@@ -1,0 +1,116 @@
+{
+  "schema_version": "moduleSvgRebuildPlan/v1",
+  "module_id": "RE3_TEST_1",
+  "status": "draft",
+  "source_files": {
+    "pptx": "source-materials/basis-seminar/pptx/<file>.pptx",
+    "pdf": "source-materials/basis-seminar/pdf/<file>.pdf",
+    "png_directory": "source-materials/basis-seminar/png/<folder>/",
+    "narration": "source-materials/basis-seminar/narration/<folder>/"
+  },
+  "global_rules": {
+    "do_not_render_slide_titles_in_svg": true,
+    "old_powerpoint_is_content_source_not_layout_template": true,
+    "component_library_is_starting_point_only": true,
+    "python_plot_library_first_for_real_diagrams": true,
+    "generic_timelines_are_svg_compositions": true,
+    "python_plots_have_no_visible_titles": true,
+    "german_plot_labels_use_real_umlauts": true,
+    "irregular_failure_times_must_remain_irregular": true,
+    "one_active_work_unit_only": true,
+    "scene_planning_before_svg_build": true,
+    "asset_decision_gate_before_svg_build": true,
+    "complex_pictograms_require_png_or_user_asset": true,
+    "visual_review_before_next_work_unit": true,
+    "didactic_reinterpretation_allowed": true
+  },
+  "slide_groups": [
+    {
+      "group_id": "RE3_TEST_1_intro_build",
+      "type": "build_sequence",
+      "source_slide_numbers": [1, 2, 3, 4, 5, 6],
+      "primary_content_slide": 6,
+      "preview_policy": "master_svg_with_optional_preview_states",
+      "intermediate_slides": [
+        {
+          "source_slide_number": 1,
+          "role": "animation_step",
+          "preview_required": false,
+          "animation_note": "Elemente werden spaeter eingeblendet oder gezeichnet."
+        }
+      ],
+      "didactic_goal": "Kurz beschreiben, was die Gruppe dem Lernenden erklaert.",
+      "scene_planning_before_build": {
+        "status": "not_started",
+        "learning_moment": "Was soll der Lernende in dieser Szene verstehen?",
+        "scene_concept": "Welche neue Grafik soll entstehen?",
+        "reinterpretation": "keep_old_logic_or_redesign",
+        "visual_dramaturgy": "Was sieht der Lernende zuerst, was wird spaeter eingeblendet, was wird bewusst weggelassen?",
+        "layout_plan": "Beschreibung der visuellen Struktur, Hauptelemente und Abstaende.",
+        "why_this_is_clearer_for_elearning": "Nur ausfuellen, wenn neu interpretiert wird.",
+        "review_risks": [
+          "enge Labels",
+          "komplexe Achsen",
+          "Formelabstaende",
+          "Marker/Pfeile",
+          "moegliche Ueberlappungen"
+        ]
+      },
+      "final_state_content": [
+        "Elemente, die im finalen Zielzustand enthalten sein muessen."
+      ],
+      "redesign_strategy": {
+        "preserve": ["fachliche Aussage", "Reihenfolge", "Formeln"],
+        "may_change": ["Layout", "Abstaende", "visuelle Gruppierung"],
+        "remove": ["PowerPoint-Titel", "nur dekorative Alt-Elemente"]
+      },
+      "component_plan": [
+        {
+          "component": "native_svg_timeline_composition",
+          "usage": "Zeitstrahl als didaktische SVG-Komposition",
+          "required_adaptations": [
+            "Ausfallpunkte unregelmaessig setzen",
+            "Labels neu positionieren",
+            "Animationsebenen und Layout dokumentieren"
+          ]
+        }
+      ],
+      "asset_plan": [
+        {
+          "source_element": "tool icon from source slide",
+          "source_evidence": "PNG/PDF/PPTX",
+          "semantic_role": "visual cue for transformation or method step",
+          "complexity": "complex",
+          "strategy": "generated_png",
+          "path": "assets/scenes/RE3_TEST_1/pictograms/tool.png",
+          "contains_text": false,
+          "reason": "concrete pictogram; do not improvise as SVG line art",
+          "blocking_question": ""
+        }
+      ],
+      "animation_layers": [
+        {
+          "layer_id": "layer_formula",
+          "trigger": "appear",
+          "source_step": 2
+        }
+      ],
+      "cross_check": {
+        "reference_slide_for_content": 6,
+        "render_checked": false,
+        "visual_review_completed": false,
+        "corrected_after_review": false,
+        "next_work_unit_allowed": false,
+        "issues": []
+      },
+      "automated_svg_qa": {
+        "required": true,
+        "command": "node tools\\svg-rebuild-qa.js RE3_TEST_1 --viewer --slides 1-6 --expect-all",
+        "report_path": "analysis/render-checks/RE3_TEST_1/automated-svg-qa/svg-qa-report.md",
+        "errors": null,
+        "warnings": null,
+        "status": "not_run"
+      }
+    }
+  ]
+}

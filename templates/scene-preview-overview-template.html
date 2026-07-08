@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scene Asset Preview</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        color: #062d46;
+        background: #f7fbfd;
+      }
+      main {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 48px;
+      }
+      h1 {
+        font-size: 34px;
+        margin: 0 0 28px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 24px;
+      }
+      .card {
+        background: white;
+        border: 1px solid #d8e3ea;
+        border-radius: 12px;
+        padding: 24px;
+      }
+      .preview {
+        height: 180px;
+        display: grid;
+        place-items: center;
+        background:
+          linear-gradient(45deg, #eef3f6 25%, transparent 25%),
+          linear-gradient(-45deg, #eef3f6 25%, transparent 25%),
+          linear-gradient(45deg, transparent 75%, #eef3f6 75%),
+          linear-gradient(-45deg, transparent 75%, #eef3f6 75%);
+        background-size: 24px 24px;
+        background-position: 0 0, 0 12px, 12px -12px, -12px 0;
+        border-radius: 8px;
+        margin-bottom: 16px;
+      }
+      img {
+        max-width: 90%;
+        max-height: 150px;
+      }
+      p {
+        margin: 0;
+        color: #5f7380;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Scene Asset Preview</h1>
+      <div class="grid">
+        <!-- Add asset preview cards here after generation. -->
+      </div>
+    </main>
+  </body>
+</html>
+

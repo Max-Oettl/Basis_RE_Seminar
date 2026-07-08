@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "g04_censored_observations_010.svg",
+  "defaults": {
+    "pauseMs": 2500,
+    "enterFrames": 18,
+    "drawFrames": 22
+  },
+  "targets": [
+    {
+      "targetId": "g04_layer_01_time_axis",
+      "label": "Ausfallzeiten und Beobachtungsende",
+      "status": "animated"
+    },
+    {
+      "targetId": "g04_layer_02_weibull_context",
+      "label": "Weibull-Kontext bleibt sichtbar",
+      "status": "animated"
+    },
+    {
+      "targetId": "g04_layer_03_object_frame",
+      "label": "Objekte einzeln betrachten",
+      "status": "animated"
+    },
+    {
+      "targetId": "g04_layer_04_failures",
+      "label": "Ausfaelle als rote Kreuze",
+      "status": "animated"
+    },
+    {
+      "targetId": "g04_layer_05_censored",
+      "label": "Zensierte Beobachtungen ergaenzen",
+      "status": "animated"
+    },
+    {
+      "targetId": "g04_layer_06_legend",
+      "label": "Legende zu Ausfall und Zensierung",
+      "status": "animated"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "g04_step_01",
+      "targetId": "g04_layer_01_time_axis",
+      "action": "show"
+    },
+    {
+      "stepId": "g04_step_02",
+      "targetId": "g04_layer_02_weibull_context",
+      "action": "show"
+    },
+    {
+      "stepId": "g04_step_03",
+      "targetId": "g04_layer_03_object_frame",
+      "action": "show"
+    },
+    {
+      "stepId": "g04_step_04",
+      "targetId": "g04_layer_04_failures",
+      "action": "show"
+    },
+    {
+      "stepId": "g04_step_05",
+      "targetId": "g04_layer_05_censored",
+      "action": "show"
+    },
+    {
+      "stepId": "g04_step_06",
+      "targetId": "g04_layer_06_legend",
+      "action": "show"
+    }
+  ]
+}

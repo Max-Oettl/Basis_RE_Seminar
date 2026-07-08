@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "g06_confidence_bounds_013.svg",
+  "defaults": {
+    "pauseMs": 2500,
+    "enterFrames": 18,
+    "drawFrames": 22
+  },
+  "targets": [
+    {
+      "targetId": "g06_layer_01_context",
+      "label": "Ausfalldaten als Ausgangspunkt",
+      "status": "animated"
+    },
+    {
+      "targetId": "g06_layer_02_plot_frame",
+      "label": "Weibull-Diagramm vorbereiten",
+      "status": "animated"
+    },
+    {
+      "targetId": "g06_layer_03_estimate",
+      "label": "Rote Schaetzlinie",
+      "status": "animated"
+    },
+    {
+      "targetId": "g06_layer_04_bounds",
+      "label": "Vertrauensbereich ergaenzen",
+      "status": "animated"
+    },
+    {
+      "targetId": "g06_layer_05_labels",
+      "label": "5 und 95 Prozent Vertrauensgrenzen",
+      "status": "animated"
+    },
+    {
+      "targetId": "g06_layer_06_note",
+      "label": "Einordnung fuer Lernende",
+      "status": "animated"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "g06_step_01",
+      "targetId": "g06_layer_01_context",
+      "action": "show"
+    },
+    {
+      "stepId": "g06_step_02",
+      "targetId": "g06_layer_02_plot_frame",
+      "action": "show"
+    },
+    {
+      "stepId": "g06_step_03",
+      "targetId": "g06_layer_03_estimate",
+      "action": "show"
+    },
+    {
+      "stepId": "g06_step_04",
+      "targetId": "g06_layer_04_bounds",
+      "action": "show"
+    },
+    {
+      "stepId": "g06_step_05",
+      "targetId": "g06_layer_05_labels",
+      "action": "show"
+    },
+    {
+      "stepId": "g06_step_06",
+      "targetId": "g06_layer_06_note",
+      "action": "show"
+    }
+  ]
+}

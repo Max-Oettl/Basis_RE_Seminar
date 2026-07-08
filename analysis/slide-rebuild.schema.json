@@ -1,0 +1,517 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://reltest-academy.local/slide-rebuild.schema.json",
+  "title": "Basis Seminar Slide Rebuild",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "seminar_id",
+    "module_id",
+    "slide_id",
+    "source_slide_number",
+    "status",
+    "source_files",
+    "source_slide_group",
+    "narration",
+    "slide_summary",
+    "canvas",
+    "visible_text",
+    "visual_elements",
+    "layout_rebuild",
+    "animation_plan",
+    "generated_assets",
+    "corporate_design_mapping",
+    "extraction_evidence",
+    "qa"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "seminar_id": {
+      "type": "string"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "slide_id": {
+      "type": "string"
+    },
+    "source_slide_number": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "review", "approved", "final", "blocked"]
+    },
+    "source_files": {
+      "$ref": "#/$defs/source_files"
+    },
+    "source_slide_group": {
+      "$ref": "#/$defs/source_slide_group"
+    },
+    "narration": {
+      "$ref": "#/$defs/narration"
+    },
+    "slide_summary": {
+      "$ref": "#/$defs/slide_summary"
+    },
+    "canvas": {
+      "$ref": "#/$defs/canvas"
+    },
+    "visible_text": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/visible_text_item"
+      }
+    },
+    "visual_elements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/visual_element"
+      }
+    },
+    "layout_rebuild": {
+      "$ref": "#/$defs/layout_rebuild"
+    },
+    "animation_plan": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/animation_item"
+      }
+    },
+    "generated_assets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/generated_asset"
+      }
+    },
+    "corporate_design_mapping": {
+      "$ref": "#/$defs/corporate_design_mapping"
+    },
+    "extraction_evidence": {
+      "$ref": "#/$defs/extraction_evidence"
+    },
+    "qa": {
+      "$ref": "#/$defs/qa"
+    }
+  },
+  "$defs": {
+    "bbox": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y", "w", "h"],
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "w": { "type": "number" },
+        "h": { "type": "number" }
+      }
+    },
+    "source_methods": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["pptx", "pdf", "png", "narration_md", "inferred"]
+      }
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "none"]
+    },
+    "string_array": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_files": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pptx", "pdf", "png", "narration_md"],
+      "properties": {
+        "pptx": { "type": "string" },
+        "pdf": { "type": "string" },
+        "png": { "type": "string" },
+        "narration_md": { "type": "string" }
+      }
+    },
+    "source_slide_group": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "group_id", "source_slide_numbers", "primary_slide_number", "notes"],
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": ["single_slide", "pptx_animation_sequence", "morph_sequence", "reveal_sequence"]
+        },
+        "group_id": {
+          "type": "string"
+        },
+        "source_slide_numbers": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minItems": 1
+        },
+        "primary_slide_number": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "notes": {
+          "$ref": "#/$defs/string_array"
+        }
+      }
+    },
+    "narration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "text_ref", "text", "sync_notes", "confidence"],
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": ["unchanged"]
+        },
+        "text_ref": { "type": "string" },
+        "text": {
+          "type": ["string", "null"]
+        },
+        "sync_notes": {
+          "$ref": "#/$defs/string_array"
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        }
+      }
+    },
+    "slide_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "purpose", "core_message", "layout_type", "complexity"],
+      "properties": {
+        "title": { "type": "string" },
+        "purpose": { "type": "string" },
+        "core_message": { "type": "string" },
+        "layout_type": {
+          "type": "string",
+          "enum": ["process", "comparison", "diagram", "table", "title", "image_explanation", "mixed"]
+        },
+        "complexity": {
+          "type": "string",
+          "enum": ["low", "medium", "high"]
+        }
+      }
+    },
+    "canvas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["coordinate_system", "origin", "width", "height", "aspect_ratio"],
+      "properties": {
+        "coordinate_system": {
+          "type": "string",
+          "const": "normalized_1000"
+        },
+        "origin": {
+          "type": "string",
+          "const": "top_left"
+        },
+        "width": {
+          "type": "number",
+          "const": 1000
+        },
+        "height": {
+          "type": "number",
+          "const": 562.5
+        },
+        "aspect_ratio": {
+          "type": "string",
+          "const": "16:9"
+        }
+      }
+    },
+    "visible_text_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "text", "role", "bbox", "reading_order", "importance", "source_methods", "keep_exact", "rebuild_note"],
+      "properties": {
+        "id": { "type": "string" },
+        "text": { "type": "string" },
+        "role": {
+          "type": "string",
+          "enum": ["title", "subtitle", "bullet", "label", "formula", "caption", "footer", "callout"]
+        },
+        "bbox": {
+          "$ref": "#/$defs/bbox"
+        },
+        "reading_order": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "importance": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "source_methods": {
+          "$ref": "#/$defs/source_methods"
+        },
+        "keep_exact": {
+          "type": "boolean"
+        },
+        "rebuild_note": {
+          "type": "string"
+        }
+      }
+    },
+    "visual_element": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "semantic_role", "bbox", "z_order", "source_methods", "original_style", "content", "relationships", "rebuild_intent", "svg_rebuild", "png_asset"],
+      "properties": {
+        "id": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": ["shape", "line", "arrow", "icon", "image", "chart", "table", "formula", "group", "background", "highlight"]
+        },
+        "semantic_role": { "type": "string" },
+        "bbox": {
+          "$ref": "#/$defs/bbox"
+        },
+        "z_order": {
+          "type": "integer"
+        },
+        "source_methods": {
+          "$ref": "#/$defs/source_methods"
+        },
+        "original_style": {
+          "type": "object",
+          "additionalProperties": {
+            "type": ["string", "number", "boolean", "null"]
+          }
+        },
+        "content": { "type": "string" },
+        "relationships": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/relationship"
+          }
+        },
+        "rebuild_intent": { "type": "string" },
+        "svg_rebuild": {
+          "$ref": "#/$defs/svg_rebuild"
+        },
+        "png_asset": {
+          "$ref": "#/$defs/png_asset"
+        }
+      }
+    },
+    "relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "target_id"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["points_to", "contains", "groups_with", "highlights", "labels"]
+        },
+        "target_id": { "type": "string" }
+      }
+    },
+    "svg_rebuild": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["use_svg", "element_type", "position", "style_token", "text_as_svg_text", "notes"],
+      "properties": {
+        "use_svg": { "type": "boolean" },
+        "element_type": {
+          "type": "string",
+          "enum": ["rounded_card", "line", "arrow", "axis", "marker", "table", "text", "icon", "shape", "group", "chart", "formula"]
+        },
+        "position": { "type": "string" },
+        "style_token": { "type": "string" },
+        "text_as_svg_text": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    },
+    "png_asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["needed", "reason", "prompt", "transparent_background"],
+      "properties": {
+        "needed": { "type": "boolean" },
+        "reason": { "type": "string" },
+        "prompt": { "type": "string" },
+        "transparent_background": { "type": "boolean" }
+      }
+    },
+    "layout_rebuild": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["composition", "visual_hierarchy", "preserve", "modernize", "do_not_change"],
+      "properties": {
+        "composition": { "type": "string" },
+        "visual_hierarchy": {
+          "$ref": "#/$defs/string_array"
+        },
+        "preserve": {
+          "$ref": "#/$defs/string_array"
+        },
+        "modernize": {
+          "$ref": "#/$defs/string_array"
+        },
+        "do_not_change": {
+          "$ref": "#/$defs/string_array"
+        }
+      }
+    },
+    "animation_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "source", "order", "trigger_label", "target_element_ids", "effect", "narration_cue", "confidence", "notes"],
+      "properties": {
+        "id": { "type": "string" },
+        "source": {
+          "type": "string",
+          "enum": ["pptx", "pptx_sequence", "morph_sequence", "inferred_from_narration", "none"]
+        },
+        "order": { "type": "integer", "minimum": 1 },
+        "trigger_label": { "type": "string" },
+        "target_element_ids": {
+          "$ref": "#/$defs/string_array"
+        },
+        "effect": {
+          "type": "string",
+          "enum": ["appear", "fade", "highlight", "move", "draw", "replace"]
+        },
+        "narration_cue": { "type": "string" },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "notes": { "type": "string" }
+      }
+    },
+    "generated_asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "needed", "asset_type", "purpose", "prompt", "usage", "must_not_include"],
+      "properties": {
+        "id": { "type": "string" },
+        "needed": { "type": "boolean" },
+        "asset_type": {
+          "type": "string",
+          "enum": ["png", "jpg", "webp"]
+        },
+        "purpose": { "type": "string" },
+        "prompt": { "type": "string" },
+        "usage": {
+          "type": "string",
+          "enum": ["background", "object", "texture", "illustrative_context"]
+        },
+        "must_not_include": {
+          "$ref": "#/$defs/string_array"
+        }
+      }
+    },
+    "corporate_design_mapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["old_color_roles", "typography_notes", "icon_notes"],
+      "properties": {
+        "old_color_roles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/color_role"
+          }
+        },
+        "typography_notes": { "type": "string" },
+        "icon_notes": { "type": "string" }
+      }
+    },
+    "color_role": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["original", "semantic_role", "new_token"],
+      "properties": {
+        "original": { "type": "string" },
+        "semantic_role": { "type": "string" },
+        "new_token": { "type": "string" }
+      }
+    },
+    "extraction_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pptx", "pdf", "png"],
+      "properties": {
+        "pptx": {
+          "$ref": "#/$defs/pptx_evidence"
+        },
+        "pdf": {
+          "$ref": "#/$defs/pdf_evidence"
+        },
+        "png": {
+          "$ref": "#/$defs/png_evidence"
+        }
+      }
+    },
+    "pptx_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["objects_found", "text_boxes_found", "images_found", "tables_found", "animations_found", "notes"],
+      "properties": {
+        "objects_found": { "type": "integer", "minimum": 0 },
+        "text_boxes_found": { "type": "integer", "minimum": 0 },
+        "images_found": { "type": "integer", "minimum": 0 },
+        "tables_found": { "type": "integer", "minimum": 0 },
+        "animations_found": { "type": "integer", "minimum": 0 },
+        "notes": { "$ref": "#/$defs/string_array" }
+      }
+    },
+    "pdf_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text_confirmed", "formula_issues", "notes"],
+      "properties": {
+        "text_confirmed": { "type": "boolean" },
+        "formula_issues": { "$ref": "#/$defs/string_array" },
+        "notes": { "$ref": "#/$defs/string_array" }
+      }
+    },
+    "png_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["visual_checked", "missing_from_pptx", "overlaps_or_crops", "notes"],
+      "properties": {
+        "visual_checked": { "type": "boolean" },
+        "missing_from_pptx": { "$ref": "#/$defs/string_array" },
+        "overlaps_or_crops": { "$ref": "#/$defs/string_array" },
+        "notes": { "$ref": "#/$defs/string_array" }
+      }
+    },
+    "qa": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["completeness", "narration_linked", "visible_text_complete", "visual_structure_complete", "animation_confidence", "issues", "open_questions", "assumptions"],
+      "properties": {
+        "completeness": {
+          "type": "string",
+          "enum": ["pass", "review", "fail"]
+        },
+        "narration_linked": { "type": "boolean" },
+        "visible_text_complete": { "type": "boolean" },
+        "visual_structure_complete": { "type": "boolean" },
+        "animation_confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "issues": { "$ref": "#/$defs/string_array" },
+        "open_questions": { "$ref": "#/$defs/string_array" },
+        "assumptions": { "$ref": "#/$defs/string_array" }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "reltestDiagramRegistry/v1",
+  "rule": "Use an existing Python plot generator before creating a new real technical diagram generator. Do not generate generic timelines as Python plots. Python plots must not include visible titles. Python plot generators export SVG only. Plot text is optimized for small seminar-scene usage: axis labels, tick labels, and legends must remain readable when scaled down. Animation-ready plot SVGs follow components/python-plot-library/svg-animation-structure.provisional.md until the project-wide animation structure exists. Weibull confidence limits are drawn as reproducible, non-parallel 5 and 95 percent bootstrap boundary curves, not filled confidence bands or linear regression confidence lines.",
+  "provisional_animation_structure": "components/python-plot-library/svg-animation-structure.provisional.md",
+  "style_module": "components/python-plot-library/reltest_plot_style.py",
+  "generators": [
+    {
+      "diagram_type": "axis_diagram",
+      "file": "components/python-plot-library/axis_diagram.py",
+      "use_for": [
+        "generic x/y plots",
+        "schematic technical curves",
+        "simple measured series"
+      ],
+      "exports": ["svg"]
+    },
+    {
+      "diagram_type": "weibull_probability_plot",
+      "file": "components/python-plot-library/weibull_probability_plot.py",
+      "use_for": [
+        "Weibull probability plots",
+        "median-rank failure data",
+        "fitted Weibull lines"
+      ],
+      "exports": ["svg"]
+    },
+    {
+      "diagram_type": "weibull_parameter_plot",
+      "file": "components/python-plot-library/weibull_parameter_plot.py",
+      "use_for": [
+        "Weibull probability plots with characteristic life T",
+        "shape parameter b readout from fitted line",
+        "basis-seminar Weibull workflow visuals"
+      ],
+      "exports": ["svg"]
+    },
+    {
+      "diagram_type": "weibull_mechanism_split_plot",
+      "file": "components/python-plot-library/weibull_mechanism_split_plot.py",
+      "use_for": [
+        "Weibull probability plots with two failure mechanisms",
+        "separated mechanism A and mechanism B trends",
+        "multi-mechanism failure-data explanation"
+      ],
+      "exports": ["svg"]
+    },
+    {
+      "diagram_type": "weibull_confidence_plot",
+      "file": "components/python-plot-library/weibull_confidence_plot.py",
+      "use_for": [
+        "Weibull probability plots with 5 and 95 percent confidence limits",
+        "median-rank failure data with lower and upper confidence boundaries",
+        "fitted Weibull lines with reproducible non-parallel bootstrap confidence limit curves",
+        "canonical Weibull confidence style with blue fit, open red failure points, and grey dashed boundary curves"
+      ],
+      "exports": ["svg"]
+    }
+  ]
+}

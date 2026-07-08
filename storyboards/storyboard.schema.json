@@ -1,0 +1,459 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://reltest-academy.local/storyboard.schema.json",
+  "title": "Reltest Academy Storyboard",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "course_id",
+    "language",
+    "source_references",
+    "scenes"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "course_id": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string",
+      "default": "de"
+    },
+    "source_references": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "feedback_log": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/feedback"
+      },
+      "default": []
+    },
+    "scenes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/scene"
+      }
+    }
+  },
+  "$defs": {
+    "feedback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "topic_id",
+        "date",
+        "title",
+        "author",
+        "note"
+      ],
+      "properties": {
+        "topic_id": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "author": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "nav_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "order",
+        "topic_id",
+        "scene_id",
+        "status",
+        "module",
+        "chapter",
+        "lesson",
+        "title",
+        "source_refs",
+        "core_content",
+        "build_sequence",
+        "narration",
+        "slide",
+        "visual",
+        "animation_triggers",
+        "interactions",
+        "design_notes",
+        "assumptions",
+        "open_questions",
+        "review"
+      ],
+      "properties": {
+        "order": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "topic_id": {
+          "type": "string"
+        },
+        "scene_id": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "review",
+            "approved",
+            "final",
+            "archived"
+          ]
+        },
+        "module": {
+          "$ref": "#/$defs/nav_item"
+        },
+        "chapter": {
+          "$ref": "#/$defs/nav_item"
+        },
+        "lesson": {
+          "$ref": "#/$defs/nav_item"
+        },
+        "title": {
+          "type": "string"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "core_content": {
+          "type": "string"
+        },
+        "build_sequence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "narration": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "text",
+            "language_rules_ref"
+          ],
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "language_rules_ref": {
+              "type": "string",
+            "default": "workflow/speaker-text-language-rules.md"
+            }
+          }
+        },
+        "slide": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "visible_text"
+          ],
+          "properties": {
+            "visible_text": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "visual": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "style_notes",
+            "composition",
+            "elements",
+            "svg_plan",
+            "generated_assets",
+            "quality_requirements",
+            "asset_links"
+          ],
+          "properties": {
+            "style_notes": {
+              "type": "string"
+            },
+            "composition": {
+              "type": "string"
+            },
+            "elements": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/visual_element"
+              }
+            },
+            "svg_plan": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/svg_plan_item"
+              }
+            },
+            "generated_assets": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/generated_asset"
+              }
+            },
+            "quality_requirements": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "asset_links": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/asset_link"
+              }
+            }
+          }
+        },
+        "animation_triggers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/animation_trigger"
+          }
+        },
+        "interactions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/interaction"
+          }
+        },
+        "design_notes": {
+          "type": "string"
+        },
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "open_questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "review": {
+          "$ref": "#/$defs/review"
+        }
+      }
+    },
+    "visual_element": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "label",
+        "description"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "svg_plan_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "layer",
+        "element_type",
+        "purpose",
+        "content",
+        "position",
+        "visual_notes"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "layer": {
+          "type": "string"
+        },
+        "element_type": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        },
+        "position": {
+          "type": "string"
+        },
+        "visual_notes": {
+          "type": "string"
+        }
+      }
+    },
+    "generated_asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "asset_type",
+        "purpose",
+        "usage",
+        "generation_prompt",
+        "required"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "asset_type": {
+          "type": "string",
+          "enum": [
+            "png",
+            "jpg",
+            "webp"
+          ]
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "usage": {
+          "type": "string"
+        },
+        "generation_prompt": {
+          "type": "string"
+        },
+        "required": {
+          "type": "boolean"
+        }
+      }
+    },
+    "asset_link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "path",
+        "role"
+      ],
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        }
+      }
+    },
+    "animation_trigger": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "narration_cue",
+        "target_element_ids"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "narration_cue": {
+          "type": "string"
+        },
+        "target_element_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "interaction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "description"
+      ],
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "notes"
+      ],
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

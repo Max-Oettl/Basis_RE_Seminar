@@ -1,0 +1,46 @@
+{
+  "schema": "svgSequencePlan/v1",
+  "module_id": "RE3_TEST_1",
+  "work_unit": "g01_basic_weibull_workflow",
+  "status": "draft_from_master_svg",
+  "master_svg": "rebuild-proposals/svg/RE3_TEST_1/g01_basic_weibull_workflow.svg",
+  "source_slides": [1, 2, 3, 4, 5, 6],
+  "primary_content_slide": 6,
+  "preview_policy": {
+    "build_intermediate_slide_svgs": false,
+    "reason": "Slides 1-6 are animation states of one process graphic. The master SVG contains semantic layers for reveal/animation.",
+    "final_preview_render": "analysis/render-checks/RE3_TEST_1/g01_basic_weibull_workflow_finalcheck.png"
+  },
+  "layers": [
+    {
+      "id": "g01_layer_01_failure_timeline",
+      "source_step": "slides 1-2",
+      "role": "input failure times"
+    },
+    {
+      "id": "g01_layer_02_median_rank_mapping",
+      "source_step": "slides 2-3",
+      "role": "median-rank probability mapping"
+    },
+    {
+      "id": "g01_layer_03_weibull_points",
+      "source_step": "slide 4",
+      "role": "points in Weibull probability paper"
+    },
+    {
+      "id": "g01_layer_04_regression_line",
+      "source_step": "slide 5",
+      "role": "fitted regression line"
+    },
+    {
+      "id": "g01_layer_05_parameter_T",
+      "source_step": "slide 6",
+      "role": "T readout at F = 63.2 percent"
+    },
+    {
+      "id": "g01_layer_06_parameter_b",
+      "source_step": "slide 6",
+      "role": "b readout from slope"
+    }
+  ]
+}

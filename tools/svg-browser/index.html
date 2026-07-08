@@ -1,0 +1,4821 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reltest SVG-Browser</title>
+  <style>
+    :root {
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: #062d46;
+      background: #eef3f6;
+      color-scheme: light;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    [hidden] {
+      display: none !important;
+    }
+    body {
+      margin: 0;
+      min-width: 1120px;
+      height: 100vh;
+      overflow: hidden;
+    }
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+    .app {
+      display: grid;
+      grid-template-columns: 340px minmax(0, 1fr);
+      height: 100vh;
+    }
+    .sidebar {
+      display: flex;
+      min-height: 0;
+      flex-direction: column;
+      border-right: 1px solid #d8e3ea;
+      background: #fff;
+    }
+    .sidebar-header {
+      padding: 22px;
+      border-bottom: 1px solid #d8e3ea;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: 24px;
+    }
+    .count {
+      color: #5f7380;
+      font-size: 14px;
+    }
+    .search {
+      width: 100%;
+      margin-top: 16px;
+      padding: 11px 13px;
+      border: 1px solid #cbd8e0;
+      border-radius: 12px;
+      color: #062d46;
+      background: #f8fbfc;
+      outline: none;
+    }
+    .search:focus {
+      border-color: #139ccb;
+      box-shadow: 0 0 0 3px rgba(19, 156, 203, 0.14);
+    }
+    .mode-switch {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      margin-top: 16px;
+      padding: 4px;
+      border: 1px solid #d8e3ea;
+      border-radius: 10px;
+      background: #eef3f6;
+    }
+    .mode-button {
+      min-height: 34px;
+      border: 0;
+      border-radius: 7px;
+      color: #5f7380;
+      background: transparent;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .mode-button.active {
+      color: #062d46;
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(6, 45, 70, 0.12);
+    }
+    .list {
+      min-height: 0;
+      flex: 1;
+      overflow: auto;
+      padding: 10px;
+    }
+    .group {
+      display: flex;
+      width: calc(100% - 20px);
+      margin: 15px 10px 7px;
+      padding: 0;
+      border: 0;
+      color: #6a7a86;
+      background: transparent;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-align: left;
+      cursor: pointer;
+    }
+    .group-label {
+      flex: 1;
+    }
+    .group-caret {
+      margin-left: 10px;
+      transition: transform 120ms ease;
+    }
+    .group.collapsed .group-caret {
+      transform: rotate(-90deg);
+    }
+    .item {
+      display: block;
+      width: 100%;
+      margin: 0 0 5px;
+      padding: 11px 12px;
+      border: 0;
+      border-radius: 12px;
+      color: #062d46;
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+    }
+    .item:hover {
+      background: #eef8fb;
+    }
+    .item.active {
+      color: #fff;
+      background: #062d46;
+    }
+    .item-title {
+      display: block;
+      overflow: hidden;
+      font-weight: 750;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .item-path {
+      display: block;
+      overflow: hidden;
+      margin-top: 4px;
+      color: #718491;
+      font-size: 12px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .item.active .item-path {
+      color: #bfeaf6;
+    }
+    .item-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 7px;
+    }
+    .storyboard-source-label {
+      margin: 14px 10px 8px;
+      color: #7a8b97;
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .storyboard-node {
+      position: relative;
+      display: grid;
+      min-width: 0;
+      margin: 6px 0;
+      border-radius: 11px;
+      border: 1px solid transparent;
+      text-align: left;
+    }
+    .storyboard-node::before {
+      content: "";
+      position: absolute;
+      inset: 7px auto 7px 8px;
+      width: 4px;
+      border-radius: 999px;
+      background: #139ccb;
+    }
+    .storyboard-node-main {
+      display: grid;
+      min-width: 0;
+      gap: 2px;
+      padding-left: 14px;
+    }
+    .storyboard-node-kind {
+      color: #6a7a86;
+      font-size: 9px;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .storyboard-node-title {
+      overflow: hidden;
+      color: #062d46;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.25;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .storyboard-module-node {
+      grid-template-columns: minmax(0, 1fr) auto;
+      width: 100%;
+      margin-top: 12px;
+      padding: 9px 10px;
+      border-color: #c7e4ef;
+      background: #eef8fb;
+      cursor: pointer;
+    }
+    .storyboard-module-node::before {
+      background: #139ccb;
+    }
+    .storyboard-module-node .group-caret {
+      align-self: center;
+      margin-left: 8px;
+    }
+    .storyboard-module-node.collapsed .group-caret {
+      transform: rotate(-90deg);
+    }
+    .storyboard-chapter-node {
+      margin-left: 10px;
+      padding: 7px 10px;
+      background: #f0fdfa;
+    }
+    .storyboard-chapter-node::before {
+      background: #14b8a6;
+    }
+    .storyboard-lesson-node {
+      margin-left: 20px;
+      padding: 7px 10px;
+      background: #fff7ed;
+    }
+    .storyboard-lesson-node::before {
+      background: #f59e0b;
+    }
+    .storyboard-scene-item {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 9px;
+      margin: 5px 0 5px 30px;
+      padding: 8px 10px;
+      border: 1px solid transparent;
+      border-radius: 11px;
+      color: #062d46;
+      background: #fff;
+      box-shadow: inset 0 0 0 1px #e4edf2;
+    }
+    .storyboard-scene-item:hover {
+      background: #eef8fb;
+    }
+    .storyboard-scene-item.active {
+      color: #fff;
+      border-color: #062d46;
+      background: #062d46;
+      box-shadow: none;
+    }
+    .storyboard-scene-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 38px;
+      height: 28px;
+      border-radius: 8px;
+      color: #075985;
+      background: #e0f2fe;
+      font-size: 12px;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+    }
+    .storyboard-scene-item.active .storyboard-scene-number {
+      color: #062d46;
+      background: #bfeaf6;
+    }
+    .storyboard-scene-title {
+      overflow: hidden;
+      font-size: 13px;
+      font-weight: 820;
+      line-height: 1.25;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .storyboard-status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: #94a3b8;
+    }
+    .storyboard-status-dot.draft { background: #f59e0b; }
+    .storyboard-status-dot.review { background: #139ccb; }
+    .storyboard-status-dot.approved { background: #22c55e; }
+    .storyboard-status-dot.final { background: #166534; }
+    .storyboard-status-dot.archived { background: #94a3b8; }
+    .badge {
+      border: 1px solid #c8d3e6;
+      border-radius: 999px;
+      color: #5f7380;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      padding: 2px 7px;
+    }
+    .badge.final {
+      background: #dcfce7;
+      border-color: #86efac;
+      color: #166534;
+    }
+    .badge.notes {
+      background: #fef3c7;
+      border-color: #fcd34d;
+      color: #92400e;
+    }
+    .main {
+      display: grid;
+      min-width: 0;
+      min-height: 0;
+      grid-template-rows: auto auto minmax(0, 1fr) auto;
+    }
+    .main.storyboard-mode {
+      grid-template-rows: auto minmax(0, 1fr) auto;
+    }
+    .main.storyboard-mode .animation-bar,
+    .main.storyboard-mode .workspace,
+    .main.storyboard-mode #fit,
+    .main.storyboard-mode #open {
+      display: none;
+    }
+    .toolbar {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 18px;
+      border-bottom: 1px solid #d8e3ea;
+      background: #fff;
+    }
+    .nav-button,
+    .action-link,
+    .fit-select {
+      min-height: 40px;
+      padding: 9px 13px;
+      border: 1px solid #cbd8e0;
+      border-radius: 11px;
+      color: #062d46;
+      background: #fff;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .nav-button:hover,
+    .action-link:hover {
+      border-color: #139ccb;
+      background: #eef8fb;
+    }
+    .nav-button:disabled {
+      cursor: default;
+      opacity: 0.38;
+    }
+    .animation-bar {
+      display: grid;
+      grid-template-columns: auto auto auto auto auto minmax(120px, 1fr);
+      min-width: 0;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 18px;
+      border-bottom: 1px solid #d8e3ea;
+      background: #f8fafc;
+    }
+    .animation-bar strong {
+      margin-right: 2px;
+      font-size: 13px;
+    }
+    .animation-status {
+      min-width: 0;
+      flex: 1;
+      overflow: hidden;
+      color: #5f7380;
+      font-size: 12px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .animation-bar .fit-select {
+      min-height: 36px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+    .animation-timeline {
+      display: grid;
+      grid-column: 1 / -1;
+      grid-template-columns: auto minmax(160px, 1fr) auto;
+      align-items: center;
+      gap: 10px;
+    }
+    .animation-timeline input[type="range"] {
+      width: 100%;
+      margin: 0;
+      accent-color: #139ccb;
+      cursor: pointer;
+    }
+    .animation-timeline input[type="range"]:disabled {
+      cursor: default;
+      opacity: 0.42;
+    }
+    .timeline-time {
+      min-width: 42px;
+      color: #5f7380;
+      font-variant-numeric: tabular-nums;
+      font-size: 12px;
+    }
+    .timeline-time:last-child {
+      text-align: right;
+    }
+    .current-title {
+      min-width: 0;
+      flex: 1;
+      padding: 0 8px;
+    }
+    .current-title strong,
+    .current-title span {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .current-title span {
+      margin-top: 3px;
+      color: #6a7a86;
+      font-size: 12px;
+    }
+    .stage {
+      position: relative;
+      min-width: 0;
+      min-height: 0;
+      overflow: auto;
+      padding: 28px;
+      background:
+        linear-gradient(45deg, #e5ecef 25%, transparent 25%),
+        linear-gradient(-45deg, #e5ecef 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #e5ecef 75%),
+        linear-gradient(-45deg, transparent 75%, #e5ecef 75%);
+      background-position: 0 0, 0 12px, 12px -12px, -12px 0;
+      background-size: 24px 24px;
+    }
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      min-height: 0;
+    }
+    .storyboard-page {
+      min-height: 0;
+      overflow: auto;
+      padding: 22px;
+      background: #f8fafc;
+    }
+    .storyboard-page[hidden] {
+      display: none;
+    }
+    .storyboard-page-inner {
+      display: grid;
+      gap: 14px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+    .storyboard-page-title {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 4px;
+      padding: 14px 16px;
+      border: 1px solid #d8e3ea;
+      border-radius: 8px;
+      background: #fff;
+    }
+    .storyboard-page-title h2 {
+      margin: 0;
+      color: #062d46;
+      font-size: 22px;
+    }
+    .storyboard-page-title p {
+      margin: 0;
+      color: #5f7380;
+      font-size: 13px;
+    }
+    .storyboard-view-switch {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 4px;
+      min-width: 220px;
+      padding: 4px;
+      border: 1px solid #d8e3ea;
+      border-radius: 10px;
+      background: #eef3f6;
+    }
+    .storyboard-view-button {
+      min-height: 34px;
+      padding: 6px 10px;
+      border: 0;
+      border-radius: 7px;
+      color: #5f7380;
+      background: transparent;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 850;
+    }
+    .storyboard-view-button.active {
+      color: #062d46;
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(6, 45, 70, 0.12);
+    }
+    .storyboard-overview {
+      display: grid;
+      gap: 18px;
+    }
+    .storyboard-overview-summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .storyboard-stat-card,
+    .storyboard-overview-module {
+      border: 1px solid #d8e3ea;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 10px 26px rgba(6, 45, 70, 0.05);
+    }
+    .storyboard-stat-card {
+      padding: 12px;
+    }
+    .storyboard-stat-card strong {
+      display: block;
+      color: #062d46;
+      font-size: 24px;
+      line-height: 1;
+    }
+    .storyboard-stat-card span {
+      display: block;
+      margin-top: 5px;
+      color: #6a7a86;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .storyboard-overview-module {
+      overflow: hidden;
+    }
+    .storyboard-overview-module-header {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 16px;
+      border: 0;
+      border-bottom: 1px solid #d8e3ea;
+      color: #062d46;
+      background: linear-gradient(90deg, #e0f2fe, #fff);
+      text-align: left;
+      cursor: pointer;
+    }
+    .storyboard-overview-module-header:hover {
+      background: linear-gradient(90deg, #c7ecfb, #fff);
+    }
+    .storyboard-overview-module-header h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+    .storyboard-overview-module-header p {
+      margin: 4px 0 0;
+      color: #5f7380;
+      font-size: 12px;
+    }
+    .storyboard-overview-count {
+      flex: 0 0 auto;
+      padding: 5px 9px;
+      border-radius: 999px;
+      color: #075985;
+      background: #bae6fd;
+      font-size: 11px;
+      font-weight: 850;
+    }
+    .storyboard-overview-header-actions {
+      display: inline-flex;
+      flex: 0 0 auto;
+      align-items: center;
+      gap: 8px;
+    }
+    .storyboard-overview-caret {
+      color: #5f7380;
+      font-size: 13px;
+      transition: transform 120ms ease;
+    }
+    .storyboard-overview-module.collapsed .storyboard-overview-caret {
+      transform: rotate(-90deg);
+    }
+    .storyboard-overview-module.collapsed .storyboard-overview-body {
+      display: none;
+    }
+    .storyboard-overview-body {
+      display: grid;
+      gap: 14px;
+      padding: 14px 16px 16px;
+    }
+    .storyboard-overview-chapter {
+      display: grid;
+      gap: 9px;
+    }
+    .storyboard-overview-chapter-title {
+      margin: 0;
+      color: #0f766e;
+      font-size: 13px;
+      font-weight: 850;
+    }
+    .storyboard-overview-lesson {
+      display: grid;
+      gap: 8px;
+      padding-left: 12px;
+      border-left: 3px solid #fed7aa;
+    }
+    .storyboard-overview-lesson-title {
+      margin: 0;
+      color: #9a3412;
+      font-size: 12px;
+      font-weight: 850;
+    }
+    .storyboard-slide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 10px;
+    }
+    .storyboard-slide-card {
+      display: grid;
+      grid-template-rows: auto auto minmax(0, 1fr) auto;
+      min-height: 190px;
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid #d8e3ea;
+      border-top: 5px solid #139ccb;
+      border-radius: 12px;
+      color: #062d46;
+      background: #fff;
+      text-align: left;
+      cursor: pointer;
+    }
+    .storyboard-slide-card:hover {
+      border-color: #139ccb;
+      box-shadow: 0 10px 24px rgba(6, 45, 70, 0.1);
+      transform: translateY(-1px);
+    }
+    .storyboard-slide-card.active {
+      border-color: #062d46;
+      border-top-color: #062d46;
+      box-shadow: 0 0 0 3px rgba(6, 45, 70, 0.12);
+    }
+    .storyboard-slide-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .storyboard-slide-card-number {
+      color: #075985;
+      font-size: 20px;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+    }
+    .storyboard-slide-card h4 {
+      margin: 0;
+      display: -webkit-box;
+      overflow: hidden;
+      color: #062d46;
+      font-size: 13px;
+      line-height: 1.28;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+    .storyboard-slide-preview {
+      display: flex;
+      min-height: 88px;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid #d8e3ea;
+      border-radius: 9px;
+      background:
+        linear-gradient(45deg, #edf3f6 25%, transparent 25%),
+        linear-gradient(-45deg, #edf3f6 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #edf3f6 75%),
+        linear-gradient(-45deg, transparent 75%, #edf3f6 75%);
+      background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+      background-size: 16px 16px;
+    }
+    .storyboard-slide-preview img {
+      display: block;
+      width: 100%;
+      height: 88px;
+      object-fit: contain;
+      background: #fff;
+    }
+    .storyboard-slide-preview-empty {
+      padding: 8px;
+      color: #7a8b97;
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: 0.05em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .storyboard-detail-preview {
+      display: flex;
+      min-height: 240px;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid #d8e3ea;
+      border-radius: 10px;
+      background:
+        linear-gradient(45deg, #edf3f6 25%, transparent 25%),
+        linear-gradient(-45deg, #edf3f6 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #edf3f6 75%),
+        linear-gradient(-45deg, transparent 75%, #edf3f6 75%);
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+      background-size: 20px 20px;
+    }
+    .storyboard-detail-preview img {
+      display: block;
+      width: 100%;
+      max-height: 320px;
+      object-fit: contain;
+      background: #fff;
+    }
+    .storyboard-detail-preview-empty {
+      padding: 18px;
+      color: #7a8b97;
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 0.05em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .storyboard-mini-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      align-self: end;
+    }
+    .storyboard-mini-badge {
+      padding: 3px 6px;
+      border-radius: 999px;
+      color: #5f7380;
+      background: #eef3f6;
+      font-size: 9px;
+      font-weight: 850;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .workspace.editor-open {
+      grid-template-columns: minmax(0, 1fr) minmax(640px, 46vw);
+    }
+    .visual-column {
+      display: grid;
+      grid-template-rows: minmax(0, 1fr) auto;
+      min-height: 0;
+    }
+    .storyboard-panel {
+      background: #fff;
+      border-top: 1px solid #d8e3ea;
+      max-height: 230px;
+      overflow: auto;
+      padding: 16px 22px 18px;
+    }
+    .storyboard-panel h2 {
+      font-size: 16px;
+      margin: 0 0 8px;
+    }
+    .storyboard-text {
+      color: #263f4d;
+      font-size: 14px;
+      line-height: 1.55;
+      margin: 0;
+      white-space: pre-wrap;
+    }
+    .storyboard-meta {
+      color: #718491;
+      font-size: 11px;
+      margin: 10px 0 0;
+    }
+    .review-panel {
+      background: #f8fafc;
+      border-left: 1px solid #d8e3ea;
+      overflow: auto;
+      padding: 20px;
+    }
+    .panel-tabs {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 4px;
+      margin-bottom: 16px;
+      padding: 4px;
+      border: 1px solid #d8e3ea;
+      border-radius: 8px;
+      background: #eef3f6;
+    }
+    .panel-tab {
+      min-height: 36px;
+      padding: 7px 8px;
+      border: 0;
+      border-radius: 6px;
+      color: #5f7380;
+      background: transparent;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .panel-tab.active {
+      color: #062d46;
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(6, 45, 70, 0.12);
+    }
+    .panel-section[hidden] {
+      display: none;
+    }
+    .editor-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .editor-toolbar h2 {
+      margin: 0;
+    }
+    .editor-actions {
+      display: flex;
+      gap: 6px;
+    }
+    .compact-button {
+      min-height: 34px;
+      padding: 7px 10px;
+      font-size: 12px;
+    }
+    .editor-save-state {
+      min-height: 18px;
+      margin: -4px 0 10px;
+      color: #5f7380;
+      font-size: 11px;
+    }
+    .editor-list {
+      display: grid;
+      gap: 6px;
+    }
+    .structure-row,
+    .target-row,
+    .step-row {
+      display: grid;
+      gap: 8px;
+      align-items: center;
+      padding: 9px;
+      border: 1px solid #d8e3ea;
+      border-radius: 7px;
+      background: #fff;
+    }
+    .structure-row {
+      grid-template-columns: minmax(0, 1fr) auto auto;
+    }
+    .structure-row.inherited-hidden {
+      opacity: 0.55;
+    }
+    .target-row,
+    .step-row {
+      grid-template-columns: minmax(0, 1fr) auto;
+      cursor: pointer;
+    }
+    .target-row.active,
+    .step-row.active {
+      border-color: #139ccb;
+      box-shadow: 0 0 0 2px rgba(19, 156, 203, 0.12);
+    }
+    .row-main {
+      min-width: 0;
+    }
+    .row-label,
+    .row-id {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .row-label {
+      color: #062d46;
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .row-id {
+      margin-top: 3px;
+      color: #718491;
+      font-family: Consolas, monospace;
+      font-size: 10px;
+    }
+    .row-toggle {
+      display: grid;
+      justify-items: center;
+      gap: 3px;
+      color: #718491;
+      font-size: 9px;
+      font-weight: 750;
+    }
+    .status-badge,
+    .action-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 22px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 800;
+    }
+    .status-badge {
+      border: 1px solid #cbd8e0;
+      color: #5f7380;
+      background: #eef3f6;
+    }
+    .action-badge.show { color: #166534; background: #dcfce7; }
+    .action-badge.hide { color: #9a3412; background: #ffedd5; }
+    .action-badge.draw { color: #075985; background: #e0f2fe; }
+    .action-badge.highlight { color: #6b21a8; background: #f3e8ff; }
+    .editor-empty {
+      margin: 8px 0;
+      color: #718491;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    .editor-hint {
+      margin: 8px 0 0;
+      color: #5f7380;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .editor-card {
+      margin-top: 12px;
+      padding: 12px;
+      border: 1px solid #d8e3ea;
+      border-radius: 8px;
+      background: #fff;
+    }
+    .editor-card h3 {
+      margin: 0 0 10px;
+      font-size: 14px;
+    }
+    .storyboard-detail {
+      display: grid;
+      gap: 10px;
+    }
+    .storyboard-field {
+      display: grid;
+      gap: 4px;
+    }
+    .storyboard-field dt {
+      color: #5f7380;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .storyboard-field dd {
+      margin: 0;
+      color: #263f4d;
+      font-size: 13px;
+      line-height: 1.45;
+      white-space: pre-wrap;
+    }
+    .storyboard-chip-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .storyboard-chip {
+      padding: 4px 7px;
+      border: 1px solid #cbd8e0;
+      border-radius: 999px;
+      color: #263f4d;
+      background: #eef3f6;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .storyboard-object {
+      padding: 9px;
+      border: 1px solid #d8e3ea;
+      border-radius: 7px;
+      background: #f8fafc;
+      font-family: Consolas, monospace;
+      font-size: 11px;
+      line-height: 1.45;
+      white-space: pre-wrap;
+      overflow: auto;
+    }
+    .storyboard-collapsible {
+      margin-top: 10px;
+      border: 1px solid #d8e3ea;
+      border-radius: 8px;
+      background: #f8fafc;
+    }
+    .storyboard-collapsible summary {
+      padding: 9px 10px;
+      color: #062d46;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 850;
+    }
+    .storyboard-collapsible summary:hover {
+      color: #139ccb;
+    }
+    .storyboard-collapsible-content {
+      display: grid;
+      gap: 10px;
+      padding: 0 10px 10px;
+    }
+    .editor-field {
+      display: grid;
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+    .editor-field label {
+      color: #5f7380;
+      font-size: 11px;
+      font-weight: 800;
+    }
+    .editor-field input,
+    .editor-field select,
+    .editor-field textarea {
+      width: 100%;
+      min-height: 36px;
+      padding: 7px 9px;
+      border: 1px solid #cbd8e0;
+      border-radius: 6px;
+      color: #062d46;
+      background: #fff;
+      font: inherit;
+    }
+    .editor-field textarea {
+      min-height: 72px;
+      resize: vertical;
+    }
+    .editor-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .spoken-selection {
+      max-height: 190px;
+      overflow: auto;
+      padding: 10px;
+      border: 1px solid #cbd8e0;
+      border-radius: 7px;
+      color: #263f4d;
+      background: #fff;
+      font-size: 13px;
+      line-height: 1.55;
+      user-select: text;
+      white-space: pre-wrap;
+    }
+    .spoken-trigger {
+      border-radius: 4px;
+      padding: 1px 3px;
+      background: rgba(49, 151, 199, 0.17);
+      color: #0f425b;
+      box-shadow: inset 0 -2px 0 rgba(49, 151, 199, 0.45);
+      cursor: pointer;
+    }
+    .spoken-trigger:hover,
+    .spoken-trigger.active {
+      background: rgba(49, 151, 199, 0.3);
+      box-shadow:
+        inset 0 -2px 0 rgba(49, 151, 199, 0.85),
+        0 0 0 2px rgba(49, 151, 199, 0.18);
+    }
+    .spoken-trigger.unmatched {
+      background: rgba(245, 158, 11, 0.18);
+      box-shadow: inset 0 -2px 0 rgba(245, 158, 11, 0.65);
+    }
+    .warning-list {
+      display: grid;
+      gap: 5px;
+      margin: 0 0 12px;
+      padding: 0;
+      list-style: none;
+    }
+    .warning-item {
+      padding: 7px 9px;
+      border-left: 3px solid #f2a93b;
+      color: #5f7380;
+      background: #fff8e8;
+      font-size: 11px;
+      line-height: 1.4;
+    }
+    .warning-item.info {
+      border-left-color: #139ccb;
+      background: #eef8fb;
+    }
+    .timeline-markers {
+      position: relative;
+      grid-column: 2;
+      height: 14px;
+      margin-top: -7px;
+    }
+    .timeline-marker {
+      position: absolute;
+      top: 0;
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+    }
+    .timeline-marker.show { background: #2aa876; }
+    .timeline-marker.hide { background: #f2a93b; }
+    .timeline-marker.draw { background: #139ccb; }
+    .timeline-marker.highlight { background: #8b5cf6; }
+    .review-panel h2 {
+      font-size: 18px;
+      margin: 0 0 8px;
+    }
+    .review-help {
+      color: #5f7380;
+      font-size: 13px;
+      line-height: 1.45;
+      margin: 0 0 18px;
+    }
+    .final-row {
+      align-items: flex-start;
+      display: flex;
+      font-weight: 750;
+      gap: 9px;
+      margin-bottom: 18px;
+    }
+    .final-row input {
+      margin-top: 3px;
+    }
+    .review-panel label[for="notes"],
+    .review-panel label[for="version-select"] {
+      display: block;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+    .version-select {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+    #notes {
+      border: 1px solid #cbd8e0;
+      border-radius: 8px;
+      font: inherit;
+      line-height: 1.45;
+      min-height: 230px;
+      padding: 10px;
+      resize: vertical;
+      width: 100%;
+    }
+    .review-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .review-status {
+      color: #5f7380;
+      font-size: 12px;
+      line-height: 1.4;
+      min-height: 34px;
+      margin: 10px 0 20px;
+    }
+    #notes[readonly] {
+      background: #eef3f6;
+      color: #263f4d;
+      cursor: default;
+    }
+    .danger-zone {
+      border-top: 1px solid #d8e3ea;
+      padding-top: 18px;
+    }
+    .danger {
+      background: #fff;
+      border-color: #fca5a5;
+      color: #b91c1c;
+      width: 100%;
+    }
+    .danger:hover:not(:disabled) {
+      background: #fef2f2;
+    }
+    .undo-toast {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: 420px;
+      padding: 12px 14px;
+      border: 1px solid #cbd8e0;
+      border-radius: 14px;
+      background: rgba(6, 45, 70, 0.96);
+      color: #fff;
+      box-shadow: 0 16px 40px rgba(6, 45, 70, 0.24);
+    }
+    .undo-toast[hidden] {
+      display: none;
+    }
+    .undo-toast button {
+      flex: 0 0 auto;
+      border-color: #8ed5eb;
+      color: #062d46;
+      background: #d9f4fb;
+    }
+    .undo-toast p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+    .canvas {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      min-width: 0;
+      min-height: 0;
+      align-items: center;
+      justify-content: center;
+    }
+    .preview {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: hidden;
+      border: 1px solid #cbd8e0;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 14px 36px rgba(6, 45, 70, 0.18);
+    }
+    .preview svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .preview.fit {
+      width: auto;
+      height: auto;
+    }
+    .preview.width {
+      width: auto;
+      height: auto;
+      max-height: none;
+    }
+    .preview.actual {
+      width: auto;
+      height: auto;
+      max-width: none;
+      max-height: none;
+    }
+    .empty {
+      color: #5f7380;
+      text-align: center;
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 10px 18px;
+      border-top: 1px solid #d8e3ea;
+      color: #5f7380;
+      background: #fff;
+      font-size: 13px;
+    }
+    kbd {
+      padding: 2px 6px;
+      border: 1px solid #cbd8e0;
+      border-bottom-width: 2px;
+      border-radius: 5px;
+      color: #062d46;
+      background: #f6f9fa;
+      font-family: inherit;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>SVG-Browser</h1>
+        <div class="count" id="count">SVGs werden gesucht…</div>
+        <div class="mode-switch" role="tablist" aria-label="Browser-Modus">
+          <button class="mode-button active" type="button" data-view-mode="svg">SVGs</button>
+          <button class="mode-button" type="button" data-view-mode="storyboard">Storyboard</button>
+        </div>
+        <input class="search" id="search" type="search" placeholder="Szene, Titel oder Pfad suchen">
+      </div>
+      <div class="list" id="list"></div>
+    </aside>
+
+    <main class="main" id="main">
+      <div class="toolbar">
+        <button class="nav-button" id="previous" type="button" title="Vorherige SVG">← Zurück</button>
+        <button class="nav-button" id="next" type="button" title="Nächste SVG">Weiter →</button>
+        <button class="nav-button" id="refresh" type="button" title="SVG-Liste neu laden">Aktualisieren</button>
+        <div class="current-title">
+          <strong id="title">Keine SVG ausgewählt</strong>
+          <span id="path"></span>
+        </div>
+        <select class="fit-select" id="fit" aria-label="Darstellungsgröße">
+          <option value="fit">Einpassen</option>
+          <option value="width">Breite</option>
+          <option value="actual">Originalgröße</option>
+        </select>
+        <a class="action-link" id="open" href="#" target="_blank" rel="noopener">Separat öffnen</a>
+      </div>
+
+      <div class="animation-bar">
+        <strong>Animationsvorschau</strong>
+        <button class="nav-button" id="animation-play" type="button" disabled>
+          Abspielen
+        </button>
+        <button class="nav-button" id="animation-reset" type="button" disabled>
+          Zurücksetzen
+        </button>
+        <label for="animation-delay">Pause</label>
+        <select class="fit-select" id="animation-delay">
+          <option value="500">0,5 s</option>
+          <option value="1000" selected>1,0 s</option>
+          <option value="1500">1,5 s</option>
+          <option value="2500">2,5 s</option>
+        </select>
+        <span class="animation-status" id="animation-status">
+          Für diese SVG ist keine Animation verfügbar.
+        </span>
+        <div class="animation-timeline">
+          <span class="timeline-time" id="timeline-current">0:00</span>
+          <input
+            id="animation-timeline"
+            type="range"
+            min="0"
+            max="1000"
+            value="0"
+            step="1"
+            aria-label="Animationsposition"
+            disabled
+          >
+          <span class="timeline-time" id="timeline-duration">0:00</span>
+          <div class="timeline-markers" id="timeline-markers"></div>
+          </div>
+        </div>
+
+        <section class="storyboard-page" id="storyboard-page" hidden>
+          <div class="storyboard-page-inner">
+            <div class="storyboard-page-title">
+              <div>
+                <h2 id="storyboard-page-title">Kein Storyboard ausgewählt</h2>
+                <p id="storyboard-page-meta">Wähle links eine Storyboard-Szene aus.</p>
+              </div>
+              <div class="storyboard-view-switch" aria-label="Storyboard-Ansicht">
+                <button class="storyboard-view-button active" data-storyboard-view="overview" type="button">
+                  Übersicht
+                </button>
+                <button class="storyboard-view-button" data-storyboard-view="detail" type="button">
+                  Szenendetail
+                </button>
+              </div>
+            </div>
+            <div class="storyboard-detail" id="storyboard-page-detail"></div>
+          </div>
+        </section>
+
+      <div class="workspace" id="workspace">
+        <div class="visual-column">
+          <div class="stage" id="stage">
+            <div class="canvas" id="canvas">
+              <div class="empty" id="empty">Noch keine SVG geladen.</div>
+              <div class="preview fit" id="preview" role="img" aria-label="" hidden></div>
+            </div>
+          </div>
+
+          <section class="storyboard-panel" aria-labelledby="storyboard-heading">
+            <h2 id="storyboard-heading">Gesprochener Text aus dem Storyboard</h2>
+            <p class="storyboard-text" id="storyboard-text">
+              Für diese SVG ist kein Storyboardtext hinterlegt.
+            </p>
+            <p class="storyboard-meta" id="storyboard-meta"></p>
+          </section>
+        </div>
+
+        <aside class="review-panel">
+            <div class="panel-tabs" role="tablist" aria-label="Arbeitsbereich">
+              <button class="panel-tab active" type="button" data-panel-tab="review">Review</button>
+              <button class="panel-tab" type="button" data-panel-tab="storyboard">Storyboard</button>
+              <button class="panel-tab" type="button" data-panel-tab="structure">SVG-Struktur</button>
+              <button class="panel-tab" type="button" data-panel-tab="animation">Animation</button>
+            </div>
+          <section class="panel-section" id="panel-review">
+          <h2>Review</h2>
+          <p class="review-help">
+            Finalisierte SVGs werden im Produktions-Workflow nicht mehr verändert.
+            Offene Notizen kann Codex später gezielt abarbeiten.
+          </p>
+
+          <label class="final-row">
+            <input id="final" type="checkbox">
+            <span>Als final markieren</span>
+          </label>
+
+          <label for="version-select">Dargestellte Version</label>
+          <select class="fit-select version-select" id="version-select" aria-label="Szenenversion auswählen">
+            <option value="">Aktueller Stand</option>
+          </select>
+
+          <label for="notes">Änderungsnotizen für Codex</label>
+          <textarea id="notes" placeholder="Was soll an dieser Szene noch angepasst werden?"></textarea>
+          <div class="review-actions">
+            <button class="nav-button" id="save-notes" type="button">Notizen speichern</button>
+          </div>
+          <p class="review-status" id="review-status"></p>
+
+          <div class="danger-zone">
+            <button class="nav-button danger" id="trash" type="button">
+              Szene in Papierkorb verschieben
+            </button>
+            </div>
+            </section>
+
+            <section class="panel-section" id="panel-storyboard" hidden>
+              <div class="editor-toolbar">
+                <h2>Storyboard</h2>
+              </div>
+              <p class="editor-empty" id="storyboard-empty" hidden>Für diese SVG ist kein strukturiertes Storyboard hinterlegt.</p>
+              <div class="storyboard-detail" id="storyboard-detail"></div>
+            </section>
+
+            <section class="panel-section" id="panel-structure" hidden>
+            <div class="editor-toolbar">
+              <h2>SVG-Struktur</h2>
+              <div class="editor-actions">
+                <button class="nav-button compact-button" id="structure-show-all" type="button">Alle Targets</button>
+                <button class="nav-button compact-button" id="save-animation-manifest" type="button">Speichern</button>
+              </div>
+            </div>
+            <p class="editor-save-state" id="editor-save-state"></p>
+            <div class="editor-list" id="structure-list"></div>
+            <p class="editor-empty" id="structure-empty" hidden>Keine steuerbaren SVG-IDs gefunden.</p>
+          </section>
+
+          <section class="panel-section" id="panel-animation" hidden>
+            <div class="editor-toolbar">
+              <h2>Animation</h2>
+              <div class="editor-actions">
+                <button class="nav-button compact-button" id="add-step" type="button">Step hinzufügen</button>
+                <button class="nav-button compact-button" id="save-animation-manifest-animation" type="button">Speichern</button>
+              </div>
+            </div>
+
+            <p class="editor-save-state" id="editor-save-state-animation"></p>
+            <ul class="warning-list" id="editor-warnings" hidden></ul>
+            <div class="editor-list" id="target-list"></div>
+            <p class="editor-empty" id="target-empty" hidden>Markiere in der SVG-Struktur zuerst sichtbare Animationstargets.</p>
+
+            <section class="editor-card" id="target-editor" hidden>
+              <h3>Target</h3>
+              <div class="editor-field">
+                <label for="target-label">Label</label>
+                <input id="target-label" type="text">
+              </div>
+              <div class="editor-grid">
+                <div class="editor-field">
+                  <label for="target-status">Status</label>
+                  <select id="target-status">
+                    <option value="needsReview">Noch offen</option>
+                    <option value="animated">Animiert</option>
+                    <option value="notAnimated">Immer sichtbar</option>
+                    <option value="ignored">Legacy: immer sichtbar</option>
+                    <option value="orphaned">SVG-ID fehlt</option>
+                  </select>
+                </div>
+                <div class="editor-field">
+                  <label for="target-confidence">Confidence</label>
+                  <select id="target-confidence">
+                    <option value="high">hoch</option>
+                    <option value="medium">mittel</option>
+                    <option value="low">niedrig</option>
+                  </select>
+                </div>
+              </div>
+            </section>
+
+            <section class="editor-card" id="steps-card" hidden>
+              <h3>Steps</h3>
+              <div class="editor-list" id="step-list"></div>
+            </section>
+
+            <section class="editor-card" id="step-editor" hidden>
+              <div class="editor-toolbar">
+                <h3>Aktiver Step</h3>
+                <button class="nav-button compact-button danger" id="delete-step" type="button">Löschen</button>
+              </div>
+              <div class="editor-grid">
+                <div class="editor-field">
+                  <label for="step-action">Action</label>
+                  <select id="step-action">
+                    <option value="show">show</option>
+                    <option value="hide">hide</option>
+                    <option value="highlight">highlight</option>
+                    <option value="draw">draw</option>
+                  </select>
+                </div>
+                <div class="editor-field">
+                  <label for="step-confidence">Confidence</label>
+                  <select id="step-confidence">
+                    <option value="high">hoch</option>
+                    <option value="medium">mittel</option>
+                    <option value="low">niedrig</option>
+                  </select>
+                </div>
+              </div>
+              <div class="editor-field">
+                <label for="step-source-text">sourceText</label>
+                <textarea id="step-source-text"></textarea>
+              </div>
+              <div class="editor-grid">
+                <div class="editor-field">
+                  <label for="step-occurrence">Vorkommen</label>
+                  <input id="step-occurrence" type="number" min="1" placeholder="automatisch">
+                </div>
+                <div class="editor-field">
+                  <label for="step-duration">Dauer in Frames</label>
+                  <input id="step-duration" type="number" min="1">
+                </div>
+                <div class="editor-field">
+                  <label for="step-offset">Y-Offset</label>
+                  <input id="step-offset" type="number">
+                </div>
+                <div class="editor-field">
+                  <label for="step-draw-style">Draw-Stil</label>
+                  <select id="step-draw-style">
+                    <option value="stroke">stroke</option>
+                    <option value="reveal">reveal</option>
+                  </select>
+                </div>
+              </div>
+              <div class="editor-field">
+                <label for="step-direction">Richtung</label>
+                <select id="step-direction">
+                  <option value="leftToRight">links nach rechts</option>
+                  <option value="rightToLeft">rechts nach links</option>
+                  <option value="topToBottom">oben nach unten</option>
+                  <option value="bottomToTop">unten nach oben</option>
+                </select>
+                </div>
+                <button class="nav-button compact-button" id="use-text-selection" type="button">Textauswahl übernehmen</button>
+                <p class="editor-hint">Markiere unten im Storyboardtext eine Wortfolge und übernimm sie hier als Trigger für den aktiven Step.</p>
+              </section>
+            </section>
+        </aside>
+      </div>
+
+      <div class="footer">
+        <span><kbd>←</kbd>/<kbd>→</kbd> oder <kbd>A</kbd>/<kbd>D</kbd> blättern · <kbd>F</kbd> Einpassen · <kbd>/</kbd> Suche</span>
+        <span id="position">0 / 0</span>
+      </div>
+    </main>
+  </div>
+
+  <div class="undo-toast" id="undo-toast" hidden>
+    <p id="undo-message"></p>
+    <button class="nav-button" id="undo-button" type="button">Rückgängig</button>
+  </div>
+
+  <script>
+    const state = {
+      all: [],
+      filtered: [],
+      selectedId: "",
+      viewMode: "svg",
+      storyboardSources: [],
+      storyboardScenes: [],
+      filteredStoryboards: [],
+      selectedStoryboardId: "",
+      storyboardPageView: "overview",
+      collapsedStoryboardGroups: {},
+      collapsedStoryboardOverviewModules: {},
+      notesDirty: false,
+      undoTrash: null,
+      undoTimer: null,
+      collapsedGroups: {},
+      animationManifest: null,
+      animationSceneId: "",
+      animationIndex: 0,
+      animationPlaying: false,
+      animationPaused: false,
+      animationToken: 0,
+      animationTime: 0,
+      animationDuration: 0,
+      animationTimeline: [],
+      animationFrame: 0,
+      animationLastTimestamp: 0,
+      svgReady: false,
+      svgWidth: 1920,
+      svgHeight: 1080,
+      previewSvg: null,
+      originalTargetStyles: new Map(),
+      panelTab: "review",
+      previewMode: "inspect",
+      animationInventory: [],
+      animationWarnings: [],
+      animationEditorReadOnly: true,
+      animationManifestExists: false,
+      animationEditorDirty: false,
+      activeTargetId: "",
+      activeStepIndex: -1,
+      inspectedTargetId: "",
+    };
+
+    const elements = {
+      list: document.querySelector("#list"),
+      count: document.querySelector("#count"),
+      search: document.querySelector("#search"),
+      previous: document.querySelector("#previous"),
+      next: document.querySelector("#next"),
+      refresh: document.querySelector("#refresh"),
+      title: document.querySelector("#title"),
+      path: document.querySelector("#path"),
+      main: document.querySelector("#main"),
+      modeButtons: [...document.querySelectorAll("[data-view-mode]")],
+      storyboardViewButtons: [...document.querySelectorAll("[data-storyboard-view]")],
+      versionSelect: document.querySelector("#version-select"),
+      fit: document.querySelector("#fit"),
+      open: document.querySelector("#open"),
+      preview: document.querySelector("#preview"),
+      canvas: document.querySelector("#canvas"),
+      empty: document.querySelector("#empty"),
+      position: document.querySelector("#position"),
+      stage: document.querySelector("#stage"),
+      final: document.querySelector("#final"),
+      notes: document.querySelector("#notes"),
+      saveNotes: document.querySelector("#save-notes"),
+      reviewStatus: document.querySelector("#review-status"),
+      trash: document.querySelector("#trash"),
+      storyboardText: document.querySelector("#storyboard-text"),
+      storyboardMeta: document.querySelector("#storyboard-meta"),
+      undoToast: document.querySelector("#undo-toast"),
+      undoMessage: document.querySelector("#undo-message"),
+      undoButton: document.querySelector("#undo-button"),
+      animationPlay: document.querySelector("#animation-play"),
+      animationReset: document.querySelector("#animation-reset"),
+      animationDelay: document.querySelector("#animation-delay"),
+      animationStatus: document.querySelector("#animation-status"),
+      animationTimeline: document.querySelector("#animation-timeline"),
+      timelineMarkers: document.querySelector("#timeline-markers"),
+      timelineCurrent: document.querySelector("#timeline-current"),
+      timelineDuration: document.querySelector("#timeline-duration"),
+      storyboardPage: document.querySelector("#storyboard-page"),
+      storyboardPageTitle: document.querySelector("#storyboard-page-title"),
+      storyboardPageMeta: document.querySelector("#storyboard-page-meta"),
+      storyboardPageDetail: document.querySelector("#storyboard-page-detail"),
+      workspace: document.querySelector("#workspace"),
+      panelTabs: [...document.querySelectorAll("[data-panel-tab]")],
+      panelReview: document.querySelector("#panel-review"),
+      panelStoryboard: document.querySelector("#panel-storyboard"),
+      panelStructure: document.querySelector("#panel-structure"),
+      panelAnimation: document.querySelector("#panel-animation"),
+      storyboardDetail: document.querySelector("#storyboard-detail"),
+      storyboardEmpty: document.querySelector("#storyboard-empty"),
+      structureList: document.querySelector("#structure-list"),
+      structureEmpty: document.querySelector("#structure-empty"),
+      structureShowAll: document.querySelector("#structure-show-all"),
+      saveAnimationManifest: document.querySelector("#save-animation-manifest"),
+      saveAnimationManifestAnimation: document.querySelector("#save-animation-manifest-animation"),
+      editorSaveState: document.querySelector("#editor-save-state"),
+      editorSaveStateAnimation: document.querySelector("#editor-save-state-animation"),
+      editorWarnings: document.querySelector("#editor-warnings"),
+      targetList: document.querySelector("#target-list"),
+      targetEmpty: document.querySelector("#target-empty"),
+      targetEditor: document.querySelector("#target-editor"),
+      targetLabel: document.querySelector("#target-label"),
+      targetStatus: document.querySelector("#target-status"),
+      targetConfidence: document.querySelector("#target-confidence"),
+      addStep: document.querySelector("#add-step"),
+      stepsCard: document.querySelector("#steps-card"),
+      stepList: document.querySelector("#step-list"),
+      stepEditor: document.querySelector("#step-editor"),
+      deleteStep: document.querySelector("#delete-step"),
+      stepAction: document.querySelector("#step-action"),
+      stepConfidence: document.querySelector("#step-confidence"),
+      stepSourceText: document.querySelector("#step-source-text"),
+      stepOccurrence: document.querySelector("#step-occurrence"),
+      stepDuration: document.querySelector("#step-duration"),
+      stepOffset: document.querySelector("#step-offset"),
+      stepDrawStyle: document.querySelector("#step-draw-style"),
+      stepDirection: document.querySelector("#step-direction"),
+      useTextSelection: document.querySelector("#use-text-selection"),
+      editorSpokenText: document.querySelector("#storyboard-text"),
+    };
+
+    function setPanelTab(tab) {
+      state.panelTab = ["review", "storyboard", "structure", "animation"].includes(tab)
+        ? tab
+        : "review";
+      elements.panelTabs.forEach((button) => {
+        button.classList.toggle(
+          "active",
+          button.dataset.panelTab === state.panelTab,
+        );
+      });
+      elements.panelReview.hidden = state.panelTab !== "review";
+      elements.panelStoryboard.hidden = state.panelTab !== "storyboard";
+      elements.panelStructure.hidden = state.panelTab !== "structure";
+      elements.panelAnimation.hidden = state.panelTab !== "animation";
+      elements.workspace.classList.toggle(
+        "editor-open",
+        state.panelTab !== "review",
+      );
+        state.previewMode = state.panelTab === "structure" ? "inspect" : state.previewMode;
+        applyPreviewSize();
+        if (state.panelTab === "structure") {
+          renderStoryboard(selectedSvg());
+          renderStructureEditor();
+        } else if (state.panelTab === "storyboard") {
+          renderStoryboard(selectedSvg());
+          renderStoryboardDetail();
+        } else if (state.panelTab === "animation") {
+          renderAnimationEditor();
+        } else {
+          renderStoryboard(selectedSvg());
+        }
+      }
+
+    function setEditorSaveState(message, isError = false) {
+      for (const status of [
+        elements.editorSaveState,
+        elements.editorSaveStateAnimation,
+      ]) {
+        status.textContent = message;
+        status.style.color = isError ? "#b91c1c" : "";
+      }
+    }
+
+    function markAnimationEditorDirty() {
+      if (state.animationEditorReadOnly) return;
+      state.animationEditorDirty = true;
+      setEditorSaveState("Ungespeichert");
+      renderAnimationControls();
+    }
+
+    function animationTarget(targetId) {
+      return (state.animationManifest?.targets || []).find(
+        (target) => target.targetId === targetId,
+      ) || null;
+    }
+
+    function ensureAnimationTarget(itemOrId) {
+      if (!state.animationManifest) return null;
+      const targetId =
+        typeof itemOrId === "string" ? itemOrId : itemOrId?.targetId;
+      if (!targetId) return null;
+      let target = animationTarget(targetId);
+      if (target) return target;
+      const item =
+        typeof itemOrId === "object"
+          ? itemOrId
+          : state.animationInventory.find((entry) => entry.targetId === targetId);
+      target = {
+        targetId,
+        label: item?.label || targetId.replace(/[_-]+/g, " "),
+        status: "needsReview",
+        render: true,
+        visibleInEditor: false,
+        confidence: "medium",
+      };
+      state.animationManifest.targets.push(target);
+      return target;
+    }
+
+    function stepsForTarget(targetId) {
+      return (state.animationManifest?.steps || [])
+        .map((step, index) => ({ step, index }))
+        .filter((entry) => entry.step.targetId === targetId);
+    }
+
+    function selectedEditorTarget() {
+      return animationTarget(state.activeTargetId);
+    }
+
+    function selectedEditorStep() {
+      return state.animationManifest?.steps?.[state.activeStepIndex] || null;
+    }
+
+    function selectInspectedTarget(targetId) {
+      const previous = state.previewSvg?.querySelector(
+        '[data-editor-selected="true"]',
+      );
+      previous?.removeAttribute("data-editor-selected");
+      state.inspectedTargetId = targetId || "";
+      if (!targetId) return;
+      const target = state.previewSvg?.querySelector(`#${CSS.escape(targetId)}`);
+      target?.setAttribute("data-editor-selected", "true");
+    }
+
+    function selectEditorTarget(targetId, inspect = true) {
+      state.activeTargetId = targetId || "";
+      const firstStep = stepsForTarget(state.activeTargetId)[0];
+      state.activeStepIndex = firstStep ? firstStep.index : -1;
+      if (inspect) {
+        state.previewMode = "inspect";
+        restoreFullScene();
+        selectInspectedTarget(state.activeTargetId);
+      }
+      renderAnimationEditor();
+    }
+
+    function isTargetEffectivelyRendered(item) {
+      let current = item;
+      while (current) {
+        const target = animationTarget(current.targetId);
+        if (target?.render === false) return false;
+        current = current.parentTargetId
+          ? state.animationInventory.find(
+              (entry) => entry.targetId === current.parentTargetId,
+            )
+          : null;
+      }
+      return true;
+    }
+
+    function updateStructureTarget(item, field, value) {
+      if (state.animationEditorReadOnly) return;
+      const target = ensureAnimationTarget(item);
+      const targetSteps = stepsForTarget(item.targetId);
+
+      if (
+        value === false &&
+        targetSteps.length &&
+        !window.confirm(
+          `${item.label} hat ${targetSteps.length} Step(s). Diese Steps ebenfalls löschen?`,
+        )
+      ) {
+        renderStructureEditor();
+        return;
+      }
+
+      if (value === false && targetSteps.length) {
+        const removed = new Set(targetSteps.map((entry) => entry.index));
+        state.animationManifest.steps = state.animationManifest.steps.filter(
+          (_, index) => !removed.has(index),
+        );
+        state.activeStepIndex = -1;
+      }
+
+      target[field] = value;
+      if (field === "render" && value === false) {
+        target.visibleInEditor = false;
+        target.status = target.status === "animated" ? "notAnimated" : target.status;
+      }
+      if (field === "visibleInEditor" && value === true) {
+        target.render = true;
+      }
+      markAnimationEditorDirty();
+      applyManifestRenderState();
+      renderStructureEditor();
+      renderAnimationEditor();
+    }
+
+    function renderStructureEditor() {
+      elements.structureList.replaceChildren();
+      const inventory = state.animationInventory || [];
+      elements.structureEmpty.hidden = inventory.length > 0;
+      elements.structureShowAll.disabled =
+        state.animationEditorReadOnly || !inventory.length;
+      elements.saveAnimationManifest.disabled =
+        state.animationEditorReadOnly || !state.animationManifest;
+
+      for (const item of inventory) {
+        const target = animationTarget(item.targetId);
+        const effectiveRendered = isTargetEffectivelyRendered(item);
+        const row = document.createElement("div");
+        row.className = `structure-row${effectiveRendered ? "" : " inherited-hidden"}`;
+        row.style.marginLeft = `${Math.min(item.depth || 0, 5) * 12}px`;
+        row.addEventListener("mouseenter", () => selectInspectedTarget(item.targetId));
+        row.addEventListener("mouseleave", () => selectInspectedTarget(""));
+        row.addEventListener("click", () => selectEditorTarget(item.targetId));
+
+        const main = document.createElement("span");
+        main.className = "row-main";
+        const label = document.createElement("span");
+        label.className = "row-label";
+        label.textContent = item.label;
+        const id = document.createElement("span");
+        id.className = "row-id";
+        id.textContent = `${item.targetId} · ${item.tagName}`;
+        main.append(label, id);
+
+        const editorToggle = document.createElement("label");
+        editorToggle.className = "row-toggle";
+        const editorInput = document.createElement("input");
+        editorInput.type = "checkbox";
+        editorInput.checked = target?.visibleInEditor === true;
+        editorInput.disabled =
+          state.animationEditorReadOnly || !effectiveRendered;
+        editorInput.addEventListener("click", (event) => event.stopPropagation());
+        editorInput.addEventListener("change", () =>
+          updateStructureTarget(item, "visibleInEditor", editorInput.checked),
+        );
+        editorToggle.append(editorInput, document.createTextNode("Editor"));
+
+        const renderToggle = document.createElement("label");
+        renderToggle.className = "row-toggle";
+        const renderInput = document.createElement("input");
+        renderInput.type = "checkbox";
+        renderInput.checked = target?.render !== false;
+        renderInput.disabled = state.animationEditorReadOnly;
+        renderInput.addEventListener("click", (event) => event.stopPropagation());
+        renderInput.addEventListener("change", () =>
+          updateStructureTarget(item, "render", renderInput.checked),
+        );
+        renderToggle.append(renderInput, document.createTextNode("Render"));
+
+        row.append(main, editorToggle, renderToggle);
+        elements.structureList.append(row);
+      }
+    }
+
+    function normalizedWordToken(token) {
+      return String(token || "")
+        .toLocaleLowerCase("de")
+        .replace(/ä/g, "ae")
+        .replace(/ö/g, "oe")
+        .replace(/ü/g, "ue")
+        .replace(/ß/g, "ss")
+        .normalize("NFD")
+        .replace(/\p{M}+/gu, "");
+    }
+
+    function wordTokens(text) {
+      const tokens = [];
+      const pattern = /\{\{pause:[^}]+\}\}|[\p{L}\p{N}]+/giu;
+      for (const match of String(text || "").matchAll(pattern)) {
+        if (match[0].toLowerCase().startsWith("{{pause:")) continue;
+        tokens.push({
+          raw: match[0],
+          normalized: normalizedWordToken(match[0]),
+          index: match.index,
+          end: match.index + match[0].length,
+        });
+      }
+      return tokens;
+    }
+
+    function sourceTextMatches(sourceText, occurrence = null) {
+      const spoken = wordTokens(selectedSvg()?.storyboard?.spokenText || "");
+      const source = wordTokens(sourceText).map((token) => token.normalized);
+      if (!source.length) return [];
+      const matches = [];
+      for (let start = 0; start <= spoken.length - source.length; start += 1) {
+        if (
+          source.every(
+            (token, offset) => spoken[start + offset].normalized === token,
+          )
+        ) {
+          matches.push(start);
+        }
+      }
+      if (occurrence !== null && occurrence !== undefined) {
+        const occurrenceIndex = Number(occurrence) - 1;
+        return Number.isInteger(occurrenceIndex) &&
+          matches[occurrenceIndex] !== undefined
+          ? [matches[occurrenceIndex]]
+          : [];
+      }
+      return matches;
+    }
+
+    function clientAnimationWarnings() {
+      const warnings = [...(state.animationWarnings || [])];
+      for (const step of state.animationManifest?.steps || []) {
+        if (!step.sourceText?.trim()) continue;
+        const matches = sourceTextMatches(step.sourceText, step.occurrence);
+        if (!matches.length) {
+          warnings.push({
+            level: "warning",
+            message: `Step ${step.stepId}: sourceText kommt im Sprechertext nicht vor.`,
+          });
+        } else if (matches.length > 1 && !step.occurrence) {
+          warnings.push({
+            level: "warning",
+            message: `Step ${step.stepId}: sourceText ist mehrfach vorhanden; occurrence fehlt.`,
+          });
+        }
+      }
+      return warnings;
+    }
+
+    function renderEditorWarnings() {
+      elements.editorWarnings.replaceChildren();
+      const warnings = clientAnimationWarnings();
+      elements.editorWarnings.hidden = !warnings.length;
+      warnings.slice(0, 12).forEach((warning) => {
+        const item = document.createElement("li");
+        item.className = `warning-item${warning.level === "info" ? " info" : ""}`;
+        item.textContent = warning.message;
+        elements.editorWarnings.append(item);
+      });
+    }
+
+    function renderTargetList() {
+      elements.targetList.replaceChildren();
+      const targets = (state.animationManifest?.targets || []).filter(
+        (target) => target.render !== false && target.visibleInEditor !== false,
+      );
+      elements.targetEmpty.hidden = targets.length > 0;
+      elements.addStep.disabled =
+        state.animationEditorReadOnly || !selectedEditorTarget();
+
+      for (const target of targets) {
+        const row = document.createElement("div");
+        row.className = `target-row${target.targetId === state.activeTargetId ? " active" : ""}`;
+        row.addEventListener("mouseenter", () => selectInspectedTarget(target.targetId));
+        row.addEventListener("mouseleave", () => selectInspectedTarget(""));
+        row.addEventListener("click", () => selectEditorTarget(target.targetId));
+
+        const main = document.createElement("span");
+        main.className = "row-main";
+        const label = document.createElement("span");
+        label.className = "row-label";
+        label.textContent = target.label || target.targetId;
+        const id = document.createElement("span");
+        id.className = "row-id";
+        id.textContent = `${target.targetId} · ${stepsForTarget(target.targetId).length} Step(s)`;
+        main.append(label, id);
+        const badge = document.createElement("span");
+        badge.className = "status-badge";
+        badge.textContent = target.status;
+        row.append(main, badge);
+        elements.targetList.append(row);
+      }
+    }
+
+    function renderTargetEditor() {
+      const target = selectedEditorTarget();
+      elements.targetEditor.hidden = !target;
+      elements.stepsCard.hidden = !target;
+      if (!target) return;
+      elements.targetLabel.value = target.label || "";
+      elements.targetStatus.value = target.status || "needsReview";
+      elements.targetConfidence.value = target.confidence || "medium";
+      elements.targetLabel.disabled = state.animationEditorReadOnly;
+      elements.targetStatus.disabled =
+        state.animationEditorReadOnly || target.status === "orphaned";
+      elements.targetConfidence.disabled = state.animationEditorReadOnly;
+    }
+
+    function renderStepList() {
+      elements.stepList.replaceChildren();
+      const entries = stepsForTarget(state.activeTargetId);
+      for (const { step, index } of entries) {
+        const row = document.createElement("div");
+        row.className = `step-row${index === state.activeStepIndex ? " active" : ""}`;
+        row.addEventListener("click", () => {
+          state.activeStepIndex = index;
+          state.previewMode = "timeline";
+          renderAnimationEditor();
+          const segment = state.animationTimeline.find(
+            (entry) => entry.originalIndex === index,
+          );
+          if (segment) renderTimelineState(segment.start);
+        });
+        const main = document.createElement("span");
+        main.className = "row-main";
+        const label = document.createElement("span");
+        label.className = "row-label";
+        label.textContent = step.sourceText || `Step ${step.stepId}`;
+        const id = document.createElement("span");
+        id.className = "row-id";
+        id.textContent = step.stepId;
+        main.append(label, id);
+        const badge = document.createElement("span");
+        badge.className = `action-badge ${step.action}`;
+        badge.textContent = step.action;
+        row.append(main, badge);
+        elements.stepList.append(row);
+      }
+    }
+
+    function renderStepEditor() {
+      const step = selectedEditorStep();
+      elements.stepEditor.hidden = !step;
+      if (!step) return;
+      elements.stepAction.value = step.action || "show";
+      elements.stepConfidence.value = step.confidence || "medium";
+      elements.stepSourceText.value = step.sourceText || "";
+      elements.stepOccurrence.value = step.occurrence || "";
+      elements.stepDuration.value =
+        step.durFrames ?? step.enterFrames ?? step.exitFrames ?? "";
+      elements.stepOffset.value =
+        step.action === "hide" ? step.toY ?? "" : step.fromY ?? "";
+      elements.stepDrawStyle.value = step.drawStyle || "stroke";
+      elements.stepDirection.value = step.direction || "leftToRight";
+      [
+        elements.stepAction,
+        elements.stepConfidence,
+        elements.stepSourceText,
+        elements.stepOccurrence,
+        elements.stepDuration,
+        elements.stepOffset,
+        elements.stepDrawStyle,
+        elements.stepDirection,
+        elements.deleteStep,
+        elements.useTextSelection,
+      ].forEach((element) => {
+        element.disabled = state.animationEditorReadOnly;
+      });
+    }
+
+    function spokenTriggerRanges() {
+      const spokenText = selectedSvg()?.storyboard?.spokenText || "";
+      const spoken = wordTokens(spokenText);
+      const ranges = [];
+      for (const { step, originalIndex, matched } of orderedAnimationSteps()) {
+        if (!matched || !step.sourceText?.trim()) continue;
+        const sourceLength = wordTokens(step.sourceText).length;
+        if (!sourceLength) continue;
+        for (const wordIndex of sourceTextMatches(step.sourceText, step.occurrence)) {
+          const first = spoken[wordIndex];
+          const last = spoken[wordIndex + sourceLength - 1];
+          if (!first || !last) continue;
+          ranges.push({
+            start: first.index,
+            end: last.end,
+            step,
+            originalIndex,
+            active: originalIndex === state.activeStepIndex,
+          });
+        }
+      }
+      return ranges
+        .sort((left, right) => {
+          if (left.active !== right.active) return left.active ? -1 : 1;
+          return left.start - right.start || right.end - left.end;
+        })
+        .filter((range, index, sorted) => {
+          const earlier = sorted.slice(0, index);
+          return !earlier.some(
+            (item) => range.start < item.end && range.end > item.start,
+          );
+        })
+        .sort((left, right) => left.start - right.start);
+    }
+
+    function selectStepFromTextTrigger(stepIndex) {
+      const step = state.animationManifest?.steps?.[stepIndex];
+      if (!step) return;
+      state.activeTargetId = step.targetId;
+      state.activeStepIndex = stepIndex;
+      state.previewMode = "timeline";
+      renderAnimationEditor();
+      const segment = state.animationTimeline.find(
+        (entry) => entry.originalIndex === stepIndex,
+      );
+      if (segment) renderTimelineState(segment.start);
+    }
+
+    function renderSpokenTextTriggers() {
+      const spokenText = selectedSvg()?.storyboard?.spokenText || "";
+      elements.editorSpokenText.replaceChildren();
+      if (!spokenText) {
+        elements.editorSpokenText.textContent =
+          "Kein gesprochener Text hinterlegt.";
+        return;
+      }
+
+      const ranges = spokenTriggerRanges();
+      let cursor = 0;
+      for (const range of ranges) {
+        if (range.start > cursor) {
+          elements.editorSpokenText.append(
+            document.createTextNode(spokenText.slice(cursor, range.start)),
+          );
+        }
+        const trigger = document.createElement("span");
+        trigger.className = `spoken-trigger${range.active ? " active" : ""}`;
+        trigger.textContent = spokenText.slice(range.start, range.end);
+        trigger.title = `${range.step.action} · ${range.step.targetId}`;
+        trigger.tabIndex = 0;
+        trigger.addEventListener("click", () => {
+          const selection = window.getSelection();
+          if (selection && !selection.isCollapsed) return;
+          selectStepFromTextTrigger(range.originalIndex);
+        });
+        trigger.addEventListener("keydown", (event) => {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          selectStepFromTextTrigger(range.originalIndex);
+        });
+        elements.editorSpokenText.append(trigger);
+        cursor = range.end;
+      }
+      if (cursor < spokenText.length) {
+        elements.editorSpokenText.append(
+          document.createTextNode(spokenText.slice(cursor)),
+        );
+      }
+    }
+
+    function renderAnimationEditor() {
+      if (state.panelTab === "animation") {
+        renderSpokenTextTriggers();
+      }
+      renderEditorWarnings();
+      renderTargetList();
+      renderTargetEditor();
+      renderStepList();
+      renderStepEditor();
+      if (state.animationEditorReadOnly) {
+        setEditorSaveState("Schreibgeschützte Version");
+      } else if (!state.animationEditorDirty) {
+        setEditorSaveState(
+          state.animationManifestExists ? "Gespeichert" : "Noch kein Manifest gespeichert",
+        );
+      }
+    }
+
+    function applyManifestRenderState() {
+      if (!state.previewSvg) return;
+      for (const target of state.animationManifest?.targets || []) {
+        const element = state.previewSvg.querySelector(
+          `#${CSS.escape(target.targetId)}`,
+        );
+        if (!element) continue;
+        element.style.display = target.render === false ? "none" : "";
+      }
+    }
+
+    function orderedAnimationSteps() {
+      const spokenWordCount = wordTokens(
+        selectedSvg()?.storyboard?.spokenText || "",
+      ).length;
+      return (state.animationManifest?.steps || [])
+        .map((step, originalIndex) => {
+          const matches = sourceTextMatches(step.sourceText, step.occurrence);
+          return {
+            step,
+            originalIndex,
+            wordIndex: matches.length ? matches[0] : spokenWordCount + originalIndex,
+            matched: matches.length > 0,
+          };
+        })
+        .sort(
+          (left, right) =>
+            left.wordIndex - right.wordIndex ||
+            left.originalIndex - right.originalIndex,
+        );
+    }
+
+    function displayName(svg) {
+      if (svg.sceneId && svg.isVersionSnapshot) {
+        return `${svg.sceneId} · ${versionLabel(svg)}`;
+      }
+      if (svg.sceneId) {
+        return svg.sceneId;
+      }
+      return svg.title || svg.fileName;
+    }
+
+    function sidebarActiveId() {
+      const selected = selectedSvg();
+      if (!selected) {
+        return "";
+      }
+      if (!selected.isVersionSnapshot) {
+        return selected.id;
+      }
+      const current = sceneFamily(selected).find((entry) => !entry.isVersionSnapshot);
+      return current?.id || selected.id;
+    }
+
+    function versionLabel(svg) {
+      if (!svg?.isVersionSnapshot) {
+        return "Aktueller Stand";
+      }
+      if (svg.version?.label) {
+        return svg.version.label;
+      }
+      if (svg.version?.created_at) {
+        return `Version ${formatReviewTimestamp(svg.version.created_at)}`;
+      }
+      return `Version ${svg.versionId || ""}`.trim();
+    }
+
+    function sceneFamily(svg) {
+      if (!svg?.sceneId) {
+        return [];
+      }
+      return state.all.filter((entry) => entry.sceneId === svg.sceneId);
+    }
+
+    function renderVersionSelector(svg = selectedSvg()) {
+      const family = sceneFamily(svg);
+      elements.versionSelect.replaceChildren();
+
+      if (!svg?.sceneId) {
+        const option = document.createElement("option");
+        option.value = svg?.id || "";
+        option.textContent = "Aktueller Stand";
+        elements.versionSelect.append(option);
+        elements.versionSelect.value = svg?.id || "";
+        elements.versionSelect.disabled = true;
+        return;
+      }
+
+      for (const entry of family) {
+        const option = document.createElement("option");
+        option.value = entry.id;
+        option.textContent = entry.isVersionSnapshot
+          ? versionLabel(entry)
+          : "Aktueller Stand";
+        elements.versionSelect.append(option);
+      }
+
+      elements.versionSelect.disabled = family.length <= 1;
+      elements.versionSelect.value = svg.id;
+    }
+
+    function selectedIndex() {
+      if (state.viewMode === "storyboard") {
+        return state.filteredStoryboards.findIndex(
+          (scene) => scene.id === state.selectedStoryboardId,
+        );
+      }
+      return state.filtered.findIndex((svg) => svg.id === sidebarActiveId());
+    }
+
+    function updateNavigation() {
+      const index = selectedIndex();
+      const total =
+        state.viewMode === "storyboard"
+          ? state.filteredStoryboards.length
+          : state.filtered.length;
+      elements.previous.disabled = index <= 0;
+      elements.next.disabled = index < 0 || index >= total - 1;
+      elements.position.textContent =
+        index >= 0 ? `${index + 1} / ${total}` : `0 / ${total}`;
+    }
+
+    function isGroupCollapsed(group) {
+      return state.collapsedGroups[group] === true;
+    }
+
+    function toggleGroup(group) {
+      state.collapsedGroups[group] = !isGroupCollapsed(group);
+      renderList();
+    }
+
+    function isStoryboardGroupCollapsed(group) {
+      return state.collapsedStoryboardGroups[group] === true;
+    }
+
+    function toggleStoryboardGroup(group) {
+      state.collapsedStoryboardGroups[group] = !isStoryboardGroupCollapsed(group);
+      renderStoryboardList();
+    }
+
+    function storyboardDisplayName(scene) {
+      const order = Number.isInteger(scene.order)
+        ? String(scene.order).padStart(3, "0")
+        : scene.sceneId || "";
+      return [order, scene.title || scene.sceneId || "Unbenannte Szene"]
+        .filter(Boolean)
+        .join(" · ");
+    }
+
+    function storyboardOrderLabel(scene) {
+      if (Number.isInteger(scene.order)) return String(scene.order).padStart(3, "0");
+      const match = String(scene.sceneId || "").match(/(\d+)/);
+      return match ? match[1].padStart(3, "0") : scene.sceneId || "";
+    }
+
+    function storyboardStatusClass(status) {
+      const normalized = String(status || "").toLowerCase();
+      return ["draft", "review", "approved", "final", "archived"].includes(normalized)
+        ? normalized
+        : "";
+    }
+
+    function storyboardSourceLabel(scene) {
+      return scene.courseId || scene.sourceTitle || scene.source || "Storyboard";
+    }
+
+    function storyboardModuleCode(scene) {
+      const raw = scene.module?.id || scene.topicId || "";
+      const match = String(raw).match(/(\d+)/);
+      return match ? `M${match[1].padStart(2, "0")}` : raw || "Modul";
+    }
+
+    function storyboardNodeLabel(item, fallback = "") {
+      if (!item) return fallback;
+      return [item.id, item.title].filter(Boolean).join(" · ") || fallback;
+    }
+
+    function storyboardStructureKey(scene, key) {
+      const item = scene[key] || {};
+      return [
+        scene.source || "",
+        key,
+        item.id || "",
+        item.title || "",
+      ].join("::");
+    }
+
+    function appendStoryboardSourceLabel(label) {
+      const source = document.createElement("div");
+      source.className = "storyboard-source-label";
+      source.textContent = label;
+      elements.list.append(source);
+    }
+
+    function appendStoryboardSidebarNode(kind, title, className) {
+      const node = document.createElement("div");
+      node.className = `storyboard-node ${className}`;
+      const main = document.createElement("span");
+      main.className = "storyboard-node-main";
+      const kindLabel = document.createElement("span");
+      kindLabel.className = "storyboard-node-kind";
+      kindLabel.textContent = kind;
+      const titleLabel = document.createElement("span");
+      titleLabel.className = "storyboard-node-title";
+      titleLabel.textContent = title;
+      main.append(kindLabel, titleLabel);
+      node.append(main);
+      elements.list.append(node);
+      return node;
+    }
+
+    function renderStoryboardList() {
+      elements.list.replaceChildren();
+      if (!state.filteredStoryboards.length) {
+        const empty = document.createElement("p");
+        empty.className = "editor-empty";
+        empty.textContent = "Keine Storyboard-Szenen gefunden.";
+        elements.list.append(empty);
+        elements.count.textContent =
+          `0 von ${state.storyboardScenes.length} Storyboard-Szenen`;
+        updateNavigation();
+        return;
+      }
+
+      const moduleCounts = new Map();
+      for (const scene of state.filteredStoryboards) {
+        const moduleKey = storyboardStructureKey(scene, "module");
+        moduleCounts.set(moduleKey, (moduleCounts.get(moduleKey) || 0) + 1);
+      }
+
+      let previousSource = "";
+      let previousModule = "";
+      let previousChapter = "";
+      let previousLesson = "";
+
+      for (const scene of state.filteredStoryboards) {
+        const sourceLabel = storyboardSourceLabel(scene);
+        if (sourceLabel !== previousSource) {
+          appendStoryboardSourceLabel(sourceLabel);
+          previousSource = sourceLabel;
+          previousModule = "";
+          previousChapter = "";
+          previousLesson = "";
+        }
+
+        const moduleKey = storyboardStructureKey(scene, "module");
+        if (moduleKey !== previousModule) {
+          const heading = document.createElement("button");
+          heading.type = "button";
+          heading.className =
+            `storyboard-node storyboard-module-node${isStoryboardGroupCollapsed(moduleKey) ? " collapsed" : ""}`;
+          heading.setAttribute(
+            "aria-expanded",
+            String(!isStoryboardGroupCollapsed(moduleKey)),
+          );
+          heading.addEventListener("click", () => toggleStoryboardGroup(moduleKey));
+
+          const main = document.createElement("span");
+          main.className = "storyboard-node-main";
+          const kind = document.createElement("span");
+          kind.className = "storyboard-node-kind";
+          kind.textContent = `${storyboardModuleCode(scene)} · ${moduleCounts.get(moduleKey)} Szenen`;
+          const title = document.createElement("span");
+          title.className = "storyboard-node-title";
+          title.textContent = scene.module?.title || storyboardNodeLabel(scene.module, "Modul");
+          main.append(kind, title);
+
+          const caret = document.createElement("span");
+          caret.className = "group-caret";
+          caret.textContent = "▾";
+
+          heading.append(main, caret);
+          elements.list.append(heading);
+          previousModule = moduleKey;
+          previousChapter = "";
+          previousLesson = "";
+        }
+
+        if (isStoryboardGroupCollapsed(moduleKey)) continue;
+
+        const chapterKey = storyboardStructureKey(scene, "chapter");
+        if (chapterKey !== previousChapter) {
+          appendStoryboardSidebarNode(
+            "Kapitel",
+            storyboardNodeLabel(scene.chapter, "Ohne Kapitel"),
+            "storyboard-chapter-node",
+          );
+          previousChapter = chapterKey;
+          previousLesson = "";
+        }
+
+        const lessonKey = storyboardStructureKey(scene, "lesson");
+        if (lessonKey !== previousLesson) {
+          appendStoryboardSidebarNode(
+            "Lektion",
+            storyboardNodeLabel(scene.lesson, "Ohne Lektion"),
+            "storyboard-lesson-node",
+          );
+          previousLesson = lessonKey;
+        }
+
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className =
+          `item storyboard-scene-item${scene.id === state.selectedStoryboardId ? " active" : ""}`;
+        button.dataset.id = scene.id;
+
+        const number = document.createElement("span");
+        number.className = "storyboard-scene-number";
+        number.textContent = storyboardOrderLabel(scene);
+
+        const title = document.createElement("span");
+        title.className = "storyboard-scene-title";
+        title.textContent = scene.title || scene.sceneId || "Unbenannte Szene";
+
+        const status = document.createElement("span");
+        status.className =
+          `storyboard-status-dot ${storyboardStatusClass(scene.status || scene.reviewStatus)}`;
+        status.title = scene.status || scene.reviewStatus || "kein Status";
+
+        button.append(number, title, status);
+        button.addEventListener("click", () => selectStoryboardScene(scene.id));
+        elements.list.append(button);
+      }
+
+      elements.count.textContent =
+        `${state.filteredStoryboards.length} von ${state.storyboardScenes.length} Storyboard-Szenen`;
+      updateNavigation();
+    }
+
+    function renderList() {
+      if (state.viewMode === "storyboard") {
+        renderStoryboardList();
+        return;
+      }
+      elements.list.replaceChildren();
+      let previousGroup = "";
+
+      for (const svg of state.filtered) {
+        if (svg.group !== previousGroup) {
+          const heading = document.createElement("button");
+          heading.type = "button";
+          heading.className = `group${isGroupCollapsed(svg.group) ? " collapsed" : ""}`;
+          heading.setAttribute("aria-expanded", String(!isGroupCollapsed(svg.group)));
+          heading.addEventListener("click", () => toggleGroup(svg.group));
+
+          const label = document.createElement("span");
+          label.className = "group-label";
+          label.textContent = svg.group;
+
+          const caret = document.createElement("span");
+          caret.className = "group-caret";
+          caret.textContent = "▾";
+
+          heading.append(label, caret);
+          elements.list.append(heading);
+          previousGroup = svg.group;
+        }
+
+        if (isGroupCollapsed(svg.group)) {
+          continue;
+        }
+
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = `item${svg.id === sidebarActiveId() ? " active" : ""}`;
+        button.dataset.id = svg.id;
+
+        const title = document.createElement("span");
+        title.className = "item-title";
+        title.textContent = displayName(svg);
+
+        const itemPath = document.createElement("span");
+        itemPath.className = "item-path";
+        itemPath.textContent = svg.title || svg.path;
+
+        const badges = document.createElement("span");
+        badges.className = "item-badges";
+        if (svg.review?.final) {
+          const finalBadge = document.createElement("span");
+          finalBadge.className = "badge final";
+          finalBadge.textContent = "FINAL";
+          badges.append(finalBadge);
+        }
+        if (svg.review?.notes_status === "open") {
+          const notesBadge = document.createElement("span");
+          notesBadge.className = "badge notes";
+          notesBadge.textContent = "NOTIZEN";
+          badges.append(notesBadge);
+        }
+
+        button.append(title, itemPath);
+        if (badges.childElementCount) button.append(badges);
+        button.addEventListener("click", () => selectSvg(svg.id));
+        elements.list.append(button);
+      }
+
+      const sidebarTotal = state.all.filter((svg) => !svg.isVersionSnapshot).length;
+      elements.count.textContent = `${state.filtered.length} von ${sidebarTotal} SVGs`;
+      updateNavigation();
+    }
+
+    async function selectSvg(id) {
+      if (id === state.selectedId) return;
+      if (
+        state.viewMode === "svg" &&
+        (state.notesDirty || state.animationEditorDirty) &&
+        state.selectedId &&
+        id !== state.selectedId &&
+        !window.confirm("Ungespeicherte Änderungen verwerfen und zu einer anderen SVG wechseln?")
+      ) {
+        return;
+      }
+      const svg = state.all.find((entry) => entry.id === id);
+      if (!svg) return;
+
+      state.collapsedGroups[svg.group] = false;
+      stopAnimationPreview();
+      state.selectedId = svg.id;
+      state.notesDirty = false;
+      state.svgReady = false;
+      elements.empty.textContent = "SVG und eingebettete Bilder werden geladen…";
+      elements.title.textContent = svg.title || displayName(svg);
+      elements.path.textContent = svg.path;
+      elements.open.href = svg.url;
+      elements.stage.scrollTo({ top: 0, left: 0 });
+      renderVersionSelector(svg);
+      renderStoryboard(svg);
+      renderReview(svg);
+      if (state.panelTab === "storyboard") {
+        renderStoryboardDetail(svg);
+      }
+      renderList();
+      document.querySelector(`.item[data-id="${CSS.escape(sidebarActiveId())}"]`)
+        ?.scrollIntoView({ block: "nearest" });
+      history.replaceState(null, "", `#${encodeURIComponent(svg.id)}`);
+
+      try {
+        await loadAnimationManifest(svg);
+        await loadPreview(svg.url, svg.title || svg.path, svg.id);
+      } catch (error) {
+        state.svgReady = false;
+        state.previewSvg = null;
+        renderAnimationControls();
+        previewMountRoot().replaceChildren(previewMountRoot().querySelector("style"));
+        elements.preview.style.visibility = "hidden";
+        elements.preview.hidden = true;
+        elements.empty.hidden = false;
+        elements.empty.textContent = `Die SVG konnte nicht dargestellt werden: ${error.message}`;
+        }
+      }
+
+    function selectedStoryboardScene() {
+      return state.storyboardScenes.find(
+        (entry) => entry.id === state.selectedStoryboardId,
+      ) || null;
+    }
+
+    function setStoryboardPageView(view) {
+      state.storyboardPageView = view === "detail" ? "detail" : "overview";
+      renderStoryboardPage();
+    }
+
+    function isStoryboardOverviewModuleCollapsed(moduleKey) {
+      return state.collapsedStoryboardOverviewModules[moduleKey] === true;
+    }
+
+    function toggleStoryboardOverviewModule(moduleKey) {
+      state.collapsedStoryboardOverviewModules[moduleKey] =
+        !isStoryboardOverviewModuleCollapsed(moduleKey);
+      renderStoryboardPage();
+    }
+
+    function appendStoryboardStat(parent, value, label) {
+      const card = document.createElement("div");
+      card.className = "storyboard-stat-card";
+      const number = document.createElement("strong");
+      number.textContent = value;
+      const text = document.createElement("span");
+      text.textContent = label;
+      card.append(number, text);
+      parent.append(card);
+    }
+
+    function findOrAddGroup(list, key, create) {
+      let item = list.find((entry) => entry.key === key);
+      if (!item) {
+        item = create();
+        item.key = key;
+        list.push(item);
+      }
+      return item;
+    }
+
+    function storyboardHierarchy(scenes) {
+      const modules = [];
+      for (const scene of scenes) {
+        const moduleKey = storyboardStructureKey(scene, "module");
+        const module = findOrAddGroup(modules, moduleKey, () => ({
+          scene,
+          sourceLabel: storyboardSourceLabel(scene),
+          label: scene.module?.title || storyboardNodeLabel(scene.module, "Ohne Modul"),
+          code: storyboardModuleCode(scene),
+          chapters: [],
+          sceneCount: 0,
+        }));
+        module.sceneCount += 1;
+
+        const chapterKey = storyboardStructureKey(scene, "chapter");
+        const chapter = findOrAddGroup(module.chapters, chapterKey, () => ({
+          label: storyboardNodeLabel(scene.chapter, "Ohne Kapitel"),
+          lessons: [],
+        }));
+
+        const lessonKey = storyboardStructureKey(scene, "lesson");
+        const lesson = findOrAddGroup(chapter.lessons, lessonKey, () => ({
+          label: storyboardNodeLabel(scene.lesson, "Ohne Lektion"),
+          scenes: [],
+        }));
+        lesson.scenes.push(scene);
+      }
+      return modules;
+    }
+
+    function storyboardSceneSvg(scene) {
+      const sceneNumber = Number(scene.sceneNumber || scene.order);
+      if (!Number.isInteger(sceneNumber) || sceneNumber <= 0) return null;
+      const candidates = state.all.filter((svg) =>
+        !svg.isVersionSnapshot &&
+        svg.isScene &&
+        Number(svg.sceneNumber) === sceneNumber &&
+        svg.url,
+      );
+      if (!candidates.length) return null;
+      return [...candidates].sort((left, right) => {
+        const leftComposed = /\/composed\/scene\.svg$/i.test(left.path) ? 0 : 1;
+        const rightComposed = /\/composed\/scene\.svg$/i.test(right.path) ? 0 : 1;
+        if (leftComposed !== rightComposed) return leftComposed - rightComposed;
+        const leftOriginal = left.variant === "original" ? 0 : 1;
+        const rightOriginal = right.variant === "original" ? 0 : 1;
+        if (leftOriginal !== rightOriginal) return leftOriginal - rightOriginal;
+        return naturalCompare(left.path, right.path);
+      })[0];
+    }
+
+    function appendStoryboardSlideCard(parent, scene) {
+      const card = document.createElement("button");
+      card.type = "button";
+      card.className =
+        `storyboard-slide-card${scene.id === state.selectedStoryboardId ? " active" : ""}`;
+      card.addEventListener("click", () => selectStoryboardScene(scene.id));
+
+      const top = document.createElement("div");
+      top.className = "storyboard-slide-card-top";
+      const number = document.createElement("span");
+      number.className = "storyboard-slide-card-number";
+      number.textContent = storyboardOrderLabel(scene);
+      const dot = document.createElement("span");
+      dot.className =
+        `storyboard-status-dot ${storyboardStatusClass(scene.status || scene.reviewStatus)}`;
+      dot.title = scene.status || scene.reviewStatus || "kein Status";
+      top.append(number, dot);
+
+      const title = document.createElement("h4");
+      title.textContent = scene.title || scene.sceneId || "Unbenannte Szene";
+
+      const preview = document.createElement("div");
+      preview.className = "storyboard-slide-preview";
+      const svg = storyboardSceneSvg(scene);
+      if (svg) {
+        const image = document.createElement("img");
+        image.loading = "lazy";
+        image.src = svg.url;
+        image.alt = `Vorschau ${scene.title || scene.sceneId || storyboardOrderLabel(scene)}`;
+        image.title = svg.path;
+        preview.append(image);
+      } else {
+        const empty = document.createElement("span");
+        empty.className = "storyboard-slide-preview-empty";
+        empty.textContent = "Noch keine SVG";
+        preview.append(empty);
+      }
+
+      const badges = document.createElement("div");
+      badges.className = "storyboard-mini-badges";
+      for (const value of [
+        scene.status || scene.reviewStatus,
+        svg ? "SVG" : "",
+        scene.spokenText ? "Text" : "Struktur",
+      ].filter(Boolean)) {
+        const badge = document.createElement("span");
+        badge.className = "storyboard-mini-badge";
+        badge.textContent = value;
+        badges.append(badge);
+      }
+
+      card.append(top, preview, title, badges);
+      parent.append(card);
+    }
+
+    function renderStoryboardOverview(target = elements.storyboardPageDetail) {
+      target.replaceChildren();
+      const scenes = state.filteredStoryboards;
+      if (!scenes.length) {
+        const empty = document.createElement("p");
+        empty.className = "editor-empty";
+        empty.textContent = "Keine Storyboard-Szenen passen zur aktuellen Suche.";
+        target.append(empty);
+        return;
+      }
+
+      const overview = document.createElement("div");
+      overview.className = "storyboard-overview";
+
+      const modules = storyboardHierarchy(scenes);
+      const chapters = new Set(scenes.map((scene) => storyboardStructureKey(scene, "chapter")));
+      const lessons = new Set(scenes.map((scene) => storyboardStructureKey(scene, "lesson")));
+      const withNarration = scenes.filter((scene) => scene.spokenText).length;
+
+      const summary = document.createElement("div");
+      summary.className = "storyboard-overview-summary";
+      appendStoryboardStat(summary, modules.length, "Module");
+      appendStoryboardStat(summary, chapters.size, "Kapitel");
+      appendStoryboardStat(summary, lessons.size, "Lektionen");
+      appendStoryboardStat(summary, scenes.length, "Szenen");
+      overview.append(summary);
+
+      for (const module of modules) {
+        const section = document.createElement("section");
+        section.className = "storyboard-overview-module";
+        section.classList.toggle("collapsed", isStoryboardOverviewModuleCollapsed(module.key));
+
+        const header = document.createElement("button");
+        header.type = "button";
+        header.className = "storyboard-overview-module-header";
+        header.setAttribute(
+          "aria-expanded",
+          String(!isStoryboardOverviewModuleCollapsed(module.key)),
+        );
+        header.addEventListener("click", () => toggleStoryboardOverviewModule(module.key));
+        const titleWrap = document.createElement("div");
+        const heading = document.createElement("h3");
+        heading.textContent = `${module.code} · ${module.label}`;
+        const subline = document.createElement("p");
+        subline.textContent =
+          `${module.sourceLabel} · ${module.chapters.length} Kapitel · ${module.sceneCount} Szenen`;
+        titleWrap.append(heading, subline);
+        const actions = document.createElement("span");
+        actions.className = "storyboard-overview-header-actions";
+        const count = document.createElement("span");
+        count.className = "storyboard-overview-count";
+        count.textContent = `${module.sceneCount} Szenen`;
+        const caret = document.createElement("span");
+        caret.className = "storyboard-overview-caret";
+        caret.textContent = "▾";
+        actions.append(count, caret);
+        header.append(titleWrap, actions);
+        section.append(header);
+
+        const body = document.createElement("div");
+        body.className = "storyboard-overview-body";
+        for (const chapter of module.chapters) {
+          const chapterBlock = document.createElement("section");
+          chapterBlock.className = "storyboard-overview-chapter";
+          const chapterTitle = document.createElement("h4");
+          chapterTitle.className = "storyboard-overview-chapter-title";
+          chapterTitle.textContent = chapter.label;
+          chapterBlock.append(chapterTitle);
+
+          for (const lesson of chapter.lessons) {
+            const lessonBlock = document.createElement("div");
+            lessonBlock.className = "storyboard-overview-lesson";
+            const lessonTitle = document.createElement("p");
+            lessonTitle.className = "storyboard-overview-lesson-title";
+            lessonTitle.textContent = lesson.label;
+            const grid = document.createElement("div");
+            grid.className = "storyboard-slide-grid";
+            for (const scene of lesson.scenes) {
+              appendStoryboardSlideCard(grid, scene);
+            }
+            lessonBlock.append(lessonTitle, grid);
+            chapterBlock.append(lessonBlock);
+          }
+          body.append(chapterBlock);
+        }
+        section.append(body);
+        overview.append(section);
+      }
+
+      if (withNarration !== scenes.length) {
+        const note = document.createElement("p");
+        note.className = "editor-hint";
+        note.textContent =
+          `${withNarration} von ${scenes.length} Szenen enthalten bereits Sprechertext; die übrigen sind Strukturplatzhalter.`;
+        overview.prepend(note);
+      }
+
+      target.append(overview);
+    }
+
+    function renderStoryboardPage() {
+      elements.storyboardViewButtons.forEach((button) => {
+        button.classList.toggle(
+          "active",
+          button.dataset.storyboardView === state.storyboardPageView,
+        );
+      });
+
+      if (state.storyboardPageView === "overview") {
+        const sources = new Set(state.filteredStoryboards.map((scene) => scene.source));
+        elements.title.textContent = "Storyboard-Übersicht";
+        elements.path.textContent =
+          `${state.filteredStoryboards.length} Szenen` +
+          (sources.size ? ` · ${sources.size} Quelle${sources.size === 1 ? "" : "n"}` : "");
+        elements.storyboardPageTitle.textContent = "Storyboard-Übersicht";
+        elements.storyboardPageMeta.textContent =
+          "Module, Kapitel, Lektionen und Szenen als kompakte Folienübersicht.";
+        renderStoryboardOverview();
+        return;
+      }
+
+      const scene = selectedStoryboardScene();
+      if (!scene) {
+        elements.title.textContent = "Kein Storyboard ausgewählt";
+        elements.path.textContent = "";
+        elements.storyboardPageTitle.textContent = "Kein Storyboard ausgewählt";
+        elements.storyboardPageMeta.textContent = "Wähle links eine Storyboard-Szene aus.";
+        elements.storyboardPageDetail.replaceChildren();
+        return;
+      }
+
+      elements.title.textContent = scene.title || scene.sceneId || "Storyboard";
+      elements.path.textContent = [
+        scene.source,
+        navLabel(scene.module),
+        navLabel(scene.chapter),
+        navLabel(scene.lesson),
+      ]
+        .filter(Boolean)
+        .join(" · ");
+      elements.storyboardPageTitle.textContent = storyboardDisplayName(scene);
+      elements.storyboardPageMeta.textContent = [
+        scene.sourceType === "storyboard_json" ? "Storyboard-JSON" : "Legacy-Quelle",
+        scene.source,
+        scene.status ? `Status: ${scene.status}` : "",
+      ]
+        .filter(Boolean)
+        .join(" · ");
+      renderStoryboardDetail(null, elements.storyboardPageDetail, scene);
+    }
+
+    function selectStoryboardScene(id, options = {}) {
+      const scene = state.storyboardScenes.find((entry) => entry.id === id);
+      if (!scene) return;
+      const { showDetail = true } = options;
+
+      state.selectedStoryboardId = scene.id;
+      if (showDetail) {
+        state.storyboardPageView = "detail";
+      }
+      renderStoryboardPage();
+      renderStoryboardList();
+      document.querySelector(`.item[data-id="${CSS.escape(scene.id)}"]`)
+        ?.scrollIntoView({ block: "nearest" });
+      history.replaceState(null, "", `#storyboard:${encodeURIComponent(scene.id)}`);
+      updateNavigation();
+    }
+
+    function renderStoryboard(svg) {
+      const storyboard = svg?.storyboard;
+      if (!storyboard?.spokenText) {
+        elements.storyboardText.textContent =
+          svg?.isScene
+            ? "Für diese Szene wurde im strukturierten Storyboard kein gesprochener Text gefunden."
+            : "Diese SVG ist keiner Storyboardszene zugeordnet.";
+        elements.storyboardMeta.textContent = "";
+        return;
+      }
+
+      elements.storyboardText.textContent = storyboard.spokenText;
+      const variantHint =
+        svg.variant && svg.variant !== "original"
+          ? ` · Variante von Szene ${storyboard.order}`
+          : "";
+      const sourceHint =
+        storyboard.sourceType === "storyboard_json"
+          ? ` · Storyboard-JSON: ${storyboard.source}`
+          : storyboard.sourceType === "legacy_rows_json"
+            ? ` · Legacy-Quelle: ${storyboard.source}`
+            : "";
+      elements.storyboardMeta.textContent =
+        `Storyboard-Szene ${storyboard.order}` +
+        `${storyboard.title ? ` · ${storyboard.title}` : ""}` +
+        variantHint +
+        sourceHint;
+    }
+
+    function appendStoryboardField(parent, label, value) {
+      const normalized =
+        typeof value === "string" ? value.trim() : value == null ? "" : String(value);
+      if (!normalized) return;
+
+      const field = document.createElement("dl");
+      field.className = "storyboard-field";
+      const term = document.createElement("dt");
+      term.textContent = label;
+      const description = document.createElement("dd");
+      description.textContent = normalized;
+      field.append(term, description);
+      parent.append(field);
+    }
+
+    function appendStoryboardChips(parent, label, items) {
+      const values = (items || []).filter((item) => typeof item === "string" && item.trim());
+      if (!values.length) return;
+
+      const field = document.createElement("dl");
+      field.className = "storyboard-field";
+      const term = document.createElement("dt");
+      term.textContent = label;
+      const description = document.createElement("dd");
+      const list = document.createElement("ul");
+      list.className = "storyboard-chip-list";
+      for (const value of values) {
+        const item = document.createElement("li");
+        item.className = "storyboard-chip";
+        item.textContent = value;
+        list.append(item);
+      }
+      description.append(list);
+      field.append(term, description);
+      parent.append(field);
+    }
+
+    function appendStoryboardObjects(parent, label, items) {
+      const values = (items || []).filter(Boolean);
+      if (!values.length) return;
+
+      const field = document.createElement("dl");
+      field.className = "storyboard-field";
+      const term = document.createElement("dt");
+      term.textContent = label;
+      const description = document.createElement("dd");
+      for (const value of values) {
+        const object = document.createElement("pre");
+        object.className = "storyboard-object";
+        object.textContent =
+          typeof value === "string" ? value : JSON.stringify(value, null, 2);
+        description.append(object);
+      }
+      field.append(term, description);
+      parent.append(field);
+    }
+
+    function appendStoryboardCard(title, build, target = elements.storyboardDetail) {
+      const card = document.createElement("section");
+      card.className = "editor-card";
+      const heading = document.createElement("h3");
+      heading.textContent = title;
+      card.append(heading);
+      build(card);
+      if (card.children.length > 1) {
+        target.append(card);
+      }
+    }
+
+    function navLabel(item) {
+      if (!item) return "";
+      return [item.id, item.title].filter(Boolean).join(" · ");
+    }
+
+    function renderStoryboardDetail(
+      svg = selectedSvg(),
+      target = elements.storyboardDetail,
+      storyboardOverride = null,
+    ) {
+      const storyboard = storyboardOverride || svg?.storyboard;
+      target.replaceChildren();
+      if (target === elements.storyboardDetail) {
+        elements.storyboardEmpty.hidden = Boolean(storyboard);
+      }
+      if (!storyboard) return;
+
+      appendStoryboardCard("Quelle", (card) => {
+        appendStoryboardField(card, "Status", storyboard.status || storyboard.reviewStatus);
+        appendStoryboardField(card, "Modul", navLabel(storyboard.module));
+        appendStoryboardField(card, "Lektion", navLabel(storyboard.lesson));
+
+        const details = document.createElement("details");
+        details.className = "storyboard-collapsible";
+        const summary = document.createElement("summary");
+        summary.textContent = "Weitere Quelleninfos";
+        const content = document.createElement("div");
+        content.className = "storyboard-collapsible-content";
+
+        appendStoryboardField(content, "Format", storyboard.sourceType || "unbekannt");
+        appendStoryboardField(content, "Datei", storyboard.source);
+        appendStoryboardField(content, "Scene-ID", storyboard.sceneId || svg?.sceneId);
+        appendStoryboardField(content, "Reihenfolge", storyboard.order);
+        appendStoryboardField(content, "Kapitel", navLabel(storyboard.chapter));
+        appendStoryboardChips(content, "Quellen", storyboard.sourceRefs);
+
+        if (content.children.length) {
+          details.append(summary, content);
+          card.append(details);
+        }
+      }, target);
+
+      appendStoryboardCard("SVG-Vorschau", (card) => {
+        const preview = document.createElement("div");
+        preview.className = "storyboard-detail-preview";
+        const linkedSvg = storyboardSceneSvg(storyboard);
+        if (linkedSvg) {
+          const image = document.createElement("img");
+          image.loading = "lazy";
+          image.src = linkedSvg.url;
+          image.alt = `Vorschau ${storyboard.title || storyboard.sceneId || storyboardOrderLabel(storyboard)}`;
+          image.title = linkedSvg.path;
+          preview.append(image);
+        } else {
+          const empty = document.createElement("span");
+          empty.className = "storyboard-detail-preview-empty";
+          empty.textContent = "Noch keine SVG vorhanden";
+          preview.append(empty);
+        }
+        card.append(preview);
+      }, target);
+
+      appendStoryboardCard("Kern", (card) => {
+        appendStoryboardField(card, "Titel", storyboard.title);
+        appendStoryboardField(card, "Hauptinhalt", storyboard.coreContent);
+        appendStoryboardField(card, "Sprechertext", storyboard.spokenText);
+      }, target);
+
+      appendStoryboardCard("Aufbau", (card) => {
+        const details = document.createElement("details");
+        details.className = "storyboard-collapsible";
+        const summary = document.createElement("summary");
+        summary.textContent = "Aufbau anzeigen";
+        const content = document.createElement("div");
+        content.className = "storyboard-collapsible-content";
+
+        appendStoryboardChips(content, "Sichtbare Texte", storyboard.visibleText);
+        appendStoryboardChips(content, "Build Sequence", storyboard.buildSequence);
+
+        if (content.children.length) {
+          details.append(summary, content);
+          card.append(details);
+        }
+      }, target);
+
+      appendStoryboardCard("Visual-Brief", (card) => {
+        appendStoryboardField(
+          card,
+          "Komposition",
+          storyboard.visual?.composition || storyboard.visualComposition,
+        );
+        appendStoryboardField(card, "Stilnotizen", storyboard.visual?.styleNotes);
+        appendStoryboardField(card, "Designnotizen", storyboard.designNotes);
+        appendStoryboardObjects(card, "Elemente", storyboard.visual?.elements);
+        appendStoryboardObjects(card, "SVG-Plan", storyboard.visual?.svgPlan);
+        appendStoryboardObjects(card, "Generierte Assets", storyboard.visual?.generatedAssets);
+        appendStoryboardChips(
+          card,
+          "Qualitätsanforderungen",
+          storyboard.visual?.qualityRequirements,
+        );
+        appendStoryboardObjects(card, "Asset-Links", storyboard.visual?.assetLinks);
+      }, target);
+
+      appendStoryboardCard("Trigger & Interaktion", (card) => {
+        appendStoryboardObjects(card, "Animationstrigger", storyboard.animationTriggers);
+        appendStoryboardObjects(card, "Interaktionen", storyboard.interactions);
+      }, target);
+
+      appendStoryboardCard("Review", (card) => {
+        appendStoryboardField(card, "Reviewstatus", storyboard.reviewStatus);
+        appendStoryboardChips(card, "Annahmen", storyboard.assumptions);
+        appendStoryboardChips(card, "Offene Fragen", storyboard.openQuestions);
+        appendStoryboardChips(card, "Review-Notizen", storyboard.reviewNotes);
+        appendStoryboardField(card, "Legacy Excel-Zeile", storyboard.excelRow);
+      }, target);
+    }
+
+    function selectedSvg() {
+      return state.all.find((svg) => svg.id === state.selectedId) || null;
+    }
+
+    function animationRoot() {
+      return state.svgReady ? state.previewSvg : null;
+    }
+
+    function findAnimationTarget(targetId) {
+      return animationRoot()?.querySelector(`#${CSS.escape(targetId)}`) || null;
+    }
+
+    function readSvgDimensions() {
+      const root = animationRoot();
+      const viewBox = root?.viewBox?.baseVal;
+      if (viewBox?.width > 0 && viewBox?.height > 0) {
+        state.svgWidth = viewBox.width;
+        state.svgHeight = viewBox.height;
+        return;
+      }
+
+      const width = Number.parseFloat(root?.getAttribute("width"));
+      const height = Number.parseFloat(root?.getAttribute("height"));
+      state.svgWidth = width > 0 ? width : 1920;
+      state.svgHeight = height > 0 ? height : 1080;
+    }
+
+    function applyPreviewSize() {
+      if (!state.svgReady || !elements.canvas) return;
+
+      const availableWidth = Math.max(1, elements.canvas.clientWidth);
+      const availableHeight = Math.max(1, elements.canvas.clientHeight);
+      const aspectRatio = state.svgWidth / state.svgHeight;
+      let width = state.svgWidth;
+      let height = state.svgHeight;
+
+      if (elements.fit.value === "fit") {
+        width = Math.min(availableWidth, availableHeight * aspectRatio);
+        height = width / aspectRatio;
+      } else if (elements.fit.value === "width") {
+        width = availableWidth;
+        height = width / aspectRatio;
+      }
+
+      elements.preview.style.width = `${Math.max(1, Math.floor(width))}px`;
+      elements.preview.style.height = `${Math.max(1, Math.floor(height))}px`;
+    }
+
+    function setAnimationStatus(message, isError = false) {
+      elements.animationStatus.textContent = message;
+      elements.animationStatus.style.color = isError ? "#b91c1c" : "";
+    }
+
+    function renderAnimationControls() {
+      const available = Boolean(
+        state.animationManifest?.steps?.length && state.svgReady,
+      );
+      elements.animationPlay.disabled = !available;
+      elements.animationReset.disabled = !available;
+      elements.animationDelay.disabled = !state.animationManifest?.steps?.length;
+      elements.animationTimeline.disabled = !available;
+      elements.animationPlay.textContent = state.animationPlaying
+        ? state.animationPaused
+          ? "Fortsetzen"
+          : "Pause"
+        : "Abspielen";
+      const canSave = Boolean(
+        state.animationManifest && !state.animationEditorReadOnly,
+      );
+      elements.saveAnimationManifest.disabled = !canSave;
+      elements.saveAnimationManifestAnimation.disabled = !canSave;
+    }
+
+    function formatTimelineTime(milliseconds) {
+      const totalSeconds = Math.max(0, milliseconds) / 1000;
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = Math.floor(totalSeconds % 60);
+      const tenths = Math.floor((totalSeconds % 1) * 10);
+      return `${minutes}:${String(seconds).padStart(2, "0")}.${tenths}`;
+    }
+
+    function updateTimelineDisplay() {
+      elements.animationTimeline.value = String(
+        Math.round(state.animationTime),
+      );
+      elements.timelineCurrent.textContent = formatTimelineTime(
+        state.animationTime,
+      );
+      elements.timelineDuration.textContent = formatTimelineTime(
+        state.animationDuration,
+      );
+    }
+
+    function sanitizeInlineSvgStyles(root) {
+      if (!root) return;
+
+      root.querySelectorAll("style").forEach((styleNode) => {
+        const source = styleNode.textContent || "";
+        styleNode.textContent = source.replace(
+          /(^|})\s*([^@{}][^{}]*)\{/g,
+          (match, prefix, selectorGroup) => {
+            const selectors = selectorGroup
+              .split(",")
+              .map((selector) => selector.trim())
+              .filter(Boolean)
+              .map((selector) => `svg ${selector}`);
+            return `${prefix} ${selectors.join(", ")} {`;
+          },
+        );
+      });
+    }
+
+    function previewMountRoot() {
+      if (!elements.preview.shadowRoot) {
+        const shadow = elements.preview.attachShadow({ mode: "open" });
+        const style = document.createElement("style");
+        style.textContent = `
+          svg { display: block; width: 100%; height: 100%; }
+          [data-editor-selected="true"] {
+            filter: drop-shadow(0 0 6px #f2a93b) drop-shadow(0 0 2px #f2a93b);
+          }
+        `;
+        shadow.append(style);
+      }
+      return elements.preview.shadowRoot;
+    }
+
+    function sanitizeInlineSvgMarkup(root) {
+      root.querySelectorAll("script").forEach((node) => node.remove());
+      root.querySelectorAll("*").forEach((node) => {
+        for (const attribute of [...node.attributes]) {
+          if (
+            attribute.name.toLowerCase().startsWith("on") ||
+            (/^(?:href|xlink:href)$/i.test(attribute.name) &&
+              /^\s*javascript:/i.test(attribute.value))
+          ) {
+            node.removeAttribute(attribute.name);
+          }
+        }
+      });
+    }
+
+    async function loadPreview(url, label, expectedId = state.selectedId) {
+      state.svgReady = false;
+      state.previewSvg = null;
+      elements.preview.hidden = false;
+      elements.preview.style.visibility = "hidden";
+      elements.preview.setAttribute("aria-label", label || "");
+      previewMountRoot().replaceChildren(previewMountRoot().querySelector("style"));
+      elements.empty.hidden = false;
+      elements.empty.textContent = "SVG und eingebettete Bilder werden geladen…";
+
+      const response = await fetch(`${url}?v=${Date.now()}`);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      const source = await response.text();
+      if (expectedId && state.selectedId !== expectedId) {
+        return;
+      }
+      const template = document.createElement("template");
+      template.innerHTML = source.trim();
+      const svgElement = template.content.querySelector("svg");
+      if (!svgElement) {
+        throw new Error("SVG-Markup fehlt.");
+      }
+      sanitizeInlineSvgMarkup(svgElement);
+      sanitizeInlineSvgStyles(svgElement);
+
+      previewMountRoot().append(svgElement);
+      if (expectedId && state.selectedId !== expectedId) {
+        svgElement.remove();
+        return;
+      }
+      state.previewSvg = svgElement;
+      state.svgReady = true;
+      svgElement.addEventListener("click", (event) => {
+        if (state.panelTab === "review") return;
+        const target = event.target.closest?.("[id]");
+        if (!target?.id) return;
+        const inventoryItem = state.animationInventory.find(
+          (item) => item.targetId === target.id,
+        );
+        if (!inventoryItem) return;
+        selectEditorTarget(target.id, state.panelTab !== "animation");
+        if (state.panelTab === "animation") {
+          state.previewMode = "timeline";
+          const segment = state.animationTimeline.find(
+            (entry) => entry.step.targetId === target.id,
+          );
+          renderTimelineState(segment?.start ?? state.animationTime);
+        }
+      });
+      readSvgDimensions();
+      applyPreviewSize();
+      applyManifestRenderState();
+
+      if (state.animationManifest) {
+        captureTargetStyles();
+        buildAnimationTimeline();
+        state.animationTime = state.animationDuration;
+        renderTimelineState(state.animationTime);
+      }
+
+      renderAnimationControls();
+      elements.preview.style.visibility = "visible";
+      elements.empty.hidden = true;
+    }
+
+    function cancelDocumentAnimations() {
+      const root = animationRoot();
+      for (const animation of root?.getAnimations?.() || []) {
+        animation.cancel();
+      }
+    }
+
+    function captureTargetStyles() {
+      if (!animationRoot() || !state.animationManifest) return;
+
+      state.originalTargetStyles = new Map();
+      for (const target of state.animationManifest.targets || []) {
+        if (target.status !== "animated") continue;
+        const element = findAnimationTarget(target.targetId);
+        if (element) {
+          state.originalTargetStyles.set(
+            target.targetId,
+            element.getAttribute("style"),
+          );
+        }
+      }
+    }
+
+    function restoreTargetStyle(targetId) {
+      const target = findAnimationTarget(targetId);
+      if (!target || !state.originalTargetStyles.has(targetId)) return;
+
+      const originalStyle = state.originalTargetStyles.get(targetId);
+      if (originalStyle === null) {
+        target.removeAttribute("style");
+      } else {
+        target.setAttribute("style", originalStyle);
+      }
+    }
+
+    function restoreFullScene() {
+      cancelDocumentAnimations();
+      for (const targetId of state.originalTargetStyles.keys()) {
+        restoreTargetStyle(targetId);
+      }
+      applyManifestRenderState();
+    }
+
+    function stopAnimationPreview() {
+      state.animationToken += 1;
+      cancelAnimationFrame(state.animationFrame);
+      state.animationFrame = 0;
+      state.animationPlaying = false;
+      state.animationPaused = false;
+      state.animationIndex = 0;
+      state.animationTime = 0;
+      state.animationDuration = 0;
+      state.animationTimeline = [];
+      restoreFullScene();
+      state.animationManifest = null;
+      state.animationSceneId = "";
+      state.originalTargetStyles = new Map();
+      state.animationInventory = [];
+      state.animationWarnings = [];
+      state.animationEditorReadOnly = true;
+      state.animationManifestExists = false;
+      state.animationEditorDirty = false;
+      state.activeTargetId = "";
+      state.activeStepIndex = -1;
+      state.inspectedTargetId = "";
+      elements.animationTimeline.value = "0";
+      elements.animationTimeline.max = "1";
+      elements.timelineMarkers.replaceChildren();
+      updateTimelineDisplay();
+      setAnimationStatus("Für diese SVG ist keine Animation verfügbar.");
+      renderAnimationControls();
+      renderStructureEditor();
+      renderAnimationEditor();
+    }
+
+    function prepareAnimationStart() {
+      restoreFullScene();
+      for (const target of state.animationManifest?.targets || []) {
+        if (target.status !== "animated" || target.render === false) continue;
+        const element = findAnimationTarget(target.targetId);
+        if (!element) continue;
+        element.style.visibility = "hidden";
+        element.style.opacity = "0";
+      }
+      state.animationIndex = 0;
+    }
+
+    function frameDuration(step) {
+      const defaults = state.animationManifest?.defaults || {};
+      const frames =
+        step.action === "draw"
+          ? step.durFrames ?? defaults.drawDurFrames ?? 30
+          : step.action === "highlight"
+            ? step.highlightDurFrames ?? defaults.highlightDurFrames ?? 24
+            : step.action === "hide"
+              ? step.exitFrames ?? defaults.exitFrames ?? 16
+              : step.enterFrames ?? defaults.enterFrames ?? 16;
+      return Math.max(200, Math.min(2500, (Number(frames) / 30) * 1000));
+    }
+
+    function applyAnimationDelayDefault(defaultDelayMs) {
+      const requested = Number(defaultDelayMs);
+      if (!Number.isFinite(requested) || requested <= 0) return;
+      const options = Array.from(elements.animationDelay.options)
+        .map((option) => Number(option.value))
+        .filter((value) => Number.isFinite(value) && value > 0);
+      if (!options.length) return;
+      const closest = options.reduce((best, value) =>
+        Math.abs(value - requested) < Math.abs(best - requested) ? value : best,
+      );
+      elements.animationDelay.value = String(closest);
+    }
+
+    function buildAnimationTimeline() {
+      const orderedSteps = orderedAnimationSteps();
+      const pause = Number(elements.animationDelay.value);
+      let cursor = 0;
+      state.animationTimeline = orderedSteps.map((entry, index) => {
+        const start = cursor;
+        const end = start + frameDuration(entry.step);
+        const pauseEnd =
+          end + (index < orderedSteps.length - 1 ? pause : 0);
+        cursor = pauseEnd;
+        return {
+          ...entry,
+          index,
+          start,
+          end,
+          pauseEnd,
+        };
+      });
+      state.animationDuration = cursor;
+      elements.animationTimeline.max = String(Math.max(1, Math.round(cursor)));
+      state.animationTime = Math.min(state.animationTime, cursor);
+      updateTimelineDisplay();
+      renderTimelineMarkers();
+    }
+
+    function renderTimelineMarkers() {
+      elements.timelineMarkers.replaceChildren();
+      const duration = Math.max(1, state.animationDuration);
+      for (const segment of state.animationTimeline) {
+        const marker = document.createElement("button");
+        marker.type = "button";
+        marker.className = `timeline-marker ${segment.step.action}`;
+        marker.style.left = `${(segment.start / duration) * 100}%`;
+        marker.title =
+          segment.step.sourceText ||
+          `${segment.step.action}: ${segment.step.targetId}`;
+        marker.addEventListener("click", () => {
+          state.previewMode = "timeline";
+          state.activeTargetId = segment.step.targetId;
+          state.activeStepIndex = segment.originalIndex;
+          renderTimelineState(segment.start);
+          renderAnimationEditor();
+        });
+        elements.timelineMarkers.append(marker);
+      }
+    }
+
+    function applyStepFinal(step) {
+      const target = findAnimationTarget(step.targetId);
+      if (!target) return;
+      restoreTargetStyle(step.targetId);
+      if (step.action === "hide") {
+        target.style.visibility = "hidden";
+        target.style.opacity = "0";
+      }
+    }
+
+    function applyStepProgress(step, progress) {
+      const target = findAnimationTarget(step.targetId);
+      if (!target) return;
+      const value = Math.max(0, Math.min(1, progress));
+      restoreTargetStyle(step.targetId);
+      target.style.visibility = "visible";
+      target.style.transformBox = "fill-box";
+      target.style.transformOrigin = "center";
+
+      if (step.action === "hide") {
+        target.style.opacity = String(1 - value);
+        if (value >= 1) target.style.visibility = "hidden";
+      } else if (step.action === "highlight") {
+        const pulse = Math.sin(value * Math.PI);
+        target.style.opacity = String(1 - pulse * 0.28);
+        target.style.transform = `scale(${1 + pulse * 0.025})`;
+      } else if (step.action === "draw") {
+        const direction = step.direction || "leftToRight";
+        target.style.opacity = String(0.25 + value * 0.75);
+        if (direction === "rightToLeft") {
+          target.style.clipPath = `inset(0 0 0 ${(1 - value) * 100}%)`;
+        } else if (direction === "topToBottom") {
+          target.style.clipPath = `inset(0 0 ${(1 - value) * 100}% 0)`;
+        } else if (direction === "bottomToTop") {
+          target.style.clipPath = `inset(${(1 - value) * 100}% 0 0 0)`;
+        } else {
+          target.style.clipPath = `inset(0 ${(1 - value) * 100}% 0 0)`;
+        }
+      } else {
+        const fromY = Number(step.fromY || 0);
+        target.style.opacity = String(value);
+        target.style.transform = `translateY(${fromY * (1 - value)}px)`;
+      }
+    }
+
+    function renderTimelineState(milliseconds, updateStatus = true) {
+      if (!state.animationManifest || !state.svgReady) return;
+
+      const time = Math.max(
+        0,
+        Math.min(Number(milliseconds) || 0, state.animationDuration),
+      );
+      prepareAnimationStart();
+      state.animationTime = time;
+      state.animationIndex = 0;
+      let activeSegment = null;
+
+      for (const segment of state.animationTimeline) {
+        if (time >= segment.end) {
+          applyStepFinal(segment.step);
+          state.animationIndex = segment.index + 1;
+          if (time < segment.pauseEnd) {
+            activeSegment = segment;
+            break;
+          }
+          continue;
+        }
+        if (time > segment.start) {
+          const progress =
+            (time - segment.start) / Math.max(1, segment.end - segment.start);
+          applyStepProgress(segment.step, progress);
+          activeSegment = segment;
+        }
+        break;
+      }
+
+      updateTimelineDisplay();
+      if (!updateStatus) return;
+
+      if (time >= state.animationDuration && state.animationTimeline.length) {
+        setAnimationStatus(
+          `Animation abgeschlossen · ${state.animationTimeline.length} Schritte.`,
+        );
+      } else if (activeSegment) {
+        const target = (state.animationManifest.targets || []).find(
+          (entry) => entry.targetId === activeSegment.step.targetId,
+        );
+        setAnimationStatus(
+          `Schritt ${activeSegment.index + 1}/${state.animationTimeline.length}: ` +
+          `${target?.label || activeSegment.step.targetId}`,
+        );
+      } else {
+        setAnimationStatus(
+          `Start · ${state.animationTimeline.length} Schritte.`,
+        );
+      }
+    }
+
+    async function runElementAnimation(element, keyframes, options) {
+      const animation = element.animate(keyframes, options);
+      try {
+        await animation.finished;
+      } catch {
+        return;
+      }
+    }
+
+    async function animateShow(target, step, duration) {
+      restoreTargetStyle(step.targetId);
+      target.style.visibility = "visible";
+      const fromY = Number(step.fromY || 0);
+      await runElementAnimation(
+        target,
+        [
+          { opacity: 0, transform: `translateY(${fromY}px)` },
+          { opacity: 1, transform: "translateY(0)" },
+        ],
+        { duration, easing: "cubic-bezier(.2,.75,.25,1)", fill: "forwards" },
+      );
+      restoreTargetStyle(step.targetId);
+    }
+
+    async function animateHide(target, step, duration) {
+      restoreTargetStyle(step.targetId);
+      await runElementAnimation(
+        target,
+        [{ opacity: 1 }, { opacity: 0 }],
+        { duration, easing: "ease-in", fill: "forwards" },
+      );
+      target.style.visibility = "hidden";
+      target.style.opacity = "0";
+    }
+
+    async function animateHighlight(target, step, duration) {
+      restoreTargetStyle(step.targetId);
+      target.style.visibility = "visible";
+      target.style.transformBox = "fill-box";
+      target.style.transformOrigin = "center";
+      await runElementAnimation(
+        target,
+        [
+          { opacity: 1, transform: "scale(1)" },
+          { opacity: 0.72, transform: "scale(1.025)" },
+          { opacity: 1, transform: "scale(1)" },
+        ],
+        { duration, easing: "ease-in-out", fill: "forwards" },
+      );
+      restoreTargetStyle(step.targetId);
+    }
+
+    async function animateDraw(target, step, duration) {
+      restoreTargetStyle(step.targetId);
+      target.style.visibility = "visible";
+      const drawable = [...target.querySelectorAll(
+        "path, line, polyline, polygon, circle, ellipse, rect",
+      )].filter((element) => {
+        try {
+          return (
+            typeof element.getTotalLength === "function" &&
+            element.getTotalLength() > 0 &&
+            getComputedStyle(element).stroke !== "none"
+          );
+        } catch {
+          return false;
+        }
+      });
+
+      const fade = runElementAnimation(
+        target,
+        [{ opacity: 0.25 }, { opacity: 1 }],
+        { duration: Math.min(duration, 500), easing: "ease-out", fill: "forwards" },
+      );
+      const drawings = drawable.map(async (element) => {
+        const originalStyle = element.getAttribute("style");
+        const length = element.getTotalLength();
+        element.style.strokeDasharray = `${length}`;
+        element.style.strokeDashoffset = `${length}`;
+        await runElementAnimation(
+          element,
+          [{ strokeDashoffset: length }, { strokeDashoffset: 0 }],
+          { duration, easing: "ease-in-out", fill: "forwards" },
+        );
+        if (originalStyle === null) {
+          element.removeAttribute("style");
+        } else {
+          element.setAttribute("style", originalStyle);
+        }
+      });
+
+      await Promise.all([fade, ...drawings]);
+      restoreTargetStyle(step.targetId);
+    }
+
+    async function animateStep(step) {
+      const target = findAnimationTarget(step.targetId);
+      if (!target) {
+        throw new Error(`Animationsziel ${step.targetId} fehlt im SVG.`);
+      }
+
+      const duration = frameDuration(step);
+      if (step.action === "hide") {
+        await animateHide(target, step, duration);
+      } else if (step.action === "highlight") {
+        await animateHighlight(target, step, duration);
+      } else if (step.action === "draw") {
+        await animateDraw(target, step, duration);
+      } else {
+        await animateShow(target, step, duration);
+      }
+    }
+
+    async function waitForDummyPause(milliseconds, token) {
+      let remaining = milliseconds;
+      let previous = performance.now();
+      while (remaining > 0 && token === state.animationToken) {
+        await new Promise((resolve) => setTimeout(resolve, 50));
+        const now = performance.now();
+        if (!state.animationPaused) {
+          remaining -= now - previous;
+        }
+        previous = now;
+      }
+    }
+
+    function pauseDocumentAnimations(paused) {
+      for (const animation of animationDocument()?.getAnimations?.() || []) {
+        if (paused) {
+          animation.pause();
+        } else {
+          animation.play();
+        }
+      }
+    }
+
+    async function playAnimation() {
+      if (!state.animationManifest?.steps?.length || !state.svgReady) return;
+      state.previewMode = "timeline";
+
+      if (state.animationPlaying) {
+        state.animationPaused = !state.animationPaused;
+        state.animationLastTimestamp = 0;
+        setAnimationStatus(
+          state.animationPaused
+            ? `Pausiert nach Schritt ${state.animationIndex}.`
+            : `Animation wird fortgesetzt …`,
+        );
+        renderAnimationControls();
+        return;
+      }
+
+      if (state.animationTime >= state.animationDuration) {
+        renderTimelineState(0, false);
+      }
+      state.animationPlaying = true;
+      state.animationPaused = false;
+      state.animationLastTimestamp = 0;
+      state.animationToken += 1;
+      renderAnimationControls();
+
+      const tick = (timestamp) => {
+        if (!state.animationPlaying) return;
+        if (!state.animationLastTimestamp) {
+          state.animationLastTimestamp = timestamp;
+        }
+        const elapsed = timestamp - state.animationLastTimestamp;
+        state.animationLastTimestamp = timestamp;
+
+        if (!state.animationPaused) {
+          renderTimelineState(state.animationTime + elapsed);
+        }
+
+        if (state.animationTime >= state.animationDuration) {
+          state.animationPlaying = false;
+          state.animationPaused = false;
+          state.animationFrame = 0;
+          renderAnimationControls();
+          return;
+        }
+        state.animationFrame = requestAnimationFrame(tick);
+      };
+      state.animationFrame = requestAnimationFrame(tick);
+    }
+
+    function resetAnimation() {
+      if (!state.animationManifest) return;
+      state.previewMode = "timeline";
+      state.animationToken += 1;
+      cancelAnimationFrame(state.animationFrame);
+      state.animationFrame = 0;
+      state.animationPlaying = false;
+      state.animationPaused = false;
+      state.animationIndex = 0;
+      state.animationLastTimestamp = 0;
+      renderTimelineState(0);
+      renderAnimationControls();
+    }
+
+    async function loadAnimationManifest(svg) {
+      state.animationToken += 1;
+      state.animationManifest = null;
+      state.animationSceneId = svg.id;
+      state.animationIndex = 0;
+      state.animationTime = 0;
+      state.animationDuration = 0;
+      state.animationTimeline = [];
+      state.originalTargetStyles = new Map();
+      state.animationInventory = [];
+      state.animationWarnings = [];
+      state.animationEditorReadOnly = true;
+      state.animationManifestExists = false;
+      state.animationEditorDirty = false;
+      state.activeTargetId = "";
+      state.activeStepIndex = -1;
+      renderAnimationControls();
+      setAnimationStatus("Animationseditor wird geladen ...");
+
+      try {
+        const response = await fetch(
+          `/api/animation-editor?id=${encodeURIComponent(svg.id)}&v=${Date.now()}`,
+        );
+        const payload = await response.json().catch(() => ({}));
+        if (!response.ok) {
+          throw new Error(payload.error || `HTTP ${response.status}`);
+        }
+        if (
+          state.selectedId !== svg.id ||
+          !Array.isArray(payload.manifest?.steps) ||
+          !Array.isArray(payload.manifest?.targets) ||
+          !Array.isArray(payload.inventory)
+        ) {
+          if (state.selectedId === svg.id) {
+            throw new Error("Animationseditor-Daten sind unvollständig.");
+          }
+          return;
+        }
+
+        state.animationManifest = payload.manifest;
+        applyAnimationDelayDefault(
+          state.animationManifest.defaults?.pauseMs ??
+            state.animationManifest.defaults?.stepDelayMs,
+        );
+        state.animationInventory = payload.inventory;
+        state.animationWarnings = payload.warnings || [];
+        state.animationEditorReadOnly =
+          payload.readOnly === true || svg.review?.final === true;
+        state.animationManifestExists = payload.manifestExists === true;
+
+        const firstVisibleTarget = state.animationManifest.targets.find(
+          (target) =>
+            target.render !== false && target.visibleInEditor !== false,
+        );
+        state.activeTargetId = firstVisibleTarget?.targetId || "";
+        const firstStep = stepsForTarget(state.activeTargetId)[0];
+        state.activeStepIndex = firstStep ? firstStep.index : -1;
+
+        buildAnimationTimeline();
+        if (state.svgReady) {
+          captureTargetStyles();
+          applyManifestRenderState();
+          renderTimelineState(state.animationDuration);
+        } else {
+          setAnimationStatus(
+            state.animationManifest.steps.length
+              ? `Bereit · ${state.animationManifest.steps.length} Schritte.`
+              : "Noch keine Animationsschritte angelegt.",
+          );
+        }
+        renderStructureEditor();
+        renderAnimationEditor();
+        renderAnimationControls();
+      } catch (error) {
+        if (state.selectedId === svg.id) {
+          setAnimationStatus(
+            `Animationseditor konnte nicht geladen werden: ${error.message}`,
+            true,
+          );
+          setEditorSaveState(error.message, true);
+        }
+      }
+    }
+
+    function refreshAnimationEditorAfterChange() {
+      buildAnimationTimeline();
+      renderStructureEditor();
+      renderAnimationEditor();
+      applyManifestRenderState();
+      renderAnimationControls();
+    }
+
+    function updateActiveTargetFromControls() {
+      const target = selectedEditorTarget();
+      if (!target || state.animationEditorReadOnly) return;
+      target.label = elements.targetLabel.value.trim() || target.targetId;
+      target.status = elements.targetStatus.value;
+      target.confidence = elements.targetConfidence.value;
+      if (target.status === "animated") {
+        target.visibleInEditor = true;
+        target.render = true;
+      }
+      markAnimationEditorDirty();
+      refreshAnimationEditorAfterChange();
+    }
+
+    function updateActiveStepFromControls() {
+      const step = selectedEditorStep();
+      if (!step || state.animationEditorReadOnly) return;
+      step.action = elements.stepAction.value;
+      step.confidence = elements.stepConfidence.value;
+      step.sourceText = elements.stepSourceText.value.trim();
+
+      const occurrence = Number(elements.stepOccurrence.value);
+      if (occurrence > 0) {
+        step.occurrence = occurrence;
+      } else {
+        delete step.occurrence;
+      }
+
+      const duration = Number(elements.stepDuration.value);
+      delete step.enterFrames;
+      delete step.exitFrames;
+      delete step.durFrames;
+      if (duration > 0) {
+        if (step.action === "show") step.enterFrames = duration;
+        else if (step.action === "hide") step.exitFrames = duration;
+        else step.durFrames = duration;
+      }
+
+      const offset = Number(elements.stepOffset.value);
+      delete step.fromY;
+      delete step.toY;
+      if (Number.isFinite(offset) && elements.stepOffset.value !== "") {
+        if (step.action === "hide") step.toY = offset;
+        else step.fromY = offset;
+      }
+
+      if (step.action === "draw") {
+        step.drawStyle = elements.stepDrawStyle.value;
+        step.direction = elements.stepDirection.value;
+      }
+
+      markAnimationEditorDirty();
+      refreshAnimationEditorAfterChange();
+    }
+
+    function addAnimationStep() {
+      const target = selectedEditorTarget();
+      if (!target || state.animationEditorReadOnly) return;
+      target.status = "animated";
+      target.render = true;
+      target.visibleInEditor = true;
+      const usedIds = new Set(
+        (state.animationManifest.steps || []).map((step) => step.stepId),
+      );
+      let nextNumber = state.animationManifest.steps.length + 1;
+      let stepId = String(nextNumber).padStart(2, "0");
+      while (usedIds.has(stepId)) {
+        nextNumber += 1;
+        stepId = String(nextNumber).padStart(2, "0");
+      }
+      state.animationManifest.steps.push({
+        stepId,
+        targetId: target.targetId,
+        action: "show",
+        sourceText: "",
+        enterFrames:
+          Number(state.animationManifest.defaults?.enterFrames) || 16,
+        fromY: 16,
+        confidence: "medium",
+      });
+      state.activeStepIndex = state.animationManifest.steps.length - 1;
+      markAnimationEditorDirty();
+      refreshAnimationEditorAfterChange();
+    }
+
+    function deleteActiveStep() {
+      const step = selectedEditorStep();
+      if (!step || state.animationEditorReadOnly) return;
+      state.animationManifest.steps.splice(state.activeStepIndex, 1);
+      const next = stepsForTarget(state.activeTargetId)[0];
+      state.activeStepIndex = next ? next.index : -1;
+      markAnimationEditorDirty();
+      refreshAnimationEditorAfterChange();
+    }
+
+    function selectedSpokenTextRange() {
+      const selection = window.getSelection();
+      if (!selection?.rangeCount || selection.isCollapsed) return "";
+      const range = selection.getRangeAt(0);
+      const container = elements.editorSpokenText;
+      const commonNode =
+        range.commonAncestorContainer.nodeType === Node.ELEMENT_NODE
+          ? range.commonAncestorContainer
+          : range.commonAncestorContainer.parentElement;
+      if (!commonNode || !container.contains(commonNode)) return "";
+
+      const fullText = container.textContent || "";
+      const before = range.cloneRange();
+      before.selectNodeContents(container);
+      before.setEnd(range.startContainer, range.startOffset);
+      let start = before.toString().length;
+      let end = start + range.toString().length;
+      const isWordCharacter = (character) =>
+        Boolean(character && /[\p{L}\p{N}]/u.test(character));
+
+      while (start > 0 && isWordCharacter(fullText[start - 1])) start -= 1;
+      while (end < fullText.length && isWordCharacter(fullText[end])) end += 1;
+      return fullText.slice(start, end).trim();
+    }
+
+    function useSpokenTextSelection() {
+      const step = selectedEditorStep();
+      if (!step || state.animationEditorReadOnly) return;
+      const selectedText = selectedSpokenTextRange();
+      if (!selectedText) {
+        setEditorSaveState(
+          "Bitte zuerst eine Wortfolge im gesprochenen Text markieren.",
+          true,
+        );
+        return;
+      }
+      step.sourceText = selectedText;
+      elements.stepSourceText.value = selectedText;
+      markAnimationEditorDirty();
+      refreshAnimationEditorAfterChange();
+    }
+
+    function showAllRenderedTargets() {
+      if (state.animationEditorReadOnly || !state.animationManifest) return;
+      for (const item of state.animationInventory) {
+        const target = ensureAnimationTarget(item);
+        if (target.render !== false) {
+          target.visibleInEditor = true;
+        }
+      }
+      if (!state.activeTargetId) {
+        state.activeTargetId = state.animationInventory[0]?.targetId || "";
+      }
+      markAnimationEditorDirty();
+      refreshAnimationEditorAfterChange();
+    }
+
+    async function saveAnimationEditor() {
+      const svg = selectedSvg();
+      if (
+        !svg ||
+        !state.animationManifest ||
+        state.animationEditorReadOnly
+      ) {
+        return;
+      }
+      elements.saveAnimationManifest.disabled = true;
+      elements.saveAnimationManifestAnimation.disabled = true;
+      setEditorSaveState("Speichere ...");
+      try {
+        const payload = await postJson("/api/animation-editor/save", {
+          id: svg.id,
+          manifest: state.animationManifest,
+        });
+        state.animationManifest = payload.manifest;
+        applyAnimationDelayDefault(
+          state.animationManifest.defaults?.pauseMs ??
+            state.animationManifest.defaults?.stepDelayMs,
+        );
+        state.animationInventory = payload.inventory || state.animationInventory;
+        state.animationWarnings = payload.warnings || [];
+        state.animationManifestExists = true;
+        state.animationEditorDirty = false;
+        svg.animation = {
+          available: state.animationManifest.steps.length > 0,
+          stepCount: state.animationManifest.steps.length,
+          url: svg.animation?.url || "",
+        };
+        setEditorSaveState("Gespeichert");
+        captureTargetStyles();
+        refreshAnimationEditorAfterChange();
+      } catch (error) {
+        setEditorSaveState(error.message, true);
+      } finally {
+        elements.saveAnimationManifest.disabled =
+          state.animationEditorReadOnly;
+        elements.saveAnimationManifestAnimation.disabled =
+          state.animationEditorReadOnly;
+      }
+    }
+
+    function setReviewStatus(message, isError = false) {
+      elements.reviewStatus.textContent = message;
+      elements.reviewStatus.style.color = isError ? "#b91c1c" : "";
+    }
+
+    function formatReviewTimestamp(value) {
+      if (!value) {
+        return "";
+      }
+      const parsed = new Date(value);
+      if (Number.isNaN(parsed.getTime())) {
+        return "";
+      }
+      return parsed.toLocaleString("de-DE");
+    }
+
+    function versionSourceNote(svg) {
+      if (!svg?.isVersionSnapshot) {
+        return "";
+      }
+      if (typeof svg.version?.source_note === "string" && svg.version.source_note.trim()) {
+        return svg.version.source_note.trim();
+      }
+      const history = Array.isArray(svg.review?.notes_history)
+        ? svg.review.notes_history
+        : [];
+      const match = history.find((entry) => entry.version_id === svg.versionId);
+      return typeof match?.note === "string" ? match.note.trim() : "";
+    }
+
+    function clearUndoTimer() {
+      if (state.undoTimer) {
+        clearTimeout(state.undoTimer);
+        state.undoTimer = null;
+      }
+    }
+
+    function hideUndoToast() {
+      clearUndoTimer();
+      state.undoTrash = null;
+      elements.undoToast.hidden = true;
+      elements.undoButton.disabled = false;
+      elements.undoMessage.textContent = "";
+    }
+
+    function showUndoToast(payload) {
+      clearUndoTimer();
+      state.undoTrash = {
+        binPath: payload.bin_path,
+        sceneId: payload.scene_id,
+      };
+      elements.undoMessage.textContent =
+        `${payload.scene_id} wurde in den Papierkorb verschoben.`;
+      elements.undoToast.hidden = false;
+      state.undoTimer = window.setTimeout(hideUndoToast, 8000);
+    }
+
+    function renderReview(svg = selectedSvg()) {
+      const available = Boolean(svg);
+      const review = svg?.review || {};
+      const isFinal = review.final === true;
+      const isVersionSnapshot = svg?.isVersionSnapshot === true;
+      const openNotes = review.notes_status === "open" ? review.notes || "" : "";
+      const displayedNotes = isVersionSnapshot ? versionSourceNote(svg) : openNotes;
+
+      elements.final.disabled = !available || isVersionSnapshot;
+      elements.final.checked = isFinal;
+      elements.notes.disabled = !available;
+      elements.notes.readOnly = isFinal || isVersionSnapshot;
+      elements.notes.value = displayedNotes;
+      elements.saveNotes.disabled = !available || isFinal || isVersionSnapshot;
+      elements.trash.disabled = !available || !svg.canTrash || isFinal || isVersionSnapshot;
+      elements.trash.title = !available
+        ? ""
+        : isVersionSnapshot
+          ? "Archivierte Versionen sind schreibgeschützt."
+        : !svg.canTrash
+          ? "Diese SVG gehört nicht zu einem vollständigen Szenenordner."
+          : isFinal
+            ? "Finalisierte Szenen müssen zuerst wieder geöffnet werden."
+            : "";
+
+      if (!available) {
+        setReviewStatus("");
+      } else if (isVersionSnapshot) {
+        const createdAt = formatReviewTimestamp(svg.version?.created_at);
+        setReviewStatus(
+          versionSourceNote(svg)
+            ? `Archivierte Version${createdAt ? ` vom ${createdAt}` : ""}; die zugehörige Notiz steht im Textfeld.`
+            : `Archivierte Version${createdAt ? ` vom ${createdAt}` : ""}.`,
+        );
+      } else if (review.read_error) {
+        setReviewStatus(review.read_error, true);
+      } else if (isFinal) {
+        const finalizedAt = review.finalized_at
+          ? new Date(review.finalized_at).toLocaleString("de-DE")
+          : "";
+        setReviewStatus(
+          finalizedAt
+            ? `Finalisiert am ${finalizedAt}.`
+            : "Finalisiert und für Änderungen gesperrt.",
+        );
+      } else if (review.notes_status === "open") {
+        setReviewStatus("Offene Änderungsnotizen gespeichert.");
+      } else {
+        setReviewStatus("Noch keine offenen Änderungsnotizen.");
+      }
+    }
+
+    async function setViewMode(mode) {
+      const nextMode = mode === "storyboard" ? "storyboard" : "svg";
+      const previousMode = state.viewMode;
+      if (
+        nextMode === "storyboard" &&
+        (state.notesDirty || state.animationEditorDirty) &&
+        !window.confirm("Ungespeicherte SVG-Änderungen verwerfen und zum Storyboard wechseln?")
+      ) {
+        return;
+      }
+
+      state.viewMode = nextMode;
+      if (state.viewMode === "storyboard" && previousMode !== "storyboard") {
+        state.storyboardPageView = "overview";
+      }
+      elements.main.classList.toggle("storyboard-mode", state.viewMode === "storyboard");
+      elements.storyboardPage.hidden = state.viewMode !== "storyboard";
+      elements.modeButtons.forEach((button) => {
+        button.classList.toggle("active", button.dataset.viewMode === state.viewMode);
+      });
+      elements.search.placeholder =
+        state.viewMode === "storyboard"
+          ? "Storyboard, Titel oder Sprechertext suchen"
+          : "Szene, Titel oder Pfad suchen";
+
+      if (state.viewMode === "storyboard") {
+        if (!state.storyboardSources.length) {
+          await loadStoryboards();
+        }
+        applyFilter();
+        if (state.selectedStoryboardId) {
+          renderStoryboardPage();
+          renderStoryboardList();
+          updateNavigation();
+        } else if (state.filteredStoryboards[0]) {
+          selectStoryboardScene(state.filteredStoryboards[0].id, { showDetail: false });
+        } else {
+          elements.title.textContent = "Kein Storyboard gefunden";
+          elements.path.textContent = "";
+          elements.storyboardPageTitle.textContent = "Kein Storyboard gefunden";
+          elements.storyboardPageMeta.textContent =
+            "Lege ein Storyboard unter storyboards/<course_id>/storyboard.json an.";
+          elements.storyboardPageDetail.replaceChildren();
+          updateNavigation();
+        }
+        return;
+      }
+
+      applyFilter();
+      const active = selectedSvg();
+      if (active) {
+        elements.title.textContent = active.title || displayName(active);
+        elements.path.textContent = active.path;
+      }
+    }
+
+    async function loadStoryboards(preferredId = "") {
+      const response = await fetch(`/api/storyboards?v=${Date.now()}`);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      const payload = await response.json();
+      state.storyboardSources = payload.storyboards || [];
+      state.storyboardScenes = state.storyboardSources.flatMap((source) =>
+        (source.scenes || []).map((scene) => ({
+          ...scene,
+          sourceId: source.id,
+          sourceTitle: source.title || source.source,
+        })),
+      );
+
+      const keepId =
+        preferredId && state.storyboardScenes.some((scene) => scene.id === preferredId)
+          ? preferredId
+          : "";
+      if (!keepId && !state.storyboardScenes.some((scene) => scene.id === state.selectedStoryboardId)) {
+        state.selectedStoryboardId = "";
+      } else if (keepId) {
+        state.selectedStoryboardId = keepId;
+      }
+
+      if (state.viewMode === "storyboard") {
+        applyFilter();
+      }
+    }
+
+      async function loadSvgs(preferredId = "") {
+      const response = await fetch(`/api/svgs?v=${Date.now()}`);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      const payload = await response.json();
+      state.all = payload.svgs;
+
+      const requestedId = decodeURIComponent(location.hash.slice(1));
+      const requestedExists =
+        requestedId && state.all.some((svg) => svg.id === requestedId);
+      const keepId = preferredId && state.all.some((svg) => svg.id === preferredId)
+        ? preferredId
+        : "";
+      if (keepId) {
+        state.selectedId = keepId;
+      } else if (requestedExists) {
+        state.selectedId = requestedId;
+      } else if (!state.all.some((svg) => svg.id === state.selectedId)) {
+        state.selectedId = "";
+      }
+
+      applyFilter();
+
+      if (!state.selectedId) {
+        const initial = state.all.find((svg) => svg.id === requestedId) || state.all[0];
+        if (initial) {
+          await selectSvg(initial.id);
+        } else {
+          elements.count.textContent = "Keine SVGs gefunden";
+        }
+      } else {
+        const active = selectedSvg();
+          if (active) {
+            renderVersionSelector(active);
+            renderStoryboard(active);
+            renderReview(active);
+            if (state.panelTab === "storyboard") {
+              renderStoryboardDetail(active);
+            }
+            stopAnimationPreview();
+          state.svgReady = false;
+          state.previewSvg = null;
+          elements.empty.textContent = "SVG und eingebettete Bilder werden geladen…";
+          elements.open.href = active.url;
+          elements.title.textContent = active.title || displayName(active);
+          elements.path.textContent = active.path;
+          try {
+            await loadAnimationManifest(active);
+            await loadPreview(active.url, active.title || active.path, active.id);
+          } catch (error) {
+            state.svgReady = false;
+            state.previewSvg = null;
+            renderAnimationControls();
+            previewMountRoot().replaceChildren(previewMountRoot().querySelector("style"));
+            elements.preview.style.visibility = "hidden";
+            elements.preview.hidden = true;
+            elements.empty.hidden = false;
+            elements.empty.textContent = `Die SVG konnte nicht dargestellt werden: ${error.message}`;
+          }
+        }
+      }
+    }
+
+    async function postJson(url, body) {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        throw new Error(payload.error || `HTTP ${response.status}`);
+      }
+      return payload;
+    }
+
+    function updateReviewInState(review) {
+      const svg = selectedSvg();
+      if (!svg) return;
+      svg.review = review;
+      state.notesDirty = false;
+      renderReview(svg);
+      renderList();
+    }
+
+    async function saveNotes() {
+      const svg = selectedSvg();
+      if (!svg) return;
+
+      elements.saveNotes.disabled = true;
+      setReviewStatus("Notizen werden gespeichert …");
+      try {
+        const payload = await postJson("/api/review/notes", {
+          id: svg.id,
+          notes: elements.notes.value,
+        });
+        updateReviewInState(payload.review);
+        setReviewStatus(
+          payload.review.notes_status === "open"
+            ? "Änderungsnotizen gespeichert."
+            : "Notizen entfernt.",
+        );
+      } catch (error) {
+        renderReview(svg);
+        setReviewStatus(error.message, true);
+      }
+    }
+
+    async function changeFinal() {
+      const svg = selectedSvg();
+      if (!svg) return;
+      const nextFinal = elements.final.checked;
+
+      if (state.notesDirty) {
+        elements.final.checked = svg.review.final === true;
+        setReviewStatus("Bitte ungespeicherte Notizen zuerst speichern.", true);
+        return;
+      }
+      if (
+        !nextFinal &&
+        svg.review.final === true &&
+        !window.confirm("Finalstatus aufheben und die SVG wieder zur Bearbeitung öffnen?")
+      ) {
+        elements.final.checked = true;
+        return;
+      }
+
+      elements.final.disabled = true;
+      setReviewStatus(nextFinal ? "SVG wird finalisiert …" : "SVG wird wieder geöffnet …");
+      try {
+        const payload = await postJson("/api/review/final", {
+          id: svg.id,
+          final: nextFinal,
+        });
+        updateReviewInState(payload.review);
+      } catch (error) {
+        elements.final.checked = svg.review.final === true;
+        renderReview(svg);
+        setReviewStatus(error.message, true);
+      }
+    }
+
+    async function trashSelectedScene() {
+      const svg = selectedSvg();
+      if (!svg?.canTrash) return;
+
+      const oldIndex = selectedIndex();
+      elements.trash.disabled = true;
+      setReviewStatus("Szenenordner wird in den Papierkorb verschoben …");
+      try {
+        const payload = await postJson("/api/trash", {
+          id: svg.id,
+          confirmSceneId: svg.sceneId,
+        });
+        state.all = state.all.filter((entry) => entry.id !== svg.id);
+        state.selectedId = "";
+        applyFilter();
+        const target = state.filtered[Math.min(oldIndex, state.filtered.length - 1)];
+        if (target) selectSvg(target.id);
+        showUndoToast(payload);
+        setReviewStatus(`${payload.scene_id} wurde in den Papierkorb verschoben.`);
+      } catch (error) {
+        renderReview(svg);
+        setReviewStatus(error.message, true);
+      }
+    }
+
+    async function undoTrash() {
+      if (!state.undoTrash) return;
+
+      const undoState = state.undoTrash;
+      elements.undoButton.disabled = true;
+      try {
+        const payload = await postJson("/api/trash/undo", {
+          binPath: undoState.binPath,
+        });
+        hideUndoToast();
+        const preferredId = `${payload.restored_path}/composed/scene.svg`;
+        await loadSvgs(preferredId);
+        setReviewStatus(`${payload.scene_id} wurde wiederhergestellt.`);
+      } catch (error) {
+        hideUndoToast();
+        setReviewStatus(error.message, true);
+      }
+    }
+
+    async function refreshSvgs() {
+      if (
+        (state.notesDirty || state.animationEditorDirty) &&
+        !window.confirm("Ungespeicherte Änderungen verwerfen und die SVG-Liste aktualisieren?")
+      ) {
+        return;
+      }
+
+      elements.refresh.disabled = true;
+      try {
+        if (state.viewMode === "storyboard") {
+          const svgResponse = await fetch(`/api/svgs?v=${Date.now()}`);
+          if (!svgResponse.ok) {
+            throw new Error(`HTTP ${svgResponse.status}`);
+          }
+          const svgPayload = await svgResponse.json();
+          state.all = svgPayload.svgs || [];
+          await loadStoryboards(state.selectedStoryboardId);
+          if (!state.selectedStoryboardId && state.filteredStoryboards[0]) {
+            selectStoryboardScene(state.filteredStoryboards[0].id, { showDetail: false });
+          } else if (state.selectedStoryboardId) {
+            renderStoryboardPage();
+            renderStoryboardList();
+            updateNavigation();
+          }
+        } else {
+          await loadSvgs(state.selectedId);
+          setReviewStatus("SVG-Liste aktualisiert.");
+        }
+      } catch (error) {
+        if (state.viewMode === "storyboard") {
+          elements.storyboardPageMeta.textContent =
+            `Storyboard konnte nicht geladen werden: ${error.message}`;
+        } else {
+          setReviewStatus(`SVG-Liste konnte nicht geladen werden: ${error.message}`, true);
+        }
+      } finally {
+        elements.refresh.disabled = false;
+      }
+    }
+
+    function move(offset) {
+      const index = selectedIndex();
+      if (state.viewMode === "storyboard") {
+        const target = state.filteredStoryboards[index + offset];
+        if (target) selectStoryboardScene(target.id);
+        return;
+      }
+      const target = state.filtered[index + offset];
+      if (target) selectSvg(target.id);
+    }
+
+    function applyFilter() {
+      const query = elements.search.value.trim().toLocaleLowerCase("de");
+      if (state.viewMode === "storyboard") {
+        state.filteredStoryboards = query
+          ? state.storyboardScenes.filter((scene) =>
+              [
+                scene.sceneId,
+                scene.title,
+                scene.coreContent,
+                scene.spokenText,
+                scene.source,
+                navLabel(scene.module),
+                navLabel(scene.chapter),
+                navLabel(scene.lesson),
+              ]
+                .filter(Boolean)
+                .some((value) => value.toLocaleLowerCase("de").includes(query)),
+            )
+          : [...state.storyboardScenes];
+
+        if (!state.filteredStoryboards.some((scene) => scene.id === state.selectedStoryboardId)) {
+          state.selectedStoryboardId = "";
+        }
+        renderStoryboardList();
+        renderStoryboardPage();
+
+        if (!state.selectedStoryboardId && state.filteredStoryboards[0]) {
+          selectStoryboardScene(state.filteredStoryboards[0].id, { showDetail: false });
+        }
+        return;
+      }
+
+      state.filtered = query
+        ? state.all.filter((svg) =>
+            !svg.isVersionSnapshot &&
+            [svg.sceneId, svg.variant, svg.title, svg.path, svg.version?.label]
+              .filter(Boolean)
+              .some((value) => value.toLocaleLowerCase("de").includes(query)),
+          )
+        : state.all.filter((svg) => !svg.isVersionSnapshot);
+
+      if (
+        !state.notesDirty &&
+        !state.filtered.some((svg) => svg.id === state.selectedId)
+      ) {
+        state.selectedId = "";
+      }
+      renderList();
+
+      if (!state.selectedId && state.filtered[0]) {
+        selectSvg(state.filtered[0].id);
+      }
+    }
+
+      elements.panelTabs.forEach((button) => {
+        button.addEventListener("click", () =>
+          setPanelTab(button.dataset.panelTab),
+        );
+      });
+      elements.modeButtons.forEach((button) => {
+        button.addEventListener("click", () =>
+          setViewMode(button.dataset.viewMode),
+        );
+      });
+      elements.storyboardViewButtons.forEach((button) => {
+        button.addEventListener("click", () =>
+          setStoryboardPageView(button.dataset.storyboardView),
+        );
+      });
+      elements.structureShowAll.addEventListener("click", showAllRenderedTargets);
+    elements.saveAnimationManifest.addEventListener(
+      "click",
+      saveAnimationEditor,
+    );
+    elements.saveAnimationManifestAnimation.addEventListener(
+      "click",
+      saveAnimationEditor,
+    );
+    elements.addStep.addEventListener("click", addAnimationStep);
+    elements.deleteStep.addEventListener("click", deleteActiveStep);
+      elements.useTextSelection.addEventListener(
+        "click",
+        useSpokenTextSelection,
+      );
+      elements.useTextSelection.addEventListener("mousedown", (event) =>
+        event.preventDefault(),
+      );
+    [
+      elements.targetLabel,
+      elements.targetStatus,
+      elements.targetConfidence,
+    ].forEach((element) => {
+      element.addEventListener("change", updateActiveTargetFromControls);
+    });
+    [
+      elements.stepAction,
+      elements.stepConfidence,
+      elements.stepSourceText,
+      elements.stepOccurrence,
+      elements.stepDuration,
+      elements.stepOffset,
+      elements.stepDrawStyle,
+      elements.stepDirection,
+    ].forEach((element) => {
+      element.addEventListener("change", updateActiveStepFromControls);
+    });
+
+    elements.search.addEventListener("input", applyFilter);
+    elements.notes.addEventListener("input", () => {
+      state.notesDirty = true;
+      setReviewStatus("Notizen wurden noch nicht gespeichert.");
+    });
+    elements.saveNotes.addEventListener("click", saveNotes);
+    elements.final.addEventListener("change", changeFinal);
+    elements.trash.addEventListener("click", trashSelectedScene);
+    elements.refresh.addEventListener("click", refreshSvgs);
+    elements.versionSelect.addEventListener("change", () => {
+      if (elements.versionSelect.value) {
+        selectSvg(elements.versionSelect.value);
+      }
+    });
+    elements.undoButton.addEventListener("click", undoTrash);
+    elements.animationPlay.addEventListener("click", playAnimation);
+    elements.animationReset.addEventListener("click", resetAnimation);
+    elements.animationDelay.addEventListener("change", () => {
+      if (!state.animationManifest) return;
+      const oldDuration = state.animationDuration;
+      const ratio = oldDuration > 0 ? state.animationTime / oldDuration : 0;
+      buildAnimationTimeline();
+      renderTimelineState(state.animationDuration * ratio);
+    });
+    elements.animationTimeline.addEventListener("input", () => {
+      if (!state.animationManifest || !state.svgReady) return;
+      state.previewMode = "timeline";
+      cancelAnimationFrame(state.animationFrame);
+      state.animationFrame = 0;
+      state.animationPlaying = false;
+      state.animationPaused = false;
+      state.animationLastTimestamp = 0;
+      renderTimelineState(Number(elements.animationTimeline.value));
+      renderAnimationControls();
+    });
+    window.addEventListener("beforeunload", (event) => {
+      if (!state.notesDirty && !state.animationEditorDirty) return;
+      event.preventDefault();
+      event.returnValue = "";
+    });
+    elements.previous.addEventListener("click", () => move(-1));
+    elements.next.addEventListener("click", () => move(1));
+    elements.fit.addEventListener("change", () => {
+      elements.preview.className = `preview ${elements.fit.value}`;
+      applyPreviewSize();
+      elements.stage.scrollTo({ top: 0, left: 0 });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.target.matches("input, select, textarea")) {
+        if (event.key === "Escape") event.target.blur();
+        return;
+      }
+
+      if (event.key === "ArrowLeft" || event.key.toLowerCase() === "a") {
+        event.preventDefault();
+        move(-1);
+      } else if (event.key === "ArrowRight" || event.key.toLowerCase() === "d") {
+        event.preventDefault();
+        move(1);
+      } else if (event.key.toLowerCase() === "f") {
+        elements.fit.value = "fit";
+        elements.fit.dispatchEvent(new Event("change"));
+      } else if (event.key === "/") {
+        event.preventDefault();
+        elements.search.focus();
+      }
+    });
+
+    async function initialize() {
+      try {
+        await loadSvgs();
+        await loadStoryboards();
+        if (location.hash.startsWith("#storyboard:")) {
+          const requestedStoryboardId = decodeURIComponent(
+            location.hash.slice("#storyboard:".length),
+          );
+          if (state.storyboardScenes.some((scene) => scene.id === requestedStoryboardId)) {
+            state.selectedStoryboardId = requestedStoryboardId;
+          }
+          await setViewMode("storyboard");
+        }
+      } catch (error) {
+        elements.empty.textContent = `SVG-Liste konnte nicht geladen werden: ${error.message}`;
+        elements.count.textContent = "Fehler beim Laden";
+      }
+    }
+
+    initialize();
+
+    if ("ResizeObserver" in window) {
+      new ResizeObserver(() => applyPreviewSize()).observe(elements.canvas);
+    } else {
+      window.addEventListener("resize", applyPreviewSize);
+    }
+  </script>
+</body>
+</html>

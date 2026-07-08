@@ -1,0 +1,123 @@
+{
+  "schema": "moduleSvgRebuildPlan/v1",
+  "module_id": "RE3_TEST_1",
+  "status": "restart_test_slice_complete",
+  "restart_reason": "Previous generated SVG proposals were deleted at user request to test the improved workflow.",
+  "created_from": [
+    "source-materials/basis-seminar/pptx/Modul_3_RE3_Test_1.pptx",
+    "source-materials/basis-seminar/png/Modul_3_RE3_Test_1_PNG",
+    "source-materials/basis-seminar/narration/RE3_TEST_1/Modul_3_Test_1.md",
+    "analysis/modul_3_test_1_contact_sheet.png"
+  ],
+  "active_rules": [
+    "Basis seminar: no prior reliability-engineering knowledge may be assumed.",
+    "Existing slides are content and structure anchors, not disposable inspiration.",
+    "The unchanged spoken text is binding and must be checked point by point.",
+    "One work unit at a time only.",
+    "Before SVG code: source/spoken-text alignment note plus creative beginner-friendly scene concept.",
+    "No visible PowerPoint title inside the SVG unless explicitly requested.",
+    "Textbox and card text must fit with visible padding.",
+    "Every SVG must be rendered and visually reviewed before the next unit starts."
+  ],
+  "process_controls": {
+    "one_active_work_unit_only": true,
+    "active_work_unit": "",
+    "batch_svg_generation_allowed": false,
+    "required_loop_per_work_unit": [
+      "source_slide_review",
+      "spoken_text_alignment",
+      "creative_scene_concept",
+      "scene_plan",
+      "implementation",
+      "render",
+      "visual_error_review",
+      "correction",
+      "re_render_if_needed",
+      "release_next_work_unit"
+    ],
+    "next_work_unit_allowed_before_current_review": false
+  },
+  "latest_automated_svg_qa": {
+    "command": "node tools\\svg-rebuild-qa.js RE3_TEST_1 --viewer --slides 1-13 --expect-all",
+    "report": "analysis/render-checks/RE3_TEST_1/automated-svg-qa/svg-qa-report.md",
+    "errors": 0,
+    "warnings": 0,
+    "status": "passed"
+  },
+  "completed_work_units": [
+    {
+      "work_unit": "g01_basic_weibull_workflow",
+      "source_slides": [1, 2, 3, 4, 5, 6],
+      "final_source_state": 6,
+      "scene_plan": "analysis/rebuild-plans/RE3_TEST_1_g01_scene_plan.md",
+      "master_svg": "rebuild-proposals/svg/RE3_TEST_1/g01_basic_weibull_workflow.svg",
+      "animation_manifest": "rebuild-proposals/svg/RE3_TEST_1/scene.animation.v1.json",
+      "animation_step_count": 9,
+      "basis_rebuild_viewer_url": "http://127.0.0.1:4174/#RE3_TEST_1%3A%3A1",
+      "review_report": "analysis/reports/RE3_TEST_1_g01_svg_rebuild_review.md",
+      "status": "ready_for_user_review"
+    },
+    {
+      "work_unit": "g02_weibull_function_formula",
+      "source_slides": [7, 8],
+      "final_source_state": 7,
+      "scene_plan": "analysis/rebuild-plans/RE3_TEST_1_g02_scene_plan.md",
+      "master_svg": "rebuild-proposals/svg/RE3_TEST_1/g02_weibull_function_formula/g02_weibull_function_formula_007.svg",
+      "animation_manifest": "rebuild-proposals/svg/RE3_TEST_1/g02_weibull_function_formula/scene.animation.v1.json",
+      "animation_step_count": 6,
+      "basis_rebuild_viewer_url": "http://127.0.0.1:4174/#RE3_TEST_1%3A%3A7",
+      "review_report": "analysis/reports/RE3_TEST_1_g02_svg_rebuild_review.md",
+      "status": "ready_for_user_review"
+    },
+    {
+      "work_unit": "g03_failure_mechanism_split",
+      "source_slides": [9],
+      "final_source_state": 9,
+      "scene_plan": "analysis/rebuild-plans/RE3_TEST_1_g03_scene_plan.md",
+      "master_svg": "rebuild-proposals/svg/RE3_TEST_1/g03_failure_mechanism_split/g03_failure_mechanism_split_009.svg",
+      "animation_manifest": "rebuild-proposals/svg/RE3_TEST_1/g03_failure_mechanism_split/scene.animation.v1.json",
+      "animation_step_count": 5,
+      "basis_rebuild_viewer_url": "http://127.0.0.1:4174/#RE3_TEST_1%3A%3A9",
+      "review_report": "analysis/reports/RE3_TEST_1_g03_svg_rebuild_review.md",
+      "status": "ready_for_user_review"
+    },
+    {
+      "work_unit": "g04_censored_observations",
+      "source_slides": [10, 11],
+      "final_source_state": 11,
+      "scene_plan": "analysis/rebuild-plans/RE3_TEST_1_g04_scene_plan.md",
+      "master_svg": "rebuild-proposals/svg/RE3_TEST_1/g04_censored_observations/g04_censored_observations_010.svg",
+      "animation_manifest": "rebuild-proposals/svg/RE3_TEST_1/g04_censored_observations/scene.animation.v1.json",
+      "animation_step_count": 6,
+      "basis_rebuild_viewer_url": "http://127.0.0.1:4174/#RE3_TEST_1%3A%3A10",
+      "review_report": "analysis/reports/RE3_TEST_1_g04_svg_rebuild_review.md",
+      "status": "ready_for_user_review"
+    },
+    {
+      "work_unit": "g05_method_selection",
+      "source_slides": [12],
+      "final_source_state": 12,
+      "scene_plan": "analysis/rebuild-plans/RE3_TEST_1_g05_scene_plan.md",
+      "master_svg": "rebuild-proposals/svg/RE3_TEST_1/g05_method_selection/g05_method_selection_012.svg",
+      "animation_manifest": "rebuild-proposals/svg/RE3_TEST_1/g05_method_selection/scene.animation.v1.json",
+      "animation_step_count": 5,
+      "basis_rebuild_viewer_url": "http://127.0.0.1:4174/#RE3_TEST_1%3A%3A12",
+      "review_report": "analysis/reports/RE3_TEST_1_g05_svg_rebuild_review.md",
+      "status": "ready_for_user_review"
+    },
+    {
+      "work_unit": "g06_confidence_bounds",
+      "source_slides": [13],
+      "final_source_state": 13,
+      "scene_plan": "analysis/rebuild-plans/RE3_TEST_1_g06_scene_plan.md",
+      "master_svg": "rebuild-proposals/svg/RE3_TEST_1/g06_confidence_bounds/g06_confidence_bounds_013.svg",
+      "animation_manifest": "rebuild-proposals/svg/RE3_TEST_1/g06_confidence_bounds/scene.animation.v1.json",
+      "animation_step_count": 6,
+      "basis_rebuild_viewer_url": "http://127.0.0.1:4174/#RE3_TEST_1%3A%3A13",
+      "review_report": "analysis/reports/RE3_TEST_1_g06_svg_rebuild_review.md",
+      "status": "ready_for_user_review"
+    }
+  ],
+  "pending_work_units": [],
+  "current_next_step": "User review of the completed RE3_TEST_1 test slice in the Basis Rebuild Viewer."
+}

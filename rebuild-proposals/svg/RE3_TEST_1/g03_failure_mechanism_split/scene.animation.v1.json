@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "g03_failure_mechanism_split_009.svg",
+  "defaults": {
+    "pauseMs": 2500,
+    "enterFrames": 18,
+    "drawFrames": 22
+  },
+  "targets": [
+    {
+      "targetId": "g03_layer_01_mixed_timeline",
+      "label": "Gemischte Ausfallzeiten erkennen",
+      "status": "animated"
+    },
+    {
+      "targetId": "g03_layer_02_two_trends",
+      "label": "Zwei Trends im Weibull-Papier",
+      "status": "animated"
+    },
+    {
+      "targetId": "g03_layer_03_split_arrow",
+      "label": "Nach Ursache trennen",
+      "status": "animated"
+    },
+    {
+      "targetId": "g03_layer_04_separated_timelines",
+      "label": "Getrennte Zeitachsen fuer A und B",
+      "status": "animated"
+    },
+    {
+      "targetId": "g03_layer_05_caution",
+      "label": "Hinweis zur getrennten Auswertung",
+      "status": "animated"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "g03_step_01",
+      "targetId": "g03_layer_01_mixed_timeline",
+      "action": "show"
+    },
+    {
+      "stepId": "g03_step_02",
+      "targetId": "g03_layer_02_two_trends",
+      "action": "show"
+    },
+    {
+      "stepId": "g03_step_03",
+      "targetId": "g03_layer_03_split_arrow",
+      "action": "show"
+    },
+    {
+      "stepId": "g03_step_04",
+      "targetId": "g03_layer_04_separated_timelines",
+      "action": "show"
+    },
+    {
+      "stepId": "g03_step_05",
+      "targetId": "g03_layer_05_caution",
+      "action": "show"
+    }
+  ]
+}

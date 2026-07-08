@@ -1,0 +1,1523 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basis Rebuild Viewer</title>
+  <style>
+    :root {
+      color: #102734;
+      background: #eef3f6;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color-scheme: light;
+    }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+    }
+    button, input, select, textarea { font: inherit; }
+    .app {
+      display: grid;
+      grid-template-columns: 340px minmax(0, 1fr);
+      height: 100vh;
+    }
+    .sidebar {
+      display: grid;
+      min-height: 0;
+      grid-template-rows: auto minmax(0, 1fr);
+      border-right: 1px solid #cad7df;
+      background: #fff;
+    }
+    .sidebar-header {
+      padding: 18px;
+      border-bottom: 1px solid #d8e3ea;
+    }
+    h1 {
+      margin: 0 0 4px;
+      font-size: 23px;
+      letter-spacing: 0;
+    }
+    .muted {
+      color: #647987;
+      font-size: 13px;
+    }
+    .filters {
+      display: grid;
+      grid-template-columns: 1fr 120px;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .search, .select, .textarea {
+      width: 100%;
+      border: 1px solid #c7d4dc;
+      border-radius: 8px;
+      color: #102734;
+      background: #f8fbfc;
+      outline: none;
+    }
+    .search, .select {
+      height: 38px;
+      padding: 8px 10px;
+    }
+    .search:focus, .select:focus, .textarea:focus {
+      border-color: #168fbd;
+      box-shadow: 0 0 0 3px rgba(22, 143, 189, 0.14);
+    }
+    .slide-list {
+      min-height: 0;
+      overflow: auto;
+      padding: 10px;
+    }
+    .module-label {
+      margin: 14px 8px 7px;
+      color: #6f818c;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .slide-item {
+      display: grid;
+      width: 100%;
+      gap: 6px;
+      margin-bottom: 6px;
+      padding: 10px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      color: #102734;
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+    }
+    .slide-item:hover { background: #eef8fb; }
+    .slide-item.active {
+      color: #fff;
+      background: #102734;
+    }
+    .slide-title {
+      overflow: hidden;
+      font-weight: 750;
+      line-height: 1.25;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .slide-meta {
+      color: #6c7f8b;
+      font-size: 12px;
+    }
+    .slide-item.active .slide-meta { color: #c9e7f1; }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 20px;
+      padding: 2px 7px;
+      border: 1px solid #d4dee5;
+      border-radius: 999px;
+      color: #536a78;
+      background: #fff;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .slide-item.active .badge {
+      border-color: rgba(255,255,255,0.35);
+      color: #fff;
+      background: rgba(255,255,255,0.12);
+    }
+    .badge.ok { border-color: #8fd8ab; color: #176b38; background: #e7f8ed; }
+    .badge.warn { border-color: #f2cd6b; color: #7a4a00; background: #fff6d7; }
+    .badge.miss { border-color: #e6a0a0; color: #8c2424; background: #fff0f0; }
+    .main {
+      display: grid;
+      min-width: 0;
+      min-height: 0;
+      grid-template-rows: auto auto minmax(0, 1fr);
+    }
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      padding: 12px 16px;
+      border-bottom: 1px solid #cad7df;
+      background: #fff;
+    }
+    .toolbar-title {
+      min-width: 0;
+      flex: 1;
+    }
+    .toolbar-title strong,
+    .toolbar-title span {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .toolbar-title span {
+      margin-top: 2px;
+      color: #647987;
+      font-size: 12px;
+    }
+    .button {
+      min-height: 38px;
+      padding: 8px 11px;
+      border: 1px solid #c7d4dc;
+      border-radius: 8px;
+      color: #102734;
+      background: #fff;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .button:hover {
+      border-color: #168fbd;
+      background: #eef8fb;
+    }
+    .button:disabled {
+      cursor: default;
+      opacity: 0.45;
+    }
+    .animation-bar {
+      display: grid;
+      grid-template-columns: auto auto auto auto 120px auto minmax(180px, 1fr) auto minmax(220px, 1fr);
+      gap: 10px;
+      align-items: center;
+      min-width: 0;
+      padding: 10px 16px;
+      border-bottom: 1px solid #cad7df;
+      background: #f8fafc;
+    }
+    .animation-bar strong {
+      font-size: 13px;
+    }
+    .animation-status {
+      min-width: 0;
+      overflow: hidden;
+      color: #647987;
+      font-size: 13px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .animation-timeline {
+      width: 100%;
+      margin: 0;
+      accent-color: #168fbd;
+    }
+    .timeline-time {
+      min-width: 42px;
+      color: #647987;
+      font-size: 12px;
+      font-variant-numeric: tabular-nums;
+    }
+    .segmented {
+      display: inline-grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+      padding: 3px;
+      border: 1px solid #d4dee5;
+      border-radius: 8px;
+      background: #eef3f6;
+    }
+    .segment {
+      min-height: 31px;
+      border: 0;
+      border-radius: 6px;
+      color: #607481;
+      background: transparent;
+      cursor: pointer;
+      font-weight: 750;
+    }
+    .segment.active {
+      color: #102734;
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(16, 39, 52, 0.12);
+    }
+    .content {
+      display: grid;
+      min-width: 0;
+      min-height: 0;
+      grid-template-columns: minmax(0, 1fr) 380px;
+    }
+    .compare {
+      min-width: 0;
+      min-height: 0;
+      overflow: auto;
+      padding: 18px;
+      background: #e7eef2;
+    }
+    .compare-grid {
+      display: grid;
+      min-height: 100%;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 14px;
+    }
+    .frame {
+      display: grid;
+      min-width: 0;
+      min-height: 0;
+      grid-template-rows: auto minmax(0, 1fr);
+      border: 1px solid #cad7df;
+      border-radius: 8px;
+      background: #fff;
+      overflow: hidden;
+    }
+    .frame-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      min-height: 42px;
+      padding: 9px 11px;
+      border-bottom: 1px solid #d8e3ea;
+      color: #324e5e;
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .frame-body {
+      display: flex;
+      min-height: 420px;
+      align-items: center;
+      justify-content: center;
+      overflow: auto;
+      padding: 12px;
+      background:
+        linear-gradient(45deg, #edf2f5 25%, transparent 25%),
+        linear-gradient(-45deg, #edf2f5 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #edf2f5 75%),
+        linear-gradient(-45deg, transparent 75%, #edf2f5 75%);
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+      background-size: 20px 20px;
+    }
+    .media {
+      display: block;
+      max-width: 100%;
+      max-height: 78vh;
+      background: #fff;
+      box-shadow: 0 8px 22px rgba(16, 39, 52, 0.13);
+    }
+    .inline-svg {
+      display: block;
+      max-width: 100%;
+      max-height: 78vh;
+      width: auto;
+      height: auto;
+      background: #fff;
+      box-shadow: 0 8px 22px rgba(16, 39, 52, 0.13);
+    }
+    .inline-svg.width { width: 100%; max-height: none; }
+    .inline-svg.original { max-width: none; max-height: none; }
+    .media.width { width: 100%; max-height: none; }
+    .media.original { max-width: none; max-height: none; }
+    .empty {
+      max-width: 360px;
+      padding: 20px;
+      color: #607481;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .overlay-stage {
+      display: none;
+      min-height: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    .overlay-box {
+      position: relative;
+      width: min(100%, 1280px);
+      aspect-ratio: 16 / 9;
+      border: 1px solid #cad7df;
+      border-radius: 8px;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 8px 22px rgba(16, 39, 52, 0.13);
+    }
+    .overlay-box img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #fff;
+    }
+    .overlay-label {
+      position: absolute;
+      z-index: 5;
+      left: 12px;
+      top: 12px;
+      padding: 5px 8px;
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(16, 39, 52, 0.78);
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .compare.overlay .compare-grid { display: none; }
+    .compare.overlay .overlay-stage { display: flex; }
+    .details {
+      min-width: 0;
+      min-height: 0;
+      overflow: auto;
+      border-left: 1px solid #cad7df;
+      background: #fff;
+    }
+    .section {
+      padding: 16px;
+      border-bottom: 1px solid #e1e9ee;
+    }
+    .section h2 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+    .kv {
+      display: grid;
+      grid-template-columns: 110px minmax(0, 1fr);
+      gap: 6px 10px;
+      font-size: 13px;
+    }
+    .kv dt {
+      color: #647987;
+      font-weight: 750;
+    }
+    .kv dd {
+      margin: 0;
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+    .list {
+      display: grid;
+      gap: 7px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 13px;
+      line-height: 1.38;
+    }
+    .list li {
+      padding: 8px 9px;
+      border-left: 3px solid #168fbd;
+      background: #f4f8fa;
+    }
+    .list.warn li { border-left-color: #d89b19; background: #fff8df; }
+    .list.issue li { border-left-color: #c74d4d; background: #fff1f1; }
+    .textarea {
+      min-height: 120px;
+      resize: vertical;
+      padding: 10px;
+      line-height: 1.35;
+    }
+    .review-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: start;
+    }
+    .review-status {
+      margin-top: 8px;
+      color: #647987;
+      font-size: 12px;
+    }
+    .path-link {
+      color: #116f91;
+      text-decoration: none;
+    }
+    .path-link:hover { text-decoration: underline; }
+    .frame-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .link-button {
+      border: 0;
+      padding: 0;
+      color: #116f91;
+      background: transparent;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 800;
+    }
+    .link-button:hover { text-decoration: underline; }
+    .link-button:disabled {
+      color: #9aabb5;
+      cursor: default;
+      text-decoration: none;
+    }
+    .fullscreen-viewer {
+      position: fixed;
+      z-index: 50;
+      inset: 0;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
+      background: #071923;
+    }
+    .fullscreen-viewer[hidden] { display: none !important; }
+    .fullscreen-toolbar {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto auto auto 120px auto minmax(220px, 1fr) auto auto minmax(220px, 1fr);
+      gap: 10px;
+      align-items: center;
+      min-width: 0;
+      padding: 12px 16px;
+      color: #eaf6fb;
+      background: #102734;
+      border-bottom: 1px solid rgba(255,255,255,0.16);
+    }
+    .fullscreen-title {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-weight: 800;
+    }
+    .fullscreen-toolbar .button,
+    .fullscreen-toolbar .select {
+      color: #102734;
+      background: #fff;
+    }
+    .fullscreen-toolbar .timeline-time,
+    .fullscreen-toolbar .animation-status,
+    .fullscreen-toolbar .muted {
+      color: #c8dbe5;
+    }
+    .fullscreen-stage {
+      display: flex;
+      min-width: 0;
+      min-height: 0;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow: hidden;
+    }
+    .fullscreen-canvas {
+      display: flex;
+      width: min(100%, calc((100vh - 112px) * 16 / 9));
+      aspect-ratio: 16 / 9;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.42);
+    }
+    .fullscreen-canvas .inline-svg {
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      max-height: none;
+      box-shadow: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>Basis Rebuild</h1>
+        <div id="count" class="muted">Laedt Quellen...</div>
+        <div class="filters">
+          <input id="search" class="search" type="search" placeholder="Folie, Modul oder Text suchen">
+          <select id="moduleFilter" class="select" aria-label="Modulfilter"></select>
+        </div>
+      </div>
+      <div id="slideList" class="slide-list"></div>
+    </aside>
+
+    <main class="main">
+      <div class="toolbar">
+        <button id="previous" class="button" title="Vorherige Folie">‹</button>
+        <button id="next" class="button" title="Naechste Folie">›</button>
+        <div class="toolbar-title">
+          <strong id="title">Keine Folie ausgewaehlt</strong>
+          <span id="subtitle"></span>
+        </div>
+        <div class="segmented" aria-label="Vergleichsansicht">
+          <button class="segment active" data-mode="side">Nebeneinander</button>
+          <button class="segment" data-mode="overlay">Overlay</button>
+        </div>
+        <label class="muted" for="opacity">Alt</label>
+        <input id="opacity" type="range" min="0" max="100" value="50" title="Deckkraft alte Folie im Overlay">
+        <select id="fitMode" class="select" aria-label="Einpassung">
+          <option value="fit">Einpassen</option>
+          <option value="width">Breite</option>
+          <option value="original">Original</option>
+        </select>
+        <button id="refresh" class="button">Aktualisieren</button>
+      </div>
+
+      <div id="animationBar" class="animation-bar" hidden>
+        <strong>Animation</strong>
+        <button id="animationPlay" class="button" type="button">Abspielen</button>
+        <button id="animationReset" class="button" type="button">Zuruecksetzen</button>
+        <label class="muted" for="animationDelay">Pause</label>
+        <select id="animationDelay" class="select" aria-label="Animationspause">
+          <option value="500">0,5 s</option>
+          <option value="1000">1,0 s</option>
+          <option value="1500">1,5 s</option>
+          <option value="2500" selected>2,5 s</option>
+        </select>
+        <span id="animationCurrent" class="timeline-time">0:00</span>
+        <input id="animationTimeline" class="animation-timeline" type="range" min="0" max="1" value="0" step="1" aria-label="Animationszeit">
+        <span id="animationTotal" class="timeline-time">0:00</span>
+        <span id="animationStatus" class="animation-status">Keine Animation fuer diesen SVG-Vorschlag.</span>
+      </div>
+
+      <div class="content">
+        <section id="compare" class="compare">
+          <div class="compare-grid">
+            <div class="frame">
+              <div class="frame-header">
+                <span>Alte Folie</span>
+                <a id="oldOpen" class="path-link" target="_blank" rel="noreferrer">oeffnen</a>
+              </div>
+              <div id="oldFrame" class="frame-body"></div>
+            </div>
+            <div class="frame">
+              <div class="frame-header">
+                <span>Neuer SVG-Vorschlag</span>
+                <div class="frame-actions">
+                  <button id="svgFullscreen" class="link-button" type="button">Vollbild</button>
+                  <a id="svgOpen" class="path-link" target="_blank" rel="noreferrer">oeffnen</a>
+                </div>
+              </div>
+              <div id="svgFrame" class="frame-body"></div>
+            </div>
+          </div>
+          <div class="overlay-stage">
+            <div class="overlay-box">
+              <img id="overlaySvg" alt="">
+              <img id="overlayOld" alt="">
+              <div class="overlay-label">Overlay: alte Folie ueber SVG</div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="details">
+          <section class="section">
+            <h2>Status</h2>
+            <dl id="meta" class="kv"></dl>
+          </section>
+          <section class="section">
+            <h2>Review</h2>
+            <div class="review-grid">
+              <select id="reviewStatus" class="select">
+                <option value="open">offen</option>
+                <option value="needs_revision">Korrektur</option>
+                <option value="accepted">akzeptiert</option>
+                <option value="final">final</option>
+              </select>
+              <button id="saveReview" class="button">Speichern</button>
+            </div>
+            <textarea id="reviewNotes" class="textarea" placeholder="Notizen zum Abgleich zwischen alter Folie und SVG-Vorschlag"></textarea>
+            <div id="reviewMessage" class="review-status"></div>
+          </section>
+          <section class="section">
+            <h2>Analyse</h2>
+            <dl id="analysisSummary" class="kv"></dl>
+          </section>
+          <section class="section">
+            <h2>QA</h2>
+            <ul id="qaList" class="list issue"></ul>
+          </section>
+          <section class="section">
+            <h2>Offene Fragen</h2>
+            <ul id="questionsList" class="list warn"></ul>
+          </section>
+          <section class="section">
+            <h2>Bildassets</h2>
+            <ul id="assetsList" class="list"></ul>
+          </section>
+          <section class="section">
+            <h2>Sichtbarer Text</h2>
+            <ul id="textList" class="list"></ul>
+          </section>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <div id="fullscreenViewer" class="fullscreen-viewer" hidden>
+    <div class="fullscreen-toolbar">
+      <div id="fullscreenTitle" class="fullscreen-title">SVG-Vorschlag</div>
+      <button id="fullscreenPlay" class="button" type="button">Abspielen</button>
+      <button id="fullscreenReset" class="button" type="button">Zuruecksetzen</button>
+      <label class="muted" for="fullscreenDelay">Pause</label>
+      <select id="fullscreenDelay" class="select" aria-label="Animationspause im Vollbild">
+        <option value="500">0,5 s</option>
+        <option value="1000">1,0 s</option>
+        <option value="1500">1,5 s</option>
+        <option value="2500" selected>2,5 s</option>
+      </select>
+      <span id="fullscreenCurrent" class="timeline-time">0:00</span>
+      <input id="fullscreenTimeline" class="animation-timeline" type="range" min="0" max="1" value="0" step="1" aria-label="Animationszeit im Vollbild">
+      <span id="fullscreenTotal" class="timeline-time">0:00</span>
+      <button id="fullscreenClose" class="button" type="button">Schliessen</button>
+      <span id="fullscreenStatus" class="animation-status">Keine Animation fuer diesen SVG-Vorschlag.</span>
+    </div>
+    <div class="fullscreen-stage">
+      <div id="fullscreenSvgFrame" class="fullscreen-canvas"></div>
+    </div>
+  </div>
+
+  <script>
+    const state = {
+      slides: [],
+      filtered: [],
+      modules: [],
+      selectedId: "",
+      mode: "side",
+      fit: "fit",
+      renderToken: 0,
+      previewSvg: null,
+      animationManifest: null,
+      animationSvg: null,
+      animationTimeline: [],
+      animationTime: 0,
+      animationDuration: 0,
+      animationPlaying: false,
+      animationPaused: false,
+      animationFrame: 0,
+      animationLastTimestamp: 0,
+      originalTargetStyles: new Map(),
+      fullscreenOpen: false,
+      fullscreenPlaceholder: null,
+    };
+
+    const elements = {
+      count: document.getElementById("count"),
+      search: document.getElementById("search"),
+      moduleFilter: document.getElementById("moduleFilter"),
+      slideList: document.getElementById("slideList"),
+      previous: document.getElementById("previous"),
+      next: document.getElementById("next"),
+      title: document.getElementById("title"),
+      subtitle: document.getElementById("subtitle"),
+      compare: document.getElementById("compare"),
+      oldFrame: document.getElementById("oldFrame"),
+      svgFrame: document.getElementById("svgFrame"),
+      oldOpen: document.getElementById("oldOpen"),
+      svgOpen: document.getElementById("svgOpen"),
+      svgFullscreen: document.getElementById("svgFullscreen"),
+      overlayOld: document.getElementById("overlayOld"),
+      overlaySvg: document.getElementById("overlaySvg"),
+      opacity: document.getElementById("opacity"),
+      fitMode: document.getElementById("fitMode"),
+      refresh: document.getElementById("refresh"),
+      animationBar: document.getElementById("animationBar"),
+      animationPlay: document.getElementById("animationPlay"),
+      animationReset: document.getElementById("animationReset"),
+      animationDelay: document.getElementById("animationDelay"),
+      animationTimeline: document.getElementById("animationTimeline"),
+      animationCurrent: document.getElementById("animationCurrent"),
+      animationTotal: document.getElementById("animationTotal"),
+      animationStatus: document.getElementById("animationStatus"),
+      fullscreenViewer: document.getElementById("fullscreenViewer"),
+      fullscreenTitle: document.getElementById("fullscreenTitle"),
+      fullscreenSvgFrame: document.getElementById("fullscreenSvgFrame"),
+      fullscreenPlay: document.getElementById("fullscreenPlay"),
+      fullscreenReset: document.getElementById("fullscreenReset"),
+      fullscreenDelay: document.getElementById("fullscreenDelay"),
+      fullscreenTimeline: document.getElementById("fullscreenTimeline"),
+      fullscreenCurrent: document.getElementById("fullscreenCurrent"),
+      fullscreenTotal: document.getElementById("fullscreenTotal"),
+      fullscreenStatus: document.getElementById("fullscreenStatus"),
+      fullscreenClose: document.getElementById("fullscreenClose"),
+      meta: document.getElementById("meta"),
+      analysisSummary: document.getElementById("analysisSummary"),
+      qaList: document.getElementById("qaList"),
+      questionsList: document.getElementById("questionsList"),
+      assetsList: document.getElementById("assetsList"),
+      textList: document.getElementById("textList"),
+      reviewStatus: document.getElementById("reviewStatus"),
+      reviewNotes: document.getElementById("reviewNotes"),
+      saveReview: document.getElementById("saveReview"),
+      reviewMessage: document.getElementById("reviewMessage"),
+      segments: [...document.querySelectorAll(".segment")],
+    };
+
+    function selectedSlide() {
+      return state.slides.find((slide) => slide.id === state.selectedId) || null;
+    }
+
+    function selectedIndex() {
+      return state.filtered.findIndex((slide) => slide.id === state.selectedId);
+    }
+
+    function badge(label, kind = "") {
+      const span = document.createElement("span");
+      span.className = `badge ${kind}`.trim();
+      span.textContent = label;
+      return span;
+    }
+
+    function statusBadges(slide) {
+      const badges = [];
+      badges.push(badge(slide.status.hasOldSlide ? "PNG" : "kein PNG", slide.status.hasOldSlide ? "ok" : "miss"));
+      badges.push(badge(slide.status.hasSvgProposal ? "SVG" : "kein SVG", slide.status.hasSvgProposal ? "ok" : "warn"));
+      if (slide.svgProposal?.aliasForSlideNumber) {
+        badges.push(badge(`Master ${String(slide.svgProposal.aliasForSlideNumber).padStart(3, "0")}`, "ok"));
+      }
+      if (slide.status.hasAnimation) {
+        badges.push(badge(`Animation ${slide.svgProposal?.animation?.stepCount || ""}`.trim(), "ok"));
+      }
+      badges.push(badge(slide.status.hasAnalysis ? slide.status.qaCompleteness : "keine Analyse", slide.status.hasAnalysis ? "" : "warn"));
+      if (slide.review?.status && slide.review.status !== "open") {
+        badges.push(badge(slide.review.status, slide.review.status === "accepted" || slide.review.status === "final" ? "ok" : "warn"));
+      }
+      return badges;
+    }
+
+    function makeMedia(record, alt) {
+      if (!record?.url) {
+        const empty = document.createElement("div");
+        empty.className = "empty";
+        empty.textContent = alt;
+        return empty;
+      }
+      const image = document.createElement("img");
+      image.className = `media ${state.fit === "fit" ? "" : state.fit}`.trim();
+      image.src = `${record.url}?v=${Date.now()}`;
+      image.alt = alt;
+      return image;
+    }
+
+    function makeEmpty(text) {
+      const empty = document.createElement("div");
+      empty.className = "empty";
+      empty.textContent = text;
+      return empty;
+    }
+
+    function formatTime(ms) {
+      const totalSeconds = Math.max(0, Math.round(Number(ms || 0) / 1000));
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = String(totalSeconds % 60).padStart(2, "0");
+      return `${minutes}:${seconds}`;
+    }
+
+    function setAnimationStatus(text) {
+      elements.animationStatus.textContent = text;
+      elements.fullscreenStatus.textContent = text;
+    }
+
+    function closeFullscreenViewer() {
+      if (!state.fullscreenOpen) return;
+      const svgElement = state.previewSvg || state.animationSvg;
+      if (svgElement && state.fullscreenPlaceholder?.parentNode) {
+        state.fullscreenPlaceholder.replaceWith(svgElement);
+      } else if (svgElement) {
+        elements.svgFrame.replaceChildren(svgElement);
+      }
+      elements.fullscreenSvgFrame.replaceChildren();
+      elements.fullscreenViewer.hidden = true;
+      state.fullscreenOpen = false;
+      state.fullscreenPlaceholder = null;
+      if (document.fullscreenElement === elements.fullscreenViewer) {
+        document.exitFullscreen().catch(() => {});
+      }
+      renderAnimationControls();
+    }
+
+    function openFullscreenViewer() {
+      const svgElement = state.previewSvg || state.animationSvg;
+      if (!svgElement) return;
+      const slide = selectedSlide();
+      state.fullscreenPlaceholder = document.createComment("fullscreen-svg-placeholder");
+      svgElement.replaceWith(state.fullscreenPlaceholder);
+      elements.fullscreenSvgFrame.replaceChildren(svgElement);
+      elements.fullscreenTitle.textContent = slide
+        ? `${slide.moduleId} · Folie ${String(slide.slideNumber).padStart(3, "0")} · SVG-Vorschlag`
+        : "SVG-Vorschlag";
+      elements.fullscreenViewer.hidden = false;
+      state.fullscreenOpen = true;
+      renderAnimationControls();
+      if (state.animationManifest) renderAnimationAt(state.animationTime);
+      elements.fullscreenViewer.requestFullscreen?.().catch(() => {});
+    }
+
+    function stopAnimationPlayback() {
+      cancelAnimationFrame(state.animationFrame);
+      state.animationFrame = 0;
+      state.animationPlaying = false;
+      state.animationPaused = false;
+      state.animationLastTimestamp = 0;
+      renderAnimationControls();
+    }
+
+    function resetAnimationState() {
+      closeFullscreenViewer();
+      stopAnimationPlayback();
+      state.animationManifest = null;
+      state.animationSvg = null;
+      state.animationTimeline = [];
+      state.animationTime = 0;
+      state.animationDuration = 0;
+      state.originalTargetStyles = new Map();
+      elements.animationTimeline.value = "0";
+      elements.animationTimeline.max = "1";
+      elements.animationCurrent.textContent = "0:00";
+      elements.animationTotal.textContent = "0:00";
+      elements.fullscreenTimeline.value = "0";
+      elements.fullscreenTimeline.max = "1";
+      elements.fullscreenCurrent.textContent = "0:00";
+      elements.fullscreenTotal.textContent = "0:00";
+      elements.animationBar.hidden = true;
+      setAnimationStatus("Keine Animation fuer diesen SVG-Vorschlag.");
+      renderAnimationControls();
+    }
+
+    function renderAnimationControls() {
+      const available = Boolean(state.animationManifest?.steps?.length && state.animationSvg);
+      elements.animationPlay.disabled = !available;
+      elements.animationReset.disabled = !available;
+      elements.animationDelay.disabled = !available;
+      elements.animationTimeline.disabled = !available;
+      elements.fullscreenPlay.disabled = !available;
+      elements.fullscreenReset.disabled = !available;
+      elements.fullscreenDelay.disabled = !available;
+      elements.fullscreenTimeline.disabled = !available;
+      elements.svgFullscreen.disabled = !(state.previewSvg || state.animationSvg);
+      const playLabel = state.animationPlaying
+        ? state.animationPaused
+          ? "Fortsetzen"
+          : "Pause"
+        : "Abspielen";
+      elements.animationPlay.textContent = playLabel;
+      elements.fullscreenPlay.textContent = playLabel;
+    }
+
+    function normalizeAnimationManifest(manifest) {
+      const fallback = {
+        schemaVersion: "svgAnimationManifest/v1",
+        defaults: {},
+        targets: [],
+        steps: [],
+      };
+      const parsed = manifest && typeof manifest === "object" ? manifest : {};
+      return {
+        ...fallback,
+        ...parsed,
+        defaults: parsed.defaults && typeof parsed.defaults === "object" ? parsed.defaults : {},
+        targets: Array.isArray(parsed.targets)
+          ? parsed.targets
+              .map((target) => ({
+                ...target,
+                targetId: target.targetId || target.id || "",
+                status: target.status || "animated",
+                render: target.render !== false,
+              }))
+              .filter((target) => target.targetId)
+          : [],
+        steps: Array.isArray(parsed.steps)
+          ? parsed.steps.filter((step) => step?.targetId)
+          : [],
+      };
+    }
+
+    function animationTargets() {
+      return (state.animationManifest?.targets || []).filter((target) =>
+        target.render !== false && target.status === "animated"
+      );
+    }
+
+    function findAnimationTarget(targetId) {
+      return state.animationSvg?.querySelector(`#${CSS.escape(targetId)}`) || null;
+    }
+
+    function captureTargetStyles() {
+      state.originalTargetStyles = new Map();
+      for (const target of animationTargets()) {
+        const element = findAnimationTarget(target.targetId);
+        if (element) {
+          state.originalTargetStyles.set(target.targetId, element.getAttribute("style"));
+        }
+      }
+    }
+
+    function restoreTargetStyle(targetId) {
+      const element = findAnimationTarget(targetId);
+      if (!element) return null;
+      const style = state.originalTargetStyles.get(targetId);
+      if (style == null) {
+        element.removeAttribute("style");
+      } else {
+        element.setAttribute("style", style);
+      }
+      return element;
+    }
+
+    function hideAnimationTarget(targetId) {
+      const element = restoreTargetStyle(targetId);
+      if (!element) return;
+      element.style.visibility = "hidden";
+      element.style.opacity = "0";
+      element.style.pointerEvents = "none";
+    }
+
+    function clipPathForDirection(direction, progress) {
+      const remaining = Math.max(0, Math.min(100, (1 - progress) * 100));
+      if (direction === "rightToLeft") return `inset(0 0 0 ${remaining}%)`;
+      if (direction === "topToBottom") return `inset(0 0 ${remaining}% 0)`;
+      if (direction === "bottomToTop") return `inset(${remaining}% 0 0 0)`;
+      return `inset(0 ${remaining}% 0 0)`;
+    }
+
+    function applyStepProgress(step, progress) {
+      const element = restoreTargetStyle(step.targetId);
+      if (!element) return;
+      const value = Math.max(0, Math.min(1, progress));
+      if (step.action === "hide") {
+        element.style.visibility = "visible";
+        element.style.opacity = String(1 - value);
+        return;
+      }
+      element.style.visibility = "visible";
+      element.style.opacity = String(Math.max(0.15, value));
+      element.style.pointerEvents = "none";
+      if (step.action === "draw") {
+        element.style.clipPath = clipPathForDirection(step.direction, value);
+      }
+    }
+
+    function applyStepFinal(step) {
+      const element = restoreTargetStyle(step.targetId);
+      if (!element) return;
+      if (step.action === "hide") {
+        element.style.visibility = "hidden";
+        element.style.opacity = "0";
+        return;
+      }
+      element.style.visibility = "visible";
+      element.style.opacity = "1";
+      element.style.clipPath = "";
+      element.style.pointerEvents = "none";
+    }
+
+    function frameDuration(step) {
+      const defaults = state.animationManifest?.defaults || {};
+      const frames =
+        step.action === "draw"
+          ? step.drawDurFrames ?? step.durFrames ?? defaults.drawDurFrames ?? 30
+          : step.action === "highlight"
+            ? step.highlightDurFrames ?? defaults.highlightDurFrames ?? 24
+            : step.action === "hide"
+              ? step.exitFrames ?? defaults.exitFrames ?? 16
+              : step.enterFrames ?? defaults.enterFrames ?? 16;
+      return Math.max(200, Math.min(2500, (Number(frames) / 30) * 1000));
+    }
+
+    function orderedAnimationSteps() {
+      const targetIds = new Set(animationTargets().map((target) => target.targetId));
+      return (state.animationManifest?.steps || [])
+        .filter((step) => targetIds.has(step.targetId))
+        .map((step, originalIndex) => ({ step, originalIndex }));
+    }
+
+    function applyAnimationDelayDefault(defaultDelayMs) {
+      const requested = Number(defaultDelayMs);
+      if (!Number.isFinite(requested) || requested <= 0) return;
+      const options = [...elements.animationDelay.options]
+        .map((option) => Number(option.value))
+        .filter((value) => Number.isFinite(value) && value > 0);
+      if (!options.length) return;
+      const closest = options.reduce((best, value) =>
+        Math.abs(value - requested) < Math.abs(best - requested) ? value : best,
+      );
+      elements.animationDelay.value = String(closest);
+      elements.fullscreenDelay.value = String(closest);
+    }
+
+    function buildAnimationTimeline() {
+      const orderedSteps = orderedAnimationSteps();
+      const pause = Number(elements.animationDelay.value);
+      let cursor = 0;
+      state.animationTimeline = orderedSteps.map((entry, index) => {
+        const start = cursor;
+        const end = start + frameDuration(entry.step);
+        const pauseEnd = end + (index < orderedSteps.length - 1 ? pause : 0);
+        cursor = pauseEnd;
+        return { ...entry, index, start, end, pauseEnd };
+      });
+      state.animationDuration = cursor;
+      elements.animationTimeline.max = String(Math.max(1, Math.round(cursor)));
+      state.animationTime = Math.min(state.animationTime, cursor);
+      elements.animationTotal.textContent = formatTime(cursor);
+      elements.fullscreenTimeline.max = elements.animationTimeline.max;
+      elements.fullscreenTotal.textContent = formatTime(cursor);
+    }
+
+    function renderAnimationAt(time) {
+      if (!state.animationManifest || !state.animationSvg) return;
+      const clamped = Math.max(0, Math.min(Number(time || 0), state.animationDuration));
+      state.animationTime = clamped;
+
+      for (const target of animationTargets()) {
+        hideAnimationTarget(target.targetId);
+      }
+
+      let activeSegment = null;
+      let lastCompletedSegment = null;
+      for (const segment of state.animationTimeline) {
+        if (clamped < segment.start) break;
+        if (clamped >= segment.end) {
+          applyStepFinal(segment.step);
+          lastCompletedSegment = segment;
+        } else {
+          activeSegment = segment;
+          const progress = (clamped - segment.start) / Math.max(1, segment.end - segment.start);
+          applyStepProgress(segment.step, progress);
+          break;
+        }
+      }
+
+      elements.animationTimeline.value = String(Math.round(clamped));
+      elements.animationCurrent.textContent = formatTime(clamped);
+      elements.fullscreenTimeline.value = elements.animationTimeline.value;
+      elements.fullscreenCurrent.textContent = elements.animationCurrent.textContent;
+      if (clamped >= state.animationDuration && state.animationTimeline.length) {
+        setAnimationStatus(`Animation abgeschlossen · ${state.animationTimeline.length} Schritte.`);
+      } else if (activeSegment) {
+        const target = state.animationManifest.targets.find((item) => item.targetId === activeSegment.step.targetId);
+        setAnimationStatus(`Schritt ${activeSegment.index + 1}/${state.animationTimeline.length}: ${target?.label || activeSegment.step.targetId}`);
+      } else if (lastCompletedSegment) {
+        setAnimationStatus(`Pause nach Schritt ${lastCompletedSegment.index + 1}/${state.animationTimeline.length}.`);
+      } else {
+        setAnimationStatus(`Start · ${state.animationTimeline.length} Schritte.`);
+      }
+      renderAnimationControls();
+    }
+
+    function resetAnimationPreview() {
+      stopAnimationPlayback();
+      renderAnimationAt(0);
+    }
+
+    function playAnimation() {
+      if (!state.animationManifest || !state.animationSvg) return;
+      if (state.animationPlaying) {
+        state.animationPaused = !state.animationPaused;
+        state.animationLastTimestamp = 0;
+        renderAnimationControls();
+        return;
+      }
+      if (state.animationTime >= state.animationDuration) {
+        renderAnimationAt(0);
+      }
+      state.animationPlaying = true;
+      state.animationPaused = false;
+      state.animationLastTimestamp = 0;
+      const tick = (timestamp) => {
+        if (!state.animationPlaying) return;
+        if (state.animationPaused) {
+          state.animationFrame = requestAnimationFrame(tick);
+          return;
+        }
+        if (!state.animationLastTimestamp) state.animationLastTimestamp = timestamp;
+        const delta = timestamp - state.animationLastTimestamp;
+        state.animationLastTimestamp = timestamp;
+        renderAnimationAt(state.animationTime + delta);
+        if (state.animationTime >= state.animationDuration) {
+          stopAnimationPlayback();
+          renderAnimationAt(state.animationDuration);
+          return;
+        }
+        state.animationFrame = requestAnimationFrame(tick);
+      };
+      renderAnimationControls();
+      state.animationFrame = requestAnimationFrame(tick);
+    }
+
+    function setupAnimation(manifest, svgElement, defaultPauseMs) {
+      state.animationManifest = normalizeAnimationManifest(manifest);
+      state.animationSvg = svgElement;
+      elements.animationBar.hidden = false;
+      applyAnimationDelayDefault(
+        state.animationManifest.defaults?.pauseMs ??
+          state.animationManifest.defaults?.stepDelayMs ??
+          defaultPauseMs,
+      );
+      captureTargetStyles();
+      buildAnimationTimeline();
+      renderAnimationAt(state.animationDuration);
+    }
+
+    async function renderSvgProposal(slide, token) {
+      const proposal = slide.svgProposal;
+      if (!proposal?.url) {
+        state.previewSvg = null;
+        resetAnimationState();
+        elements.svgFrame.replaceChildren(makeEmpty("Kein SVG-Vorschlag gefunden."));
+        return;
+      }
+
+      elements.svgFrame.replaceChildren(makeEmpty("SVG-Vorschlag wird geladen..."));
+      try {
+        const response = await fetch(`${proposal.url}?v=${Date.now()}`);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const source = await response.text();
+        if (token !== state.renderToken) return;
+        const documentSvg = new DOMParser().parseFromString(source, "image/svg+xml");
+        const parserError = documentSvg.querySelector("parsererror");
+        if (parserError) throw new Error("SVG konnte nicht geparst werden.");
+        const svgElement = document.importNode(documentSvg.documentElement, true);
+        svgElement.classList.add("inline-svg");
+        if (state.fit !== "fit") svgElement.classList.add(state.fit);
+        state.previewSvg = svgElement;
+        elements.svgFrame.replaceChildren(svgElement);
+
+        if (proposal.animation?.available && proposal.animation.url) {
+          const manifestResponse = await fetch(`${proposal.animation.url}?v=${Date.now()}`);
+          if (!manifestResponse.ok) throw new Error(`Animationsmanifest HTTP ${manifestResponse.status}`);
+          const manifest = await manifestResponse.json();
+          if (token !== state.renderToken) return;
+          setupAnimation(manifest, svgElement, proposal.animation.defaultPauseMs);
+        } else {
+          resetAnimationState();
+        }
+      } catch (error) {
+        state.previewSvg = null;
+        resetAnimationState();
+        elements.svgFrame.replaceChildren(makeMedia(proposal, `SVG konnte nicht inline geladen werden: ${error.message}`));
+      }
+    }
+
+    function renderList() {
+      elements.slideList.replaceChildren();
+      let currentModule = "";
+      for (const slide of state.filtered) {
+        if (slide.moduleId !== currentModule) {
+          currentModule = slide.moduleId;
+          const label = document.createElement("div");
+          label.className = "module-label";
+          label.textContent = currentModule;
+          elements.slideList.append(label);
+        }
+
+        const button = document.createElement("button");
+        button.className = `slide-item ${slide.id === state.selectedId ? "active" : ""}`;
+        button.type = "button";
+        button.addEventListener("click", () => selectSlide(slide.id));
+
+        const title = document.createElement("div");
+        title.className = "slide-title";
+        title.textContent = slide.title;
+        const meta = document.createElement("div");
+        meta.className = "slide-meta";
+        meta.textContent = `${slide.slideId} · Folie ${String(slide.slideNumber).padStart(3, "0")}`;
+        const badges = document.createElement("div");
+        badges.className = "badges";
+        statusBadges(slide).forEach((item) => badges.append(item));
+
+        button.append(title, meta, badges);
+        elements.slideList.append(button);
+      }
+    }
+
+    function renderDefinitionList(node, entries) {
+      node.replaceChildren();
+      for (const [label, value] of entries) {
+        const dt = document.createElement("dt");
+        dt.textContent = label;
+        const dd = document.createElement("dd");
+        if (value?.href) {
+          const link = document.createElement("a");
+          link.className = "path-link";
+          link.href = value.href;
+          link.target = "_blank";
+          link.rel = "noreferrer";
+          link.textContent = value.text;
+          dd.append(link);
+        } else {
+          dd.textContent = value || "-";
+        }
+        node.append(dt, dd);
+      }
+    }
+
+    function renderListItems(node, items, emptyText) {
+      node.replaceChildren();
+      const values = items.filter(Boolean);
+      if (!values.length) {
+        const item = document.createElement("li");
+        item.textContent = emptyText;
+        node.append(item);
+        return;
+      }
+      values.forEach((value) => {
+        const item = document.createElement("li");
+        item.textContent = typeof value === "string" ? value : JSON.stringify(value);
+        node.append(item);
+      });
+    }
+
+    function renderDetails(slide) {
+      const analysis = slide.analysis?.summary || {};
+      const qa = analysis.qa || {};
+      const summary = analysis.slideSummary || {};
+      const group = analysis.sourceSlideGroup || {};
+
+      renderDefinitionList(elements.meta, [
+        ["Modul", slide.moduleId],
+        ["Folie", String(slide.slideNumber).padStart(3, "0")],
+        ["Slide-ID", slide.slideId],
+        ["Alte Folie", slide.oldSlide ? { text: slide.oldSlide.path, href: slide.oldSlide.url } : "-"],
+        ["SVG", slide.svgProposal ? { text: slide.svgProposal.path, href: slide.svgProposal.url } : "-"],
+        ["SVG-Alias", slide.svgProposal?.aliasForSlideNumber ? `Master von Folie ${String(slide.svgProposal.aliasForSlideNumber).padStart(3, "0")}` : "-"],
+        ["Animation", slide.svgProposal?.animation?.available ? `${slide.svgProposal.animation.stepCount} Schritte` : "-"],
+        ["Analyse", slide.analysis?.summary ? { text: slide.analysis.path, href: slide.analysis.url } : "-"],
+      ]);
+
+      renderDefinitionList(elements.analysisSummary, [
+        ["Titel", summary.title],
+        ["Zweck", summary.purpose],
+        ["Kernaussage", summary.core_message],
+        ["Layout", summary.layout_type],
+        ["Komplexitaet", summary.complexity],
+        ["Sequenz", group.mode],
+        ["Quellfolien", Array.isArray(group.source_slide_numbers) ? group.source_slide_numbers.join(", ") : ""],
+      ]);
+
+      renderListItems(elements.qaList, [
+        ...(qa.issues || []),
+        slide.status.analysisError ? `Analysefehler: ${slide.status.analysisError}` : "",
+      ], "Keine QA-Issues dokumentiert.");
+
+      renderListItems(elements.questionsList, qa.open_questions || [], "Keine offenen Fragen dokumentiert.");
+
+      const assets = (analysis.generatedAssets || []).map((asset) => {
+        const needed = asset.needed === true ? "benoetigt" : "optional";
+        return `${asset.id || "asset"} (${needed}): ${asset.purpose || asset.prompt || "keine Beschreibung"}`;
+      });
+      const pngElements = (analysis.visualElements || [])
+        .filter((element) => element.png_asset?.needed)
+        .map((element) => `${element.id}: ${element.png_asset.reason || element.semantic_role || "Bildasset pruefen"}`);
+      renderListItems(elements.assetsList, [...assets, ...pngElements], "Keine Bildassets dokumentiert.");
+
+      const visibleText = (analysis.visibleText || []).map((item) => item.text);
+      renderListItems(elements.textList, visibleText, "Kein sichtbarer Text dokumentiert.");
+
+      elements.reviewStatus.value = slide.review?.status || "open";
+      elements.reviewNotes.value = slide.review?.notes || "";
+      elements.reviewMessage.textContent = slide.review?.updated_at
+        ? `Gespeichert: ${new Date(slide.review.updated_at).toLocaleString("de-DE")}`
+        : "";
+    }
+
+    function renderMedia(slide) {
+      const token = state.renderToken + 1;
+      state.renderToken = token;
+      resetAnimationState();
+      state.previewSvg = null;
+      elements.oldFrame.replaceChildren(makeMedia(slide.oldSlide, "Keine alte Foliengrafik gefunden."));
+      renderSvgProposal(slide, token);
+
+      elements.oldOpen.hidden = !slide.oldSlide;
+      elements.svgOpen.hidden = !slide.svgProposal;
+      if (slide.oldSlide) elements.oldOpen.href = slide.oldSlide.url;
+      if (slide.svgProposal) elements.svgOpen.href = slide.svgProposal.url;
+
+      elements.overlayOld.src = slide.oldSlide?.url ? `${slide.oldSlide.url}?v=${Date.now()}` : "";
+      elements.overlaySvg.src = slide.svgProposal?.url ? `${slide.svgProposal.url}?v=${Date.now()}` : "";
+      elements.overlayOld.style.opacity = String(Number(elements.opacity.value) / 100);
+    }
+
+    function selectSlide(id) {
+      const slide = state.slides.find((item) => item.id === id);
+      if (!slide) return;
+      state.selectedId = id;
+      elements.title.textContent = slide.title;
+      elements.subtitle.textContent = `${slide.moduleId} · ${slide.slideId} · Folie ${String(slide.slideNumber).padStart(3, "0")}`;
+      renderMedia(slide);
+      renderDetails(slide);
+      renderList();
+      updateNavigation();
+      location.hash = encodeURIComponent(id);
+    }
+
+    function applyFilter() {
+      const query = elements.search.value.trim().toLocaleLowerCase("de");
+      const moduleId = elements.moduleFilter.value;
+      state.filtered = state.slides.filter((slide) => {
+        if (moduleId && slide.moduleId !== moduleId) return false;
+        if (!query) return true;
+        return [
+          slide.moduleId,
+          slide.slideId,
+          slide.title,
+          slide.analysis?.summary?.slideSummary?.core_message,
+          slide.review?.notes,
+        ]
+          .filter(Boolean)
+          .some((value) => String(value).toLocaleLowerCase("de").includes(query));
+      });
+      if (!state.filtered.some((slide) => slide.id === state.selectedId)) {
+        state.selectedId = "";
+      }
+      renderList();
+      if (!state.selectedId && state.filtered[0]) selectSlide(state.filtered[0].id);
+      updateNavigation();
+    }
+
+    function updateNavigation() {
+      const index = selectedIndex();
+      elements.previous.disabled = index <= 0;
+      elements.next.disabled = index < 0 || index >= state.filtered.length - 1;
+    }
+
+    function move(offset) {
+      const index = selectedIndex();
+      const next = state.filtered[index + offset];
+      if (next) selectSlide(next.id);
+    }
+
+    async function saveReview() {
+      const slide = selectedSlide();
+      if (!slide) return;
+      elements.saveReview.disabled = true;
+      elements.reviewMessage.textContent = "Speichere...";
+      try {
+        const response = await fetch("/api/review", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            id: slide.id,
+            status: elements.reviewStatus.value,
+            notes: elements.reviewNotes.value,
+          }),
+        });
+        const payload = await response.json();
+        if (!response.ok) throw new Error(payload.error || `HTTP ${response.status}`);
+        slide.review = payload.review;
+        slide.status.reviewStatus = payload.review.status;
+        renderDetails(slide);
+        renderList();
+      } catch (error) {
+        elements.reviewMessage.textContent = error.message;
+      } finally {
+        elements.saveReview.disabled = false;
+      }
+    }
+
+    function setMode(mode) {
+      state.mode = mode === "overlay" ? "overlay" : "side";
+      elements.compare.classList.toggle("overlay", state.mode === "overlay");
+      elements.segments.forEach((button) => {
+        button.classList.toggle("active", button.dataset.mode === state.mode);
+      });
+    }
+
+    async function loadSlides(preferredId = "") {
+      const response = await fetch(`/api/slides?v=${Date.now()}`);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const payload = await response.json();
+      state.slides = payload.slides || [];
+      state.modules = payload.modules || [];
+
+      elements.moduleFilter.replaceChildren();
+      const allOption = document.createElement("option");
+      allOption.value = "";
+      allOption.textContent = "Alle Module";
+      elements.moduleFilter.append(allOption);
+      state.modules.forEach((moduleId) => {
+        const option = document.createElement("option");
+        option.value = moduleId;
+        option.textContent = moduleId;
+        elements.moduleFilter.append(option);
+      });
+
+      elements.count.textContent = `${state.slides.length} Folien gefunden`;
+      const hashId = decodeURIComponent(location.hash.slice(1));
+      const requested =
+        state.slides.find((slide) => slide.id === preferredId) ||
+        state.slides.find((slide) => slide.id === hashId);
+      if (requested) {
+        state.selectedId = requested.id;
+      }
+
+      applyFilter();
+
+      const initial =
+        requested ||
+        state.slides.find((slide) => slide.id === state.selectedId) ||
+        state.filtered[0];
+      if (initial) selectSlide(initial.id);
+    }
+
+    elements.search.addEventListener("input", applyFilter);
+    elements.moduleFilter.addEventListener("change", applyFilter);
+    elements.previous.addEventListener("click", () => move(-1));
+    elements.next.addEventListener("click", () => move(1));
+    elements.refresh.addEventListener("click", () => loadSlides(state.selectedId));
+    elements.saveReview.addEventListener("click", saveReview);
+    elements.svgFullscreen.addEventListener("click", openFullscreenViewer);
+    elements.animationPlay.addEventListener("click", playAnimation);
+    elements.animationReset.addEventListener("click", resetAnimationPreview);
+    elements.fullscreenPlay.addEventListener("click", playAnimation);
+    elements.fullscreenReset.addEventListener("click", resetAnimationPreview);
+    elements.fullscreenClose.addEventListener("click", closeFullscreenViewer);
+    elements.animationDelay.addEventListener("change", () => {
+      if (!state.animationManifest) return;
+      elements.fullscreenDelay.value = elements.animationDelay.value;
+      const oldDuration = state.animationDuration;
+      const ratio = oldDuration > 0 ? state.animationTime / oldDuration : 0;
+      buildAnimationTimeline();
+      renderAnimationAt(state.animationDuration * ratio);
+    });
+    elements.fullscreenDelay.addEventListener("change", () => {
+      if (!state.animationManifest) return;
+      elements.animationDelay.value = elements.fullscreenDelay.value;
+      const oldDuration = state.animationDuration;
+      const ratio = oldDuration > 0 ? state.animationTime / oldDuration : 0;
+      buildAnimationTimeline();
+      renderAnimationAt(state.animationDuration * ratio);
+    });
+    elements.animationTimeline.addEventListener("input", () => {
+      if (!state.animationManifest) return;
+      stopAnimationPlayback();
+      renderAnimationAt(Number(elements.animationTimeline.value));
+    });
+    elements.fullscreenTimeline.addEventListener("input", () => {
+      if (!state.animationManifest) return;
+      stopAnimationPlayback();
+      renderAnimationAt(Number(elements.fullscreenTimeline.value));
+    });
+    elements.opacity.addEventListener("input", () => {
+      elements.overlayOld.style.opacity = String(Number(elements.opacity.value) / 100);
+    });
+    elements.fitMode.addEventListener("change", () => {
+      state.fit = elements.fitMode.value;
+      const slide = selectedSlide();
+      if (slide) renderMedia(slide);
+    });
+    elements.segments.forEach((button) => {
+      button.addEventListener("click", () => setMode(button.dataset.mode));
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && state.fullscreenOpen) {
+        closeFullscreenViewer();
+        return;
+      }
+      if (event.target.matches("input, select, textarea")) return;
+      if (event.key === "ArrowLeft" || event.key.toLowerCase() === "a") move(-1);
+      if (event.key === "ArrowRight" || event.key.toLowerCase() === "d") move(1);
+      if (event.key === "/") {
+        event.preventDefault();
+        elements.search.focus();
+      }
+    });
+    document.addEventListener("fullscreenchange", () => {
+      if (state.fullscreenOpen && !document.fullscreenElement) {
+        closeFullscreenViewer();
+      }
+    });
+
+    loadSlides().catch((error) => {
+      elements.count.textContent = `Fehler: ${error.message}`;
+    });
+  </script>
+</body>
+</html>

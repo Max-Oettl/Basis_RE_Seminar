@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "scene.svg",
+  "defaults": {
+    "enterFrames": 14,
+    "highlightDurFrames": 24,
+    "drawDurFrames": 36
+  },
+  "targets": [
+    {
+      "targetId": "background",
+      "label": "Hintergrund",
+      "status": "ignored",
+      "ignoreReason": "static-background",
+      "confidence": "high"
+    },
+    {
+      "targetId": "",
+      "label": "",
+      "status": "animated",
+      "confidence": "medium"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "02",
+      "targetId": "",
+      "action": "show",
+      "sourceText": "",
+      "enterFrames": 14,
+      "fromY": 18,
+      "confidence": "medium"
+    }
+  ]
+}

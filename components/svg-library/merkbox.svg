@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">SVG template: merkbox</title>
+  <desc id="desc">Reusable note box with adjustable size, accent stripe, title, and body text.</desc>
+  <defs>
+    <filter id="merkbox_soft_shadow" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#062d46" flood-opacity="0.16"/>
+    </filter>
+    <style>
+      .merkbox-frame { fill: #ffffff; stroke: #d5e6ee; stroke-width: 3; }
+      .merkbox-inner { fill: #f6fafc; stroke: #e8f1f5; stroke-width: 2; }
+      .merkbox-accent { fill: #139ccb; }
+      .merkbox-kicker { fill: #139ccb; font: 800 24px Inter, "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+      .merkbox-title { fill: #062d46; font: 800 42px Inter, "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+      .merkbox-text { fill: #24465a; font: 500 28px Inter, "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+      .merkbox-muted { fill: #6c8491; font: 500 22px Inter, "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+    </style>
+  </defs>
+
+  <!--
+    Parameters for reuse:
+    - Outer box: x=360 y=318 width=1200 height=300 rx=26
+    - Inner padding: 42 px
+    - Accent width: 18 px
+    - If the box is resized, keep all text inside x+56 ... x+width-56.
+  -->
+  <g id="component_merkbox" data-component="merkbox" data-role="reusable-svg-component">
+    <rect id="merkbox_frame" class="merkbox-frame" x="360" y="318" width="1200" height="300" rx="26" filter="url(#merkbox_soft_shadow)"/>
+    <rect id="merkbox_inner" class="merkbox-inner" x="390" y="348" width="1140" height="240" rx="20"/>
+    <rect id="merkbox_accent" class="merkbox-accent" x="360" y="318" width="18" height="300" rx="9"/>
+    <text id="merkbox_kicker" class="merkbox-kicker" x="420" y="404">MERKBOX</text>
+    <text id="merkbox_title" class="merkbox-title" x="420" y="462">Kurzer Kerngedanke</text>
+    <text id="merkbox_line_1" class="merkbox-text" x="420" y="526">Eine zentrale Aussage steht als editierbarer SVG-Text in der Box.</text>
+    <text id="merkbox_line_2" class="merkbox-muted" x="420" y="566">Bei Bedarf zweite Zeile kurz halten oder Box verbreitern.</text>
+  </g>
+</svg>
