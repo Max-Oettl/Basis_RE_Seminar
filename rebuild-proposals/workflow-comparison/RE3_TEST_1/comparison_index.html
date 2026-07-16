@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RE3_TEST_1 Workflow-Vergleich</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: #062d46;
+      background: #f6f8f9;
+    }
+    main {
+      max-width: 1680px;
+      margin: 0 auto;
+      padding: 34px 28px 60px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+    }
+    .lead {
+      margin: 0 0 26px;
+      color: #5d7080;
+      font-size: 16px;
+    }
+    .slide-row {
+      background: white;
+      border: 1px solid #cfe0e8;
+      border-radius: 8px;
+      margin: 0 0 24px;
+      overflow: hidden;
+    }
+    .slide-row header {
+      display: grid;
+      grid-template-columns: 90px 280px 1fr;
+      gap: 18px;
+      align-items: center;
+      padding: 18px 22px;
+      border-bottom: 1px solid #d7e6ed;
+      background: #e8f6fb;
+    }
+    .slide-row span {
+      font-weight: 800;
+      color: #0c8fc1;
+    }
+    .slide-row strong {
+      font-size: 18px;
+    }
+    .slide-row em {
+      color: #5d7080;
+      font-style: normal;
+    }
+    .compare-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      padding: 16px;
+    }
+    figure {
+      margin: 0;
+      border: 1px solid #d7e6ed;
+      border-radius: 6px;
+      background: #fbfdfe;
+      overflow: hidden;
+    }
+    figcaption {
+      padding: 10px 12px;
+      font-weight: 760;
+      color: #062d46;
+      border-bottom: 1px solid #d7e6ed;
+    }
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      background: #f7fafc;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>RE3_TEST_1: Workflow-Vergleich</h1>
+    <p class="lead">Quelle, bisherige gruppierte Umsetzung und neue per-Folie abgeleitete Workflow-Variante.</p>
+    
+      <section class="slide-row">
+        <header>
+          <span>Folie 01</span>
+          <strong>Ausfalldaten sammeln</strong>
+          <em>Ausfallzeiten werden entlang der Lebensdauerachse sortiert.</em>
+        </header>
+        <div class="compare-grid">
+          <figure>
+            <figcaption>Quelle</figcaption>
+            <img src="../../../source-materials/basis-seminar/png/Modul_3_RE3_Test_1_PNG/Folie1.PNG" alt="Source slide 01">
+          </figure>
+          <figure>
+            <figcaption>Bisherige Umsetzung</figcaption>
+            <img src="../../svg/RE3_TEST_1/g01_basic_weibull_workflow.svg" alt="Old workflow SVG for slide 01">
+          </figure>
+          <figure>
+            <figcaption>Neue Workflow-Variante</figcaption>
+            <img src="new-workflow/slide_001/slide_001.svg" alt="New workflow SVG for slide 01">
+          </figure>
+        </div>
+      </section>
+
+      <section class="slide-row">
+        <header>
+          <span>Folie 02</span>
+          <strong>Median-Rang einführen</strong>
+          <em>Ausfallzeiten bekommen geschätzte Ausfallwahrscheinlichkeiten.</em>
+        </header>
+        <div class="compare-grid">
+          <figure>
+            <figcaption>Quelle</figcaption>
+            <img src="../../../source-materials/basis-seminar/png/Modul_3_RE3_Test_1_PNG/Folie2.PNG" alt="Source slide 02">
+          </figure>
+          <figure>
+            <figcaption>Bisherige Umsetzung</figcaption>
+            <img src="../../svg/RE3_TEST_1/g01_basic_weibull_workflow.svg" alt="Old workflow SVG for slide 02">
+          </figure>
+          <figure>
+            <figcaption>Neue Workflow-Variante</figcaption>
+            <img src="new-workflow/slide_002/slide_002.svg" alt="New workflow SVG for slide 02">
+          </figure>
+        </div>
+      </section>
+
+      <section class="slide-row">
+        <header>
+          <span>Folie 03</span>
+          <strong>Hilfslinien vorbereiten</strong>
+          <em>Berechnete F(tᵢ)-Werte werden im Diagramm verortet.</em>
+        </header>
+        <div class="compare-grid">
+          <figure>
+            <figcaption>Quelle</figcaption>
+            <img src="../../../source-materials/basis-seminar/png/Modul_3_RE3_Test_1_PNG/Folie3.PNG" alt="Source slide 03">
+          </figure>
+          <figure>
+            <figcaption>Bisherige Umsetzung</figcaption>
+            <img src="../../svg/RE3_TEST_1/g01_basic_weibull_workflow.svg" alt="Old workflow SVG for slide 03">
+          </figure>
+          <figure>
+            <figcaption>Neue Workflow-Variante</figcaption>
+            <img src="new-workflow/slide_003/slide_003.svg" alt="New workflow SVG for slide 03">
+          </figure>
+        </div>
+      </section>
+
+      <section class="slide-row">
+        <header>
+          <span>Folie 04</span>
+          <strong>Punkte ins Weibull-Papier</strong>
+          <em>Aus tᵢ und F(tᵢ) werden Datenpunkte im Wahrscheinlichkeitsnetz.</em>
+        </header>
+        <div class="compare-grid">
+          <figure>
+            <figcaption>Quelle</figcaption>
+            <img src="../../../source-materials/basis-seminar/png/Modul_3_RE3_Test_1_PNG/Folie4.PNG" alt="Source slide 04">
+          </figure>
+          <figure>
+            <figcaption>Bisherige Umsetzung</figcaption>
+            <img src="../../svg/RE3_TEST_1/g01_basic_weibull_workflow.svg" alt="Old workflow SVG for slide 04">
+          </figure>
+          <figure>
+            <figcaption>Neue Workflow-Variante</figcaption>
+            <img src="new-workflow/slide_004/slide_004.svg" alt="New workflow SVG for slide 04">
+          </figure>
+        </div>
+      </section>
+
+      <section class="slide-row">
+        <header>
+          <span>Folie 05</span>
+          <strong>Ausgleichsgerade bestimmen</strong>
+          <em>Die Punktwolke wird durch einen Weibull-Fit beschrieben.</em>
+        </header>
+        <div class="compare-grid">
+          <figure>
+            <figcaption>Quelle</figcaption>
+            <img src="../../../source-materials/basis-seminar/png/Modul_3_RE3_Test_1_PNG/Folie5.PNG" alt="Source slide 05">
+          </figure>
+          <figure>
+            <figcaption>Bisherige Umsetzung</figcaption>
+            <img src="../../svg/RE3_TEST_1/g01_basic_weibull_workflow.svg" alt="Old workflow SVG for slide 05">
+          </figure>
+          <figure>
+            <figcaption>Neue Workflow-Variante</figcaption>
+            <img src="new-workflow/slide_005/slide_005.svg" alt="New workflow SVG for slide 05">
+          </figure>
+        </div>
+      </section>
+
+      <section class="slide-row">
+        <header>
+          <span>Folie 06</span>
+          <strong>Weibull-Parameter ablesen</strong>
+          <em>T wird bei 63,2 % abgelesen, b ergibt sich aus der Steigung.</em>
+        </header>
+        <div class="compare-grid">
+          <figure>
+            <figcaption>Quelle</figcaption>
+            <img src="../../../source-materials/basis-seminar/png/Modul_3_RE3_Test_1_PNG/Folie6.PNG" alt="Source slide 06">
+          </figure>
+          <figure>
+            <figcaption>Bisherige Umsetzung</figcaption>
+            <img src="../../svg/RE3_TEST_1/g01_basic_weibull_workflow.svg" alt="Old workflow SVG for slide 06">
+          </figure>
+          <figure>
+            <figcaption>Neue Workflow-Variante</figcaption>
+            <img src="new-workflow/slide_006/slide_006.svg" alt="New workflow SVG for slide 06">
+          </figure>
+        </div>
+      </section>
+
+      <section class="slide-row">
+        <header>
+          <span>Folie 07</span>
+          <strong>Von Parametern zur Funktion</strong>
+          <em>T und b werden in die Weibull-Funktion eingesetzt.</em>
+        </header>
+        <div class="compare-grid">
+          <figure>
+            <figcaption>Quelle</figcaption>
+            <img src="../../../source-materials/basis-seminar/png/Modul_3_RE3_Test_1_PNG/Folie7.PNG" alt="Source slide 07">
+          </figure>
+          <figure>
+            <figcaption>Bisherige Umsetzung</figcaption>
+            <img src="../../svg/RE3_TEST_1/g02_weibull_function_formula/g02_weibull_function_formula_007.svg" alt="Old workflow SVG for slide 07">
+          </figure>
+          <figure>
+            <figcaption>Neue Workflow-Variante</figcaption>
+            <img src="new-workflow/slide_007/slide_007.svg" alt="New workflow SVG for slide 07">
+          </figure>
+        </div>
+      </section>
+
+      <section class="slide-row">
+        <header>
+          <span>Folie 08</span>
+          <strong>Grafische Auswertung sichtbar halten</strong>
+          <em>Der Zwischenzustand zeigt den grafischen Kontext ohne Formelblock.</em>
+        </header>
+        <div class="compare-grid">
+          <figure>
+            <figcaption>Quelle</figcaption>
+            <img src="../../../source-materials/basis-seminar/png/Modul_3_RE3_Test_1_PNG/Folie8.PNG" alt="Source slide 08">
+          </figure>
+          <figure>
+            <figcaption>Bisherige Umsetzung</figcaption>
+            <img src="../../svg/RE3_TEST_1/g02_weibull_function_formula/g02_weibull_function_formula_007.svg" alt="Old workflow SVG for slide 08">
+          </figure>
+          <figure>
+            <figcaption>Neue Workflow-Variante</figcaption>
+            <img src="new-workflow/slide_008/slide_008.svg" alt="New workflow SVG for slide 08">
+          </figure>
+        </div>
+      </section>
+
+      <section class="slide-row">
+        <header>
+          <span>Folie 09</span>
+          <strong>Ausfallmechanismen trennen</strong>
+          <em>Gemischte Ausfälle werden nach Mechanismus A und B getrennt betrachtet.</em>
+        </header>
+        <div class="compare-grid">
+          <figure>
+            <figcaption>Quelle</figcaption>
+            <img src="../../../source-materials/basis-seminar/png/Modul_3_RE3_Test_1_PNG/Folie9.PNG" alt="Source slide 09">
+          </figure>
+          <figure>
+            <figcaption>Bisherige Umsetzung</figcaption>
+            <img src="../../svg/RE3_TEST_1/g03_failure_mechanism_split/g03_failure_mechanism_split_009.svg" alt="Old workflow SVG for slide 09">
+          </figure>
+          <figure>
+            <figcaption>Neue Workflow-Variante</figcaption>
+            <img src="new-workflow/slide_009/slide_009.svg" alt="New workflow SVG for slide 09">
+          </figure>
+        </div>
+      </section>
+
+      <section class="slide-row">
+        <header>
+          <span>Folie 10</span>
+          <strong>Objekt-Zeit-Diagramm aufbauen</strong>
+          <em>Ausfallzeitpunkte werden den einzelnen Objekten zugeordnet.</em>
+        </header>
+        <div class="compare-grid">
+          <figure>
+            <figcaption>Quelle</figcaption>
+            <img src="../../../source-materials/basis-seminar/png/Modul_3_RE3_Test_1_PNG/Folie10.PNG" alt="Source slide 10">
+          </figure>
+          <figure>
+            <figcaption>Bisherige Umsetzung</figcaption>
+            <img src="../../svg/RE3_TEST_1/g04_censored_observations/g04_censored_observations_010.svg" alt="Old workflow SVG for slide 10">
+          </figure>
+          <figure>
+            <figcaption>Neue Workflow-Variante</figcaption>
+            <img src="new-workflow/slide_010/slide_010.svg" alt="New workflow SVG for slide 10">
+          </figure>
+        </div>
+      </section>
+
+      <section class="slide-row">
+        <header>
+          <span>Folie 11</span>
+          <strong>Zensierte Beobachtungen ergänzen</strong>
+          <em>Nicht ausgefallene Objekte werden als zensierte Beobachtungen sichtbar.</em>
+        </header>
+        <div class="compare-grid">
+          <figure>
+            <figcaption>Quelle</figcaption>
+            <img src="../../../source-materials/basis-seminar/png/Modul_3_RE3_Test_1_PNG/Folie11.PNG" alt="Source slide 11">
+          </figure>
+          <figure>
+            <figcaption>Bisherige Umsetzung</figcaption>
+            <img src="../../svg/RE3_TEST_1/g04_censored_observations/g04_censored_observations_010.svg" alt="Old workflow SVG for slide 11">
+          </figure>
+          <figure>
+            <figcaption>Neue Workflow-Variante</figcaption>
+            <img src="new-workflow/slide_011/slide_011.svg" alt="New workflow SVG for slide 11">
+          </figure>
+        </div>
+      </section>
+
+      <section class="slide-row">
+        <header>
+          <span>Folie 12</span>
+          <strong>Methoden einordnen</strong>
+          <em>Grafische Methode und Berechnungsmethoden werden als zwei Wege dargestellt.</em>
+        </header>
+        <div class="compare-grid">
+          <figure>
+            <figcaption>Quelle</figcaption>
+            <img src="../../../source-materials/basis-seminar/png/Modul_3_RE3_Test_1_PNG/Folie12.PNG" alt="Source slide 12">
+          </figure>
+          <figure>
+            <figcaption>Bisherige Umsetzung</figcaption>
+            <img src="../../svg/RE3_TEST_1/g05_method_selection/g05_method_selection_012.svg" alt="Old workflow SVG for slide 12">
+          </figure>
+          <figure>
+            <figcaption>Neue Workflow-Variante</figcaption>
+            <img src="new-workflow/slide_012/slide_012.svg" alt="New workflow SVG for slide 12">
+          </figure>
+        </div>
+      </section>
+
+      <section class="slide-row">
+        <header>
+          <span>Folie 13</span>
+          <strong>Vertrauensgrenzen zeigen</strong>
+          <em>5 %- und 95 %-Grenzkurven machen die Unsicherheit der Schätzung sichtbar.</em>
+        </header>
+        <div class="compare-grid">
+          <figure>
+            <figcaption>Quelle</figcaption>
+            <img src="../../../source-materials/basis-seminar/png/Modul_3_RE3_Test_1_PNG/Folie13.PNG" alt="Source slide 13">
+          </figure>
+          <figure>
+            <figcaption>Bisherige Umsetzung</figcaption>
+            <img src="../../svg/RE3_TEST_1/g06_confidence_bounds/g06_confidence_bounds_013.svg" alt="Old workflow SVG for slide 13">
+          </figure>
+          <figure>
+            <figcaption>Neue Workflow-Variante</figcaption>
+            <img src="new-workflow/slide_013/slide_013.svg" alt="New workflow SVG for slide 13">
+          </figure>
+        </div>
+      </section>
+
+  </main>
+</body>
+</html>

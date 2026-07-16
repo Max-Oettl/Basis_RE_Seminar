@@ -1,0 +1,158 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "sceneId": "RE3_TEST_1_slide_007",
+  "svgPath": "slide_007.svg",
+  "status": "draft",
+  "defaults": {
+    "enterFrames": 16,
+    "drawDurFrames": 24,
+    "highlightDurFrames": 24
+  },
+  "targets": [
+    {
+      "targetId": "input_timeline",
+      "label": "input timeline",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "tool_transform",
+      "label": "tool transform",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_context_plot",
+      "label": "weibull context plot",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "formula_panel",
+      "label": "formula panel",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_formula_inline",
+      "label": "weibull formula inline",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "example_value",
+      "label": "example value",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_context_plot_asset__PathCollection_1",
+      "label": "Ausfalldaten",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_context_plot_asset__line2d_57",
+      "label": "Weibull-Fit",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_context_plot_asset__legend_1",
+      "label": "Legende",
+      "status": "animated",
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "01_input_timeline",
+      "targetId": "input_timeline",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "02_tool_transform",
+      "targetId": "tool_transform",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "03_weibull_context_plot",
+      "targetId": "weibull_context_plot",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "plot_weibull_context_plot_01_weibull_context_plot_asset_PathCollection_1",
+      "targetId": "weibull_context_plot_asset__PathCollection_1",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Ausfalldaten"
+    },
+    {
+      "stepId": "plot_weibull_context_plot_02_weibull_context_plot_asset_line2d_57",
+      "targetId": "weibull_context_plot_asset__line2d_57",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Weibull-Fit"
+    },
+    {
+      "stepId": "plot_weibull_context_plot_03_weibull_context_plot_asset_legend_1",
+      "targetId": "weibull_context_plot_asset__legend_1",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Legende"
+    },
+    {
+      "stepId": "04_formula_panel",
+      "targetId": "formula_panel",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "05_weibull_formula_inline",
+      "targetId": "weibull_formula_inline",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "06_example_value",
+      "targetId": "example_value",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    }
+  ],
+  "notes": [
+    "Static SVG preview keeps all layers visible; this manifest defines reveal targets for PowerPoint/video animation.",
+    "When a Python plot contains internal SVG animation targets, scene-level callouts are placed after that plot in the reveal order.",
+    "Plotinhalt: Kontextplot wird nicht mehr als fertige Gesamtgrafik eingeblendet."
+  ]
+}

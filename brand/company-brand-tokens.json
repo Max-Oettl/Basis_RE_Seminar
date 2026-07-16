@@ -1,0 +1,144 @@
+{
+  "schema": "companyBrandTokens/v1",
+  "brand": {
+    "companyName": "Reltest Academy",
+    "profile": "reltest-academy",
+    "version": "0.1.0",
+    "source": [
+      "brand/reltest-academy-style-guide.md",
+      "brand/design-quality-bar.md"
+    ],
+    "personality": [
+      "technisch",
+      "serioes",
+      "praezise",
+      "ruhig",
+      "zuverlaessigkeitsorientiert",
+      "managementtauglich"
+    ],
+    "avoid": [
+      "verspielt",
+      "bunt-zufaellig",
+      "ueberladen",
+      "startup-dekorativ",
+      "generische-ki-aesthetik"
+    ]
+  },
+  "canvas": {
+    "artifactScope": "content-svg",
+    "embeddingTarget": "powerpoint-slide",
+    "aspectRatio": "16:9",
+    "preferredViewBox": "0 0 1920 1080",
+    "supportsTransparentBackground": true
+  },
+  "spacing": {
+    "outerMargin": 96,
+    "contentMargin": 88,
+    "sectionGap": 56,
+    "blockGap": 32,
+    "tightGap": 16,
+    "cardPadding": 32
+  },
+  "typography": {
+    "title": 54,
+    "contentTitle": 44,
+    "subtitle": 32,
+    "body": 26,
+    "caption": 20,
+    "minReadable": 18,
+    "minCaption": 14
+  },
+  "colors": {
+    "backgroundLight": "#F7F9FC",
+    "backgroundDark": "#021D31",
+    "panelLight": "#FFFFFF",
+    "panelSoft": "#EEF3F6",
+    "textPrimary": "#062D46",
+    "textSecondary": "#6A7A86",
+    "textInverse": "#FFFFFF",
+    "brandPrimary": "#062D46",
+    "brandSecondary": "#021D31",
+    "accentPrimary": "#139CCB",
+    "accentSecondary": "#E7F6FB",
+    "lineMuted": "#CBD5E1",
+    "gridMuted": "#E2E8F0",
+    "riskLow": "#2AA876",
+    "riskMedium": "#F2A93B",
+    "riskHigh": "#D1495B",
+    "black": "#000000"
+  },
+  "stroke": {
+    "hairline": 1.5,
+    "normal": 2.5,
+    "emphasis": 4
+  },
+  "radius": {
+    "small": 8,
+    "card": 18,
+    "large": 28
+  },
+  "shadow": {
+    "allowed": false
+  },
+  "variants": {
+    "technical": {
+      "defaultBackgroundMode": "transparent",
+      "primaryAccent": "accentPrimary",
+      "density": "normal"
+    },
+    "management": {
+      "defaultBackgroundMode": "transparent",
+      "primaryAccent": "brandPrimary",
+      "density": "normal"
+    },
+    "light": {
+      "defaultBackgroundMode": "transparent",
+      "primaryAccent": "accentPrimary",
+      "density": "normal"
+    },
+    "dark": {
+      "defaultBackgroundMode": "dark",
+      "primaryAccent": "accentPrimary",
+      "density": "low"
+    },
+    "minimal": {
+      "defaultBackgroundMode": "transparent",
+      "primaryAccent": "brandPrimary",
+      "density": "dense"
+    }
+  },
+  "qa": {
+    "metadataRequiredFields": [
+      "artifactScope",
+      "embeddingTarget",
+      "slideType",
+      "layoutIntent",
+      "takeaway",
+      "density",
+      "contentMode",
+      "backgroundMode",
+      "brandProfile",
+      "brandVariant"
+    ],
+    "contentModes": [
+      "transparent-content",
+      "contained-card",
+      "full-content-area"
+    ],
+    "backgroundModes": [
+      "transparent",
+      "light",
+      "dark"
+    ],
+    "densities": [
+      "low",
+      "normal",
+      "dense"
+    ],
+    "maxVisibleColors": {
+      "low": 6,
+      "normal": 8,
+      "dense": 12
+    }
+  }
+}

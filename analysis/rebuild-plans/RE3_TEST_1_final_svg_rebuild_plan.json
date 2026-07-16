@@ -1,0 +1,91 @@
+{
+  "schema": "finalSvgRebuildPlan/v1",
+  "module_id": "RE3_TEST_1",
+  "output_root": "rebuild-proposals/svg/RE3_TEST_1",
+  "principles": [
+    "11 regular individual slide SVGs, not an HTML comparison variant",
+    "true technical plots embedded from Python plot SVG assets",
+    "formulas embedded from LaTeX/Mathtext SVG assets",
+    "generic timelines and object-time diagrams built as native SVG",
+    "animations described in scene.animation.v1.json beside every SVG",
+    "source slides 3 and 8 are intentionally removed from the current SVG set because they do not add a fitting standalone content module"
+  ],
+  "removed_slides": [
+    {
+      "slide": 3,
+      "reason": "Does not fit the new content-SVG sequence as a standalone slide; its helper-line idea is covered by the surrounding build sequence."
+    },
+    {
+      "slide": 8,
+      "reason": "Intermediate bridge state; removed from the current SVG set instead of keeping an underfilled standalone slide."
+    }
+  ],
+  "slides": [
+    {
+      "slide": 1,
+      "focus": "Ausfallzeiten sammeln und sortieren",
+      "svg": "rebuild-proposals/svg/RE3_TEST_1/slide_001/slide_001.svg",
+      "manifest": "rebuild-proposals/svg/RE3_TEST_1/slide_001/scene.animation.v1.json"
+    },
+    {
+      "slide": 2,
+      "focus": "Median-Rang berechnen",
+      "svg": "rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg",
+      "manifest": "rebuild-proposals/svg/RE3_TEST_1/slide_002/scene.animation.v1.json"
+    },
+    {
+      "slide": 4,
+      "focus": "Wertepaare in das Weibull-Netz übertragen",
+      "svg": "rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg",
+      "manifest": "rebuild-proposals/svg/RE3_TEST_1/slide_004/scene.animation.v1.json"
+    },
+    {
+      "slide": 5,
+      "focus": "Ausgleichsgerade bestimmen",
+      "svg": "rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg",
+      "manifest": "rebuild-proposals/svg/RE3_TEST_1/slide_005/scene.animation.v1.json"
+    },
+    {
+      "slide": 6,
+      "focus": "Weibull-Parameter ablesen",
+      "svg": "rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg",
+      "manifest": "rebuild-proposals/svg/RE3_TEST_1/slide_006/scene.animation.v1.json"
+    },
+    {
+      "slide": 7,
+      "focus": "Parameter in die Funktion einsetzen",
+      "svg": "rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg",
+      "manifest": "rebuild-proposals/svg/RE3_TEST_1/slide_007/scene.animation.v1.json"
+    },
+    {
+      "slide": 9,
+      "focus": "Ausfallmechanismen trennen",
+      "svg": "rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg",
+      "manifest": "rebuild-proposals/svg/RE3_TEST_1/slide_009/scene.animation.v1.json"
+    },
+    {
+      "slide": 10,
+      "focus": "Objekt-Zeit-Diagramm aufbauen",
+      "svg": "rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg",
+      "manifest": "rebuild-proposals/svg/RE3_TEST_1/slide_010/scene.animation.v1.json"
+    },
+    {
+      "slide": 11,
+      "focus": "Zensierte Beobachtungen ergänzen",
+      "svg": "rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg",
+      "manifest": "rebuild-proposals/svg/RE3_TEST_1/slide_011/scene.animation.v1.json"
+    },
+    {
+      "slide": 12,
+      "focus": "Auswertemethoden einordnen",
+      "svg": "rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg",
+      "manifest": "rebuild-proposals/svg/RE3_TEST_1/slide_012/scene.animation.v1.json"
+    },
+    {
+      "slide": 13,
+      "focus": "Vertrauensgrenzen darstellen",
+      "svg": "rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg",
+      "manifest": "rebuild-proposals/svg/RE3_TEST_1/slide_013/scene.animation.v1.json"
+    }
+  ]
+}

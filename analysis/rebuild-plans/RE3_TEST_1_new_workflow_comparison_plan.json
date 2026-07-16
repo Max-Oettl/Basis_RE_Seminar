@@ -1,0 +1,174 @@
+{
+  "schema": "workflowComparisonPlan/v1",
+  "module_id": "RE3_TEST_1",
+  "purpose": "Fresh per-slide SVG derivation using the layered workflow to compare against the existing master-sequence implementation.",
+  "old_workflow_reference": "rebuild-proposals/svg/RE3_TEST_1",
+  "new_workflow_output": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow",
+  "slide_count": 13,
+  "strategy": [
+    "13 individual SVGs for direct per-slide review",
+    "true diagrams embedded from Python plot SVG assets",
+    "non-trivial formulas embedded from LaTeX/Mathtext SVG assets",
+    "simple formula labels built as native SVG text where sufficient",
+    "existing PNG pictograms embedded as data URI where semantically required",
+    "no visible PowerPoint title in SVG graphics"
+  ],
+  "slides": [
+    {
+      "slide": 1,
+      "title": "Ausfalldaten sammeln",
+      "focus": "Ausfallzeiten werden entlang der Lebensdauerachse sortiert.",
+      "strategies": [
+        "Timeline: SVG",
+        "kein Plot",
+        "Quelle: Folie 1"
+      ],
+      "svg": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_001/slide_001.svg",
+      "manifest": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_001/scene.animation.v1.json"
+    },
+    {
+      "slide": 2,
+      "title": "Median-Rang einführen",
+      "focus": "Ausfallzeiten bekommen geschätzte Ausfallwahrscheinlichkeiten.",
+      "strategies": [
+        "Formel: LaTeX-SVG",
+        "Timeline: SVG",
+        "Quelle: Folie 2"
+      ],
+      "svg": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_002/slide_002.svg",
+      "manifest": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_002/scene.animation.v1.json"
+    },
+    {
+      "slide": 3,
+      "title": "Hilfslinien vorbereiten",
+      "focus": "Berechnete F(tᵢ)-Werte werden im Diagramm verortet.",
+      "strategies": [
+        "Formelzeichen: SVG-Text",
+        "Hilfslinien: SVG",
+        "Quelle: Folie 3"
+      ],
+      "svg": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_003/slide_003.svg",
+      "manifest": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_003/scene.animation.v1.json"
+    },
+    {
+      "slide": 4,
+      "title": "Punkte ins Weibull-Papier",
+      "focus": "Aus tᵢ und F(tᵢ) werden Datenpunkte im Wahrscheinlichkeitsnetz.",
+      "strategies": [
+        "Diagramm: Python-Plot",
+        "Plot-Asset: Weibull-Kontext",
+        "Quelle: Folie 4"
+      ],
+      "svg": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_004/slide_004.svg",
+      "manifest": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_004/scene.animation.v1.json"
+    },
+    {
+      "slide": 5,
+      "title": "Ausgleichsgerade bestimmen",
+      "focus": "Die Punktwolke wird durch einen Weibull-Fit beschrieben.",
+      "strategies": [
+        "Diagramm: Python-Plot",
+        "Fit sichtbar im Plot",
+        "Quelle: Folie 5"
+      ],
+      "svg": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_005/slide_005.svg",
+      "manifest": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_005/scene.animation.v1.json"
+    },
+    {
+      "slide": 6,
+      "title": "Weibull-Parameter ablesen",
+      "focus": "T wird bei 63,2 % abgelesen, b ergibt sich aus der Steigung.",
+      "strategies": [
+        "Diagramm: Python-Plot",
+        "Parameter-Callouts",
+        "Quelle: Folie 6"
+      ],
+      "svg": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_006/slide_006.svg",
+      "manifest": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_006/scene.animation.v1.json"
+    },
+    {
+      "slide": 7,
+      "title": "Von Parametern zur Funktion",
+      "focus": "T und b werden in die Weibull-Funktion eingesetzt.",
+      "strategies": [
+        "Diagramm: Python-Plot",
+        "Formel: LaTeX-SVG",
+        "Quelle: Folie 7"
+      ],
+      "svg": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_007/slide_007.svg",
+      "manifest": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_007/scene.animation.v1.json"
+    },
+    {
+      "slide": 8,
+      "title": "Grafische Auswertung sichtbar halten",
+      "focus": "Der Zwischenzustand zeigt den grafischen Kontext ohne Formelblock.",
+      "strategies": [
+        "Diagramm: Python-Plot",
+        "Zwischenzustand",
+        "Quelle: Folie 8"
+      ],
+      "svg": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_008/slide_008.svg",
+      "manifest": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_008/scene.animation.v1.json"
+    },
+    {
+      "slide": 9,
+      "title": "Ausfallmechanismen trennen",
+      "focus": "Gemischte Ausfälle werden nach Mechanismus A und B getrennt betrachtet.",
+      "strategies": [
+        "Diagramm: Python-Plot",
+        "Timeline: SVG",
+        "Quelle: Folie 9"
+      ],
+      "svg": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_009/slide_009.svg",
+      "manifest": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_009/scene.animation.v1.json"
+    },
+    {
+      "slide": 10,
+      "title": "Objekt-Zeit-Diagramm aufbauen",
+      "focus": "Ausfallzeitpunkte werden den einzelnen Objekten zugeordnet.",
+      "strategies": [
+        "Timeline: SVG",
+        "Objektachsen",
+        "Quelle: Folie 10"
+      ],
+      "svg": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_010/slide_010.svg",
+      "manifest": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_010/scene.animation.v1.json"
+    },
+    {
+      "slide": 11,
+      "title": "Zensierte Beobachtungen ergänzen",
+      "focus": "Nicht ausgefallene Objekte werden als zensierte Beobachtungen sichtbar.",
+      "strategies": [
+        "Timeline: SVG",
+        "Zensierung: SVG",
+        "Quelle: Folie 11"
+      ],
+      "svg": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_011/slide_011.svg",
+      "manifest": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_011/scene.animation.v1.json"
+    },
+    {
+      "slide": 12,
+      "title": "Methoden einordnen",
+      "focus": "Grafische Methode und Berechnungsmethoden werden als zwei Wege dargestellt.",
+      "strategies": [
+        "Diagramm: Python-Plot",
+        "Piktogramme: PNG",
+        "Quelle: Folie 12"
+      ],
+      "svg": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_012/slide_012.svg",
+      "manifest": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_012/scene.animation.v1.json"
+    },
+    {
+      "slide": 13,
+      "title": "Vertrauensgrenzen zeigen",
+      "focus": "5 %- und 95 %-Grenzkurven machen die Unsicherheit der Schätzung sichtbar.",
+      "strategies": [
+        "Diagramm: Python-Plot",
+        "Vertrauensgrenzen: Bootstrap",
+        "Quelle: Folie 13"
+      ],
+      "svg": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_013/slide_013.svg",
+      "manifest": "rebuild-proposals/workflow-comparison/RE3_TEST_1/new-workflow/slide_013/scene.animation.v1.json"
+    }
+  ]
+}

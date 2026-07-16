@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="scene_title scene_desc">
+  <title id="scene_title">Ausfallwahrscheinlichkeiten berechnen</title>
+  <desc id="scene_desc">Content-SVG ohne sichtbaren Folientitel: Die vorhandenen Ausfallzeiten bleiben auf der Lebensdauerachse, Schritt 1 ergänzt die Median-Rank-Formel und eine vertikale Konstruktionsachse.</desc>
+  <metadata id="slide-quality-metadata" type="application/json"><![CDATA[
+{
+  "artifactScope": "content-svg",
+  "embeddingTarget": "powerpoint-slide",
+  "slideType": "build-sequence-reveal",
+  "contentTitle": "Ausfallwahrscheinlichkeiten berechnen",
+  "layoutIntent": "Continue the initial life-duration timeline and reveal the Median-Rank calculation plus the vertical construction axis.",
+  "takeaway": "Nach dem Sammeln der Ausfallzeiten wird jedem geordneten Ausfall über die Median-Rank-Formel eine Ausfallwahrscheinlichkeit zugeordnet.",
+  "audienceGoal": "Learners see that failure probabilities are calculated from rank number i and sample size n before points are plotted.",
+  "density": "normal",
+  "contentMode": "transparent-content",
+  "backgroundMode": "transparent",
+  "brandProfile": "reltest-academy",
+  "brandVariant": "technical",
+  "designException": ""
+}
+  ]]></metadata>
+
+  <defs>
+    <style>
+      .font {
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+      }
+      .text-primary {
+        fill: #062D46;
+      }
+      .text-secondary {
+        fill: #6A7A86;
+      }
+      .accent-stroke {
+        fill: #FFFFFF;
+        stroke: #139CCB;
+        stroke-width: 5;
+      }
+      .muted-stroke {
+        fill: #FFFFFF;
+        stroke: #CBD5E1;
+        stroke-width: 5;
+      }
+      .axis-line {
+        stroke: #062D46;
+        stroke-width: 5;
+        stroke-linecap: round;
+      }
+      .axis-guide {
+        stroke: #CBD5E1;
+        stroke-width: 2.5;
+        stroke-linecap: round;
+      }
+      .failure-line {
+        stroke: #D1495B;
+        stroke-width: 9;
+        stroke-linecap: round;
+      }
+      .label-red {
+        fill: #D1495B;
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+        font-size: 32px;
+        font-style: italic;
+      }
+      .panel-text {
+        fill: #062D46;
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+      }
+    </style>
+  </defs>
+
+  <g id="scene_root" class="font">
+    <g id="workflow_steps" aria-label="Aufbauschritte der Lebensdatenanalyse">
+      <g id="step_0" aria-label="Schritt 0 Sammeln der Ausfalldaten">
+        <circle id="step_0_marker" class="muted-stroke" cx="206" cy="250" r="35" data-qc-role="timeline-marker" data-qc-group="step_0" data-qc-layer="foreground" data-qc-allow-overlap="true"/>
+        <text id="step_0_number" class="text-secondary" x="206" y="262" text-anchor="middle" font-size="34" font-weight="750" data-qc-role="text" data-qc-group="step_0" data-qc-layer="foreground" data-qc-important="true" data-qc-allow-overlap="true">0</text>
+        <text id="step_0_text" class="text-secondary" x="276" y="264" font-size="36" font-weight="650" data-qc-role="text" data-qc-group="step_0" data-qc-layer="foreground" data-qc-important="true">Sammeln der Ausfalldaten</text>
+      </g>
+
+      <g id="step_1" aria-label="Schritt 1 Berechnen von Ausfallwahrscheinlichkeiten">
+        <circle id="step_1_marker" class="accent-stroke" cx="206" cy="382" r="35" data-qc-role="timeline-marker" data-qc-group="step_1" data-qc-layer="foreground" data-qc-allow-overlap="true"/>
+        <text id="step_1_number" class="text-primary" x="206" y="394" text-anchor="middle" font-size="34" font-weight="800" data-qc-role="text" data-qc-group="step_1" data-qc-layer="foreground" data-qc-important="true" data-qc-allow-overlap="true">1</text>
+        <text id="step_1_text_line_1" class="text-primary" x="276" y="330" font-size="34" font-weight="700" data-qc-role="text" data-qc-group="step_1" data-qc-layer="foreground" data-qc-important="true">Berechnen von</text>
+        <text id="step_1_text_line_2" class="text-primary" x="276" y="392" font-size="34" font-weight="700" data-qc-role="text" data-qc-group="step_1" data-qc-layer="foreground" data-qc-important="true">Ausfall-</text>
+        <text id="step_1_text_line_3" class="text-primary" x="276" y="454" font-size="34" font-weight="700" data-qc-role="text" data-qc-group="step_1" data-qc-layer="foreground" data-qc-important="true">wahrscheinlichkeiten</text>
+      </g>
+    </g>
+
+    <g id="formula_panel" aria-label="Median-Rank-Formel mit Definitionen">
+      <rect id="formula_panel_box" x="130" y="546" width="540" height="302" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5" data-qc-role="background-box" data-qc-group="formula_panel" data-qc-layer="background"/>
+      <rect id="formula_asset_box" x="152" y="610" width="510" height="122" rx="3" fill="#FFFFFF" stroke="#062D46" stroke-width="2" data-qc-role="background-box" data-qc-group="formula_panel" data-qc-layer="background"/>
+      <text id="formula_panel_label" class="text-primary" x="130" y="510" font-size="35" font-weight="750" data-qc-role="text" data-qc-group="formula_panel" data-qc-layer="foreground" data-qc-important="true">Berechnung mit:</text>
+      <g id="median_rank_formula_asset" aria-label="F(t_i) = (i - 0,3) durch (n + 0,4)" transform="translate(184 648)" data-qc-role="formula" data-qc-group="formula_panel" data-qc-layer="foreground" data-qc-allow-overlap="true" data-formula-asset="assets/formulas/RE3_TEST_1/median_rank.svg" data-formula-embedding="inline">
+        <text class="panel-text" x="0" y="28" font-size="38" font-style="italic" font-weight="520" data-qc-allow-overlap="true">F</text>
+        <text class="panel-text" x="28" y="28" font-size="38" font-weight="520" data-qc-allow-overlap="true">(</text>
+        <text class="panel-text" x="46" y="28" font-size="38" font-style="italic" font-weight="520" data-qc-allow-overlap="true">t</text>
+        <text class="panel-text" x="62" y="40" font-size="22" font-style="italic" font-weight="520" data-qc-allow-overlap="true">i</text>
+        <text class="panel-text" x="78" y="28" font-size="38" font-weight="520" data-qc-allow-overlap="true">) =</text>
+        <text class="panel-text" x="244" y="2" text-anchor="middle" font-size="29" font-weight="520" data-qc-allow-overlap="true">i - 0,3</text>
+        <line x1="178" y1="17" x2="310" y2="17" stroke="#062D46" stroke-width="2.4" data-qc-allow-overlap="true"/>
+        <text class="panel-text" x="244" y="58" text-anchor="middle" font-size="29" font-weight="520" data-qc-allow-overlap="true">n + 0,4</text>
+      </g>
+      <text id="formula_range" class="panel-text" x="532" y="688" font-size="23" font-weight="520" data-qc-role="text" data-qc-group="formula_panel" data-qc-layer="foreground" data-qc-important="true">
+        <tspan font-style="italic">i</tspan><tspan> = 1, 2, ..., </tspan><tspan font-style="italic">n</tspan>
+      </text>
+      <g id="formula_definitions" aria-label="Definitionen der Formelparameter">
+        <text id="formula_definition_i" class="panel-text" x="182" y="782" font-size="30" font-style="italic" data-qc-role="text" data-qc-group="formula_panel" data-qc-layer="foreground" data-qc-important="true">i -> Rangnummer des Ausfalls</text>
+        <text id="formula_definition_n" class="panel-text" x="182" y="826" font-size="30" font-style="italic" data-qc-role="text" data-qc-group="formula_panel" data-qc-layer="foreground" data-qc-important="true">n -> Stichprobengröße</text>
+      </g>
+    </g>
+
+    <g id="probability_axis" aria-label="Konstruktionsachse Summe der ausgefallenen Teile" data-qc-role="axis-arrow" data-qc-group="probability_axis" data-qc-layer="axis">
+      <text id="probability_axis_label_1" class="text-primary" x="710" y="146" text-anchor="middle" font-size="30" font-weight="650" data-qc-role="axis-label" data-qc-axis="y" data-qc-group="probability_axis" data-qc-layer="label" data-qc-important="true">Summe der</text>
+      <text id="probability_axis_label_2" class="text-primary" x="710" y="190" text-anchor="middle" font-size="30" font-weight="650" data-qc-role="axis-label" data-qc-axis="y" data-qc-group="probability_axis" data-qc-layer="label" data-qc-important="true">ausgefallenen Teile</text>
+      <line id="probability_axis_line" class="axis-line" x1="710" y1="700" x2="710" y2="346" data-qc-role="axis-line" data-qc-axis="y" data-qc-group="probability_axis" data-qc-layer="axis"/>
+      <polygon id="probability_axis_arrowhead" points="710,306 688,350 732,350" fill="#062D46" data-qc-role="axis-arrow-head" data-qc-axis="y" data-qc-group="probability_axis" data-qc-layer="axis"/>
+    </g>
+
+    <g id="existing_timeline" aria-label="Lebensdauerachse mit unveränderten Ausfallzeitpunkten" data-qc-role="timeline" data-qc-group="failure_timeline" data-qc-layer="foreground">
+      <g id="axis" aria-label="Lebensdauerachse" data-qc-role="axis-arrow" data-qc-group="failure_timeline" data-qc-layer="axis">
+        <line id="axis_guide" class="axis-guide" x1="710" y1="730" x2="1604" y2="730" data-qc-role="grid-line" data-qc-group="failure_timeline" data-qc-layer="background"/>
+        <line id="axis_line" class="axis-line" x1="710" y1="700" x2="1604" y2="700" data-qc-role="axis-line" data-qc-axis="x" data-qc-group="failure_timeline" data-qc-layer="axis"/>
+        <polygon id="axis_arrowhead" points="1650,700 1604,676 1604,724" fill="#062D46" data-qc-role="axis-arrow-head" data-qc-axis="x" data-qc-group="failure_timeline" data-qc-layer="axis"/>
+      </g>
+
+      <g id="failure_markers" aria-label="Sieben unregelmäßig verteilte Ausfälle" data-qc-role="timeline-marker" data-qc-group="failure_timeline" data-qc-layer="data">
+        <g id="failure_marker_t1" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true">
+          <line class="failure-line" x1="785" y1="685" x2="815" y2="715" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+          <line class="failure-line" x1="785" y1="715" x2="815" y2="685" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+        </g>
+        <g id="failure_marker_t2" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true">
+          <line class="failure-line" x1="915" y1="685" x2="945" y2="715" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+          <line class="failure-line" x1="915" y1="715" x2="945" y2="685" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+        </g>
+        <g id="failure_marker_t3" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true">
+          <line class="failure-line" x1="995" y1="685" x2="1025" y2="715" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+          <line class="failure-line" x1="995" y1="715" x2="1025" y2="685" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+        </g>
+        <g id="failure_marker_t4" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true">
+          <line class="failure-line" x1="1180" y1="685" x2="1210" y2="715" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+          <line class="failure-line" x1="1180" y1="715" x2="1210" y2="685" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+        </g>
+        <g id="failure_marker_t5" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true">
+          <line class="failure-line" x1="1240" y1="685" x2="1270" y2="715" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+          <line class="failure-line" x1="1240" y1="715" x2="1270" y2="685" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+        </g>
+        <g id="failure_marker_t6" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true">
+          <line class="failure-line" x1="1423" y1="685" x2="1453" y2="715" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+          <line class="failure-line" x1="1423" y1="715" x2="1453" y2="685" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+        </g>
+        <g id="failure_marker_t7" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true">
+          <line class="failure-line" x1="1539" y1="685" x2="1569" y2="715" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+          <line class="failure-line" x1="1539" y1="715" x2="1569" y2="685" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+        </g>
+      </g>
+
+      <g id="failure_time_labels" aria-label="Labels der geordneten Ausfallzeiten" data-qc-role="timeline-label" data-qc-group="failure_timeline" data-qc-layer="label">
+        <text id="time_label_t1" class="label-red" x="800" y="766" text-anchor="middle" data-qc-role="timeline-label" data-qc-group="failure_timeline" data-qc-layer="label" data-qc-important="true">t₁</text>
+        <text id="time_label_t2" class="label-red" x="930" y="766" text-anchor="middle" data-qc-role="timeline-label" data-qc-group="failure_timeline" data-qc-layer="label" data-qc-important="true">t₂</text>
+        <text id="time_label_t3" class="label-red" x="1010" y="766" text-anchor="middle" data-qc-role="timeline-label" data-qc-group="failure_timeline" data-qc-layer="label" data-qc-important="true">t₃</text>
+        <text id="time_label_t4" class="label-red" x="1195" y="766" text-anchor="middle" data-qc-role="timeline-label" data-qc-group="failure_timeline" data-qc-layer="label" data-qc-important="true">t₄</text>
+        <text id="time_label_t5" class="label-red" x="1255" y="766" text-anchor="middle" data-qc-role="timeline-label" data-qc-group="failure_timeline" data-qc-layer="label" data-qc-important="true">t₅</text>
+        <text id="time_label_t6" class="label-red" x="1438" y="766" text-anchor="middle" data-qc-role="timeline-label" data-qc-group="failure_timeline" data-qc-layer="label" data-qc-important="true">t₆</text>
+        <text id="time_label_t7" class="label-red" x="1554" y="766" text-anchor="middle" data-qc-role="timeline-label" data-qc-group="failure_timeline" data-qc-layer="label" data-qc-important="true">t₇</text>
+      </g>
+
+      <g id="axis_label_group" aria-label="Achsenlabel Lebensdauer t" data-qc-role="axis-label" data-qc-group="failure_timeline" data-qc-layer="label">
+        <text id="axis_label" class="text-primary" x="1438" y="828" font-size="36" font-weight="650" data-qc-role="axis-label" data-qc-axis="x" data-qc-group="failure_timeline" data-qc-layer="label" data-qc-important="true">Lebensdauer t</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -4,6 +4,7 @@ import argparse
 import math
 from pathlib import Path
 
+from basis_seminar_plot_data import DEFAULT_FAILURE_TIMES_CSV, weibull_x_limits
 from reltest_plot_style import (
     RELTEST_COLORS,
     apply_reltest_style,
@@ -53,8 +54,7 @@ def build_plot(
     slope, intercept = linear_fit(x_fit, y_fit)
     beta, eta = fit_weibull_parameters_from_line(slope, intercept)
 
-    min_time = min(min(sorted_times) * 0.65, eta * 0.62)
-    max_time = max(max(sorted_times) * 1.35, eta * 1.35)
+    min_time, max_time = weibull_x_limits(sorted_times)
     line_times = logspace(min_time, max_time, 140)
     line_y = [intercept + slope * math.log10(time) for time in line_times]
     t_probability = 0.632
@@ -122,7 +122,7 @@ def build_plot(
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Create a Reltest-style Weibull probability plot with T and b readout helpers.")
-    parser.add_argument("--times", default="12,18,27,44,68,105,160")
+    parser.add_argument("--times", default=DEFAULT_FAILURE_TIMES_CSV)
     parser.add_argument(
         "--probabilities",
         help="Optional failure probabilities as fractions or percent values. If omitted, median ranks are used.",

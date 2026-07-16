@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "sceneId": "RE3_TEST_1_slide_010",
+  "svgPath": "slide_010.svg",
+  "status": "draft",
+  "defaults": {
+    "enterFrames": 16,
+    "drawDurFrames": 24,
+    "highlightDurFrames": 24
+  },
+  "targets": [
+    {
+      "targetId": "input_timeline",
+      "label": "input timeline",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "tool_transform",
+      "label": "tool transform",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "simple_plot",
+      "label": "simple plot",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "object_time",
+      "label": "object time",
+      "status": "animated",
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "01_input_timeline",
+      "targetId": "input_timeline",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "02_tool_transform",
+      "targetId": "tool_transform",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "03_simple_plot",
+      "targetId": "simple_plot",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "04_object_time",
+      "targetId": "object_time",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    }
+  ],
+  "notes": [
+    "Static SVG preview keeps all layers visible; this manifest defines reveal targets for PowerPoint/video animation."
+  ]
+}

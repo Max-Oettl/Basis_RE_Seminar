@@ -17,19 +17,46 @@ Szenenworkflow entschieden.
 
 ## Animationseinheiten
 
-Animierbare Einheiten sind sinnvolle SVG-Gruppen oder Einzelelemente, zum Beispiel:
+Animierbare Einheiten sind sinnvolle SVG-Gruppen oder Einzelelemente. Fuer
+erklaerende Seminarplots werden alle didaktischen Plotinhalte standardmaessig
+als Animationseinheiten vorbereitet. Achsen, Ticklabels und Grid koennen als
+Orientierungsbasis sofort sichtbar bleiben; die eigentliche Aussage des Plots
+wird schrittweise sichtbar.
+
+Typische Animationseinheiten sind zum Beispiel:
 
 - Achsen und Raster
-- Datenpunkte
-- Fit-Linie
+- Datenpunkte oder einzelne Datenpunkt-Gruppen
+- Ausfallzeitpunkte, Ausfallkreuze und Zensurmarker
+- Fit-Linie oder Kurve
 - Vertrauensgrenzen
-- Markerlinien
-- Legende
+- Hilfs-, Ablese- und Markerlinien
+- Parameterlabels und Werte
+- Legende, sofern sie an noch nicht sichtbare Inhalte gekoppelt ist
 - einzelne Hervorhebungen oder Annotationen
 
 Jede potenziell animierbare Einheit braucht eine stabile, sprechende ID. Die ID
 muss fachlich lesbar sein, zum Beispiel `plot-data-points`,
 `plot-weibull-fit`, `plot-confidence-limits` oder `plot-legend`.
+
+Empfohlene ID-Muster:
+
+```text
+plot-data-points
+plot-failure-marker-t1
+plot-helper-horizontal-t1
+plot-helper-vertical-t1
+plot-fit-line
+plot-parameter-t
+plot-parameter-b
+plot-confidence-5
+plot-confidence-95
+plot-confidence-limits
+```
+
+Wenn mehrere Folien dieselbe Plotsequenz aufbauen, bleiben die IDs fuer gleiche
+fachliche Elemente zwischen den Folien gleich. Das erleichtert Review,
+Animation und spaetere Korrekturen.
 
 ## Provisorisches Trigger-Modell
 
@@ -47,6 +74,15 @@ animation_trigger:
   action: "show"
   note: "Vertrauensgrenzen nach dem Weibull-Fit einblenden."
 ```
+
+Fuer schrittweise Erklaerplots ist die Standardreihenfolge:
+
+1. Achsen, Grid und Achsenlabels als Basis zeigen.
+2. Datenpunkte oder Ausfallmarker einblenden.
+3. Hilfslinien, Ableselinien oder Zuordnungslinien einblenden.
+4. Fit-Linie, Kurve oder Verteilung einblenden.
+5. Parameterwerte, Legende oder Labels einblenden.
+6. Vertrauensgrenzen oder Unsicherheitsinformationen einblenden.
 
 Dieses Modell ist bewusst klein gehalten. Es legt nur fest, dass gewuenschte
 Elemente ueber einen Zeittrigger ausgeloest werden. Die finale Syntax, Ablage
@@ -73,3 +109,8 @@ eine spaetere Animation ohne Neuzeichnen der Datengeometrie moeglich ist. Wenn e
 bestehender Plotgenerator noch keine ausreichend stabilen IDs oder Gruppen erzeugt,
 wird das als Verbesserungsnotiz dokumentiert und bei der naechsten Anpassung des
 Generators nachgezogen.
+
+Wenn ein Plot in ein Szenen-SVG eingebunden wird und plotinterne Elemente
+animiert werden sollen, muss das Plot-SVG inline oder anderweitig DOM-adressierbar
+eingebunden werden. Eine reine `image`-Einbettung per Data-URI ist nur ein
+statischer Fallback und fuer didaktisch schrittweise Plotinhalte nicht ausreichend.

@@ -50,6 +50,42 @@
       gap: 8px;
       margin-top: 14px;
     }
+    .sidebar-actions {
+      display: grid;
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .sidebar-actions .button {
+      width: 100%;
+      font-weight: 800;
+    }
+    .slide-action-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+    .slide-action-grid .wide {
+      grid-column: 1 / -1;
+    }
+    .button.danger {
+      border-color: #e2a2a2;
+      color: #8c2424;
+      background: #fff7f7;
+    }
+    .button.danger:hover {
+      border-color: #c74d4d;
+      background: #fff0f0;
+    }
+    .sidebar-toggle {
+      margin-top: 2px;
+      font-weight: 700;
+    }
+    .sidebar-message {
+      min-height: 16px;
+      color: #647987;
+      font-size: 12px;
+      line-height: 1.3;
+    }
     .search, .select, .textarea {
       width: 100%;
       border: 1px solid #c7d4dc;
@@ -96,6 +132,10 @@
     .slide-item.active {
       color: #fff;
       background: #102734;
+    }
+    .slide-item.hidden-slide {
+      border-color: #e7b4b4;
+      background: #fff7f7;
     }
     .slide-title {
       overflow: hidden;
@@ -217,29 +257,6 @@
       font-size: 12px;
       font-variant-numeric: tabular-nums;
     }
-    .segmented {
-      display: inline-grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3px;
-      padding: 3px;
-      border: 1px solid #d4dee5;
-      border-radius: 8px;
-      background: #eef3f6;
-    }
-    .segment {
-      min-height: 31px;
-      border: 0;
-      border-radius: 6px;
-      color: #607481;
-      background: transparent;
-      cursor: pointer;
-      font-weight: 750;
-    }
-    .segment.active {
-      color: #102734;
-      background: #fff;
-      box-shadow: 0 1px 4px rgba(16, 39, 52, 0.12);
-    }
     .content {
       display: grid;
       min-width: 0;
@@ -323,44 +340,6 @@
       text-align: center;
       line-height: 1.4;
     }
-    .overlay-stage {
-      display: none;
-      min-height: 100%;
-      align-items: center;
-      justify-content: center;
-    }
-    .overlay-box {
-      position: relative;
-      width: min(100%, 1280px);
-      aspect-ratio: 16 / 9;
-      border: 1px solid #cad7df;
-      border-radius: 8px;
-      background: #fff;
-      overflow: hidden;
-      box-shadow: 0 8px 22px rgba(16, 39, 52, 0.13);
-    }
-    .overlay-box img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      background: #fff;
-    }
-    .overlay-label {
-      position: absolute;
-      z-index: 5;
-      left: 12px;
-      top: 12px;
-      padding: 5px 8px;
-      border-radius: 999px;
-      color: #fff;
-      background: rgba(16, 39, 52, 0.78);
-      font-size: 12px;
-      font-weight: 800;
-    }
-    .compare.overlay .compare-grid { display: none; }
-    .compare.overlay .overlay-stage { display: flex; }
     .details {
       min-width: 0;
       min-height: 0;
@@ -419,11 +398,163 @@
       gap: 8px;
       align-items: start;
     }
+    .presentation-toggle {
+      display: grid;
+      gap: 6px;
+      margin-top: 8px;
+      padding: 10px;
+      border: 1px solid #dbe6ec;
+      border-radius: 8px;
+      background: #f7fafc;
+    }
+    .checkbox-row {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      color: #18394c;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+    .checkbox-row input {
+      width: 16px;
+      height: 16px;
+      margin: 1px 0 0;
+      accent-color: #168fbd;
+    }
+    .checkbox-row:has(input:disabled) {
+      color: #8295a0;
+    }
     .review-status {
       margin-top: 8px;
       color: #647987;
       font-size: 12px;
     }
+    .version-control {
+      display: grid;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .version-control .select:disabled {
+      opacity: 0.65;
+    }
+    .global-crosscheck-controls {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .global-crosscheck-controls .select { width: 190px; }
+    .global-crosscheck-controls .button { font-weight: 800; }
+    .global-crosscheck-backdrop {
+      position: fixed;
+      z-index: 70;
+      inset: 0;
+      display: flex;
+      justify-content: flex-end;
+      padding: 64px 18px 18px;
+      background: rgba(7, 25, 35, 0.46);
+    }
+    .global-crosscheck-panel {
+      display: grid;
+      width: min(680px, calc(100vw - 36px));
+      max-height: calc(100vh - 82px);
+      grid-template-rows: auto auto minmax(0, 1fr);
+      border: 1px solid #b9cbd5;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 18px 48px rgba(7, 25, 35, 0.28);
+      overflow: hidden;
+    }
+    .global-crosscheck-header {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 14px 16px;
+      border-bottom: 1px solid #d8e3ea;
+    }
+    .global-crosscheck-header h2 {
+      min-width: 0;
+      flex: 1;
+      margin: 0;
+      font-size: 18px;
+    }
+    .global-crosscheck-summary {
+      padding: 12px 16px;
+      border-bottom: 1px solid #e1e9ee;
+      color: #526b79;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .global-crosscheck-results {
+      min-height: 0;
+      overflow: auto;
+      padding: 12px;
+    }
+    .global-crosscheck-result {
+      display: grid;
+      gap: 7px;
+      margin-bottom: 8px;
+      padding: 11px 12px;
+      border: 1px solid #d8e3ea;
+      border-radius: 8px;
+      background: #fff;
+    }
+    .global-crosscheck-result-header {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .global-crosscheck-result-title {
+      min-width: 0;
+      flex: 1;
+      overflow: hidden;
+      font-size: 13px;
+      font-weight: 800;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .global-crosscheck-result-meta {
+      color: #647987;
+      font-size: 12px;
+    }
+    .global-crosscheck-findings {
+      display: grid;
+      gap: 5px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .global-crosscheck-findings li {
+      padding: 7px 8px;
+      border-left: 3px solid #8da6b4;
+      background: #f5f8fa;
+    }
+    .global-crosscheck-findings li[data-severity="warning"] {
+      border-left-color: #d89b19;
+      background: #fff8df;
+    }
+    .global-crosscheck-findings li[data-severity="error"] {
+      border-left-color: #c74d4d;
+      background: #fff1f1;
+    }
+    .crosscheck-status {
+      display: inline-flex;
+      min-height: 24px;
+      align-items: center;
+      padding: 3px 8px;
+      border: 1px solid #b9cbd5;
+      border-radius: 999px;
+      color: #3e5a69;
+      background: #f4f8fa;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .crosscheck-status.ok { border-color: #8fd8ab; color: #176b38; background: #e7f8ed; }
+    .crosscheck-status.warn { border-color: #f2cd6b; color: #7a4a00; background: #fff6d7; }
+    .crosscheck-status.error { border-color: #e6a0a0; color: #8c2424; background: #fff0f0; }
     .path-link {
       color: #116f91;
       text-decoration: none;
@@ -459,8 +590,8 @@
     }
     .fullscreen-viewer[hidden] { display: none !important; }
     .fullscreen-toolbar {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto auto auto 120px auto minmax(220px, 1fr) auto auto minmax(220px, 1fr);
+      display: flex;
+      flex-wrap: wrap;
       gap: 10px;
       align-items: center;
       min-width: 0;
@@ -471,6 +602,7 @@
     }
     .fullscreen-title {
       min-width: 0;
+      flex: 1;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -485,6 +617,26 @@
     .fullscreen-toolbar .animation-status,
     .fullscreen-toolbar .muted {
       color: #c8dbe5;
+    }
+    .fullscreen-toolbar .animation-status {
+      flex: 1 1 220px;
+    }
+    .fullscreen-toolbar .animation-timeline {
+      width: min(28vw, 340px);
+    }
+    .fullscreen-counter {
+      min-width: 72px;
+      color: #c8dbe5;
+      font-size: 13px;
+      font-weight: 800;
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+    .fullscreen-presentation-control { display: none; }
+    .fullscreen-viewer.presentation .fullscreen-presentation-control {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
     .fullscreen-stage {
       display: flex;
@@ -511,6 +663,35 @@
       max-height: none;
       box-shadow: none;
     }
+    .undo-toast {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 80;
+      display: flex;
+      max-width: min(420px, calc(100vw - 36px));
+      gap: 12px;
+      align-items: center;
+      padding: 12px 14px;
+      border: 1px solid #c7d4dc;
+      border-radius: 8px;
+      color: #102734;
+      background: #fff;
+      box-shadow: 0 12px 34px rgba(16, 39, 52, 0.22);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .undo-toast[hidden] { display: none !important; }
+    .undo-toast-text {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+    .undo-toast .button {
+      min-height: 32px;
+      padding: 5px 9px;
+      font-size: 12px;
+      font-weight: 800;
+    }
   </style>
 </head>
 <body>
@@ -522,6 +703,19 @@
         <div class="filters">
           <input id="search" class="search" type="search" placeholder="Folie, Modul oder Text suchen">
           <select id="moduleFilter" class="select" aria-label="Modulfilter"></select>
+        </div>
+        <div class="sidebar-actions">
+          <button id="addSlide" class="button" type="button">Zusatzfolie hinzufuegen</button>
+          <div class="slide-action-grid">
+            <button id="moveSlideUp" class="button" type="button">Hoch</button>
+            <button id="moveSlideDown" class="button" type="button">Runter</button>
+            <button id="deleteSlide" class="button danger wide" type="button">Folie loeschen</button>
+          </div>
+          <label class="checkbox-row sidebar-toggle" for="showHiddenSlides">
+            <input id="showHiddenSlides" type="checkbox">
+            <span>Ausgeblendete anzeigen</span>
+          </label>
+          <div id="sidebarMessage" class="sidebar-message"></div>
         </div>
       </div>
       <div id="slideList" class="slide-list"></div>
@@ -535,17 +729,16 @@
           <strong id="title">Keine Folie ausgewaehlt</strong>
           <span id="subtitle"></span>
         </div>
-        <div class="segmented" aria-label="Vergleichsansicht">
-          <button class="segment active" data-mode="side">Nebeneinander</button>
-          <button class="segment" data-mode="overlay">Overlay</button>
-        </div>
-        <label class="muted" for="opacity">Alt</label>
-        <input id="opacity" type="range" min="0" max="100" value="50" title="Deckkraft alte Folie im Overlay">
         <select id="fitMode" class="select" aria-label="Einpassung">
           <option value="fit">Einpassen</option>
           <option value="width">Breite</option>
           <option value="original">Original</option>
         </select>
+        <div class="global-crosscheck-controls">
+          <select id="crosscheckScope" class="select" aria-label="Crosscheck-Bereich"></select>
+          <button id="runCrosscheck" class="button" type="button">Crosscheck</button>
+        </div>
+        <button id="presentationMode" class="button" type="button" disabled>Praesentieren</button>
         <button id="refresh" class="button">Aktualisieren</button>
       </div>
 
@@ -553,8 +746,8 @@
         <strong>Animation</strong>
         <button id="animationPlay" class="button" type="button">Abspielen</button>
         <button id="animationReset" class="button" type="button">Zuruecksetzen</button>
-        <label class="muted" for="animationDelay">Pause</label>
-        <select id="animationDelay" class="select" aria-label="Animationspause">
+        <label class="muted" for="animationDelay">Schrittpause</label>
+        <select id="animationDelay" class="select" aria-label="Pause zwischen Animationsschritten">
           <option value="500">0,5 s</option>
           <option value="1000">1,0 s</option>
           <option value="1500">1,5 s</option>
@@ -571,7 +764,7 @@
           <div class="compare-grid">
             <div class="frame">
               <div class="frame-header">
-                <span>Alte Folie</span>
+                <span>Referenzfolie</span>
                 <a id="oldOpen" class="path-link" target="_blank" rel="noreferrer">oeffnen</a>
               </div>
               <div id="oldFrame" class="frame-body"></div>
@@ -580,18 +773,12 @@
               <div class="frame-header">
                 <span>Neuer SVG-Vorschlag</span>
                 <div class="frame-actions">
+                  <button id="svgAnimationEdit" class="link-button" type="button" disabled>Animation bearbeiten</button>
                   <button id="svgFullscreen" class="link-button" type="button">Vollbild</button>
                   <a id="svgOpen" class="path-link" target="_blank" rel="noreferrer">oeffnen</a>
                 </div>
               </div>
               <div id="svgFrame" class="frame-body"></div>
-            </div>
-          </div>
-          <div class="overlay-stage">
-            <div class="overlay-box">
-              <img id="overlaySvg" alt="">
-              <img id="overlayOld" alt="">
-              <div class="overlay-label">Overlay: alte Folie ueber SVG</div>
             </div>
           </div>
         </section>
@@ -613,48 +800,59 @@
               <button id="saveReview" class="button">Speichern</button>
             </div>
             <textarea id="reviewNotes" class="textarea" placeholder="Notizen zum Abgleich zwischen alter Folie und SVG-Vorschlag"></textarea>
+            <div class="presentation-toggle">
+              <label class="checkbox-row" for="includeInPresentation">
+                <input id="includeInPresentation" type="checkbox">
+                <span>Im Praesentationsmodus anzeigen</span>
+              </label>
+              <div id="presentationMessage" class="review-status"></div>
+            </div>
+            <div class="version-control">
+              <label class="muted" for="versionSelect">Version anzeigen</label>
+              <select id="versionSelect" class="select" aria-label="SVG-Version"></select>
+              <div id="versionMessage" class="review-status"></div>
+            </div>
             <div id="reviewMessage" class="review-status"></div>
-          </section>
-          <section class="section">
-            <h2>Analyse</h2>
-            <dl id="analysisSummary" class="kv"></dl>
-          </section>
-          <section class="section">
-            <h2>QA</h2>
-            <ul id="qaList" class="list issue"></ul>
-          </section>
-          <section class="section">
-            <h2>Offene Fragen</h2>
-            <ul id="questionsList" class="list warn"></ul>
-          </section>
-          <section class="section">
-            <h2>Bildassets</h2>
-            <ul id="assetsList" class="list"></ul>
-          </section>
-          <section class="section">
-            <h2>Sichtbarer Text</h2>
-            <ul id="textList" class="list"></ul>
           </section>
         </aside>
       </div>
     </main>
   </div>
 
+  <div id="undoToast" class="undo-toast" hidden role="status" aria-live="polite">
+    <span id="undoToastText" class="undo-toast-text">L&ouml;schen r&uuml;ckg&auml;ngig machen?</span>
+    <button id="undoDelete" class="button" type="button">R&uuml;ckg&auml;ngig</button>
+  </div>
+
+  <div id="globalCrosscheckBackdrop" class="global-crosscheck-backdrop" hidden>
+    <section class="global-crosscheck-panel" role="dialog" aria-modal="true" aria-labelledby="globalCrosscheckTitle">
+      <div class="global-crosscheck-header">
+        <h2 id="globalCrosscheckTitle">Crosscheck</h2>
+        <button id="closeCrosscheck" class="button" type="button">Schliessen</button>
+      </div>
+      <div id="crosscheckProgress" class="global-crosscheck-summary" role="status" aria-live="polite"></div>
+      <div id="crosscheckResults" class="global-crosscheck-results"></div>
+    </section>
+  </div>
+
   <div id="fullscreenViewer" class="fullscreen-viewer" hidden>
     <div class="fullscreen-toolbar">
       <div id="fullscreenTitle" class="fullscreen-title">SVG-Vorschlag</div>
-      <button id="fullscreenPlay" class="button" type="button">Abspielen</button>
-      <button id="fullscreenReset" class="button" type="button">Zuruecksetzen</button>
-      <label class="muted" for="fullscreenDelay">Pause</label>
-      <select id="fullscreenDelay" class="select" aria-label="Animationspause im Vollbild">
+      <button id="fullscreenPreviousSlide" class="button fullscreen-presentation-control" type="button">&lsaquo;</button>
+      <span id="fullscreenCounter" class="fullscreen-counter fullscreen-presentation-control">0 / 0</span>
+      <button id="fullscreenNextSlide" class="button fullscreen-presentation-control" type="button">&rsaquo;</button>
+      <button id="fullscreenPlay" class="button fullscreen-animation-control" type="button">Abspielen</button>
+      <button id="fullscreenReset" class="button fullscreen-animation-control" type="button">Zuruecksetzen</button>
+      <label class="muted fullscreen-animation-control" for="fullscreenDelay">Schrittpause</label>
+      <select id="fullscreenDelay" class="select fullscreen-animation-control" aria-label="Pause zwischen Animationsschritten im Vollbild">
         <option value="500">0,5 s</option>
         <option value="1000">1,0 s</option>
         <option value="1500">1,5 s</option>
         <option value="2500" selected>2,5 s</option>
       </select>
-      <span id="fullscreenCurrent" class="timeline-time">0:00</span>
-      <input id="fullscreenTimeline" class="animation-timeline" type="range" min="0" max="1" value="0" step="1" aria-label="Animationszeit im Vollbild">
-      <span id="fullscreenTotal" class="timeline-time">0:00</span>
+      <span id="fullscreenCurrent" class="timeline-time fullscreen-animation-control">0:00</span>
+      <input id="fullscreenTimeline" class="animation-timeline fullscreen-animation-control" type="range" min="0" max="1" value="0" step="1" aria-label="Animationszeit im Vollbild">
+      <span id="fullscreenTotal" class="timeline-time fullscreen-animation-control">0:00</span>
       <button id="fullscreenClose" class="button" type="button">Schliessen</button>
       <span id="fullscreenStatus" class="animation-status">Keine Animation fuer diesen SVG-Vorschlag.</span>
     </div>
@@ -669,7 +867,8 @@
       filtered: [],
       modules: [],
       selectedId: "",
-      mode: "side",
+      selectedVersionId: "current",
+      showHidden: false,
       fit: "fit",
       renderToken: 0,
       previewSvg: null,
@@ -682,30 +881,47 @@
       animationPaused: false,
       animationFrame: 0,
       animationLastTimestamp: 0,
+      animationPauseMs: 2500,
+      animationPauseUserSelected: false,
       originalTargetStyles: new Map(),
       fullscreenOpen: false,
+      fullscreenMode: "single",
       fullscreenPlaceholder: null,
+      presentationSlides: [],
+      presentationIndex: 0,
+      presentationToken: 0,
+      pendingDeleteUndo: null,
+      deleteUndoTimer: 0,
+      crosscheckRunning: false,
+      crosscheckResults: [],
     };
 
     const elements = {
       count: document.getElementById("count"),
       search: document.getElementById("search"),
       moduleFilter: document.getElementById("moduleFilter"),
+      addSlide: document.getElementById("addSlide"),
+      moveSlideUp: document.getElementById("moveSlideUp"),
+      moveSlideDown: document.getElementById("moveSlideDown"),
+      deleteSlide: document.getElementById("deleteSlide"),
+      showHiddenSlides: document.getElementById("showHiddenSlides"),
+      sidebarMessage: document.getElementById("sidebarMessage"),
+      undoToast: document.getElementById("undoToast"),
+      undoToastText: document.getElementById("undoToastText"),
+      undoDelete: document.getElementById("undoDelete"),
       slideList: document.getElementById("slideList"),
       previous: document.getElementById("previous"),
       next: document.getElementById("next"),
       title: document.getElementById("title"),
       subtitle: document.getElementById("subtitle"),
-      compare: document.getElementById("compare"),
       oldFrame: document.getElementById("oldFrame"),
       svgFrame: document.getElementById("svgFrame"),
       oldOpen: document.getElementById("oldOpen"),
       svgOpen: document.getElementById("svgOpen"),
+      svgAnimationEdit: document.getElementById("svgAnimationEdit"),
       svgFullscreen: document.getElementById("svgFullscreen"),
-      overlayOld: document.getElementById("overlayOld"),
-      overlaySvg: document.getElementById("overlaySvg"),
-      opacity: document.getElementById("opacity"),
       fitMode: document.getElementById("fitMode"),
+      presentationMode: document.getElementById("presentationMode"),
       refresh: document.getElementById("refresh"),
       animationBar: document.getElementById("animationBar"),
       animationPlay: document.getElementById("animationPlay"),
@@ -726,17 +942,24 @@
       fullscreenTotal: document.getElementById("fullscreenTotal"),
       fullscreenStatus: document.getElementById("fullscreenStatus"),
       fullscreenClose: document.getElementById("fullscreenClose"),
+      fullscreenPreviousSlide: document.getElementById("fullscreenPreviousSlide"),
+      fullscreenNextSlide: document.getElementById("fullscreenNextSlide"),
+      fullscreenCounter: document.getElementById("fullscreenCounter"),
       meta: document.getElementById("meta"),
-      analysisSummary: document.getElementById("analysisSummary"),
-      qaList: document.getElementById("qaList"),
-      questionsList: document.getElementById("questionsList"),
-      assetsList: document.getElementById("assetsList"),
-      textList: document.getElementById("textList"),
+      crosscheckScope: document.getElementById("crosscheckScope"),
+      runCrosscheck: document.getElementById("runCrosscheck"),
+      globalCrosscheckBackdrop: document.getElementById("globalCrosscheckBackdrop"),
+      closeCrosscheck: document.getElementById("closeCrosscheck"),
+      crosscheckProgress: document.getElementById("crosscheckProgress"),
+      crosscheckResults: document.getElementById("crosscheckResults"),
       reviewStatus: document.getElementById("reviewStatus"),
       reviewNotes: document.getElementById("reviewNotes"),
+      includeInPresentation: document.getElementById("includeInPresentation"),
+      presentationMessage: document.getElementById("presentationMessage"),
+      versionSelect: document.getElementById("versionSelect"),
+      versionMessage: document.getElementById("versionMessage"),
       saveReview: document.getElementById("saveReview"),
       reviewMessage: document.getElementById("reviewMessage"),
-      segments: [...document.querySelectorAll(".segment")],
     };
 
     function selectedSlide() {
@@ -745,6 +968,128 @@
 
     function selectedIndex() {
       return state.filtered.findIndex((slide) => slide.id === state.selectedId);
+    }
+
+    function selectedArchivedVersion(slide) {
+      if (!slide || state.selectedVersionId === "current") return null;
+      const versions = Array.isArray(slide.review?.versions) ? slide.review.versions : [];
+      return versions.find((version) => version.version_id === state.selectedVersionId) || null;
+    }
+
+    function activeSvgProposal(slide) {
+      return selectedArchivedVersion(slide)?.proposal || slide?.svgProposal || null;
+    }
+
+    function activeVersionLabel(slide) {
+      return selectedArchivedVersion(slide)?.label || "Aktuelle Version";
+    }
+
+    function slideIncludedInPresentation(slide) {
+      return slide?.review?.include_in_presentation !== false;
+    }
+
+    function slideIsHidden(slide) {
+      return slide?.isHidden === true || slide?.status?.isHidden === true;
+    }
+
+    function slideDisplayLabel(slide) {
+      if (slide?.isAdditionalSlide) {
+        return slide.additionalSlide?.title || `Zusatzfolie ${String((slide.slideNumber || 1001) - 1000).padStart(3, "0")}`;
+      }
+      return `Folie ${String(slide?.slideNumber || 0).padStart(3, "0")}`;
+    }
+
+    function slideSubtitle(slide) {
+      return `${slide.moduleId} · ${slide.slideId} · ${slideDisplayLabel(slide)}`;
+    }
+
+    function crosscheckReferences(slide) {
+      return Array.isArray(slide?.crosscheck?.references) ? slide.crosscheck.references : [];
+    }
+
+    function primaryCrosscheckReference(slide) {
+      const references = crosscheckReferences(slide);
+      const preferred = Number(slide?.crosscheck?.referenceMapping?.primary_source_slide);
+      return references.find((reference) => reference.sourceSlideNumber === preferred) || references[0] || null;
+    }
+
+    function crosscheckStatusInfo(status) {
+      return {
+        precheck_passed: { label: "Vorpruefung ohne Befund", tone: "ok" },
+        review_required: { label: "Pruefung erforderlich", tone: "warn" },
+        issues_found: { label: "Befunde gefunden", tone: "error" },
+        not_applicable: { label: "Kein eigenes SVG", tone: "" },
+        read_error: { label: "Bericht fehlerhaft", tone: "error" },
+      }[status] || { label: "Noch nicht geprueft", tone: "" };
+    }
+
+    function renderCrosscheckScopeOptions() {
+      const selected = selectedSlide();
+      const previousValue = elements.crosscheckScope.value;
+      elements.crosscheckScope.replaceChildren();
+
+      const allOption = document.createElement("option");
+      allOption.value = "all";
+      allOption.textContent = "Alle Module";
+      elements.crosscheckScope.append(allOption);
+
+      state.modules.forEach((moduleId) => {
+        const option = document.createElement("option");
+        option.value = `module:${moduleId}`;
+        option.textContent = `Modul: ${moduleId}`;
+        elements.crosscheckScope.append(option);
+      });
+
+      if (selected) {
+        const option = document.createElement("option");
+        option.value = `slide:${selected.id}`;
+        option.textContent = `Einzelne Folie: ${slideDisplayLabel(selected)}`;
+        elements.crosscheckScope.append(option);
+      }
+
+      const availableValues = [...elements.crosscheckScope.options].map((option) => option.value);
+      const requestedValue = previousValue.startsWith("slide:") && selected
+        ? `slide:${selected.id}`
+        : previousValue;
+      elements.crosscheckScope.value = availableValues.includes(requestedValue)
+        ? requestedValue
+        : selected && availableValues.includes(`module:${selected.moduleId}`)
+          ? `module:${selected.moduleId}`
+          : "all";
+    }
+
+    function crosscheckSlidesForScope() {
+      const scope = elements.crosscheckScope.value || "all";
+      const eligible = state.slides.filter((slide) =>
+        slide.svgProposal?.url && slide.crosscheck?.referenceMapping?.mapping_type !== "absorbed_source"
+      );
+      if (scope.startsWith("module:")) {
+        const moduleId = scope.slice("module:".length);
+        return eligible.filter((slide) => slide.moduleId === moduleId);
+      }
+      if (scope.startsWith("slide:")) {
+        const slideId = scope.slice("slide:".length);
+        return eligible.filter((slide) => slide.id === slideId);
+      }
+      return eligible;
+    }
+
+    function presentationSlideList() {
+      const source = state.filtered.length ? state.filtered : state.slides;
+      return source.filter((slide) => !slideIsHidden(slide) && slide.svgProposal?.url && slideIncludedInPresentation(slide));
+    }
+
+    function presentationStartIndex(slides) {
+      const index = slides.findIndex((slide) => slide.id === state.selectedId);
+      return index >= 0 ? index : 0;
+    }
+
+    function updatePresentationButton() {
+      const count = presentationSlideList().length;
+      elements.presentationMode.disabled = count === 0;
+      elements.presentationMode.title = count
+        ? `${count} neue SVG-Folien praesentieren`
+        : "Keine neuen SVG-Folien im aktuellen Filter";
     }
 
     function badge(label, kind = "") {
@@ -756,7 +1101,11 @@
 
     function statusBadges(slide) {
       const badges = [];
-      badges.push(badge(slide.status.hasOldSlide ? "PNG" : "kein PNG", slide.status.hasOldSlide ? "ok" : "miss"));
+      if (slide.isAdditionalSlide) {
+        badges.push(badge("Zusatz", "warn"));
+      } else {
+        badges.push(badge(slide.status.hasOldSlide ? "PNG" : "kein PNG", slide.status.hasOldSlide ? "ok" : "miss"));
+      }
       badges.push(badge(slide.status.hasSvgProposal ? "SVG" : "kein SVG", slide.status.hasSvgProposal ? "ok" : "warn"));
       if (slide.svgProposal?.aliasForSlideNumber) {
         badges.push(badge(`Master ${String(slide.svgProposal.aliasForSlideNumber).padStart(3, "0")}`, "ok"));
@@ -764,9 +1113,29 @@
       if (slide.status.hasAnimation) {
         badges.push(badge(`Animation ${slide.svgProposal?.animation?.stepCount || ""}`.trim(), "ok"));
       }
+      if (Array.isArray(slide.review?.versions) && slide.review.versions.length) {
+        badges.push(badge(`${slide.review.versions.length} Versionen`, "ok"));
+      }
+      if (slide.status.hasSvgProposal && !slideIncludedInPresentation(slide)) {
+        badges.push(badge("Praesentation aus", "warn"));
+      }
+      if (slideIsHidden(slide)) {
+        badges.push(badge("ausgeblendet", "miss"));
+      }
       badges.push(badge(slide.status.hasAnalysis ? slide.status.qaCompleteness : "keine Analyse", slide.status.hasAnalysis ? "" : "warn"));
       if (slide.review?.status && slide.review.status !== "open") {
         badges.push(badge(slide.review.status, slide.review.status === "accepted" || slide.review.status === "final" ? "ok" : "warn"));
+      }
+      if (slide.crosscheck?.report) {
+        const crosscheckStatus = crosscheckStatusInfo(slide.crosscheck.report.status);
+        badges.push(badge(
+          slide.crosscheck.report.is_stale ? "Crosscheck veraltet" : crosscheckStatus.label,
+          slide.crosscheck.report.is_stale
+            ? "warn"
+            : crosscheckStatus.tone === "error"
+              ? "miss"
+              : crosscheckStatus.tone,
+        ));
       }
       return badges;
     }
@@ -799,44 +1168,177 @@
       return `${minutes}:${seconds}`;
     }
 
+    function formatSeconds(ms) {
+      const seconds = Math.max(0, Number(ms || 0) / 1000);
+      return `${seconds.toLocaleString("de-DE", {
+        minimumFractionDigits: seconds % 1 ? 1 : 0,
+        maximumFractionDigits: 1,
+      })} s`;
+    }
+
     function setAnimationStatus(text) {
       elements.animationStatus.textContent = text;
       elements.fullscreenStatus.textContent = text;
     }
 
+    function requestViewerFullscreen() {
+      try {
+        elements.fullscreenViewer.requestFullscreen?.()?.catch?.(() => {});
+      } catch {
+        // The fullscreen panel remains usable when browser fullscreen is unavailable.
+      }
+    }
+
+    function exitViewerFullscreen() {
+      try {
+        document.exitFullscreen?.()?.catch?.(() => {});
+      } catch {
+        // Ignore browser-specific fullscreen teardown failures.
+      }
+    }
+
     function closeFullscreenViewer() {
       if (!state.fullscreenOpen) return;
-      const svgElement = state.previewSvg || state.animationSvg;
-      if (svgElement && state.fullscreenPlaceholder?.parentNode) {
-        state.fullscreenPlaceholder.replaceWith(svgElement);
-      } else if (svgElement) {
-        elements.svgFrame.replaceChildren(svgElement);
+      const presentationSlide = state.fullscreenMode === "presentation"
+        ? state.presentationSlides[state.presentationIndex]
+        : null;
+      if (state.fullscreenMode === "single") {
+        const svgElement = state.previewSvg || state.animationSvg;
+        if (svgElement && state.fullscreenPlaceholder?.parentNode) {
+          state.fullscreenPlaceholder.replaceWith(svgElement);
+        } else if (svgElement) {
+          elements.svgFrame.replaceChildren(svgElement);
+        }
       }
       elements.fullscreenSvgFrame.replaceChildren();
       elements.fullscreenViewer.hidden = true;
+      elements.fullscreenViewer.classList.remove("presentation");
       state.fullscreenOpen = false;
+      state.fullscreenMode = "single";
       state.fullscreenPlaceholder = null;
+      state.presentationSlides = [];
+      state.presentationIndex = 0;
+      state.presentationToken += 1;
       if (document.fullscreenElement === elements.fullscreenViewer) {
-        document.exitFullscreen().catch(() => {});
+        exitViewerFullscreen();
       }
-      renderAnimationControls();
+      if (presentationSlide) {
+        selectSlide(presentationSlide.id);
+      } else {
+        renderAnimationControls();
+      }
     }
 
     function openFullscreenViewer() {
       const svgElement = state.previewSvg || state.animationSvg;
       if (!svgElement) return;
       const slide = selectedSlide();
+      state.fullscreenMode = "single";
+      state.presentationSlides = [];
+      state.presentationIndex = 0;
+      state.presentationToken += 1;
+      elements.fullscreenViewer.classList.remove("presentation");
       state.fullscreenPlaceholder = document.createComment("fullscreen-svg-placeholder");
       svgElement.replaceWith(state.fullscreenPlaceholder);
       elements.fullscreenSvgFrame.replaceChildren(svgElement);
       elements.fullscreenTitle.textContent = slide
         ? `${slide.moduleId} · Folie ${String(slide.slideNumber).padStart(3, "0")} · SVG-Vorschlag`
         : "SVG-Vorschlag";
+      if (slide) {
+        elements.fullscreenTitle.textContent =
+          `${slide.moduleId} - Folie ${String(slide.slideNumber).padStart(3, "0")} - ${activeVersionLabel(slide)}`;
+      }
       elements.fullscreenViewer.hidden = false;
       state.fullscreenOpen = true;
       renderAnimationControls();
       if (state.animationManifest) renderAnimationAt(state.animationTime);
-      elements.fullscreenViewer.requestFullscreen?.().catch(() => {});
+      requestViewerFullscreen();
+    }
+
+    async function renderPresentationSlide() {
+      if (!state.fullscreenOpen || state.fullscreenMode !== "presentation") return;
+      const slide = state.presentationSlides[state.presentationIndex];
+      const proposal = slide?.svgProposal;
+      const token = state.presentationToken + 1;
+      state.presentationToken = token;
+      if (!slide || !proposal?.url) {
+        elements.fullscreenSvgFrame.replaceChildren(makeEmpty("Keine neue SVG-Folie gefunden."));
+        elements.fullscreenTitle.textContent = "Praesentation";
+        elements.fullscreenCounter.textContent = "0 / 0";
+        elements.fullscreenPreviousSlide.disabled = true;
+        elements.fullscreenNextSlide.disabled = true;
+        return;
+      }
+
+      const count = state.presentationSlides.length;
+      elements.fullscreenTitle.textContent =
+        `${slide.moduleId} - Folie ${String(slide.slideNumber).padStart(3, "0")} - ${slide.title}`;
+      elements.fullscreenCounter.textContent = `${state.presentationIndex + 1} / ${count}`;
+      elements.fullscreenPreviousSlide.disabled = state.presentationIndex <= 0;
+      elements.fullscreenNextSlide.disabled = state.presentationIndex >= count - 1;
+      clearAnimationState();
+      elements.fullscreenStatus.textContent = proposal.animation?.available
+        ? `Lade Animation mit ${proposal.animation.stepCount || 0} Schritten...`
+        : "Keine Animation fuer diese SVG-Folie.";
+      elements.fullscreenSvgFrame.replaceChildren(makeEmpty("SVG wird geladen..."));
+
+      try {
+        const response = await fetch(`${proposal.url}?v=${Date.now()}`);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const text = await response.text();
+        const svgElement = parseSafeInlineSvg(text);
+        if (token !== state.presentationToken) return;
+        svgElement.classList.add("inline-svg");
+        elements.fullscreenSvgFrame.replaceChildren(svgElement);
+        if (proposal.animation?.exists && proposal.animation.url) {
+          try {
+            const manifestResponse = await fetch(`${proposal.animation.url}?v=${Date.now()}`);
+            if (!manifestResponse.ok) throw new Error(`HTTP ${manifestResponse.status}`);
+            const manifest = await manifestResponse.json();
+            if (token !== state.presentationToken) return;
+            setupAnimation(manifest, svgElement, proposal.animation.defaultPauseMs);
+          } catch (error) {
+            if (token !== state.presentationToken) return;
+            clearAnimationState();
+            elements.fullscreenStatus.textContent = `Animation konnte nicht geladen werden: ${error.message}`;
+          }
+        } else {
+          renderAnimationControls();
+        }
+      } catch (error) {
+        if (token !== state.presentationToken) return;
+        clearAnimationState();
+        elements.fullscreenSvgFrame.replaceChildren(makeEmpty(`SVG konnte nicht geladen werden: ${error.message}`));
+      }
+    }
+
+    function openPresentationMode() {
+      const slides = presentationSlideList();
+      if (!slides.length) return;
+      if (state.fullscreenOpen) closeFullscreenViewer();
+      stopAnimationPlayback();
+      state.fullscreenMode = "presentation";
+      state.fullscreenPlaceholder = null;
+      state.presentationSlides = slides;
+      state.presentationIndex = presentationStartIndex(slides);
+      elements.fullscreenViewer.classList.add("presentation");
+      elements.fullscreenViewer.hidden = false;
+      state.fullscreenOpen = true;
+      renderPresentationSlide();
+      requestViewerFullscreen();
+    }
+
+    function movePresentation(offset) {
+      if (!state.fullscreenOpen || state.fullscreenMode !== "presentation") return false;
+      const nextIndex = Math.max(
+        0,
+        Math.min(state.presentationSlides.length - 1, state.presentationIndex + offset)
+      );
+      if (nextIndex !== state.presentationIndex) {
+        state.presentationIndex = nextIndex;
+        renderPresentationSlide();
+      }
+      return true;
     }
 
     function stopAnimationPlayback() {
@@ -848,8 +1350,7 @@
       renderAnimationControls();
     }
 
-    function resetAnimationState() {
-      closeFullscreenViewer();
+    function clearAnimationState() {
       stopAnimationPlayback();
       state.animationManifest = null;
       state.animationSvg = null;
@@ -870,8 +1371,14 @@
       renderAnimationControls();
     }
 
+    function resetAnimationState() {
+      closeFullscreenViewer();
+      clearAnimationState();
+    }
+
     function renderAnimationControls() {
       const available = Boolean(state.animationManifest?.steps?.length && state.animationSvg);
+      syncAnimationDelayControls();
       elements.animationPlay.disabled = !available;
       elements.animationReset.disabled = !available;
       elements.animationDelay.disabled = !available;
@@ -881,6 +1388,8 @@
       elements.fullscreenDelay.disabled = !available;
       elements.fullscreenTimeline.disabled = !available;
       elements.svgFullscreen.disabled = !(state.previewSvg || state.animationSvg);
+      elements.svgAnimationEdit.disabled =
+        !activeSvgProposal(selectedSlide()) || state.selectedVersionId !== "current";
       const playLabel = state.animationPlaying
         ? state.animationPaused
           ? "Fortsetzen"
@@ -888,6 +1397,7 @@
         : "Abspielen";
       elements.animationPlay.textContent = playLabel;
       elements.fullscreenPlay.textContent = playLabel;
+      updatePresentationButton();
     }
 
     function normalizeAnimationManifest(manifest) {
@@ -1017,23 +1527,54 @@
         .map((step, originalIndex) => ({ step, originalIndex }));
     }
 
-    function applyAnimationDelayDefault(defaultDelayMs) {
-      const requested = Number(defaultDelayMs);
-      if (!Number.isFinite(requested) || requested <= 0) return;
+    function animationDelayOptions() {
       const options = [...elements.animationDelay.options]
         .map((option) => Number(option.value))
         .filter((value) => Number.isFinite(value) && value > 0);
-      if (!options.length) return;
-      const closest = options.reduce((best, value) =>
+      return options.length ? options : [2500];
+    }
+
+    function closestAnimationDelay(value) {
+      const requested = Number(value);
+      const options = animationDelayOptions();
+      if (!Number.isFinite(requested) || requested <= 0) return state.animationPauseMs || options[0];
+      return options.reduce((best, value) =>
         Math.abs(value - requested) < Math.abs(best - requested) ? value : best,
       );
+    }
+
+    function syncAnimationDelayControls() {
+      const value = String(closestAnimationDelay(state.animationPauseMs));
+      state.animationPauseMs = Number(value);
+      elements.animationDelay.value = value;
+      elements.fullscreenDelay.value = value;
+    }
+
+    function setAnimationDelay(value, userSelected = false) {
+      state.animationPauseMs = closestAnimationDelay(value);
+      if (userSelected) state.animationPauseUserSelected = true;
+      syncAnimationDelayControls();
+    }
+
+    function applyAnimationDelayDefault(defaultDelayMs) {
+      if (state.animationPauseUserSelected || state.fullscreenMode === "presentation") {
+        syncAnimationDelayControls();
+        return;
+      }
+      const requested = Number(defaultDelayMs);
+      if (!Number.isFinite(requested) || requested <= 0) {
+        syncAnimationDelayControls();
+        return;
+      }
+      const closest = closestAnimationDelay(requested);
+      state.animationPauseMs = closest;
       elements.animationDelay.value = String(closest);
       elements.fullscreenDelay.value = String(closest);
     }
 
     function buildAnimationTimeline() {
       const orderedSteps = orderedAnimationSteps();
-      const pause = Number(elements.animationDelay.value);
+      const pause = Number(state.animationPauseMs) || 0;
       let cursor = 0;
       state.animationTimeline = orderedSteps.map((entry, index) => {
         const start = cursor;
@@ -1048,6 +1589,19 @@
       elements.animationTotal.textContent = formatTime(cursor);
       elements.fullscreenTimeline.max = elements.animationTimeline.max;
       elements.fullscreenTotal.textContent = formatTime(cursor);
+    }
+
+    function rebuildAnimationTimelineKeepingPosition() {
+      if (!state.animationManifest) return;
+      const oldDuration = state.animationDuration;
+      const ratio = oldDuration > 0 ? state.animationTime / oldDuration : 0;
+      buildAnimationTimeline();
+      renderAnimationAt(state.animationDuration * ratio);
+    }
+
+    function handleAnimationDelayChange(value) {
+      setAnimationDelay(value, true);
+      rebuildAnimationTimelineKeepingPosition();
     }
 
     function renderAnimationAt(time) {
@@ -1079,14 +1633,14 @@
       elements.fullscreenTimeline.value = elements.animationTimeline.value;
       elements.fullscreenCurrent.textContent = elements.animationCurrent.textContent;
       if (clamped >= state.animationDuration && state.animationTimeline.length) {
-        setAnimationStatus(`Animation abgeschlossen · ${state.animationTimeline.length} Schritte.`);
+        setAnimationStatus(`Animation abgeschlossen - ${state.animationTimeline.length} Schritte.`);
       } else if (activeSegment) {
         const target = state.animationManifest.targets.find((item) => item.targetId === activeSegment.step.targetId);
         setAnimationStatus(`Schritt ${activeSegment.index + 1}/${state.animationTimeline.length}: ${target?.label || activeSegment.step.targetId}`);
       } else if (lastCompletedSegment) {
-        setAnimationStatus(`Pause nach Schritt ${lastCompletedSegment.index + 1}/${state.animationTimeline.length}.`);
+        setAnimationStatus(`Pause ${formatSeconds(state.animationPauseMs)} nach Schritt ${lastCompletedSegment.index + 1}/${state.animationTimeline.length}.`);
       } else {
-        setAnimationStatus(`Start · ${state.animationTimeline.length} Schritte.`);
+        setAnimationStatus(`Start - ${state.animationTimeline.length} Schritte.`);
       }
       renderAnimationControls();
     }
@@ -1131,10 +1685,60 @@
       state.animationFrame = requestAnimationFrame(tick);
     }
 
+    function parseSafeInlineSvg(source) {
+      const documentSvg = new DOMParser().parseFromString(source, "image/svg+xml");
+      const root = documentSvg.documentElement;
+      if (documentSvg.querySelector("parsererror") || root?.localName?.toLowerCase() !== "svg") {
+        throw new Error("SVG konnte nicht geparst werden.");
+      }
+      documentSvg.querySelectorAll("script, foreignObject, iframe, object, embed").forEach((node) => node.remove());
+      documentSvg.querySelectorAll("style").forEach((style) => {
+        if (/@import|javascript:|url\(\s*['\"]?(?:https?:|\/\/)/i.test(style.textContent || "")) {
+          style.remove();
+        }
+      });
+      documentSvg.querySelectorAll("*").forEach((node) => {
+        for (const attribute of [...node.attributes]) {
+          const name = attribute.name.toLowerCase();
+          const value = attribute.value.trim();
+          if (name.startsWith("on")) {
+            node.removeAttribute(attribute.name);
+          } else if (
+            ["href", "xlink:href", "src"].includes(name) &&
+            /^(?:javascript:|vbscript:|data:text\/html|https?:|\/\/)/i.test(value)
+          ) {
+            node.removeAttribute(attribute.name);
+          } else if (
+            name === "style" &&
+            /javascript:|url\(\s*['\"]?(?:https?:|\/\/)/i.test(value)
+          ) {
+            node.removeAttribute(attribute.name);
+          }
+        }
+      });
+      root.removeAttribute("width");
+      root.removeAttribute("height");
+      if (!root.getAttribute("preserveAspectRatio")) root.setAttribute("preserveAspectRatio", "xMidYMid meet");
+      return document.importNode(root, true);
+    }
+
     function setupAnimation(manifest, svgElement, defaultPauseMs) {
       state.animationManifest = normalizeAnimationManifest(manifest);
+      for (const target of state.animationManifest.targets) {
+        if (target.render !== false) continue;
+        const element = svgElement.id === target.targetId
+          ? svgElement
+          : svgElement.querySelector(`#${CSS.escape(target.targetId)}`);
+        if (!element) continue;
+        if (element === svgElement) {
+          element.style.display = "none";
+        } else {
+          element.remove();
+        }
+      }
       state.animationSvg = svgElement;
-      elements.animationBar.hidden = false;
+      elements.animationBar.hidden =
+        state.fullscreenMode === "presentation" || !state.animationManifest.steps.length;
       applyAnimationDelayDefault(
         state.animationManifest.defaults?.pauseMs ??
           state.animationManifest.defaults?.stepDelayMs ??
@@ -1146,11 +1750,15 @@
     }
 
     async function renderSvgProposal(slide, token) {
-      const proposal = slide.svgProposal;
+      const proposal = activeSvgProposal(slide);
       if (!proposal?.url) {
         state.previewSvg = null;
         resetAnimationState();
-        elements.svgFrame.replaceChildren(makeEmpty("Kein SVG-Vorschlag gefunden."));
+        elements.svgFrame.replaceChildren(makeEmpty(
+          slide.isAdditionalSlide
+            ? "Noch kein SVG-Vorschlag vorhanden. Beschreibe die neue Folie rechts in den Notizen."
+            : "Kein SVG-Vorschlag gefunden.",
+        ));
         return;
       }
 
@@ -1160,16 +1768,13 @@
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const source = await response.text();
         if (token !== state.renderToken) return;
-        const documentSvg = new DOMParser().parseFromString(source, "image/svg+xml");
-        const parserError = documentSvg.querySelector("parsererror");
-        if (parserError) throw new Error("SVG konnte nicht geparst werden.");
-        const svgElement = document.importNode(documentSvg.documentElement, true);
+        const svgElement = parseSafeInlineSvg(source);
         svgElement.classList.add("inline-svg");
         if (state.fit !== "fit") svgElement.classList.add(state.fit);
         state.previewSvg = svgElement;
         elements.svgFrame.replaceChildren(svgElement);
 
-        if (proposal.animation?.available && proposal.animation.url) {
+        if (proposal.animation?.exists && proposal.animation.url) {
           const manifestResponse = await fetch(`${proposal.animation.url}?v=${Date.now()}`);
           if (!manifestResponse.ok) throw new Error(`Animationsmanifest HTTP ${manifestResponse.status}`);
           const manifest = await manifestResponse.json();
@@ -1198,7 +1803,7 @@
         }
 
         const button = document.createElement("button");
-        button.className = `slide-item ${slide.id === state.selectedId ? "active" : ""}`;
+        button.className = `slide-item ${slide.id === state.selectedId ? "active" : ""} ${slideIsHidden(slide) ? "hidden-slide" : ""}`.trim();
         button.type = "button";
         button.addEventListener("click", () => selectSlide(slide.id));
 
@@ -1207,7 +1812,7 @@
         title.textContent = slide.title;
         const meta = document.createElement("div");
         meta.className = "slide-meta";
-        meta.textContent = `${slide.slideId} · Folie ${String(slide.slideNumber).padStart(3, "0")}`;
+        meta.textContent = `${slide.slideId} · ${slideDisplayLabel(slide)}`;
         const badges = document.createElement("div");
         badges.className = "badges";
         statusBadges(slide).forEach((item) => badges.append(item));
@@ -1238,103 +1843,121 @@
       }
     }
 
-    function renderListItems(node, items, emptyText) {
-      node.replaceChildren();
-      const values = items.filter(Boolean);
-      if (!values.length) {
-        const item = document.createElement("li");
-        item.textContent = emptyText;
-        node.append(item);
-        return;
-      }
-      values.forEach((value) => {
-        const item = document.createElement("li");
-        item.textContent = typeof value === "string" ? value : JSON.stringify(value);
-        node.append(item);
+    function renderVersionSelect(slide, versions) {
+      elements.versionSelect.replaceChildren();
+
+      const current = document.createElement("option");
+      current.value = "current";
+      current.textContent = "Aktuelle Version";
+      elements.versionSelect.append(current);
+
+      versions.forEach((version) => {
+        const option = document.createElement("option");
+        option.value = version.version_id;
+        option.textContent = version.label || version.version_id;
+        elements.versionSelect.append(option);
       });
+
+      const hasSelectedVersion = versions.some((version) => version.version_id === state.selectedVersionId);
+      if (state.selectedVersionId !== "current" && !hasSelectedVersion) {
+        state.selectedVersionId = "current";
+      }
+      elements.versionSelect.value = state.selectedVersionId;
+      elements.versionSelect.disabled = !slide.svgProposal && !versions.length;
     }
 
     function renderDetails(slide) {
-      const analysis = slide.analysis?.summary || {};
-      const qa = analysis.qa || {};
-      const summary = analysis.slideSummary || {};
-      const group = analysis.sourceSlideGroup || {};
+      const archivedVersion = selectedArchivedVersion(slide);
+      const reviewVersions = Array.isArray(slide.review?.versions) ? slide.review.versions : [];
 
       renderDefinitionList(elements.meta, [
         ["Modul", slide.moduleId],
-        ["Folie", String(slide.slideNumber).padStart(3, "0")],
+        ["Typ", slide.isAdditionalSlide ? "Zusatzfolie" : "Quellfolie"],
+        ["Folie", slideDisplayLabel(slide)],
+        ["Anzeige", slideIsHidden(slide) ? "ausgeblendet" : "aktiv"],
         ["Slide-ID", slide.slideId],
+        ["Einfuegen nach", slide.isAdditionalSlide && slide.additionalSlide?.insert_after_slide_number
+          ? `Folie ${String(slide.additionalSlide.insert_after_slide_number).padStart(3, "0")}`
+          : "-"],
         ["Alte Folie", slide.oldSlide ? { text: slide.oldSlide.path, href: slide.oldSlide.url } : "-"],
-        ["SVG", slide.svgProposal ? { text: slide.svgProposal.path, href: slide.svgProposal.url } : "-"],
+        ["SVG", activeSvgProposal(slide) ? { text: activeSvgProposal(slide).path, href: activeSvgProposal(slide).url } : "-"],
+        ["Version", activeVersionLabel(slide)],
+        ["Praesentation", slide.svgProposal?.url ? (slideIncludedInPresentation(slide) ? "anzeigen" : "ausgeblendet") : "-"],
         ["SVG-Alias", slide.svgProposal?.aliasForSlideNumber ? `Master von Folie ${String(slide.svgProposal.aliasForSlideNumber).padStart(3, "0")}` : "-"],
-        ["Animation", slide.svgProposal?.animation?.available ? `${slide.svgProposal.animation.stepCount} Schritte` : "-"],
-        ["Analyse", slide.analysis?.summary ? { text: slide.analysis.path, href: slide.analysis.url } : "-"],
+        ["Animation", activeSvgProposal(slide)?.animation?.available ? `${activeSvgProposal(slide).animation.stepCount} Schritte` : "-"],
       ]);
 
-      renderDefinitionList(elements.analysisSummary, [
-        ["Titel", summary.title],
-        ["Zweck", summary.purpose],
-        ["Kernaussage", summary.core_message],
-        ["Layout", summary.layout_type],
-        ["Komplexitaet", summary.complexity],
-        ["Sequenz", group.mode],
-        ["Quellfolien", Array.isArray(group.source_slide_numbers) ? group.source_slide_numbers.join(", ") : ""],
-      ]);
-
-      renderListItems(elements.qaList, [
-        ...(qa.issues || []),
-        slide.status.analysisError ? `Analysefehler: ${slide.status.analysisError}` : "",
-      ], "Keine QA-Issues dokumentiert.");
-
-      renderListItems(elements.questionsList, qa.open_questions || [], "Keine offenen Fragen dokumentiert.");
-
-      const assets = (analysis.generatedAssets || []).map((asset) => {
-        const needed = asset.needed === true ? "benoetigt" : "optional";
-        return `${asset.id || "asset"} (${needed}): ${asset.purpose || asset.prompt || "keine Beschreibung"}`;
-      });
-      const pngElements = (analysis.visualElements || [])
-        .filter((element) => element.png_asset?.needed)
-        .map((element) => `${element.id}: ${element.png_asset.reason || element.semantic_role || "Bildasset pruefen"}`);
-      renderListItems(elements.assetsList, [...assets, ...pngElements], "Keine Bildassets dokumentiert.");
-
-      const visibleText = (analysis.visibleText || []).map((item) => item.text);
-      renderListItems(elements.textList, visibleText, "Kein sichtbarer Text dokumentiert.");
-
-      elements.reviewStatus.value = slide.review?.status || "open";
-      elements.reviewNotes.value = slide.review?.notes || "";
-      elements.reviewMessage.textContent = slide.review?.updated_at
-        ? `Gespeichert: ${new Date(slide.review.updated_at).toLocaleString("de-DE")}`
-        : "";
+      renderVersionSelect(slide, reviewVersions);
+      elements.reviewStatus.value = archivedVersion?.review_status || slide.review?.status || "open";
+      elements.reviewNotes.value = archivedVersion?.notes || slide.review?.notes || "";
+      elements.reviewNotes.placeholder = slide.isAdditionalSlide
+        ? "Beschreibe hier den neuen Folienvorschlag: Inhalt, Kernaussage, gewuenschte Visualisierung, Animationen und Bezug zu den Nachbarfolien."
+        : "Notizen zum Abgleich zwischen alter Folie und SVG-Vorschlag";
+      elements.reviewStatus.disabled = Boolean(archivedVersion);
+      elements.reviewNotes.disabled = Boolean(archivedVersion);
+      elements.saveReview.disabled = Boolean(archivedVersion);
+      elements.includeInPresentation.checked = slideIncludedInPresentation(slide);
+      elements.includeInPresentation.disabled = Boolean(archivedVersion) || !slide.svgProposal?.url || slideIsHidden(slide);
+      elements.presentationMessage.textContent = archivedVersion
+        ? "Archivstand ist nur lesend; die aktuelle Folie steuert den Praesentationsmodus."
+        : slideIsHidden(slide)
+          ? "Ausgeblendete Folien erscheinen nicht im Praesentationsmodus."
+        : !slide.svgProposal?.url
+          ? "Keine neue SVG-Folie fuer den Praesentationsmodus vorhanden."
+          : slideIncludedInPresentation(slide)
+            ? "Diese Folie erscheint im Praesentationsmodus."
+            : "Diese Folie wird im Praesentationsmodus uebersprungen.";
+      elements.versionMessage.textContent = archivedVersion
+        ? `Archivstand vom ${archivedVersion.created_at ? new Date(archivedVersion.created_at).toLocaleString("de-DE") : "unbekannten Zeitpunkt"}; nur lesend.`
+        : slide.review?.pending_before_snapshot
+          ? "Offene Notiz: Vorherstand ist vorbereitet und wird nach Behebung im Verlauf sichtbar."
+          : reviewVersions.length
+          ? `${reviewVersions.length} archivierte Versionen verfuegbar.`
+          : "Noch keine archivierte Version.";
+      elements.reviewMessage.textContent = archivedVersion
+        ? "Archivierte Notiz wird angezeigt."
+        : slide.review?.updated_at
+          ? `Gespeichert: ${new Date(slide.review.updated_at).toLocaleString("de-DE")}`
+          : "";
     }
 
     function renderMedia(slide) {
       const token = state.renderToken + 1;
+      const proposal = activeSvgProposal(slide);
+      const reference = primaryCrosscheckReference(slide);
+      const oldSlide = reference?.oldSlide || slide.oldSlide;
       state.renderToken = token;
       resetAnimationState();
       state.previewSvg = null;
-      elements.oldFrame.replaceChildren(makeMedia(slide.oldSlide, "Keine alte Foliengrafik gefunden."));
+      elements.oldFrame.replaceChildren(makeMedia(
+        oldSlide,
+        slide.isAdditionalSlide
+          ? "Zusatzfolie: keine alte Foliengrafik vorhanden."
+          : "Keine alte Foliengrafik gefunden.",
+      ));
       renderSvgProposal(slide, token);
 
-      elements.oldOpen.hidden = !slide.oldSlide;
-      elements.svgOpen.hidden = !slide.svgProposal;
-      if (slide.oldSlide) elements.oldOpen.href = slide.oldSlide.url;
-      if (slide.svgProposal) elements.svgOpen.href = slide.svgProposal.url;
-
-      elements.overlayOld.src = slide.oldSlide?.url ? `${slide.oldSlide.url}?v=${Date.now()}` : "";
-      elements.overlaySvg.src = slide.svgProposal?.url ? `${slide.svgProposal.url}?v=${Date.now()}` : "";
-      elements.overlayOld.style.opacity = String(Number(elements.opacity.value) / 100);
+      elements.oldOpen.hidden = !oldSlide;
+      elements.svgOpen.hidden = !proposal;
+      if (oldSlide) elements.oldOpen.href = oldSlide.url;
+      if (proposal) elements.svgOpen.href = proposal.url;
     }
 
     function selectSlide(id) {
       const slide = state.slides.find((item) => item.id === id);
       if (!slide) return;
+      const slideChanged = state.selectedId !== id;
+      if (slideChanged) {
+        state.selectedVersionId = "current";
+      }
       state.selectedId = id;
       elements.title.textContent = slide.title;
-      elements.subtitle.textContent = `${slide.moduleId} · ${slide.slideId} · Folie ${String(slide.slideNumber).padStart(3, "0")}`;
+      elements.subtitle.textContent = slideSubtitle(slide);
       renderMedia(slide);
       renderDetails(slide);
       renderList();
       updateNavigation();
+      renderCrosscheckScopeOptions();
       location.hash = encodeURIComponent(id);
     }
 
@@ -1343,6 +1966,7 @@
       const moduleId = elements.moduleFilter.value;
       state.filtered = state.slides.filter((slide) => {
         if (moduleId && slide.moduleId !== moduleId) return false;
+        if (slideIsHidden(slide) && !state.showHidden) return false;
         if (!query) return true;
         return [
           slide.moduleId,
@@ -1350,6 +1974,7 @@
           slide.title,
           slide.analysis?.summary?.slideSummary?.core_message,
           slide.review?.notes,
+          ...(Array.isArray(slide.review?.versions) ? slide.review.versions.map((version) => version.notes) : []),
         ]
           .filter(Boolean)
           .some((value) => String(value).toLocaleLowerCase("de").includes(query));
@@ -1359,13 +1984,27 @@
       }
       renderList();
       if (!state.selectedId && state.filtered[0]) selectSlide(state.filtered[0].id);
+      elements.count.textContent = `${state.filtered.length} von ${state.slides.length} Folien angezeigt`;
       updateNavigation();
+    }
+
+    function updateSlideActionButtons() {
+      const slide = selectedSlide();
+      const index = selectedIndex();
+      const canMove = Boolean(slide) && !slideIsHidden(slide);
+      elements.moveSlideUp.disabled = !canMove || index <= 0;
+      elements.moveSlideDown.disabled = !canMove || index < 0 || index >= state.filtered.length - 1;
+      elements.deleteSlide.disabled = !slide;
+      elements.deleteSlide.textContent = slide && slideIsHidden(slide) ? "Wiederherstellen" : "Folie loeschen";
+      elements.deleteSlide.classList.toggle("danger", !(slide && slideIsHidden(slide)));
     }
 
     function updateNavigation() {
       const index = selectedIndex();
       elements.previous.disabled = index <= 0;
       elements.next.disabled = index < 0 || index >= state.filtered.length - 1;
+      updatePresentationButton();
+      updateSlideActionButtons();
     }
 
     function move(offset) {
@@ -1374,9 +2013,161 @@
       if (next) selectSlide(next.id);
     }
 
+    function changeVersion() {
+      const slide = selectedSlide();
+      if (!slide) return;
+      state.selectedVersionId = elements.versionSelect.value || "current";
+      renderMedia(slide);
+      renderDetails(slide);
+    }
+
+    function openGlobalCrosscheckPanel() {
+      elements.globalCrosscheckBackdrop.hidden = false;
+    }
+
+    function closeGlobalCrosscheckPanel() {
+      if (state.crosscheckRunning) return;
+      elements.globalCrosscheckBackdrop.hidden = true;
+    }
+
+    function renderGlobalCrosscheckResults() {
+      elements.crosscheckResults.replaceChildren();
+      if (!state.crosscheckResults.length) {
+        elements.crosscheckResults.append(makeEmpty("Noch keine Folie geprueft."));
+        return;
+      }
+
+      state.crosscheckResults.forEach((entry) => {
+        const report = entry.report || {};
+        const counts = report.summary || {};
+        const statusInfo = crosscheckStatusInfo(report.status);
+        const item = document.createElement("article");
+        item.className = "global-crosscheck-result";
+
+        const header = document.createElement("div");
+        header.className = "global-crosscheck-result-header";
+        const title = document.createElement("div");
+        title.className = "global-crosscheck-result-title";
+        title.textContent = `${entry.moduleId} · ${slideDisplayLabel(entry)}`;
+        const status = document.createElement("span");
+        status.className = `crosscheck-status ${statusInfo.tone}`.trim();
+        status.textContent = statusInfo.label;
+        const openSlide = document.createElement("button");
+        openSlide.className = "link-button";
+        openSlide.type = "button";
+        openSlide.textContent = "Folie anzeigen";
+        openSlide.addEventListener("click", () => {
+          closeGlobalCrosscheckPanel();
+          selectSlide(entry.id);
+        });
+        header.append(title, status, openSlide);
+
+        const meta = document.createElement("div");
+        meta.className = "global-crosscheck-result-meta";
+        const referenceSlides = Array.isArray(report.reference_mapping?.source_slides)
+          ? report.reference_mapping.source_slides
+          : [];
+        meta.textContent = `${referenceSlides.length ? `Referenzen: ${referenceSlides.map((number) => `Folie ${String(number).padStart(3, "0")}`).join(", ")} · ` : ""}${counts.errors || 0} Fehler · ${counts.warnings || 0} Hinweise`;
+
+        const findings = document.createElement("ul");
+        findings.className = "global-crosscheck-findings";
+        const reportFindings = Array.isArray(report.findings) ? report.findings : [];
+        if (reportFindings.length) {
+          reportFindings.forEach((finding) => {
+            const findingItem = document.createElement("li");
+            findingItem.dataset.severity = finding.severity || "info";
+            findingItem.textContent = finding.message || finding.code || "Unbenannter Befund";
+            findings.append(findingItem);
+          });
+        } else {
+          const findingItem = document.createElement("li");
+          findingItem.textContent = "Keine konkreten Uebertragungsfehler in der deterministischen Vorpruefung.";
+          findings.append(findingItem);
+        }
+
+        item.append(header, meta, findings);
+        elements.crosscheckResults.append(item);
+      });
+    }
+
+    async function runGlobalCrosscheck() {
+      if (state.crosscheckRunning) return;
+      const slides = crosscheckSlidesForScope();
+      state.crosscheckResults = [];
+      openGlobalCrosscheckPanel();
+      renderGlobalCrosscheckResults();
+      if (!slides.length) {
+        elements.crosscheckProgress.textContent = "Im gewaehlten Bereich gibt es keine pruefbare SVG-Folie.";
+        return;
+      }
+
+      state.crosscheckRunning = true;
+      elements.runCrosscheck.disabled = true;
+      elements.crosscheckScope.disabled = true;
+      elements.closeCrosscheck.disabled = true;
+      try {
+        for (let index = 0; index < slides.length; index += 1) {
+          const slide = slides[index];
+          elements.crosscheckProgress.textContent =
+            `Pruefe ${index + 1} von ${slides.length}: ${slide.moduleId} · ${slideDisplayLabel(slide)}`;
+          try {
+            const response = await fetch("/api/crosscheck", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ id: slide.id }),
+            });
+            const payload = await response.json();
+            if (!response.ok) throw new Error(payload.error || `HTTP ${response.status}`);
+            slide.crosscheck = {
+              ...(slide.crosscheck || {}),
+              report: payload.crosscheck,
+            };
+            slide.status.crosscheckStatus = payload.crosscheck.status;
+            state.crosscheckResults.push({
+              id: slide.id,
+              moduleId: slide.moduleId,
+              slideNumber: slide.slideNumber,
+              isAdditionalSlide: slide.isAdditionalSlide,
+              additionalSlide: slide.additionalSlide,
+              report: payload.crosscheck,
+            });
+          } catch (error) {
+            state.crosscheckResults.push({
+              id: slide.id,
+              moduleId: slide.moduleId,
+              slideNumber: slide.slideNumber,
+              isAdditionalSlide: slide.isAdditionalSlide,
+              additionalSlide: slide.additionalSlide,
+              report: {
+                status: "read_error",
+                summary: { errors: 1, warnings: 0 },
+                findings: [{ severity: "error", message: error.message }],
+              },
+            });
+          }
+          renderGlobalCrosscheckResults();
+        }
+
+        const totals = state.crosscheckResults.reduce((summary, entry) => ({
+          errors: summary.errors + Number(entry.report?.summary?.errors || 0),
+          warnings: summary.warnings + Number(entry.report?.summary?.warnings || 0),
+        }), { errors: 0, warnings: 0 });
+        elements.crosscheckProgress.textContent =
+          `Abgeschlossen: ${state.crosscheckResults.length} Folien · ${totals.errors} Fehler · ${totals.warnings} Hinweise.`;
+        renderList();
+      } finally {
+        state.crosscheckRunning = false;
+        elements.runCrosscheck.disabled = false;
+        elements.crosscheckScope.disabled = false;
+        elements.closeCrosscheck.disabled = false;
+      }
+    }
+
     async function saveReview() {
       const slide = selectedSlide();
       if (!slide) return;
+      if (selectedArchivedVersion(slide)) return;
+      state.selectedVersionId = "current";
       elements.saveReview.disabled = true;
       elements.reviewMessage.textContent = "Speichere...";
       try {
@@ -1395,19 +2186,194 @@
         slide.status.reviewStatus = payload.review.status;
         renderDetails(slide);
         renderList();
+        if (payload.archivedVersion) {
+          elements.reviewMessage.textContent = payload.archivedVersion.reused
+            ? `Gespeichert. Vorhandene Version bleibt verknuepft: ${payload.archivedVersion.label}.`
+            : `Gespeichert. Version archiviert: ${payload.archivedVersion.label}.`;
+        } else if (payload.review?.pending_before_snapshot) {
+          elements.reviewMessage.textContent =
+            "Notiz gespeichert. Verlaufsversion entsteht nach Behebung der Notiz.";
+        }
       } catch (error) {
         elements.reviewMessage.textContent = error.message;
       } finally {
-        elements.saveReview.disabled = false;
+        elements.saveReview.disabled = Boolean(selectedArchivedVersion(slide));
       }
     }
 
-    function setMode(mode) {
-      state.mode = mode === "overlay" ? "overlay" : "side";
-      elements.compare.classList.toggle("overlay", state.mode === "overlay");
-      elements.segments.forEach((button) => {
-        button.classList.toggle("active", button.dataset.mode === state.mode);
-      });
+    async function savePresentationPreference() {
+      const slide = selectedSlide();
+      if (!slide || selectedArchivedVersion(slide)) return;
+      const previous = slideIncludedInPresentation(slide);
+      const next = elements.includeInPresentation.checked;
+      slide.review = {
+        ...(slide.review || {}),
+        include_in_presentation: next,
+      };
+      elements.presentationMessage.textContent = "Speichere Praesentationsauswahl...";
+      renderList();
+      updatePresentationButton();
+      try {
+        const response = await fetch("/api/presentation", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            id: slide.id,
+            includeInPresentation: next,
+          }),
+        });
+        const payload = await response.json();
+        if (!response.ok) throw new Error(payload.error || `HTTP ${response.status}`);
+        slide.review = payload.review;
+        slide.status.reviewStatus = payload.review.status;
+        renderDetails(slide);
+        renderList();
+        updatePresentationButton();
+      } catch (error) {
+        slide.review = {
+          ...(slide.review || {}),
+          include_in_presentation: previous,
+        };
+        elements.includeInPresentation.checked = previous;
+        elements.presentationMessage.textContent = error.message;
+        renderList();
+        updatePresentationButton();
+      }
+    }
+
+    function hideDeleteUndoToast() {
+      clearTimeout(state.deleteUndoTimer);
+      state.deleteUndoTimer = 0;
+      state.pendingDeleteUndo = null;
+      elements.undoToast.hidden = true;
+    }
+
+    function showDeleteUndoToast(slide) {
+      clearTimeout(state.deleteUndoTimer);
+      state.pendingDeleteUndo = {
+        id: slide.id,
+        label: slideDisplayLabel(slide),
+      };
+      elements.undoToastText.textContent = "L\u00f6schen r\u00fcckg\u00e4ngig machen?";
+      elements.undoToast.hidden = false;
+      state.deleteUndoTimer = setTimeout(() => {
+        hideDeleteUndoToast();
+      }, 5000);
+    }
+
+    async function restoreDeletedSlideFromToast() {
+      const undo = state.pendingDeleteUndo;
+      if (!undo?.id) return;
+      clearTimeout(state.deleteUndoTimer);
+      elements.undoDelete.disabled = true;
+      elements.undoToastText.textContent = "Stelle Folie wieder her...";
+      try {
+        const response = await fetch("/api/slide-curation", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            id: undo.id,
+            action: "restore",
+          }),
+        });
+        const payload = await response.json();
+        if (!response.ok) throw new Error(payload.error || `HTTP ${response.status}`);
+        hideDeleteUndoToast();
+        await loadSlides(undo.id);
+        elements.sidebarMessage.textContent = "Loeschen rueckgaengig gemacht.";
+      } catch (error) {
+        elements.undoToastText.textContent = error.message;
+      } finally {
+        elements.undoDelete.disabled = false;
+      }
+    }
+
+    async function applySelectedSlideCuration(action) {
+      const slide = selectedSlide();
+      if (!slide) return;
+      const index = selectedIndex();
+      const fallbackSlide = state.filtered[index + 1] || state.filtered[index - 1] || null;
+      const preferredId = action === "hide" ? fallbackSlide?.id || "" : slide.id;
+      elements.sidebarMessage.textContent = "Speichere Folienreihenfolge...";
+      elements.moveSlideUp.disabled = true;
+      elements.moveSlideDown.disabled = true;
+      elements.deleteSlide.disabled = true;
+      try {
+        const response = await fetch("/api/slide-curation", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            id: slide.id,
+            action,
+          }),
+        });
+        const payload = await response.json();
+        if (!response.ok) throw new Error(payload.error || `HTTP ${response.status}`);
+        await loadSlides(preferredId);
+        if (action === "hide") {
+          showDeleteUndoToast(slide);
+        } else if (action === "restore" && state.pendingDeleteUndo?.id === slide.id) {
+          hideDeleteUndoToast();
+        }
+        elements.sidebarMessage.textContent = action === "hide"
+          ? "Folie ausgeblendet."
+          : action === "restore"
+            ? "Folie wiederhergestellt."
+            : "Folienreihenfolge gespeichert.";
+      } catch (error) {
+        elements.sidebarMessage.textContent = error.message;
+        updateSlideActionButtons();
+      }
+    }
+
+    function moduleForAdditionalSlide() {
+      const slide = selectedSlide();
+      return slide?.moduleId || elements.moduleFilter.value || state.modules[0] || "";
+    }
+
+    function insertAfterForAdditionalSlide(moduleId) {
+      const slide = selectedSlide();
+      if (slide?.moduleId === moduleId) {
+        return slide.isAdditionalSlide
+          ? slide.additionalSlide?.insert_after_slide_number || null
+          : slide.slideNumber;
+      }
+
+      const moduleSlides = state.slides
+        .filter((item) => item.moduleId === moduleId && !item.isAdditionalSlide && Number.isFinite(Number(item.slideNumber)))
+        .sort((left, right) => left.slideNumber - right.slideNumber);
+      return moduleSlides.length ? moduleSlides[moduleSlides.length - 1].slideNumber : null;
+    }
+
+    async function addAdditionalSlide() {
+      const moduleId = moduleForAdditionalSlide();
+      if (!moduleId) {
+        elements.sidebarMessage.textContent = "Kein Modul fuer Zusatzfolie gefunden.";
+        return;
+      }
+
+      elements.addSlide.disabled = true;
+      elements.sidebarMessage.textContent = "Lege Zusatzfolie an...";
+      try {
+        const response = await fetch("/api/additional-slide", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            moduleId,
+            insertAfterSlideNumber: insertAfterForAdditionalSlide(moduleId),
+          }),
+        });
+        const payload = await response.json();
+        if (!response.ok) throw new Error(payload.error || `HTTP ${response.status}`);
+        elements.search.value = "";
+        await loadSlides(payload.slide?.id || "");
+        elements.sidebarMessage.textContent = "Zusatzfolie angelegt. Beschreibe den Vorschlag rechts in den Notizen.";
+        elements.reviewNotes.focus();
+      } catch (error) {
+        elements.sidebarMessage.textContent = error.message;
+      } finally {
+        elements.addSlide.disabled = false;
+      }
     }
 
     async function loadSlides(preferredId = "") {
@@ -1444,36 +2410,57 @@
         requested ||
         state.slides.find((slide) => slide.id === state.selectedId) ||
         state.filtered[0];
-      if (initial) selectSlide(initial.id);
+      if (initial) {
+        selectSlide(initial.id);
+      }
     }
 
     elements.search.addEventListener("input", applyFilter);
     elements.moduleFilter.addEventListener("change", applyFilter);
+    elements.addSlide.addEventListener("click", addAdditionalSlide);
+    elements.moveSlideUp.addEventListener("click", () => applySelectedSlideCuration("up"));
+    elements.moveSlideDown.addEventListener("click", () => applySelectedSlideCuration("down"));
+    elements.deleteSlide.addEventListener("click", () => {
+      const slide = selectedSlide();
+      if (!slide) return;
+      applySelectedSlideCuration(slideIsHidden(slide) ? "restore" : "hide");
+    });
+    elements.undoDelete.addEventListener("click", restoreDeletedSlideFromToast);
+    elements.showHiddenSlides.addEventListener("change", () => {
+      state.showHidden = elements.showHiddenSlides.checked;
+      applyFilter();
+    });
     elements.previous.addEventListener("click", () => move(-1));
     elements.next.addEventListener("click", () => move(1));
+    elements.presentationMode.addEventListener("click", openPresentationMode);
     elements.refresh.addEventListener("click", () => loadSlides(state.selectedId));
+    elements.versionSelect.addEventListener("change", changeVersion);
+    elements.runCrosscheck.addEventListener("click", runGlobalCrosscheck);
+    elements.closeCrosscheck.addEventListener("click", closeGlobalCrosscheckPanel);
+    elements.globalCrosscheckBackdrop.addEventListener("click", (event) => {
+      if (event.target === elements.globalCrosscheckBackdrop) closeGlobalCrosscheckPanel();
+    });
     elements.saveReview.addEventListener("click", saveReview);
+    elements.includeInPresentation.addEventListener("change", savePresentationPreference);
     elements.svgFullscreen.addEventListener("click", openFullscreenViewer);
+    elements.svgAnimationEdit.addEventListener("click", () => {
+      const slide = selectedSlide();
+      if (!slide || !activeSvgProposal(slide) || state.selectedVersionId !== "current") return;
+      location.href = `/svg-animation-editor?id=${encodeURIComponent(slide.id)}`;
+    });
     elements.animationPlay.addEventListener("click", playAnimation);
     elements.animationReset.addEventListener("click", resetAnimationPreview);
     elements.fullscreenPlay.addEventListener("click", playAnimation);
     elements.fullscreenReset.addEventListener("click", resetAnimationPreview);
     elements.fullscreenClose.addEventListener("click", closeFullscreenViewer);
+    elements.fullscreenPreviousSlide.addEventListener("click", () => movePresentation(-1));
+    elements.fullscreenNextSlide.addEventListener("click", () => movePresentation(1));
+    elements.fullscreenSvgFrame.addEventListener("click", () => movePresentation(1));
     elements.animationDelay.addEventListener("change", () => {
-      if (!state.animationManifest) return;
-      elements.fullscreenDelay.value = elements.animationDelay.value;
-      const oldDuration = state.animationDuration;
-      const ratio = oldDuration > 0 ? state.animationTime / oldDuration : 0;
-      buildAnimationTimeline();
-      renderAnimationAt(state.animationDuration * ratio);
+      handleAnimationDelayChange(elements.animationDelay.value);
     });
     elements.fullscreenDelay.addEventListener("change", () => {
-      if (!state.animationManifest) return;
-      elements.animationDelay.value = elements.fullscreenDelay.value;
-      const oldDuration = state.animationDuration;
-      const ratio = oldDuration > 0 ? state.animationTime / oldDuration : 0;
-      buildAnimationTimeline();
-      renderAnimationAt(state.animationDuration * ratio);
+      handleAnimationDelayChange(elements.fullscreenDelay.value);
     });
     elements.animationTimeline.addEventListener("input", () => {
       if (!state.animationManifest) return;
@@ -1485,23 +2472,49 @@
       stopAnimationPlayback();
       renderAnimationAt(Number(elements.fullscreenTimeline.value));
     });
-    elements.opacity.addEventListener("input", () => {
-      elements.overlayOld.style.opacity = String(Number(elements.opacity.value) / 100);
-    });
     elements.fitMode.addEventListener("change", () => {
       state.fit = elements.fitMode.value;
       const slide = selectedSlide();
       if (slide) renderMedia(slide);
     });
-    elements.segments.forEach((button) => {
-      button.addEventListener("click", () => setMode(button.dataset.mode));
-    });
     document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !elements.globalCrosscheckBackdrop.hidden) {
+        closeGlobalCrosscheckPanel();
+        return;
+      }
       if (event.key === "Escape" && state.fullscreenOpen) {
         closeFullscreenViewer();
         return;
       }
       if (event.target.matches("input, select, textarea")) return;
+      if (state.fullscreenOpen && state.fullscreenMode === "presentation") {
+        if (event.target.closest("button, a")) return;
+        if (event.key === "ArrowLeft" || event.key === "PageUp" || event.key.toLowerCase() === "a") {
+          event.preventDefault();
+          movePresentation(-1);
+          return;
+        }
+        if (event.key === " ") {
+          event.preventDefault();
+          if (state.animationManifest?.steps?.length && state.animationSvg) {
+            playAnimation();
+          } else {
+            movePresentation(1);
+          }
+          return;
+        }
+        if (
+          event.key === "ArrowRight" ||
+          event.key === "PageDown" ||
+          event.key === "Enter" ||
+          event.key.toLowerCase() === "d"
+        ) {
+          event.preventDefault();
+          movePresentation(1);
+          return;
+        }
+        return;
+      }
       if (event.key === "ArrowLeft" || event.key.toLowerCase() === "a") move(-1);
       if (event.key === "ArrowRight" || event.key.toLowerCase() === "d") move(1);
       if (event.key === "/") {

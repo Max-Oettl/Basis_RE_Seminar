@@ -23,6 +23,8 @@ Sie sollen nicht wirken wie:
 
 ## Farbrollen
 
+Die technische Token-Quelle fuer Generatoren und QA ist `brand/company-brand-tokens.json`. Die Werte unten sind die fachliche Brand-Vorgabe; wenn echte Firmenfarben, Logo-Farben oder Praesentationsvorgaben finalisiert werden, werden sie zentral in dieser Token-Datei angepasst.
+
 Die exakten Farbwerte können später aus dem Logo finalisiert werden. Bis dahin gilt diese Arbeits-Palette:
 
 - Primary Navy: `#062D46`
@@ -90,4 +92,3 @@ Das Logo muss nicht auf jeder SVG sichtbar sein, wenn die Grafik in einem gebran
 - klein und ruhig platzieren
 - nicht mit dem Lerninhalt konkurrieren
 - ausreichend Abstand zum Rand
-

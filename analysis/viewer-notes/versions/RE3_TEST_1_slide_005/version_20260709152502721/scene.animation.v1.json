@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "sceneId": "RE3_TEST_1_slide_005",
+  "svgPath": "slide_005.svg",
+  "status": "draft",
+  "defaults": {
+    "enterFrames": 16,
+    "drawDurFrames": 24,
+    "highlightDurFrames": 24
+  },
+  "targets": [
+    {
+      "targetId": "workflow_steps",
+      "label": "workflow steps",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "fit_plot",
+      "label": "fit plot",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "fit_callout_box",
+      "label": "fit callout box",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "fit_callout_text",
+      "label": "fit callout text",
+      "status": "animated",
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "01_workflow_steps",
+      "targetId": "workflow_steps",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "02_fit_plot",
+      "targetId": "fit_plot",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "03_fit_callout_box",
+      "targetId": "fit_callout_box",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "04_fit_callout_text",
+      "targetId": "fit_callout_text",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    }
+  ],
+  "notes": [
+    "Static SVG preview keeps all layers visible; this manifest defines reveal targets for PowerPoint/video animation."
+  ]
+}

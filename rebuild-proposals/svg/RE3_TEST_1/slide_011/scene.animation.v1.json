@@ -1,0 +1,321 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "sceneId": "RE3_TEST_1_slide_011",
+  "svgPath": "slide_011.svg",
+  "status": "draft",
+  "defaults": {
+    "enterFrames": 16,
+    "drawDurFrames": 24,
+    "highlightDurFrames": 24
+  },
+  "targets": [
+    {
+      "targetId": "weibull_context_plot",
+      "label": "weibull context plot",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "censoring_arrow",
+      "label": "censoring arrow",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "object_time_plot",
+      "label": "object time plot",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "censoring_note",
+      "label": "censoring note",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_context_plot_asset__PathCollection_1",
+      "label": "Ausfalldaten",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_context_plot_asset__line2d_57",
+      "label": "Weibull-Fit",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_context_plot_asset__legend_1",
+      "label": "Legende",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "object_time_plot_asset__plot-object-1-runtime",
+      "label": "Laufzeit Objekt 1",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "object_time_plot_asset__plot-object-1-failure",
+      "label": "Ausfall Objekt 1",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "object_time_plot_asset__plot-object-2-runtime",
+      "label": "Laufzeit Objekt 2",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "object_time_plot_asset__plot-object-2-failure",
+      "label": "Ausfall Objekt 2",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "object_time_plot_asset__plot-object-3-runtime",
+      "label": "Laufzeit Objekt 3",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "object_time_plot_asset__plot-object-3-censored",
+      "label": "Zensur Objekt 3",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "object_time_plot_asset__plot-object-4-runtime",
+      "label": "Laufzeit Objekt 4",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "object_time_plot_asset__plot-object-4-failure",
+      "label": "Ausfall Objekt 4",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "object_time_plot_asset__plot-object-5-runtime",
+      "label": "Laufzeit Objekt 5",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "object_time_plot_asset__plot-object-5-failure",
+      "label": "Ausfall Objekt 5",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "object_time_plot_asset__plot-object-6-runtime",
+      "label": "Laufzeit Objekt 6",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "object_time_plot_asset__plot-object-6-censored",
+      "label": "Zensur Objekt 6",
+      "status": "animated",
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "01_weibull_context_plot",
+      "targetId": "weibull_context_plot",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "plot_weibull_context_plot_01_weibull_context_plot_asset_PathCollection_1",
+      "targetId": "weibull_context_plot_asset__PathCollection_1",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Ausfalldaten"
+    },
+    {
+      "stepId": "plot_weibull_context_plot_02_weibull_context_plot_asset_line2d_57",
+      "targetId": "weibull_context_plot_asset__line2d_57",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Weibull-Fit"
+    },
+    {
+      "stepId": "plot_weibull_context_plot_03_weibull_context_plot_asset_legend_1",
+      "targetId": "weibull_context_plot_asset__legend_1",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Legende"
+    },
+    {
+      "stepId": "02_censoring_arrow",
+      "targetId": "censoring_arrow",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "03_object_time_plot",
+      "targetId": "object_time_plot",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "plot_object_time_plot_01_object_time_plot_asset_plot_object_1_runtime",
+      "targetId": "object_time_plot_asset__plot-object-1-runtime",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Laufzeit Objekt 1"
+    },
+    {
+      "stepId": "plot_object_time_plot_02_object_time_plot_asset_plot_object_1_failure",
+      "targetId": "object_time_plot_asset__plot-object-1-failure",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Ausfall Objekt 1"
+    },
+    {
+      "stepId": "plot_object_time_plot_03_object_time_plot_asset_plot_object_2_runtime",
+      "targetId": "object_time_plot_asset__plot-object-2-runtime",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Laufzeit Objekt 2"
+    },
+    {
+      "stepId": "plot_object_time_plot_04_object_time_plot_asset_plot_object_2_failure",
+      "targetId": "object_time_plot_asset__plot-object-2-failure",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Ausfall Objekt 2"
+    },
+    {
+      "stepId": "plot_object_time_plot_05_object_time_plot_asset_plot_object_3_runtime",
+      "targetId": "object_time_plot_asset__plot-object-3-runtime",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Laufzeit Objekt 3"
+    },
+    {
+      "stepId": "plot_object_time_plot_06_object_time_plot_asset_plot_object_3_censored",
+      "targetId": "object_time_plot_asset__plot-object-3-censored",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Zensur Objekt 3"
+    },
+    {
+      "stepId": "plot_object_time_plot_07_object_time_plot_asset_plot_object_4_runtime",
+      "targetId": "object_time_plot_asset__plot-object-4-runtime",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Laufzeit Objekt 4"
+    },
+    {
+      "stepId": "plot_object_time_plot_08_object_time_plot_asset_plot_object_4_failure",
+      "targetId": "object_time_plot_asset__plot-object-4-failure",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Ausfall Objekt 4"
+    },
+    {
+      "stepId": "plot_object_time_plot_09_object_time_plot_asset_plot_object_5_runtime",
+      "targetId": "object_time_plot_asset__plot-object-5-runtime",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Laufzeit Objekt 5"
+    },
+    {
+      "stepId": "plot_object_time_plot_10_object_time_plot_asset_plot_object_5_failure",
+      "targetId": "object_time_plot_asset__plot-object-5-failure",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Ausfall Objekt 5"
+    },
+    {
+      "stepId": "plot_object_time_plot_11_object_time_plot_asset_plot_object_6_runtime",
+      "targetId": "object_time_plot_asset__plot-object-6-runtime",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Laufzeit Objekt 6"
+    },
+    {
+      "stepId": "plot_object_time_plot_12_object_time_plot_asset_plot_object_6_censored",
+      "targetId": "object_time_plot_asset__plot-object-6-censored",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Zensur Objekt 6"
+    },
+    {
+      "stepId": "04_censoring_note",
+      "targetId": "censoring_note",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    }
+  ],
+  "notes": [
+    "Static SVG preview keeps all layers visible; this manifest defines reveal targets for PowerPoint/video animation.",
+    "When a Python plot contains internal SVG animation targets, scene-level callouts are placed after that plot in the reveal order.",
+    "Plotinhalt: Weibull-Kontextplot wird stufenweise aufgebaut.",
+    "Plotinhalt: Zensierte und ausgefallene Objektlaufzeiten werden pro Objekt eingeblendet."
+  ]
+}

@@ -7,6 +7,7 @@ import xml.etree.ElementTree as ET
 
 import numpy as np
 
+from basis_seminar_plot_data import DEFAULT_FAILURE_TIMES_CSV, weibull_x_limits
 from reltest_plot_style import (
     RELTEST_COLORS,
     apply_reltest_style,
@@ -165,7 +166,7 @@ def build_plot(
     upper_bound: float = 0.95,
     bootstrap_samples: int = 5000,
     seed: int = 42,
-    xlabel: str = "Prüfzeit t / Lastwechsel",
+    xlabel: str = "Lebensdauer t",
     ylabel: str = "Ausfallwahrscheinlichkeit F(t) [%]",
     confidence_trigger_at_seconds: float | None = None,
 ) -> None:
@@ -186,7 +187,8 @@ def build_plot(
     slope, intercept = linear_fit(x_fit, y_fit)
     beta, eta = fit_weibull_parameters_from_line(slope, intercept)
 
-    line_times = logspace(min(sorted_times) * 0.75, max(sorted_times) * 1.25, 160)
+    x_min, x_max = weibull_x_limits(sorted_times)
+    line_times = logspace(x_min, x_max, 160)
     line_x = np.asarray([math.log10(time) for time in line_times], dtype=float)
     line_y = intercept + slope * line_x
     lower, upper = bootstrap_confidence_limits(
@@ -244,7 +246,7 @@ def build_plot(
     ax.set_yticks(y_ticks)
     ax.set_yticklabels(y_labels)
     ax.set_ylim(weibull_y(0.01), weibull_y(0.99))
-    ax.set_xlim(min(line_times), max(line_times))
+    ax.set_xlim(x_min, x_max)
 
     style_axes(ax, xlabel, ylabel)
     legend = ax.legend(loc="lower right")
@@ -279,7 +281,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="Create a Reltest-style Weibull probability plot with reproducible 5 % and 95 % bootstrap confidence limit curves and without a visible plot title."
     )
-    parser.add_argument("--times", default="12,18,27,44,68,105,160")
+    parser.add_argument("--times", default=DEFAULT_FAILURE_TIMES_CSV)
     parser.add_argument(
         "--probabilities",
         help="Optional failure probabilities as fractions or percent values. If omitted, median ranks are used.",
@@ -288,7 +290,7 @@ def main() -> None:
     parser.add_argument("--upper-bound", type=float, default=0.95)
     parser.add_argument("--bootstrap-samples", type=int, default=5000)
     parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--xlabel", default="Prüfzeit t / Lastwechsel")
+    parser.add_argument("--xlabel", default="Lebensdauer t")
     parser.add_argument("--ylabel", default="Ausfallwahrscheinlichkeit F(t) [%]")
     parser.add_argument(
         "--confidence-trigger-at-seconds",

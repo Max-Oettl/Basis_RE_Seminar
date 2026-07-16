@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_005.svg",
+  "defaults": {
+    "pauseMs": 1600,
+    "enterFrames": 16,
+    "drawFrames": 20
+  },
+  "targets": [
+    {
+      "targetId": "slide_005_layer_01_context",
+      "label": "Kontext und Ziel",
+      "status": "animated"
+    },
+    {
+      "targetId": "slide_005_layer_02_main_visual",
+      "label": "Hauptvisual",
+      "status": "animated"
+    },
+    {
+      "targetId": "slide_005_layer_04_workflow_note",
+      "label": "Workflow-Notiz",
+      "status": "animated"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "slide_005_step_01",
+      "targetId": "slide_005_layer_01_context",
+      "action": "show"
+    },
+    {
+      "stepId": "slide_005_step_02",
+      "targetId": "slide_005_layer_02_main_visual",
+      "action": "show"
+    },
+    {
+      "stepId": "slide_005_step_03",
+      "targetId": "slide_005_layer_04_workflow_note",
+      "action": "show"
+    }
+  ]
+}

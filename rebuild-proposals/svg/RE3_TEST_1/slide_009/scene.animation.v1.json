@@ -1,0 +1,160 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "sceneId": "RE3_TEST_1_slide_009",
+  "svgPath": "slide_009.svg",
+  "status": "draft",
+  "defaults": {
+    "enterFrames": 16,
+    "drawDurFrames": 24,
+    "highlightDurFrames": 24
+  },
+  "targets": [
+    {
+      "targetId": "mixed_mechanisms",
+      "label": "mixed mechanisms",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "split_arrow",
+      "label": "split arrow",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "split_result",
+      "label": "split result",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "mechanism_plot",
+      "label": "mechanism plot",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "mechanism_plot_asset__plot-mechanism-a-points",
+      "label": "Datenpunkte Mechanismus A",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "mechanism_plot_asset__plot-mechanism-a-fit",
+      "label": "Fit Mechanismus A",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "mechanism_plot_asset__plot-mechanism-b-points",
+      "label": "Datenpunkte Mechanismus B",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "mechanism_plot_asset__plot-mechanism-b-fit",
+      "label": "Fit Mechanismus B",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "mechanism_plot_asset__legend_1",
+      "label": "Legende",
+      "status": "animated",
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "01_mixed_mechanisms",
+      "targetId": "mixed_mechanisms",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "02_split_arrow",
+      "targetId": "split_arrow",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "03_split_result",
+      "targetId": "split_result",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "04_mechanism_plot",
+      "targetId": "mechanism_plot",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "plot_mechanism_plot_01_mechanism_plot_asset_plot_mechanism_a_points",
+      "targetId": "mechanism_plot_asset__plot-mechanism-a-points",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Datenpunkte Mechanismus A"
+    },
+    {
+      "stepId": "plot_mechanism_plot_02_mechanism_plot_asset_plot_mechanism_a_fit",
+      "targetId": "mechanism_plot_asset__plot-mechanism-a-fit",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Fit Mechanismus A"
+    },
+    {
+      "stepId": "plot_mechanism_plot_03_mechanism_plot_asset_plot_mechanism_b_points",
+      "targetId": "mechanism_plot_asset__plot-mechanism-b-points",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Datenpunkte Mechanismus B"
+    },
+    {
+      "stepId": "plot_mechanism_plot_04_mechanism_plot_asset_plot_mechanism_b_fit",
+      "targetId": "mechanism_plot_asset__plot-mechanism-b-fit",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Fit Mechanismus B"
+    },
+    {
+      "stepId": "plot_mechanism_plot_05_mechanism_plot_asset_legend_1",
+      "targetId": "mechanism_plot_asset__legend_1",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Legende"
+    }
+  ],
+  "notes": [
+    "Static SVG preview keeps all layers visible; this manifest defines reveal targets for PowerPoint/video animation.",
+    "When a Python plot contains internal SVG animation targets, scene-level callouts are placed after that plot in the reveal order.",
+    "Plotinhalt: Mechanismen werden nacheinander aufgebaut."
+  ]
+}

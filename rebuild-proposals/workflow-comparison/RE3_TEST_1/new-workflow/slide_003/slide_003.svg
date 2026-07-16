@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">RE3_TEST_1 new workflow comparison slide 003</title>
+  <desc id="desc">Berechnete F(tᵢ)-Werte werden im Diagramm verortet.</desc>
+  <metadata>
+    module_id: RE3_TEST_1
+    comparison_variant: new-layered-workflow
+    source_slide: 3
+    old_workflow_reference: rebuild-proposals/svg/RE3_TEST_1
+    generated_by: tools/generate_re3_test_1_new_workflow_comparison.py
+  </metadata>
+
+  <defs>
+    <style>
+
+    .bg { fill: #f6f8f9; }
+    .panel { fill: #ffffff; stroke: #cfe0e8; stroke-width: 2; }
+    .soft { fill: #e8f6fb; stroke: #9bd5e7; stroke-width: 2; }
+    .accent { fill: #fff6df; stroke: #f0c96b; stroke-width: 2; }
+    .ink { fill: #062d46; }
+    .muted { fill: #5d7080; }
+    .text { font-family: Inter, "Segoe UI", Arial, sans-serif; fill: #062d46; }
+    .caption { font-size: 22px; fill: #5d7080; }
+    .kicker { font-size: 23px; font-weight: 760; fill: #0c8fc1; }
+    .headline { font-size: 40px; font-weight: 820; }
+    .subhead { font-size: 28px; font-weight: 760; }
+    .body { font-size: 24px; fill: #5d7080; }
+    .small { font-size: 20px; fill: #5d7080; }
+    .formula { font-size: 38px; font-weight: 650; }
+    .formula-small { font-size: 28px; font-weight: 650; }
+    .axis { stroke: #062d46; stroke-width: 4; stroke-linecap: round; fill: none; }
+    .thin-axis { stroke: #062d46; stroke-width: 3; stroke-linecap: round; fill: none; }
+    .line { stroke: #062d46; stroke-width: 3; stroke-linecap: round; fill: none; }
+    .blue { stroke: #0c8fc1; stroke-width: 5; stroke-linecap: round; fill: none; }
+    .red { stroke: #e11931; stroke-width: 5; stroke-linecap: round; fill: none; }
+    .green { stroke: #2c8f5b; stroke-width: 5; stroke-linecap: round; fill: none; }
+    .dash { stroke-dasharray: 10 9; }
+    .grid { stroke: #d7e6ed; stroke-width: 2; fill: none; }
+    .plot-frame { fill: #ffffff; stroke: #d7e6ed; stroke-width: 2; }
+
+    </style>
+    <marker id="arrow-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#062d46" />
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0c8fc1" />
+    </marker>
+    <g id="failure-cross">
+      <line class="red" x1="-13" y1="-13" x2="13" y2="13" />
+      <line class="red" x1="-13" y1="13" x2="13" y2="-13" />
+    </g>
+    <g id="censor-mark">
+      <circle r="15" fill="#ffffff" stroke="#0c8fc1" stroke-width="4" />
+      <path class="blue" d="M -7 0 L 7 0" />
+    </g>
+  </defs>
+
+  <rect class="bg" width="1920" height="1080" />
+
+  <g id="slide_003_layer_01_context" data-anim-label="Kontext und Ziel">
+    <text class="text kicker" x="120" y="100">RE3_TEST_1 · Folie 03 · neuer Workflow-Vergleich</text>
+    <text class="text headline" x="120" y="152">Hilfslinien vorbereiten</text>
+    <text class="text caption" x="120" y="194">Berechnete F(tᵢ)-Werte werden im Diagramm verortet.</text>
+  </g>
+
+
+  <g id="slide_003_layer_02_main_visual" data-anim-label="Hilfslinien">
+    <rect class="plot-frame" x="250" y="270" width="1120" height="620" rx="8" />
+    <line class="axis" x1="350" y1="790" x2="1250" y2="790" marker-end="url(#arrow-ink)" />
+    <line class="axis" x1="350" y1="790" x2="350" y2="360" marker-end="url(#arrow-ink)" />
+    <text class="text body" x="730" y="850">Lebensdauer t</text>
+    <text class="text body" x="206" y="590" transform="rotate(-90 206 590)">Ausfallwahrscheinlichkeit F(t)</text>
+    <path class="grid" d="M 350 690 H 1250 M 350 590 H 1250 M 350 490 H 1250 M 550 360 V 790 M 750 360 V 790 M 950 360 V 790" />
+    <path class="blue dash" d="M 350 690 H 610 V 790" />
+    <path class="blue dash" d="M 350 590 H 760 V 790" />
+    <path class="blue dash" d="M 350 490 H 940 V 790" />
+    <text class="text body" x="1420" y="430">Hilfslinien zeigen:</text>
+    <text class="text body" x="1420" y="472">Wo liegt F(tᵢ)</text>
+    <text class="text body" x="1420" y="514">zur Ausfallzeit tᵢ?</text>
+  </g>
+
+
+  <g id="slide_003_layer_04_workflow_note" data-anim-label="Workflow-Notiz">
+    <rect class="soft" x="120" y="958" width="1680" height="68" rx="8" />
+    <text class="text small" x="152" y="1000">Neuer Workflow: Formelzeichen: SVG-Text · Hilfslinien: SVG · Quelle: Folie 3</text>
+  </g>
+
+</svg>

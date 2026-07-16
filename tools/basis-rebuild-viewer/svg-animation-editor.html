@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SVG-Struktur bearbeiten</title>
+  <link rel="stylesheet" href="/viewer-assets/svg-animation-editor.css">
+</head>
+<body>
+  <div id="editorApp" class="editor-shell" aria-busy="true">
+    <header class="editor-header">
+      <div class="editor-heading">
+        <span class="editor-eyebrow">Animationsmodus</span>
+        <strong id="sceneTitle" class="editor-title">SVG-Struktur wird geladen</strong>
+        <span id="svgPath" class="editor-path"></span>
+      </div>
+      <div class="editor-header-meta" aria-live="polite">
+        <span id="triggerCount" class="meta-chip">0 Trigger</span>
+        <span id="issueCount" class="meta-chip">0 Hinweise</span>
+        <span id="saveState" class="save-state">Lade…</span>
+      </div>
+      <div class="editor-actions">
+        <button id="saveButton" class="button primary" type="button" disabled>Speichern</button>
+        <button id="backButton" class="button" type="button">Zurück</button>
+      </div>
+    </header>
+
+    <main class="editor-workspace">
+      <section class="stage-panel" aria-label="SVG-Vorschau">
+        <div class="panel-toolbar">
+          <div>
+            <strong>SVG Preview</strong>
+            <span id="previewMode" class="toolbar-chip">Elemente sichtbar</span>
+          </div>
+          <span id="selectedPreviewId" class="selected-id">Keine ID ausgewählt</span>
+        </div>
+        <div id="svgStage" class="svg-stage">
+          <div class="empty-state">SVG wird geladen…</div>
+        </div>
+        <div class="stage-footer">
+          <span>Auswahl per Klick im SVG oder im Strukturbaum</span>
+          <span id="inventoryCount">0 IDs</span>
+        </div>
+      </section>
+
+      <aside class="work-panel" aria-label="SVG-Editor">
+        <div class="editor-tabs" role="tablist" aria-label="Editorbereiche">
+          <button class="editor-tab" type="button" role="tab" aria-selected="false" disabled
+            title="Der Animationstab folgt im nächsten Portierungsschnitt.">Animation</button>
+          <button class="editor-tab active" type="button" role="tab" aria-selected="true">SVG Struktur</button>
+        </div>
+
+        <section class="structure-section">
+          <div class="structure-heading">
+            <div>
+              <strong>SVG Struktur</strong>
+              <span id="structureSummary" class="structure-summary">0 Animation · 0 IDs</span>
+            </div>
+            <p>Editorziel und Render-Sichtbarkeit werden getrennt verwaltet.</p>
+          </div>
+
+          <div class="bulk-toolbar" aria-label="Sammelaktionen">
+            <button id="collapseAllButton" class="button compact" type="button">Alles aufklappen</button>
+            <button id="animateAllButton" class="button compact" type="button">Alle animieren</button>
+            <button id="animateNoneButton" class="button compact" type="button">Keine animieren</button>
+            <button id="showAllButton" class="button compact" type="button">Alle anzeigen</button>
+            <button id="hideAllButton" class="button compact danger" type="button">Alle ausblenden</button>
+          </div>
+
+          <div class="tree-header" aria-hidden="true">
+            <span></span>
+            <span>Animation</span>
+            <span>Sichtbar</span>
+            <span>ID und Status</span>
+          </div>
+          <div id="structureTree" class="structure-tree" role="tree" aria-label="SVG-ID-Baum"></div>
+
+          <div id="selectionDetails" class="selection-details">
+            <strong>Keine SVG-ID ausgewählt</strong>
+            <p>Wähle eine Zeile oder ein Element in der Vorschau.</p>
+          </div>
+        </section>
+
+        <section class="issues-section" aria-labelledby="issuesTitle">
+          <div class="issues-heading">
+            <strong id="issuesTitle">Hinweise</strong>
+            <span id="issuesRemainder"></span>
+          </div>
+          <ul id="issuesList" class="issues-list"></ul>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <div id="fatalError" class="fatal-error" hidden role="alert">
+    <strong>Der SVG-Editor konnte nicht geöffnet werden.</strong>
+    <p id="fatalErrorText"></p>
+    <button id="fatalBackButton" class="button" type="button">Zurück zum Viewer</button>
+  </div>
+
+  <script src="/viewer-assets/svg-animation-domain.js"></script>
+  <script src="/viewer-assets/svg-animation-editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="scene_title scene_desc">
+  <title id="scene_title">Ausfallmechanismen trennen</title>
+  <desc id="scene_desc">Content-SVG ohne sichtbare PowerPoint-Masterelemente.</desc>
+  <metadata id="slide-quality-metadata" type="application/json"><![CDATA[
+{
+  "artifactScope": "content-svg",
+  "embeddingTarget": "powerpoint-slide",
+  "slideType": "content-module",
+  "contentTitle": "Ausfallmechanismen trennen",
+  "layoutIntent": "Ausfallmechanismen trennen",
+  "takeaway": "Ausfallmechanismen trennen",
+  "density": "normal",
+  "contentMode": "transparent-content",
+  "backgroundMode": "transparent",
+  "brandProfile": "reltest-academy",
+  "brandVariant": "technical"
+}
+  ]]></metadata>
+
+  <defs>
+    <style>
+      .font { font-family: Inter, "Segoe UI", Arial, sans-serif; }
+      .axis { stroke: #062D46; stroke-width: 5; stroke-linecap: round; fill: none; }
+      .thin-axis { stroke: #062D46; stroke-width: 3.2; stroke-linecap: round; fill: none; }
+      .guide { stroke: #139CCB; stroke-width: 3; stroke-dasharray: 8 7; fill: none; }
+      .failure-red { stroke: #D1495B; stroke-width: 8; stroke-linecap: round; }
+      .failure-blue { stroke: #139CCB; stroke-width: 8; stroke-linecap: round; }
+      .fit-red { stroke: #D1495B; stroke-width: 5; stroke-linecap: round; fill: none; }
+      .fit-blue { stroke: #139CCB; stroke-width: 5; stroke-linecap: round; fill: none; }
+      .muted { fill: #6A7A86; }
+      .ink { fill: #062D46; }
+      .accent { fill: #139CCB; }
+      .red { fill: #D1495B; }
+    </style>
+    <marker id="arrow_ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#062D46"/>
+    </marker>
+    <marker id="arrow_blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#139CCB"/>
+    </marker>
+    <g id="cross_red">
+      <line class="failure-red" x1="0" y1="0" x2="28" y2="28" data-qc-allow-overlap="true"/>
+      <line class="failure-red" x1="0" y1="28" x2="28" y2="0" data-qc-allow-overlap="true"/>
+    </g>
+    <g id="cross_blue">
+      <line class="failure-blue" x1="0" y1="0" x2="28" y2="28" data-qc-allow-overlap="true"/>
+      <line class="failure-blue" x1="0" y1="28" x2="28" y2="0" data-qc-allow-overlap="true"/>
+    </g>
+  </defs>
+
+  <g id="scene_root" class="font">
+<text id="mech_a_label" x="245" y="155" text-anchor="start" font-size="28" font-weight="650" fill="#D1495B" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >Ausfallmechanismus A</text>
+<text id="mech_b_label" x="590" y="155" text-anchor="start" font-size="28" font-weight="650" fill="#139CCB" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >Ausfallmechanismus B</text>
+<g id="mixed_mechanisms" aria-label="Ausfallzeitstrahl">
+<line id="mixed_mechanisms_axis" class="axis" x1="280" y1="240" x2="820" y2="240" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>
+<use href="#cross_red" x="316" y="226" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="mixed_mechanisms_label_1" x="330" y="292" text-anchor="middle" font-size="28" font-weight="650" fill="#D1495B" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₁</text>
+<use href="#cross_blue" x="424" y="226" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="mixed_mechanisms_label_2" x="438" y="292" text-anchor="middle" font-size="28" font-weight="650" fill="#139CCB" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₂</text>
+<use href="#cross_red" x="524" y="226" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="mixed_mechanisms_label_3" x="538" y="292" text-anchor="middle" font-size="28" font-weight="650" fill="#D1495B" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₃</text>
+<use href="#cross_blue" x="629" y="226" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="mixed_mechanisms_label_4" x="643" y="292" text-anchor="middle" font-size="28" font-weight="650" fill="#139CCB" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₄</text>
+<use href="#cross_blue" x="706" y="226" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="mixed_mechanisms_label_5" x="720" y="292" text-anchor="middle" font-size="28" font-weight="650" fill="#139CCB" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₅</text>
+<use href="#cross_red" x="771" y="226" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="mixed_mechanisms_label_6" x="785" y="292" text-anchor="middle" font-size="28" font-weight="650" fill="#D1495B" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₆</text>
+<text id="mixed_mechanisms_axis_label" x="866" y="250" text-anchor="start" font-size="30" font-weight="650" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >t</text>
+</g>
+<line id="split_arrow" class="axis" x1="890" y1="240" x2="1030" y2="240" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>
+<g id="split_result">
+<text id="split_a_title" x="1135" y="138" text-anchor="start" font-size="28" font-weight="650" fill="#D1495B" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >Ausfallmechanismus A</text>
+<g id="mechanism_a" aria-label="Ausfallzeitstrahl">
+<line id="mechanism_a_axis" class="axis" x1="1240" y1="210" x2="1600" y2="210" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>
+<use href="#cross_red" x="1272" y="196" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="mechanism_a_label_1" x="1286" y="262" text-anchor="middle" font-size="28" font-weight="650" fill="#D1495B" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₁</text>
+<use href="#cross_red" x="1391" y="196" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="mechanism_a_label_2" x="1405" y="262" text-anchor="middle" font-size="28" font-weight="650" fill="#D1495B" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₃</text>
+<use href="#cross_red" x="1518" y="196" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="mechanism_a_label_3" x="1532" y="262" text-anchor="middle" font-size="28" font-weight="650" fill="#D1495B" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₆</text>
+<text id="mechanism_a_axis_label" x="1646" y="220" text-anchor="start" font-size="30" font-weight="650" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >t</text>
+</g>
+<text id="split_b_title" x="1135" y="338" text-anchor="start" font-size="28" font-weight="650" fill="#139CCB" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >Ausfallmechanismus B</text>
+<g id="mechanism_b" aria-label="Ausfallzeitstrahl">
+<line id="mechanism_b_axis" class="axis" x1="1240" y1="410" x2="1600" y2="410" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>
+<use href="#cross_blue" x="1296" y="396" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="mechanism_b_label_1" x="1310" y="462" text-anchor="middle" font-size="28" font-weight="650" fill="#139CCB" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₂</text>
+<use href="#cross_blue" x="1428" y="396" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="mechanism_b_label_2" x="1442" y="462" text-anchor="middle" font-size="28" font-weight="650" fill="#139CCB" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₄</text>
+<use href="#cross_blue" x="1500" y="396" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="mechanism_b_label_3" x="1514" y="462" text-anchor="middle" font-size="28" font-weight="650" fill="#139CCB" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₅</text>
+<text id="mechanism_b_axis_label" x="1646" y="420" text-anchor="start" font-size="30" font-weight="650" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >t</text>
+</g>
+</g>
+<g id="mechanism_plot"><svg id="mechanism_plot_asset_inline_svg" x="440" y="548" width="1040" height="390" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 907.663906 504.541406" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid meet" data-plot-inline-source="mechanism_plot_asset">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-08T22:08:11.646878</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="mechanism_plot_asset__figure_1">
+  <g id="mechanism_plot_asset__patch_1">
+   <path d="M 0 504.541406 
+L 907.663906 504.541406 
+L 907.663906 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="mechanism_plot_asset__axes_1">
+   <g id="mechanism_plot_asset__patch_2">
+    <path d="M 63.243906 442.496953 
+L 900.463906 442.496953 
+L 900.463906 12.138477 
+L 63.243906 12.138477 
+z
+" style="fill: #fbfdfe"/>
+   </g>
+   <g id="mechanism_plot_asset__matplotlib.axis_1">
+    <g id="mechanism_plot_asset__xtick_1">
+     <g id="mechanism_plot_asset__line2d_1">
+      <path d="M 101.178566 442.496953 
+L 101.178566 12.138477 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_2">
+      <defs>
+       <path id="mechanism_plot_asset__mcb094d4d26" d="M 0 0 
+L 0 6 
+" style="stroke: #526f7c; stroke-width: 1.2"/>
+      </defs>
+      <g>
+       <use xlink:href="#mechanism_plot_asset__mcb094d4d26" x="101.178566" y="442.496953" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="mechanism_plot_asset__text_1">
+      <!-- $\mathdefault{10^{1}}$ -->
+      <g style="fill: #526f7c" transform="translate(89.738566 464.086953)">
+       <text>
+        <tspan x="0" y="-0.991938" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #526f7c">1</tspan>
+        <tspan x="8.270996" y="-0.991938" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #526f7c">0</tspan>
+        <tspan x="16.666406" y="-6.360938" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #526f7c">1</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__xtick_2">
+     <g id="mechanism_plot_asset__line2d_3">
+      <path d="M 698.704098 442.496953 
+L 698.704098 12.138477 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_4">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__mcb094d4d26" x="698.704098" y="442.496953" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="mechanism_plot_asset__text_2">
+      <!-- $\mathdefault{10^{2}}$ -->
+      <g style="fill: #526f7c" transform="translate(687.264098 464.216953)">
+       <text>
+        <tspan x="0" y="-0.871625" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #526f7c">1</tspan>
+        <tspan x="8.270996" y="-0.871625" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #526f7c">0</tspan>
+        <tspan x="16.666406" y="-6.240625" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #526f7c">2</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__xtick_3">
+     <g id="mechanism_plot_asset__line2d_5">
+      <path d="M 73.837297 442.496953 
+L 73.837297 12.138477 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_6">
+      <defs>
+       <path id="mechanism_plot_asset__m6f067e63cb" d="M 0 0 
+L 0 3.5 
+" style="stroke: #526f7c; stroke-width: 0.9"/>
+      </defs>
+      <g>
+       <use xlink:href="#mechanism_plot_asset__m6f067e63cb" x="73.837297" y="442.496953" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__xtick_4">
+     <g id="mechanism_plot_asset__line2d_7">
+      <path d="M 281.051674 442.496953 
+L 281.051674 12.138477 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_8">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__m6f067e63cb" x="281.051674" y="442.496953" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__xtick_5">
+     <g id="mechanism_plot_asset__line2d_9">
+      <path d="M 386.270697 442.496953 
+L 386.270697 12.138477 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_10">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__m6f067e63cb" x="386.270697" y="442.496953" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__xtick_6">
+     <g id="mechanism_plot_asset__line2d_11">
+      <path d="M 460.924783 442.496953 
+L 460.924783 12.138477 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_12">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__m6f067e63cb" x="460.924783" y="442.496953" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__xtick_7">
+     <g id="mechanism_plot_asset__line2d_13">
+      <path d="M 518.83099 442.496953 
+L 518.83099 12.138477 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_14">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__m6f067e63cb" x="518.83099" y="442.496953" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__xtick_8">
+     <g id="mechanism_plot_asset__line2d_15">
+      <path d="M 566.143806 442.496953 
+L 566.143806 12.138477 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_16">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__m6f067e63cb" x="566.143806" y="442.496953" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__xtick_9">
+     <g id="mechanism_plot_asset__line2d_17">
+      <path d="M 606.146222 442.496953 
+L 606.146222 12.138477 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_18">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__m6f067e63cb" x="606.146222" y="442.496953" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__xtick_10">
+     <g id="mechanism_plot_asset__line2d_19">
+      <path d="M 640.797891 442.496953 
+L 640.797891 12.138477 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_20">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__m6f067e63cb" x="640.797891" y="442.496953" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__xtick_11">
+     <g id="mechanism_plot_asset__line2d_21">
+      <path d="M 671.362829 442.496953 
+L 671.362829 12.138477 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_22">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__m6f067e63cb" x="671.362829" y="442.496953" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__xtick_12">
+     <g id="mechanism_plot_asset__line2d_23">
+      <path d="M 878.577206 442.496953 
+L 878.577206 12.138477 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_24">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__m6f067e63cb" x="878.577206" y="442.496953" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__text_3">
+     <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="481.853906" y="493.017187" transform="rotate(-0 481.853906 493.017187)">Lebensdauer t</text>
+    </g>
+   </g>
+   <g id="mechanism_plot_asset__matplotlib.axis_2">
+    <g id="mechanism_plot_asset__ytick_1">
+     <g id="mechanism_plot_asset__line2d_25">
+      <path d="M 63.243906 442.496953 
+L 900.463906 442.496953 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_26">
+      <defs>
+       <path id="mechanism_plot_asset__me82b74f88c" d="M 0 0 
+L -6 0 
+" style="stroke: #526f7c; stroke-width: 1.2"/>
+      </defs>
+      <g>
+       <use xlink:href="#mechanism_plot_asset__me82b74f88c" x="63.243906" y="442.496953" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="mechanism_plot_asset__text_4">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.743906" y="447.43543" transform="rotate(-0 53.743906 447.43543)">1</text>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__ytick_2">
+     <g id="mechanism_plot_asset__line2d_27">
+      <path d="M 63.243906 393.457503 
+L 900.463906 393.457503 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_28">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__me82b74f88c" x="63.243906" y="393.457503" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="mechanism_plot_asset__text_5">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.743906" y="398.39598" transform="rotate(-0 53.743906 398.39598)">2</text>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__ytick_3">
+     <g id="mechanism_plot_asset__line2d_29">
+      <path d="M 63.243906 328.015663 
+L 900.463906 328.015663 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_30">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__me82b74f88c" x="63.243906" y="328.015663" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="mechanism_plot_asset__text_6">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.743906" y="332.95414" transform="rotate(-0 53.743906 332.95414)">5</text>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__ytick_4">
+     <g id="mechanism_plot_asset__line2d_31">
+      <path d="M 63.243906 277.457899 
+L 900.463906 277.457899 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_32">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__me82b74f88c" x="63.243906" y="277.457899" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="mechanism_plot_asset__text_7">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.743906" y="282.396376" transform="rotate(-0 53.743906 282.396376)">10</text>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__ytick_5">
+     <g id="mechanism_plot_asset__line2d_33">
+      <path d="M 63.243906 224.750957 
+L 900.463906 224.750957 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_34">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__me82b74f88c" x="63.243906" y="224.750957" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="mechanism_plot_asset__text_8">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.743906" y="229.689433" transform="rotate(-0 53.743906 229.689433)">20</text>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__ytick_6">
+     <g id="mechanism_plot_asset__line2d_35">
+      <path d="M 63.243906 191.809647 
+L 900.463906 191.809647 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_36">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__me82b74f88c" x="63.243906" y="191.809647" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="mechanism_plot_asset__text_9">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.743906" y="196.748124" transform="rotate(-0 53.743906 196.748124)">30</text>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__ytick_7">
+     <g id="mechanism_plot_asset__line2d_37">
+      <path d="M 63.243906 166.580669 
+L 900.463906 166.580669 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_38">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__me82b74f88c" x="63.243906" y="166.580669" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="mechanism_plot_asset__text_10">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.743906" y="171.519146" transform="rotate(-0 53.743906 171.519146)">40</text>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__ytick_8">
+     <g id="mechanism_plot_asset__line2d_39">
+      <path d="M 63.243906 145.143683 
+L 900.463906 145.143683 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_40">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__me82b74f88c" x="63.243906" y="145.143683" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="mechanism_plot_asset__text_11">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.743906" y="150.08216" transform="rotate(-0 53.743906 150.08216)">50</text>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__ytick_9">
+     <g id="mechanism_plot_asset__line2d_41">
+      <path d="M 63.243906 125.54145 
+L 900.463906 125.54145 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_42">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__me82b74f88c" x="63.243906" y="125.54145" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="mechanism_plot_asset__text_12">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.743906" y="130.479927" transform="rotate(-0 53.743906 130.479927)">60</text>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__ytick_10">
+     <g id="mechanism_plot_asset__line2d_43">
+      <path d="M 63.243906 106.363654 
+L 900.463906 106.363654 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_44">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__me82b74f88c" x="63.243906" y="106.363654" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="mechanism_plot_asset__text_13">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.743906" y="111.302131" transform="rotate(-0 53.743906 111.302131)">70</text>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__ytick_11">
+     <g id="mechanism_plot_asset__line2d_45">
+      <path d="M 63.243906 85.977105 
+L 900.463906 85.977105 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_46">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__me82b74f88c" x="63.243906" y="85.977105" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="mechanism_plot_asset__text_14">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.743906" y="90.915581" transform="rotate(-0 53.743906 90.915581)">80</text>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__ytick_12">
+     <g id="mechanism_plot_asset__line2d_47">
+      <path d="M 63.243906 60.822295 
+L 900.463906 60.822295 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_48">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__me82b74f88c" x="63.243906" y="60.822295" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="mechanism_plot_asset__text_15">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.743906" y="65.760771" transform="rotate(-0 53.743906 65.760771)">90</text>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__ytick_13">
+     <g id="mechanism_plot_asset__line2d_49">
+      <path d="M 63.243906 42.339278 
+L 900.463906 42.339278 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_50">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__me82b74f88c" x="63.243906" y="42.339278" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="mechanism_plot_asset__text_16">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.743906" y="47.277754" transform="rotate(-0 53.743906 47.277754)">95</text>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__ytick_14">
+     <g id="mechanism_plot_asset__line2d_51">
+      <path d="M 63.243906 23.595708 
+L 900.463906 23.595708 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_52">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__me82b74f88c" x="63.243906" y="23.595708" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="mechanism_plot_asset__text_17">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.743906" y="28.534184" transform="rotate(-0 53.743906 28.534184)">98</text>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__ytick_15">
+     <g id="mechanism_plot_asset__line2d_53">
+      <path d="M 63.243906 12.138477 
+L 900.463906 12.138477 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="mechanism_plot_asset__line2d_54">
+      <g>
+       <use xlink:href="#mechanism_plot_asset__me82b74f88c" x="63.243906" y="12.138477" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="mechanism_plot_asset__text_18">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.743906" y="17.076953" transform="rotate(-0 53.743906 17.076953)">99</text>
+     </g>
+    </g>
+    <g id="mechanism_plot_asset__text_19">
+     <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="20.877188" y="227.317715" transform="rotate(-90 20.877188 227.317715)">Ausfallwahrscheinlichkeit F(t) [%]</text>
+    </g>
+   </g>
+   <g id="mechanism_plot_asset__plot-mechanism-a-fit">
+    <path d="M 63.243906 273.361278 
+L 629.388168 -1 
+L 629.388168 -1 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #d82735; stroke-width: 2.6; stroke-linecap: square"/>
+   </g>
+   <g id="mechanism_plot_asset__plot-mechanism-b-fit">
+    <path d="M 63.243906 399.185178 
+L 900.463906 45.181976 
+L 900.463906 45.181976 
+" clip-path="url(#mechanism_plot_asset__pba7d54d959)" style="fill: none; stroke: #3b66c4; stroke-width: 2.6; stroke-linecap: square"/>
+   </g>
+   <g id="mechanism_plot_asset__patch_3">
+    <path d="M 63.243906 442.496953 
+L 63.243906 12.138477 
+" style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="mechanism_plot_asset__patch_4">
+    <path d="M 63.243906 442.496953 
+L 900.463906 442.496953 
+" style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="mechanism_plot_asset__plot-mechanism-a-points">
+    <defs>
+     <path id="mechanism_plot_asset__m9ecf404dcb" d="M 0 4.062019 
+C 1.07726 4.062019 2.110543 3.634019 2.872281 2.872281 
+C 3.634019 2.110543 4.062019 1.07726 4.062019 0 
+C 4.062019 -1.07726 3.634019 -2.110543 2.872281 -2.872281 
+C 2.110543 -3.634019 1.07726 -4.062019 0 -4.062019 
+C -1.07726 -4.062019 -2.110543 -3.634019 -2.872281 -2.872281 
+C -3.634019 -2.110543 -4.062019 -1.07726 -4.062019 0 
+C -4.062019 1.07726 -3.634019 2.110543 -2.872281 2.872281 
+C -2.110543 3.634019 -1.07726 4.062019 0 4.062019 
+z
+" style="stroke: #d82735; stroke-width: 2"/>
+    </defs>
+    <g clip-path="url(#mechanism_plot_asset__pba7d54d959)">
+     <use xlink:href="#mechanism_plot_asset__m9ecf404dcb" x="148.491382" y="242.51743" style="fill: #ffffff; stroke: #d82735; stroke-width: 2"/>
+     <use xlink:href="#mechanism_plot_asset__m9ecf404dcb" x="253.710405" y="169.7406" style="fill: #ffffff; stroke: #d82735; stroke-width: 2"/>
+     <use xlink:href="#mechanism_plot_asset__m9ecf404dcb" x="358.929429" y="122.931805" style="fill: #ffffff; stroke: #d82735; stroke-width: 2"/>
+     <use xlink:href="#mechanism_plot_asset__m9ecf404dcb" x="485.657969" y="76.639587" style="fill: #ffffff; stroke: #d82735; stroke-width: 2"/>
+    </g>
+   </g>
+   <g id="mechanism_plot_asset__plot-mechanism-b-points">
+    <defs>
+     <path id="mechanism_plot_asset__m07a2a5de1e" d="M 0 4.062019 
+C 1.07726 4.062019 2.110543 3.634019 2.872281 2.872281 
+C 3.634019 2.110543 4.062019 1.07726 4.062019 0 
+C 4.062019 -1.07726 3.634019 -2.110543 2.872281 -2.872281 
+C 2.110543 -3.634019 1.07726 -4.062019 0 -4.062019 
+C -1.07726 -4.062019 -2.110543 -3.634019 -2.872281 -2.872281 
+C -3.634019 -2.110543 -4.062019 -1.07726 -4.062019 0 
+C -4.062019 1.07726 -3.634019 2.110543 -2.872281 2.872281 
+C -2.110543 3.634019 -1.07726 4.062019 0 4.062019 
+z
+" style="stroke: #3b66c4; stroke-width: 2"/>
+    </defs>
+    <g clip-path="url(#mechanism_plot_asset__pba7d54d959)">
+     <use xlink:href="#mechanism_plot_asset__m07a2a5de1e" x="447.614068" y="242.51743" style="fill: #ffffff; stroke: #3b66c4; stroke-width: 2"/>
+     <use xlink:href="#mechanism_plot_asset__m07a2a5de1e" x="586.915052" y="169.7406" style="fill: #ffffff; stroke: #3b66c4; stroke-width: 2"/>
+     <use xlink:href="#mechanism_plot_asset__m07a2a5de1e" x="711.365245" y="122.931805" style="fill: #ffffff; stroke: #3b66c4; stroke-width: 2"/>
+     <use xlink:href="#mechanism_plot_asset__m07a2a5de1e" x="836.403212" y="76.639587" style="fill: #ffffff; stroke: #3b66c4; stroke-width: 2"/>
+    </g>
+   </g>
+   <g id="mechanism_plot_asset__legend_1">
+    <g id="mechanism_plot_asset__line2d_55">
+     <path d="M 745.247969 402.972891 
+L 760.847969 402.972891 
+L 776.447969 402.972891 
+" style="fill: none; stroke: #d82735; stroke-width: 2.6; stroke-linecap: square"/>
+    </g>
+    <g id="mechanism_plot_asset__text_20">
+     <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start" x="786.847969" y="407.522891" transform="rotate(-0 786.847969 407.522891)">Mechanismus A</text>
+    </g>
+    <g id="mechanism_plot_asset__line2d_56">
+     <path d="M 745.247969 423.123906 
+L 760.847969 423.123906 
+L 776.447969 423.123906 
+" style="fill: none; stroke: #3b66c4; stroke-width: 2.6; stroke-linecap: square"/>
+    </g>
+    <g id="mechanism_plot_asset__text_21">
+     <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start" x="786.847969" y="427.673906" transform="rotate(-0 786.847969 427.673906)">Mechanismus B</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="mechanism_plot_asset__pba7d54d959">
+   <rect x="63.243906" y="12.138477" width="837.22" height="430.358477"/>
+  </clipPath>
+ </defs>
+</svg></g>
+  </g>
+</svg>

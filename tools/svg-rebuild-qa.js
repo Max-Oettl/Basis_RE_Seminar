@@ -3,6 +3,9 @@
 const fs = require("fs");
 const path = require("path");
 const { spawn, spawnSync } = require("child_process");
+const { runBrowserLayoutQa } = require("./svg-qa/browser-layout-qa");
+const { formatLayoutIssue } = require("./svg-qa/layout-report");
+const { runStaticDesignQa } = require("./svg-qa/design-qa");
 
 const repoRoot = path.resolve(__dirname, "..");
 const defaultProposalRoot = path.join(repoRoot, "rebuild-proposals", "svg");
@@ -16,13 +19,20 @@ Options:
   --viewer              Start the Basis Rebuild Viewer API and check slide mapping.
   --expect-all          Fail when checked viewer slides have no SVG or no animation.
   --slides <range>      Restrict viewer check, e.g. 1-13 or 1,2,7-9.
+  --layout              Run deterministic browser-based rendered SVG layout QA.
+  --layout-warn-only    Report layout QA findings as warnings (default for --layout).
+  --layout-strict       Count layout QA findings as errors.
+  --layout-times <list> Animation times for layout QA, e.g. 0,0.5,1,end.
+  --strict-design       Count static Content-SVG/design/brand QA findings as errors.
+  --no-design           Disable static Content-SVG/design/brand QA.
   --report-dir <path>   Override report output directory.
   --no-report           Do not write JSON/Markdown reports.
   --help                Show this help.
 
 Examples:
   node tools/svg-rebuild-qa.js RE3_TEST_1
-  node tools/svg-rebuild-qa.js RE3_TEST_1 --viewer --slides 1-13 --expect-all`);
+  node tools/svg-rebuild-qa.js RE3_TEST_1 --viewer --slides 1-13 --expect-all
+  node tools/svg-rebuild-qa.js RE3_TEST_1 --viewer --slides 1-13 --expect-all --layout`);
 }
 
 function parseArgs(argv) {
@@ -31,6 +41,12 @@ function parseArgs(argv) {
     viewer: false,
     expectAll: false,
     slides: "",
+    layout: false,
+    layoutWarnOnly: false,
+    layoutStrict: false,
+    layoutTimes: "",
+    design: true,
+    strictDesign: false,
     reportDir: "",
     writeReport: true,
   };
@@ -45,6 +61,21 @@ function parseArgs(argv) {
       options.expectAll = true;
     } else if (arg === "--slides") {
       options.slides = argv[++index] || "";
+    } else if (arg === "--layout") {
+      options.layout = true;
+    } else if (arg === "--layout-warn-only") {
+      options.layout = true;
+      options.layoutWarnOnly = true;
+    } else if (arg === "--layout-strict") {
+      options.layout = true;
+      options.layoutStrict = true;
+    } else if (arg === "--layout-times") {
+      options.layout = true;
+      options.layoutTimes = argv[++index] || "";
+    } else if (arg === "--strict-design") {
+      options.strictDesign = true;
+    } else if (arg === "--no-design") {
+      options.design = false;
     } else if (arg === "--report-dir") {
       options.reportDir = argv[++index] || "";
     } else if (arg === "--no-report") {
@@ -225,6 +256,12 @@ function validateSvg(svgPath, report) {
     if (text.includes("Allgemeines Vorgehen in der Lebensdatenanalyse")) {
       addIssue(report, "error", svgPath, "Visible PowerPoint title found in SVG text.", text);
     }
+    if (/\bRE\d+(?:_TEST_\d+)?\s*[·|.-]\s*(?:Folie|Slide)\s*\d+/i.test(text)) {
+      addIssue(report, "error", svgPath, "Visible module/slide kicker found in SVG text.", text);
+    }
+    if (/\b(?:neuer Workflow|Workflow-Variante|Workflow-Hinweis|Quelle:\s*Folie|Fokus:)\b/i.test(text)) {
+      addIssue(report, "error", svgPath, "Visible workflow/source metadata found in SVG text.", text);
+    }
     if (/\b(fuer|koennen|muessen|Schaetz|geschaetzt|Ausfaelle|ergaenzen)\b/i.test(text)) {
       addIssue(report, "warning", svgPath, "Visible text may use ASCII replacement instead of German characters.", text);
     }
@@ -247,6 +284,19 @@ function validateSvg(svgPath, report) {
   for (const match of svgText.matchAll(/<image\b[^>]*\b(?:href|xlink:href)\s*=\s*["']([^"']+)["'][^>]*>/gi)) {
     const href = match[1];
     if (/^(data:|https?:|#)/i.test(href)) continue;
+    if (href.startsWith("/files/")) {
+      let servedPath = "";
+      try {
+        servedPath = decodeURIComponent(href.slice("/files/".length).split(/[?#]/, 1)[0]);
+      } catch {
+        servedPath = "";
+      }
+      const assetPath = path.resolve(repoRoot, servedPath);
+      if (!isInside(repoRoot, assetPath) || !fs.existsSync(assetPath)) {
+        addIssue(report, "error", svgPath, "Referenced /files image asset is missing.", href);
+      }
+      continue;
+    }
     const assetPath = path.resolve(path.dirname(svgPath), href);
     if (!isInside(repoRoot, assetPath) || !fs.existsSync(assetPath)) {
       addIssue(report, "error", svgPath, "Referenced image asset is missing.", href);
@@ -337,6 +387,14 @@ function parseSlideRange(value) {
   return result;
 }
 
+function inferSvgSlideNumber(filePath) {
+  const normalized = String(filePath || "").replace(/\\/g, "/");
+  const match =
+    normalized.match(/(?:slide|folie|page)[_\-\s]*(\d+)/i) ||
+    path.basename(normalized).match(/(\d+)/);
+  return match ? Number(match[1]) : null;
+}
+
 async function waitForViewer(port) {
   const url = `http://127.0.0.1:${port}/api/slides`;
   for (let attempt = 0; attempt < 40; attempt += 1) {
@@ -366,9 +424,11 @@ async function runViewerCheck(moduleId, options, report) {
     const rows = (payload.slides || [])
       .filter((slide) => slide.moduleId === moduleId)
       .filter((slide) => !slideRange || slideRange.has(Number(slide.slideNumber)))
-      .sort((left, right) => left.slideNumber - right.slideNumber)
+      .sort((left, right) => (Number(left.sortOrder) || left.slideNumber) - (Number(right.sortOrder) || right.slideNumber))
       .map((slide) => ({
         slide: slide.slideNumber,
+        isAdditionalSlide: Boolean(slide.isAdditionalSlide),
+        isHidden: Boolean(slide.isHidden || slide.status?.isHidden),
         hasOldSlide: Boolean(slide.status && slide.status.hasOldSlide),
         hasSvg: Boolean(slide.status && slide.status.hasSvgProposal),
         hasAnimation: Boolean(slide.status && slide.status.hasAnimation),
@@ -390,10 +450,13 @@ async function runViewerCheck(moduleId, options, report) {
 
     if (options.expectAll) {
       for (const row of rows) {
+        if (row.isHidden) continue;
         if (!row.hasSvg) {
+          if (row.isAdditionalSlide) continue;
           addIssue(report, "error", null, "Viewer slide has no SVG proposal.", `slide ${row.slide}`);
         }
         if (!row.hasAnimation) {
+          if (row.isAdditionalSlide && !row.hasSvg) continue;
           addIssue(report, "error", null, "Viewer slide has no animation.", `slide ${row.slide}`);
         }
       }
@@ -404,6 +467,14 @@ async function runViewerCheck(moduleId, options, report) {
       try {
         const svgResponse = await fetch(`http://127.0.0.1:${port}${row.url}`);
         const svgText = await svgResponse.text();
+        let servedSvgPath = "";
+        if (row.url.startsWith("/files/")) {
+          try {
+            servedSvgPath = path.resolve(repoRoot, decodeURIComponent(row.url.slice("/files/".length).split(/[?#]/, 1)[0]));
+          } catch {
+            servedSvgPath = "";
+          }
+        }
         const unresolvedLocalImages = [...svgText.matchAll(/<image\b[^>]*?\s(?:href|xlink:href)=["']([^"']+)["']/gi)]
           .map((match) => match[1])
           .filter((reference) => {
@@ -415,6 +486,19 @@ async function runViewerCheck(moduleId, options, report) {
               reference.startsWith("/files/")
             ) {
               return false;
+            }
+            if (servedSvgPath && isInside(repoRoot, servedSvgPath)) {
+              const cleanReference = reference.split(/[?#]/, 1)[0];
+              let decodedReference = "";
+              try {
+                decodedReference = decodeURIComponent(cleanReference);
+              } catch {
+                decodedReference = cleanReference;
+              }
+              const assetPath = path.resolve(path.dirname(servedSvgPath), decodedReference);
+              if (isInside(repoRoot, assetPath) && fs.existsSync(assetPath)) {
+                return false;
+              }
             }
             return true;
           });
@@ -460,6 +544,11 @@ function writeReports(report, reportDir) {
     "",
     `- Files checked: ${report.summary.files_checked}`,
     `- Animation manifests checked: ${report.summary.manifests_checked}`,
+    `- Layout files checked: ${report.summary.layout_files_checked}`,
+    `- Layout states checked: ${report.summary.layout_states_checked}`,
+    `- Design files checked: ${report.summary.design_files_checked}`,
+    `- Design errors: ${report.summary.design_errors}`,
+    `- Design warnings: ${report.summary.design_warnings}`,
     `- Errors: ${report.summary.errors}`,
     `- Warnings: ${report.summary.warnings}`,
     "",
@@ -471,11 +560,53 @@ function writeReports(report, reportDir) {
     lines.push("No issues found by automated checks.", "");
   } else {
     for (const issue of report.issues) {
+      if (issue.rule) {
+        lines.push(formatLayoutIssue(issue));
+        continue;
+      }
       const file = issue.file ? ` (${issue.file})` : "";
       const detail = issue.detail ? `: ${issue.detail}` : "";
       lines.push(`- ${issue.severity.toUpperCase()}${file}: ${issue.message}${detail}`);
     }
     lines.push("");
+  }
+
+  if (report.layout && report.layout.checked) {
+    lines.push("## Layout QA", "");
+    lines.push(`- Mode: ${report.layout.strict && !report.layout.warnOnly ? "strict" : "warn-only"}`);
+    lines.push(`- Files checked: ${report.layout.summary?.files_checked || 0}`);
+    lines.push(`- States checked: ${report.layout.summary?.states_checked || 0}`);
+    lines.push(`- Browser: ${report.layout.browser?.executable || "not available"}`);
+    lines.push("");
+
+    const layoutIssues = Array.isArray(report.layout.issues) ? report.layout.issues : [];
+    if (!layoutIssues.length) {
+      lines.push("No layout issues found by rendered SVG layout QA.", "");
+    } else {
+      for (const issue of layoutIssues) {
+        lines.push(formatLayoutIssue(issue));
+      }
+      lines.push("");
+    }
+  }
+
+  if (report.design && report.design.checked) {
+    lines.push("## Design QA", "");
+    lines.push(`- Mode: ${report.design.strict ? "strict-design" : "warn-only"}`);
+    lines.push(`- Files checked: ${report.design.summary?.files_checked || 0}`);
+    lines.push(`- Brand tokens: ${report.design.brandTokens?.path || "not configured"}`);
+    lines.push(`- Brand profile: ${report.design.brandTokens?.profile || "unknown"}`);
+    lines.push("");
+
+    const designIssues = Array.isArray(report.design.issues) ? report.design.issues : [];
+    if (!designIssues.length) {
+      lines.push("No Content-SVG/design/brand issues found by static QA.", "");
+    } else {
+      for (const issue of designIssues) {
+        lines.push(formatLayoutIssue(issue));
+      }
+      lines.push("");
+    }
   }
 
   if (report.viewer && report.viewer.checked) {
@@ -523,9 +654,16 @@ async function main() {
     files: [],
     issues: [],
     viewer: { checked: false },
+    layout: { checked: false },
+    design: { checked: false },
     summary: {
       files_checked: 0,
       manifests_checked: 0,
+      layout_files_checked: 0,
+      layout_states_checked: 0,
+      design_files_checked: 0,
+      design_errors: 0,
+      design_warnings: 0,
       errors: 0,
       warnings: 0,
     },
@@ -544,12 +682,48 @@ async function main() {
     validateManifest(manifestPath, svgByPath, report);
   }
 
+  const selectedSlideRange = parseSlideRange(options.slides);
+  const scopedSvgFiles = selectedSlideRange
+    ? svgFiles.filter((svgPath) => selectedSlideRange.has(inferSvgSlideNumber(svgPath)))
+    : svgFiles;
+
+  if (options.design) {
+    const design = runStaticDesignQa({
+      svgFiles: scopedSvgFiles,
+      manifestFiles,
+      repoRoot,
+      strictDesign: options.strictDesign,
+    });
+    report.design = design;
+    report.issues.push(...design.issues);
+  }
+
   if (options.viewer) {
     await runViewerCheck(moduleId, options, report);
   }
 
+  if (options.layout) {
+    const layout = await runBrowserLayoutQa({
+      svgFiles: scopedSvgFiles,
+      repoRoot,
+      options: {
+        enabled: true,
+        strict: options.layoutStrict,
+        warnOnly: options.layoutWarnOnly || !options.layoutStrict,
+        times: options.layoutTimes,
+      },
+    });
+    report.layout = layout;
+    report.issues.push(...layout.issues);
+  }
+
   report.summary.files_checked = svgFiles.length;
   report.summary.manifests_checked = manifestFiles.length;
+  report.summary.layout_files_checked = report.layout?.summary?.files_checked || 0;
+  report.summary.layout_states_checked = report.layout?.summary?.states_checked || 0;
+  report.summary.design_files_checked = report.design?.summary?.files_checked || 0;
+  report.summary.design_errors = report.design?.summary?.errors || 0;
+  report.summary.design_warnings = report.design?.summary?.warnings || 0;
   report.summary.errors = report.issues.filter((issue) => issue.severity === "error").length;
   report.summary.warnings = report.issues.filter((issue) => issue.severity === "warning").length;
 
@@ -558,7 +732,7 @@ async function main() {
     written = writeReports(report, reportDir);
   }
 
-  console.log(`SVG QA ${moduleId}: ${report.summary.errors} error(s), ${report.summary.warnings} warning(s), ${svgFiles.length} SVG(s), ${manifestFiles.length} manifest(s).`);
+  console.log(`SVG QA ${moduleId}: ${report.summary.errors} error(s), ${report.summary.warnings} warning(s), ${svgFiles.length} SVG(s), ${manifestFiles.length} manifest(s), design ${report.summary.design_errors} error(s)/${report.summary.design_warnings} warning(s).`);
   if (written) {
     console.log(`Report: ${toPosixPath(written.mdPath)}`);
   }

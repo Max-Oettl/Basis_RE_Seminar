@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "sceneId": "RE3_TEST_1_slide_009",
+  "svgPath": "slide_009.svg",
+  "status": "draft",
+  "defaults": {
+    "enterFrames": 16,
+    "drawDurFrames": 24,
+    "highlightDurFrames": 24
+  },
+  "targets": [
+    {
+      "targetId": "mixed_mechanisms",
+      "label": "mixed mechanisms",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "tool_transform",
+      "label": "tool transform",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "mechanism_plot",
+      "label": "mechanism plot",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "mechanism_a",
+      "label": "mechanism a",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "mechanism_b",
+      "label": "mechanism b",
+      "status": "animated",
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "01_mixed_mechanisms",
+      "targetId": "mixed_mechanisms",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "02_tool_transform",
+      "targetId": "tool_transform",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "03_mechanism_plot",
+      "targetId": "mechanism_plot",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "04_mechanism_a",
+      "targetId": "mechanism_a",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "05_mechanism_b",
+      "targetId": "mechanism_b",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    }
+  ],
+  "notes": [
+    "Static SVG preview keeps all layers visible; this manifest defines reveal targets for PowerPoint/video animation."
+  ]
+}

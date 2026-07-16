@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "sceneId": "RE3_TEST_1_slide_001",
+  "svgPath": "slide_001.svg",
+  "status": "draft",
+  "defaults": {
+    "enterFrames": 16,
+    "drawDurFrames": 24,
+    "highlightDurFrames": 24
+  },
+  "targets": [
+    {
+      "targetId": "step_label_group",
+      "label": "Schritt 0: Sammeln der Ausfalldaten",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "axis",
+      "label": "Lebensdauerachse",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "axis_label_group",
+      "label": "Achsenlabel Lebensdauer t",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "failure_markers",
+      "label": "Ausfallkreuze",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "failure_time_labels",
+      "label": "Labels t1 bis t7",
+      "status": "animated",
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "01_show_step",
+      "targetId": "step_label_group",
+      "action": "show",
+      "sourceText": "Sammeln der Ausfalldaten",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 12,
+      "confidence": "high"
+    },
+    {
+      "stepId": "02_draw_axis",
+      "targetId": "axis",
+      "action": "draw",
+      "sourceText": "entlang der Zeitachse visualisieren",
+      "trigger": "time_or_user",
+      "durFrames": 24,
+      "drawStyle": "stroke",
+      "direction": "leftToRight",
+      "confidence": "high"
+    },
+    {
+      "stepId": "03_show_axis_label",
+      "targetId": "axis_label_group",
+      "action": "show",
+      "sourceText": "Zeitachse",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 8,
+      "confidence": "medium"
+    },
+    {
+      "stepId": "04_show_failures",
+      "targetId": "failure_markers",
+      "action": "show",
+      "sourceText": "Ausfalldaten in Form unterschiedlicher Zeitwerte",
+      "trigger": "time_or_user",
+      "enterFrames": 18,
+      "fromY": -8,
+      "confidence": "high"
+    },
+    {
+      "stepId": "05_show_time_labels",
+      "targetId": "failure_time_labels",
+      "action": "show",
+      "sourceText": "der Größe nach sortiert",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 8,
+      "confidence": "medium"
+    }
+  ],
+  "notes": [
+    "The static SVG preview keeps all layers visible; this manifest describes how the same layers can be introduced in PowerPoint/video.",
+    "Failure positions are illustrative_irregular: x=800, 930, 1010, 1195, 1255, 1438, 1554. They intentionally include clusters and gaps.",
+    "Step 1 is not visible in slide_001; it is planned for the next reveal state slide_002."
+  ]
+}

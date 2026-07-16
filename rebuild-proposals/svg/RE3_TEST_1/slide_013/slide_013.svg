@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="scene_title scene_desc">
+  <title id="scene_title">Weibull-Plot mit Vertrauensgrenzen</title>
+  <desc id="scene_desc">Content-SVG ohne sichtbare PowerPoint-Masterelemente.</desc>
+  <metadata id="slide-quality-metadata" type="application/json"><![CDATA[
+{
+  "artifactScope": "content-svg",
+  "embeddingTarget": "powerpoint-slide",
+  "slideType": "content-module",
+  "contentTitle": "Weibull-Plot mit Vertrauensgrenzen",
+  "layoutIntent": "Weibull-Plot mit Vertrauensgrenzen",
+  "takeaway": "Weibull-Plot mit Vertrauensgrenzen",
+  "density": "normal",
+  "contentMode": "transparent-content",
+  "backgroundMode": "transparent",
+  "brandProfile": "reltest-academy",
+  "brandVariant": "technical"
+}
+  ]]></metadata>
+
+  <defs>
+    <style>
+      .font { font-family: Inter, "Segoe UI", Arial, sans-serif; }
+      .axis { stroke: #062D46; stroke-width: 5; stroke-linecap: round; fill: none; }
+      .thin-axis { stroke: #062D46; stroke-width: 3.2; stroke-linecap: round; fill: none; }
+      .guide { stroke: #139CCB; stroke-width: 3; stroke-dasharray: 8 7; fill: none; }
+      .failure-red { stroke: #D1495B; stroke-width: 8; stroke-linecap: round; }
+      .failure-blue { stroke: #139CCB; stroke-width: 8; stroke-linecap: round; }
+      .fit-red { stroke: #D1495B; stroke-width: 5; stroke-linecap: round; fill: none; }
+      .fit-blue { stroke: #139CCB; stroke-width: 5; stroke-linecap: round; fill: none; }
+      .muted { fill: #6A7A86; }
+      .ink { fill: #062D46; }
+      .accent { fill: #139CCB; }
+      .red { fill: #D1495B; }
+    </style>
+    <marker id="arrow_ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#062D46"/>
+    </marker>
+    <marker id="arrow_blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#139CCB"/>
+    </marker>
+    <g id="cross_red">
+      <line class="failure-red" x1="0" y1="0" x2="28" y2="28" data-qc-allow-overlap="true"/>
+      <line class="failure-red" x1="0" y1="28" x2="28" y2="0" data-qc-allow-overlap="true"/>
+    </g>
+    <g id="cross_blue">
+      <line class="failure-blue" x1="0" y1="0" x2="28" y2="28" data-qc-allow-overlap="true"/>
+      <line class="failure-blue" x1="0" y1="28" x2="28" y2="0" data-qc-allow-overlap="true"/>
+    </g>
+  </defs>
+
+  <g id="scene_root" class="font">
+<g id="input_timeline" aria-label="Ausfallzeitstrahl">
+<line id="input_timeline_axis" class="axis" x1="250" y1="210" x2="810" y2="210" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>
+<use href="#cross_red" x="288" y="196" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="input_timeline_label_1" x="302" y="262" text-anchor="middle" font-size="28" font-weight="650" fill="#D1495B" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₁</text>
+<use href="#cross_red" x="400" y="196" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="input_timeline_label_2" x="414" y="262" text-anchor="middle" font-size="28" font-weight="650" fill="#D1495B" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₂</text>
+<use href="#cross_red" x="506" y="196" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="input_timeline_label_3" x="520" y="262" text-anchor="middle" font-size="28" font-weight="650" fill="#D1495B" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₃</text>
+<use href="#cross_red" x="608" y="196" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="input_timeline_label_4" x="622" y="262" text-anchor="middle" font-size="28" font-weight="650" fill="#D1495B" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₄</text>
+<use href="#cross_red" x="698" y="196" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="input_timeline_label_5" x="712" y="262" text-anchor="middle" font-size="28" font-weight="650" fill="#D1495B" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₅</text>
+<use href="#cross_red" x="756" y="196" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="input_timeline_label_6" x="770" y="262" text-anchor="middle" font-size="28" font-weight="650" fill="#D1495B" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₆</text>
+<text id="input_timeline_axis_label" x="856" y="220" text-anchor="start" font-size="30" font-weight="650" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >t</text>
+</g>
+<line id="confidence_arrow" class="axis" x1="920" y1="210" x2="1045" y2="210" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>
+<g id="confidence_plot"><svg id="confidence_plot_asset_inline_svg" x="230" y="460" width="1030" height="455" xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" viewBox="0 0 908.183125 503.861172" version="1.1" preserveAspectRatio="xMidYMid meet" data-plot-inline-source="confidence_plot_asset">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2026-07-10T09:03:59.549932</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="confidence_plot_asset__figure_1">
+  <g id="confidence_plot_asset__patch_1">
+   <path d="M 0 503.861172  L 908.183125 503.861172  L 908.183125 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="confidence_plot_asset__plot-axes">
+   <g id="confidence_plot_asset__patch_2">
+    <path d="M 62.663125 445.158984  L 900.983125 445.158984  L 900.983125 12.138984  L 62.663125 12.138984  z " style="fill: #fbfdfe" />
+   </g>
+   <g id="confidence_plot_asset__matplotlib.axis_1">
+    <g id="confidence_plot_asset__xtick_1">
+     <g id="confidence_plot_asset__line2d_1">
+      <path d="M 119.107061 445.158984  L 119.107061 12.138984  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_2">
+      <defs>
+       <path id="confidence_plot_asset__mef20fc9a28" d="M 0 0  L 0 6  " style="stroke: #526f7c; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#confidence_plot_asset__mef20fc9a28" x="119.107061" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="confidence_plot_asset__text_1">
+      
+      <g style="fill: #526f7c" transform="translate(107.667061 464.536953)">
+       <text>
+        <tspan x="0" y="-0.384375" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #526f7c">1</tspan>
+        <tspan x="8.270996" y="-0.384375" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #526f7c">0</tspan>
+        <tspan x="16.666406" y="-5.360938" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #526f7c">1</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__xtick_2">
+     <g id="confidence_plot_asset__line2d_3">
+      <path d="M 701.543633 445.158984  L 701.543633 12.138984  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_4">
+      <g>
+       <use ns4:href="#confidence_plot_asset__mef20fc9a28" x="701.543633" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="confidence_plot_asset__text_2">
+      
+      <g style="fill: #526f7c" transform="translate(690.103633 464.536953)">
+       <text>
+        <tspan x="0" y="-0.264063" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #526f7c">1</tspan>
+        <tspan x="8.270996" y="-0.264063" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #526f7c">0</tspan>
+        <tspan x="16.666406" y="-5.240625" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #526f7c">2</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__xtick_3">
+     <g id="confidence_plot_asset__line2d_5">
+      <path d="M 62.663125 445.158984  L 62.663125 12.138984  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_6">
+      <defs>
+       <path id="confidence_plot_asset__m45c752126b" d="M 0 0  L 0 3.5  " style="stroke: #526f7c; stroke-width: 0.9" />
+      </defs>
+      <g>
+       <use ns4:href="#confidence_plot_asset__m45c752126b" x="62.663125" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__xtick_4">
+     <g id="confidence_plot_asset__line2d_7">
+      <path d="M 92.456225 445.158984  L 92.456225 12.138984  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_8">
+      <g>
+       <use ns4:href="#confidence_plot_asset__m45c752126b" x="92.456225" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__xtick_5">
+     <g id="confidence_plot_asset__line2d_9">
+      <path d="M 294.437939 445.158984  L 294.437939 12.138984  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_10">
+      <g>
+       <use ns4:href="#confidence_plot_asset__m45c752126b" x="294.437939" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__xtick_6">
+     <g id="confidence_plot_asset__line2d_11">
+      <path d="M 396.999929 445.158984  L 396.999929 12.138984  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_12">
+      <g>
+       <use ns4:href="#confidence_plot_asset__m45c752126b" x="396.999929" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__xtick_7">
+     <g id="confidence_plot_asset__line2d_13">
+      <path d="M 469.768818 445.158984  L 469.768818 12.138984  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_14">
+      <g>
+       <use ns4:href="#confidence_plot_asset__m45c752126b" x="469.768818" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__xtick_8">
+     <g id="confidence_plot_asset__line2d_15">
+      <path d="M 526.212754 445.158984  L 526.212754 12.138984  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_16">
+      <g>
+       <use ns4:href="#confidence_plot_asset__m45c752126b" x="526.212754" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__xtick_9">
+     <g id="confidence_plot_asset__line2d_17">
+      <path d="M 572.330807 445.158984  L 572.330807 12.138984  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_18">
+      <g>
+       <use ns4:href="#confidence_plot_asset__m45c752126b" x="572.330807" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__xtick_10">
+     <g id="confidence_plot_asset__line2d_19">
+      <path d="M 611.323066 445.158984  L 611.323066 12.138984  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_20">
+      <g>
+       <use ns4:href="#confidence_plot_asset__m45c752126b" x="611.323066" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__xtick_11">
+     <g id="confidence_plot_asset__line2d_21">
+      <path d="M 645.099697 445.158984  L 645.099697 12.138984  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_22">
+      <g>
+       <use ns4:href="#confidence_plot_asset__m45c752126b" x="645.099697" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__xtick_12">
+     <g id="confidence_plot_asset__line2d_23">
+      <path d="M 674.892797 445.158984  L 674.892797 12.138984  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_24">
+      <g>
+       <use ns4:href="#confidence_plot_asset__m45c752126b" x="674.892797" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__xtick_13">
+     <g id="confidence_plot_asset__line2d_25">
+      <path d="M 876.874511 445.158984  L 876.874511 12.138984  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_26">
+      <g>
+       <use ns4:href="#confidence_plot_asset__m45c752126b" x="876.874511" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__text_3">
+     <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="481.823125" y="492.917734" transform="rotate(-0 481.823125 492.917734)">Lebensdauer t</text>
+    </g>
+   </g>
+   <g id="confidence_plot_asset__matplotlib.axis_2">
+    <g id="confidence_plot_asset__ytick_1">
+     <g id="confidence_plot_asset__line2d_27">
+      <path d="M 62.663125 445.158984  L 900.983125 445.158984  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_28">
+      <defs>
+       <path id="confidence_plot_asset__mcf70fbdc78" d="M 0 0  L -6 0  " style="stroke: #526f7c; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#confidence_plot_asset__mcf70fbdc78" x="62.663125" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="confidence_plot_asset__text_4">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="450.097969" transform="rotate(-0 53.163125 450.097969)">1</text>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__ytick_2">
+     <g id="confidence_plot_asset__line2d_29">
+      <path d="M 62.663125 395.816253  L 900.983125 395.816253  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_30">
+      <g>
+       <use ns4:href="#confidence_plot_asset__mcf70fbdc78" x="62.663125" y="395.816253" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="confidence_plot_asset__text_5">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="400.755238" transform="rotate(-0 53.163125 400.755238)">2</text>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__ytick_3">
+     <g id="confidence_plot_asset__line2d_31">
+      <path d="M 62.663125 329.969693  L 900.983125 329.969693  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_32">
+      <g>
+       <use ns4:href="#confidence_plot_asset__mcf70fbdc78" x="62.663125" y="329.969693" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="confidence_plot_asset__text_6">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="334.908677" transform="rotate(-0 53.163125 334.908677)">5</text>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__ytick_4">
+     <g id="confidence_plot_asset__line2d_33">
+      <path d="M 62.663125 279.099257  L 900.983125 279.099257  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_34">
+      <g>
+       <use ns4:href="#confidence_plot_asset__mcf70fbdc78" x="62.663125" y="279.099257" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="confidence_plot_asset__text_7">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="284.038241" transform="rotate(-0 53.163125 284.038241)">10</text>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__ytick_5">
+     <g id="confidence_plot_asset__line2d_35">
+      <path d="M 62.663125 226.066352  L 900.983125 226.066352  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_36">
+      <g>
+       <use ns4:href="#confidence_plot_asset__mcf70fbdc78" x="62.663125" y="226.066352" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="confidence_plot_asset__text_8">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="231.005337" transform="rotate(-0 53.163125 231.005337)">20</text>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__ytick_6">
+     <g id="confidence_plot_asset__line2d_37">
+      <path d="M 62.663125 192.921319  L 900.983125 192.921319  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_38">
+      <g>
+       <use ns4:href="#confidence_plot_asset__mcf70fbdc78" x="62.663125" y="192.921319" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="confidence_plot_asset__text_9">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="197.860304" transform="rotate(-0 53.163125 197.860304)">30</text>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__ytick_7">
+     <g id="confidence_plot_asset__line2d_39">
+      <path d="M 62.663125 167.536314  L 900.983125 167.536314  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_40">
+      <g>
+       <use ns4:href="#confidence_plot_asset__mcf70fbdc78" x="62.663125" y="167.536314" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="confidence_plot_asset__text_10">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="172.475299" transform="rotate(-0 53.163125 172.475299)">40</text>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__ytick_8">
+     <g id="confidence_plot_asset__line2d_41">
+      <path d="M 62.663125 145.966753  L 900.983125 145.966753  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_42">
+      <g>
+       <use ns4:href="#confidence_plot_asset__mcf70fbdc78" x="62.663125" y="145.966753" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="confidence_plot_asset__text_11">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="150.905737" transform="rotate(-0 53.163125 150.905737)">50</text>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__ytick_9">
+     <g id="confidence_plot_asset__line2d_43">
+      <path d="M 62.663125 126.243291  L 900.983125 126.243291  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_44">
+      <g>
+       <use ns4:href="#confidence_plot_asset__mcf70fbdc78" x="62.663125" y="126.243291" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="confidence_plot_asset__text_12">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="131.182275" transform="rotate(-0 53.163125 131.182275)">60</text>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__ytick_10">
+     <g id="confidence_plot_asset__line2d_45">
+      <path d="M 62.663125 106.946891  L 900.983125 106.946891  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_46">
+      <g>
+       <use ns4:href="#confidence_plot_asset__mcf70fbdc78" x="62.663125" y="106.946891" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="confidence_plot_asset__text_13">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="111.885875" transform="rotate(-0 53.163125 111.885875)">70</text>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__ytick_11">
+     <g id="confidence_plot_asset__line2d_47">
+      <path d="M 62.663125 86.434262  L 900.983125 86.434262  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_48">
+      <g>
+       <use ns4:href="#confidence_plot_asset__mcf70fbdc78" x="62.663125" y="86.434262" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="confidence_plot_asset__text_14">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="91.373247" transform="rotate(-0 53.163125 91.373247)">80</text>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__ytick_12">
+     <g id="confidence_plot_asset__line2d_49">
+      <path d="M 62.663125 61.123885  L 900.983125 61.123885  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_50">
+      <g>
+       <use ns4:href="#confidence_plot_asset__mcf70fbdc78" x="62.663125" y="61.123885" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="confidence_plot_asset__text_15">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="66.062869" transform="rotate(-0 53.163125 66.062869)">90</text>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__ytick_13">
+     <g id="confidence_plot_asset__line2d_51">
+      <path d="M 62.663125 42.52656  L 900.983125 42.52656  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_52">
+      <g>
+       <use ns4:href="#confidence_plot_asset__mcf70fbdc78" x="62.663125" y="42.52656" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="confidence_plot_asset__text_16">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="47.465545" transform="rotate(-0 53.163125 47.465545)">95</text>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__ytick_14">
+     <g id="confidence_plot_asset__line2d_53">
+      <path d="M 62.663125 23.667072  L 900.983125 23.667072  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_54">
+      <g>
+       <use ns4:href="#confidence_plot_asset__mcf70fbdc78" x="62.663125" y="23.667072" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="confidence_plot_asset__text_17">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="28.606056" transform="rotate(-0 53.163125 28.606056)">98</text>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__ytick_15">
+     <g id="confidence_plot_asset__line2d_55">
+      <path d="M 62.663125 12.138984  L 900.983125 12.138984  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="confidence_plot_asset__line2d_56">
+      <g>
+       <use ns4:href="#confidence_plot_asset__mcf70fbdc78" x="62.663125" y="12.138984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="confidence_plot_asset__text_18">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="17.077969" transform="rotate(-0 53.163125 17.077969)">99</text>
+     </g>
+    </g>
+    <g id="confidence_plot_asset__text_19">
+     <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="20.877188" y="228.648984" transform="rotate(-90 20.877188 228.648984)">Ausfallwahrscheinlichkeit F(t) [%]</text>
+    </g>
+   </g>
+   <g id="confidence_plot_asset__plot-confidence-limits"><g id="confidence_plot_asset__plot-confidence-lower-limit">
+    <path d="M 62.663125 435.905818  L 67.935578 433.090362  L 83.752936 425.075813  L 89.025389 422.247969  L 99.570295 417.450989  L 104.842748 414.701413  L 110.1152 411.327491  L 125.932559 404.063744  L 131.205012 401.429622  L 136.477465 398.620434  L 141.749917 395.611944  L 152.294823 390.773704  L 162.839729 385.239493  L 168.112182 382.87568  L 173.384634 379.914416  L 183.92954 374.954782  L 189.201993 372.471331  L 194.474446 369.443924  L 199.746899 366.595078  L 205.019351 363.340935  L 210.291804 360.691781  L 215.564257 357.772423  L 220.83671 355.232611  L 231.381616 349.9096  L 236.654068 347.369403  L 247.198974 341.540676  L 252.471427 338.581877  L 257.74388 336.21518  L 263.016333 333.556812  L 273.561238 327.252531  L 278.833691 324.324704  L 284.106144 322.174313  L 289.378597 319.012516  L 294.65105 315.663672  L 299.923502 313.103916  L 315.740861 306.265213  L 321.013314 303.549581  L 326.285767 300.617562  L 336.830672 296.186841  L 342.103125 293.563932  L 347.375578 290.596967  L 352.648031 288.24378  L 357.920483 285.280706  L 363.192936 282.845493  L 368.465389 280.278297  L 373.737842 277.402347  L 384.282748 271.373646  L 389.5552 268.599316  L 394.827653 266.167701  L 400.100106 263.524883  L 405.372559 261.220413  L 410.645012 258.053054  L 415.917465 255.811412  L 421.189917 253.057863  L 426.46237 249.937919  L 437.007276 245.223423  L 447.552182 239.688077  L 458.097087 234.545158  L 463.36954 231.617922  L 468.641993 229.43947  L 479.186899 224.117069  L 484.459351 221.598006  L 495.004257 216.935226  L 505.549163 211.763027  L 510.821616 209.851382  L 516.094068 207.48529  L 526.638974 203.146939  L 531.911427 201.166881  L 537.18388 198.931343  L 542.456333 196.817831  L 547.728785 194.298045  L 553.001238 192.196324  L 558.273691 189.712599  L 563.546144 187.690129  L 574.09105 183.188517  L 589.908408 176.433487  L 600.453314 172.159224  L 610.998219 167.421025  L 616.270672 165.542643  L 621.543125 163.422229  L 626.815578 161.639015  L 632.088031 159.487179  L 637.360483 157.758055  L 647.905389 153.334848  L 658.450295 149.512114  L 663.722748 147.835879  L 674.267653 144.194102  L 679.540106 142.426361  L 690.085012 139.107061  L 695.357465 137.094842  L 700.629917 135.202073  L 705.90237 133.528076  L 732.264634 125.823477  L 737.537087 124.475345  L 742.80954 122.969712  L 748.081993 121.275675  L 753.354446 119.770789  L 763.899351 117.044585  L 769.171804 115.374477  L 790.261616 109.707171  L 795.534068 108.622333  L 816.62388 103.649668  L 832.441238 99.800376  L 837.713691 98.627005  L 842.986144 97.332054  L 864.075955 92.924703  L 890.438219 87.63829  L 900.983125 85.411251  L 900.983125 85.411251  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke-dasharray: 6.29,2.72; stroke-dashoffset: 0; stroke: #526f7c; stroke-width: 1.7" />
+   </g>
+   <g id="confidence_plot_asset__plot-confidence-upper-limit">
+    <path d="M 62.663125 194.193  L 67.935578 193.431066  L 94.297842 188.758488  L 110.1152 186.186287  L 125.932559 183.49075  L 147.02237 179.882994  L 152.294823 179.11373  L 168.112182 176.476908  L 173.384634 175.332411  L 220.83671 166.626235  L 231.381616 164.596185  L 236.654068 163.733861  L 247.198974 161.742895  L 257.74388 159.90679  L 278.833691 155.885658  L 284.106144 154.750793  L 294.65105 152.795892  L 299.923502 151.903921  L 315.740861 148.454662  L 331.558219 145.150061  L 336.830672 143.900507  L 342.103125 142.885226  L 389.5552 132.606818  L 394.827653 131.73943  L 405.372559 129.620227  L 410.645012 128.67531  L 415.917465 127.433873  L 421.189917 125.741457  L 431.734823 123.351042  L 437.007276 122.345722  L 447.552182 119.622017  L 452.824634 118.683644  L 458.097087 117.114623  L 468.641993 114.639394  L 473.914446 113.175468  L 484.459351 110.66379  L 489.731804 109.259135  L 500.27671 106.131179  L 505.549163 104.723285  L 516.094068 101.343897  L 521.366521 99.587844  L 537.18388 94.999333  L 542.456333 93.538535  L 547.728785 91.94822  L 553.001238 90.202806  L 558.273691 88.863054  L 568.818597 85.947091  L 574.09105 83.969853  L 584.635955 80.266546  L 589.908408 78.630692  L 595.180861 76.546388  L 600.453314 74.628439  L 616.270672 69.741293  L 621.543125 67.788562  L 626.815578 65.981335  L 632.088031 64.336193  L 637.360483 62.543848  L 642.632936 60.92107  L 647.905389 58.742144  L 653.177842 57.316747  L 658.450295 55.368032  L 663.722748 53.03752  L 668.9952 51.467995  L 679.540106 46.661602  L 684.812559 44.410896  L 690.085012 42.793911  L 700.629917 38.571111  L 705.90237 36.081196  L 711.174823 33.965644  L 716.447276 32.037761  L 721.719729 29.626481  L 726.992182 27.337762  L 742.80954 21.31076  L 753.354446 16.789537  L 758.626899 14.635721  L 763.899351 12.749457  L 769.171804 9.843565  L 774.444257 7.639615  L 779.71671 5.022863  L 784.989163 2.601994  L 793.786605 -1  L 793.786605 -1  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke-dasharray: 6.29,2.72; stroke-dashoffset: 0; stroke: #526f7c; stroke-width: 1.7" />
+   </g>
+   </g><g id="confidence_plot_asset__plot-weibull-fit">
+    <path d="M 62.663125 290.203258  L 900.983125 27.362356  L 900.983125 27.362356  " clip-path="url(#confidence_plot_asset__p007597510d)" style="fill: none; stroke: #139ccb; stroke-width: 2.5; stroke-linecap: square" />
+   </g>
+   <g id="confidence_plot_asset__patch_3">
+    <path d="M 62.663125 445.158984  L 62.663125 12.138984  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="confidence_plot_asset__patch_4">
+    <path d="M 62.663125 445.158984  L 900.983125 445.158984  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="confidence_plot_asset__plot-data-points">
+    <defs>
+     <path id="confidence_plot_asset__m8ebf464cf1" d="M 0 3.807887  C 1.009863 3.807887 1.978501 3.406664 2.692582 2.692582  C 3.406664 1.978501 3.807887 1.009863 3.807887 0  C 3.807887 -1.009863 3.406664 -1.978501 2.692582 -2.692582  C 1.978501 -3.406664 1.009863 -3.807887 0 -3.807887  C -1.009863 -3.807887 -1.978501 -3.406664 -2.692582 -2.692582  C -3.406664 -1.978501 -3.807887 -1.009863 -3.807887 0  C -3.807887 1.009863 -3.406664 1.978501 -2.692582 2.692582  C -1.978501 3.406664 -1.009863 3.807887 0 3.807887  z " style="stroke: #d82735; stroke-width: 1.8" />
+    </defs>
+    <g clip-path="url(#confidence_plot_asset__p007597510d)">
+     <use ns4:href="#confidence_plot_asset__m8ebf464cf1" x="165.225114" y="283.234373" style="fill: #ffffff; stroke: #d82735; stroke-width: 1.8" />
+     <use ns4:href="#confidence_plot_asset__m8ebf464cf1" x="267.787104" y="214.988216" style="fill: #ffffff; stroke: #d82735; stroke-width: 1.8" />
+     <use ns4:href="#confidence_plot_asset__m8ebf464cf1" x="370.349093" y="175.883381" style="fill: #ffffff; stroke: #d82735; stroke-width: 1.8" />
+     <use ns4:href="#confidence_plot_asset__m8ebf464cf1" x="493.877432" y="145.966753" style="fill: #ffffff; stroke: #d82735; stroke-width: 1.8" />
+     <use ns4:href="#confidence_plot_asset__m8ebf464cf1" x="603.990698" y="119.486073" style="fill: #ffffff; stroke: #d82735; stroke-width: 1.8" />
+     <use ns4:href="#confidence_plot_asset__m8ebf464cf1" x="713.885055" y="92.79765" style="fill: #ffffff; stroke: #d82735; stroke-width: 1.8" />
+     <use ns4:href="#confidence_plot_asset__m8ebf464cf1" x="820.430576" y="59.438606" style="fill: #ffffff; stroke: #d82735; stroke-width: 1.8" />
+    </g>
+   </g>
+   <g id="confidence_plot_asset__plot-legend">
+    <g id="confidence_plot_asset__plot-confidence-lower-legend-handle">
+     <path d="M 695.481563 367.010703  L 711.081563 367.010703  L 726.681563 367.010703  " style="fill: none; stroke-dasharray: 6.29,2.72; stroke-dashoffset: 0; stroke: #526f7c; stroke-width: 1.7" />
+    </g>
+    <g id="confidence_plot_asset__plot-confidence-lower-legend-label">
+     <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start" x="737.081563" y="371.560703" transform="rotate(-0 737.081563 371.560703)">5 %-Vertrauensgrenze</text>
+    </g>
+    <g id="confidence_plot_asset__plot-confidence-upper-legend-handle">
+     <path d="M 695.481563 386.742266  L 711.081563 386.742266  L 726.681563 386.742266  " style="fill: none; stroke-dasharray: 6.29,2.72; stroke-dashoffset: 0; stroke: #526f7c; stroke-width: 1.7" />
+    </g>
+    <g id="confidence_plot_asset__plot-confidence-upper-legend-label">
+     <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start" x="737.081563" y="391.292266" transform="rotate(-0 737.081563 391.292266)">95 %-Vertrauensgrenze</text>
+    </g>
+    <g id="confidence_plot_asset__line2d_57">
+     <path d="M 695.481563 406.473828  L 711.081563 406.473828  L 726.681563 406.473828  " style="fill: none; stroke: #139ccb; stroke-width: 2.5; stroke-linecap: square" />
+    </g>
+    <g id="confidence_plot_asset__text_20">
+     <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start" x="737.081563" y="411.023828" transform="rotate(-0 737.081563 411.023828)">Weibull-Fit</text>
+    </g>
+    <g id="confidence_plot_asset__PathCollection_1">
+     <g>
+      <use ns4:href="#confidence_plot_asset__m8ebf464cf1" x="711.081563" y="427.342891" style="fill: #ffffff; stroke: #d82735; stroke-width: 1.8" />
+     </g>
+    </g>
+    <g id="confidence_plot_asset__text_21">
+     <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start" x="737.081563" y="430.755391" transform="rotate(-0 737.081563 430.755391)">Ausfalldaten</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="confidence_plot_asset__p007597510d">
+   <rect x="62.663125" y="12.138984" width="838.32" height="433.02" />
+  </clipPath>
+ </defs>
+</svg></g>
+<path id="confidence_note" d="M 1300 535 H 1730 V 725 H 1300 Z" fill="#E7F6FB" stroke="#CBD5E1" stroke-width="2.5" pointer-events="none" data-qc-layer="background"/>
+<text id="confidence_note_1" x="1345" y="596" text-anchor="start" font-size="36" font-weight="780" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >5 % / 95 %</text>
+<text id="confidence_note_2" x="1345" y="648" text-anchor="start" font-size="34" font-weight="700" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >Vertrauensgrenzen</text>
+<text id="confidence_note_3" x="1345" y="696" text-anchor="start" font-size="28" font-weight="600" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >als Kurven, nicht als Band</text>
+  </g>
+</svg>
+

@@ -1,0 +1,194 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "sceneId": "RE3_TEST_1_slide_013",
+  "svgPath": "slide_013.svg",
+  "status": "draft",
+  "defaults": {
+    "enterFrames": 16,
+    "drawDurFrames": 24,
+    "highlightDurFrames": 24
+  },
+  "targets": [
+    {
+      "targetId": "input_timeline",
+      "label": "input timeline",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "confidence_arrow",
+      "label": "confidence arrow",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "confidence_plot",
+      "label": "confidence plot",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "confidence_note",
+      "label": "confidence note",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "confidence_plot_asset__plot-data-points",
+      "label": "Ausfalldaten",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "confidence_plot_asset__plot-weibull-fit",
+      "label": "Weibull-Fit",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "confidence_plot_asset__plot-confidence-limits",
+      "label": "5 %- und 95 %-Vertrauensgrenzen",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "confidence_plot_asset__plot-confidence-lower-legend-handle",
+      "label": "5 %-Legendenlinie",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "confidence_plot_asset__plot-confidence-lower-legend-label",
+      "label": "5 %-Legendentext",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "confidence_plot_asset__plot-confidence-upper-legend-handle",
+      "label": "95 %-Legendenlinie",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "confidence_plot_asset__plot-confidence-upper-legend-label",
+      "label": "95 %-Legendentext",
+      "status": "animated",
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "01_input_timeline",
+      "targetId": "input_timeline",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "02_confidence_arrow",
+      "targetId": "confidence_arrow",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "03_confidence_plot",
+      "targetId": "confidence_plot",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "plot_confidence_plot_01_confidence_plot_asset_plot_data_points",
+      "targetId": "confidence_plot_asset__plot-data-points",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Ausfalldaten"
+    },
+    {
+      "stepId": "plot_confidence_plot_02_confidence_plot_asset_plot_weibull_fit",
+      "targetId": "confidence_plot_asset__plot-weibull-fit",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "Weibull-Fit"
+    },
+    {
+      "stepId": "plot_confidence_plot_03_confidence_plot_asset_plot_confidence_limits",
+      "targetId": "confidence_plot_asset__plot-confidence-limits",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "5 %- und 95 %-Vertrauensgrenzen"
+    },
+    {
+      "stepId": "plot_confidence_plot_04_confidence_plot_asset_plot_confidence_lower_legend_handle",
+      "targetId": "confidence_plot_asset__plot-confidence-lower-legend-handle",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "5 %-Legendenlinie"
+    },
+    {
+      "stepId": "plot_confidence_plot_05_confidence_plot_asset_plot_confidence_lower_legend_label",
+      "targetId": "confidence_plot_asset__plot-confidence-lower-legend-label",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "5 %-Legendentext"
+    },
+    {
+      "stepId": "plot_confidence_plot_06_confidence_plot_asset_plot_confidence_upper_legend_handle",
+      "targetId": "confidence_plot_asset__plot-confidence-upper-legend-handle",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "95 %-Legendenlinie"
+    },
+    {
+      "stepId": "plot_confidence_plot_07_confidence_plot_asset_plot_confidence_upper_legend_label",
+      "targetId": "confidence_plot_asset__plot-confidence-upper-legend-label",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 12,
+      "fromY": 0,
+      "confidence": "high",
+      "sourceText": "95 %-Legendentext"
+    },
+    {
+      "stepId": "04_confidence_note",
+      "targetId": "confidence_note",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high",
+      "afterInternalPlotDelayMs": 3300,
+      "sourceText": "Die 5 %- und 95 %-Vertrauensgrenzen werden erst nach den Kurven im Python-Plot gezeigt."
+    }
+  ],
+  "notes": [
+    "Static SVG preview keeps all layers visible; this manifest defines reveal targets for PowerPoint/video animation.",
+    "When a Python plot contains internal SVG animation targets, scene-level callouts are placed after that plot in the reveal order.",
+    "Plotinhalt: Daten, Fit und Vertrauensgrenzen werden schrittweise eingeblendet; Vertrauensgrenzen bleiben der letzte Plotinhalt."
+  ]
+}

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="scene_title scene_desc">
+  <title id="scene_title">Ausfallwahrscheinlichkeiten berechnen</title>
+  <desc id="scene_desc">Content-SVG ohne sichtbaren Folientitel: Die vorhandenen Ausfallzeiten bleiben auf der Lebensdauerachse, Schritt 1 ergänzt die Median-Rank-Formel und eine vertikale Konstruktionsachse.</desc>
+  <metadata id="slide-quality-metadata" type="application/json"><![CDATA[
+{
+  "artifactScope": "content-svg",
+  "embeddingTarget": "powerpoint-slide",
+  "slideType": "build-sequence-reveal",
+  "contentTitle": "Ausfallwahrscheinlichkeiten berechnen",
+  "layoutIntent": "Continue the initial life-duration timeline and reveal the Median-Rank calculation plus the vertical construction axis.",
+  "takeaway": "Nach dem Sammeln der Ausfallzeiten wird jedem geordneten Ausfall über die Median-Rank-Formel eine Ausfallwahrscheinlichkeit zugeordnet.",
+  "audienceGoal": "Learners see that failure probabilities are calculated from rank number i and sample size n before points are plotted.",
+  "density": "normal",
+  "contentMode": "transparent-content",
+  "backgroundMode": "transparent",
+  "brandProfile": "reltest-academy",
+  "brandVariant": "technical",
+  "designException": ""
+}
+  ]]></metadata>
+
+  <defs>
+    <style>
+      .font {
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+      }
+      .text-primary {
+        fill: #062D46;
+      }
+      .text-secondary {
+        fill: #6A7A86;
+      }
+      .accent-stroke {
+        fill: #FFFFFF;
+        stroke: #139CCB;
+        stroke-width: 5;
+      }
+      .muted-stroke {
+        fill: #FFFFFF;
+        stroke: #CBD5E1;
+        stroke-width: 5;
+      }
+      .axis-line {
+        stroke: #062D46;
+        stroke-width: 5;
+        stroke-linecap: round;
+      }
+      .axis-guide {
+        stroke: #CBD5E1;
+        stroke-width: 2.5;
+        stroke-linecap: round;
+      }
+      .failure-line {
+        stroke: #D1495B;
+        stroke-width: 9;
+        stroke-linecap: round;
+      }
+      .label-red {
+        fill: #D1495B;
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+        font-size: 32px;
+        font-style: italic;
+      }
+      .panel-text {
+        fill: #062D46;
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+      }
+      .definition-arrow-line {
+        fill: none;
+        stroke: #139CCB;
+        stroke-width: 3.4;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .definition-arrow-head {
+        fill: none;
+        stroke: #139CCB;
+        stroke-width: 3.4;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+    <symbol id="definition_arrow_symbol" viewBox="0 0 96 28">
+      <path class="definition-arrow-line" d="M 8 14 H 72"/>
+      <path class="definition-arrow-head" d="M 62 5 L 72 14 L 62 23"/>
+    </symbol>
+  </defs>
+
+  <g id="scene_root" class="font">
+    <g id="workflow_steps" aria-label="Aufbauschritte der Lebensdatenanalyse">
+      <g id="step_0" aria-label="Schritt 0 Sammeln der Ausfalldaten">
+        <circle id="step_0_marker" class="muted-stroke" cx="206" cy="210" r="35" data-qc-role="timeline-marker" data-qc-group="step_0" data-qc-layer="foreground" data-qc-allow-overlap="true"/>
+        <text id="step_0_number" class="text-secondary" x="206" y="222" text-anchor="middle" font-size="34" font-weight="750" data-qc-role="text" data-qc-group="step_0" data-qc-layer="foreground" data-qc-important="true" data-qc-allow-overlap="true">0</text>
+        <text id="step_0_text" class="text-secondary" x="276" y="224" font-size="36" font-weight="650" data-qc-role="text" data-qc-group="step_0" data-qc-layer="foreground" data-qc-important="true">Sammeln der Ausfalldaten</text>
+      </g>
+
+      <g id="step_1" aria-label="Schritt 1 Berechnen von Ausfallwahrscheinlichkeiten">
+        <circle id="step_1_marker" class="accent-stroke" cx="206" cy="382" r="35" data-qc-role="timeline-marker" data-qc-group="step_1" data-qc-layer="foreground" data-qc-allow-overlap="true"/>
+        <text id="step_1_number" class="text-primary" x="206" y="394" text-anchor="middle" font-size="34" font-weight="800" data-qc-role="text" data-qc-group="step_1" data-qc-layer="foreground" data-qc-important="true" data-qc-allow-overlap="true">1</text>
+        <text id="step_1_text_line_1" class="text-primary" x="276" y="330" font-size="34" font-weight="700" data-qc-role="text" data-qc-group="step_1" data-qc-layer="foreground" data-qc-important="true">Berechnen von</text>
+        <text id="step_1_text_line_2" class="text-primary" x="276" y="392" font-size="34" font-weight="700" data-qc-role="text" data-qc-group="step_1" data-qc-layer="foreground" data-qc-important="true">Ausfall-</text>
+        <text id="step_1_text_line_3" class="text-primary" x="276" y="454" font-size="34" font-weight="700" data-qc-role="text" data-qc-group="step_1" data-qc-layer="foreground" data-qc-important="true">wahrscheinlichkeiten</text>
+      </g>
+    </g>
+
+    <g id="formula_panel" aria-label="Median-Rank-Formel mit Definitionen">
+      <text id="formula_panel_label" class="text-primary" x="130" y="510" font-size="35" font-weight="750" data-qc-role="text" data-qc-group="formula_panel" data-qc-layer="foreground" data-qc-important="true">Berechnung mit:</text>
+      <g id="median_rank_formula_asset" aria-label="F(t&#8321;) = (i - 0,3) durch (n + 0,4)" transform="translate(184 648)" data-qc-role="formula" data-qc-group="formula_panel" data-qc-layer="foreground" data-qc-allow-overlap="true" data-formula-asset="assets/formulas/RE3_TEST_1/median_rank.svg" data-formula-embedding="inline">
+        <text class="panel-text" x="0" y="28" font-size="38" font-style="italic" font-weight="520" data-qc-allow-overlap="true">F</text>
+        <text class="panel-text" x="28" y="28" font-size="38" font-weight="520" data-qc-allow-overlap="true">(</text>
+        <text class="panel-text" x="46" y="28" font-size="38" font-style="italic" font-weight="520" data-qc-allow-overlap="true">t</text>
+        <text class="panel-text" x="62" y="40" font-size="22" font-style="italic" font-weight="520" data-qc-allow-overlap="true">i</text>
+        <text class="panel-text" x="78" y="28" font-size="38" font-weight="520" data-qc-allow-overlap="true">) =</text>
+        <text class="panel-text" x="244" y="2" text-anchor="middle" font-size="29" font-weight="520" data-qc-allow-overlap="true">i - 0,3</text>
+        <line x1="178" y1="17" x2="310" y2="17" stroke="#062D46" stroke-width="2.4" data-qc-allow-overlap="true"/>
+        <text class="panel-text" x="244" y="58" text-anchor="middle" font-size="29" font-weight="520" data-qc-allow-overlap="true">n + 0,4</text>
+      </g>
+      <text id="formula_range" class="panel-text" x="532" y="688" font-size="23" font-weight="520" data-qc-role="text" data-qc-group="formula_panel" data-qc-layer="foreground" data-qc-important="true">
+        <tspan font-style="italic">i</tspan><tspan> = 1, 2, ..., </tspan><tspan font-style="italic">n</tspan>
+      </text>
+      <g id="formula_definitions" aria-label="Definitionen der Formelparameter">
+        <g id="formula_definition_i" data-qc-role="text" data-qc-group="formula_panel" data-qc-layer="foreground" data-qc-important="true" aria-label="i bedeutet Rangnummer des Ausfalls">
+          <text id="formula_definition_i_symbol" class="panel-text" x="182" y="782" font-size="30" font-style="italic">i</text>
+          <use id="formula_definition_i_arrow" href="#definition_arrow_symbol" x="212" y="762" width="68" height="20" data-component-source="components/svg-library/definition-arrow.svg"/>
+          <text id="formula_definition_i_text" class="panel-text" x="296" y="782" font-size="30" font-style="italic">Rangnummer des Ausfalls</text>
+        </g>
+        <g id="formula_definition_n" data-qc-role="text" data-qc-group="formula_panel" data-qc-layer="foreground" data-qc-important="true" aria-label="n bedeutet Stichprobengröße">
+          <text id="formula_definition_n_symbol" class="panel-text" x="182" y="826" font-size="30" font-style="italic">n</text>
+          <use id="formula_definition_n_arrow" href="#definition_arrow_symbol" x="212" y="806" width="68" height="20" data-component-source="components/svg-library/definition-arrow.svg"/>
+          <text id="formula_definition_n_text" class="panel-text" x="296" y="826" font-size="30" font-style="italic">Stichprobengröße</text>
+        </g>
+      </g>
+    </g>
+
+    <g id="construction_plot" aria-label="Python-generiertes Konstruktionsdiagramm mit einheitlichen t_i-Daten" data-qc-role="plot" data-qc-group="construction_plot" data-qc-layer="data">
+      <g id="construction_plot_asset" transform="translate(740 232.52) scale(1.4467)" data-qc-role="plot" data-qc-group="construction_plot" data-qc-layer="data" data-qc-important="true" data-plot-asset="assets/plots/RE3_TEST_1/failure_probability_construction_slide_002.svg" data-plot-embedding="inline">
+<defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 356.82914 
+L 715.444961 356.82914 
+L 715.444961 0 
+L 0 0 
+L 0 356.82914 
+z
+" style="fill: none; opacity: 0"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 86.164961 335.756137 
+L 708.244961 335.756137 
+L 708.244961 50.060137 
+L 86.164961 50.060137 
+L 86.164961 335.756137 
+z
+" style="fill: none"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="plot-helper-horizontal-t1">
+    <path d="M 86.164961 280.356237 
+L 125.703944 280.356237 
+" clip-path="url(#p5927a241d5)" style="fill: none; stroke: #d82735; stroke-opacity: 0.92; stroke-width: 1.25; stroke-linecap: square"/>
+   </g>
+   <g id="plot-helper-vertical-t1">
+    <path d="M 125.703944 312.565481 
+L 125.703944 280.356237 
+" clip-path="url(#p5927a241d5)" style="fill: none; stroke: #d82735; stroke-opacity: 0.92; stroke-width: 1.25; stroke-linecap: square"/>
+   </g>
+   <g id="plot-helper-horizontal-t2">
+    <path d="M 86.164961 248.146992 
+L 145.473436 248.146992 
+" clip-path="url(#p5927a241d5)" style="fill: none; stroke: #d82735; stroke-opacity: 0.92; stroke-width: 1.25; stroke-linecap: square"/>
+   </g>
+   <g id="plot-helper-vertical-t2">
+    <path d="M 145.473436 312.565481 
+L 145.473436 248.146992 
+" clip-path="url(#p5927a241d5)" style="fill: none; stroke: #d82735; stroke-opacity: 0.92; stroke-width: 1.25; stroke-linecap: square"/>
+   </g>
+   <g id="plot-helper-horizontal-t3">
+    <path d="M 86.164961 215.937747 
+L 175.127673 215.937747 
+" clip-path="url(#p5927a241d5)" style="fill: none; stroke: #d82735; stroke-opacity: 0.92; stroke-width: 1.25; stroke-linecap: square"/>
+   </g>
+   <g id="plot-helper-vertical-t3">
+    <path d="M 175.127673 312.565481 
+L 175.127673 215.937747 
+" clip-path="url(#p5927a241d5)" style="fill: none; stroke: #d82735; stroke-opacity: 0.92; stroke-width: 1.25; stroke-linecap: square"/>
+   </g>
+   <g id="plot-helper-horizontal-t4">
+    <path d="M 86.164961 183.728503 
+L 231.141232 183.728503 
+" clip-path="url(#p5927a241d5)" style="fill: none; stroke: #d82735; stroke-opacity: 0.92; stroke-width: 1.25; stroke-linecap: square"/>
+   </g>
+   <g id="plot-helper-vertical-t4">
+    <path d="M 231.141232 312.565481 
+L 231.141232 183.728503 
+" clip-path="url(#p5927a241d5)" style="fill: none; stroke: #d82735; stroke-opacity: 0.92; stroke-width: 1.25; stroke-linecap: square"/>
+   </g>
+   <g id="plot-helper-horizontal-t5">
+    <path d="M 86.164961 151.519258 
+L 310.219198 151.519258 
+" clip-path="url(#p5927a241d5)" style="fill: none; stroke: #d82735; stroke-opacity: 0.92; stroke-width: 1.25; stroke-linecap: square"/>
+   </g>
+   <g id="plot-helper-vertical-t5">
+    <path d="M 310.219198 312.565481 
+L 310.219198 151.519258 
+" clip-path="url(#p5927a241d5)" style="fill: none; stroke: #d82735; stroke-opacity: 0.92; stroke-width: 1.25; stroke-linecap: square"/>
+   </g>
+   <g id="plot-helper-horizontal-t6">
+    <path d="M 86.164961 119.310013 
+L 432.131063 119.310013 
+" clip-path="url(#p5927a241d5)" style="fill: none; stroke: #d82735; stroke-opacity: 0.92; stroke-width: 1.25; stroke-linecap: square"/>
+   </g>
+   <g id="plot-helper-vertical-t6">
+    <path d="M 432.131063 312.565481 
+L 432.131063 119.310013 
+" clip-path="url(#p5927a241d5)" style="fill: none; stroke: #d82735; stroke-opacity: 0.92; stroke-width: 1.25; stroke-linecap: square"/>
+   </g>
+   <g id="plot-helper-horizontal-t7">
+    <path d="M 86.164961 87.100769 
+L 613.351402 87.100769 
+" clip-path="url(#p5927a241d5)" style="fill: none; stroke: #d82735; stroke-opacity: 0.92; stroke-width: 1.25; stroke-linecap: square"/>
+   </g>
+   <g id="plot-helper-vertical-t7">
+    <path d="M 613.351402 312.565481 
+L 613.351402 87.100769 
+" clip-path="url(#p5927a241d5)" style="fill: none; stroke: #d82735; stroke-opacity: 0.92; stroke-width: 1.25; stroke-linecap: square"/>
+   </g>
+   <g id="plot-axis-x">
+    <path d="M 86.164961 312.565481 
+Q 397.204961 312.565481 705.785286 312.565481 
+" style="fill: none; stroke: #062d46; stroke-width: 2.2; stroke-linecap: round"/>
+    <path d="M 700.585286 309.965481 
+L 705.785286 312.565481 
+L 700.585286 315.165481 
+z
+" style="fill: #062d46; stroke: #062d46; stroke-width: 2.2; stroke-linecap: round"/>
+   </g>
+   <g id="plot-axis-y">
+    <path d="M 86.164961 312.565481 
+Q 86.164961 181.312809 86.164961 52.519812 
+" style="fill: none; stroke: #062d46; stroke-width: 2.2; stroke-linecap: round"/>
+    <path d="M 83.564961 57.719812 
+L 86.164961 52.519812 
+L 88.764961 57.719812 
+z
+" style="fill: #062d46; stroke: #062d46; stroke-width: 2.2; stroke-linecap: round"/>
+   </g>
+   <g id="plot-probability-label-t1">
+    <text style="font-style: italic; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d82735" x="64.392161" y="284.081393" transform="rotate(-0 64.392161 284.081393)">F(t₁)</text>
+   </g>
+   <g id="plot-time-label-t1">
+    <text style="font-style: italic; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d82735" x="125.703944" y="335.062885" transform="rotate(-0 125.703944 335.062885)">t₁</text>
+   </g>
+   <g id="plot-probability-label-t2">
+    <text style="font-style: italic; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d82735" x="64.392161" y="251.872148" transform="rotate(-0 64.392161 251.872148)">F(t₂)</text>
+   </g>
+   <g id="plot-time-label-t2">
+    <text style="font-style: italic; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d82735" x="145.473436" y="335.062885" transform="rotate(-0 145.473436 335.062885)">t₂</text>
+   </g>
+   <g id="plot-probability-label-t3">
+    <text style="font-style: italic; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d82735" x="64.392161" y="219.662904" transform="rotate(-0 64.392161 219.662904)">F(t₃)</text>
+   </g>
+   <g id="plot-time-label-t3">
+    <text style="font-style: italic; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d82735" x="175.127673" y="335.062885" transform="rotate(-0 175.127673 335.062885)">t₃</text>
+   </g>
+   <g id="plot-probability-label-t4">
+    <text style="font-style: italic; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d82735" x="64.392161" y="187.453659" transform="rotate(-0 64.392161 187.453659)">F(t₄)</text>
+   </g>
+   <g id="plot-time-label-t4">
+    <text style="font-style: italic; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d82735" x="231.141232" y="335.062885" transform="rotate(-0 231.141232 335.062885)">t₄</text>
+   </g>
+   <g id="plot-probability-label-t5">
+    <text style="font-style: italic; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d82735" x="64.392161" y="155.244414" transform="rotate(-0 64.392161 155.244414)">F(t₅)</text>
+   </g>
+   <g id="plot-time-label-t5">
+    <text style="font-style: italic; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d82735" x="310.219198" y="335.062885" transform="rotate(-0 310.219198 335.062885)">t₅</text>
+   </g>
+   <g id="plot-probability-label-t6">
+    <text style="font-style: italic; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d82735" x="64.392161" y="123.03517" transform="rotate(-0 64.392161 123.03517)">F(t₆)</text>
+   </g>
+   <g id="plot-time-label-t6">
+    <text style="font-style: italic; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d82735" x="432.131063" y="335.062885" transform="rotate(-0 432.131063 335.062885)">t₆</text>
+   </g>
+   <g id="plot-probability-label-t7">
+    <text style="font-style: italic; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d82735" x="64.392161" y="90.825925" transform="rotate(-0 64.392161 90.825925)">F(t₇)</text>
+   </g>
+   <g id="plot-time-label-t7">
+    <text style="font-style: italic; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d82735" x="613.351402" y="335.062885" transform="rotate(-0 613.351402 335.062885)">t₇</text>
+   </g>
+   <g id="plot-axis-label-x">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="646.036961" y="346.509609" transform="rotate(-0 646.036961 346.509609)">Lebensdauer t</text>
+   </g>
+   <g id="plot-axis-label-y">
+    <text style="font-weight: 700; font-size: 14.5px; font-family: 'DejaVu Sans'; fill: #062d46" transform="translate(39.549727 18.217734)">Summe der</text>
+    <text style="font-weight: 700; font-size: 14.5px; font-family: 'DejaVu Sans'; fill: #062d46" transform="translate(7.2 35.335981)">ausgefallenen Teile</text>
+   </g>
+   <g id="plot-failure-marker-t1">
+    <defs>
+     <path id="m90beda20b0" d="M -4.242641 4.242641 
+L 4.242641 -4.242641 
+M -4.242641 -4.242641 
+L 4.242641 4.242641 
+" style="stroke: #d82735; stroke-width: 2.2"/>
+    </defs>
+    <g>
+     <use xlink:href="#m90beda20b0" x="125.703944" y="312.565481" style="fill: #d82735; stroke: #d82735; stroke-width: 2.2"/>
+    </g>
+   </g>
+   <g id="plot-failure-marker-t2">
+    <g>
+     <use xlink:href="#m90beda20b0" x="145.473436" y="312.565481" style="fill: #d82735; stroke: #d82735; stroke-width: 2.2"/>
+    </g>
+   </g>
+   <g id="plot-failure-marker-t3">
+    <g>
+     <use xlink:href="#m90beda20b0" x="175.127673" y="312.565481" style="fill: #d82735; stroke: #d82735; stroke-width: 2.2"/>
+    </g>
+   </g>
+   <g id="plot-failure-marker-t4">
+    <g>
+     <use xlink:href="#m90beda20b0" x="231.141232" y="312.565481" style="fill: #d82735; stroke: #d82735; stroke-width: 2.2"/>
+    </g>
+   </g>
+   <g id="plot-failure-marker-t5">
+    <g>
+     <use xlink:href="#m90beda20b0" x="310.219198" y="312.565481" style="fill: #d82735; stroke: #d82735; stroke-width: 2.2"/>
+    </g>
+   </g>
+   <g id="plot-failure-marker-t6">
+    <g>
+     <use xlink:href="#m90beda20b0" x="432.131063" y="312.565481" style="fill: #d82735; stroke: #d82735; stroke-width: 2.2"/>
+    </g>
+   </g>
+   <g id="plot-failure-marker-t7">
+    <g>
+     <use xlink:href="#m90beda20b0" x="613.351402" y="312.565481" style="fill: #d82735; stroke: #d82735; stroke-width: 2.2"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p5927a241d5">
+   <rect x="86.164961" y="50.060137" width="622.08" height="285.696"/>
+  </clipPath>
+ </defs>
+
+      </g>
+    </g>
+    <g id="probability_axis" display="none" data-qc-ignore="true" aria-label="Konstruktionsachse Summe der ausgefallenen Teile">
+      <text id="probability_axis_label_1" class="text-primary" x="710" y="146" text-anchor="middle" font-size="30" font-weight="650" data-qc-role="axis-label" data-qc-axis="y" data-qc-group="probability_axis" data-qc-layer="label" data-qc-important="true">Summe der</text>
+      <text id="probability_axis_label_2" class="text-primary" x="710" y="190" text-anchor="middle" font-size="30" font-weight="650" data-qc-role="axis-label" data-qc-axis="y" data-qc-group="probability_axis" data-qc-layer="label" data-qc-important="true">ausgefallenen Teile</text>
+      <line id="probability_axis_line" class="axis-line" x1="710" y1="700" x2="710" y2="346" data-qc-role="axis-line" data-qc-axis="y" data-qc-group="probability_axis" data-qc-layer="axis"/>
+      <polygon id="probability_axis_arrowhead" points="710,306 688,350 732,350" fill="#062D46" data-qc-role="axis-arrow-head" data-qc-axis="y" data-qc-group="probability_axis" data-qc-layer="axis"/>
+    </g>
+
+    <g id="existing_timeline" display="none" data-qc-ignore="true" aria-label="Lebensdauerachse mit unveränderten Ausfallzeitpunkten">
+      <g id="axis" aria-label="Lebensdauerachse" data-qc-role="axis-arrow" data-qc-group="failure_timeline" data-qc-layer="axis">
+        <line id="axis_line" class="axis-line" x1="710" y1="700" x2="1604" y2="700" data-qc-role="axis-line" data-qc-axis="x" data-qc-group="failure_timeline" data-qc-layer="axis"/>
+        <polygon id="axis_arrowhead" points="1650,700 1604,676 1604,724" fill="#062D46" data-qc-role="axis-arrow-head" data-qc-axis="x" data-qc-group="failure_timeline" data-qc-layer="axis"/>
+      </g>
+
+      <g id="failure_markers" aria-label="Sieben unregelmäßig verteilte Ausfälle" data-qc-role="timeline-marker" data-qc-group="failure_timeline" data-qc-layer="data">
+        <g id="failure_marker_t1" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true">
+          <line class="failure-line" x1="785" y1="685" x2="815" y2="715" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+          <line class="failure-line" x1="785" y1="715" x2="815" y2="685" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+        </g>
+        <g id="failure_marker_t2" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true">
+          <line class="failure-line" x1="915" y1="685" x2="945" y2="715" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+          <line class="failure-line" x1="915" y1="715" x2="945" y2="685" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+        </g>
+        <g id="failure_marker_t3" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true">
+          <line class="failure-line" x1="995" y1="685" x2="1025" y2="715" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+          <line class="failure-line" x1="995" y1="715" x2="1025" y2="685" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+        </g>
+        <g id="failure_marker_t4" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true">
+          <line class="failure-line" x1="1180" y1="685" x2="1210" y2="715" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+          <line class="failure-line" x1="1180" y1="715" x2="1210" y2="685" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+        </g>
+        <g id="failure_marker_t5" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true">
+          <line class="failure-line" x1="1240" y1="685" x2="1270" y2="715" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+          <line class="failure-line" x1="1240" y1="715" x2="1270" y2="685" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+        </g>
+        <g id="failure_marker_t6" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true">
+          <line class="failure-line" x1="1423" y1="685" x2="1453" y2="715" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+          <line class="failure-line" x1="1423" y1="715" x2="1453" y2="685" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+        </g>
+        <g id="failure_marker_t7" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true">
+          <line class="failure-line" x1="1539" y1="685" x2="1569" y2="715" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+          <line class="failure-line" x1="1539" y1="715" x2="1569" y2="685" data-qc-role="cross-marker" data-qc-group="failure_timeline" data-qc-layer="data" data-qc-allow-overlap="true"/>
+        </g>
+      </g>
+
+      <g id="failure_time_labels" aria-label="Labels der geordneten Ausfallzeiten" data-qc-role="timeline-label" data-qc-group="failure_timeline" data-qc-layer="label">
+        <text id="time_label_t1" class="label-red" x="800" y="766" text-anchor="middle" data-qc-role="timeline-label" data-qc-group="failure_timeline" data-qc-layer="label" data-qc-important="true">t&#8321;</text>
+        <text id="time_label_t2" class="label-red" x="930" y="766" text-anchor="middle" data-qc-role="timeline-label" data-qc-group="failure_timeline" data-qc-layer="label" data-qc-important="true">t&#8322;</text>
+        <text id="time_label_t3" class="label-red" x="1010" y="766" text-anchor="middle" data-qc-role="timeline-label" data-qc-group="failure_timeline" data-qc-layer="label" data-qc-important="true">t&#8323;</text>
+        <text id="time_label_t4" class="label-red" x="1195" y="766" text-anchor="middle" data-qc-role="timeline-label" data-qc-group="failure_timeline" data-qc-layer="label" data-qc-important="true">t&#8324;</text>
+        <text id="time_label_t5" class="label-red" x="1255" y="766" text-anchor="middle" data-qc-role="timeline-label" data-qc-group="failure_timeline" data-qc-layer="label" data-qc-important="true">t&#8325;</text>
+        <text id="time_label_t6" class="label-red" x="1438" y="766" text-anchor="middle" data-qc-role="timeline-label" data-qc-group="failure_timeline" data-qc-layer="label" data-qc-important="true">t&#8326;</text>
+        <text id="time_label_t7" class="label-red" x="1554" y="766" text-anchor="middle" data-qc-role="timeline-label" data-qc-group="failure_timeline" data-qc-layer="label" data-qc-important="true">t&#8327;</text>
+      </g>
+
+      <g id="axis_label_group" aria-label="Achsenlabel Lebensdauer t" data-qc-role="axis-label" data-qc-group="failure_timeline" data-qc-layer="label">
+        <text id="axis_label" class="text-primary" x="1438" y="828" font-size="36" font-weight="650" data-qc-role="axis-label" data-qc-axis="x" data-qc-group="failure_timeline" data-qc-layer="label" data-qc-important="true">Lebensdauer t</text>
+      </g>
+    </g>
+  </g>
+</svg>
+
+
+
+
+

@@ -22,6 +22,9 @@ Der Agent arbeitet nach:
 - Vor SVG-Auftraegen das gesamte relevante Folienpaket betrachten und eine Sequenzkarte erstellen.
 - Aufbau-, Morph-, Duplikat- und reine Animationsfolien als Gruppen klassifizieren.
 - Fuer jede Gruppe den vollstaendigen Zielzustand und die Animationszwischenzustaende bestimmen.
+- Mehrere Folien, die durch Einblenden, Ausblenden, Verschieben, Hervorheben oder andere Animationen zu einer gemeinsamen Erklaergrafik werden koennen, als eine zusammengezogene Arbeitseinheit planen.
+- Fachlich relevanten Quellinhalt vollstaendig erfassen: Die spaetere SVG darf anders gestaltet sein, aber keine Begriffe, Schritte, Parameter, Beispiele, Tabellen, Diagramme oder Muss-Aussagen verlieren.
+- Informationsdichte der spaeteren Grafik an der Quellfolie orientieren; nicht deutlich leerer planen, wenn die Quelle mehr fachlich relevante Information traegt.
 - Sprechertextdateien und Abschnitte zuordnen.
 - PPTX-Objekte, Ebenen und Animationen auswerten, soweit technisch moeglich.
 - PDF-Text und Formeln gegenpruefen.
@@ -34,9 +37,9 @@ Der Agent arbeitet nach:
 
 Vor dem ersten SVG entsteht:
 
-- `analysis/rebuild-plans/<module_id>_svg_rebuild_plan.json`
+- `analysis/rebuild-plans/<module_id>_sequence_plan.md`
 
-Dieser Plan enthaelt Sequenzgruppen, Zielzustandsfolien, Preview-Policy, didaktisches Zielbild, Komponentenplan, Assetplan und Cross-Check-Kriterien.
+Dieser Markdown-Plan enthaelt Quellenanalyse, Sequenzgruppen, Zielzustandsfolien, Preview-Policy, didaktisches Zielbild, Komponentenplan, Assetplan, Python-Plot-/Formel-/Timeline-Strategie, Animationsebenen und Cross-Check-Kriterien. Ein altes JSON-Planartefakt ist nur noch optionaler Zusatz, nicht die fuehrende Quelle.
 
 ## Grenzen
 
@@ -66,6 +69,7 @@ Eine Folie ist nur dann `pass`, wenn:
 
 Bei SVG-Auftraegen ist zusaetzlich Pflicht:
 
-- kein SVG-Bau ohne Rebuild-Plan,
+- kein SVG-Bau ohne detaillierten Markdown-Sequenz- und Bauplan,
 - keine Einzel-SVGs fuer reine Animationsfolien ohne begruendete Preview-Policy,
+- kein inhaltliches Ausduennen der PowerPoint-Folie,
 - keine 1:1-Kopie der PowerPoint, wenn ein klareres E-Learning-Zielbild moeglich ist.

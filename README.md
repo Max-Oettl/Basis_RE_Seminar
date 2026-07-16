@@ -11,7 +11,7 @@ Verbindlich ist der Basis-Seminar-Rebuild:
 1. Originalquellen pro Folie sammeln: PowerPoint, PDF, PNG-Export und freigegebener Sprechertext.
 2. Quellen gegeneinander pruefen.
 3. Sichtbaren Inhalt, Layout, Objektstruktur, Animationen und Sprechertext-Verknuepfung dokumentieren.
-4. Pro Folie eine Rebuild-JSON-Datei nach `workflow/slide-rebuild-json-contract.md` erzeugen.
+4. Pro Folie eine Rebuild-JSON-Datei nach `workflow/10-source-analysis/slide-rebuild-json-contract.md` erzeugen.
 5. Pro Modul einen kurzen QA-/Modulreport erstellen.
 
 Die wichtigste Regel: Der Sprechertext bleibt unveraendert. Er wird verknuepft, nicht neu geschrieben.
@@ -53,11 +53,30 @@ rebuild-proposals/
 
 Neue oder neu sortierte Basis-Seminar-Quellen sollen unter `source-materials/basis-seminar/` abgelegt werden.
 
+## Workflow-Struktur
+
+Die Projektregeln sind hierarchisch aufgebaut, damit Codex nur den Kontext laden muss, der zum aktuellen Arbeitsschritt passt.
+
+- `AGENT.md`: kompakter verpflichtender Router fuer Codex.
+- `workflow/README.md`: Uebersicht der Workflow-Ebenen.
+- `workflow/00-router/context-loading-map.md`: Entscheidung, welche Detailregeln zu laden sind.
+- `workflow/10-source-analysis/`: Folienanalyse, Sprechertext-Abgleich und Rebuild-JSON.
+- `workflow/20-scene-planning/`: Szenenbrief, Sequenzkarte und Layerplanung.
+- `workflow/30-visual-decision/`: Asset-Entscheidung und Elementklassifikation.
+- `workflow/31-python-plots/`: Diagramme, Python-Plotgeneratoren und Vertrauensgrenzen.
+- `workflow/32-formulas/`: Formeldarstellung.
+- `workflow/33-timelines/`: Timelines und Ausfall-Zeitachsen.
+- `workflow/40-svg-production/`: SVG-Komposition.
+- `workflow/50-animation/`: Animation und Manifest.
+- `workflow/60-quality/`: technische und visuelle Freigabe.
+
+Alte Dateien direkt unter `workflow/` sind Compatibility Redirects und zeigen auf die neuen kanonischen Pfade.
+
 ## Wichtige Dateien
 
 - `AGENT.md`: verpflichtende Arbeitsregeln fuer Codex in diesem Repo.
-- `workflow/basis-seminar-slide-rebuild-runbook.md`: Ablauf fuer die Folienanalyse.
-- `workflow/slide-rebuild-json-contract.md`: JSON-Vertrag pro Folie.
+- `workflow/10-source-analysis/basis-seminar-slide-rebuild-runbook.md`: Ablauf fuer die Folienanalyse.
+- `workflow/10-source-analysis/slide-rebuild-json-contract.md`: JSON-Vertrag pro Folie.
 - `analysis/slide-rebuild.schema.json`: maschinenlesbares Schema fuer Rebuild-JSON.
 - `templates/slide-inventory-template.json`: Starttemplate fuer ein Modul-/Folieninventar.
 - `templates/slide-rebuild-template.json`: Starttemplate fuer eine Folienanalyse.

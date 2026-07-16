@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "sceneId": "RE3_TEST_1_slide_002",
+  "svgPath": "slide_002.svg",
+  "status": "draft",
+  "defaults": {
+    "enterFrames": 16,
+    "highlightDurFrames": 24,
+    "drawDurFrames": 24
+  },
+  "targets": [
+    {
+      "targetId": "step_0",
+      "label": "Schritt 0: Sammeln der Ausfalldaten",
+      "status": "static_context",
+      "confidence": "high"
+    },
+    {
+      "targetId": "existing_timeline",
+      "label": "Stabile Lebensdauerachse mit Ausfallzeitpunkten",
+      "status": "static_context",
+      "confidence": "high"
+    },
+    {
+      "targetId": "step_1",
+      "label": "Schritt 1: Berechnen von Ausfallwahrscheinlichkeiten",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "formula_panel",
+      "label": "Median-Rank-Formel mit Definitionen",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "probability_axis",
+      "label": "Vertikale Konstruktionsachse",
+      "status": "animated",
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "01_keep_context",
+      "targetId": "step_0",
+      "action": "show",
+      "sourceText": "Sammeln der Ausfalldaten",
+      "trigger": "time_or_user",
+      "enterFrames": 10,
+      "fromY": 0,
+      "confidence": "high"
+    },
+    {
+      "stepId": "02_keep_timeline",
+      "targetId": "existing_timeline",
+      "action": "show",
+      "sourceText": "Ausfalldaten entlang der Lebensdauerachse",
+      "trigger": "time_or_user",
+      "enterFrames": 10,
+      "fromY": 0,
+      "confidence": "high"
+    },
+    {
+      "stepId": "03_reveal_step_1",
+      "targetId": "step_1",
+      "action": "show",
+      "sourceText": "Berechnen von Ausfallwahrscheinlichkeiten",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "04_reveal_formula",
+      "targetId": "formula_panel",
+      "action": "show",
+      "sourceText": "Median-Rank-Formel",
+      "trigger": "time_or_user",
+      "enterFrames": 18,
+      "fromY": 14,
+      "confidence": "high"
+    },
+    {
+      "stepId": "05_draw_construction_axis",
+      "targetId": "probability_axis",
+      "action": "draw",
+      "sourceText": "Summe der ausgefallenen Teile",
+      "trigger": "time_or_user",
+      "durFrames": 24,
+      "drawStyle": "stroke",
+      "direction": "bottomToTop",
+      "confidence": "medium"
+    }
+  ],
+  "notes": [
+    "Static SVG preview shows all layers; animation tooling can reveal the listed groups in order.",
+    "The Median-Rank formula is embedded from assets/formulas/RE3_TEST_1/median_rank.svg.",
+    "Failure positions remain intentionally irregular and consistent with slide_001."
+  ]
+}

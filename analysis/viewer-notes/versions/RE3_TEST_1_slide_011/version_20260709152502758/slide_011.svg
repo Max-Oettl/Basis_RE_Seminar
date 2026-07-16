@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="scene_title scene_desc">
+  <title id="scene_title">Zensierte Beobachtungen ergänzen</title>
+  <desc id="scene_desc">Content-SVG ohne sichtbare PowerPoint-Masterelemente.</desc>
+  <metadata id="slide-quality-metadata" type="application/json"><![CDATA[
+{
+  "artifactScope": "content-svg",
+  "embeddingTarget": "powerpoint-slide",
+  "slideType": "content-module",
+  "contentTitle": "Zensierte Beobachtungen ergänzen",
+  "layoutIntent": "Zensierte Beobachtungen ergänzen",
+  "takeaway": "Zensierte Beobachtungen ergänzen",
+  "density": "normal",
+  "contentMode": "transparent-content",
+  "backgroundMode": "transparent",
+  "brandProfile": "reltest-academy",
+  "brandVariant": "technical"
+}
+  ]]></metadata>
+
+  <defs>
+    <style>
+      .font { font-family: Inter, "Segoe UI", Arial, sans-serif; }
+      .axis { stroke: #062D46; stroke-width: 5; stroke-linecap: round; fill: none; }
+      .thin-axis { stroke: #062D46; stroke-width: 3.2; stroke-linecap: round; fill: none; }
+      .guide { stroke: #139CCB; stroke-width: 3; stroke-dasharray: 8 7; fill: none; }
+      .failure-red { stroke: #D1495B; stroke-width: 8; stroke-linecap: round; }
+      .failure-blue { stroke: #139CCB; stroke-width: 8; stroke-linecap: round; }
+      .fit-red { stroke: #D1495B; stroke-width: 5; stroke-linecap: round; fill: none; }
+      .fit-blue { stroke: #139CCB; stroke-width: 5; stroke-linecap: round; fill: none; }
+      .muted { fill: #6A7A86; }
+      .ink { fill: #062D46; }
+      .accent { fill: #139CCB; }
+      .red { fill: #D1495B; }
+    </style>
+    <marker id="arrow_ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#062D46"/>
+    </marker>
+    <marker id="arrow_blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#139CCB"/>
+    </marker>
+    <g id="cross_red">
+      <line class="failure-red" x1="0" y1="0" x2="28" y2="28" data-qc-allow-overlap="true"/>
+      <line class="failure-red" x1="0" y1="28" x2="28" y2="0" data-qc-allow-overlap="true"/>
+    </g>
+    <g id="cross_blue">
+      <line class="failure-blue" x1="0" y1="0" x2="28" y2="28" data-qc-allow-overlap="true"/>
+      <line class="failure-blue" x1="0" y1="28" x2="28" y2="0" data-qc-allow-overlap="true"/>
+    </g>
+  </defs>
+
+  <g id="scene_root" class="font">
+<g id="input_timeline" aria-label="Ausfallzeitstrahl">
+<line id="input_timeline_axis" class="axis" x1="280" y1="250" x2="720" y2="250" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>
+<use href="#cross_red" x="320" y="236" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="input_timeline_label_1" x="334" y="302" text-anchor="middle" font-size="28" font-weight="650" fill="#D1495B" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₁</text>
+<use href="#cross_red" x="436" y="236" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="input_timeline_label_2" x="450" y="302" text-anchor="middle" font-size="28" font-weight="650" fill="#D1495B" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₂</text>
+<use href="#cross_red" x="530" y="236" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="input_timeline_label_3" x="544" y="302" text-anchor="middle" font-size="28" font-weight="650" fill="#D1495B" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₃</text>
+<use href="#cross_red" x="626" y="236" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="input_timeline_label_4" x="640" y="302" text-anchor="middle" font-size="28" font-weight="650" fill="#D1495B" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="timeline-label">t₄</text>
+<text id="input_timeline_axis_label" x="766" y="260" text-anchor="start" font-size="30" font-weight="650" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >t</text>
+</g>
+<line x1="814" y1="250" x2="868" y2="250" stroke="#139CCB" stroke-width="6" marker-end="url(#arrow_blue)" data-qc-role="axis-line"/>
+
+    <g id="tool_transform" transform="translate(520 350) scale(0.9)" aria-label="Werkzeug-Symbol">
+      <path d="M 0 30 L 56 30 L 56 0 L 110 55 L 56 110 L 56 80 L 0 80 Z" fill="#E7F6FB" stroke="#062D46" stroke-width="4"/>
+      <line x1="42" y1="34" x2="76" y2="68" stroke="#062D46" stroke-width="7" stroke-linecap="round"/>
+      <line x1="76" y1="34" x2="42" y2="68" stroke="#062D46" stroke-width="7" stroke-linecap="round"/>
+    </g>
+
+<g id="simple_plot">
+<path id="simple_plot_box" d="M 300 560 H 730 V 920 H 300 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5" pointer-events="none" data-qc-layer="background"/>
+<line class="axis" x1="380" y1="848" x2="380" y2="612" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>
+<line class="axis" x1="380" y1="848" x2="678" y2="848" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>
+<path class="fit-red" d="M 442 778 L 660 664"/>
+<text id="simple_plot_ylabel" x="340" y="738" text-anchor="middle" font-size="24" font-weight="650" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" transform="rotate(-90 340 738)" data-qc-role="axis-label">Ausfallwahrscheinlichkeit</text>
+<text id="simple_plot_xlabel" x="572" y="892" text-anchor="middle" font-size="24" font-weight="650" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="axis-label">Lebensdauer</text>
+</g>
+<line class="axis" x1="970" y1="382" x2="1090" y2="382" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>
+<g id="object_time">
+<path id="object_time_box" d="M 1120 185 H 1740 V 615 H 1120 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5" pointer-events="none" data-qc-layer="background"/>
+<line class="axis" x1="1232" y1="541" x2="1668" y2="541" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>
+<line class="axis" x1="1232" y1="541" x2="1232" y2="247" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>
+<text id="object_time_ylabel" x="1162" y="397" text-anchor="middle" font-size="28" font-weight="650" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" transform="rotate(-90 1162 397)" data-qc-role="axis-label">Objekt Nr.</text>
+<text id="object_time_xlabel" x="1695" y="577" text-anchor="middle" font-size="28" font-weight="650" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif"  data-qc-layer="foreground" data-qc-important="true" data-qc-role="axis-label">t</text>
+<text id="object_time_row_1" x="1208" y="576" text-anchor="end" font-size="26" font-weight="600" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >1</text>
+<line class="thin-axis" x1="1232" y1="567" x2="1622" y2="567" data-qc-role="grid-line"/>
+<use href="#cross_red" x="1471" y="553" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="object_time_row_2" x="1208" y="526" text-anchor="end" font-size="26" font-weight="600" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >2</text>
+<line class="thin-axis" x1="1232" y1="517" x2="1622" y2="517" data-qc-role="grid-line"/>
+<use href="#cross_red" x="1571" y="503" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="object_time_row_3" x="1208" y="476" text-anchor="end" font-size="26" font-weight="600" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >3</text>
+<line class="thin-axis" x1="1232" y1="467" x2="1622" y2="467" data-qc-role="grid-line"/>
+<line x1="1232" y1="467" x2="1578" y2="467" stroke="#062D46" stroke-width="3.2"/>
+<line x1="1578" y1="467" x2="1626" y2="467" stroke="#139CCB" stroke-width="5" marker-end="url(#arrow_blue)"/>
+<text id="object_time_row_4" x="1208" y="426" text-anchor="end" font-size="26" font-weight="600" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >4</text>
+<line class="thin-axis" x1="1232" y1="417" x2="1622" y2="417" data-qc-role="grid-line"/>
+<line x1="1232" y1="417" x2="1578" y2="417" stroke="#062D46" stroke-width="3.2"/>
+<line x1="1578" y1="417" x2="1626" y2="417" stroke="#139CCB" stroke-width="5" marker-end="url(#arrow_blue)"/>
+<text id="object_time_row_5" x="1208" y="376" text-anchor="end" font-size="26" font-weight="600" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >5</text>
+<line class="thin-axis" x1="1232" y1="367" x2="1622" y2="367" data-qc-role="grid-line"/>
+<use href="#cross_red" x="1604" y="353" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+<text id="object_time_row_6" x="1208" y="326" text-anchor="end" font-size="26" font-weight="600" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >6</text>
+<line class="thin-axis" x1="1232" y1="317" x2="1622" y2="317" data-qc-role="grid-line"/>
+<use href="#cross_red" x="1661" y="303" data-qc-role="cross-marker" data-qc-allow-overlap="true"/>
+</g>
+  </g>
+</svg>

@@ -1,8 +1,11 @@
 {
   "schema": "reltestDiagramRegistry/v1",
-  "rule": "Use an existing Python plot generator before creating a new real technical diagram generator. Do not generate generic timelines as Python plots. Python plots must not include visible titles. Python plot generators export SVG only. Plot text is optimized for small seminar-scene usage: axis labels, tick labels, and legends must remain readable when scaled down. Animation-ready plot SVGs follow components/python-plot-library/svg-animation-structure.provisional.md until the project-wide animation structure exists. Weibull confidence limits are drawn as reproducible, non-parallel 5 and 95 percent bootstrap boundary curves, not filled confidence bands or linear regression confidence lines.",
+  "rule": "Use Python plot generators for all real plots and technical diagrams. Use an existing generator before creating a new one. Generic one-dimensional failure timelines with only an x-axis, X/cross markers or censor markers stay SVG-native. As soon as a graphic has a y-axis, object rows, ablesbare Achsenskalierung, data points, curves, fit lines, probability nets, distributions or confidence limits, the Python-plot workflow applies. Python plots must not include visible titles. Python plot generators export SVG only. Plot text is optimized for small seminar-scene usage: axis labels, tick labels, and legends must remain readable when scaled down. Animation-ready plot SVGs follow components/python-plot-library/svg-animation-structure.provisional.md until the project-wide animation structure exists. Weibull confidence limits are drawn as reproducible, non-parallel 5 and 95 percent bootstrap boundary curves, not filled confidence bands or linear regression confidence lines. Multi-slide plot build-up sequences must share one documented data and axis contract across sorting, probability plotting, fit, parameter readout and confidence-limit stages.",
   "provisional_animation_structure": "components/python-plot-library/svg-animation-structure.provisional.md",
   "style_module": "components/python-plot-library/reltest_plot_style.py",
+  "shared_sequence_data": {
+    "RE3_TEST_1_weibull_median_rank": "components/python-plot-library/basis_seminar_plot_data.py"
+  },
   "generators": [
     {
       "diagram_type": "axis_diagram",
@@ -11,6 +14,16 @@
         "generic x/y plots",
         "schematic technical curves",
         "simple measured series"
+      ],
+      "exports": ["svg"]
+    },
+    {
+      "diagram_type": "failure_probability_construction_plot",
+      "file": "components/python-plot-library/failure_probability_construction_plot.py",
+      "use_for": [
+        "Median-Rank construction diagrams",
+        "F(t_i) helper lines from failure ranks to failure times",
+        "basis-seminar life-data workflow helper-line visuals"
       ],
       "exports": ["svg"]
     },
@@ -52,6 +65,16 @@
         "median-rank failure data with lower and upper confidence boundaries",
         "fitted Weibull lines with reproducible non-parallel bootstrap confidence limit curves",
         "canonical Weibull confidence style with blue fit, open red failure points, and grey dashed boundary curves"
+      ],
+      "exports": ["svg"]
+    },
+    {
+      "diagram_type": "object_time_diagram_plot",
+      "file": "components/python-plot-library/object_time_diagram_plot.py",
+      "use_for": [
+        "object-time diagrams with object rows and a time axis",
+        "failure and censoring row diagrams with y-axis/object numbering",
+        "basis-seminar object-number assignment and censored-observation visuals"
       ],
       "exports": ["svg"]
     }

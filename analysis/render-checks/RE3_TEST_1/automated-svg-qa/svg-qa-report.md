@@ -1,31 +1,1010 @@
 # SVG QA Report - RE3_TEST_1
 
-Generated: 2026-07-08T20:14:47.742Z
+Generated: 2026-07-10T09:17:00.271Z
 
 ## Summary
 
-- Files checked: 6
-- Animation manifests checked: 6
+- Files checked: 23
+- Animation manifests checked: 11
+- Layout files checked: 0
+- Layout states checked: 0
+- Design files checked: 23
+- Design errors: 0
+- Design warnings: 479
 - Errors: 0
-- Warnings: 0
+- Warnings: 490
 
 ## Issues
 
-No issues found by automated checks.
+- WARNING (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): ViewBox is not close to 16:9.: 715.444961x356.82914
+- WARNING (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): ViewBox is not close to 16:9.: 908.183125x503.861172
+- WARNING (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): ViewBox is not close to 16:9.: 908.183125x503.861172
+- WARNING (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): ViewBox is not close to 16:9.: 908.183125x503.861172
+- WARNING (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): ViewBox is not close to 16:9.: 907.663906x504.541406
+- WARNING (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/object_time_plot_asset.inline.svg): ViewBox is not close to 16:9.: 677.392656x375.050312
+- WARNING (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): ViewBox is not close to 16:9.: 908.183125x503.861172
+- WARNING (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/object_time_plot_asset.inline.svg): ViewBox is not close to 16:9.: 677.392656x375.050312
+- WARNING (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): ViewBox is not close to 16:9.: 908.183125x503.861172
+- WARNING (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): ViewBox is not close to 16:9.: 908.183125x503.861172
+- WARNING (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): ViewBox is not close to 16:9.: 908.183125x503.861172
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14.5px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Colors outside brand/design tokens found. Detail: #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [text-volume] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Many text nodes for a non-dense Content-SVG. Detail: 46 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14.5px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Colors outside brand/design tokens found. Detail: #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14.5px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14.5px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Colors outside brand/design tokens found. Detail: #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Many visible colors found for the declared density. Detail: 11 colors: #062D46, #139CCB, #FFFFFF, #FBFDFE, #DCE8EE, #526F7C, #D82735, #E7F6FB, #CBD5E1, #D1495B, #6A7A86
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Many visible shapes do not have semantic role markers. Detail: 46 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 12px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [text-volume] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Many text nodes for a non-dense Content-SVG. Detail: 39 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 12px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Many visible colors found for the declared density. Detail: 11 colors: #062D46, #139CCB, #FFFFFF, #FBFDFE, #DCE8EE, #526F7C, #D82735, #E7F6FB, #CBD5E1, #D1495B, #6A7A86
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Many visible shapes do not have semantic role markers. Detail: 51 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [text-volume] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Many text nodes for a non-dense Content-SVG. Detail: 38 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Many visible colors found for the declared density. Detail: 10 colors: #062D46, #139CCB, #D1495B, #FFFFFF, #FBFDFE, #DCE8EE, #526F7C, #D82735, #CBD5E1, #6A7A86
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Many visible shapes do not have semantic role markers. Detail: 47 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735, #3B66C4 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [text-volume] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Many text nodes for a non-dense Content-SVG. Detail: 40 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Many visible colors found for the declared density. Detail: 10 colors: #062D46, #139CCB, #D1495B, #FFFFFF, #FBFDFE, #DCE8EE, #526F7C, #D82735, #3B66C4, #6A7A86
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735, #3B66C4 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Many visible shapes do not have semantic role markers. Detail: 47 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/object_time_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/object_time_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/object_time_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Many visible colors found for the declared density. Detail: 11 colors: #062D46, #139CCB, #FFFFFF, #FBFDFE, #DCE8EE, #526F7C, #D82735, #E7F6FB, #CBD5E1, #D1495B, #6A7A86
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Many visible shapes do not have semantic role markers. Detail: 58 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/object_time_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/object_time_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/object_time_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Many visible colors found for the declared density. Detail: 11 colors: #062D46, #139CCB, #FFFFFF, #FBFDFE, #DCE8EE, #526F7C, #D82735, #E7F6FB, #CBD5E1, #D1495B, #6A7A86
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Many visible shapes do not have semantic role markers. Detail: 59 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Many visible colors found for the declared density. Detail: 10 colors: #062D46, #139CCB, #FFFFFF, #FBFDFE, #DCE8EE, #526F7C, #D82735, #CBD5E1, #D1495B, #6A7A86
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Many visible shapes do not have semantic role markers. Detail: 48 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [text-volume] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Many text nodes for a non-dense Content-SVG. Detail: 33 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Many visible colors found for the declared density. Detail: 11 colors: #062D46, #139CCB, #D1495B, #FFFFFF, #FBFDFE, #DCE8EE, #526F7C, #D82735, #E7F6FB, #CBD5E1, #6A7A86
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Many visible shapes do not have semantic role markers. Detail: 50 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+
+## Design QA
+
+- Mode: warn-only
+- Files checked: 23
+- Brand tokens: brand/company-brand-tokens.json
+- Brand profile: reltest-academy
+
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14.5px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_002/plots/construction_plot.inline.svg): Colors outside brand/design tokens found. Detail: #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [text-volume] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Many text nodes for a non-dense Content-SVG. Detail: 46 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14.5px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_002/slide_002.svg): Colors outside brand/design tokens found. Detail: #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14.5px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_004/plots/points_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14.5px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_004/slide_004.svg): Colors outside brand/design tokens found. Detail: #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_005/plots/fit_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Many visible colors found for the declared density. Detail: 11 colors: #062D46, #139CCB, #FFFFFF, #FBFDFE, #DCE8EE, #526F7C, #D82735, #E7F6FB, #CBD5E1, #D1495B, #6A7A86
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE3_TEST_1/slide_005/slide_005.svg): Many visible shapes do not have semantic role markers. Detail: 46 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 12px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_006/plots/parameter_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [text-volume] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Many text nodes for a non-dense Content-SVG. Detail: 39 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 12px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Many visible colors found for the declared density. Detail: 11 colors: #062D46, #139CCB, #FFFFFF, #FBFDFE, #DCE8EE, #526F7C, #D82735, #E7F6FB, #CBD5E1, #D1495B, #6A7A86
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE3_TEST_1/slide_006/slide_006.svg): Many visible shapes do not have semantic role markers. Detail: 51 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_007/plots/weibull_context_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [text-volume] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Many text nodes for a non-dense Content-SVG. Detail: 38 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Many visible colors found for the declared density. Detail: 10 colors: #062D46, #139CCB, #D1495B, #FFFFFF, #FBFDFE, #DCE8EE, #526F7C, #D82735, #CBD5E1, #6A7A86
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE3_TEST_1/slide_007/slide_007.svg): Many visible shapes do not have semantic role markers. Detail: 47 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735, #3B66C4 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_009/plots/mechanism_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [text-volume] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Many text nodes for a non-dense Content-SVG. Detail: 40 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Many visible colors found for the declared density. Detail: 10 colors: #062D46, #139CCB, #D1495B, #FFFFFF, #FBFDFE, #DCE8EE, #526F7C, #D82735, #3B66C4, #6A7A86
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735, #3B66C4 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE3_TEST_1/slide_009/slide_009.svg): Many visible shapes do not have semantic role markers. Detail: 47 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/object_time_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/object_time_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/object_time_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_010/plots/weibull_context_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Many visible colors found for the declared density. Detail: 11 colors: #062D46, #139CCB, #FFFFFF, #FBFDFE, #DCE8EE, #526F7C, #D82735, #E7F6FB, #CBD5E1, #D1495B, #6A7A86
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE3_TEST_1/slide_010/slide_010.svg): Many visible shapes do not have semantic role markers. Detail: 58 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/object_time_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/object_time_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/object_time_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/object_time_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_011/plots/weibull_context_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Many visible colors found for the declared density. Detail: 11 colors: #062D46, #139CCB, #FFFFFF, #FBFDFE, #DCE8EE, #526F7C, #D82735, #E7F6FB, #CBD5E1, #D1495B, #6A7A86
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE3_TEST_1/slide_011/slide_011.svg): Many visible shapes do not have semantic role markers. Detail: 59 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_012/plots/weibull_context_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Many visible colors found for the declared density. Detail: 10 colors: #062D46, #139CCB, #FFFFFF, #FBFDFE, #DCE8EE, #526F7C, #D82735, #CBD5E1, #D1495B, #6A7A86
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE3_TEST_1/slide_012/slide_012.svg): Many visible shapes do not have semantic role markers. Detail: 48 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_013/plots/confidence_plot_asset.inline.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [text-volume] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Many text nodes for a non-dense Content-SVG. Detail: 33 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Many visible colors found for the declared density. Detail: 11 colors: #062D46, #139CCB, #D1495B, #FFFFFF, #FBFDFE, #DCE8EE, #526F7C, #D82735, #E7F6FB, #CBD5E1, #6A7A86
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Colors outside brand/design tokens found. Detail: #FBFDFE, #DCE8EE, #526F7C, #D82735 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Very similar but non-identical colors found. Detail: #FFFFFF ~ #FBFDFE
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE3_TEST_1/slide_013/slide_013.svg): Many visible shapes do not have semantic role markers. Detail: 50 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
 
 ## Viewer Mapping
 
-- slide 1: svg=true, animation=true, steps=9, file=g01_basic_weibull_workflow.svg
-- slide 2: svg=true, animation=true, steps=9, file=g01_basic_weibull_workflow.svg alias for 1
-- slide 3: svg=true, animation=true, steps=9, file=g01_basic_weibull_workflow.svg alias for 1
-- slide 4: svg=true, animation=true, steps=9, file=g01_basic_weibull_workflow.svg alias for 1
-- slide 5: svg=true, animation=true, steps=9, file=g01_basic_weibull_workflow.svg alias for 1
-- slide 6: svg=true, animation=true, steps=9, file=g01_basic_weibull_workflow.svg alias for 1
-- slide 7: svg=true, animation=true, steps=6, file=g02_weibull_function_formula_007.svg
-- slide 8: svg=true, animation=true, steps=6, file=g02_weibull_function_formula_007.svg alias for 7
-- slide 9: svg=true, animation=true, steps=5, file=g03_failure_mechanism_split_009.svg
-- slide 10: svg=true, animation=true, steps=6, file=g04_censored_observations_010.svg
-- slide 11: svg=true, animation=true, steps=6, file=g04_censored_observations_010.svg alias for 10
-- slide 12: svg=true, animation=true, steps=5, file=g05_method_selection_012.svg
-- slide 13: svg=true, animation=true, steps=6, file=g06_confidence_bounds_013.svg
+- slide 1: svg=true, animation=true, steps=5, file=slide_001.svg
+- slide 2: svg=true, animation=true, steps=39, file=slide_002.svg
+- slide 4: svg=true, animation=true, steps=45, file=slide_004.svg
+- slide 5: svg=true, animation=true, steps=7, file=slide_005.svg
+- slide 6: svg=true, animation=true, steps=6, file=slide_006.svg
+- slide 7: svg=true, animation=true, steps=9, file=slide_007.svg
+- slide 9: svg=true, animation=true, steps=9, file=slide_009.svg
+- slide 10: svg=true, animation=true, steps=19, file=slide_010.svg
+- slide 11: svg=true, animation=true, steps=19, file=slide_011.svg
+- slide 12: svg=true, animation=true, steps=6, file=slide_012.svg
+- slide 13: svg=true, animation=true, steps=11, file=slide_013.svg
 

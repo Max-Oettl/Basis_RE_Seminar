@@ -12,7 +12,8 @@ Das SVG ist ein Layout- und Animationscontainer. Es ist nicht das Ziel, PNGs aut
 - Immer nur eine Arbeitseinheit komponieren: eine echte Inhaltsfolie oder eine Sequenzgruppe.
 - Erst nach dokumentierter Szenenplanung fuer diese Einheit mit SVG-Code beginnen.
 - Erst nach dokumentierter Asset-Entscheidung nach `workflow/svg-asset-decision-gate.md` mit SVG-Code beginnen.
-- Bei PowerPoint-Aufbaufolgen ein Master-SVG mit semantischen Layern bauen; reine Animations-Zwischenstaende werden als Layer-State, Final-Preview oder `skip_preview` dokumentiert.
+- Bei PowerPoint-Aufbaufolgen ein gemeinsames Zielbild mit semantischen Layern bauen; reine Animations-Zwischenstaende werden als Layer-State, Preview oder `skip_preview` dokumentiert.
+- Fachlich relevanten Quellinhalt vollstaendig uebernehmen. Layout und Verpackung duerfen neu sein, aber die SVG darf keine Muss-Inhalte, Parameter, Beispiele, Diagrammlogik oder Sprechertextanker verlieren.
 - Library-Komponenten immer an die konkrete didaktische Aussage anpassen; sie sind Startgeometrie, nicht Endlayout.
 - Ausfaelle, Datenpunkte und Zeitmarken nicht automatisch gleichverteilen. Positionen werden aus Quelle, Zielzustand oder fachlicher Aussage abgeleitet.
 - Geprüfte PNG-Assets per `<image>` in das SVG einbinden.
@@ -22,7 +23,7 @@ Das SVG ist ein Layout- und Animationscontainer. Es ist nicht das Ziel, PNGs aut
 - Keine ungewollten Überlappungen zwischen Text, PNGs und SVG-Elementen erzeugen.
 - Keine sichtbaren Folienhaupttitel oder automatisch gesetzten Ueberschriften ins SVG schreiben. Der SVG-Vorschlag ist eine Grafikkomponente; Folientitel werden spaeter ausserhalb des SVGs ergaenzt, ausser der Nutzer fordert sie explizit.
 - Fazit-, Merksatz- oder Zusammenfassungsbaender nur einbauen, wenn sie fuer die didaktische Aussage wirklich noetig sind. Wenig Inhalt ist kein Grund fuer eine kuenstliche Zusammenfassung.
-- Bei PowerPoint-Aufbaufolgen zuerst ein Master-SVG mit semantischen Layern bauen. Per-Folie-Dateien dienen nur als Preview-Zustaende mit ein-/ausgeblendeten Layern.
+- Bei PowerPoint-Aufbaufolgen zuerst die zusammengezogene Layerstruktur bauen. Per-Folie-Dateien dienen nur als Preview-Zustaende mit ein-/ausgeblendeten Layern, wenn sie fuer Review oder Pipeline noetig sind.
 - Komplexere Piktogramme und Werkzeug-/Methodensymbole als lokale PNGs per `<image>` einbinden; nicht spontan aus SVG-Strichen in die Folie zeichnen.
 - Wenn fuer ein konkretes Piktogramm kein PNG vorhanden ist, wird die Arbeitseinheit als blockiert oder asset-offen dokumentiert; es wird kein SVG-Ersatz improvisiert.
 - `manifest.json` und `prompts.json` als Quelle berücksichtigen.
@@ -31,7 +32,7 @@ Das SVG ist ein Layout- und Animationscontainer. Es ist nicht das Ziel, PNGs aut
 - Keine automatisch gesetzten Folienüberschriften erzeugen. Szenentitel gehören nur in die Grafik, wenn sie ausdrücklich verlangt sind.
 - Pfeile als Linie plus separate Spitze konstruieren, wenn dadurch sichtbare Linienüberstände vermieden werden.
 - Highlight-Flächen vor zugehörigen Texten zeichnen. Text und Labels müssen nach der Highlight-Fläche im SVG stehen.
-- Fuer technische Diagramme zuerst `components/python-plot-library/` pruefen und vorhandene Plot-Generatoren verwenden; bei fehlendem Diagrammtyp einen neuen Generator dort anlegen.
+- Fuer technische Diagramme und echte Plots `components/python-plot-library/` verwenden; bei fehlendem Diagrammtyp einen neuen Generator dort anlegen. Einfache Ausfall-Timelines mit Kreuzen und Zensurmarkern bleiben SVG-native Timelines.
 - Vor eigenen nicht-diagrammatischen Standardformen zuerst `components/svg-library/` pruefen und passende Merkbox- oder Layoutvorlagen uebernehmen.
 - Diagramme nach `workflow/diagram-guidelines.md` konstruieren.
 
@@ -40,9 +41,10 @@ Das SVG ist ein Layout- und Animationscontainer. Es ist nicht das Ziel, PNGs aut
 - Keine SVG-Komposition vor Asset-Freigabe.
 - Keine SVG-Komposition ohne Asset-Entscheidungstabelle fuer die aktive Arbeitseinheit.
 - Keine SVG-Komposition ohne dokumentierten Rebuild-Plan und Zielzustand, ausser der Auftrag ist ausdruecklich nur eine Einzelgrafik ohne PowerPoint-Quelle.
+- Keine SVG-Komposition, die inhaltlich deutlich leerer ist als die Quellfolie, ausser der Szenenbrief dokumentiert, wie der Inhalt anderweitig durch Grafik oder Animation getragen wird.
 - Keine Batch- oder Generatorlaeufe fuer mehrere Arbeitseinheiten, solange die aktuelle Einheit nicht gerendert, visuell geprueft und korrigiert wurde.
 - Vor Rueckmeldung das gerenderte SVG gegen Zielzustand und Design-Brief pruefen. Offensichtliche Kollisionen, falsche Achsennaehe, unpassende Library-Skalierung oder blind uebernommene PowerPoint-Struktur sind Freigabefehler.
-- Animationen und Trigger laufen standardmäßig auf Gruppen- oder Bildebene.
+- Animationen und Trigger laufen standardmaessig auf Gruppen- oder Bildebene. Jede neue Content-SVG erhaelt sinnvolle Animationsziele; eine komplett statische SVG ist eine begruendete Ausnahme.
 - PNGs werden nicht automatisch vektorisiert.
 - Wichtige Icons können später optional vektorisiert werden, aber nicht im Standardworkflow.
 - Asset-Pfade müssen projektlokal und stabil sein.

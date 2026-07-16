@@ -15,8 +15,8 @@ Der Zielkontext ist ein Basis-Seminar. Die Gestaltung darf kein Expertenwissen i
 - Asset-Entscheidung nach `workflow/svg-asset-decision-gate.md` pruefen, bevor ein visuelles Element gezeichnet oder ersetzt wird.
 - Konzeptempfehlungen aus `agents/creative-scene-concept-designer.md` beziehungsweise dem Design-Brief beruecksichtigen, wenn der Inhalt abstrakt oder fachlich anspruchsvoll ist.
 - Fuer genau eine aktive Arbeitseinheit zuerst eine saubere Szenenplanung ausarbeiten, bevor ein SVG gestaltet wird.
-- Den fachlichen Zielzustand didaktisch neu gestalten; die alte PowerPoint ist Inhaltsquelle, keine Layoutvorlage.
-- Bei PowerPoint-Aufbaufolgen den finalen Zielzustand als Hauptbild entwerfen und fruehere Zustaende nur als Animationslayer behandeln.
+- Den fachlichen Zielzustand didaktisch neu gestalten; die alte PowerPoint ist Inhaltsquelle, keine Layoutvorlage. Inhaltlich relevante Aussagen, Begriffe, Schritte, Beispiele, Parameter und Diagrammlogik werden vollstaendig uebernommen.
+- Bei PowerPoint-Aufbaufolgen den zusammengezogenen Zielzustand als gemeinsame Erklaergrafik entwerfen und fruehere Zustaende als Animationslayer oder Preview-Zustaende behandeln.
 - Akzeptierte PNG-Assets aus `assets/scenes/<scene_id>/pictograms/` verwenden.
 - SVG-native Elemente gestalten: Boxen, Kacheln, Texte, Pfeile, Achsen, Hintergründe, Hervorhebungen.
 - Gruppen mit stabilen IDs anlegen.
@@ -29,8 +29,10 @@ Der Zielkontext ist ein Basis-Seminar. Die Gestaltung darf kein Expertenwissen i
 ## Gestaltungsprinzipien
 
 - Nicht 1:1 nachbauen, wenn eine klarere eLearning-Grafik denselben Inhalt besser vermittelt.
+- Nicht zusammenfassen, wenn dadurch fachlicher Quellinhalt verloren geht. Die neue Grafik darf anders verpacken, aber nicht fachlich ausduennen.
 - Basis-Seminar vor Expertenlogik: Begriffe, Formeln und Diagramme schrittweise einfuehren; nichts als bekannt voraussetzen.
 - Naehe zur Quelle wahren: sichtbare Aussage, Beispiele, Begriffe, Diagrammtypen und fachliche Reihenfolge der vorhandenen Folie bleiben der Ausgangspunkt.
+- Die Text- und Informationsdichte orientiert sich an der PowerPoint-Quelle. Weniger Text ist nur erlaubt, wenn derselbe Inhalt durch Grafik, Formel, Plot, Label oder Animation getragen wird.
 - Sprechertextdeckung pruefen: Kein im Sprechertext relevanter Begriff, Parameter, Schritt, Unterschied oder Zahlenbeispiel wird ohne dokumentierte Begruendung weggelassen.
 - Library-Elemente sind Konstruktionshilfen, keine fertigen Folienlayouts. Groesse, Positionen, Beschriftungen, Abstaende, Datenpunkte und Animationsebenen muessen fuer die konkrete Folie angepasst werden.
 - Ausfaelle, Messpunkte, Zeitmarken und Kurvenpunkte duerfen nicht automatisch gleichmaessig verteilt werden. Wenn Quelle oder fachliche Aussage unregelmaessige Abstaende zeigen, werden diese sichtbar uebernommen oder begruendet neu gesetzt.
@@ -56,7 +58,7 @@ Der Zielkontext ist ein Basis-Seminar. Die Gestaltung darf kein Expertenwissen i
 - Achsenbeschriftungen nah an der Achse platzieren: lesbar und kollisionsfrei, aber nicht lose weit entfernt.
 - Datenpunkte auf Regressionslinien oder Kurven exakt ausrichten, wenn sie diese Linie repräsentieren.
 - Markerlinien für Werte gemäß dokumentiertem Endmodus führen: exakt bis zur Kurve oder alle auf dieselbe Höhe oberhalb des Graphen.
-- Echte technische Diagramme kommen zuerst aus `components/python-plot-library/`: Achsendiagramme, Datenplots und Weibull-Plots werden als reproduzierbare Python-Plots erzeugt. Generische Timelines und Ausfall-Zeitstrahlen bleiben SVG-Kompositionen.
+- Echte technische Diagramme und Plots kommen aus `components/python-plot-library/`: Achsendiagramme, Datenplots, Kurven, Fits, Verteilungen und Weibull-Plots werden als reproduzierbare Python-Plots erzeugt. Nur generische Timelines, Ausfall-Zeitstrahlen und einfache Objekt-Zeitachsen mit `X`-/Zensurmarkern bleiben SVG-Kompositionen.
 - Wiederkehrende nicht-diagrammatische Basisformen kommen zuerst aus `components/svg-library/`, zum Beispiel Merkboxen und Layoutbausteine.
 - Für alle Diagramme gilt `workflow/diagram-guidelines.md`.
 - Jede sichtbare Achse erhält eine Pfeilspitze, deren Spitze exakt das Achsenende bildet; die Achsenlinie endet lückenlos an der Basis der Spitze.

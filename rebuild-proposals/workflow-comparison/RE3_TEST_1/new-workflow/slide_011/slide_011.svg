@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">RE3_TEST_1 new workflow comparison slide 011</title>
+  <desc id="desc">Nicht ausgefallene Objekte werden als zensierte Beobachtungen sichtbar.</desc>
+  <metadata>
+    module_id: RE3_TEST_1
+    comparison_variant: new-layered-workflow
+    source_slide: 11
+    old_workflow_reference: rebuild-proposals/svg/RE3_TEST_1
+    generated_by: tools/generate_re3_test_1_new_workflow_comparison.py
+  </metadata>
+
+  <defs>
+    <style>
+
+    .bg { fill: #f6f8f9; }
+    .panel { fill: #ffffff; stroke: #cfe0e8; stroke-width: 2; }
+    .soft { fill: #e8f6fb; stroke: #9bd5e7; stroke-width: 2; }
+    .accent { fill: #fff6df; stroke: #f0c96b; stroke-width: 2; }
+    .ink { fill: #062d46; }
+    .muted { fill: #5d7080; }
+    .text { font-family: Inter, "Segoe UI", Arial, sans-serif; fill: #062d46; }
+    .caption { font-size: 22px; fill: #5d7080; }
+    .kicker { font-size: 23px; font-weight: 760; fill: #0c8fc1; }
+    .headline { font-size: 40px; font-weight: 820; }
+    .subhead { font-size: 28px; font-weight: 760; }
+    .body { font-size: 24px; fill: #5d7080; }
+    .small { font-size: 20px; fill: #5d7080; }
+    .formula { font-size: 38px; font-weight: 650; }
+    .formula-small { font-size: 28px; font-weight: 650; }
+    .axis { stroke: #062d46; stroke-width: 4; stroke-linecap: round; fill: none; }
+    .thin-axis { stroke: #062d46; stroke-width: 3; stroke-linecap: round; fill: none; }
+    .line { stroke: #062d46; stroke-width: 3; stroke-linecap: round; fill: none; }
+    .blue { stroke: #0c8fc1; stroke-width: 5; stroke-linecap: round; fill: none; }
+    .red { stroke: #e11931; stroke-width: 5; stroke-linecap: round; fill: none; }
+    .green { stroke: #2c8f5b; stroke-width: 5; stroke-linecap: round; fill: none; }
+    .dash { stroke-dasharray: 10 9; }
+    .grid { stroke: #d7e6ed; stroke-width: 2; fill: none; }
+    .plot-frame { fill: #ffffff; stroke: #d7e6ed; stroke-width: 2; }
+
+    </style>
+    <marker id="arrow-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#062d46" />
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0c8fc1" />
+    </marker>
+    <g id="failure-cross">
+      <line class="red" x1="-13" y1="-13" x2="13" y2="13" />
+      <line class="red" x1="-13" y1="13" x2="13" y2="-13" />
+    </g>
+    <g id="censor-mark">
+      <circle r="15" fill="#ffffff" stroke="#0c8fc1" stroke-width="4" />
+      <path class="blue" d="M -7 0 L 7 0" />
+    </g>
+  </defs>
+
+  <rect class="bg" width="1920" height="1080" />
+
+  <g id="slide_011_layer_01_context" data-anim-label="Kontext und Ziel">
+    <text class="text kicker" x="120" y="100">RE3_TEST_1 · Folie 11 · neuer Workflow-Vergleich</text>
+    <text class="text headline" x="120" y="152">Zensierte Beobachtungen ergänzen</text>
+    <text class="text caption" x="120" y="194">Nicht ausgefallene Objekte werden als zensierte Beobachtungen sichtbar.</text>
+  </g>
+
+
+  <g id="slide_011_layer_02_main_visual" data-anim-label="Objekt-Zeit-Diagramm">
+    <rect class="panel" x="190" y="300" width="1480" height="610" rx="8" />
+    <text class="text subhead" x="250" y="370">Objekte über der Prüfzeit</text>
+    <text class="text body" x="250" y="420">Jede Zeile ist ein Objekt; rote Kreuze sind beobachtete Ausfälle.</text>
+    <line class="axis" x1="460" y1="720" x2="1390" y2="720" marker-end="url(#arrow-ink)" />
+    <text class="text body" x="1426" y="728">t</text>
+    <text class="text body" x="250" y="510">Objekt 1</text>
+    <text class="text body" x="250" y="590">Objekt 2</text>
+    <text class="text body" x="250" y="670">Objekt 3</text>
+    <line class="thin-axis" x1="460" y1="500" x2="1360" y2="500" />
+    <line class="thin-axis" x1="460" y1="580" x2="1360" y2="580" />
+    <line class="thin-axis" x1="460" y1="660" x2="1360" y2="660" />
+    <use href="#failure-cross" x="690" y="500" />
+    <use href="#failure-cross" x="910" y="580" />
+    <use href="#failure-cross" x="1050" y="660" />
+
+      <use href="#censor-mark" x="1170" y="620" />
+      <line class="blue dash" x1="1170" y1="480" x2="1170" y2="700" />
+      <text class="text body" x="1220" y="628">zensiert: bis hierhin nicht ausgefallen</text>
+
+    <rect class="soft" x="520" y="775" width="1000" height="88" rx="8" />
+    <use href="#failure-cross" x="570" y="820" />
+    <text class="text body" x="610" y="828">Ausfall beobachtet</text>
+
+      <use href="#censor-mark" x="1214" y="820" />
+      <text class="text body" x="1254" y="828">zensierte Beobachtung</text>
+
+  </g>
+
+
+  <g id="slide_011_layer_04_workflow_note" data-anim-label="Workflow-Notiz">
+    <rect class="soft" x="120" y="958" width="1680" height="68" rx="8" />
+    <text class="text small" x="152" y="1000">Neuer Workflow: Timeline: SVG · Zensierung: SVG · Quelle: Folie 11</text>
+  </g>
+
+</svg>

@@ -47,7 +47,7 @@ Vor der ersten Szene legt er aus `templates/production-run-template.md` ein Run-
 - Texte bleiben im SVG, nicht im PNG.
 - Triggerfähigkeit wird auf Gruppen-, Karten- und Bildebene geplant.
 - Produktive Trigger werden extern in `composed/scene.animation.v1.json` beschrieben.
-- Erlaubte Trigger-Aktionen sind nur `show`, `hide`, `highlight` und `draw`.
+- Erlaubte Trigger-Aktionen sind `show`, `hide`, `highlight`, `draw` und, wenn fuer die Erklaerung zentral, `move`.
 - Time-Trigger im SVG sind nicht Teil des Standards.
 - Die Qualitätsmesslatte aus `brand/design-quality-bar.md` ist verbindlich.
 - Es ist immer nur eine Szene aktiv.

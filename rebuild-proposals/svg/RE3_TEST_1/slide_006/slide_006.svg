@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="scene_title scene_desc">
+  <title id="scene_title">Weibull-Parameter ablesen</title>
+  <desc id="scene_desc">Content-SVG ohne sichtbare PowerPoint-Masterelemente.</desc>
+  <metadata id="slide-quality-metadata" type="application/json"><![CDATA[
+{
+  "artifactScope": "content-svg",
+  "embeddingTarget": "powerpoint-slide",
+  "slideType": "content-module",
+  "contentTitle": "Weibull-Parameter ablesen",
+  "layoutIntent": "Weibull-Parameter ablesen",
+  "takeaway": "Weibull-Parameter ablesen",
+  "density": "normal",
+  "contentMode": "transparent-content",
+  "backgroundMode": "transparent",
+  "brandProfile": "reltest-academy",
+  "brandVariant": "technical"
+}
+  ]]></metadata>
+
+  <defs>
+    <style>
+      .font { font-family: Inter, "Segoe UI", Arial, sans-serif; }
+      .axis { stroke: #062D46; stroke-width: 5; stroke-linecap: round; fill: none; }
+      .thin-axis { stroke: #062D46; stroke-width: 3.2; stroke-linecap: round; fill: none; }
+      .guide { stroke: #139CCB; stroke-width: 3; stroke-dasharray: 8 7; fill: none; }
+      .failure-red { stroke: #D1495B; stroke-width: 8; stroke-linecap: round; }
+      .failure-blue { stroke: #139CCB; stroke-width: 8; stroke-linecap: round; }
+      .fit-red { stroke: #D1495B; stroke-width: 5; stroke-linecap: round; fill: none; }
+      .fit-blue { stroke: #139CCB; stroke-width: 5; stroke-linecap: round; fill: none; }
+      .muted { fill: #6A7A86; }
+      .ink { fill: #062D46; }
+      .accent { fill: #139CCB; }
+      .red { fill: #D1495B; }
+    </style>
+    <marker id="arrow_ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#062D46"/>
+    </marker>
+    <marker id="arrow_blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#139CCB"/>
+    </marker>
+    <g id="cross_red">
+      <line class="failure-red" x1="0" y1="0" x2="28" y2="28" data-qc-allow-overlap="true"/>
+      <line class="failure-red" x1="0" y1="28" x2="28" y2="0" data-qc-allow-overlap="true"/>
+    </g>
+    <g id="cross_blue">
+      <line class="failure-blue" x1="0" y1="0" x2="28" y2="28" data-qc-allow-overlap="true"/>
+      <line class="failure-blue" x1="0" y1="28" x2="28" y2="0" data-qc-allow-overlap="true"/>
+    </g>
+  </defs>
+
+  <g id="scene_root" class="font">
+<g id="workflow_steps" class="font">
+<g id="step_0" aria-label="Sammeln der Ausfalldaten">
+<circle id="step_0_circle" cx="206" cy="250" r="34" fill="#FFFFFF" stroke="#139CCB" stroke-width="5" data-qc-role="timeline-marker" data-qc-allow-overlap="true"/>
+<text id="step_0_number" x="206" y="262" text-anchor="middle" font-size="33" font-weight="800" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-important="true" data-qc-allow-overlap="true">0</text>
+<text id="step_0_text_1" x="278" y="262" text-anchor="start" font-size="34" font-weight="700" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >Sammeln der Ausfalldaten</text>
+</g>
+<g id="step_1" aria-label="Berechnen von">
+<circle id="step_1_circle" cx="206" cy="382" r="34" fill="#FFFFFF" stroke="#139CCB" stroke-width="5" data-qc-role="timeline-marker" data-qc-allow-overlap="true"/>
+<text id="step_1_number" x="206" y="394" text-anchor="middle" font-size="33" font-weight="800" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-important="true" data-qc-allow-overlap="true">1</text>
+<text id="step_1_text_1" x="278" y="370" text-anchor="start" font-size="34" font-weight="700" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >Berechnen von</text>
+<text id="step_1_text_2" x="278" y="418" text-anchor="start" font-size="34" font-weight="700" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >Ausfallwahrscheinlichkeiten</text>
+</g>
+<g id="step_2" aria-label="Ermittlung der">
+<circle id="step_2_circle" cx="206" cy="540" r="34" fill="#FFFFFF" stroke="#139CCB" stroke-width="5" data-qc-role="timeline-marker" data-qc-allow-overlap="true"/>
+<text id="step_2_number" x="206" y="552" text-anchor="middle" font-size="33" font-weight="800" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-important="true" data-qc-allow-overlap="true">2</text>
+<text id="step_2_text_1" x="278" y="528" text-anchor="start" font-size="34" font-weight="700" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >Ermittlung der</text>
+<text id="step_2_text_2" x="278" y="576" text-anchor="start" font-size="34" font-weight="700" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >Regressionsgeraden</text>
+</g>
+<g id="step_3" aria-label="Schätzung der">
+<circle id="step_3_circle" cx="206" cy="700" r="34" fill="#FFFFFF" stroke="#139CCB" stroke-width="5" data-qc-role="timeline-marker" data-qc-allow-overlap="true"/>
+<text id="step_3_number" x="206" y="712" text-anchor="middle" font-size="33" font-weight="800" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-important="true" data-qc-allow-overlap="true">3</text>
+<text id="step_3_text_1" x="278" y="688" text-anchor="start" font-size="34" font-weight="700" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >Schätzung der</text>
+<text id="step_3_text_2" x="278" y="736" text-anchor="start" font-size="34" font-weight="700" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >Weibull-Parameter</text>
+</g>
+<text id="step_3_detail_b" x="278" y="820" text-anchor="start" font-size="30" font-weight="600" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >-&gt; b = Steigung der Linie</text>
+<text id="step_3_detail_t" x="278" y="868" text-anchor="start" font-size="30" font-weight="600" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >-&gt; T = F⁻¹(0,632)</text>
+</g><g id="parameter_plot"><svg id="parameter_plot_asset_inline_svg" x="790" y="168" width="900" height="650" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 908.183125 503.861172" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid meet" data-plot-inline-source="parameter_plot_asset">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-10T09:03:57.797378</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="parameter_plot_asset__figure_1">
+  <g id="parameter_plot_asset__patch_1">
+   <path d="M 0 503.861172 
+L 908.183125 503.861172 
+L 908.183125 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="parameter_plot_asset__axes_1">
+   <g id="parameter_plot_asset__patch_2">
+    <path d="M 62.663125 445.158984 
+L 900.983125 445.158984 
+L 900.983125 12.138984 
+L 62.663125 12.138984 
+z
+" style="fill: #fbfdfe"/>
+   </g>
+   <g id="parameter_plot_asset__matplotlib.axis_1">
+    <g id="parameter_plot_asset__xtick_1">
+     <g id="parameter_plot_asset__line2d_1">
+      <path d="M 119.107061 445.158984 
+L 119.107061 12.138984 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_2">
+      <defs>
+       <path id="parameter_plot_asset__m0c925a071a" d="M 0 0 
+L 0 6 
+" style="stroke: #526f7c; stroke-width: 1.2"/>
+      </defs>
+      <g>
+       <use xlink:href="#parameter_plot_asset__m0c925a071a" x="119.107061" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="parameter_plot_asset__text_1">
+      <!-- $\mathdefault{10^{1}}$ -->
+      <g style="fill: #526f7c" transform="translate(107.667061 464.536953)">
+       <text>
+        <tspan x="0" y="-0.384375" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #526f7c">1</tspan>
+        <tspan x="8.270996" y="-0.384375" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #526f7c">0</tspan>
+        <tspan x="16.666406" y="-5.360938" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #526f7c">1</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__xtick_2">
+     <g id="parameter_plot_asset__line2d_3">
+      <path d="M 701.543633 445.158984 
+L 701.543633 12.138984 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_4">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m0c925a071a" x="701.543633" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="parameter_plot_asset__text_2">
+      <!-- $\mathdefault{10^{2}}$ -->
+      <g style="fill: #526f7c" transform="translate(690.103633 464.536953)">
+       <text>
+        <tspan x="0" y="-0.264063" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #526f7c">1</tspan>
+        <tspan x="8.270996" y="-0.264063" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #526f7c">0</tspan>
+        <tspan x="16.666406" y="-5.240625" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #526f7c">2</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__xtick_3">
+     <g id="parameter_plot_asset__line2d_5">
+      <path d="M 62.663125 445.158984 
+L 62.663125 12.138984 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_6">
+      <defs>
+       <path id="parameter_plot_asset__m51952ada3f" d="M 0 0 
+L 0 3.5 
+" style="stroke: #526f7c; stroke-width: 0.9"/>
+      </defs>
+      <g>
+       <use xlink:href="#parameter_plot_asset__m51952ada3f" x="62.663125" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__xtick_4">
+     <g id="parameter_plot_asset__line2d_7">
+      <path d="M 92.456225 445.158984 
+L 92.456225 12.138984 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_8">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m51952ada3f" x="92.456225" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__xtick_5">
+     <g id="parameter_plot_asset__line2d_9">
+      <path d="M 294.437939 445.158984 
+L 294.437939 12.138984 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_10">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m51952ada3f" x="294.437939" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__xtick_6">
+     <g id="parameter_plot_asset__line2d_11">
+      <path d="M 396.999929 445.158984 
+L 396.999929 12.138984 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_12">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m51952ada3f" x="396.999929" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__xtick_7">
+     <g id="parameter_plot_asset__line2d_13">
+      <path d="M 469.768818 445.158984 
+L 469.768818 12.138984 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_14">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m51952ada3f" x="469.768818" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__xtick_8">
+     <g id="parameter_plot_asset__line2d_15">
+      <path d="M 526.212754 445.158984 
+L 526.212754 12.138984 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_16">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m51952ada3f" x="526.212754" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__xtick_9">
+     <g id="parameter_plot_asset__line2d_17">
+      <path d="M 572.330807 445.158984 
+L 572.330807 12.138984 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_18">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m51952ada3f" x="572.330807" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__xtick_10">
+     <g id="parameter_plot_asset__line2d_19">
+      <path d="M 611.323066 445.158984 
+L 611.323066 12.138984 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_20">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m51952ada3f" x="611.323066" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__xtick_11">
+     <g id="parameter_plot_asset__line2d_21">
+      <path d="M 645.099697 445.158984 
+L 645.099697 12.138984 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_22">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m51952ada3f" x="645.099697" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__xtick_12">
+     <g id="parameter_plot_asset__line2d_23">
+      <path d="M 674.892797 445.158984 
+L 674.892797 12.138984 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_24">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m51952ada3f" x="674.892797" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__xtick_13">
+     <g id="parameter_plot_asset__line2d_25">
+      <path d="M 876.874511 445.158984 
+L 876.874511 12.138984 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_26">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m51952ada3f" x="876.874511" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 0.9"/>
+      </g>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__text_3">
+     <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="481.823125" y="492.917734" transform="rotate(-0 481.823125 492.917734)">Lebensdauer t</text>
+    </g>
+   </g>
+   <g id="parameter_plot_asset__matplotlib.axis_2">
+    <g id="parameter_plot_asset__ytick_1">
+     <g id="parameter_plot_asset__line2d_27">
+      <path d="M 62.663125 445.158984 
+L 900.983125 445.158984 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_28">
+      <defs>
+       <path id="parameter_plot_asset__m9ef3872ff8" d="M 0 0 
+L -6 0 
+" style="stroke: #526f7c; stroke-width: 1.2"/>
+      </defs>
+      <g>
+       <use xlink:href="#parameter_plot_asset__m9ef3872ff8" x="62.663125" y="445.158984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="parameter_plot_asset__text_4">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="450.097969" transform="rotate(-0 53.163125 450.097969)">1</text>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__ytick_2">
+     <g id="parameter_plot_asset__line2d_29">
+      <path d="M 62.663125 395.816253 
+L 900.983125 395.816253 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_30">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m9ef3872ff8" x="62.663125" y="395.816253" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="parameter_plot_asset__text_5">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="400.755238" transform="rotate(-0 53.163125 400.755238)">2</text>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__ytick_3">
+     <g id="parameter_plot_asset__line2d_31">
+      <path d="M 62.663125 329.969693 
+L 900.983125 329.969693 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_32">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m9ef3872ff8" x="62.663125" y="329.969693" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="parameter_plot_asset__text_6">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="334.908677" transform="rotate(-0 53.163125 334.908677)">5</text>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__ytick_4">
+     <g id="parameter_plot_asset__line2d_33">
+      <path d="M 62.663125 279.099257 
+L 900.983125 279.099257 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_34">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m9ef3872ff8" x="62.663125" y="279.099257" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="parameter_plot_asset__text_7">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="284.038241" transform="rotate(-0 53.163125 284.038241)">10</text>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__ytick_5">
+     <g id="parameter_plot_asset__line2d_35">
+      <path d="M 62.663125 226.066352 
+L 900.983125 226.066352 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_36">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m9ef3872ff8" x="62.663125" y="226.066352" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="parameter_plot_asset__text_8">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="231.005337" transform="rotate(-0 53.163125 231.005337)">20</text>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__ytick_6">
+     <g id="parameter_plot_asset__line2d_37">
+      <path d="M 62.663125 192.921319 
+L 900.983125 192.921319 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_38">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m9ef3872ff8" x="62.663125" y="192.921319" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="parameter_plot_asset__text_9">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="197.860304" transform="rotate(-0 53.163125 197.860304)">30</text>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__ytick_7">
+     <g id="parameter_plot_asset__line2d_39">
+      <path d="M 62.663125 167.536314 
+L 900.983125 167.536314 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_40">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m9ef3872ff8" x="62.663125" y="167.536314" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="parameter_plot_asset__text_10">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="172.475299" transform="rotate(-0 53.163125 172.475299)">40</text>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__ytick_8">
+     <g id="parameter_plot_asset__line2d_41">
+      <path d="M 62.663125 145.966753 
+L 900.983125 145.966753 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_42">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m9ef3872ff8" x="62.663125" y="145.966753" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="parameter_plot_asset__text_11">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="150.905737" transform="rotate(-0 53.163125 150.905737)">50</text>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__ytick_9">
+     <g id="parameter_plot_asset__line2d_43">
+      <path d="M 62.663125 126.243291 
+L 900.983125 126.243291 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_44">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m9ef3872ff8" x="62.663125" y="126.243291" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="parameter_plot_asset__text_12">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="131.182275" transform="rotate(-0 53.163125 131.182275)">60</text>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__ytick_10">
+     <g id="parameter_plot_asset__line2d_45">
+      <path d="M 62.663125 106.946891 
+L 900.983125 106.946891 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_46">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m9ef3872ff8" x="62.663125" y="106.946891" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="parameter_plot_asset__text_13">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="111.885875" transform="rotate(-0 53.163125 111.885875)">70</text>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__ytick_11">
+     <g id="parameter_plot_asset__line2d_47">
+      <path d="M 62.663125 86.434262 
+L 900.983125 86.434262 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_48">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m9ef3872ff8" x="62.663125" y="86.434262" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="parameter_plot_asset__text_14">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="91.373247" transform="rotate(-0 53.163125 91.373247)">80</text>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__ytick_12">
+     <g id="parameter_plot_asset__line2d_49">
+      <path d="M 62.663125 61.123885 
+L 900.983125 61.123885 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_50">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m9ef3872ff8" x="62.663125" y="61.123885" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="parameter_plot_asset__text_15">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="66.062869" transform="rotate(-0 53.163125 66.062869)">90</text>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__ytick_13">
+     <g id="parameter_plot_asset__line2d_51">
+      <path d="M 62.663125 42.52656 
+L 900.983125 42.52656 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_52">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m9ef3872ff8" x="62.663125" y="42.52656" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="parameter_plot_asset__text_16">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="47.465545" transform="rotate(-0 53.163125 47.465545)">95</text>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__ytick_14">
+     <g id="parameter_plot_asset__line2d_53">
+      <path d="M 62.663125 23.667072 
+L 900.983125 23.667072 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_54">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m9ef3872ff8" x="62.663125" y="23.667072" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="parameter_plot_asset__text_17">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="28.606056" transform="rotate(-0 53.163125 28.606056)">98</text>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__ytick_15">
+     <g id="parameter_plot_asset__line2d_55">
+      <path d="M 62.663125 12.138984 
+L 900.983125 12.138984 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #dce8ee; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="parameter_plot_asset__line2d_56">
+      <g>
+       <use xlink:href="#parameter_plot_asset__m9ef3872ff8" x="62.663125" y="12.138984" style="fill: #526f7c; stroke: #526f7c; stroke-width: 1.2"/>
+      </g>
+     </g>
+     <g id="parameter_plot_asset__text_18">
+      <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526f7c" x="53.163125" y="17.077969" transform="rotate(-0 53.163125 17.077969)">99</text>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__text_19">
+     <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="20.877188" y="228.648984" transform="rotate(-90 20.877188 228.648984)">Ausfallwahrscheinlichkeit F(t) [%]</text>
+    </g>
+   </g>
+   <g id="parameter_plot_asset__plot-weibull-fit">
+    <path d="M 62.663125 290.203258 
+L 900.983125 27.362356 
+L 900.983125 27.362356 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #139ccb; stroke-width: 2.6; stroke-linecap: square"/>
+   </g>
+   <g id="parameter_plot_asset__LineCollection_1">
+    <path d="M 62.663125 120.088344 
+L 605.311352 120.088344 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #526f7c; stroke-width: 1.5"/>
+   </g>
+   <g id="parameter_plot_asset__LineCollection_2">
+    <path d="M 605.311352 445.158984 
+L 605.311352 120.088344 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #526f7c; stroke-width: 1.5"/>
+   </g>
+   <g id="parameter_plot_asset__line2d_57">
+    <path d="M 370.349093 193.733584 
+L 511.903341 193.733584 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #526f7c; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="parameter_plot_asset__line2d_58">
+    <path d="M 511.903341 193.733584 
+L 511.903341 149.35167 
+" clip-path="url(#parameter_plot_asset__pb1ed6e112d)" style="fill: none; stroke: #526f7c; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="parameter_plot_asset__patch_3">
+    <path d="M 62.663125 445.158984 
+L 62.663125 12.138984 
+" style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="parameter_plot_asset__patch_4">
+    <path d="M 62.663125 445.158984 
+L 900.983125 445.158984 
+" style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="parameter_plot_asset__plot-data-points">
+    <defs>
+     <path id="parameter_plot_asset__m40be73ea8b" d="M 0 4.123106 
+C 1.09346 4.123106 2.142283 3.688669 2.915476 2.915476 
+C 3.688669 2.142283 4.123106 1.09346 4.123106 0 
+C 4.123106 -1.09346 3.688669 -2.142283 2.915476 -2.915476 
+C 2.142283 -3.688669 1.09346 -4.123106 0 -4.123106 
+C -1.09346 -4.123106 -2.142283 -3.688669 -2.915476 -2.915476 
+C -3.688669 -2.142283 -4.123106 -1.09346 -4.123106 0 
+C -4.123106 1.09346 -3.688669 2.142283 -2.915476 2.915476 
+C -2.142283 3.688669 -1.09346 4.123106 0 4.123106 
+z
+" style="stroke: #d82735; stroke-width: 2"/>
+    </defs>
+    <g clip-path="url(#parameter_plot_asset__pb1ed6e112d)">
+     <use xlink:href="#parameter_plot_asset__m40be73ea8b" x="165.225114" y="283.234373" style="fill: #ffffff; stroke: #d82735; stroke-width: 2"/>
+     <use xlink:href="#parameter_plot_asset__m40be73ea8b" x="267.787104" y="214.988216" style="fill: #ffffff; stroke: #d82735; stroke-width: 2"/>
+     <use xlink:href="#parameter_plot_asset__m40be73ea8b" x="370.349093" y="175.883381" style="fill: #ffffff; stroke: #d82735; stroke-width: 2"/>
+     <use xlink:href="#parameter_plot_asset__m40be73ea8b" x="493.877432" y="145.966753" style="fill: #ffffff; stroke: #d82735; stroke-width: 2"/>
+     <use xlink:href="#parameter_plot_asset__m40be73ea8b" x="603.990698" y="119.486073" style="fill: #ffffff; stroke: #d82735; stroke-width: 2"/>
+     <use xlink:href="#parameter_plot_asset__m40be73ea8b" x="713.885055" y="92.79765" style="fill: #ffffff; stroke: #d82735; stroke-width: 2"/>
+     <use xlink:href="#parameter_plot_asset__m40be73ea8b" x="820.430576" y="59.438606" style="fill: #ffffff; stroke: #d82735; stroke-width: 2"/>
+    </g>
+   </g>
+   <g id="parameter_plot_asset__text_20">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="605.311352" y="429.083414" transform="rotate(-0 605.311352 429.083414)">T</text>
+   </g>
+   <g id="parameter_plot_asset__text_21">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #526f7c" x="77.402186" y="117.592719" transform="rotate(-0 77.402186 117.592719)">63,2 %</text>
+   </g>
+   <g id="parameter_plot_asset__text_22">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #062d46" x="524.244763" y="175.681689" transform="rotate(-0 524.244763 175.681689)">b</text>
+   </g>
+   <g id="parameter_plot_asset__legend_1">
+    <g id="parameter_plot_asset__line2d_59">
+     <path d="M 766.459531 406.473828 
+L 782.059531 406.473828 
+L 797.659531 406.473828 
+" style="fill: none; stroke: #139ccb; stroke-width: 2.6; stroke-linecap: square"/>
+    </g>
+    <g id="parameter_plot_asset__text_23">
+     <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start" x="808.059531" y="411.023828" transform="rotate(-0 808.059531 411.023828)">Weibull-Fit</text>
+    </g>
+    <g id="parameter_plot_asset__PathCollection_1">
+     <g>
+      <use xlink:href="#parameter_plot_asset__m40be73ea8b" x="782.059531" y="427.342891" style="fill: #ffffff; stroke: #d82735; stroke-width: 2"/>
+     </g>
+    </g>
+    <g id="parameter_plot_asset__text_24">
+     <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start" x="808.059531" y="430.755391" transform="rotate(-0 808.059531 430.755391)">Ausfalldaten</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="parameter_plot_asset__pb1ed6e112d">
+   <rect x="62.663125" y="12.138984" width="838.32" height="433.02"/>
+  </clipPath>
+ </defs>
+</svg></g>
+<path id="parameter_note_t" d="M 1345 842 H 1535 V 922 H 1345 Z" fill="#E7F6FB" stroke="#CBD5E1" stroke-width="2.5" pointer-events="none" data-qc-layer="background"/>
+<text id="parameter_note_t_text" x="1382" y="894" text-anchor="start" font-size="26" font-weight="700" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >T = 63,2 %</text>
+<path id="parameter_note_b" d="M 1560 842 H 1740 V 922 H 1560 Z" fill="#E7F6FB" stroke="#CBD5E1" stroke-width="2.5" pointer-events="none" data-qc-layer="background"/>
+<text id="parameter_note_b_text" x="1616" y="894" text-anchor="start" font-size="30" font-weight="800" fill="#062D46" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-layer="foreground" data-qc-important="true" >b</text>
+  </g>
+</svg>
+

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "sceneId": "RE3_TEST_1_slide_013",
+  "svgPath": "slide_013.svg",
+  "status": "draft",
+  "defaults": {
+    "enterFrames": 16,
+    "drawDurFrames": 24,
+    "highlightDurFrames": 24
+  },
+  "targets": [
+    {
+      "targetId": "input_timeline",
+      "label": "input timeline",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "tool_transform",
+      "label": "tool transform",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "confidence_plot",
+      "label": "confidence plot",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "confidence_note",
+      "label": "confidence note",
+      "status": "animated",
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "01_input_timeline",
+      "targetId": "input_timeline",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "02_tool_transform",
+      "targetId": "tool_transform",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "03_confidence_plot",
+      "targetId": "confidence_plot",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "04_confidence_note",
+      "targetId": "confidence_note",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    }
+  ],
+  "notes": [
+    "Static SVG preview keeps all layers visible; this manifest defines reveal targets for PowerPoint/video animation."
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "sceneId": "RE3_TEST_1_slide_004",
+  "svgPath": "slide_004.svg",
+  "status": "draft",
+  "defaults": {
+    "enterFrames": 16,
+    "drawDurFrames": 24,
+    "highlightDurFrames": 24
+  },
+  "targets": [
+    {
+      "targetId": "workflow_steps",
+      "label": "workflow steps",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "points_plot",
+      "label": "points plot",
+      "status": "animated",
+      "confidence": "high"
+    },
+    {
+      "targetId": "slide_004_note",
+      "label": "slide 004 note",
+      "status": "animated",
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "01_workflow_steps",
+      "targetId": "workflow_steps",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "02_points_plot",
+      "targetId": "points_plot",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    },
+    {
+      "stepId": "03_slide_004_note",
+      "targetId": "slide_004_note",
+      "action": "show",
+      "trigger": "time_or_user",
+      "enterFrames": 16,
+      "fromY": 10,
+      "confidence": "high"
+    }
+  ],
+  "notes": [
+    "Static SVG preview keeps all layers visible; this manifest defines reveal targets for PowerPoint/video animation."
+  ]
+}

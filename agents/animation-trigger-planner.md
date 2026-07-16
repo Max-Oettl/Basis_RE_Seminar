@@ -12,6 +12,7 @@ Die verbindliche technische Grundlage ist:
 
 - Potenzielle Triggerpunkte aus Sprechertext oder Storyboard ableiten.
 - Sichtbare Elemente in didaktisch sinnvolle Animationsziele aufteilen.
+- Fuer jede neue Content-SVG sinnvolle Animationen planen. Elemente, die im Sprechertext nacheinander beschrieben werden, sollen in der Regel erst passend erscheinen, gezeichnet, ausgeblendet, verschoben oder hervorgehoben werden.
 - Stabile SVG-IDs und Gruppenziele prüfen.
 - Für jede Animation einen Vorschlag in `composed/scene.animation.v1.json` vorbereiten.
 - Alle relevanten SVG-Ziele in `targets[]` als `animated` oder `ignored` bewerten.
@@ -20,6 +21,7 @@ Die verbindliche technische Grundlage ist:
 - Unsichere Trigger klar markieren.
 - Keine finalen Sekunden, Frames oder Wort-Indizes erzeugen.
 - Keine produktive Trigger-Logik direkt ins SVG schreiben.
+- Keine ueberpraezise Animationsdramaturgie erzwingen: Die genaue Animation bleibt szenenabhaengig. Pflicht ist die didaktisch sinnvolle Layer- und Triggerfaehigkeit, nicht ein fixer Effektkatalog.
 
 ## SVG-Regeln
 
@@ -55,6 +57,9 @@ Der Agent darf nur diese Aktionen vorschlagen:
 - `hide`
 - `highlight`
 - `draw`
+- `move` nur als Planungsnotiz, wenn eine Verschiebung didaktisch zentral ist und die Downstream-Pipeline diese Aktion explizit unterstuetzt oder spaeter ergaenzt.
+
+Ein- und Ausblenden, Zeichnen, Verschieben und Hervorheben sind wichtige Gestaltungsmittel. Wenn ein Effekt technisch noch nicht final unterstuetzt ist, wird er im Manifest als offene Animationsabsicht dokumentiert, statt die SVG statisch und unstrukturiert zu lassen.
 
 ## Trigger-Qualität
 
