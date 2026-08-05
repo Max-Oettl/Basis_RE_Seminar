@@ -1,0 +1,128 @@
+{
+  "schema_version": "svgQaReport/v1",
+  "module_id": "slide_011",
+  "svg_root": "rebuild-proposals/svg/RE1/slide_011",
+  "generated_at": "2026-07-31T12:10:45.324Z",
+  "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\tools\\svg-rebuild-qa.js rebuild-proposals\\svg\\RE1\\slide_011 --strict-design --layout --layout-strict --layout-times 0,0.5,1,end --report-dir analysis\\reports\\qa\\RE1\\chapter-01-review-notes-2026-07-31\\slide_011",
+  "files": [
+    {
+      "path": "rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg",
+      "ids": 86,
+      "animationManifest": ""
+    },
+    {
+      "path": "rebuild-proposals/svg/RE1/slide_011/slide_011.svg",
+      "ids": 98,
+      "animationManifest": "rebuild-proposals/svg/RE1/slide_011/scene.animation.v1.json"
+    }
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg",
+      "message": "ViewBox is not close to 16:9.",
+      "detail": "843.287187x440"
+    }
+  ],
+  "viewer": {
+    "checked": false
+  },
+  "layout": {
+    "checked": true,
+    "strict": true,
+    "warnOnly": false,
+    "browser": {
+      "executable": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "port": 5847
+    },
+    "files": [
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg",
+        "slide": "011",
+        "states_checked": 1,
+        "browser_rendered": true
+      },
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_011/slide_011.svg",
+        "slide": "011",
+        "states_checked": 4,
+        "browser_rendered": true
+      }
+    ],
+    "issues": [],
+    "summary": {
+      "checked": true,
+      "files_checked": 2,
+      "states_checked": 5,
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "design": {
+    "checked": true,
+    "strict": true,
+    "warnOnly": false,
+    "brandTokens": {
+      "loaded": true,
+      "path": "brand/company-brand-tokens.json",
+      "profile": "reltest-education",
+      "companyName": "RelTest Education"
+    },
+    "tokenSources": [
+      {
+        "loaded": true,
+        "path": "brand/company-brand-tokens.json",
+        "profile": "reltest-education"
+      },
+      {
+        "loaded": true,
+        "path": "brand/reltest-education-slide-design-tokens.json",
+        "profile": "reltest-education"
+      }
+    ],
+    "files": [
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 7,
+        "textCount": 13
+      },
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_011/slide_011.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "full-slide",
+        "tokenSource": "brand/reltest-education-slide-design-tokens.json",
+        "colorCount": 10,
+        "textCount": 18
+      }
+    ],
+    "issues": [],
+    "summary": {
+      "files_checked": 2,
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "handoff": {
+    "checked": false
+  },
+  "summary": {
+    "files_checked": 2,
+    "manifests_checked": 1,
+    "layout_files_checked": 2,
+    "layout_states_checked": 5,
+    "design_files_checked": 2,
+    "design_errors": 0,
+    "design_warnings": 0,
+    "handoff_scenes_checked": 0,
+    "handoff_manifests_checked": 0,
+    "handoff_errors": 0,
+    "handoff_warnings": 0,
+    "errors": 0,
+    "warnings": 1
+  }
+}

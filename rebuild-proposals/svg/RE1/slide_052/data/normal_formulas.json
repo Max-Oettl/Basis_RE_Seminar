@@ -1,0 +1,11 @@
+{
+  "schema_version": "reltestFormulaSet/v1",
+  "distribution": "normal",
+  "source_slides": [62],
+  "formulas": {
+    "density": "$f(t)=\\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{(t-\\mu)^2}{2\\sigma^2}}$",
+    "failure_probability": "$F(t)=\\int_{0}^{t}f(\\tau)\\,\\mathrm{d}\\tau$",
+    "reliability": "$R(t)=1-F(t)=\\int_{t}^{\\infty}f(\\tau)\\,\\mathrm{d}\\tau$",
+    "hazard": "$\\lambda(t)=\\frac{f(t)}{R(t)}$"
+  }
+}

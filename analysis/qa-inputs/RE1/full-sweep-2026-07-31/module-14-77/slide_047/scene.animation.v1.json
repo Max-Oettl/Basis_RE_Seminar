@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_047.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "mtbf_intervals",
+      "label": "MTBF-Intervalle",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mttff_interval",
+      "label": "MTTFF-Intervall",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mean_metric_limitation",
+      "label": "Grenze von Mittelwertkennzahlen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "defined_probability_transition",
+      "label": "Übergang zu definierter Ausfallwahrscheinlichkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_mtbf_intervals",
+      "targetId": "mtbf_intervals",
+      "action": "show",
+      "sourceText": "mittleren Zeitraum zwischen zwei aufeinanderfolgenden Ausfällen in einem reparierbaren System",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_mttff_interval",
+      "targetId": "mttff_interval",
+      "action": "show",
+      "sourceText": "Der M-T-T-F-F ist die mittlere Lebensdauer bis zum ersten Ausfall",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_mean_metric_limitation",
+      "targetId": "mean_metric_limitation",
+      "action": "show",
+      "sourceText": "nicht als Zuverlässigkeitsanforderungen geeignet",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_defined_probability_transition",
+      "targetId": "defined_probability_transition",
+      "action": "show",
+      "sourceText": "für eine definierte niedrige Ausfallwahrscheinlichkeit festgelegt werden können",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

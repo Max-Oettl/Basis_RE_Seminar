@@ -513,6 +513,8 @@ Bitte prüfen:
 
 Da Inline-`<animate>` im Projekt verboten ist und Animationen über `scene.animation.v1.json` laufen, soll die Layout-Prüfung nach Möglichkeit die bestehende Viewer-/Animation-Logik verwenden.
 
+Fuer finale `storyboardImportPackage/v1`-Lieferungen muss dieselbe Layout-Pruefung zusaetzlich das zum SVG namensgleiche `<svg-name>.animation.v1.json` aufloesen. Die interne Reviewer-Datei `scene.animation.v1.json` hat in Arbeitsordnern Vorrang; fehlt sie, wird das externe Basename-Manifest verwendet.
+
 Bitte prüfen:
 
 * Initialzustand

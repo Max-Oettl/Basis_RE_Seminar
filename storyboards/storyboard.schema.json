@@ -170,7 +170,8 @@
           ],
           "properties": {
             "text": {
-              "type": "string"
+              "type": "string",
+              "description": "Wirksamer Sprechertext. Darf validierte Pausenmarker nach workflow/50-animation/narration-pause-markers.md enthalten; die Marker bleiben im Rohtext erhalten und zaehlen nicht als Woerter."
             },
             "language_rules_ref": {
               "type": "string",
@@ -410,7 +411,8 @@
           "type": "string"
         },
         "narration_cue": {
-          "type": "string"
+          "type": "string",
+          "description": "Gesprochener Textanker fuer den Animationstrigger. Pausenmarker duerfen hier nicht verwendet werden."
         },
         "target_element_ids": {
           "type": "array",

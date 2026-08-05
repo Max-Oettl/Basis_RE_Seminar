@@ -76,7 +76,11 @@ function hitAtOverlap(above, below) {
 function runZOrderExpected(layout, context, config) {
   if (!config.checks.zOrderExpected) return [];
   const issues = [];
-  const visible = layout.elements.filter((element) => element.visible);
+  const visible = layout.elements.filter((element) =>
+    element.visible &&
+    !element.animationHidden &&
+    !element.qc?.allowOverlap
+  );
 
   for (let index = 0; index < visible.length; index += 1) {
     for (let otherIndex = index + 1; otherIndex < visible.length; otherIndex += 1) {

@@ -1,0 +1,111 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_027",
+  "scene_id": "re1_src_028",
+  "source_slides": [
+    28
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "woehler_data",
+      "label": "Versuchsdaten",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "woehler_curve",
+      "label": "Wöhlerkurve",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "selected_load_level",
+      "label": "Stichprobe bei 640 N/mm²",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "selected_640_context",
+      "label": "Streuung bei 640 N/mm²",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "statistical_description_task",
+      "label": "Statistische Beschreibungsaufgabe",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_woehler_curve",
+      "targetId": "woehler_curve",
+      "action": "draw",
+      "sourceText": "Die Wöhlerkurve beschreibt den Zusammenhang",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_woehler_data",
+      "targetId": "woehler_data",
+      "action": "show",
+      "sourceText": "Dabei wurden mehrere Versuche auf unterschiedlichen Lastniveaus",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_selected_load_level",
+      "targetId": "selected_load_level",
+      "action": "show",
+      "sourceText": "Betrachten wir nun die erreichten Ausfallzeiten für die Stichproben auf dem Lastniveau",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_selected_640_context",
+      "targetId": "selected_640_context",
+      "action": "show",
+      "sourceText": "Betrachten wir nun die erreichten Ausfallzeiten für die Stichproben auf dem Lastniveau",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_statistical_description_task",
+      "targetId": "statistical_description_task",
+      "action": "show",
+      "sourceText": "Die Aufgabe der Zuverlässigkeitstechnik ist es nun",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

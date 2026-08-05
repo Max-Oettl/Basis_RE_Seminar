@@ -1,5 +1,7 @@
 # Two-Phase Scene Production Workflow
 
+> Legacy-/Downstream-Workflow fuer assetbasierte Szenenproduktion. Neue PowerPoint-SVG-Module verwenden `workflow/40-svg-production/svg-rebuild-production-runbook.md` und uebernehmen Quell-SVG-Geometrie direkt.
+
 Dieses Repo verwendet ab jetzt einen zweiphasigen Workflow.
 
 Bei einer Serie aus mehreren Szenen wird dieser Workflow strikt Szene für Szene nach `workflow/scene-by-scene-production-runbook.md` ausgeführt. Die nächste Szene beginnt erst nach vollständiger Freigabe und dokumentiertem Handoff der aktuellen Szene.
@@ -15,6 +17,10 @@ Für benötigte PNG-Assets gilt:
 - kein vollständiges Szenenlayout
 - kein Text im Bild
 - transparenter Hintergrund
+- minimalistisches Profil `reltest-education-minimal-v1` nach
+  `workflow/30-visual-decision/pictogram-creation-workflow.md`
+- dokumentierte Semantik, 48-px-/960x540-Erkennbarkeit, Kontrast und
+  seminarweiter `reuseKey`
 - visuell prüfbar vor der SVG-Komposition
 
 Beispiel:
@@ -98,6 +104,11 @@ Die verbindliche Detailkonvention steht in:
 ## Manuelles Freigabe-Gate
 
 Eine Szene darf erst komponiert werden, wenn im `manifest.json` alle benötigten Assets den Status `accepted` haben.
+
+Bei Piktogrammen setzt `accepted` vier bestandene Gates voraus: Semantik,
+Education-Stil, E-Learning-Kleinmassstab und Zugaenglichkeit/Technik. Ein
+generiertes oder extrahiertes Rasterpiktogramm wird zusaetzlich mit
+`tools/validate-pictogram-asset.js --release` geprueft.
 
 Mögliche Asset-Status:
 

@@ -1,0 +1,1018 @@
+{
+  "schema_version": "svgQaReport/v1",
+  "module_id": "slide_077",
+  "svg_root": "rebuild-proposals/svg/RE1/slide_077",
+  "generated_at": "2026-07-20T07:50:52.049Z",
+  "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\tools\\svg-rebuild-qa.js rebuild-proposals/svg/RE1/slide_077 --no-design --layout --report-dir analysis/qa-reports/RE1/chapter-06/slide-077-review-fix/layout",
+  "files": [
+    {
+      "path": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+      "ids": 248,
+      "animationManifest": ""
+    },
+    {
+      "path": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_hazard.svg",
+      "ids": 69,
+      "animationManifest": ""
+    },
+    {
+      "path": "rebuild-proposals/svg/RE1/slide_077/slide_077.svg",
+      "ids": 263,
+      "animationManifest": "rebuild-proposals/svg/RE1/slide_077/scene.animation.v1.json"
+    }
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_hazard.svg",
+      "message": "ViewBox is not close to 16:9.",
+      "detail": "717.9205x410.632219"
+    },
+    {
+      "rule": "group_integrity",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+      "slide": "077",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "",
+      "related_element_id": "",
+      "message": "No data-qc-* attributes found; layout QA is using heuristics only.",
+      "expected": "Explicit data-qc roles and relationships for text boxes, arrows, axes, formulas, and timelines.",
+      "actual": {
+        "elementsWithDataQc": 0,
+        "totalElements": 608
+      },
+      "bbox": null,
+      "recommendation": "Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.",
+      "detail": ""
+    },
+    {
+      "rule": "slide_bounds",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+      "slide": "077",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_105",
+      "related_element_id": "",
+      "message": "Important visible element extends outside the SVG viewBox.",
+      "expected": {
+        "left": 0,
+        "top": 0,
+        "right": 878.2352294921875,
+        "bottom": 492.6072692871094
+      },
+      "actual": {
+        "left": 42.99674987792969,
+        "top": -3.027496337890625,
+        "right": 62.99729919433594,
+        "bottom": 146.5840301513672,
+        "width": 20.00054931640625,
+        "height": 149.6115264892578
+      },
+      "bbox": {
+        "element": {
+          "left": 42.99674987792969,
+          "top": -3.027496337890625,
+          "right": 62.99729919433594,
+          "bottom": 146.5840301513672,
+          "width": 20.00054931640625,
+          "height": 149.6115264892578
+        }
+      },
+      "recommendation": "Move the element inside the slide area or resize the composition.",
+      "detail": ""
+    },
+    {
+      "rule": "slide_bounds",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+      "slide": "077",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_121",
+      "related_element_id": "",
+      "message": "Important visible element extends outside the SVG viewBox.",
+      "expected": {
+        "left": 0,
+        "top": 0,
+        "right": 878.2352294921875,
+        "bottom": 492.6072692871094
+      },
+      "actual": {
+        "left": 42.99674987792969,
+        "top": -3.027496337890625,
+        "right": 62.99729919433594,
+        "bottom": 2.9726715087890625,
+        "width": 20.00054931640625,
+        "height": 6.0001678466796875
+      },
+      "bbox": {
+        "element": {
+          "left": 42.99674987792969,
+          "top": -3.027496337890625,
+          "right": 62.99729919433594,
+          "bottom": 2.9726715087890625,
+          "width": 20.00054931640625,
+          "height": 6.0001678466796875
+        }
+      },
+      "recommendation": "Move the element inside the slide area or resize the composition.",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+      "slide": "077",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_105",
+      "related_element_id": "qc_runtime_484",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 53.149169921875,
+          "top": 143.42922973632812,
+          "right": 62.99729919433594,
+          "bottom": 146.5840301513672,
+          "width": 9.848129272460938,
+          "height": 3.1548004150390625
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 42.99674987792969,
+          "top": -3.027496337890625,
+          "right": 62.99729919433594,
+          "bottom": 146.5840301513672,
+          "width": 20.00054931640625,
+          "height": 149.6115264892578
+        },
+        "right": {
+          "left": 53.149169921875,
+          "top": 143.42922973632812,
+          "right": 66.64453125,
+          "bottom": 158.4296417236328,
+          "width": 13.495361328125,
+          "height": 15.000411987304688
+        },
+        "overlap": {
+          "left": 53.149169921875,
+          "top": 143.42922973632812,
+          "right": 62.99729919433594,
+          "bottom": 146.5840301513672,
+          "width": 9.848129272460938,
+          "height": 3.1548004150390625
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+      "slide": "077",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_106",
+      "related_element_id": "qc_runtime_484",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 53.149169921875,
+          "top": 143.42922973632812,
+          "right": 62.99729919433594,
+          "bottom": 146.5840301513672,
+          "width": 9.848129272460938,
+          "height": 3.1548004150390625
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 42.99674987792969,
+          "top": 131.5836181640625,
+          "right": 62.99729919433594,
+          "bottom": 146.5840301513672,
+          "width": 20.00054931640625,
+          "height": 15.000411987304688
+        },
+        "right": {
+          "left": 53.149169921875,
+          "top": 143.42922973632812,
+          "right": 66.64453125,
+          "bottom": 158.4296417236328,
+          "width": 13.495361328125,
+          "height": 15.000411987304688
+        },
+        "overlap": {
+          "left": 53.149169921875,
+          "top": 143.42922973632812,
+          "right": 62.99729919433594,
+          "bottom": 146.5840301513672,
+          "width": 9.848129272460938,
+          "height": 3.1548004150390625
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+      "slide": "077",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_159",
+      "related_element_id": "qc_runtime_372",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 60.37453079223633,
+          "top": 431.7886657714844,
+          "right": 66.14952850341797,
+          "bottom": 438.49853515625,
+          "width": 5.774997711181641,
+          "height": 6.709869384765625
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 60.37453079223633,
+          "top": 431.7886657714844,
+          "right": 89.21273803710938,
+          "bottom": 454.15814208984375,
+          "width": 28.838207244873047,
+          "height": 22.369476318359375
+        },
+        "right": {
+          "left": 49.89908218383789,
+          "top": 423.4981384277344,
+          "right": 66.14952850341797,
+          "bottom": 438.49853515625,
+          "width": 16.250446319580078,
+          "height": 15.000396728515625
+        },
+        "overlap": {
+          "left": 60.37453079223633,
+          "top": 431.7886657714844,
+          "right": 66.14952850341797,
+          "bottom": 438.49853515625,
+          "width": 5.774997711181641,
+          "height": 6.709869384765625
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+      "slide": "077",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_444",
+      "related_element_id": "qc_runtime_452",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 53.149169921875,
+          "top": 206.31008911132812,
+          "right": 66.64453125,
+          "bottom": 209.1511688232422,
+          "width": 13.495361328125,
+          "height": 2.8410797119140625
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 53.149169921875,
+          "top": 206.31008911132812,
+          "right": 66.64453125,
+          "bottom": 221.3105010986328,
+          "width": 13.495361328125,
+          "height": 15.000411987304688
+        },
+        "right": {
+          "left": 43.414527893066406,
+          "top": 194.1507568359375,
+          "right": 66.65264892578125,
+          "bottom": 209.1511688232422,
+          "width": 23.238121032714844,
+          "height": 15.000411987304688
+        },
+        "overlap": {
+          "left": 53.149169921875,
+          "top": 206.31008911132812,
+          "right": 66.64453125,
+          "bottom": 209.1511688232422,
+          "width": 13.495361328125,
+          "height": 2.8410797119140625
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+      "slide": "077",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_460",
+      "related_element_id": "qc_runtime_468",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 53.149169921875,
+          "top": 178.337890625,
+          "right": 66.64453125,
+          "bottom": 181.4458770751953,
+          "width": 13.495361328125,
+          "height": 3.1079864501953125
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 53.149169921875,
+          "top": 178.337890625,
+          "right": 66.64453125,
+          "bottom": 193.3383026123047,
+          "width": 13.495361328125,
+          "height": 15.000411987304688
+        },
+        "right": {
+          "left": 53.149169921875,
+          "top": 166.44546508789062,
+          "right": 66.64453125,
+          "bottom": 181.4458770751953,
+          "width": 13.495361328125,
+          "height": 15.000411987304688
+        },
+        "overlap": {
+          "left": 53.149169921875,
+          "top": 178.337890625,
+          "right": 66.64453125,
+          "bottom": 181.4458770751953,
+          "width": 13.495361328125,
+          "height": 3.1079864501953125
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+      "slide": "077",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_468",
+      "related_element_id": "qc_runtime_476",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 53.149169921875,
+          "top": 166.44546508789062,
+          "right": 66.14952850341797,
+          "bottom": 172.70765686035156,
+          "width": 13.000358581542969,
+          "height": 6.2621917724609375
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 53.149169921875,
+          "top": 166.44546508789062,
+          "right": 66.64453125,
+          "bottom": 181.4458770751953,
+          "width": 13.495361328125,
+          "height": 15.000411987304688
+        },
+        "right": {
+          "left": 53.149169921875,
+          "top": 157.70724487304688,
+          "right": 66.14952850341797,
+          "bottom": 172.70765686035156,
+          "width": 13.000358581542969,
+          "height": 15.000411987304688
+        },
+        "overlap": {
+          "left": 53.149169921875,
+          "top": 166.44546508789062,
+          "right": 66.14952850341797,
+          "bottom": 172.70765686035156,
+          "width": 13.000358581542969,
+          "height": 6.2621917724609375
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+      "slide": "077",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_514",
+      "related_element_id": "qc_runtime_516",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 4.551435470581055,
+          "top": 159.70742797851562,
+          "right": 24.551984786987305,
+          "bottom": 162.35427856445312,
+          "width": 20.00054931640625,
+          "height": 2.6468505859375
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 4.551435470581055,
+          "top": 159.70742797851562,
+          "right": 24.551984786987305,
+          "bottom": 173.70782470703125,
+          "width": 20.00054931640625,
+          "height": 14.000396728515625
+        },
+        "right": {
+          "left": 4.551435470581055,
+          "top": 156.3541259765625,
+          "right": 24.551984786987305,
+          "bottom": 162.35427856445312,
+          "width": 20.00054931640625,
+          "height": 6.000152587890625
+        },
+        "overlap": {
+          "left": 4.551435470581055,
+          "top": 159.70742797851562,
+          "right": 24.551984786987305,
+          "bottom": 162.35427856445312,
+          "width": 20.00054931640625,
+          "height": 2.6468505859375
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "group_integrity",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_hazard.svg",
+      "slide": "077",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "",
+      "related_element_id": "",
+      "message": "No data-qc-* attributes found; layout QA is using heuristics only.",
+      "expected": "Explicit data-qc roles and relationships for text boxes, arrows, axes, formulas, and timelines.",
+      "actual": {
+        "elementsWithDataQc": 0,
+        "totalElements": 209
+      },
+      "bbox": null,
+      "recommendation": "Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.",
+      "detail": ""
+    }
+  ],
+  "viewer": {
+    "checked": false
+  },
+  "layout": {
+    "checked": true,
+    "strict": false,
+    "warnOnly": true,
+    "browser": {
+      "executable": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "port": 5376
+    },
+    "files": [
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+        "slide": "077",
+        "states_checked": 1,
+        "browser_rendered": true
+      },
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_hazard.svg",
+        "slide": "077",
+        "states_checked": 1,
+        "browser_rendered": true
+      },
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_077/slide_077.svg",
+        "slide": "077",
+        "states_checked": 5,
+        "browser_rendered": true
+      }
+    ],
+    "issues": [
+      {
+        "rule": "group_integrity",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+        "slide": "077",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "",
+        "related_element_id": "",
+        "message": "No data-qc-* attributes found; layout QA is using heuristics only.",
+        "expected": "Explicit data-qc roles and relationships for text boxes, arrows, axes, formulas, and timelines.",
+        "actual": {
+          "elementsWithDataQc": 0,
+          "totalElements": 608
+        },
+        "bbox": null,
+        "recommendation": "Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.",
+        "detail": ""
+      },
+      {
+        "rule": "slide_bounds",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+        "slide": "077",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_105",
+        "related_element_id": "",
+        "message": "Important visible element extends outside the SVG viewBox.",
+        "expected": {
+          "left": 0,
+          "top": 0,
+          "right": 878.2352294921875,
+          "bottom": 492.6072692871094
+        },
+        "actual": {
+          "left": 42.99674987792969,
+          "top": -3.027496337890625,
+          "right": 62.99729919433594,
+          "bottom": 146.5840301513672,
+          "width": 20.00054931640625,
+          "height": 149.6115264892578
+        },
+        "bbox": {
+          "element": {
+            "left": 42.99674987792969,
+            "top": -3.027496337890625,
+            "right": 62.99729919433594,
+            "bottom": 146.5840301513672,
+            "width": 20.00054931640625,
+            "height": 149.6115264892578
+          }
+        },
+        "recommendation": "Move the element inside the slide area or resize the composition.",
+        "detail": ""
+      },
+      {
+        "rule": "slide_bounds",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+        "slide": "077",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_121",
+        "related_element_id": "",
+        "message": "Important visible element extends outside the SVG viewBox.",
+        "expected": {
+          "left": 0,
+          "top": 0,
+          "right": 878.2352294921875,
+          "bottom": 492.6072692871094
+        },
+        "actual": {
+          "left": 42.99674987792969,
+          "top": -3.027496337890625,
+          "right": 62.99729919433594,
+          "bottom": 2.9726715087890625,
+          "width": 20.00054931640625,
+          "height": 6.0001678466796875
+        },
+        "bbox": {
+          "element": {
+            "left": 42.99674987792969,
+            "top": -3.027496337890625,
+            "right": 62.99729919433594,
+            "bottom": 2.9726715087890625,
+            "width": 20.00054931640625,
+            "height": 6.0001678466796875
+          }
+        },
+        "recommendation": "Move the element inside the slide area or resize the composition.",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+        "slide": "077",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_105",
+        "related_element_id": "qc_runtime_484",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 53.149169921875,
+            "top": 143.42922973632812,
+            "right": 62.99729919433594,
+            "bottom": 146.5840301513672,
+            "width": 9.848129272460938,
+            "height": 3.1548004150390625
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 42.99674987792969,
+            "top": -3.027496337890625,
+            "right": 62.99729919433594,
+            "bottom": 146.5840301513672,
+            "width": 20.00054931640625,
+            "height": 149.6115264892578
+          },
+          "right": {
+            "left": 53.149169921875,
+            "top": 143.42922973632812,
+            "right": 66.64453125,
+            "bottom": 158.4296417236328,
+            "width": 13.495361328125,
+            "height": 15.000411987304688
+          },
+          "overlap": {
+            "left": 53.149169921875,
+            "top": 143.42922973632812,
+            "right": 62.99729919433594,
+            "bottom": 146.5840301513672,
+            "width": 9.848129272460938,
+            "height": 3.1548004150390625
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+        "slide": "077",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_106",
+        "related_element_id": "qc_runtime_484",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 53.149169921875,
+            "top": 143.42922973632812,
+            "right": 62.99729919433594,
+            "bottom": 146.5840301513672,
+            "width": 9.848129272460938,
+            "height": 3.1548004150390625
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 42.99674987792969,
+            "top": 131.5836181640625,
+            "right": 62.99729919433594,
+            "bottom": 146.5840301513672,
+            "width": 20.00054931640625,
+            "height": 15.000411987304688
+          },
+          "right": {
+            "left": 53.149169921875,
+            "top": 143.42922973632812,
+            "right": 66.64453125,
+            "bottom": 158.4296417236328,
+            "width": 13.495361328125,
+            "height": 15.000411987304688
+          },
+          "overlap": {
+            "left": 53.149169921875,
+            "top": 143.42922973632812,
+            "right": 62.99729919433594,
+            "bottom": 146.5840301513672,
+            "width": 9.848129272460938,
+            "height": 3.1548004150390625
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+        "slide": "077",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_159",
+        "related_element_id": "qc_runtime_372",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 60.37453079223633,
+            "top": 431.7886657714844,
+            "right": 66.14952850341797,
+            "bottom": 438.49853515625,
+            "width": 5.774997711181641,
+            "height": 6.709869384765625
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 60.37453079223633,
+            "top": 431.7886657714844,
+            "right": 89.21273803710938,
+            "bottom": 454.15814208984375,
+            "width": 28.838207244873047,
+            "height": 22.369476318359375
+          },
+          "right": {
+            "left": 49.89908218383789,
+            "top": 423.4981384277344,
+            "right": 66.14952850341797,
+            "bottom": 438.49853515625,
+            "width": 16.250446319580078,
+            "height": 15.000396728515625
+          },
+          "overlap": {
+            "left": 60.37453079223633,
+            "top": 431.7886657714844,
+            "right": 66.14952850341797,
+            "bottom": 438.49853515625,
+            "width": 5.774997711181641,
+            "height": 6.709869384765625
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+        "slide": "077",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_444",
+        "related_element_id": "qc_runtime_452",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 53.149169921875,
+            "top": 206.31008911132812,
+            "right": 66.64453125,
+            "bottom": 209.1511688232422,
+            "width": 13.495361328125,
+            "height": 2.8410797119140625
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 53.149169921875,
+            "top": 206.31008911132812,
+            "right": 66.64453125,
+            "bottom": 221.3105010986328,
+            "width": 13.495361328125,
+            "height": 15.000411987304688
+          },
+          "right": {
+            "left": 43.414527893066406,
+            "top": 194.1507568359375,
+            "right": 66.65264892578125,
+            "bottom": 209.1511688232422,
+            "width": 23.238121032714844,
+            "height": 15.000411987304688
+          },
+          "overlap": {
+            "left": 53.149169921875,
+            "top": 206.31008911132812,
+            "right": 66.64453125,
+            "bottom": 209.1511688232422,
+            "width": 13.495361328125,
+            "height": 2.8410797119140625
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+        "slide": "077",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_460",
+        "related_element_id": "qc_runtime_468",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 53.149169921875,
+            "top": 178.337890625,
+            "right": 66.64453125,
+            "bottom": 181.4458770751953,
+            "width": 13.495361328125,
+            "height": 3.1079864501953125
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 53.149169921875,
+            "top": 178.337890625,
+            "right": 66.64453125,
+            "bottom": 193.3383026123047,
+            "width": 13.495361328125,
+            "height": 15.000411987304688
+          },
+          "right": {
+            "left": 53.149169921875,
+            "top": 166.44546508789062,
+            "right": 66.64453125,
+            "bottom": 181.4458770751953,
+            "width": 13.495361328125,
+            "height": 15.000411987304688
+          },
+          "overlap": {
+            "left": 53.149169921875,
+            "top": 178.337890625,
+            "right": 66.64453125,
+            "bottom": 181.4458770751953,
+            "width": 13.495361328125,
+            "height": 3.1079864501953125
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+        "slide": "077",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_468",
+        "related_element_id": "qc_runtime_476",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 53.149169921875,
+            "top": 166.44546508789062,
+            "right": 66.14952850341797,
+            "bottom": 172.70765686035156,
+            "width": 13.000358581542969,
+            "height": 6.2621917724609375
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 53.149169921875,
+            "top": 166.44546508789062,
+            "right": 66.64453125,
+            "bottom": 181.4458770751953,
+            "width": 13.495361328125,
+            "height": 15.000411987304688
+          },
+          "right": {
+            "left": 53.149169921875,
+            "top": 157.70724487304688,
+            "right": 66.14952850341797,
+            "bottom": 172.70765686035156,
+            "width": 13.000358581542969,
+            "height": 15.000411987304688
+          },
+          "overlap": {
+            "left": 53.149169921875,
+            "top": 166.44546508789062,
+            "right": 66.14952850341797,
+            "bottom": 172.70765686035156,
+            "width": 13.000358581542969,
+            "height": 6.2621917724609375
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg",
+        "slide": "077",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_514",
+        "related_element_id": "qc_runtime_516",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 4.551435470581055,
+            "top": 159.70742797851562,
+            "right": 24.551984786987305,
+            "bottom": 162.35427856445312,
+            "width": 20.00054931640625,
+            "height": 2.6468505859375
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 4.551435470581055,
+            "top": 159.70742797851562,
+            "right": 24.551984786987305,
+            "bottom": 173.70782470703125,
+            "width": 20.00054931640625,
+            "height": 14.000396728515625
+          },
+          "right": {
+            "left": 4.551435470581055,
+            "top": 156.3541259765625,
+            "right": 24.551984786987305,
+            "bottom": 162.35427856445312,
+            "width": 20.00054931640625,
+            "height": 6.000152587890625
+          },
+          "overlap": {
+            "left": 4.551435470581055,
+            "top": 159.70742797851562,
+            "right": 24.551984786987305,
+            "bottom": 162.35427856445312,
+            "width": 20.00054931640625,
+            "height": 2.6468505859375
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "group_integrity",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_077/plots/weibull_hazard.svg",
+        "slide": "077",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "",
+        "related_element_id": "",
+        "message": "No data-qc-* attributes found; layout QA is using heuristics only.",
+        "expected": "Explicit data-qc roles and relationships for text boxes, arrows, axes, formulas, and timelines.",
+        "actual": {
+          "elementsWithDataQc": 0,
+          "totalElements": 209
+        },
+        "bbox": null,
+        "recommendation": "Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.",
+        "detail": ""
+      }
+    ],
+    "summary": {
+      "checked": true,
+      "files_checked": 3,
+      "states_checked": 7,
+      "errors": 0,
+      "warnings": 11
+    }
+  },
+  "design": {
+    "checked": false
+  },
+  "handoff": {
+    "checked": false
+  },
+  "summary": {
+    "files_checked": 3,
+    "manifests_checked": 1,
+    "layout_files_checked": 3,
+    "layout_states_checked": 7,
+    "design_files_checked": 0,
+    "design_errors": 0,
+    "design_warnings": 0,
+    "handoff_scenes_checked": 0,
+    "handoff_manifests_checked": 0,
+    "handoff_errors": 0,
+    "handoff_warnings": 0,
+    "errors": 0,
+    "warnings": 12
+  }
+}

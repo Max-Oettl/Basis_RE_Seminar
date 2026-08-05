@@ -1,0 +1,94 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_063",
+  "scene_id": "re1_src_079",
+  "source_slides": [
+    79,
+    80
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "weibull_shift_base",
+      "label": "Zweiparametrige Ausgangskurve",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_shifted_curve",
+      "label": "Verschobene dreiparametrige Kurve",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_shift_t0",
+      "label": "Ausfallfreie Zeit",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_shift_probabilities",
+      "label": "Unveränderte Wahrscheinlichkeiten",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_weibull_shift_base",
+      "targetId": "weibull_shift_base",
+      "action": "draw",
+      "sourceText": "Zu sehen ist hier die zwei-parametrige Weibullverteilung mit Ihrem Ursprung im Koordinatensystem",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_weibull_shifted_curve",
+      "targetId": "weibull_shifted_curve",
+      "action": "draw",
+      "sourceText": "Durch das Einführen der ausfallfreien Zeit erfolgt nun eine Verschiebung der Verteilung nach rechts",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_weibull_shift_t0",
+      "targetId": "weibull_shift_t0",
+      "action": "show",
+      "sourceText": "startet die drei-parametrige Weibullverteilung bai der ausfallfreien Zeit t null",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_shift_probabilities",
+      "targetId": "weibull_shift_probabilities",
+      "action": "show",
+      "sourceText": "Die charakteristische Lebensdauer entspricht aber weiterhin einer Ausfallwahrscheinlichkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

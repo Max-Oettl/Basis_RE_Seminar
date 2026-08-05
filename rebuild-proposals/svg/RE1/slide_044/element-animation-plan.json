@@ -1,0 +1,111 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_044",
+  "scene_id": "re1_src_049",
+  "source_slides": [
+    49
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "skew_distribution_curve",
+      "label": "Rechtsschiefe Verteilung",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "mode_marker",
+      "label": "Modalwert",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "median_marker",
+      "label": "Median",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "mean_marker",
+      "label": "Mittelwert",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "skew_measure_conclusion",
+      "label": "Einordnung für Ausfalldaten",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_skew_distribution_curve",
+      "targetId": "skew_distribution_curve",
+      "action": "draw",
+      "sourceText": "anhand der hier gezeigten rechtsschiefen Verteilung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_mode_marker",
+      "targetId": "mode_marker",
+      "action": "show",
+      "sourceText": "Der Modalwert befindet sich am Maximum der Dichtefunktion",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_median_marker",
+      "targetId": "median_marker",
+      "action": "show",
+      "sourceText": "Rechts davon liegt der Median",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_mean_marker",
+      "targetId": "mean_marker",
+      "action": "show",
+      "sourceText": "Noch weiter rechts, in einem Bereich, der von Ausreißern beeinflusst wird, finden wir den Mittelwert",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_skew_measure_conclusion",
+      "targetId": "skew_measure_conclusion",
+      "action": "show",
+      "sourceText": "Da Ausfalldaten in der Regel nicht normalverteilt sind",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

@@ -1,27 +1,48 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from typing import Iterable, Sequence
 
 
+REPO_ROOT = Path(__file__).resolve().parents[2]
+BRAND_TOKEN_PATH = REPO_ROOT / "brand" / "reltest-education-slide-design-tokens.json"
+BRAND_TOKENS = json.loads(BRAND_TOKEN_PATH.read_text(encoding="utf-8"))
+BRAND_COLORS = BRAND_TOKENS["colors"]
+
 RELTEST_COLORS = {
-    "ink": "#062d46",
-    "muted": "#526f7c",
-    "grid_major": "#9dbac8",
-    "grid_minor": "#dce8ee",
-    "data": "#139ccb",
-    "accent": "#d82735",
-    "support": "#6aa88f",
-    "background": "#ffffff",
-    "plot_background": "#fbfdfe",
+    "ink": BRAND_COLORS["navy"],
+    "muted": BRAND_COLORS["educationGraphiteBlue"],
+    "grid_major": BRAND_COLORS["navy20"],
+    "grid_minor": BRAND_COLORS["navy10"],
+    "data": BRAND_COLORS["educationGreen"],
+    "data_80": BRAND_COLORS["educationGreen80"],
+    "data_60": BRAND_COLORS["educationGreen60"],
+    "data_40": BRAND_COLORS["educationGreen40"],
+    "data_20": BRAND_COLORS["educationGreen20"],
+    "accent": BRAND_COLORS["educationCoral"],
+    "support": BRAND_COLORS["educationSteelCyan"],
+    "warning": BRAND_COLORS["educationGold"],
+    "background": BRAND_COLORS["surface"],
+    "plot_background": BRAND_COLORS["surfaceSoft"],
 }
 
 FIGSIZE_16_9 = (12.8, 7.2)
 DEFAULT_DPI = 180
+FONT_FILES = [
+    REPO_ROOT / "brand" / "fonts" / "archivo" / "Archivo-wdth-wght.ttf",
+    REPO_ROOT / "brand" / "fonts" / "archivo" / "Archivo-Italic-wdth-wght.ttf",
+    REPO_ROOT / "brand" / "fonts" / "oxanium" / "Oxanium-wght.ttf",
+]
 
 
 def apply_reltest_style() -> None:
     import matplotlib.pyplot as plt
+    from matplotlib import font_manager
+
+    for font_path in FONT_FILES:
+        if font_path.exists():
+            font_manager.fontManager.addfont(font_path)
 
     plt.rcParams.update(
         {
@@ -40,16 +61,16 @@ def apply_reltest_style() -> None:
             "axes.labelsize": 18,
             "xtick.color": RELTEST_COLORS["muted"],
             "ytick.color": RELTEST_COLORS["muted"],
-            "xtick.labelsize": 13,
-            "ytick.labelsize": 13,
+            "xtick.labelsize": 18,
+            "ytick.labelsize": 18,
             "grid.color": RELTEST_COLORS["grid_minor"],
             "grid.linewidth": 0.8,
             "grid.alpha": 0.75,
-            "font.family": "DejaVu Sans",
-            "font.sans-serif": ["DejaVu Sans", "Segoe UI", "Arial", "Inter", "sans-serif"],
-            "font.size": 13,
+            "font.family": "Archivo",
+            "font.sans-serif": ["Archivo", "Arial", "Helvetica", "sans-serif"],
+            "font.size": 18,
             "legend.frameon": False,
-            "legend.fontsize": 13,
+            "legend.fontsize": 18,
             "legend.handlelength": 2.4,
             "legend.labelspacing": 0.55,
             "svg.fonttype": "none",
@@ -98,7 +119,7 @@ def style_axes(ax, xlabel: str, ylabel: str | None = None) -> None:
     ax.tick_params(axis="both", which="minor", length=3.5, width=0.9)
 
 
-def save_figure(fig, svg_path: str | Path) -> None:
+def save_figure(fig, svg_path: str | Path, transparent: bool = False) -> None:
     svg_path = Path(svg_path)
     svg_path.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(svg_path, format="svg", bbox_inches="tight")
+    fig.savefig(svg_path, format="svg", bbox_inches="tight", transparent=transparent)

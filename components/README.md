@@ -1,4 +1,4 @@
-# SVG Components
+# Wiederverwendbare Komponenten
 
 Dieses Verzeichnis ist fuer wiederverwendbare hochwertige SVG-Komponenten gedacht.
 
@@ -21,7 +21,14 @@ Echte technische Diagramme, Datenplots und Wahrscheinlichkeitsnetze liegen nicht
 
 ## Verbindliche Komponenten
 
-- `python-plot-library/`: Standard-Python-Generatoren fuer echte technische Diagramme und Weibull-Plots. Vor jedem echten Diagramm zuerst diese Library pruefen; bei fehlendem Diagrammtyp einen neuen Generator dort anlegen. Python-Plots werden ausschliesslich als SVG exportiert und koennen nach `python-plot-library/svg-animation-structure.provisional.md` fuer zeitgetriggerte Animation vorbereitet werden.
+- `pictogram-library/`: Wiederverwendbare technische Piktogramme im Profil
+  `reltest-education-minimal-v1`, mit zentraler Bedeutungsregistry und
+  E-Learning-Kleinmassstabtest. Piktogramme duerfen eingesetzt werden, wenn sie
+  Begriffe, Funktionen, Handlungen, Hierarchien oder Zustaende schneller
+  erfassbar machen. Sie bleiben semantisch, konsistent und werden nicht als
+  Dekoration verteilt.
+- `image-library/`: Freigegebene wiederverwendbare Rasterillustrationen und generierte Bildassets mit zugehoerigem Asset-Manifest. Die konkrete Datei wird zusaetzlich in jedem verwendenden Folienordner gespeichert.
+- `python-plot-library/`: Standard-Python-Generatoren fuer echte technische Diagramme und Weibull-Plots. Vor jedem echten Diagramm zuerst diese Library pruefen; bei fehlendem Diagrammtyp einen neuen Generator dort anlegen. Python-Plots werden ausschliesslich als SVG exportiert und nach `python-plot-library/svg-animation-structure.md` fuer manifestgesteuerte Sprechertextanimation vorbereitet.
 - `svg-library/`: Standard-SVG-Bausteine fuer Merkboxen und andere nicht-diagrammatische Layoutformen. Vor eigenen Grundformen zuerst diese Vorlagen pruefen und bei passender Struktur wiederverwenden.
 - `takeaway-band.md`: Standard fuer Merksaetze und Fazitbaender am unteren Bildrand. Neue Szenen sollen diesen Aufbau verwenden, damit die E-Learning-Grafiken zusammenhaengend wirken.
 

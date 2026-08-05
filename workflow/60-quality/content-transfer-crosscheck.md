@@ -1,13 +1,13 @@
 # Content Transfer Crosscheck
 
-Dieser Crosscheck prueft pro neuer Content-SVG, ob die fachlichen Inhalte der zugeordneten alten PowerPoint-Folie oder Foliengruppe nachvollziehbar uebertragen wurden. Er ist ein eigener Qualitaetsschritt vor dem technischen SVG-QA-Gate.
+Dieser Crosscheck prueft pro neuer Content-SVG, ob die fachlichen und sichtbaren Inhalte der zugeordneten PowerPoint-Quell-SVG oder Quell-SVG-Gruppe nachvollziehbar uebertragen wurden. Er ist ein eigener Qualitaetsschritt vor dem technischen SVG-QA-Gate.
 
 ## Grundsatz
 
 - Der Crosscheck wird immer folienweise fuer genau eine neue SVG-Arbeitseinheit ausgefuehrt.
-- Eine neue Folie kann eine, mehrere oder keine alten Referenzfolien besitzen.
+- Eine neue Folie kann eine, mehrere oder keine Quell-SVG-Referenzen besitzen.
 - Zusammengezogene Reveal-, Morph- oder Aufbaufolien werden gemeinsam gegen alle zugeordneten Quellfolien geprueft.
-- Zusatzfolien besitzen keine erfundene Altfolienreferenz. Fuer sie sind Review-Briefing, Nachbarfolien und Sprechertext der Inhaltsanker.
+- Zusatzfolien besitzen keine erfundene Quell-SVG-Referenz. Fuer sie sind Review-Briefing, Nachbarfolien und Sprechertext der Inhaltsanker.
 - Quellfolien, die nur als Zwischenzustand in einer anderen neuen Folie aufgehen, erhalten kein eigenes Crosscheck-Ergebnis gegen ein nicht vorhandenes SVG. Ihr Inhalt wird im Crosscheck der aufnehmenden Folie geprueft.
 
 ## Verbindliches Referenz-Mapping
@@ -29,6 +29,10 @@ Jede geplante SVG-Arbeitseinheit enthaelt mindestens:
 - `mapping_type`: `direct`, `merged` oder `new_content`
 - `rationale`
 
+`source_slides` bezeichnet im aktiven Workflow die stabilen Nummern der Quell-SVGs unter `powerpoint-svg/<module_id>/SVG/`. Bei einer Zusammenfuehrung enthaelt die Liste alle aufgenommenen Ursprungszustaende. `primary_source_slide` ist normalerweise die vollstaendigste Quell-SVG.
+
+Fuer jede Referenz muss zusaetzlich der Eintrag in `analysis/inventories/<module_id>_svg-text-map.json` existieren. Der Crosscheck vergleicht damit nicht nur Quell- und Ziel-SVG, sondern auch den wortgetreuen Sprechertext und dokumentierte Zusatzinformationen der aufgenommenen Ursprungsfolien.
+
 Das Mapping wird aktualisiert, bevor eine Quellfolie entfernt, mit einer anderen Folie zusammengezogen oder als Zusatzfolie neu eingeordnet wird. Gleiche Foliennummern duerfen nur als Fallback dienen und gelten bis zur Bestaetigung im Plan als Warnung.
 
 ## Globale Viewer-Bedienung
@@ -48,20 +52,23 @@ Auch bei Modul- oder Gesamtauswahl arbeitet der Viewer intern strikt Folie fuer 
 Fuer jede Folie im ausgewaehlten Bereich wird geprueft:
 
 1. Existiert ein explizites Referenz-Mapping?
-2. Sind alle zugeordneten gerenderten Quellfolien und Analyse-JSONs vorhanden?
-3. Existiert der aktuelle SVG-Vorschlag?
-4. Sind relevante sichtbare Quelltexte und Formelinhalte im SVG-Text nachweisbar oder als visueller Pruefpunkt markiert?
-5. Gibt es verdaechtige Zeichenfolgen, die auf fehlerhaft uebertragene Umlaute, Sonderzeichen oder Indizes hindeuten?
-6. Besitzt eine zusammengezogene Mehrfolien-Szene Animationsschritte fuer ihren Aufbau?
-7. Welche fachlichen und visuellen Aussagen muessen weiterhin manuell gegen die Referenzbilder und den Sprechertext geprueft werden?
+2. Sind alle zugeordneten Quell-SVGs vorhanden und parsebar?
+3. Existieren die passenden SVG-Text-Mapping-Eintraege und stimmen ihre Hashes?
+4. Existiert der aktuelle SVG-Vorschlag?
+5. Sind relevante sichtbare Texte aus den Quell-SVGs im Ziel-SVG nachweisbar oder als bewusste visuelle Transformation dokumentiert?
+6. Sind alle im gemappten Sprechertext grafisch zu tragenden Begriffe, Schritte, Parameter, Formeln und Unterschiede im Ziel nachweisbar oder bewusst dokumentiert?
+7. Gibt es verdaechtige Zeichenfolgen, die auf fehlerhaft uebertragene Umlaute, Sonderzeichen oder Indizes hindeuten?
+8. Besitzt eine zusammengezogene Mehrfolien-Szene Animationsschritte fuer ihren Aufbau?
+9. Welche nicht textuell pruefbaren Pfade, Bilder, Diagrammgeometrien, Mengen, Positionen und Hervorhebungen muessen weiterhin manuell gegen die Quell-SVGs und den Sprechertext geprueft werden?
 
-Die Referenzauswahl im Viewer schaltet bei Mehrfachzuordnungen zwischen den alten Folien um. Der Bericht wird gespeichert unter:
+Die Referenzauswahl im Viewer schaltet bei Mehrfachzuordnungen zwischen den Quell-SVGs um. Der Bericht wird gespeichert unter:
 
 ```text
 analysis/viewer-notes/crosschecks/<module_id>_slide_<nummer>.json
 ```
 
 Ein Bericht wird als veraltet markiert, sobald sich der SVG-Inhalt oder das Referenz-Mapping geaendert hat.
+Er wird ebenfalls veraltet, wenn sich ein Quell-SVG-, DOCX-, Extraktions- oder Sprechertexthash im SVG-Text-Mapping aendert.
 
 ## Statuswerte
 
@@ -76,7 +83,7 @@ Ein Bericht wird als veraltet markiert, sobald sich der SVG-Inhalt oder das Refe
 
 1. Neue SVG nach Plan und Detailrichtlinien erstellen oder korrigieren.
 2. Crosscheck fuer genau diese Folie ausfuehren.
-3. Referenzfolien einzeln durchschalten und alle Befunde sowie manuellen Pruefpunkte bearbeiten.
+3. Quell-SVGs einzeln durchschalten und alle Befunde sowie manuellen Pruefpunkte bearbeiten.
 4. Crosscheck erneut ausfuehren, bis keine konkreten Uebertragungsfehler verbleiben.
 5. Danach das technische und gerenderte QA-Gate fuer dieselbe Folie ausfuehren.
 6. Erst nach Crosscheck und Re-QA zur naechsten Arbeitseinheit wechseln.

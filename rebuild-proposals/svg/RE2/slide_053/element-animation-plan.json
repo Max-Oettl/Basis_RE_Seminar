@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re2_ch3_fta_aircraft_top_event",
+  "targets": [
+    {
+      "targetId": "fta53_asset",
+      "label": "Flugzeug mit drei Fahrwerksgruppen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta53_nodes",
+      "label": "Fahrwerk-Fehlerbaum",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta53_links",
+      "label": "Fehlerbaum-Beziehungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta53_asset",
+      "targetId": "fta53_asset",
+      "action": "show",
+      "sourceText": "Hierzu betrachten wir das Bugradfahrwerk eines Flugzeuges",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_fta53_nodes",
+      "targetId": "fta53_nodes",
+      "action": "show",
+      "sourceText": "Das Bugrad ist beispielsweise ausgefallen, wenn die beiden Reifen eins und zwei ausgefallen sind.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_fta53_links",
+      "targetId": "fta53_links",
+      "action": "draw",
+      "sourceText": "Auch hier sind die Ausfälle der Reifen jeweils mit einem Und-Gatter verbunden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung wird erst nach den zugehörigen Ereignissen gezeichnet; kleine Linien- und Pfeilskalierung.",
+      "drawDurFrames": 40
+    }
+  ]
+}

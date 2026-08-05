@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_054" data-brand-profile="reltest-academy">
+  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"cdf-quantile-requirement-plot","contentTitle":"Bq-Lebensdauer","layoutIntent":"dominant-bq-distribution-with-coupled-example-markers-and-compact-requirement-definition","takeaway":"Die Bq-Lebensdauer ordnet einer definierten Ausfallwahrscheinlichkeit eine konkrete Laufleistung zu.","density":"balanced","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-academy","brandVariant":"academy-production","sourceSlides":[54],"officialLogoStatus":"pending-original-asset"}]]></metadata>
+  <title id="accessible_title">Bq-Lebensdauer</title>
+  <desc id="accessible_description">Die Bq-Lebensdauer ordnet einer definierten Ausfallwahrscheinlichkeit eine konkrete Laufleistung zu.</desc>
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F9FBFC"/>
+      <stop offset="56%" stop-color="#F1F5F8"/>
+      <stop offset="100%" stop-color="#E9F0F4"/>
+    </linearGradient>
+    <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#102A43" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="shadowSoft" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#102A43" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow_007EA7" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#007EA7"/></marker>
+    <marker id="arrow_102A43" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#102A43"/></marker>
+    <marker id="arrow_D1495B" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#D1495B"/></marker>
+    <marker id="arrow_2F6F55" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#2F6F55"/></marker>
+    <marker id="arrow_B7791F" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#B7791F"/></marker>
+  </defs>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+  </style>
+  <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
+  <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
+  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><svg id="bq_life_plot" x="86" y="220" width="1270" height="680" viewBox="0 0 800.519125 387.89106" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="bq_life_plot__figure_1">
+  <g id="bq_life_plot__patch_1">
+   <path d="M 0 387.89106  L 800.519125 387.89106  L 800.519125 0  L 0 0  L 0 387.89106  z " style="fill: none; opacity: 0" />
+  </g>
+  <g id="bq_life_plot__axes_1">
+   <g id="bq_life_plot__patch_2">
+    <path d="M 62.663125 310.248  L 793.319125 310.248  L 793.319125 7.2  L 62.663125 7.2  L 62.663125 310.248  z " style="fill: none" />
+   </g>
+   <g id="bq_life_plot__matplotlib.axis_1">
+    <g id="bq_life_plot__xtick_1">
+     <g id="bq_life_plot__line2d_1">
+      <path d="M 153.995125 310.248  L 153.995125 7.2  " clip-path="url(#bq_life_plot__ped0b2a98bc)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="bq_life_plot__line2d_2">
+      <defs>
+       <path id="bq_life_plot__mb79032d0d9" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#bq_life_plot__mb79032d0d9" x="153.995125" y="310.248" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="bq_life_plot__text_1">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="153.995125" y="329.625969" transform="rotate(-0 153.995125 329.625969)">100.000</text>
+     </g>
+    </g>
+    <g id="bq_life_plot__xtick_2">
+     <g id="bq_life_plot__line2d_3">
+      <path d="M 336.659125 310.248  L 336.659125 7.2  " clip-path="url(#bq_life_plot__ped0b2a98bc)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="bq_life_plot__line2d_4">
+      <g>
+       <use ns4:href="#bq_life_plot__mb79032d0d9" x="336.659125" y="310.248" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="bq_life_plot__text_2">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="336.659125" y="329.625969" transform="rotate(-0 336.659125 329.625969)">250.000</text>
+     </g>
+    </g>
+    <g id="bq_life_plot__xtick_3">
+     <g id="bq_life_plot__line2d_5">
+      <path d="M 519.323125 310.248  L 519.323125 7.2  " clip-path="url(#bq_life_plot__ped0b2a98bc)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="bq_life_plot__line2d_6">
+      <g>
+       <use ns4:href="#bq_life_plot__mb79032d0d9" x="519.323125" y="310.248" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="bq_life_plot__text_3">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="519.323125" y="329.625969" transform="rotate(-0 519.323125 329.625969)">700.000</text>
+     </g>
+    </g>
+    <g id="bq_life_plot__xtick_4">
+     <g id="bq_life_plot__line2d_7">
+      <path d="M 701.987125 310.248  L 701.987125 7.2  " clip-path="url(#bq_life_plot__ped0b2a98bc)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="bq_life_plot__line2d_8">
+      <g>
+       <use ns4:href="#bq_life_plot__mb79032d0d9" x="701.987125" y="310.248" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="bq_life_plot__text_4">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="701.987125" y="329.625969" transform="rotate(-0 701.987125 329.625969)">1.200.000</text>
+     </g>
+    </g>
+    <g id="bq_life_plot__text_5">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="427.991125" y="358.00675" transform="rotate(-0 427.991125 358.00675)">Laufleistung [km]</text>
+    </g>
+   </g>
+   <g id="bq_life_plot__matplotlib.axis_2">
+    <g id="bq_life_plot__ytick_1">
+     <g id="bq_life_plot__line2d_9">
+      <path d="M 62.663125 272.367  L 793.319125 272.367  " clip-path="url(#bq_life_plot__ped0b2a98bc)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="bq_life_plot__line2d_10">
+      <defs>
+       <path id="bq_life_plot__m8c852fd8e8" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#bq_life_plot__m8c852fd8e8" x="62.663125" y="272.367" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="bq_life_plot__text_6">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="53.163125" y="277.305984" transform="rotate(-0 53.163125 277.305984)">5</text>
+     </g>
+    </g>
+    <g id="bq_life_plot__ytick_2">
+     <g id="bq_life_plot__line2d_11">
+      <path d="M 62.663125 196.605  L 793.319125 196.605  " clip-path="url(#bq_life_plot__ped0b2a98bc)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="bq_life_plot__line2d_12">
+      <g>
+       <use ns4:href="#bq_life_plot__m8c852fd8e8" x="62.663125" y="196.605" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="bq_life_plot__text_7">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="53.163125" y="201.543984" transform="rotate(-0 53.163125 201.543984)">10</text>
+     </g>
+    </g>
+    <g id="bq_life_plot__ytick_3">
+     <g id="bq_life_plot__line2d_13">
+      <path d="M 62.663125 120.843  L 793.319125 120.843  " clip-path="url(#bq_life_plot__ped0b2a98bc)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="bq_life_plot__line2d_14">
+      <g>
+       <use ns4:href="#bq_life_plot__m8c852fd8e8" x="62.663125" y="120.843" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="bq_life_plot__text_8">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="53.163125" y="125.781984" transform="rotate(-0 53.163125 125.781984)">20</text>
+     </g>
+    </g>
+    <g id="bq_life_plot__ytick_4">
+     <g id="bq_life_plot__line2d_15">
+      <path d="M 62.663125 45.081  L 793.319125 45.081  " clip-path="url(#bq_life_plot__ped0b2a98bc)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="bq_life_plot__line2d_16">
+      <g>
+       <use ns4:href="#bq_life_plot__m8c852fd8e8" x="62.663125" y="45.081" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="bq_life_plot__text_9">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="53.163125" y="50.019984" transform="rotate(-0 53.163125 50.019984)">50</text>
+     </g>
+    </g>
+    <g id="bq_life_plot__text_10">
+     
+     <g style="fill: #062d46" transform="translate(20.877188 328.194) rotate(-90)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">A</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="13.930664" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="26.745117" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.458984" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">f</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.290039" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="57.436523" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="63.606445" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="69.776367" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">w</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="86.405273" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="98.551758" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="111.366211" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="120.243164" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="130.957031" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="141.626953" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="154.441406" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="166.649414" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="172.819336" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="185.633789" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="191.803711" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="197.973633" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="208.643555" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="221.458008" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">k</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="233.428711" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="245.636719" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="251.806641" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="260.411133" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="298.133789" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="304.400391" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">[</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="312.626953" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">%</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="330.662109" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">]</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="266.677734" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">F</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="284.053711" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="277.03125" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">(</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="291.111328" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">)</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="bq_distribution" data-anim-target="true" data-anim-label="Verteilungskurve der Ausfallwahrscheinlichkeit"><g id="bq_life_plot__bq_distribution_curve">
+    <path d="M 84.582805 301.15656  L 771.399445 16.29144  L 771.399445 16.29144  " clip-path="url(#bq_life_plot__ped0b2a98bc)" style="fill: none; stroke: #007ea7; stroke-width: 4; stroke-linecap: square" />
+   </g>
+   <g id="bq_life_plot__bq_distribution_label">
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #007ea7" x="493.750165" y="29.9286" transform="rotate(-0 493.750165 29.9286)">Verteilungsgerade</text>
+   </g>
+   </g><g id="b5_example" data-anim-target="true" data-anim-label="B5-Lebensdauer bei 100.000 Kilometern"><g id="bq_life_plot__b5_guides">
+    <path d="M 62.663125 272.367  L 153.995125 272.367  " clip-path="url(#bq_life_plot__ped0b2a98bc)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #d1495b; stroke-width: 2.5" />
+    <path d="M 153.995125 310.248  L 153.995125 272.367  " clip-path="url(#bq_life_plot__ped0b2a98bc)" style="fill: none; stroke-dasharray: 9.25,4; stroke-dashoffset: 0; stroke: #d1495b; stroke-width: 2.5" />
+   </g>
+   <g id="bq_life_plot__b5_label">
+    
+    <g style="fill: #d1495b" transform="translate(55.356565 376.91856)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.078125" style="font-style: oblique; font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">B</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.662598" y="2.710938" style="font-size: 11.9px; font-family: 'DejaVu Sans'; fill: #d1495b">5</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.010596" y="-0.078125" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="40.566748" y="-0.078125" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">1</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="51.382666" y="-0.078125" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">0</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="62.198584" y="-0.078125" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">0</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="73.014502" y="-0.078125" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">.</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="78.418311" y="-0.078125" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">0</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="89.234229" y="-0.078125" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">0</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="100.050146" y="-0.078125" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">0</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="110.866064" y="-0.078125" style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b"> </tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="116.784521" y="-0.078125" style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">k</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="128.090186" y="-0.078125" style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">m</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="bq_life_plot__b5_failed_label">
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d1495b" x="376.845205" y="376.91856" transform="rotate(-0 376.845205 376.91856)">5 % ausgefallen</text>
+   </g>
+   <g id="bq_life_plot__b5_separator">
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="391.458325" y="376.91856" transform="rotate(-0 391.458325 376.91856)">|</text>
+   </g>
+   <g id="bq_life_plot__b5_intact_label">
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2f6f55" x="406.071445" y="376.91856" transform="rotate(-0 406.071445 376.91856)">95 % intakt</text>
+   </g>
+   <g id="bq_life_plot__b5_point">
+    <defs>
+     <path id="bq_life_plot__m0c4b9667b3" d="M 0 6.123724  C 1.624031 6.123724 3.181764 5.47849 4.330127 4.330127  C 5.47849 3.181764 6.123724 1.624031 6.123724 0  C 6.123724 -1.624031 5.47849 -3.181764 4.330127 -4.330127  C 3.181764 -5.47849 1.624031 -6.123724 0 -6.123724  C -1.624031 -6.123724 -3.181764 -5.47849 -4.330127 -4.330127  C -5.47849 -3.181764 -6.123724 -1.624031 -6.123724 0  C -6.123724 1.624031 -5.47849 3.181764 -4.330127 4.330127  C -3.181764 5.47849 -1.624031 6.123724 0 6.123724  z " style="stroke: #ffffff; stroke-width: 2" />
+    </defs>
+    <g clip-path="url(#bq_life_plot__ped0b2a98bc)">
+     <use ns4:href="#bq_life_plot__m0c4b9667b3" x="153.995125" y="272.367" style="fill: #d1495b; stroke: #ffffff; stroke-width: 2" />
+    </g>
+   </g>
+   </g><g id="other_bq_markers" data-anim-target="true" data-anim-label="Weitere Bq-Lebensdauern"><g id="bq_life_plot__other_bq_guides">
+    <path d="M 62.663125 196.605  L 336.659125 196.605  " clip-path="url(#bq_life_plot__ped0b2a98bc)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #6a7a86; stroke-opacity: 0.75; stroke-width: 1.5" />
+    <path d="M 336.659125 310.248  L 336.659125 196.605  " clip-path="url(#bq_life_plot__ped0b2a98bc)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #6a7a86; stroke-opacity: 0.75; stroke-width: 1.5" />
+    <path d="M 62.663125 120.843  L 519.323125 120.843  " clip-path="url(#bq_life_plot__ped0b2a98bc)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #6a7a86; stroke-opacity: 0.75; stroke-width: 1.5" />
+    <path d="M 519.323125 310.248  L 519.323125 120.843  " clip-path="url(#bq_life_plot__ped0b2a98bc)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #6a7a86; stroke-opacity: 0.75; stroke-width: 1.5" />
+    <path d="M 62.663125 45.081  L 701.987125 45.081  " clip-path="url(#bq_life_plot__ped0b2a98bc)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #6a7a86; stroke-opacity: 0.75; stroke-width: 1.5" />
+    <path d="M 701.987125 310.248  L 701.987125 45.081  " clip-path="url(#bq_life_plot__ped0b2a98bc)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #6a7a86; stroke-opacity: 0.75; stroke-width: 1.5" />
+   </g>
+   <g id="bq_life_plot__bq_label_10">
+    
+    <g style="fill: #2f6f55" transform="translate(324.584125 182.96784)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.0625" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">B</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="10.290527" y="2.398438" style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #2f6f55">1</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="16.970947" y="2.398438" style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #2f6f55">0</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="bq_life_plot__bq_label_20">
+    
+    <g style="fill: #2f6f55" transform="translate(507.248125 107.20584)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.0625" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">B</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="10.290527" y="2.398438" style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #2f6f55">2</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="16.970947" y="2.398438" style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #2f6f55">0</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="bq_life_plot__bq_label_50">
+    
+    <g style="fill: #2f6f55" transform="translate(689.912125 31.44384)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.0625" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">B</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="10.290527" y="2.398438" style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #2f6f55">5</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="16.970947" y="2.398438" style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #2f6f55">0</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="bq_life_plot__other_bq_points">
+    <defs>
+     <path id="bq_life_plot__m60fe13b86f" d="M 0 5.123475  C 1.358762 5.123475 2.662055 4.583634 3.622844 3.622844  C 4.583634 2.662055 5.123475 1.358762 5.123475 0  C 5.123475 -1.358762 4.583634 -2.662055 3.622844 -3.622844  C 2.662055 -4.583634 1.358762 -5.123475 0 -5.123475  C -1.358762 -5.123475 -2.662055 -4.583634 -3.622844 -3.622844  C -4.583634 -2.662055 -5.123475 -1.358762 -5.123475 0  C -5.123475 1.358762 -4.583634 2.662055 -3.622844 3.622844  C -2.662055 4.583634 -1.358762 5.123475 0 5.123475  z " style="stroke: #ffffff; stroke-width: 1.8" />
+    </defs>
+    <g clip-path="url(#bq_life_plot__ped0b2a98bc)">
+     <use ns4:href="#bq_life_plot__m60fe13b86f" x="336.659125" y="196.605" style="fill: #2f6f55; stroke: #ffffff; stroke-width: 1.8" />
+     <use ns4:href="#bq_life_plot__m60fe13b86f" x="519.323125" y="120.843" style="fill: #2f6f55; stroke: #ffffff; stroke-width: 1.8" />
+     <use ns4:href="#bq_life_plot__m60fe13b86f" x="701.987125" y="45.081" style="fill: #2f6f55; stroke: #ffffff; stroke-width: 1.8" />
+    </g>
+   </g>
+  </g><g id="bq_life_plot__patch_3">
+    <path d="M 62.663125 310.248  L 62.663125 7.2  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="bq_life_plot__patch_4">
+    <path d="M 62.663125 310.248  L 793.319125 310.248  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   </g>
+ </g>
+ <defs>
+  <clipPath id="bq_life_plot__ped0b2a98bc">
+   <rect data-qc-allow-overlap="true" x="62.663125" y="7.2" width="730.656" height="303.048" />
+  </clipPath>
+ </defs>
+</svg><g id="bq_q_definition" data-anim-target="true" data-anim-label="Bedeutung von q"><title>Bedeutung von q</title><rect data-qc-allow-overlap="true" x="1400" y="236" width="420" height="210" rx="8" fill="#FFFFFF" stroke="#007EA7" stroke-width="1.5" filter="url(#shadowSoft)"/><circle cx="1460" cy="305" r="40" fill="#D9F0F7"/><g transform="translate(1436 281) scale(2)" fill="none" stroke="#007EA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="2.4"/><circle cx="17" cy="17" r="2.4"/><path d="M5 19L19 5"/></g><text x="1522" y="294" class="" font-size="42" font-weight="860" fill="#007EA7" text-anchor="start" data-qc-role="text"><tspan x="1522" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">q</tspan></text><text x="1522" y="335" class="" font-size="21" font-weight="740" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1522" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Ausfallwahrscheinlichkeit</tspan><tspan x="1522" dy="27" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">in Prozent</tspan></text><text x="1438" y="405" class="" font-size="19" font-weight="720" fill="#243B53" text-anchor="start" data-qc-role="text"><tspan x="1438" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Bq verknüpft q mit einer Laufleistung.</tspan></text></g><g id="bq_requirement_conclusion" data-anim-target="true" data-anim-label="Bq als Zuverlässigkeitsanforderung"><title>Bq als Zuverlässigkeitsanforderung</title><rect data-qc-allow-overlap="true" x="1400" y="500" width="420" height="344" rx="8" fill="#E3F0EA" stroke="#2F6F55" stroke-width="1.5"/><circle cx="1464" cy="574" r="42" fill="#FFFFFF"/><g transform="translate(1438 548) scale(2.1666666666666665)" fill="none" stroke="#2F6F55" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-2.9 8.1-7 10-4.1-1.9-7-5.4-7-10V6z"/><path d="M8.5 12l2.2 2.2 4.8-5"/></g><text x="1526" y="562" class="" font-size="18" font-weight="840" fill="#2F6F55" text-anchor="start" data-qc-role="text"><tspan x="1526" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">PRÄZISE ANFORDERUNG</tspan></text><text x="1438" y="650" class="" font-size="27" font-weight="820" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1438" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Lebensdauer</tspan></text><text x="1438" y="692" class="" font-size="25" font-weight="820" fill="#52606D" text-anchor="start" data-qc-role="text"><tspan x="1438" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">+</tspan></text><text x="1438" y="736" class="" font-size="22" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1438" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">zulässige Ausfallwahrscheinlichkeit</tspan></text><text x="1438" y="804" class="" font-size="20" font-weight="820" fill="#2F6F55" text-anchor="start" data-qc-role="text"><tspan x="1438" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">festlegen und überprüfen</tspan></text></g></g>
+</svg>

@@ -12,6 +12,7 @@ from reltest_plot_style import (
     save_figure,
     style_axes,
 )
+from svg_animation_targets import prepare_svg_animation_targets
 
 
 PROBABILITY_TICKS = [0.01, 0.02, 0.05, 0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90, 0.95, 0.98, 0.99]
@@ -85,7 +86,7 @@ def build_plot(
 
     ax.set_xscale("log")
     fit_line = ax.plot(line_times, line_y, color=RELTEST_COLORS["data"], linewidth=2.5, label="Weibull-Fit")[0]
-    fit_line.set_gid("plot-weibull-fit")
+    fit_line.set_gid("plot_weibull_fit")
 
     scatter = ax.scatter(
         sorted_times,
@@ -97,7 +98,7 @@ def build_plot(
         zorder=3,
         label="Ausfalldaten",
     )
-    scatter.set_gid("plot-data-points")
+    scatter.set_gid("plot_data_points")
 
     y_ticks = [weibull_y(value) for value in PROBABILITY_TICKS]
     y_labels = [f"{int(value * 100)}" for value in PROBABILITY_TICKS]
@@ -108,10 +109,17 @@ def build_plot(
 
     style_axes(ax, xlabel, ylabel)
     legend = ax.legend(loc="lower right")
-    legend.set_gid("plot-legend")
+    legend.set_gid("plot_legend")
     fig.tight_layout()
     save_figure(fig, output)
     plt.close(fig)
+    prepare_svg_animation_targets(
+        output,
+        {
+            "plot_data_points": "Ausfalldaten",
+            "plot_weibull_fit": "Weibull-Fit",
+        },
+    )
 
 
 def main() -> None:

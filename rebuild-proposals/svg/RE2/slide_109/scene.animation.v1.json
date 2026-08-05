@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_109.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "s109_failures",
+      "label": "Typische Ausfallarten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s109_causes",
+      "label": "Typische Ausfallursachen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s109_failures",
+      "targetId": "s109_failures",
+      "action": "show",
+      "sourceText": "Die Fehlfunktion eines Bauteils ist oft einfach die physikalische Ausfallart. Typische Ausfallarten sind Bruch, Kurzschluss, Undichtheit oder auch Leistungsabfall. Natürlich gibt es noch viele weitere Ausfallarten.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_s109_causes",
+      "targetId": "s109_causes",
+      "action": "show",
+      "sourceText": "Diese Ausfallarten werden wiederum durch unterschiedliche Ausfallursachen hervorgerufen. Typische Ursachen sind falsche Materialwahl, unzulässige Belastung, Materialfehler sowie Ermüdung, Korrosion oder falscher Einbau. Auch hier gibt es viele weitere mögliche Ursachen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    }
+  ]
+}

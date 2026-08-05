@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_025.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "functional_testing",
+      "label": "Funktionale Erprobung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "qualitative_product_assurance",
+      "label": "Qualitative Absicherung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "quantitative_product_assurance",
+      "label": "Quantitative Absicherung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_functional_testing",
+      "targetId": "functional_testing",
+      "action": "show",
+      "sourceText": "Wir sprechen hierbei auch von der funktionalen Erprobung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_qualitative_product_assurance",
+      "targetId": "qualitative_product_assurance",
+      "action": "show",
+      "sourceText": "mit Hilfe von qualitativen Zuverlässigkeitsanalysen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_quantitative_product_assurance",
+      "targetId": "quantitative_product_assurance",
+      "action": "show",
+      "sourceText": "quantitativen Zuverlässigkeitsabsicherung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

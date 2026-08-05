@@ -1,0 +1,58 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_043",
+  "scene_id": "re1_src_047",
+  "source_slides": [
+    47,
+    48
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "mode_formula",
+      "label": "Ableitungsbedingung des Modalwerts",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "mode_peak",
+      "label": "Maximum der Dichtefunktion",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_mode_formula",
+      "targetId": "mode_formula",
+      "action": "show",
+      "sourceText": "indem man die erste Ableitung der Dichtefunktion auf Null setzt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_mode_peak",
+      "targetId": "mode_peak",
+      "action": "show",
+      "sourceText": "Punkt, an dem die Dichtefunktion ihr Maximum erreicht",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

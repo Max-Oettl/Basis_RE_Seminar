@@ -1,0 +1,353 @@
+{
+  "schema_version": "svgQaReport/v1",
+  "module_id": "slide_066",
+  "svg_root": "rebuild-proposals/svg/RE1/slide_066",
+  "generated_at": "2026-07-20T05:53:21.649Z",
+  "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\tools\\svg-rebuild-qa.js rebuild-proposals/svg/RE1/slide_066 --no-design --layout --report-dir analysis/qa-reports/RE1/chapter-05/lessons-03-04/slide-066-direct",
+  "files": [
+    {
+      "path": "rebuild-proposals/svg/RE1/slide_066/plots/nkw_probability.svg",
+      "ids": 142,
+      "animationManifest": ""
+    },
+    {
+      "path": "rebuild-proposals/svg/RE1/slide_066/slide_066.svg",
+      "ids": 159,
+      "animationManifest": "rebuild-proposals/svg/RE1/slide_066/scene.animation.v1.json"
+    }
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_066/plots/nkw_probability.svg",
+      "message": "ViewBox is not close to 16:9.",
+      "detail": "712.705531x413.449742"
+    },
+    {
+      "rule": "group_integrity",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_066/plots/nkw_probability.svg",
+      "slide": "066",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "",
+      "related_element_id": "",
+      "message": "No data-qc-* attributes found; layout QA is using heuristics only.",
+      "expected": "Explicit data-qc roles and relationships for text boxes, arrows, axes, formulas, and timelines.",
+      "actual": {
+        "elementsWithDataQc": 0,
+        "totalElements": 365
+      },
+      "bbox": null,
+      "recommendation": "Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_066/plots/nkw_probability.svg",
+      "slide": "066",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_312",
+      "related_element_id": "qc_runtime_320",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 53.149147033691406,
+          "top": 32.95752716064453,
+          "right": 66.1495361328125,
+          "bottom": 37.372859954833984,
+          "width": 13.000389099121094,
+          "height": 4.415332794189453
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 53.149147033691406,
+          "top": 32.95752716064453,
+          "right": 66.64454650878906,
+          "bottom": 47.95797348022461,
+          "width": 13.495399475097656,
+          "height": 15.000446319580078
+        },
+        "right": {
+          "left": 53.149147033691406,
+          "top": 22.372413635253906,
+          "right": 66.1495361328125,
+          "bottom": 37.372859954833984,
+          "width": 13.000389099121094,
+          "height": 15.000446319580078
+        },
+        "overlap": {
+          "left": 53.149147033691406,
+          "top": 32.95752716064453,
+          "right": 66.1495361328125,
+          "bottom": 37.372859954833984,
+          "width": 13.000389099121094,
+          "height": 4.415332794189453
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_066/plots/nkw_probability.svg",
+      "slide": "066",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_358",
+      "related_element_id": "qc_runtime_360",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 4.551399230957031,
+          "top": 50.95233154296875,
+          "right": 24.551992416381836,
+          "bottom": 53.599212646484375,
+          "width": 20.000593185424805,
+          "height": 2.646881103515625
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 4.551399230957031,
+          "top": 50.95233154296875,
+          "right": 24.551992416381836,
+          "bottom": 64.9527587890625,
+          "width": 20.000593185424805,
+          "height": 14.00042724609375
+        },
+        "right": {
+          "left": 4.551399230957031,
+          "top": 47.599029541015625,
+          "right": 24.551992416381836,
+          "bottom": 53.599212646484375,
+          "width": 20.000593185424805,
+          "height": 6.00018310546875
+        },
+        "overlap": {
+          "left": 4.551399230957031,
+          "top": 50.95233154296875,
+          "right": 24.551992416381836,
+          "bottom": 53.599212646484375,
+          "width": 20.000593185424805,
+          "height": 2.646881103515625
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "layout_browser_render",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_066/slide_066.svg",
+      "slide": "066",
+      "time_seconds": null,
+      "state": "",
+      "element_id": "",
+      "related_element_id": "",
+      "message": "SVG layout QA failed for this file.",
+      "expected": null,
+      "actual": "CDP socket closed.",
+      "bbox": null,
+      "recommendation": "Check SVG syntax, external references, and browser-renderability.",
+      "detail": ""
+    }
+  ],
+  "viewer": {
+    "checked": false
+  },
+  "layout": {
+    "checked": true,
+    "strict": false,
+    "warnOnly": true,
+    "browser": {
+      "executable": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "port": 5913
+    },
+    "files": [
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_066/plots/nkw_probability.svg",
+        "slide": "066",
+        "states_checked": 1,
+        "browser_rendered": true
+      },
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_066/slide_066.svg",
+        "slide": "066",
+        "states_checked": 0,
+        "browser_rendered": false
+      }
+    ],
+    "issues": [
+      {
+        "rule": "group_integrity",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_066/plots/nkw_probability.svg",
+        "slide": "066",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "",
+        "related_element_id": "",
+        "message": "No data-qc-* attributes found; layout QA is using heuristics only.",
+        "expected": "Explicit data-qc roles and relationships for text boxes, arrows, axes, formulas, and timelines.",
+        "actual": {
+          "elementsWithDataQc": 0,
+          "totalElements": 365
+        },
+        "bbox": null,
+        "recommendation": "Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_066/plots/nkw_probability.svg",
+        "slide": "066",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_312",
+        "related_element_id": "qc_runtime_320",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 53.149147033691406,
+            "top": 32.95752716064453,
+            "right": 66.1495361328125,
+            "bottom": 37.372859954833984,
+            "width": 13.000389099121094,
+            "height": 4.415332794189453
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 53.149147033691406,
+            "top": 32.95752716064453,
+            "right": 66.64454650878906,
+            "bottom": 47.95797348022461,
+            "width": 13.495399475097656,
+            "height": 15.000446319580078
+          },
+          "right": {
+            "left": 53.149147033691406,
+            "top": 22.372413635253906,
+            "right": 66.1495361328125,
+            "bottom": 37.372859954833984,
+            "width": 13.000389099121094,
+            "height": 15.000446319580078
+          },
+          "overlap": {
+            "left": 53.149147033691406,
+            "top": 32.95752716064453,
+            "right": 66.1495361328125,
+            "bottom": 37.372859954833984,
+            "width": 13.000389099121094,
+            "height": 4.415332794189453
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_066/plots/nkw_probability.svg",
+        "slide": "066",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_358",
+        "related_element_id": "qc_runtime_360",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 4.551399230957031,
+            "top": 50.95233154296875,
+            "right": 24.551992416381836,
+            "bottom": 53.599212646484375,
+            "width": 20.000593185424805,
+            "height": 2.646881103515625
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 4.551399230957031,
+            "top": 50.95233154296875,
+            "right": 24.551992416381836,
+            "bottom": 64.9527587890625,
+            "width": 20.000593185424805,
+            "height": 14.00042724609375
+          },
+          "right": {
+            "left": 4.551399230957031,
+            "top": 47.599029541015625,
+            "right": 24.551992416381836,
+            "bottom": 53.599212646484375,
+            "width": 20.000593185424805,
+            "height": 6.00018310546875
+          },
+          "overlap": {
+            "left": 4.551399230957031,
+            "top": 50.95233154296875,
+            "right": 24.551992416381836,
+            "bottom": 53.599212646484375,
+            "width": 20.000593185424805,
+            "height": 2.646881103515625
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "layout_browser_render",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_066/slide_066.svg",
+        "slide": "066",
+        "time_seconds": null,
+        "state": "",
+        "element_id": "",
+        "related_element_id": "",
+        "message": "SVG layout QA failed for this file.",
+        "expected": null,
+        "actual": "CDP socket closed.",
+        "bbox": null,
+        "recommendation": "Check SVG syntax, external references, and browser-renderability.",
+        "detail": ""
+      }
+    ],
+    "summary": {
+      "checked": true,
+      "files_checked": 2,
+      "states_checked": 1,
+      "errors": 0,
+      "warnings": 4
+    }
+  },
+  "design": {
+    "checked": false
+  },
+  "handoff": {
+    "checked": false
+  },
+  "summary": {
+    "files_checked": 2,
+    "manifests_checked": 1,
+    "layout_files_checked": 2,
+    "layout_states_checked": 1,
+    "design_files_checked": 0,
+    "design_errors": 0,
+    "design_warnings": 0,
+    "handoff_scenes_checked": 0,
+    "handoff_manifests_checked": 0,
+    "handoff_errors": 0,
+    "handoff_warnings": 0,
+    "errors": 0,
+    "warnings": 5
+  }
+}

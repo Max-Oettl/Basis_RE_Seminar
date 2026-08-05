@@ -1,0 +1,93 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_035",
+  "scene_id": "re1_src_037",
+  "source_slides": [
+    37
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "men_distribution",
+      "label": "Ausfallwahrscheinlichkeit Männer",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "women_distribution",
+      "label": "Ausfallwahrscheinlichkeit Frauen",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "age_80_readout",
+      "label": "Ablesung bei achtzig Jahren",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "human_cdf_comparison",
+      "label": "Werte bei achtzig Jahren",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_men_distribution",
+      "targetId": "men_distribution",
+      "action": "draw",
+      "sourceText": "Die Ausfallwahrscheinlichkeit, also die Wahrscheinlichkeit zu sterben, steigt bei Männern im Vergleich zu den Frauen deutlich steiler an",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_women_distribution",
+      "targetId": "women_distribution",
+      "action": "draw",
+      "sourceText": "Die Ausfallwahrscheinlichkeit, also die Wahrscheinlichkeit zu sterben, steigt bei Männern im Vergleich zu den Frauen deutlich steiler an",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_age_80_readout",
+      "targetId": "age_80_readout",
+      "action": "show",
+      "sourceText": "Demnach sind auch bei einem Lebensalter von achtzig Jahren",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_human_cdf_comparison",
+      "targetId": "human_cdf_comparison",
+      "action": "show",
+      "sourceText": "Demnach sind auch bei einem Lebensalter von achtzig Jahren",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

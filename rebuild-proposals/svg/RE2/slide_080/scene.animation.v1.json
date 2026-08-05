@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_080.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "s80_tree_nodes",
+      "label": "Systemelemente",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s80_tree_links",
+      "label": "Hierarchische Verknüpfungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s80_tree_nodes",
+      "targetId": "s80_tree_nodes",
+      "action": "show",
+      "sourceText": "Im zweiten Schritt der FME-A erfolgt die Strukturanalyse. Dabei analysieren wir die Struktur eines Produktes innerhalb der festgelegten Systemgrenzen und ordnen die Systemelemente in einer baumartigen Hierarchie an.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_s80_tree_links",
+      "targetId": "s80_tree_links",
+      "action": "draw",
+      "sourceText": "Der dritte Schritt umfasst die Erstellung der Systemstruktur, auch Systembaum genannt. Hierbei ordnen wir die einzelnen Systemelemente hierarchisch an, basierend auf der Struktur des Systems. Wichtig ist, dass beliebig viele Hierarchieebenen verwendet werden können. Die Anzahl der Ebenen hängt vom jeweiligen System und dem gewünschten Detaillierungsgrad ab.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung wird erst nach den zugehörigen fachlichen Endpunkten aufgebaut.",
+      "drawDurFrames": 42
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # Szene-Für-Szene-Produktionsrunbook
 
+> Legacy-/Downstream-Workflow fuer storyboardbasierte Szenenproduktion. Neue PowerPoint-SVG-Module verwenden `workflow/40-svg-production/svg-rebuild-production-runbook.md`.
+
 Dieses Runbook ist bei Aufträgen mit einer oder mehreren Szenen verbindlich. Es wird zu Beginn jeder Szene neu geöffnet und von oben nach unten abgearbeitet.
 
 Ziel ist, dass immer genau eine Szene aktiv produziert wird, ihr Kontext vollständig in Dateien steht und die nächste Szene erst nach Abschluss der aktuellen Szene beginnt.
@@ -88,7 +90,7 @@ Der Scene-Worker liest vor dem ersten Entwurf:
 4. `workflow/graphic-creation-quality-gate.md`
 5. `workflow/scene-manifest-contract.md`
 6. `brand/design-quality-bar.md`
-7. `brand/reltest-academy-style-guide.md`
+7. `brand/reltest-education-style-guide.md`
 8. die Storyboard-Quelle und vorhandene Metadaten der aktuellen Szene
 9. `production-runs/<run_id>.md`
 10. `assets/scenes/<scene_id>/manifest.json`, `prompts.json`, `handoff.md` und `review.json`, falls vorhanden
@@ -280,7 +282,7 @@ Verantwortlich: `agents/art-director.md`
 Zu lesen:
 
 - `agents/art-director.md`
-- `brand/reltest-academy-style-guide.md`
+- `brand/reltest-education-style-guide.md`
 - `components/README.md`
 - bei Merksatz oder Fazit: `components/takeaway-band.md`
 - bei Diagrammen: `workflow/diagram-guidelines.md`
@@ -315,8 +317,11 @@ Für jedes Asset festhalten:
 
 - eindeutige Asset-ID und Dateiname
 - isoliertes Motiv und Rolle in der Szene
+- Semantik-Brief mit `concept`, `mustShowFeatures`, `mustNotImply`,
+  `confusableWith`, `firstUseLabel` und `reuseKey`
 - Stil, Perspektive, Farbwelt und gewünschte Freistellung
 - transparenter Hintergrund
+- Zielmassstab 48 px und geplanter 960x540-Szenencheck
 - Ausschlüsse: kein Text, keine Zahlen, kein Logo, kein Wasserzeichen, keine vollständige Szene
 
 Stop-Gate:
@@ -344,6 +349,7 @@ Zu lesen:
 
 - `agents/png-asset-reviewer.md`
 - `brand/design-quality-bar.md`
+- `workflow/30-visual-decision/pictogram-creation-workflow.md`
 
 Jedes Asset erhält im `manifest.json`:
 
@@ -356,7 +362,13 @@ Bei `needs_revision` zurück zu Schritt 5 und nur das betroffene Asset erneut er
 Stop-Gate:
 
 - Kein SVG wird komponiert, solange ein benötigtes Asset nicht `accepted` ist.
-- Transparenz, Zuschnitt, Textfreiheit, Stil und Skalierbarkeit sind geprüft.
+- Semantik, Education-Stil, Transparenz, Zuschnitt, Textfreiheit,
+  48-px-/960x540-Erkennbarkeit, Kontrast und nicht allein farbcodierte Bedeutung
+  sind geprueft.
+- Der Asset-Brief basiert auf
+  `templates/pictogram-asset-brief-template.json`; fuer Rasterpiktogramme ist
+  `node tools/validate-pictogram-asset.js --brief <asset-brief.json> --release`
+  ohne Fehler gelaufen.
 
 ## Schritt 8: SVG Komponieren
 
@@ -367,7 +379,7 @@ Zu lesen:
 - `agents/svg-compositor.md`
 - `workflow/graphic-creation-quality-gate.md`
 - `brand/design-quality-bar.md`
-- `brand/reltest-academy-style-guide.md`
+- `brand/reltest-education-style-guide.md`
 - bei Diagrammen: `workflow/diagram-guidelines.md`
 - benötigte Dateien unter `components/`
 
@@ -427,7 +439,7 @@ Verantwortlich: Production Orchestrator, bei Bedarf mit `agents/brand-guardian.m
 Zu lesen:
 
 - `agents/brand-guardian.md`
-- `brand/reltest-academy-style-guide.md`
+- `brand/reltest-education-style-guide.md`
 - `brand/design-quality-bar.md`
 
 Stop-Gate:

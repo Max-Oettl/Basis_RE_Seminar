@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "reltestEducationPictogramAsset/v1",
+  "assetId": "timed_reliability_proof",
+  "file": "components/image-library/generated-pictograms/education-v3/timed-reliability-proof-flat.png",
+  "assetType": "generated_png",
+  "status": "accepted",
+  "styleProfile": "reltest-education-minimal-v1",
+  "source": {
+    "evidenceType": "user_request_and_speaker_text",
+    "reference": "RE1 Szene 15: Zuverlässigkeit durch zeitbezogenen Test nachweisen",
+    "license": "project_internal"
+  },
+  "semantics": {
+    "concept": "Zeitbezogener Zuverlässigkeitsnachweis",
+    "learningFunction": "status",
+    "mustShowFeatures": ["Stoppuhr", "Prüfhaken"],
+    "mustNotImply": ["Kalendertermin", "reine Zeitmessung", "Rennen"],
+    "confusableWith": ["allgemeine Uhr", "Terminplanung"],
+    "firstUseLabel": "Zuverlässigkeit nachweisen",
+    "reuseKey": "timed-reliability-proof"
+  },
+  "visualStyle": {
+    "flat2d": true,
+    "perspective": "front",
+    "dominantSilhouette": true,
+    "semanticLayers": 2,
+    "brandColors": ["#031334", "#00A754"],
+    "gradients": false,
+    "shadows": false,
+    "threeDimensional": false,
+    "isometric": false,
+    "photorealistic": false,
+    "glow": false,
+    "texture": false,
+    "embeddedText": false,
+    "logo": false,
+    "watermark": false
+  },
+  "raster": {
+    "widthPx": 1024,
+    "heightPx": 1024,
+    "transparentBackground": true,
+    "safeMarginRatio": 0.10
+  },
+  "learningUse": {
+    "targetPlacementPx": 112,
+    "requiresTextLabelOnFirstUse": true,
+    "colorIndependentMeaning": true,
+    "smallScaleTests": {
+      "at32px": "passed",
+      "at48px": "passed",
+      "scene960x540": "passed"
+    }
+  },
+  "accessibility": {
+    "redundantWithVisibleLabel": true,
+    "accessibleName": "",
+    "contrastPairs": [
+      {"foreground": "#031334", "background": "#FFFFFF", "minimumRatio": 3},
+      {"foreground": "#00A754", "background": "#FFFFFF", "minimumRatio": 3}
+    ]
+  },
+  "review": {
+    "semantic": "passed",
+    "style": "passed",
+    "eLearning": "passed",
+    "accessibilityTechnical": "passed",
+    "notes": ["Built-in image generation; magenta chroma removed locally; colors flattened deterministically to Education navy and signal green.", "At 32 px, 48 px and 112 px the stopwatch silhouette and check remain distinct; final 960x540 scene check is part of the scene review."]
+  }
+}

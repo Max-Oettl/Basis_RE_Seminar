@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re1_src_007",
+  "svgPath": "rebuild-proposals/svg/RE1/slide_007/slide_007.svg",
+  "spokenText": "Hierzu schauen wir uns mal die Ergebnisse einer Befragung nach den wichtigsten Kriterien der Kunden beim Kauf eines Neuwagens aus den Jahren Zweitausendsiebzehn bis Zweitausendzwanzig an.\n\nDabei ist zu sehen, dass sowohl die Zuverlässigkeit als auch die Sicherheit die Top-Aspekte der Kundenerwartung sind, die noch vor dem Kaufpreis oder Spritverbrauch des PKWs den größten Stellenwert haben.\n\nAngesichts der steigenden Kundenerwartungen an Zuverlässigkeit und Sicherheit und dem gleichzeitigen Anstieg von Rückrufaktionen, steht die Industrie vor der Herausforderung, diesen Erwartungen gerecht zu werden und die negativen Folgen mangelnder Zuverlässigkeit zu vermeiden.",
+  "animationDecision": "static",
+  "animationRationale": "Der Sprechertext liest den Gesamtvergleich; ein schrittweiser Aufbau würde den direkten Mehrjahresvergleich verschlechtern.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Show wird als reines Fade bewertet.",
+      "Gleiche sourceText-Phrase startet alle Schritte derselben Triggergruppe gleichzeitig."
+    ]
+  },
+  "initialStateRationale": "Die vollständige Statistik ist der kleinste sinnvolle Vergleichszustand.",
+  "semanticGroups": [
+    {
+      "groupId": "brand_background",
+      "label": "RelTest-Education-Hintergrund",
+      "role": "background",
+      "members": [
+        "Education-Farbverlauf",
+        "ruhiges technisches Raster"
+      ],
+      "initialState": "static_decorative",
+      "dependsOn": [],
+      "groupingRationale": "Der Hintergrund ist ruhiger Markenrahmen und trägt keine vorweggenommene Fachinformation."
+    },
+    {
+      "groupId": "purchase_chart_context",
+      "label": "Mehrjahresvergleich der Kaufkriterien",
+      "role": "context",
+      "members": [
+        "Top-2-Hinweise",
+        "vollständiger Balkenplot",
+        "Legende",
+        "Achsen"
+      ],
+      "initialState": "visible_context",
+      "dependsOn": [],
+      "groupingRationale": "Alle Reihen und Kategorien müssen gleichzeitig vergleichbar sein."
+    }
+  ],
+  "narrativeBeats": [],
+  "steps": [],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "purchase_chart_context"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Die vollständige Statistik ist der kleinste sinnvolle Vergleichszustand."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "purchase_chart_context"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der vollständige statische Endzustand bleibt ohne Animation fachlich verständlich."
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re2_ch2_ishikawa",
+  "targets": [
+    {
+      "targetId": "ishi_effect",
+      "label": "Wirkung Leistungsverlust",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "ishi_material",
+      "label": "Materialien",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "ishi_machine",
+      "label": "Maschinen und Ausrüstung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "ishi_human",
+      "label": "Mensch",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "ishi_methods",
+      "label": "Methoden",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "ishi_environment",
+      "label": "Milieu und Umwelt",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "ishi_spine",
+      "label": "Ursache-Wirkungs-Beziehungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_ishi_effect",
+      "targetId": "ishi_effect",
+      "action": "show",
+      "sourceText": "In unserem Fall ist die unerwünschte Wirkung der Leistungsverlust der PV-Anlage.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_ishi_material",
+      "targetId": "ishi_material",
+      "action": "show",
+      "sourceText": "Zunächst werden alle Materialien bzw. Bauteile betrachtet",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_ishi_machine",
+      "targetId": "ishi_machine",
+      "action": "show",
+      "sourceText": "In der zweiten Gräte können die eingesetzten Maschinen und Ausrüstungen erfasst werden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_ishi_human",
+      "targetId": "ishi_human",
+      "action": "show",
+      "sourceText": "Der Mensch spielt natürlich auch in technischen Systemen meist eine relevante Rolle.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_05_ishi_methods",
+      "targetId": "ishi_methods",
+      "action": "show",
+      "sourceText": "Unter Methoden verstehen wir die Prozesse und Verfahren",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_06_ishi_environment",
+      "targetId": "ishi_environment",
+      "action": "show",
+      "sourceText": "Zum Schluss gibt es noch die Umweltfaktoren",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_07_ishi_spine",
+      "targetId": "ishi_spine",
+      "action": "draw",
+      "sourceText": "Das Ishikawa-Diagramm wird von rechts nach links gelesen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "drawDurFrames": 42
+    }
+  ]
+}

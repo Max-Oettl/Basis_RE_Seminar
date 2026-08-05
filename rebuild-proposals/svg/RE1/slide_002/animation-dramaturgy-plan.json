@@ -1,0 +1,238 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re1_src_002",
+  "svgPath": "rebuild-proposals/svg/RE1/slide_002/slide_002.svg",
+  "spokenText": "Auch die Fahrzeug- und Maschinenhersteller sind vor Rückrufen nicht gefeit.In der Praxis sind sie verständlicherweise sehr zurückhaltend, wenn es um Aussagen zur Zuverlässigkeit ihrer Produkte geht. Niemand spricht gerne über Zuverlässigkeitsprobleme. Das Kraftfahrt-Bundesamt liefert jedoch offizielle Daten zu Rückrufaktionen aufgrund sicherheitskritischer Mängel in der Automobilindustrie. In den letzten zehn Jahren hat sich die Anzahl solcher Rückrufe von Hundertfünfundzwanzig im Jahr Zweitausendneun auf Dreihundertneunzig im Jahr Zweitausendneunzehn mehr als verdreifacht.",
+  "animationDecision": "animated",
+  "animationRationale": "Achsen und Legende schaffen Orientierung; die beiden vergleichbaren Datenserien erscheinen gemeinsam und die Schlusskennzahlen erst bei der gesprochenen Entwicklung.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Show wird als reines Fade bewertet.",
+      "Gleiche sourceText-Phrase startet alle Schritte derselben Triggergruppe gleichzeitig."
+    ]
+  },
+  "initialStateRationale": "Der Diagrammrahmen ist notwendig, um die folgende offizielle Statistik einordnen zu können; Daten und Ergebnis bleiben zunächst verborgen.",
+  "semanticGroups": [
+    {
+      "groupId": "brand_background",
+      "label": "RelTest-Education-Hintergrund",
+      "role": "background",
+      "members": [
+        "Education-Farbverlauf",
+        "ruhiges technisches Raster"
+      ],
+      "initialState": "static_decorative",
+      "dependsOn": [],
+      "groupingRationale": "Der Hintergrund ist ruhiger Markenrahmen und trägt keine vorweggenommene Fachinformation."
+    },
+    {
+      "groupId": "recall_chart_frame",
+      "label": "Diagrammrahmen",
+      "role": "context",
+      "members": [
+        "Achsen",
+        "Skalen",
+        "Raster",
+        "Legende"
+      ],
+      "initialState": "visible_context",
+      "dependsOn": [],
+      "groupingRationale": "Achsen, Skalen und Legende bilden den gemeinsamen Interpretationsrahmen."
+    },
+    {
+      "groupId": "recall_actions_series",
+      "label": "Rückrufaktionen 2009 bis 2019",
+      "role": "data_series",
+      "members": [
+        "elf Jahresbalken der Rückrufaktionen"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "recall_chart_frame"
+      ],
+      "groupingRationale": "Alle Jahresbalken bilden eine zusammengehörige Zeitreihe."
+    },
+    {
+      "groupId": "affected_vehicles_series",
+      "label": "Betroffene Fahrzeuge 2009 bis 2019",
+      "role": "data_series",
+      "members": [
+        "Linie",
+        "Jahresmarker",
+        "zugehörige Serienlogik"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "recall_chart_frame"
+      ],
+      "groupingRationale": "Linie und Marker werden als eine Datenserie wahrgenommen."
+    },
+    {
+      "groupId": "recall_key_figures",
+      "label": "Schlüsselwerte und Zehnjahresentwicklung",
+      "role": "result",
+      "members": [
+        "Kennzahl 125",
+        "Kennzahl 390",
+        "Schlussfolgerung größer als dreifach"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "recall_actions_series",
+        "affected_vehicles_series"
+      ],
+      "groupingRationale": "Die drei Karten verdichten denselben Zeitvergleich."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "introduce_official_data",
+      "claim": "Das KBA liefert offizielle Rückrufdaten.",
+      "sourceText": "Das Kraftfahrt-Bundesamt liefert jedoch offizielle Daten",
+      "occurrence": 1,
+      "requiredContext": [
+        "recall_chart_frame"
+      ],
+      "revealTogether": [
+        "recall_actions_series",
+        "affected_vehicles_series"
+      ],
+      "learnerStateBefore": "Nur Achsen, Skalen und Legende sind sichtbar.",
+      "learnerStateAfter": "Beide Datenserien sind gleichzeitig lesbar."
+    },
+    {
+      "beatId": "summarize_ten_year_change",
+      "claim": "Die Rückrufaktionen haben sich mehr als verdreifacht.",
+      "sourceText": "In den letzten zehn Jahren hat sich",
+      "occurrence": 1,
+      "requiredContext": [
+        "recall_chart_frame",
+        "recall_actions_series",
+        "affected_vehicles_series"
+      ],
+      "revealTogether": [
+        "recall_key_figures"
+      ],
+      "learnerStateBefore": "Der vollständige Datenverlauf ist sichtbar.",
+      "learnerStateAfter": "Startwert, Endwert und Schlussfolgerung sind hervorgehoben."
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_recall_actions_series",
+      "beatId": "introduce_official_data",
+      "targetId": "recall_actions_series",
+      "action": "draw",
+      "effect": {
+        "drawDurFrames": 42,
+        "direction": "leftToRight"
+      },
+      "rationale": "Die Balkenreihe entsteht entlang der Zeitachse."
+    },
+    {
+      "stepId": "draw_affected_vehicles_series",
+      "beatId": "introduce_official_data",
+      "targetId": "affected_vehicles_series",
+      "action": "draw",
+      "effect": {
+        "drawDurFrames": 42,
+        "direction": "leftToRight"
+      },
+      "rationale": "Die Fahrzeuglinie startet im selben Triggerfenster wie die Balken."
+    },
+    {
+      "stepId": "show_recall_key_figures",
+      "beatId": "summarize_ten_year_change",
+      "targetId": "recall_key_figures",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Die Schlusskennzahlen erscheinen erst nach sichtbarer Datengrundlage."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "recall_chart_frame"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der Diagrammrahmen ist notwendig, um die folgende offizielle Statistik einordnen zu können; Daten und Ergebnis bleiben zunächst verborgen."
+    },
+    {
+      "stateId": "before_introduce_official_data",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "recall_chart_frame"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Nur Achsen, Skalen und Legende sind sichtbar."
+    },
+    {
+      "stateId": "after_introduce_official_data",
+      "afterBeatId": "introduce_official_data",
+      "visibleGroups": [
+        "brand_background",
+        "recall_chart_frame",
+        "recall_actions_series",
+        "affected_vehicles_series"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Beide Datenserien sind gleichzeitig lesbar."
+    },
+    {
+      "stateId": "before_summarize_ten_year_change",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "recall_chart_frame",
+        "recall_actions_series",
+        "affected_vehicles_series"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der vollständige Datenverlauf ist sichtbar."
+    },
+    {
+      "stateId": "after_summarize_ten_year_change",
+      "afterBeatId": "summarize_ten_year_change",
+      "visibleGroups": [
+        "brand_background",
+        "recall_chart_frame",
+        "recall_actions_series",
+        "affected_vehicles_series",
+        "recall_key_figures"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Startwert, Endwert und Schlussfolgerung sind hervorgehoben."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "summarize_ten_year_change",
+      "visibleGroups": [
+        "brand_background",
+        "recall_chart_frame",
+        "recall_actions_series",
+        "affected_vehicles_series",
+        "recall_key_figures"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der vollständige statische Endzustand bleibt ohne Animation fachlich verständlich."
+    }
+  ]
+}

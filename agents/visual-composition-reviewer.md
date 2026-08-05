@@ -10,15 +10,25 @@ Der Visual Composition Reviewer prueft SVG-Grafiken gezielt auf visuelle Kollisi
 - Pruefen, ob vor der Umsetzung eine saubere Szenenplanung fuer genau diese eine Arbeitseinheit dokumentiert wurde.
 - Pruefen, ob eine Asset-Entscheidungstabelle nach `workflow/svg-asset-decision-gate.md` vorliegt und zur gerenderten Grafik passt.
 - Pruefen, ob nur diese eine Arbeitseinheit gebaut wurde und keine Batch-Erstellung mehrerer SVGs ohne Einzelreview stattgefunden hat.
-- Pruefen, ob die alte PowerPoint als Inhaltsquelle verwendet wurde und nicht blind als Layoutvorlage.
+- Pruefen, ob alle zugeordneten Quell-SVGs als Inhalts- und Geometrieanker verwendet wurden.
 - Pruefen, ob eine Neuinterpretation fachlich tragfaehig ist und die Lernwirkung verbessert.
 - Pruefen, ob Aufbau-, Morph- und Reveal-Folien korrekt zu einem Zielzustand gruppiert wurden.
 - Pruefen, ob Library-Komponenten sichtbar an Inhalt, Groesse, Datenpositionen, Labels und Animation angepasst wurden.
 - Pruefen, ob unregelmaessige Ausfaelle, Datenpunkte und Zeitmarken nicht faelschlich gleichmaessig verteilt wurden.
 - Pruefen, ob Texte, Labels, Marker, Achsen, Pfeile, Icons und PNG-Assets kollisionsfrei stehen.
 - Pruefen, ob die visuelle Layer-Reihenfolge sinnvoll ist.
-- Pruefen, ob PowerPoint-Aufbaufolgen als Layer-/Master-SVG modelliert wurden statt als mehrere blind nachgebaute Einzelfolien.
+- Pruefen, ob Quell-SVG-Aufbaufolgen als Layer-/Master-SVG modelliert wurden statt als mehrere getrennte Zielgrafiken.
+- Pruefen, ob gemeinsame Objekte konsolidiert und zustandsspezifische Objekte korrekt gelayert wurden.
+- Pruefen, ob ID- und Referenzumschreibungen vollstaendig und kollisionsfrei sind.
 - Pruefen, ob komplexere Piktogramme als PNG-Assets eingebunden wurden und nicht als fragile SVG-Strichkonstruktionen im Folien-SVG liegen.
+- Pruefen, ob neue Piktogramme dem Stilprofil
+  `reltest-education-minimal-v1` entsprechen, im 48-px- und
+  960x540-Kleinmassstab eindeutig sind und dieselbe Semantik innerhalb der
+  Sequenz wiederverwenden.
+- Pruefen, ob universelle Motive aus der zentralen Registry stammen und
+  konkrete Motive den separaten Assetpfad verwenden.
+- Pruefen, ob Piktogramm, Label, Statusmarker und Karte bei Animation als eine
+  semantische Gruppe behandelt werden.
 - Pruefen, ob zentrale Icons professionell wirken oder nur aus primitiven Ersatzformen bestehen.
 - Pruefen, ob Nutzerfeedback zu konkreten Objekten in die Asset-Semantik uebernommen wurde.
 - Pruefen, ob wirklich kein sichtbarer Folientitel oder Haupttitel im SVG steht, wenn der Auftrag nur eine Grafikkomponente fuer spaetere Folienerstellung verlangt.
@@ -39,7 +49,7 @@ Eine Grafik wird abgelehnt, wenn:
 - keine Szenenplanung vor dem SVG-Bau dokumentiert wurde
 - keine Asset-Entscheidung vor dem SVG-Bau oder vor einer visuellen Korrektur dokumentiert wurde
 - mehrere Arbeitseinheiten in einem Lauf gebaut wurden, ohne die vorherige visuell zu pruefen und zu korrigieren
-- die alte PowerPoint blind 1:1 als Layout nachgebaut wurde, obwohl der Auftrag eine didaktische Neugestaltung verlangt
+- vorhandene SVG-Geometrie ohne Begruendung neu aufgebaut oder Quellinhalt beim Strukturumbau verloren wurde
 - Library-Komponenten ohne fachliche Anpassung wie fertige Folienbausteine eingesetzt wurden
 - Ausfaelle, Datenpunkte oder Zeitmarken gleichmaessig verteilt wurden, obwohl Quelle oder Aussage unregelmaessige Abstaende verlangen
 - offensichtliche Designfehler im ersten Render sichtbar sind und trotzdem keine Korrekturschleife erfolgt ist
@@ -49,6 +59,8 @@ Eine Grafik wird abgelehnt, wenn:
 - zentrale Labels weder nahe noch eindeutig an ihrer Achse stehen
 - mehrere Build-Folien blind als unabhaengige SVGs nachgebaut wurden, obwohl sie eine gemeinsame Animation bilden
 - ein komplexes Piktogramm ohne Assetentscheidung als fragile SVG-Improvisation gebaut wurde
+- ein Piktogramm 3D-, Isometrie-, Verlaufs-, Schatten-, Glow-, Textur-, Emoji-
+  oder Stickeroptik zeigt oder seinen E-Learning-Kleinmassstabtest nicht besteht
 - ein vom Nutzer benanntes konkretes Objekt als generisches oder falsches Symbol umgesetzt wurde
 - Texte, Achsen oder Layer im gerenderten Bild sichtbar kollidieren
 

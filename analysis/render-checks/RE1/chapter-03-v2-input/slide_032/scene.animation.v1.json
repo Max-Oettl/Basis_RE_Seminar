@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_032.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "frequency_histogram",
+      "label": "Einzelhäufigkeiten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "cumulative_histogram",
+      "label": "Summenhäufigkeiten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "cumulative_operation",
+      "label": "Kumulative Addition",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "empirical_distribution",
+      "label": "Empirische Verteilungsfunktion",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "empirical_cdf_definition",
+      "label": "Definition F Stern von t",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_frequency_histogram",
+      "targetId": "frequency_histogram",
+      "action": "show",
+      "sourceText": "Das Histogramm bzw. die Dichtefunktion gibt einen Aufschluss",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_cumulative_histogram",
+      "targetId": "cumulative_histogram",
+      "action": "show",
+      "sourceText": "Man summiert also einfach im Histogramm",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_cumulative_operation",
+      "targetId": "cumulative_operation",
+      "action": "show",
+      "sourceText": "Man summiert also einfach im Histogramm",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_empirical_distribution",
+      "targetId": "empirical_distribution",
+      "action": "draw",
+      "sourceText": "Die Verbindungslinie im Histogramm ergibt eine weitere Funktion",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_empirical_cdf_definition",
+      "targetId": "empirical_cdf_definition",
+      "action": "show",
+      "sourceText": "Die Verbindungslinie im Histogramm ergibt eine weitere Funktion",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

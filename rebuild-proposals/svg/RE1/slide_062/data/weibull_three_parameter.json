@@ -1,0 +1,12 @@
+{
+  "schema_version": "reltestWeibullFormulaSet/v1",
+  "parameters": ["t", "T", "b", "t0"],
+  "parameterization": "three_parameter",
+  "replacement_rules": ["T -> T - t0", "t -> t - t0"],
+  "formulas": {
+    "density": "$f(t)=\\frac{b}{T-t_0}\\left(\\frac{t-t_0}{T-t_0}\\right)^{b-1}e^{-\\left(\\frac{t-t_0}{T-t_0}\\right)^b}$",
+    "failure_probability": "$F(t)=1-e^{-\\left(\\frac{t-t_0}{T-t_0}\\right)^b}$",
+    "reliability": "$R(t)=e^{-\\left(\\frac{t-t_0}{T-t_0}\\right)^b}$",
+    "hazard": "$\\lambda(t)=\\frac{b}{T-t_0}\\left(\\frac{t-t_0}{T-t_0}\\right)^{b-1}$"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_003.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "takata_case_context",
+      "label": "Ursache und Verletzungsfolge",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "takata_scope_and_consequences",
+      "label": "Ausmaß und Konsequenzen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_takata_case_context",
+      "targetId": "takata_case_context",
+      "action": "show",
+      "sourceText": "Der Rückruf im Zusammenhang mit den Takata-Airbags ist eine der größten",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_takata_scope_and_consequences",
+      "targetId": "takata_scope_and_consequences",
+      "action": "show",
+      "sourceText": "Das Ausmaß dieses Problems zeigt sich in der Notwendigkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

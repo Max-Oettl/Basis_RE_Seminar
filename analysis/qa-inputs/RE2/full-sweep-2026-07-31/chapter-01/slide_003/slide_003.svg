@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="content-svg" data-embedding-target="powerpoint-slide" data-scene-id="re2_ch1_lifecycle" data-brand-profile="reltest-education" data-qc-group="scene_content" data-qc-layer="content">
+  <metadata id="slide-quality-metadata" type="application/json"><![CDATA[{"artifactScope":"content-svg","embeddingTarget":"powerpoint-slide","slideType":"bathtub-curve-method-focus","contentTitle":"Methodenfokus entlang der Badewannenkurve","layoutIntent":"source-aligned-integrated-lifecycle-diagram","takeaway":"Qualitative Systemanalyse reduziert Risiken vor allem in den Bereichen eins und zwei der Badewannenkurve.","audienceGoal":"Methoden und Wirkungen direkt den drei Lebensphasen des Produkts zuordnen.","density":"normal","contentMode":"transparent-content","backgroundMode":"transparent","brandProfile":"reltest-education","brandVariant":"education-production","sourceSlides":[3],"targetStructureVersion":"external-svg-asset-package-handoff/v1","plotAsset":"plots/bathtub_curve.svg","sourceFidelity":"shared-axis-and-phase-alignment-preserved"}]]></metadata>
+  <title id="accessible_title">Methodenfokus entlang der Badewannenkurve</title>
+  <desc id="accessible_description">Die Badewannenkurve zeigt drei Bereiche auf einer gemeinsamen Lebensdauerachse. Qualitative Methoden und Systemanalyse sind den Bereichen eins und zwei zugeordnet, quantitative Methoden und Zuverlässigkeitsnachweis dem dritten Bereich.</desc>
+  <style>
+    text { font-family: "Archivo", Arial, Helvetica, sans-serif;  }
+    .method-label { font-size: 37px; font-weight: 760; }
+    .method-label.inverse, .outcome-label.inverse { fill: #FFFFFF; }
+    .outcome-label { font-size: 42px; font-weight: 800; }
+  </style>
+
+  <g id="bathtub_curve_overview" data-anim-target="true" data-anim-label="Badewannenkurve mit drei Ausfallbereichen" data-qc-group="bathtub_curve_overview" data-qc-layer="plot">
+    <image href="plots/bathtub_curve.svg" x="80" y="78" width="1760" height="680" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+
+  <g id="qualitative_lifecycle_focus" data-anim-target="true" data-anim-label="Qualitative Methoden in den Bereichen eins und zwei" data-qc-group="qualitative_lifecycle_focus" data-qc-layer="content">
+    <rect x="420" y="298" width="650" height="156" rx="22" fill="#00A754"/>
+    <text fill="#031334" x="745" y="360" class="method-label inverse" text-anchor="middle">
+      <tspan x="745" dy="0">Fokus qualitative</tspan>
+      <tspan x="745" dy="54">ZUV-Methoden</tspan>
+    </text>
+  </g>
+
+  <g id="quantitative_lifecycle_focus" data-anim-target="true" data-anim-label="Quantitative Methoden im dritten Bereich" data-qc-group="quantitative_lifecycle_focus" data-qc-layer="content">
+    <rect x="1360" y="298" width="424" height="156" rx="22" fill="#FFFFFF" stroke="#00A754" stroke-width="4"/>
+    <text fill="#031334" x="1572" y="360" class="method-label" text-anchor="middle">
+      <tspan x="1572" dy="0">Fokus quantitative</tspan>
+      <tspan x="1572" dy="54">ZUV-Methoden</tspan>
+    </text>
+
+    <rect x="1307" y="766" width="477" height="150" rx="22" fill="#FFFFFF" stroke="#00A754" stroke-width="4"/>
+    <text fill="#031334" x="1545" y="824" class="outcome-label" text-anchor="middle">
+      <tspan x="1545" dy="0">Nachweis</tspan>
+      <tspan x="1545" dy="60">Zuverlässigkeit</tspan>
+    </text>
+  </g>
+
+  <g id="system_analysis_outcome" data-anim-target="true" data-anim-label="Risikoreduktion durch Systemanalyse" data-qc-group="system_analysis_outcome" data-qc-layer="content">
+    <rect x="190" y="766" width="1117" height="150" rx="22" fill="#00A754"/>
+    <text fill="#031334" x="748" y="856" class="outcome-label inverse" text-anchor="middle">Risikoreduktion durch Systemanalyse</text>
+  </g>
+</svg>

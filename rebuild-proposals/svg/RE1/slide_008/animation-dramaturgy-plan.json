@@ -1,0 +1,349 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re1_src_008",
+  "svgPath": "rebuild-proposals/svg/RE1/slide_008/slide_008.svg",
+  "spokenText": "Ein Schlüsselelement in diesem Bestreben ist die ausreichende Lebensdauer von Produkten, ein Faktor, der sowohl für Kunden als auch für Unternehmen von großer Bedeutung ist.\n\nSo bewirbt SKF ihr Trouble-Free Operation Service Program mit dem Slogan: Drei Dinge kann keiner voraussagen:\n\nDas Leben, den Tod und den Ausfall einer Maschine – Mach zwei daraus.\n\nDie Intention dahinter ist klar: Durch die Vorhersage des Lebensdauer-Endes von Komponenten, können diese vor dem Ausfall getauscht werden.\n\nAuf diese Weise können die negativen Folgen der Ausfälle, aufgrund von mangelnder Zuverlässigkeit, vermieden werden.\n\nSomit lassen sich Anlagen störungsfrei betreiben und Stillstandszeiten minimieren.\n\nIn diesem Abschnitt haben wir uns einen Überblick über die Folgen der Unzuverlässigkeit und die Faktoren, welche sie beeinflussen, verschafft.\n\nWir haben gesehen, dass wir uns immer im Spannungsfeld zwischen den Anforderungen auf der Kunden- und auch auf der Unternehmensseite befinden.\n\nIm nächsten Kapitel gehen wir tiefer auf den technischen Hintergrund der Zuverlässigkeit ein und lernen ebenfalls dessen Definition kennen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Szene beginnt mit einer allgemeinen Lebensdaueraussage. Anlagenkontext, Zitatkörper, zitierte Schlusszeile und praktische Bedeutung folgen deshalb erst an ihren jeweils gesprochenen Stellen.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Show wird als reines Fade bewertet.",
+      "Gleiche sourceText-Phrase startet alle Schritte derselben Triggergruppe gleichzeitig."
+    ]
+  },
+  "initialStateRationale": "Vor der SKF-Nennung bleibt die Content-Ebene leer. Das konkrete Anlagenmotiv würde den folgenden Service-Programm-Kontext sonst vorwegnehmen.",
+  "semanticGroups": [
+    {
+      "groupId": "brand_background",
+      "label": "RelTest-Education-Hintergrund",
+      "role": "background",
+      "members": [
+        "Education-Farbverlauf",
+        "ruhiges technisches Raster"
+      ],
+      "initialState": "static_decorative",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Der Markenrahmen enthaelt keine konkrete Fachinformation und darf vor der Narration sichtbar sein.",
+      "dependsOn": [],
+      "groupingRationale": "Der Hintergrund ist ruhiger Markenrahmen und trägt keine vorweggenommene Fachinformation."
+    },
+    {
+      "groupId": "motivation_media_context",
+      "label": "Industrieller Anlagenkontext",
+      "role": "context",
+      "members": [
+        "vollständiges Anlagenfoto",
+        "ruhige Marine-Überlagerung"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [],
+      "groupingRationale": "Foto und Tonwertüberlagerung erscheinen gemeinsam mit der ersten SKF-Nennung.",
+      "firstRelevantBeatId": "show_media_context",
+      "initialVisibilityEvidence": "Vor der SKF-Nennung bleibt die Szene allgemein; das konkrete Anlagenmotiv wäre verfrüht."
+    },
+    {
+      "groupId": "forecast_quote_setup",
+      "label": "Zitat zum Unvorhersehbaren",
+      "role": "quote",
+      "members": [
+        "vollständige Zitatkarte",
+        "SKF-Kontextlabel",
+        "Anführungszeichen",
+        "Zitatkörper bis Maschine"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "motivation_media_context"
+      ],
+      "groupingRationale": "Zitatkarte, Marke und gesprochener Zitatkörper bilden einen Leseblock.",
+      "firstRelevantBeatId": "show_quote_setup",
+      "initialVisibilityEvidence": "Der Zitatkörper wird erst ab der gesprochenen ersten Zitatzeile benötigt."
+    },
+    {
+      "groupId": "forecast_quote_conclusion",
+      "label": "Schlusszeile des SKF-Zitats",
+      "role": "quote",
+      "members": [
+        "Trennlinie innerhalb der Zitatkarte",
+        "Originalzeile Machen Sie zwei daraus",
+        "schließendes Anführungszeichen"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "forecast_quote_setup"
+      ],
+      "groupingRationale": "Die Pointe bleibt räumlich und typografisch Bestandteil desselben Zitats, wird aber erst an ihrer gesprochenen Stelle sichtbar.",
+      "firstRelevantBeatId": "show_quote_conclusion",
+      "initialVisibilityEvidence": "Die Schlusszeile darf den Aufbau des Zitats nicht vorwegnehmen."
+    },
+    {
+      "groupId": "forecast_quote_implication",
+      "label": "Praktische Bedeutung des Zitats",
+      "role": "result",
+      "members": [
+        "vollständige Ergebniskarte",
+        "Vorhersage- und Austauschziel"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "forecast_quote_conclusion"
+      ],
+      "groupingRationale": "Die Interpretation ist vom direkten Zitat getrennt und folgt erst mit der gesprochenen Intention.",
+      "firstRelevantBeatId": "show_quote_implication",
+      "initialVisibilityEvidence": "Die Interpretation folgt erst nach dem vollständigen direkten Zitat."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "introduce_lifetime_relevance",
+      "claim": "Eine ausreichende Lebensdauer wird allgemein als Schlüsselelement eingeführt.",
+      "sourceText": "Ein Schlüsselelement in diesem Bestreben",
+      "occurrence": 1,
+      "requiredContext": [],
+      "revealTogether": [],
+      "learnerStateBefore": "Nur der ruhige Marken- und Downstream-Rahmen ist sichtbar.",
+      "learnerStateAfter": "Noch kein konkreter SKF- oder Anlagenkontext ist sichtbar."
+    },
+    {
+      "beatId": "show_media_context",
+      "claim": "SKF und sein Service-Programm führen in den konkreten Maschinenkontext.",
+      "sourceText": "bewirbt SKF ihr Trouble-Free Operation Service Program",
+      "occurrence": 1,
+      "requiredContext": [],
+      "revealTogether": [
+        "motivation_media_context"
+      ],
+      "learnerStateBefore": "Die allgemeine Lebensdaueraussage ist gesprochen.",
+      "learnerStateAfter": "Das vollständige Anlagenmotiv ist sichtbar."
+    },
+    {
+      "beatId": "show_quote_setup",
+      "claim": "Drei Ereignisse gelten als nicht vorhersagbar.",
+      "sourceText": "Drei Dinge kann keiner voraussagen",
+      "occurrence": 1,
+      "requiredContext": [
+        "motivation_media_context"
+      ],
+      "revealTogether": [
+        "forecast_quote_setup"
+      ],
+      "learnerStateBefore": "Nur die Anlage ist sichtbar.",
+      "learnerStateAfter": "Zitatkarte und Zitatkörper sind sichtbar."
+    },
+    {
+      "beatId": "show_quote_conclusion",
+      "claim": "Die Schlusszeile reduziert die drei unvorhersagbaren Ereignisse auf zwei.",
+      "sourceText": "Mach zwei daraus",
+      "occurrence": 1,
+      "requiredContext": [
+        "motivation_media_context",
+        "forecast_quote_setup"
+      ],
+      "revealTogether": [
+        "forecast_quote_conclusion"
+      ],
+      "learnerStateBefore": "Der Zitatkörper ist sichtbar.",
+      "learnerStateAfter": "Die originale Schlusszeile vervollständigt dasselbe Zitat."
+    },
+    {
+      "beatId": "show_quote_implication",
+      "claim": "Das Lebensdauer-Ende soll vorhersagbar und ein Austausch vor dem Ausfall möglich werden.",
+      "sourceText": "Die Intention dahinter ist klar",
+      "occurrence": 1,
+      "requiredContext": [
+        "motivation_media_context",
+        "forecast_quote_setup",
+        "forecast_quote_conclusion"
+      ],
+      "revealTogether": [
+        "forecast_quote_implication"
+      ],
+      "learnerStateBefore": "Das vollständige Zitat ist sichtbar.",
+      "learnerStateAfter": "Die praktische Bedeutung ist klar vom Zitat getrennt ergänzt."
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_motivation_media_context",
+      "beatId": "show_media_context",
+      "targetId": "motivation_media_context",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Das konkrete Anlagenbild erscheint erst bei der SKF-Nennung."
+    },
+    {
+      "stepId": "show_forecast_quote_setup",
+      "beatId": "show_quote_setup",
+      "targetId": "forecast_quote_setup",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Zitatkarte und gesprochener Hauptsatz erscheinen als vollständiger Leseblock."
+    },
+    {
+      "stepId": "show_forecast_quote_conclusion",
+      "beatId": "show_quote_conclusion",
+      "targetId": "forecast_quote_conclusion",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Die Schlusszeile wird innerhalb der bestehenden Zitatkarte ergänzt."
+    },
+    {
+      "stepId": "show_forecast_quote_implication",
+      "beatId": "show_quote_implication",
+      "targetId": "forecast_quote_implication",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Die praktische Bedeutung erscheint erst nach dem vollständigen Zitat."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Vor der SKF-Nennung bleibt die Content-Ebene leer. Das konkrete Anlagenmotiv würde den folgenden Service-Programm-Kontext sonst vorwegnehmen."
+    },
+    {
+      "stateId": "before_introduce_lifetime_relevance",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Nur der ruhige Marken- und Downstream-Rahmen ist sichtbar."
+    },
+    {
+      "stateId": "after_introduce_lifetime_relevance",
+      "afterBeatId": "introduce_lifetime_relevance",
+      "visibleGroups": [
+        "brand_background"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Noch kein konkreter SKF- oder Anlagenkontext ist sichtbar."
+    },
+    {
+      "stateId": "before_show_media_context",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Die allgemeine Lebensdaueraussage ist gesprochen."
+    },
+    {
+      "stateId": "after_show_media_context",
+      "afterBeatId": "show_media_context",
+      "visibleGroups": [
+        "brand_background",
+        "motivation_media_context"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Das vollständige Anlagenmotiv ist sichtbar."
+    },
+    {
+      "stateId": "before_show_quote_setup",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "motivation_media_context"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Nur die Anlage ist sichtbar."
+    },
+    {
+      "stateId": "after_show_quote_setup",
+      "afterBeatId": "show_quote_setup",
+      "visibleGroups": [
+        "brand_background",
+        "motivation_media_context",
+        "forecast_quote_setup"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Zitatkarte und Zitatkörper sind sichtbar."
+    },
+    {
+      "stateId": "before_show_quote_conclusion",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "motivation_media_context",
+        "forecast_quote_setup"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der Zitatkörper ist sichtbar."
+    },
+    {
+      "stateId": "after_show_quote_conclusion",
+      "afterBeatId": "show_quote_conclusion",
+      "visibleGroups": [
+        "brand_background",
+        "motivation_media_context",
+        "forecast_quote_setup",
+        "forecast_quote_conclusion"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Die originale Schlusszeile vervollständigt dasselbe Zitat."
+    },
+    {
+      "stateId": "before_show_quote_implication",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "motivation_media_context",
+        "forecast_quote_setup",
+        "forecast_quote_conclusion"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Das vollständige Zitat ist sichtbar."
+    },
+    {
+      "stateId": "after_show_quote_implication",
+      "afterBeatId": "show_quote_implication",
+      "visibleGroups": [
+        "brand_background",
+        "motivation_media_context",
+        "forecast_quote_setup",
+        "forecast_quote_conclusion",
+        "forecast_quote_implication"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Die praktische Bedeutung ist klar vom Zitat getrennt ergänzt."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "show_quote_implication",
+      "visibleGroups": [
+        "brand_background",
+        "motivation_media_context",
+        "forecast_quote_setup",
+        "forecast_quote_conclusion",
+        "forecast_quote_implication"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der vollständige statische Endzustand bleibt ohne Animation fachlich verständlich."
+    }
+  ]
+}

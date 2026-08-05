@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_005.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "consequence_structure",
+      "label": "Folgenstruktur",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "nonlegal_consequences",
+      "label": "Nicht-rechtliche Folgen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "civil_consequences",
+      "label": "Zivilrechtliche Folgen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "criminal_consequences",
+      "label": "Strafrechtliche Folgen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_consequence_structure",
+      "targetId": "consequence_structure",
+      "action": "show",
+      "sourceText": "In unseren Beispielen zu Produkt-Rückrufen haben wir die spezifischen Folgen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_nonlegal_consequences",
+      "targetId": "nonlegal_consequences",
+      "action": "show",
+      "sourceText": "Zu den nicht-rechtlichen Folgen zählen beispielsweise wirtschaftliche Verluste",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_civil_consequences",
+      "targetId": "civil_consequences",
+      "action": "show",
+      "sourceText": "Zudem stehen Unternehmen vor zivilrechtlichen Konsequenzen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_criminal_consequences",
+      "targetId": "criminal_consequences",
+      "action": "show",
+      "sourceText": "In besonders schwerwiegenden Fällen können auch strafrechtliche Sanktionen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

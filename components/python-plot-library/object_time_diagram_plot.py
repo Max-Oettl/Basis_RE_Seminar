@@ -4,6 +4,7 @@ import argparse
 from pathlib import Path
 
 from reltest_plot_style import RELTEST_COLORS, apply_reltest_style, parse_float_list, save_figure
+from svg_animation_targets import prepare_svg_animation_targets
 
 
 def build_plot(
@@ -31,7 +32,8 @@ def build_plot(
 
     apply_reltest_style()
     fig, ax = plt.subplots(figsize=(9.6, 5.4))
-    ax.set_gid("plot-object-time-axes")
+    ax.set_gid("plot_object_time_axes")
+    animation_targets: dict[str, str] = {}
 
     ax.set_xlim(0, max_time)
     ax.set_ylim(0.35, object_count + 0.75)
@@ -55,7 +57,9 @@ def build_plot(
             solid_capstyle="round",
             zorder=1,
         )[0]
-        runtime_line.set_gid(f"plot-object-{index}-runtime")
+        runtime_id = f"plot_object_{index}_runtime"
+        runtime_line.set_gid(runtime_id)
+        animation_targets[runtime_id] = f"Laufzeit Objekt {index}"
 
         if is_censored:
             ax.scatter(
@@ -68,7 +72,8 @@ def build_plot(
                 linewidth=1.5,
                 zorder=3,
                 clip_on=False,
-            ).set_gid(f"plot-object-{index}-censored")
+            ).set_gid(f"plot_object_{index}_censored")
+            animation_targets[f"plot_object_{index}_censored"] = f"Zensierung Objekt {index}"
         else:
             ax.scatter(
                 [failure_time],
@@ -79,7 +84,8 @@ def build_plot(
                 linewidths=2.4,
                 zorder=3,
                 clip_on=False,
-            ).set_gid(f"plot-object-{index}-failure")
+            ).set_gid(f"plot_object_{index}_failure")
+            animation_targets[f"plot_object_{index}_failure"] = f"Ausfall Objekt {index}"
 
     ax.set_xlabel(xlabel, labelpad=12)
     ax.set_ylabel(ylabel, labelpad=12)
@@ -89,6 +95,7 @@ def build_plot(
     fig.tight_layout()
     save_figure(fig, output)
     plt.close(fig)
+    prepare_svg_animation_targets(output, animation_targets)
 
 
 def main() -> None:

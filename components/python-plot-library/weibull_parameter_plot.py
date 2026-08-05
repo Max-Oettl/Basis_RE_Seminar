@@ -12,6 +12,7 @@ from reltest_plot_style import (
     save_figure,
     style_axes,
 )
+from svg_animation_targets import prepare_svg_animation_targets
 from weibull_probability_plot import (
     PROBABILITY_TICKS,
     linear_fit,
@@ -70,7 +71,7 @@ def build_plot(
 
     ax.set_xscale("log")
     fit_line = ax.plot(line_times, line_y, color=RELTEST_COLORS["data"], linewidth=2.6, label="Weibull-Fit")[0]
-    fit_line.set_gid("plot-weibull-fit")
+    fit_line.set_gid("plot_weibull_fit")
     points = ax.scatter(
         sorted_times,
         y_fit,
@@ -81,9 +82,9 @@ def build_plot(
         zorder=3,
         label="Ausfalldaten",
     )
-    points.set_gid("plot-data-points")
+    points.set_gid("plot_data_points")
 
-    ax.hlines(
+    parameter_t_horizontal = ax.hlines(
         t_y,
         xmin=min_time,
         xmax=eta,
@@ -91,7 +92,8 @@ def build_plot(
         linewidth=1.5,
         linestyles="--",
     )
-    ax.vlines(
+    parameter_t_horizontal.set_gid("plot_parameter_t_horizontal")
+    parameter_t_vertical = ax.vlines(
         eta,
         ymin=weibull_y(0.01),
         ymax=t_y,
@@ -99,12 +101,18 @@ def build_plot(
         linewidth=1.5,
         linestyles="--",
     )
-    ax.text(eta, weibull_y(0.012), "T", ha="center", va="bottom", color=RELTEST_COLORS["ink"], fontsize=15, fontweight="bold")
-    ax.text(min_time * 1.06, t_y, "63,2 %", ha="left", va="bottom", color=RELTEST_COLORS["muted"], fontsize=12)
+    parameter_t_vertical.set_gid("plot_parameter_t_vertical")
+    parameter_t_label = ax.text(eta, weibull_y(0.012), "T", ha="center", va="bottom", color=RELTEST_COLORS["ink"], fontsize=15, fontweight="bold")
+    parameter_t_label.set_gid("plot_parameter_t_label")
+    parameter_t_probability = ax.text(min_time * 1.06, t_y, "63,2 %", ha="left", va="bottom", color=RELTEST_COLORS["muted"], fontsize=12)
+    parameter_t_probability.set_gid("plot_parameter_t_probability")
 
-    ax.plot([triangle_x1, triangle_x2], [triangle_y1, triangle_y1], color=RELTEST_COLORS["muted"], linewidth=1.8)
-    ax.plot([triangle_x2, triangle_x2], [triangle_y1, triangle_y2], color=RELTEST_COLORS["muted"], linewidth=1.8)
-    ax.text(triangle_x2 * 1.05, (triangle_y1 + triangle_y2) / 2, "b", ha="left", va="center", color=RELTEST_COLORS["ink"], fontsize=15, fontweight="bold")
+    parameter_b_horizontal = ax.plot([triangle_x1, triangle_x2], [triangle_y1, triangle_y1], color=RELTEST_COLORS["muted"], linewidth=1.8)[0]
+    parameter_b_vertical = ax.plot([triangle_x2, triangle_x2], [triangle_y1, triangle_y2], color=RELTEST_COLORS["muted"], linewidth=1.8)[0]
+    parameter_b_horizontal.set_gid("plot_parameter_b_horizontal")
+    parameter_b_vertical.set_gid("plot_parameter_b_vertical")
+    parameter_b_label = ax.text(triangle_x2 * 1.05, (triangle_y1 + triangle_y2) / 2, "b", ha="left", va="center", color=RELTEST_COLORS["ink"], fontsize=15, fontweight="bold")
+    parameter_b_label.set_gid("plot_parameter_b_label")
 
     y_ticks = [weibull_y(value) for value in PROBABILITY_TICKS]
     y_labels = [f"{int(value * 100)}" for value in PROBABILITY_TICKS]
@@ -118,6 +126,20 @@ def build_plot(
     fig.tight_layout()
     save_figure(fig, output)
     plt.close(fig)
+    prepare_svg_animation_targets(
+        output,
+        {
+            "plot_data_points": "Ausfalldaten",
+            "plot_weibull_fit": "Weibull-Fit",
+            "plot_parameter_t_horizontal": "Hilfslinie T waagerecht",
+            "plot_parameter_t_vertical": "Hilfslinie T senkrecht",
+            "plot_parameter_t_label": "Parameter T",
+            "plot_parameter_t_probability": "Ausfallwahrscheinlichkeit 63,2 %",
+            "plot_parameter_b_horizontal": "Steigungsdreieck b waagerecht",
+            "plot_parameter_b_vertical": "Steigungsdreieck b senkrecht",
+            "plot_parameter_b_label": "Parameter b",
+        },
+    )
 
 
 def main() -> None:

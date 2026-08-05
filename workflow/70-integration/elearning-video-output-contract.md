@@ -270,6 +270,19 @@ Beispiel für Szene 04:
 
 `sourceText` muss innerhalb von `spokenText` eindeutig vorkommen.
 
+`spokenText` darf Pausenmarker wie `{{pause:short}}`, `{{pause:medium}}`,
+`{{pause:long}}`, `{{pause:1.2s}}` oder `{{pause:1200ms}}` enthalten. Diese Marker
+sind Timing-Metadaten:
+
+- Sie zählen nicht als Wörter.
+- Sie dürfen niemals Bestandteil von `sourceText` sein.
+- Der Produktionsadapter muss sie erst an der TTS-Grenze in das jeweilige
+  Syntheseformat, zum Beispiel SSML-`<break>`, übersetzen.
+- Alle nachfolgenden Wort- und Animationszeitpunkte werden um die bis dahin
+  aufgelaufene Pausendauer verschoben.
+- Unbekannte, unvollständige oder länger als drei Sekunden dauernde Marker
+  blockieren die Übergabe.
+
 Wenn dieselbe Phrase mehrfach vorkommt, muss `occurrence` gesetzt werden:
 
 ```json

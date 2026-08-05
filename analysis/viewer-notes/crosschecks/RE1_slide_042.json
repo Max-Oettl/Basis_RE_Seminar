@@ -1,0 +1,651 @@
+{
+  "schema_version": "basisRebuildContentCrosscheck/v2",
+  "module_id": "RE1",
+  "output_slide_number": 42,
+  "checked_at": "2026-07-19T19:42:50.945Z",
+  "status": "review_required",
+  "manual_review_required": true,
+  "reference_mapping": {
+    "work_unit": "slide_042",
+    "output_slide_number": 42,
+    "source_slides": [
+      45,
+      46
+    ],
+    "primary_source_slide": 45,
+    "output_slide_numbers": [],
+    "mapping_type": "merged",
+    "rationale": "Die Quell-SVGs 45, 46 teilen denselben Sprechertext und bilden belegte Aufbauzustaende einer animierten Szene.",
+    "mapping_source": "reference_map",
+    "reference_map_path": "analysis/rebuild-plans/RE1_source-reference-map.json",
+    "sequence_plan": "analysis/rebuild-plans/RE1_sequence_plan.md",
+    "read_error": ""
+  },
+  "references": [
+    {
+      "source_slide_number": 45,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE1/SVG/Folie45.SVG",
+      "source_svg_sha256": "bef4ba3ebaabc62f39b6624ca881d1bd757aa7c342a1861fa0fcd8085dc1c714",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE1/SVG/Folie45.SVG",
+      "analysis_path": ""
+    },
+    {
+      "source_slide_number": 46,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE1/SVG/Folie46.SVG",
+      "source_svg_sha256": "fb49b53ad94612264da54687bd7bb3d39adc0c35ec26bee370f8d319c2256ca0",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE1/SVG/Folie46.SVG",
+      "analysis_path": ""
+    }
+  ],
+  "proposal": {
+    "path": "rebuild-proposals/svg/RE1/slide_042/slide_042.svg",
+    "svg_sha256": "8ef03f3e32cf20fd38a676126816c0aab95fea713682e42fc80700279487abb8",
+    "animation_manifest": "/files/rebuild-proposals/svg/RE1/slide_042/scene.animation.v1.json"
+  },
+  "summary": {
+    "source_count": 2,
+    "checked_content_items": 51,
+    "errors": 0,
+    "warnings": 16,
+    "infos": 0,
+    "animation_steps": 3
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 045: \"Der Median ist diejenige Ausfallzeit, unterhalb und oberhalb derer genau die Hälfte der Ausfälle\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Der Median ist diejenige Ausfallzeit, unterhalb und oberhalb derer genau die Hälfte der Ausfälle"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 045: \"liegen. Der Median lässt sich deshalb am einfachsten mit der Ausfallwahrscheinlichkeit\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-3",
+      "expected": "liegen. Der Median lässt sich deshalb am einfachsten mit der Ausfallwahrscheinlichkeit"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 045: \") ermitteln:\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-7",
+      "expected": ") ermitteln:"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 045: \"Wird das Ausfallverhalten mit der Dichtefunktion\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-8",
+      "expected": "Wird das Ausfallverhalten mit der Dichtefunktion"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 045: \") dargestellt, so unterteilt der Median die Fläche\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-12",
+      "expected": ") dargestellt, so unterteilt der Median die Fläche"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 045: \"unterhalb der Kurve\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-13",
+      "expected": "unterhalb der Kurve"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 045: \") in zwei gleich große Flächenstücke.\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-17",
+      "expected": ") in zwei gleich große Flächenstücke."
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 045: \"Ein großer Vorteil des Median im Vergleich zum Mittelwert\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-18",
+      "expected": "Ein großer Vorteil des Median im Vergleich zum Mittelwert"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 045: \"besteht darin, dass er sehr\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-21",
+      "expected": "besteht darin, dass er sehr"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 045: \"unempfindlich gegenüber „Ausreißern“ ist. Eine sehr kurze oder sehr lange Ausfallzeit kann den\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-22",
+      "expected": "unempfindlich gegenüber „Ausreißern“ ist. Eine sehr kurze oder sehr lange Ausfallzeit kann den"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 046: \"Der Median ist Ausfallzeit, bei der die eine Hälfte der Ausfälle früher und die andere später liegt\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Der Median ist Ausfallzeit, bei der die eine Hälfte der Ausfälle früher und die andere später liegt"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 046: \"Er lässt sich mit der Ausfallwahrscheinlichkeit F(t) ermitteln:\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Er lässt sich mit der Ausfallwahrscheinlichkeit F(t) ermitteln:"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 046: \"In der Dichtefunktion f(t) teilt der Median die Fläche unter der Kurve in zwei exakt gleiche\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-6",
+      "expected": "In der Dichtefunktion f(t) teilt der Median die Fläche unter der Kurve in zwei exakt gleiche"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 046: \"Unempfindlich gegenüber „Ausreißern“\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-9",
+      "expected": "Unempfindlich gegenüber „Ausreißern“"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 046: \"kurze oder lange Ausfallzeit hat keinen\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-12",
+      "expected": "kurze oder lange Ausfallzeit hat keinen"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 046: \"Einfluss auf den Median\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-13",
+      "expected": "Einfluss auf den Median"
+    }
+  ],
+  "content_checks": [
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Median",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Der Median ist diejenige Ausfallzeit, unterhalb und oberhalb derer genau die Hälfte der Ausfälle",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.071,
+      "evidence": "tokens:median"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-3",
+      "expected": "liegen. Der Median lässt sich deshalb am einfachsten mit der Ausfallwahrscheinlichkeit",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.091,
+      "evidence": "tokens:median"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-4",
+      "expected": "F",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-5",
+      "expected": "(",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-6",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-7",
+      "expected": ") ermitteln:",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-8",
+      "expected": "Wird das Ausfallverhalten mit der Dichtefunktion",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-9",
+      "expected": "f",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-10",
+      "expected": "(",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-11",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-12",
+      "expected": ") dargestellt, so unterteilt der Median die Fläche",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.143,
+      "evidence": "tokens:median"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-13",
+      "expected": "unterhalb der Kurve",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-14",
+      "expected": "f",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-15",
+      "expected": "(",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-16",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-17",
+      "expected": ") in zwei gleich große Flächenstücke.",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.6,
+      "evidence": "tokens:zwei,gleich,grosse"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-18",
+      "expected": "Ein großer Vorteil des Median im Vergleich zum Mittelwert",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.111,
+      "evidence": "tokens:median"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-19",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-20",
+      "expected": "m",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-21",
+      "expected": "besteht darin, dass er sehr",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-22",
+      "expected": "unempfindlich gegenüber „Ausreißern“ ist. Eine sehr kurze oder sehr lange Ausfallzeit kann den",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.538,
+      "evidence": "tokens:gegenüber,ausreissern,eine,kurze,oder,lange,den"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-23",
+      "expected": "Median nicht verschieben.",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "tokens:median,nicht,verschieben"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-24",
+      "expected": "𝐹",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-25",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-26",
+      "expected": "𝑚𝑒𝑑𝑖𝑎𝑛",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-27",
+      "expected": "=",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-28",
+      "expected": "0",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-29",
+      "expected": ",",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 45,
+      "source_item_id": "source-svg-text-30",
+      "expected": "5",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-1",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Der Median ist Ausfallzeit, bei der die eine Hälfte der Ausfälle früher und die andere später liegt",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.235,
+      "evidence": "tokens:median,eine,früher,später"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-3",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Er lässt sich mit der Ausfallwahrscheinlichkeit F(t) ermitteln:",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-5",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-6",
+      "expected": "In der Dichtefunktion f(t) teilt der Median die Fläche unter der Kurve in zwei exakt gleiche",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.133,
+      "evidence": "tokens:median,zwei"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-7",
+      "expected": "Hälften",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-8",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-9",
+      "expected": "Unempfindlich gegenüber „Ausreißern“",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.667,
+      "evidence": "tokens:gegenüber,ausreissern"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-10",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-11",
+      "expected": "extrem",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-12",
+      "expected": "kurze oder lange Ausfallzeit hat keinen",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:kurze,oder,lange"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-13",
+      "expected": "Einfluss auf den Median",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:den,median"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-14",
+      "expected": "Median",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-15",
+      "expected": "𝐹",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-16",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-17",
+      "expected": "𝑚𝑒𝑑𝑖𝑎𝑛",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-18",
+      "expected": "=",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-19",
+      "expected": "0",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-20",
+      "expected": ",",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 46,
+      "source_item_id": "source-svg-text-21",
+      "expected": "5",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    }
+  ],
+  "manual_review_focus": [
+    "Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.",
+    "Sprechertext-Reihenfolge gegen die semantisch geplanten Animationsschritte pruefen."
+  ],
+  "reference_mapping_sha256": "13c2de14cdf856863158c33c49ecf3cbef8c2a00559f8f120ea8e9d2bfc3dcb2",
+  "reference_map_path": "analysis/rebuild-plans/RE1_source-reference-map.json",
+  "sequence_plan": "analysis/rebuild-plans/RE1_sequence_plan.md"
+}

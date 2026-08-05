@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_016.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "assurance_contribution",
+      "label": "Erprobung und Absicherung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "reliability_collaboration",
+      "label": "Gemeinsames Ziel",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "design_contribution",
+      "label": "Konstruktive Auslegung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_assurance_contribution",
+      "targetId": "assurance_contribution",
+      "action": "show",
+      "sourceText": "Für die Sicherstellung der Produktzuverlässigkeit reichen die quantitativen sowie die qualitativen Methoden allein nicht aus",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_reliability_collaboration",
+      "targetId": "reliability_collaboration",
+      "action": "show",
+      "sourceText": "Eine Zusammenarbeit zwischen Design und Zuverlässigkeit-Team ist entscheidend",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_design_contribution",
+      "targetId": "design_contribution",
+      "action": "show",
+      "sourceText": "Bei der konstruktiven Auslegung kann zum einen auf bewährte Konstruktionsrichtlinien zurückgegriffen werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

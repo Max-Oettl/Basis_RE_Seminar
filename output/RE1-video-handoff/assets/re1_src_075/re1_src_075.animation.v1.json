@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_075.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "weibull_formula_parameters",
+      "label": "Parameter",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_density_formula",
+      "label": "Dichtefunktion",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_failure_formula",
+      "label": "Ausfallwahrscheinlichkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_reliability_formula",
+      "label": "Überlebenswahrscheinlichkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_hazard_formula",
+      "label": "Ausfallrate",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_weibull_formula_parameters",
+      "targetId": "weibull_formula_parameters",
+      "action": "show",
+      "sourceText": "Die Weibullverteilung kann mathematisch über die",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_density_formula",
+      "targetId": "weibull_density_formula",
+      "action": "show",
+      "sourceText": "Entsprechend lässt sich die Dichtefunktion einfach",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_failure_formula",
+      "targetId": "weibull_failure_formula",
+      "action": "show",
+      "sourceText": "Über das Integral der Dichtefunktion erhält",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_reliability_formula",
+      "targetId": "weibull_reliability_formula",
+      "action": "show",
+      "sourceText": "Die Überlebenswahrscheinlichkeit R von t berechnet",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_hazard_formula",
+      "targetId": "weibull_hazard_formula",
+      "action": "show",
+      "sourceText": "Und zum Schluss noch die Ausfallrate",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

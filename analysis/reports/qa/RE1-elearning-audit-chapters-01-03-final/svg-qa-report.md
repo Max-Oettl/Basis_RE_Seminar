@@ -1,0 +1,2728 @@
+# SVG QA Report - RE1
+
+Generated: 2026-07-17T12:40:08.748Z
+
+## Summary
+
+- Files checked: 102
+- Animation manifests checked: 77
+- Layout files checked: 64
+- Layout states checked: 207
+- Design files checked: 64
+- Design errors: 0
+- Design warnings: 1202
+- Handoff scenes checked: 0
+- Handoff manifests checked: 0
+- Handoff errors: 0
+- Handoff warnings: 0
+- Errors: 0
+- Warnings: 1336
+
+## Issues
+
+- WARNING (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): ViewBox is not close to 16:9.: 938.219531x391.6
+- WARNING (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): ViewBox is not close to 16:9.: 1082.836875x411.877942
+- WARNING (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): ViewBox is not close to 16:9.: 843.001562x440.001406
+- WARNING (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): ViewBox is not close to 16:9.: 843.001562x440.001406
+- WARNING (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): ViewBox is not close to 16:9.: 843.001562x440.001406
+- WARNING (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): ViewBox is not close to 16:9.: 900.730313x411.201406
+- WARNING (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): ViewBox is not close to 16:9.: 837.571875x457.12
+- WARNING (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): ViewBox is not close to 16:9.: 965.13158x360.808219
+- WARNING (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): ViewBox is not close to 16:9.: 550.250001x454.32
+- WARNING (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): ViewBox is not close to 16:9.: 838.091094x456.68
+- WARNING (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): ViewBox is not close to 16:9.: 838.154062x457.001406
+- WARNING (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): ViewBox is not close to 16:9.: 940.393781x381.500625
+- WARNING (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): ViewBox is not close to 16:9.: 194.7x60.72
+- WARNING (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): ViewBox is not close to 16:9.: 309.36x82.98
+- WARNING (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): ViewBox is not close to 16:9.: 837.700625x457.12
+- WARNING (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): ViewBox is not close to 16:9.: 837.830781x456.68
+- WARNING (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): ViewBox is not close to 16:9.: 837.700625x457.001406
+- WARNING (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): ViewBox is not close to 16:9.: 292.02x75.42
+- WARNING (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-area-integral.svg): ViewBox is not close to 16:9.: 296.58x73.14
+- WARNING (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): ViewBox is not close to 16:9.: 272x43.609375
+- WARNING (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): ViewBox is not close to 16:9.: 837.896562x413.48
+- WARNING (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): ViewBox is not close to 16:9.: 180.8x61.2
+- WARNING (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): ViewBox is not close to 16:9.: 900.48x410.88
+- WARNING (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): ViewBox is not close to 16:9.: 837.960938x457.001406
+- WARNING (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): ViewBox is not close to 16:9.: 838.089687x456.68
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): Many visible colors found for the declared density. Detail: 16 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #C8D5DF, #FFFFFF, #1F2933, #D9F0F7, #243B53, #F9E4E7, #F7EEDC, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #1F2933, #D9F0F7, #243B53, #F9E4E7 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Many text nodes for a non-dense Content-SVG. Detail: 40 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Many visible colors found for the declared density. Detail: 19 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #6A7A86, #E2E8F0, #139CCB, #062D46, #FFFFFF, #D9F0F7, #243B53, #F9E4E7
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #243B53, #F9E4E7, #F7EEDC, #1F2933 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): Many visible colors found for the declared density. Detail: 16 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #C8D5DF, #FFFFFF, #1F2933, #D9F0F7, #243B53, #F9E4E7, #F7EEDC, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #1F2933, #D9F0F7, #243B53, #F9E4E7 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): Many visible colors found for the declared density. Detail: 16 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #C8D5DF, #FFFFFF, #1F2933, #D9F0F7, #243B53, #F9E4E7, #F7EEDC, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #1F2933, #D9F0F7, #243B53, #F9E4E7 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_005/slide_005.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_005/slide_005.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_005/slide_005.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_005/slide_005.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_005/slide_005.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_005/slide_005.svg): Many visible colors found for the declared density. Detail: 14 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #D9F0F7, #1F2933, #F7EEDC, #F9E4E7, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_005/slide_005.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #1F2933, #F7EEDC, #F9E4E7, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_005/slide_005.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_005/slide_005.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_006/slide_006.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_006/slide_006.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_006/slide_006.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_006/slide_006.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_006/slide_006.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_006/slide_006.svg): Many visible colors found for the declared density. Detail: 12 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #F9E4E7, #E3F0EA, #FFFFFF, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_006/slide_006.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #F9E4E7, #E3F0EA, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_006/slide_006.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E3F0EA
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_006/slide_006.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Colors outside brand/design tokens found. Detail: #D9F0F7, #007EA7, #2798B8, #6FB8D1, #ACD7E4 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Many visible shapes do not have semantic role markers. Detail: 67 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Many text nodes for a non-dense Content-SVG. Detail: 36 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Many visible colors found for the declared density. Detail: 19 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #52606D, #C8D5DF, #E3F0EA, #E2E8F0, #6A7A86, #2798B8, #6FB8D1
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #52606D, #C8D5DF, #E3F0EA, #2798B8 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46, #E3F0EA ~ #E2E8F0
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Many visible shapes do not have semantic role markers. Detail: 84 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_008/slide_008.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_008/slide_008.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_008/slide_008.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_008/slide_008.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_008/slide_008.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_008/slide_008.svg): Many visible colors found for the declared density. Detail: 13 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #F7EEDC, #FFFFFF, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_008/slide_008.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #F7EEDC, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_008/slide_008.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_008/slide_008.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): Many visible colors found for the declared density. Detail: 16 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #243B53, #FFFFFF, #DCE8EF, #52606D, #C8D5DF, #E3F0EA, #F9E4E7, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #243B53, #DCE8EF, #52606D, #C8D5DF, #E3F0EA Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E3F0EA, #DCE8EF ~ #E3F0EA
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Colors outside brand/design tokens found. Detail: #79C7E3, #102A43 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Very similar but non-identical colors found. Detail: #102A43 ~ #062D46
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Many visible colors found for the declared density. Detail: 20 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #E2E8F0, #6A7A86, #79C7E3, #139CCB, #062D46, #D9F0F7, #1F2933, #F7FAFC
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #79C7E3, #D9F0F7, #1F2933, #F7FAFC, #F9E4E7 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Many visible shapes do not have semantic role markers. Detail: 49 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Colors outside brand/design tokens found. Detail: #79C7E3, #102A43 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Very similar but non-identical colors found. Detail: #102A43 ~ #062D46
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Many visible colors found for the declared density. Detail: 19 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #F7FAFC, #E2E8F0, #6A7A86, #79C7E3, #062D46, #139CCB, #FFFFFF
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #F7FAFC, #79C7E3, #C8D5DF, #E3F0EA Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #F7FAFC, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E2E8F0, #E9F0F4 ~ #E3F0EA, #102A43 ~ #062D46
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Colors outside brand/design tokens found. Detail: #79C7E3, #102A43 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Very similar but non-identical colors found. Detail: #102A43 ~ #062D46
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Many visible colors found for the declared density. Detail: 22 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #F7FAFC, #E2E8F0, #6A7A86, #79C7E3, #062D46, #139CCB, #FFFFFF
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #F7FAFC, #79C7E3, #C8D5DF, #E3F0EA Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #F7FAFC, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E2E8F0, #E9F0F4 ~ #E3F0EA, #102A43 ~ #062D46
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Many visible shapes do not have semantic role markers. Detail: 48 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_013/slide_013.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_013/slide_013.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_013/slide_013.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_013/slide_013.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_013/slide_013.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_013/slide_013.svg): Many visible colors found for the declared density. Detail: 14 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #F7FAFC, #F7EEDC, #E3F0EA, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_013/slide_013.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #F7FAFC, #F7EEDC, #E3F0EA Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_013/slide_013.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E3F0EA
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_013/slide_013.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Many visible colors found for the declared density. Detail: 10 colors: #D1495B, #007EA7, #B7791F, #6A7A86, #062D46, #139CCB, #FFFFFF, #9F3443, #00698A, #8A5A17
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Colors outside brand/design tokens found. Detail: #007EA7, #B7791F, #9F3443, #00698A, #8A5A17 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Many visible colors found for the declared density. Detail: 19 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #6A7A86, #062D46, #139CCB, #FFFFFF, #9F3443, #00698A, #8A5A17, #F9E4E7
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #9F3443, #00698A, #8A5A17, #F9E4E7, #243B53 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #102A43 ~ #062D46
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Many visible shapes do not have semantic role markers. Detail: 46 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_015/slide_015.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_015/slide_015.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_015/slide_015.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_015/slide_015.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_015/slide_015.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_015/slide_015.svg): Many visible colors found for the declared density. Detail: 13 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #D9F0F7, #1F2933, #F7EEDC, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_015/slide_015.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #1F2933, #F7EEDC, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_015/slide_015.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_015/slide_015.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Many visible colors found for the declared density. Detail: 14 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #243B53, #E3F0EA, #C8D5DF, #D9F0F7, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #243B53, #E3F0EA, #C8D5DF, #D9F0F7, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E3F0EA
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): Many visible colors found for the declared density. Detail: 17 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #F7FAFC, #243B53, #FFFFFF, #F9E4E7, #E3F0EA, #F7EEDC, #E5EDF3
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #F7FAFC, #243B53, #F9E4E7, #E3F0EA Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #F7FAFC, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E5EDF3, #F7FAFC ~ #FFFFFF
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Many visible colors found for the declared density. Detail: 16 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #F9E4E7, #E3F0EA, #F7EEDC, #E5EDF3, #D9F0F7, #C8D5DF, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #F9E4E7, #E3F0EA, #F7EEDC, #E5EDF3, #D9F0F7 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E5EDF3, #E3F0EA ~ #E5EDF3
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Many visible shapes do not have semantic role markers. Detail: 46 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Many visible colors found for the declared density. Detail: 16 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #E3F0EA, #F7EEDC, #E5EDF3, #243B53, #F9E4E7, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #E3F0EA, #F7EEDC, #E5EDF3, #243B53 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E5EDF3, #E3F0EA ~ #E5EDF3
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Many text nodes for a non-dense Content-SVG. Detail: 42 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Many visible colors found for the declared density. Detail: 18 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #E3F0EA, #F7EEDC, #E5EDF3, #C8D5DF, #243B53, #F9E4E7
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #E3F0EA, #F7EEDC, #E5EDF3, #C8D5DF Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E5EDF3, #FFFFFF ~ #F7FAFC
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Many visible colors found for the declared density. Detail: 17 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #F9E4E7, #F7EEDC, #E5EDF3, #DCE8EF, #243B53, #E3F0EA
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #F9E4E7, #F7EEDC, #E5EDF3, #DCE8EF Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E5EDF3, #E9F0F4 ~ #E3F0EA, #D9F0F7 ~ #DCE8EF, #E5EDF3 ~ #DCE8EF, #E5EDF3 ~ #E3F0EA
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Many visible colors found for the declared density. Detail: 18 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #F9E4E7, #F7EEDC, #E5EDF3, #C8D5DF, #F7FAFC, #243B53
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #F9E4E7, #F7EEDC, #E5EDF3, #C8D5DF Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E5EDF3, #E9F0F4 ~ #E3F0EA, #FFFFFF ~ #F7FAFC
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Many visible colors found for the declared density. Detail: 17 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #F9E4E7, #E3F0EA, #E5EDF3, #C8D5DF, #243B53, #F7EEDC
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #F9E4E7, #E3F0EA, #E5EDF3, #C8D5DF Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E5EDF3, #E3F0EA ~ #E5EDF3
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Many visible colors found for the declared density. Detail: 16 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #F9E4E7, #F7EEDC, #E5EDF3, #243B53, #E3F0EA, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #F9E4E7, #F7EEDC, #E5EDF3, #243B53 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E5EDF3, #E9F0F4 ~ #E3F0EA, #E5EDF3 ~ #E3F0EA
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Many visible colors found for the declared density. Detail: 18 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #F9E4E7, #E3F0EA, #E5EDF3, #F7FAFC, #C8D5DF, #243B53
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #F9E4E7, #E3F0EA, #E5EDF3, #F7FAFC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E5EDF3, #FFFFFF ~ #F7FAFC
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Many visible colors found for the declared density. Detail: 16 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #F9E4E7, #E3F0EA, #F7EEDC, #C8D5DF, #243B53, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #F9E4E7, #E3F0EA, #F7EEDC, #C8D5DF Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E3F0EA
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Many visible colors found for the declared density. Detail: 17 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #C8D5DF, #E2E8F0, #6A7A86, #062D46, #F9E4E7, #243B53
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #C8D5DF, #F9E4E7, #243B53, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Many visible shapes do not have semantic role markers. Detail: 59 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Colors outside brand/design tokens found. Detail: #007EA7, #2F6F55 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Many visible colors found for the declared density. Detail: 15 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #E2E8F0, #6A7A86, #062D46, #2AA876, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 10px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 10px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 10px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 10px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Element coordinate is outside the SVG viewBox. Detail: text: -11.336247,179.580661
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Colors outside brand/design tokens found. Detail: #668099 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Many visible shapes do not have semantic role markers. Detail: 66 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 10px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 10px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 10px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 10px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Element coordinate is outside the SVG viewBox. Detail: text: -11.336247,179.580661
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Many visible colors found for the declared density. Detail: 14 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #668099, #062D46, #6A7A86, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #668099, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #102A43 ~ #062D46, #668099 ~ #627D98
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Many visible shapes do not have semantic role markers. Detail: 78 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Colors outside brand/design tokens found. Detail: #007EA7, #2F6F55 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Many visible colors found for the declared density. Detail: 16 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #52606D, #E2E8F0, #6A7A86, #062D46, #C8D5DF, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #52606D, #C8D5DF, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Colors outside brand/design tokens found. Detail: #244A7C Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Many visible colors found for the declared density. Detail: 15 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #E2E8F0, #6A7A86, #062D46, #244A7C, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #244A7C, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Many text nodes for a non-dense Content-SVG. Detail: 51 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Colors outside brand/design tokens found. Detail: #007EA7, #4F78A8 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Many visible shapes do not have semantic role markers. Detail: 53 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Many text nodes for a non-dense Content-SVG. Detail: 65 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Many visible colors found for the declared density. Detail: 20 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #C8D5DF, #D9F0F7, #243B53, #4F78A8, #E3F0EA, #F9E4E7, #E2E8F0
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #243B53, #4F78A8, #E3F0EA Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): High SVG element count for declared density. Detail: 352 elements with density=balanced
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Many visible shapes do not have semantic role markers. Detail: 74 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): Element coordinate is outside the SVG viewBox. Detail: rect: 118.207031,-10.54375
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): Element coordinate is outside the SVG viewBox. Detail: rect end: 188.247363,-7.918749999999999
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Colors outside brand/design tokens found. Detail: #4F78A8 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Many visible shapes do not have semantic role markers. Detail: 66 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Many text nodes for a non-dense Content-SVG. Detail: 34 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text element has no determinable font-size. Detail: <text data-qc-role="formula" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text element has no determinable font-size. Detail: <text data-qc-role="formula" data-qc-allow-overlap="true">
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Element coordinate is outside the SVG viewBox. Detail: rect: 118.207031,-10.54375
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Element coordinate is outside the SVG viewBox. Detail: rect end: 188.247363,-7.918749999999999
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Many visible colors found for the declared density. Detail: 20 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #C8D5DF, #D9F0F7, #243B53, #4F78A8, #E3F0EA, #F9E4E7, #E2E8F0
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #243B53, #4F78A8, #E3F0EA Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E2E8F0, #E9F0F4 ~ #E5ECF5, #102A43 ~ #062D46, #E3F0EA ~ #E2E8F0
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Many visible shapes do not have semantic role markers. Detail: 91 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Colors outside brand/design tokens found. Detail: #4F78A8, #B7791F Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Many text nodes for a non-dense Content-SVG. Detail: 33 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Many visible colors found for the declared density. Detail: 22 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #C8D5DF, #D9F0F7, #243B53, #4F78A8, #E3F0EA, #F9E4E7, #F7FAFC
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #243B53, #4F78A8, #E3F0EA Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Many visible shapes do not have semantic role markers. Detail: 59 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Colors outside brand/design tokens found. Detail: #244A7C, #B7791F Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Many text nodes for a non-dense Content-SVG. Detail: 34 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Many visible colors found for the declared density. Detail: 21 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #C8D5DF, #D9F0F7, #243B53, #4F78A8, #E3F0EA, #F9E4E7, #E2E8F0
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #243B53, #4F78A8, #E3F0EA Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Many visible shapes do not have semantic role markers. Detail: 47 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-area-integral.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-area-integral.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Colors outside brand/design tokens found. Detail: #4F78A8, #2F6F55 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Many text nodes for a non-dense Content-SVG. Detail: 36 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text element has no determinable font-size. Detail: <text data-qc-role="formula" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text element has no determinable font-size. Detail: <text data-qc-role="formula" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text element has no determinable font-size. Detail: <text data-qc-role="formula" data-qc-allow-overlap="true">
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Many visible colors found for the declared density. Detail: 21 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #C8D5DF, #D9F0F7, #243B53, #E5ECF5, #4F78A8, #F9E4E7, #DCE8EF
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #243B53, #E5ECF5, #4F78A8 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E5ECF5, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Many visible shapes do not have semantic role markers. Detail: 47 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): Element coordinate is outside the SVG viewBox. Detail: rect: 122.167969,-10.029688
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): Element coordinate is outside the SVG viewBox. Detail: rect end: 174.449219,-7.529688
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Many visible colors found for the declared density. Detail: 9 colors: #D1495B, #007EA7, #B7791F, #062D46, #6A7A86, #FFFFFF, #9F3443, #00698A, #8A5A17
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Colors outside brand/design tokens found. Detail: #007EA7, #B7791F, #9F3443, #00698A, #8A5A17 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text element has no determinable font-size. Detail: <text data-qc-role="formula" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Element coordinate is outside the SVG viewBox. Detail: rect: 122.167969,-10.029688
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Element coordinate is outside the SVG viewBox. Detail: rect end: 174.449219,-7.529688
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Many visible colors found for the declared density. Detail: 25 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #C8D5DF, #D9F0F7, #243B53, #E5ECF5, #4F78A8, #E3F0EA, #DCE8EF
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #243B53, #E5ECF5, #4F78A8 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E5ECF5, #E9F0F4 ~ #E3F0EA, #102A43 ~ #062D46, #D9F0F7 ~ #DCE8EF, #E5ECF5 ~ #E3F0EA
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Colors outside brand/design tokens found. Detail: #007EA7, #B7791F, #244A7C Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Many text nodes for a non-dense Content-SVG. Detail: 36 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Many visible colors found for the declared density. Detail: 22 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #C8D5DF, #D9F0F7, #243B53, #E5ECF5, #4F78A8, #E3F0EA, #E2E8F0
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #243B53, #E5ECF5, #4F78A8 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E5ECF5, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46, #E5ECF5 ~ #E3F0EA
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Many text nodes for a non-dense Content-SVG. Detail: 33 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Many visible colors found for the declared density. Detail: 23 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #C8D5DF, #D9F0F7, #243B53, #E5ECF5, #4F78A8, #E3F0EA, #F7FAFC
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #243B53, #E5ECF5, #4F78A8 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E5ECF5, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E2E8F0
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Many visible shapes do not have semantic role markers. Detail: 54 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): t=0s element=legend_1 related=qc_runtime_164 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): t=0s element=legend_1 related=qc_runtime_172 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): t=0s element=legend_1 related=qc_runtime_279 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): t=0s element=legend_1 related=qc_runtime_283 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): t=0s element=legend_1 related=qc_runtime_287 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): t=0s element=legend_1 related=qc_runtime_291 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): t=0s element=qc_runtime_37 related=qc_runtime_39 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): t=0.533s element=qc_runtime_37 related=qc_runtime_39 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): t=1.517s element=qc_runtime_37 related=qc_runtime_39 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): t=0s element=qc_runtime_167 related=qc_runtime_168 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): t=0s element=qc_runtime_70 related=qc_runtime_71 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): t=0s element=qc_runtime_76 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): t=0s element=qc_runtime_96 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): t=0s element=qc_runtime_64 related=qc_runtime_76 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): t=0s element=qc_runtime_69 related=qc_runtime_76 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): t=0s element=qc_runtime_74 related=qc_runtime_76 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): t=0s element=qc_runtime_76 related=qc_runtime_84 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): t=0s element=qc_runtime_173 related=qc_runtime_174 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): t=0s element=qc_runtime_174 related=qc_runtime_176 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): t=0s element=qc_runtime_141 related=qc_runtime_142 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): t=0s element=qc_runtime_142 related=qc_runtime_144 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): t=0s element=qc_runtime_136 related=qc_runtime_137 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): t=0s element=qc_runtime_332 related=qc_runtime_333 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [text_inside_box] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_18 related=qc_runtime_31 Text does not fit inside its background box (left, right, top, bottom). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- WARNING [text_inside_box] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_25 related=qc_runtime_31 Text does not fit inside its background box (top, bottom). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- WARNING [text_inside_box] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_29 related=qc_runtime_31 Text does not fit inside its background box (top, bottom). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_18 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_19 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_24 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_25 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_26 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_27 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_28 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_29 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_30 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_19 related=qc_runtime_21 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_26 related=qc_runtime_28 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): t=0s element=qc_runtime_18 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): t=0s element=qc_runtime_31 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): t=0s element=qc_runtime_32 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): t=0s element=qc_runtime_19 related=qc_runtime_24 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): t=0s element=qc_runtime_21 related=qc_runtime_27 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): t=0s element=qc_runtime_21 related=qc_runtime_32 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): t=0s element=qc_runtime_89 related=qc_runtime_90 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): t=0s element=qc_runtime_178 related=qc_runtime_180 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): t=0s element=qc_runtime_182 related=qc_runtime_184 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): t=0s element=qc_runtime_156 related=qc_runtime_158 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): t=0s element=qc_runtime_18 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): t=0s element=qc_runtime_31 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): t=0s element=qc_runtime_34 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): t=0s element=qc_runtime_19 related=qc_runtime_24 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): t=0s element=qc_runtime_21 related=qc_runtime_27 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): t=0s element=qc_runtime_21 related=qc_runtime_33 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-area-integral.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-area-integral.svg): t=0s element=qc_runtime_18 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-area-integral.svg): t=0s element=qc_runtime_33 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-area-integral.svg): t=0s element=qc_runtime_34 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-area-integral.svg): t=0s element=qc_runtime_21 related=qc_runtime_27 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-area-integral.svg): t=0s element=qc_runtime_21 related=qc_runtime_33 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_18 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_19 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_20 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_21 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_22 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_23 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_24 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_25 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_26 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_27 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_28 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_29 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_21 related=qc_runtime_28 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): t=0s element=qc_runtime_212 related=qc_runtime_213 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): t=0s element=qc_runtime_213 related=qc_runtime_215 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [text_inside_box] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_18 related=qc_runtime_32 Text does not fit inside its background box (left, right, top, bottom). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- WARNING [text_inside_box] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_24 related=qc_runtime_32 Text does not fit inside its background box (left, top, bottom). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- WARNING [text_inside_box] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_27 related=qc_runtime_32 Text does not fit inside its background box (top, bottom). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- WARNING [text_inside_box] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_29 related=qc_runtime_32 Text does not fit inside its background box (top, bottom). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- WARNING [text_inside_box] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_31 related=qc_runtime_32 Text does not fit inside its background box (right, top, bottom). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_18 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_25 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_26 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_28 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_30 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_25 related=qc_runtime_28 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+
+## Layout QA
+
+- Mode: warn-only
+- Files checked: 64
+- States checked: 207
+- Browser: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): t=0s element=legend_1 related=qc_runtime_164 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): t=0s element=legend_1 related=qc_runtime_172 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): t=0s element=legend_1 related=qc_runtime_279 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): t=0s element=legend_1 related=qc_runtime_283 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): t=0s element=legend_1 related=qc_runtime_287 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): t=0s element=legend_1 related=qc_runtime_291 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): t=0s element=qc_runtime_37 related=qc_runtime_39 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): t=0.533s element=qc_runtime_37 related=qc_runtime_39 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): t=1.517s element=qc_runtime_37 related=qc_runtime_39 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): t=0s element=qc_runtime_167 related=qc_runtime_168 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): t=0s element=qc_runtime_70 related=qc_runtime_71 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): t=0s element=qc_runtime_76 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): t=0s element=qc_runtime_96 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): t=0s element=qc_runtime_64 related=qc_runtime_76 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): t=0s element=qc_runtime_69 related=qc_runtime_76 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): t=0s element=qc_runtime_74 related=qc_runtime_76 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): t=0s element=qc_runtime_76 related=qc_runtime_84 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): t=0s element=qc_runtime_173 related=qc_runtime_174 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): t=0s element=qc_runtime_174 related=qc_runtime_176 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): t=0s element=qc_runtime_141 related=qc_runtime_142 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): t=0s element=qc_runtime_142 related=qc_runtime_144 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): t=0s element=qc_runtime_136 related=qc_runtime_137 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): t=0s element=qc_runtime_332 related=qc_runtime_333 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [text_inside_box] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_18 related=qc_runtime_31 Text does not fit inside its background box (left, right, top, bottom). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- WARNING [text_inside_box] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_25 related=qc_runtime_31 Text does not fit inside its background box (top, bottom). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- WARNING [text_inside_box] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_29 related=qc_runtime_31 Text does not fit inside its background box (top, bottom). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_18 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_19 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_24 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_25 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_26 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_27 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_28 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_29 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_30 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_19 related=qc_runtime_21 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): t=0s element=qc_runtime_26 related=qc_runtime_28 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): t=0s element=qc_runtime_18 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): t=0s element=qc_runtime_31 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): t=0s element=qc_runtime_32 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): t=0s element=qc_runtime_19 related=qc_runtime_24 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): t=0s element=qc_runtime_21 related=qc_runtime_27 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): t=0s element=qc_runtime_21 related=qc_runtime_32 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): t=0s element=qc_runtime_89 related=qc_runtime_90 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): t=0s element=qc_runtime_178 related=qc_runtime_180 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): t=0s element=qc_runtime_182 related=qc_runtime_184 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): t=0s element=qc_runtime_156 related=qc_runtime_158 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): t=0s element=qc_runtime_18 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): t=0s element=qc_runtime_31 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): t=0s element=qc_runtime_34 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): t=0s element=qc_runtime_19 related=qc_runtime_24 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): t=0s element=qc_runtime_21 related=qc_runtime_27 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): t=0s element=qc_runtime_21 related=qc_runtime_33 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-area-integral.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-area-integral.svg): t=0s element=qc_runtime_18 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-area-integral.svg): t=0s element=qc_runtime_33 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-area-integral.svg): t=0s element=qc_runtime_34 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-area-integral.svg): t=0s element=qc_runtime_21 related=qc_runtime_27 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-area-integral.svg): t=0s element=qc_runtime_21 related=qc_runtime_33 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_18 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_19 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_20 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_21 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_22 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_23 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_24 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_25 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_26 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_27 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_28 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_29 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): t=0s element=qc_runtime_21 related=qc_runtime_28 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): t=0s element=qc_runtime_212 related=qc_runtime_213 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): t=0s element=qc_runtime_213 related=qc_runtime_215 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [text_inside_box] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_18 related=qc_runtime_32 Text does not fit inside its background box (left, right, top, bottom). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- WARNING [text_inside_box] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_24 related=qc_runtime_32 Text does not fit inside its background box (left, top, bottom). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- WARNING [text_inside_box] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_27 related=qc_runtime_32 Text does not fit inside its background box (top, bottom). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- WARNING [text_inside_box] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_29 related=qc_runtime_32 Text does not fit inside its background box (top, bottom). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- WARNING [text_inside_box] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_31 related=qc_runtime_32 Text does not fit inside its background box (right, top, bottom). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_18 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_25 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_26 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_28 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [slide_bounds] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_30 Important visible element extends outside the SVG viewBox. Recommendation: Move the element inside the slide area or resize the composition.
+- WARNING [unexpected_overlap] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): t=0s element=qc_runtime_25 related=qc_runtime_28 Important elements overlap without an explicit data-qc-allow-overlap exception. Recommendation: Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap="true".
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- WARNING [group_integrity] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+
+## Design QA
+
+- Mode: warn-only
+- Files checked: 64
+- Brand tokens: brand/company-brand-tokens.json
+- Brand profile: reltest-academy
+
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): Many visible colors found for the declared density. Detail: 16 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #C8D5DF, #FFFFFF, #1F2933, #D9F0F7, #243B53, #F9E4E7, #F7EEDC, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #1F2933, #D9F0F7, #243B53, #F9E4E7 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_001/slide_001.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Many text nodes for a non-dense Content-SVG. Detail: 40 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Many visible colors found for the declared density. Detail: 19 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #6A7A86, #E2E8F0, #139CCB, #062D46, #FFFFFF, #D9F0F7, #243B53, #F9E4E7
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #243B53, #F9E4E7, #F7EEDC, #1F2933 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_002/slide_002.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): Many visible colors found for the declared density. Detail: 16 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #C8D5DF, #FFFFFF, #1F2933, #D9F0F7, #243B53, #F9E4E7, #F7EEDC, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #1F2933, #D9F0F7, #243B53, #F9E4E7 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_003/slide_003.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): Many visible colors found for the declared density. Detail: 16 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #C8D5DF, #FFFFFF, #1F2933, #D9F0F7, #243B53, #F9E4E7, #F7EEDC, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #1F2933, #D9F0F7, #243B53, #F9E4E7 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_004/slide_004.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_005/slide_005.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_005/slide_005.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_005/slide_005.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_005/slide_005.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_005/slide_005.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_005/slide_005.svg): Many visible colors found for the declared density. Detail: 14 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #D9F0F7, #1F2933, #F7EEDC, #F9E4E7, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_005/slide_005.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #1F2933, #F7EEDC, #F9E4E7, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_005/slide_005.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_005/slide_005.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_006/slide_006.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_006/slide_006.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_006/slide_006.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_006/slide_006.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_006/slide_006.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_006/slide_006.svg): Many visible colors found for the declared density. Detail: 12 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #F9E4E7, #E3F0EA, #FFFFFF, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_006/slide_006.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #F9E4E7, #E3F0EA, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_006/slide_006.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E3F0EA
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_006/slide_006.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Colors outside brand/design tokens found. Detail: #D9F0F7, #007EA7, #2798B8, #6FB8D1, #ACD7E4 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): Many visible shapes do not have semantic role markers. Detail: 67 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Many text nodes for a non-dense Content-SVG. Detail: 36 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Many visible colors found for the declared density. Detail: 19 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #52606D, #C8D5DF, #E3F0EA, #E2E8F0, #6A7A86, #2798B8, #6FB8D1
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #52606D, #C8D5DF, #E3F0EA, #2798B8 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46, #E3F0EA ~ #E2E8F0
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Many visible shapes do not have semantic role markers. Detail: 84 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_007/slide_007.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_008/slide_008.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_008/slide_008.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_008/slide_008.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_008/slide_008.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_008/slide_008.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_008/slide_008.svg): Many visible colors found for the declared density. Detail: 13 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #F7EEDC, #FFFFFF, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_008/slide_008.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #F7EEDC, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_008/slide_008.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_008/slide_008.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): Many visible colors found for the declared density. Detail: 16 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #243B53, #FFFFFF, #DCE8EF, #52606D, #C8D5DF, #E3F0EA, #F9E4E7, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #243B53, #DCE8EF, #52606D, #C8D5DF, #E3F0EA Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E3F0EA, #DCE8EF ~ #E3F0EA
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_009/slide_009.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Colors outside brand/design tokens found. Detail: #79C7E3, #102A43 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): Very similar but non-identical colors found. Detail: #102A43 ~ #062D46
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Many visible colors found for the declared density. Detail: 20 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #E2E8F0, #6A7A86, #79C7E3, #139CCB, #062D46, #D9F0F7, #1F2933, #F7FAFC
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #79C7E3, #D9F0F7, #1F2933, #F7FAFC, #F9E4E7 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Many visible shapes do not have semantic role markers. Detail: 49 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_010/slide_010.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Colors outside brand/design tokens found. Detail: #79C7E3, #102A43 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): Very similar but non-identical colors found. Detail: #102A43 ~ #062D46
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Many visible colors found for the declared density. Detail: 19 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #F7FAFC, #E2E8F0, #6A7A86, #79C7E3, #062D46, #139CCB, #FFFFFF
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #F7FAFC, #79C7E3, #C8D5DF, #E3F0EA Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #F7FAFC, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E2E8F0, #E9F0F4 ~ #E3F0EA, #102A43 ~ #062D46
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_011/slide_011.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Colors outside brand/design tokens found. Detail: #79C7E3, #102A43 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): Very similar but non-identical colors found. Detail: #102A43 ~ #062D46
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Many visible colors found for the declared density. Detail: 22 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #F7FAFC, #E2E8F0, #6A7A86, #79C7E3, #062D46, #139CCB, #FFFFFF
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #F7FAFC, #79C7E3, #C8D5DF, #E3F0EA Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #F7FAFC, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E2E8F0, #E9F0F4 ~ #E3F0EA, #102A43 ~ #062D46
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Many visible shapes do not have semantic role markers. Detail: 48 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_012/slide_012.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_013/slide_013.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_013/slide_013.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_013/slide_013.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_013/slide_013.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_013/slide_013.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_013/slide_013.svg): Many visible colors found for the declared density. Detail: 14 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #F7FAFC, #F7EEDC, #E3F0EA, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_013/slide_013.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #F7FAFC, #F7EEDC, #E3F0EA Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_013/slide_013.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E3F0EA
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_013/slide_013.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Many visible colors found for the declared density. Detail: 10 colors: #D1495B, #007EA7, #B7791F, #6A7A86, #062D46, #139CCB, #FFFFFF, #9F3443, #00698A, #8A5A17
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Colors outside brand/design tokens found. Detail: #007EA7, #B7791F, #9F3443, #00698A, #8A5A17 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Many visible colors found for the declared density. Detail: 19 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #6A7A86, #062D46, #139CCB, #FFFFFF, #9F3443, #00698A, #8A5A17, #F9E4E7
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #9F3443, #00698A, #8A5A17, #F9E4E7, #243B53 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #102A43 ~ #062D46
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Many visible shapes do not have semantic role markers. Detail: 46 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_015/slide_015.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_015/slide_015.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_015/slide_015.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_015/slide_015.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_015/slide_015.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_015/slide_015.svg): Many visible colors found for the declared density. Detail: 13 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #D9F0F7, #1F2933, #F7EEDC, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_015/slide_015.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #1F2933, #F7EEDC, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_015/slide_015.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_015/slide_015.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Many visible colors found for the declared density. Detail: 14 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #243B53, #E3F0EA, #C8D5DF, #D9F0F7, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #243B53, #E3F0EA, #C8D5DF, #D9F0F7, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E3F0EA
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): Many visible colors found for the declared density. Detail: 17 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #F7FAFC, #243B53, #FFFFFF, #F9E4E7, #E3F0EA, #F7EEDC, #E5EDF3
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #F7FAFC, #243B53, #F9E4E7, #E3F0EA Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #F7FAFC, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E5EDF3, #F7FAFC ~ #FFFFFF
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Many visible colors found for the declared density. Detail: 16 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #F9E4E7, #E3F0EA, #F7EEDC, #E5EDF3, #D9F0F7, #C8D5DF, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #F9E4E7, #E3F0EA, #F7EEDC, #E5EDF3, #D9F0F7 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E5EDF3, #E3F0EA ~ #E5EDF3
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Many visible shapes do not have semantic role markers. Detail: 46 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Many visible colors found for the declared density. Detail: 16 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #E3F0EA, #F7EEDC, #E5EDF3, #243B53, #F9E4E7, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #E3F0EA, #F7EEDC, #E5EDF3, #243B53 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E5EDF3, #E3F0EA ~ #E5EDF3
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Many text nodes for a non-dense Content-SVG. Detail: 42 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Many visible colors found for the declared density. Detail: 18 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #E3F0EA, #F7EEDC, #E5EDF3, #C8D5DF, #243B53, #F9E4E7
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #E3F0EA, #F7EEDC, #E5EDF3, #C8D5DF Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E5EDF3, #FFFFFF ~ #F7FAFC
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Many visible colors found for the declared density. Detail: 17 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #F9E4E7, #F7EEDC, #E5EDF3, #DCE8EF, #243B53, #E3F0EA
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #F9E4E7, #F7EEDC, #E5EDF3, #DCE8EF Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E5EDF3, #E9F0F4 ~ #E3F0EA, #D9F0F7 ~ #DCE8EF, #E5EDF3 ~ #DCE8EF, #E5EDF3 ~ #E3F0EA
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Many visible colors found for the declared density. Detail: 18 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #F9E4E7, #F7EEDC, #E5EDF3, #C8D5DF, #F7FAFC, #243B53
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #F9E4E7, #F7EEDC, #E5EDF3, #C8D5DF Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E5EDF3, #E9F0F4 ~ #E3F0EA, #FFFFFF ~ #F7FAFC
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Many visible colors found for the declared density. Detail: 17 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #F9E4E7, #E3F0EA, #E5EDF3, #C8D5DF, #243B53, #F7EEDC
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #F9E4E7, #E3F0EA, #E5EDF3, #C8D5DF Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E5EDF3, #E3F0EA ~ #E5EDF3
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Many visible colors found for the declared density. Detail: 16 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #F9E4E7, #F7EEDC, #E5EDF3, #243B53, #E3F0EA, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #F9E4E7, #F7EEDC, #E5EDF3, #243B53 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E5EDF3, #E9F0F4 ~ #E3F0EA, #E5EDF3 ~ #E3F0EA
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Many visible colors found for the declared density. Detail: 18 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #F9E4E7, #E3F0EA, #E5EDF3, #F7FAFC, #C8D5DF, #243B53
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #F9E4E7, #E3F0EA, #E5EDF3, #F7FAFC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E5EDF3, #FFFFFF ~ #F7FAFC
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Many visible colors found for the declared density. Detail: 16 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #F9E4E7, #E3F0EA, #F7EEDC, #C8D5DF, #243B53, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #F9E4E7, #E3F0EA, #F7EEDC, #C8D5DF Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E3F0EA
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Many visible colors found for the declared density. Detail: 17 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #C8D5DF, #E2E8F0, #6A7A86, #062D46, #F9E4E7, #243B53
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #C8D5DF, #F9E4E7, #243B53, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Many visible shapes do not have semantic role markers. Detail: 59 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_027/slide_027.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): Colors outside brand/design tokens found. Detail: #007EA7, #2F6F55 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13.5px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Many visible colors found for the declared density. Detail: 15 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #E2E8F0, #6A7A86, #062D46, #2AA876, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_028/slide_028.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 10px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 10px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 10px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 10px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Element coordinate is outside the SVG viewBox. Detail: text: -11.336247,179.580661
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Colors outside brand/design tokens found. Detail: #668099 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): Many visible shapes do not have semantic role markers. Detail: 66 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 10px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 10px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 10px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 10px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Element coordinate is outside the SVG viewBox. Detail: text: -11.336247,179.580661
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Many visible colors found for the declared density. Detail: 14 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #668099, #062D46, #6A7A86, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #668099, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #102A43 ~ #062D46, #668099 ~ #627D98
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Many visible shapes do not have semantic role markers. Detail: 78 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_029/slide_029.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): Colors outside brand/design tokens found. Detail: #007EA7, #2F6F55 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Many visible colors found for the declared density. Detail: 16 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #52606D, #E2E8F0, #6A7A86, #062D46, #C8D5DF, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #52606D, #C8D5DF, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_030/slide_030.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): Colors outside brand/design tokens found. Detail: #244A7C Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Many visible colors found for the declared density. Detail: 15 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #D9F0F7, #FFFFFF, #E2E8F0, #6A7A86, #062D46, #244A7C, #627D98
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #D9F0F7, #244A7C, #627D98 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_031/slide_031.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Many text nodes for a non-dense Content-SVG. Detail: 51 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Colors outside brand/design tokens found. Detail: #007EA7, #4F78A8 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): Many visible shapes do not have semantic role markers. Detail: 53 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Many text nodes for a non-dense Content-SVG. Detail: 65 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Many visible colors found for the declared density. Detail: 20 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #C8D5DF, #D9F0F7, #243B53, #4F78A8, #E3F0EA, #F9E4E7, #E2E8F0
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #243B53, #4F78A8, #E3F0EA Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): High SVG element count for declared density. Detail: 352 elements with density=balanced
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Many visible shapes do not have semantic role markers. Detail: 74 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_032/slide_032.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): Element coordinate is outside the SVG viewBox. Detail: rect: 118.207031,-10.54375
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): Element coordinate is outside the SVG viewBox. Detail: rect end: 188.247363,-7.918749999999999
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Colors outside brand/design tokens found. Detail: #4F78A8 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): Many visible shapes do not have semantic role markers. Detail: 66 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Many text nodes for a non-dense Content-SVG. Detail: 34 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text element has no determinable font-size. Detail: <text data-qc-role="formula" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Text element has no determinable font-size. Detail: <text data-qc-role="formula" data-qc-allow-overlap="true">
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Element coordinate is outside the SVG viewBox. Detail: rect: 118.207031,-10.54375
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Element coordinate is outside the SVG viewBox. Detail: rect end: 188.247363,-7.918749999999999
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Many visible colors found for the declared density. Detail: 20 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #C8D5DF, #D9F0F7, #243B53, #4F78A8, #E3F0EA, #F9E4E7, #E2E8F0
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #243B53, #4F78A8, #E3F0EA Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E2E8F0, #E9F0F4 ~ #E5ECF5, #102A43 ~ #062D46, #E3F0EA ~ #E2E8F0
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Many visible shapes do not have semantic role markers. Detail: 91 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_033/slide_033.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): Colors outside brand/design tokens found. Detail: #4F78A8, #B7791F Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Many text nodes for a non-dense Content-SVG. Detail: 33 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Many visible colors found for the declared density. Detail: 22 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #C8D5DF, #D9F0F7, #243B53, #4F78A8, #E3F0EA, #F9E4E7, #F7FAFC
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #243B53, #4F78A8, #E3F0EA Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Many visible shapes do not have semantic role markers. Detail: 59 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_034/slide_034.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): Colors outside brand/design tokens found. Detail: #244A7C, #B7791F Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Many text nodes for a non-dense Content-SVG. Detail: 34 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Many visible colors found for the declared density. Detail: 21 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #C8D5DF, #D9F0F7, #243B53, #4F78A8, #E3F0EA, #F9E4E7, #E2E8F0
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #243B53, #4F78A8, #E3F0EA Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Many visible shapes do not have semantic role markers. Detail: 47 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_035/slide_035.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-area-integral.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-area-integral.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): Colors outside brand/design tokens found. Detail: #4F78A8, #2F6F55 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Many text nodes for a non-dense Content-SVG. Detail: 36 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text element has no determinable font-size. Detail: <text data-qc-role="formula" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text element has no determinable font-size. Detail: <text data-qc-role="formula" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Text element has no determinable font-size. Detail: <text data-qc-role="formula" data-qc-allow-overlap="true">
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Many visible colors found for the declared density. Detail: 21 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #C8D5DF, #D9F0F7, #243B53, #E5ECF5, #4F78A8, #F9E4E7, #DCE8EF
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #243B53, #E5ECF5, #4F78A8 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E5ECF5, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Many visible shapes do not have semantic role markers. Detail: 47 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_036/slide_036.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): Element coordinate is outside the SVG viewBox. Detail: rect: 122.167969,-10.029688
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): Element coordinate is outside the SVG viewBox. Detail: rect end: 174.449219,-7.529688
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Many visible colors found for the declared density. Detail: 9 colors: #D1495B, #007EA7, #B7791F, #062D46, #6A7A86, #FFFFFF, #9F3443, #00698A, #8A5A17
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): Colors outside brand/design tokens found. Detail: #007EA7, #B7791F, #9F3443, #00698A, #8A5A17 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text element has no determinable font-size. Detail: <text data-qc-role="formula" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Element coordinate is outside the SVG viewBox. Detail: rect: 122.167969,-10.029688
+- WARNING [viewbox-bounds] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Element coordinate is outside the SVG viewBox. Detail: rect end: 174.449219,-7.529688
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Many visible colors found for the declared density. Detail: 25 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #C8D5DF, #D9F0F7, #243B53, #E5ECF5, #4F78A8, #E3F0EA, #DCE8EF
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #243B53, #E5ECF5, #4F78A8 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E5ECF5, #E9F0F4 ~ #E3F0EA, #102A43 ~ #062D46, #D9F0F7 ~ #DCE8EF, #E5ECF5 ~ #E3F0EA
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_037/slide_037.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): Colors outside brand/design tokens found. Detail: #007EA7, #B7791F, #244A7C Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Many text nodes for a non-dense Content-SVG. Detail: 36 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Many visible colors found for the declared density. Detail: 22 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #C8D5DF, #D9F0F7, #243B53, #E5ECF5, #4F78A8, #E3F0EA, #E2E8F0
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #243B53, #E5ECF5, #4F78A8 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F1F5F8 ~ #E9F0F4, #E9F0F4 ~ #E5ECF5, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E2E8F0, #102A43 ~ #062D46, #E5ECF5 ~ #E3F0EA
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_038/slide_038.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+- WARNING [design-metadata] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Missing Content-SVG quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): Text element has no determinable font-size. Detail: <text>
+- WARNING [content-svg-scope] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): artifactScope should be content-svg for generated content modules. Detail: artifactScope=full-slide
+- WARNING [powerpoint-embedding] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): embeddingTarget should identify PowerPoint embedding. Detail: embeddingTarget=standalone-slide
+- WARNING [content-svg-mode] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): contentMode is not one of the supported Content-SVG modes. Detail: full-slide
+- WARNING [background-mode] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): backgroundMode must be transparent, light, or dark. Detail: brand-frame
+- WARNING [design-density] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): density must be low, normal, or dense. Detail: balanced
+- WARNING [text-volume] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Many text nodes for a non-dense Content-SVG. Detail: 33 text nodes; set density="dense" only with a documented reason.
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [min-font-size] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- WARNING [color-count] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Many visible colors found for the declared density. Detail: 23 colors: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #D1495B, #2F6F55, #B7791F, #FFFFFF, #C8D5DF, #D9F0F7, #243B53, #E5ECF5, #4F78A8, #E3F0EA, #F7FAFC
+- WARNING [brand-token-color] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Colors outside brand/design tokens found. Detail: #F9FBFC, #F1F5F8, #E9F0F4, #102A43, #007EA7, #2F6F55, #B7791F, #C8D5DF, #D9F0F7, #243B53, #E5ECF5, #4F78A8 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- WARNING [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Very similar but non-identical colors found. Detail: #F9FBFC ~ #F1F5F8, #F9FBFC ~ #FFFFFF, #F9FBFC ~ #F7FAFC, #F1F5F8 ~ #E9F0F4, #F1F5F8 ~ #F7FAFC, #E9F0F4 ~ #E5ECF5, #E9F0F4 ~ #E3F0EA, #E9F0F4 ~ #E2E8F0
+- WARNING [decorative-noise] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Many visible shapes do not have semantic role markers. Detail: 54 unmarked simple shapes Recommendation: Mark functional elements with data-role/data-qc-role; mark intentional decoration with data-role="decorative" and data-qa-reason.
+- WARNING [brand-effects] (rebuild-proposals/svg/RE1/slide_039/slide_039.svg): Gradients or SVG filters are present; verify they are semantic and PowerPoint-safe. Detail: Brand tokens currently mark shadows as disallowed.
+
+## Viewer Mapping
+
+- slide 1: svg=true, animation=true, steps=2, file=slide_001.svg
+- slide 2: svg=true, animation=true, steps=1, file=slide_002.svg
+- slide 3: svg=true, animation=true, steps=2, file=slide_003.svg
+- slide 4: svg=true, animation=true, steps=2, file=slide_004.svg
+- slide 5: svg=true, animation=true, steps=4, file=slide_005.svg
+- slide 6: svg=true, animation=true, steps=4, file=slide_006.svg
+- slide 7: svg=true, animation=false, steps=0, file=slide_007.svg
+- slide 8: svg=true, animation=true, steps=2, file=slide_008.svg
+- slide 9: svg=true, animation=true, steps=2, file=slide_009.svg
+- slide 10: svg=true, animation=true, steps=6, file=slide_010.svg
+- slide 11: svg=true, animation=true, steps=4, file=slide_011.svg
+- slide 12: svg=true, animation=true, steps=1, file=slide_012.svg
+- slide 13: svg=true, animation=true, steps=1, file=slide_013.svg
+- slide 14: svg=true, animation=true, steps=5, file=slide_014.svg
+- slide 15: svg=true, animation=true, steps=3, file=slide_015.svg
+- slide 16: svg=true, animation=true, steps=3, file=slide_016.svg
+- slide 17: svg=true, animation=true, steps=5, file=slide_017.svg
+- slide 18: svg=true, animation=true, steps=3, file=slide_018.svg
+- slide 19: svg=true, animation=true, steps=3, file=slide_019.svg
+- slide 20: svg=true, animation=true, steps=4, file=slide_020.svg
+- slide 21: svg=true, animation=true, steps=2, file=slide_021.svg
+- slide 22: svg=true, animation=true, steps=3, file=slide_022.svg
+- slide 23: svg=true, animation=true, steps=3, file=slide_023.svg
+- slide 24: svg=true, animation=true, steps=3, file=slide_024.svg
+- slide 25: svg=true, animation=true, steps=2, file=slide_025.svg
+- slide 26: svg=true, animation=true, steps=3, file=slide_026.svg
+- slide 27: svg=true, animation=true, steps=5, file=slide_027.svg
+- slide 28: svg=true, animation=true, steps=4, file=slide_028.svg
+- slide 29: svg=true, animation=true, steps=2, file=slide_029.svg
+- slide 30: svg=true, animation=true, steps=6, file=slide_030.svg
+- slide 31: svg=true, animation=true, steps=4, file=slide_031.svg
+- slide 32: svg=true, animation=true, steps=9, file=slide_032.svg
+- slide 33: svg=true, animation=true, steps=7, file=slide_033.svg
+- slide 34: svg=true, animation=true, steps=6, file=slide_034.svg
+- slide 35: svg=true, animation=true, steps=4, file=slide_035.svg
+- slide 36: svg=true, animation=true, steps=7, file=slide_036.svg
+- slide 37: svg=true, animation=true, steps=6, file=slide_037.svg
+- slide 38: svg=true, animation=true, steps=5, file=slide_038.svg
+- slide 39: svg=true, animation=true, steps=5, file=slide_039.svg
+

@@ -1,0 +1,93 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_074",
+  "scene_id": "re1_src_093",
+  "source_slides": [
+    93
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "summary_density",
+      "label": "Dichtefunktion",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "summary_failure_probability",
+      "label": "Ausfallwahrscheinlichkeit",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "summary_reliability",
+      "label": "Überlebenswahrscheinlichkeit",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "summary_hazard",
+      "label": "Ausfallrate",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_summary_density",
+      "targetId": "summary_density",
+      "action": "draw",
+      "sourceText": "Zum einen links oben dargestellt, die Dichtefunktion",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_summary_failure_probability",
+      "targetId": "summary_failure_probability",
+      "action": "draw",
+      "sourceText": "Zum anderen sind rechts die Ausfall- und Überlebenswahrscheinlichkeit dargestellt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_summary_reliability",
+      "targetId": "summary_reliability",
+      "action": "draw",
+      "sourceText": "Zum anderen sind rechts die Ausfall- und Überlebenswahrscheinlichkeit dargestellt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_summary_hazard",
+      "targetId": "summary_hazard",
+      "action": "draw",
+      "sourceText": "Und zuletzt links unten die Ausfallrate",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

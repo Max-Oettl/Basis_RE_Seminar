@@ -1,0 +1,61 @@
+{
+    "schema_version":  "basisReSvgTransformationReport/v1",
+    "module_id":  "RE1",
+    "work_unit":  "slide_011",
+    "scene_id":  "re1_src_011",
+    "target_structure_version":  "external-svg-asset-package-handoff/v1",
+    "source_slides":  [
+                          11
+                      ],
+    "primary_source_slide":  11,
+    "target_svg":  "rebuild-proposals/svg/RE1/slide_011/slide_011.svg",
+    "animation_manifest":  "rebuild-proposals/svg/RE1/slide_011/scene.animation.v1.json",
+    "source_states":  [
+                          {
+                              "source_slide":  11,
+                              "source_svg":  "source-materials/basis-seminar/powerpoint-svg/RE1/SVG/Folie11.SVG",
+                              "source_sha256":  "b48641603673d91295893b88e7343ad71f5318962b384ef1bff14fbc5936df6b",
+                              "target_group":  "main_content",
+                              "removed":  {
+                                              "powerpoint_speaker_controls":  1,
+                                              "visible_slide_title_nodes":  3,
+                                              "invisible_text_nodes":  0,
+                                              "full_slide_backgrounds":  1,
+                                              "rectangles_clamped_to_viewbox":  0,
+                                              "source_text_nodes_marked":  2,
+                                              "text_nodes_raised_to_minimum":  0,
+                                              "formula_subscripts_marked":  0,
+                                              "german_text_nodes_normalized":  0,
+                                              "gradient_references_flattened":  0,
+                                              "brand_color_attributes_mapped":  16,
+                                              "source_geometry_nodes_marked":  19,
+                                              "embedded_images_with_provenance":  0,
+                                              "layout_qa_nodes_marked":  38
+                                          },
+                              "rewritten_id_count":  0
+                          }
+                      ],
+    "invariants":  {
+                       "visible_powerpoint_title_removed":  true,
+                       "powerpoint_speaker_removed":  true,
+                       "full_slide_background_removed":  true,
+                       "ids_rewritten":  true,
+                       "static_end_state_visible":  true,
+                       "source_text_triggers_only":  true
+                   },
+    "qa":  {
+               "status":  "passed",
+               "content_crosscheck":  "analysis/reports/crosschecks/RE1/slide_011.json",
+               "svg_qa_report":  "analysis/reports/qa/RE1/slide_011/svg-qa-report.json",
+               "issues":  [
+
+                          ],
+               "warnings":  [
+
+                            ],
+               "open_questions":  [
+
+                                  ]
+           },
+    "element_animation_plan":  "rebuild-proposals/svg/RE1/slide_011/element-animation-plan.json"
+}

@@ -1,0 +1,272 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re1_src_009",
+  "svgPath": "rebuild-proposals/svg/RE1/slide_009/slide_009.svg",
+  "spokenText": "In diesem Abschnitt befassen wir uns mit der Fragestellung, was die Zuverlässigkeit eigentlich ist.\n\nUm dies zu erläutern, schauen wir uns zunächst einmal die System-Struktur eines P-K-Ws an. Der PKW besteht aus einzelnen Teilsystemen bzw. Baugruppen wie beispielsweise Motor, Getriebe und Fahrwerk. Der Motor wiederum kann weiter in Kolben, Pleuel, Kurbelgehäuse und Kurbelwelle unterteilt werden.\n\nAus Kundensicht würde man von einem zuverlässigen Produkt sprechen, wenn das Produkt einwandfrei funktioniert, das heißt wenn es seine Funktionsfähigkeit gewährleisten kann.\n\nIm Falle eines PKWs ist die entsprechende Funktion einfach das Fahren. Um diese Funktion zu erfüllen, müssen auch die Elemente in der untergeordneten System-Struktur ihre Funktionsfähigkeit gewährleisten. Im Falle des Motors muss also eine Leistung erzeugt werden. Dies gilt analog auch für die tiefer liegenden Elemente.\n\nVerliert nun beispielsweise der Kolben, aufgrund eines Ausfalls, seine Funktionsfähigkeit, hat dies immer auch einen Einfluss auf die Elemente der übergeordneten Systemstruktur. In dem Fall kann der Motor keine Leistung mehr erzeugen, was dazu führt, dass das Fahren des PKWs nicht mehr möglich ist.\n\nDie Zuverlässigkeit bezieht sich demnach immer auf die Funktionsfähigkeit eines Elements in der Systemstruktur. Demnach kann sie für ein System definiert werden, aber auch für dessen Teilsysteme, Baugruppen und Komponenten.\n\nUm die Zuverlässigkeit des Systems wieder herzustellen, müssen alle untergeordneten defekten Komponenten repariert werden. In unserem Beispiel also der Kolben.",
+  "animationDecision": "animated",
+  "animationRationale": "Der PKW ist fester Systemanker; Hierarchie, Funktionen und Fehlerwirkung werden in fachlicher Abhängigkeit aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Show wird als reines Fade bewertet.",
+      "Gleiche sourceText-Phrase startet alle Schritte derselben Triggergruppe gleichzeitig."
+    ]
+  },
+  "initialStateRationale": "Der PKW genügt als Bezugsobjekt für die einleitende Fragestellung. Untergeordnete Ebenen würden die Erklärung vorwegnehmen.",
+  "semanticGroups": [
+    {
+      "groupId": "brand_background",
+      "label": "RelTest-Education-Hintergrund",
+      "role": "background",
+      "members": [
+        "Education-Farbverlauf",
+        "ruhiges technisches Raster"
+      ],
+      "initialState": "static_decorative",
+      "dependsOn": [],
+      "groupingRationale": "Der Hintergrund ist ruhiger Markenrahmen und trägt keine vorweggenommene Fachinformation."
+    },
+    {
+      "groupId": "vehicle_root",
+      "label": "PKW als Systembezug",
+      "role": "context",
+      "members": [
+        "dunkle PKW-Karte",
+        "Fahrzeugpiktogramm",
+        "PKW-Label"
+      ],
+      "initialState": "visible_context",
+      "dependsOn": [],
+      "groupingRationale": "Karte, Icon und Begriff bilden den Systemanker."
+    },
+    {
+      "groupId": "vehicle_system_hierarchy",
+      "label": "Systemstruktur eines PKW",
+      "role": "concept_relationship_bundle",
+      "members": [
+        "alle orthogonalen Verbinder",
+        "Motor, Getriebe und Fahrwerk",
+        "vier Motorkomponenten"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "vehicle_root"
+      ],
+      "groupingRationale": "Alle Verbinder erscheinen gleichzeitig mit ihren Endpunkten."
+    },
+    {
+      "groupId": "function_examples",
+      "label": "Funktionen der Systemelemente",
+      "role": "relationship",
+      "members": [
+        "Funktionslabels an allen Knoten",
+        "vollständiger Funktionszusammenhang"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "vehicle_root",
+        "vehicle_system_hierarchy"
+      ],
+      "groupingRationale": "Funktionen benötigen die bereits sichtbare Systemstruktur."
+    },
+    {
+      "groupId": "failure_propagation",
+      "label": "Fehlerwirkung vom Kolben bis zum PKW",
+      "role": "relationship",
+      "members": [
+        "Ausfallmarker am Kolben",
+        "vollständige Fehlerwirkungskette",
+        "beide Fehlerpfeile"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "vehicle_system_hierarchy",
+        "function_examples"
+      ],
+      "groupingRationale": "Fehlerwirkung setzt Struktur und Normalfunktion voraus."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "show_vehicle_hierarchy",
+      "claim": "Der PKW wird in Teilsysteme und Komponenten zerlegt.",
+      "sourceText": "schauen wir uns zunächst einmal die System-Struktur",
+      "occurrence": 1,
+      "requiredContext": [
+        "vehicle_root"
+      ],
+      "revealTogether": [
+        "vehicle_system_hierarchy"
+      ],
+      "learnerStateBefore": "Nur der PKW ist sichtbar.",
+      "learnerStateAfter": "Der vollständige Systembaum ist sichtbar."
+    },
+    {
+      "beatId": "show_functions",
+      "claim": "Jede Systemebene erfüllt eine notwendige Funktion.",
+      "sourceText": "Im Falle eines PKWs ist die entsprechende Funktion",
+      "occurrence": 1,
+      "requiredContext": [
+        "vehicle_root",
+        "vehicle_system_hierarchy"
+      ],
+      "revealTogether": [
+        "function_examples"
+      ],
+      "learnerStateBefore": "Die reine Struktur ist sichtbar.",
+      "learnerStateAfter": "Alle Funktionsbeziehungen sind ergänzt."
+    },
+    {
+      "beatId": "show_failure_propagation",
+      "claim": "Der Kolbenausfall wirkt bis zur Fahrfunktion.",
+      "sourceText": "Verliert nun beispielsweise der Kolben",
+      "occurrence": 1,
+      "requiredContext": [
+        "vehicle_system_hierarchy",
+        "function_examples"
+      ],
+      "revealTogether": [
+        "failure_propagation"
+      ],
+      "learnerStateBefore": "Struktur und Normalfunktion sind sichtbar.",
+      "learnerStateAfter": "Die vollständige Fehlerfortpflanzung ist sichtbar."
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_vehicle_system_hierarchy",
+      "beatId": "show_vehicle_hierarchy",
+      "targetId": "vehicle_system_hierarchy",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Knoten und Verbinder erscheinen als vollständiger Baum."
+    },
+    {
+      "stepId": "show_function_examples",
+      "beatId": "show_functions",
+      "targetId": "function_examples",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Alle Funktionslabels und die Beziehungskette erscheinen gemeinsam."
+    },
+    {
+      "stepId": "show_failure_propagation",
+      "beatId": "show_failure_propagation",
+      "targetId": "failure_propagation",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Marker, Pfeile und Fehlertexte erscheinen gemeinsam."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "vehicle_root"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der PKW genügt als Bezugsobjekt für die einleitende Fragestellung. Untergeordnete Ebenen würden die Erklärung vorwegnehmen."
+    },
+    {
+      "stateId": "before_show_vehicle_hierarchy",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "vehicle_root"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Nur der PKW ist sichtbar."
+    },
+    {
+      "stateId": "after_show_vehicle_hierarchy",
+      "afterBeatId": "show_vehicle_hierarchy",
+      "visibleGroups": [
+        "brand_background",
+        "vehicle_root",
+        "vehicle_system_hierarchy"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der vollständige Systembaum ist sichtbar."
+    },
+    {
+      "stateId": "before_show_functions",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "vehicle_root",
+        "vehicle_system_hierarchy"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Die reine Struktur ist sichtbar."
+    },
+    {
+      "stateId": "after_show_functions",
+      "afterBeatId": "show_functions",
+      "visibleGroups": [
+        "brand_background",
+        "vehicle_root",
+        "vehicle_system_hierarchy",
+        "function_examples"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Alle Funktionsbeziehungen sind ergänzt."
+    },
+    {
+      "stateId": "before_show_failure_propagation",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "vehicle_root",
+        "vehicle_system_hierarchy",
+        "function_examples"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Struktur und Normalfunktion sind sichtbar."
+    },
+    {
+      "stateId": "after_show_failure_propagation",
+      "afterBeatId": "show_failure_propagation",
+      "visibleGroups": [
+        "brand_background",
+        "vehicle_root",
+        "vehicle_system_hierarchy",
+        "function_examples",
+        "failure_propagation"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Die vollständige Fehlerfortpflanzung ist sichtbar."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "show_failure_propagation",
+      "visibleGroups": [
+        "brand_background",
+        "vehicle_root",
+        "vehicle_system_hierarchy",
+        "function_examples",
+        "failure_propagation"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der vollständige statische Endzustand bleibt ohne Animation fachlich verständlich."
+    }
+  ]
+}

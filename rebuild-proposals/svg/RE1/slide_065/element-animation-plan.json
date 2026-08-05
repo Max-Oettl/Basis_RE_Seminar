@@ -1,0 +1,111 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_065",
+  "scene_id": "re1_src_083",
+  "source_slides": [
+    83
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "nkw_gearbox_context",
+      "label": "6-Gang-NKW-Getriebe",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "nkw_cdf_data",
+      "label": "Ausfalldaten und Formparameter",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "nkw_weibull_model",
+      "label": "Weibullmodell",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "nkw_cdf_curve",
+      "label": "S-förmige Ausfallwahrscheinlichkeit",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "nkw_linear_scale",
+      "label": "Normale Skalierung",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_nkw_gearbox_context",
+      "targetId": "nkw_gearbox_context",
+      "action": "show",
+      "sourceText": "Für die ermittelten Ausfallzeiten des Getriebes",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_nkw_cdf_data",
+      "targetId": "nkw_cdf_data",
+      "action": "show",
+      "sourceText": "Der Formparameter wurde dabei zu eins-komma-vier ermittelt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_nkw_weibull_model",
+      "targetId": "nkw_weibull_model",
+      "action": "show",
+      "sourceText": "Der Formparameter wurde dabei zu eins-komma-vier ermittelt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_nkw_cdf_curve",
+      "targetId": "nkw_cdf_curve",
+      "action": "draw",
+      "sourceText": "Verlauf der Ausfallwahrscheinlichkeit über der normierten Lebensdauer dargestellt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_nkw_linear_scale",
+      "targetId": "nkw_linear_scale",
+      "action": "show",
+      "sourceText": "Die Achsen sind dabei normal skaliert und ohne Logarithmierung dargestellt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

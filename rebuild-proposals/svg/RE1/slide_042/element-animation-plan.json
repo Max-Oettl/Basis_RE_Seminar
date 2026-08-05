@@ -1,0 +1,76 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_042",
+  "scene_id": "re1_src_045",
+  "source_slides": [
+    45,
+    46
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "median_formula",
+      "label": "Medianformel",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "median_equal_halves",
+      "label": "Zwei gleiche Flächenhälften",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "median_robustness",
+      "label": "Robustheit gegenüber Ausreißern",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_median_formula",
+      "targetId": "median_formula",
+      "action": "show",
+      "sourceText": "entspricht dem Zeitpunkt, zu dem fünfzig Prozent der Bauteile ausgefallen sind",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_median_equal_halves",
+      "targetId": "median_equal_halves",
+      "action": "show",
+      "sourceText": "teilt der Median die Fläche unter dieser Kurve in zwei exakt gleiche Hälften",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_median_robustness",
+      "targetId": "median_robustness",
+      "action": "show",
+      "sourceText": "Robustheit gegenüber Ausreißern",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

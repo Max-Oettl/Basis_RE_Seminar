@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_027.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "field_observation",
+      "label": "Feldbeobachtung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "field_reliability_assessment",
+      "label": "Felddatenauswertung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "next_generation_learning_loop",
+      "label": "Lessons Learned",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_field_observation",
+      "targetId": "field_observation",
+      "action": "show",
+      "sourceText": "Sobald unser Produkt im Feld ist",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_field_reliability_assessment",
+      "targetId": "field_reliability_assessment",
+      "action": "show",
+      "sourceText": "nur mit Hilfe der Daten aus",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_next_generation_learning_loop",
+      "targetId": "next_generation_learning_loop",
+      "action": "show",
+      "sourceText": "wichtiger Input für die Weiterentwicklung der nächsten Produktgeneration",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

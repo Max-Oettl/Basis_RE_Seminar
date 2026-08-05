@@ -1,0 +1,94 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_041",
+  "scene_id": "re1_src_043",
+  "source_slides": [
+    43,
+    44
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "mean_formula",
+      "label": "Formel des arithmetischen Mittelwerts",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "mass_points",
+      "label": "Ausfallzeiten als Massenpunkte",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "mean_centroid",
+      "label": "Mittelwert als Schwerpunkt",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "outlier_effect",
+      "label": "Ausreißereinfluss auf den Mittelwert",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_mean_formula",
+      "targetId": "mean_formula",
+      "action": "show",
+      "sourceText": "Dabei wird einfach die Summe aller Ausfallzeiten durch die Anzahl der Ausfälle geteilt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_mass_points",
+      "targetId": "mass_points",
+      "action": "show",
+      "sourceText": "Stellt euch hierzu die Ausfallzeiten als Massenpunkte vor",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_mean_centroid",
+      "targetId": "mean_centroid",
+      "action": "show",
+      "sourceText": "Der Mittelwert entspricht dann genau dem Schwerpunkt dieser Punkte",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_outlier_effect",
+      "targetId": "outlier_effect",
+      "action": "show",
+      "sourceText": "dass der Mittelwert sehr empfindlich auf Ausreißer reagiert",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

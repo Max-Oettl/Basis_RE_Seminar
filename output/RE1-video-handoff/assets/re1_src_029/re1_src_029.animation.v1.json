@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_029.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "histogram_bars",
+      "label": "Stichprobe als Histogramm",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "histogram_classes",
+      "label": "Klassen und Klassenbreite",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "density_curve",
+      "label": "Dichtefunktion der Grundgesamtheit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "density_interpretation",
+      "label": "Ablesung des Ausfallbereichs",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_histogram_bars",
+      "targetId": "histogram_bars",
+      "action": "show",
+      "sourceText": "Zunächst erstellen wir ein Histogramm für",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_histogram_classes",
+      "targetId": "histogram_classes",
+      "action": "show",
+      "sourceText": "Die einzelnen Balken werden auch als Klassen bezeichnet",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_density_curve",
+      "targetId": "density_curve",
+      "action": "draw",
+      "sourceText": "Würden wir nun die Stichprobengröße und",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "durFrames": 42
+    },
+    {
+      "stepId": "show_density_interpretation",
+      "targetId": "density_interpretation",
+      "action": "show",
+      "sourceText": "So könnte man in unserem Schaubild direkt interpretieren",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

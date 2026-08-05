@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re2_ch3_fta_minimal_cut_sets",
+  "targets": [
+    {
+      "targetId": "fta51_circuit",
+      "label": "Redundante Stromversorgung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta51_nodes",
+      "label": "Minimaler Ausfallschnitt",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta51_links",
+      "label": "UND-Verknüpfung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta51_circuit",
+      "targetId": "fta51_circuit",
+      "action": "show",
+      "sourceText": "Nehmen wir mal an, wir hätten in der Schaltung zur Steuerung des Motors eine zweite Stromversorgung installiert.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_fta51_nodes",
+      "targetId": "fta51_nodes",
+      "action": "show",
+      "sourceText": "Da die gesamte Stromversorgung erst ausgefallen ist",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_fta51_links",
+      "targetId": "fta51_links",
+      "action": "draw",
+      "sourceText": "Erst wenn beide Ausfall-Ereignisse eingetreten sind",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung wird erst nach den zugehörigen Ereignissen gezeichnet; kleine Linien- und Pfeilskalierung.",
+      "drawDurFrames": 40
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re2_ch3_fta_motor_secondary_causes",
+  "targets": [
+    {
+      "targetId": "fta41_circuit",
+      "label": "Motorschaltung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta41_nodes",
+      "label": "Fehlerbaum-Ereignisse",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta41_links",
+      "label": "Fehlerbaum-Beziehungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta41_note",
+      "label": "Fokus",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta41_circuit",
+      "targetId": "fta41_circuit",
+      "action": "show",
+      "sourceText": "Schauen wir uns hierzu nochmals das vorherige Beispiel an.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_fta41_nodes",
+      "targetId": "fta41_nodes",
+      "action": "show",
+      "sourceText": "Wir wissen ja bereits, dass das Top-Fehler-Ereignis an die Spitze des Baumes platziert wird.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_fta41_links",
+      "targetId": "fta41_links",
+      "action": "draw",
+      "sourceText": "verknüpfen wir diese mit einem Oder Gatter.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung wird erst nach den zugehörigen Ereignissen gezeichnet; kleine Linien- und Pfeilskalierung.",
+      "drawDurFrames": 40
+    },
+    {
+      "stepId": "step_04_fta41_note",
+      "targetId": "fta41_note",
+      "action": "show",
+      "sourceText": "Auf diese Weise wird der Fehlerbaum nach unten hin immer weiter verästelt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

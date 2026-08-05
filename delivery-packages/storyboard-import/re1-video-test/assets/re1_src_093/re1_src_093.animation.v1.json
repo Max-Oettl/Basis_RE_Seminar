@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_093.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "summary_density",
+      "label": "Dichtefunktion",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "summary_failure_probability",
+      "label": "Ausfallwahrscheinlichkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "summary_reliability",
+      "label": "Überlebenswahrscheinlichkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "summary_hazard",
+      "label": "Ausfallrate",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_summary_density",
+      "targetId": "summary_density",
+      "action": "draw",
+      "sourceText": "Zum einen links oben dargestellt, die Dichtefunktion",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_summary_failure_probability",
+      "targetId": "summary_failure_probability",
+      "action": "draw",
+      "sourceText": "Zum anderen sind rechts die Ausfall- und Überlebenswahrscheinlichkeit dargestellt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_summary_reliability",
+      "targetId": "summary_reliability",
+      "action": "draw",
+      "sourceText": "Zum anderen sind rechts die Ausfall- und Überlebenswahrscheinlichkeit dargestellt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_summary_hazard",
+      "targetId": "summary_hazard",
+      "action": "draw",
+      "sourceText": "Und zuletzt links unten die Ausfallrate",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    }
+  ]
+}

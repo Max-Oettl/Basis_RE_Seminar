@@ -1,0 +1,416 @@
+{
+  "schema_version": "basisRebuildContentCrosscheck/v2",
+  "module_id": "RE1",
+  "output_slide_number": 43,
+  "checked_at": "2026-07-19T19:42:51.058Z",
+  "status": "review_required",
+  "manual_review_required": true,
+  "reference_mapping": {
+    "work_unit": "slide_043",
+    "output_slide_number": 43,
+    "source_slides": [
+      47,
+      48
+    ],
+    "primary_source_slide": 48,
+    "output_slide_numbers": [],
+    "mapping_type": "merged",
+    "rationale": "Die Quell-SVGs 47, 48 teilen denselben Sprechertext und bilden belegte Aufbauzustaende einer animierten Szene.",
+    "mapping_source": "reference_map",
+    "reference_map_path": "analysis/rebuild-plans/RE1_source-reference-map.json",
+    "sequence_plan": "analysis/rebuild-plans/RE1_sequence_plan.md",
+    "read_error": ""
+  },
+  "references": [
+    {
+      "source_slide_number": 47,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE1/SVG/Folie47.SVG",
+      "source_svg_sha256": "14b054bde160cd567b589d0b8472dc6e6c8ad832569a9d5a351ef6749d72c4be",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE1/SVG/Folie47.SVG",
+      "analysis_path": ""
+    },
+    {
+      "source_slide_number": 48,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE1/SVG/Folie48.SVG",
+      "source_svg_sha256": "cff9bf7f7b8bbad740a8de15fddeed06bb94ec1dfc728ba62c3562e86f318930",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE1/SVG/Folie48.SVG",
+      "analysis_path": ""
+    }
+  ],
+  "proposal": {
+    "path": "rebuild-proposals/svg/RE1/slide_043/slide_043.svg",
+    "svg_sha256": "9640d3fdfc4cc5a997551a979b7281cdc9514fb70bcde97f37dcf2a6ef0aefad",
+    "animation_manifest": "/files/rebuild-proposals/svg/RE1/slide_043/scene.animation.v1.json"
+  },
+  "summary": {
+    "source_count": 2,
+    "checked_content_items": 32,
+    "errors": 0,
+    "warnings": 8,
+    "infos": 0,
+    "animation_steps": 2
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 047: \"Der Modalwert ist die Ausfallzeit, die in einer Verteilung am häufigsten vorkommt\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 47,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Der Modalwert ist die Ausfallzeit, die in einer Verteilung am häufigsten vorkommt"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 047: \"Er lässt sich mit der ersten Ableitung der Dichtefunktion ermitteln:\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 47,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Er lässt sich mit der ersten Ableitung der Dichtefunktion ermitteln:"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 047: \"Der Modalwert entspricht dem Punkt, an dem die Dichtefunktion ihr Maximum erreicht\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 47,
+      "source_item_id": "source-svg-text-6",
+      "expected": "Der Modalwert entspricht dem Punkt, an dem die Dichtefunktion ihr Maximum erreicht"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 048: \"Als Modalwert wird diejenige Ausfallzeit bezeichnet, die am häufigsten auftritt. Der Modalwert\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Als Modalwert wird diejenige Ausfallzeit bezeichnet, die am häufigsten auftritt. Der Modalwert"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 048: \"kann deshalb\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-5",
+      "expected": "kann deshalb"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 048: \"mit der Dichtefunktion\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-6",
+      "expected": "mit der Dichtefunktion"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 048: \") einfach bestimmt werden:\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-10",
+      "expected": ") einfach bestimmt werden:"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 048: \"entspricht der Ausfallzeit beim Maximum der Dichtefunktion\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-13",
+      "expected": "entspricht der Ausfallzeit beim Maximum der Dichtefunktion"
+    }
+  ],
+  "content_checks": [
+    {
+      "source_slide_number": 47,
+      "source_item_id": "source-svg-text-1",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 47,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Der Modalwert ist die Ausfallzeit, die in einer Verteilung am häufigsten vorkommt",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:der,modalwert,die,ausfallzeit,die,verteilung"
+    },
+    {
+      "source_slide_number": 47,
+      "source_item_id": "source-svg-text-3",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 47,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Er lässt sich mit der ersten Ableitung der Dichtefunktion ermitteln:",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.3,
+      "evidence": "tokens:der,ableitung,der"
+    },
+    {
+      "source_slide_number": 47,
+      "source_item_id": "source-svg-text-5",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 47,
+      "source_item_id": "source-svg-text-6",
+      "expected": "Der Modalwert entspricht dem Punkt, an dem die Dichtefunktion ihr Maximum erreicht",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:der,modalwert,die,ihr,maximum,erreicht"
+    },
+    {
+      "source_slide_number": 47,
+      "source_item_id": "source-svg-text-7",
+      "expected": "Modalwert",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 47,
+      "source_item_id": "source-svg-text-8",
+      "expected": "𝑓",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 47,
+      "source_item_id": "source-svg-text-9",
+      "expected": "′",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 47,
+      "source_item_id": "source-svg-text-10",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 47,
+      "source_item_id": "source-svg-text-11",
+      "expected": "𝑚𝑜𝑑𝑎𝑙",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 47,
+      "source_item_id": "source-svg-text-12",
+      "expected": "=",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 47,
+      "source_item_id": "source-svg-text-13",
+      "expected": "0",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Modalwert",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Als Modalwert wird diejenige Ausfallzeit bezeichnet, die am häufigsten auftritt. Der Modalwert",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.417,
+      "evidence": "tokens:modalwert,ausfallzeit,die,der,modalwert"
+    },
+    {
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-3",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-4",
+      "expected": "modal",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-5",
+      "expected": "kann deshalb",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-6",
+      "expected": "mit der Dichtefunktion",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.333,
+      "evidence": "tokens:der"
+    },
+    {
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-7",
+      "expected": "f",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-8",
+      "expected": "(",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-9",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-10",
+      "expected": ") einfach bestimmt werden:",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-11",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-12",
+      "expected": "modal",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-13",
+      "expected": "entspricht der Ausfallzeit beim Maximum der Dichtefunktion",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.571,
+      "evidence": "tokens:der,ausfallzeit,maximum,der"
+    },
+    {
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-14",
+      "expected": "𝑓",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-15",
+      "expected": "′",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-16",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-17",
+      "expected": "𝑚𝑜𝑑𝑎𝑙",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-18",
+      "expected": "=",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 48,
+      "source_item_id": "source-svg-text-19",
+      "expected": "0",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    }
+  ],
+  "manual_review_focus": [
+    "Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.",
+    "Sprechertext-Reihenfolge gegen die semantisch geplanten Animationsschritte pruefen."
+  ],
+  "reference_mapping_sha256": "b9b7b0fac01eb02b83ebc46cb8da172e3e1f77a92d16d84974064bccda4fde74",
+  "reference_map_path": "analysis/rebuild-plans/RE1_source-reference-map.json",
+  "sequence_plan": "analysis/rebuild-plans/RE1_sequence_plan.md"
+}

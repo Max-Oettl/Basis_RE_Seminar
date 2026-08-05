@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_029" data-brand-profile="reltest-academy">
+  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"animated-chart-build","contentTitle":"Vom Histogramm zur Dichtefunktion","layoutIntent":"matched-sample-and-population-states-on-identical-time-axes","takeaway":"Das Histogramm beschreibt die Stichprobe; die Dichtefunktion schätzt das Ausfallverhalten der Grundgesamtheit.","density":"balanced","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-academy","brandVariant":"academy-production","sourceSlides":[29,30],"officialLogoStatus":"pending-original-asset"}]]></metadata>
+  <title id="accessible_title">Vom Histogramm zur Dichtefunktion</title>
+  <desc id="accessible_description">Das Histogramm beschreibt die Stichprobe; die Dichtefunktion schätzt das Ausfallverhalten der Grundgesamtheit.</desc>
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F9FBFC"/>
+      <stop offset="56%" stop-color="#F1F5F8"/>
+      <stop offset="100%" stop-color="#E9F0F4"/>
+    </linearGradient>
+    <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#102A43" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="shadowSoft" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#102A43" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow_007EA7" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#007EA7"/></marker>
+    <marker id="arrow_D1495B" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#D1495B"/></marker>
+    <marker id="arrow_2F6F55" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#2F6F55"/></marker>
+    <marker id="arrow_B7791F" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#B7791F"/></marker>
+  </defs>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+    .slide-title { fill: #102A43; }
+  </style>
+  <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
+  <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
+  <rect x="74" y="36" width="118" height="5" rx="3" fill="#007EA7"/>
+  <text x="78" y="116" class="slide-title" font-size="56" font-weight="800">Vom Histogramm zur Dichtefunktion</text>
+  <line x1="78" y1="148" x2="1842" y2="148" stroke="#102A43" stroke-opacity="0.12" stroke-width="1.5"/>
+  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><g id="reliability_function_rail" aria-label="Vier Zuverlässigkeitsfunktionen"><g data-reliability-function="density"><title>1. Dichtefunktion f(t)</title><rect data-qc-allow-overlap="true" x="98" y="174" width="400" height="52" rx="6" fill="#007EA7" stroke="#007EA7" stroke-width="1.5"/><circle cx="126" cy="200" r="16" fill="#FFFFFF"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="126" y="207" font-size="17" font-weight="820" fill="#007EA7" text-anchor="middle">1</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="154" y="207" font-size="19" font-weight="780" fill="#FFFFFF">f(t) · Dichtefunktion</text></g><g data-reliability-function="failure_probability"><title>2. Ausfallwahrscheinlichkeit F(t)</title><rect data-qc-allow-overlap="true" x="533" y="174" width="400" height="52" rx="6" fill="#FFFFFF" stroke="#C8D5DF" stroke-width="1.5"/><circle cx="561" cy="200" r="16" fill="#E5ECF5"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="561" y="207" font-size="17" font-weight="820" fill="#4F78A8" text-anchor="middle">2</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="589" y="207" font-size="19" font-weight="780" fill="#243B53">F(t) · Ausfallwahrscheinlichkeit</text></g><g data-reliability-function="reliability"><title>3. Zuverlässigkeit R(t)</title><rect data-qc-allow-overlap="true" x="968" y="174" width="400" height="52" rx="6" fill="#FFFFFF" stroke="#C8D5DF" stroke-width="1.5"/><circle cx="996" cy="200" r="16" fill="#E3F0EA"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="996" y="207" font-size="17" font-weight="820" fill="#2F6F55" text-anchor="middle">3</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1024" y="207" font-size="19" font-weight="780" fill="#243B53">R(t) · Zuverlässigkeit</text></g><g data-reliability-function="hazard"><title>4. Ausfallrate λ(t)</title><rect data-qc-allow-overlap="true" x="1403" y="174" width="400" height="52" rx="6" fill="#FFFFFF" stroke="#C8D5DF" stroke-width="1.5"/><circle cx="1431" cy="200" r="16" fill="#F9E4E7"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1431" y="207" font-size="17" font-weight="820" fill="#D1495B" text-anchor="middle">4</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1459" y="207" font-size="19" font-weight="780" fill="#243B53">λ(t) · Ausfallrate</text></g></g><g id="histogram_definition" data-anim-target="true" data-anim-label="Histogramm und Klassen"><title>Histogramm und Klassen</title><circle cx="146" cy="273" r="32" fill="#D9F0F7"/><g transform="translate(127 254) scale(1.5833333333333333)" fill="none" stroke="#007EA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M4 12l8 4 8-4M4 16l8 4 8-4"/></g><text x="196" y="265" class="" font-size="18" font-weight="820" fill="#007EA7" text-anchor="start" data-qc-role="text"><tspan x="196" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">STICHPROBE · n = 16</tspan></text><text x="196" y="294" class="" font-size="19" font-weight="680" fill="#243B53" text-anchor="start" data-qc-role="text"><tspan x="196" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Balken = Klassen · Klassenbreite prägt die sichtbare Form</tspan></text></g><g id="density_population_context" data-anim-target="true" data-anim-label="Dichtefunktion der Grundgesamtheit"><title>Dichtefunktion der Grundgesamtheit</title><path d="M 860 282 L 1045 282" fill="none" stroke="#2F6F55" stroke-width="4" marker-end="url(#arrow_2F6F55)"/><text x="952" y="260" class="" font-size="17" font-weight="780" fill="#2F6F55" text-anchor="middle" data-qc-role="text"><tspan x="952" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">n ↑ · Klassenanzahl ↑</tspan></text><circle cx="1095" cy="273" r="32" fill="#E3F0EA"/><g transform="translate(1076 254) scale(1.5833333333333333)" fill="none" stroke="#2F6F55" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7"/></g><text x="1145" y="265" class="" font-size="18" font-weight="820" fill="#2F6F55" text-anchor="start" data-qc-role="text"><tspan x="1145" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">GRUNDGESAMTHEIT</tspan></text><text x="1145" y="294" class="" font-size="19" font-weight="680" fill="#243B53" text-anchor="start" data-qc-role="text"><tspan x="1145" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">glatte Dichte als empirische Schätzung des realen Ausfallverhaltens</tspan></text></g><svg id="histogram_density_plot" x="100" y="318" width="1720" height="500" viewBox="0 0 975.472388 360.808219" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 360.808219  L 975.472388 360.808219  L 975.472388 0  L 0 0  L 0 360.808219  z " style="fill: none; opacity: 0" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 75.899844 301.104  L 467.849844 301.104  L 467.849844 7.2  L 75.899844 7.2  L 75.899844 301.104  z " style="fill: none" />
+   </g>
+   <g id="histogram_bars" data-anim-target="true" data-anim-label="Histogrammklassen der Stichprobe"><g id="histogram_bar_0">
+    <path d="M 92.578567 301.104  L 142.614737 301.104  L 142.614737 247.077529  L 92.578567 247.077529  z " clip-path="url(#p246e016c5b)" style="fill: #007ea7; opacity: 0.34; stroke: #007ea7; stroke-width: 2; stroke-linejoin: miter" />
+   </g>
+   <g id="histogram_bar_1">
+    <path d="M 142.614737 301.104  L 192.650908 301.104  L 192.650908 193.051059  L 142.614737 193.051059  z " clip-path="url(#p246e016c5b)" style="fill: #007ea7; opacity: 0.34; stroke: #007ea7; stroke-width: 2; stroke-linejoin: miter" />
+   </g>
+   <g id="histogram_bar_2">
+    <path d="M 192.650908 301.104  L 242.687078 301.104  L 242.687078 -23.054824  L 192.650908 -23.054824  z " clip-path="url(#p246e016c5b)" style="fill: #007ea7; opacity: 0.34; stroke: #007ea7; stroke-width: 2; stroke-linejoin: miter" />
+   </g>
+   <g id="histogram_bar_3">
+    <path d="M 242.687078 301.104  L 292.723248 301.104  L 292.723248 139.024588  L 242.687078 139.024588  z " clip-path="url(#p246e016c5b)" style="fill: #007ea7; opacity: 0.34; stroke: #007ea7; stroke-width: 2; stroke-linejoin: miter" />
+   </g>
+   <g id="histogram_bar_4">
+    <path d="M 292.723248 301.104  L 342.759418 301.104  L 342.759418 193.051059  L 292.723248 193.051059  z " clip-path="url(#p246e016c5b)" style="fill: #007ea7; opacity: 0.34; stroke: #007ea7; stroke-width: 2; stroke-linejoin: miter" />
+   </g>
+   <g id="histogram_bar_5">
+    <path d="M 342.759418 301.104  L 392.795588 301.104  L 392.795588 193.051059  L 342.759418 193.051059  z " clip-path="url(#p246e016c5b)" style="fill: #007ea7; opacity: 0.34; stroke: #007ea7; stroke-width: 2; stroke-linejoin: miter" />
+   </g>
+   <g id="histogram_bar_6">
+    <path d="M 392.795588 301.104  L 442.831759 301.104  L 442.831759 301.104  L 392.795588 301.104  z " clip-path="url(#p246e016c5b)" style="fill: #007ea7; opacity: 0.34; stroke: #007ea7; stroke-width: 2; stroke-linejoin: miter" />
+   </g>
+   </g><g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 92.578567 301.104  L 92.578567 7.2  " clip-path="url(#p246e016c5b)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m41dd8dea79" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#m41dd8dea79" x="92.578567" y="301.104" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_1">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="92.578567" y="320.480953" transform="rotate(-0 92.578567 320.480953)">23.000</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 209.329631 301.104  L 209.329631 7.2  " clip-path="url(#p246e016c5b)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use ns4:href="#m41dd8dea79" x="209.329631" y="301.104" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_2">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="209.329631" y="320.480953" transform="rotate(-0 209.329631 320.480953)">30.000</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 342.759418 301.104  L 342.759418 7.2  " clip-path="url(#p246e016c5b)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use ns4:href="#m41dd8dea79" x="342.759418" y="301.104" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_3">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="342.759418" y="320.480953" transform="rotate(-0 342.759418 320.480953)">38.000</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 459.510482 301.104  L 459.510482 7.2  " clip-path="url(#p246e016c5b)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use ns4:href="#m41dd8dea79" x="459.510482" y="301.104" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_4">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="459.510482" y="320.480953" transform="rotate(-0 459.510482 320.480953)">45.000</text>
+     </g>
+    </g>
+    <g id="text_5">
+     
+     <g style="fill: #062d46" transform="translate(191.054844 349.284)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.616211" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="34.330078" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="42.93457" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">w</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="59.563477" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="71.771484" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="82.441406" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="95.255859" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="105.969727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="118.177734" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="124.347656" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="130.614258" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="142.022461" y="2.371866" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="148.342285" y="2.371866" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #062d46">W</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_9">
+      <path d="M 75.899844 301.104  L 467.849844 301.104  " clip-path="url(#p246e016c5b)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_10">
+      <defs>
+       <path id="m19a230ede2" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#m19a230ede2" x="75.899844" y="301.104" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_6">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.399844" y="306.042477" transform="rotate(-0 66.399844 306.042477)">0.00</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_11">
+      <path d="M 75.899844 257.882824  L 467.849844 257.882824  " clip-path="url(#p246e016c5b)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use ns4:href="#m19a230ede2" x="75.899844" y="257.882824" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_7">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.399844" y="262.8213" transform="rotate(-0 66.399844 262.8213)">0.05</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13">
+      <path d="M 75.899844 214.661647  L 467.849844 214.661647  " clip-path="url(#p246e016c5b)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use ns4:href="#m19a230ede2" x="75.899844" y="214.661647" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_8">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.399844" y="219.600124" transform="rotate(-0 66.399844 219.600124)">0.10</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_15">
+      <path d="M 75.899844 171.440471  L 467.849844 171.440471  " clip-path="url(#p246e016c5b)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use ns4:href="#m19a230ede2" x="75.899844" y="171.440471" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_9">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.399844" y="176.378947" transform="rotate(-0 66.399844 176.378947)">0.15</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_17">
+      <path d="M 75.899844 128.219294  L 467.849844 128.219294  " clip-path="url(#p246e016c5b)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use ns4:href="#m19a230ede2" x="75.899844" y="128.219294" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_10">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.399844" y="133.157771" transform="rotate(-0 66.399844 133.157771)">0.20</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_19">
+      <path d="M 75.899844 84.998118  L 467.849844 84.998118  " clip-path="url(#p246e016c5b)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use ns4:href="#m19a230ede2" x="75.899844" y="84.998118" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_11">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.399844" y="89.936594" transform="rotate(-0 66.399844 89.936594)">0.25</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_21">
+      <path d="M 75.899844 41.776941  L 467.849844 41.776941  " clip-path="url(#p246e016c5b)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_22">
+      <g>
+       <use ns4:href="#m19a230ede2" x="75.899844" y="41.776941" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_12">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.399844" y="46.715418" transform="rotate(-0 66.399844 46.715418)">0.30</text>
+     </g>
+    </g>
+    <g id="text_13">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="21.130313" y="154.152" transform="rotate(-90 21.130313 154.152)">Relative Häufigkeit</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 75.899844 301.104  L 75.899844 7.2  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="patch_4">
+    <path d="M 75.899844 301.104  L 467.849844 301.104  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_5">
+    <path d="M 561.917844 301.104  L 953.867844 301.104  L 953.867844 7.2  L 561.917844 7.2  L 561.917844 301.104  z " style="fill: none" />
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_5">
+     <g id="line2d_23">
+      <path d="M 578.596567 301.104  L 578.596567 7.2  " clip-path="url(#pb56ed8591a)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_24">
+      <g>
+       <use ns4:href="#m41dd8dea79" x="578.596567" y="301.104" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_14">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="578.596567" y="320.480953" transform="rotate(-0 578.596567 320.480953)">23.000</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_25">
+      <path d="M 695.347631 301.104  L 695.347631 7.2  " clip-path="url(#pb56ed8591a)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_26">
+      <g>
+       <use ns4:href="#m41dd8dea79" x="695.347631" y="301.104" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_15">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="695.347631" y="320.480953" transform="rotate(-0 695.347631 320.480953)">30.000</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_27">
+      <path d="M 828.777418 301.104  L 828.777418 7.2  " clip-path="url(#pb56ed8591a)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_28">
+      <g>
+       <use ns4:href="#m41dd8dea79" x="828.777418" y="301.104" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_16">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="828.777418" y="320.480953" transform="rotate(-0 828.777418 320.480953)">38.000</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_29">
+      <path d="M 945.528482 301.104  L 945.528482 7.2  " clip-path="url(#pb56ed8591a)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_30">
+      <g>
+       <use ns4:href="#m41dd8dea79" x="945.528482" y="301.104" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_17">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="945.528482" y="320.480953" transform="rotate(-0 945.528482 320.480953)">45.000</text>
+     </g>
+    </g>
+    <g id="text_18">
+     
+     <g style="fill: #062d46" transform="translate(677.072844 349.284)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.616211" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="34.330078" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="42.93457" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">w</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="59.563477" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="71.771484" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="82.441406" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="95.255859" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="105.969727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="118.177734" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="124.347656" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="130.614258" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="142.022461" y="2.371866" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="148.342285" y="2.371866" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #062d46">W</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_8">
+     <g id="line2d_31">
+      <path d="M 561.917844 301.104  L 953.867844 301.104  " clip-path="url(#pb56ed8591a)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_32">
+      <g>
+       <use ns4:href="#m19a230ede2" x="561.917844" y="301.104" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_19">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="552.417844" y="306.042477" transform="rotate(-0 552.417844 306.042477)">0.0</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_33">
+      <path d="M 561.917844 246.677333  L 953.867844 246.677333  " clip-path="url(#pb56ed8591a)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_34">
+      <g>
+       <use ns4:href="#m19a230ede2" x="561.917844" y="246.677333" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_20">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="552.417844" y="251.61581" transform="rotate(-0 552.417844 251.61581)">0.2</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_35">
+      <path d="M 561.917844 192.250667  L 953.867844 192.250667  " clip-path="url(#pb56ed8591a)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_36">
+      <g>
+       <use ns4:href="#m19a230ede2" x="561.917844" y="192.250667" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_21">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="552.417844" y="197.189143" transform="rotate(-0 552.417844 197.189143)">0.4</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_37">
+      <path d="M 561.917844 137.824  L 953.867844 137.824  " clip-path="url(#pb56ed8591a)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_38">
+      <g>
+       <use ns4:href="#m19a230ede2" x="561.917844" y="137.824" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_22">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="552.417844" y="142.762477" transform="rotate(-0 552.417844 142.762477)">0.6</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_39">
+      <path d="M 561.917844 83.397333  L 953.867844 83.397333  " clip-path="url(#pb56ed8591a)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_40">
+      <g>
+       <use ns4:href="#m19a230ede2" x="561.917844" y="83.397333" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_23">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="552.417844" y="88.33581" transform="rotate(-0 552.417844 88.33581)">0.8</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_41">
+      <path d="M 561.917844 28.970667  L 953.867844 28.970667  " clip-path="url(#pb56ed8591a)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_42">
+      <g>
+       <use ns4:href="#m19a230ede2" x="561.917844" y="28.970667" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_24">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="552.417844" y="33.909143" transform="rotate(-0 552.417844 33.909143)">1.0</text>
+     </g>
+    </g>
+    <g id="text_25">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="515.419563" y="154.152" transform="rotate(-90 515.419563 154.152)">Relative Dichte</text>
+    </g>
+   </g>
+   <g id="density_curve" data-anim-target="true" data-anim-label="Glatte Dichtefunktion der Grundgesamtheit"><g id="density_area">
+    <defs>
+     <path id="mfc42adc9c8" d="M 561.917844 -83.658723  L 561.917844 -59.704219  L 562.703315 -59.704219  L 563.488786 -59.704219  L 564.274257 -59.704219  L 565.059728 -59.704219  L 565.845198 -59.704219  L 566.630669 -59.704219  L 567.41614 -59.704219  L 568.201611 -59.704219  L 568.987082 -59.704219  L 569.772553 -59.704219  L 570.558024 -59.704219  L 571.343495 -59.704219  L 572.128966 -59.704219  L 572.914437 -59.704219  L 573.699908 -59.704219  L 574.485379 -59.704219  L 575.27085 -59.704219  L 576.056321 -59.704219  L 576.841792 -59.704219  L 577.627263 -59.704219  L 578.412734 -59.704219  L 579.198204 -59.704219  L 579.983675 -59.704219  L 580.769146 -59.704219  L 581.554617 -59.704219  L 582.340088 -59.704219  L 583.125559 -59.704219  L 583.91103 -59.704219  L 584.696501 -59.704219  L 585.481972 -59.704219  L 586.267443 -59.704219  L 587.052914 -59.704219  L 587.838385 -59.704219  L 588.623856 -59.704219  L 589.409327 -59.704219  L 590.194798 -59.704219  L 590.980269 -59.704219  L 591.76574 -59.704219  L 592.55121 -59.704219  L 593.336681 -59.704219  L 594.122152 -59.704219  L 594.907623 -59.704219  L 595.693094 -59.704219  L 596.478565 -59.704219  L 597.264036 -59.704219  L 598.049507 -59.704219  L 598.834978 -59.704219  L 599.620449 -59.704219  L 600.40592 -59.704219  L 601.191391 -59.704219  L 601.976862 -59.704219  L 602.762333 -59.704219  L 603.547804 -59.704219  L 604.333275 -59.704219  L 605.118746 -59.704219  L 605.904216 -59.704219  L 606.689687 -59.704219  L 607.475158 -59.704219  L 608.260629 -59.704219  L 609.0461 -59.704219  L 609.831571 -59.704219  L 610.617042 -59.704219  L 611.402513 -59.704219  L 612.187984 -59.704219  L 612.973455 -59.704219  L 613.758926 -59.704219  L 614.544397 -59.704219  L 615.329868 -59.704219  L 616.115339 -59.704219  L 616.90081 -59.704219  L 617.686281 -59.704219  L 618.471752 -59.704219  L 619.257223 -59.704219  L 620.042693 -59.704219  L 620.828164 -59.704219  L 621.613635 -59.704219  L 622.399106 -59.704219  L 623.184577 -59.704219  L 623.970048 -59.704219  L 624.755519 -59.704219  L 625.54099 -59.704219  L 626.326461 -59.704219  L 627.111932 -59.704219  L 627.897403 -59.704219  L 628.682874 -59.704219  L 629.468345 -59.704219  L 630.253816 -59.704219  L 631.039287 -59.704219  L 631.824758 -59.704219  L 632.610229 -59.704219  L 633.395699 -59.704219  L 634.18117 -59.704219  L 634.966641 -59.704219  L 635.752112 -59.704219  L 636.537583 -59.704219  L 637.323054 -59.704219  L 638.108525 -59.704219  L 638.893996 -59.704219  L 639.679467 -59.704219  L 640.464938 -59.704219  L 641.250409 -59.704219  L 642.03588 -59.704219  L 642.821351 -59.704219  L 643.606822 -59.704219  L 644.392293 -59.704219  L 645.177764 -59.704219  L 645.963235 -59.704219  L 646.748705 -59.704219  L 647.534176 -59.704219  L 648.319647 -59.704219  L 649.105118 -59.704219  L 649.890589 -59.704219  L 650.67606 -59.704219  L 651.461531 -59.704219  L 652.247002 -59.704219  L 653.032473 -59.704219  L 653.817944 -59.704219  L 654.603415 -59.704219  L 655.388886 -59.704219  L 656.174357 -59.704219  L 656.959828 -59.704219  L 657.745299 -59.704219  L 658.53077 -59.704219  L 659.316241 -59.704219  L 660.101711 -59.704219  L 660.887182 -59.704219  L 661.672653 -59.704219  L 662.458124 -59.704219  L 663.243595 -59.704219  L 664.029066 -59.704219  L 664.814537 -59.704219  L 665.600008 -59.704219  L 666.385479 -59.704219  L 667.17095 -59.704219  L 667.956421 -59.704219  L 668.741892 -59.704219  L 669.527363 -59.704219  L 670.312834 -59.704219  L 671.098305 -59.704219  L 671.883776 -59.704219  L 672.669247 -59.704219  L 673.454717 -59.704219  L 674.240188 -59.704219  L 675.025659 -59.704219  L 675.81113 -59.704219  L 676.596601 -59.704219  L 677.382072 -59.704219  L 678.167543 -59.704219  L 678.953014 -59.704219  L 679.738485 -59.704219  L 680.523956 -59.704219  L 681.309427 -59.704219  L 682.094898 -59.704219  L 682.880369 -59.704219  L 683.66584 -59.704219  L 684.451311 -59.704219  L 685.236782 -59.704219  L 686.022253 -59.704219  L 686.807724 -59.704219  L 687.593194 -59.704219  L 688.378665 -59.704219  L 689.164136 -59.704219  L 689.949607 -59.704219  L 690.735078 -59.704219  L 691.520549 -59.704219  L 692.30602 -59.704219  L 693.091491 -59.704219  L 693.876962 -59.704219  L 694.662433 -59.704219  L 695.447904 -59.704219  L 696.233375 -59.704219  L 697.018846 -59.704219  L 697.804317 -59.704219  L 698.589788 -59.704219  L 699.375259 -59.704219  L 700.16073 -59.704219  L 700.9462 -59.704219  L 701.731671 -59.704219  L 702.517142 -59.704219  L 703.302613 -59.704219  L 704.088084 -59.704219  L 704.873555 -59.704219  L 705.659026 -59.704219  L 706.444497 -59.704219  L 707.229968 -59.704219  L 708.015439 -59.704219  L 708.80091 -59.704219  L 709.586381 -59.704219  L 710.371852 -59.704219  L 711.157323 -59.704219  L 711.942794 -59.704219  L 712.728265 -59.704219  L 713.513736 -59.704219  L 714.299206 -59.704219  L 715.084677 -59.704219  L 715.870148 -59.704219  L 716.655619 -59.704219  L 717.44109 -59.704219  L 718.226561 -59.704219  L 719.012032 -59.704219  L 719.797503 -59.704219  L 720.582974 -59.704219  L 721.368445 -59.704219  L 722.153916 -59.704219  L 722.939387 -59.704219  L 723.724858 -59.704219  L 724.510329 -59.704219  L 725.2958 -59.704219  L 726.081271 -59.704219  L 726.866742 -59.704219  L 727.652212 -59.704219  L 728.437683 -59.704219  L 729.223154 -59.704219  L 730.008625 -59.704219  L 730.794096 -59.704219  L 731.579567 -59.704219  L 732.365038 -59.704219  L 733.150509 -59.704219  L 733.93598 -59.704219  L 734.721451 -59.704219  L 735.506922 -59.704219  L 736.292393 -59.704219  L 737.077864 -59.704219  L 737.863335 -59.704219  L 738.648806 -59.704219  L 739.434277 -59.704219  L 740.219748 -59.704219  L 741.005218 -59.704219  L 741.790689 -59.704219  L 742.57616 -59.704219  L 743.361631 -59.704219  L 744.147102 -59.704219  L 744.932573 -59.704219  L 745.718044 -59.704219  L 746.503515 -59.704219  L 747.288986 -59.704219  L 748.074457 -59.704219  L 748.859928 -59.704219  L 749.645399 -59.704219  L 750.43087 -59.704219  L 751.216341 -59.704219  L 752.001812 -59.704219  L 752.787283 -59.704219  L 753.572754 -59.704219  L 754.358225 -59.704219  L 755.143695 -59.704219  L 755.929166 -59.704219  L 756.714637 -59.704219  L 757.500108 -59.704219  L 758.285579 -59.704219  L 759.07105 -59.704219  L 759.856521 -59.704219  L 760.641992 -59.704219  L 761.427463 -59.704219  L 762.212934 -59.704219  L 762.998405 -59.704219  L 763.783876 -59.704219  L 764.569347 -59.704219  L 765.354818 -59.704219  L 766.140289 -59.704219  L 766.92576 -59.704219  L 767.711231 -59.704219  L 768.496701 -59.704219  L 769.282172 -59.704219  L 770.067643 -59.704219  L 770.853114 -59.704219  L 771.638585 -59.704219  L 772.424056 -59.704219  L 773.209527 -59.704219  L 773.994998 -59.704219  L 774.780469 -59.704219  L 775.56594 -59.704219  L 776.351411 -59.704219  L 777.136882 -59.704219  L 777.922353 -59.704219  L 778.707824 -59.704219  L 779.493295 -59.704219  L 780.278766 -59.704219  L 781.064237 -59.704219  L 781.849707 -59.704219  L 782.635178 -59.704219  L 783.420649 -59.704219  L 784.20612 -59.704219  L 784.991591 -59.704219  L 785.777062 -59.704219  L 786.562533 -59.704219  L 787.348004 -59.704219  L 788.133475 -59.704219  L 788.918946 -59.704219  L 789.704417 -59.704219  L 790.489888 -59.704219  L 791.275359 -59.704219  L 792.06083 -59.704219  L 792.846301 -59.704219  L 793.631772 -59.704219  L 794.417243 -59.704219  L 795.202713 -59.704219  L 795.988184 -59.704219  L 796.773655 -59.704219  L 797.559126 -59.704219  L 798.344597 -59.704219  L 799.130068 -59.704219  L 799.915539 -59.704219  L 800.70101 -59.704219  L 801.486481 -59.704219  L 802.271952 -59.704219  L 803.057423 -59.704219  L 803.842894 -59.704219  L 804.628365 -59.704219  L 805.413836 -59.704219  L 806.199307 -59.704219  L 806.984778 -59.704219  L 807.770249 -59.704219  L 808.55572 -59.704219  L 809.34119 -59.704219  L 810.126661 -59.704219  L 810.912132 -59.704219  L 811.697603 -59.704219  L 812.483074 -59.704219  L 813.268545 -59.704219  L 814.054016 -59.704219  L 814.839487 -59.704219  L 815.624958 -59.704219  L 816.410429 -59.704219  L 817.1959 -59.704219  L 817.981371 -59.704219  L 818.766842 -59.704219  L 819.552313 -59.704219  L 820.337784 -59.704219  L 821.123255 -59.704219  L 821.908726 -59.704219  L 822.694196 -59.704219  L 823.479667 -59.704219  L 824.265138 -59.704219  L 825.050609 -59.704219  L 825.83608 -59.704219  L 826.621551 -59.704219  L 827.407022 -59.704219  L 828.192493 -59.704219  L 828.977964 -59.704219  L 829.763435 -59.704219  L 830.548906 -59.704219  L 831.334377 -59.704219  L 832.119848 -59.704219  L 832.905319 -59.704219  L 833.69079 -59.704219  L 834.476261 -59.704219  L 835.261732 -59.704219  L 836.047202 -59.704219  L 836.832673 -59.704219  L 837.618144 -59.704219  L 838.403615 -59.704219  L 839.189086 -59.704219  L 839.974557 -59.704219  L 840.760028 -59.704219  L 841.545499 -59.704219  L 842.33097 -59.704219  L 843.116441 -59.704219  L 843.901912 -59.704219  L 844.687383 -59.704219  L 845.472854 -59.704219  L 846.258325 -59.704219  L 847.043796 -59.704219  L 847.829267 -59.704219  L 848.614738 -59.704219  L 849.400208 -59.704219  L 850.185679 -59.704219  L 850.97115 -59.704219  L 851.756621 -59.704219  L 852.542092 -59.704219  L 853.327563 -59.704219  L 854.113034 -59.704219  L 854.898505 -59.704219  L 855.683976 -59.704219  L 856.469447 -59.704219  L 857.254918 -59.704219  L 858.040389 -59.704219  L 858.82586 -59.704219  L 859.611331 -59.704219  L 860.396802 -59.704219  L 861.182273 -59.704219  L 861.967744 -59.704219  L 862.753214 -59.704219  L 863.538685 -59.704219  L 864.324156 -59.704219  L 865.109627 -59.704219  L 865.895098 -59.704219  L 866.680569 -59.704219  L 867.46604 -59.704219  L 868.251511 -59.704219  L 869.036982 -59.704219  L 869.822453 -59.704219  L 870.607924 -59.704219  L 871.393395 -59.704219  L 872.178866 -59.704219  L 872.964337 -59.704219  L 873.749808 -59.704219  L 874.535279 -59.704219  L 875.32075 -59.704219  L 876.106221 -59.704219  L 876.891691 -59.704219  L 877.677162 -59.704219  L 878.462633 -59.704219  L 879.248104 -59.704219  L 880.033575 -59.704219  L 880.819046 -59.704219  L 881.604517 -59.704219  L 882.389988 -59.704219  L 883.175459 -59.704219  L 883.96093 -59.704219  L 884.746401 -59.704219  L 885.531872 -59.704219  L 886.317343 -59.704219  L 887.102814 -59.704219  L 887.888285 -59.704219  L 888.673756 -59.704219  L 889.459227 -59.704219  L 890.244697 -59.704219  L 891.030168 -59.704219  L 891.815639 -59.704219  L 892.60111 -59.704219  L 893.386581 -59.704219  L 894.172052 -59.704219  L 894.957523 -59.704219  L 895.742994 -59.704219  L 896.528465 -59.704219  L 897.313936 -59.704219  L 898.099407 -59.704219  L 898.884878 -59.704219  L 899.670349 -59.704219  L 900.45582 -59.704219  L 901.241291 -59.704219  L 902.026762 -59.704219  L 902.812233 -59.704219  L 903.597703 -59.704219  L 904.383174 -59.704219  L 905.168645 -59.704219  L 905.954116 -59.704219  L 906.739587 -59.704219  L 907.525058 -59.704219  L 908.310529 -59.704219  L 909.096 -59.704219  L 909.881471 -59.704219  L 910.666942 -59.704219  L 911.452413 -59.704219  L 912.237884 -59.704219  L 913.023355 -59.704219  L 913.808826 -59.704219  L 914.594297 -59.704219  L 915.379768 -59.704219  L 916.165239 -59.704219  L 916.950709 -59.704219  L 917.73618 -59.704219  L 918.521651 -59.704219  L 919.307122 -59.704219  L 920.092593 -59.704219  L 920.878064 -59.704219  L 921.663535 -59.704219  L 922.449006 -59.704219  L 923.234477 -59.704219  L 924.019948 -59.704219  L 924.805419 -59.704219  L 925.59089 -59.704219  L 926.376361 -59.704219  L 927.161832 -59.704219  L 927.947303 -59.704219  L 928.732774 -59.704219  L 929.518245 -59.704219  L 930.303715 -59.704219  L 931.089186 -59.704219  L 931.874657 -59.704219  L 932.660128 -59.704219  L 933.445599 -59.704219  L 934.23107 -59.704219  L 935.016541 -59.704219  L 935.802012 -59.704219  L 936.587483 -59.704219  L 937.372954 -59.704219  L 938.158425 -59.704219  L 938.943896 -59.704219  L 939.729367 -59.704219  L 940.514838 -59.704219  L 941.300309 -59.704219  L 942.08578 -59.704219  L 942.871251 -59.704219  L 943.656722 -59.704219  L 944.442192 -59.704219  L 945.227663 -59.704219  L 946.013134 -59.704219  L 946.798605 -59.704219  L 947.584076 -59.704219  L 948.369547 -59.704219  L 949.155018 -59.704219  L 949.940489 -59.704219  L 950.72596 -59.704219  L 951.511431 -59.704219  L 952.296902 -59.704219  L 953.082373 -59.704219  L 953.867844 -59.704219  L 953.867844 -63.67143  L 953.867844 -63.67143  L 953.082373 -63.836237  L 952.296902 -64.006627  L 951.511431 -64.182731  L 950.72596 -64.36468  L 949.940489 -64.552606  L 949.155018 -64.74664  L 948.369547 -64.946914  L 947.584076 -65.15356  L 946.798605 -65.36671  L 946.013134 -65.586495  L 945.227663 -65.813047  L 944.442192 -66.046496  L 943.656722 -66.286973  L 942.871251 -66.534608  L 942.08578 -66.789528  L 941.300309 -67.051862  L 940.514838 -67.321736  L 939.729367 -67.599275  L 938.943896 -67.884602  L 938.158425 -68.17784  L 937.372954 -68.479108  L 936.587483 -68.788524  L 935.802012 -69.106205  L 935.016541 -69.432263  L 934.23107 -69.766811  L 933.445599 -70.109957  L 932.660128 -70.461806  L 931.874657 -70.822462  L 931.089186 -71.192023  L 930.303715 -71.570588  L 929.518245 -71.958248  L 928.732774 -72.355093  L 927.947303 -72.761209  L 927.161832 -73.176677  L 926.376361 -73.601576  L 925.59089 -74.035979  L 924.805419 -74.479956  L 924.019948 -74.93357  L 923.234477 -75.396883  L 922.449006 -75.86995  L 921.663535 -76.352821  L 920.878064 -76.845542  L 920.092593 -77.348153  L 919.307122 -77.860691  L 918.521651 -78.383183  L 917.73618 -78.915656  L 916.950709 -79.458128  L 916.165239 -80.010613  L 915.379768 -80.573117  L 914.594297 -81.145644  L 913.808826 -81.728189  L 913.023355 -82.320742  L 912.237884 -82.923288  L 911.452413 -83.535805  L 910.666942 -84.158265  L 909.881471 -84.790634  L 909.096 -85.432873  L 908.310529 -86.084936  L 907.525058 -86.746771  L 906.739587 -87.41832  L 905.954116 -88.099519  L 905.168645 -88.790298  L 904.383174 -89.490582  L 903.597703 -90.200289  L 902.812233 -90.91933  L 902.026762 -91.647614  L 901.241291 -92.385041  L 900.45582 -93.131506  L 899.670349 -93.8869  L 898.884878 -94.651107  L 898.099407 -95.424006  L 897.313936 -96.205473  L 896.528465 -96.995375  L 895.742994 -97.793578  L 894.957523 -98.599942  L 894.172052 -99.414322  L 893.386581 -100.236568  L 892.60111 -101.066528  L 891.815639 -101.904044  L 891.030168 -102.748956  L 890.244697 -103.6011  L 889.459227 -104.460306  L 888.673756 -105.326406  L 887.888285 -106.199224  L 887.102814 -107.078584  L 886.317343 -107.964308  L 885.531872 -108.856215  L 884.746401 -109.754121  L 883.96093 -110.657842  L 883.175459 -111.567192  L 882.389988 -112.481984  L 881.604517 -113.40203  L 880.819046 -114.327141  L 880.033575 -115.257128  L 879.248104 -116.191802  L 878.462633 -117.130975  L 877.677162 -118.074457  L 876.891691 -119.022061  L 876.106221 -119.973601  L 875.32075 -120.928891  L 874.535279 -121.887747  L 873.749808 -122.849988  L 872.964337 -123.815434  L 872.178866 -124.783907  L 871.393395 -125.755232  L 870.607924 -126.729237  L 869.822453 -127.705755  L 869.036982 -128.684618  L 868.251511 -129.665666  L 867.46604 -130.648741  L 866.680569 -131.633689  L 865.895098 -132.62036  L 865.109627 -133.608609  L 864.324156 -134.598297  L 863.538685 -135.589288  L 862.753214 -136.581452  L 861.967744 -137.574665  L 861.182273 -138.568807  L 860.396802 -139.563765  L 859.611331 -140.559432  L 858.82586 -141.555705  L 858.040389 -142.552489  L 857.254918 -143.549695  L 856.469447 -144.54724  L 855.683976 -145.545048  L 854.898505 -146.543048  L 854.113034 -147.541179  L 853.327563 -148.539383  L 852.542092 -149.53761  L 851.756621 -150.535819  L 850.97115 -151.533972  L 850.185679 -152.532042  L 849.400208 -153.530005  L 848.614738 -154.527848  L 847.829267 -155.52556  L 847.043796 -156.523142  L 846.258325 -157.520598  L 845.472854 -158.517941  L 844.687383 -159.515189  L 843.901912 -160.512369  L 843.116441 -161.509512  L 842.33097 -162.506658  L 841.545499 -163.503851  L 840.760028 -164.501142  L 839.974557 -165.498589  L 839.189086 -166.496256  L 838.403615 -167.494212  L 837.618144 -168.492532  L 836.832673 -169.491296  L 836.047202 -170.490591  L 835.261732 -171.490508  L 834.476261 -172.491142  L 833.69079 -173.492594  L 832.905319 -174.49497  L 832.119848 -175.498379  L 831.334377 -176.502936  L 830.548906 -177.508757  L 829.763435 -178.515965  L 828.977964 -179.524683  L 828.192493 -180.53504  L 827.407022 -181.547165  L 826.621551 -182.561193  L 825.83608 -183.577258  L 825.050609 -184.595498  L 824.265138 -185.616052  L 823.479667 -186.639061  L 822.694196 -187.664667  L 821.908726 -188.693011  L 821.123255 -189.724239  L 820.337784 -190.758492  L 819.552313 -191.795915  L 818.766842 -192.83665  L 817.981371 -193.880841  L 817.1959 -194.928628  L 816.410429 -195.980151  L 815.624958 -197.03555  L 814.839487 -198.094962  L 814.054016 -199.15852  L 813.268545 -200.226358  L 812.483074 -201.298604  L 811.697603 -202.375385  L 810.912132 -203.456823  L 810.126661 -204.543038  L 809.34119 -205.634144  L 808.55572 -206.730253  L 807.770249 -207.831471  L 806.984778 -208.937899  L 806.199307 -210.049634  L 805.413836 -211.166766  L 804.628365 -212.28938  L 803.842894 -213.417555  L 803.057423 -214.551364  L 802.271952 -215.690873  L 801.486481 -216.836142  L 800.70101 -217.987222  L 799.915539 -219.14416  L 799.130068 -220.306991  L 798.344597 -221.475747  L 797.559126 -222.650449  L 796.773655 -223.83111  L 795.988184 -225.017735  L 795.202713 -226.210321  L 794.417243 -227.408854  L 793.631772 -228.613314  L 792.846301 -229.823669  L 792.06083 -231.039879  L 791.275359 -232.261893  L 790.489888 -233.489653  L 789.704417 -234.723088  L 788.918946 -235.962118  L 788.133475 -237.206653  L 787.348004 -238.456592  L 786.562533 -239.711825  L 785.777062 -240.972229  L 784.991591 -242.237672  L 784.20612 -243.508011  L 783.420649 -244.78309  L 782.635178 -246.062745  L 781.849707 -247.346799  L 781.064237 -248.635065  L 780.278766 -249.927342  L 779.493295 -251.223422  L 778.707824 -252.523082  L 777.922353 -253.82609  L 777.136882 -255.132201  L 776.351411 -256.441159  L 775.56594 -257.752698  L 774.780469 -259.06654  L 773.994998 -260.382393  L 773.209527 -261.699959  L 772.424056 -263.018924  L 771.638585 -264.338965  L 770.853114 -265.659748  L 770.067643 -266.980928  L 769.282172 -268.302147  L 768.496701 -269.62304  L 767.711231 -270.943228  L 766.92576 -272.262323  L 766.140289 -273.579926  L 765.354818 -274.895628  L 764.569347 -276.209011  L 763.783876 -277.519646  L 762.998405 -278.827094  L 762.212934 -280.130906  L 761.427463 -281.430627  L 760.641992 -282.725788  L 759.856521 -284.015916  L 759.07105 -285.300527  L 758.285579 -286.579128  L 757.500108 -287.85122  L 756.714637 -289.116296  L 755.929166 -290.37384  L 755.143695 -291.623331  L 754.358225 -292.86424  L 753.572754 -294.096033  L 752.787283 -295.318167  L 752.001812 -296.530097  L 751.216341 -297.731271  L 750.43087 -298.921131  L 749.645399 -300.099118  L 748.859928 -301.264666  L 748.074457 -302.417205  L 747.288986 -303.556165  L 746.503515 -304.680971  L 745.718044 -305.791045  L 744.932573 -306.885809  L 744.147102 -307.964684  L 743.361631 -309.027088  L 742.57616 -310.07244  L 741.790689 -311.100159  L 741.005218 -312.109666  L 740.219748 -313.100381  L 739.434277 -314.071726  L 738.648806 -315.023128  L 737.863335 -315.954013  L 737.077864 -316.863813  L 736.292393 -317.751963  L 735.506922 -318.617903  L 734.721451 -319.461076  L 733.93598 -320.280932  L 733.150509 -321.076929  L 732.365038 -321.848527  L 731.579567 -322.595199  L 730.794096 -323.31642  L 730.008625 -324.011676  L 729.223154 -324.680464  L 728.437683 -325.322286  L 727.652212 -325.936657  L 726.866742 -326.523101  L 726.081271 -327.081154  L 725.2958 -327.610362  L 724.510329 -328.110286  L 723.724858 -328.580497  L 722.939387 -329.020578  L 722.153916 -329.430129  L 721.368445 -329.808762  L 720.582974 -330.156103  L 719.797503 -330.471794  L 719.012032 -330.755491  L 718.226561 -331.006869  L 717.44109 -331.225615  L 716.655619 -331.411435  L 715.870148 -331.564052  L 715.084677 -331.683205  L 714.299206 -331.768653  L 713.513736 -331.820171  L 712.728265 -331.837552  L 711.942794 -331.82061  L 711.157323 -331.769175  L 710.371852 -331.683099  L 709.586381 -331.562251  L 708.80091 -331.40652  L 708.015439 -331.215817  L 707.229968 -330.99007  L 706.444497 -330.729227  L 705.659026 -330.43326  L 704.873555 -330.102156  L 704.088084 -329.735926  L 703.302613 -329.3346  L 702.517142 -328.898229  L 701.731671 -328.426883  L 700.9462 -327.920654  L 700.16073 -327.379653  L 699.375259 -326.804011  L 698.589788 -326.193881  L 697.804317 -325.549434  L 697.018846 -324.870861  L 696.233375 -324.158374  L 695.447904 -323.412202  L 694.662433 -322.632596  L 693.876962 -321.819823  L 693.091491 -320.974172  L 692.30602 -320.095946  L 691.520549 -319.18547  L 690.735078 -318.243085  L 689.949607 -317.26915  L 689.164136 -316.264039  L 688.378665 -315.228145  L 687.593194 -314.161875  L 686.807724 -313.065654  L 686.022253 -311.93992  L 685.236782 -310.785127  L 684.451311 -309.601744  L 683.66584 -308.390251  L 682.880369 -307.151144  L 682.094898 -305.88493  L 681.309427 -304.59213  L 680.523956 -303.273275  L 679.738485 -301.928906  L 678.953014 -300.559579  L 678.167543 -299.165854  L 677.382072 -297.748305  L 676.596601 -296.307512  L 675.81113 -294.844064  L 675.025659 -293.358558  L 674.240188 -291.851597  L 673.454717 -290.323791  L 672.669247 -288.775756  L 671.883776 -287.20811  L 671.098305 -285.62148  L 670.312834 -284.016494  L 669.527363 -282.393784  L 668.741892 -280.753985  L 667.956421 -279.097732  L 667.17095 -277.425664  L 666.385479 -275.738419  L 665.600008 -274.036638  L 664.814537 -272.320957  L 664.029066 -270.592017  L 663.243595 -268.850452  L 662.458124 -267.096897  L 661.672653 -265.331985  L 660.887182 -263.556345  L 660.101711 -261.770601  L 659.316241 -259.975377  L 658.53077 -258.171289  L 657.745299 -256.358949  L 656.959828 -254.538965  L 656.174357 -252.711937  L 655.388886 -250.878461  L 654.603415 -249.039125  L 653.817944 -247.194511  L 653.032473 -245.345193  L 652.247002 -243.491738  L 651.461531 -241.634705  L 650.67606 -239.774644  L 649.890589 -237.912098  L 649.105118 -236.047599  L 648.319647 -234.181672  L 647.534176 -232.314832  L 646.748705 -230.447585  L 645.963235 -228.580426  L 645.177764 -226.713843  L 644.392293 -224.848311  L 643.606822 -222.984297  L 642.821351 -221.122256  L 642.03588 -219.262636  L 641.250409 -217.40587  L 640.464938 -215.552386  L 639.679467 -213.702597  L 638.893996 -211.856907  L 638.108525 -210.015711  L 637.323054 -208.179393  L 636.537583 -206.348325  L 635.752112 -204.52287  L 634.966641 -202.703381  L 634.18117 -200.8902  L 633.395699 -199.083658  L 632.610229 -197.284078  L 631.824758 -195.491772  L 631.039287 -193.707042  L 630.253816 -191.930181  L 629.468345 -190.161471  L 628.682874 -188.401186  L 627.897403 -186.64959  L 627.111932 -184.906939  L 626.326461 -183.173477  L 625.54099 -181.449444  L 624.755519 -179.735066  L 623.970048 -178.030566  L 623.184577 -176.336155  L 622.399106 -174.652036  L 621.613635 -172.978408  L 620.828164 -171.315457  L 620.042693 -169.663367  L 619.257223 -168.022309  L 618.471752 -166.392453  L 617.686281 -164.773958  L 616.90081 -163.166978  L 616.115339 -161.57166  L 615.329868 -159.988145  L 614.544397 -158.416568  L 613.758926 -156.857059  L 612.973455 -155.309741  L 612.187984 -153.774734  L 611.402513 -152.252148  L 610.617042 -150.742094  L 609.831571 -149.244673  L 609.0461 -147.759984  L 608.260629 -146.288121  L 607.475158 -144.829173  L 606.689687 -143.383225  L 605.904216 -141.950359  L 605.118746 -140.530652  L 604.333275 -139.124176  L 603.547804 -137.731002  L 602.762333 -136.351196  L 601.976862 -134.984819  L 601.191391 -133.631931  L 600.40592 -132.292588  L 599.620449 -130.966842  L 598.834978 -129.654744  L 598.049507 -128.35634  L 597.264036 -127.071673  L 596.478565 -125.800784  L 595.693094 -124.543711  L 594.907623 -123.300489  L 594.122152 -122.07115  L 593.336681 -120.855725  L 592.55121 -119.65424  L 591.76574 -118.466719  L 590.980269 -117.293185  L 590.194798 -116.133656  L 589.409327 -114.98815  L 588.623856 -113.856679  L 587.838385 -112.739255  L 587.052914 -111.635887  L 586.267443 -110.546581  L 585.481972 -109.471341  L 584.696501 -108.410167  L 583.91103 -107.363058  L 583.125559 -106.330009  L 582.340088 -105.311014  L 581.554617 -104.306061  L 580.769146 -103.315139  L 579.983675 -102.338233  L 579.198204 -101.375323  L 578.412734 -100.42639  L 577.627263 -99.491409  L 576.841792 -98.570353  L 576.056321 -97.663193  L 575.27085 -96.769897  L 574.485379 -95.890429  L 573.699908 -95.024749  L 572.914437 -94.172818  L 572.128966 -93.334589  L 571.343495 -92.510017  L 570.558024 -91.699049  L 569.772553 -90.901632  L 568.987082 -90.11771  L 568.201611 -89.347221  L 567.41614 -88.590104  L 566.630669 -87.846292  L 565.845198 -87.115716  L 565.059728 -86.398302  L 564.274257 -85.693976  L 563.488786 -85.00266  L 562.703315 -84.32427  L 561.917844 -83.658723  z " style="stroke: #d1495b; stroke-opacity: 0.12" />
+    </defs>
+    <g clip-path="url(#pb56ed8591a)">
+     <use ns4:href="#mfc42adc9c8" x="0" y="360.808219" style="fill: #d1495b; fill-opacity: 0.12; stroke: #d1495b; stroke-opacity: 0.12" />
+    </g>
+   </g>
+   <g id="density_curve_path">
+    <path d="M 561.917844 277.149495  L 565.845198 273.692503  L 569.772553 269.906587  L 573.699908 265.783469  L 577.627263 261.31681  L 581.554617 256.502158  L 585.481972 251.336878  L 589.409327 245.820069  L 593.336681 239.952494  L 597.264036 233.736546  L 601.976862 225.8234  L 606.689687 217.424993  L 611.402513 208.556071  L 616.115339 199.236559  L 621.613635 187.829811  L 627.111932 175.90128  L 633.395699 161.724561  L 641.250409 143.402348  L 660.887182 97.251874  L 666.385479 85.069799  L 671.098305 75.186738  L 675.025659 67.449661  L 678.953014 60.24864  L 682.094898 54.923288  L 685.236782 50.023091  L 688.378665 45.580074  L 690.735078 42.565133  L 693.091491 39.834047  L 695.447904 37.396016  L 697.804317 35.258785  L 700.16073 33.428566  L 702.517142 31.90999  L 704.873555 30.706063  L 707.229968 29.818149  L 709.586381 29.245968  L 711.942794 28.987609  L 714.299206 29.039566  L 716.655619 29.396784  L 719.012032 30.052727  L 721.368445 30.999457  L 723.724858 32.227722  L 726.081271 33.727065  L 728.437683 35.485933  L 730.794096 37.491799  L 733.93598 40.527287  L 737.077864 43.944405  L 740.219748 47.707838  L 743.361631 51.781131  L 747.288986 57.252053  L 752.001812 64.278122  L 757.500108 72.956999  L 764.569347 84.599207  L 784.991591 118.570547  L 792.06083 129.76834  L 798.344597 139.332471  L 804.628365 148.518839  L 811.697603 158.432834  L 819.552313 169.012304  L 828.977964 181.283536  L 845.472854 202.290278  L 872.178866 236.024312  L 880.033575 245.551091  L 886.317343 252.843911  L 891.815639 258.904175  L 896.528465 263.812844  L 901.241291 268.423178  L 905.954116 272.7087  L 910.666942 276.649954  L 914.594297 279.662575  L 918.521651 282.425035  L 922.449006 284.938269  L 926.376361 287.206643  L 930.303715 289.237631  L 934.23107 291.041407  L 938.158425 292.630379  L 942.871251 294.273611  L 947.584076 295.654659  L 952.296902 296.801592  L 953.867844 297.136788  L 953.867844 297.136788  " clip-path="url(#pb56ed8591a)" style="fill: none; stroke: #d1495b; stroke-width: 4; stroke-linecap: square" />
+   </g>
+  </g><g id="line2d_43">
+    <path d="M 578.596567 301.104  L 578.596567 7.2  " clip-path="url(#pb56ed8591a)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #6a7a86; stroke-width: 1.4" />
+   </g>
+   <g id="line2d_44">
+    <path d="M 945.528482 301.104  L 945.528482 7.2  " clip-path="url(#pb56ed8591a)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #6a7a86; stroke-width: 1.4" />
+   </g>
+   <g id="patch_6">
+    <path d="M 561.917844 301.104  L 561.917844 7.2  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="patch_7">
+    <path d="M 561.917844 301.104  L 953.867844 301.104  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   </g>
+ </g>
+ <defs>
+  <clipPath id="p246e016c5b">
+   <rect data-qc-allow-overlap="true" x="75.899844" y="7.2" width="391.95" height="293.904" />
+  </clipPath>
+  <clipPath id="pb56ed8591a">
+   <rect data-qc-allow-overlap="true" x="561.917844" y="7.2" width="391.95" height="293.904" />
+  </clipPath>
+ </defs>
+</svg><g id="density_range_interpretation" data-anim-target="true" data-anim-label="Interpretierter Ausfallbereich"><title>Interpretierter Ausfallbereich</title><rect data-qc-allow-overlap="true" x="98" y="840" width="1724" height="94" rx="8" fill="#F7EEDC" stroke="#B7791F" stroke-width="1.5"/><text x="145" y="875" class="" font-size="22" font-weight="820" fill="#B7791F" text-anchor="start" data-qc-role="text"><tspan x="145" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Beginn ≈ 23.000 Lastwechsel</tspan></text><text x="960" y="876" class="" font-size="20" font-weight="700" fill="#102A43" text-anchor="middle" data-qc-role="text"><tspan x="960" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">empirische Annäherung – keine exakte Grundgesamtheit</tspan></text><text x="1775" y="875" class="" font-size="22" font-weight="820" fill="#B7791F" text-anchor="end" data-qc-role="text"><tspan x="1775" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">alle ausgefallen ≈ 45.000</tspan></text></g></g>
+  <line x1="78" y1="982" x2="1842" y2="982" stroke="#102A43" stroke-opacity="0.12" stroke-width="1.5"/>
+  <text x="78" y="1026" font-size="20" font-weight="700" fill="#627D98">Professional Reliability Training | Reliability Engineer</text>
+  <text x="1580" y="1026" font-size="20" font-weight="700" fill="#627D98" text-anchor="end">RE1 · Szene 28</text>
+  <g id="official_logo_reserved" data-logo-status="pending-original-asset" aria-label="Reservierter Bereich für das offizielle RelTest-Academy-Logo"/>
+</svg>

@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_083.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "nkw_gearbox_context",
+      "label": "6-Gang-NKW-Getriebe",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "nkw_cdf_data",
+      "label": "Ausfalldaten und Formparameter",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "nkw_cdf_curve",
+      "label": "S-förmige Ausfallwahrscheinlichkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "nkw_linear_scale",
+      "label": "Normale Skalierung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_nkw_gearbox_context",
+      "targetId": "nkw_gearbox_context",
+      "action": "show",
+      "sourceText": "Für die ermittelten Ausfallzeiten des Getriebes",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_nkw_cdf_data",
+      "targetId": "nkw_cdf_data",
+      "action": "show",
+      "sourceText": "Der Formparameter wurde dabei zu eins",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_nkw_cdf_curve",
+      "targetId": "nkw_cdf_curve",
+      "action": "draw",
+      "sourceText": "Verlauf der Ausfallwahrscheinlichkeit über der normierten Lebensdauer dargestellt",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "durFrames": 42
+    },
+    {
+      "stepId": "show_nkw_linear_scale",
+      "targetId": "nkw_linear_scale",
+      "action": "show",
+      "sourceText": "Die Achsen sind dabei normal skaliert",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

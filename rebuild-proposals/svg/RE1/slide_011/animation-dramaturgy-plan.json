@@ -1,0 +1,280 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re1_src_011",
+  "svgPath": "rebuild-proposals/svg/RE1/slide_011/slide_011.svg",
+  "spokenText": "Nun kann man versuchen, die Belastbarkeit zu erhöhen, also die Qualität zu verbessern, wodurch dessen Kurve nach rechts verschoben wird. Die Folge ist ein kleinerer Überlappungsbereich und dementsprechend auch weniger Ausfälle.",
+  "animationDecision": "animated",
+  "animationRationale": "Die gestrichelte Ausgangslage bleibt sichtbar; die Zielkurve vollzieht eine fachlich begründete Rechtsverschiebung und erst danach erscheint der reduzierte Ausfallbereich.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Show wird als reines Fade bewertet.",
+      "Gleiche sourceText-Phrase startet alle Schritte derselben Triggergruppe gleichzeitig."
+    ]
+  },
+  "initialStateRationale": "Belastung, Achsen und gestrichelte Ausgangslage sind notwendig, damit die Verschiebung als Zustandsänderung lesbar ist.",
+  "semanticGroups": [
+    {
+      "groupId": "brand_background",
+      "label": "RelTest-Education-Hintergrund",
+      "role": "background",
+      "members": [
+        "Education-Farbverlauf",
+        "ruhiges technisches Raster"
+      ],
+      "initialState": "static_decorative",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Der Markenrahmen enthaelt keine konkrete Fachinformation und darf vor der Narration sichtbar sein.",
+      "dependsOn": [],
+      "groupingRationale": "Der Hintergrund ist ruhiger Markenrahmen und trägt keine vorweggenommene Fachinformation."
+    },
+    {
+      "groupId": "shift_plot_context",
+      "label": "Vorher-Zustand des Stress-Strength-Modells",
+      "role": "context",
+      "members": [
+        "Achsen",
+        "Belastungsverteilung",
+        "gestrichelte Vergleichskurve",
+        "Kurvenlabels"
+      ],
+      "initialState": "visible_context",
+      "dependsOn": [],
+      "groupingRationale": "Alle Bestandteile definieren den fachlichen Vorher-Zustand; die gestrichelte Kurve bleibt ohne zusätzliches Innenlabel eindeutig.",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Der Vorher-Zustand ist notwendiger Vergleichsanker für die unmittelbar erklärte Verschiebung."
+    },
+    {
+      "groupId": "shifted_strength_distribution",
+      "label": "Nach rechts bewegte Belastbarkeit",
+      "role": "state_change",
+      "members": [
+        "Belastbarkeitskurve",
+        "Belastbarkeitsfläche",
+        "direktes Label"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "shift_plot_context"
+      ],
+      "groupingRationale": "Kurve, Fläche und Label müssen sich als dasselbe Objekt bewegen.",
+      "firstRelevantBeatId": "move_strength_right",
+      "initialVisibilityEvidence": "Die Zielkurve darf erst mit der beschriebenen Qualitätsverbesserung erscheinen."
+    },
+    {
+      "groupId": "shifted_strength_explanation",
+      "label": "Belastbarkeit erhöhen",
+      "role": "annotation",
+      "members": [
+        "vollständige Erklärungskarte",
+        "Richtungspfeil"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "shifted_strength_distribution"
+      ],
+      "groupingRationale": "Erklärung und Richtungspfeil beschreiben dieselbe Zustandsänderung.",
+      "firstRelevantBeatId": "move_strength_right",
+      "initialVisibilityEvidence": "Richtungspfeil und Erklärung gehören zur sichtbaren Kurvenbewegung."
+    },
+    {
+      "groupId": "failure_overlap",
+      "label": "Reduzierte Ausfallverteilung",
+      "role": "result",
+      "members": [
+        "schmalere weich auslaufende Glockenkurve",
+        "sichtbare Verteilungskontur",
+        "freistehendes Ausfalllabel mit Führungslinie"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "shifted_strength_distribution"
+      ],
+      "groupingRationale": "Breite und Höhe der glockenförmigen Ausfallverteilung reduzieren sich als Ergebnis der sichtbaren Verschiebung; Führungslinie und Label erscheinen mit ihr.",
+      "firstRelevantBeatId": "show_reduced_overlap",
+      "initialVisibilityEvidence": "Das Ergebnis darf die Wirkung der Verschiebung nicht vorwegnehmen."
+    },
+    {
+      "groupId": "reduced_overlap_explanation",
+      "label": "Kleinerer Ausfallbereich",
+      "role": "annotation",
+      "members": [
+        "vollständige grüne Ergebnisbox"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "failure_overlap"
+      ],
+      "groupingRationale": "Ergebnisbox und Ausfallbereich werden gemeinsam gelesen.",
+      "firstRelevantBeatId": "show_reduced_overlap",
+      "initialVisibilityEvidence": "Die Ergebnisbox erscheint gemeinsam mit der reduzierten Ausfallverteilung."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "move_strength_right",
+      "claim": "Höhere Belastbarkeit verschiebt die Kurve nach rechts.",
+      "sourceText": "wodurch dessen Kurve nach rechts verschoben wird",
+      "occurrence": 1,
+      "requiredContext": [
+        "shift_plot_context"
+      ],
+      "revealTogether": [
+        "shifted_strength_distribution",
+        "shifted_strength_explanation"
+      ],
+      "learnerStateBefore": "Die gestrichelte Ausgangslage ist sichtbar.",
+      "learnerStateAfter": "Die neue Kurve steht rechts und die Richtung ist erklärt."
+    },
+    {
+      "beatId": "show_reduced_overlap",
+      "claim": "Die Rechtsverschiebung verkleinert den Ausfallbereich.",
+      "sourceText": "Die Folge ist ein kleinerer Überlappungsbereich",
+      "occurrence": 1,
+      "requiredContext": [
+        "shift_plot_context",
+        "shifted_strength_distribution"
+      ],
+      "revealTogether": [
+        "failure_overlap",
+        "reduced_overlap_explanation"
+      ],
+      "learnerStateBefore": "Vorher- und Nachherlage sind vergleichbar.",
+      "learnerStateAfter": "Der kleinere Ausfallbereich und seine Aussage sind sichtbar."
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "move_shifted_strength_distribution",
+      "beatId": "move_strength_right",
+      "targetId": "shifted_strength_distribution",
+      "action": "transform",
+      "effect": {
+        "durFrames": 45,
+        "fromTranslateX": -74.8,
+        "fromTranslateY": 0,
+        "fromScale": 1,
+        "translateX": 0,
+        "translateY": 0,
+        "scale": 1,
+        "transformOrigin": "center"
+      },
+      "rationale": "Die Bewegung zeigt die reale Änderung desselben fachlichen Objekts."
+    },
+    {
+      "stepId": "show_shifted_strength_explanation",
+      "beatId": "move_strength_right",
+      "targetId": "shifted_strength_explanation",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Erklärung und Bewegung starten im selben Triggerfenster."
+    },
+    {
+      "stepId": "show_reduced_failure_overlap",
+      "beatId": "show_reduced_overlap",
+      "targetId": "failure_overlap",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Der Ausfallbereich erscheint erst nach der Verschiebung."
+    },
+    {
+      "stepId": "show_reduced_overlap_explanation",
+      "beatId": "show_reduced_overlap",
+      "targetId": "reduced_overlap_explanation",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Ergebnisbox und Bereich starten gemeinsam."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "shift_plot_context"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Belastung, Achsen und gestrichelte Ausgangslage sind notwendig, damit die Verschiebung als Zustandsänderung lesbar ist."
+    },
+    {
+      "stateId": "before_move_strength_right",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "shift_plot_context"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Die gestrichelte Ausgangslage ist sichtbar."
+    },
+    {
+      "stateId": "after_move_strength_right",
+      "afterBeatId": "move_strength_right",
+      "visibleGroups": [
+        "brand_background",
+        "shift_plot_context",
+        "shifted_strength_distribution",
+        "shifted_strength_explanation"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Die neue Kurve steht rechts und die Richtung ist erklärt."
+    },
+    {
+      "stateId": "before_show_reduced_overlap",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "shift_plot_context",
+        "shifted_strength_distribution",
+        "shifted_strength_explanation"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Vorher- und Nachherlage sind vergleichbar."
+    },
+    {
+      "stateId": "after_show_reduced_overlap",
+      "afterBeatId": "show_reduced_overlap",
+      "visibleGroups": [
+        "brand_background",
+        "shift_plot_context",
+        "shifted_strength_distribution",
+        "shifted_strength_explanation",
+        "failure_overlap",
+        "reduced_overlap_explanation"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der kleinere Ausfallbereich und seine Aussage sind sichtbar."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "show_reduced_overlap",
+      "visibleGroups": [
+        "brand_background",
+        "shift_plot_context",
+        "shifted_strength_distribution",
+        "shifted_strength_explanation",
+        "failure_overlap",
+        "reduced_overlap_explanation"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der vollständige statische Endzustand bleibt ohne Animation fachlich verständlich."
+    }
+  ]
+}

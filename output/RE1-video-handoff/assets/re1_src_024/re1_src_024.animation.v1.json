@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_024.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "production_risk_prevention",
+      "label": "Prozess-FMEA",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "production_process_optimization",
+      "label": "DOE",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "production_screening_monitoring",
+      "label": "Screening und Monitoring",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_production_risk_prevention",
+      "targetId": "production_risk_prevention",
+      "action": "show",
+      "sourceText": "Hierbei kann wieder auf die f",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_production_process_optimization",
+      "targetId": "production_process_optimization",
+      "action": "show",
+      "sourceText": "Auch die statistische Versuchsplanung kurz D",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_production_screening_monitoring",
+      "targetId": "production_screening_monitoring",
+      "action": "show",
+      "sourceText": "Sicherstellung der Produktionsqualität",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_041.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "nkw_hazard_curve",
+      "label": "Steigende Ausfallrate",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "nkw_hazard_gearbox_image",
+      "label": "Generierte Illustration des 6-Gang-NKW-Getriebes",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "wearout_area",
+      "label": "Verschleißbereich",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "nkw_hazard_mechanism",
+      "label": "Verschleiß und Ermüdung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "nkw_hazard_counterexample",
+      "label": "Gegenbeispiel zur Badewannenkurve",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_nkw_hazard_curve",
+      "targetId": "nkw_hazard_curve",
+      "action": "draw",
+      "sourceText": "Hierbei steigt die Ausfallrate kontinuierlich über",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "durFrames": 42
+    },
+    {
+      "stepId": "show_nkw_hazard_gearbox_image",
+      "targetId": "nkw_hazard_gearbox_image",
+      "action": "show",
+      "sourceText": "Hierbei steigt die Ausfallrate kontinuierlich über",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_wearout_area",
+      "targetId": "wearout_area",
+      "action": "show",
+      "sourceText": "In unserem Beispiel sehen wir aufgrund",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_nkw_hazard_mechanism",
+      "targetId": "nkw_hazard_mechanism",
+      "action": "show",
+      "sourceText": "In unserem Beispiel sehen wir aufgrund",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_nkw_hazard_counterexample",
+      "targetId": "nkw_hazard_counterexample",
+      "action": "show",
+      "sourceText": "Der Verlauf der Ausfallrate eines Produktes",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

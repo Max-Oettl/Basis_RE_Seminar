@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_028.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "histogram_bars",
+      "label": "Histogrammklassen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "histogram_definition",
+      "label": "Histogrammdefinition",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "density_curve",
+      "label": "Dichtefunktion",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "density_population_context",
+      "label": "Grundgesamtheit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "density_range_interpretation",
+      "label": "Ausfallbereich",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_histogram_bars",
+      "targetId": "histogram_bars",
+      "action": "show",
+      "sourceText": "Zunächst erstellen wir ein Histogramm für die Ausfallzeiten unserer Stichprobe",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_histogram_definition",
+      "targetId": "histogram_definition",
+      "action": "show",
+      "sourceText": "Zunächst erstellen wir ein Histogramm für die Ausfallzeiten unserer Stichprobe",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_density_curve",
+      "targetId": "density_curve",
+      "action": "draw",
+      "sourceText": "Würden wir nun die Stichprobengröße und auch die Klassenanzahl immer weiter erhöhen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_density_population_context",
+      "targetId": "density_population_context",
+      "action": "show",
+      "sourceText": "Wichtig zu merken an dieser Stelle ist",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_density_range_interpretation",
+      "targetId": "density_range_interpretation",
+      "action": "show",
+      "sourceText": "So könnte man in unserem Schaubild direkt interpretieren",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

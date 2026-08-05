@@ -10,6 +10,7 @@ from reltest_plot_style import (
     save_figure,
     style_axes,
 )
+from svg_animation_targets import prepare_svg_animation_targets
 
 
 def build_plot(
@@ -29,7 +30,7 @@ def build_plot(
     fig, ax = plt.subplots()
 
     if connect:
-        ax.plot(
+        data_artist = ax.plot(
             x_values,
             y_values,
             color=RELTEST_COLORS["data"],
@@ -39,9 +40,9 @@ def build_plot(
             markerfacecolor="white",
             markeredgewidth=1.8,
             markeredgecolor=RELTEST_COLORS["accent"],
-        )
+        )[0]
     else:
-        ax.scatter(
+        data_artist = ax.scatter(
             x_values,
             y_values,
             s=58,
@@ -50,12 +51,14 @@ def build_plot(
             linewidth=1.8,
             zorder=3,
         )
+    data_artist.set_gid("plot_data_series")
 
     style_axes(ax, xlabel, ylabel)
     ax.margins(x=0.08, y=0.12)
     fig.tight_layout()
     save_figure(fig, output)
     plt.close(fig)
+    prepare_svg_animation_targets(output, {"plot_data_series": "Datenreihe"})
 
 
 def main() -> None:

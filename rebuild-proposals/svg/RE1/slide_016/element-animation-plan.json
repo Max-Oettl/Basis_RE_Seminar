@@ -1,0 +1,93 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_016",
+  "scene_id": "re1_src_017",
+  "source_slides": [
+    17
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "assurance_contribution",
+      "label": "Erprobung und Absicherung",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "reliability_collaboration",
+      "label": "Gemeinsames Ziel",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "design_contribution",
+      "label": "Konstruktive Auslegung",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "reliability_collaboration_links",
+      "label": "Zusammenspiel beider Beiträge",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_assurance_contribution",
+      "targetId": "assurance_contribution",
+      "action": "show",
+      "sourceText": "Für die Sicherstellung der Produktzuverlässigkeit reichen die quantitativen sowie die qualitativen Methoden allein nicht aus",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_reliability_collaboration",
+      "targetId": "reliability_collaboration",
+      "action": "show",
+      "sourceText": "Eine Zusammenarbeit zwischen Design und Zuverlässigkeit-Team ist entscheidend",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_design_contribution",
+      "targetId": "design_contribution",
+      "action": "show",
+      "sourceText": "Bei der konstruktiven Auslegung kann zum einen auf bewährte Konstruktionsrichtlinien zurückgegriffen werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_reliability_collaboration_links",
+      "targetId": "reliability_collaboration_links",
+      "action": "draw",
+      "sourceText": "Ein zuverlässiges Produkt resultiert also immer nur aus Zusammenspiel",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

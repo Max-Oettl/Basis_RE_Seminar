@@ -1,10 +1,10 @@
-# Reltest Academy Design Quality Bar
+# RelTest Education Design Quality Bar
 
 Diese Datei definiert die Mindestqualität für produktive SVG-Grafiken.
 
 ## Zielbild
 
-Reltest Academy Grafiken sollen wirken wie hochwertige technische Weiterbildung für Ingenieure:
+RelTest Education Grafiken sollen wirken wie hochwertige technische Weiterbildung für Ingenieure:
 
 - präzise
 - ruhig
@@ -35,6 +35,10 @@ Eine SVG ist nicht freigabefähig, wenn einer dieser Punkte zutrifft:
 - Eine Karte oder ein Bereich enthält zu viele Texte und wirkt vollgestellt.
 - Die Grafik übersetzt das Storyboard nur mechanisch, ohne klare visuelle Idee.
 - Verschiedene Szenen wirken wie unterschiedliche Designsysteme.
+- Neue SVGs verwenden noch die Altbezeichnung `RelTest Academy`, das Profil
+  `reltest-academy` oder eine Solutions-dominante Cyan-Signatur.
+- Inhaltstext verwendet nicht Archivo oder Headlines/Auszeichnungen verwenden
+  nicht Oxanium.
 - Die Grafik wirkt wie eine PowerPoint-Folie mit großer Überschrift statt wie ein eigenständiges Bild- oder Diagrammelement.
 - Ein SVG-Vorschlag enthaelt einen automatisch gesetzten sichtbaren Folientitel, obwohl der Titel spaeter im Folien-/Videolayout ergaenzt wird.
 - Fazit-, Merksatz- oder Zusammenfassungsboxen werden ohne didaktische Notwendigkeit eingefuegt.
@@ -54,8 +58,23 @@ Grobe Ersatzkonstruktionen aus Kreisen, Rechtecken und Strichen sind nur erlaubt
 
 Wenn ein Motiv als SVG-Pfad nicht hochwertig genug gelingt und nicht einzeln animiert werden muss, ist ein eingebettetes Raster-Piktogramm oft die bessere Lösung.
 
+Neue Piktogramme muessen ausserdem das Stilprofil
+`reltest-education-minimal-v1` und
+`workflow/30-visual-decision/pictogram-creation-workflow.md` erfuellen. Nicht
+akzeptabel sind insbesondere kleine 3D-Renderings, isometrische Perspektiven,
+Verlaeufe, Glanz, Schatten, Glow, Texturen, Sticker-/Emoji-Optik, eingebrannter
+Text oder ein nicht transparenter Rasterhintergrund.
+
+E-Learning-Freigabe verlangt eine eindeutige Begriffszuordnung, erkennbare
+Silhouette bei 48 px, pruefbaren Szenenrender bei 960x540, mindestens 3:1
+Kontrast fuer bedeutungsrelevante Teile und eine nicht allein farbcodierte
+Bedeutung.
+
 ## Textqualität
 
+- Inhaltstext verwendet Archivo; Headlines und Auszeichnungen verwenden Oxanium.
+- Sora, Inter, Segoe UI und Arial sind keine fuehrenden Markenschriften mehr.
+  Arial/Helvetica sind nur technische Fallbacks hinter Archivo.
 - Text in Grafiken ist sparsam einzusetzen.
 - Der Sprechertext trägt die Erklärung; die Grafik zeigt Struktur, Beziehung und Kernidee.
 - Labels müssen groß genug und klar lesbar sein.
@@ -90,7 +109,8 @@ Wenn ein Motiv als SVG-Pfad nicht hochwertig genug gelingt und nicht einzeln ani
 ## Merksatzband
 
 - Merksätze am unteren Bildrand verwenden das Takeaway-Band aus `components/takeaway-band.md`.
-- Das Band ist navy, hat links eine cyanfarbene Akzentleiste und eine dezente cyanfarbene Innenkontur.
+- Das Band ist marineblau, hat links eine signalgruene Akzentleiste und eine
+  dezente signalgruene Innenkontur.
 - Die erste Zeile enthält die Kernaussage, die zweite Zeile nur eine kurze Präzisierung.
 - Unterschiedliche Fazitbox-Stile zwischen Szenen sind nicht akzeptabel, wenn kein bewusster didaktischer Grund dokumentiert ist.
 

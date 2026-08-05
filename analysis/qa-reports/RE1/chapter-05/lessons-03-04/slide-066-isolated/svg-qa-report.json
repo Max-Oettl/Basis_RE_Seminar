@@ -1,0 +1,98 @@
+{
+  "schema_version": "svgQaReport/v1",
+  "module_id": "slide-066",
+  "svg_root": "analysis/qa-isolation/slide-066",
+  "generated_at": "2026-07-20T05:53:59.687Z",
+  "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\tools\\svg-rebuild-qa.js analysis/qa-isolation/slide-066 --no-design --layout --report-dir analysis/qa-reports/RE1/chapter-05/lessons-03-04/slide-066-isolated",
+  "files": [
+    {
+      "path": "analysis/qa-isolation/slide-066/slide_066.svg",
+      "ids": 159,
+      "animationManifest": ""
+    }
+  ],
+  "issues": [
+    {
+      "rule": "layout_browser_render",
+      "severity": "warning",
+      "file": "analysis/qa-isolation/slide-066/slide_066.svg",
+      "slide": "066",
+      "time_seconds": null,
+      "state": "",
+      "element_id": "",
+      "related_element_id": "",
+      "message": "SVG layout QA failed for this file.",
+      "expected": null,
+      "actual": "CDP socket closed.",
+      "bbox": null,
+      "recommendation": "Check SVG syntax, external references, and browser-renderability.",
+      "detail": ""
+    }
+  ],
+  "viewer": {
+    "checked": false
+  },
+  "layout": {
+    "checked": true,
+    "strict": false,
+    "warnOnly": true,
+    "browser": {
+      "executable": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "port": 5484
+    },
+    "files": [
+      {
+        "path": "analysis/qa-isolation/slide-066/slide_066.svg",
+        "slide": "066",
+        "states_checked": 0,
+        "browser_rendered": false
+      }
+    ],
+    "issues": [
+      {
+        "rule": "layout_browser_render",
+        "severity": "warning",
+        "file": "analysis/qa-isolation/slide-066/slide_066.svg",
+        "slide": "066",
+        "time_seconds": null,
+        "state": "",
+        "element_id": "",
+        "related_element_id": "",
+        "message": "SVG layout QA failed for this file.",
+        "expected": null,
+        "actual": "CDP socket closed.",
+        "bbox": null,
+        "recommendation": "Check SVG syntax, external references, and browser-renderability.",
+        "detail": ""
+      }
+    ],
+    "summary": {
+      "checked": true,
+      "files_checked": 1,
+      "states_checked": 0,
+      "errors": 0,
+      "warnings": 1
+    }
+  },
+  "design": {
+    "checked": false
+  },
+  "handoff": {
+    "checked": false
+  },
+  "summary": {
+    "files_checked": 1,
+    "manifests_checked": 0,
+    "layout_files_checked": 1,
+    "layout_states_checked": 0,
+    "design_files_checked": 0,
+    "design_errors": 0,
+    "design_warnings": 0,
+    "handoff_scenes_checked": 0,
+    "handoff_manifests_checked": 0,
+    "handoff_errors": 0,
+    "handoff_warnings": 0,
+    "errors": 0,
+    "warnings": 1
+  }
+}

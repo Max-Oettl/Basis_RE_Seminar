@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re2_ch2_abc_classification_rules",
+  "targets": [
+    {
+      "targetId": "abc18_a",
+      "label": "A-Teile",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "abc18_b",
+      "label": "B-Teile",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "abc18_difference",
+      "label": "Unterschied A und B",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "abc18_c",
+      "label": "C-Teile",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_abc18_a",
+      "targetId": "abc18_a",
+      "action": "show",
+      "sourceText": "Dabei wird jeder Ausfallmechanismus als A-Teil, B-Teil oder C-Teil klassifiziert.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_abc18_b",
+      "targetId": "abc18_b",
+      "action": "show",
+      "sourceText": "A-Teile und B-Teile gelten als risikoreich.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_abc18_difference",
+      "targetId": "abc18_difference",
+      "action": "show",
+      "sourceText": "Der Unterschied zwischen ihnen besteht darin, dass die Belastung für A-Teile definierbar oder berechenbar ist.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_abc18_c",
+      "targetId": "abc18_c",
+      "action": "show",
+      "sourceText": "C-Teile dagegen sind risikoneutral und müssen nicht weiterverfolgt werden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    }
+  ]
+}

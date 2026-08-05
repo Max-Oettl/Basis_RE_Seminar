@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_028.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "histogram_bars",
+      "label": "Stichprobe als Histogrammklassen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "density_curve",
+      "label": "Dichtefunktion der Grundgesamtheit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_histogram_bars",
+      "targetId": "histogram_bars",
+      "action": "show",
+      "sourceText": "Zunächst erstellen wir ein Histogramm für die Ausfallzeiten unserer Stichprobe",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_density_curve",
+      "targetId": "density_curve",
+      "action": "draw",
+      "sourceText": "Würden wir nun die Stichprobengröße und auch die Klassenanzahl immer weiter erhöhen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    }
+  ]
+}

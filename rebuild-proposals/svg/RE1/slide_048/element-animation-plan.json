@@ -1,0 +1,75 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_048",
+  "scene_id": "re1_src_053",
+  "source_slides": [
+    53
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "ppm_scale_comparison",
+      "label": "Prozent, Promille und ppm",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "ppm_lifetime_reference",
+      "label": "Kopplung an Lebensdauer",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "ppm_to_bq_transition",
+      "label": "Übergang zur Bq-Lebensdauer",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_ppm_scale_comparison",
+      "targetId": "ppm_scale_comparison",
+      "action": "show",
+      "sourceText": "in Prozent, Promille oder Parts Per Million",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_ppm_lifetime_reference",
+      "targetId": "ppm_lifetime_reference",
+      "action": "show",
+      "sourceText": "nur sinnvoll, wenn sie für eine Lebensdauer wie eine bestimmte Anzahl an Betriebsstunden oder eine Laufleistung definiert wird",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_ppm_to_bq_transition",
+      "targetId": "ppm_to_bq_transition",
+      "action": "show",
+      "sourceText": "Genau hierfür ist die B-Q-Lebensdauer geeignet",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

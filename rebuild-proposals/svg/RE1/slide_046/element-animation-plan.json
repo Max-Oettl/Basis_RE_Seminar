@@ -1,0 +1,111 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_046",
+  "scene_id": "re1_src_051",
+  "source_slides": [
+    51
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "mttf_failure_observations",
+      "label": "Ausfallzeiten nicht reparierbarer Einheiten",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "mttf_formula",
+      "label": "MTTF-Formel",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "mttf_density",
+      "label": "Dichtefunktion der Lebensdauer",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "mttf_marker",
+      "label": "MTTF-Marker",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "mttf_half_probability",
+      "label": "50-Prozent-Einordnung",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_mttf_failure_observations",
+      "targetId": "mttf_failure_observations",
+      "action": "show",
+      "sourceText": "Produkten, die nicht repariert werden können",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_mttf_formula",
+      "targetId": "mttf_formula",
+      "action": "show",
+      "sourceText": "Erwartungswert der Lebensdauer, der aus dem Integral der Zuverlässigkeitsfunktion über der Zeit berechnet wird",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_mttf_density",
+      "targetId": "mttf_density",
+      "action": "draw",
+      "sourceText": "Näherungsweise kann dieser Wert auch durch den Mittelwert der Verteilung abgeschätzt werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_mttf_marker",
+      "targetId": "mttf_marker",
+      "action": "show",
+      "sourceText": "Der M-T-T-F repräsentiert somit die mittlere Lebensdauer",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_mttf_half_probability",
+      "targetId": "mttf_half_probability",
+      "action": "show",
+      "sourceText": "fünfzig Prozent Überlebens- beziehungsweise Ausfallwahrscheinlichkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

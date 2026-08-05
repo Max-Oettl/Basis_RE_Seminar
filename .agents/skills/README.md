@@ -11,14 +11,22 @@ Formale Codex-Skills sollen hier erst entstehen, wenn eine wiederverwendbare Fae
 
 ## Aktuelle Entscheidung
 
-Die Regeln fuer die Basis-Seminar-Folienuebersetzung werden nicht als separater Skill ausgelagert. Sie bleiben in:
+Die allgemeinen Regeln fuer die Basis-Seminar-Folienuebersetzung bleiben in:
 
 - `AGENT.md` fuer globale Prioritaeten,
 - `agents/*.md` fuer Rollenpflichten,
 - `workflow/` fuer konkrete Prozess- und Qualitaetsregeln,
 - `templates/` fuer auszufuellende Planungsartefakte.
 
-Grund: Die aktuelle Arbeit optimiert die Uebersetzung vorhandener PowerPoint-Folien in Content-SVGs. Diese Regeln sind stark projekt-, quellen- und workflowgebunden. Ein formaler Skill wuerde erst Sinn ergeben, wenn daraus eine allgemeine, projektunabhaengige Faehigkeit entsteht, z.B. ein wiederverwendbarer Python-Plot-SVG-Skill.
+Ein formaler Skill existiert fuer die bewusst wiederverwendbare Redesign-Faehigkeit:
+
+- `redesign-reltest-slides/`: Redesign einzelner Folien, Sequenzen oder Module im RelTest-Education-Design mit getrennten Modi fuer Vollfolien und Content-SVGs.
+- `animate-svg-from-narration/`: Sprechertextgefuehrte SVG-Animationsdramaturgie mit bewusstem Initialzustand, semantischen Gruppen, Abhaengigkeitslogik, Effektwahl und zustandsbasierter QA.
+
+Grund fuer diese Ausnahmen: Redesign und Animationsdramaturgie besitzen jeweils
+einen eigenstaendigen Trigger, wiederverwendbare Entscheidungssysteme und klar
+abgegrenzte Qualitaetsgates. Die allgemeine Quellenuebersetzung bleibt weiterhin
+projektgebunden und wird nicht dupliziert.
 
 - Projektregeln bleiben nah an Quellen, Szenenplaenen und bestehenden Artefakten.
 - Codex kann per Workflow-Router nur die noetigen Detaildateien laden.

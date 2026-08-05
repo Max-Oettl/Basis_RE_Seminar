@@ -1,27 +1,34 @@
 {
   "schema": "companyBrandTokens/v1",
   "brand": {
-    "companyName": "Reltest Academy",
-    "profile": "reltest-academy",
-    "version": "0.1.0",
+    "companyName": "RelTest Education",
+    "profile": "reltest-education",
+    "subbrand": "education",
+    "version": "1.0.0",
+    "effectiveDate": "2026-07-31",
     "source": [
-      "brand/reltest-academy-style-guide.md",
+      "source-materials/brand/Corporate_Design_RELTEST_19.pdf",
+      "brand/reltest-education-style-guide.md",
       "brand/design-quality-bar.md"
     ],
     "personality": [
+      "modern",
+      "reduziert",
+      "international",
       "technisch",
-      "serioes",
       "praezise",
-      "ruhig",
-      "zuverlaessigkeitsorientiert",
-      "managementtauglich"
+      "professionell",
+      "digital-affin",
+      "didaktisch-klar"
     ],
     "avoid": [
+      "solutions-dominante-cyanpalette",
+      "academy-altmarke",
       "verspielt",
       "bunt-zufaellig",
       "ueberladen",
-      "startup-dekorativ",
-      "generische-ki-aesthetik"
+      "generische-ki-aesthetik",
+      "dekorative-effekte"
     ]
   },
   "canvas": {
@@ -40,37 +47,100 @@
     "cardPadding": 32
   },
   "typography": {
+    "displayFontFamily": "\"Oxanium\", \"Archivo\", Arial, sans-serif",
+    "bodyFontFamily": "\"Archivo\", Arial, Helvetica, sans-serif",
+    "fallbackFontFamily": "Arial, Helvetica, sans-serif",
+    "fontAssets": {
+      "oxaniumVariable": "brand/fonts/oxanium/Oxanium-wght.ttf",
+      "archivoVariable": "brand/fonts/archivo/Archivo-wdth-wght.ttf",
+      "archivoItalicVariable": "brand/fonts/archivo/Archivo-Italic-wdth-wght.ttf",
+      "license": "SIL Open Font License 1.1"
+    },
     "title": 54,
     "contentTitle": 44,
     "subtitle": 32,
     "body": 26,
     "caption": 20,
     "minReadable": 18,
-    "minCaption": 14
+    "minCaption": 14,
+    "hierarchy": {
+      "h1": {
+        "family": "Oxanium",
+        "weight": 700,
+        "lineHeight": 1.15,
+        "allCapsRule": "Only for short titles up to 3-4 words or about 25 characters.",
+        "allCapsLetterSpacing": "0.03em"
+      },
+      "h2": {
+        "family": "Oxanium",
+        "weight": 600,
+        "acceptedWeightRange": [500, 600],
+        "lineHeight": 1.15
+      },
+      "h3": {
+        "family": "Archivo",
+        "weight": 600,
+        "lineHeight": 1.15
+      },
+      "body": {
+        "family": "Archivo",
+        "weight": 400,
+        "lineHeight": 1.35
+      },
+      "emphasis": {
+        "family": "Archivo",
+        "weight": 600
+      },
+      "caption": {
+        "family": "Archivo",
+        "weight": 400,
+        "style": "italic"
+      }
+    },
+    "alignment": "left",
+    "listMarker": "en-dash"
   },
   "colors": {
     "backgroundLight": "#F7F9FC",
-    "backgroundDark": "#021D31",
+    "backgroundDark": "#031334",
     "panelLight": "#FFFFFF",
-    "panelSoft": "#EEF3F6",
-    "textPrimary": "#062D46",
-    "textSecondary": "#6A7A86",
+    "panelSoft": "#E6F6EE",
+    "textPrimary": "#031334",
+    "textSecondary": "#25495F",
     "textInverse": "#FFFFFF",
-    "brandPrimary": "#062D46",
-    "brandSecondary": "#021D31",
-    "accentPrimary": "#139CCB",
-    "accentSecondary": "#E7F6FB",
-    "lineMuted": "#CBD5E1",
-    "gridMuted": "#E2E8F0",
-    "riskLow": "#2AA876",
-    "riskMedium": "#F2A93B",
-    "riskHigh": "#D1495B",
-    "black": "#000000"
+    "brandPrimary": "#031334",
+    "brandPrimary80": "#35425D",
+    "brandPrimary60": "#687185",
+    "brandPrimary40": "#9AA1AE",
+    "brandPrimary20": "#CDD0D6",
+    "brandPrimary10": "#E6E7EB",
+    "accentPrimary": "#00A754",
+    "accentPrimary80": "#33B976",
+    "accentPrimary60": "#66CA98",
+    "accentPrimary40": "#99DCBA",
+    "accentPrimary20": "#CCEDDD",
+    "accentPrimary10": "#E6F6EE",
+    "educationGold": "#E9B400",
+    "educationCoral": "#EC6244",
+    "educationSteelCyan": "#0C84B4",
+    "educationGraphiteBlue": "#25495F",
+    "lineMuted": "#CDD0D6",
+    "gridMuted": "#E6E7EB",
+    "riskLow": "#00A754",
+    "riskMedium": "#E9B400",
+    "riskHigh": "#EC6244",
+    "black": "#000000",
+    "white": "#FFFFFF"
   },
   "stroke": {
     "hairline": 1.5,
     "normal": 2.5,
-    "emphasis": 4
+    "emphasis": 4,
+    "maximum": 6
+  },
+  "pictograms": {
+    "tokenSource": "brand/reltest-education-pictogram-tokens.json",
+    "styleProfile": "reltest-education-minimal-v1"
   },
   "radius": {
     "small": 8,
@@ -81,33 +151,40 @@
     "allowed": false
   },
   "variants": {
-    "technical": {
+    "education-technical": {
       "defaultBackgroundMode": "transparent",
       "primaryAccent": "accentPrimary",
       "density": "normal"
     },
-    "management": {
+    "education-management": {
       "defaultBackgroundMode": "transparent",
       "primaryAccent": "brandPrimary",
       "density": "normal"
     },
-    "light": {
+    "education-light": {
       "defaultBackgroundMode": "transparent",
       "primaryAccent": "accentPrimary",
       "density": "normal"
     },
-    "dark": {
+    "education-dark": {
       "defaultBackgroundMode": "dark",
       "primaryAccent": "accentPrimary",
       "density": "low"
     },
-    "minimal": {
+    "education-minimal": {
       "defaultBackgroundMode": "transparent",
       "primaryAccent": "brandPrimary",
       "density": "dense"
     }
   },
   "qa": {
+    "requiredBrandProfile": "reltest-education",
+    "requiredBodyFont": "Archivo",
+    "allowedDisplayFont": "Oxanium",
+    "legacyBrandNamesForbidden": [
+      "Reltest Academy",
+      "RelTest Academy"
+    ],
     "metadataRequiredFields": [
       "artifactScope",
       "embeddingTarget",

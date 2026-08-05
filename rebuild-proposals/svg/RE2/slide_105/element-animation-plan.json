@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re2_ch4_fmea_slide_105",
+  "targets": [
+    {
+      "targetId": "s105_nodes",
+      "label": "Autoreifen-Beispiel",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s105_links",
+      "label": "Ursache-Wirkungs-Kette",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s105_nodes",
+      "targetId": "s105_nodes",
+      "action": "show",
+      "sourceText": "Bei einem Autoreifen könnte dies beispielsweise ein plötzlicher Druckverlust sein. Jeder Fehler hat grundsätzlich eine Fehlerursache, die zu diesem Fehler geführt hat. Für den Druckverlust im Reifen könnte ein spitzer Gegenstand wie ein Nagel auf der Straße verantwortlich sein.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_s105_links",
+      "targetId": "s105_links",
+      "action": "draw",
+      "sourceText": "Bei einem Autoreifen könnte dies beispielsweise ein plötzlicher Druckverlust sein. Jeder Fehler hat grundsätzlich eine Fehlerursache, die zu diesem Fehler geführt hat. Für den Druckverlust im Reifen könnte ein spitzer Gegenstand wie ein Nagel auf der Straße verantwortlich sein.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung wird erst nach den zugehörigen fachlichen Endpunkten aufgebaut.",
+      "drawDurFrames": 42
+    }
+  ]
+}

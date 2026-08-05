@@ -1,0 +1,11 @@
+{
+  "schema_version": "reltestFormulaSet/v1",
+  "distribution": "exponential",
+  "source_slides": [70],
+  "formulas": {
+    "density": "$f(t)=\\lambda\\,e^{-\\lambda t}$",
+    "failure_probability": "$F(t)=1-e^{-\\lambda t}$",
+    "reliability": "$R(t)=e^{-\\lambda t}$",
+    "hazard": "$\\lambda(t)=\\frac{f(t)}{R(t)}=\\lambda=\\frac{1}{t_m}$"
+  }
+}

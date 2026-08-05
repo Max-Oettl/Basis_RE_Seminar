@@ -1,5 +1,7 @@
 # Slide Rebuild JSON Contract
 
+> Legacy-Vertrag fuer bestehende Mehrquellen-Analysen. Neue PowerPoint-SVG-Module verwenden `workflow/10-source-analysis/source-svg-transformation-contract.md` und `analysis/source-svg-inventory.schema.json`.
+
 Dieser Vertrag beschreibt die JSON-Struktur fuer eine analysierte Basis-Seminar-Folie.
 
 Das maschinenlesbare Schema liegt unter:

@@ -1,0 +1,93 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_008",
+  "scene_id": "re1_src_008",
+  "source_slides": [
+    8
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "motivation_media_context",
+      "label": "Industrieller Anlagenkontext",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "forecast_quote_setup",
+      "label": "Zitat zum Unvorhersehbaren",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "forecast_quote_conclusion",
+      "label": "Schlusszeile des SKF-Zitats",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "forecast_quote_implication",
+      "label": "Praktische Bedeutung des Zitats",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_motivation_media_context",
+      "targetId": "motivation_media_context",
+      "action": "show",
+      "sourceText": "bewirbt SKF ihr Trouble-Free Operation Service Program",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_forecast_quote_setup",
+      "targetId": "forecast_quote_setup",
+      "action": "show",
+      "sourceText": "Drei Dinge kann keiner voraussagen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_forecast_quote_conclusion",
+      "targetId": "forecast_quote_conclusion",
+      "action": "show",
+      "sourceText": "Mach zwei daraus",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_forecast_quote_implication",
+      "targetId": "forecast_quote_implication",
+      "action": "show",
+      "sourceText": "Die Intention dahinter ist klar",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

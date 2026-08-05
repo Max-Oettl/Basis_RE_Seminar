@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re2_ch2_p_diagram_principle",
+  "targets": [
+    {
+      "targetId": "p_system",
+      "label": "System Produkt oder Prozess",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "p_inputs",
+      "label": "Eingangs- und Stellgrößen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "p_controls",
+      "label": "Kontrollierbare Größen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "p_disturbances",
+      "label": "Störgrößen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "p_outputs",
+      "label": "Zielgrößen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "p_relations",
+      "label": "Wirkbeziehungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_p_system",
+      "targetId": "p_system",
+      "action": "show",
+      "sourceText": "Das Parameter Diagramm stellt den Zusammenhang zwischen Systemparametern",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_p_inputs",
+      "targetId": "p_inputs",
+      "action": "show",
+      "sourceText": "Ganz links gibt es die Eingangsgrößen oder auch Stellgrößen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_p_controls",
+      "targetId": "p_controls",
+      "action": "show",
+      "sourceText": "Zusätzlich gehen in das System kontrollierbare Größen oder Steuergrößen ein.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_p_disturbances",
+      "targetId": "p_disturbances",
+      "action": "show",
+      "sourceText": "Unerwünschte Einflüsse, die wir nicht direkt kontrollieren können",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_05_p_outputs",
+      "targetId": "p_outputs",
+      "action": "show",
+      "sourceText": "Aus dem System heraus gehen die Zielgrößen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_06_p_relations",
+      "targetId": "p_relations",
+      "action": "draw",
+      "sourceText": "Die Klassifizierung dieser Größen innerhalb des P-Diagramms hilft uns",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "drawDurFrames": 42
+    }
+  ]
+}

@@ -1,14 +1,15 @@
 # Agentenrollen
 
-Diese Rollen dienen als interne Arbeitsanweisungen. Der Default dieses Repos ist jetzt die Basis-Seminar-Rebuild-Analyse.
+Diese Rollen dienen als interne Arbeitsanweisungen. Der Default dieses Repos ist die Transformation exportierter PowerPoint-Quell-SVGs.
 
 Die verpflichtenden Mindestregeln stehen in `AGENT.md`. Die Detailregeln werden ueber `workflow/README.md` und `workflow/00-router/context-loading-map.md` geladen.
 
-## Primaerprozess: Rebuild-Analyse
+## Primaerprozess: Quell-SVG-Analyse
 
-1. `rebuild-analysis-orchestrator.md`
+1. `source-text-intake-mapper.md`
+2. `source-svg-transformation-planner.md`
 
-Der Rebuild Analysis Orchestrator fuehrt Quelleninventar, Folienanalyse, Sprechertext-Verknuepfung, Rebuild-JSON und Modulreport.
+Der Source Text Intake Mapper extrahiert zuerst die Word-Sprechertexte und ordnet sie den einzelnen Quell-SVGs zu. Erst danach fuehrt der Source SVG Transformation Planner Modul-Inventar, Zustandsvergleich, Sequenzgruppierung, stabile `Scene_ID`-Vergabe, Sprechertextzuordnung, Quellreferenz-Mapping und Transformationsplanung aus.
 
 Er erzeugt keine SVGs, keine PNGs und keine neuen Sprechertexte, ausser der Nutzer beauftragt ausdruecklich einen SVG-Vorschlag oder eine Testumsetzung.
 
@@ -16,33 +17,35 @@ Er erzeugt keine SVGs, keine PNGs und keine neuen Sprechertexte, ausser der Nutz
 
 Wenn ein SVG-Vorschlag aus vorhandenen Basis-Seminar-Folien erstellt wird, gelten diese Rollen verpflichtend:
 
-1. `rebuild-analysis-orchestrator.md`
-2. Sequenzkarte und Design-Brief nach `workflow/40-svg-production/svg-rebuild-production-runbook.md`
-3. `creative-scene-concept-designer.md`
-4. `svg-visual-designer.md`
-5. `svg-compositor.md`
-6. `visual-composition-reviewer.md`
-7. `svg-technical-validator.md`
-8. `brand-guardian.md`
+1. `source-text-intake-mapper.md`
+2. `source-svg-transformation-planner.md`
+3. Sequenzkarte und Design-Brief nach `workflow/40-svg-production/svg-rebuild-production-runbook.md`
+4. `creative-scene-concept-designer.md`
+5. `svg-visual-designer.md`
+6. `svg-compositor.md`
+7. `visual-composition-reviewer.md`
+8. `svg-technical-validator.md`
+9. `brand-guardian.md`
 
 Der SVG-Vorschlag ist eine neue Grafikkomponente fuer die spaetere Folienerstellung. Er ist nicht automatisch eine komplette PowerPoint-Folie.
 
 Der Zielkontext ist ein Basis-Seminar. Die Agenten duerfen kein Vorwissen in Zuverlaessigkeitstechnik voraussetzen. Der neue Kreativ-Agent entwickelt vor dem visuellen Design einsteigerfreundliche Szenenansaetze und empfiehlt eine didaktisch klare Variante.
 
-Die neue Grafik ist eine inhaltliche Uebersetzung, keine Zusammenfassung. Der fachlich relevante Inhalt der Quellfolie(n) wird vollstaendig uebernommen, anders verpackt und sauberer gestaltet. Die Informationsdichte orientiert sich an den PowerPoint-Folien; der Sprechertext muss weiterhin passen.
+Die neue Grafik ist eine Strukturtransformation, keine Zusammenfassung und kein erneuter Nachbau. Der fachlich relevante Inhalt der Quell-SVGs wird vollstaendig uebernommen, neu gruppiert und animierbar gemacht. Die Informationsdichte orientiert sich an den Quell-SVGs; der Sprechertext muss weiterhin passen.
 
 Es wird immer nur eine Arbeitseinheit bearbeitet: eine echte Inhaltsfolie oder eine Sequenzgruppe. Die naechste Einheit beginnt erst, wenn Szenenplanung, Umsetzung, Render, visueller Fehlercheck und Korrektur der aktuellen Einheit abgeschlossen sind.
 
 Pflichtpruefung vor Freigabe:
 
-- das gesamte relevante Folienpaket wurde vor dem Bauen betrachtet
+- das gesamte Quell-SVG-Paket wurde vor dem Bauen betrachtet und inventarisiert
+- alle Word-Dokumente wurden verlustfrei extrahiert und jede Quell-SVG besitzt ein eindeutiges, hashgesichertes Text-Mapping
 - Aufbau-, Morph- und Duplikatfolien wurden gruppiert
 - pro Gruppe ist die vollstaendige Zielzustandsfolie bestimmt
 - mehrere Folien, die durch Animationen zu einer gemeinsamen Erklaergrafik werden koennen, wurden zusammengezogen und als Layer-/Preview-Struktur geplant
 - vorhandene Folien und Sprechertext wurden nach `workflow/10-source-analysis/source-slide-and-spoken-text-alignment.md` abgeglichen
 - die neue Grafik laesst keine im Sprechertext grafisch relevante Aussage aus
 - die neue Grafik laesst keinen fachlich relevanten Quellinhalt aus, auch wenn Layout und Verpackung modernisiert werden
-- es gibt einen Design-Brief; die alte PowerPoint ist Inhaltsquelle, nicht Layoutschablone
+- es gibt einen Design-Brief und einen Quellknoten-Transformationsplan
 - fuer abstrakte oder fachlich anspruchsvolle Inhalte gibt es eine kreative, einsteigerfreundliche Konzeptphase vor dem SVG-Design
 - fuer die aktuelle Arbeitseinheit liegt vor dem Bau eine saubere Szenenplanung vor
 - es wurde nur diese eine Arbeitseinheit gebaut und geprueft, nicht mehrere gleichzeitig
@@ -52,13 +55,16 @@ Pflichtpruefung vor Freigabe:
 - Library-Komponenten wurden angepasst und nicht blind verwendet
 - Ausfallzeiten oder Datenmarker sind nicht kuenstlich gleichmaessig gesetzt, wenn sie unregelmaessig sein muessen
 - Pfeile, Achsen, Marker und Labels sind proportional, kollisionsfrei und bleiben innerhalb der vorgesehenen Layoutflaechen
-- bei Build-/Animationsfolien wird dokumentiert, ob mehrere PowerPoint-Folien eine gemeinsame Animation oder Morph-Sequenz bilden
+- bei Build-/Animationsfolien wird dokumentiert, ob mehrere Quell-SVGs eine gemeinsame Animation oder Morph-Sequenz bilden
 - bei Build-/Animationsfolien wird ein gemeinsames Zielbild mit Layern geplant; einzelne Folien-SVGs sind nur Preview-Zustaende, wenn sie fuer Review oder Pipeline gebraucht werden
 - jede Content-SVG enthaelt sinnvolle Animationsziele; fehlende Animationen brauchen eine Begruendung
 - echte Plots und technische Diagramme werden aus Python erzeugt; einfache Ausfall-Timelines mit `X`-Markern bleiben SVG-native Timelines
 - komplexere Piktogramme werden als freigegebene PNG-Assets eingebunden, nicht im SVG improvisiert
-- ein gerenderter Cross-Check gegen Zielzustandsfolie und Design-Brief wurde durchgefuehrt
+- ein gerenderter Cross-Check gegen alle zugeordneten Quell-SVGs und den Design-Brief wurde durchgefuehrt
 - gefundene visuelle Fehler wurden an derselben Einheit behoben und erneut geprueft
+- oeffentliche SVG-Ziele verwenden semantische ASCII-`snake_case`-IDs und `data-anim-target="true"`
+- jeder finale Animationsschritt besitzt eine eindeutige `sourceText`-Phrase aus dem freigegebenen Szenensprechertext
+- das finale `storyboardImportPackage/v1` wurde ueber `tools/svg-rebuild-qa.js --handoff-package ... --strict-handoff` geprueft
 
 ## Legacy-Prozess: Storyboard
 
@@ -88,7 +94,9 @@ Bei fachlich anspruchsvollen Inhalten kann `reliability-engineering-reviewer.md`
 
 ## Rollenlogik
 
-- `rebuild-analysis-orchestrator.md`: erstellt quellenbelegte Rebuild-Spezifikationen fuer bestehende Folien.
+- `source-text-intake-mapper.md`: extrahiert Word-Dokumente und erstellt das eindeutige SVG-Text-Mapping.
+- `source-svg-transformation-planner.md`: inventarisiert Quell-SVGs und plant Zusammenfuehrung, Zielstruktur und Animation.
+- `rebuild-analysis-orchestrator.md`: Legacy-Rolle fuer bestehende PPTX/PDF/PNG-Mehrquellenanalysen.
 - `creative-scene-concept-designer.md`: entwickelt kreative, basisgerechte Szenenkonzepte ohne vorausgesetztes Expertenwissen.
 - `storyboard-orchestrator.md`: fuehrt alte oder spaetere Storyboard-Erstellungen.
 - `storyboard-writer.md`: schreibt freigegebene Storyboard-JSON.

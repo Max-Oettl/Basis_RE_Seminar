@@ -149,6 +149,78 @@ test("Unicode-Matching, occurrence und Wortgrenzen sind deterministisch", () => 
   assert.equal(domain.expandToWordBoundaries(text, 8, 31), "enthalten auch unterschiedlich");
 });
 
+test("Pausenmarker sind keine Wörter oder Animationstrigger", () => {
+  const spoken = "Zuerst die Basis. {{pause:medium}} Danach folgt das Ergebnis.";
+  assert.deepEqual(domain.wordTokens(spoken).map((token) => token.raw), [
+    "Zuerst", "die", "Basis", "Danach", "folgt", "das", "Ergebnis",
+  ]);
+  assert.equal(domain.matchSourceText(spoken, "Danach folgt das Ergebnis").selected.wordIndex, 3);
+
+  const issues = domain.collectIssues(
+    {
+      targets: [{ targetId: "result", status: "animated" }],
+      steps: [{ stepId: "pause", targetId: "result", action: "show", sourceText: "{{pause:medium}}" }],
+    },
+    [{ targetId: "result", tagName: "g" }],
+    spoken,
+  );
+  assert.ok(issues.some((issue) => issue.code === "pause-marker-as-trigger" && issue.severity === "error"));
+});
+
+test("Mock-Timeline addiert Pausen vor nachfolgenden Sprachtriggern", () => {
+  const inventory = [{ targetId: "result", tagName: "g" }];
+  const manifest = {
+    targets: [{ targetId: "result", status: "animated" }],
+    steps: [{ targetId: "result", action: "show", sourceText: "Danach folgt das Ergebnis" }],
+  };
+  const timeline = domain.buildMockTimeline(
+    manifest,
+    inventory,
+    "Zuerst die Basis. {{pause:long}} Danach folgt das Ergebnis.",
+  );
+  assert.equal(timeline[0].pauseOffsetSec, 1.4);
+  assert.equal(timeline[0].mockSec, 1.4);
+});
+
+test("Pausenmarker sind keine Woerter und verschieben nachfolgende Mock-Zeitpunkte", () => {
+  const spoken = "Block A. {{pause:medium}} Danach folgt Block B.";
+  assert.deepEqual(domain.wordTokens(spoken).map((token) => token.raw), [
+    "Block", "A", "Danach", "folgt", "Block", "B",
+  ]);
+  assert.equal(domain.wordTokens(spoken)[2].start, spoken.indexOf("Danach"));
+
+  const inventory = [
+    { targetId: "a", tagName: "g" },
+    { targetId: "b", tagName: "g" },
+  ];
+  const manifest = domain.syncManifest({
+    schemaVersion: domain.SCHEMA_VERSION,
+    svgPath: "slide.svg",
+    targets: [
+      { targetId: "a", status: "animated" },
+      { targetId: "b", status: "animated" },
+    ],
+    steps: [
+      { targetId: "a", action: "show", sourceText: "Block A" },
+      { targetId: "b", action: "show", sourceText: "Block B" },
+    ],
+  }, inventory, "slide.svg");
+  const timeline = domain.buildMockTimeline(manifest, inventory, spoken);
+  assert.deepEqual(timeline.map((entry) => entry.mockSec), [0, 1.3]);
+});
+
+test("Pausenmarker koennen nicht als Animationstrigger gespeichert werden", () => {
+  const inventory = [{ targetId: "a", tagName: "g" }];
+  const manifest = domain.syncManifest({
+    schemaVersion: domain.SCHEMA_VERSION,
+    svgPath: "slide.svg",
+    targets: [{ targetId: "a", status: "animated" }],
+    steps: [{ targetId: "a", action: "show", sourceText: "{{pause:medium}}" }],
+  }, inventory, "slide.svg");
+  assert.ok(domain.collectIssues(manifest, inventory, "Text {{pause:medium}} weiter")
+    .some((issue) => issue.code === "pause-marker-as-trigger" && issue.severity === "error"));
+});
+
 test("Mock-Timeline folgt Sprach- statt Manifestreihenfolge", () => {
   const inventory = [
     { targetId: "a", tagName: "g" },

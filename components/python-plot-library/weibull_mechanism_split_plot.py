@@ -11,6 +11,7 @@ from reltest_plot_style import (
     save_figure,
     style_axes,
 )
+from svg_animation_targets import prepare_svg_animation_targets
 from weibull_probability_plot import (
     PROBABILITY_TICKS,
     linear_fit,
@@ -20,7 +21,7 @@ from weibull_probability_plot import (
 )
 
 
-MECHANISM_B_COLOR = "#3b66c4"
+MECHANISM_B_COLOR = RELTEST_COLORS["support"]
 
 
 def fit_series(times: list[float]) -> tuple[list[float], list[float], float, float]:
@@ -59,8 +60,8 @@ def build_plot(
     ax.set_xscale("log")
     line_a_artist = ax.plot(line_times, line_a, color=RELTEST_COLORS["accent"], linewidth=2.6, label="Mechanismus A")[0]
     line_b_artist = ax.plot(line_times, line_b, color=MECHANISM_B_COLOR, linewidth=2.6, label="Mechanismus B")[0]
-    line_a_artist.set_gid("plot-mechanism-a-fit")
-    line_b_artist.set_gid("plot-mechanism-b-fit")
+    line_a_artist.set_gid("plot_mechanism_a_fit")
+    line_b_artist.set_gid("plot_mechanism_b_fit")
 
     points_a = ax.scatter(
         sorted_a,
@@ -80,8 +81,8 @@ def build_plot(
         linewidth=2.0,
         zorder=3,
     )
-    points_a.set_gid("plot-mechanism-a-points")
-    points_b.set_gid("plot-mechanism-b-points")
+    points_a.set_gid("plot_mechanism_a_points")
+    points_b.set_gid("plot_mechanism_b_points")
 
     y_ticks = [weibull_y(value) for value in PROBABILITY_TICKS]
     y_labels = [f"{int(value * 100)}" for value in PROBABILITY_TICKS]
@@ -95,6 +96,15 @@ def build_plot(
     fig.tight_layout()
     save_figure(fig, output)
     plt.close(fig)
+    prepare_svg_animation_targets(
+        output,
+        {
+            "plot_mechanism_a_points": "Ausfalldaten Mechanismus A",
+            "plot_mechanism_a_fit": "Fit Mechanismus A",
+            "plot_mechanism_b_points": "Ausfalldaten Mechanismus B",
+            "plot_mechanism_b_fit": "Fit Mechanismus B",
+        },
+    )
 
 
 def main() -> None:

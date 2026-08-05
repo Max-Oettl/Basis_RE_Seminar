@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_064" data-brand-profile="reltest-academy">
+  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"two-evidence-distribution-assessment","contentTitle":"Exponentialverteilung in der Zuverlässigkeitstechnik","layoutIntent":"paired-constant-hazard-and-positive-time-cdf-with-random-failure-mapping","takeaway":"Die konstante Ausfallrate beschreibt Zufallsausfälle; die Ausfallwahrscheinlichkeit beginnt bei t gleich null ebenfalls bei null.","density":"balanced","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-academy","brandVariant":"academy-production","sourceSlides":[64,65,66,67,68,69],"officialLogoStatus":"pending-original-asset"}]]></metadata>
+  <title id="accessible_title">Exponentialverteilung in der Zuverlässigkeitstechnik</title>
+  <desc id="accessible_description">Die konstante Ausfallrate beschreibt Zufallsausfälle; die Ausfallwahrscheinlichkeit beginnt bei t gleich null ebenfalls bei null.</desc>
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F9FBFC"/>
+      <stop offset="56%" stop-color="#F1F5F8"/>
+      <stop offset="100%" stop-color="#E9F0F4"/>
+    </linearGradient>
+    <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#102A43" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="shadowSoft" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#102A43" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow_007EA7" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#007EA7"/></marker>
+    <marker id="arrow_102A43" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#102A43"/></marker>
+    <marker id="arrow_D1495B" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#D1495B"/></marker>
+    <marker id="arrow_2F6F55" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#2F6F55"/></marker>
+    <marker id="arrow_B7791F" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#B7791F"/></marker>
+  </defs>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+  </style>
+  <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
+  <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
+  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><svg id="exponential_hazard_plot" x="70" y="224" width="850" height="520" viewBox="0 0 579.833906 350.728219" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="exponential_hazard_plot__figure_1">
+  <g id="exponential_hazard_plot__patch_1">
+   <path d="M 0 350.728219  L 579.833906 350.728219  L 579.833906 0  L 0 0  L 0 350.728219  z " style="fill: none; opacity: 0" />
+  </g>
+  <g id="exponential_hazard_plot__axes_1">
+   <g id="exponential_hazard_plot__patch_2">
+    <path d="M 67.378281 291.024  L 568.498281 291.024  L 568.498281 7.2  L 67.378281 7.2  L 67.378281 291.024  z " style="fill: none" />
+   </g>
+   <g id="exponential_hazard_plot__matplotlib.axis_1">
+    <g id="exponential_hazard_plot__xtick_1">
+     <g id="exponential_hazard_plot__line2d_1">
+      <path d="M 67.378281 291.024  L 67.378281 7.2  " clip-path="url(#exponential_hazard_plot__p45ff730140)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_hazard_plot__line2d_2">
+      <defs>
+       <path id="exponential_hazard_plot__m257840c795" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#exponential_hazard_plot__m257840c795" x="67.378281" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_hazard_plot__text_1">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="67.378281" y="310.400953" transform="rotate(-0 67.378281 310.400953)">0</text>
+     </g>
+    </g>
+    <g id="exponential_hazard_plot__xtick_2">
+     <g id="exponential_hazard_plot__line2d_3">
+      <path d="M 167.602281 291.024  L 167.602281 7.2  " clip-path="url(#exponential_hazard_plot__p45ff730140)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_hazard_plot__line2d_4">
+      <g>
+       <use ns4:href="#exponential_hazard_plot__m257840c795" x="167.602281" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_hazard_plot__text_2">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="167.602281" y="310.400953" transform="rotate(-0 167.602281 310.400953)">1</text>
+     </g>
+    </g>
+    <g id="exponential_hazard_plot__xtick_3">
+     <g id="exponential_hazard_plot__line2d_5">
+      <path d="M 267.826281 291.024  L 267.826281 7.2  " clip-path="url(#exponential_hazard_plot__p45ff730140)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_hazard_plot__line2d_6">
+      <g>
+       <use ns4:href="#exponential_hazard_plot__m257840c795" x="267.826281" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_hazard_plot__text_3">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="267.826281" y="310.400953" transform="rotate(-0 267.826281 310.400953)">2</text>
+     </g>
+    </g>
+    <g id="exponential_hazard_plot__xtick_4">
+     <g id="exponential_hazard_plot__line2d_7">
+      <path d="M 368.050281 291.024  L 368.050281 7.2  " clip-path="url(#exponential_hazard_plot__p45ff730140)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_hazard_plot__line2d_8">
+      <g>
+       <use ns4:href="#exponential_hazard_plot__m257840c795" x="368.050281" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_hazard_plot__text_4">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="368.050281" y="310.400953" transform="rotate(-0 368.050281 310.400953)">3</text>
+     </g>
+    </g>
+    <g id="exponential_hazard_plot__xtick_5">
+     <g id="exponential_hazard_plot__line2d_9">
+      <path d="M 468.274281 291.024  L 468.274281 7.2  " clip-path="url(#exponential_hazard_plot__p45ff730140)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_hazard_plot__line2d_10">
+      <g>
+       <use ns4:href="#exponential_hazard_plot__m257840c795" x="468.274281" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_hazard_plot__text_5">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="468.274281" y="310.400953" transform="rotate(-0 468.274281 310.400953)">4</text>
+     </g>
+    </g>
+    <g id="exponential_hazard_plot__xtick_6">
+     <g id="exponential_hazard_plot__line2d_11">
+      <path d="M 568.498281 291.024  L 568.498281 7.2  " clip-path="url(#exponential_hazard_plot__p45ff730140)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_hazard_plot__line2d_12">
+      <g>
+       <use ns4:href="#exponential_hazard_plot__m257840c795" x="568.498281" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_hazard_plot__text_6">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="568.498281" y="310.400953" transform="rotate(-0 568.498281 310.400953)">5</text>
+     </g>
+    </g>
+    <g id="exponential_hazard_plot__text_7">
+     
+     <g style="fill: #062d46" transform="translate(245.578281 339.204)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.677734" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">b</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="36.5625" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="48.770508" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="61.584961" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="72.298828" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">d</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="85.183594" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="97.330078" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="110.144531" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="122.352539" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="131.229492" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="137.496094" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="exponential_hazard_plot__matplotlib.axis_2">
+    <g id="exponential_hazard_plot__ytick_1">
+     <g id="exponential_hazard_plot__line2d_13">
+      <path d="M 67.378281 291.024  L 568.498281 291.024  " clip-path="url(#exponential_hazard_plot__p45ff730140)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_hazard_plot__line2d_14">
+      <defs>
+       <path id="exponential_hazard_plot__mb593f8703e" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#exponential_hazard_plot__mb593f8703e" x="67.378281" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_hazard_plot__text_8">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="295.962477" transform="rotate(-0 57.878281 295.962477)">0.0</text>
+     </g>
+    </g>
+    <g id="exponential_hazard_plot__ytick_2">
+     <g id="exponential_hazard_plot__line2d_15">
+      <path d="M 67.378281 230.635915  L 568.498281 230.635915  " clip-path="url(#exponential_hazard_plot__p45ff730140)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_hazard_plot__line2d_16">
+      <g>
+       <use ns4:href="#exponential_hazard_plot__mb593f8703e" x="67.378281" y="230.635915" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_hazard_plot__text_9">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="235.574391" transform="rotate(-0 57.878281 235.574391)">0.5</text>
+     </g>
+    </g>
+    <g id="exponential_hazard_plot__ytick_3">
+     <g id="exponential_hazard_plot__line2d_17">
+      <path d="M 67.378281 170.24783  L 568.498281 170.24783  " clip-path="url(#exponential_hazard_plot__p45ff730140)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_hazard_plot__line2d_18">
+      <g>
+       <use ns4:href="#exponential_hazard_plot__mb593f8703e" x="67.378281" y="170.24783" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_hazard_plot__text_10">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="175.186306" transform="rotate(-0 57.878281 175.186306)">1.0</text>
+     </g>
+    </g>
+    <g id="exponential_hazard_plot__ytick_4">
+     <g id="exponential_hazard_plot__line2d_19">
+      <path d="M 67.378281 109.859745  L 568.498281 109.859745  " clip-path="url(#exponential_hazard_plot__p45ff730140)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_hazard_plot__line2d_20">
+      <g>
+       <use ns4:href="#exponential_hazard_plot__mb593f8703e" x="67.378281" y="109.859745" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_hazard_plot__text_11">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="114.798221" transform="rotate(-0 57.878281 114.798221)">1.5</text>
+     </g>
+    </g>
+    <g id="exponential_hazard_plot__ytick_5">
+     <g id="exponential_hazard_plot__line2d_21">
+      <path d="M 67.378281 49.47166  L 568.498281 49.47166  " clip-path="url(#exponential_hazard_plot__p45ff730140)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_hazard_plot__line2d_22">
+      <g>
+       <use ns4:href="#exponential_hazard_plot__mb593f8703e" x="67.378281" y="49.47166" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_hazard_plot__text_12">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="54.410136" transform="rotate(-0 57.878281 54.410136)">2.0</text>
+     </g>
+    </g>
+    <g id="exponential_hazard_plot__text_13">
+     
+     <g style="fill: #062d46" transform="translate(20.88 223.992) rotate(-90)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">A</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="13.930664" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="26.745117" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.458984" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">f</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.290039" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="57.436523" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="63.606445" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="69.776367" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="78.65332" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="90.799805" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="99.404297" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="111.612305" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="117.878906" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">λ</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="135.553711" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="128.53125" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">(</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="142.611328" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">)</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="exponential_hazard_curves" data-anim-target="true" data-anim-label="Konstante Ausfallrate der Exponentialverteilung"><g id="exponential_hazard_plot__exponential_hazard_lambda_1">
+    <path d="M 67.378281 49.47166  L 71.589374 49.47166  L 75.800466 49.47166  L 80.011559 49.47166  L 84.222651 49.47166  L 88.433743 49.47166  L 92.644836 49.47166  L 96.855928 49.47166  L 101.067021 49.47166  L 105.278113 49.47166  L 109.489206 49.47166  L 113.700298 49.47166  L 117.91139 49.47166  L 122.122483 49.47166  L 126.333575 49.47166  L 130.544668 49.47166  L 134.75576 49.47166  L 138.966853 49.47166  L 143.177945 49.47166  L 147.389038 49.47166  L 151.60013 49.47166  L 155.811222 49.47166  L 160.022315 49.47166  L 164.233407 49.47166  L 168.4445 49.47166  L 172.655592 49.47166  L 176.866685 49.47166  L 181.077777 49.47166  L 185.288869 49.47166  L 189.499962 49.47166  L 193.711054 49.47166  L 197.922147 49.47166  L 202.133239 49.47166  L 206.344332 49.47166  L 210.555424 49.47166  L 214.766517 49.47166  L 218.977609 49.47166  L 223.188701 49.47166  L 227.399794 49.47166  L 231.610886 49.47166  L 235.821979 49.47166  L 240.033071 49.47166  L 244.244164 49.47166  L 248.455256 49.47166  L 252.666348 49.47166  L 256.877441 49.47166  L 261.088533 49.47166  L 265.299626 49.47166  L 269.510718 49.47166  L 273.721811 49.47166  L 277.932903 49.47166  L 282.143996 49.47166  L 286.355088 49.47166  L 290.56618 49.47166  L 294.777273 49.47166  L 298.988365 49.47166  L 303.199458 49.47166  L 307.41055 49.47166  L 311.621643 49.47166  L 315.832735 49.47166  L 320.043827 49.47166  L 324.25492 49.47166  L 328.466012 49.47166  L 332.677105 49.47166  L 336.888197 49.47166  L 341.09929 49.47166  L 345.310382 49.47166  L 349.521475 49.47166  L 353.732567 49.47166  L 357.943659 49.47166  L 362.154752 49.47166  L 366.365844 49.47166  L 370.576937 49.47166  L 374.788029 49.47166  L 378.999122 49.47166  L 383.210214 49.47166  L 387.421306 49.47166  L 391.632399 49.47166  L 395.843491 49.47166  L 400.054584 49.47166  L 404.265676 49.47166  L 408.476769 49.47166  L 412.687861 49.47166  L 416.898954 49.47166  L 421.110046 49.47166  L 425.321138 49.47166  L 429.532231 49.47166  L 433.743323 49.47166  L 437.954416 49.47166  L 442.165508 49.47166  L 446.376601 49.47166  L 450.587693 49.47166  L 454.798785 49.47166  L 459.009878 49.47166  L 463.22097 49.47166  L 467.432063 49.47166  L 471.643155 49.47166  L 475.854248 49.47166  L 480.06534 49.47166  L 484.276433 49.47166  L 488.487525 49.47166  L 492.698617 49.47166  L 496.90971 49.47166  L 501.120802 49.47166  L 505.331895 49.47166  L 509.542987 49.47166  L 513.75408 49.47166  L 517.965172 49.47166  L 522.176264 49.47166  L 526.387357 49.47166  L 530.598449 49.47166  L 534.809542 49.47166  L 539.020634 49.47166  L 543.231727 49.47166  L 547.442819 49.47166  L 551.653912 49.47166  L 555.865004 49.47166  L 560.076096 49.47166  L 564.287189 49.47166  L 568.498281 49.47166  " clip-path="url(#exponential_hazard_plot__p45ff730140)" style="fill: none; stroke: #007ea7; stroke-width: 3.3; stroke-linecap: square" />
+   </g>
+   <g id="exponential_hazard_plot__exponential_hazard_lambda_2">
+    <path d="M 67.378281 170.24783  L 71.589374 170.24783  L 75.800466 170.24783  L 80.011559 170.24783  L 84.222651 170.24783  L 88.433743 170.24783  L 92.644836 170.24783  L 96.855928 170.24783  L 101.067021 170.24783  L 105.278113 170.24783  L 109.489206 170.24783  L 113.700298 170.24783  L 117.91139 170.24783  L 122.122483 170.24783  L 126.333575 170.24783  L 130.544668 170.24783  L 134.75576 170.24783  L 138.966853 170.24783  L 143.177945 170.24783  L 147.389038 170.24783  L 151.60013 170.24783  L 155.811222 170.24783  L 160.022315 170.24783  L 164.233407 170.24783  L 168.4445 170.24783  L 172.655592 170.24783  L 176.866685 170.24783  L 181.077777 170.24783  L 185.288869 170.24783  L 189.499962 170.24783  L 193.711054 170.24783  L 197.922147 170.24783  L 202.133239 170.24783  L 206.344332 170.24783  L 210.555424 170.24783  L 214.766517 170.24783  L 218.977609 170.24783  L 223.188701 170.24783  L 227.399794 170.24783  L 231.610886 170.24783  L 235.821979 170.24783  L 240.033071 170.24783  L 244.244164 170.24783  L 248.455256 170.24783  L 252.666348 170.24783  L 256.877441 170.24783  L 261.088533 170.24783  L 265.299626 170.24783  L 269.510718 170.24783  L 273.721811 170.24783  L 277.932903 170.24783  L 282.143996 170.24783  L 286.355088 170.24783  L 290.56618 170.24783  L 294.777273 170.24783  L 298.988365 170.24783  L 303.199458 170.24783  L 307.41055 170.24783  L 311.621643 170.24783  L 315.832735 170.24783  L 320.043827 170.24783  L 324.25492 170.24783  L 328.466012 170.24783  L 332.677105 170.24783  L 336.888197 170.24783  L 341.09929 170.24783  L 345.310382 170.24783  L 349.521475 170.24783  L 353.732567 170.24783  L 357.943659 170.24783  L 362.154752 170.24783  L 366.365844 170.24783  L 370.576937 170.24783  L 374.788029 170.24783  L 378.999122 170.24783  L 383.210214 170.24783  L 387.421306 170.24783  L 391.632399 170.24783  L 395.843491 170.24783  L 400.054584 170.24783  L 404.265676 170.24783  L 408.476769 170.24783  L 412.687861 170.24783  L 416.898954 170.24783  L 421.110046 170.24783  L 425.321138 170.24783  L 429.532231 170.24783  L 433.743323 170.24783  L 437.954416 170.24783  L 442.165508 170.24783  L 446.376601 170.24783  L 450.587693 170.24783  L 454.798785 170.24783  L 459.009878 170.24783  L 463.22097 170.24783  L 467.432063 170.24783  L 471.643155 170.24783  L 475.854248 170.24783  L 480.06534 170.24783  L 484.276433 170.24783  L 488.487525 170.24783  L 492.698617 170.24783  L 496.90971 170.24783  L 501.120802 170.24783  L 505.331895 170.24783  L 509.542987 170.24783  L 513.75408 170.24783  L 517.965172 170.24783  L 522.176264 170.24783  L 526.387357 170.24783  L 530.598449 170.24783  L 534.809542 170.24783  L 539.020634 170.24783  L 543.231727 170.24783  L 547.442819 170.24783  L 551.653912 170.24783  L 555.865004 170.24783  L 560.076096 170.24783  L 564.287189 170.24783  L 568.498281 170.24783  " clip-path="url(#exponential_hazard_plot__p45ff730140)" style="fill: none; stroke: #b7791f; stroke-width: 3.3; stroke-linecap: square" />
+   </g>
+   <g id="exponential_hazard_plot__exponential_hazard_lambda_3">
+    <path d="M 67.378281 230.635915  L 71.589374 230.635915  L 75.800466 230.635915  L 80.011559 230.635915  L 84.222651 230.635915  L 88.433743 230.635915  L 92.644836 230.635915  L 96.855928 230.635915  L 101.067021 230.635915  L 105.278113 230.635915  L 109.489206 230.635915  L 113.700298 230.635915  L 117.91139 230.635915  L 122.122483 230.635915  L 126.333575 230.635915  L 130.544668 230.635915  L 134.75576 230.635915  L 138.966853 230.635915  L 143.177945 230.635915  L 147.389038 230.635915  L 151.60013 230.635915  L 155.811222 230.635915  L 160.022315 230.635915  L 164.233407 230.635915  L 168.4445 230.635915  L 172.655592 230.635915  L 176.866685 230.635915  L 181.077777 230.635915  L 185.288869 230.635915  L 189.499962 230.635915  L 193.711054 230.635915  L 197.922147 230.635915  L 202.133239 230.635915  L 206.344332 230.635915  L 210.555424 230.635915  L 214.766517 230.635915  L 218.977609 230.635915  L 223.188701 230.635915  L 227.399794 230.635915  L 231.610886 230.635915  L 235.821979 230.635915  L 240.033071 230.635915  L 244.244164 230.635915  L 248.455256 230.635915  L 252.666348 230.635915  L 256.877441 230.635915  L 261.088533 230.635915  L 265.299626 230.635915  L 269.510718 230.635915  L 273.721811 230.635915  L 277.932903 230.635915  L 282.143996 230.635915  L 286.355088 230.635915  L 290.56618 230.635915  L 294.777273 230.635915  L 298.988365 230.635915  L 303.199458 230.635915  L 307.41055 230.635915  L 311.621643 230.635915  L 315.832735 230.635915  L 320.043827 230.635915  L 324.25492 230.635915  L 328.466012 230.635915  L 332.677105 230.635915  L 336.888197 230.635915  L 341.09929 230.635915  L 345.310382 230.635915  L 349.521475 230.635915  L 353.732567 230.635915  L 357.943659 230.635915  L 362.154752 230.635915  L 366.365844 230.635915  L 370.576937 230.635915  L 374.788029 230.635915  L 378.999122 230.635915  L 383.210214 230.635915  L 387.421306 230.635915  L 391.632399 230.635915  L 395.843491 230.635915  L 400.054584 230.635915  L 404.265676 230.635915  L 408.476769 230.635915  L 412.687861 230.635915  L 416.898954 230.635915  L 421.110046 230.635915  L 425.321138 230.635915  L 429.532231 230.635915  L 433.743323 230.635915  L 437.954416 230.635915  L 442.165508 230.635915  L 446.376601 230.635915  L 450.587693 230.635915  L 454.798785 230.635915  L 459.009878 230.635915  L 463.22097 230.635915  L 467.432063 230.635915  L 471.643155 230.635915  L 475.854248 230.635915  L 480.06534 230.635915  L 484.276433 230.635915  L 488.487525 230.635915  L 492.698617 230.635915  L 496.90971 230.635915  L 501.120802 230.635915  L 505.331895 230.635915  L 509.542987 230.635915  L 513.75408 230.635915  L 517.965172 230.635915  L 522.176264 230.635915  L 526.387357 230.635915  L 530.598449 230.635915  L 534.809542 230.635915  L 539.020634 230.635915  L 543.231727 230.635915  L 547.442819 230.635915  L 551.653912 230.635915  L 555.865004 230.635915  L 560.076096 230.635915  L 564.287189 230.635915  L 568.498281 230.635915  " clip-path="url(#exponential_hazard_plot__p45ff730140)" style="fill: none; stroke: #2f6f55; stroke-width: 3.3; stroke-linecap: square" />
+   </g>
+   <g id="exponential_hazard_plot__exponential_hazard_label_1">
+    <g id="exponential_hazard_plot__patch_5">
+     <path d="M 511.607961 49.590248  L 552.407961 49.590248  L 552.407961 30.686732  L 511.607961 30.686732  z " style="fill: #ffffff; opacity: 0.88" />
+    </g>
+    
+    <g style="fill: #007ea7" transform="translate(513.557961 44.036732)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.609375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">λ</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.799316" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.290039" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">2</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="exponential_hazard_plot__exponential_hazard_label_2">
+    <g id="exponential_hazard_plot__patch_6">
+     <path d="M 511.607961 170.366418  L 552.407961 170.366418  L 552.407961 151.462902  L 511.607961 151.462902  z " style="fill: #ffffff; opacity: 0.88" />
+    </g>
+    
+    <g style="fill: #b7791f" transform="translate(513.557961 164.812902)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.609375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #b7791f">λ</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.799316" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #b7791f">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.290039" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #b7791f">1</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="exponential_hazard_plot__exponential_hazard_label_3">
+    <g id="exponential_hazard_plot__patch_7">
+     <path d="M 494.357961 230.754503  L 552.407961 230.754503  L 552.407961 211.850987  L 494.357961 211.850987  z " style="fill: #ffffff; opacity: 0.88" />
+    </g>
+    
+    <g style="fill: #2f6f55" transform="translate(496.307961 225.200987)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.609375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">λ</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.799316" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.290039" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">0</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="36.833496" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">,</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="44.523926" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">5</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="exponential_hazard_plot__exponential_hazard_annotation">
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #d1495b" x="85.418601" y="27.731949" transform="rotate(-0 85.418601 27.731949)">über die Lebensdauer konstant</text>
+   </g>
+  </g><g id="exponential_hazard_plot__patch_3">
+    <path d="M 67.378281 291.024  L 67.378281 7.2  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="exponential_hazard_plot__patch_4">
+    <path d="M 67.378281 291.024  L 568.498281 291.024  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   </g>
+ </g>
+ <defs>
+  <clipPath id="exponential_hazard_plot__p45ff730140">
+   <rect data-qc-allow-overlap="true" x="67.378281" y="7.2" width="501.12" height="283.824" />
+  </clipPath>
+ </defs>
+</svg><svg id="exponential_cdf_plot" x="996" y="224" width="850" height="520" viewBox="0 0 579.833906 350.728219" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="exponential_cdf_plot__figure_1">
+  <g id="exponential_cdf_plot__patch_1">
+   <path d="M 0 350.728219  L 579.833906 350.728219  L 579.833906 0  L 0 0  L 0 350.728219  z " style="fill: none; opacity: 0" />
+  </g>
+  <g id="exponential_cdf_plot__axes_1">
+   <g id="exponential_cdf_plot__patch_2">
+    <path d="M 67.378281 291.024  L 568.498281 291.024  L 568.498281 7.2  L 67.378281 7.2  L 67.378281 291.024  z " style="fill: none" />
+   </g>
+   <g id="exponential_cdf_plot__matplotlib.axis_1">
+    <g id="exponential_cdf_plot__xtick_1">
+     <g id="exponential_cdf_plot__line2d_1">
+      <path d="M 67.378281 291.024  L 67.378281 7.2  " clip-path="url(#exponential_cdf_plot__p2d497e6c4c)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_cdf_plot__line2d_2">
+      <defs>
+       <path id="exponential_cdf_plot__meae64064b3" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#exponential_cdf_plot__meae64064b3" x="67.378281" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_cdf_plot__text_1">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="67.378281" y="310.400953" transform="rotate(-0 67.378281 310.400953)">0</text>
+     </g>
+    </g>
+    <g id="exponential_cdf_plot__xtick_2">
+     <g id="exponential_cdf_plot__line2d_3">
+      <path d="M 167.602281 291.024  L 167.602281 7.2  " clip-path="url(#exponential_cdf_plot__p2d497e6c4c)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_cdf_plot__line2d_4">
+      <g>
+       <use ns4:href="#exponential_cdf_plot__meae64064b3" x="167.602281" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_cdf_plot__text_2">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="167.602281" y="310.400953" transform="rotate(-0 167.602281 310.400953)">1</text>
+     </g>
+    </g>
+    <g id="exponential_cdf_plot__xtick_3">
+     <g id="exponential_cdf_plot__line2d_5">
+      <path d="M 267.826281 291.024  L 267.826281 7.2  " clip-path="url(#exponential_cdf_plot__p2d497e6c4c)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_cdf_plot__line2d_6">
+      <g>
+       <use ns4:href="#exponential_cdf_plot__meae64064b3" x="267.826281" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_cdf_plot__text_3">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="267.826281" y="310.400953" transform="rotate(-0 267.826281 310.400953)">2</text>
+     </g>
+    </g>
+    <g id="exponential_cdf_plot__xtick_4">
+     <g id="exponential_cdf_plot__line2d_7">
+      <path d="M 368.050281 291.024  L 368.050281 7.2  " clip-path="url(#exponential_cdf_plot__p2d497e6c4c)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_cdf_plot__line2d_8">
+      <g>
+       <use ns4:href="#exponential_cdf_plot__meae64064b3" x="368.050281" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_cdf_plot__text_4">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="368.050281" y="310.400953" transform="rotate(-0 368.050281 310.400953)">3</text>
+     </g>
+    </g>
+    <g id="exponential_cdf_plot__xtick_5">
+     <g id="exponential_cdf_plot__line2d_9">
+      <path d="M 468.274281 291.024  L 468.274281 7.2  " clip-path="url(#exponential_cdf_plot__p2d497e6c4c)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_cdf_plot__line2d_10">
+      <g>
+       <use ns4:href="#exponential_cdf_plot__meae64064b3" x="468.274281" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_cdf_plot__text_5">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="468.274281" y="310.400953" transform="rotate(-0 468.274281 310.400953)">4</text>
+     </g>
+    </g>
+    <g id="exponential_cdf_plot__xtick_6">
+     <g id="exponential_cdf_plot__line2d_11">
+      <path d="M 568.498281 291.024  L 568.498281 7.2  " clip-path="url(#exponential_cdf_plot__p2d497e6c4c)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_cdf_plot__line2d_12">
+      <g>
+       <use ns4:href="#exponential_cdf_plot__meae64064b3" x="568.498281" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_cdf_plot__text_6">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="568.498281" y="310.400953" transform="rotate(-0 568.498281 310.400953)">5</text>
+     </g>
+    </g>
+    <g id="exponential_cdf_plot__text_7">
+     
+     <g style="fill: #062d46" transform="translate(245.578281 339.204)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.677734" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">b</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="36.5625" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="48.770508" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="61.584961" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="72.298828" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">d</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="85.183594" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="97.330078" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="110.144531" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="122.352539" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="131.229492" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="137.496094" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="exponential_cdf_plot__matplotlib.axis_2">
+    <g id="exponential_cdf_plot__ytick_1">
+     <g id="exponential_cdf_plot__line2d_13">
+      <path d="M 67.378281 291.024  L 568.498281 291.024  " clip-path="url(#exponential_cdf_plot__p2d497e6c4c)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_cdf_plot__line2d_14">
+      <defs>
+       <path id="exponential_cdf_plot__m14877bef2d" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#exponential_cdf_plot__m14877bef2d" x="67.378281" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_cdf_plot__text_8">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="295.962477" transform="rotate(-0 57.878281 295.962477)">0.0</text>
+     </g>
+    </g>
+    <g id="exponential_cdf_plot__ytick_2">
+     <g id="exponential_cdf_plot__line2d_15">
+      <path d="M 67.378281 235.372235  L 568.498281 235.372235  " clip-path="url(#exponential_cdf_plot__p2d497e6c4c)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_cdf_plot__line2d_16">
+      <g>
+       <use ns4:href="#exponential_cdf_plot__m14877bef2d" x="67.378281" y="235.372235" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_cdf_plot__text_9">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="240.310712" transform="rotate(-0 57.878281 240.310712)">0.2</text>
+     </g>
+    </g>
+    <g id="exponential_cdf_plot__ytick_3">
+     <g id="exponential_cdf_plot__line2d_17">
+      <path d="M 67.378281 179.720471  L 568.498281 179.720471  " clip-path="url(#exponential_cdf_plot__p2d497e6c4c)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_cdf_plot__line2d_18">
+      <g>
+       <use ns4:href="#exponential_cdf_plot__m14877bef2d" x="67.378281" y="179.720471" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_cdf_plot__text_10">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="184.658947" transform="rotate(-0 57.878281 184.658947)">0.4</text>
+     </g>
+    </g>
+    <g id="exponential_cdf_plot__ytick_4">
+     <g id="exponential_cdf_plot__line2d_19">
+      <path d="M 67.378281 124.068706  L 568.498281 124.068706  " clip-path="url(#exponential_cdf_plot__p2d497e6c4c)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_cdf_plot__line2d_20">
+      <g>
+       <use ns4:href="#exponential_cdf_plot__m14877bef2d" x="67.378281" y="124.068706" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_cdf_plot__text_11">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="129.007182" transform="rotate(-0 57.878281 129.007182)">0.6</text>
+     </g>
+    </g>
+    <g id="exponential_cdf_plot__ytick_5">
+     <g id="exponential_cdf_plot__line2d_21">
+      <path d="M 67.378281 68.416941  L 568.498281 68.416941  " clip-path="url(#exponential_cdf_plot__p2d497e6c4c)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_cdf_plot__line2d_22">
+      <g>
+       <use ns4:href="#exponential_cdf_plot__m14877bef2d" x="67.378281" y="68.416941" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_cdf_plot__text_12">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="73.355418" transform="rotate(-0 57.878281 73.355418)">0.8</text>
+     </g>
+    </g>
+    <g id="exponential_cdf_plot__ytick_6">
+     <g id="exponential_cdf_plot__line2d_23">
+      <path d="M 67.378281 12.765176  L 568.498281 12.765176  " clip-path="url(#exponential_cdf_plot__p2d497e6c4c)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="exponential_cdf_plot__line2d_24">
+      <g>
+       <use ns4:href="#exponential_cdf_plot__m14877bef2d" x="67.378281" y="12.765176" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="exponential_cdf_plot__text_13">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="17.703653" transform="rotate(-0 57.878281 17.703653)">1.0</text>
+     </g>
+    </g>
+    <g id="exponential_cdf_plot__text_14">
+     
+     <g style="fill: #062d46" transform="translate(20.88 297.972) rotate(-90)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">A</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="13.930664" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="26.745117" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.458984" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">f</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.290039" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="57.436523" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="63.606445" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="69.776367" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">w</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="86.405273" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="98.551758" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="111.366211" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="120.243164" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="130.957031" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="141.626953" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="154.441406" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="166.649414" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="172.819336" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="185.633789" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="191.803711" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="197.973633" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="208.643555" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="221.458008" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">k</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="233.428711" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="245.636719" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="251.806641" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="260.411133" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="266.677734" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">F</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="284.053711" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="277.03125" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">(</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="291.111328" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">)</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="exponential_cdf_curves" data-anim-target="true" data-anim-label="Ausfallwahrscheinlichkeit der Exponentialverteilung"><g id="exponential_cdf_plot__exponential_cdf_lambda_1">
+    <path d="M 67.378281 291.024  L 70.962831 271.815137  L 74.54738 253.932308  L 78.131929 237.283972  L 81.716479 221.78491  L 85.301028 207.355785  L 88.885577 193.922737  L 92.470127 181.417003  L 96.054676 169.77457  L 99.639225 158.935841  L 103.223775 148.845336  L 106.808324 139.451401  L 110.392874 130.705953  L 113.977423 122.564223  L 117.561972 114.984536  L 121.146522 107.928092  L 124.731071 101.358772  L 128.31562 95.242947  L 131.90017 89.549312  L 135.484719 84.248722  L 139.069268 79.314045  L 142.653818 74.720019  L 146.238367 70.44313  L 149.822916 66.461485  L 154.124376 62.044636  L 158.425835 57.9911  L 162.727294 54.270991  L 167.028753 50.856885  L 171.330213 47.723609  L 175.631672 44.848064  L 179.933131 42.209051  L 184.9515 39.403285  L 189.969869 36.864886  L 194.988238 34.568376  L 200.723517 32.210517  L 206.458796 30.107644  L 212.194075 28.232182  L 218.646264 26.363598  L 225.098453 24.720759  L 232.267552 23.127089  L 240.15356 21.61829  L 248.756479 20.221745  L 258.076307 18.956292  L 268.113045 17.832583  L 278.866693 16.853917  L 291.054161 15.971203  L 304.675449 15.208149  L 320.447466 14.548502  L 339.087122 13.994569  L 362.028238 13.542984  L 391.421543 13.197825  L 432.285406 12.956598  L 498.241114 12.816508  L 568.498281 12.777809  L 568.498281 12.777809  " clip-path="url(#exponential_cdf_plot__p2d497e6c4c)" style="fill: none; stroke: #007ea7; stroke-width: 3.2; stroke-linecap: square" />
+   </g>
+   <g id="exponential_cdf_plot__exponential_cdf_lambda_2">
+    <path d="M 67.378281 291.024  L 72.39665 277.434224  L 77.415019 264.508155  L 82.433389 252.213376  L 87.451758 240.519058  L 92.470127 229.395873  L 97.488496 218.81593  L 102.506865 208.752697  L 107.525234 199.180938  L 112.543603 190.07665  L 117.561972 181.417003  L 122.580341 173.180282  L 127.59871 165.34583  L 132.61708 157.894002  L 137.635449 150.806111  L 142.653818 144.064383  L 147.672187 137.651912  L 153.407466 130.705953  L 159.142745 124.146314  L 164.878024 117.951511  L 170.613303 112.10125  L 176.348582 106.576369  L 182.083861 101.358772  L 187.81914 96.431367  L 193.554419 91.778015  L 199.289698 87.383474  L 205.741886 82.731083  L 212.194075 78.368764  L 218.646264 74.278433  L 225.098453 70.44313  L 231.550642 66.846956  L 238.71974 63.113563  L 245.888839 59.637895  L 253.057938 56.402161  L 260.943946 53.100243  L 268.829955 50.048174  L 276.715964 47.227049  L 285.318882 44.392349  L 293.921801 41.790821  L 303.241629 39.21342  L 312.561457 36.864886  L 322.598195 34.568376  L 333.351843 32.35011  L 344.105492 30.357531  L 355.576049 28.455046  L 367.763517 26.658563  L 380.667895 24.980089  L 394.289183 23.427849  L 409.34429 21.940655  L 425.116307 20.604612  L 442.322144 19.367971  L 461.67871 18.208338  L 482.469097 17.18863  L 506.127122 16.258555  L 532.652788 15.446218  L 562.763002 14.750489  L 568.498281 14.64007  L 568.498281 14.64007  " clip-path="url(#exponential_cdf_plot__p2d497e6c4c)" style="fill: none; stroke: #b7791f; stroke-width: 3.2; stroke-linecap: square" />
+   </g>
+   <g id="exponential_cdf_plot__exponential_cdf_lambda_3">
+    <path d="M 67.378281 291.024  L 74.54738 281.247834  L 81.716479 271.815137  L 89.602487 261.821489  L 97.488496 252.213376  L 105.374504 242.975926  L 113.260513 234.094839  L 121.146522 225.556367  L 129.03253 217.347292  L 136.918539 209.454909  L 144.804547 201.866998  L 152.690556 194.571814  L 160.576565 187.558064  L 169.179483 180.214928  L 177.782401 173.180282  L 186.38532 166.441164  L 194.988238 159.98516  L 203.591157 153.800375  L 212.194075 147.875417  L 221.513904 141.73727  L 230.833732 135.877982  L 240.15356 130.284886  L 249.473389 124.945888  L 258.793217 119.849445  L 268.829955 114.619597  L 278.866693 109.645168  L 288.903431 104.913684  L 299.65708 100.100361  L 310.410728 95.53846  L 321.164376 91.214847  L 332.634934 86.851628  L 344.105492 82.731083  L 355.576049 78.839714  L 367.763517 74.942  L 379.950985 71.274211  L 392.855363 67.626219  L 405.75974 64.205677  L 419.381028 60.826203  L 433.719225 57.508437  L 448.057423 54.419704  L 463.11253 51.405747  L 478.884547 48.481897  L 495.373474 45.661423  L 511.862401 43.063676  L 529.068238 40.57144  L 547.707895 38.102316  L 567.064462 35.77002  L 568.498281 35.606052  L 568.498281 35.606052  " clip-path="url(#exponential_cdf_plot__p2d497e6c4c)" style="fill: none; stroke: #2f6f55; stroke-width: 3.2; stroke-linecap: square" />
+   </g>
+   <g id="exponential_cdf_plot__exponential_cdf_legend">
+    <g id="exponential_cdf_plot__line2d_25">
+     <path d="M 452.848281 222.163453  L 470.848281 222.163453  L 488.848281 222.163453  " style="fill: none; stroke: #007ea7; stroke-width: 3.2; stroke-linecap: square" />
+    </g>
+    <g id="exponential_cdf_plot__text_15">
+     
+     <g transform="translate(500.848281 227.413453)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.609375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'">λ</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.799316" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'">=</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.290039" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'">2</tspan>
+      </text>
+     </g>
+    </g>
+    <g id="exponential_cdf_plot__line2d_26">
+     <path d="M 452.848281 245.416969  L 470.848281 245.416969  L 488.848281 245.416969  " style="fill: none; stroke: #b7791f; stroke-width: 3.2; stroke-linecap: square" />
+    </g>
+    <g id="exponential_cdf_plot__text_16">
+     
+     <g transform="translate(500.848281 250.666969)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.609375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'">λ</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.799316" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'">=</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.290039" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'">1</tspan>
+      </text>
+     </g>
+    </g>
+    <g id="exponential_cdf_plot__line2d_27">
+     <path d="M 452.848281 268.670484  L 470.848281 268.670484  L 488.848281 268.670484  " style="fill: none; stroke: #2f6f55; stroke-width: 3.2; stroke-linecap: square" />
+    </g>
+    <g id="exponential_cdf_plot__text_17">
+     
+     <g transform="translate(500.848281 273.920484)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.609375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'">λ</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.799316" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'">=</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.290039" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'">0</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="36.833496" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'">,</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="44.523926" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'">5</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   </g><g id="exponential_cdf_plot__patch_3">
+    <path d="M 67.378281 291.024  L 67.378281 7.2  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="exponential_cdf_plot__patch_4">
+    <path d="M 67.378281 291.024  L 568.498281 291.024  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="exponential_zero_start" data-anim-target="true" data-anim-label="Start bei null Prozent Ausfallwahrscheinlichkeit"><g id="exponential_cdf_plot__exponential_zero_label">
+    
+    <g style="fill: #d1495b" transform="translate(83.414121 270.154588)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.859375" style="font-style: oblique; font-size: 16px; font-family: 'DejaVu Sans'; fill: #d1495b">F</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="9.203125" y="-0.859375" style="font-size: 16px; font-family: 'DejaVu Sans'; fill: #d1495b">(</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="15.445312" y="-0.859375" style="font-size: 16px; font-family: 'DejaVu Sans'; fill: #d1495b">0</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="25.625" y="-0.859375" style="font-size: 16px; font-family: 'DejaVu Sans'; fill: #d1495b">)</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="34.984375" y="-0.859375" style="font-size: 16px; font-family: 'DejaVu Sans'; fill: #d1495b">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="51.507812" y="-0.859375" style="font-size: 16px; font-family: 'DejaVu Sans'; fill: #d1495b">0</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="exponential_cdf_plot__exponential_zero_point">
+    <defs>
+     <path id="exponential_cdf_plot__m496c463921" d="M 0 5.123475  C 1.358762 5.123475 2.662055 4.583634 3.622844 3.622844  C 4.583634 2.662055 5.123475 1.358762 5.123475 0  C 5.123475 -1.358762 4.583634 -2.662055 3.622844 -3.622844  C 2.662055 -4.583634 1.358762 -5.123475 0 -5.123475  C -1.358762 -5.123475 -2.662055 -4.583634 -3.622844 -3.622844  C -4.583634 -2.662055 -5.123475 -1.358762 -5.123475 0  C -5.123475 1.358762 -4.583634 2.662055 -3.622844 3.622844  C -2.662055 4.583634 -1.358762 5.123475 0 5.123475  z " style="stroke: #ffffff; stroke-width: 1.8" />
+    </defs>
+    <g clip-path="url(#exponential_cdf_plot__p2d497e6c4c)">
+     <use ns4:href="#exponential_cdf_plot__m496c463921" x="67.378281" y="291.024" style="fill: #d1495b; stroke: #ffffff; stroke-width: 1.8" />
+    </g>
+   </g>
+  </g></g>
+ </g>
+ <defs>
+  <clipPath id="exponential_cdf_plot__p2d497e6c4c">
+   <rect data-qc-allow-overlap="true" x="67.378281" y="7.2" width="501.12" height="283.824" />
+  </clipPath>
+ </defs>
+</svg><g id="exponential_random_mapping" data-anim-target="true" data-anim-label="Zuordnung zum Zufallsausfallbereich"><title>Zuordnung zum Zufallsausfallbereich</title><rect data-qc-allow-overlap="true" x="90" y="770" width="264.6666666666667" height="54" rx="6" fill="#F7FAFC" stroke="#C8D5DF" stroke-width="1.2"/><text x="222.33333333333334" y="804" class="" font-size="17" font-weight="700" fill="#52606D" text-anchor="middle" data-qc-role="text"><tspan x="222.33333333333334" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Frühausfälle</tspan></text><rect data-qc-allow-overlap="true" x="362.6666666666667" y="770" width="264.6666666666667" height="54" rx="6" fill="#D9F0F7" stroke="#007EA7" stroke-width="2.2"/><text x="495" y="804" class="" font-size="17" font-weight="840" fill="#007EA7" text-anchor="middle" data-qc-role="text"><tspan x="495" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Zufallsausfälle</tspan></text><rect data-qc-allow-overlap="true" x="635.3333333333334" y="770" width="264.6666666666667" height="54" rx="6" fill="#F7FAFC" stroke="#C8D5DF" stroke-width="1.2"/><text x="767.6666666666667" y="804" class="" font-size="17" font-weight="700" fill="#52606D" text-anchor="middle" data-qc-role="text"><tspan x="767.6666666666667" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Verschleiß / Ermüdung</tspan></text><text x="495" y="858" class="" font-size="23" font-weight="800" fill="#007EA7" text-anchor="middle" data-qc-role="text"><tspan x="495" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Konstante Ausfallrate beschreibt nur Bereich 2</tspan></text><text x="495" y="894" class="" font-size="19" font-weight="720" fill="#243B53" text-anchor="middle" data-qc-role="text"><tspan x="495" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Früh- und Ermüdungsausfälle bleiben unberücksichtigt</tspan></text></g><g id="exponential_lifetime_suitability" data-anim-target="true" data-anim-label="Positive Lebensdauer und Parameterwirkung"><title>Positive Lebensdauer und Parameterwirkung</title><rect data-qc-allow-overlap="true" x="1016" y="770" width="810" height="132" rx="8" fill="#E3F0EA" stroke="#2F6F55" stroke-width="1.5"/><circle cx="1082" cy="836" r="38" fill="#FFFFFF"/><g transform="translate(1059 813) scale(1.9166666666666667)" fill="none" stroke="#2F6F55" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-2.9 8.1-7 10-4.1-1.9-7-5.4-7-10V6z"/><path d="M8.5 12l2.2 2.2 4.8-5"/></g><text x="1140" y="818" class="" font-size="18" font-weight="850" fill="#2F6F55" text-anchor="start" data-qc-role="text"><tspan x="1140" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">F(0) = 0  ·  NUR t ≥ 0</tspan></text><text x="1140" y="860" class="" font-size="22" font-weight="730" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1140" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Größeres λ erreicht 100 %</tspan><tspan x="1140" dy="28" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Ausfallwahrscheinlichkeit früher.</tspan></text></g></g>
+</svg>

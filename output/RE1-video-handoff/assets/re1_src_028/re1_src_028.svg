@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_028" data-brand-profile="reltest-academy">
+  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"data-chart","contentTitle":"Streuung von Ausfallzeiten im Wöhlerversuch","layoutIntent":"source-faithful-task-card-with-horizontal-load-level-plot","takeaway":"Mehrere Ausfallzeiten auf demselben Lastniveau streuen und müssen statistisch beschrieben werden.","density":"balanced","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-academy","brandVariant":"academy-production","sourceSlides":[28],"officialLogoStatus":"pending-original-asset"}]]></metadata>
+  <title id="accessible_title">Streuung von Ausfallzeiten im Wöhlerversuch</title>
+  <desc id="accessible_description">Mehrere Ausfallzeiten auf demselben Lastniveau streuen und müssen statistisch beschrieben werden.</desc>
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F9FBFC"/>
+      <stop offset="56%" stop-color="#F1F5F8"/>
+      <stop offset="100%" stop-color="#E9F0F4"/>
+    </linearGradient>
+    <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#102A43" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="shadowSoft" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#102A43" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow_007EA7" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#007EA7"/></marker>
+    <marker id="arrow_D1495B" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#D1495B"/></marker>
+    <marker id="arrow_2F6F55" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#2F6F55"/></marker>
+    <marker id="arrow_B7791F" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#B7791F"/></marker>
+  </defs>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+  </style>
+  <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
+  <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
+  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><g id="reliability_function_tag" aria-label="1. Dichtefunktion f(t)"><rect data-qc-allow-overlap="true" x="98" y="174" width="326" height="42" rx="6" fill="#D9F0F7" stroke="#007EA7" stroke-width="1.5"/><circle cx="123" cy="195" r="14" fill="#FFFFFF"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="123" y="201" font-size="16" font-weight="820" fill="#007EA7" text-anchor="middle">1</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="149" y="202" font-size="18" font-weight="800" fill="#007EA7">f(t) · Dichtefunktion</text></g><rect data-qc-allow-overlap="true" x="98" y="250" width="430" height="600" rx="8" fill="#FFFFFF" stroke="#C8D5DF" stroke-width="1.5"/><line x1="130" y1="632" x2="496" y2="632" stroke="#C8D5DF" stroke-width="2"/><svg id="woehler_plot" x="568" y="224" width="1256" height="684" viewBox="0 0 837.571875 457.12" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="woehler_plot__figure_1">
+  <g id="woehler_plot__patch_1">
+   <path d="M 0 457.12  L 837.571875 457.12  L 837.571875 0  L 0 0  L 0 457.12  z " style="fill: none; opacity: 0" />
+  </g>
+  <g id="woehler_plot__axes_1">
+   <g id="woehler_plot__patch_2">
+    <path d="M 79.789219 394.175781  L 817.965 394.175781  L 817.965 12.138477  L 79.789219 12.138477  L 79.789219 394.175781  z " style="fill: none" />
+   </g>
+   <g id="woehler_plot__matplotlib.axis_1">
+    <g id="woehler_plot__xtick_1">
+     <g id="woehler_plot__line2d_1">
+      <path d="M 79.789219 394.175781  L 79.789219 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_2">
+      <defs>
+       <path id="woehler_plot__mb4ee764998" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#woehler_plot__mb4ee764998" x="79.789219" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="woehler_plot__text_1">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="79.789219" y="413.552734" transform="rotate(-0 79.789219 413.552734)">5</text>
+     </g>
+    </g>
+    <g id="woehler_plot__xtick_2">
+     <g id="woehler_plot__line2d_3">
+      <path d="M 190.895745 394.175781  L 190.895745 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_4">
+      <g>
+       <use ns4:href="#woehler_plot__mb4ee764998" x="190.895745" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="woehler_plot__text_2">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="190.895745" y="413.552734" transform="rotate(-0 190.895745 413.552734)">10</text>
+     </g>
+    </g>
+    <g id="woehler_plot__xtick_3">
+     <g id="woehler_plot__line2d_5">
+      <path d="M 448.877109 394.175781  L 448.877109 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_6">
+      <g>
+       <use ns4:href="#woehler_plot__mb4ee764998" x="448.877109" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="woehler_plot__text_3">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="448.877109" y="413.552734" transform="rotate(-0 448.877109 413.552734)">50</text>
+     </g>
+    </g>
+    <g id="woehler_plot__xtick_4">
+     <g id="woehler_plot__line2d_7">
+      <path d="M 559.983635 394.175781  L 559.983635 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_8">
+      <g>
+       <use ns4:href="#woehler_plot__mb4ee764998" x="559.983635" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="woehler_plot__text_4">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="559.983635" y="413.552734" transform="rotate(-0 559.983635 413.552734)">100</text>
+     </g>
+    </g>
+    <g id="woehler_plot__xtick_5">
+     <g id="woehler_plot__line2d_9">
+      <path d="M 817.965 394.175781  L 817.965 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_10">
+      <g>
+       <use ns4:href="#woehler_plot__mb4ee764998" x="817.965" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="woehler_plot__text_5">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="817.965" y="413.552734" transform="rotate(-0 817.965 413.552734)">500</text>
+     </g>
+    </g>
+    <g id="woehler_plot__xtick_6">
+     <g id="woehler_plot__line2d_11">
+      <path d="M 109.014058 394.175781  L 109.014058 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_12">
+      <defs>
+       <path id="woehler_plot__m96375e33a9" d="M 0 0  L 0 3.5  " style="stroke: #6a7a86; stroke-width: 0.9" />
+      </defs>
+      <g>
+       <use ns4:href="#woehler_plot__m96375e33a9" x="109.014058" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="woehler_plot__xtick_7">
+     <g id="woehler_plot__line2d_13">
+      <path d="M 133.723307 394.175781  L 133.723307 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_14">
+      <g>
+       <use ns4:href="#woehler_plot__m96375e33a9" x="133.723307" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="woehler_plot__xtick_8">
+     <g id="woehler_plot__line2d_15">
+      <path d="M 155.127433 394.175781  L 155.127433 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_16">
+      <g>
+       <use ns4:href="#woehler_plot__m96375e33a9" x="155.127433" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="woehler_plot__xtick_9">
+     <g id="woehler_plot__line2d_17">
+      <path d="M 174.007209 394.175781  L 174.007209 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_18">
+      <g>
+       <use ns4:href="#woehler_plot__m96375e33a9" x="174.007209" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="woehler_plot__xtick_10">
+     <g id="woehler_plot__line2d_19">
+      <path d="M 302.002271 394.175781  L 302.002271 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_20">
+      <g>
+       <use ns4:href="#woehler_plot__m96375e33a9" x="302.002271" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="woehler_plot__xtick_11">
+     <g id="woehler_plot__line2d_21">
+      <path d="M 366.995422 394.175781  L 366.995422 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_22">
+      <g>
+       <use ns4:href="#woehler_plot__m96375e33a9" x="366.995422" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="woehler_plot__xtick_12">
+     <g id="woehler_plot__line2d_23">
+      <path d="M 413.108797 394.175781  L 413.108797 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_24">
+      <g>
+       <use ns4:href="#woehler_plot__m96375e33a9" x="413.108797" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="woehler_plot__xtick_13">
+     <g id="woehler_plot__line2d_25">
+      <path d="M 478.101948 394.175781  L 478.101948 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_26">
+      <g>
+       <use ns4:href="#woehler_plot__m96375e33a9" x="478.101948" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="woehler_plot__xtick_14">
+     <g id="woehler_plot__line2d_27">
+      <path d="M 502.811198 394.175781  L 502.811198 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_28">
+      <g>
+       <use ns4:href="#woehler_plot__m96375e33a9" x="502.811198" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="woehler_plot__xtick_15">
+     <g id="woehler_plot__line2d_29">
+      <path d="M 524.215323 394.175781  L 524.215323 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_30">
+      <g>
+       <use ns4:href="#woehler_plot__m96375e33a9" x="524.215323" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="woehler_plot__xtick_16">
+     <g id="woehler_plot__line2d_31">
+      <path d="M 543.0951 394.175781  L 543.0951 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_32">
+      <g>
+       <use ns4:href="#woehler_plot__m96375e33a9" x="543.0951" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="woehler_plot__xtick_17">
+     <g id="woehler_plot__line2d_33">
+      <path d="M 671.090162 394.175781  L 671.090162 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_34">
+      <g>
+       <use ns4:href="#woehler_plot__m96375e33a9" x="671.090162" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="woehler_plot__xtick_18">
+     <g id="woehler_plot__line2d_35">
+      <path d="M 736.083313 394.175781  L 736.083313 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_36">
+      <g>
+       <use ns4:href="#woehler_plot__m96375e33a9" x="736.083313" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="woehler_plot__xtick_19">
+     <g id="woehler_plot__line2d_37">
+      <path d="M 782.196688 394.175781  L 782.196688 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_38">
+      <g>
+       <use ns4:href="#woehler_plot__m96375e33a9" x="782.196688" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="woehler_plot__text_6">
+     
+     <g style="fill: #062d46" transform="translate(342.587109 445.595781)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.616211" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="34.330078" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="42.93457" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">w</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="59.563477" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="71.771484" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="82.441406" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="95.255859" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="105.969727" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="118.177734" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="124.347656" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="161.292969" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="167.55957" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">·</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="174.397461" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="130.614258" y="-0.214437" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="142.022461" y="2.485554" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="148.342285" y="2.485554" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #062d46">W</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="180.664062" y="-0.214437" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">1</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="192.116211" y="-0.214437" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">0</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="203.740625" y="-7.648438" style="font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #062d46">3</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="woehler_plot__matplotlib.axis_2">
+    <g id="woehler_plot__ytick_1">
+     <g id="woehler_plot__line2d_39">
+      <path d="M 79.789219 394.175781  L 817.965 394.175781  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_40">
+      <defs>
+       <path id="woehler_plot__m6910f6b4b7" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#woehler_plot__m6910f6b4b7" x="79.789219" y="394.175781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="woehler_plot__text_7">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="70.289219" y="399.114258" transform="rotate(-0 70.289219 399.114258)">200</text>
+     </g>
+    </g>
+    <g id="woehler_plot__ytick_2">
+     <g id="woehler_plot__line2d_41">
+      <path d="M 79.789219 298.666455  L 817.965 298.666455  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_42">
+      <g>
+       <use ns4:href="#woehler_plot__m6910f6b4b7" x="79.789219" y="298.666455" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="woehler_plot__text_8">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="70.289219" y="303.604932" transform="rotate(-0 70.289219 303.604932)">400</text>
+     </g>
+    </g>
+    <g id="woehler_plot__ytick_3">
+     <g id="woehler_plot__line2d_43">
+      <path d="M 79.789219 203.157129  L 817.965 203.157129  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_44">
+      <g>
+       <use ns4:href="#woehler_plot__m6910f6b4b7" x="79.789219" y="203.157129" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="woehler_plot__text_9">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="70.289219" y="208.095605" transform="rotate(-0 70.289219 208.095605)">600</text>
+     </g>
+    </g>
+    <g id="woehler_plot__ytick_4">
+     <g id="woehler_plot__line2d_45">
+      <path d="M 79.789219 184.055264  L 817.965 184.055264  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_46">
+      <g>
+       <use ns4:href="#woehler_plot__m6910f6b4b7" x="79.789219" y="184.055264" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="woehler_plot__text_10">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="70.289219" y="188.99374" transform="rotate(-0 70.289219 188.99374)">640</text>
+     </g>
+    </g>
+    <g id="woehler_plot__ytick_5">
+     <g id="woehler_plot__line2d_47">
+      <path d="M 79.789219 107.647803  L 817.965 107.647803  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_48">
+      <g>
+       <use ns4:href="#woehler_plot__m6910f6b4b7" x="79.789219" y="107.647803" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="woehler_plot__text_11">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="70.289219" y="112.586279" transform="rotate(-0 70.289219 112.586279)">800</text>
+     </g>
+    </g>
+    <g id="woehler_plot__ytick_6">
+     <g id="woehler_plot__line2d_49">
+      <path d="M 79.789219 12.138477  L 817.965 12.138477  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="woehler_plot__line2d_50">
+      <g>
+       <use ns4:href="#woehler_plot__m6910f6b4b7" x="79.789219" y="12.138477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="woehler_plot__text_12">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="70.289219" y="17.076953" transform="rotate(-0 70.289219 17.076953)">1000</text>
+     </g>
+    </g>
+    <g id="woehler_plot__text_13">
+     
+     <g style="fill: #062d46" transform="translate(20.88 377.217129) rotate(-90)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">Z</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="13.051758" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="25.198242" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="38.012695" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="50.827148" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">f</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="58.658203" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="71.472656" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">ß</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="84.418945" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">b</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="97.303711" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="103.473633" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="115.681641" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">g</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="128.566406" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="140.774414" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="151.488281" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">p</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="164.373047" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="176.519531" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="189.333984" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="202.148438" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="214.962891" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="227.777344" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">g</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="240.662109" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="258.336914" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="264.603516" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">[</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="272.830078" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">N</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="287.894531" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">/</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="294.46875" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">m</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="313.224609" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">m</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="331.980469" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">²</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="339.864258" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">]</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="246.928711" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">σ</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="selected_load_level" data-anim-target="true" data-anim-label="Stichprobe bei 640 N/mm²"><g id="woehler_plot__selected_load_level_guide">
+    <path d="M 79.789219 184.055264  L 817.965 184.055264  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #d1495b; stroke-opacity: 0.75; stroke-width: 1.5" />
+   </g>
+   <g id="woehler_plot__selected_load_level_label">
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #d1495b" x="92.125522" y="175.459424" transform="rotate(-0 92.125522 175.459424)">640 N/mm²</text>
+   </g>
+   <g id="woehler_plot__selected_load_level_points">
+    <defs>
+     <path id="woehler_plot__mbbecf5ff3b" d="M 0 4.358899  C 1.155994 4.358899 2.264796 3.899618 3.082207 3.082207  C 3.899618 2.264796 4.358899 1.155994 4.358899 0  C 4.358899 -1.155994 3.899618 -2.264796 3.082207 -3.082207  C 2.264796 -3.899618 1.155994 -4.358899 0 -4.358899  C -1.155994 -4.358899 -2.264796 -3.899618 -3.082207 -3.082207  C -3.899618 -2.264796 -4.358899 -1.155994 -4.358899 0  C -4.358899 1.155994 -3.899618 2.264796 -3.082207 3.082207  C -2.264796 3.899618 -1.155994 4.358899 0 4.358899  z " style="stroke: #d1495b; stroke-width: 2.6" />
+    </defs>
+    <g clip-path="url(#woehler_plot__pc39ba43886)">
+     <use ns4:href="#woehler_plot__mbbecf5ff3b" x="350.106887" y="184.055264" style="fill: #ffffff; stroke: #d1495b; stroke-width: 2.6" />
+     <use ns4:href="#woehler_plot__mbbecf5ff3b" x="361.561247" y="184.055264" style="fill: #ffffff; stroke: #d1495b; stroke-width: 2.6" />
+     <use ns4:href="#woehler_plot__mbbecf5ff3b" x="372.251396" y="184.055264" style="fill: #ffffff; stroke: #d1495b; stroke-width: 2.6" />
+     <use ns4:href="#woehler_plot__mbbecf5ff3b" x="382.272961" y="184.055264" style="fill: #ffffff; stroke: #d1495b; stroke-width: 2.6" />
+     <use ns4:href="#woehler_plot__mbbecf5ff3b" x="391.704672" y="184.055264" style="fill: #ffffff; stroke: #d1495b; stroke-width: 2.6" />
+     <use ns4:href="#woehler_plot__mbbecf5ff3b" x="400.612121" y="184.055264" style="fill: #ffffff; stroke: #d1495b; stroke-width: 2.6" />
+    </g>
+   </g>
+  </g><g id="woehler_plot__patch_3">
+    <path d="M 79.789219 394.175781  L 79.789219 12.138477  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="woehler_plot__patch_4">
+    <path d="M 79.789219 394.175781  L 817.965 394.175781  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="woehler_curve" data-anim-target="true" data-anim-label="Wöhlerkurve"><g id="woehler_plot__woehler_curve_path">
+    <path d="M 144.78237 105.566582  L 786.154737 333.773563  L 786.154737 333.773563  " clip-path="url(#woehler_plot__pc39ba43886)" style="fill: none; stroke: #062d46; stroke-width: 3.2; stroke-linecap: square" />
+   </g>
+   <g id="woehler_plot__woehler_curve_label">
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #062d46" x="431.988574" y="160.177932" transform="rotate(-0 431.988574 160.177932)">Wöhlerkurve</text>
+   </g>
+   </g><g id="woehler_data" data-anim-target="true" data-anim-label="Versuchsdaten auf mehreren Lastniveaus">
+    <defs>
+     <path id="woehler_plot__m6bf556b4d6" d="M 0 3.807887  C 1.009863 3.807887 1.978501 3.406664 2.692582 2.692582  C 3.406664 1.978501 3.807887 1.009863 3.807887 0  C 3.807887 -1.009863 3.406664 -1.978501 2.692582 -2.692582  C 1.978501 -3.406664 1.009863 -3.807887 0 -3.807887  C -1.009863 -3.807887 -1.978501 -3.406664 -2.692582 -2.692582  C -3.406664 -1.978501 -3.807887 -1.009863 -3.807887 0  C -3.807887 1.009863 -3.406664 1.978501 -2.692582 2.692582  C -1.978501 3.406664 -1.009863 3.807887 0 3.807887  z " style="stroke: #062d46; stroke-width: 1.8" />
+    </defs>
+    <g clip-path="url(#woehler_plot__pc39ba43886)">
+     <use ns4:href="#woehler_plot__m6bf556b4d6" x="166.719916" y="126.749668" style="fill: #ffffff; stroke: #062d46; stroke-width: 1.8" />
+     <use ns4:href="#woehler_plot__m6bf556b4d6" x="177.53027" y="126.749668" style="fill: #ffffff; stroke: #062d46; stroke-width: 1.8" />
+     <use ns4:href="#woehler_plot__m6bf556b4d6" x="187.657396" y="126.749668" style="fill: #ffffff; stroke: #062d46; stroke-width: 1.8" />
+     <use ns4:href="#woehler_plot__m6bf556b4d6" x="195.633809" y="126.749668" style="fill: #ffffff; stroke: #062d46; stroke-width: 1.8" />
+     <use ns4:href="#woehler_plot__m6bf556b4d6" x="206.173284" y="126.749668" style="fill: #ffffff; stroke: #062d46; stroke-width: 1.8" />
+     <use ns4:href="#woehler_plot__m6bf556b4d6" x="217.426523" y="126.749668" style="fill: #ffffff; stroke: #062d46; stroke-width: 1.8" />
+     <use ns4:href="#woehler_plot__m6bf556b4d6" x="461.213413" y="231.809927" style="fill: #ffffff; stroke: #062d46; stroke-width: 1.8" />
+     <use ns4:href="#woehler_plot__m6bf556b4d6" x="469.880001" y="231.809927" style="fill: #ffffff; stroke: #062d46; stroke-width: 1.8" />
+     <use ns4:href="#woehler_plot__m6bf556b4d6" x="478.101948" y="231.809927" style="fill: #ffffff; stroke: #062d46; stroke-width: 1.8" />
+     <use ns4:href="#woehler_plot__m6bf556b4d6" x="488.447011" y="231.809927" style="fill: #ffffff; stroke: #062d46; stroke-width: 1.8" />
+     <use ns4:href="#woehler_plot__m6bf556b4d6" x="498.164703" y="231.809927" style="fill: #ffffff; stroke: #062d46; stroke-width: 1.8" />
+     <use ns4:href="#woehler_plot__m6bf556b4d6" x="511.718647" y="231.809927" style="fill: #ffffff; stroke: #062d46; stroke-width: 1.8" />
+     <use ns4:href="#woehler_plot__m6bf556b4d6" x="578.149412" y="274.789124" style="fill: #ffffff; stroke: #062d46; stroke-width: 1.8" />
+     <use ns4:href="#woehler_plot__m6bf556b4d6" x="589.208475" y="274.789124" style="fill: #ffffff; stroke: #062d46; stroke-width: 1.8" />
+     <use ns4:href="#woehler_plot__m6bf556b4d6" x="602.038747" y="274.789124" style="fill: #ffffff; stroke: #062d46; stroke-width: 1.8" />
+     <use ns4:href="#woehler_plot__m6bf556b4d6" x="615.058603" y="274.789124" style="fill: #ffffff; stroke: #062d46; stroke-width: 1.8" />
+     <use ns4:href="#woehler_plot__m6bf556b4d6" x="630.23276" y="274.789124" style="fill: #ffffff; stroke: #062d46; stroke-width: 1.8" />
+     <use ns4:href="#woehler_plot__m6bf556b4d6" x="654.201626" y="274.789124" style="fill: #ffffff; stroke: #062d46; stroke-width: 1.8" />
+    </g>
+   </g>
+   </g>
+ </g>
+ <defs>
+  <clipPath id="woehler_plot__pc39ba43886">
+   <rect data-qc-allow-overlap="true" x="79.789219" y="12.138477" width="738.175781" height="382.037305" />
+  </clipPath>
+ </defs>
+</svg><g id="selected_640_context" data-anim-target="true" data-anim-label="Streuung bei 640 N/mm²"><title>Streuung bei 640 N/mm²</title><circle cx="156" cy="700" r="36" fill="#F9E4E7"/><g transform="translate(135 679) scale(1.75)" fill="none" stroke="#D1495B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/><path d="M15.5 8.5L21 3M17 3h4v4"/></g><text x="210" y="687" class="" font-size="18" font-weight="840" fill="#D1495B" text-anchor="start" data-qc-role="text"><tspan x="210" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">LASTNIVEAU 640 N/mm²</tspan></text><text x="210" y="724" class="" font-size="21" font-weight="720" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="210" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">gleiche Spannung</tspan><tspan x="210" dy="29" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">unterschiedliche Ausfallzeiten</tspan></text></g><g id="statistical_description_task" data-anim-target="true" data-anim-label="Aufgabe der Zuverlässigkeitstechnik"><title>Aufgabe der Zuverlässigkeitstechnik</title><circle cx="156" cy="322" r="36" fill="#D9F0F7"/><g transform="translate(135 301) scale(1.75)" fill="none" stroke="#007EA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M8 10.5l1.8 1.8 3.6-4"/></g><text x="210" y="310" class="" font-size="18" font-weight="840" fill="#007EA7" text-anchor="start" data-qc-role="text"><tspan x="210" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">AUFGABE DER</tspan><tspan x="210" dy="24" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">ZUVERLÄSSIGKEITSTECHNIK</tspan></text><text x="132" y="410" class="" font-size="27" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="132" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Trotz der Streuung</tspan><tspan x="132" dy="37" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Informationen zum</tspan><tspan x="132" dy="37" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">produktspezifischen</tspan><tspan x="132" dy="37" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Ausfallverhalten ermitteln</tspan></text><text x="132" y="585" class="" font-size="19" font-weight="700" fill="#243B53" text-anchor="start" data-qc-role="text"><tspan x="132" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Lebensdauer statistisch bewerten</tspan></text></g></g>
+</svg>

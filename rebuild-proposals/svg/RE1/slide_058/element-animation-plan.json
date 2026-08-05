@@ -1,0 +1,93 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_058",
+  "scene_id": "re1_src_073",
+  "source_slides": [
+    73
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "weibull_random_mapping",
+      "label": "Zufallsausfälle",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_early_mapping",
+      "label": "Frühausfälle",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_wear_mapping",
+      "label": "Verschleißausfälle",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_lifecycle_conclusion",
+      "label": "Gesamter Lebenszyklus",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_weibull_random_mapping",
+      "targetId": "weibull_random_mapping",
+      "action": "show",
+      "sourceText": "Mit einem Formparameter von eins können wir den mittleren Bereich der Badewannenkurve beschreiben",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_early_mapping",
+      "targetId": "weibull_early_mapping",
+      "action": "show",
+      "sourceText": "Für einen Formparameter kleiner eins befinden wir uns im ersten Bereich der Badewannenkurve",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_wear_mapping",
+      "targetId": "weibull_wear_mapping",
+      "action": "show",
+      "sourceText": "Und für b größer eins befinden wir uns im dritten Bereich der Badewannenkurve",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_lifecycle_conclusion",
+      "targetId": "weibull_lifecycle_conclusion",
+      "action": "show",
+      "sourceText": "Wir sehen, dass wir mit Hilfe der Weibullverteilung alle drei Bereiche der Badewannenkurve abdecken können",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

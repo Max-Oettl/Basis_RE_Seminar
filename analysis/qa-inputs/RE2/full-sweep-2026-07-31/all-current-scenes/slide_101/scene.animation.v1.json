@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_101.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "s101_tree_nodes",
+      "label": "Systemelemente",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s101_tree_links",
+      "label": "Hierarchische Verknüpfungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s101_tree_nodes",
+      "targetId": "s101_tree_nodes",
+      "action": "show",
+      "sourceText": "In diesem Schritt identifizieren wir die Fehlfunktionen der einzelnen Systemelemente. Dabei wird jeder Funktion eines Systemelements mindestens eine Fehlfunktion oder ein Fehler zugeordnet.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_s101_tree_links",
+      "targetId": "s101_tree_links",
+      "action": "draw",
+      "sourceText": "Kommen wir nun zum vierten Schritt der FME-A, der Fehleranalyse.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung wird erst nach den zugehörigen fachlichen Endpunkten aufgebaut.",
+      "drawDurFrames": 42
+    }
+  ]
+}

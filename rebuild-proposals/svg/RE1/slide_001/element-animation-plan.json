@@ -1,0 +1,57 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_001",
+  "scene_id": "re1_src_001",
+  "source_slides": [
+    1
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "a320_case_context",
+      "label": "Technische Ursache und Folge",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "a320_business_impact",
+      "label": "Ausmaß und wirtschaftliche Wirkung",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_a320_case_context",
+      "targetId": "a320_case_context",
+      "action": "show",
+      "sourceText": "Ein Fall aus der jüngsten Vergangenheit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_a320_business_impact",
+      "targetId": "a320_business_impact",
+      "action": "show",
+      "sourceText": "Die Auswirkungen erstrecken sich auf die Hersteller",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

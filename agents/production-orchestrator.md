@@ -23,7 +23,7 @@ Vor der ersten Szene legt er aus `templates/production-run-template.md` ein Run-
 7. Lernziel und zentrale Aussage bestimmen.
 8. Fachliche Struktur klären.
 9. Art Direction und PNG/SVG-Assetstrategie festlegen.
-9a. Asset-Entscheidung nach `workflow/svg-asset-decision-gate.md` dokumentieren: native SVG, Library-SVG, generiertes PNG, extrahiertes PNG, Nutzer-Asset oder begruendete Auslassung.
+9a. Asset-Entscheidung nach `workflow/svg-asset-decision-gate.md` dokumentieren: Diagramm-/Layout-SVG, generiertes PNG, extrahiertes PNG, Nutzer-Asset oder begruendete Auslassung. Piktogramme sind ausnahmslos generierte PNGs; SVG-Piktogramme sind nicht zulaessig.
 10. Einen frischen Scene-Worker mit exklusivem Szenenordner für Schritte 1 bis 8 einsetzen.
 11. Den gelieferten Review-Kandidaten und alle offenen Punkte übernehmen.
 12. PNGs bei Bedarf per `<image>` einbinden.
@@ -35,6 +35,7 @@ Vor der ersten Szene legt er aus `templates/production-run-template.md` ein Run-
 18. Szene im Run-Register abschließen.
 19. Erst danach einen frischen Scene-Worker für die nächste Szene starten.
 20. Nach der letzten Szene den serienweiten Konsistenzreview durchführen.
+21. Bei Basis-Seminar-SVG-Uebergaben genau ein `storyboardImportPackage/v1` erzeugen und ueber den zentralen `--handoff-package --strict-handoff`-Check freigeben.
 
 ## Entscheidungskriterien
 
@@ -43,11 +44,15 @@ Vor der ersten Szene legt er aus `templates/production-run-template.md` ein Run-
 - Vollständig SVG-native Diagramm- und Erklärszenen sind nach dokumentierter Assetentscheidung zulässig.
 - Didaktische Klarheit hat Vorrang vor visueller Komplexität.
 - Piktogramme sollen hochwertig, aber nicht ablenkend detailliert sein.
-- Wenn ein Piktogramm oder konkretes Objekt benoetigt wird: kein improvisierter SVG-Ersatz, sondern PNG erzeugen, extrahieren oder Nutzer-Asset anfordern.
+- Piktogramme folgen
+  `workflow/30-visual-decision/pictogram-creation-workflow.md`; vor der
+  SVG-Komposition muessen Semantik-, Education-Stil-, 48-px-/960x540- und
+  Zugaenglichkeitsgate dokumentiert bestanden sein.
+- Wenn ein Piktogramm benoetigt wird: immer ein generiertes transparentes PNG verwenden. Bei einem realen konkreten Objekt darf stattdessen ein Quellenbild extrahiert oder ein Nutzer-Asset angefordert werden.
 - Texte bleiben im SVG, nicht im PNG.
 - Triggerfähigkeit wird auf Gruppen-, Karten- und Bildebene geplant.
 - Produktive Trigger werden extern in `composed/scene.animation.v1.json` beschrieben.
-- Erlaubte Trigger-Aktionen sind `show`, `hide`, `highlight`, `draw` und, wenn fuer die Erklaerung zentral, `move`.
+- Erlaubte Trigger-Aktionen sind `show`, `hide`, `highlight`, `draw` und `transform`.
 - Time-Trigger im SVG sind nicht Teil des Standards.
 - Die Qualitätsmesslatte aus `brand/design-quality-bar.md` ist verbindlich.
 - Es ist immer nur eine Szene aktiv.
@@ -83,3 +88,4 @@ Pro Gesamtauftrag liefert er zusätzlich:
 
 - `production-runs/<run_id>.md`
 - dokumentierten serienweiten Konsistenzreview
+- bei externer Basis-Seminar-Uebergabe `delivery-packages/storyboard-import/<external-module-id>/` nach `workflow/70-integration/storyboard-import-package-handoff.md`

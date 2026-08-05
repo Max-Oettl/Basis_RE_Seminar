@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_002.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "recall_statistics_chart",
+      "label": "Offizielle Rückrufstatistik",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_recall_statistics_chart",
+      "targetId": "recall_statistics_chart",
+      "action": "show",
+      "sourceText": "Das Kraftfahrt-Bundesamt liefert jedoch offizielle Daten zu Rückrufaktionen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

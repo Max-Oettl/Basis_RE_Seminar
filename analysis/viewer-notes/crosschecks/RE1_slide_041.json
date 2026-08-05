@@ -1,0 +1,924 @@
+{
+  "schema_version": "basisRebuildContentCrosscheck/v2",
+  "module_id": "RE1",
+  "output_slide_number": 41,
+  "checked_at": "2026-07-19T19:42:50.825Z",
+  "status": "review_required",
+  "manual_review_required": true,
+  "reference_mapping": {
+    "work_unit": "slide_041",
+    "output_slide_number": 41,
+    "source_slides": [
+      43,
+      44
+    ],
+    "primary_source_slide": 43,
+    "output_slide_numbers": [],
+    "mapping_type": "merged",
+    "rationale": "Die Quell-SVGs 43, 44 teilen denselben Sprechertext und bilden belegte Aufbauzustaende einer animierten Szene.",
+    "mapping_source": "reference_map",
+    "reference_map_path": "analysis/rebuild-plans/RE1_source-reference-map.json",
+    "sequence_plan": "analysis/rebuild-plans/RE1_sequence_plan.md",
+    "read_error": ""
+  },
+  "references": [
+    {
+      "source_slide_number": 43,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE1/SVG/Folie43.SVG",
+      "source_svg_sha256": "4c7715a8d121f010b198deba7b4de2718143359dfa50f9201cc79d8156e54267",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE1/SVG/Folie43.SVG",
+      "analysis_path": ""
+    },
+    {
+      "source_slide_number": 44,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE1/SVG/Folie44.SVG",
+      "source_svg_sha256": "998184ae4a80195240502cc3fe6bff9b649e7f935b35022f487b6db26bbf604f",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE1/SVG/Folie44.SVG",
+      "analysis_path": ""
+    }
+  ],
+  "proposal": {
+    "path": "rebuild-proposals/svg/RE1/slide_041/slide_041.svg",
+    "svg_sha256": "f0d5c2e0627644267dc602644caa7cefe6517cee4c27efd2e10a5270c2927090",
+    "animation_manifest": "/files/rebuild-proposals/svg/RE1/slide_041/scene.animation.v1.json"
+  },
+  "summary": {
+    "source_count": 2,
+    "checked_content_items": 84,
+    "errors": 0,
+    "warnings": 13,
+    "infos": 0,
+    "animation_steps": 4
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 043: \"Der meist kurz als Mittelwert bezeichnete empirische arithmetische Mittelwert wird aus den\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Der meist kurz als Mittelwert bezeichnete empirische arithmetische Mittelwert wird aus den"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 043: \"folgendermaßen berechnet:\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-11",
+      "expected": "folgendermaßen berechnet:"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 043: \"Der Mittelwert gibt als Lageparameter an, wo ungefähr die Mitte der Ausfallzeiten liegt. Stellt man\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-12",
+      "expected": "Der Mittelwert gibt als Lageparameter an, wo ungefähr die Mitte der Ausfallzeiten liegt. Stellt man"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 043: \"sich die Ausfallzeiten als Massenpunkte vor, so entspricht der Mittelwert\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-13",
+      "expected": "sich die Ausfallzeiten als Massenpunkte vor, so entspricht der Mittelwert"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 043: \"dem Schwerpunkt\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-16",
+      "expected": "dem Schwerpunkt"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 043: \"dieser Massenpunkte.\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-17",
+      "expected": "dieser Massenpunkte."
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 043: \"Der arithmetische Mittelwert ist sehr empfindlich gegenüber „Ausreißern“, d.h. eine extrem kurze\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-18",
+      "expected": "Der arithmetische Mittelwert ist sehr empfindlich gegenüber „Ausreißern“, d.h. eine extrem kurze"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 043: \"oder lange Ausfallzeit beeinflusst die Größe des Mittelwertes sehr stark.\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-19",
+      "expected": "oder lange Ausfallzeit beeinflusst die Größe des Mittelwertes sehr stark."
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 044: \"Der empirische arithmetische Mittelwert oder auch nur kurz Mittelwert berechnet sich zu:\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Der empirische arithmetische Mittelwert oder auch nur kurz Mittelwert berechnet sich zu:"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 044: \"Er dient als Lageparameter und zeigt die Mitte der einzelnen Ausfallzeiten\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Er dient als Lageparameter und zeigt die Mitte der einzelnen Ausfallzeiten"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 044: \"Empfindlichkeit gegenüber Ausreißern\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-12",
+      "expected": "Empfindlichkeit gegenüber Ausreißern"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 044: \"extrem kurze oder lange Ausfallzeit haben starken\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-14",
+      "expected": "extrem kurze oder lange Ausfallzeit haben starken"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 044: \"Einfluss auf den Mittelwert\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-15",
+      "expected": "Einfluss auf den Mittelwert"
+    }
+  ],
+  "content_checks": [
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Der meist kurz als Mittelwert bezeichnete empirische arithmetische Mittelwert wird aus den",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.333,
+      "evidence": "tokens:der,als,mittelwert,mittelwert"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Ausfallzeiten",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-3",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-4",
+      "expected": "1",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-5",
+      "expected": ",",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-6",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-7",
+      "expected": "2",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-8",
+      "expected": ", ... ,",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-9",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-10",
+      "expected": "n",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-11",
+      "expected": "folgendermaßen berechnet:",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-12",
+      "expected": "Der Mittelwert gibt als Lageparameter an, wo ungefähr die Mitte der Ausfallzeiten liegt. Stellt man",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.4,
+      "evidence": "tokens:der,mittelwert,als,lageparameter,der,ausfallzeiten"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-13",
+      "expected": "sich die Ausfallzeiten als Massenpunkte vor, so entspricht der Mittelwert",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:ausfallzeiten,als,massenpunkte,der,mittelwert"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-14",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-15",
+      "expected": "m",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-16",
+      "expected": "dem Schwerpunkt",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:schwerpunkt"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-17",
+      "expected": "dieser Massenpunkte.",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:massenpunkte"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-18",
+      "expected": "Der arithmetische Mittelwert ist sehr empfindlich gegenüber „Ausreißern“, d.h. eine extrem kurze",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.182,
+      "evidence": "tokens:der,mittelwert"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-19",
+      "expected": "oder lange Ausfallzeit beeinflusst die Größe des Mittelwertes sehr stark.",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-20",
+      "expected": "Mittelwert",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-21",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-22",
+      "expected": "𝑚",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-23",
+      "expected": "=",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-24",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-25",
+      "expected": "1",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-26",
+      "expected": "+",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-27",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-28",
+      "expected": "2",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-29",
+      "expected": "+",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-30",
+      "expected": "⋯",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-31",
+      "expected": "+",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-32",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-33",
+      "expected": "𝑛",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-34",
+      "expected": "𝑛",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-35",
+      "expected": "=",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-36",
+      "expected": "1",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-37",
+      "expected": "𝑛",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-38",
+      "expected": "෍",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-39",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-40",
+      "expected": "𝑖",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-41",
+      "expected": "𝑛",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-42",
+      "expected": "𝑖",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-43",
+      "expected": "=",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 43,
+      "source_item_id": "source-svg-text-44",
+      "expected": "1",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-1",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Der empirische arithmetische Mittelwert oder auch nur kurz Mittelwert berechnet sich zu:",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.25,
+      "evidence": "tokens:der,mittelwert,mittelwert"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-3",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Er dient als Lageparameter und zeigt die Mitte der einzelnen Ausfallzeiten",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.364,
+      "evidence": "tokens:als,lageparameter,der,ausfallzeiten"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-5",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-6",
+      "expected": "Ausfallzeiten als Massenpunkte",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-7",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-8",
+      "expected": "Mittelwert",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-9",
+      "expected": "=",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-10",
+      "expected": "Schwerpunkt der Massenpunkte",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "tokens:schwerpunkt,der,massenpunkte"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-11",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-12",
+      "expected": "Empfindlichkeit gegenüber Ausreißern",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-13",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-14",
+      "expected": "extrem kurze oder lange Ausfallzeit haben starken",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-15",
+      "expected": "Einfluss auf den Mittelwert",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.25,
+      "evidence": "tokens:mittelwert"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-16",
+      "expected": "Mittelwert",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-17",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-18",
+      "expected": "𝑚",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-19",
+      "expected": "=",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-20",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-21",
+      "expected": "1",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-22",
+      "expected": "+",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-23",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-24",
+      "expected": "2",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-25",
+      "expected": "+",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-26",
+      "expected": "⋯",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-27",
+      "expected": "+",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-28",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-29",
+      "expected": "𝑛",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-30",
+      "expected": "𝑛",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-31",
+      "expected": "=",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-32",
+      "expected": "1",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-33",
+      "expected": "𝑛",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-34",
+      "expected": "෍",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-35",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-36",
+      "expected": "𝑖",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-37",
+      "expected": "𝑛",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-38",
+      "expected": "𝑖",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-39",
+      "expected": "=",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 44,
+      "source_item_id": "source-svg-text-40",
+      "expected": "1",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    }
+  ],
+  "manual_review_focus": [
+    "Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.",
+    "Sprechertext-Reihenfolge gegen die semantisch geplanten Animationsschritte pruefen."
+  ],
+  "reference_mapping_sha256": "8a6515f62a4e5780083b29d30fbed33c48c4e71ad2d98fc03587a0524b971088",
+  "reference_map_path": "analysis/rebuild-plans/RE1_source-reference-map.json",
+  "sequence_plan": "analysis/rebuild-plans/RE1_sequence_plan.md"
+}

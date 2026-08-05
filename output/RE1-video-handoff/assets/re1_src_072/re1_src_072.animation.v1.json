@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_072.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "weibull_hazard_random",
+      "label": "Konstante Ausfallrate",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_hazard_early",
+      "label": "Sinkende Ausfallrate",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_hazard_wear",
+      "label": "Steigende Ausfallrate",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_weibull_hazard_random",
+      "targetId": "weibull_hazard_random",
+      "action": "draw",
+      "sourceText": "Für b gleich eins ergibt sich",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "durFrames": 42
+    },
+    {
+      "stepId": "draw_weibull_hazard_early",
+      "targetId": "weibull_hazard_early",
+      "action": "draw",
+      "sourceText": "Für b kleiner eins sinkt die",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "durFrames": 42
+    },
+    {
+      "stepId": "draw_weibull_hazard_wear",
+      "targetId": "weibull_hazard_wear",
+      "action": "draw",
+      "sourceText": "Und für b größer eins ist",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "durFrames": 42
+    }
+  ]
+}

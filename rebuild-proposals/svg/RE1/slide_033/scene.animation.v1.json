@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_033.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "population_stems",
+      "label": "Kumulierte Grundgesamtheit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "smooth_distribution",
+      "label": "Glatte Verteilungsfunktion",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "cdf_integral_formula",
+      "label": "Integralbeziehung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "cdf_derivative_formula",
+      "label": "Ableitungsbeziehung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "cdf_zero_endpoint",
+      "label": "Startwert null Prozent",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "cdf_hundred_endpoint",
+      "label": "Grenzwert einhundert Prozent",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "cdf_statistical_meaning",
+      "label": "Statistische Bedeutung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_population_stems",
+      "targetId": "population_stems",
+      "action": "show",
+      "sourceText": "Wird nun wieder die Anzahl der Ausfälle gegen unendlich immer weiter erhöht",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_smooth_distribution",
+      "targetId": "smooth_distribution",
+      "action": "draw",
+      "sourceText": "ergib sich wieder eine glatte Kurve",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_cdf_integral_formula",
+      "targetId": "cdf_integral_formula",
+      "action": "show",
+      "sourceText": "Mathematisch kann die Ausfallwahrscheinlichkeit durch das Integral",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_cdf_derivative_formula",
+      "targetId": "cdf_derivative_formula",
+      "action": "show",
+      "sourceText": "oder andersherum, die Dichtefunktion einfach durch die Ableitung der Ausfallwahrscheinlichkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_cdf_zero_endpoint",
+      "targetId": "cdf_zero_endpoint",
+      "action": "show",
+      "sourceText": "Die Ausfallwahrscheinlichkeit startet zu Beginn der Lebensdauer immer bei einem Wert von null Prozent",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_cdf_hundred_endpoint",
+      "targetId": "cdf_hundred_endpoint",
+      "action": "show",
+      "sourceText": "erreicht zu einem bestimmten Zeitpunkt dann den Wert von einhundert Prozent",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_cdf_statistical_meaning",
+      "targetId": "cdf_statistical_meaning",
+      "action": "show",
+      "sourceText": "Die Ausfallwahrscheinlichkeit beschreibt statistisch",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

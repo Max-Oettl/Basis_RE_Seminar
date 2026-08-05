@@ -1,0 +1,57 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_029",
+  "scene_id": "re1_src_031",
+  "source_slides": [
+    31
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "density_ridges",
+      "label": "Dichtefunktionen je Lastniveau",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "woehler_peak_line",
+      "label": "Beschriftete Wöhlerlinie",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_density_ridges",
+      "targetId": "density_ridges",
+      "action": "draw",
+      "sourceText": "Die Dichtefunktion beschreibt das Ausfallverhalten über der Zeit für ein spezifisches Lastniveau",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_woehler_peak_line",
+      "targetId": "woehler_peak_line",
+      "action": "draw",
+      "sourceText": "Erweitert man nun die Darstellung um die Dimension der Spannung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

@@ -2,29 +2,37 @@
 
 ## Ziel
 
-Der SVG Compositor baut erst nach manueller Asset-Freigabe ein SVG aus geprüften PNG-Piktogrammen und SVG-nativen Layout-Elementen.
+Der SVG Compositor transformiert eine oder mehrere freigegebene PowerPoint-Quell-SVGs in genau ein strukturiertes Ziel-SVG. Zusaetzliche Plot-, Formel- oder Bildassets werden erst nach ihrer jeweiligen Freigabe eingebunden.
 
-Das SVG ist ein Layout- und Animationscontainer. Es ist nicht das Ziel, PNGs automatisch in SVG-Pfade umzuwandeln.
+Das Ziel-SVG ist ein Layout- und Animationscontainer. Die Quell-SVG wird bevorzugt strukturell uebernommen; ein kompletter Neuaufbau vorhandener Geometrie ist nicht der Standard.
 
 ## Verantwortlichkeiten
 
 - Rebuild-Plan, Sequenzkarte und Design-Brief aus `analysis/rebuild-plans/` als fuehrende Bauanweisung verwenden.
+- Source-SVG-Inventar und alle im Referenz-Mapping genannten Quell-SVGs laden.
+- `workflow/40-svg-production/target-svg-structure-contract.md` vor jeder Komposition anwenden.
 - Immer nur eine Arbeitseinheit komponieren: eine echte Inhaltsfolie oder eine Sequenzgruppe.
 - Erst nach dokumentierter Szenenplanung fuer diese Einheit mit SVG-Code beginnen.
 - Erst nach dokumentierter Asset-Entscheidung nach `workflow/svg-asset-decision-gate.md` mit SVG-Code beginnen.
-- Bei PowerPoint-Aufbaufolgen ein gemeinsames Zielbild mit semantischen Layern bauen; reine Animations-Zwischenstaende werden als Layer-State, Preview oder `skip_preview` dokumentiert.
+- Bei Quell-SVG-Aufbaufolgen ein gemeinsames Zielbild mit semantischen Layern bauen; reine Animations-Zwischenstaende werden als Layer-State, Preview oder `skip_preview` dokumentiert.
+- Gemeinsame semantische Objekte aus mehreren Quell-SVGs konsolidieren; zustandsspezifische Objekte in getrennte Layer uebernehmen.
+- IDs, `defs`, Klassen, `href` und `url(#...)` beim Merge kollisionsfrei und gemeinsam umschreiben.
 - Fachlich relevanten Quellinhalt vollstaendig uebernehmen. Layout und Verpackung duerfen neu sein, aber die SVG darf keine Muss-Inhalte, Parameter, Beispiele, Diagrammlogik oder Sprechertextanker verlieren.
 - Library-Komponenten immer an die konkrete didaktische Aussage anpassen; sie sind Startgeometrie, nicht Endlayout.
 - Ausfaelle, Datenpunkte und Zeitmarken nicht automatisch gleichverteilen. Positionen werden aus Quelle, Zielzustand oder fachlicher Aussage abgeleitet.
 - Geprüfte PNG-Assets per `<image>` in das SVG einbinden.
 - SVG-native Elemente ergänzen: Kacheln, Boxen, Texte, Pfeile, Achsen, Hintergründe, Hervorhebungen.
-- Triggergruppen auf Karten-, Bereichs- oder Bildebene anlegen.
+- Triggergruppen auf Karten-, Bereichs- oder Bildebene mit semantischen ASCII-`snake_case`-IDs, `data-anim-target="true"` und verstaendlichem `data-anim-label` anlegen.
 - Texte als SVG-Text setzen.
 - Keine ungewollten Überlappungen zwischen Text, PNGs und SVG-Elementen erzeugen.
 - Keine sichtbaren Folienhaupttitel oder automatisch gesetzten Ueberschriften ins SVG schreiben. Der SVG-Vorschlag ist eine Grafikkomponente; Folientitel werden spaeter ausserhalb des SVGs ergaenzt, ausser der Nutzer fordert sie explizit.
 - Fazit-, Merksatz- oder Zusammenfassungsbaender nur einbauen, wenn sie fuer die didaktische Aussage wirklich noetig sind. Wenig Inhalt ist kein Grund fuer eine kuenstliche Zusammenfassung.
-- Bei PowerPoint-Aufbaufolgen zuerst die zusammengezogene Layerstruktur bauen. Per-Folie-Dateien dienen nur als Preview-Zustaende mit ein-/ausgeblendeten Layern, wenn sie fuer Review oder Pipeline noetig sind.
+- Bei Aufbaufolgen zuerst die zusammengezogene Layerstruktur bauen. Per-Folie-Dateien dienen nur als Preview-Zustaende mit ein-/ausgeblendeten Layern, wenn sie fuer Review oder Pipeline noetig sind.
 - Komplexere Piktogramme und Werkzeug-/Methodensymbole als lokale PNGs per `<image>` einbinden; nicht spontan aus SVG-Strichen in die Folie zeichnen.
+- Nur Piktogramme mit bestandenem Asset-Brief nach
+  `workflow/30-visual-decision/pictogram-creation-workflow.md` integrieren. Die
+  dokumentierte Mindestplatzierung einhalten und den 960x540-Szenenrender als
+  Teil des visuellen Reviews behandeln.
 - Wenn fuer ein konkretes Piktogramm kein PNG vorhanden ist, wird die Arbeitseinheit als blockiert oder asset-offen dokumentiert; es wird kein SVG-Ersatz improvisiert.
 - `manifest.json` und `prompts.json` als Quelle berücksichtigen.
 - Merksatz- und Fazitbereiche mit der Takeaway-Band-Komponente aus `components/takeaway-band.md` bauen.
@@ -41,7 +49,9 @@ Das SVG ist ein Layout- und Animationscontainer. Es ist nicht das Ziel, PNGs aut
 - Keine SVG-Komposition vor Asset-Freigabe.
 - Keine SVG-Komposition ohne Asset-Entscheidungstabelle fuer die aktive Arbeitseinheit.
 - Keine SVG-Komposition ohne dokumentierten Rebuild-Plan und Zielzustand, ausser der Auftrag ist ausdruecklich nur eine Einzelgrafik ohne PowerPoint-Quelle.
-- Keine SVG-Komposition, die inhaltlich deutlich leerer ist als die Quellfolie, ausser der Szenenbrief dokumentiert, wie der Inhalt anderweitig durch Grafik oder Animation getragen wird.
+- Keine SVG-Komposition, die inhaltlich deutlich leerer ist als die zugeordneten Quell-SVGs, ausser der Szenenbrief dokumentiert, wie der Inhalt anderweitig durch Grafik oder Animation getragen wird.
+- Keine Aenderung an Dateien unter `source-materials/basis-seminar/powerpoint-svg/`.
+- Keine finale Freigabe ohne Anwendung des Zielstrukturvertrags `external-svg-asset-package-handoff/v1`.
 - Keine Batch- oder Generatorlaeufe fuer mehrere Arbeitseinheiten, solange die aktuelle Einheit nicht gerendert, visuell geprueft und korrigiert wurde.
 - Vor Rueckmeldung das gerenderte SVG gegen Zielzustand und Design-Brief pruefen. Offensichtliche Kollisionen, falsche Achsennaehe, unpassende Library-Skalierung oder blind uebernommene PowerPoint-Struktur sind Freigabefehler.
 - Animationen und Trigger laufen standardmaessig auf Gruppen- oder Bildebene. Jede neue Content-SVG erhaelt sinnvolle Animationsziele; eine komplett statische SVG ist eine begruendete Ausnahme.
@@ -67,3 +77,5 @@ Der Agent liefert:
 - `composed/scene.svg`
 - Triggergruppen mit semantischen IDs
 - aktualisierte Metadaten oder Manifest-Referenzen
+
+Die finale Paketkopie entsteht erst nach interner Freigabe unter `delivery-packages/storyboard-import/<external-module-id>/assets/<Scene_ID>/`. SVG und externes Manifest erhalten dort denselben Basename.

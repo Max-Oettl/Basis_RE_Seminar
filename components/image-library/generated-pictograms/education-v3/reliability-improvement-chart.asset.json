@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "reltestEducationPictogramAsset/v1",
+  "assetId": "reliability_improvement_chart",
+  "file": "components/image-library/generated-pictograms/education-v3/reliability-improvement-chart-flat.png",
+  "assetType": "generated_png",
+  "status": "accepted",
+  "styleProfile": "reltest-education-minimal-v1",
+  "source": {
+    "evidenceType": "user_request_and_speaker_text",
+    "reference": "RE1 Szene 15: Verbesserung der Zuverlässigkeit",
+    "license": "project_internal"
+  },
+  "semantics": {
+    "concept": "Verbesserung der Zuverlässigkeit",
+    "learningFunction": "concept-anchor",
+    "mustShowFeatures": ["Diagrammrahmen", "ansteigende Linie", "Pfeil nach oben"],
+    "mustNotImply": ["exakter Messwert", "Umsatzwachstum", "Finanzprognose"],
+    "confusableWith": ["allgemeine Geschäftsentwicklung", "reine Trenddarstellung"],
+    "firstUseLabel": "Zuverlässigkeit verbessern",
+    "reuseKey": "reliability-improvement-chart"
+  },
+  "visualStyle": {
+    "flat2d": true,
+    "perspective": "front",
+    "dominantSilhouette": true,
+    "semanticLayers": 2,
+    "brandColors": ["#031334", "#00A754"],
+    "gradients": false,
+    "shadows": false,
+    "threeDimensional": false,
+    "isometric": false,
+    "photorealistic": false,
+    "glow": false,
+    "texture": false,
+    "embeddedText": false,
+    "logo": false,
+    "watermark": false
+  },
+  "raster": {
+    "widthPx": 1024,
+    "heightPx": 1024,
+    "transparentBackground": true,
+    "safeMarginRatio": 0.10
+  },
+  "learningUse": {
+    "targetPlacementPx": 112,
+    "requiresTextLabelOnFirstUse": true,
+    "colorIndependentMeaning": true,
+    "smallScaleTests": {
+      "at32px": "passed",
+      "at48px": "passed",
+      "scene960x540": "passed"
+    }
+  },
+  "accessibility": {
+    "redundantWithVisibleLabel": true,
+    "accessibleName": "",
+    "contrastPairs": [
+      {"foreground": "#031334", "background": "#FFFFFF", "minimumRatio": 3},
+      {"foreground": "#00A754", "background": "#FFFFFF", "minimumRatio": 3}
+    ]
+  },
+  "review": {
+    "semantic": "passed",
+    "style": "passed",
+    "eLearning": "passed",
+    "accessibilityTechnical": "passed",
+    "notes": ["Built-in image generation; magenta chroma removed locally; colors flattened deterministically to Education navy and signal green.", "At 32 px, 48 px and 112 px the rising graph and arrow remain distinct; final 960x540 scene check is part of the scene review."]
+  }
+}

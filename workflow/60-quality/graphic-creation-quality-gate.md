@@ -1,6 +1,6 @@
 # Grafik-Erstellungsworkflow Und Qualitätsgate
 
-Dieses Dokument beschreibt, wie eine einzelne Reltest-Academy-Grafik erstellt und vor der Freigabe geprüft wird.
+Dieses Dokument beschreibt, wie eine einzelne RelTest-Education-Grafik erstellt und vor der Freigabe geprüft wird.
 
 Ziel ist keine PowerPoint-Folie, sondern ein sauberes Content-SVG, Bild- oder Diagrammelement fuer E-Learning und spaetere PowerPoint-Einbettung. Titel, Kapitelueberschriften und lange erklaerende Texte gehoeren nur dann in die Grafik, wenn sie ausdruecklich Teil des gewuenschten Inhaltsmoduls sind.
 
@@ -29,10 +29,23 @@ Jedes visuelle Element wird klassifiziert:
 - Generische Timeline, Aufbauachse oder Ausfall-Zeitstrahl: als didaktische SVG-Komposition planen, nicht als Python-Plot erzeugen.
 - Formel, Tabelle, Prozesspfeil oder einfacher Marker: normalerweise SVG-nativ.
 - Library-Element: nur als angepasste Vorlage, nicht als blind kopierte Komponente.
-- Piktogramm, Werkzeug-/Methodensymbol, source-spezifisches Icon, realistisches Objekt oder Illustration: PNG-Asset erzeugen, extrahieren oder vom Nutzer anfordern.
+- Piktogramm, unabhaengig von seiner Komplexitaet: als generiertes transparentes
+  PNG nach dem Education-Piktogrammworkflow erstellen. Weder native SVG-Pfade
+  noch Library-SVG-Geometrie sind fuer neue oder veraenderte Szenen zulaessig.
+- Quellenbild, realistische Illustration oder bereits vorhandenes Rasterasset:
+  als separates PNG extrahieren beziehungsweise vom Nutzer anfordern; es darf
+  nicht faelschlich als neu generiertes Piktogramm registriert werden.
 - Alte PowerPoint-Dekoration ohne fachliche Funktion: weglassen oder begruendet als `omit_with_reason` dokumentieren.
 
-Ein komplexes Piktogramm darf nicht als improvisierte Linien-/Pfad-SVG umgesetzt werden. Wenn die konkrete Form fuer die Bedeutung wichtig ist, ist ein PNG-Asset Pflicht.
+Jedes Piktogramm muss ein generiertes PNG-Asset sein. Das Szenen-SVG darf dieses
+Asset nur platzieren, gruppieren und animieren, aber nicht aus SVG-Formen
+rekonstruieren.
+
+Fuer jedes Piktogramm gilt zusaetzlich
+`workflow/30-visual-decision/pictogram-creation-workflow.md`. Vor der
+SVG-Komposition muessen Semantik, Education-Stilprofil, 48-px-Erkennbarkeit,
+960x540-Szenenrender, mindestens 3:1 Nicht-Text-Kontrast, nicht allein
+farbcodierte Bedeutung und seminarweite Wiederverwendung geprueft sein.
 
 Bei Nutzerfeedback wird dieses Gate erneut angewendet, bevor gepatcht wird.
 
@@ -202,6 +215,14 @@ Eine Grafik ist erst fertig, wenn alle Punkte erfüllt sind:
 
 - Komplexe Piktogramme oder source-spezifische Icons sind als PNG/image eingebunden, nicht als improvisierte Linien-/Pfad-SVG.
 - Alle eingebundenen PNG/image-Assets existieren lokal, sind im Render sichtbar erkennbar und im Asset-Manifest oder Szenenbrief dokumentiert.
+- Neue Piktogramme folgen `reltest-education-minimal-v1`: flat 2D, frontal oder
+  orthografisch, maximal zwei Markenfarben, keine Verlaeufe, Schatten, 3D-,
+  Isometrie-, Glow-, Textur-, Emoji- oder Stickeroptik.
+- Jedes bedeutungsrelevante Piktogramm ist bei 48 px und im 960x540-Szenenrender
+  eindeutig, erreicht mindestens 3:1 Kontrast und vermittelt Status nicht nur
+  ueber Farbe.
+- Kompakte universelle Piktogramme bestehen zusaetzlich den 32-px-Haertetest;
+  Piktogramm, Label, Statusmarker und Karte bleiben bei Animation atomar.
 
 ## 10. Automatisches SVG-QA-Gate
 

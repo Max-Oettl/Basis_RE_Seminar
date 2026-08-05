@@ -5,6 +5,7 @@ from pathlib import Path
 
 from basis_seminar_plot_data import DEFAULT_FAILURE_TIMES_CSV
 from reltest_plot_style import RELTEST_COLORS, apply_reltest_style, parse_float_list, save_figure
+from svg_animation_targets import prepare_svg_animation_targets
 
 
 SUBSCRIPT_DIGITS = {
@@ -65,7 +66,7 @@ def build_plot(
         arrowprops=dict(arrowstyle="-|>", color=RELTEST_COLORS["ink"], linewidth=2.2, shrinkA=0, shrinkB=0),
         clip_on=False,
     )
-    x_axis.arrow_patch.set_gid("plot-axis-x")
+    x_axis.arrow_patch.set_gid("plot_axis_x")
     y_axis = ax.annotate(
         "",
         xy=(0, ymax),
@@ -73,11 +74,12 @@ def build_plot(
         arrowprops=dict(arrowstyle="-|>", color=RELTEST_COLORS["ink"], linewidth=2.2, shrinkA=0, shrinkB=0),
         clip_on=False,
     )
-    y_axis.arrow_patch.set_gid("plot-axis-y")
+    y_axis.arrow_patch.set_gid("plot_axis_y")
 
     helper_artists = []
     marker_artists = []
     label_artists = []
+    animation_targets: dict[str, str] = {}
     for rank, time_value in zip(ranks, sorted_times):
         label_suffix = subscript_number(rank)
         horizontal = ax.plot(
@@ -89,7 +91,9 @@ def build_plot(
             linestyle="-",
             zorder=2,
         )[0]
-        horizontal.set_gid(f"plot-helper-horizontal-t{rank}")
+        horizontal_id = f"plot_helper_horizontal_t{rank}"
+        horizontal.set_gid(horizontal_id)
+        animation_targets[horizontal_id] = f"Waagerechte Hilfslinie t{rank}"
         vertical = ax.plot(
             [time_value, time_value],
             [0, rank],
@@ -99,7 +103,9 @@ def build_plot(
             linestyle="-",
             zorder=2,
         )[0]
-        vertical.set_gid(f"plot-helper-vertical-t{rank}")
+        vertical_id = f"plot_helper_vertical_t{rank}"
+        vertical.set_gid(vertical_id)
+        animation_targets[vertical_id] = f"Senkrechte Hilfslinie t{rank}"
         helper_artists.extend([horizontal, vertical])
 
         marker = ax.scatter(
@@ -112,7 +118,9 @@ def build_plot(
             zorder=4,
             clip_on=False,
         )
-        marker.set_gid(f"plot-failure-marker-t{rank}")
+        marker_id = f"plot_failure_marker_t{rank}"
+        marker.set_gid(marker_id)
+        animation_targets[marker_id] = f"Ausfallzeitpunkt t{rank}"
         marker_artists.append(marker)
 
         if show_intersections:
@@ -126,7 +134,9 @@ def build_plot(
                 zorder=5,
                 clip_on=False,
             )
-            point.set_gid(f"plot-mapped-point-t{rank}")
+            point_id = f"plot_mapped_point_t{rank}"
+            point.set_gid(point_id)
+            animation_targets[point_id] = f"Datenpunkt F(t{rank})"
             marker_artists.append(point)
 
         f_label = ax.text(
@@ -140,7 +150,9 @@ def build_plot(
             fontstyle="italic",
             clip_on=False,
         )
-        f_label.set_gid(f"plot-probability-label-t{rank}")
+        probability_label_id = f"plot_probability_label_t{rank}"
+        f_label.set_gid(probability_label_id)
+        animation_targets[probability_label_id] = f"Beschriftung F(t{rank})"
         label_artists.append(f_label)
 
         t_label = ax.text(
@@ -154,7 +166,9 @@ def build_plot(
             fontstyle="italic",
             clip_on=False,
         )
-        t_label.set_gid(f"plot-time-label-t{rank}")
+        time_label_id = f"plot_time_label_t{rank}"
+        t_label.set_gid(time_label_id)
+        animation_targets[time_label_id] = f"Beschriftung t{rank}"
         label_artists.append(t_label)
 
     ax.text(
@@ -167,7 +181,7 @@ def build_plot(
         fontsize=15,
         fontweight="bold",
         clip_on=False,
-    ).set_gid("plot-axis-label-x")
+    ).set_gid("plot_axis_label_x")
     ax.text(
         0,
         ymax + 0.36,
@@ -179,11 +193,12 @@ def build_plot(
         fontweight="bold",
         linespacing=1.28,
         clip_on=False,
-    ).set_gid("plot-axis-label-y")
+    ).set_gid("plot_axis_label_y")
 
     fig.subplots_adjust(left=0.16, right=0.96, bottom=0.18, top=0.82)
     save_figure(fig, output)
     plt.close(fig)
+    prepare_svg_animation_targets(output, animation_targets)
 
 
 def main() -> None:

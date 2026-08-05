@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_046.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "mttf_failure_observations",
+      "label": "Ausfallzeiten nicht reparierbarer Einheiten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mttf_formula",
+      "label": "MTTF-Formel",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mttf_density",
+      "label": "Dichtefunktion der Lebensdauer",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mttf_marker",
+      "label": "MTTF-Marker",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mttf_half_probability",
+      "label": "50-Prozent-Einordnung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_mttf_failure_observations",
+      "targetId": "mttf_failure_observations",
+      "action": "show",
+      "sourceText": "Produkten, die nicht repariert werden können",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_mttf_formula",
+      "targetId": "mttf_formula",
+      "action": "show",
+      "sourceText": "Erwartungswert der Lebensdauer, der aus dem Integral der Zuverlässigkeitsfunktion über der Zeit berechnet wird",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_mttf_density",
+      "targetId": "mttf_density",
+      "action": "draw",
+      "sourceText": "Näherungsweise kann dieser Wert auch durch den Mittelwert der Verteilung abgeschätzt werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_mttf_marker",
+      "targetId": "mttf_marker",
+      "action": "show",
+      "sourceText": "Der M-T-T-F repräsentiert somit die mittlere Lebensdauer",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_mttf_half_probability",
+      "targetId": "mttf_half_probability",
+      "action": "show",
+      "sourceText": "fünfzig Prozent Überlebens- beziehungsweise Ausfallwahrscheinlichkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

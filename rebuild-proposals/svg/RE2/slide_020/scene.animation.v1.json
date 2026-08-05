@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_020.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 40,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "fta20_acronym",
+      "label": "Abkürzung FTA",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta20_terms",
+      "label": "Deutsche Bezeichnungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta20_acronym",
+      "targetId": "fta20_acronym",
+      "action": "show",
+      "sourceText": "F-T-A steht für den englischen Begriff Fault Tree Analysis.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_fta20_terms",
+      "targetId": "fta20_terms",
+      "action": "show",
+      "sourceText": "Im Deutschen findet man manchmal auch die Abkürzung F-B-A",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

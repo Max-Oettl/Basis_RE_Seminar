@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_049.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "bq_distribution",
+      "label": "Verteilungskurve",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "bq_q_definition",
+      "label": "Bedeutung von q",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "b5_example",
+      "label": "B5-Beispiel",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "other_bq_markers",
+      "label": "Weitere Bq-Lebensdauern",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "bq_requirement_conclusion",
+      "label": "Bq als Zuverlässigkeitsanforderung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_bq_distribution",
+      "targetId": "bq_distribution",
+      "action": "draw",
+      "sourceText": "ordnet einer bestimmten Lebensdauer eine definierte Ausfallwahrscheinlichkeit zu",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_bq_q_definition",
+      "targetId": "bq_q_definition",
+      "action": "show",
+      "sourceText": "Dabei steht das Q für die Ausfallwahrscheinlichkeit in Prozent",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_b5_example",
+      "targetId": "b5_example",
+      "action": "show",
+      "sourceText": "Zum Beispiel bedeutet eine B-fünf-Lebensdauer von einhunderttausend Kilometern",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_other_bq_markers",
+      "targetId": "other_bq_markers",
+      "action": "show",
+      "sourceText": "flexibel für verschiedene Lebensdauern",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_bq_requirement_conclusion",
+      "targetId": "bq_requirement_conclusion",
+      "action": "show",
+      "sourceText": "präzise Methode zur Festlegung und Überprüfung von Zuverlässigkeitsanforderungen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

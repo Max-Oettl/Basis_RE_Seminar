@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_084.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "nkw_probability_data",
+      "label": "Transformierte Ausfalldaten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "nkw_probability_line",
+      "label": "Geradenförmiger Weibull-Fit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "nkw_same_data_note",
+      "label": "Gleiche Daten, andere Skalierung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_nkw_probability_data",
+      "targetId": "nkw_probability_data",
+      "action": "show",
+      "sourceText": "Nach der Transformation der Achsen in eine einfach bzw. doppel-logarithmierte Skalierung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_nkw_probability_line",
+      "targetId": "nkw_probability_line",
+      "action": "draw",
+      "sourceText": "ergibt sich für dieselbe Verteilung eine geradenförmige Darstellung der Ausfallwahrscheinlichkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_nkw_same_data_note",
+      "targetId": "nkw_same_data_note",
+      "action": "show",
+      "sourceText": "mit transformierten Achsen und damit Verteilungsfunktionen in Form von Geraden arbeiten",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

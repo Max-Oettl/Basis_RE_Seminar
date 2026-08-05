@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re2_ch4_fmea_slide_101",
+  "targets": [
+    {
+      "targetId": "s101_tree_nodes",
+      "label": "Systemelemente",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s101_tree_links",
+      "label": "Hierarchische Verknüpfungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s101_tree_nodes",
+      "targetId": "s101_tree_nodes",
+      "action": "show",
+      "sourceText": "In diesem Schritt identifizieren wir die Fehlfunktionen der einzelnen Systemelemente. Dabei wird jeder Funktion eines Systemelements mindestens eine Fehlfunktion oder ein Fehler zugeordnet.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_s101_tree_links",
+      "targetId": "s101_tree_links",
+      "action": "draw",
+      "sourceText": "Werfen wir dazu einen Blick auf unsere Systemstruktur. Wir kennen bereits die Systemelemente und ihre zugeordneten Funktionen. Nun können wir jeder Funktion eine oder mehrere Fehlfunktionen zuordnen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung wird erst nach den zugehörigen fachlichen Endpunkten aufgebaut.",
+      "drawDurFrames": 42
+    }
+  ]
+}

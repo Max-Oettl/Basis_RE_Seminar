@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_002.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "recall_actions_series",
+      "label": "Rückrufaktionen 2009 bis 2019",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "affected_vehicles_series",
+      "label": "Betroffene Fahrzeuge 2009 bis 2019",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "recall_key_figures",
+      "label": "Schlüsselwerte und Zehnjahresentwicklung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_recall_actions_series",
+      "targetId": "recall_actions_series",
+      "action": "draw",
+      "sourceText": "Das Kraftfahrt-Bundesamt liefert jedoch offizielle Daten",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "durFrames": 42
+    },
+    {
+      "stepId": "draw_affected_vehicles_series",
+      "targetId": "affected_vehicles_series",
+      "action": "draw",
+      "sourceText": "Das Kraftfahrt-Bundesamt liefert jedoch offizielle Daten",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "durFrames": 42
+    },
+    {
+      "stepId": "show_recall_key_figures",
+      "targetId": "recall_key_figures",
+      "action": "show",
+      "sourceText": "In den letzten zehn Jahren hat sich",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

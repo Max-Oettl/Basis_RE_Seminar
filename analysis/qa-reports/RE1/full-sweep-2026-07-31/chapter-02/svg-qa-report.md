@@ -1,0 +1,488 @@
+# SVG QA Report - RE1
+
+Generated: 2026-07-31T14:27:39.644Z
+
+## Summary
+
+- Files checked: 163
+- Animation manifests checked: 77
+- Layout files checked: 14
+- Layout states checked: 56
+- Design files checked: 14
+- Design errors: 136
+- Design warnings: 0
+- Handoff scenes checked: 0
+- Handoff manifests checked: 0
+- Handoff errors: 0
+- Handoff warnings: 0
+- Errors: 177
+- Warnings: 79
+
+## Issues
+
+- WARNING (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): ViewBox is not close to 16:9.: 938.219531x391.6
+- WARNING (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): ViewBox is not close to 16:9.: 1106.836875x411.877942
+- WARNING (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): ViewBox is not close to 16:9.: 843.287187x440
+- WARNING (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): ViewBox is not close to 16:9.: 843.287187x440
+- WARNING (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): ViewBox is not close to 16:9.: 843.287187x440
+- WARNING (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): ViewBox is not close to 16:9.: 1131.020625x339.420625
+- WARNING (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): ViewBox is not close to 16:9.: 837.571875x457.12
+- WARNING (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): ViewBox is not close to 16:9.: 965.13158x360.808219
+- WARNING (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): ViewBox is not close to 16:9.: 550.250001x454.32
+- WARNING (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): ViewBox is not close to 16:9.: 838.091094x456.68
+- WARNING (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): ViewBox is not close to 16:9.: 838.154062x457.001406
+- WARNING (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): ViewBox is not close to 16:9.: 940.393781x381.500625
+- WARNING (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): ViewBox is not close to 16:9.: 194.7x60.72
+- WARNING (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): ViewBox is not close to 16:9.: 309.36x82.98
+- WARNING (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): ViewBox is not close to 16:9.: 837.700625x457.12
+- WARNING (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): ViewBox is not close to 16:9.: 837.830781x456.68
+- WARNING (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): ViewBox is not close to 16:9.: 837.700625x457.001406
+- WARNING (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): ViewBox is not close to 16:9.: 292.02x75.42
+- WARNING (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-area-integral.svg): ViewBox is not close to 16:9.: 296.58x73.14
+- WARNING (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): ViewBox is not close to 16:9.: 272x43.609375
+- WARNING (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): ViewBox is not close to 16:9.: 837.896562x413.48
+- WARNING (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): ViewBox is not close to 16:9.: 180.8x61.2
+- WARNING (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): ViewBox is not close to 16:9.: 900.48x410.88
+- WARNING (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): ViewBox is not close to 16:9.: 837.960938x457.001406
+- WARNING (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): ViewBox is not close to 16:9.: 838.089687x456.68
+- WARNING (rebuild-proposals/svg/RE1/slide_041/formulas/mean.svg): ViewBox is not close to 16:9.: 439.08x102.4
+- WARNING (rebuild-proposals/svg/RE1/slide_041/plots/mean_balance.svg): ViewBox is not close to 16:9.: 1033.02125x327.802187
+- WARNING (rebuild-proposals/svg/RE1/slide_042/formulas/median.svg): ViewBox is not close to 16:9.: 303.48x44.248125
+- WARNING (rebuild-proposals/svg/RE1/slide_042/plots/median_split.svg): ViewBox is not close to 16:9.: 802.441875x407.002188
+- WARNING (rebuild-proposals/svg/RE1/slide_043/formulas/mode.svg): ViewBox is not close to 16:9.: 248.46x44.248125
+- WARNING (rebuild-proposals/svg/RE1/slide_043/plots/mode_peak.svg): ViewBox is not close to 16:9.: 802.441875x407.002188
+- WARNING (rebuild-proposals/svg/RE1/slide_044/plots/right_skew_compare.svg): ViewBox is not close to 16:9.: 802.441875x407.002188
+- WARNING (rebuild-proposals/svg/RE1/slide_046/formulas/mttf.svg): ViewBox is not close to 16:9.: 602x62.42
+- WARNING (rebuild-proposals/svg/RE1/slide_046/plots/mttf.svg): ViewBox is not close to 16:9.: 1033.010625x241.542812
+- WARNING (rebuild-proposals/svg/RE1/slide_049/plots/bq_life.svg): ViewBox is not close to 16:9.: 800.519125x387.89106
+- WARNING (rebuild-proposals/svg/RE1/slide_050/plots/normal_density.svg): ViewBox is not close to 16:9.: 724.121906x415.570695
+- WARNING (rebuild-proposals/svg/RE1/slide_051/plots/normal_cdf.svg): ViewBox is not close to 16:9.: 579.833906x350.728219
+- WARNING (rebuild-proposals/svg/RE1/slide_051/plots/normal_hazard.svg): ViewBox is not close to 16:9.: 575.702344x350.728219
+- WARNING (rebuild-proposals/svg/RE1/slide_052/formulas/density.svg): ViewBox is not close to 16:9.: 310.92x79.26
+- WARNING (rebuild-proposals/svg/RE1/slide_052/formulas/failure_probability.svg): ViewBox is not close to 16:9.: 287.52x77.31
+- WARNING (rebuild-proposals/svg/RE1/slide_052/formulas/hazard.svg): ViewBox is not close to 16:9.: 176.37x59.76
+- WARNING (rebuild-proposals/svg/RE1/slide_052/formulas/reliability.svg): ViewBox is not close to 16:9.: 491.88x71.07
+- WARNING (rebuild-proposals/svg/RE1/slide_054/plots/exponential_cdf.svg): ViewBox is not close to 16:9.: 579.833906x350.728219
+- WARNING (rebuild-proposals/svg/RE1/slide_054/plots/exponential_hazard.svg): ViewBox is not close to 16:9.: 579.833906x350.728219
+- WARNING (rebuild-proposals/svg/RE1/slide_055/formulas/density.svg): ViewBox is not close to 16:9.: 233.76x53.589844
+- WARNING (rebuild-proposals/svg/RE1/slide_055/formulas/failure_probability.svg): ViewBox is not close to 16:9.: 289.62x53.589844
+- WARNING (rebuild-proposals/svg/RE1/slide_055/formulas/hazard.svg): ViewBox is not close to 16:9.: 355.14x64.08
+- WARNING (rebuild-proposals/svg/RE1/slide_055/formulas/reliability.svg): ViewBox is not close to 16:9.: 216.12x53.589844
+- WARNING (rebuild-proposals/svg/RE1/slide_056/plots/weibull_density.svg): ViewBox is not close to 16:9.: 738.594563x410.632219
+- WARNING (rebuild-proposals/svg/RE1/slide_057/plots/weibull_hazard.svg): ViewBox is not close to 16:9.: 717.9205x410.632219
+- WARNING (rebuild-proposals/svg/RE1/slide_058/plots/weibull_hazard.svg): ViewBox is not close to 16:9.: 717.9205x410.632219
+- WARNING (rebuild-proposals/svg/RE1/slide_060/formulas/density.svg): ViewBox is not close to 16:9.: 334.8x59.4
+- WARNING (rebuild-proposals/svg/RE1/slide_060/formulas/failure_probability.svg): ViewBox is not close to 16:9.: 295.32x59.379141
+- WARNING (rebuild-proposals/svg/RE1/slide_060/formulas/hazard.svg): ViewBox is not close to 16:9.: 344.52x60.12
+- WARNING (rebuild-proposals/svg/RE1/slide_060/formulas/reliability.svg): ViewBox is not close to 16:9.: 227.07x59.379141
+- WARNING (rebuild-proposals/svg/RE1/slide_061/formulas/failure_result.svg): ViewBox is not close to 16:9.: 418.17x42.609141
+- WARNING (rebuild-proposals/svg/RE1/slide_061/formulas/independent_of_b.svg): ViewBox is not close to 16:9.: 268.02x49.239141
+- WARNING (rebuild-proposals/svg/RE1/slide_061/formulas/reliability_result.svg): ViewBox is not close to 16:9.: 620.19x42.609141
+- WARNING (rebuild-proposals/svg/RE1/slide_061/formulas/substitution.svg): ViewBox is not close to 16:9.: 304.29x59.769141
+- WARNING (rebuild-proposals/svg/RE1/slide_061/formulas/unit_ratio.svg): ViewBox is not close to 16:9.: 302.73x55.089141
+- WARNING (rebuild-proposals/svg/RE1/slide_062/formulas/density.svg): ViewBox is not close to 16:9.: 411.56x58.78
+- WARNING (rebuild-proposals/svg/RE1/slide_062/formulas/failure_probability.svg): ViewBox is not close to 16:9.: 301.45x57.858203
+- WARNING (rebuild-proposals/svg/RE1/slide_062/formulas/hazard.svg): ViewBox is not close to 16:9.: 324.69x59.04
+- WARNING (rebuild-proposals/svg/RE1/slide_062/formulas/reliability.svg): ViewBox is not close to 16:9.: 240.55x57.858203
+- WARNING (rebuild-proposals/svg/RE1/slide_064/plots/weibull_paper.svg): ViewBox is not close to 16:9.: 724.145531x413.449742
+- WARNING (rebuild-proposals/svg/RE1/slide_065/formulas/formula.svg): ViewBox is not close to 16:9.: 305.32x57.188906
+- WARNING (rebuild-proposals/svg/RE1/slide_065/plots/nkw_cdf.svg): ViewBox is not close to 16:9.: 719.986281x410.632219
+- WARNING (rebuild-proposals/svg/RE1/slide_066/plots/nkw_probability.svg): ViewBox is not close to 16:9.: 712.705531x413.449742
+- WARNING (rebuild-proposals/svg/RE1/slide_068/formulas/transformation.svg): ViewBox is not close to 16:9.: 180.84x45.609844
+- WARNING (rebuild-proposals/svg/RE1/slide_069/plots/lognormal_probability_pair.svg): ViewBox is not close to 16:9.: 533.751094x315.795636
+- WARNING (rebuild-proposals/svg/RE1/slide_070/formulas/density.svg): ViewBox is not close to 16:9.: 299.06x69.56
+- WARNING (rebuild-proposals/svg/RE1/slide_070/formulas/failure_probability.svg): ViewBox is not close to 16:9.: 343.48x66.24
+- WARNING (rebuild-proposals/svg/RE1/slide_070/formulas/hazard.svg): ViewBox is not close to 16:9.: 176.37x59.76
+- WARNING (rebuild-proposals/svg/RE1/slide_070/formulas/median.svg): ViewBox is not close to 16:9.: 211.47x44.169141
+- WARNING (rebuild-proposals/svg/RE1/slide_070/formulas/reliability.svg): ViewBox is not close to 16:9.: 265.29x42.609141
+- WARNING (rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg): ViewBox is not close to 16:9.: 759.610609x466.800219
+- WARNING (rebuild-proposals/svg/RE1/slide_075/formulas/hazard-ratio.svg): ViewBox is not close to 16:9.: 180.8x61.2
+- WARNING (rebuild-proposals/svg/RE1/slide_075/plots/bathtub_curve.svg): ViewBox is not close to 16:9.: 900.48x410.88
+- WARNING (rebuild-proposals/svg/RE1/slide_076/plots/weibull_density.svg): ViewBox is not close to 16:9.: 738.594563x410.632219
+- ERROR [design-metadata] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Missing slide quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text element has no determinable font-size. Detail: <text>
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text element has no determinable font-size. Detail: <text>
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [brand-font-family] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text has no determinable RelTest Education font family. Detail: <text>
+- ERROR [brand-font-family] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text has no determinable RelTest Education font family. Detail: <text>
+- ERROR [brand-font-family] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text has no determinable RelTest Education font family. Detail: <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #9f3443" x="199.700625" y="294.103113" transform="rotate(-0 199.700625 294.103113)">
+- ERROR [brand-font-family] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text has no determinable RelTest Education font family. Detail: <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #00698a" x="580.220625" y="294.103113" transform="rotate(-0 580.220625 294.103113)">
+- ERROR [brand-font-family] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text has no determinable RelTest Education font family. Detail: <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #8a5a17" x="960.740625" y="294.103113" transform="rotate(-0 960.740625 294.103113)">
+- ERROR [brand-font-family] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text has no determinable RelTest Education font family. Detail: <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #9f3443" x="199.700625" y="94.614053" transform="rotate(-0 199.700625 94.614053)">
+- ERROR [brand-font-family] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text has no determinable RelTest Education font family. Detail: <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #00698a" x="580.220625" y="94.614053" transform="rotate(-0 580.220625 94.614053)">
+- ERROR [brand-font-family] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text has no determinable RelTest Education font family. Detail: <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #8a5a17" x="960.740625" y="94.614053" transform="rotate(-0 960.740625 94.614053)">
+- ERROR [brand-font-family] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): SVG contains no text led by the required Archivo body font. Recommendation: Use font-family="Archivo, Arial, Helvetica, sans-serif" for content text.
+- ERROR [color-count] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Many visible colors found for the declared density. Detail: 10 colors: #D1495B, #007EA7, #B7791F, #062D46, #6A7A86, #139CCB, #FFFFFF, #9F3443, #00698A, #8A5A17
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Colors outside brand/design tokens found. Detail: #D1495B, #007EA7, #B7791F, #062D46, #6A7A86, #139CCB, #9F3443, #00698A, #8A5A17 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [color-count] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Many visible colors found for the declared density. Detail: 17 colors: #FFFFFF, #F7F9FC, #E6F6EE, #031334, #D1495B, #007EA7, #B7791F, #062D46, #6A7A86, #139CCB, #9F3443, #00698A, #8A5A17, #00A754, #E9B400, #FFF5CC
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Colors outside brand/design tokens found. Detail: #D1495B, #007EA7, #B7791F, #062D46, #6A7A86, #139CCB, #9F3443, #00698A, #8A5A17 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 1: 58px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 1: #FFFFFF on #FFFFFF: 1.00:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 2: 58px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 2: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 3: 58px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 3: #00A754 on #E6F6EE: 2.82:1
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): Colors outside brand/design tokens found. Detail: #E5EDF3 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): Very similar but non-identical colors found. Detail: #E6F6EE ~ #E5EDF3
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Colors outside brand/design tokens found. Detail: #E5EDF3 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Very similar but non-identical colors found. Detail: #E6F6EE ~ #E5EDF3
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 1: 54px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 1: #FFFFFF on #FFFFFF: 1.00:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 2: 58px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 2: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 3: 50px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 3: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 4: 50px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 4: #E9B400 on #FFF5CC: 1.75:1
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Colors outside brand/design tokens found. Detail: #E5EDF3 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Very similar but non-identical colors found. Detail: #E6F6EE ~ #E5EDF3
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 1: 48px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 1: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 2: 48px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 2: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 3: 48px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 3: #EC6244 on #FCE7E2: 2.76:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 4: 48px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 4: #00A754 on #E6F6EE: 2.82:1
+- ERROR [text-volume] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Many text nodes for a non-dense Content-SVG. Detail: 36 text nodes; set density="dense" only with a documented reason.
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Colors outside brand/design tokens found. Detail: #E5EDF3 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Very similar but non-identical colors found. Detail: #E6F6EE ~ #E5EDF3
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Colors outside brand/design tokens found. Detail: #E5EDF3, #DCE8EF Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Very similar but non-identical colors found. Detail: #E6F6EE ~ #E5EDF3, #E5EDF3 ~ #DCE8EF
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 1: 62px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 1: #FFFFFF on #FFFFFF: 1.00:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 2: 62px
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 3: 62px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Colors outside brand/design tokens found. Detail: #E5EDF3 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Very similar but non-identical colors found. Detail: #E6F6EE ~ #E5EDF3
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 1: 58px
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 2: 58px
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 3: 58px
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 4: 58px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 4: #E9B400 on #FFFFFF: 1.91:1
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Colors outside brand/design tokens found. Detail: #E5EDF3 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Very similar but non-identical colors found. Detail: #E6F6EE ~ #E5EDF3
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 1: 58px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 1: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 2: 58px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 2: #E9B400 on #FFF5CC: 1.75:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 3: 58px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 3: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 4: 48px
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 1: 54px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 1: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 2: 56px
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 3: 56px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Colors outside brand/design tokens found. Detail: #E5EDF3 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Very similar but non-identical colors found. Detail: #E6F6EE ~ #E5EDF3
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 1: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 2: 58px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 2: #E9B400 on #FFFFFF: 1.91:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 3: 58px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 1: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 2: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 3: 62px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 3: #E9B400 on #FFFFFF: 1.91:1
+- ERROR [group_integrity] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): t=1.517s element=qc_runtime_97 related=qc_runtime_86 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): t=1.517s element=qc_runtime_98 related=qc_runtime_86 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): t=2.5s element=qc_runtime_97 related=qc_runtime_86 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): t=2.5s element=qc_runtime_98 related=qc_runtime_86 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=0s element=qc_runtime_72 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=0s element=qc_runtime_73 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=0s element=qc_runtime_74 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=0s element=qc_runtime_75 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=0.533s element=qc_runtime_72 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=0.533s element=qc_runtime_73 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=0.533s element=qc_runtime_74 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=0.533s element=qc_runtime_75 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=1.517s element=qc_runtime_72 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=1.517s element=qc_runtime_73 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=1.517s element=qc_runtime_74 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=1.517s element=qc_runtime_75 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=2.5s element=qc_runtime_72 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=2.5s element=qc_runtime_73 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=2.5s element=qc_runtime_74 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=2.5s element=qc_runtime_75 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=3.483s element=qc_runtime_72 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=3.483s element=qc_runtime_73 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=3.483s element=qc_runtime_74 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=3.483s element=qc_runtime_75 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): t=0s element=qc_runtime_55 related=qc_runtime_50 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): t=0s element=qc_runtime_56 related=qc_runtime_50 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): t=0.533s element=qc_runtime_55 related=qc_runtime_50 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): t=0.533s element=qc_runtime_56 related=qc_runtime_50 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): t=1.517s element=qc_runtime_55 related=qc_runtime_50 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): t=1.517s element=qc_runtime_56 related=qc_runtime_50 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): t=2.5s element=qc_runtime_102 related=qc_runtime_97 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): t=2.5s element=qc_runtime_103 related=qc_runtime_97 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): t=0s element=qc_runtime_101 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): t=0.533s element=qc_runtime_101 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): t=1.517s element=qc_runtime_75 related=qc_runtime_69 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): t=1.517s element=qc_runtime_76 related=qc_runtime_69 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): t=1.517s element=qc_runtime_101 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): t=2.5s element=qc_runtime_75 related=qc_runtime_69 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): t=2.5s element=qc_runtime_76 related=qc_runtime_69 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): t=2.5s element=qc_runtime_101 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+
+## Layout QA
+
+- Mode: strict
+- Files checked: 14
+- States checked: 56
+- Browser: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+- ERROR [group_integrity] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): t=0s No data-qc-* attributes found; layout QA is using heuristics only. Recommendation: Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): t=1.517s element=qc_runtime_97 related=qc_runtime_86 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): t=1.517s element=qc_runtime_98 related=qc_runtime_86 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): t=2.5s element=qc_runtime_97 related=qc_runtime_86 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): t=2.5s element=qc_runtime_98 related=qc_runtime_86 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=0s element=qc_runtime_72 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=0s element=qc_runtime_73 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=0s element=qc_runtime_74 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=0s element=qc_runtime_75 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=0.533s element=qc_runtime_72 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=0.533s element=qc_runtime_73 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=0.533s element=qc_runtime_74 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=0.533s element=qc_runtime_75 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=1.517s element=qc_runtime_72 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=1.517s element=qc_runtime_73 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=1.517s element=qc_runtime_74 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=1.517s element=qc_runtime_75 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=2.5s element=qc_runtime_72 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=2.5s element=qc_runtime_73 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=2.5s element=qc_runtime_74 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=2.5s element=qc_runtime_75 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=3.483s element=qc_runtime_72 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=3.483s element=qc_runtime_73 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=3.483s element=qc_runtime_74 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): t=3.483s element=qc_runtime_75 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): t=0s element=qc_runtime_55 related=qc_runtime_50 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): t=0s element=qc_runtime_56 related=qc_runtime_50 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): t=0.533s element=qc_runtime_55 related=qc_runtime_50 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): t=0.533s element=qc_runtime_56 related=qc_runtime_50 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): t=1.517s element=qc_runtime_55 related=qc_runtime_50 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): t=1.517s element=qc_runtime_56 related=qc_runtime_50 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): t=2.5s element=qc_runtime_102 related=qc_runtime_97 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): t=2.5s element=qc_runtime_103 related=qc_runtime_97 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): t=0s element=qc_runtime_101 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): t=0.533s element=qc_runtime_101 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): t=1.517s element=qc_runtime_75 related=qc_runtime_69 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): t=1.517s element=qc_runtime_76 related=qc_runtime_69 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): t=1.517s element=qc_runtime_101 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): t=2.5s element=qc_runtime_75 related=qc_runtime_69 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [text_inside_box] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): t=2.5s element=qc_runtime_76 related=qc_runtime_69 Text does not fit inside its background box (right). Recommendation: Box enlarge, text wrap, or move text so visible padding remains on every side.
+- ERROR [arrow_integrity] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): t=2.5s element=qc_runtime_101 marker-end references a missing marker definition. Recommendation: Add the marker definition or correct the marker URL.
+
+## Design QA
+
+- Mode: strict-design
+- Files checked: 14
+- Brand tokens: brand/company-brand-tokens.json
+- Brand profile: reltest-education
+
+- ERROR [design-metadata] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Missing slide quality metadata. Detail: Add slide-quality metadata in SVG metadata or scene manifest.
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text element has no determinable font-size. Detail: <text>
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text element has no determinable font-size. Detail: <text>
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [brand-font-family] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text has no determinable RelTest Education font family. Detail: <text>
+- ERROR [brand-font-family] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text has no determinable RelTest Education font family. Detail: <text>
+- ERROR [brand-font-family] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text has no determinable RelTest Education font family. Detail: <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #9f3443" x="199.700625" y="294.103113" transform="rotate(-0 199.700625 294.103113)">
+- ERROR [brand-font-family] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text has no determinable RelTest Education font family. Detail: <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #00698a" x="580.220625" y="294.103113" transform="rotate(-0 580.220625 294.103113)">
+- ERROR [brand-font-family] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text has no determinable RelTest Education font family. Detail: <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #8a5a17" x="960.740625" y="294.103113" transform="rotate(-0 960.740625 294.103113)">
+- ERROR [brand-font-family] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text has no determinable RelTest Education font family. Detail: <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #9f3443" x="199.700625" y="94.614053" transform="rotate(-0 199.700625 94.614053)">
+- ERROR [brand-font-family] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text has no determinable RelTest Education font family. Detail: <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #00698a" x="580.220625" y="94.614053" transform="rotate(-0 580.220625 94.614053)">
+- ERROR [brand-font-family] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Text has no determinable RelTest Education font family. Detail: <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #8a5a17" x="960.740625" y="94.614053" transform="rotate(-0 960.740625 94.614053)">
+- ERROR [brand-font-family] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): SVG contains no text led by the required Archivo body font. Recommendation: Use font-family="Archivo, Arial, Helvetica, sans-serif" for content text.
+- ERROR [color-count] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Many visible colors found for the declared density. Detail: 10 colors: #D1495B, #007EA7, #B7791F, #062D46, #6A7A86, #139CCB, #FFFFFF, #9F3443, #00698A, #8A5A17
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): Colors outside brand/design tokens found. Detail: #D1495B, #007EA7, #B7791F, #062D46, #6A7A86, #139CCB, #9F3443, #00698A, #8A5A17 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text element has no determinable font-size. Detail: <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Text is smaller than the Content-SVG readability minimum. Detail: 13px < 18px
+- ERROR [color-count] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Many visible colors found for the declared density. Detail: 17 colors: #FFFFFF, #F7F9FC, #E6F6EE, #031334, #D1495B, #007EA7, #B7791F, #062D46, #6A7A86, #139CCB, #9F3443, #00698A, #8A5A17, #00A754, #E9B400, #FFF5CC
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_014/slide_014.svg): Colors outside brand/design tokens found. Detail: #D1495B, #007EA7, #B7791F, #062D46, #6A7A86, #139CCB, #9F3443, #00698A, #8A5A17 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 1: 58px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 1: #FFFFFF on #FFFFFF: 1.00:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 2: 58px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 2: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 3: 58px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_016/slide_016.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 3: #00A754 on #E6F6EE: 2.82:1
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): Colors outside brand/design tokens found. Detail: #E5EDF3 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_017/slide_017.svg): Very similar but non-identical colors found. Detail: #E6F6EE ~ #E5EDF3
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Colors outside brand/design tokens found. Detail: #E5EDF3 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Very similar but non-identical colors found. Detail: #E6F6EE ~ #E5EDF3
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 1: 54px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 1: #FFFFFF on #FFFFFF: 1.00:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 2: 58px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 2: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 3: 50px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 3: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 4: 50px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_018/slide_018.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 4: #E9B400 on #FFF5CC: 1.75:1
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Colors outside brand/design tokens found. Detail: #E5EDF3 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Very similar but non-identical colors found. Detail: #E6F6EE ~ #E5EDF3
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 1: 48px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 1: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 2: 48px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 2: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 3: 48px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 3: #EC6244 on #FCE7E2: 2.76:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 4: 48px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_019/slide_019.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 4: #00A754 on #E6F6EE: 2.82:1
+- ERROR [text-volume] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Many text nodes for a non-dense Content-SVG. Detail: 36 text nodes; set density="dense" only with a documented reason.
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 15px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 11.5px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Text is smaller than the Content-SVG readability minimum. Detail: 14px < 18px
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Colors outside brand/design tokens found. Detail: #E5EDF3 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_020/slide_020.svg): Very similar but non-identical colors found. Detail: #E6F6EE ~ #E5EDF3
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Colors outside brand/design tokens found. Detail: #E5EDF3, #DCE8EF Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Very similar but non-identical colors found. Detail: #E6F6EE ~ #E5EDF3, #E5EDF3 ~ #DCE8EF
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 1: 62px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 1: #FFFFFF on #FFFFFF: 1.00:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 2: 62px
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_021/slide_021.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 3: 62px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Colors outside brand/design tokens found. Detail: #E5EDF3 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Very similar but non-identical colors found. Detail: #E6F6EE ~ #E5EDF3
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 1: 58px
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 2: 58px
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 3: 58px
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 4: 58px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_022/slide_022.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 4: #E9B400 on #FFFFFF: 1.91:1
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Colors outside brand/design tokens found. Detail: #E5EDF3 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Very similar but non-identical colors found. Detail: #E6F6EE ~ #E5EDF3
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 1: 58px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 1: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 2: 58px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 2: #E9B400 on #FFF5CC: 1.75:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 3: 58px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 3: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_023/slide_023.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 4: 48px
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 1: 54px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 1: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 2: 56px
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_024/slide_024.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 3: 56px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Colors outside brand/design tokens found. Detail: #E5EDF3 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-near-duplicate] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Very similar but non-identical colors found. Detail: #E6F6EE ~ #E5EDF3
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 1: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 2: 58px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 2: #E9B400 on #FFFFFF: 1.91:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_025/slide_025.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 3: 58px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Text is smaller than the Content-SVG readability minimum. Detail: 17px < 18px
+- ERROR [min-font-size] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Text is smaller than the Content-SVG readability minimum. Detail: 16px < 18px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 1: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 2: #00A754 on #E6F6EE: 2.82:1
+- ERROR [pictogram-small-scale-review] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Pictogram requires an explicit small-scale context review. Detail: Pictogram 3: 62px
+- ERROR [pictogram-contrast] (rebuild-proposals/svg/RE1/slide_026/slide_026.svg): Pictogram foreground does not reach the minimum non-text contrast. Detail: Pictogram 3: #E9B400 on #FFFFFF: 1.91:1
+
+## Viewer Mapping
+
+- slide 14: svg=true, animation=true, steps=5, file=slide_014.svg
+- slide 15: svg=true, animation=true, steps=2, file=slide_015.svg
+- slide 16: svg=true, animation=true, steps=4, file=slide_016.svg
+- slide 17: svg=true, animation=true, steps=5, file=slide_017.svg
+- slide 18: svg=true, animation=true, steps=3, file=slide_018.svg
+- slide 19: svg=true, animation=true, steps=3, file=slide_019.svg
+- slide 20: svg=true, animation=true, steps=4, file=slide_020.svg
+- slide 21: svg=true, animation=true, steps=2, file=slide_021.svg
+- slide 22: svg=true, animation=true, steps=3, file=slide_022.svg
+- slide 23: svg=true, animation=true, steps=3, file=slide_023.svg
+- slide 24: svg=true, animation=true, steps=3, file=slide_024.svg
+- slide 25: svg=true, animation=true, steps=2, file=slide_025.svg
+- slide 26: svg=true, animation=true, steps=3, file=slide_026.svg
+

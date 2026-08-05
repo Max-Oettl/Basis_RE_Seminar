@@ -2,135 +2,128 @@
 
 ## Ziel
 
-Der Animation Trigger Planner bereitet SVGs so vor, dass die spätere Video-Pipeline Animationen über Sprechertext-Trigger auslösen kann.
+Der Animation Trigger Planner entscheidet zuerst, ob eine Content-SVG ueberhaupt animiert werden soll. Nur bei belegtem didaktischem Nutzen plant er semantische Gruppen, Effekte und Sprechertext-Trigger.
 
-Die verbindliche technische Grundlage ist:
+Verbindliche Reihenfolge:
 
-- `trigger-specs/speaker-text-trigger-conventions.md`
+1. `.agents/skills/animate-svg-from-narration/SKILL.md`
+2. `workflow/50-animation/animation-decision-and-dramaturgy.md`
+3. bei `animated`: `workflow/50-animation/scene-manifest-contract.md`
+4. fuer die Lieferung: `workflow/70-integration/storyboard-import-package-handoff.md`
 
-## Verantwortlichkeiten
+## Harte Regeln
 
-- Potenzielle Triggerpunkte aus Sprechertext oder Storyboard ableiten.
-- Sichtbare Elemente in didaktisch sinnvolle Animationsziele aufteilen.
-- Fuer jede neue Content-SVG sinnvolle Animationen planen. Elemente, die im Sprechertext nacheinander beschrieben werden, sollen in der Regel erst passend erscheinen, gezeichnet, ausgeblendet, verschoben oder hervorgehoben werden.
-- Stabile SVG-IDs und Gruppenziele prüfen.
-- Für jede Animation einen Vorschlag in `composed/scene.animation.v1.json` vorbereiten.
-- Alle relevanten SVG-Ziele in `targets[]` als `animated` oder `ignored` bewerten.
-- Trigger-Phrasen aus dem Sprechertext wählen.
-- Confidence-Werte vergeben.
-- Unsichere Trigger klar markieren.
-- Keine finalen Sekunden, Frames oder Wort-Indizes erzeugen.
-- Keine produktive Trigger-Logik direkt ins SVG schreiben.
-- Keine ueberpraezise Animationsdramaturgie erzwingen: Die genaue Animation bleibt szenenabhaengig. Pflicht ist die didaktisch sinnvolle Layer- und Triggerfaehigkeit, nicht ein fixer Effektkatalog.
+- Animation ist optional.
+- `static` ist ein gleichwertiges Ergebnis und braucht keine Rechtfertigung als Ausnahme.
+- Bei unklarer Grundlage gilt `needs_review`; dann werden keine Schritte erzeugt.
+- Eine statische, sofort vollstaendige Darstellung ist besser als eine willkuerliche Reveal-Folge.
+- DOM-Reihenfolge, Elementtyp, Knotenzahl, Position und gleichmaessig verteilte Textstellen sind keine Animationslogik.
+- Wenige vollstaendige fachliche Gruppen sind besser als viele technische Mikrogruppen.
 
-## SVG-Regeln
+## Pflichtinputs
 
-Animierbare Elemente brauchen stabile, eindeutige und sprechende IDs.
+Vor jeder Entscheidung liest der Agent:
 
-Wenn mehrere Elemente gemeinsam erscheinen sollen, ist die gemeinsame Gruppe das Animationsziel.
+- alle Quell-SVGs der Arbeitseinheit in Reihenfolge,
+- den vollstaendigen gemappten Szenensprechertext,
+- die Zielkomposition und ihre fachliche Leselogik,
+- belegte Aufbauzustaende und Abhaengigkeiten,
+- bei Diagrammen Achsen-, Daten-, Fit-, Legenden- und Grenzlogik.
 
-Beispiel:
+## Entscheidung
 
-```xml
-<g id="bullet_01">
-  <rect id="bullet_01_bg" />
-  <text id="bullet_01_text">Erster Punkt</text>
-</g>
-```
+Der Agent dokumentiert genau einen Modus:
 
-Dann wird `bullet_01` getriggert, nicht `bullet_01_text`.
+- `static`: alles ist von Anfang an sichtbar; `targets` und `steps` bleiben leer.
+- `animated`: der Sprechertext oder belegte Quellzustaende tragen eine sinnvolle Reihenfolge.
+- `needs_review`: eine belastbare Entscheidung ist noch nicht moeglich.
 
-Bei eingebundenen PNGs liegt der Trigger normalerweise auf der umgebenden Gruppe:
+Eine Animation ist typisch sinnvoll bei nacheinander eingefuehrten Fachbloecken, Prozessen, Zustandsaenderungen, belegten Aufbaufolien oder schrittweiser Diagrammauswertung.
 
-```xml
-<g id="source_field_data_card">
-  <image id="source_field_data_image" href="../pictograms/field_vehicle.png" />
-  <text id="source_field_data_title">Felddaten</text>
-</g>
-```
+Eine statische Szene ist typisch sinnvoll, wenn die Darstellung als Ganzes erklaert wird, alle Teile sofort benoetigt werden, die Szene klein oder dicht ist oder eine Aufteilung nur technische Einzelteile erzeugen wuerde.
+
+## Sprechertext Und Narrative Beats
+
+Der Sprechertext wird in wenige fachliche Erklaerabschnitte zerlegt. Fuer jeden Abschnitt werden Aussage, visuelle Gruppe, Aktion und eindeutige vollstaendige `sourceText`-Phrase dokumentiert.
+
+Trigger werden nicht mathematisch ueber den Text verteilt. Die Anzahl der Schritte folgt den fachlichen Erklaerabschnitten.
+
+Vor den Beats wird fuer jede Gruppe der Initialzustand nach dem Animations-Skill
+klassifiziert. Ein animiertes Target ist in der aktuellen Runtime bei Frame 0
+verborgen; dadurch duerfen initial notwendige Orientierungsanker nicht
+versehentlich als `animated` markiert werden.
+
+## Semantische Gruppen
+
+Ein Target ist eine fachlich vollstaendige visuelle Einheit.
+
+- Box: Hintergrund, Rand, Titel, Text und Icon gemeinsam.
+- Liste: Aufzaehlungszeichen, Abschnittslabel und vollstaendiger zugehoeriger Inhalt gemeinsam. Insbesondere duerfen Labels wie `Ursache`, `Folge`, `Ausmass` und `Kosten & Konsequenz` nicht von ihren Punkten getrennt werden.
+- Pfeil: Linie, Spitze, Label und Marker gemeinsam.
+- Formel: zusammengehoerige Zeichen und Erklaerung gemeinsam, sofern der Text sie gemeinsam einfuehrt.
+- Diagrammrahmen: Achsen, Skalen, Ticks, Gitternetz und Achsenbeschriftungen gemeinsam.
+- Datenreihe: Datenpunkte, Marker und zugehoeriger Legendeneintrag gemeinsam, wenn sie gemeinsam erklaert werden.
+- Vertrauensgrenzen: beide Grenzen als eine gemeinsame Unsicherheitsgruppe.
+
+Einzelne Buchstaben, Textzeilen, Exportpfade oder Hintergruende derselben Box duerfen nicht separat animiert werden.
+PowerPoint-Exportgruppen sind keine verlaesslichen Inhaltsgrenzen. Vor der Freigabe wird jede Liste visuell gegen ihre Einrueckung und Aufzaehlungszeichen gelesen; bei Bedarf werden Exportgruppen an fachlichen Grenzen geteilt und neu gruppiert.
+
+Animierbare Gruppen erhalten stabile ASCII-`snake_case`-IDs, `data-anim-target="true"` und nach Moeglichkeit `data-anim-label`.
+
+## Diagrammreihenfolge
+
+Nur wenn der Sprechertext einen Aufbau traegt, gilt als Standard:
+
+1. Diagrammrahmen mit Achsen und Beschriftungen.
+2. Primaere Daten oder Datenreihen.
+3. Fit-, Regressions-, Verteilungs- oder Referenzlinie.
+4. Vertrauens- oder Prognosegrenzen gemeinsam.
+5. Gezieltes Highlight fuer die Schlussfolgerung.
+
+Wird das Diagramm als fertiges Ergebnis erklaert, bleibt es statisch.
 
 ## Erlaubte Aktionen
 
-Der Agent darf nur diese Aktionen vorschlagen:
+- `show`: neue vollstaendige Gruppe einfuehren.
+- `hide`: nur bei fachlich belegtem Zustandswechsel.
+- `draw`: echte Kurve, Linie oder gerichteten Pfad zeichnen.
+- `highlight`: bereits sichtbare Aussage gezielt betonen.
+- `transform`: fachlich echte Bewegung oder Form-/Skalenaenderung.
 
-- `show`
-- `hide`
-- `highlight`
-- `draw`
-- `move` nur als Planungsnotiz, wenn eine Verschiebung didaktisch zentral ist und die Downstream-Pipeline diese Aktion explizit unterstuetzt oder spaeter ergaenzt.
+Effekte werden nicht gemischt, um kuenstliche Abwechslung zu erzeugen.
+Nicht unterstuetzte Effekte wie echtes Verschwimmen bleiben ausserhalb des
+Produktionsmanifests und werden als erforderliche Runtime-Erweiterung dokumentiert.
 
-Ein- und Ausblenden, Zeichnen, Verschieben und Hervorheben sind wichtige Gestaltungsmittel. Wenn ein Effekt technisch noch nicht final unterstuetzt ist, wird er im Manifest als offene Animationsabsicht dokumentiert, statt die SVG statisch und unstrukturiert zu lassen.
+## Triggerqualitaet
 
-## Trigger-Qualität
+Jeder animierte Schritt besitzt eine wortgetreue, eindeutige Phrase aus dem wirksamen Szenensprechertext. Vollstaendige Woerter sind Pflicht; bei mehrfacher Fundstelle ist `occurrence` Pflicht.
 
-Ein guter Trigger ist eine kurze Phrase, die im Sprechertext vorkommt und eindeutig zum visuellen Moment passt.
-
-Gute Trigger:
-
-- `Der erste Schritt`
-- `vollständige Ausfallzeiten`
-- `rechtszensiert`
-- `die Verbindung`
-
-Schlechte Trigger:
-
-- `und`
-- `das`
-- `hier`
-- mehrfach vorkommende Einzelwörter
-- frei erfundene Formulierungen
-
-## Confidence
-
-- `high`: Trigger-Phrase ist eindeutig und fachlich passend.
-- `medium`: Trigger ist plausibel, aber mit finalem Sprechertext zu prüfen.
-- `low`: Trigger ist unsicher und braucht manuelle Freigabe.
-
-Bei `low` muss eine Begründung stehen.
+Nach jeder Sprechertextaenderung werden alle Trigger erneut validiert. Ein fehlender Match blockiert die Freigabe des betroffenen Schritts.
 
 ## Output
 
-Der Agent erstellt oder aktualisiert pro Szene:
+Der Agent aktualisiert den Szenenplan mit:
 
 ```text
-assets/scenes/<scene_id>/composed/scene.animation.v1.json
+animation_decision: static | animated | needs_review
+animation_rationale: fachliche Begruendung
+narrative_beats: geordnete Sprechertextabschnitte
+semantic_groups: Ziel-ID, Rolle und vollstaendige Gruppenmitglieder
+steps: nur bei animated
 ```
 
-`scene.animation.v1.json` ist die primäre Reviewer-Datei:
+Bei `animated` erstellt oder aktualisiert er `scene.animation.v1.json`. Bei `static` enthaelt ein technisch erforderliches Manifest leere `targets` und `steps`; ein kuenstlicher Ganzfolien-`show`-Schritt ist verboten.
 
-```json
-{
-  "schemaVersion": "svgAnimationManifest/v1",
-  "svgPath": "scene.svg",
-  "defaults": {
-    "enterFrames": 14,
-    "highlightDurFrames": 24,
-    "drawDurFrames": 36
-  },
-  "targets": [
-    {
-      "targetId": "card_complete_data",
-      "label": "Karte vollständige Daten",
-      "status": "animated",
-      "confidence": "high"
-    }
-  ],
-  "steps": [
-    {
-      "stepId": "02",
-      "targetId": "card_complete_data",
-      "action": "show",
-      "sourceText": "vollständige Ausfallzeiten",
-      "enterFrames": 14,
-      "fromY": 18,
-      "confidence": "high"
-    }
-  ]
-}
-```
+## Freigabe
 
-## Preview-Timings
+Vor Abschluss prueft der Agent:
 
-Zeitbasierte SVG-Animationen sind nicht Teil des Standards.
+- Jeder Schritt hat einen erklaerbaren didaktischen Nutzen.
+- Reihenfolge und Gruppen passen zum Sprechertextkontext.
+- Boxen, Diagrammrahmen, Datenreihen und Vertrauensgrenzen sind vollstaendig gruppiert.
+- Keine Gruppe endet mit einem verwaisten Aufzaehlungszeichen oder einem vom Inhalt getrennten Abschnittslabel.
+- Dekoration und dauerhafte Orientierung bleiben statisch.
+- Der Endzustand ist ohne Animation fachlich lesbar.
+- Eine statische Darstellung waere nicht klarer.
 
-Die Reviewer-Datei ist immer `scene.animation.v1.json`.
+Nicht begruendbare Schritte werden entfernt. Eine nicht begruendbare Animation wird `static`.

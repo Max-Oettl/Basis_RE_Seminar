@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "reltestEducationPictogramAsset/v1",
+  "assetId": "re1_customer_dissatisfaction",
+  "file": "components/image-library/generated-pictograms/education-v2/re1-customer-dissatisfaction.png",
+  "assetType": "generated_png",
+  "status": "accepted",
+  "styleProfile": "reltest-education-minimal-v1",
+  "source": {"evidenceType": "speaker_text", "reference": "RE1 Szene 10: Kundenunzufriedenheit", "license": "project_internal"},
+  "semantics": {
+    "concept": "Kundenunzufriedenheit",
+    "learningFunction": "concept-anchor",
+    "mustShowFeatures": ["Kundenbüste", "unzufriedener Gesichtsausdruck", "Abwärtsmarker"],
+    "mustNotImply": ["neutrale Person", "Mitarbeiterrolle", "positive Kundenzufriedenheit"],
+    "confusableWith": ["Beschwerdeprozess", "Mitarbeiterunzufriedenheit"],
+    "firstUseLabel": "Kundenunzufriedenheit",
+    "reuseKey": "customer-dissatisfaction"
+  },
+  "visualStyle": {
+    "flat2d": true, "perspective": "front", "dominantSilhouette": true, "semanticLayers": 2,
+    "brandColors": ["#031334", "#EC6244"], "gradients": false, "shadows": false,
+    "threeDimensional": false, "isometric": false, "photorealistic": false, "glow": false,
+    "texture": false, "embeddedText": false, "logo": false, "watermark": false
+  },
+  "raster": {"widthPx": 1254, "heightPx": 1254, "transparentBackground": true, "safeMarginRatio": 0.08},
+  "learningUse": {"targetPlacementPx": 96, "requiresTextLabelOnFirstUse": true, "colorIndependentMeaning": true, "smallScaleTests": {"at32px": "passed", "at48px": "passed", "scene960x540": "passed"}},
+  "accessibility": {"redundantWithVisibleLabel": true, "accessibleName": "", "contrastPairs": [{"foreground": "#031334", "background": "#FFFFFF", "minimumRatio": 3}, {"foreground": "#EC6244", "background": "#FFFFFF", "minimumRatio": 3}]},
+  "review": {"semantic": "passed", "style": "passed", "eLearning": "passed", "accessibilityTechnical": "passed", "notes": ["Built-in image generation; magenta chroma removed locally. Verified in the 1920x1080 scene and 960x540 viewer render."]}
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "replace_me",
+  "svgPath": "replace_me.svg",
+  "spokenText": "Vollstaendigen wirksamen Sprechertext hier einfuegen.",
+  "animationDecision": "needs_review",
+  "animationRationale": "Fachliche Begruendung fuer static, animated oder needs_review.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": []
+  },
+  "initialStateRationale": "Kleinster ausreichender Orientierungsrahmen fuer den ersten Sprecherabschnitt.",
+  "semanticGroups": [
+    {
+      "groupId": "orientation_anchor",
+      "label": "Orientierungsanker",
+      "role": "context",
+      "members": [
+        "Liste der SVG-Bestandteile"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Der Orientierungsanker wird bereits vor oder im ersten Sprecherbeat benoetigt.",
+      "dependsOn": [],
+      "groupingRationale": "Diese Bestandteile werden als eine fachliche Einheit wahrgenommen."
+    }
+  ],
+  "narrativeBeats": [],
+  "steps": [],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "orientation_anchor"
+      ],
+      "reviewStatus": "pending",
+      "notes": ""
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "orientation_anchor"
+      ],
+      "reviewStatus": "pending",
+      "notes": ""
+    }
+  ]
+}

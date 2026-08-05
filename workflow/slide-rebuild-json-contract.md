@@ -1,5 +1,5 @@
 # Compatibility Redirect
 
-Canonical file: `workflow/10-source-analysis/slide-rebuild-json-contract.md`
+Active canonical file for new modules: `workflow/10-source-analysis/source-svg-transformation-contract.md`
 
-This legacy path is intentionally kept so older references do not break. Read the canonical file for the full current rules.
+The former multi-source JSON contract remains at `workflow/10-source-analysis/slide-rebuild-json-contract.md` for existing analyses.

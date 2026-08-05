@@ -1,5 +1,7 @@
 # Agent: Rebuild Analysis Orchestrator
 
+> Legacy-Rolle fuer bestehende PPTX/PDF/PNG-Analysen. Neue Module verwenden `agents/source-svg-transformation-planner.md`.
+
 ## Ziel
 
 Der Rebuild Analysis Orchestrator fuehrt die Analyse bestehender Basis-Seminar-Folien und erzeugt Rebuild-JSON sowie Modulreports.

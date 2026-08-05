@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_070.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "lognormal_formula_parameters",
+      "label": "Parameter",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "lognormal_formula_system",
+      "label": "Vier Zuverlässigkeitsfunktionen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "lognormal_median_formula",
+      "label": "Median",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_lognormal_formula_parameters",
+      "targetId": "lognormal_formula_parameters",
+      "action": "show",
+      "sourceText": "Die Gleichungen der Lognormalverteilung leiten sich direkt aus der Normalverteilung ab",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_lognormal_formula_system",
+      "targetId": "lognormal_formula_system",
+      "action": "show",
+      "sourceText": "Der einzige Unterschied ist, dass die Zeit hierbei noch logarithmiert wird",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_lognormal_median_formula",
+      "targetId": "lognormal_median_formula",
+      "action": "show",
+      "sourceText": "dass der Median nun nicht mehr gleich dem Erwartungswert mü ist",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

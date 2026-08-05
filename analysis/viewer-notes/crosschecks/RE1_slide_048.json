@@ -1,0 +1,266 @@
+{
+  "schema_version": "basisRebuildContentCrosscheck/v2",
+  "module_id": "RE1",
+  "output_slide_number": 48,
+  "checked_at": "2026-07-19T19:42:51.622Z",
+  "status": "review_required",
+  "manual_review_required": true,
+  "reference_mapping": {
+    "work_unit": "slide_048",
+    "output_slide_number": 48,
+    "source_slides": [
+      53
+    ],
+    "primary_source_slide": 53,
+    "output_slide_numbers": [],
+    "mapping_type": "direct",
+    "rationale": "Quell-SVG 53 besitzt einen eigenen Sprechertextabschnitt und bleibt eine eigenstaendige Content-SVG-Szene.",
+    "mapping_source": "reference_map",
+    "reference_map_path": "analysis/rebuild-plans/RE1_source-reference-map.json",
+    "sequence_plan": "analysis/rebuild-plans/RE1_sequence_plan.md",
+    "read_error": ""
+  },
+  "references": [
+    {
+      "source_slide_number": 53,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE1/SVG/Folie53.SVG",
+      "source_svg_sha256": "64941c7eb9c132facaf81dd3af487ec202603c508a9e00338727be449ae67b3a",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE1/SVG/Folie53.SVG",
+      "analysis_path": ""
+    }
+  ],
+  "proposal": {
+    "path": "rebuild-proposals/svg/RE1/slide_048/slide_048.svg",
+    "svg_sha256": "4970400fd86990b07380c3a174151d3653f52d55b14281ca00d2850b69b1bfe8",
+    "animation_manifest": "/files/rebuild-proposals/svg/RE1/slide_048/scene.animation.v1.json"
+  },
+  "summary": {
+    "source_count": 1,
+    "checked_content_items": 18,
+    "errors": 0,
+    "warnings": 6,
+    "infos": 0,
+    "animation_steps": 3
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 053: \"1 Hundert\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-4",
+      "expected": "1 Hundert"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 053: \"1 Tausend\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-5",
+      "expected": "1 Tausend"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 053: \"1 von Hundert\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-7",
+      "expected": "1 von Hundert"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 053: \"1 von Tausend\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-9",
+      "expected": "1 von Tausend"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 053: \"Eine ppm\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-16",
+      "expected": "Eine ppm"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 053: \"Angabe ist nur sinnvoll mit einem Zeitpunkt bzw. einer Laufleistung\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-18",
+      "expected": "Angabe ist nur sinnvoll mit einem Zeitpunkt bzw. einer Laufleistung"
+    }
+  ],
+  "content_checks": [
+    {
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Parts per million ppm",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Anteil von",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Beispiel",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-4",
+      "expected": "1 Hundert",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:1"
+    },
+    {
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-5",
+      "expected": "1 Tausend",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:1"
+    },
+    {
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-6",
+      "expected": "1 Million",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "tokens:1,million"
+    },
+    {
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-7",
+      "expected": "1 von Hundert",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.667,
+      "evidence": "tokens:1,von"
+    },
+    {
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-8",
+      "expected": "= 1 %",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-9",
+      "expected": "1 von Tausend",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.667,
+      "evidence": "tokens:1,von"
+    },
+    {
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-10",
+      "expected": "= 1 ‰",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-11",
+      "expected": "1 von 1 Million",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "tokens:1,von,1,million"
+    },
+    {
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-12",
+      "expected": "= 1 ppm",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-13",
+      "expected": "Prozent",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-14",
+      "expected": "Promille",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-15",
+      "expected": "ppm",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-16",
+      "expected": "Eine ppm",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:ppm"
+    },
+    {
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-17",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 53,
+      "source_item_id": "source-svg-text-18",
+      "expected": "Angabe ist nur sinnvoll mit einem Zeitpunkt bzw. einer Laufleistung",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.3,
+      "evidence": "tokens:mit,zeitpunkt,laufleistung"
+    }
+  ],
+  "manual_review_focus": [
+    "Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.",
+    "Sprechertext-Reihenfolge gegen die semantisch geplanten Animationsschritte pruefen."
+  ],
+  "reference_mapping_sha256": "042be92dd0be2d9bce535ad71e12121209d2b891712ad465852a927869cf33cd",
+  "reference_map_path": "analysis/rebuild-plans/RE1_source-reference-map.json",
+  "sequence_plan": "analysis/rebuild-plans/RE1_sequence_plan.md"
+}

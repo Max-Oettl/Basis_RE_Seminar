@@ -290,9 +290,10 @@ function collectSvgLayout(params) {
         padding: attr(element, "data-qc-padding"),
         layer: attr(element, "data-qc-layer"),
         important: attr(element, "data-qc-important") === "true",
+        allowHidden: attr(element, "data-qc-allow-hidden") === "true" || Boolean(element.closest("[data-qc-allow-hidden='true']")),
         above: attr(element, "data-qc-above"),
         below: attr(element, "data-qc-below"),
-        allowOverlap: attr(element, "data-qc-allow-overlap") === "true",
+        allowOverlap: attr(element, "data-qc-allow-overlap") === "true" || Boolean(element.closest("[data-qc-allow-overlap='true']")),
         expectedTop: attr(element, "data-qc-expected-top") === "true",
         plot: attr(element, "data-qc-plot"),
         axis: attr(element, "data-qc-axis"),
@@ -346,8 +347,8 @@ function collectSvgLayout(params) {
     },
     fonts: {
       status: document.fonts ? document.fonts.status : "unavailable",
-      interCheck: document.fonts ? document.fonts.check("16px Inter") : null,
-      segoeCheck: document.fonts ? document.fonts.check("16px Segoe UI") : null,
+      archivoCheck: document.fonts ? document.fonts.check("16px Archivo") : null,
+      oxaniumCheck: document.fonts ? document.fonts.check("16px Oxanium") : null,
     },
   };
 }

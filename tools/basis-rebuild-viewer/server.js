@@ -4,7 +4,9 @@ const fs = require("fs");
 const path = require("path");
 const { spawn } = require("child_process");
 const svgAnimationDomain = require("./svg-animation-domain");
+const narrationPauseDomain = require("./narration-pause-domain");
 const contentCrosscheckDomain = require("./content-crosscheck-domain");
+const trainingStructureDomain = require("./training-structure-domain");
 
 const repoRoot = path.resolve(__dirname, "..", "..");
 const realRepoRoot = fs.realpathSync(repoRoot);
@@ -12,12 +14,15 @@ const indexPath = path.join(__dirname, "index.html");
 const svgAnimationEditorPath = path.join(__dirname, "svg-animation-editor.html");
 const viewerAssetPaths = new Map([
   ["svg-animation-domain.js", path.join(__dirname, "svg-animation-domain.js")],
+  ["narration-pause-domain.js", path.join(__dirname, "narration-pause-domain.js")],
   ["svg-animation-editor.js", path.join(__dirname, "svg-animation-editor.js")],
   ["svg-animation-editor.css", path.join(__dirname, "svg-animation-editor.css")],
 ]);
 const sourceRoot = path.join(repoRoot, "source-materials", "basis-seminar");
-const pngRoot = path.join(sourceRoot, "png");
+const sourceSvgRoot = path.join(sourceRoot, "powerpoint-svg");
+const legacyPngRoot = path.join(sourceRoot, "png");
 const analysisRoot = path.join(repoRoot, "analysis");
+const inventoryRoot = path.join(analysisRoot, "inventories");
 const slideAnalysisRoot = path.join(analysisRoot, "slides");
 const moduleAnalysisRoot = path.join(analysisRoot, "modules");
 const reviewRoot = path.join(analysisRoot, "viewer-notes");
@@ -25,6 +30,8 @@ const reviewVersionRoot = path.join(reviewRoot, "versions");
 const pendingReviewRoot = path.join(reviewRoot, "_pending");
 const additionalSlidesPath = path.join(reviewRoot, "additional-slides.json");
 const viewerCurationPath = path.join(reviewRoot, "viewer-curation.json");
+const trainingStructurePath = path.join(reviewRoot, "training-structure.json");
+const spokenTextOverridesPath = path.join(reviewRoot, "spoken-text-overrides.json");
 const crosscheckRoot = path.join(reviewRoot, "crosschecks");
 const rebuildPlanRoot = path.join(analysisRoot, "rebuild-plans");
 const proposalRoots = [
@@ -133,6 +140,242 @@ function sourceReferenceMapPath(moduleId) {
   );
 }
 
+function scenePlanPath(moduleId) {
+  return path.join(
+    rebuildPlanRoot,
+    `${cleanModuleId(moduleId)}_scene-plan.json`,
+  );
+}
+
+function readScenePlan(moduleId) {
+  const filePath = scenePlanPath(moduleId);
+  if (!fs.existsSync(filePath)) {
+    return { path: "", scenes: [], readError: "" };
+  }
+
+  try {
+    const parsed = readJsonFile(filePath);
+    return {
+      path: toWebPath(filePath),
+      scenes: Array.isArray(parsed?.scenes) ? parsed.scenes : [],
+      readError: "",
+    };
+  } catch (error) {
+    return {
+      path: toWebPath(filePath),
+      scenes: [],
+      readError: error.message,
+    };
+  }
+}
+
+function readSpokenTextOverrides() {
+  const fallback = {
+    schema_version: "basisRebuildSpokenTextOverrides/v1",
+    updated_at: null,
+    slides: {},
+  };
+  if (!fs.existsSync(spokenTextOverridesPath)) return fallback;
+
+  try {
+    const parsed = readJsonFile(spokenTextOverridesPath);
+    return {
+      ...fallback,
+      ...parsed,
+      slides: parsed?.slides && typeof parsed.slides === "object" && !Array.isArray(parsed.slides)
+        ? parsed.slides
+        : {},
+    };
+  } catch {
+    return fallback;
+  }
+}
+
+function readSvgTextMap(moduleId) {
+  const safeModuleId = cleanModuleId(moduleId);
+  const filePath = path.join(inventoryRoot, `${safeModuleId}_svg-text-map.json`);
+  const fallback = {
+    path: "",
+    mappingStatus: "missing",
+    mappings: new Map(),
+    readError: "",
+  };
+  if (!fs.existsSync(filePath)) return fallback;
+
+  try {
+    const parsed = readJsonFile(filePath);
+    if (
+      parsed?.schema_version !== "basisReSvgTextMap/v1" ||
+      cleanModuleId(parsed?.module_id) !== safeModuleId
+    ) {
+      return {
+        ...fallback,
+        path: toWebPath(filePath),
+        mappingStatus: "invalid",
+        readError: "SVG-Text-Mapping besitzt eine ungueltige Modul- oder Schemaangabe.",
+      };
+    }
+    return {
+      path: toWebPath(filePath),
+      mappingStatus: String(parsed.mapping_status || ""),
+      mappings: new Map(
+        (Array.isArray(parsed.mappings) ? parsed.mappings : [])
+          .map((entry) => [Number(entry?.source_slide_number), entry])
+          .filter(([slideNumber]) => Number.isFinite(slideNumber)),
+      ),
+      readError: "",
+    };
+  } catch (error) {
+    return {
+      ...fallback,
+      path: toWebPath(filePath),
+      mappingStatus: "invalid",
+      readError: error.message,
+    };
+  }
+}
+
+function mappedSpeakerTextForSlide(sourceTextMap, slideNumber) {
+  const safeSlideNumber = Number(slideNumber);
+  const mapping = sourceTextMap?.mappings?.get(safeSlideNumber);
+  const text = typeof mapping?.spoken_text === "string" ? mapping.spoken_text.trim() : "";
+  if (!mapping || mapping.mapping_status !== "mapped" || !text) return null;
+
+  const sourceSlides = mapping.shared_text_group
+    ? [...sourceTextMap.mappings.values()]
+      .filter((entry) => entry?.shared_text_group === mapping.shared_text_group)
+      .map((entry) => Number(entry.source_slide_number))
+      .filter(Number.isFinite)
+      .sort((left, right) => left - right)
+    : [safeSlideNumber];
+
+  return {
+    text,
+    source: `${sourceTextMap.path}#${mapping.source_slide_key}`,
+    scope: mapping.shared_text_group ? "shared-section" : "slide",
+    sourceSlides,
+    workUnit: "",
+  };
+}
+
+function spokenTextForSlide(scenePlan, slideNumber, slide, override = null, sourceTextMap = null) {
+  const safeSlideNumber = Number(slideNumber);
+  const scene = scenePlan.scenes.find(
+    (entry) => Number(entry?.output_slide_number) === safeSlideNumber,
+  );
+  const sceneText = typeof scene?.spoken_text === "string" ? scene.spoken_text.trim() : "";
+  let resolved;
+  if (sceneText) {
+    const sourceSlides = Array.isArray(scene?.source_slides)
+      ? scene.source_slides.map(Number).filter(Number.isFinite)
+      : [];
+    resolved = {
+      text: sceneText,
+      source: scenePlan.path,
+      scope: sourceSlides.length > 1 ? "merged-scene" : "scene",
+      sourceSlides,
+      workUnit: String(scene?.work_unit || ""),
+    };
+  } else {
+    const mappedSpeakerText = mappedSpeakerTextForSlide(sourceTextMap, safeSlideNumber);
+    if (mappedSpeakerText) {
+      resolved = mappedSpeakerText;
+    } else {
+      const narration = resolveNarrationText(slide);
+      resolved = {
+        text: narration.text,
+        source: narration.source,
+        scope: narration.scope,
+        sourceSlides: [],
+        workUnit: "",
+      };
+    }
+  }
+
+  if (override && typeof override.text === "string") {
+    return {
+      ...resolved,
+      text: override.text,
+      source: toWebPath(spokenTextOverridesPath),
+      isOverride: true,
+      updatedAt: override.updated_at || null,
+      originalSource: resolved.source,
+    };
+  }
+
+  return {
+    ...resolved,
+    isOverride: false,
+    updatedAt: null,
+    originalSource: resolved.source,
+  };
+}
+
+function animationDecisionForSlide(scenePlan, slideNumber) {
+  const safeSlideNumber = Number(slideNumber);
+  const scene = scenePlan.scenes.find(
+    (entry) => Number(entry?.output_slide_number) === safeSlideNumber,
+  );
+  const decision = String(scene?.animation_plan?.decision || "");
+  if (["static", "animated", "needs_review"].includes(decision)) {
+    return {
+      decision,
+      rationale: String(scene?.animation_plan?.rationale || ""),
+      source: scenePlan.path,
+    };
+  }
+  return {
+    decision: "needs_review",
+    rationale: "Legacy-Plan ohne semantische Animationsentscheidung; bestehende Schritte sind nicht freigegeben.",
+    source: scenePlan.path,
+  };
+}
+
+function validateSpokenTextOverride(text) {
+  if (typeof text !== "string") throw createHttpError("Der Sprechertext muss Text sein.", 400);
+  const normalizedText = text.replace(/\r\n/g, "\n").trim();
+  if (normalizedText.length > 150_000) {
+    throw createHttpError("Der Sprechertext ist zu lang.", 400);
+  }
+  const pauseAnalysis = narrationPauseDomain.validateNarration(normalizedText);
+  if (!pauseAnalysis.valid) {
+    throw createHttpError("Der Sprechertext enthält ungültige Pausenmarker.", 422, pauseAnalysis.errors);
+  }
+  return normalizedText;
+}
+
+function saveSpokenTextOverride(id, text, reset = false) {
+  const match = String(id || "").match(/^(.+)::(\d+)$/);
+  if (!match) throw createHttpError("Ungueltige Slide-ID.", 400);
+  const moduleId = cleanModuleId(match[1]);
+  const slideNumber = Number(match[2]);
+  const slideId = slideKey(moduleId, slideNumber);
+  const knownSlide = listSlides().slides.some((slide) => slide.id === slideId);
+  if (!knownSlide) throw createHttpError("Folie wurde nicht gefunden.", 404);
+
+  const store = readSpokenTextOverrides();
+  if (reset) {
+    delete store.slides[slideId];
+  } else {
+    const normalizedText = validateSpokenTextOverride(text);
+    store.slides[slideId] = {
+      text: normalizedText,
+      updated_at: new Date().toISOString(),
+    };
+  }
+
+  store.schema_version = "basisRebuildSpokenTextOverrides/v1";
+  store.updated_at = new Date().toISOString();
+  if (Object.keys(store.slides).length) {
+    writeJsonFileAtomic(spokenTextOverridesPath, store);
+  } else if (fs.existsSync(spokenTextOverridesPath)) {
+    fs.rmSync(spokenTextOverridesPath, { force: true });
+  }
+
+  const updatedSlide = listSlides().slides.find((slide) => slide.id === slideId);
+  return updatedSlide?.spokenText || null;
+}
+
 function normalizeSourceReferenceMapping(entry, source = "reference_map") {
   const outputSlideNumber = Number(entry?.output_slide_number);
   const sourceSlides = Array.isArray(entry?.source_slides)
@@ -200,7 +443,7 @@ function sourceReferenceMappingFor(moduleId, slideNumber, isAdditionalSlide = fa
       output_slide_number: safeSlideNumber,
       source_slides: [],
       mapping_type: "new_content",
-      rationale: "Zusatzfolie ohne alte PowerPoint-Referenz; das Review-Briefing ist der Inhaltsanker.",
+      rationale: "Zusatzfolie ohne Quell-SVG-Referenz; das Review-Briefing ist der Inhaltsanker.",
     }, "additional_slide");
   }
 
@@ -348,6 +591,21 @@ function writeViewerCurationStore(store) {
   });
 }
 
+function readTrainingStructureStore() {
+  if (!fs.existsSync(trainingStructurePath)) return trainingStructureDomain.defaultStore();
+  try {
+    return trainingStructureDomain.normalizeStore(readJsonFile(trainingStructurePath));
+  } catch {
+    return trainingStructureDomain.defaultStore();
+  }
+}
+
+function applyTrainingStructureAction(input) {
+  const output = trainingStructureDomain.applyAction(readTrainingStructureStore(), input);
+  writeJsonFileAtomic(trainingStructurePath, output.store);
+  return output;
+}
+
 function normalizedSlideCuration(value) {
   const order = Number(value?.order);
   return {
@@ -485,16 +743,30 @@ function moveSlideInCuration(id, direction) {
       (Number(left.sortOrder) || left.slideNumber) - (Number(right.sortOrder) || right.slideNumber) ||
       left.slideNumber - right.slideNumber
     );
-  const index = allSlides.findIndex((slide) => slide.id === String(id));
-  if (index < 0) return null;
-  const targetIndex = safeDirection === "down" ? index + 1 : index - 1;
-  if (targetIndex < 0 || targetIndex >= allSlides.length) {
+  const trainingStructure = readTrainingStructureStore();
+  const moduleStructure = trainingStructure.modules[moduleId] || { scene_assignments: {} };
+  const selectedAssignment = moduleStructure.scene_assignments[String(id)] || null;
+  const placementKey = selectedAssignment
+    ? `${selectedAssignment.chapter_id}::${selectedAssignment.lesson_id}`
+    : "__unassigned__";
+  const groupSlides = allSlides.filter((slide) => {
+    const assignment = moduleStructure.scene_assignments[slide.id] || null;
+    const candidateKey = assignment
+      ? `${assignment.chapter_id}::${assignment.lesson_id}`
+      : "__unassigned__";
+    return candidateKey === placementKey;
+  });
+  const groupIndex = groupSlides.findIndex((slide) => slide.id === String(id));
+  if (groupIndex < 0) return null;
+  const targetGroupIndex = safeDirection === "down" ? groupIndex + 1 : groupIndex - 1;
+  if (targetGroupIndex < 0 || targetGroupIndex >= groupSlides.length) {
     return { id, moduleId, unchanged: true };
   }
 
   const reordered = [...allSlides];
-  const [moved] = reordered.splice(index, 1);
-  reordered.splice(targetIndex, 0, moved);
+  const index = reordered.findIndex((slide) => slide.id === String(id));
+  const targetIndex = reordered.findIndex((slide) => slide.id === groupSlides[targetGroupIndex].id);
+  [reordered[index], reordered[targetIndex]] = [reordered[targetIndex], reordered[index]];
 
   const store = readViewerCurationStore();
   const now = new Date().toISOString();
@@ -572,14 +844,36 @@ function extractSlideNumber(fileName) {
   return numericParts[numericParts.length - 1];
 }
 
+function extractSlideNumberFromFolder(folderName) {
+  const match = String(folderName).match(
+    /^(?:slide|folie|seite|page|scene|s)[_\-\s]*(\d+)$/i,
+  );
+  return match ? Number(match[1]) : null;
+}
+
 function inferModuleAndSlide(filePath, root, fallbackIndex = 0) {
   const relativeParts = path.relative(root, filePath).split(path.sep);
   const fileName = path.basename(filePath);
   const folderModule = relativeParts.length > 1 ? extractModuleFromName(relativeParts[0]) || relativeParts[0] : "";
   const nameModule = extractModuleFromName(fileName);
   const moduleId = cleanModuleId(folderModule || nameModule || "unassigned");
-  const slideNumber = extractSlideNumber(fileName) || fallbackIndex + 1;
+  const folderSlideNumber = relativeParts
+    .slice(1, -1)
+    .map((part) => extractSlideNumberFromFolder(part))
+    .find((value) => Number.isFinite(value) && value > 0);
+  const slideNumber = folderSlideNumber || extractSlideNumber(fileName) || fallbackIndex + 1;
   return { moduleId, slideNumber };
+}
+
+function svgProposalPriority(proposal) {
+  const fileName = String(proposal?.fileName || "").toLowerCase();
+  const expectedSceneFile = `slide_${padSlideNumber(proposal?.slideNumber)}.svg`;
+  if (fileName === expectedSceneFile) return 100;
+
+  const proposalPath = String(proposal?.path || "").replaceAll("\\", "/").toLowerCase();
+  if (/\/(?:plots|formulas|media)\//.test(proposalPath)) return 0;
+  if (/^slide[_-]?\d+\.svg$/.test(fileName)) return 80;
+  return 40;
 }
 
 function slideKey(moduleId, slideNumber) {
@@ -645,6 +939,14 @@ function normalizedReviewStatus(value) {
 
 function normalizedReviewNotes(value) {
   return String(value || "").replace(/\r\n/g, "\n").trim();
+}
+
+function reviewStatusAfterNoteSave(status, notes) {
+  const normalizedStatus = normalizedReviewStatus(status);
+  if (normalizedStatus === "open" && normalizedReviewNotes(notes)) {
+    return "needs_revision";
+  }
+  return normalizedStatus;
 }
 
 function normalizedIncludeInPresentation(value) {
@@ -981,8 +1283,8 @@ function saveReview(id, status, notes) {
   if (!match) return null;
   const moduleId = cleanModuleId(match[1]);
   const slideNumber = Number(match[2]);
-  const normalizedStatus = normalizedReviewStatus(status);
   let normalizedNotes = normalizedReviewNotes(notes);
+  const normalizedStatus = reviewStatusAfterNoteSave(status, normalizedNotes);
   const previous = (() => {
     try {
       return readRawReview(moduleId, slideNumber);
@@ -1069,12 +1371,12 @@ function savePresentationPreference(id, includeInPresentation) {
   };
 }
 
-function collectOldSlides() {
-  const files = collectFiles(pngRoot, imageExtensions).sort(naturalCompare);
+function collectSourceSlidesFromRoot(root, extensions, sourceKind, priority) {
+  const files = collectFiles(root, extensions).sort(naturalCompare);
   const groups = new Map();
 
   for (const filePath of files) {
-    const relativeParts = path.relative(pngRoot, filePath).split(path.sep);
+    const relativeParts = path.relative(root, filePath).split(path.sep);
     const rawModule =
       relativeParts.length > 1
         ? extractModuleFromName(relativeParts[0]) || relativeParts[0]
@@ -1088,18 +1390,40 @@ function collectOldSlides() {
   for (const [moduleId, moduleFiles] of groups.entries()) {
     moduleFiles.sort(naturalCompare);
     moduleFiles.forEach((filePath, index) => {
-      const inferred = inferModuleAndSlide(filePath, pngRoot, index);
+      const inferred = inferModuleAndSlide(filePath, root, index);
       results.push({
         moduleId,
         slideNumber: inferred.slideNumber,
         path: toWebPath(filePath),
         url: fileUrl(filePath),
         fileName: path.basename(filePath),
+        sourceKind,
+        priority,
       });
     });
   }
-
   return results;
+}
+
+function collectOldSlides() {
+  const bySlide = new Map();
+  const candidates = [
+    ...collectSourceSlidesFromRoot(legacyPngRoot, imageExtensions, "legacy_png", 0),
+    ...collectSourceSlidesFromRoot(sourceSvgRoot, svgExtensions, "powerpoint_svg", 1),
+  ];
+
+  for (const candidate of candidates) {
+    const key = slideKey(candidate.moduleId, candidate.slideNumber);
+    const previous = bySlide.get(key);
+    if (!previous || candidate.priority > previous.priority) bySlide.set(key, candidate);
+  }
+
+  return [...bySlide.values()]
+    .map(({ priority, ...slide }) => slide)
+    .sort((left, right) =>
+      naturalCompare(left.moduleId, right.moduleId) ||
+      left.slideNumber - right.slideNumber
+    );
 }
 
 function collectSvgProposals() {
@@ -1264,6 +1588,7 @@ function applyAnimationGroupSvgAliases(map) {
 function listSlides() {
   const map = new Map();
   const curationStore = readViewerCurationStore();
+  const trainingStructure = readTrainingStructureStore();
 
   for (const oldSlide of collectOldSlides()) {
     const record = mergeRecord(map, oldSlide.moduleId, oldSlide.slideNumber);
@@ -1272,7 +1597,9 @@ function listSlides() {
 
   for (const proposal of collectSvgProposals()) {
     const record = mergeRecord(map, proposal.moduleId, proposal.slideNumber);
-    record.svgProposal = proposal;
+    if (!record.svgProposal || svgProposalPriority(proposal) > svgProposalPriority(record.svgProposal)) {
+      record.svgProposal = proposal;
+    }
   }
 
   for (const analysis of collectAnalysisSlides()) {
@@ -1310,8 +1637,20 @@ function listSlides() {
     }
   }
 
+  const scenePlans = new Map(
+    [...new Set([...map.values()].map((record) => record.moduleId))]
+      .map((moduleId) => [moduleId, readScenePlan(moduleId)]),
+  );
+  const sourceTextMaps = new Map(
+    [...new Set([...map.values()].map((record) => record.moduleId))]
+      .map((moduleId) => [moduleId, readSvgTextMap(moduleId)]),
+  );
+  const spokenTextOverrides = readSpokenTextOverrides();
+
   const slides = [...map.values()]
     .map((record) => {
+      const sourceTextMap = sourceTextMaps.get(record.moduleId);
+      const sourceTextMapping = sourceTextMap?.mappings?.get(Number(record.slideNumber));
       const review = readReview(record.moduleId, record.slideNumber);
       const qa = record.analysis?.summary?.qa || null;
       const completeness = qa?.completeness || "missing";
@@ -1337,10 +1676,28 @@ function listSlides() {
         record.svgProposal,
         referenceMapping,
       );
+      const spokenText = spokenTextForSlide(
+        scenePlans.get(record.moduleId) || { path: "", scenes: [], readError: "" },
+        record.slideNumber,
+        record,
+        spokenTextOverrides.slides[slideKey(record.moduleId, record.slideNumber)] || null,
+        sourceTextMap,
+      );
+      const animationDecision = animationDecisionForSlide(
+        scenePlans.get(record.moduleId) || { path: "", scenes: [], readError: "" },
+        record.slideNumber,
+      );
       return {
         ...record,
-        title: record.title || record.oldSlide?.fileName || record.svgProposal?.fileName || record.slideId,
+        title:
+          record.title ||
+          sourceTextMapping?.source_text_title ||
+          record.oldSlide?.fileName ||
+          record.svgProposal?.fileName ||
+          record.slideId,
         review,
+        spokenText,
+        animationDecision,
         crosscheck: {
           referenceMapping,
           references: sourceReferences,
@@ -1350,7 +1707,10 @@ function listSlides() {
           isAdditionalSlide: Boolean(record.isAdditionalSlide),
           isHidden: Boolean(record.isHidden),
           hasOldSlide: Boolean(record.oldSlide),
+          hasSourceSvg: record.oldSlide?.sourceKind === "powerpoint_svg",
+          sourceKind: record.oldSlide?.sourceKind || "",
           hasSvgProposal: Boolean(record.svgProposal),
+          hasAnimationManifest: Boolean(record.svgProposal?.animation?.exists),
           hasAnimation: Boolean(record.svgProposal?.animation?.available),
           hasAnalysis: Boolean(record.analysis?.summary),
           analysisError: record.analysis?.readError || "",
@@ -1368,7 +1728,7 @@ function listSlides() {
     );
 
   const modules = [...new Set(slides.map((slide) => slide.moduleId))].sort(naturalCompare);
-  return { repoRoot, modules, slides };
+  return { repoRoot, modules, slides, trainingStructure };
 }
 
 function runContentCrosscheck(slideId) {
@@ -1385,9 +1745,24 @@ function runContentCrosscheck(slideId) {
     const source = slideCollection.slides.find((slide) =>
       slide.moduleId === target.moduleId && slide.slideNumber === sourceSlideNumber
     );
+    const oldSlide = source?.oldSlide || null;
+    let sourceSvgSource = "";
+    if (oldSlide?.sourceKind === "powerpoint_svg" && oldSlide.path) {
+      const sourceSvgPath = path.resolve(repoRoot, oldSlide.path);
+      if (
+        isInsideRepo(sourceSvgPath) &&
+        fs.existsSync(sourceSvgPath) &&
+        fs.statSync(sourceSvgPath).isFile() &&
+        path.extname(sourceSvgPath).toLowerCase() === ".svg" &&
+        isInsideRepoReal(sourceSvgPath)
+      ) {
+        sourceSvgSource = fs.readFileSync(sourceSvgPath, "utf8");
+      }
+    }
     return {
       slideNumber: sourceSlideNumber,
-      oldSlide: source?.oldSlide || null,
+      oldSlide,
+      sourceSvgSource,
       analysisPath: source?.analysis?.path || "",
       analysis: source?.analysis?.summary || null,
     };
@@ -1425,6 +1800,8 @@ function runContentCrosscheck(slideId) {
     svgSource,
     svgText: extractedSvgText.text,
     animationStepCount: proposal?.animation?.stepCount || 0,
+    animationDecision: target.animationDecision?.decision || "needs_review",
+    spokenText: target.spokenText?.text || "",
     reviewNotes: target.review?.notes || "",
   });
 
@@ -1574,7 +1951,7 @@ function readAnimationEditorState(slideId) {
     severity: "error",
     message: `${error.path}: ${error.message}`,
   }));
-  const narration = resolveNarrationText(target.slide);
+  const narration = target.slide.spokenText || resolveNarrationText(target.slide);
   const issues = svgAnimationDomain.collectIssues(
     manifest,
     inventoryResult.inventory,
@@ -1860,6 +2237,19 @@ const server = http.createServer((request, response) => {
     return;
   }
 
+  if (request.method === "POST" && requestUrl.pathname === "/api/spoken-text") {
+    readJsonBody(request)
+      .then((body) => {
+        const spokenText = saveSpokenTextOverride(body.id, body.text, body.reset === true);
+        sendJson(response, 200, { ok: true, spokenText });
+      })
+      .catch((error) => sendJson(response, error.status || 400, {
+        error: error.message,
+        details: error.details || undefined,
+      }));
+    return;
+  }
+
   if (request.method === "POST" && requestUrl.pathname === "/api/crosscheck") {
     readJsonBody(request)
       .then((body) => {
@@ -1922,6 +2312,19 @@ const server = http.createServer((request, response) => {
     return;
   }
 
+  if (request.method === "POST" && requestUrl.pathname === "/api/training-structure") {
+    readJsonBody(request)
+      .then((body) => {
+        const output = applyTrainingStructureAction(body);
+        sendJson(response, 200, {
+          trainingStructure: output.store,
+          result: output.result,
+        });
+      })
+      .catch((error) => sendJson(response, error.status || 400, { error: error.message }));
+    return;
+  }
+
   if (request.method === "GET" && requestUrl.pathname.startsWith("/files/")) {
     serveFile(response, requestUrl.pathname.slice("/files/".length));
     return;
@@ -1963,10 +2366,17 @@ if (require.main === module) {
 }
 
 module.exports = {
+  inferModuleAndSlide,
+  mappedSpeakerTextForSlide,
+  narrationPauseDomain,
   readAnimationEditorState,
+  readSvgTextMap,
+  reviewStatusAfterNoteSave,
   resolveNarrationText,
   runContentCrosscheck,
   saveAnimationEditorState,
+  spokenTextForSlide,
+  validateSpokenTextOverride,
   server,
   writeJsonFileAtomic,
 };

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_087.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "lognormal_probability_pair",
+      "label": "Ausfall- und Überlebenswahrscheinlichkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "lognormal_hazard_curves",
+      "label": "Ausfallraten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "lognormal_hazard_limit",
+      "label": "Maximum und Abfall",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "lognormal_wear_limitation",
+      "label": "Eignungsgrenze",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_lognormal_probability_pair",
+      "targetId": "lognormal_probability_pair",
+      "action": "show",
+      "sourceText": "Verläufen für die Funktionen der Dichte, der Ausfallrate, der Ausfallwahrscheinlichkeit und der Überlebenswahrscheinlichkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_lognormal_hazard_curves",
+      "targetId": "lognormal_hazard_curves",
+      "action": "draw",
+      "sourceText": "Ein Nachteil zeigt sich bai der Ausfallrate für Verschleißmechanismen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_lognormal_hazard_limit",
+      "targetId": "lognormal_hazard_limit",
+      "action": "show",
+      "sourceText": "bis das Maximum erreicht ist und die Kurve wieder abfällt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_lognormal_wear_limitation",
+      "targetId": "lognormal_wear_limitation",
+      "action": "show",
+      "sourceText": "mit Hilfe der Log-Normalverteilung nur unvollständig beschrieben werden können",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

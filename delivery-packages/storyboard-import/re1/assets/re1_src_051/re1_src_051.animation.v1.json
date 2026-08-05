@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_051.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 16,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 36,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "state_001_data_shapes_01",
+      "label": "Daten und Formen 1",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "state_001_text_content_01",
+      "label": "Textblock 1",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "state_001_visual_media_01",
+      "label": "Bildinhalt 1",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "state_001_linework_01",
+      "label": "Linien und Verlauf 1",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "state_001_visual_media_02",
+      "label": "Bildinhalt 2",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_state_001_data_shapes_01",
+      "targetId": "state_001_data_shapes_01",
+      "action": "show",
+      "sourceText": "Der Mean Time To Failure beschreibt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Semantische Elementgruppe passend zum Sprechertext aufbauen.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_state_001_text_content_01",
+      "targetId": "state_001_text_content_01",
+      "action": "show",
+      "sourceText": "Erwartungswert der Lebensdauer der aus dem",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Semantische Elementgruppe passend zum Sprechertext aufbauen.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_state_001_visual_media_01",
+      "targetId": "state_001_visual_media_01",
+      "action": "show",
+      "sourceText": "der Verteilung abgeschätzt werden Der M-T-T-F",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Semantische Elementgruppe passend zum Sprechertext aufbauen.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_state_001_linework_01",
+      "targetId": "state_001_linework_01",
+      "action": "draw",
+      "sourceText": "Ausfallwahrscheinlichkeit Dies bedeutet dass ungefähr die",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Semantische Elementgruppe passend zum Sprechertext aufbauen.",
+      "durFrames": 36,
+      "drawStyle": "reveal",
+      "direction": "leftToRight"
+    },
+    {
+      "stepId": "show_state_001_visual_media_02",
+      "targetId": "state_001_visual_media_02",
+      "action": "show",
+      "sourceText": "dem Mean Time Between Failure",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Semantische Elementgruppe passend zum Sprechertext aufbauen.",
+      "enterFrames": 16
+    }
+  ]
+}

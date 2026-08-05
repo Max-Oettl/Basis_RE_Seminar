@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "assets/diagram.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 16,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 36,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "content_group",
+      "label": "Inhaltsgruppe",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_content_group",
+      "targetId": "content_group",
+      "action": "show",
+      "sourceText": "Freigegebener Sprechertext dieser Szene",
+      "enterFrames": 16,
+      "fromY": 18,
+      "confidence": "high"
+    }
+  ]
+}

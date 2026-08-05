@@ -1,0 +1,111 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_068",
+  "scene_id": "re1_src_086",
+  "source_slides": [
+    86
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "lognormal_transformation",
+      "label": "Logarithmische Transformation",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "lognormal_density_curves",
+      "label": "Dichtekurven",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "lognormal_parameters",
+      "label": "Parameter",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "lognormal_multiplicative_process",
+      "label": "Multiplikative Prozesse",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "lognormal_applications",
+      "label": "Anwendungen",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_lognormal_transformation",
+      "targetId": "lognormal_transformation",
+      "action": "show",
+      "sourceText": "wenn die mit dem Logarithmus transformierte Zufallsvariable Ypsilon normalverteilt ist",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_lognormal_density_curves",
+      "targetId": "lognormal_density_curves",
+      "action": "draw",
+      "sourceText": "wenn man sich die unterschiedlichen Verläufe der Dichtefunktionen näher anschaut",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_lognormal_parameters",
+      "targetId": "lognormal_parameters",
+      "action": "show",
+      "sourceText": "Die Log-Normalverteilung ist durch den Erwartungswert und die Standardabweichung definiert",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_lognormal_multiplicative_process",
+      "targetId": "lognormal_multiplicative_process",
+      "action": "show",
+      "sourceText": "entstehen Werte durch das Produkt vieler positiver Zufallsvariablen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_lognormal_applications",
+      "targetId": "lognormal_applications",
+      "action": "show",
+      "sourceText": "Typische Anwendungsgebiete sind neben der Lebensdauerdatenanalyse",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

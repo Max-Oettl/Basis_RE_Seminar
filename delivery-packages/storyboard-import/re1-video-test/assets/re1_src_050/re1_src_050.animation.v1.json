@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_050.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "time_average_metrics",
+      "label": "MTTF und MTBF",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "probability_requirement_metrics",
+      "label": "ppm und Bq-Lebensdauer",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_time_average_metrics",
+      "targetId": "time_average_metrics",
+      "action": "show",
+      "sourceText": "Zunächst betrachten wir die Mean Time To Failure und den Mean Time Between Failure",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_probability_requirement_metrics",
+      "targetId": "probability_requirement_metrics",
+      "action": "show",
+      "sourceText": "Anschließend werden wir die Kennzahlen Parts Per Million, kurz P-P-M, und die B-Q-Lebensdauer betrachten",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

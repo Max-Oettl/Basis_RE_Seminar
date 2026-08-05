@@ -1,0 +1,111 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_061",
+  "scene_id": "re1_src_076",
+  "source_slides": [
+    76
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "weibull_derivation_substitution",
+      "label": "T einsetzen",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_derivation_unit_ratio",
+      "label": "Verhältnis vereinfachen",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_derivation_independent",
+      "label": "Unabhängigkeit von b",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_derivation_failure_result",
+      "label": "F von T",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_derivation_reliability_result",
+      "label": "R von T",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_weibull_derivation_substitution",
+      "targetId": "weibull_derivation_substitution",
+      "action": "show",
+      "sourceText": "Setzt man für die gewünschte Zeit nun die charakteristische Lebensdauer ein",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_derivation_unit_ratio",
+      "targetId": "weibull_derivation_unit_ratio",
+      "action": "show",
+      "sourceText": "Da sich die Klammer zu eins ergibt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_derivation_independent",
+      "targetId": "weibull_derivation_independent",
+      "action": "show",
+      "sourceText": "was sich wiederrum einfach zu eins minus e, hoch minus eins, umschreiben lässt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_derivation_failure_result",
+      "targetId": "weibull_derivation_failure_result",
+      "action": "show",
+      "sourceText": "für die Ausfallwahrscheinlichkeit ungefähr null-komma-sechs-drei-zwei erhält",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_derivation_reliability_result",
+      "targetId": "weibull_derivation_reliability_result",
+      "action": "show",
+      "sourceText": "die Kurven durch eine Zuverlässigkeit von sechsunddreißigkomma-acht Prozent verlaufen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_019.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "planning_drivers",
+      "label": "Treiber und Systemziel",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "reliability_goal_cascade",
+      "label": "Zielkaskade",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "representative_load_collective",
+      "label": "Repräsentatives Lastkollektiv",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_planning_drivers",
+      "targetId": "planning_drivers",
+      "action": "show",
+      "sourceText": "unter der Berücksichtigung der gesetzlichen Vorgaben",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_reliability_goal_cascade",
+      "targetId": "reliability_goal_cascade",
+      "action": "show",
+      "sourceText": "Dieses Ziel wird auf der obersten Systemebene festgelegt",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_representative_load_collective",
+      "targetId": "representative_load_collective",
+      "action": "show",
+      "sourceText": "Ein zweiter wichtiger Punkt neben der Zuverlässigkeitsplanung",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

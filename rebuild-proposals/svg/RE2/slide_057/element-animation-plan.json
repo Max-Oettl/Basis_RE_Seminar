@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re2_ch3_fta_aircraft_common_mode",
+  "targets": [
+    {
+      "targetId": "fta57_tree",
+      "label": "Fahrwerksgruppen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta57_links",
+      "label": "Gemeinsame Ausfallart",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta57_statement",
+      "label": "Folge für die Zuverlässigkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta57_tree",
+      "targetId": "fta57_tree",
+      "action": "show",
+      "sourceText": "Ein Common-Mode-Ausfall bezieht sich auf den Ausfall von mehreren Komponenten",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_fta57_links",
+      "targetId": "fta57_links",
+      "action": "draw",
+      "sourceText": "Das heißt der Ausfall einer Komponente bedingt direkt den Ausfall einer anderen Komponente.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung wird erst nach den zugehörigen Ereignissen gezeichnet; kleine Linien- und Pfeilskalierung.",
+      "drawDurFrames": 40
+    },
+    {
+      "stepId": "step_03_fta57_statement",
+      "targetId": "fta57_statement",
+      "action": "show",
+      "sourceText": "Solche Ausfälle erhöhen die Wahrscheinlichkeit eines Systemausfalls",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_036",
+  "scene_id": "re1_src_038",
+  "source_slides": [
+    38
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "reliability_relation",
+      "label": "R gleich eins minus F",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "density_reference",
+      "label": "Dichtefunktion",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "tx_reference",
+      "label": "Bezugszeitpunkt tx",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "failure_probability_area",
+      "label": "Ausfallfläche",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "failure_area_formula",
+      "label": "Integral der Ausfallfläche",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "reliability_area",
+      "label": "Zuverlässigkeitsfläche",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "reliability_area_formula",
+      "label": "Integral der Zuverlässigkeitsfläche",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_reliability_relation",
+      "targetId": "reliability_relation",
+      "action": "show",
+      "sourceText": "Demnach berechnet sich die Überlebenswahrscheinlichkeit bzw. Zuverlässigkeit also einfach zu eins minus der Ausfallwahrscheinlichkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_density_reference",
+      "targetId": "density_reference",
+      "action": "draw",
+      "sourceText": "Grafisch kann die Abhängigkeit auch mit Hilfe der Dichtefunktion visualisiert werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_tx_reference",
+      "targetId": "tx_reference",
+      "action": "show",
+      "sourceText": "Für einen spezifischen Zeitpunkt t-x",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_failure_probability_area",
+      "targetId": "failure_probability_area",
+      "action": "show",
+      "sourceText": "Für einen spezifischen Zeitpunkt t-x kann die Ausfallwahrscheinlichkeit über das Flächenintegral",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_failure_area_formula",
+      "targetId": "failure_area_formula",
+      "action": "show",
+      "sourceText": "Für einen spezifischen Zeitpunkt t-x kann die Ausfallwahrscheinlichkeit über das Flächenintegral",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_reliability_area",
+      "targetId": "reliability_area",
+      "action": "show",
+      "sourceText": "Umgekehrt kann die Zuverlässigkeit über das Flächenintegral",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_reliability_area_formula",
+      "targetId": "reliability_area_formula",
+      "action": "show",
+      "sourceText": "Umgekehrt kann die Zuverlässigkeit über das Flächenintegral",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re2_ch3_fta_preventive_corrective",
+  "targets": [
+    {
+      "targetId": "fta30_preventive",
+      "label": "Präventiver Ansatz",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta30_corrective",
+      "label": "Korrektiver Ansatz",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta30_comparison",
+      "label": "Zeitlicher Unterschied",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta30_preventive",
+      "targetId": "fta30_preventive",
+      "action": "show",
+      "sourceText": "Beim präventiven Ansatz erfolgt die frühzeitige Identifizierung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_fta30_corrective",
+      "targetId": "fta30_corrective",
+      "action": "show",
+      "sourceText": "Beim korrektiven Ansatz dagegen werden die aufgetretenen Fehler",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_fta30_comparison",
+      "targetId": "fta30_comparison",
+      "action": "show",
+      "sourceText": "Dieser Ansatz ist also reaktiv",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

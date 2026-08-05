@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "reltestEducationPictogramAssetCollection/v1",
+  "styleProfile": "reltest-education-minimal-v1",
+  "source": {
+    "evidenceType": "module_content_and_speaker_text",
+    "license": "project_internal"
+  },
+  "visualStyle": {
+    "flat2d": true,
+    "perspective": "front",
+    "dominantSilhouette": true,
+    "semanticLayersMax": 2,
+    "brandColors": ["#031334", "#00A754"],
+    "gradients": false,
+    "shadows": false,
+    "threeDimensional": false,
+    "photorealistic": false,
+    "embeddedText": false
+  },
+  "raster": {
+    "productionWidthPx": 384,
+    "productionHeightPx": 384,
+    "chromaSourceWidthPx": 1254,
+    "chromaSourceHeightPx": 1254,
+    "transparentBackground": true,
+    "safeMarginRatioMin": 0.08,
+    "optimizationReason": "384 px preserves ample detail for 40–76 px e-learning placement while keeping embedded SVGs stable and portable."
+  },
+  "learningUse": {
+    "targetPlacementPx": 64,
+    "requiresTextLabelOnFirstUse": true,
+    "colorIndependentMeaning": true
+  },
+  "review": {
+    "semantic": "approved",
+    "style": "approved",
+    "eLearning": "approved",
+    "accessibilityTechnical": "approved",
+    "notes": [
+      "Die PNGs werden immer gemeinsam mit ihrer sichtbaren Kartenbeschriftung verwendet.",
+      "Die Form bleibt der primäre Bedeutungsträger; Farbe dient nur der Markenbindung."
+    ]
+  },
+  "assets": [
+    { "assetId": "education_core_target", "file": "target.png", "concept": "Ziel oder Sollwert", "learningFunction": "concept-anchor", "mustShowFeatures": ["Zielscheibe", "Mittelpunkt"], "mustNotImply": ["Trefferquote"] },
+    { "assetId": "education_core_shield_check", "file": "shield-check.png", "concept": "Absicherung oder Nachweis", "learningFunction": "status", "mustShowFeatures": ["Schild", "Haken"], "mustNotImply": ["allgemeine Dekoration"] },
+    { "assetId": "education_core_settings", "file": "settings.png", "concept": "technische Auslegung", "learningFunction": "concept-anchor", "mustShowFeatures": ["Zahnrad"], "mustNotImply": ["Produktion"] },
+    { "assetId": "education_core_layers", "file": "layers.png", "concept": "Ebenen oder Generationen", "learningFunction": "orientation", "mustShowFeatures": ["gestapelte Ebenen"], "mustNotImply": ["Datenbank"] },
+    { "assetId": "education_core_search", "file": "search.png", "concept": "untersuchen oder identifizieren", "learningFunction": "action-cue", "mustShowFeatures": ["Lupe"], "mustNotImply": ["reine Messung"] },
+    { "assetId": "education_core_package", "file": "package.png", "concept": "Produkt oder Systemeinheit", "learningFunction": "concept-anchor", "mustShowFeatures": ["geschlossene Box"], "mustNotImply": ["Datenhaltung"] },
+    { "assetId": "education_core_cloud", "file": "cloud.png", "concept": "Umgebungsbedingungen", "learningFunction": "orientation", "mustShowFeatures": ["Wolke", "Einflusspfeil"], "mustNotImply": ["Cloudspeicher"] },
+    { "assetId": "education_core_flask", "file": "flask.png", "concept": "Test oder Versuch", "learningFunction": "concept-anchor", "mustShowFeatures": ["Laborgefäß", "Prüfflüssigkeit"], "mustNotImply": ["Feldbeobachtung"] },
+    { "assetId": "education_core_factory", "file": "factory.png", "concept": "Produktion oder Serie", "learningFunction": "orientation", "mustShowFeatures": ["Fabrik", "Qualitätszeichen"], "mustNotImply": ["einzelne Maschine"] },
+    { "assetId": "education_core_wrench_alert", "file": "wrench-alert.png", "concept": "technischer Handlungsbedarf", "learningFunction": "action-cue", "mustShowFeatures": ["Schraubenschlüssel", "Warnzeichen"], "mustNotImply": ["Routinekonfiguration"] },
+    { "assetId": "education_core_eye", "file": "eye.png", "concept": "beobachten", "learningFunction": "action-cue", "mustShowFeatures": ["Auge"], "mustNotImply": ["Datenspeicherung"] },
+    { "assetId": "education_core_database", "file": "database.png", "concept": "Felddaten auswerten", "learningFunction": "concept-anchor", "mustShowFeatures": ["Datenspeicher", "Haken"], "mustNotImply": ["Cloud"] },
+    { "assetId": "education_core_loop", "file": "loop.png", "concept": "Rückkopplung", "learningFunction": "orientation", "mustShowFeatures": ["zwei Kreispfeile"], "mustNotImply": ["einmaliger Ablauf"] },
+    { "assetId": "education_core_list_check", "file": "list-check.png", "concept": "strukturierte Prüfung", "learningFunction": "action-cue", "mustShowFeatures": ["Prüfliste", "Haken"], "mustNotImply": ["ungeprüfte Liste"] },
+    { "assetId": "education_core_machine_alert", "file": "machine-alert.png", "concept": "technischer Ausfallzustand", "learningFunction": "status", "mustShowFeatures": ["technisches Zahnrad", "Warnzeichen"], "mustNotImply": ["Routinekonfiguration"] },
+    { "assetId": "education_core_clock", "file": "clock.png", "concept": "Zeit, Lebensdauer oder Zeitintervall", "learningFunction": "concept-anchor", "mustShowFeatures": ["Zifferblatt", "Zeiger"], "mustNotImply": ["Kalenderdatum"] },
+    { "assetId": "education_core_percent", "file": "percent.png", "concept": "Anteil oder Wahrscheinlichkeit in Prozent", "learningFunction": "concept-anchor", "mustShowFeatures": ["Prozentzeichen"], "mustNotImply": ["Preisnachlass"] },
+    { "assetId": "education_core_shield", "file": "shield.png", "concept": "Schutz, Absicherung oder ZuverlÃ¤ssigkeit", "learningFunction": "concept-anchor", "mustShowFeatures": ["Schild"], "mustNotImply": ["bereits erbrachter Nachweis"] }
+  ]
+}

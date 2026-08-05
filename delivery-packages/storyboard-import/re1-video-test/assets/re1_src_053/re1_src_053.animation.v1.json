@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_053.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "ppm_scale_comparison",
+      "label": "Prozent, Promille und ppm",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "ppm_lifetime_reference",
+      "label": "Kopplung an Lebensdauer",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "ppm_to_bq_transition",
+      "label": "Übergang zur Bq-Lebensdauer",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_ppm_scale_comparison",
+      "targetId": "ppm_scale_comparison",
+      "action": "show",
+      "sourceText": "in Prozent, Promille oder Parts Per Million",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_ppm_lifetime_reference",
+      "targetId": "ppm_lifetime_reference",
+      "action": "show",
+      "sourceText": "nur sinnvoll, wenn sie für eine Lebensdauer wie eine bestimmte Anzahl an Betriebsstunden oder eine Laufleistung definiert wird",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_ppm_to_bq_transition",
+      "targetId": "ppm_to_bq_transition",
+      "action": "show",
+      "sourceText": "Genau hierfür ist die B-Q-Lebensdauer geeignet",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

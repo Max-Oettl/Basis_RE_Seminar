@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re2_ch4_fmea_slide_088",
+  "targets": [
+    {
+      "targetId": "s88_gear_nodes",
+      "label": "Anpassungsgetriebe",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s88_gear_links",
+      "label": "Hierarchische Verknüpfungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s88_gear_nodes",
+      "targetId": "s88_gear_nodes",
+      "action": "show",
+      "sourceText": "Schauen wir uns das Ganze mal am Beispiel eines Anpassungsgetriebes an.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_s88_gear_links",
+      "targetId": "s88_gear_links",
+      "action": "draw",
+      "sourceText": "Diese Aufteilung hilft uns jetzt, eine klare und vollständige Systemstruktur zu erstellen. Ganz oben, auf der ersten Systemebene, befindet sich das Getriebe. Entsprechend der Stückliste kann es in die drei Baugruppen Antrieb, Abtrieb und Gehäuse untergliedert werden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung wird erst nach den zugehörigen fachlichen Endpunkten aufgebaut.",
+      "drawDurFrames": 42
+    }
+  ]
+}

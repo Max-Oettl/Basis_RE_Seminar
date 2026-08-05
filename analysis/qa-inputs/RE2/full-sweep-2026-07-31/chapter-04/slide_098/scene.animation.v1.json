@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_098.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "s98_function",
+      "label": "Funktion",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s98_faults",
+      "label": "Fehlfunktionen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s98_fault_links",
+      "label": "Zuordnung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s98_rule",
+      "label": "Negationsprinzip",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s98_function",
+      "targetId": "s98_function",
+      "action": "show",
+      "sourceText": "In diesem Schritt identifizieren wir die Fehlfunktionen der einzelnen Systemelemente. Dabei wird jeder Funktion eines Systemelements mindestens eine Fehlfunktion oder ein Fehler zugeordnet.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_s98_faults",
+      "targetId": "s98_faults",
+      "action": "show",
+      "sourceText": "In diesem Schritt identifizieren wir die Fehlfunktionen der einzelnen Systemelemente. Dabei wird jeder Funktion eines Systemelements mindestens eine Fehlfunktion oder ein Fehler zugeordnet.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_s98_fault_links",
+      "targetId": "s98_fault_links",
+      "action": "draw",
+      "sourceText": "In diesem Schritt identifizieren wir die Fehlfunktionen der einzelnen Systemelemente. Dabei wird jeder Funktion eines Systemelements mindestens eine Fehlfunktion oder ein Fehler zugeordnet.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung wird erst nach den zugehörigen fachlichen Endpunkten aufgebaut.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "step_04_s98_rule",
+      "targetId": "s98_rule",
+      "action": "show",
+      "sourceText": "Ein Fehler entsteht in der Regel durch die Nichterfüllung oder die eingeschränkte Erfüllung einer Funktion. Der Fehler lässt sich somit einfach durch die Negation der Funktion ableiten.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_087.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 16,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 36,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "state_001_visual_media_01",
+      "label": "Bildinhalt 1",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "state_002_visual_media_01",
+      "label": "Bildinhalt 1",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "state_002_data_shapes_01",
+      "label": "Daten und Formen 1",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_state_001_visual_media_01",
+      "targetId": "state_001_visual_media_01",
+      "action": "show",
+      "sourceText": "Wie bereits erwähnt ist die Log-Normalverteilung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Semantische Elementgruppe passend zum Sprechertext aufbauen.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "hide_state_001_visual_media_01_at_002",
+      "targetId": "state_001_visual_media_01",
+      "action": "hide",
+      "sourceText": "dass sich die Zunahme der Ausfallrate",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vorherige Elementgruppe beim Zustandswechsel ausblenden.",
+      "exitFrames": 12
+    },
+    {
+      "stepId": "show_state_002_visual_media_01",
+      "targetId": "state_002_visual_media_01",
+      "action": "show",
+      "sourceText": "dass sich die Zunahme der Ausfallrate",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Semantische Elementgruppe passend zum Sprechertext aufbauen.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_state_002_data_shapes_01",
+      "targetId": "state_002_data_shapes_01",
+      "action": "show",
+      "sourceText": "nur unvollständig beschrieben werden können",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Semantische Elementgruppe passend zum Sprechertext aufbauen.",
+      "enterFrames": 16
+    }
+  ]
+}

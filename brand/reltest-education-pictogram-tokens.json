@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "reltestEducationPictogram/v1",
+  "status": "active-production",
+  "brandProfile": "reltest-education",
+  "style": "reltest-education-minimal-v1",
+  "source": [
+    "source-materials/brand/Corporate_Design_RELTEST_19.pdf",
+    "brand/reltest-education-style-guide.md",
+    "workflow/30-visual-decision/pictogram-creation-workflow.md"
+  ],
+  "grid": {
+    "viewBox": "0 0 24 24",
+    "width": 24,
+    "height": 24,
+    "safeInset": 2,
+    "opticalCenter": [12, 12]
+  },
+  "geometry": {
+    "defaultMode": "outline",
+    "strokeWidth": 1.8,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "minimumGap": 1.5,
+    "minimumFeatureLength": 1.5,
+    "maximumSemanticLayers": 2,
+    "maximumForegroundColors": 2,
+    "maximumCompactFilledStatusMarkers": 1,
+    "perspective": "flat-orthographic",
+    "shadowsAllowed": false,
+    "gradientsAllowed": false,
+    "texturesAllowed": false,
+    "threeDimensionalEffectsAllowed": false,
+    "textInsideIconAllowed": false
+  },
+  "colors": {
+    "defaultStroke": "#031334",
+    "educationAccent": "#00A754",
+    "inverse": "#FFFFFF",
+    "failure": "#EC6244",
+    "warning": "#E9B400",
+    "technicalSupport": "#0C84B4",
+    "secondary": "#25495F",
+    "softEducationBackground": "#E6F6EE",
+    "softFailureBackground": "#FCE7E2",
+    "softWarningBackground": "#FFF5CC",
+    "softNeutralBackground": "#F7F9FC",
+    "allowedForegroundOnLight": [
+      "#031334",
+      "#00A754",
+      "#EC6244",
+      "#0C84B4",
+      "#25495F"
+    ],
+    "allowedForegroundOnDark": [
+      "#FFFFFF",
+      "#00A754",
+      "#E9B400",
+      "#EC6244",
+      "#0C84B4"
+    ],
+    "notes": {
+      "educationGreen": "Primary Education accent; may lead an icon family.",
+      "steelCyan": "Technical or comparison role only; never the default Education lead.",
+      "goldOnLight": "Does not reach 3:1 against white and needs a dark field or a separate high-contrast outline."
+    }
+  },
+  "displaySizes": {
+    "minimumPlacementPx": {
+      "microStatusWithAdjacentLabel": 48,
+      "compactUniversal": 64,
+      "standardWithLabel": 80,
+      "objectPictogram": 96,
+      "focalLearningMotif": 140
+    },
+    "hardMinimumSourcePx": 32,
+    "preferredMinimumSourcePx": 64,
+    "secondaryStatusRequiresAdjacentLabel": true,
+    "reviewScales": [
+      { "name": "source", "scale": 1 },
+      { "name": "typical-viewer", "scale": 0.5 }
+    ]
+  },
+  "backgroundField": {
+    "allowed": true,
+    "defaultShape": "circle",
+    "flatFillOnly": true,
+    "outlineAllowed": false,
+    "mustNotCarryIndependentMeaning": true
+  },
+  "rasterVariant": {
+    "allowedOnlyForComplexOrConcreteMotifs": true,
+    "masterMinimumPx": 1024,
+    "transparentBackgroundRequired": true,
+    "safeMarginRatio": 0.08,
+    "mustMatchMinimalStyle": true,
+    "photorealisticAllowed": false,
+    "embeddedTextAllowed": false,
+    "logoOrWatermarkAllowed": false
+  },
+  "elearning": {
+    "semanticRoles": [
+      "concept-anchor",
+      "action-cue",
+      "orientation",
+      "status",
+      "comparison-marker"
+    ],
+    "onePrimaryMeaning": true,
+    "labelOrUnambiguousContextRequired": true,
+    "colorMayNotBeSoleCarrier": true,
+    "hoverMayNotBeRequired": true,
+    "atomicAnimationDefault": true,
+    "preferredEntrance": "show",
+    "decorativeMotionForbidden": true,
+    "recognitionTargetSeconds": 1,
+    "contrastRatioMinimum": 3,
+    "accessibility": {
+      "redundantWithVisibleText": "aria-hidden=true",
+      "standaloneSemantic": "role=img and non-empty aria-label"
+    }
+  },
+  "qa": {
+    "requiredDataComponent": "reltest-pictogram",
+    "requiredDataStyle": "reltest-education-minimal-v1",
+    "requiredDataKind": true,
+    "forbiddenElements": [
+      "text",
+      "image",
+      "filter",
+      "linearGradient",
+      "radialGradient",
+      "script"
+    ],
+    "requiredPreviewSizesPx": [64, 48, 32],
+    "contextPreviewRequired": true,
+    "grayscaleRecognitionRequired": true,
+    "semanticRegistryRequired": true
+  }
+}

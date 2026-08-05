@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re2_ch3_fta_not_investigated_event",
+  "targets": [
+    {
+      "targetId": "fta46_circuit",
+      "label": "Motorschaltung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta46_symbol",
+      "label": "Nicht weiter untersuchtes Ereignis",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta46_explanation",
+      "label": "Bedeutung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta46_circuit",
+      "targetId": "fta46_circuit",
+      "action": "show",
+      "sourceText": "Der Fehlerbaum muss aber nicht immer bis zum Ende durchgeführt werden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_fta46_symbol",
+      "targetId": "fta46_symbol",
+      "action": "show",
+      "sourceText": "Hierzu können wir einfach ein Rauten-Symbol verwenden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_fta46_explanation",
+      "targetId": "fta46_explanation",
+      "action": "show",
+      "sourceText": "Hierzu können wir einfach ein Rauten-Symbol verwenden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

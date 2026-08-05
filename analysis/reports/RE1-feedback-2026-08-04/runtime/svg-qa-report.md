@@ -1,0 +1,186 @@
+# SVG QA Report - RE1
+
+Generated: 2026-08-04T19:46:25.077Z
+
+## Summary
+
+- Files checked: 164
+- Animation manifests checked: 77
+- Layout files checked: 0
+- Layout states checked: 0
+- Design files checked: 0
+- Design errors: 0
+- Design warnings: 0
+- Handoff scenes checked: 0
+- Handoff manifests checked: 0
+- Handoff errors: 0
+- Handoff warnings: 0
+- Errors: 0
+- Warnings: 83
+
+## Issues
+
+- WARNING (rebuild-proposals/svg/RE1/slide_002/plots/recall_statistics.svg): ViewBox is not close to 16:9.: 938.219531x391.6
+- WARNING (rebuild-proposals/svg/RE1/slide_007/plots/purchase_criteria.svg): ViewBox is not close to 16:9.: 1106.836875x411.877942
+- WARNING (rebuild-proposals/svg/RE1/slide_010/plots/stress_strength.svg): ViewBox is not close to 16:9.: 843.287187x440
+- WARNING (rebuild-proposals/svg/RE1/slide_011/plots/stress_strength.svg): ViewBox is not close to 16:9.: 835.166875x432
+- WARNING (rebuild-proposals/svg/RE1/slide_012/plots/stress_strength.svg): ViewBox is not close to 16:9.: 843.287187x440
+- WARNING (rebuild-proposals/svg/RE1/slide_014/plots/bathtub_curve.svg): ViewBox is not close to 16:9.: 1131.2x339.2
+- WARNING (rebuild-proposals/svg/RE1/slide_027/plots/woehler.svg): ViewBox is not close to 16:9.: 831.341875x450.12
+- WARNING (rebuild-proposals/svg/RE1/slide_028/plots/histogram_density.svg): ViewBox is not close to 16:9.: 979.831986x368.972
+- WARNING (rebuild-proposals/svg/RE1/slide_029/plots/woehler_3d.svg): ViewBox is not close to 16:9.: 530.460001x454.32
+- WARNING (rebuild-proposals/svg/RE1/slide_030/plots/nkw_density.svg): ViewBox is not close to 16:9.: 831.195x450
+- WARNING (rebuild-proposals/svg/RE1/slide_031/plots/human_density.svg): ViewBox is not close to 16:9.: 831.336562x450
+- WARNING (rebuild-proposals/svg/RE1/slide_032/plots/empirical_cdf.svg): ViewBox is not close to 16:9.: 943.838563x389.31
+- WARNING (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg): ViewBox is not close to 16:9.: 194.7x60.72
+- WARNING (rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg): ViewBox is not close to 16:9.: 309.36x82.98
+- WARNING (rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg): ViewBox is not close to 16:9.: 831.410156x450.12
+- WARNING (rebuild-proposals/svg/RE1/slide_034/plots/nkw_cdf.svg): ViewBox is not close to 16:9.: 831.325312x450
+- WARNING (rebuild-proposals/svg/RE1/slide_035/plots/human_cdf.svg): ViewBox is not close to 16:9.: 831.400312x450
+- WARNING (rebuild-proposals/svg/RE1/slide_036/formulas/failure-area-integral.svg): ViewBox is not close to 16:9.: 292.02x75.42
+- WARNING (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-area-integral.svg): ViewBox is not close to 16:9.: 296.58x73.14
+- WARNING (rebuild-proposals/svg/RE1/slide_036/formulas/reliability-complement.svg): ViewBox is not close to 16:9.: 272x43.609375
+- WARNING (rebuild-proposals/svg/RE1/slide_036/plots/reliability_partition.svg): ViewBox is not close to 16:9.: 831.225312x406.8
+- WARNING (rebuild-proposals/svg/RE1/slide_037/formulas/hazard-ratio.svg): ViewBox is not close to 16:9.: 180.8x61.2
+- WARNING (rebuild-proposals/svg/RE1/slide_037/plots/bathtub_curve.svg): ViewBox is not close to 16:9.: 1123.2x331.2
+- WARNING (rebuild-proposals/svg/RE1/slide_038/plots/human_hazard.svg): ViewBox is not close to 16:9.: 831.27x450
+- WARNING (rebuild-proposals/svg/RE1/slide_039/plots/nkw_hazard.svg): ViewBox is not close to 16:9.: 831.291875x450
+- WARNING (rebuild-proposals/svg/RE1/slide_041/formulas/mean.svg): ViewBox is not close to 16:9.: 439.08x102.4
+- WARNING (rebuild-proposals/svg/RE1/slide_041/plots/mean_balance.svg): ViewBox is not close to 16:9.: 1025.95x320.4
+- WARNING (rebuild-proposals/svg/RE1/slide_042/formulas/median.svg): ViewBox is not close to 16:9.: 303.48x44.248125
+- WARNING (rebuild-proposals/svg/RE1/slide_042/plots/median_split.svg): ViewBox is not close to 16:9.: 795.558437x399.6
+- WARNING (rebuild-proposals/svg/RE1/slide_043/formulas/mode.svg): ViewBox is not close to 16:9.: 248.46x44.248125
+- WARNING (rebuild-proposals/svg/RE1/slide_043/plots/mode_peak.svg): ViewBox is not close to 16:9.: 795.558437x399.6
+- WARNING (rebuild-proposals/svg/RE1/slide_044/plots/right_skew_compare.svg): ViewBox is not close to 16:9.: 795.558437x399.6
+- WARNING (rebuild-proposals/svg/RE1/slide_046/formulas/mttf.svg): ViewBox is not close to 16:9.: 602x62.42
+- WARNING (rebuild-proposals/svg/RE1/slide_046/plots/mttf.svg): ViewBox is not close to 16:9.: 1025.975x234
+- WARNING (rebuild-proposals/svg/RE1/slide_049/plots/bq_life.svg): ViewBox is not close to 16:9.: 806.856875x372.1752
+- WARNING (rebuild-proposals/svg/RE1/slide_050/plots/normal_density.svg): ViewBox is not close to 16:9.: 732.203562x426.698
+- WARNING (rebuild-proposals/svg/RE1/slide_051/plots/normal_cdf.svg): ViewBox is not close to 16:9.: 587.915562x361.228824
+- WARNING (rebuild-proposals/svg/RE1/slide_051/plots/normal_hazard.svg): ViewBox is not close to 16:9.: 582.495875x358.892
+- WARNING (rebuild-proposals/svg/RE1/slide_052/formulas/density.svg): ViewBox is not close to 16:9.: 310.92x79.26
+- WARNING (rebuild-proposals/svg/RE1/slide_052/formulas/failure_probability.svg): ViewBox is not close to 16:9.: 287.52x77.31
+- WARNING (rebuild-proposals/svg/RE1/slide_052/formulas/hazard.svg): ViewBox is not close to 16:9.: 176.37x59.76
+- WARNING (rebuild-proposals/svg/RE1/slide_052/formulas/reliability.svg): ViewBox is not close to 16:9.: 491.88x71.07
+- WARNING (rebuild-proposals/svg/RE1/slide_054/plots/exponential_cdf.svg): ViewBox is not close to 16:9.: 587.915562x361.228824
+- WARNING (rebuild-proposals/svg/RE1/slide_054/plots/exponential_hazard.svg): ViewBox is not close to 16:9.: 587.895875x358.892
+- WARNING (rebuild-proposals/svg/RE1/slide_055/formulas/density.svg): ViewBox is not close to 16:9.: 233.76x53.589844
+- WARNING (rebuild-proposals/svg/RE1/slide_055/formulas/failure_probability.svg): ViewBox is not close to 16:9.: 289.62x53.589844
+- WARNING (rebuild-proposals/svg/RE1/slide_055/formulas/hazard.svg): ViewBox is not close to 16:9.: 355.14x64.08
+- WARNING (rebuild-proposals/svg/RE1/slide_055/formulas/reliability.svg): ViewBox is not close to 16:9.: 216.12x53.589844
+- WARNING (rebuild-proposals/svg/RE1/slide_057/plots/weibull_hazard.svg): ViewBox is not close to 16:9.: 724.337x418.796
+- WARNING (rebuild-proposals/svg/RE1/slide_058/plots/weibull_hazard.svg): ViewBox is not close to 16:9.: 724.337x418.796
+- WARNING (rebuild-proposals/svg/RE1/slide_060/formulas/density.svg): ViewBox is not close to 16:9.: 334.8x59.4
+- WARNING (rebuild-proposals/svg/RE1/slide_060/formulas/failure_probability.svg): ViewBox is not close to 16:9.: 272.88x55.088437
+- WARNING (rebuild-proposals/svg/RE1/slide_060/formulas/hazard.svg): ViewBox is not close to 16:9.: 344.52x60.12
+- WARNING (rebuild-proposals/svg/RE1/slide_060/formulas/reliability.svg): ViewBox is not close to 16:9.: 209.88x55.088437
+- WARNING (rebuild-proposals/svg/RE1/slide_061/formulas/failure_result.svg): ViewBox is not close to 16:9.: 386.28x39.608438
+- WARNING (rebuild-proposals/svg/RE1/slide_061/formulas/independent_of_b.svg): ViewBox is not close to 16:9.: 247.68x45.728437
+- WARNING (rebuild-proposals/svg/RE1/slide_061/formulas/reliability_result.svg): ViewBox is not close to 16:9.: 572.76x39.608438
+- WARNING (rebuild-proposals/svg/RE1/slide_061/formulas/substitution.svg): ViewBox is not close to 16:9.: 281.16x55.448437
+- WARNING (rebuild-proposals/svg/RE1/slide_061/formulas/unit_ratio.svg): ViewBox is not close to 16:9.: 279.72x51.128438
+- WARNING (rebuild-proposals/svg/RE1/slide_062/formulas/density.svg): ViewBox is not close to 16:9.: 437.88x62.34
+- WARNING (rebuild-proposals/svg/RE1/slide_062/formulas/failure_probability.svg): ViewBox is not close to 16:9.: 284.43x54.757734
+- WARNING (rebuild-proposals/svg/RE1/slide_062/formulas/hazard.svg): ViewBox is not close to 16:9.: 324.69x59.04
+- WARNING (rebuild-proposals/svg/RE1/slide_062/formulas/reliability.svg): ViewBox is not close to 16:9.: 227.01x54.757734
+- WARNING (rebuild-proposals/svg/RE1/slide_063/plots/weibull_shift.svg): ViewBox is not close to 16:9.: 732.203562x418.796
+- WARNING (rebuild-proposals/svg/RE1/slide_064/plots/weibull_paper.svg): ViewBox is not close to 16:9.: 736.240625x422.81
+- WARNING (rebuild-proposals/svg/RE1/slide_065/formulas/formula.svg): ViewBox is not close to 16:9.: 305.32x57.188906
+- WARNING (rebuild-proposals/svg/RE1/slide_065/plots/nkw_cdf.svg): ViewBox is not close to 16:9.: 727.028563x419.958235
+- WARNING (rebuild-proposals/svg/RE1/slide_066/plots/nkw_probability.svg): ViewBox is not close to 16:9.: 721.840625x422.81
+- WARNING (rebuild-proposals/svg/RE1/slide_067/plots/weibull_mechanisms.svg): ViewBox is not close to 16:9.: 736.240625x422.81
+- WARNING (rebuild-proposals/svg/RE1/slide_068/formulas/transformation.svg): ViewBox is not close to 16:9.: 180.84x45.609844
+- WARNING (rebuild-proposals/svg/RE1/slide_068/plots/lognormal_density.svg): ViewBox is not close to 16:9.: 732.203562x418.796
+- WARNING (rebuild-proposals/svg/RE1/slide_069/plots/lognormal_density.svg): ViewBox is not close to 16:9.: 732.192312x418.796
+- WARNING (rebuild-proposals/svg/RE1/slide_069/plots/lognormal_hazard.svg): ViewBox is not close to 16:9.: 732.192312x418.796
+- WARNING (rebuild-proposals/svg/RE1/slide_069/plots/lognormal_probability_pair.svg): ViewBox is not close to 16:9.: 541.844x326.922941
+- WARNING (rebuild-proposals/svg/RE1/slide_070/formulas/density.svg): ViewBox is not close to 16:9.: 299.06x69.56
+- WARNING (rebuild-proposals/svg/RE1/slide_070/formulas/failure_probability.svg): ViewBox is not close to 16:9.: 402.08x77.04
+- WARNING (rebuild-proposals/svg/RE1/slide_070/formulas/hazard.svg): ViewBox is not close to 16:9.: 154.22x52.56
+- WARNING (rebuild-proposals/svg/RE1/slide_070/formulas/median.svg): ViewBox is not close to 16:9.: 184.82x38.967969
+- WARNING (rebuild-proposals/svg/RE1/slide_070/formulas/reliability.svg): ViewBox is not close to 16:9.: 231.74x37.607969
+- WARNING (rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg): ViewBox is not close to 16:9.: 758.020375x469.436
+- WARNING (rebuild-proposals/svg/RE1/slide_075/formulas/hazard-ratio.svg): ViewBox is not close to 16:9.: 180.8x61.2
+- WARNING (rebuild-proposals/svg/RE1/slide_075/plots/bathtub_curve.svg): ViewBox is not close to 16:9.: 1123.2x331.2
+- WARNING (rebuild-proposals/svg/RE1/slide_077/plots/weibull_bathtub_network.svg): ViewBox is not close to 16:9.: 848.310295x499.004
+
+## Viewer Mapping
+
+- slide 1: svg=true, animation=true, steps=2, file=slide_001.svg
+- slide 2: svg=true, animation=true, steps=3, file=slide_002.svg
+- slide 3: svg=true, animation=true, steps=2, file=slide_003.svg
+- slide 4: svg=true, animation=true, steps=2, file=slide_004.svg
+- slide 5: svg=true, animation=true, steps=3, file=slide_005.svg
+- slide 6: svg=true, animation=true, steps=3, file=slide_006.svg
+- slide 7: svg=true, animation=false, steps=0, file=slide_007.svg
+- slide 8: svg=true, animation=true, steps=4, file=slide_008.svg
+- slide 9: svg=true, animation=true, steps=3, file=slide_009.svg
+- slide 10: svg=true, animation=true, steps=6, file=slide_010.svg
+- slide 11: svg=true, animation=true, steps=4, file=slide_011.svg
+- slide 12: svg=true, animation=true, steps=1, file=slide_012.svg
+- slide 13: svg=true, animation=true, steps=1, file=slide_013.svg
+- slide 14: svg=true, animation=true, steps=5, file=slide_014.svg
+- slide 15: svg=true, animation=true, steps=2, file=slide_015.svg
+- slide 16: svg=true, animation=true, steps=4, file=slide_016.svg
+- slide 17: svg=true, animation=true, steps=5, file=slide_017.svg
+- slide 18: svg=true, animation=true, steps=3, file=slide_018.svg
+- slide 19: svg=true, animation=true, steps=3, file=slide_019.svg
+- slide 20: svg=true, animation=true, steps=4, file=slide_020.svg
+- slide 21: svg=true, animation=true, steps=2, file=slide_021.svg
+- slide 22: svg=true, animation=true, steps=3, file=slide_022.svg
+- slide 23: svg=true, animation=true, steps=3, file=slide_023.svg
+- slide 24: svg=true, animation=true, steps=3, file=slide_024.svg
+- slide 25: svg=true, animation=true, steps=2, file=slide_025.svg
+- slide 26: svg=true, animation=true, steps=3, file=slide_026.svg
+- slide 27: svg=true, animation=true, steps=5, file=slide_027.svg
+- slide 28: svg=true, animation=true, steps=4, file=slide_028.svg
+- slide 29: svg=true, animation=true, steps=2, file=slide_029.svg
+- slide 30: svg=true, animation=true, steps=6, file=slide_030.svg
+- slide 31: svg=true, animation=true, steps=4, file=slide_031.svg
+- slide 32: svg=true, animation=true, steps=9, file=slide_032.svg
+- slide 33: svg=true, animation=true, steps=7, file=slide_033.svg
+- slide 34: svg=true, animation=true, steps=6, file=slide_034.svg
+- slide 35: svg=true, animation=true, steps=4, file=slide_035.svg
+- slide 36: svg=true, animation=true, steps=7, file=slide_036.svg
+- slide 37: svg=true, animation=true, steps=17, file=slide_037.svg
+- slide 38: svg=true, animation=true, steps=11, file=slide_038.svg
+- slide 39: svg=true, animation=true, steps=5, file=slide_039.svg
+- slide 40: svg=true, animation=true, steps=1, file=slide_040.svg
+- slide 41: svg=true, animation=true, steps=4, file=slide_041.svg
+- slide 42: svg=true, animation=true, steps=3, file=slide_042.svg
+- slide 43: svg=true, animation=true, steps=2, file=slide_043.svg
+- slide 44: svg=true, animation=true, steps=5, file=slide_044.svg
+- slide 45: svg=true, animation=true, steps=2, file=slide_045.svg
+- slide 46: svg=true, animation=true, steps=5, file=slide_046.svg
+- slide 47: svg=true, animation=true, steps=4, file=slide_047.svg
+- slide 48: svg=true, animation=true, steps=3, file=slide_048.svg
+- slide 49: svg=true, animation=true, steps=5, file=slide_049.svg
+- slide 50: svg=true, animation=true, steps=6, file=slide_050.svg
+- slide 51: svg=true, animation=true, steps=5, file=slide_051.svg
+- slide 52: svg=true, animation=true, steps=6, file=slide_052.svg
+- slide 53: svg=true, animation=true, steps=5, file=slide_053.svg
+- slide 54: svg=true, animation=true, steps=5, file=slide_054.svg
+- slide 55: svg=true, animation=true, steps=6, file=slide_055.svg
+- slide 56: svg=true, animation=true, steps=6, file=slide_056.svg
+- slide 57: svg=true, animation=true, steps=3, file=slide_057.svg
+- slide 58: svg=true, animation=true, steps=4, file=slide_058.svg
+- slide 59: svg=true, animation=true, steps=4, file=slide_059.svg
+- slide 60: svg=true, animation=true, steps=6, file=slide_060.svg
+- slide 61: svg=true, animation=true, steps=5, file=slide_061.svg
+- slide 62: svg=true, animation=true, steps=4, file=slide_062.svg
+- slide 63: svg=true, animation=true, steps=4, file=slide_063.svg
+- slide 64: svg=true, animation=true, steps=8, file=slide_064.svg
+- slide 65: svg=true, animation=true, steps=5, file=slide_065.svg
+- slide 66: svg=true, animation=true, steps=3, file=slide_066.svg
+- slide 67: svg=true, animation=true, steps=5, file=slide_067.svg
+- slide 68: svg=true, animation=true, steps=5, file=slide_068.svg
+- slide 69: svg=true, animation=true, steps=5, file=slide_069.svg
+- slide 70: svg=true, animation=true, steps=3, file=slide_070.svg
+- slide 71: svg=true, animation=true, steps=1, file=slide_071.svg
+- slide 72: svg=true, animation=true, steps=2, file=slide_072.svg
+- slide 73: svg=true, animation=true, steps=5, file=slide_073.svg
+- slide 74: svg=true, animation=true, steps=4, file=slide_074.svg
+- slide 75: svg=true, animation=true, steps=9, file=slide_075.svg
+- slide 76: svg=true, animation=true, steps=6, file=slide_076.svg
+- slide 77: svg=true, animation=true, steps=5, file=slide_077.svg
+

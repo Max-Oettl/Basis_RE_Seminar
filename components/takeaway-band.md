@@ -1,4 +1,4 @@
-# Component: Reltest Academy Takeaway Band
+# Component: RelTest Education Takeaway Band
 
 Dieses Fazitband ist die verbindliche Referenz für Merksätze und zentrale Einsichten am unteren Bildrand. Es basiert auf den Szenen 004 bis 007 und soll in neuen Szenen konsistent wiederverwendet werden.
 
@@ -13,11 +13,11 @@ Dieses Fazitband ist die verbindliche Referenz für Merksätze und zentrale Eins
 ## Standardklassen
 
 ```xml
-.takeaway-band { fill: #062d46; }
-.takeaway-outline { fill: none; stroke: #139ccb; stroke-width: 3; opacity: 0.65; }
-.takeaway-accent { fill: #139ccb; }
-.takeaway-text { fill: #ffffff; font-family: Inter, "Segoe UI", Arial, sans-serif; font-size: 34px; font-weight: 800; text-anchor: middle; }
-.takeaway-sub { fill: #bfeaf6; font-family: Inter, "Segoe UI", Arial, sans-serif; font-size: 22px; font-weight: 580; text-anchor: middle; }
+.takeaway-band { fill: #031334; }
+.takeaway-outline { fill: none; stroke: #00a754; stroke-width: 3; opacity: 0.65; }
+.takeaway-accent { fill: #00a754; }
+.takeaway-text { fill: #ffffff; font-family: "Archivo", Arial, Helvetica, sans-serif; font-size: 34px; font-weight: 700; text-anchor: middle; }
+.takeaway-sub { fill: #cceddd; font-family: "Archivo", Arial, Helvetica, sans-serif; font-size: 22px; font-weight: 400; text-anchor: middle; }
 ```
 
 ## Standardmarkup

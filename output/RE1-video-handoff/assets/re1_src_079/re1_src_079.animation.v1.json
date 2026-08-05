@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_079.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "weibull_shift_base",
+      "label": "Zweiparametrige Ausgangskurve",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_shifted_curve",
+      "label": "Verschobene dreiparametrige Kurve",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_shift_t0",
+      "label": "Ausfallfreie Zeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_shift_probabilities",
+      "label": "Unveränderte Wahrscheinlichkeiten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_weibull_shift_base",
+      "targetId": "weibull_shift_base",
+      "action": "draw",
+      "sourceText": "Zu sehen ist hier die zwei",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "durFrames": 42
+    },
+    {
+      "stepId": "move_weibull_shifted_curve",
+      "targetId": "weibull_shifted_curve",
+      "action": "transform",
+      "sourceText": "Durch das Einführen der ausfallfreien Zeit",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte Bewegung desselben fachlichen Elements zwischen zwei Zuständen.",
+      "durFrames": 64,
+      "fromTranslateX": -170,
+      "fromTranslateY": 0,
+      "fromScale": 1,
+      "translateX": 0,
+      "translateY": 0,
+      "scale": 1,
+      "transformOrigin": "center"
+    },
+    {
+      "stepId": "show_weibull_shift_t0",
+      "targetId": "weibull_shift_t0",
+      "action": "show",
+      "sourceText": "startet die drei parametrige Weibullverteilung bai",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_shift_probabilities",
+      "targetId": "weibull_shift_probabilities",
+      "action": "show",
+      "sourceText": "Die charakteristische Lebensdauer entspricht aber weiterhin einer Ausfallwahrscheinlichkeit",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

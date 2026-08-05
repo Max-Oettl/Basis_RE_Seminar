@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_036" data-brand-profile="reltest-academy">
+  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"readout-data-chart","contentTitle":"Ausfallwahrscheinlichkeit eines NKW-Getriebes","layoutIntent":"source-calibrated-cdf-with-direct-bidirectional-readout-paths","takeaway":"Die Verteilungsfunktion erlaubt beide Leserichtungen: Prozent zu Zeitpunkt und Zeitpunkt zu Prozent.","density":"balanced","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-academy","brandVariant":"academy-production","sourceSlides":[36],"officialLogoStatus":"pending-original-asset"}]]></metadata>
+  <title id="accessible_title">Ausfallwahrscheinlichkeit eines NKW-Getriebes</title>
+  <desc id="accessible_description">Die Verteilungsfunktion erlaubt beide Leserichtungen: Prozent zu Zeitpunkt und Zeitpunkt zu Prozent.</desc>
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F9FBFC"/>
+      <stop offset="56%" stop-color="#F1F5F8"/>
+      <stop offset="100%" stop-color="#E9F0F4"/>
+    </linearGradient>
+    <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#102A43" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="shadowSoft" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#102A43" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow_007EA7" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#007EA7"/></marker>
+    <marker id="arrow_D1495B" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#D1495B"/></marker>
+    <marker id="arrow_2F6F55" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#2F6F55"/></marker>
+    <marker id="arrow_B7791F" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#B7791F"/></marker>
+  </defs>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+    .slide-title { fill: #102A43; }
+  </style>
+  <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
+  <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
+  <rect x="74" y="36" width="118" height="5" rx="3" fill="#007EA7"/>
+  <text x="78" y="116" class="slide-title" font-size="50" font-weight="800">Ausfallwahrscheinlichkeit eines NKW-Getriebes</text>
+  <line x1="78" y1="148" x2="1842" y2="148" stroke="#102A43" stroke-opacity="0.12" stroke-width="1.5"/>
+  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><g id="reliability_function_rail" aria-label="Vier Zuverlässigkeitsfunktionen"><g data-reliability-function="density"><title>1. Dichtefunktion f(t)</title><rect data-qc-allow-overlap="true" x="98" y="174" width="400" height="52" rx="6" fill="#FFFFFF" stroke="#C8D5DF" stroke-width="1.5"/><circle cx="126" cy="200" r="16" fill="#D9F0F7"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="126" y="207" font-size="17" font-weight="820" fill="#007EA7" text-anchor="middle">1</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="154" y="207" font-size="19" font-weight="780" fill="#243B53">f(t) · Dichtefunktion</text></g><g data-reliability-function="failure_probability"><title>2. Ausfallwahrscheinlichkeit F(t)</title><rect data-qc-allow-overlap="true" x="533" y="174" width="400" height="52" rx="6" fill="#4F78A8" stroke="#4F78A8" stroke-width="1.5"/><circle cx="561" cy="200" r="16" fill="#FFFFFF"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="561" y="207" font-size="17" font-weight="820" fill="#4F78A8" text-anchor="middle">2</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="589" y="207" font-size="19" font-weight="780" fill="#FFFFFF">F(t) · Ausfallwahrscheinlichkeit</text></g><g data-reliability-function="reliability"><title>3. Zuverlässigkeit R(t)</title><rect data-qc-allow-overlap="true" x="968" y="174" width="400" height="52" rx="6" fill="#FFFFFF" stroke="#C8D5DF" stroke-width="1.5"/><circle cx="996" cy="200" r="16" fill="#E3F0EA"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="996" y="207" font-size="17" font-weight="820" fill="#2F6F55" text-anchor="middle">3</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1024" y="207" font-size="19" font-weight="780" fill="#243B53">R(t) · Zuverlässigkeit</text></g><g data-reliability-function="hazard"><title>4. Ausfallrate λ(t)</title><rect data-qc-allow-overlap="true" x="1403" y="174" width="400" height="52" rx="6" fill="#FFFFFF" stroke="#C8D5DF" stroke-width="1.5"/><circle cx="1431" cy="200" r="16" fill="#F9E4E7"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1431" y="207" font-size="17" font-weight="820" fill="#D1495B" text-anchor="middle">4</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1459" y="207" font-size="19" font-weight="780" fill="#243B53">λ(t) · Ausfallrate</text></g></g><circle cx="142" cy="270" r="30" fill="#F7FAFC"/><g transform="translate(124 252) scale(1.5)" fill="none" stroke="#243B53" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7"/></g><text x="188" y="265" class="" font-size="19" font-weight="790" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="188" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">6-Gang-NKW-Getriebe · 2.115 Schadensereignisse · 82 Klassen</tspan></text><text x="188" y="294" class="" font-size="18" font-weight="660" fill="#52606D" text-anchor="start" data-qc-role="text"><tspan x="188" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">normierte Lebensdauer</tspan></text><svg id="nkw_cdf_plot" x="100" y="300" width="1720" height="528" viewBox="0 0 837.830781 456.68" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="nkw_cdf_plot__figure_1">
+  <g id="nkw_cdf_plot__patch_1">
+   <path d="M 0 456.68  L 837.830781 456.68  L 837.830781 0  L 0 0  L 0 456.68  z " style="fill: none; opacity: 0" />
+  </g>
+  <g id="nkw_cdf_plot__axes_1">
+   <g id="nkw_cdf_plot__patch_2">
+    <path d="M 71.517969 396.975781  L 820.29375 396.975781  L 820.29375 12.138477  L 71.517969 12.138477  L 71.517969 396.975781  z " style="fill: none" />
+   </g>
+   <g id="nkw_cdf_plot__matplotlib.axis_1">
+    <g id="nkw_cdf_plot__xtick_1">
+     <g id="nkw_cdf_plot__line2d_1">
+      <path d="M 71.517969 396.975781  L 71.517969 12.138477  " clip-path="url(#nkw_cdf_plot__p077f6be058)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="nkw_cdf_plot__line2d_2">
+      <defs>
+       <path id="nkw_cdf_plot__mf41e837921" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#nkw_cdf_plot__mf41e837921" x="71.517969" y="396.975781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="nkw_cdf_plot__text_1">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="71.517969" y="416.352734" transform="rotate(-0 71.517969 416.352734)">0.0</text>
+     </g>
+    </g>
+    <g id="nkw_cdf_plot__xtick_2">
+     <g id="nkw_cdf_plot__line2d_3">
+      <path d="M 221.273125 396.975781  L 221.273125 12.138477  " clip-path="url(#nkw_cdf_plot__p077f6be058)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="nkw_cdf_plot__line2d_4">
+      <g>
+       <use ns4:href="#nkw_cdf_plot__mf41e837921" x="221.273125" y="396.975781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="nkw_cdf_plot__text_2">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="221.273125" y="416.352734" transform="rotate(-0 221.273125 416.352734)">0.5</text>
+     </g>
+    </g>
+    <g id="nkw_cdf_plot__xtick_3">
+     <g id="nkw_cdf_plot__line2d_5">
+      <path d="M 371.028281 396.975781  L 371.028281 12.138477  " clip-path="url(#nkw_cdf_plot__p077f6be058)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="nkw_cdf_plot__line2d_6">
+      <g>
+       <use ns4:href="#nkw_cdf_plot__mf41e837921" x="371.028281" y="396.975781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="nkw_cdf_plot__text_3">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="371.028281" y="416.352734" transform="rotate(-0 371.028281 416.352734)">1.0</text>
+     </g>
+    </g>
+    <g id="nkw_cdf_plot__xtick_4">
+     <g id="nkw_cdf_plot__line2d_7">
+      <path d="M 520.783437 396.975781  L 520.783437 12.138477  " clip-path="url(#nkw_cdf_plot__p077f6be058)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="nkw_cdf_plot__line2d_8">
+      <g>
+       <use ns4:href="#nkw_cdf_plot__mf41e837921" x="520.783437" y="396.975781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="nkw_cdf_plot__text_4">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="520.783437" y="416.352734" transform="rotate(-0 520.783437 416.352734)">1.5</text>
+     </g>
+    </g>
+    <g id="nkw_cdf_plot__xtick_5">
+     <g id="nkw_cdf_plot__line2d_9">
+      <path d="M 670.538594 396.975781  L 670.538594 12.138477  " clip-path="url(#nkw_cdf_plot__p077f6be058)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="nkw_cdf_plot__line2d_10">
+      <g>
+       <use ns4:href="#nkw_cdf_plot__mf41e837921" x="670.538594" y="396.975781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="nkw_cdf_plot__text_5">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="670.538594" y="416.352734" transform="rotate(-0 670.538594 416.352734)">2.0</text>
+     </g>
+    </g>
+    <g id="nkw_cdf_plot__xtick_6">
+     <g id="nkw_cdf_plot__line2d_11">
+      <path d="M 820.29375 396.975781  L 820.29375 12.138477  " clip-path="url(#nkw_cdf_plot__p077f6be058)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="nkw_cdf_plot__line2d_12">
+      <g>
+       <use ns4:href="#nkw_cdf_plot__mf41e837921" x="820.29375" y="396.975781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="nkw_cdf_plot__text_6">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="820.29375" y="416.352734" transform="rotate(-0 820.29375 416.352734)">2.5</text>
+     </g>
+    </g>
+    <g id="nkw_cdf_plot__text_7">
+     
+     <g style="fill: #062d46" transform="translate(310.365859 445.155781)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">N</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="15.064453" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">o</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.430664" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="36.307617" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">m</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="55.063477" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="61.233398" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="73.441406" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="82.318359" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="90.922852" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="103.130859" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="109.397461" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="120.867188" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="133.075195" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">b</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="145.959961" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="158.167969" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="170.982422" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="181.696289" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">d</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="194.581055" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="206.727539" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="219.541992" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="231.75" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="240.626953" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="246.893555" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="260.015625" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">T</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="253.951172" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">/</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="nkw_cdf_plot__matplotlib.axis_2">
+    <g id="nkw_cdf_plot__ytick_1">
+     <g id="nkw_cdf_plot__line2d_13">
+      <path d="M 71.517969 396.975781  L 820.29375 396.975781  " clip-path="url(#nkw_cdf_plot__p077f6be058)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="nkw_cdf_plot__line2d_14">
+      <defs>
+       <path id="nkw_cdf_plot__m98d9125301" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#nkw_cdf_plot__m98d9125301" x="71.517969" y="396.975781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="nkw_cdf_plot__text_8">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="62.017969" y="401.914258" transform="rotate(-0 62.017969 401.914258)">0</text>
+     </g>
+    </g>
+    <g id="nkw_cdf_plot__ytick_2">
+     <g id="nkw_cdf_plot__line2d_15">
+      <path d="M 71.517969 320.00832  L 820.29375 320.00832  " clip-path="url(#nkw_cdf_plot__p077f6be058)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="nkw_cdf_plot__line2d_16">
+      <g>
+       <use ns4:href="#nkw_cdf_plot__m98d9125301" x="71.517969" y="320.00832" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="nkw_cdf_plot__text_9">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="62.017969" y="324.946797" transform="rotate(-0 62.017969 324.946797)">20</text>
+     </g>
+    </g>
+    <g id="nkw_cdf_plot__ytick_3">
+     <g id="nkw_cdf_plot__line2d_17">
+      <path d="M 71.517969 243.040859  L 820.29375 243.040859  " clip-path="url(#nkw_cdf_plot__p077f6be058)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="nkw_cdf_plot__line2d_18">
+      <g>
+       <use ns4:href="#nkw_cdf_plot__m98d9125301" x="71.517969" y="243.040859" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="nkw_cdf_plot__text_10">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="62.017969" y="247.979336" transform="rotate(-0 62.017969 247.979336)">40</text>
+     </g>
+    </g>
+    <g id="nkw_cdf_plot__ytick_4">
+     <g id="nkw_cdf_plot__line2d_19">
+      <path d="M 71.517969 166.073398  L 820.29375 166.073398  " clip-path="url(#nkw_cdf_plot__p077f6be058)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="nkw_cdf_plot__line2d_20">
+      <g>
+       <use ns4:href="#nkw_cdf_plot__m98d9125301" x="71.517969" y="166.073398" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="nkw_cdf_plot__text_11">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="62.017969" y="171.011875" transform="rotate(-0 62.017969 171.011875)">60</text>
+     </g>
+    </g>
+    <g id="nkw_cdf_plot__ytick_5">
+     <g id="nkw_cdf_plot__line2d_21">
+      <path d="M 71.517969 89.105937  L 820.29375 89.105937  " clip-path="url(#nkw_cdf_plot__p077f6be058)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="nkw_cdf_plot__line2d_22">
+      <g>
+       <use ns4:href="#nkw_cdf_plot__m98d9125301" x="71.517969" y="89.105937" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="nkw_cdf_plot__text_12">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="62.017969" y="94.044414" transform="rotate(-0 62.017969 94.044414)">80</text>
+     </g>
+    </g>
+    <g id="nkw_cdf_plot__ytick_6">
+     <g id="nkw_cdf_plot__line2d_23">
+      <path d="M 71.517969 12.138477  L 820.29375 12.138477  " clip-path="url(#nkw_cdf_plot__p077f6be058)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="nkw_cdf_plot__line2d_24">
+      <g>
+       <use ns4:href="#nkw_cdf_plot__m98d9125301" x="71.517969" y="12.138477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="nkw_cdf_plot__text_13">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="62.017969" y="17.076953" transform="rotate(-0 62.017969 17.076953)">100</text>
+     </g>
+    </g>
+    <g id="nkw_cdf_plot__text_14">
+     
+     <g style="fill: #062d46" transform="translate(20.88 373.757129) rotate(-90)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">A</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="13.930664" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="26.745117" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.458984" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">f</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.290039" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="57.436523" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="63.606445" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="69.776367" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">w</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="86.405273" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="98.551758" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="111.366211" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="120.243164" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="130.957031" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="141.626953" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="154.441406" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="166.649414" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="172.819336" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="185.633789" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="191.803711" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="197.973633" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="208.643555" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="221.458008" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">k</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="233.428711" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="245.636719" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="251.806641" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="260.411133" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="298.133789" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="304.400391" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">[</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="312.626953" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">%</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="330.662109" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">]</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="266.677734" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">F</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="284.053711" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="277.03125" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">(</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="291.111328" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">)</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="nkw_distribution" data-anim-target="true" data-anim-label="Ausfallwahrscheinlichkeit des Getriebes">
+    <path d="M 71.517969 396.975781  L 74.018055 396.810824  L 77.768184 396.249051  L 81.518313 395.421949  L 85.268442 394.377159  L 89.018571 393.142043  L 94.018743 391.231271  L 99.018916 389.048739  L 104.019088 386.620005  L 109.01926 383.965934  L 115.269475 380.358305  L 121.51969 376.456236  L 127.769906 372.286066  L 134.020121 367.871429  L 141.520379 362.281412  L 149.020637 356.404536  L 157.770939 349.227528  L 166.52124 341.749123  L 176.521584 332.888127  L 187.771972 322.589329  L 200.272402 310.826961  L 215.272918 296.400703  L 240.273779 271.98742  L 267.774726 245.211626  L 284.025286 229.685572  L 299.025802 215.667859  L 311.526233 204.270407  L 324.026663 193.168875  L 335.27705 183.455209  L 346.527438 174.023607  L 357.777825 164.889159  L 369.028212 156.064045  L 379.028557 148.486891  L 389.028901 141.166623  L 399.029245 134.106742  L 409.02959 127.309386  L 419.029934 120.77544  L 429.030278 114.504638  L 439.030623 108.49566  L 449.030967 102.746232  L 459.031311 97.253217  L 469.031656 92.01271  L 479.032 87.02012  L 489.032344 82.270255  L 499.032689 77.757401  L 509.033033 73.475393  L 519.033377 69.417691  L 529.033722 65.57744  L 540.284109 61.508225  L 551.534496 57.694817  L 562.784884 54.126595  L 574.035271 50.792805  L 585.285658 47.682644  L 596.536046 44.785325  L 609.036476 41.802694  L 621.536907 39.055128  L 634.037337 36.52843  L 647.78781 33.987652  L 661.538284 31.679533  L 675.288757 29.586903  L 690.289274 27.530511  L 705.28979 25.690749  L 721.54035 23.919973  L 739.040952 22.246128  L 757.791598 20.691865  L 777.792287 19.274046  L 799.043018 18.003564  L 820.29375 16.942069  L 820.29375 16.942069  " clip-path="url(#nkw_cdf_plot__p077f6be058)" style="fill: none; stroke: #4f78a8; stroke-width: 4.2; stroke-linecap: square" />
+   </g>
+   <g id="ten_percent_readout" data-anim-target="true" data-anim-label="Ablesen des Zeitpunkts bei zehn Prozent"><g id="nkw_cdf_plot__ten_percent_guide">
+    <path d="M 71.517969 358.492051  L 146.395547 358.492051  " clip-path="url(#nkw_cdf_plot__p077f6be058)" style="fill: none; stroke-dasharray: 9.62,4.16; stroke-dashoffset: 0; stroke: #d1495b; stroke-width: 2.6" />
+    <path d="M 146.395547 396.975781  L 146.395547 358.492051  " clip-path="url(#nkw_cdf_plot__p077f6be058)" style="fill: none; stroke-dasharray: 9.62,4.16; stroke-dashoffset: 0; stroke: #d1495b; stroke-width: 2.6" />
+   </g>
+   <g id="nkw_cdf_plot__ten_percent_label">
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #d1495b" x="164.366166" y="343.098559" transform="rotate(-0 164.366166 343.098559)">10 % → t ≈ 0,25</text>
+   </g>
+   <g id="nkw_cdf_plot__ten_percent_dot">
+    <defs>
+     <path id="nkw_cdf_plot__m0bcab7a92c" d="M 0 4.898979  C 1.299225 4.898979 2.545411 4.382792 3.464102 3.464102  C 4.382792 2.545411 4.898979 1.299225 4.898979 0  C 4.898979 -1.299225 4.382792 -2.545411 3.464102 -3.464102  C 2.545411 -4.382792 1.299225 -4.898979 0 -4.898979  C -1.299225 -4.898979 -2.545411 -4.382792 -3.464102 -3.464102  C -4.382792 -2.545411 -4.898979 -1.299225 -4.898979 0  C -4.898979 1.299225 -4.382792 2.545411 -3.464102 3.464102  C -2.545411 4.382792 -1.299225 4.898979 0 4.898979  z " style="stroke: #ffffff; stroke-width: 1.8" />
+    </defs>
+    <g clip-path="url(#nkw_cdf_plot__p077f6be058)">
+     <use ns4:href="#nkw_cdf_plot__m0bcab7a92c" x="146.395547" y="358.492051" style="fill: #d1495b; stroke: #ffffff; stroke-width: 1.8" />
+    </g>
+   </g>
+   </g><g id="time_one_readout" data-anim-target="true" data-anim-label="Ablesen der Ausfallwahrscheinlichkeit bei t gleich eins"><g id="nkw_cdf_plot__time_one_guide">
+    <path d="M 371.028281 396.975781  L 371.028281 154.528279  " clip-path="url(#nkw_cdf_plot__p077f6be058)" style="fill: none; stroke-dasharray: 9.62,4.16; stroke-dashoffset: 0; stroke: #b7791f; stroke-width: 2.6" />
+    <path d="M 71.517969 154.528279  L 371.028281 154.528279  " clip-path="url(#nkw_cdf_plot__p077f6be058)" style="fill: none; stroke-dasharray: 9.62,4.16; stroke-dashoffset: 0; stroke: #b7791f; stroke-width: 2.6" />
+   </g>
+   <g id="nkw_cdf_plot__time_one_label">
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #b7791f" x="388.9989" y="146.831533" transform="rotate(-0 388.9989 146.831533)">t = 1 → F(t) = 63 %</text>
+   </g>
+   <g id="nkw_cdf_plot__time_one_dot">
+    <defs>
+     <path id="nkw_cdf_plot__m9d0f9b0190" d="M 0 4.898979  C 1.299225 4.898979 2.545411 4.382792 3.464102 3.464102  C 4.382792 2.545411 4.898979 1.299225 4.898979 0  C 4.898979 -1.299225 4.382792 -2.545411 3.464102 -3.464102  C 2.545411 -4.382792 1.299225 -4.898979 0 -4.898979  C -1.299225 -4.898979 -2.545411 -4.382792 -3.464102 -3.464102  C -4.382792 -2.545411 -4.898979 -1.299225 -4.898979 0  C -4.898979 1.299225 -4.382792 2.545411 -3.464102 3.464102  C -2.545411 4.382792 -1.299225 4.898979 0 4.898979  z " style="stroke: #ffffff; stroke-width: 1.8" />
+    </defs>
+    <g clip-path="url(#nkw_cdf_plot__p077f6be058)">
+     <use ns4:href="#nkw_cdf_plot__m9d0f9b0190" x="371.028281" y="154.528279" style="fill: #b7791f; stroke: #ffffff; stroke-width: 1.8" />
+    </g>
+   </g>
+  </g><g id="nkw_cdf_plot__patch_3">
+    <path d="M 71.517969 396.975781  L 71.517969 12.138477  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="nkw_cdf_plot__patch_4">
+    <path d="M 71.517969 396.975781  L 820.29375 396.975781  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   </g>
+ </g>
+ <defs>
+  <clipPath id="nkw_cdf_plot__p077f6be058">
+   <rect data-qc-allow-overlap="true" x="71.517969" y="12.138477" width="748.775781" height="384.837305" />
+  </clipPath>
+ </defs>
+</svg><rect data-qc-allow-overlap="true" x="98" y="844" width="1724" height="90" rx="8" fill="#F7FAFC" stroke="#C8D5DF" stroke-width="1.5"/><line x1="960" y1="858" x2="960" y2="920" stroke="#C8D5DF" stroke-width="2"/><g id="ten_percent_context" data-anim-target="true" data-anim-label="Zeitpunkt bei zehn Prozent"><title>Zeitpunkt bei zehn Prozent</title><circle cx="150" cy="889" r="35" fill="#F9E4E7"/><g transform="translate(129 868) scale(1.75)" fill="none" stroke="#D1495B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/><path d="M15.5 8.5L21 3M17 3h4v4"/></g><text x="204" y="878" class="" font-size="17" font-weight="840" fill="#D1495B" text-anchor="start" data-qc-role="text"><tspan x="204" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">VON F(t) ZUR ZEIT</tspan></text><text x="204" y="910" class="" font-size="23" font-weight="820" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="204" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">10 % ausgefallen → t ≈ 0,25</tspan></text></g><g id="time_one_context" data-anim-target="true" data-anim-label="Ausfallwahrscheinlichkeit bei t gleich eins"><title>Ausfallwahrscheinlichkeit bei t gleich eins</title><circle cx="1015" cy="889" r="35" fill="#F7EEDC"/><g transform="translate(994 868) scale(1.75)" fill="none" stroke="#B7791F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/><path d="M15.5 8.5L21 3M17 3h4v4"/></g><text x="1068" y="878" class="" font-size="17" font-weight="840" fill="#B7791F" text-anchor="start" data-qc-role="text"><tspan x="1068" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">VON DER ZEIT ZU F(t)</tspan></text><text x="1068" y="910" class="" font-size="23" font-weight="820" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1068" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">t = 1 → F(t) = 63 %</tspan></text></g></g>
+  <line x1="78" y1="982" x2="1842" y2="982" stroke="#102A43" stroke-opacity="0.12" stroke-width="1.5"/>
+  <text x="78" y="1026" font-size="20" font-weight="700" fill="#627D98">Professional Reliability Training | Reliability Engineer</text>
+  <text x="1580" y="1026" font-size="20" font-weight="700" fill="#627D98" text-anchor="end">RE1 · Szene 34</text>
+  <g id="official_logo_reserved" data-logo-status="pending-original-asset" aria-label="Reservierter Bereich für das offizielle RelTest-Academy-Logo"/>
+</svg>

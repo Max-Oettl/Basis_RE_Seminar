@@ -18,9 +18,12 @@ Die inhaltliche Prüfung von absichtlichen oder unabsichtlichen visuellen Überl
 - IDs auf Eindeutigkeit prüfen.
 - Animationsziele gegen `composed/scene.animation.v1.json` prüfen.
 - `<image>`-Referenzen auf lokale PNG-Assets prüfen.
+- Transformierte SVGs gegen `workflow/40-svg-production/target-svg-structure-contract.md` pruefen.
+- Bei zusammengefuehrten Quell-SVGs doppelte IDs, kollidierende `defs`, gebrochene `href`-Ziele und unaufgeloeste `url(#...)`-Referenzen pruefen.
 - Prüfen, ob SVG-Komposition erst nach Asset-Freigabe erfolgt.
 - Lesbarkeit und Skalierbarkeit sicherstellen.
 - Externe Abhängigkeiten vermeiden oder dokumentieren.
+- Fuer finale Lieferpakete `workflow/70-integration/storyboard-import-package-handoff.md` und den zentralen `--handoff-package`-Check anwenden.
 
 ## Prüfkriterien
 
@@ -28,6 +31,8 @@ Die inhaltliche Prüfung von absichtlichen oder unabsichtlichen visuellen Überl
 - Keine doppelten IDs.
 - Keine unklaren IDs wie `path123` für zentrale Elemente.
 - Animierbare Gruppen haben semantische, eindeutige `id`s.
+- Oeffentliche Animationsziele verwenden ASCII-`snake_case`, `data-anim-target="true"` und nach Moeglichkeit `data-anim-label`.
+- Keine `<script>`-Elemente, Eventhandler, `javascript:`-URLs, Remote-URLs oder absoluten lokalen Dateipfade.
 - Keine produktive Triggerlogik, `data-trigger-id`, `data-step`, `data-time-trigger` oder `<animate>`-Zeitblöcke in der SVG.
 - Eingebundene PNGs liegen lokal unter `assets/scenes/<scene_id>/pictograms/`.
 - PNGs werden per `<image>` eingebunden und nicht automatisch vektorisiert.
@@ -48,6 +53,10 @@ Die inhaltliche Prüfung von absichtlichen oder unabsichtlichen visuellen Überl
 - Sichtbare Folientitel, automatisch übernommene Hauptüberschriften und unnötige Zusammenfassungsboxen sind technische Freigabefehler, wenn der SVG-Vorschlag nur die Grafikkomponente liefern soll.
 - Bei Build-/Reveal-Sequenzen muss es ein Master-SVG oder eine dokumentierte Layer-Struktur geben; mehrere isolierte Nachbauten derselben Animation sind ein Freigabefehler.
 - Eingebundene PNG-Piktogramme müssen projektlokal referenziert sein und dürfen keinen eingebrannten Fachtext enthalten.
+- Neue Rasterpiktogramme muessen einen freigegebenen Asset-Brief mit
+  `styleProfile=reltest-education-minimal-v1`, transparentem Hintergrund,
+  dokumentiertem 48-px-/960x540-Test und mindestens 3:1 Nicht-Text-Kontrast
+  besitzen.
 - Für Diagramm-SVGs reicht XML-Validität nicht aus; mindestens ein Render-/Viewer-Check muss dokumentiert sein.
 - Highlight-Flächen dürfen in der SVG-Reihenfolge nicht nach den Texten liegen, wenn sie diese überdecken könnten.
 - Diagramme erfüllen die dokumentierten Struktur- und Geometriebedingungen aus `workflow/diagram-guidelines.md`.
@@ -55,10 +64,13 @@ Die inhaltliche Prüfung von absichtlichen oder unabsichtlichen visuellen Überl
 - Fachliche Achsen besitzen Labels oder eine dokumentierte Skizzenausnahme.
 - Achsentitel verwenden die geometrische Mitte des geraden Achsenstrichs als Ausrichtungspunkt; Pfeilspitzen werden nicht mitgerechnet.
 - Vertikale Marker starten an der x-Achse; ihr Endmodus ist innerhalb des Diagramms konsistent.
+- Finale Szenenordner enthalten genau eine SVG; ein externes Animationsmanifest hat denselben Basename und nur Felder aus `svgAnimationManifest/v1`.
+- Alle finalen `sourceText`-Phrasen kommen eindeutig im Sprechertext derselben `Scene_ID` vor; Wiederholungen verwenden `occurrence`.
+- Keine finalen Sekunden, Wortindizes, TTS-Zeitpunkte oder absoluten Produktionsframes im Lieferpaket.
 
 ## SVG-Rebuild-Zusatzpruefung
 
-- SVG-Rebuilds aus PowerPoint-Quellen referenzieren ihren Rebuild-Plan, Zielzustand und ihre Preview-Policy.
+- SVG-Transformationen referenzieren ihr Source-SVG-Inventar, alle Quell-SVGs, den Rebuild-Plan, Zielzustand und ihre Preview-Policy.
 - Aufbaufolgen besitzen einen dokumentierten finalen Zielzustand; reine Zwischenstaende duerfen als `skip_preview` markiert sein.
 - Ausfall-, Daten- und Zeitmarker sind fachlich positioniert und nicht versehentlich per Equal-Spacing verteilt.
 

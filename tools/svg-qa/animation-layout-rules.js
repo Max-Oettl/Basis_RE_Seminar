@@ -30,6 +30,8 @@ function frameDuration(manifest, step) {
   const frames =
     step.action === "draw"
       ? step.drawDurFrames ?? step.durFrames ?? defaults.drawDurFrames ?? 30
+      : step.action === "transform"
+        ? step.durFrames ?? defaults.transformDurFrames ?? 30
       : step.action === "highlight"
         ? step.highlightDurFrames ?? defaults.highlightDurFrames ?? 24
         : step.action === "hide"
@@ -41,16 +43,34 @@ function frameDuration(manifest, step) {
 function buildTimeline(manifest) {
   const targetIds = new Set(animationTargets(manifest).map((target) => target.targetId));
   const pause = Number(manifest.defaults?.pauseMs ?? manifest.defaults?.stepDelayMs ?? 450);
+  const orderedSteps = manifest.steps.filter((step) => targetIds.has(step.targetId));
+  const triggerGroups = [];
+  for (const step of orderedSteps) {
+    const key = `${step.sourceText || ""}::${step.occurrence || 1}`;
+    const previous = triggerGroups.at(-1);
+    if (previous?.key === key) previous.steps.push(step);
+    else triggerGroups.push({ key, steps: [step] });
+  }
   let cursor = 0;
-  return manifest.steps
-    .filter((step) => targetIds.has(step.targetId))
-    .map((step, index) => {
-      const start = cursor;
-      const end = start + frameDuration(manifest, step);
-      const pauseEnd = end + (index < manifest.steps.length - 1 ? pause : 0);
-      cursor = pauseEnd;
-      return { step, index, start, end, pauseEnd };
+  const timeline = [];
+  triggerGroups.forEach((group, groupIndex) => {
+    const start = cursor;
+    const groupDuration = Math.max(...group.steps.map((step) => frameDuration(manifest, step)));
+    const groupEnd = start + groupDuration;
+    const pauseEnd = groupEnd + (groupIndex < triggerGroups.length - 1 ? pause : 0);
+    group.steps.forEach((step) => {
+      timeline.push({
+        step,
+        index: timeline.length,
+        triggerGroupIndex: groupIndex,
+        start,
+        end: start + frameDuration(manifest, step),
+        pauseEnd,
+      });
     });
+    cursor = pauseEnd;
+  });
+  return timeline;
 }
 
 function buildAnimationStates(rawManifest, options = {}) {
@@ -141,8 +161,24 @@ function buildApplyAnimationStateExpression(manifest, timeline, state) {
       }
       element.removeAttribute("data-svg-qa-animation-hidden");
       element.style.visibility = "visible";
-      element.style.opacity = String(Math.max(0.15, value));
       element.style.pointerEvents = "none";
+      if (step.action === "transform") {
+        const fromX = Number(step.fromTranslateX) || 0;
+        const fromY = Number(step.fromTranslateY) || 0;
+        const toX = Number(step.translateX) || 0;
+        const toY = Number(step.translateY) || 0;
+        const fromScale = Number(step.fromScale) || 1;
+        const toScale = Number(step.scale) || 1;
+        const x = fromX + (toX - fromX) * value;
+        const y = fromY + (toY - fromY) * value;
+        const scale = fromScale + (toScale - fromScale) * value;
+        element.style.opacity = "1";
+        element.style.transformBox = "fill-box";
+        element.style.transformOrigin = step.transformOrigin || "center";
+        element.style.transform = "translate(" + x + "px, " + y + "px) scale(" + scale + ")";
+        return;
+      }
+      element.style.opacity = String(value);
       if (step.action === "draw") {
         element.style.clipPath = clipPathForDirection(step.direction, value);
       }
@@ -160,6 +196,16 @@ function buildApplyAnimationStateExpression(manifest, timeline, state) {
       element.style.visibility = "visible";
       element.style.opacity = "1";
       element.style.clipPath = "";
+      if (step.action === "transform") {
+        const x = Number(step.translateX) || 0;
+        const y = Number(step.translateY) || 0;
+        const scale = Number(step.scale) || 1;
+        element.style.transformBox = "fill-box";
+        element.style.transformOrigin = step.transformOrigin || "center";
+        element.style.transform = "translate(" + x + "px, " + y + "px) scale(" + scale + ")";
+      } else {
+        element.style.transform = "";
+      }
       element.style.pointerEvents = "none";
     }
     for (const target of animatedTargets) hideAnimationTarget(target.targetId);
@@ -170,7 +216,6 @@ function buildApplyAnimationStateExpression(manifest, timeline, state) {
       } else {
         const progress = (timeMs - segment.start) / Math.max(1, segment.end - segment.start);
         applyStepProgress(segment.step, progress);
-        break;
       }
     }
     return { applied: true, timeMs };

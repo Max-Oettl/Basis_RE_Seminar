@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_020.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "p_diagram_method",
+      "label": "P-Diagramm",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "block_diagram_method",
+      "label": "Bauteil-Blockschaltbild",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fault_tree_method",
+      "label": "Fehlerbaum",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fmea_method",
+      "label": "FMEA",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_p_diagram_method",
+      "targetId": "p_diagram_method",
+      "action": "show",
+      "sourceText": "Über das P-Diagramm können anschließend die Eingangs- und Ausgangsgrößen des Systems beschrieben werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_block_diagram_method",
+      "targetId": "block_diagram_method",
+      "action": "show",
+      "sourceText": "Dafür werden Bauteil-Blockschaltbilder verwendet",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_fault_tree_method",
+      "targetId": "fault_tree_method",
+      "action": "show",
+      "sourceText": "Hierfür wird auf die Methode des Fehlerbaums zurückgegriffen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_fmea_method",
+      "targetId": "fmea_method",
+      "action": "show",
+      "sourceText": "Der Fehlerbaum ist auch eine sehr gute Vorarbeit für unsere nächste Methode",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

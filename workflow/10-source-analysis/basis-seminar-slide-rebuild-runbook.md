@@ -1,5 +1,7 @@
 # Basis Seminar Slide Rebuild Runbook
 
+> Legacy-Mehrquellen-Workflow. Fuer neue Module gilt ausschliesslich `workflow/10-source-analysis/source-svg-intake-workflow.md`. Dieser Inhalt bleibt erhalten, damit bestehende PPTX/PDF/PNG-Analysen nachvollziehbar bleiben.
+
 Dieses Runbook beschreibt den Standardablauf fuer die Analyse bestehender Basis-Seminar-Folien.
 
 ## Ziel
@@ -62,7 +64,7 @@ analysis/
 7. PDF gegenpruefen: Text, Formeln, Seitenreihenfolge und gerenderter Endzustand.
 8. PNG visuell analysieren: Komposition, Gewichtung, Ueberlagerungen und sichtbare Details.
 9. Visuelle Elemente klassifizieren: Diagramm/Formel/Text/Prozess versus Piktogramm/Bildmotiv/realistisches Objekt.
-10. Komplexe Bilder und Piktogramme als wiederverwendbar, neu zu erzeugen, zu extrahieren oder vom Nutzer anzufordern bewerten.
+10. Piktogramme immer als neu zu generierende transparente PNGs planen. Andere komplexe Bilder als wiederverwendbar, neu zu erzeugen, zu extrahieren oder vom Nutzer anzufordern bewerten.
 11. Semantische Folienbeschreibung formulieren.
 12. Rebuild-Entscheidungen fuer Text, SVG und optionale PNG-Assets dokumentieren; dabei festhalten, wie die Informationsdichte der PowerPoint-Folie erhalten bleibt.
 13. Animationsplan aus PPTX, PPTX-Folienfolgen oder Sprechertext ableiten und Unsicherheit markieren.

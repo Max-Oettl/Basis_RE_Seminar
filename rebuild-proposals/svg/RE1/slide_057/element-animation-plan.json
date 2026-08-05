@@ -1,0 +1,75 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_057",
+  "scene_id": "re1_src_072",
+  "source_slides": [
+    72
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "weibull_hazard_random",
+      "label": "Konstante Ausfallrate",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_hazard_early",
+      "label": "Sinkende Ausfallrate",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_hazard_wear",
+      "label": "Steigende Ausfallrate",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_weibull_hazard_random",
+      "targetId": "weibull_hazard_random",
+      "action": "draw",
+      "sourceText": "Für b gleich eins ergibt sich eine konstante Ausfallrate",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_weibull_hazard_early",
+      "targetId": "weibull_hazard_early",
+      "action": "draw",
+      "sourceText": "Für b kleiner eins, sinkt die Ausfallrate über der Zeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_weibull_hazard_wear",
+      "targetId": "weibull_hazard_wear",
+      "action": "draw",
+      "sourceText": "Und für b größer eins ist ein ansteigender Verlauf der Ausfallrate zu erkennen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

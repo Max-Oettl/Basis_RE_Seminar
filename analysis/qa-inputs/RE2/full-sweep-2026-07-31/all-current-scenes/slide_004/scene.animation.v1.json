@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_004.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "pv_environment",
+      "label": "Umwelt und Schnittstellen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "pv_system",
+      "label": "System PV-Anlage",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "pv_inverter_boundary",
+      "label": "Subsystem Wechselrichter",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "pv_flows",
+      "label": "Energieflüsse und DC/DC-Wandler",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_pv_environment",
+      "targetId": "pv_environment",
+      "action": "show",
+      "sourceText": "Um die Wechselwirkungen der PV-Anlage mit der Umgebung zu betrachten",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_pv_system",
+      "targetId": "pv_system",
+      "action": "show",
+      "sourceText": "Um zu beschreiben, welche Komponenten zu der PV-Anlage gehören",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_pv_inverter_boundary",
+      "targetId": "pv_inverter_boundary",
+      "action": "show",
+      "sourceText": "So hat der Wechselrichter beispielsweise wieder eine eigene Systemgrenze.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_pv_flows",
+      "targetId": "pv_flows",
+      "action": "draw",
+      "sourceText": "Jedes dieser Elemente kann wiederum als eigenes Subsystem betrachtet werden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "drawDurFrames": 42
+    }
+  ]
+}

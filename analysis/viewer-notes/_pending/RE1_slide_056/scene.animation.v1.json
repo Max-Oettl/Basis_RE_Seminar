@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_056.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "weibull_density_curves",
+      "label": "Dichtekurven der Weibullverteilung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_density_eta",
+      "label": "Charakteristische Lebensdauer im Plot",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_eta_meaning",
+      "label": "Bedeutung von T",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_beta_meaning",
+      "label": "Bedeutung von b",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_special_cases",
+      "label": "Spezialfälle",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_applications",
+      "label": "Anwendungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_weibull_density_curves",
+      "targetId": "weibull_density_curves",
+      "action": "draw",
+      "sourceText": "Auf der rechten Seite sind hierzu unterschiedliche Verläufe von Dichtefunktionen dargestellt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_weibull_density_eta",
+      "targetId": "weibull_density_eta",
+      "action": "show",
+      "sourceText": "Zum einen durch die charakteristische Lebensdauer groß T",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_eta_meaning",
+      "targetId": "weibull_eta_meaning",
+      "action": "show",
+      "sourceText": "Die charakteristische Lebensdauer ist eine Art Lageparameter",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_beta_meaning",
+      "targetId": "weibull_beta_meaning",
+      "action": "show",
+      "sourceText": "Der Formparameter b bestimmt dabei die Form der Verteilung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_special_cases",
+      "targetId": "weibull_special_cases",
+      "action": "show",
+      "sourceText": "Für b gleich eins ergibt sich beispielsweise genau die Exponentialverteilung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_applications",
+      "targetId": "weibull_applications",
+      "action": "show",
+      "sourceText": "Aufgrund der Flexibilität hat die Weibullverteilung ein sehr breites Anwendungsspektrum",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

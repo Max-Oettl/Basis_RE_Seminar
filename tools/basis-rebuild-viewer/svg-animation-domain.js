@@ -1,8 +1,8 @@
 (function exposeSvgAnimationDomain(root, factory) {
-  const api = factory();
+  const api = factory(root);
   if (typeof module === "object" && module.exports) module.exports = api;
   if (root) root.SvgAnimationDomain = api;
-})(typeof globalThis !== "undefined" ? globalThis : this, function createSvgAnimationDomain() {
+})(typeof globalThis !== "undefined" ? globalThis : this, function createSvgAnimationDomain(root) {
   "use strict";
 
   const SCHEMA_VERSION = "svgAnimationManifest/v1";
@@ -428,6 +428,12 @@
         }
         optionalString(step.stepId, `${stepPath}.stepId`, errors);
         optionalString(step.sourceText, `${stepPath}.sourceText`, errors);
+        if (typeof step.sourceText === "string" && /\{\{pause:/i.test(step.sourceText)) {
+          errors.push({
+            path: `${stepPath}.sourceText`,
+            message: "Pausenmarker sind keine gesprochenen Woerter und duerfen nicht als Trigger verwendet werden.",
+          });
+        }
         optionalString(step.notes, `${stepPath}.notes`, errors);
         optionalString(step.trigger, `${stepPath}.trigger`, errors);
         if (step.confidence != null && !CONFIDENCE_VALUES.has(step.confidence)) {
@@ -692,8 +698,34 @@
       .replace(/[^\p{L}\p{N}]+/gu, "");
   }
 
+  function narrationPauseApi() {
+    if (root?.NarrationPauseDomain) return root.NarrationPauseDomain;
+    if (typeof require === "function") {
+      try {
+        return require("./narration-pause-domain");
+      } catch {
+        return null;
+      }
+    }
+    return null;
+  }
+
+  function maskNarrationPauseMarkers(text) {
+    const source = String(text || "");
+    const domain = narrationPauseApi();
+    if (domain?.stripPauseMarkers) return domain.stripPauseMarkers(source);
+    if (domain?.maskPauseMarkers) return domain.maskPauseMarkers(source);
+    return source.replace(/\{\{pause:(?:short|medium|long|\d+(?:\.\d+)?s|\d+ms)\}\}/g, (marker) => " ".repeat(marker.length));
+  }
+
+  function narrationPauseDurationBefore(text, index) {
+    const domain = narrationPauseApi();
+    if (domain?.durationBefore) return domain.durationBefore(text, index);
+    return domain?.pauseDurationBefore ? domain.pauseDurationBefore(text, index) : 0;
+  }
+
   function wordTokens(text) {
-    return Array.from(String(text || "").matchAll(/[\p{L}\p{N}]+/gu))
+    return Array.from(maskNarrationPauseMarkers(text).matchAll(/[\p{L}\p{N}]+/gu))
       .map((match) => ({
         raw: match[0],
         normalized: normalizeWord(match[0]),
@@ -757,6 +789,9 @@
         wordIndex: match.selected?.wordIndex ?? Number.POSITIVE_INFINITY,
         fallbackWordIndex: spokenWordCount + originalIndex,
         range: match.selected,
+        pauseOffsetSec: match.selected
+          ? narrationPauseDurationBefore(spokenText, match.selected.start) / 1000
+          : 0,
       });
     });
     entries.sort((left, right) => {
@@ -767,7 +802,7 @@
     return entries.map((entry, timelineIndex) => ({
       ...entry,
       timelineIndex,
-      mockSec: timelineIndex * 0.5,
+      mockSec: timelineIndex * 0.5 + entry.pauseOffsetSec,
     }));
   }
 
@@ -777,6 +812,16 @@
 
   function collectIssues(manifest, inventory, spokenText = "", extraIssues = []) {
     const issues = [...(extraIssues || [])];
+    const pauseDomain = narrationPauseApi();
+    const pauseValidation = pauseDomain?.validateNarration?.(spokenText);
+    for (const pauseError of pauseValidation?.errors || []) {
+      issues.push(issue(
+        "invalid-pause-marker",
+        "error",
+        `Ungültiger Pausenmarker im Sprechertext: ${pauseError.raw}`,
+        { start: pauseError.start, end: pauseError.end },
+      ));
+    }
     const inventoryIds = new Set((inventory || []).map((item) => item.targetId));
     const targets = targetMap(manifest);
     const stepCounts = new Map();
@@ -814,6 +859,8 @@
       }
       if (!step.sourceText) {
         issues.push(issue("missing-source-text", "warning", `Step ${stepLabel} hat keinen sourceText.`, { stepId: step.stepId }));
+      } else if (/\{\{pause:/i.test(step.sourceText)) {
+        issues.push(issue("pause-marker-as-trigger", "error", `Step ${stepLabel}: Ein Pausenmarker darf nicht als sourceText-Trigger verwendet werden.`, { stepId: step.stepId }));
       } else if (spokenText) {
         const match = matchSourceText(spokenText, step.sourceText, step.occurrence);
         if (!match.matches.length) {
@@ -858,6 +905,7 @@
     isEffectivelyRendered,
     labelFromTargetId,
     matchSourceText,
+    maskNarrationPauseMarkers,
     normalizeManifest,
     normalizeWord,
     setEditorVisibility,

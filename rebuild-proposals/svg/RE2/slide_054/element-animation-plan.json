@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re2_ch3_fta_aircraft_group_failures",
+  "targets": [
+    {
+      "targetId": "fta54_asset",
+      "label": "Flugzeug mit drei Fahrwerksgruppen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta54_nodes",
+      "label": "Fahrwerk-Fehlerbaum",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta54_links",
+      "label": "Fehlerbaum-Beziehungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta54_asset",
+      "targetId": "fta54_asset",
+      "action": "show",
+      "sourceText": "Hierzu betrachten wir das Bugradfahrwerk eines Flugzeuges",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_fta54_nodes",
+      "targetId": "fta54_nodes",
+      "action": "show",
+      "sourceText": "Das gleiche Prinzip gilt für das linke und rechte Hauptfahrwerk.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_fta54_links",
+      "targetId": "fta54_links",
+      "action": "draw",
+      "sourceText": "Auch hier sind die Ausfälle der Reifen jeweils mit einem Und-Gatter verbunden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung wird erst nach den zugehörigen Ereignissen gezeichnet; kleine Linien- und Pfeilskalierung.",
+      "drawDurFrames": 40
+    }
+  ]
+}

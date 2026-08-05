@@ -6,6 +6,8 @@ const { spawn, spawnSync } = require("child_process");
 const { runBrowserLayoutQa } = require("./svg-qa/browser-layout-qa");
 const { formatLayoutIssue } = require("./svg-qa/layout-report");
 const { runStaticDesignQa } = require("./svg-qa/design-qa");
+const { runHandoffPackageQa } = require("./svg-qa/handoff-package-qa");
+const { inspectSemanticAnimationBoundaries } = require("./svg-qa/semantic-animation-qa");
 
 const repoRoot = path.resolve(__dirname, "..");
 const defaultProposalRoot = path.join(repoRoot, "rebuild-proposals", "svg");
@@ -13,7 +15,7 @@ const defaultReportRoot = path.join(repoRoot, "analysis", "render-checks");
 
 function usage() {
   console.log(`Usage:
-  node tools/svg-rebuild-qa.js <module_id_or_svg_dir> [options]
+  node tools/svg-rebuild-qa.js [<module_id_or_svg_dir>] [options]
 
 Options:
   --viewer              Start the Basis Rebuild Viewer API and check slide mapping.
@@ -25,6 +27,9 @@ Options:
   --layout-times <list> Animation times for layout QA, e.g. 0,0.5,1,end.
   --strict-design       Count static Content-SVG/design/brand QA findings as errors.
   --no-design           Disable static Content-SVG/design/brand QA.
+  --handoff-package <path>
+                        Validate a final storyboardImportPackage/v1 delivery.
+  --strict-handoff      Count strong handoff recommendations as errors.
   --report-dir <path>   Override report output directory.
   --no-report           Do not write JSON/Markdown reports.
   --help                Show this help.
@@ -32,7 +37,8 @@ Options:
 Examples:
   node tools/svg-rebuild-qa.js RE3_TEST_1
   node tools/svg-rebuild-qa.js RE3_TEST_1 --viewer --slides 1-13 --expect-all
-  node tools/svg-rebuild-qa.js RE3_TEST_1 --viewer --slides 1-13 --expect-all --layout`);
+  node tools/svg-rebuild-qa.js RE3_TEST_1 --viewer --slides 1-13 --expect-all --layout
+  node tools/svg-rebuild-qa.js --handoff-package delivery-packages/storyboard-import/<module_id> --strict-handoff`);
 }
 
 function parseArgs(argv) {
@@ -47,6 +53,8 @@ function parseArgs(argv) {
     layoutTimes: "",
     design: true,
     strictDesign: false,
+    handoffPackage: "",
+    strictHandoff: false,
     reportDir: "",
     writeReport: true,
   };
@@ -76,6 +84,10 @@ function parseArgs(argv) {
       options.strictDesign = true;
     } else if (arg === "--no-design") {
       options.design = false;
+    } else if (arg === "--handoff-package") {
+      options.handoffPackage = argv[++index] || "";
+    } else if (arg === "--strict-handoff") {
+      options.strictHandoff = true;
     } else if (arg === "--report-dir") {
       options.reportDir = argv[++index] || "";
     } else if (arg === "--no-report") {
@@ -95,6 +107,16 @@ function cleanModuleId(value) {
     .trim()
     .replace(/\s+/g, "_")
     .replace(/[^\w.-]+/g, "_") || "unassigned";
+}
+
+function inferHandoffModuleId(packageRoot) {
+  try {
+    const manifestPath = path.join(packageRoot, "import.package.v1.json");
+    const manifest = JSON.parse(readUtf8(manifestPath));
+    return cleanModuleId(manifest.moduleId || path.basename(packageRoot));
+  } catch {
+    return cleanModuleId(path.basename(packageRoot));
+  }
 }
 
 function toPosixPath(filePath) {
@@ -145,7 +167,7 @@ function parseJsonFile(filePath, report) {
 function powershellXmlCheck(filePath) {
   if (process.platform !== "win32") return null;
 
-  const command = "& { param([string]$p) $ErrorActionPreference='Stop'; $xml = New-Object System.Xml.XmlDocument; $xml.PreserveWhitespace = $true; $xml.Load($p) }";
+  const command = "& { param([string]$p) $ErrorActionPreference='Stop'; $xml = New-Object System.Xml.XmlDocument; $xml.XmlResolver = $null; $xml.PreserveWhitespace = $true; $xml.Load($p) }";
 
   const result = spawnSync("powershell.exe", ["-NoProfile", "-Command", command, filePath], {
     encoding: "utf8",
@@ -267,6 +289,10 @@ function validateSvg(svgPath, report) {
     }
   }
 
+  for (const finding of inspectSemanticAnimationBoundaries(svgText)) {
+    addIssue(report, "error", svgPath, finding.message, finding.detail);
+  }
+
   const ids = extractIds(svgText);
   fileResult.ids = ids.length;
   const duplicateIds = ids.filter((id, index) => ids.indexOf(id) !== index);
@@ -338,11 +364,8 @@ function validateManifest(manifestPath, svgByPath, report) {
 
   const targets = Array.isArray(manifest.targets) ? manifest.targets : [];
   const steps = Array.isArray(manifest.steps) ? manifest.steps : [];
-  if (!targets.length) {
-    addIssue(report, "error", manifestPath, "Animation manifest has no targets.");
-  }
-  if (!steps.length) {
-    addIssue(report, "error", manifestPath, "Animation manifest has no steps.");
+  if (steps.length && !targets.length) {
+    addIssue(report, "error", manifestPath, "Animated manifest has steps but no targets.");
   }
 
   const targetIds = new Set();
@@ -356,6 +379,16 @@ function validateManifest(manifestPath, svgByPath, report) {
     if (!svgInfo.ids.has(targetId)) {
       addIssue(report, "error", manifestPath, "Animation target ID does not exist in SVG.", targetId);
     }
+  }
+
+  const wholeSceneTarget = /^(?:scene_content|main_content|source_state_[0-9]+)$/;
+  if (steps.length && targets.length && targets.every((target) => wholeSceneTarget.test(String(target?.targetId || "")))) {
+    addIssue(
+      report,
+      "error",
+      manifestPath,
+      "Animation only targets complete scene/source-state containers; semantic element targets are required.",
+    );
   }
 
   for (const step of steps) {
@@ -431,6 +464,7 @@ async function runViewerCheck(moduleId, options, report) {
         isHidden: Boolean(slide.isHidden || slide.status?.isHidden),
         hasOldSlide: Boolean(slide.status && slide.status.hasOldSlide),
         hasSvg: Boolean(slide.status && slide.status.hasSvgProposal),
+        hasAnimationManifest: Boolean(slide.status && slide.status.hasAnimationManifest),
         hasAnimation: Boolean(slide.status && slide.status.hasAnimation),
         file: slide.svgProposal && slide.svgProposal.fileName || "",
         url: slide.svgProposal && slide.svgProposal.url || "",
@@ -455,9 +489,9 @@ async function runViewerCheck(moduleId, options, report) {
           if (row.isAdditionalSlide) continue;
           addIssue(report, "error", null, "Viewer slide has no SVG proposal.", `slide ${row.slide}`);
         }
-        if (!row.hasAnimation) {
+        if (!row.hasAnimationManifest) {
           if (row.isAdditionalSlide && !row.hasSvg) continue;
-          addIssue(report, "error", null, "Viewer slide has no animation.", `slide ${row.slide}`);
+          addIssue(report, "error", null, "Viewer slide has no animation decision manifest.", `slide ${row.slide}`);
         }
       }
     }
@@ -549,6 +583,10 @@ function writeReports(report, reportDir) {
     `- Design files checked: ${report.summary.design_files_checked}`,
     `- Design errors: ${report.summary.design_errors}`,
     `- Design warnings: ${report.summary.design_warnings}`,
+    `- Handoff scenes checked: ${report.summary.handoff_scenes_checked}`,
+    `- Handoff manifests checked: ${report.summary.handoff_manifests_checked}`,
+    `- Handoff errors: ${report.summary.handoff_errors}`,
+    `- Handoff warnings: ${report.summary.handoff_warnings}`,
     `- Errors: ${report.summary.errors}`,
     `- Warnings: ${report.summary.warnings}`,
     "",
@@ -609,6 +647,17 @@ function writeReports(report, reportDir) {
     }
   }
 
+  if (report.handoff && report.handoff.checked) {
+    lines.push("## Handoff Package QA", "");
+    lines.push(`- Mode: ${report.handoff.strict ? "strict-handoff" : "recommendations-as-warnings"}`);
+    lines.push(`- Package: ${report.handoff.packageRoot || "not configured"}`);
+    lines.push(`- Module ID: ${report.handoff.moduleId || "unknown"}`);
+    lines.push(`- Scenes checked: ${report.handoff.summary?.scenes_checked || 0}`);
+    lines.push(`- SVGs checked: ${report.handoff.summary?.svg_files_checked || 0}`);
+    lines.push(`- Animation manifests checked: ${report.handoff.summary?.manifests_checked || 0}`);
+    lines.push("");
+  }
+
   if (report.viewer && report.viewer.checked) {
     lines.push("## Viewer Mapping", "");
     for (const row of report.viewer.rows) {
@@ -624,18 +673,23 @@ function writeReports(report, reportDir) {
 
 async function main() {
   const options = parseArgs(process.argv.slice(2));
-  if (options.help || !options.target) {
+  if (options.help || (!options.target && !options.handoffPackage)) {
     usage();
     process.exit(options.help ? 0 : 2);
   }
 
-  const targetPath = path.resolve(repoRoot, options.target);
-  const moduleId = fs.existsSync(targetPath)
-    ? cleanModuleId(path.basename(targetPath))
-    : cleanModuleId(options.target);
-  const svgRoot = fs.existsSync(targetPath)
-    ? targetPath
-    : path.join(defaultProposalRoot, moduleId);
+  const handoffRoot = options.handoffPackage
+    ? path.resolve(repoRoot, options.handoffPackage)
+    : "";
+  const targetPath = options.target ? path.resolve(repoRoot, options.target) : "";
+  const moduleId = options.target
+    ? (fs.existsSync(targetPath)
+      ? cleanModuleId(path.basename(targetPath))
+      : cleanModuleId(options.target))
+    : inferHandoffModuleId(handoffRoot);
+  const svgRoot = options.target
+    ? (fs.existsSync(targetPath) ? targetPath : path.join(defaultProposalRoot, moduleId))
+    : handoffRoot;
 
   if (!fs.existsSync(svgRoot)) {
     throw new Error(`SVG root not found: ${svgRoot}`);
@@ -656,6 +710,7 @@ async function main() {
     viewer: { checked: false },
     layout: { checked: false },
     design: { checked: false },
+    handoff: { checked: false },
     summary: {
       files_checked: 0,
       manifests_checked: 0,
@@ -664,6 +719,10 @@ async function main() {
       design_files_checked: 0,
       design_errors: 0,
       design_warnings: 0,
+      handoff_scenes_checked: 0,
+      handoff_manifests_checked: 0,
+      handoff_errors: 0,
+      handoff_warnings: 0,
       errors: 0,
       warnings: 0,
     },
@@ -717,6 +776,16 @@ async function main() {
     report.issues.push(...layout.issues);
   }
 
+  if (handoffRoot) {
+    const handoff = runHandoffPackageQa({
+      packageRoot: handoffRoot,
+      strict: options.strictHandoff,
+    });
+    handoff.packageRoot = toPosixPath(handoffRoot);
+    report.handoff = handoff;
+    report.issues.push(...handoff.issues);
+  }
+
   report.summary.files_checked = svgFiles.length;
   report.summary.manifests_checked = manifestFiles.length;
   report.summary.layout_files_checked = report.layout?.summary?.files_checked || 0;
@@ -724,6 +793,10 @@ async function main() {
   report.summary.design_files_checked = report.design?.summary?.files_checked || 0;
   report.summary.design_errors = report.design?.summary?.errors || 0;
   report.summary.design_warnings = report.design?.summary?.warnings || 0;
+  report.summary.handoff_scenes_checked = report.handoff?.summary?.scenes_checked || 0;
+  report.summary.handoff_manifests_checked = report.handoff?.summary?.manifests_checked || 0;
+  report.summary.handoff_errors = report.handoff?.summary?.errors || 0;
+  report.summary.handoff_warnings = report.handoff?.summary?.warnings || 0;
   report.summary.errors = report.issues.filter((issue) => issue.severity === "error").length;
   report.summary.warnings = report.issues.filter((issue) => issue.severity === "warning").length;
 
@@ -732,7 +805,7 @@ async function main() {
     written = writeReports(report, reportDir);
   }
 
-  console.log(`SVG QA ${moduleId}: ${report.summary.errors} error(s), ${report.summary.warnings} warning(s), ${svgFiles.length} SVG(s), ${manifestFiles.length} manifest(s), design ${report.summary.design_errors} error(s)/${report.summary.design_warnings} warning(s).`);
+  console.log(`SVG QA ${moduleId}: ${report.summary.errors} error(s), ${report.summary.warnings} warning(s), ${svgFiles.length} SVG(s), ${manifestFiles.length} internal manifest(s), design ${report.summary.design_errors} error(s)/${report.summary.design_warnings} warning(s), handoff ${report.summary.handoff_errors} error(s)/${report.summary.handoff_warnings} warning(s).`);
   if (written) {
     console.log(`Report: ${toPosixPath(written.mdPath)}`);
   }

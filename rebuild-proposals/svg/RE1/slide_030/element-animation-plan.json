@@ -1,0 +1,129 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_030",
+  "scene_id": "re1_src_032",
+  "source_slides": [
+    32
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "observed_density",
+      "label": "Reale Ausfalldichte",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "nkw_gearbox_image",
+      "label": "Generierte Illustration des 6-Gang-NKW-Getriebes",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "nkw_density_question",
+      "label": "Prüffragen",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "nkw_density_diagnosis",
+      "label": "Diagnose",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "desired_density",
+      "label": "Gewünschte Dichte",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "nkw_density_desired_state",
+      "label": "Zielzustand",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_observed_density",
+      "targetId": "observed_density",
+      "action": "draw",
+      "sourceText": "Im Schaubild ist die Dichtefunktion der Ausfälle eines Sechsgang-Nutzfahrzeuggetriebes zu sehen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_nkw_gearbox_image",
+      "targetId": "nkw_gearbox_image",
+      "action": "show",
+      "sourceText": "Im Schaubild ist die Dichtefunktion der Ausfälle eines Sechsgang-Nutzfahrzeuggetriebes zu sehen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_nkw_density_question",
+      "targetId": "nkw_density_question",
+      "action": "show",
+      "sourceText": "Nun zu zwei Fragen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_nkw_density_diagnosis",
+      "targetId": "nkw_density_diagnosis",
+      "action": "show",
+      "sourceText": "Was dir als erstes auffallen sollte",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_desired_density",
+      "targetId": "desired_density",
+      "action": "draw",
+      "sourceText": "Es wäre also wünschenswert",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_nkw_density_desired_state",
+      "targetId": "nkw_density_desired_state",
+      "action": "show",
+      "sourceText": "Es wäre also wünschenswert",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

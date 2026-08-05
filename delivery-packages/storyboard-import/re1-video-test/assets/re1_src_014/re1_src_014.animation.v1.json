@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_014.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "bathtub_curve_path",
+      "label": "Ausgangsverlauf der Badewannenkurve",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "qualitative_plot_effect",
+      "label": "Risikoreduktion im Frühausfallbereich",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "qualitative_method_focus",
+      "label": "Qualitative Methoden",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "quantitative_plot_effect",
+      "label": "Reduktion im Ermüdungsbereich",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "quantitative_method_focus",
+      "label": "Quantitative Methoden",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_bathtub_curve_path",
+      "targetId": "bathtub_curve_path",
+      "action": "draw",
+      "sourceText": "Schauen wir uns hierfür zunächst einen typischen Verlauf von Ausfällen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_qualitative_plot_effect",
+      "targetId": "qualitative_plot_effect",
+      "action": "draw",
+      "sourceText": "Die qualitativen Methoden werden vor allem dazu genutzt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_qualitative_method_focus",
+      "targetId": "qualitative_method_focus",
+      "action": "show",
+      "sourceText": "Die qualitativen Methoden werden vor allem dazu genutzt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_quantitative_plot_effect",
+      "targetId": "quantitative_plot_effect",
+      "action": "draw",
+      "sourceText": "Die quantitativen Methoden werden dagegen primär genutzt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_quantitative_method_focus",
+      "targetId": "quantitative_method_focus",
+      "action": "show",
+      "sourceText": "Die quantitativen Methoden werden dagegen primär genutzt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

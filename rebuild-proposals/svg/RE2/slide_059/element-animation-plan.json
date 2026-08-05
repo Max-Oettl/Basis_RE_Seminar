@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re2_ch3_fta_hospital_power_tree",
+  "targets": [
+    {
+      "targetId": "fta59_asset",
+      "label": "Krankenhaus-Stromversorgung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta59_nodes",
+      "label": "Fehlerbaum",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta59_links",
+      "label": "Fehlerbaum-Beziehungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta59_asset",
+      "targetId": "fta59_asset",
+      "action": "show",
+      "sourceText": "Der Operationssaal wird über ein eigenes Stromnetzwerk betrieben",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_fta59_nodes",
+      "targetId": "fta59_nodes",
+      "action": "show",
+      "sourceText": "Wir beginnen zunächst mit dem Top-Ereignis",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_fta59_links",
+      "targetId": "fta59_links",
+      "action": "draw",
+      "sourceText": "Daher sind diese beiden Ereignisse mit einem Und-Gatter verbunden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung wird erst nach den zugehörigen Ereignissen gezeichnet; kleine Linien- und Pfeilskalierung.",
+      "drawDurFrames": 40
+    }
+  ]
+}

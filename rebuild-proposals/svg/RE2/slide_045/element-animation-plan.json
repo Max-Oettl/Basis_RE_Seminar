@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re2_ch3_fta_basic_event",
+  "targets": [
+    {
+      "targetId": "fta45_symbol",
+      "label": "Basisereignis",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta45_explanation",
+      "label": "Bedeutung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta45_circuit",
+      "label": "Motorschaltung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta45_symbol",
+      "targetId": "fta45_symbol",
+      "action": "show",
+      "sourceText": "Die Basisereignisse stellen immer das Ende des Fehlerbaumes dar",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_fta45_explanation",
+      "targetId": "fta45_explanation",
+      "action": "show",
+      "sourceText": "Die Basisereignisse stellen immer das Ende des Fehlerbaumes dar",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_fta45_circuit",
+      "targetId": "fta45_circuit",
+      "action": "show",
+      "sourceText": "Der Fehlerbaum muss aber nicht immer bis zum Ende durchgeführt werden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

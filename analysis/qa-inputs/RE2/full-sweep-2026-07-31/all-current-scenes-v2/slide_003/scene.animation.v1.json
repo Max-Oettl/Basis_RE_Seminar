@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "sceneId": "re2_ch1_lifecycle",
+  "svgPath": "slide_003.svg",
+  "status": "draft",
+  "defaults": {
+    "enterFrames": 16,
+    "highlightDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "bathtub_curve_overview",
+      "label": "Badewannenkurve mit drei Ausfallbereichen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "qualitative_lifecycle_focus",
+      "label": "Qualitative Methoden in den Bereichen eins und zwei",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "quantitative_lifecycle_focus",
+      "label": "Quantitative Methoden im dritten Bereich",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "system_analysis_outcome",
+      "label": "Risikoreduktion durch Systemanalyse",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_bathtub_curve",
+      "targetId": "bathtub_curve_overview",
+      "action": "show",
+      "sourceText": "Die Badewannenkurve kann in die drei Bereiche Frühausfälle, Zufallsausfälle und Ermüdungsausfälle eingeteilt werden",
+      "occurrence": 1,
+      "enterFrames": 16,
+      "confidence": "high"
+    },
+    {
+      "stepId": "show_qualitative_lifecycle_focus",
+      "targetId": "qualitative_lifecycle_focus",
+      "action": "show",
+      "sourceText": "Die qualitativen und quantitativen Zuverlässigkeitsmethoden werden für unterschiedliche Ausfallarten und damit auch für die verschiedenen Lebensphasen des Produktes eingesetzt",
+      "occurrence": 1,
+      "enterFrames": 16,
+      "confidence": "high"
+    },
+    {
+      "stepId": "show_quantitative_lifecycle_focus",
+      "targetId": "quantitative_lifecycle_focus",
+      "action": "show",
+      "sourceText": "Die qualitativen und quantitativen Zuverlässigkeitsmethoden werden für unterschiedliche Ausfallarten und damit auch für die verschiedenen Lebensphasen des Produktes eingesetzt",
+      "occurrence": 1,
+      "enterFrames": 16,
+      "confidence": "high"
+    },
+    {
+      "stepId": "highlight_qualitative_lifecycle_focus",
+      "targetId": "qualitative_lifecycle_focus",
+      "action": "highlight",
+      "sourceText": "werden die qualitativen Methoden vor allem dazu genutzt, die Ausfälle zu Beginn der Lebensdauer zu reduzieren",
+      "occurrence": 1,
+      "highlightDurFrames": 30,
+      "confidence": "high"
+    },
+    {
+      "stepId": "show_system_analysis_outcome",
+      "targetId": "system_analysis_outcome",
+      "action": "show",
+      "sourceText": "in dem vor allem eine Risikoreduktion durch eine Systemanalyse im Vordergrund steht",
+      "occurrence": 1,
+      "enterFrames": 16,
+      "confidence": "high"
+    },
+    {
+      "stepId": "highlight_system_analysis_outcome",
+      "targetId": "system_analysis_outcome",
+      "action": "highlight",
+      "sourceText": "Die Systemanalyse bildet immer die Grundlage für eine saubere qualitative Zuverlässigkeitsanalyse",
+      "occurrence": 1,
+      "highlightDurFrames": 30,
+      "confidence": "high"
+    }
+  ]
+}

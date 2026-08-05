@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_056.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "normal_hazard_curves",
+      "label": "Steigende Ausfallrate",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "normal_wearout_mapping",
+      "label": "Bereich 3 der Badewannenkurve",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "normal_cdf_curves",
+      "label": "Ausfallwahrscheinlichkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "normal_zero_problem",
+      "label": "Problem bei t gleich null",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "normal_lifetime_limitation",
+      "label": "Eignungsgrenze",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_normal_hazard_curves",
+      "targetId": "normal_hazard_curves",
+      "action": "draw",
+      "sourceText": "Betrachten wir zunächst nur den Verlauf der Ausfallrate",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "durFrames": 42
+    },
+    {
+      "stepId": "show_normal_wearout_mapping",
+      "targetId": "normal_wearout_mapping",
+      "action": "show",
+      "sourceText": "Das heißt also dass sich die",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_normal_cdf_curves",
+      "targetId": "normal_cdf_curves",
+      "action": "draw",
+      "sourceText": "Betrachten wir nun das Schaubild der Ausfallwahrscheinlichkeit",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "durFrames": 42
+    },
+    {
+      "stepId": "show_normal_zero_problem",
+      "targetId": "normal_zero_problem",
+      "action": "show",
+      "sourceText": "Zum Zeitpunkt t gleich null sind",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_normal_lifetime_limitation",
+      "targetId": "normal_lifetime_limitation",
+      "action": "show",
+      "sourceText": "Da die Ausfallzeiten in Realität natürlich",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

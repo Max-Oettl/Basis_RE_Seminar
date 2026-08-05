@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_014.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "func_blackbox",
+      "label": "Black Box",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "func_definition",
+      "label": "Abstrakte Aufgabenbeschreibung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "func_decomposition",
+      "label": "Zerlegung in Teilfunktionen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "func_relations",
+      "label": "Funktionsbeziehungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_func_blackbox",
+      "targetId": "func_blackbox",
+      "action": "show",
+      "sourceText": "Dabei kann das System zunächst als Black-Box aufgefasst werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_func_definition",
+      "targetId": "func_definition",
+      "action": "show",
+      "sourceText": "Die Funktion selbst ist die Aufgabenbeschreibung in neutraler Form",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_func_decomposition",
+      "targetId": "func_decomposition",
+      "action": "show",
+      "sourceText": "Auf System-Ebene kann eine Funktion meist in untergeordnete Teilfunktionen aufgeteilt werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_func_relations",
+      "targetId": "func_relations",
+      "action": "draw",
+      "sourceText": "Wird die Summe dieser Teilfunktionen erfüllt, so ist auch die übergeordnete Funktion des Systems erfüllt.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
+      "drawDurFrames": 42
+    }
+  ]
+}

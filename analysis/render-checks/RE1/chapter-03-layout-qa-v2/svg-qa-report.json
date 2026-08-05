@@ -1,0 +1,2976 @@
+{
+  "schema_version": "svgQaReport/v1",
+  "module_id": "chapter-03-layout-input-v1",
+  "svg_root": "analysis/render-checks/RE1/chapter-03-layout-input-v1",
+  "generated_at": "2026-07-16T19:28:12.416Z",
+  "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\tools\\svg-rebuild-qa.js analysis\\render-checks\\RE1\\chapter-03-layout-input-v1 --no-design --layout --layout-strict --layout-times 0,0.5,1,end --report-dir analysis\\render-checks\\RE1\\chapter-03-layout-qa-v2",
+  "files": [
+    {
+      "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_027/slide_027.svg",
+      "ids": 125,
+      "animationManifest": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_027/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_028/slide_028.svg",
+      "ids": 88,
+      "animationManifest": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_028/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_029/slide_029.svg",
+      "ids": 95,
+      "animationManifest": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_029/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_030/slide_030.svg",
+      "ids": 88,
+      "animationManifest": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_030/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_031/slide_031.svg",
+      "ids": 85,
+      "animationManifest": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_031/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+      "ids": 153,
+      "animationManifest": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_033/slide_033.svg",
+      "ids": 83,
+      "animationManifest": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_033/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_034/slide_034.svg",
+      "ids": 83,
+      "animationManifest": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_034/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_035/slide_035.svg",
+      "ids": 82,
+      "animationManifest": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_035/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_036/slide_036.svg",
+      "ids": 90,
+      "animationManifest": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_036/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_037/slide_037.svg",
+      "ids": 45,
+      "animationManifest": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_037/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_038/slide_038.svg",
+      "ids": 87,
+      "animationManifest": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_038/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_039/slide_039.svg",
+      "ids": 86,
+      "animationManifest": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_039/scene.animation.v1.json"
+    }
+  ],
+  "issues": [
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_029/slide_029.svg",
+      "slide": "029",
+      "time_seconds": 4.233,
+      "state": "time_3",
+      "element_id": "qc_runtime_239",
+      "related_element_id": "qc_runtime_230",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 1548,
+        "right_max": 1822,
+        "top_min": 758,
+        "bottom_max": 888
+      },
+      "actual": {
+        "left": 1649,
+        "right": 1835.609375,
+        "top": 821,
+        "bottom": 869
+      },
+      "bbox": {
+        "text": {
+          "left": 1649,
+          "top": 821,
+          "right": 1835.609375,
+          "bottom": 869,
+          "width": 186.609375,
+          "height": 48
+        },
+        "box": {
+          "left": 1540,
+          "top": 750,
+          "right": 1830,
+          "bottom": 896,
+          "width": 290,
+          "height": 146
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_029/slide_029.svg",
+      "slide": "029",
+      "time_seconds": 4.233,
+      "state": "time_3",
+      "element_id": "qc_runtime_240",
+      "related_element_id": "qc_runtime_230",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 1548,
+        "right_max": 1822,
+        "top_min": 758,
+        "bottom_max": 888
+      },
+      "actual": {
+        "left": 1649,
+        "right": 1835.609375,
+        "top": 821,
+        "bottom": 845
+      },
+      "bbox": {
+        "text": {
+          "left": 1649,
+          "top": 821,
+          "right": 1835.609375,
+          "bottom": 845,
+          "width": 186.609375,
+          "height": 24
+        },
+        "box": {
+          "left": 1540,
+          "top": 750,
+          "right": 1830,
+          "bottom": 896,
+          "width": 290,
+          "height": 146
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_029/slide_029.svg",
+      "slide": "029",
+      "time_seconds": 4.233,
+      "state": "time_3",
+      "element_id": "qc_runtime_241",
+      "related_element_id": "qc_runtime_230",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 1548,
+        "right_max": 1822,
+        "top_min": 758,
+        "bottom_max": 888
+      },
+      "actual": {
+        "left": 1650,
+        "right": 1830.9365234375,
+        "top": 845,
+        "bottom": 869
+      },
+      "bbox": {
+        "text": {
+          "left": 1650,
+          "top": 845,
+          "right": 1830.9365234375,
+          "bottom": 869,
+          "width": 180.9365234375,
+          "height": 24
+        },
+        "box": {
+          "left": 1540,
+          "top": 750,
+          "right": 1830,
+          "bottom": 896,
+          "width": 290,
+          "height": 146
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_030/slide_030.svg",
+      "slide": "030",
+      "time_seconds": 7.183,
+      "state": "time_3",
+      "element_id": "qc_runtime_274",
+      "related_element_id": "qc_runtime_268",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 1258,
+        "right_max": 1522,
+        "top_min": 658,
+        "bottom_max": 882
+      },
+      "actual": {
+        "left": 1290,
+        "right": 1524.134765625,
+        "top": 751,
+        "bottom": 845
+      },
+      "bbox": {
+        "text": {
+          "left": 1290,
+          "top": 751,
+          "right": 1524.134765625,
+          "bottom": 845,
+          "width": 234.134765625,
+          "height": 94
+        },
+        "box": {
+          "left": 1250,
+          "top": 650,
+          "right": 1530,
+          "bottom": 890,
+          "width": 280,
+          "height": 240
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_030/slide_030.svg",
+      "slide": "030",
+      "time_seconds": 7.183,
+      "state": "time_3",
+      "element_id": "qc_runtime_275",
+      "related_element_id": "qc_runtime_268",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 1258,
+        "right_max": 1522,
+        "top_min": 658,
+        "bottom_max": 882
+      },
+      "actual": {
+        "left": 1290,
+        "right": 1524.134765625,
+        "top": 751,
+        "bottom": 779
+      },
+      "bbox": {
+        "text": {
+          "left": 1290,
+          "top": 751,
+          "right": 1524.134765625,
+          "bottom": 779,
+          "width": 234.134765625,
+          "height": 28
+        },
+        "box": {
+          "left": 1250,
+          "top": 650,
+          "right": 1530,
+          "bottom": 890,
+          "width": 280,
+          "height": 240
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+      "slide": "032",
+      "time_seconds": 0,
+      "state": "initial",
+      "element_id": "qc_runtime_379",
+      "related_element_id": "qc_runtime_373",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 1538,
+        "right_max": 1812,
+        "top_min": 318,
+        "bottom_max": 492
+      },
+      "actual": {
+        "left": 1645,
+        "right": 1856.2158203125,
+        "top": 378,
+        "bottom": 437
+      },
+      "bbox": {
+        "text": {
+          "left": 1645,
+          "top": 378,
+          "right": 1856.2158203125,
+          "bottom": 437,
+          "width": 211.2158203125,
+          "height": 59
+        },
+        "box": {
+          "left": 1530,
+          "top": 310,
+          "right": 1820,
+          "bottom": 500,
+          "width": 290,
+          "height": 190
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+      "slide": "032",
+      "time_seconds": 0,
+      "state": "initial",
+      "element_id": "qc_runtime_380",
+      "related_element_id": "qc_runtime_373",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 1538,
+        "right_max": 1812,
+        "top_min": 318,
+        "bottom_max": 492
+      },
+      "actual": {
+        "left": 1645,
+        "right": 1845.69921875,
+        "top": 378,
+        "bottom": 408
+      },
+      "bbox": {
+        "text": {
+          "left": 1645,
+          "top": 378,
+          "right": 1845.69921875,
+          "bottom": 408,
+          "width": 200.69921875,
+          "height": 30
+        },
+        "box": {
+          "left": 1530,
+          "top": 310,
+          "right": 1820,
+          "bottom": 500,
+          "width": 290,
+          "height": 190
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+      "slide": "032",
+      "time_seconds": 0,
+      "state": "initial",
+      "element_id": "qc_runtime_381",
+      "related_element_id": "qc_runtime_373",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 1538,
+        "right_max": 1812,
+        "top_min": 318,
+        "bottom_max": 492
+      },
+      "actual": {
+        "left": 1645,
+        "right": 1856.2158203125,
+        "top": 407,
+        "bottom": 437
+      },
+      "bbox": {
+        "text": {
+          "left": 1645,
+          "top": 407,
+          "right": 1856.2158203125,
+          "bottom": 437,
+          "width": 211.2158203125,
+          "height": 30
+        },
+        "box": {
+          "left": 1530,
+          "top": 310,
+          "right": 1820,
+          "bottom": 500,
+          "width": 290,
+          "height": 190
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+      "slide": "032",
+      "time_seconds": 0.5,
+      "state": "time_1",
+      "element_id": "qc_runtime_379",
+      "related_element_id": "qc_runtime_373",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 1538,
+        "right_max": 1812,
+        "top_min": 318,
+        "bottom_max": 492
+      },
+      "actual": {
+        "left": 1645,
+        "right": 1856.2158203125,
+        "top": 378,
+        "bottom": 437
+      },
+      "bbox": {
+        "text": {
+          "left": 1645,
+          "top": 378,
+          "right": 1856.2158203125,
+          "bottom": 437,
+          "width": 211.2158203125,
+          "height": 59
+        },
+        "box": {
+          "left": 1530,
+          "top": 310,
+          "right": 1820,
+          "bottom": 500,
+          "width": 290,
+          "height": 190
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+      "slide": "032",
+      "time_seconds": 0.5,
+      "state": "time_1",
+      "element_id": "qc_runtime_380",
+      "related_element_id": "qc_runtime_373",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 1538,
+        "right_max": 1812,
+        "top_min": 318,
+        "bottom_max": 492
+      },
+      "actual": {
+        "left": 1645,
+        "right": 1845.69921875,
+        "top": 378,
+        "bottom": 408
+      },
+      "bbox": {
+        "text": {
+          "left": 1645,
+          "top": 378,
+          "right": 1845.69921875,
+          "bottom": 408,
+          "width": 200.69921875,
+          "height": 30
+        },
+        "box": {
+          "left": 1530,
+          "top": 310,
+          "right": 1820,
+          "bottom": 500,
+          "width": 290,
+          "height": 190
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+      "slide": "032",
+      "time_seconds": 0.5,
+      "state": "time_1",
+      "element_id": "qc_runtime_381",
+      "related_element_id": "qc_runtime_373",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 1538,
+        "right_max": 1812,
+        "top_min": 318,
+        "bottom_max": 492
+      },
+      "actual": {
+        "left": 1645,
+        "right": 1856.2158203125,
+        "top": 407,
+        "bottom": 437
+      },
+      "bbox": {
+        "text": {
+          "left": 1645,
+          "top": 407,
+          "right": 1856.2158203125,
+          "bottom": 437,
+          "width": 211.2158203125,
+          "height": 30
+        },
+        "box": {
+          "left": 1530,
+          "top": 310,
+          "right": 1820,
+          "bottom": 500,
+          "width": 290,
+          "height": 190
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+      "slide": "032",
+      "time_seconds": 1,
+      "state": "time_2",
+      "element_id": "qc_runtime_379",
+      "related_element_id": "qc_runtime_373",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 1538,
+        "right_max": 1812,
+        "top_min": 318,
+        "bottom_max": 492
+      },
+      "actual": {
+        "left": 1645,
+        "right": 1856.2158203125,
+        "top": 378,
+        "bottom": 437
+      },
+      "bbox": {
+        "text": {
+          "left": 1645,
+          "top": 378,
+          "right": 1856.2158203125,
+          "bottom": 437,
+          "width": 211.2158203125,
+          "height": 59
+        },
+        "box": {
+          "left": 1530,
+          "top": 310,
+          "right": 1820,
+          "bottom": 500,
+          "width": 290,
+          "height": 190
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+      "slide": "032",
+      "time_seconds": 1,
+      "state": "time_2",
+      "element_id": "qc_runtime_380",
+      "related_element_id": "qc_runtime_373",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 1538,
+        "right_max": 1812,
+        "top_min": 318,
+        "bottom_max": 492
+      },
+      "actual": {
+        "left": 1645,
+        "right": 1845.69921875,
+        "top": 378,
+        "bottom": 408
+      },
+      "bbox": {
+        "text": {
+          "left": 1645,
+          "top": 378,
+          "right": 1845.69921875,
+          "bottom": 408,
+          "width": 200.69921875,
+          "height": 30
+        },
+        "box": {
+          "left": 1530,
+          "top": 310,
+          "right": 1820,
+          "bottom": 500,
+          "width": 290,
+          "height": 190
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+      "slide": "032",
+      "time_seconds": 1,
+      "state": "time_2",
+      "element_id": "qc_runtime_381",
+      "related_element_id": "qc_runtime_373",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 1538,
+        "right_max": 1812,
+        "top_min": 318,
+        "bottom_max": 492
+      },
+      "actual": {
+        "left": 1645,
+        "right": 1856.2158203125,
+        "top": 407,
+        "bottom": 437
+      },
+      "bbox": {
+        "text": {
+          "left": 1645,
+          "top": 407,
+          "right": 1856.2158203125,
+          "bottom": 437,
+          "width": 211.2158203125,
+          "height": 30
+        },
+        "box": {
+          "left": 1530,
+          "top": 310,
+          "right": 1820,
+          "bottom": 500,
+          "width": 290,
+          "height": 190
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+      "slide": "032",
+      "time_seconds": 4.35,
+      "state": "end",
+      "element_id": "qc_runtime_379",
+      "related_element_id": "qc_runtime_373",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 1538,
+        "right_max": 1812,
+        "top_min": 318,
+        "bottom_max": 492
+      },
+      "actual": {
+        "left": 1645,
+        "right": 1856.2158203125,
+        "top": 378,
+        "bottom": 437
+      },
+      "bbox": {
+        "text": {
+          "left": 1645,
+          "top": 378,
+          "right": 1856.2158203125,
+          "bottom": 437,
+          "width": 211.2158203125,
+          "height": 59
+        },
+        "box": {
+          "left": 1530,
+          "top": 310,
+          "right": 1820,
+          "bottom": 500,
+          "width": 290,
+          "height": 190
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+      "slide": "032",
+      "time_seconds": 4.35,
+      "state": "end",
+      "element_id": "qc_runtime_380",
+      "related_element_id": "qc_runtime_373",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 1538,
+        "right_max": 1812,
+        "top_min": 318,
+        "bottom_max": 492
+      },
+      "actual": {
+        "left": 1645,
+        "right": 1845.69921875,
+        "top": 378,
+        "bottom": 408
+      },
+      "bbox": {
+        "text": {
+          "left": 1645,
+          "top": 378,
+          "right": 1845.69921875,
+          "bottom": 408,
+          "width": 200.69921875,
+          "height": 30
+        },
+        "box": {
+          "left": 1530,
+          "top": 310,
+          "right": 1820,
+          "bottom": 500,
+          "width": 290,
+          "height": 190
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+      "slide": "032",
+      "time_seconds": 4.35,
+      "state": "end",
+      "element_id": "qc_runtime_381",
+      "related_element_id": "qc_runtime_373",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 1538,
+        "right_max": 1812,
+        "top_min": 318,
+        "bottom_max": 492
+      },
+      "actual": {
+        "left": 1645,
+        "right": 1856.2158203125,
+        "top": 407,
+        "bottom": 437
+      },
+      "bbox": {
+        "text": {
+          "left": 1645,
+          "top": 407,
+          "right": 1856.2158203125,
+          "bottom": 437,
+          "width": 211.2158203125,
+          "height": 30
+        },
+        "box": {
+          "left": 1530,
+          "top": 310,
+          "right": 1820,
+          "bottom": 500,
+          "width": 290,
+          "height": 190
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_035/slide_035.svg",
+      "slide": "035",
+      "time_seconds": 5.217,
+      "state": "end",
+      "element_id": "qc_runtime_233",
+      "related_element_id": "qc_runtime_232",
+      "message": "Text does not fit inside its background box (top).",
+      "expected": {
+        "left_min": 1368,
+        "right_max": 1822,
+        "top_min": 318,
+        "bottom_max": 512
+      },
+      "actual": {
+        "left": 1382,
+        "right": 1505.453125,
+        "top": 309,
+        "bottom": 378
+      },
+      "bbox": {
+        "text": {
+          "left": 1382,
+          "top": 309,
+          "right": 1505.453125,
+          "bottom": 378,
+          "width": 123.453125,
+          "height": 69
+        },
+        "box": {
+          "left": 1360,
+          "top": 310,
+          "right": 1830,
+          "bottom": 520,
+          "width": 470,
+          "height": 210
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_035/slide_035.svg",
+      "slide": "035",
+      "time_seconds": 5.217,
+      "state": "end",
+      "element_id": "qc_runtime_234",
+      "related_element_id": "qc_runtime_232",
+      "message": "Text does not fit inside its background box (top).",
+      "expected": {
+        "left_min": 1368,
+        "right_max": 1822,
+        "top_min": 318,
+        "bottom_max": 512
+      },
+      "actual": {
+        "left": 1382,
+        "right": 1505.453125,
+        "top": 309,
+        "bottom": 378
+      },
+      "bbox": {
+        "text": {
+          "left": 1382,
+          "top": 309,
+          "right": 1505.453125,
+          "bottom": 378,
+          "width": 123.453125,
+          "height": 69
+        },
+        "box": {
+          "left": 1360,
+          "top": 310,
+          "right": 1830,
+          "bottom": 520,
+          "width": 470,
+          "height": 210
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_035/slide_035.svg",
+      "slide": "035",
+      "time_seconds": 5.217,
+      "state": "end",
+      "element_id": "qc_runtime_239",
+      "related_element_id": "qc_runtime_238",
+      "message": "Text does not fit inside its background box (top).",
+      "expected": {
+        "left_min": 1368,
+        "right_max": 1822,
+        "top_min": 563,
+        "bottom_max": 757
+      },
+      "actual": {
+        "left": 1382,
+        "right": 1505.453125,
+        "top": 554,
+        "bottom": 623
+      },
+      "bbox": {
+        "text": {
+          "left": 1382,
+          "top": 554,
+          "right": 1505.453125,
+          "bottom": 623,
+          "width": 123.453125,
+          "height": 69
+        },
+        "box": {
+          "left": 1360,
+          "top": 555,
+          "right": 1830,
+          "bottom": 765,
+          "width": 470,
+          "height": 210
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_035/slide_035.svg",
+      "slide": "035",
+      "time_seconds": 5.217,
+      "state": "end",
+      "element_id": "qc_runtime_240",
+      "related_element_id": "qc_runtime_238",
+      "message": "Text does not fit inside its background box (top).",
+      "expected": {
+        "left_min": 1368,
+        "right_max": 1822,
+        "top_min": 563,
+        "bottom_max": 757
+      },
+      "actual": {
+        "left": 1382,
+        "right": 1505.453125,
+        "top": 554,
+        "bottom": 623
+      },
+      "bbox": {
+        "text": {
+          "left": 1382,
+          "top": 554,
+          "right": 1505.453125,
+          "bottom": 623,
+          "width": 123.453125,
+          "height": 69
+        },
+        "box": {
+          "left": 1360,
+          "top": 555,
+          "right": 1830,
+          "bottom": 765,
+          "width": 470,
+          "height": 210
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_037/slide_037.svg",
+      "slide": "037",
+      "time_seconds": 0,
+      "state": "initial",
+      "element_id": "qc_runtime_61",
+      "related_element_id": "qc_runtime_62",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 454.3203125,
+          "top": 307,
+          "right": 480.0625,
+          "bottom": 335,
+          "width": 25.7421875,
+          "height": 28
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 145,
+          "top": 306,
+          "right": 480.0625,
+          "bottom": 363,
+          "width": 335.0625,
+          "height": 57
+        },
+        "right": {
+          "left": 454.3203125,
+          "top": 307,
+          "right": 535.31396484375,
+          "bottom": 335,
+          "width": 80.99365234375,
+          "height": 28
+        },
+        "overlap": {
+          "left": 454.3203125,
+          "top": 307,
+          "right": 480.0625,
+          "bottom": 335,
+          "width": 25.7421875,
+          "height": 28
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_037/slide_037.svg",
+      "slide": "037",
+      "time_seconds": 0,
+      "state": "initial",
+      "element_id": "qc_runtime_61",
+      "related_element_id": "qc_runtime_65",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 400.265625,
+          "top": 356,
+          "right": 480.0625,
+          "bottom": 363,
+          "width": 79.796875,
+          "height": 7
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 145,
+          "top": 306,
+          "right": 480.0625,
+          "bottom": 363,
+          "width": 335.0625,
+          "height": 57
+        },
+        "right": {
+          "left": 400.265625,
+          "top": 356,
+          "right": 589.841796875,
+          "bottom": 380,
+          "width": 189.576171875,
+          "height": 24
+        },
+        "overlap": {
+          "left": 400.265625,
+          "top": 356,
+          "right": 480.0625,
+          "bottom": 363,
+          "width": 79.796875,
+          "height": 7
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_037/slide_037.svg",
+      "slide": "037",
+      "time_seconds": 0.5,
+      "state": "time_1",
+      "element_id": "qc_runtime_61",
+      "related_element_id": "qc_runtime_62",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 454.3203125,
+          "top": 307,
+          "right": 480.0625,
+          "bottom": 335,
+          "width": 25.7421875,
+          "height": 28
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 145,
+          "top": 306,
+          "right": 480.0625,
+          "bottom": 363,
+          "width": 335.0625,
+          "height": 57
+        },
+        "right": {
+          "left": 454.3203125,
+          "top": 307,
+          "right": 535.31396484375,
+          "bottom": 335,
+          "width": 80.99365234375,
+          "height": 28
+        },
+        "overlap": {
+          "left": 454.3203125,
+          "top": 307,
+          "right": 480.0625,
+          "bottom": 335,
+          "width": 25.7421875,
+          "height": 28
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_037/slide_037.svg",
+      "slide": "037",
+      "time_seconds": 0.5,
+      "state": "time_1",
+      "element_id": "qc_runtime_61",
+      "related_element_id": "qc_runtime_65",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 400.265625,
+          "top": 356,
+          "right": 480.0625,
+          "bottom": 363,
+          "width": 79.796875,
+          "height": 7
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 145,
+          "top": 306,
+          "right": 480.0625,
+          "bottom": 363,
+          "width": 335.0625,
+          "height": 57
+        },
+        "right": {
+          "left": 400.265625,
+          "top": 356,
+          "right": 589.841796875,
+          "bottom": 380,
+          "width": 189.576171875,
+          "height": 24
+        },
+        "overlap": {
+          "left": 400.265625,
+          "top": 356,
+          "right": 480.0625,
+          "bottom": 363,
+          "width": 79.796875,
+          "height": 7
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_037/slide_037.svg",
+      "slide": "037",
+      "time_seconds": 1,
+      "state": "time_2",
+      "element_id": "qc_runtime_61",
+      "related_element_id": "qc_runtime_62",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 454.3203125,
+          "top": 307,
+          "right": 480.0625,
+          "bottom": 335,
+          "width": 25.7421875,
+          "height": 28
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 145,
+          "top": 306,
+          "right": 480.0625,
+          "bottom": 363,
+          "width": 335.0625,
+          "height": 57
+        },
+        "right": {
+          "left": 454.3203125,
+          "top": 307,
+          "right": 535.31396484375,
+          "bottom": 335,
+          "width": 80.99365234375,
+          "height": 28
+        },
+        "overlap": {
+          "left": 454.3203125,
+          "top": 307,
+          "right": 480.0625,
+          "bottom": 335,
+          "width": 25.7421875,
+          "height": 28
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_037/slide_037.svg",
+      "slide": "037",
+      "time_seconds": 1,
+      "state": "time_2",
+      "element_id": "qc_runtime_61",
+      "related_element_id": "qc_runtime_65",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 400.265625,
+          "top": 356,
+          "right": 480.0625,
+          "bottom": 363,
+          "width": 79.796875,
+          "height": 7
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 145,
+          "top": 306,
+          "right": 480.0625,
+          "bottom": 363,
+          "width": 335.0625,
+          "height": 57
+        },
+        "right": {
+          "left": 400.265625,
+          "top": 356,
+          "right": 589.841796875,
+          "bottom": 380,
+          "width": 189.576171875,
+          "height": 24
+        },
+        "overlap": {
+          "left": 400.265625,
+          "top": 356,
+          "right": 480.0625,
+          "bottom": 363,
+          "width": 79.796875,
+          "height": 7
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_037/slide_037.svg",
+      "slide": "037",
+      "time_seconds": 5.333,
+      "state": "time_3",
+      "element_id": "qc_runtime_61",
+      "related_element_id": "qc_runtime_62",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 454.3203125,
+          "top": 307,
+          "right": 480.0625,
+          "bottom": 335,
+          "width": 25.7421875,
+          "height": 28
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 145,
+          "top": 306,
+          "right": 480.0625,
+          "bottom": 363,
+          "width": 335.0625,
+          "height": 57
+        },
+        "right": {
+          "left": 454.3203125,
+          "top": 307,
+          "right": 535.31396484375,
+          "bottom": 335,
+          "width": 80.99365234375,
+          "height": 28
+        },
+        "overlap": {
+          "left": 454.3203125,
+          "top": 307,
+          "right": 480.0625,
+          "bottom": 335,
+          "width": 25.7421875,
+          "height": 28
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_037/slide_037.svg",
+      "slide": "037",
+      "time_seconds": 5.333,
+      "state": "time_3",
+      "element_id": "qc_runtime_61",
+      "related_element_id": "qc_runtime_65",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 400.265625,
+          "top": 356,
+          "right": 480.0625,
+          "bottom": 363,
+          "width": 79.796875,
+          "height": 7
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 145,
+          "top": 306,
+          "right": 480.0625,
+          "bottom": 363,
+          "width": 335.0625,
+          "height": 57
+        },
+        "right": {
+          "left": 400.265625,
+          "top": 356,
+          "right": 589.841796875,
+          "bottom": 380,
+          "width": 189.576171875,
+          "height": 24
+        },
+        "overlap": {
+          "left": 400.265625,
+          "top": 356,
+          "right": 480.0625,
+          "bottom": 363,
+          "width": 79.796875,
+          "height": 7
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_039/slide_039.svg",
+      "slide": "039",
+      "time_seconds": 4.35,
+      "state": "end",
+      "element_id": "qc_runtime_270",
+      "related_element_id": "qc_runtime_264",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 1313,
+        "right_max": 1822,
+        "top_min": 712,
+        "bottom_max": 884
+      },
+      "actual": {
+        "left": 1435,
+        "right": 1831.5,
+        "top": 774,
+        "bottom": 806
+      },
+      "bbox": {
+        "text": {
+          "left": 1435,
+          "top": 774,
+          "right": 1831.5,
+          "bottom": 806,
+          "width": 396.5,
+          "height": 32
+        },
+        "box": {
+          "left": 1305,
+          "top": 704,
+          "right": 1830,
+          "bottom": 892,
+          "width": 525,
+          "height": 188
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_039/slide_039.svg",
+      "slide": "039",
+      "time_seconds": 4.35,
+      "state": "end",
+      "element_id": "qc_runtime_271",
+      "related_element_id": "qc_runtime_264",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 1313,
+        "right_max": 1822,
+        "top_min": 712,
+        "bottom_max": 884
+      },
+      "actual": {
+        "left": 1435,
+        "right": 1831.5,
+        "top": 774,
+        "bottom": 806
+      },
+      "bbox": {
+        "text": {
+          "left": 1435,
+          "top": 774,
+          "right": 1831.5,
+          "bottom": 806,
+          "width": 396.5,
+          "height": 32
+        },
+        "box": {
+          "left": 1305,
+          "top": 704,
+          "right": 1830,
+          "bottom": 892,
+          "width": 525,
+          "height": 188
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    }
+  ],
+  "viewer": {
+    "checked": false
+  },
+  "layout": {
+    "checked": true,
+    "strict": true,
+    "warnOnly": false,
+    "browser": {
+      "executable": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "port": 5941
+    },
+    "files": [
+      {
+        "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_027/slide_027.svg",
+        "slide": "027",
+        "states_checked": 4,
+        "browser_rendered": true
+      },
+      {
+        "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_028/slide_028.svg",
+        "slide": "028",
+        "states_checked": 4,
+        "browser_rendered": true
+      },
+      {
+        "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_029/slide_029.svg",
+        "slide": "029",
+        "states_checked": 4,
+        "browser_rendered": true
+      },
+      {
+        "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_030/slide_030.svg",
+        "slide": "030",
+        "states_checked": 4,
+        "browser_rendered": true
+      },
+      {
+        "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_031/slide_031.svg",
+        "slide": "031",
+        "states_checked": 4,
+        "browser_rendered": true
+      },
+      {
+        "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+        "slide": "032",
+        "states_checked": 4,
+        "browser_rendered": true
+      },
+      {
+        "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_033/slide_033.svg",
+        "slide": "033",
+        "states_checked": 4,
+        "browser_rendered": true
+      },
+      {
+        "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_034/slide_034.svg",
+        "slide": "034",
+        "states_checked": 4,
+        "browser_rendered": true
+      },
+      {
+        "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_035/slide_035.svg",
+        "slide": "035",
+        "states_checked": 4,
+        "browser_rendered": true
+      },
+      {
+        "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_036/slide_036.svg",
+        "slide": "036",
+        "states_checked": 4,
+        "browser_rendered": true
+      },
+      {
+        "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_037/slide_037.svg",
+        "slide": "037",
+        "states_checked": 4,
+        "browser_rendered": true
+      },
+      {
+        "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_038/slide_038.svg",
+        "slide": "038",
+        "states_checked": 4,
+        "browser_rendered": true
+      },
+      {
+        "path": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_039/slide_039.svg",
+        "slide": "039",
+        "states_checked": 4,
+        "browser_rendered": true
+      }
+    ],
+    "issues": [
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_029/slide_029.svg",
+        "slide": "029",
+        "time_seconds": 4.233,
+        "state": "time_3",
+        "element_id": "qc_runtime_239",
+        "related_element_id": "qc_runtime_230",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 1548,
+          "right_max": 1822,
+          "top_min": 758,
+          "bottom_max": 888
+        },
+        "actual": {
+          "left": 1649,
+          "right": 1835.609375,
+          "top": 821,
+          "bottom": 869
+        },
+        "bbox": {
+          "text": {
+            "left": 1649,
+            "top": 821,
+            "right": 1835.609375,
+            "bottom": 869,
+            "width": 186.609375,
+            "height": 48
+          },
+          "box": {
+            "left": 1540,
+            "top": 750,
+            "right": 1830,
+            "bottom": 896,
+            "width": 290,
+            "height": 146
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_029/slide_029.svg",
+        "slide": "029",
+        "time_seconds": 4.233,
+        "state": "time_3",
+        "element_id": "qc_runtime_240",
+        "related_element_id": "qc_runtime_230",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 1548,
+          "right_max": 1822,
+          "top_min": 758,
+          "bottom_max": 888
+        },
+        "actual": {
+          "left": 1649,
+          "right": 1835.609375,
+          "top": 821,
+          "bottom": 845
+        },
+        "bbox": {
+          "text": {
+            "left": 1649,
+            "top": 821,
+            "right": 1835.609375,
+            "bottom": 845,
+            "width": 186.609375,
+            "height": 24
+          },
+          "box": {
+            "left": 1540,
+            "top": 750,
+            "right": 1830,
+            "bottom": 896,
+            "width": 290,
+            "height": 146
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_029/slide_029.svg",
+        "slide": "029",
+        "time_seconds": 4.233,
+        "state": "time_3",
+        "element_id": "qc_runtime_241",
+        "related_element_id": "qc_runtime_230",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 1548,
+          "right_max": 1822,
+          "top_min": 758,
+          "bottom_max": 888
+        },
+        "actual": {
+          "left": 1650,
+          "right": 1830.9365234375,
+          "top": 845,
+          "bottom": 869
+        },
+        "bbox": {
+          "text": {
+            "left": 1650,
+            "top": 845,
+            "right": 1830.9365234375,
+            "bottom": 869,
+            "width": 180.9365234375,
+            "height": 24
+          },
+          "box": {
+            "left": 1540,
+            "top": 750,
+            "right": 1830,
+            "bottom": 896,
+            "width": 290,
+            "height": 146
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_030/slide_030.svg",
+        "slide": "030",
+        "time_seconds": 7.183,
+        "state": "time_3",
+        "element_id": "qc_runtime_274",
+        "related_element_id": "qc_runtime_268",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 1258,
+          "right_max": 1522,
+          "top_min": 658,
+          "bottom_max": 882
+        },
+        "actual": {
+          "left": 1290,
+          "right": 1524.134765625,
+          "top": 751,
+          "bottom": 845
+        },
+        "bbox": {
+          "text": {
+            "left": 1290,
+            "top": 751,
+            "right": 1524.134765625,
+            "bottom": 845,
+            "width": 234.134765625,
+            "height": 94
+          },
+          "box": {
+            "left": 1250,
+            "top": 650,
+            "right": 1530,
+            "bottom": 890,
+            "width": 280,
+            "height": 240
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_030/slide_030.svg",
+        "slide": "030",
+        "time_seconds": 7.183,
+        "state": "time_3",
+        "element_id": "qc_runtime_275",
+        "related_element_id": "qc_runtime_268",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 1258,
+          "right_max": 1522,
+          "top_min": 658,
+          "bottom_max": 882
+        },
+        "actual": {
+          "left": 1290,
+          "right": 1524.134765625,
+          "top": 751,
+          "bottom": 779
+        },
+        "bbox": {
+          "text": {
+            "left": 1290,
+            "top": 751,
+            "right": 1524.134765625,
+            "bottom": 779,
+            "width": 234.134765625,
+            "height": 28
+          },
+          "box": {
+            "left": 1250,
+            "top": 650,
+            "right": 1530,
+            "bottom": 890,
+            "width": 280,
+            "height": 240
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+        "slide": "032",
+        "time_seconds": 0,
+        "state": "initial",
+        "element_id": "qc_runtime_379",
+        "related_element_id": "qc_runtime_373",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 1538,
+          "right_max": 1812,
+          "top_min": 318,
+          "bottom_max": 492
+        },
+        "actual": {
+          "left": 1645,
+          "right": 1856.2158203125,
+          "top": 378,
+          "bottom": 437
+        },
+        "bbox": {
+          "text": {
+            "left": 1645,
+            "top": 378,
+            "right": 1856.2158203125,
+            "bottom": 437,
+            "width": 211.2158203125,
+            "height": 59
+          },
+          "box": {
+            "left": 1530,
+            "top": 310,
+            "right": 1820,
+            "bottom": 500,
+            "width": 290,
+            "height": 190
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+        "slide": "032",
+        "time_seconds": 0,
+        "state": "initial",
+        "element_id": "qc_runtime_380",
+        "related_element_id": "qc_runtime_373",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 1538,
+          "right_max": 1812,
+          "top_min": 318,
+          "bottom_max": 492
+        },
+        "actual": {
+          "left": 1645,
+          "right": 1845.69921875,
+          "top": 378,
+          "bottom": 408
+        },
+        "bbox": {
+          "text": {
+            "left": 1645,
+            "top": 378,
+            "right": 1845.69921875,
+            "bottom": 408,
+            "width": 200.69921875,
+            "height": 30
+          },
+          "box": {
+            "left": 1530,
+            "top": 310,
+            "right": 1820,
+            "bottom": 500,
+            "width": 290,
+            "height": 190
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+        "slide": "032",
+        "time_seconds": 0,
+        "state": "initial",
+        "element_id": "qc_runtime_381",
+        "related_element_id": "qc_runtime_373",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 1538,
+          "right_max": 1812,
+          "top_min": 318,
+          "bottom_max": 492
+        },
+        "actual": {
+          "left": 1645,
+          "right": 1856.2158203125,
+          "top": 407,
+          "bottom": 437
+        },
+        "bbox": {
+          "text": {
+            "left": 1645,
+            "top": 407,
+            "right": 1856.2158203125,
+            "bottom": 437,
+            "width": 211.2158203125,
+            "height": 30
+          },
+          "box": {
+            "left": 1530,
+            "top": 310,
+            "right": 1820,
+            "bottom": 500,
+            "width": 290,
+            "height": 190
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+        "slide": "032",
+        "time_seconds": 0.5,
+        "state": "time_1",
+        "element_id": "qc_runtime_379",
+        "related_element_id": "qc_runtime_373",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 1538,
+          "right_max": 1812,
+          "top_min": 318,
+          "bottom_max": 492
+        },
+        "actual": {
+          "left": 1645,
+          "right": 1856.2158203125,
+          "top": 378,
+          "bottom": 437
+        },
+        "bbox": {
+          "text": {
+            "left": 1645,
+            "top": 378,
+            "right": 1856.2158203125,
+            "bottom": 437,
+            "width": 211.2158203125,
+            "height": 59
+          },
+          "box": {
+            "left": 1530,
+            "top": 310,
+            "right": 1820,
+            "bottom": 500,
+            "width": 290,
+            "height": 190
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+        "slide": "032",
+        "time_seconds": 0.5,
+        "state": "time_1",
+        "element_id": "qc_runtime_380",
+        "related_element_id": "qc_runtime_373",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 1538,
+          "right_max": 1812,
+          "top_min": 318,
+          "bottom_max": 492
+        },
+        "actual": {
+          "left": 1645,
+          "right": 1845.69921875,
+          "top": 378,
+          "bottom": 408
+        },
+        "bbox": {
+          "text": {
+            "left": 1645,
+            "top": 378,
+            "right": 1845.69921875,
+            "bottom": 408,
+            "width": 200.69921875,
+            "height": 30
+          },
+          "box": {
+            "left": 1530,
+            "top": 310,
+            "right": 1820,
+            "bottom": 500,
+            "width": 290,
+            "height": 190
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+        "slide": "032",
+        "time_seconds": 0.5,
+        "state": "time_1",
+        "element_id": "qc_runtime_381",
+        "related_element_id": "qc_runtime_373",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 1538,
+          "right_max": 1812,
+          "top_min": 318,
+          "bottom_max": 492
+        },
+        "actual": {
+          "left": 1645,
+          "right": 1856.2158203125,
+          "top": 407,
+          "bottom": 437
+        },
+        "bbox": {
+          "text": {
+            "left": 1645,
+            "top": 407,
+            "right": 1856.2158203125,
+            "bottom": 437,
+            "width": 211.2158203125,
+            "height": 30
+          },
+          "box": {
+            "left": 1530,
+            "top": 310,
+            "right": 1820,
+            "bottom": 500,
+            "width": 290,
+            "height": 190
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+        "slide": "032",
+        "time_seconds": 1,
+        "state": "time_2",
+        "element_id": "qc_runtime_379",
+        "related_element_id": "qc_runtime_373",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 1538,
+          "right_max": 1812,
+          "top_min": 318,
+          "bottom_max": 492
+        },
+        "actual": {
+          "left": 1645,
+          "right": 1856.2158203125,
+          "top": 378,
+          "bottom": 437
+        },
+        "bbox": {
+          "text": {
+            "left": 1645,
+            "top": 378,
+            "right": 1856.2158203125,
+            "bottom": 437,
+            "width": 211.2158203125,
+            "height": 59
+          },
+          "box": {
+            "left": 1530,
+            "top": 310,
+            "right": 1820,
+            "bottom": 500,
+            "width": 290,
+            "height": 190
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+        "slide": "032",
+        "time_seconds": 1,
+        "state": "time_2",
+        "element_id": "qc_runtime_380",
+        "related_element_id": "qc_runtime_373",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 1538,
+          "right_max": 1812,
+          "top_min": 318,
+          "bottom_max": 492
+        },
+        "actual": {
+          "left": 1645,
+          "right": 1845.69921875,
+          "top": 378,
+          "bottom": 408
+        },
+        "bbox": {
+          "text": {
+            "left": 1645,
+            "top": 378,
+            "right": 1845.69921875,
+            "bottom": 408,
+            "width": 200.69921875,
+            "height": 30
+          },
+          "box": {
+            "left": 1530,
+            "top": 310,
+            "right": 1820,
+            "bottom": 500,
+            "width": 290,
+            "height": 190
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+        "slide": "032",
+        "time_seconds": 1,
+        "state": "time_2",
+        "element_id": "qc_runtime_381",
+        "related_element_id": "qc_runtime_373",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 1538,
+          "right_max": 1812,
+          "top_min": 318,
+          "bottom_max": 492
+        },
+        "actual": {
+          "left": 1645,
+          "right": 1856.2158203125,
+          "top": 407,
+          "bottom": 437
+        },
+        "bbox": {
+          "text": {
+            "left": 1645,
+            "top": 407,
+            "right": 1856.2158203125,
+            "bottom": 437,
+            "width": 211.2158203125,
+            "height": 30
+          },
+          "box": {
+            "left": 1530,
+            "top": 310,
+            "right": 1820,
+            "bottom": 500,
+            "width": 290,
+            "height": 190
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+        "slide": "032",
+        "time_seconds": 4.35,
+        "state": "end",
+        "element_id": "qc_runtime_379",
+        "related_element_id": "qc_runtime_373",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 1538,
+          "right_max": 1812,
+          "top_min": 318,
+          "bottom_max": 492
+        },
+        "actual": {
+          "left": 1645,
+          "right": 1856.2158203125,
+          "top": 378,
+          "bottom": 437
+        },
+        "bbox": {
+          "text": {
+            "left": 1645,
+            "top": 378,
+            "right": 1856.2158203125,
+            "bottom": 437,
+            "width": 211.2158203125,
+            "height": 59
+          },
+          "box": {
+            "left": 1530,
+            "top": 310,
+            "right": 1820,
+            "bottom": 500,
+            "width": 290,
+            "height": 190
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+        "slide": "032",
+        "time_seconds": 4.35,
+        "state": "end",
+        "element_id": "qc_runtime_380",
+        "related_element_id": "qc_runtime_373",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 1538,
+          "right_max": 1812,
+          "top_min": 318,
+          "bottom_max": 492
+        },
+        "actual": {
+          "left": 1645,
+          "right": 1845.69921875,
+          "top": 378,
+          "bottom": 408
+        },
+        "bbox": {
+          "text": {
+            "left": 1645,
+            "top": 378,
+            "right": 1845.69921875,
+            "bottom": 408,
+            "width": 200.69921875,
+            "height": 30
+          },
+          "box": {
+            "left": 1530,
+            "top": 310,
+            "right": 1820,
+            "bottom": 500,
+            "width": 290,
+            "height": 190
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_032/slide_032.svg",
+        "slide": "032",
+        "time_seconds": 4.35,
+        "state": "end",
+        "element_id": "qc_runtime_381",
+        "related_element_id": "qc_runtime_373",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 1538,
+          "right_max": 1812,
+          "top_min": 318,
+          "bottom_max": 492
+        },
+        "actual": {
+          "left": 1645,
+          "right": 1856.2158203125,
+          "top": 407,
+          "bottom": 437
+        },
+        "bbox": {
+          "text": {
+            "left": 1645,
+            "top": 407,
+            "right": 1856.2158203125,
+            "bottom": 437,
+            "width": 211.2158203125,
+            "height": 30
+          },
+          "box": {
+            "left": 1530,
+            "top": 310,
+            "right": 1820,
+            "bottom": 500,
+            "width": 290,
+            "height": 190
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_035/slide_035.svg",
+        "slide": "035",
+        "time_seconds": 5.217,
+        "state": "end",
+        "element_id": "qc_runtime_233",
+        "related_element_id": "qc_runtime_232",
+        "message": "Text does not fit inside its background box (top).",
+        "expected": {
+          "left_min": 1368,
+          "right_max": 1822,
+          "top_min": 318,
+          "bottom_max": 512
+        },
+        "actual": {
+          "left": 1382,
+          "right": 1505.453125,
+          "top": 309,
+          "bottom": 378
+        },
+        "bbox": {
+          "text": {
+            "left": 1382,
+            "top": 309,
+            "right": 1505.453125,
+            "bottom": 378,
+            "width": 123.453125,
+            "height": 69
+          },
+          "box": {
+            "left": 1360,
+            "top": 310,
+            "right": 1830,
+            "bottom": 520,
+            "width": 470,
+            "height": 210
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_035/slide_035.svg",
+        "slide": "035",
+        "time_seconds": 5.217,
+        "state": "end",
+        "element_id": "qc_runtime_234",
+        "related_element_id": "qc_runtime_232",
+        "message": "Text does not fit inside its background box (top).",
+        "expected": {
+          "left_min": 1368,
+          "right_max": 1822,
+          "top_min": 318,
+          "bottom_max": 512
+        },
+        "actual": {
+          "left": 1382,
+          "right": 1505.453125,
+          "top": 309,
+          "bottom": 378
+        },
+        "bbox": {
+          "text": {
+            "left": 1382,
+            "top": 309,
+            "right": 1505.453125,
+            "bottom": 378,
+            "width": 123.453125,
+            "height": 69
+          },
+          "box": {
+            "left": 1360,
+            "top": 310,
+            "right": 1830,
+            "bottom": 520,
+            "width": 470,
+            "height": 210
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_035/slide_035.svg",
+        "slide": "035",
+        "time_seconds": 5.217,
+        "state": "end",
+        "element_id": "qc_runtime_239",
+        "related_element_id": "qc_runtime_238",
+        "message": "Text does not fit inside its background box (top).",
+        "expected": {
+          "left_min": 1368,
+          "right_max": 1822,
+          "top_min": 563,
+          "bottom_max": 757
+        },
+        "actual": {
+          "left": 1382,
+          "right": 1505.453125,
+          "top": 554,
+          "bottom": 623
+        },
+        "bbox": {
+          "text": {
+            "left": 1382,
+            "top": 554,
+            "right": 1505.453125,
+            "bottom": 623,
+            "width": 123.453125,
+            "height": 69
+          },
+          "box": {
+            "left": 1360,
+            "top": 555,
+            "right": 1830,
+            "bottom": 765,
+            "width": 470,
+            "height": 210
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_035/slide_035.svg",
+        "slide": "035",
+        "time_seconds": 5.217,
+        "state": "end",
+        "element_id": "qc_runtime_240",
+        "related_element_id": "qc_runtime_238",
+        "message": "Text does not fit inside its background box (top).",
+        "expected": {
+          "left_min": 1368,
+          "right_max": 1822,
+          "top_min": 563,
+          "bottom_max": 757
+        },
+        "actual": {
+          "left": 1382,
+          "right": 1505.453125,
+          "top": 554,
+          "bottom": 623
+        },
+        "bbox": {
+          "text": {
+            "left": 1382,
+            "top": 554,
+            "right": 1505.453125,
+            "bottom": 623,
+            "width": 123.453125,
+            "height": 69
+          },
+          "box": {
+            "left": 1360,
+            "top": 555,
+            "right": 1830,
+            "bottom": 765,
+            "width": 470,
+            "height": 210
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_037/slide_037.svg",
+        "slide": "037",
+        "time_seconds": 0,
+        "state": "initial",
+        "element_id": "qc_runtime_61",
+        "related_element_id": "qc_runtime_62",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 454.3203125,
+            "top": 307,
+            "right": 480.0625,
+            "bottom": 335,
+            "width": 25.7421875,
+            "height": 28
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 145,
+            "top": 306,
+            "right": 480.0625,
+            "bottom": 363,
+            "width": 335.0625,
+            "height": 57
+          },
+          "right": {
+            "left": 454.3203125,
+            "top": 307,
+            "right": 535.31396484375,
+            "bottom": 335,
+            "width": 80.99365234375,
+            "height": 28
+          },
+          "overlap": {
+            "left": 454.3203125,
+            "top": 307,
+            "right": 480.0625,
+            "bottom": 335,
+            "width": 25.7421875,
+            "height": 28
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_037/slide_037.svg",
+        "slide": "037",
+        "time_seconds": 0,
+        "state": "initial",
+        "element_id": "qc_runtime_61",
+        "related_element_id": "qc_runtime_65",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 400.265625,
+            "top": 356,
+            "right": 480.0625,
+            "bottom": 363,
+            "width": 79.796875,
+            "height": 7
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 145,
+            "top": 306,
+            "right": 480.0625,
+            "bottom": 363,
+            "width": 335.0625,
+            "height": 57
+          },
+          "right": {
+            "left": 400.265625,
+            "top": 356,
+            "right": 589.841796875,
+            "bottom": 380,
+            "width": 189.576171875,
+            "height": 24
+          },
+          "overlap": {
+            "left": 400.265625,
+            "top": 356,
+            "right": 480.0625,
+            "bottom": 363,
+            "width": 79.796875,
+            "height": 7
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_037/slide_037.svg",
+        "slide": "037",
+        "time_seconds": 0.5,
+        "state": "time_1",
+        "element_id": "qc_runtime_61",
+        "related_element_id": "qc_runtime_62",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 454.3203125,
+            "top": 307,
+            "right": 480.0625,
+            "bottom": 335,
+            "width": 25.7421875,
+            "height": 28
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 145,
+            "top": 306,
+            "right": 480.0625,
+            "bottom": 363,
+            "width": 335.0625,
+            "height": 57
+          },
+          "right": {
+            "left": 454.3203125,
+            "top": 307,
+            "right": 535.31396484375,
+            "bottom": 335,
+            "width": 80.99365234375,
+            "height": 28
+          },
+          "overlap": {
+            "left": 454.3203125,
+            "top": 307,
+            "right": 480.0625,
+            "bottom": 335,
+            "width": 25.7421875,
+            "height": 28
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_037/slide_037.svg",
+        "slide": "037",
+        "time_seconds": 0.5,
+        "state": "time_1",
+        "element_id": "qc_runtime_61",
+        "related_element_id": "qc_runtime_65",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 400.265625,
+            "top": 356,
+            "right": 480.0625,
+            "bottom": 363,
+            "width": 79.796875,
+            "height": 7
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 145,
+            "top": 306,
+            "right": 480.0625,
+            "bottom": 363,
+            "width": 335.0625,
+            "height": 57
+          },
+          "right": {
+            "left": 400.265625,
+            "top": 356,
+            "right": 589.841796875,
+            "bottom": 380,
+            "width": 189.576171875,
+            "height": 24
+          },
+          "overlap": {
+            "left": 400.265625,
+            "top": 356,
+            "right": 480.0625,
+            "bottom": 363,
+            "width": 79.796875,
+            "height": 7
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_037/slide_037.svg",
+        "slide": "037",
+        "time_seconds": 1,
+        "state": "time_2",
+        "element_id": "qc_runtime_61",
+        "related_element_id": "qc_runtime_62",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 454.3203125,
+            "top": 307,
+            "right": 480.0625,
+            "bottom": 335,
+            "width": 25.7421875,
+            "height": 28
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 145,
+            "top": 306,
+            "right": 480.0625,
+            "bottom": 363,
+            "width": 335.0625,
+            "height": 57
+          },
+          "right": {
+            "left": 454.3203125,
+            "top": 307,
+            "right": 535.31396484375,
+            "bottom": 335,
+            "width": 80.99365234375,
+            "height": 28
+          },
+          "overlap": {
+            "left": 454.3203125,
+            "top": 307,
+            "right": 480.0625,
+            "bottom": 335,
+            "width": 25.7421875,
+            "height": 28
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_037/slide_037.svg",
+        "slide": "037",
+        "time_seconds": 1,
+        "state": "time_2",
+        "element_id": "qc_runtime_61",
+        "related_element_id": "qc_runtime_65",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 400.265625,
+            "top": 356,
+            "right": 480.0625,
+            "bottom": 363,
+            "width": 79.796875,
+            "height": 7
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 145,
+            "top": 306,
+            "right": 480.0625,
+            "bottom": 363,
+            "width": 335.0625,
+            "height": 57
+          },
+          "right": {
+            "left": 400.265625,
+            "top": 356,
+            "right": 589.841796875,
+            "bottom": 380,
+            "width": 189.576171875,
+            "height": 24
+          },
+          "overlap": {
+            "left": 400.265625,
+            "top": 356,
+            "right": 480.0625,
+            "bottom": 363,
+            "width": 79.796875,
+            "height": 7
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_037/slide_037.svg",
+        "slide": "037",
+        "time_seconds": 5.333,
+        "state": "time_3",
+        "element_id": "qc_runtime_61",
+        "related_element_id": "qc_runtime_62",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 454.3203125,
+            "top": 307,
+            "right": 480.0625,
+            "bottom": 335,
+            "width": 25.7421875,
+            "height": 28
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 145,
+            "top": 306,
+            "right": 480.0625,
+            "bottom": 363,
+            "width": 335.0625,
+            "height": 57
+          },
+          "right": {
+            "left": 454.3203125,
+            "top": 307,
+            "right": 535.31396484375,
+            "bottom": 335,
+            "width": 80.99365234375,
+            "height": 28
+          },
+          "overlap": {
+            "left": 454.3203125,
+            "top": 307,
+            "right": 480.0625,
+            "bottom": 335,
+            "width": 25.7421875,
+            "height": 28
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_037/slide_037.svg",
+        "slide": "037",
+        "time_seconds": 5.333,
+        "state": "time_3",
+        "element_id": "qc_runtime_61",
+        "related_element_id": "qc_runtime_65",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 400.265625,
+            "top": 356,
+            "right": 480.0625,
+            "bottom": 363,
+            "width": 79.796875,
+            "height": 7
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 145,
+            "top": 306,
+            "right": 480.0625,
+            "bottom": 363,
+            "width": 335.0625,
+            "height": 57
+          },
+          "right": {
+            "left": 400.265625,
+            "top": 356,
+            "right": 589.841796875,
+            "bottom": 380,
+            "width": 189.576171875,
+            "height": 24
+          },
+          "overlap": {
+            "left": 400.265625,
+            "top": 356,
+            "right": 480.0625,
+            "bottom": 363,
+            "width": 79.796875,
+            "height": 7
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_039/slide_039.svg",
+        "slide": "039",
+        "time_seconds": 4.35,
+        "state": "end",
+        "element_id": "qc_runtime_270",
+        "related_element_id": "qc_runtime_264",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 1313,
+          "right_max": 1822,
+          "top_min": 712,
+          "bottom_max": 884
+        },
+        "actual": {
+          "left": 1435,
+          "right": 1831.5,
+          "top": 774,
+          "bottom": 806
+        },
+        "bbox": {
+          "text": {
+            "left": 1435,
+            "top": 774,
+            "right": 1831.5,
+            "bottom": 806,
+            "width": 396.5,
+            "height": 32
+          },
+          "box": {
+            "left": 1305,
+            "top": 704,
+            "right": 1830,
+            "bottom": 892,
+            "width": 525,
+            "height": 188
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/render-checks/RE1/chapter-03-layout-input-v1/slide_039/slide_039.svg",
+        "slide": "039",
+        "time_seconds": 4.35,
+        "state": "end",
+        "element_id": "qc_runtime_271",
+        "related_element_id": "qc_runtime_264",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 1313,
+          "right_max": 1822,
+          "top_min": 712,
+          "bottom_max": 884
+        },
+        "actual": {
+          "left": 1435,
+          "right": 1831.5,
+          "top": 774,
+          "bottom": 806
+        },
+        "bbox": {
+          "text": {
+            "left": 1435,
+            "top": 774,
+            "right": 1831.5,
+            "bottom": 806,
+            "width": 396.5,
+            "height": 32
+          },
+          "box": {
+            "left": 1305,
+            "top": 704,
+            "right": 1830,
+            "bottom": 892,
+            "width": 525,
+            "height": 188
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      }
+    ],
+    "summary": {
+      "checked": true,
+      "files_checked": 13,
+      "states_checked": 52,
+      "errors": 31,
+      "warnings": 0
+    }
+  },
+  "design": {
+    "checked": false
+  },
+  "handoff": {
+    "checked": false
+  },
+  "summary": {
+    "files_checked": 13,
+    "manifests_checked": 13,
+    "layout_files_checked": 13,
+    "layout_states_checked": 52,
+    "design_files_checked": 0,
+    "design_errors": 0,
+    "design_warnings": 0,
+    "handoff_scenes_checked": 0,
+    "handoff_manifests_checked": 0,
+    "handoff_errors": 0,
+    "handoff_warnings": 0,
+    "errors": 31,
+    "warnings": 0
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_075.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "s75_structure",
+      "label": "FMEA-Team",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s75_links",
+      "label": "Teamstruktur",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s75_structure",
+      "targetId": "s75_structure",
+      "action": "show",
+      "sourceText": "Das Team wird in der Regel von einem Moderator begleitet. Dieser Moderator ist nicht der Fachexperte oder Verantwortliche, sondern eine neutrale Instanz, die den Prozess leitet. Er sorgt dafür, dass die FME-A-Methodik korrekt angewendet wird und die einzelnen Schritte eingehalten werden. Dafür benötigt der Moderator umfangreiche Methodenkompetenz, Teamfähigkeit und Sozialkompetenz. Außerdem sollte er Fähigkeiten in Moderation, Organisation, Überzeugung und Präsentation mitbringen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_s75_links",
+      "targetId": "s75_links",
+      "action": "draw",
+      "sourceText": "Ein weiterer wichtiger Aspekt ist die Zusammenstellung eines geeigneten Teams. Ein interdisziplinäres Team, das unterschiedliche Rollen und Fachbereiche repräsentiert, ist entscheidend für den Erfolg der FME-A.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung wird erst nach den zugehörigen fachlichen Endpunkten aufgebaut.",
+      "drawDurFrames": 42
+    }
+  ]
+}

@@ -27,7 +27,7 @@ Pflicht:
 - Wenn ja: Strategie `python_plot_library` verwenden und Generator, Datenquelle, Achsenlabels, Einheiten und Zielpfad dokumentieren.
 - Wenn nein: Strategie `new_python_plot_generator` verwenden, neuen Generator in `components/python-plot-library/` anlegen und `diagram-registry.json` aktualisieren.
 - Alle Generatoren nutzen `reltest_plot_style.py`, damit Achsen, Schriften, Gridlines, Farben und Exportverhalten einheitlich bleiben.
-- Python-Plotgeneratoren exportieren ausschliesslich SVG. Animierbare Plot-SVGs folgen vorlaeufig `components/python-plot-library/svg-animation-structure.provisional.md`.
+- Python-Plotgeneratoren exportieren ausschliesslich SVG. Animierbare Plot-SVGs folgen `components/python-plot-library/svg-animation-structure.md`; oeffentliche Plotziele verwenden semantische ASCII-`snake_case`-IDs und `data-anim-target="true"`.
 - Python-Plots tragen keinen sichtbaren Titel.
 - Sichtbare deutsche Plotlabels verwenden echte Umlaute und `ß`; Ersatzschreibungen wie `ae`, `oe`, `ue` oder `ss` sind fuer deutsche Woerter in Plotlabels nicht zulaessig.
 - Generische Timelines, Aufbauachsen, Ausfall-Zeitstrahlen und einfache Objekt-Zeitachsen sind keine Python-Plots, solange sie nur Ereignisse, Ausfaelle mit `X`/Kreuzen oder Zensierungen markieren. Sie werden als didaktische SVG-Komposition behandelt.
@@ -56,8 +56,11 @@ Diese Elemente duerfen aus `components/svg-library/` abgeleitet werden:
 
 - Merkbox oder strukturierendes Panel
 - wiederkehrende Pfeil- oder Markergruppen
+- hochwertige technische Zeichnungen, deren fachliche Identitaetsmerkmale kontrolliert dargestellt und wiederverwendet werden sollen
 
 Die Library ist nur ein Startpunkt. Jede Komponente muss an Inhalt, Platzbedarf, Datenposition, Labels, Abstaende und Animation angepasst werden.
+
+Technische Zeichnungen duerfen neu als zentrales Library-SVG angelegt werden, wenn ein Foto nicht gewuenscht ist oder eine schematische Darstellung didaktisch besser passt. Das zugehoerige Asset-Manifest nennt mindestens Gegenstand, Darstellungsart, Herkunft beziehungsweise Lizenz und die fachlich zwingenden Merkmale. Vor Einsatz wird visuell geprueft, dass diese Merkmale im gerenderten Zielmassstab erkennbar sind.
 
 ### PNG-Asset
 
@@ -69,8 +72,11 @@ Diese Elemente werden als PNG erzeugt, extrahiert oder vom Nutzer angefordert:
 - illustrative Einzelelemente, die mehr als einfache Geometrie sind
 - source-spezifische Icons, deren Wiedererkennbarkeit wichtig ist
 - alle Bildelemente, bei denen ein improvisiertes Linien-SVG sichtbar schlechter wirkt
+- konkrete technische oder alltaegliche Motive wie Strommast, Batterie,
+  Wechselrichter, Stromzaehler, Lampe, Fernseher oder Waschmaschine, wenn ihre
+  Wiedererkennbarkeit die Systemdarstellung traegt
 
-Ein komplexes Piktogramm darf nicht als handgebautes Linien-/Pfad-SVG improvisiert werden.
+Ein Piktogramm darf nicht als handgebautes Linien-/Pfad-SVG oder als Library-SVG umgesetzt werden. Fuer neue oder veraenderte Szenen ist ein generiertes transparentes PNG Pflicht. Technische Diagramme, Kurven, Tabellen, Formeln und Verbinder sind keine Piktogramme und duerfen weiterhin SVG-nativ umgesetzt werden.
 
 ## Asset-Strategien
 
@@ -115,7 +121,28 @@ Ein Element wird als Piktogramm behandelt, sobald mindestens eines davon zutriff
 - es waere mit wenigen SVG-Grundformen nur ungefaehr oder kindlich darstellbar
 - der Nutzer weist darauf hin, dass die konkrete Form erkennbar sein muss
 
-Dann gilt: `generated_png`, `extracted_png` oder `user_asset_required`. Nicht `native_svg`.
+Alle Piktogramme, auch universelle Motive wie Suche, Zeit, Ziel oder
+Datenhaltung, verwenden `generated_png`. Das PNG wird mit transparentem
+Hintergrund nach dem Education-Piktogrammworkflow erzeugt, in der Rasterregistry
+dokumentiert und im Kleinmassstab sowie im realen Szenenkontext geprueft.
+`native_svg` und `library_svg_adapted` sind fuer Piktogramme nicht zulaessig.
+`extracted_png` bleibt nur fuer bereits vorhandene Quellenbilder oder
+Illustrationen zulaessig, nicht als Ersatz fuer ein neu zu erstellendes
+Piktogramm.
+
+Mehrere benannte Motive duerfen nicht pauschal als ein einziges
+`native_svg`-Systemdiagramm klassifiziert werden. Jedes semantisch eigenstaendige
+Motiv erhaelt eine eigene Tabellenzeile und eine eigene Erkennbarkeitspruefung.
+
+Nach der Klassifikation ist fuer jedes Piktogramm zusaetzlich
+`workflow/30-visual-decision/pictogram-creation-workflow.md` verbindlich. Die
+Strategie entscheidet das Dateiformat; sie hebt die gemeinsame minimalistische
+Education-Formensprache, den 48-px-/960x540-Test, die Farbsemantik und den
+Kontrastcheck nicht auf.
+
+Ein konkretes Motiv wie Strommast, Batterie, Lampe, Fernseher oder Waschmaschine
+darf nicht durch eine beschriftete generische Box ersetzt werden, wenn die
+Objekterkennung die fachliche Systemdarstellung traegt.
 
 ## Korrekturmodus
 
@@ -140,6 +167,13 @@ Eine Arbeitseinheit ist nicht fertig, wenn:
 - ein PNG-Asset nicht im Asset-Manifest dokumentiert ist
 - ein Quellbild gebraucht wird, aber weder extrahiert noch als Nutzerbedarf markiert wurde
 - die gerenderte Vorschau zeigt, dass ein Icon nicht erkennbar ist
+- ein Piktogramm das vierfache Gate fuer Semantik, Education-Stil,
+  E-Learning-Kleinmassstab und Zugaenglichkeit nicht bestanden hat
+- ein generiertes Piktogramm 3D-, Isometrie-, Verlaufs-, Schatten-, Glow- oder
+  Texturoptik zeigt
+- im Szenenordner und Ziel-SVG kein geplanter Bild-/Library-Assetnachweis vorhanden
+  ist, obwohl die Quelle konkrete, identitaetstragende Motive zeigt
 - die Asset-Entscheidung nicht zum Sprechertext oder zur Quelle passt
+- eine technische Zeichnung ein generisches Objekt zeigt oder ein identitaetsbestimmendes Merkmal wie Bauart, Fahrzeugklasse oder Gangzahl nicht eindeutig traegt
 
 Der automatische SVG-QA-Lauf prueft nur technische Teile. Die semantische Asset-Entscheidung muss im visuellen Cross-Check aktiv geprueft werden.

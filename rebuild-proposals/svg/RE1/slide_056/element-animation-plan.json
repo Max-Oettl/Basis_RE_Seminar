@@ -1,0 +1,129 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_056",
+  "scene_id": "re1_src_071",
+  "source_slides": [
+    71
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "weibull_density_curves",
+      "label": "Dichtekurven der Weibullverteilung",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_density_eta",
+      "label": "Charakteristische Lebensdauer im Plot",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_eta_meaning",
+      "label": "Bedeutung von T",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_beta_meaning",
+      "label": "Bedeutung von b",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_special_cases",
+      "label": "Spezialfälle",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_applications",
+      "label": "Anwendungen",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_weibull_density_curves",
+      "targetId": "weibull_density_curves",
+      "action": "draw",
+      "sourceText": "Auf der rechten Seite sind hierzu unterschiedliche Verläufe von Dichtefunktionen dargestellt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_weibull_density_eta",
+      "targetId": "weibull_density_eta",
+      "action": "show",
+      "sourceText": "Zum einen durch die charakteristische Lebensdauer groß T",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_eta_meaning",
+      "targetId": "weibull_eta_meaning",
+      "action": "show",
+      "sourceText": "Die charakteristische Lebensdauer ist eine Art Lageparameter",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_beta_meaning",
+      "targetId": "weibull_beta_meaning",
+      "action": "show",
+      "sourceText": "Der Formparameter b bestimmt dabei die Form der Verteilung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_special_cases",
+      "targetId": "weibull_special_cases",
+      "action": "show",
+      "sourceText": "Für b gleich eins ergibt sich beispielsweise genau die Exponentialverteilung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_applications",
+      "targetId": "weibull_applications",
+      "action": "show",
+      "sourceText": "Aufgrund der Flexibilität hat die Weibullverteilung ein sehr breites Anwendungsspektrum",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_006.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "reliability_core",
+      "label": "Zuverlässigkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "development_pressure",
+      "label": "Entwicklungsdruck",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "complexity_pressure",
+      "label": "Komplexitätsdruck",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "counteracting_demands",
+      "label": "Gegenläufige Anforderungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_reliability_core",
+      "targetId": "reliability_core",
+      "action": "show",
+      "sourceText": "Generell gibt es viele unterschiedliche Faktoren, welche einen Einfluss auf die Zuverlässigkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_development_pressure",
+      "targetId": "development_pressure",
+      "action": "show",
+      "sourceText": "Wichtige Einflussgrößen auf die Zuverlässigkeit sind vor allem die Entwicklungszeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_complexity_pressure",
+      "targetId": "complexity_pressure",
+      "action": "show",
+      "sourceText": "Zusätzlich steigen auch Komplexität und Funktionsumfang der Produkte",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_counteracting_demands",
+      "targetId": "counteracting_demands",
+      "action": "show",
+      "sourceText": "Dem gegenüber stehen die steigende Produkthaftung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

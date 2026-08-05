@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re2_ch3_fta_logic_gates",
+  "targets": [
+    {
+      "targetId": "fta37_and",
+      "label": "UND-Gatter",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta37_or",
+      "label": "ODER-Gatter",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta37_not",
+      "label": "NICHT-Gatter",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta37_and",
+      "targetId": "fta37_and",
+      "action": "show",
+      "sourceText": "Beim UND-Gatter tritt das nachfolgende Ereignis",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_fta37_or",
+      "targetId": "fta37_or",
+      "action": "show",
+      "sourceText": "Beim Oder Gatter tritt das nachfolgende Ereignis",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_fta37_not",
+      "targetId": "fta37_not",
+      "action": "show",
+      "sourceText": "beim NICHT-Gatter",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

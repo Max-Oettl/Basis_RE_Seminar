@@ -1,0 +1,144 @@
+{
+  "schema_version": "basisRebuildContentCrosscheck/v2",
+  "module_id": "RE1",
+  "output_slide_number": 49,
+  "checked_at": "2026-07-19T19:42:51.744Z",
+  "status": "review_required",
+  "manual_review_required": true,
+  "reference_mapping": {
+    "work_unit": "slide_049",
+    "output_slide_number": 49,
+    "source_slides": [
+      54
+    ],
+    "primary_source_slide": 54,
+    "output_slide_numbers": [],
+    "mapping_type": "direct",
+    "rationale": "Quell-SVG 54 besitzt einen eigenen Sprechertextabschnitt und bleibt eine eigenstaendige Content-SVG-Szene.",
+    "mapping_source": "reference_map",
+    "reference_map_path": "analysis/rebuild-plans/RE1_source-reference-map.json",
+    "sequence_plan": "analysis/rebuild-plans/RE1_sequence_plan.md",
+    "read_error": ""
+  },
+  "references": [
+    {
+      "source_slide_number": 54,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE1/SVG/Folie54.SVG",
+      "source_svg_sha256": "29a4fc3c4266807da1a0124e6b479f807fa7ae8505fe92c36a782d885f02bc6e",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE1/SVG/Folie54.SVG",
+      "analysis_path": ""
+    }
+  ],
+  "proposal": {
+    "path": "rebuild-proposals/svg/RE1/slide_049/slide_049.svg",
+    "svg_sha256": "8a57a5364aaee55d4c1c75e383e8205ee1f61da84bb05e6b723d02604f8805e0",
+    "animation_manifest": "/files/rebuild-proposals/svg/RE1/slide_049/scene.animation.v1.json"
+  },
+  "summary": {
+    "source_count": 1,
+    "checked_content_items": 8,
+    "errors": 0,
+    "warnings": 2,
+    "infos": 0,
+    "animation_steps": 5
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 054: \"Die\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 54,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Die"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 054: \"Lebensdauer ordnet einer definierten Ausfallwahrscheinlichkeit eine Laufzeit zu\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 54,
+      "source_item_id": "source-svg-text-8",
+      "expected": "Lebensdauer ordnet einer definierten Ausfallwahrscheinlichkeit eine Laufzeit zu"
+    }
+  ],
+  "content_checks": [
+    {
+      "source_slide_number": 54,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Bq",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 54,
+      "source_item_id": "source-svg-text-2",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 54,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Lebensdauer",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 54,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Die",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 54,
+      "source_item_id": "source-svg-text-5",
+      "expected": "B",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 54,
+      "source_item_id": "source-svg-text-6",
+      "expected": "q",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 54,
+      "source_item_id": "source-svg-text-7",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 54,
+      "source_item_id": "source-svg-text-8",
+      "expected": "Lebensdauer ordnet einer definierten Ausfallwahrscheinlichkeit eine Laufzeit zu",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.375,
+      "evidence": "tokens:lebensdauer,einer,ausfallwahrscheinlichkeit"
+    }
+  ],
+  "manual_review_focus": [
+    "Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.",
+    "Sprechertext-Reihenfolge gegen die semantisch geplanten Animationsschritte pruefen."
+  ],
+  "reference_mapping_sha256": "d0678a3cfea3202e4546591c10b53568ff9ad5a3c6e2e92e14c3e0039b0a5bda",
+  "reference_map_path": "analysis/rebuild-plans/RE1_source-reference-map.json",
+  "sequence_plan": "analysis/rebuild-plans/RE1_sequence_plan.md"
+}

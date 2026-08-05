@@ -1,5 +1,7 @@
 "use strict";
 
+const crypto = require("crypto");
+
 const SUBSCRIPT_MAP = Object.freeze({
   "₀": "0",
   "₁": "1",
@@ -50,19 +52,46 @@ function normalizeText(value) {
 }
 
 function extractSvgText(svgSource) {
-  const fragments = [];
+  const nodes = [];
   const source = String(svgSource || "");
-  for (const match of source.matchAll(/<text\b[^>]*>([\s\S]*?)<\/text>/gi)) {
-    const fragment = decodeXmlEntities(match[1].replace(/<[^>]*>/g, " "))
+  for (const match of source.matchAll(/<text\b([^>]*)>([\s\S]*?)<\/text>/gi)) {
+    const correctedFragment = decodeXmlEntities(match[2].replace(/<[^>]*>/g, " "))
       .replace(/\s+/g, " ")
       .trim();
-    if (fragment) fragments.push(fragment);
+    if (correctedFragment) {
+      nodes.push({
+        attrs: match[1] || "",
+        text: correctedFragment,
+      });
+    }
   }
+  const fragments = nodes.map((node) => node.text);
   return {
+    nodes,
     fragments,
     text: fragments.join(" "),
     normalized: normalizeText(fragments.join(" ")),
   };
+}
+
+function attributeValue(attrs, name) {
+  const escaped = String(name || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const match = String(attrs || "").match(new RegExp(`\\b${escaped}\\s*=\\s*["']([^"']+)["']`, "i"));
+  return match ? decodeXmlEntities(match[1]).trim() : "";
+}
+
+function isDocumentedTargetAddition(node) {
+  const evidence = attributeValue(node.attrs, "data-source-evidence");
+  const reference = attributeValue(node.attrs, "data-source-reference");
+  return /^(?:source_svg|spoken_text|user_request|brand_frame|orientation)$/i.test(evidence) && Boolean(reference);
+}
+
+function isBrandFrameText(value) {
+  const text = String(value || "").trim();
+  return (
+    text === "Professional Reliability Training | Reliability Engineer" ||
+    /^RE\d+\s*(?:Â·|·|\||-)\s*Szene\s*\d+$/i.test(text)
+  );
 }
 
 function significantTokens(value) {
@@ -123,9 +152,17 @@ function sourceSlideLabel(slideNumber) {
 function contentChecksForSource(source, svgText) {
   const checks = [];
   const findings = [];
-  const visibleText = Array.isArray(source.analysis?.visibleText)
+  const analyzedVisibleText = Array.isArray(source.analysis?.visibleText)
     ? source.analysis.visibleText
     : [];
+  const sourceSvgText = extractSvgText(source.sourceSvgSource || "");
+  const visibleText = analyzedVisibleText.length
+    ? analyzedVisibleText
+    : sourceSvgText.fragments.map((text, index) => ({
+        id: `source-svg-text-${index + 1}`,
+        text,
+        role: "source_svg_text",
+      }));
 
   for (const item of visibleText) {
     const expected = String(item?.text || "").trim();
@@ -146,6 +183,7 @@ function contentChecksForSource(source, svgText) {
       source_slide_number: source.slideNumber,
       source_item_id: item.id || "",
       expected,
+      source_kind: analyzedVisibleText.length ? "analysis" : "source_svg",
       result: coverage.matched ? "textually_supported" : "manual_visual_check",
       score: Number(coverage.score.toFixed(3)),
       evidence: coverage.evidence,
@@ -173,7 +211,9 @@ function buildContentCrosscheck(input) {
   const sources = Array.isArray(input.sources) ? input.sources : [];
   const findings = [];
   const contentChecks = [];
+  const targetTextChecks = [];
   const manualReviewFocus = [];
+  const targetSupportText = [];
   const isAdditionalSlide = input.isAdditionalSlide === true;
   const hasProposal = Boolean(input.proposal?.path && input.svgSource);
 
@@ -190,7 +230,7 @@ function buildContentCrosscheck(input) {
       findings.push(finding(
         "error",
         "additional-slide-has-source-reference",
-        "Eine Zusatzfolie darf nicht stillschweigend einer alten PowerPoint-Folie zugeordnet werden.",
+        "Eine Zusatzfolie darf nicht stillschweigend einer Quell-SVG zugeordnet werden.",
       ));
     }
     if (!String(input.reviewNotes || "").trim()) {
@@ -238,15 +278,36 @@ function buildContentCrosscheck(input) {
       findings.push(finding(
         "error",
         "source-render-missing",
-        `${sourceSlideLabel(source.slideNumber)} besitzt keine aufloesbare gerenderte Altfolie.`,
+        `${sourceSlideLabel(source.slideNumber)} besitzt keine aufloesbare Quell-SVG.`,
         { source_slide_number: source.slideNumber },
       ));
     }
-    if (!source.analysis) {
+    const sourceIsSvg = source.oldSlide?.sourceKind === "powerpoint_svg" ||
+      /\.svg$/i.test(String(source.oldSlide?.path || ""));
+    const sourceSvgText = extractSvgText(source.sourceSvgSource || "");
+    targetSupportText.push(sourceSvgText.text);
+    if (Array.isArray(source.analysis?.visibleText)) {
+      targetSupportText.push(...source.analysis.visibleText.map((item) => String(item?.text || "")));
+    }
+    if (sourceIsSvg && !source.sourceSvgSource) {
+      findings.push(finding(
+        "error",
+        "source-svg-unreadable",
+        `${sourceSlideLabel(source.slideNumber)} konnte nicht als SVG gelesen werden.`,
+        { source_slide_number: source.slideNumber },
+      ));
+    } else if (sourceIsSvg && !sourceSvgText.fragments.length) {
+      findings.push(finding(
+        "warning",
+        "source-svg-text-not-extractable",
+        `${sourceSlideLabel(source.slideNumber)} enthaelt keine direkt auslesbaren Textknoten. Inhalte koennen als Pfade vorliegen und muessen visuell geprueft werden.`,
+        { source_slide_number: source.slideNumber },
+      ));
+    } else if (!sourceIsSvg && !source.analysis) {
       findings.push(finding(
         "warning",
         "source-analysis-missing",
-        `${sourceSlideLabel(source.slideNumber)} besitzt keine strukturierte Rebuild-Analyse.`,
+        `${sourceSlideLabel(source.slideNumber)} nutzt nur den Legacy-Bildfallback und besitzt keine strukturierte Rebuild-Analyse.`,
         { source_slide_number: source.slideNumber },
       ));
       continue;
@@ -258,7 +319,7 @@ function buildContentCrosscheck(input) {
       findings.push(...result.findings);
     }
 
-    const visualElements = Array.isArray(source.analysis.visualElements)
+    const visualElements = Array.isArray(source.analysis?.visualElements)
       ? source.analysis.visualElements
       : [];
     for (const element of visualElements) {
@@ -281,9 +342,54 @@ function buildContentCrosscheck(input) {
     }
   }
 
+  if (hasProposal && !isAdditionalSlide) {
+    targetSupportText.push(String(input.spokenText || ""));
+    const supportText = targetSupportText.filter(Boolean).join(" ");
+    if (normalizeText(supportText)) {
+      const targetNodes = extractSvgText(input.svgSource).nodes;
+      for (const node of targetNodes) {
+        if (isBrandFrameText(node.text)) {
+          targetTextChecks.push({
+            target_text: node.text,
+            result: "brand_frame",
+          });
+          continue;
+        }
+        if (isDocumentedTargetAddition(node)) {
+          targetTextChecks.push({
+            target_text: node.text,
+            result: "documented_addition",
+            evidence_type: attributeValue(node.attrs, "data-source-evidence"),
+            evidence_reference: attributeValue(node.attrs, "data-source-reference"),
+          });
+          continue;
+        }
+        const coverage = textCoverage(node.text, supportText);
+        targetTextChecks.push({
+          target_text: node.text,
+          result: coverage.matched ? "source_or_spoken_supported" : "unsupported_target_text",
+          score: Number(coverage.score.toFixed(3)),
+          evidence: coverage.evidence,
+        });
+        if (!coverage.matched) {
+          findings.push(finding(
+            "warning",
+            "target-text-not-source-supported",
+            `Der sichtbare Zieltext "${node.text}" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.`,
+            {
+              target_text: node.text,
+              recommendation: "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren.",
+            },
+          ));
+        }
+      }
+    }
+  }
+
   const sourceCount = sources.length;
   const animationStepCount = Number(input.animationStepCount) || 0;
-  if (hasProposal && sourceCount > 1 && animationStepCount === 0) {
+  const animationDecision = String(input.animationDecision || "needs_review");
+  if (hasProposal && sourceCount > 1 && animationDecision === "animated" && animationStepCount === 0) {
     findings.push(finding(
       "warning",
       "merged-source-without-animation",
@@ -293,7 +399,13 @@ function buildContentCrosscheck(input) {
 
   if (hasProposal) {
     manualReviewFocus.push("Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.");
-    manualReviewFocus.push("Sprechertext-Reihenfolge gegen die Animationsschritte pruefen.");
+    if (animationDecision === "animated") {
+      manualReviewFocus.push("Sprechertext-Reihenfolge gegen die semantisch geplanten Animationsschritte pruefen.");
+    } else if (animationDecision === "static") {
+      manualReviewFocus.push("Bestaetigen, dass die vollstaendige statische Darstellung klarer als ein schrittweiser Aufbau ist.");
+    } else {
+      manualReviewFocus.push("Animationsentscheidung vor der Freigabe semantisch auf static oder animated setzen.");
+    }
   }
 
   const uniqueManualFocus = [...new Set(manualReviewFocus)];
@@ -309,7 +421,7 @@ function buildContentCrosscheck(input) {
         : "precheck_passed";
 
   return {
-    schema_version: "basisRebuildContentCrosscheck/v1",
+    schema_version: "basisRebuildContentCrosscheck/v2",
     module_id: input.moduleId || "",
     output_slide_number: Number(input.outputSlideNumber) || null,
     checked_at: checkedAt,
@@ -318,6 +430,8 @@ function buildContentCrosscheck(input) {
     reference_mapping: mapping,
     references: sources.map((source) => ({
       source_slide_number: source.slideNumber,
+      source_svg_path: source.oldSlide?.sourceKind === "powerpoint_svg" ? source.oldSlide.path : "",
+      source_svg_sha256: source.sourceSvgSource ? crypto.createHash("sha256").update(source.sourceSvgSource, "utf8").digest("hex") : "",
       old_slide_path: source.oldSlide?.path || "",
       analysis_path: source.analysisPath || "",
     })),
@@ -325,6 +439,7 @@ function buildContentCrosscheck(input) {
     summary: {
       source_count: sourceCount,
       checked_content_items: contentChecks.length,
+      checked_target_text_items: targetTextChecks.length,
       errors: errorCount,
       warnings: warningCount,
       infos: infoCount,
@@ -332,6 +447,7 @@ function buildContentCrosscheck(input) {
     },
     findings,
     content_checks: contentChecks,
+    target_text_checks: targetTextChecks,
     manual_review_focus: uniqueManualFocus,
   };
 }

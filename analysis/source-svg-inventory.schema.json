@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "basis-re-source-svg-inventory.schema.json",
+  "title": "Basis RE source SVG module inventory",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "module_id",
+    "source_root",
+    "input_kind",
+    "slides",
+    "qa"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "schema_version": { "const": "basisReSourceSvgInventory/v2" }
+        }
+      },
+      "then": {
+        "required": ["text_root", "text_mapping_file", "text_mapping_status"],
+        "properties": {
+          "slides": {
+            "items": {
+              "required": [
+                "source_slide_key",
+                "spoken_text_source",
+                "text_mapping_ref",
+                "spoken_text"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "properties": {
+    "schema_version": {
+      "enum": ["basisReSourceSvgInventory/v1", "basisReSourceSvgInventory/v2"]
+    },
+    "module_id": { "type": "string", "minLength": 1 },
+    "source_root": { "type": "string", "minLength": 1 },
+    "input_kind": { "const": "powerpoint_slide_svg" },
+    "text_root": { "type": ["string", "null"] },
+    "text_mapping_file": { "type": ["string", "null"] },
+    "text_mapping_status": {
+      "enum": ["missing", "mapped", "needs_review", "blocked"]
+    },
+    "narration_root": { "type": ["string", "null"] },
+    "narration_status": {
+      "enum": ["missing", "mapped", "needs_review"]
+    },
+    "slides": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/slide" }
+    },
+    "qa": { "$ref": "#/$defs/qa" }
+  },
+  "$defs": {
+    "stringArray": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "qa": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["issues", "warnings", "open_questions"],
+      "properties": {
+        "issues": { "$ref": "#/$defs/stringArray" },
+        "warnings": { "$ref": "#/$defs/stringArray" },
+        "open_questions": { "$ref": "#/$defs/stringArray" }
+      }
+    },
+    "slide": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_slide_number",
+        "source_svg",
+        "sha256",
+        "view_box",
+        "technical_status",
+        "visible_content_summary",
+        "visible_text",
+        "features",
+        "references",
+        "sequence_role",
+        "state_delta",
+        "candidate_sequence_group",
+        "transformation_notes",
+        "qa"
+      ],
+      "properties": {
+        "source_slide_key": {
+          "type": "string",
+          "pattern": "^slide_[0-9]{3,}$"
+        },
+        "source_slide_number": { "type": "integer", "minimum": 1 },
+        "source_svg": { "type": "string", "pattern": "\\.[sS][vV][gG]$" },
+        "sha256": { "type": "string", "pattern": "^[a-fA-F0-9]{64}$" },
+        "view_box": { "type": "string", "minLength": 1 },
+        "width": { "type": ["string", "null"] },
+        "height": { "type": ["string", "null"] },
+        "spoken_text_source": { "type": ["string", "null"] },
+        "text_mapping_ref": { "type": ["string", "null"] },
+        "spoken_text": { "type": ["string", "null"] },
+        "technical_status": {
+          "enum": ["ready", "warning", "blocked"]
+        },
+        "visible_content_summary": { "type": "string" },
+        "visible_text": { "$ref": "#/$defs/stringArray" },
+        "features": {
+          "type": "object",
+          "additionalProperties": { "type": ["boolean", "integer", "number", "string", "null"] }
+        },
+        "references": { "$ref": "#/$defs/stringArray" },
+        "sequence_role": {
+          "enum": [
+            "standalone",
+            "sequence_start",
+            "sequence_state",
+            "sequence_final",
+            "duplicate_state",
+            "absorbed_source",
+            "new_content_anchor"
+          ]
+        },
+        "state_delta": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["compared_to", "added", "removed", "changed", "interpretation"],
+          "properties": {
+            "compared_to": { "type": ["integer", "null"], "minimum": 1 },
+            "added": { "$ref": "#/$defs/stringArray" },
+            "removed": { "$ref": "#/$defs/stringArray" },
+            "changed": { "$ref": "#/$defs/stringArray" },
+            "interpretation": { "type": "string" }
+          }
+        },
+        "candidate_sequence_group": { "type": ["string", "null"] },
+        "transformation_notes": { "$ref": "#/$defs/stringArray" },
+        "qa": { "$ref": "#/$defs/qa" }
+      }
+    }
+  }
+}

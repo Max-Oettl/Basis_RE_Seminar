@@ -3,7 +3,6 @@ from __future__ import annotations
 import argparse
 import math
 from pathlib import Path
-import xml.etree.ElementTree as ET
 
 import numpy as np
 
@@ -15,6 +14,7 @@ from reltest_plot_style import (
     save_figure,
     style_axes,
 )
+from svg_animation_targets import prepare_svg_animation_targets
 from weibull_probability_plot import (
     PROBABILITY_TICKS,
     linear_fit,
@@ -23,9 +23,6 @@ from weibull_probability_plot import (
     normalize_probabilities,
     weibull_y,
 )
-
-
-SVG_NAMESPACE = "http://www.w3.org/2000/svg"
 
 
 def fit_weibull_parameters_from_line(slope: float, intercept: float) -> tuple[float, float]:
@@ -79,85 +76,6 @@ def bound_label(bound: float) -> str:
     return f"{percent:.1f} %-Vertrauensgrenze"
 
 
-def add_time_triggered_fade_in(
-    svg_path: str | Path,
-    child_ids: list[str],
-    group_id: str,
-    trigger_at_seconds: float,
-    duration_seconds: float = 0.45,
-    additional_target_ids: list[str] | None = None,
-) -> None:
-    if trigger_at_seconds < 0:
-        raise ValueError("Animation trigger time must not be negative.")
-    if duration_seconds <= 0:
-        raise ValueError("Animation duration must be positive.")
-
-    ET.register_namespace("", SVG_NAMESPACE)
-    tree = ET.parse(svg_path)
-    root = tree.getroot()
-    parent_map = {child: parent for parent in root.iter() for child in parent}
-
-    elements = []
-    for child_id in child_ids:
-        element = next((candidate for candidate in root.iter() if candidate.get("id") == child_id), None)
-        if element is None:
-            raise ValueError(f"Cannot find SVG element with id '{child_id}'.")
-        elements.append(element)
-
-    parents = {parent_map[element] for element in elements}
-    if len(parents) != 1:
-        raise ValueError("Animated SVG elements must share the same parent group.")
-
-    parent = parents.pop()
-    parent_children = list(parent)
-    ordered_elements = sorted(elements, key=parent_children.index)
-    insert_index = min(parent_children.index(element) for element in ordered_elements)
-
-    group = ET.Element(
-        f"{{{SVG_NAMESPACE}}}g",
-        {
-            "id": group_id,
-            "opacity": "0",
-            "data-animation-trigger-type": "time",
-            "data-animation-trigger-at-seconds": f"{trigger_at_seconds:g}",
-            "data-animation-action": "show",
-        },
-    )
-    add_fade_animation(group, trigger_at_seconds, duration_seconds)
-
-    for element in ordered_elements:
-        parent.remove(element)
-        group.append(element)
-    parent.insert(insert_index, group)
-
-    for target_id in additional_target_ids or []:
-        element = next((candidate for candidate in root.iter() if candidate.get("id") == target_id), None)
-        if element is None:
-            raise ValueError(f"Cannot find SVG element with id '{target_id}'.")
-        element.set("opacity", "0")
-        element.set("data-animation-trigger-type", "time")
-        element.set("data-animation-trigger-at-seconds", f"{trigger_at_seconds:g}")
-        element.set("data-animation-action", "show")
-        add_fade_animation(element, trigger_at_seconds, duration_seconds)
-
-    tree.write(svg_path, encoding="utf-8", xml_declaration=True)
-
-
-def add_fade_animation(element: ET.Element, trigger_at_seconds: float, duration_seconds: float) -> None:
-    ET.SubElement(
-        element,
-        f"{{{SVG_NAMESPACE}}}animate",
-        {
-            "attributeName": "opacity",
-            "from": "0",
-            "to": "1",
-            "begin": f"{trigger_at_seconds:g}s",
-            "dur": f"{duration_seconds:g}s",
-            "fill": "freeze",
-        },
-    )
-
-
 def build_plot(
     times: list[float],
     output: str | Path,
@@ -168,7 +86,6 @@ def build_plot(
     seed: int = 42,
     xlabel: str = "Lebensdauer t",
     ylabel: str = "Ausfallwahrscheinlichkeit F(t) [%]",
-    confidence_trigger_at_seconds: float | None = None,
 ) -> None:
     import matplotlib.pyplot as plt
 
@@ -206,7 +123,7 @@ def build_plot(
 
     apply_reltest_style()
     fig, ax = plt.subplots()
-    ax.set_gid("plot-axes")
+    ax.set_gid("plot_axes")
 
     ax.set_xscale("log")
     lower_line = ax.plot(
@@ -217,7 +134,7 @@ def build_plot(
         linestyle="--",
         label=bound_label(lower_bound),
     )[0]
-    lower_line.set_gid("plot-confidence-lower-limit")
+    lower_line.set_gid("plot_confidence_lower_limit")
     upper_line = ax.plot(
         line_times,
         upper,
@@ -226,9 +143,9 @@ def build_plot(
         linestyle="--",
         label=bound_label(upper_bound),
     )[0]
-    upper_line.set_gid("plot-confidence-upper-limit")
+    upper_line.set_gid("plot_confidence_upper_limit")
     fit_line = ax.plot(line_times, line_y, color=RELTEST_COLORS["data"], linewidth=2.5, label="Weibull-Fit")[0]
-    fit_line.set_gid("plot-weibull-fit")
+    fit_line.set_gid("plot_weibull_fit")
     scatter = ax.scatter(
         sorted_times,
         y_fit,
@@ -239,7 +156,7 @@ def build_plot(
         zorder=3,
         label="Ausfalldaten",
     )
-    scatter.set_gid("plot-data-points")
+    scatter.set_gid("plot_data_points")
 
     y_ticks = [weibull_y(value) for value in PROBABILITY_TICKS]
     y_labels = [f"{int(value * 100)}" for value in PROBABILITY_TICKS]
@@ -250,31 +167,32 @@ def build_plot(
 
     style_axes(ax, xlabel, ylabel)
     legend = ax.legend(loc="lower right")
-    legend.set_gid("plot-legend")
+    legend.set_gid("plot_legend")
     legend_handles = getattr(legend, "legend_handles", None) or getattr(legend, "legendHandles", [])
     legend_texts = legend.get_texts()
     if len(legend_handles) >= 2 and len(legend_texts) >= 2:
-        legend_handles[0].set_gid("plot-confidence-lower-legend-handle")
-        legend_handles[1].set_gid("plot-confidence-upper-legend-handle")
-        legend_texts[0].set_gid("plot-confidence-lower-legend-label")
-        legend_texts[1].set_gid("plot-confidence-upper-legend-label")
+        legend_handles[0].set_gid("plot_confidence_lower_legend_handle")
+        legend_handles[1].set_gid("plot_confidence_upper_legend_handle")
+        legend_texts[0].set_gid("plot_confidence_lower_legend_label")
+        legend_texts[1].set_gid("plot_confidence_upper_legend_label")
     fig.tight_layout()
     save_figure(fig, output)
     plt.close(fig)
-
-    if confidence_trigger_at_seconds is not None:
-        add_time_triggered_fade_in(
-            svg_path=output,
-            child_ids=["plot-confidence-lower-limit", "plot-confidence-upper-limit"],
-            group_id="plot-confidence-limits",
-            trigger_at_seconds=confidence_trigger_at_seconds,
-            additional_target_ids=[
-                "plot-confidence-lower-legend-handle",
-                "plot-confidence-upper-legend-handle",
-                "plot-confidence-lower-legend-label",
-                "plot-confidence-upper-legend-label",
-            ],
-        )
+    prepare_svg_animation_targets(
+        output,
+        targets={
+            "plot_confidence_limits": "5 %- und 95 %-Vertrauensgrenzen",
+            "plot_weibull_fit": "Weibull-Fit",
+            "plot_data_points": "Ausfalldaten",
+        },
+        sibling_groups=[
+            (
+                "plot_confidence_limits",
+                "5 %- und 95 %-Vertrauensgrenzen",
+                ["plot_confidence_lower_limit", "plot_confidence_upper_limit"],
+            )
+        ],
+    )
 
 
 def main() -> None:
@@ -292,11 +210,6 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--xlabel", default="Lebensdauer t")
     parser.add_argument("--ylabel", default="Ausfallwahrscheinlichkeit F(t) [%]")
-    parser.add_argument(
-        "--confidence-trigger-at-seconds",
-        type=float,
-        help="Optional provisional SVG time trigger: fade in confidence limits after this many seconds.",
-    )
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
 
@@ -309,7 +222,6 @@ def main() -> None:
         seed=args.seed,
         xlabel=args.xlabel,
         ylabel=args.ylabel,
-        confidence_trigger_at_seconds=args.confidence_trigger_at_seconds,
         output=args.output,
     )
 

@@ -1,0 +1,229 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re1_src_006",
+  "svgPath": "rebuild-proposals/svg/RE1/slide_006/slide_006.svg",
+  "spokenText": "Generell gibt es viele unterschiedliche Faktoren, welche einen Einfluss auf die Zuverlässigkeit eines Produktes besitzen.Diese Faktoren können sowohl von der Kundenseite als auch von der Unternehmensseite ausgehen.\n\nWichtige Einflussgrößen auf die Zuverlässigkeit sind vor allem die Entwicklungszeit und auch die Entwicklungskosten.\n\nHeutzutage werden Produkte in immer kürzeren Zyklen entwickelt und auch das Entwicklungsbudget wird immer weiter reduziert.\n\nBeide Aspekte führen dazu, dass Produkte mit einer unzureichenden Absicherung auf den Markt kommen und haben folglich einen negativen Einfluss auf die Zuverlässigkeit.\n\nZusätzlich steigen auch Komplexität und Funktionsumfang der Produkte aufgrund der steigenden Kundenerwartungen immer weiter an, was das Ganze noch weiter verstärkt.\n\nDem gegenüber stehen die steigende Produkthaftung, der allgemeine Trend zur Fehlerkostenminimierung, sowie die immer höher werdenden Kundenanforderungen an die Zuverlässigkeit.\n\nDiese Faktoren wirken sich positiv auf die Zuverlässigkeit von Produkten aus.\n\nDoch wie sieht der Kunde das Thema Zuverlässigkeit?",
+  "animationDecision": "animated",
+  "animationRationale": "Das Bezugszentrum muss sofort Orientierung geben; drei fachliche Einflussgruppen werden danach in derselben Reihenfolge wie im Sprechertext ergänzt.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Show wird im internen Reviewer als reines Fade bewertet.",
+      "Das Bezugszentrum bleibt statischer Frame-0-Kontext."
+    ]
+  },
+  "initialStateRationale": "Zuverlässigkeit ist das Bezugszentrum aller folgenden Aussagen und muss bereits beim ersten Satz sichtbar sein; die konkreten Einflüsse würden spätere Sprecherabschnitte vorwegnehmen.",
+  "semanticGroups": [
+    {
+      "groupId": "reliability_core",
+      "label": "Zuverlässigkeit als Bezugszentrum",
+      "role": "context",
+      "members": [
+        "beide Ellipsen",
+        "Text Zuverlässigkeit"
+      ],
+      "initialState": "visible_context",
+      "dependsOn": [],
+      "groupingRationale": "Bezugsfläche, Kontur und Begriff bilden einen untrennbaren Orientierungsanker."
+    },
+    {
+      "groupId": "development_pressure",
+      "label": "Entwicklungszeit und Entwicklungskosten",
+      "role": "concept_relationship_bundle",
+      "members": [
+        "Label Kürzere Entwicklungszeit",
+        "Label Verringerte Entwicklungskosten",
+        "beide zugehörigen Pfeile zum Bezugszentrum"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "reliability_core"
+      ],
+      "groupingRationale": "Der Sprechertext führt beide Entwicklungsfaktoren als gemeinsamen negativen Einflussblock ein."
+    },
+    {
+      "groupId": "complexity_pressure",
+      "label": "Komplexität und Funktionsumfang",
+      "role": "concept_relationship_bundle",
+      "members": [
+        "Label Höhere Komplexität",
+        "Label Größere Funktionalität",
+        "beide zugehörigen Pfeile zum Bezugszentrum"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "reliability_core"
+      ],
+      "groupingRationale": "Beide Faktoren werden in einem Satz als gemeinsame Verstärkung eingeführt."
+    },
+    {
+      "groupId": "counteracting_demands",
+      "label": "Gegenläufige Anforderungen",
+      "role": "concept_relationship_bundle",
+      "members": [
+        "Label Steigende Produkthaftung",
+        "Label Minimierung von Fehlerkosten",
+        "Label Gestiegene Kundenanforderungen",
+        "drei zugehörige Pfeile zum Bezugszentrum"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "reliability_core"
+      ],
+      "groupingRationale": "Die drei positiv wirkenden Anforderungen werden gemeinsam kontrastiert."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "orient_reliability",
+      "claim": "Mehrere Faktoren beeinflussen die Zuverlässigkeit.",
+      "sourceText": "Generell gibt es viele unterschiedliche Faktoren",
+      "occurrence": 1,
+      "requiredContext": [
+        "reliability_core"
+      ],
+      "revealTogether": [],
+      "learnerStateBefore": "Das Downstream-Masterlayout ist sichtbar.",
+      "learnerStateAfter": "Zuverlässigkeit ist als gemeinsames Bezugszentrum etabliert."
+    },
+    {
+      "beatId": "introduce_development_pressure",
+      "claim": "Entwicklungszeit und Entwicklungskosten wirken als gemeinsamer Druck.",
+      "sourceText": "Wichtige Einflussgrößen auf die Zuverlässigkeit sind",
+      "occurrence": 1,
+      "requiredContext": [
+        "reliability_core"
+      ],
+      "revealTogether": [
+        "development_pressure"
+      ],
+      "learnerStateBefore": "Nur das Bezugszentrum ist als Fachinhalt sichtbar.",
+      "learnerStateAfter": "Die beiden Entwicklungsfaktoren sind mit ihrer Wirkung auf das Zentrum sichtbar."
+    },
+    {
+      "beatId": "introduce_complexity_pressure",
+      "claim": "Komplexität und Funktionsumfang verstärken den Druck.",
+      "sourceText": "Zusätzlich steigen auch Komplexität und Funktionsumfang",
+      "occurrence": 1,
+      "requiredContext": [
+        "reliability_core",
+        "development_pressure"
+      ],
+      "revealTogether": [
+        "complexity_pressure"
+      ],
+      "learnerStateBefore": "Entwicklungsfaktoren und Bezugszentrum sind sichtbar.",
+      "learnerStateAfter": "Auch der zweite negative Einflussblock ist vollständig sichtbar."
+    },
+    {
+      "beatId": "introduce_counteracting_demands",
+      "claim": "Produkthaftung, Fehlerkosten und Kundenanforderungen wirken gegenläufig.",
+      "sourceText": "Dem gegenüber stehen die steigende Produkthaftung",
+      "occurrence": 1,
+      "requiredContext": [
+        "reliability_core",
+        "development_pressure",
+        "complexity_pressure"
+      ],
+      "revealTogether": [
+        "counteracting_demands"
+      ],
+      "learnerStateBefore": "Die belastenden Einflüsse sind vollständig sichtbar.",
+      "learnerStateAfter": "Das gesamte Spannungsfeld ist sichtbar."
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_development_pressure",
+      "beatId": "introduce_development_pressure",
+      "targetId": "development_pressure",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Der vollständige Entwicklungsblock wird als neue Information ruhig eingeblendet."
+    },
+    {
+      "stepId": "show_complexity_pressure",
+      "beatId": "introduce_complexity_pressure",
+      "targetId": "complexity_pressure",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Der zweite Einflussblock folgt der Sprecherreihenfolge mit derselben Effektfamilie."
+    },
+    {
+      "stepId": "show_counteracting_demands",
+      "beatId": "introduce_counteracting_demands",
+      "targetId": "counteracting_demands",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Die drei gegenläufigen Anforderungen erscheinen gemeinsam als ein Kontrastblock."
+    }
+  ],
+  "unsupportedEffectRequests": [
+    {
+      "effect": "highlight_initially_visible_target",
+      "targetId": "reliability_core",
+      "reason": "Ein abschließender Fokus auf das bereits bei Frame 0 sichtbare Bezugszentrum wäre didaktisch passend, wird vom aktuellen Initialsichtbarkeitsmodell aber nicht sauber unterstützt.",
+      "status": "runtime_extension_required"
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "reliability_core"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Kein leerer Inhaltsframe; keine Einflussgruppe wird vorweggenommen."
+    },
+    {
+      "stateId": "after_development",
+      "afterBeatId": "introduce_development_pressure",
+      "visibleGroups": [
+        "reliability_core",
+        "development_pressure"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Pfeile und ihre beiden Ausgangslabels erscheinen gemeinsam."
+    },
+    {
+      "stateId": "after_complexity",
+      "afterBeatId": "introduce_complexity_pressure",
+      "visibleGroups": [
+        "reliability_core",
+        "development_pressure",
+        "complexity_pressure"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der negative Einflussraum ist vollständig, die Gegenkräfte fehlen noch bewusst."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "introduce_counteracting_demands",
+      "visibleGroups": [
+        "reliability_core",
+        "development_pressure",
+        "complexity_pressure",
+        "counteracting_demands"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der statische Endzustand enthält alle sieben Einflussgrößen und ihre Beziehungen."
+    }
+  ]
+}

@@ -1,0 +1,556 @@
+{
+  "schema_version": "basisRebuildContentCrosscheck/v2",
+  "module_id": "RE2",
+  "output_slide_number": 1,
+  "checked_at": "2026-07-24T09:51:13.478Z",
+  "status": "review_required",
+  "manual_review_required": true,
+  "reference_mapping": {
+    "work_unit": "slide_001",
+    "output_slide_number": 1,
+    "source_slides": [
+      1,
+      2
+    ],
+    "primary_source_slide": 2,
+    "output_slide_numbers": [],
+    "mapping_type": "merged",
+    "rationale": "Die Quellfolien 1 und 2 teilen denselben Sprechertext. Folie 2 ergänzt als belegter Aufbauzustand die Methoden FTA und FMEA und wird deshalb mit Folie 1 zu einer animierten Szene zusammengeführt.",
+    "mapping_source": "reference_map",
+    "reference_map_path": "analysis/rebuild-plans/RE2_source-reference-map.json",
+    "sequence_plan": "analysis/rebuild-plans/RE2_sequence_plan.md",
+    "read_error": ""
+  },
+  "references": [
+    {
+      "source_slide_number": 1,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie1.SVG",
+      "source_svg_sha256": "5ab355bc07a7a8d14ce5ddddf1c05f20ae2a663d9ea36380c3e50fbd47a164f1",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie1.SVG",
+      "analysis_path": "analysis/slides/re2_slide_001_rebuild.json"
+    },
+    {
+      "source_slide_number": 2,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie2.SVG",
+      "source_svg_sha256": "5493eb8cdd1d94003692da328632310d97539213df1b7b1bcb75565b25c2710b",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie2.SVG",
+      "analysis_path": "analysis/slides/re2_slide_002_rebuild.json"
+    }
+  ],
+  "proposal": {
+    "path": "rebuild-proposals/svg/RE2/slide_001/slide_001.svg",
+    "svg_sha256": "a82aa739746e209cd1af9510a816aa079dd43e35a8d407efa0aa7f3241d8fddc",
+    "animation_manifest": "/files/rebuild-proposals/svg/RE2/slide_001/scene.animation.v1.json"
+  },
+  "summary": {
+    "source_count": 2,
+    "checked_content_items": 44,
+    "errors": 0,
+    "warnings": 12,
+    "infos": 0,
+    "animation_steps": 5
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 001: \"Einteilung der Zuverlässigkeitsmethoden\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Einteilung der Zuverlässigkeitsmethoden"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 001: \"Identifikation der kritischen\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-11",
+      "expected": "Identifikation der kritischen"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 001: \"Verbesserung der\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-14",
+      "expected": "Verbesserung der"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 001: \"Bestimmung von\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-17",
+      "expected": "Bestimmung von"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 001: \"Lebensdauermodellen\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-18",
+      "expected": "Lebensdauermodellen"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 001: \"Nachweis der\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-20",
+      "expected": "Nachweis der"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 002: \"Einteilung der Zuverlässigkeitsmethoden\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Einteilung der Zuverlässigkeitsmethoden"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 002: \"Identifikation der kritischen\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-11",
+      "expected": "Identifikation der kritischen"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 002: \"Verbesserung der\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-14",
+      "expected": "Verbesserung der"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 002: \"Bestimmung von\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-17",
+      "expected": "Bestimmung von"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 002: \"Lebensdauermodellen\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-18",
+      "expected": "Lebensdauermodellen"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 002: \"Nachweis der\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-20",
+      "expected": "Nachweis der"
+    }
+  ],
+  "content_checks": [
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Einteilung der Zuverlässigkeitsmethoden",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.667,
+      "evidence": "tokens:der,zuverlässigkeitsmethoden"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Qualitative",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Zuverlässigkeits",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-4",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-5",
+      "expected": "methoden",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-6",
+      "expected": "Quantitative",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-7",
+      "expected": "Zuverlässigkeits",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-8",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-9",
+      "expected": "methoden",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-10",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-11",
+      "expected": "Identifikation der kritischen",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.333,
+      "evidence": "tokens:der"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-12",
+      "expected": "Ausfallmechanismen",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-13",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-14",
+      "expected": "Verbesserung der",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:der"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-15",
+      "expected": "Zuverlässigkeit",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-16",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-17",
+      "expected": "Bestimmung von",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:von"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-18",
+      "expected": "Lebensdauermodellen",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-19",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-20",
+      "expected": "Nachweis der",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:der"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-21",
+      "expected": "Zuverlässigkeit",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Einteilung der Zuverlässigkeitsmethoden",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.667,
+      "evidence": "tokens:der,zuverlässigkeitsmethoden"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Qualitative",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Zuverlässigkeits",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-4",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-5",
+      "expected": "methoden",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-6",
+      "expected": "Quantitative",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-7",
+      "expected": "Zuverlässigkeits",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-8",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-9",
+      "expected": "methoden",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-10",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-11",
+      "expected": "Identifikation der kritischen",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.333,
+      "evidence": "tokens:der"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-12",
+      "expected": "Ausfallmechanismen",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-13",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-14",
+      "expected": "Verbesserung der",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:der"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-15",
+      "expected": "Zuverlässigkeit",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-16",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-17",
+      "expected": "Bestimmung von",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:von"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-18",
+      "expected": "Lebensdauermodellen",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-19",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-20",
+      "expected": "Nachweis der",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:der"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-21",
+      "expected": "Zuverlässigkeit",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-22",
+      "expected": "FTA",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-23",
+      "expected": "FMEA",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    }
+  ],
+  "manual_review_focus": [
+    "Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.",
+    "Animationsentscheidung vor der Freigabe semantisch auf static oder animated setzen."
+  ],
+  "reference_mapping_sha256": "2c02b91f5929667ce35d8cc9de7a60eb3ad9779923ed9dced78dc8c5518469f9",
+  "reference_map_path": "analysis/rebuild-plans/RE2_source-reference-map.json",
+  "sequence_plan": "analysis/rebuild-plans/RE2_sequence_plan.md"
+}

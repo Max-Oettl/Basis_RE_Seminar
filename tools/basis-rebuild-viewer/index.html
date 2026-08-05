@@ -10,6 +10,15 @@
       background: #eef3f6;
       font-family: "Segoe UI", Arial, sans-serif;
       color-scheme: light;
+      --chapter-tint: rgba(0, 126, 167, 0.09);
+      --chapter-tint-hover: rgba(0, 126, 167, 0.14);
+      --chapter-border: rgba(0, 126, 167, 0.24);
+      --lesson-tint: rgba(183, 121, 31, 0.08);
+      --lesson-tint-hover: rgba(183, 121, 31, 0.13);
+      --lesson-border: rgba(183, 121, 31, 0.22);
+      --scene-tint: rgba(47, 111, 85, 0.075);
+      --scene-tint-hover: rgba(47, 111, 85, 0.13);
+      --scene-border: rgba(47, 111, 85, 0.19);
     }
     * { box-sizing: border-box; }
     [hidden] { display: none !important; }
@@ -58,6 +67,111 @@
     .sidebar-actions .button {
       width: 100%;
       font-weight: 800;
+    }
+    .structure-tree {
+      display: grid;
+      gap: 8px;
+    }
+    .structure-node {
+      min-width: 0;
+    }
+    .structure-heading {
+      display: flex;
+      min-width: 0;
+      gap: 4px;
+      align-items: center;
+      border: 1px solid var(--chapter-border);
+      border-radius: 6px;
+      background: var(--chapter-tint);
+      transition: background-color 120ms ease, border-color 120ms ease;
+    }
+    .structure-heading:hover {
+      background: var(--chapter-tint-hover);
+    }
+    .structure-heading.lesson-heading {
+      border-color: var(--lesson-border);
+      background: var(--lesson-tint);
+    }
+    .structure-heading.lesson-heading:hover {
+      background: var(--lesson-tint-hover);
+    }
+    .structure-toggle {
+      display: flex;
+      min-width: 0;
+      flex: 1;
+      gap: 7px;
+      align-items: center;
+      padding: 8px;
+      border: 0;
+      color: #183746;
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+    }
+    .structure-toggle strong {
+      min-width: 0;
+      overflow: hidden;
+      flex: 1;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .structure-count {
+      color: #6c7f8b;
+      font-size: 11px;
+      font-variant-numeric: tabular-nums;
+    }
+    .structure-node-actions {
+      display: flex;
+      gap: 2px;
+      padding-right: 4px;
+    }
+    .structure-icon-button {
+      display: inline-flex;
+      width: 26px;
+      height: 26px;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      border: 0;
+      border-radius: 4px;
+      color: #536a78;
+      background: transparent;
+      cursor: pointer;
+    }
+    .structure-icon-button:hover {
+      color: #102734;
+      background: #e3f1f6;
+    }
+    .structure-icon-button:disabled {
+      cursor: default;
+      opacity: 0.28;
+    }
+    .lesson-list {
+      display: grid;
+      gap: 6px;
+      margin: 6px 0 0 12px;
+      padding-left: 9px;
+      border-left: 2px solid #d8e5eb;
+    }
+    .scene-list {
+      display: grid;
+      gap: 5px;
+      margin-top: 5px;
+    }
+    .structure-empty {
+      padding: 8px 9px;
+      color: #748792;
+      font-size: 12px;
+      line-height: 1.35;
+    }
+    .unassigned-heading {
+      border-style: dashed;
+      border-color: #d8b76c;
+      background: #fffaf0;
+    }
+    .slide-item.structure-scene {
+      margin: 0;
+      padding: 8px 9px;
     }
     .slide-action-grid {
       display: grid;
@@ -132,6 +246,14 @@
     .slide-item.active {
       color: #fff;
       background: #102734;
+    }
+    .slide-item.structure-scene:not(.active):not(.hidden-slide) {
+      border-color: var(--scene-border);
+      background: var(--scene-tint);
+      transition: background-color 120ms ease, border-color 120ms ease;
+    }
+    .slide-item.structure-scene:not(.active):not(.hidden-slide):hover {
+      background: var(--scene-tint-hover);
     }
     .slide-item.hidden-slide {
       border-color: #e7b4b4;
@@ -264,15 +386,18 @@
       grid-template-columns: minmax(0, 1fr) 380px;
     }
     .compare {
+      display: grid;
       min-width: 0;
       min-height: 0;
+      grid-template-rows: minmax(520px, 1fr) auto;
+      gap: 14px;
       overflow: auto;
       padding: 18px;
       background: #e7eef2;
     }
     .compare-grid {
       display: grid;
-      min-height: 100%;
+      min-height: 520px;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 14px;
     }
@@ -299,6 +424,7 @@
       font-weight: 800;
     }
     .frame-body {
+      position: relative;
       display: flex;
       min-height: 420px;
       align-items: center;
@@ -333,6 +459,214 @@
     .inline-svg.original { max-width: none; max-height: none; }
     .media.width { width: 100%; max-height: none; }
     .media.original { max-width: none; max-height: none; }
+    .spoken-text-panel {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid #cad7df;
+      border-radius: 8px;
+      background: #fff;
+    }
+    .spoken-text-header {
+      display: flex;
+      min-height: 42px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 9px 14px;
+      border-bottom: 1px solid #d8e3ea;
+      color: #324e5e;
+      font-size: 13px;
+    }
+    .spoken-text-actions {
+      display: flex;
+      min-width: 0;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .spoken-text-actions .button {
+      min-height: 30px;
+      padding: 4px 9px;
+      font-size: 12px;
+    }
+    .spoken-text-header strong {
+      font-size: 14px;
+    }
+    .spoken-text-meta {
+      color: #647987;
+      font-weight: 600;
+      text-align: right;
+    }
+    .spoken-text-meta.warn { color: #9a6712; }
+    .spoken-text-body {
+      max-height: 280px;
+      overflow: auto;
+      padding: 16px 18px;
+      color: #183746;
+      font-size: 15px;
+      line-height: 1.58;
+      white-space: pre-wrap;
+    }
+    .spoken-text-pause {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      min-height: 26px;
+      margin: 0 3px;
+      padding: 2px 9px;
+      border: 1px solid #00a754;
+      border-radius: 999px;
+      color: #183746;
+      background: #e6f6ee;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 750;
+      line-height: 1.2;
+      vertical-align: baseline;
+      cursor: pointer;
+    }
+    .spoken-text-pause::before { content: "\23F8"; color: #00a754; }
+    .spoken-text-pause:hover { border-color: #008f48; background: #d6f0e2; }
+    .spoken-text-pause.invalid {
+      border-color: #c74d4d;
+      color: #8d2929;
+      background: #fff1f1;
+    }
+    .spoken-text-pause.invalid::before { content: "!"; color: #c74d4d; }
+    .spoken-text-pause:focus-visible {
+      outline: 2px solid #102f46;
+      outline-offset: 2px;
+    }
+    .spoken-text-trigger {
+      padding: 1px 2px;
+      border-bottom: 2px solid #168fbd;
+      border-radius: 2px;
+      color: inherit;
+      background: #dff3fa;
+      cursor: help;
+    }
+    .spoken-text-trigger.action-draw { border-bottom-color: #2b8a6e; background: #def3eb; }
+    .spoken-text-trigger.action-highlight { border-bottom-color: #c98c16; background: #fff0bd; }
+    .spoken-text-trigger.action-hide { border-bottom-color: #c74d4d; background: #fde4e4; }
+    .spoken-text-trigger.action-transform { border-bottom-color: #7962a8; background: #eee8f8; }
+    .spoken-text-trigger:focus-visible {
+      outline: 2px solid #102f46;
+      outline-offset: 2px;
+    }
+    @keyframes spokenTargetPulse {
+      from { filter: drop-shadow(0 0 3px #f2a93b) drop-shadow(0 0 5px #f2a93b); }
+      to { filter: drop-shadow(0 0 7px #ffd85a) drop-shadow(0 0 13px #f2a93b); }
+    }
+    .inline-svg .spoken-trigger-target-preview {
+      visibility: visible !important;
+      opacity: 1 !important;
+      filter: drop-shadow(0 0 7px #ffd85a) drop-shadow(0 0 13px #f2a93b) !important;
+      animation: spokenTargetPulse 700ms ease-in-out infinite alternate;
+    }
+    .svg-trigger-hover-box {
+      position: absolute;
+      z-index: 5;
+      min-width: 8px;
+      min-height: 8px;
+      border: 3px solid #f2a93b;
+      border-radius: 4px;
+      background: rgba(255, 216, 90, 0.12);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.9), 0 0 16px rgba(242, 169, 59, 0.85);
+      pointer-events: none;
+    }
+    .spoken-text-body .empty {
+      max-width: none;
+      padding: 8px 0;
+      text-align: left;
+    }
+    .spoken-text-editor {
+      display: grid;
+      gap: 10px;
+      padding: 14px;
+    }
+    .spoken-text-editor[hidden] { display: none !important; }
+    .spoken-text-editor-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px 12px;
+    }
+    .spoken-text-editor-toolbar label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #324e5e;
+      font-size: 12px;
+      font-weight: 750;
+    }
+    .spoken-text-pause-status {
+      color: #647987;
+      font-size: 12px;
+    }
+    .spoken-text-pause-status.invalid { color: #a22f2f; font-weight: 750; }
+    .spoken-text-editor textarea {
+      width: 100%;
+      min-height: 240px;
+      resize: vertical;
+      padding: 12px;
+      border: 1px solid #9fb3bf;
+      border-radius: 6px;
+      color: #183746;
+      background: #fff;
+      font: inherit;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .spoken-text-editor-footer {
+      display: flex;
+      min-width: 0;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .spoken-text-editor-buttons {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .spoken-text-editor .button.primary {
+      border-color: #137fa9;
+      color: #fff;
+      background: #168fbd;
+    }
+    .spoken-text-save-status {
+      min-width: 0;
+      color: #647987;
+      font-size: 12px;
+      overflow-wrap: anywhere;
+    }
+    .pause-editor-popover {
+      position: fixed;
+      z-index: 40;
+      display: grid;
+      width: min(320px, calc(100vw - 24px));
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid #9fb3bf;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 12px 34px rgba(16, 39, 52, 0.24);
+    }
+    .pause-editor-popover[hidden] { display: none !important; }
+    .pause-editor-popover strong { color: #183746; font-size: 13px; }
+    .pause-editor-fields {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 110px;
+      gap: 8px;
+    }
+    .pause-editor-fields input[hidden] { display: none; }
+    .pause-editor-actions { display: flex; justify-content: flex-end; gap: 7px; }
+    .pause-editor-popover .button.primary {
+      border-color: #137fa9;
+      color: #fff;
+      background: #168fbd;
+    }
     .empty {
       max-width: 360px;
       padding: 20px;
@@ -397,6 +731,17 @@
       grid-template-columns: 1fr auto;
       gap: 8px;
       align-items: start;
+    }
+    .structure-assignment {
+      display: grid;
+      gap: 8px;
+    }
+    .structure-assignment label {
+      display: grid;
+      gap: 5px;
+      color: #647987;
+      font-size: 12px;
+      font-weight: 700;
     }
     .presentation-toggle {
       display: grid;
@@ -706,6 +1051,7 @@
         </div>
         <div class="sidebar-actions">
           <button id="addSlide" class="button" type="button">Zusatzfolie hinzufuegen</button>
+          <button id="addChapter" class="button" type="button">Kapitel hinzufuegen</button>
           <div class="slide-action-grid">
             <button id="moveSlideUp" class="button" type="button">Hoch</button>
             <button id="moveSlideDown" class="button" type="button">Runter</button>
@@ -749,9 +1095,9 @@
         <label class="muted" for="animationDelay">Schrittpause</label>
         <select id="animationDelay" class="select" aria-label="Pause zwischen Animationsschritten">
           <option value="500">0,5 s</option>
-          <option value="1000">1,0 s</option>
+          <option value="1000" selected>1,0 s</option>
           <option value="1500">1,5 s</option>
-          <option value="2500" selected>2,5 s</option>
+          <option value="2500">2,5 s</option>
         </select>
         <span id="animationCurrent" class="timeline-time">0:00</span>
         <input id="animationTimeline" class="animation-timeline" type="range" min="0" max="1" value="0" step="1" aria-label="Animationszeit">
@@ -764,7 +1110,7 @@
           <div class="compare-grid">
             <div class="frame">
               <div class="frame-header">
-                <span>Referenzfolie</span>
+                <span>Quell-SVG</span>
                 <a id="oldOpen" class="path-link" target="_blank" rel="noreferrer">oeffnen</a>
               </div>
               <div id="oldFrame" class="frame-body"></div>
@@ -781,9 +1127,76 @@
               <div id="svgFrame" class="frame-body"></div>
             </div>
           </div>
+          <section class="spoken-text-panel" aria-labelledby="spokenTextTitle">
+            <div class="spoken-text-header">
+              <strong id="spokenTextTitle">Gesprochener Text</strong>
+              <div class="spoken-text-actions">
+                <span id="spokenTextMeta" class="spoken-text-meta"></span>
+                <button id="spokenTextCopyRaw" class="button" type="button">Rohtext kopieren</button>
+                <button id="spokenTextEdit" class="button" type="button">Bearbeiten</button>
+              </div>
+            </div>
+            <div id="spokenTextBody" class="spoken-text-body" aria-live="polite"></div>
+            <div id="spokenTextEditor" class="spoken-text-editor" hidden>
+              <div class="spoken-text-editor-toolbar">
+                <label for="spokenTextPauseInsert">
+                  Pause einfuegen
+                  <select id="spokenTextPauseInsert" class="select" aria-label="Pause an Cursorposition einfuegen">
+                    <option value="">Auswaehlen ...</option>
+                    <option value="short">Kurz - 0,4 s</option>
+                    <option value="medium">Mittel - 0,8 s</option>
+                    <option value="long">Lang - 1,4 s</option>
+                    <option value="custom">Benutzerdefiniert ...</option>
+                  </select>
+                </label>
+                <span id="spokenTextPauseStatus" class="spoken-text-pause-status" aria-live="polite"></span>
+              </div>
+              <textarea id="spokenTextInput" aria-label="Gesprochenen Text bearbeiten"></textarea>
+              <div class="spoken-text-editor-footer">
+                <span id="spokenTextSaveStatus" class="spoken-text-save-status" aria-live="polite"></span>
+                <div class="spoken-text-editor-buttons">
+                  <button id="spokenTextRestore" class="button" type="button">Original wiederherstellen</button>
+                  <button id="spokenTextCancel" class="button" type="button">Abbrechen</button>
+                  <button id="spokenTextSave" class="button primary" type="button">Speichern</button>
+                </div>
+              </div>
+            </div>
+            <div id="spokenTextPauseEditor" class="pause-editor-popover" role="dialog" aria-label="Pause bearbeiten" hidden>
+              <strong>Pause bearbeiten</strong>
+              <div class="pause-editor-fields">
+                <select id="spokenTextPauseEditPreset" class="select" aria-label="Pausendauer">
+                  <option value="short">Kurz - 0,4 s</option>
+                  <option value="medium">Mittel - 0,8 s</option>
+                  <option value="long">Lang - 1,4 s</option>
+                  <option value="custom">Benutzerdefiniert</option>
+                </select>
+                <input id="spokenTextPauseEditCustom" class="search" type="text" inputmode="decimal" aria-label="Benutzerdefinierte Pause in Sekunden" hidden>
+              </div>
+              <div class="pause-editor-actions">
+                <button id="spokenTextPauseDelete" class="button danger" type="button">Loeschen</button>
+                <button id="spokenTextPauseCancel" class="button" type="button">Abbrechen</button>
+                <button id="spokenTextPauseApply" class="button primary" type="button">Uebernehmen</button>
+              </div>
+            </div>
+          </section>
         </section>
 
         <aside class="details">
+          <section class="section">
+            <h2>Gliederung</h2>
+            <div class="structure-assignment">
+              <label for="sceneChapter">
+                Kapitel
+                <select id="sceneChapter" class="select"></select>
+              </label>
+              <label for="sceneLesson">
+                Lektion
+                <select id="sceneLesson" class="select"></select>
+              </label>
+              <button id="saveScenePlacement" class="button" type="button">Zuordnung speichern</button>
+              <div id="scenePlacementMessage" class="review-status"></div>
+            </div>
+          </section>
           <section class="section">
             <h2>Status</h2>
             <dl id="meta" class="kv"></dl>
@@ -799,7 +1212,7 @@
               </select>
               <button id="saveReview" class="button">Speichern</button>
             </div>
-            <textarea id="reviewNotes" class="textarea" placeholder="Notizen zum Abgleich zwischen alter Folie und SVG-Vorschlag"></textarea>
+            <textarea id="reviewNotes" class="textarea" placeholder="Änderungswünsche zur Ziel-SVG: Inhalt, Gestaltung, Darstellung oder Animation"></textarea>
             <div class="presentation-toggle">
               <label class="checkbox-row" for="includeInPresentation">
                 <input id="includeInPresentation" type="checkbox">
@@ -846,9 +1259,9 @@
       <label class="muted fullscreen-animation-control" for="fullscreenDelay">Schrittpause</label>
       <select id="fullscreenDelay" class="select fullscreen-animation-control" aria-label="Pause zwischen Animationsschritten im Vollbild">
         <option value="500">0,5 s</option>
-        <option value="1000">1,0 s</option>
+        <option value="1000" selected>1,0 s</option>
         <option value="1500">1,5 s</option>
-        <option value="2500" selected>2,5 s</option>
+        <option value="2500">2,5 s</option>
       </select>
       <span id="fullscreenCurrent" class="timeline-time fullscreen-animation-control">0:00</span>
       <input id="fullscreenTimeline" class="animation-timeline fullscreen-animation-control" type="range" min="0" max="1" value="0" step="1" aria-label="Animationszeit im Vollbild">
@@ -861,11 +1274,16 @@
     </div>
   </div>
 
+  <script src="/viewer-assets/narration-pause-domain.js"></script>
+  <script src="/viewer-assets/svg-animation-domain.js"></script>
   <script>
     const state = {
       slides: [],
       filtered: [],
       modules: [],
+      trainingStructure: { schema_version: "basisReliabilityTrainingStructure/v1", modules: {} },
+      structureCollapsed: new Set(),
+      structureSaving: false,
       selectedId: "",
       selectedVersionId: "current",
       showHidden: false,
@@ -881,7 +1299,7 @@
       animationPaused: false,
       animationFrame: 0,
       animationLastTimestamp: 0,
-      animationPauseMs: 2500,
+      animationPauseMs: 1000,
       animationPauseUserSelected: false,
       originalTargetStyles: new Map(),
       fullscreenOpen: false,
@@ -890,10 +1308,17 @@
       presentationSlides: [],
       presentationIndex: 0,
       presentationToken: 0,
+      comparisonWheelDelta: 0,
+      comparisonWheelBlocked: false,
+      comparisonWheelResetTimer: 0,
       pendingDeleteUndo: null,
       deleteUndoTimer: 0,
       crosscheckRunning: false,
       crosscheckResults: [],
+      spokenTextEditing: false,
+      spokenTextSaving: false,
+      spokenPauseEdit: null,
+      spokenTriggerPreview: { targets: [], boxes: [] },
     };
 
     const elements = {
@@ -901,6 +1326,7 @@
       search: document.getElementById("search"),
       moduleFilter: document.getElementById("moduleFilter"),
       addSlide: document.getElementById("addSlide"),
+      addChapter: document.getElementById("addChapter"),
       moveSlideUp: document.getElementById("moveSlideUp"),
       moveSlideDown: document.getElementById("moveSlideDown"),
       deleteSlide: document.getElementById("deleteSlide"),
@@ -910,6 +1336,7 @@
       undoToastText: document.getElementById("undoToastText"),
       undoDelete: document.getElementById("undoDelete"),
       slideList: document.getElementById("slideList"),
+      compareGrid: document.querySelector(".compare-grid"),
       previous: document.getElementById("previous"),
       next: document.getElementById("next"),
       title: document.getElementById("title"),
@@ -920,6 +1347,24 @@
       svgOpen: document.getElementById("svgOpen"),
       svgAnimationEdit: document.getElementById("svgAnimationEdit"),
       svgFullscreen: document.getElementById("svgFullscreen"),
+      spokenTextBody: document.getElementById("spokenTextBody"),
+      spokenTextMeta: document.getElementById("spokenTextMeta"),
+      spokenTextCopyRaw: document.getElementById("spokenTextCopyRaw"),
+      spokenTextEdit: document.getElementById("spokenTextEdit"),
+      spokenTextEditor: document.getElementById("spokenTextEditor"),
+      spokenTextInput: document.getElementById("spokenTextInput"),
+      spokenTextPauseInsert: document.getElementById("spokenTextPauseInsert"),
+      spokenTextPauseStatus: document.getElementById("spokenTextPauseStatus"),
+      spokenTextPauseEditor: document.getElementById("spokenTextPauseEditor"),
+      spokenTextPauseEditPreset: document.getElementById("spokenTextPauseEditPreset"),
+      spokenTextPauseEditCustom: document.getElementById("spokenTextPauseEditCustom"),
+      spokenTextPauseDelete: document.getElementById("spokenTextPauseDelete"),
+      spokenTextPauseCancel: document.getElementById("spokenTextPauseCancel"),
+      spokenTextPauseApply: document.getElementById("spokenTextPauseApply"),
+      spokenTextSaveStatus: document.getElementById("spokenTextSaveStatus"),
+      spokenTextRestore: document.getElementById("spokenTextRestore"),
+      spokenTextCancel: document.getElementById("spokenTextCancel"),
+      spokenTextSave: document.getElementById("spokenTextSave"),
       fitMode: document.getElementById("fitMode"),
       presentationMode: document.getElementById("presentationMode"),
       refresh: document.getElementById("refresh"),
@@ -945,6 +1390,10 @@
       fullscreenPreviousSlide: document.getElementById("fullscreenPreviousSlide"),
       fullscreenNextSlide: document.getElementById("fullscreenNextSlide"),
       fullscreenCounter: document.getElementById("fullscreenCounter"),
+      sceneChapter: document.getElementById("sceneChapter"),
+      sceneLesson: document.getElementById("sceneLesson"),
+      saveScenePlacement: document.getElementById("saveScenePlacement"),
+      scenePlacementMessage: document.getElementById("scenePlacementMessage"),
       meta: document.getElementById("meta"),
       crosscheckScope: document.getElementById("crosscheckScope"),
       runCrosscheck: document.getElementById("runCrosscheck"),
@@ -961,6 +1410,13 @@
       saveReview: document.getElementById("saveReview"),
       reviewMessage: document.getElementById("reviewMessage"),
     };
+
+    try {
+      const collapsed = JSON.parse(localStorage.getItem("basis-rebuild-structure-collapsed") || "[]");
+      if (Array.isArray(collapsed)) state.structureCollapsed = new Set(collapsed);
+    } catch {
+      state.structureCollapsed = new Set();
+    }
 
     function selectedSlide() {
       return state.slides.find((slide) => slide.id === state.selectedId) || null;
@@ -1001,6 +1457,203 @@
 
     function slideSubtitle(slide) {
       return `${slide.moduleId} · ${slide.slideId} · ${slideDisplayLabel(slide)}`;
+    }
+
+    function trainingModule(moduleId = elements.moduleFilter.value) {
+      return state.trainingStructure?.modules?.[moduleId] || {
+        chapters: [],
+        scene_assignments: {},
+      };
+    }
+
+    function scenePlacement(slide) {
+      if (!slide) return null;
+      const module = trainingModule(slide.moduleId);
+      const assignment = module.scene_assignments?.[slide.id];
+      const chapter = module.chapters.find((item) => item.id === assignment?.chapter_id);
+      const lesson = chapter?.lessons.find((item) => item.id === assignment?.lesson_id);
+      return chapter && lesson ? { chapter, lesson, assignment } : null;
+    }
+
+    function scenePlacementKey(slide) {
+      const placement = scenePlacement(slide);
+      return placement
+        ? `${placement.chapter.id}::${placement.lesson.id}`
+        : "__unassigned__";
+    }
+
+    function orderedSlidesByStructure(slides, moduleId) {
+      const module = trainingModule(moduleId);
+      const remaining = new Map(slides.map((slide) => [slide.id, slide]));
+      const ordered = [];
+      module.chapters.forEach((chapter) => {
+        chapter.lessons.forEach((lesson) => {
+          slides.forEach((slide) => {
+            const assignment = module.scene_assignments?.[slide.id];
+            if (
+              remaining.has(slide.id) &&
+              assignment?.chapter_id === chapter.id &&
+              assignment?.lesson_id === lesson.id
+            ) {
+              ordered.push(slide);
+              remaining.delete(slide.id);
+            }
+          });
+        });
+      });
+      ordered.push(...remaining.values());
+      return ordered;
+    }
+
+    function structureCollapseKey(kind, moduleId, id) {
+      return `${moduleId}:${kind}:${id}`;
+    }
+
+    function structureIsCollapsed(kind, moduleId, id) {
+      return state.structureCollapsed.has(structureCollapseKey(kind, moduleId, id));
+    }
+
+    function persistStructureCollapseState() {
+      localStorage.setItem(
+        "basis-rebuild-structure-collapsed",
+        JSON.stringify([...state.structureCollapsed]),
+      );
+    }
+
+    function toggleStructureNode(kind, moduleId, id) {
+      const key = structureCollapseKey(kind, moduleId, id);
+      if (state.structureCollapsed.has(key)) state.structureCollapsed.delete(key);
+      else state.structureCollapsed.add(key);
+      persistStructureCollapseState();
+      renderList();
+    }
+
+    function expandStructurePath(slide) {
+      const placement = scenePlacement(slide);
+      if (!placement) return;
+      const chapterKey = structureCollapseKey("chapter", slide.moduleId, placement.chapter.id);
+      const lessonKey = structureCollapseKey("lesson", slide.moduleId, placement.lesson.id);
+      const chapterChanged = state.structureCollapsed.delete(chapterKey);
+      const lessonChanged = state.structureCollapsed.delete(lessonKey);
+      const changed = chapterChanged || lessonChanged;
+      if (changed) persistStructureCollapseState();
+    }
+
+    function makeStructureIcon(label, title, handler, disabled = false) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "structure-icon-button";
+      button.textContent = label;
+      button.title = title;
+      button.setAttribute("aria-label", title);
+      button.disabled = disabled;
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        handler();
+      });
+      return button;
+    }
+
+    async function updateTrainingStructure(action, values = {}, successMessage = "Gliederung gespeichert.") {
+      if (state.structureSaving) return null;
+      state.structureSaving = true;
+      elements.addChapter.disabled = true;
+      elements.saveScenePlacement.disabled = true;
+      elements.sidebarMessage.textContent = "Speichere Gliederung...";
+      try {
+        const response = await fetch("/api/training-structure", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ action, ...values }),
+        });
+        const payload = await response.json();
+        if (!response.ok) throw new Error(payload.error || `HTTP ${response.status}`);
+        state.trainingStructure = payload.trainingStructure || state.trainingStructure;
+        applyFilter();
+        const slide = selectedSlide();
+        if (slide) renderDetails(slide);
+        elements.sidebarMessage.textContent = successMessage;
+        return payload.result;
+      } catch (error) {
+        elements.sidebarMessage.textContent = error.message;
+        elements.scenePlacementMessage.textContent = error.message;
+        return null;
+      } finally {
+        state.structureSaving = false;
+        elements.addChapter.disabled = false;
+        renderScenePlacement(selectedSlide());
+      }
+    }
+
+    function addChapter() {
+      const moduleId = elements.moduleFilter.value;
+      if (!moduleId) return;
+      const module = trainingModule(moduleId);
+      const title = globalThis.prompt(
+        "Name des neuen Kapitels",
+        `Kapitel ${module.chapters.length + 1}`,
+      );
+      if (title === null) return;
+      updateTrainingStructure("create_chapter", { moduleId, title }, "Kapitel angelegt.");
+    }
+
+    function addLesson(moduleId, chapter) {
+      const title = globalThis.prompt(
+        "Name der neuen Lektion",
+        `Lektion ${chapter.lessons.length + 1}`,
+      );
+      if (title === null) return;
+      updateTrainingStructure(
+        "create_lesson",
+        { moduleId, chapterId: chapter.id, title },
+        "Lektion angelegt.",
+      );
+    }
+
+    function renameStructureNode(kind, moduleId, chapter, lesson = null) {
+      const target = lesson || chapter;
+      const title = globalThis.prompt(
+        `${kind === "chapter" ? "Kapitel" : "Lektion"} umbenennen`,
+        target.title,
+      );
+      if (title === null) return;
+      updateTrainingStructure(
+        `rename_${kind}`,
+        {
+          moduleId,
+          chapterId: chapter.id,
+          lessonId: lesson?.id,
+          title,
+        },
+        `${kind === "chapter" ? "Kapitel" : "Lektion"} umbenannt.`,
+      );
+    }
+
+    function deleteStructureNode(kind, moduleId, chapter, lesson = null) {
+      const target = lesson || chapter;
+      if (!globalThis.confirm(`${target.title} wirklich l\u00f6schen?`)) return;
+      updateTrainingStructure(
+        `delete_${kind}`,
+        {
+          moduleId,
+          chapterId: chapter.id,
+          lessonId: lesson?.id,
+        },
+        `${kind === "chapter" ? "Kapitel" : "Lektion"} gel\u00f6scht.`,
+      );
+    }
+
+    function moveStructureNode(kind, moduleId, chapter, lesson, direction) {
+      updateTrainingStructure(
+        `move_${kind}`,
+        {
+          moduleId,
+          chapterId: chapter.id,
+          lessonId: lesson?.id,
+          direction,
+        },
+        "Reihenfolge gespeichert.",
+      );
     }
 
     function crosscheckReferences(slide) {
@@ -1075,8 +1728,9 @@
     }
 
     function presentationSlideList() {
-      const source = state.filtered.length ? state.filtered : state.slides;
-      return source.filter((slide) => !slideIsHidden(slide) && slide.svgProposal?.url && slideIncludedInPresentation(slide));
+      return state.filtered.filter((slide) =>
+        !slideIsHidden(slide) && slide.svgProposal?.url && slideIncludedInPresentation(slide)
+      );
     }
 
     function presentationStartIndex(slides) {
@@ -1104,14 +1758,29 @@
       if (slide.isAdditionalSlide) {
         badges.push(badge("Zusatz", "warn"));
       } else {
-        badges.push(badge(slide.status.hasOldSlide ? "PNG" : "kein PNG", slide.status.hasOldSlide ? "ok" : "miss"));
+        const sourceLabel = slide.status.hasSourceSvg
+          ? "Quell-SVG"
+          : slide.status.hasOldSlide
+            ? "Legacy-PNG"
+            : "keine Quelle";
+        badges.push(badge(sourceLabel, slide.status.hasOldSlide ? "ok" : "miss"));
       }
-      badges.push(badge(slide.status.hasSvgProposal ? "SVG" : "kein SVG", slide.status.hasSvgProposal ? "ok" : "warn"));
+      badges.push(badge(slide.status.hasSvgProposal ? "Ziel-SVG" : "kein Ziel-SVG", slide.status.hasSvgProposal ? "ok" : "warn"));
       if (slide.svgProposal?.aliasForSlideNumber) {
         badges.push(badge(`Master ${String(slide.svgProposal.aliasForSlideNumber).padStart(3, "0")}`, "ok"));
       }
-      if (slide.status.hasAnimation) {
-        badges.push(badge(`Animation ${slide.svgProposal?.animation?.stepCount || ""}`.trim(), "ok"));
+      const animationDecision = slide.animationDecision?.decision || "needs_review";
+      if (animationDecision === "static") {
+        badges.push(badge("statisch", "ok"));
+      } else if (animationDecision === "animated") {
+        badges.push(badge(
+          slide.status.hasAnimation
+            ? `Animation ${slide.svgProposal?.animation?.stepCount || ""}`.trim()
+            : "Animation fehlt",
+          slide.status.hasAnimation ? "ok" : "warn",
+        ));
+      } else {
+        badges.push(badge("Animation pruefen", "warn"));
       }
       if (Array.isArray(slide.review?.versions) && slide.review.versions.length) {
         badges.push(badge(`${slide.review.versions.length} Versionen`, "ok"));
@@ -1286,7 +1955,7 @@
         const response = await fetch(`${proposal.url}?v=${Date.now()}`);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const text = await response.text();
-        const svgElement = parseSafeInlineSvg(text);
+        const svgElement = parseSafeInlineSvg(text, response.url);
         if (token !== state.presentationToken) return;
         svgElement.classList.add("inline-svg");
         elements.fullscreenSvgFrame.replaceChildren(svgElement);
@@ -1339,6 +2008,46 @@
         renderPresentationSlide();
       }
       return true;
+    }
+
+    function resetComparisonWheelNavigation() {
+      clearTimeout(state.comparisonWheelResetTimer);
+      state.comparisonWheelResetTimer = 0;
+      state.comparisonWheelDelta = 0;
+      state.comparisonWheelBlocked = false;
+    }
+
+    function handleComparisonWheel(event) {
+      if (state.fullscreenOpen || event.ctrlKey) return;
+      if (event.target.closest("button, a, input, select, textarea")) return;
+
+      const primaryDelta = Math.abs(event.deltaY) >= Math.abs(event.deltaX)
+        ? event.deltaY
+        : event.deltaX;
+      if (!primaryDelta) return;
+
+      event.preventDefault();
+      clearTimeout(state.comparisonWheelResetTimer);
+      state.comparisonWheelResetTimer = window.setTimeout(resetComparisonWheelNavigation, 180);
+      if (state.comparisonWheelBlocked) return;
+
+      const normalizedDelta = event.deltaMode === WheelEvent.DOM_DELTA_LINE
+        ? primaryDelta * 16
+        : event.deltaMode === WheelEvent.DOM_DELTA_PAGE
+          ? primaryDelta * window.innerHeight
+          : primaryDelta;
+      if (
+        state.comparisonWheelDelta &&
+        Math.sign(state.comparisonWheelDelta) !== Math.sign(normalizedDelta)
+      ) {
+        state.comparisonWheelDelta = 0;
+      }
+      state.comparisonWheelDelta += normalizedDelta;
+      if (Math.abs(state.comparisonWheelDelta) < 48) return;
+
+      move(state.comparisonWheelDelta > 0 ? 1 : -1);
+      state.comparisonWheelDelta = 0;
+      state.comparisonWheelBlocked = true;
     }
 
     function stopAnimationPlayback() {
@@ -1463,6 +2172,7 @@
     function hideAnimationTarget(targetId) {
       const element = restoreTargetStyle(targetId);
       if (!element) return;
+      element.style.display = "";
       element.style.visibility = "hidden";
       element.style.opacity = "0";
       element.style.pointerEvents = "none";
@@ -1480,14 +2190,42 @@
       const element = restoreTargetStyle(step.targetId);
       if (!element) return;
       const value = Math.max(0, Math.min(1, progress));
+      element.style.display = "";
       if (step.action === "hide") {
         element.style.visibility = "visible";
         element.style.opacity = String(1 - value);
         return;
       }
       element.style.visibility = "visible";
-      element.style.opacity = String(Math.max(0.15, value));
       element.style.pointerEvents = "none";
+      if (step.action === "highlight") {
+        const pulse = Math.sin(Math.PI * value);
+        const color = step.stroke || "#F2A93B";
+        const strength = Math.max(2, Number(step.strokeWidth) || 4);
+        element.style.opacity = "1";
+        element.style.transformBox = "fill-box";
+        element.style.transformOrigin = "center";
+        element.style.transform = `scale(${1 + pulse * 0.018})`;
+        element.style.filter = `drop-shadow(0 0 ${strength + pulse * strength}px ${color})`;
+        return;
+      }
+      if (step.action === "transform") {
+        const fromX = Number(step.fromTranslateX) || 0;
+        const fromY = Number(step.fromTranslateY) || 0;
+        const toX = Number(step.translateX) || 0;
+        const toY = Number(step.translateY) || 0;
+        const fromScale = Number(step.fromScale) || 1;
+        const toScale = Number(step.scale) || 1;
+        const x = fromX + (toX - fromX) * value;
+        const y = fromY + (toY - fromY) * value;
+        const scale = fromScale + (toScale - fromScale) * value;
+        element.style.opacity = "1";
+        element.style.transformBox = "fill-box";
+        element.style.transformOrigin = step.transformOrigin || "center";
+        element.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+        return;
+      }
+      element.style.opacity = String(value);
       if (step.action === "draw") {
         element.style.clipPath = clipPathForDirection(step.direction, value);
       }
@@ -1496,6 +2234,7 @@
     function applyStepFinal(step) {
       const element = restoreTargetStyle(step.targetId);
       if (!element) return;
+      element.style.display = "";
       if (step.action === "hide") {
         element.style.visibility = "hidden";
         element.style.opacity = "0";
@@ -1504,6 +2243,17 @@
       element.style.visibility = "visible";
       element.style.opacity = "1";
       element.style.clipPath = "";
+      element.style.filter = "";
+      if (step.action === "transform") {
+        const x = Number(step.translateX) || 0;
+        const y = Number(step.translateY) || 0;
+        const scale = Number(step.scale) || 1;
+        element.style.transformBox = "fill-box";
+        element.style.transformOrigin = step.transformOrigin || "center";
+        element.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+      } else {
+        element.style.transform = "";
+      }
       element.style.pointerEvents = "none";
     }
 
@@ -1512,6 +2262,8 @@
       const frames =
         step.action === "draw"
           ? step.drawDurFrames ?? step.durFrames ?? defaults.drawDurFrames ?? 30
+          : step.action === "transform"
+            ? step.durFrames ?? defaults.transformDurFrames ?? 30
           : step.action === "highlight"
             ? step.highlightDurFrames ?? defaults.highlightDurFrames ?? 24
             : step.action === "hide"
@@ -1531,7 +2283,7 @@
       const options = [...elements.animationDelay.options]
         .map((option) => Number(option.value))
         .filter((value) => Number.isFinite(value) && value > 0);
-      return options.length ? options : [2500];
+      return options.length ? options : [1000];
     }
 
     function closestAnimationDelay(value) {
@@ -1576,13 +2328,35 @@
       const orderedSteps = orderedAnimationSteps();
       const pause = Number(state.animationPauseMs) || 0;
       let cursor = 0;
-      state.animationTimeline = orderedSteps.map((entry, index) => {
+      const triggerGroups = [];
+      for (const entry of orderedSteps) {
+        const key = `${entry.step.sourceText || ""}::${entry.step.occurrence || 1}`;
+        const previous = triggerGroups.at(-1);
+        if (previous?.key === key) {
+          previous.entries.push(entry);
+        } else {
+          triggerGroups.push({ key, entries: [entry] });
+        }
+      }
+      const timeline = [];
+      triggerGroups.forEach((group, groupIndex) => {
         const start = cursor;
-        const end = start + frameDuration(entry.step);
-        const pauseEnd = end + (index < orderedSteps.length - 1 ? pause : 0);
+        const groupDuration = Math.max(...group.entries.map((entry) => frameDuration(entry.step)));
+        const groupEnd = start + groupDuration;
+        const pauseEnd = groupEnd + (groupIndex < triggerGroups.length - 1 ? pause : 0);
+        group.entries.forEach((entry) => {
+          timeline.push({
+            ...entry,
+            index: timeline.length,
+            triggerGroupIndex: groupIndex,
+            start,
+            end: start + frameDuration(entry.step),
+            pauseEnd,
+          });
+        });
         cursor = pauseEnd;
-        return { ...entry, index, start, end, pauseEnd };
       });
+      state.animationTimeline = timeline;
       state.animationDuration = cursor;
       elements.animationTimeline.max = String(Math.max(1, Math.round(cursor)));
       state.animationTime = Math.min(state.animationTime, cursor);
@@ -1613,7 +2387,7 @@
         hideAnimationTarget(target.targetId);
       }
 
-      let activeSegment = null;
+      const activeSegments = [];
       let lastCompletedSegment = null;
       for (const segment of state.animationTimeline) {
         if (clamped < segment.start) break;
@@ -1621,10 +2395,9 @@
           applyStepFinal(segment.step);
           lastCompletedSegment = segment;
         } else {
-          activeSegment = segment;
+          activeSegments.push(segment);
           const progress = (clamped - segment.start) / Math.max(1, segment.end - segment.start);
           applyStepProgress(segment.step, progress);
-          break;
         }
       }
 
@@ -1634,9 +2407,14 @@
       elements.fullscreenCurrent.textContent = elements.animationCurrent.textContent;
       if (clamped >= state.animationDuration && state.animationTimeline.length) {
         setAnimationStatus(`Animation abgeschlossen - ${state.animationTimeline.length} Schritte.`);
-      } else if (activeSegment) {
-        const target = state.animationManifest.targets.find((item) => item.targetId === activeSegment.step.targetId);
-        setAnimationStatus(`Schritt ${activeSegment.index + 1}/${state.animationTimeline.length}: ${target?.label || activeSegment.step.targetId}`);
+      } else if (activeSegments.length) {
+        const labels = activeSegments.map((segment) => {
+          const target = state.animationManifest.targets.find((item) => item.targetId === segment.step.targetId);
+          return target?.label || segment.step.targetId;
+        });
+        const groupNumber = activeSegments[0].triggerGroupIndex + 1;
+        const groupCount = Math.max(...state.animationTimeline.map((segment) => segment.triggerGroupIndex)) + 1;
+        setAnimationStatus(`Trigger ${groupNumber}/${groupCount}: ${labels.join(", ")}`);
       } else if (lastCompletedSegment) {
         setAnimationStatus(`Pause ${formatSeconds(state.animationPauseMs)} nach Schritt ${lastCompletedSegment.index + 1}/${state.animationTimeline.length}.`);
       } else {
@@ -1685,7 +2463,7 @@
       state.animationFrame = requestAnimationFrame(tick);
     }
 
-    function parseSafeInlineSvg(source) {
+    function parseSafeInlineSvg(source, sourceUrl = location.href) {
       const documentSvg = new DOMParser().parseFromString(source, "image/svg+xml");
       const root = documentSvg.documentElement;
       if (documentSvg.querySelector("parsererror") || root?.localName?.toLowerCase() !== "svg") {
@@ -1708,6 +2486,22 @@
             /^(?:javascript:|vbscript:|data:text\/html|https?:|\/\/)/i.test(value)
           ) {
             node.removeAttribute(attribute.name);
+          } else if (
+            ["href", "xlink:href", "src"].includes(name) &&
+            value &&
+            !value.startsWith("#") &&
+            !/^(?:data:|blob:)/i.test(value)
+          ) {
+            try {
+              const resolved = new URL(value, sourceUrl);
+              if (resolved.origin !== location.origin) {
+                node.removeAttribute(attribute.name);
+              } else {
+                node.setAttribute(attribute.name, `${resolved.pathname}${resolved.search}${resolved.hash}`);
+              }
+            } catch {
+              node.removeAttribute(attribute.name);
+            }
           } else if (
             name === "style" &&
             /javascript:|url\(\s*['\"]?(?:https?:|\/\/)/i.test(value)
@@ -1768,7 +2562,7 @@
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const source = await response.text();
         if (token !== state.renderToken) return;
-        const svgElement = parseSafeInlineSvg(source);
+        const svgElement = parseSafeInlineSvg(source, response.url);
         svgElement.classList.add("inline-svg");
         if (state.fit !== "fit") svgElement.classList.add(state.fit);
         state.previewSvg = svgElement;
@@ -1780,8 +2574,10 @@
           const manifest = await manifestResponse.json();
           if (token !== state.renderToken) return;
           setupAnimation(manifest, svgElement, proposal.animation.defaultPauseMs);
+          renderSpokenText(slide);
         } else {
           resetAnimationState();
+          renderSpokenText(slide);
         }
       } catch (error) {
         state.previewSvg = null;
@@ -1790,36 +2586,211 @@
       }
     }
 
+    function makeSceneListItem(slide) {
+      const button = document.createElement("button");
+      button.className = `slide-item structure-scene ${slide.id === state.selectedId ? "active" : ""} ${slideIsHidden(slide) ? "hidden-slide" : ""}`.trim();
+      button.type = "button";
+      button.addEventListener("click", () => selectSlide(slide.id));
+
+      const title = document.createElement("div");
+      title.className = "slide-title";
+      title.textContent = slide.title;
+      const meta = document.createElement("div");
+      meta.className = "slide-meta";
+      meta.textContent = `${slide.slideId} · Szene ${String(slide.slideNumber || 0).padStart(3, "0")}`;
+      const badges = document.createElement("div");
+      badges.className = "badges";
+      statusBadges(slide).forEach((item) => badges.append(item));
+      button.append(title, meta, badges);
+      return button;
+    }
+
+    function makeStructureHeading({
+      kind,
+      moduleId,
+      id,
+      title,
+      count,
+      className = "",
+      actions = [],
+    }) {
+      const collapsed = structureIsCollapsed(kind, moduleId, id);
+      const heading = document.createElement("div");
+      heading.className = `structure-heading ${className}`.trim();
+      const toggle = document.createElement("button");
+      toggle.type = "button";
+      toggle.className = "structure-toggle";
+      toggle.setAttribute("aria-expanded", String(!collapsed));
+      toggle.addEventListener("click", () => toggleStructureNode(kind, moduleId, id));
+
+      const marker = document.createElement("span");
+      marker.textContent = collapsed ? "\u25b8" : "\u25be";
+      const label = document.createElement("strong");
+      label.textContent = title;
+      const countNode = document.createElement("span");
+      countNode.className = "structure-count";
+      countNode.textContent = String(count);
+      toggle.append(marker, label, countNode);
+
+      const actionNode = document.createElement("div");
+      actionNode.className = "structure-node-actions";
+      actions.forEach((action) => actionNode.append(makeStructureIcon(
+        action.label,
+        action.title,
+        action.handler,
+        action.disabled,
+      )));
+      heading.append(toggle, actionNode);
+      return { heading, collapsed };
+    }
+
     function renderList() {
       elements.slideList.replaceChildren();
-      let currentModule = "";
-      for (const slide of state.filtered) {
-        if (slide.moduleId !== currentModule) {
-          currentModule = slide.moduleId;
-          const label = document.createElement("div");
-          label.className = "module-label";
-          label.textContent = currentModule;
-          elements.slideList.append(label);
+      const moduleId = elements.moduleFilter.value;
+      const module = trainingModule(moduleId);
+      const queryActive = Boolean(elements.search.value.trim());
+      const tree = document.createElement("div");
+      tree.className = "structure-tree";
+
+      module.chapters.forEach((chapter, chapterIndex) => {
+        const chapterSlides = state.filtered.filter((slide) => scenePlacement(slide)?.chapter.id === chapter.id);
+        if (queryActive && !chapterSlides.length) return;
+        const chapterNode = document.createElement("section");
+        chapterNode.className = "structure-node";
+        const chapterHeader = makeStructureHeading({
+          kind: "chapter",
+          moduleId,
+          id: chapter.id,
+          title: chapter.title,
+          count: chapterSlides.length,
+          actions: [
+            {
+              label: "\u2191",
+              title: "Kapitel nach oben",
+              disabled: chapterIndex === 0,
+              handler: () => moveStructureNode("chapter", moduleId, chapter, null, "up"),
+            },
+            {
+              label: "\u2193",
+              title: "Kapitel nach unten",
+              disabled: chapterIndex === module.chapters.length - 1,
+              handler: () => moveStructureNode("chapter", moduleId, chapter, null, "down"),
+            },
+            {
+              label: "+",
+              title: "Lektion hinzuf\u00fcgen",
+              handler: () => addLesson(moduleId, chapter),
+            },
+            {
+              label: "\u270e",
+              title: "Kapitel umbenennen",
+              handler: () => renameStructureNode("chapter", moduleId, chapter),
+            },
+            {
+              label: "\u00d7",
+              title: "Kapitel l\u00f6schen",
+              handler: () => deleteStructureNode("chapter", moduleId, chapter),
+            },
+          ],
+        });
+        chapterNode.append(chapterHeader.heading);
+
+        if (!chapterHeader.collapsed || queryActive) {
+          const lessonList = document.createElement("div");
+          lessonList.className = "lesson-list";
+          chapter.lessons.forEach((lesson, lessonIndex) => {
+            const lessonSlides = chapterSlides.filter((slide) => scenePlacement(slide)?.lesson.id === lesson.id);
+            if (queryActive && !lessonSlides.length) return;
+            const lessonNode = document.createElement("section");
+            lessonNode.className = "structure-node";
+            const lessonHeader = makeStructureHeading({
+              kind: "lesson",
+              moduleId,
+              id: lesson.id,
+              title: lesson.title,
+              count: lessonSlides.length,
+              className: "lesson-heading",
+              actions: [
+                {
+                  label: "\u2191",
+                  title: "Lektion nach oben",
+                  disabled: lessonIndex === 0,
+                  handler: () => moveStructureNode("lesson", moduleId, chapter, lesson, "up"),
+                },
+                {
+                  label: "\u2193",
+                  title: "Lektion nach unten",
+                  disabled: lessonIndex === chapter.lessons.length - 1,
+                  handler: () => moveStructureNode("lesson", moduleId, chapter, lesson, "down"),
+                },
+                {
+                  label: "\u270e",
+                  title: "Lektion umbenennen",
+                  handler: () => renameStructureNode("lesson", moduleId, chapter, lesson),
+                },
+                {
+                  label: "\u00d7",
+                  title: "Lektion l\u00f6schen",
+                  handler: () => deleteStructureNode("lesson", moduleId, chapter, lesson),
+                },
+              ],
+            });
+            lessonNode.append(lessonHeader.heading);
+            if (!lessonHeader.collapsed || queryActive) {
+              const sceneList = document.createElement("div");
+              sceneList.className = "scene-list";
+              lessonSlides.forEach((slide) => sceneList.append(makeSceneListItem(slide)));
+              if (!lessonSlides.length) {
+                const empty = document.createElement("div");
+                empty.className = "structure-empty";
+                empty.textContent = "Noch keine Szenen zugeordnet.";
+                sceneList.append(empty);
+              }
+              lessonNode.append(sceneList);
+            }
+            lessonList.append(lessonNode);
+          });
+          if (!chapter.lessons.length) {
+            const empty = document.createElement("div");
+            empty.className = "structure-empty";
+            empty.textContent = "Lege mit + die erste Lektion an.";
+            lessonList.append(empty);
+          }
+          chapterNode.append(lessonList);
         }
+        tree.append(chapterNode);
+      });
 
-        const button = document.createElement("button");
-        button.className = `slide-item ${slide.id === state.selectedId ? "active" : ""} ${slideIsHidden(slide) ? "hidden-slide" : ""}`.trim();
-        button.type = "button";
-        button.addEventListener("click", () => selectSlide(slide.id));
-
-        const title = document.createElement("div");
-        title.className = "slide-title";
-        title.textContent = slide.title;
-        const meta = document.createElement("div");
-        meta.className = "slide-meta";
-        meta.textContent = `${slide.slideId} · ${slideDisplayLabel(slide)}`;
-        const badges = document.createElement("div");
-        badges.className = "badges";
-        statusBadges(slide).forEach((item) => badges.append(item));
-
-        button.append(title, meta, badges);
-        elements.slideList.append(button);
+      const unassigned = state.filtered.filter((slide) => !scenePlacement(slide));
+      if (unassigned.length) {
+        const unassignedNode = document.createElement("section");
+        unassignedNode.className = "structure-node";
+        const unassignedHeader = makeStructureHeading({
+          kind: "unassigned",
+          moduleId,
+          id: "unassigned",
+          title: "Nicht zugeordnet",
+          count: unassigned.length,
+          className: "unassigned-heading",
+        });
+        unassignedNode.append(unassignedHeader.heading);
+        if (!unassignedHeader.collapsed || queryActive) {
+          const sceneList = document.createElement("div");
+          sceneList.className = "scene-list";
+          unassigned.forEach((slide) => sceneList.append(makeSceneListItem(slide)));
+          unassignedNode.append(sceneList);
+        }
+        tree.append(unassignedNode);
       }
+
+      if (!state.filtered.length) {
+        const empty = document.createElement("div");
+        empty.className = "structure-empty";
+        empty.textContent = "Keine Szenen im aktuellen Filter.";
+        tree.append(empty);
+      }
+      elements.slideList.append(tree);
+      elements.slideList.querySelector(".slide-item.active")?.scrollIntoView({ block: "nearest" });
     }
 
     function renderDefinitionList(node, entries) {
@@ -1866,9 +2837,90 @@
       elements.versionSelect.disabled = !slide.svgProposal && !versions.length;
     }
 
+    function renderLessonOptions(preferredLessonId = "") {
+      const slide = selectedSlide();
+      const module = trainingModule(slide?.moduleId);
+      const chapter = module.chapters.find((item) => item.id === elements.sceneChapter.value);
+      elements.sceneLesson.replaceChildren();
+
+      const empty = document.createElement("option");
+      empty.value = "";
+      empty.textContent = chapter ? "Lektion ausw\u00e4hlen" : "Keine Lektion";
+      elements.sceneLesson.append(empty);
+      chapter?.lessons.forEach((lesson) => {
+        const option = document.createElement("option");
+        option.value = lesson.id;
+        option.textContent = lesson.title;
+        elements.sceneLesson.append(option);
+      });
+      if (chapter?.lessons.some((lesson) => lesson.id === preferredLessonId)) {
+        elements.sceneLesson.value = preferredLessonId;
+      }
+      elements.sceneLesson.disabled = !chapter || !chapter.lessons.length || state.structureSaving;
+      elements.saveScenePlacement.disabled = state.structureSaving || (
+        Boolean(elements.sceneChapter.value) && !elements.sceneLesson.value
+      );
+    }
+
+    function renderScenePlacement(slide) {
+      elements.sceneChapter.replaceChildren();
+      const empty = document.createElement("option");
+      empty.value = "";
+      empty.textContent = "Nicht zugeordnet";
+      elements.sceneChapter.append(empty);
+
+      if (!slide) {
+        elements.sceneChapter.disabled = true;
+        elements.sceneLesson.disabled = true;
+        elements.saveScenePlacement.disabled = true;
+        elements.scenePlacementMessage.textContent = "Keine Szene ausgew\u00e4hlt.";
+        return;
+      }
+
+      const module = trainingModule(slide.moduleId);
+      module.chapters.forEach((chapter) => {
+        const option = document.createElement("option");
+        option.value = chapter.id;
+        option.textContent = chapter.title;
+        elements.sceneChapter.append(option);
+      });
+      const placement = scenePlacement(slide);
+      elements.sceneChapter.value = placement?.chapter.id || "";
+      elements.sceneChapter.disabled = state.structureSaving || !module.chapters.length;
+      renderLessonOptions(placement?.lesson.id || "");
+      elements.saveScenePlacement.disabled = state.structureSaving || !module.chapters.length || (
+        Boolean(elements.sceneChapter.value) && !elements.sceneLesson.value
+      );
+      elements.scenePlacementMessage.textContent = placement
+        ? `${placement.chapter.title} \u00b7 ${placement.lesson.title}`
+        : module.chapters.length
+          ? "Diese Szene ist noch keiner Lektion zugeordnet."
+          : "Lege links zuerst ein Kapitel an.";
+    }
+
+    async function saveScenePlacement() {
+      const slide = selectedSlide();
+      if (!slide) return;
+      const chapterId = elements.sceneChapter.value;
+      const lessonId = elements.sceneLesson.value;
+      if (chapterId && !lessonId) {
+        elements.scenePlacementMessage.textContent = "Bitte eine Lektion ausw\u00e4hlen.";
+        return;
+      }
+      elements.scenePlacementMessage.textContent = "Speichere Zuordnung...";
+      const result = await updateTrainingStructure(
+        "assign_scene",
+        { moduleId: slide.moduleId, slideId: slide.id, chapterId, lessonId },
+        "Szenenzuordnung gespeichert.",
+      );
+      if (result) renderScenePlacement(slide);
+    }
+
     function renderDetails(slide) {
       const archivedVersion = selectedArchivedVersion(slide);
       const reviewVersions = Array.isArray(slide.review?.versions) ? slide.review.versions : [];
+
+      renderScenePlacement(slide);
 
       renderDefinitionList(elements.meta, [
         ["Modul", slide.moduleId],
@@ -1879,11 +2931,12 @@
         ["Einfuegen nach", slide.isAdditionalSlide && slide.additionalSlide?.insert_after_slide_number
           ? `Folie ${String(slide.additionalSlide.insert_after_slide_number).padStart(3, "0")}`
           : "-"],
-        ["Alte Folie", slide.oldSlide ? { text: slide.oldSlide.path, href: slide.oldSlide.url } : "-"],
+        ["Quell-SVG", slide.oldSlide ? { text: slide.oldSlide.path, href: slide.oldSlide.url } : "-"],
         ["SVG", activeSvgProposal(slide) ? { text: activeSvgProposal(slide).path, href: activeSvgProposal(slide).url } : "-"],
         ["Version", activeVersionLabel(slide)],
         ["Praesentation", slide.svgProposal?.url ? (slideIncludedInPresentation(slide) ? "anzeigen" : "ausgeblendet") : "-"],
         ["SVG-Alias", slide.svgProposal?.aliasForSlideNumber ? `Master von Folie ${String(slide.svgProposal.aliasForSlideNumber).padStart(3, "0")}` : "-"],
+        ["Animationsmodus", slide.animationDecision?.decision || "needs_review"],
         ["Animation", activeSvgProposal(slide)?.animation?.available ? `${activeSvgProposal(slide).animation.stepCount} Schritte` : "-"],
       ]);
 
@@ -1892,7 +2945,7 @@
       elements.reviewNotes.value = archivedVersion?.notes || slide.review?.notes || "";
       elements.reviewNotes.placeholder = slide.isAdditionalSlide
         ? "Beschreibe hier den neuen Folienvorschlag: Inhalt, Kernaussage, gewuenschte Visualisierung, Animationen und Bezug zu den Nachbarfolien."
-        : "Notizen zum Abgleich zwischen alter Folie und SVG-Vorschlag";
+        : "Änderungswünsche zur Ziel-SVG: Inhalt, Gestaltung, Darstellung oder Animation";
       elements.reviewStatus.disabled = Boolean(archivedVersion);
       elements.reviewNotes.disabled = Boolean(archivedVersion);
       elements.saveReview.disabled = Boolean(archivedVersion);
@@ -1921,21 +2974,478 @@
           : "";
     }
 
+    function animationActionLabel(action) {
+      return ({
+        show: "einblenden",
+        hide: "ausblenden",
+        draw: "zeichnen",
+        highlight: "hervorheben",
+        transform: "bewegen",
+      })[action] || action || "animieren";
+    }
+
+    function spokenTextTriggerRanges(text, manifest) {
+      const domain = globalThis.SvgAnimationDomain;
+      const steps = Array.isArray(manifest?.steps) ? manifest.steps : [];
+      if (!domain?.matchSourceText || !text || !steps.length) {
+        return { ranges: [], total: 0, matched: 0 };
+      }
+
+      const targets = new Map(
+        (manifest.targets || []).map((target) => [target.targetId, target]),
+      );
+      const groups = [];
+      const byTrigger = new Map();
+      steps.forEach((step) => {
+        const sourceText = String(step.sourceText || "").trim();
+        if (!sourceText) return;
+        const occurrence = Number(step.occurrence) || 1;
+        const key = `${sourceText}::${occurrence}`;
+        let group = byTrigger.get(key);
+        if (!group) {
+          group = { sourceText, occurrence, steps: [], order: groups.length + 1 };
+          groups.push(group);
+          byTrigger.set(key, group);
+        }
+        group.steps.push(step);
+      });
+
+      const byRange = new Map();
+      groups.forEach((group) => {
+        const match = domain.matchSourceText(text, group.sourceText, group.occurrence);
+        if (!match.selected) return;
+        const key = `${match.selected.start}:${match.selected.end}`;
+        const range = byRange.get(key) || {
+          start: match.selected.start,
+          end: match.selected.end,
+          actions: [],
+          targetIds: [],
+          descriptions: [],
+        };
+        group.steps.forEach((step) => {
+          const target = targets.get(step.targetId);
+          range.actions.push(step.action || "show");
+          range.targetIds.push(step.targetId);
+          range.descriptions.push(
+            `Trigger ${group.order}: ${target?.label || step.targetId} ${animationActionLabel(step.action)}`,
+          );
+        });
+        byRange.set(key, range);
+      });
+
+      return {
+        ranges: [...byRange.values()].sort((left, right) => left.start - right.start || left.end - right.end),
+        total: groups.length,
+        matched: groups.filter((group) =>
+          domain.matchSourceText(text, group.sourceText, group.occurrence).selected
+        ).length,
+      };
+    }
+
+    function clearSpokenTriggerPreview() {
+      state.spokenTriggerPreview.targets.forEach((target) => {
+        target.classList.remove("spoken-trigger-target-preview");
+      });
+      state.spokenTriggerPreview.boxes.forEach((box) => box.remove());
+      state.spokenTriggerPreview = { targets: [], boxes: [] };
+    }
+
+    function showSpokenTriggerPreview(targetIds) {
+      clearSpokenTriggerPreview();
+      const svgElement = state.previewSvg || state.animationSvg;
+      if (!svgElement || !targetIds.length) return;
+      const frameRect = elements.svgFrame.getBoundingClientRect();
+      const targets = [];
+      const boxes = [];
+
+      [...new Set(targetIds)].forEach((targetId) => {
+        const target = svgElement.id === targetId
+          ? svgElement
+          : svgElement.querySelector(`#${CSS.escape(targetId)}`);
+        if (!target) return;
+        target.classList.add("spoken-trigger-target-preview");
+        targets.push(target);
+
+        const targetRect = target.getBoundingClientRect();
+        if (targetRect.width <= 0 || targetRect.height <= 0) return;
+        const box = document.createElement("div");
+        box.className = "svg-trigger-hover-box";
+        box.style.left = `${targetRect.left - frameRect.left + elements.svgFrame.scrollLeft - 3}px`;
+        box.style.top = `${targetRect.top - frameRect.top + elements.svgFrame.scrollTop - 3}px`;
+        box.style.width = `${targetRect.width + 6}px`;
+        box.style.height = `${targetRect.height + 6}px`;
+        elements.svgFrame.append(box);
+        boxes.push(box);
+      });
+
+      state.spokenTriggerPreview = { targets, boxes };
+    }
+
+    function closeSpokenPauseEditor() {
+      const returnFocus = state.spokenPauseEdit?.returnFocus;
+      state.spokenPauseEdit = null;
+      elements.spokenTextPauseEditor.hidden = true;
+      if (returnFocus?.isConnected) returnFocus.focus();
+    }
+
+    function updateSpokenPauseCustomVisibility() {
+      const custom = elements.spokenTextPauseEditPreset.value === "custom";
+      elements.spokenTextPauseEditCustom.hidden = !custom;
+      if (custom) elements.spokenTextPauseEditCustom.focus();
+    }
+
+    function openSpokenPauseEditor(pause, anchor) {
+      const slide = selectedSlide();
+      if (!slide || selectedArchivedVersion(slide)) return;
+      state.spokenPauseEdit = {
+        mode: "edit",
+        start: pause.start,
+        end: pause.end,
+        raw: pause.raw,
+        returnFocus: anchor,
+      };
+      elements.spokenTextPauseDelete.hidden = false;
+      elements.spokenTextPauseEditPreset.value = pause.valid ? pause.preset : "custom";
+      elements.spokenTextPauseEditCustom.value = pause.valid && pause.preset === "custom"
+        ? String(pause.durationMs / 1000)
+        : "";
+      elements.spokenTextPauseEditor.hidden = false;
+      updateSpokenPauseCustomVisibility();
+      const rect = anchor.getBoundingClientRect();
+      requestAnimationFrame(() => {
+        const popup = elements.spokenTextPauseEditor;
+        const left = Math.max(12, Math.min(rect.left, window.innerWidth - popup.offsetWidth - 12));
+        const top = Math.max(12, Math.min(rect.bottom + 6, window.innerHeight - popup.offsetHeight - 12));
+        popup.style.left = `${left}px`;
+        popup.style.top = `${top}px`;
+        if (elements.spokenTextPauseEditPreset.value !== "custom") {
+          elements.spokenTextPauseEditPreset.focus();
+        }
+      });
+    }
+
+    function openCustomPauseInsertEditor(anchor) {
+      state.spokenPauseEdit = {
+        mode: "insert",
+        start: elements.spokenTextInput.selectionStart,
+        end: elements.spokenTextInput.selectionEnd,
+        returnFocus: anchor,
+      };
+      elements.spokenTextPauseDelete.hidden = true;
+      elements.spokenTextPauseEditPreset.value = "custom";
+      elements.spokenTextPauseEditCustom.value = "1,0";
+      elements.spokenTextPauseEditor.hidden = false;
+      updateSpokenPauseCustomVisibility();
+      const rect = anchor.getBoundingClientRect();
+      requestAnimationFrame(() => {
+        const popup = elements.spokenTextPauseEditor;
+        const left = Math.max(12, Math.min(rect.left, window.innerWidth - popup.offsetWidth - 12));
+        const top = Math.max(12, Math.min(rect.bottom + 6, window.innerHeight - popup.offsetHeight - 12));
+        popup.style.left = `${left}px`;
+        popup.style.top = `${top}px`;
+      });
+    }
+
+    function pausePill(pause, archived) {
+      const domain = globalThis.NarrationPauseDomain;
+      const pill = document.createElement("button");
+      pill.type = "button";
+      pill.className = `spoken-text-pause${pause.valid ? "" : " invalid"}`;
+      pill.textContent = pause.valid
+        ? `Pause: ${pause.label} - ${domain.formatDuration(pause.durationMs)}`
+        : "Pause: ungueltiger Marker";
+      pill.title = pause.valid ? pause.raw : `${pause.raw}\n${pause.error}`;
+      pill.setAttribute("aria-disabled", archived ? "true" : "false");
+      if (!archived) pill.addEventListener("click", () => openSpokenPauseEditor(pause, pill));
+      return pill;
+    }
+
+    function appendHighlightedSpokenText(node, text, ranges, archived) {
+      const pauseDomain = globalThis.NarrationPauseDomain;
+      const pauses = pauseDomain?.pauseSegments ? pauseDomain.pauseSegments(text) : [];
+
+      const boundaries = [...new Set([
+        0,
+        text.length,
+        ...ranges.flatMap((range) => [range.start, range.end]),
+        ...pauses.flatMap((pause) => [pause.start, pause.end]),
+      ])].sort((left, right) => left - right);
+
+      for (let index = 0; index < boundaries.length - 1; index += 1) {
+        const start = boundaries[index];
+        const end = boundaries[index + 1];
+        if (end <= start) continue;
+        const segment = text.slice(start, end);
+        const pause = pauses.find((candidate) => candidate.start === start && candidate.end === end);
+        if (pause) {
+          node.append(pausePill(pause, archived));
+          continue;
+        }
+        const activeRanges = ranges.filter((range) => range.start <= start && range.end >= end);
+        if (!activeRanges.length) {
+          node.append(document.createTextNode(segment));
+          continue;
+        }
+        const actions = [...new Set(activeRanges.flatMap((range) => range.actions))];
+        const targetIds = [...new Set(activeRanges.flatMap((range) => range.targetIds))];
+        const mark = document.createElement("mark");
+        mark.className = `spoken-text-trigger action-${actions[0] || "show"}`;
+        mark.textContent = segment;
+        mark.title = [...new Set(activeRanges.flatMap((range) => range.descriptions))].join("\n");
+        mark.tabIndex = 0;
+        mark.addEventListener("pointerenter", () => showSpokenTriggerPreview(targetIds));
+        mark.addEventListener("pointerleave", clearSpokenTriggerPreview);
+        mark.addEventListener("focus", () => showSpokenTriggerPreview(targetIds));
+        mark.addEventListener("blur", clearSpokenTriggerPreview);
+        node.append(mark);
+      }
+    }
+
+    function renderSpokenText(slide) {
+      const pauseDomain = globalThis.NarrationPauseDomain;
+      const spokenText = slide?.spokenText || {};
+      const text = String(spokenText.text || "").trim();
+      const sourceSlides = Array.isArray(spokenText.sourceSlides)
+        ? spokenText.sourceSlides.filter((value) => Number.isFinite(Number(value)))
+        : [];
+      const triggerInfo = spokenTextTriggerRanges(text, state.animationManifest);
+      const pauseValidation = pauseDomain?.validateNarration
+        ? pauseDomain.validateNarration(text)
+        : { valid: true, errors: [], pauseCount: 0, durationMs: 0 };
+      const archived = Boolean(selectedArchivedVersion(slide));
+
+      elements.spokenTextBody.hidden = state.spokenTextEditing;
+      elements.spokenTextEditor.hidden = !state.spokenTextEditing;
+      elements.spokenTextEdit.disabled = archived || state.spokenTextEditing || state.spokenTextSaving;
+      elements.spokenTextCopyRaw.disabled = !text;
+      elements.spokenTextRestore.disabled = !spokenText.isOverride || state.spokenTextSaving;
+      elements.spokenTextCancel.disabled = state.spokenTextSaving;
+      elements.spokenTextSave.disabled = state.spokenTextSaving;
+
+      if (!state.spokenTextEditing) {
+        clearSpokenTriggerPreview();
+        elements.spokenTextBody.replaceChildren();
+        if (!text) {
+          elements.spokenTextBody.append(makeEmpty(
+            "F\u00fcr diese Szene ist noch kein gesprochener Text hinterlegt.",
+          ));
+        } else {
+          appendHighlightedSpokenText(elements.spokenTextBody, text, triggerInfo.ranges, archived);
+        }
+      }
+
+      const metaParts = [];
+      if (sourceSlides.length) {
+        metaParts.push(`Quellfolien ${sourceSlides.map((number) => String(number).padStart(3, "0")).join(", ")}`);
+      }
+      if (text) {
+        const wordCount = pauseDomain?.wordCount
+          ? pauseDomain.wordCount(text)
+          : text.split(/\s+/).filter(Boolean).length;
+        metaParts.push(`${wordCount} W\u00f6rter`);
+      }
+      if (pauseValidation.pauseCount) {
+        metaParts.push(
+          `${pauseValidation.pauseCount} Pause${pauseValidation.pauseCount === 1 ? "" : "n"} · ${pauseDomain.formatDuration(pauseValidation.durationMs)}`,
+        );
+      }
+      if (pauseValidation.errors.length) metaParts.push(`${pauseValidation.errors.length} Pausenfehler`);
+      if (triggerInfo.total) {
+        metaParts.push(`${triggerInfo.matched}/${triggerInfo.total} Trigger markiert`);
+      } else if (state.animationManifest) {
+        metaParts.push("Keine Texttrigger");
+      }
+      if (spokenText.isOverride) metaParts.push("bearbeitet");
+      if (archived) metaParts.push("Archivstand");
+      elements.spokenTextMeta.textContent = metaParts.join(" \u00b7 ") || "Keine Textzuordnung";
+      elements.spokenTextMeta.classList.toggle(
+        "warn",
+        (triggerInfo.total > 0 && triggerInfo.matched < triggerInfo.total) || !pauseValidation.valid,
+      );
+    }
+
+    function updateSpokenPauseStatus() {
+      const domain = globalThis.NarrationPauseDomain;
+      const validation = domain?.validateNarration
+        ? domain.validateNarration(elements.spokenTextInput.value)
+        : { valid: true, errors: [], pauseCount: 0, durationMs: 0 };
+      elements.spokenTextPauseStatus.textContent = validation.valid
+        ? `${validation.pauseCount} Pause${validation.pauseCount === 1 ? "" : "n"} - ${domain.formatDuration(validation.durationMs)}`
+        : `${validation.errors.length} ungueltige Pausenmarker`;
+      elements.spokenTextPauseStatus.classList.toggle("invalid", !validation.valid);
+      elements.spokenTextSave.disabled = state.spokenTextSaving || !validation.valid;
+      elements.spokenTextCopyRaw.disabled = !elements.spokenTextInput.value;
+    }
+
+    async function copyRawSpokenText() {
+      const text = state.spokenTextEditing
+        ? elements.spokenTextInput.value
+        : String(selectedSlide()?.spokenText?.text || "");
+      if (!text) return;
+      const originalLabel = elements.spokenTextCopyRaw.textContent;
+      try {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          const helper = document.createElement("textarea");
+          helper.value = text;
+          helper.style.position = "fixed";
+          helper.style.opacity = "0";
+          document.body.append(helper);
+          helper.select();
+          document.execCommand("copy");
+          helper.remove();
+        }
+        elements.spokenTextCopyRaw.textContent = "Kopiert";
+      } catch (error) {
+        elements.spokenTextCopyRaw.textContent = "Kopieren fehlgeschlagen";
+      } finally {
+        window.setTimeout(() => {
+          elements.spokenTextCopyRaw.textContent = originalLabel;
+        }, 1400);
+      }
+    }
+
+    function insertSpokenPause() {
+      const domain = globalThis.NarrationPauseDomain;
+      const value = elements.spokenTextPauseInsert.value;
+      elements.spokenTextPauseInsert.value = "";
+      if (!domain || !value || !state.spokenTextEditing) return;
+      if (value === "custom") {
+        openCustomPauseInsertEditor(elements.spokenTextPauseInsert);
+        return;
+      }
+      try {
+        const result = domain.insertPause(
+          elements.spokenTextInput.value,
+          elements.spokenTextInput.selectionStart,
+          elements.spokenTextInput.selectionEnd,
+          value,
+        );
+        elements.spokenTextInput.value = result.text;
+        elements.spokenTextInput.focus();
+        elements.spokenTextInput.setSelectionRange(result.selectionStart, result.selectionStart);
+        updateSpokenPauseStatus();
+      } catch (error) {
+        elements.spokenTextSaveStatus.textContent = error.message;
+      }
+    }
+
+    function beginSpokenTextEdit() {
+      const slide = selectedSlide();
+      if (!slide || selectedArchivedVersion(slide)) return;
+      clearSpokenTriggerPreview();
+      state.spokenTextEditing = true;
+      elements.spokenTextInput.value = String(slide.spokenText?.text || "");
+      elements.spokenTextSaveStatus.textContent = slide.spokenText?.isOverride
+        ? "Bearbeitete Fassung. Trigger werden nach dem Speichern neu gepr\u00fcft."
+        : "Der extrahierte Originaltext bleibt als R\u00fccksetzpunkt erhalten.";
+      renderSpokenText(slide);
+      updateSpokenPauseStatus();
+      elements.spokenTextInput.focus();
+    }
+
+    function cancelSpokenTextEdit() {
+      state.spokenTextEditing = false;
+      state.spokenTextSaving = false;
+      closeSpokenPauseEditor();
+      elements.spokenTextSaveStatus.textContent = "";
+      renderSpokenText(selectedSlide());
+    }
+
+    async function persistSpokenText(reset = false, textOverride = null) {
+      const slide = selectedSlide();
+      if (!slide || selectedArchivedVersion(slide) || state.spokenTextSaving) return;
+      if (reset && !globalThis.confirm("Bearbeiteten Sprechertext verwerfen und Original wiederherstellen?")) return;
+
+      state.spokenTextSaving = true;
+      elements.spokenTextSaveStatus.textContent = reset ? "Stelle Original wieder her..." : "Speichere...";
+      renderSpokenText(slide);
+      try {
+        const response = await fetch("/api/spoken-text", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            id: slide.id,
+            text: textOverride == null ? elements.spokenTextInput.value : textOverride,
+            reset,
+          }),
+        });
+        const payload = await response.json();
+        if (!response.ok) {
+          const detail = Array.isArray(payload.details) && payload.details[0]?.message
+            ? ` ${payload.details[0].message}`
+            : "";
+          throw new Error(`${payload.error || `HTTP ${response.status}`}${detail}`);
+        }
+        slide.spokenText = payload.spokenText || {};
+        state.spokenTextEditing = false;
+        closeSpokenPauseEditor();
+        elements.spokenTextSaveStatus.textContent = "";
+        renderSpokenText(slide);
+      } catch (error) {
+        elements.spokenTextSaveStatus.textContent = error.message;
+        if (textOverride != null) globalThis.alert(error.message);
+      } finally {
+        state.spokenTextSaving = false;
+        renderSpokenText(slide);
+      }
+    }
+
+    async function applySpokenPauseChange(remove = false) {
+      const domain = globalThis.NarrationPauseDomain;
+      const slide = selectedSlide();
+      const edit = state.spokenPauseEdit;
+      if (!domain || !slide || !edit || state.spokenTextSaving) return;
+      try {
+        const value = remove
+          ? null
+          : elements.spokenTextPauseEditPreset.value === "custom"
+            ? elements.spokenTextPauseEditCustom.value
+            : elements.spokenTextPauseEditPreset.value;
+        if (edit.mode === "insert") {
+          const result = domain.insertPause(
+            elements.spokenTextInput.value,
+            edit.start,
+            edit.end,
+            value,
+          );
+          elements.spokenTextInput.value = result.text;
+          closeSpokenPauseEditor();
+          elements.spokenTextInput.focus();
+          elements.spokenTextInput.setSelectionRange(result.selectionStart, result.selectionEnd);
+          updateSpokenPauseStatus();
+        } else {
+          const result = domain.replacePause(
+            String(slide.spokenText?.text || ""),
+            edit.start,
+            edit.end,
+            value,
+          );
+          await persistSpokenText(false, result.text);
+        }
+      } catch (error) {
+        globalThis.alert(error.message);
+      }
+    }
+
     function renderMedia(slide) {
       const token = state.renderToken + 1;
       const proposal = activeSvgProposal(slide);
       const reference = primaryCrosscheckReference(slide);
       const oldSlide = reference?.oldSlide || slide.oldSlide;
       state.renderToken = token;
+      clearSpokenTriggerPreview();
       resetAnimationState();
       state.previewSvg = null;
       elements.oldFrame.replaceChildren(makeMedia(
         oldSlide,
         slide.isAdditionalSlide
-          ? "Zusatzfolie: keine alte Foliengrafik vorhanden."
-          : "Keine alte Foliengrafik gefunden.",
+          ? "Zusatzfolie: keine Quell-SVG vorhanden."
+          : "Keine Quell-SVG gefunden.",
       ));
       renderSvgProposal(slide, token);
+      renderSpokenText(slide);
 
       elements.oldOpen.hidden = !oldSlide;
       elements.svgOpen.hidden = !proposal;
@@ -1949,6 +3459,10 @@
       const slideChanged = state.selectedId !== id;
       if (slideChanged) {
         state.selectedVersionId = "current";
+        state.spokenTextEditing = false;
+        state.spokenTextSaving = false;
+        closeSpokenPauseEditor();
+        expandStructurePath(slide);
       }
       state.selectedId = id;
       elements.title.textContent = slide.title;
@@ -1963,15 +3477,20 @@
 
     function applyFilter() {
       const query = elements.search.value.trim().toLocaleLowerCase("de");
-      const moduleId = elements.moduleFilter.value;
-      state.filtered = state.slides.filter((slide) => {
-        if (moduleId && slide.moduleId !== moduleId) return false;
+      const moduleId = elements.moduleFilter.value || state.modules[0] || "";
+      if (moduleId && elements.moduleFilter.value !== moduleId) elements.moduleFilter.value = moduleId;
+      const moduleSlides = state.slides.filter((slide) => slide.moduleId === moduleId);
+      const matching = moduleSlides.filter((slide) => {
         if (slideIsHidden(slide) && !state.showHidden) return false;
         if (!query) return true;
+        const placement = scenePlacement(slide);
         return [
           slide.moduleId,
           slide.slideId,
           slide.title,
+          placement?.chapter.title,
+          placement?.lesson.title,
+          slide.spokenText?.text,
           slide.analysis?.summary?.slideSummary?.core_message,
           slide.review?.notes,
           ...(Array.isArray(slide.review?.versions) ? slide.review.versions.map((version) => version.notes) : []),
@@ -1979,21 +3498,25 @@
           .filter(Boolean)
           .some((value) => String(value).toLocaleLowerCase("de").includes(query));
       });
+      state.filtered = orderedSlidesByStructure(matching, moduleId);
       if (!state.filtered.some((slide) => slide.id === state.selectedId)) {
         state.selectedId = "";
       }
       renderList();
       if (!state.selectedId && state.filtered[0]) selectSlide(state.filtered[0].id);
-      elements.count.textContent = `${state.filtered.length} von ${state.slides.length} Folien angezeigt`;
+      elements.count.textContent = `${state.filtered.length} von ${moduleSlides.length} Szenen in ${moduleId}`;
       updateNavigation();
     }
 
     function updateSlideActionButtons() {
       const slide = selectedSlide();
-      const index = selectedIndex();
+      const groupSlides = slide
+        ? state.filtered.filter((item) => scenePlacementKey(item) === scenePlacementKey(slide))
+        : [];
+      const index = groupSlides.findIndex((item) => item.id === slide?.id);
       const canMove = Boolean(slide) && !slideIsHidden(slide);
       elements.moveSlideUp.disabled = !canMove || index <= 0;
-      elements.moveSlideDown.disabled = !canMove || index < 0 || index >= state.filtered.length - 1;
+      elements.moveSlideDown.disabled = !canMove || index < 0 || index >= groupSlides.length - 1;
       elements.deleteSlide.disabled = !slide;
       elements.deleteSlide.textContent = slide && slideIsHidden(slide) ? "Wiederherstellen" : "Folie loeschen";
       elements.deleteSlide.classList.toggle("danger", !(slide && slideIsHidden(slide)));
@@ -2016,6 +3539,9 @@
     function changeVersion() {
       const slide = selectedSlide();
       if (!slide) return;
+      state.spokenTextEditing = false;
+      state.spokenTextSaving = false;
+      closeSpokenPauseEditor();
       state.selectedVersionId = elements.versionSelect.value || "current";
       renderMedia(slide);
       renderDetails(slide);
@@ -2382,24 +3908,33 @@
       const payload = await response.json();
       state.slides = payload.slides || [];
       state.modules = payload.modules || [];
+      state.trainingStructure = payload.trainingStructure || {
+        schema_version: "basisReliabilityTrainingStructure/v1",
+        modules: {},
+      };
+
+      const previousModule = elements.moduleFilter.value;
+      const hashId = decodeURIComponent(location.hash.slice(1));
+      const requested =
+        state.slides.find((slide) => slide.id === preferredId) ||
+        state.slides.find((slide) => slide.id === hashId);
+      const storedModule = localStorage.getItem("basis-rebuild-active-module") || "";
+      const activeModule = requested?.moduleId ||
+        (state.modules.includes(previousModule) ? previousModule : "") ||
+        (state.modules.includes(storedModule) ? storedModule : "") ||
+        state.modules[0] || "";
 
       elements.moduleFilter.replaceChildren();
-      const allOption = document.createElement("option");
-      allOption.value = "";
-      allOption.textContent = "Alle Module";
-      elements.moduleFilter.append(allOption);
       state.modules.forEach((moduleId) => {
         const option = document.createElement("option");
         option.value = moduleId;
         option.textContent = moduleId;
         elements.moduleFilter.append(option);
       });
+      elements.moduleFilter.value = activeModule;
+      elements.addChapter.disabled = !activeModule;
 
       elements.count.textContent = `${state.slides.length} Folien gefunden`;
-      const hashId = decodeURIComponent(location.hash.slice(1));
-      const requested =
-        state.slides.find((slide) => slide.id === preferredId) ||
-        state.slides.find((slide) => slide.id === hashId);
       if (requested) {
         state.selectedId = requested.id;
       }
@@ -2416,8 +3951,13 @@
     }
 
     elements.search.addEventListener("input", applyFilter);
-    elements.moduleFilter.addEventListener("change", applyFilter);
+    elements.moduleFilter.addEventListener("change", () => {
+      state.selectedId = "";
+      localStorage.setItem("basis-rebuild-active-module", elements.moduleFilter.value);
+      applyFilter();
+    });
     elements.addSlide.addEventListener("click", addAdditionalSlide);
+    elements.addChapter.addEventListener("click", addChapter);
     elements.moveSlideUp.addEventListener("click", () => applySelectedSlideCuration("up"));
     elements.moveSlideDown.addEventListener("click", () => applySelectedSlideCuration("down"));
     elements.deleteSlide.addEventListener("click", () => {
@@ -2441,6 +3981,29 @@
       if (event.target === elements.globalCrosscheckBackdrop) closeGlobalCrosscheckPanel();
     });
     elements.saveReview.addEventListener("click", saveReview);
+    elements.spokenTextEdit.addEventListener("click", beginSpokenTextEdit);
+    elements.spokenTextCopyRaw.addEventListener("click", copyRawSpokenText);
+    elements.spokenTextCancel.addEventListener("click", cancelSpokenTextEdit);
+    elements.spokenTextSave.addEventListener("click", () => persistSpokenText(false));
+    elements.spokenTextRestore.addEventListener("click", () => persistSpokenText(true));
+    elements.spokenTextPauseInsert.addEventListener("change", insertSpokenPause);
+    elements.spokenTextInput.addEventListener("input", updateSpokenPauseStatus);
+    elements.spokenTextPauseEditPreset.addEventListener("change", updateSpokenPauseCustomVisibility);
+    elements.spokenTextPauseCancel.addEventListener("click", closeSpokenPauseEditor);
+    elements.spokenTextPauseApply.addEventListener("click", () => applySpokenPauseChange(false));
+    elements.spokenTextPauseDelete.addEventListener("click", () => applySpokenPauseChange(true));
+    elements.spokenTextPauseEditor.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") return;
+      event.preventDefault();
+      closeSpokenPauseEditor();
+    });
+    elements.sceneChapter.addEventListener("change", () => renderLessonOptions());
+    elements.sceneLesson.addEventListener("change", () => {
+      elements.saveScenePlacement.disabled = state.structureSaving || (
+        Boolean(elements.sceneChapter.value) && !elements.sceneLesson.value
+      );
+    });
+    elements.saveScenePlacement.addEventListener("click", saveScenePlacement);
     elements.includeInPresentation.addEventListener("change", savePresentationPreference);
     elements.svgFullscreen.addEventListener("click", openFullscreenViewer);
     elements.svgAnimationEdit.addEventListener("click", () => {
@@ -2456,6 +4019,7 @@
     elements.fullscreenPreviousSlide.addEventListener("click", () => movePresentation(-1));
     elements.fullscreenNextSlide.addEventListener("click", () => movePresentation(1));
     elements.fullscreenSvgFrame.addEventListener("click", () => movePresentation(1));
+    elements.compareGrid.addEventListener("wheel", handleComparisonWheel, { passive: false });
     elements.animationDelay.addEventListener("change", () => {
       handleAnimationDelayChange(elements.animationDelay.value);
     });
@@ -2478,6 +4042,10 @@
       if (slide) renderMedia(slide);
     });
     document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !elements.spokenTextPauseEditor.hidden) {
+        closeSpokenPauseEditor();
+        return;
+      }
       if (event.key === "Escape" && !elements.globalCrosscheckBackdrop.hidden) {
         closeGlobalCrosscheckPanel();
         return;

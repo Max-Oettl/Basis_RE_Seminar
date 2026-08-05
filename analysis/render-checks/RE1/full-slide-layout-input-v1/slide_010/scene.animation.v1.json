@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_010.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "stress_distribution",
+      "label": "Belastungsverteilung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "stress_influences",
+      "label": "Einflüsse auf die Belastung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "strength_distribution",
+      "label": "Belastbarkeitsverteilung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "strength_influences",
+      "label": "Einflüsse auf die Belastbarkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "failure_overlap",
+      "label": "Ausfallbereich",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "failure_consequences",
+      "label": "Ausfallfolgen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_stress_distribution",
+      "targetId": "stress_distribution",
+      "action": "draw",
+      "sourceText": "Zunächst einmal wirkt auf ein Produkt oder auch eine Komponente",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_stress_influences",
+      "targetId": "stress_influences",
+      "action": "show",
+      "sourceText": "Zunächst einmal wirkt auf ein Produkt oder auch eine Komponente",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_strength_distribution",
+      "targetId": "strength_distribution",
+      "action": "draw",
+      "sourceText": "Dem gegenüber steht die Belastbarkeit, die jedes Produkt besitzt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_strength_influences",
+      "targetId": "strength_influences",
+      "action": "show",
+      "sourceText": "Dem gegenüber steht die Belastbarkeit, die jedes Produkt besitzt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_failure_overlap",
+      "targetId": "failure_overlap",
+      "action": "show",
+      "sourceText": "Zwischen den Verteilungen von Belastung und Belastbarkeit gibt es nun einen Überlappungsbereich",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_failure_consequences",
+      "targetId": "failure_consequences",
+      "action": "show",
+      "sourceText": "Diese Ausfälle wiederum führen zu Kundenunzufriedenheit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

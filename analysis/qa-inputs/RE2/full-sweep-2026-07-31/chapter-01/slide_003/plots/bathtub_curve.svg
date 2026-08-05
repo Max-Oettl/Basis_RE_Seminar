@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1760" height="680" viewBox="0 0 1760 680" role="img" aria-labelledby="plot_title plot_description" data-artifact-scope="content-svg" data-embedding-target="powerpoint-slide" data-brand-profile="reltest-education" data-qc-group="bathtub_curve_plot" data-qc-layer="plot">
+  <metadata id="slide-quality-metadata" type="application/json"><![CDATA[{"artifactScope":"content-svg","embeddingTarget":"powerpoint-slide","slideType":"schematic-bathtub-curve-plot","contentTitle":"Badewannenkurve","layoutIntent":"source-aligned-three-region-technical-plot","takeaway":"Der Ausfallverlauf gliedert sich in Früh-, Zufalls- und Ermüdungsausfälle.","audienceGoal":"Die drei Lebensphasen auf einer gemeinsamen Achse unterscheiden.","density":"normal","contentMode":"transparent-content","backgroundMode":"transparent","brandProfile":"reltest-education","brandVariant":"education-production","generator":"components/python-plot-library/bathtub_curve_plot.py","generatorVariant":"source_aligned"}]]></metadata>
+  <title id="plot_title">Badewannenkurve mit drei Lebensphasen</title>
+  <desc id="plot_description">Die Ausfallzahl fällt bei den Frühausfällen, bleibt im Bereich der Zufallsausfälle annähernd konstant und steigt bei den Ermüdungsausfällen wieder an.</desc>
+  <defs>
+    <marker id="axis_arrow" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1 L12 7 L1 13 Z" fill="#031334"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "Archivo", Arial, Helvetica, sans-serif;  }
+    .phase-title { font-size: 32px; font-weight: 800; }
+    .phase-number { font-size: 23px; font-weight: 800; }
+    .axis-label { font-size: 29px; font-weight: 800; }
+  </style>
+
+  <g id="diagram_frame" data-qc-group="diagram_frame" data-qc-layer="axes">
+    <line x1="110" y1="556" x2="1712" y2="556" stroke="#031334" stroke-width="4" marker-end="url(#axis_arrow)"/>
+    <line x1="110" y1="556" x2="110" y2="86" stroke="#031334" stroke-width="4" marker-end="url(#axis_arrow)"/>
+    <line x1="589" y1="80" x2="589" y2="584" stroke="#031334" stroke-width="3"/>
+    <line x1="1227" y1="80" x2="1227" y2="584" stroke="#031334" stroke-width="3"/>
+    <text fill="#031334" x="908" y="634" class="axis-label" text-anchor="middle">Lebensdauer <tspan font-style="italic">t</tspan></text>
+    <text fill="#031334" x="54" y="340" class="axis-label" text-anchor="middle" transform="rotate(-90 54 340)"># Ausfälle</text>
+  </g>
+
+  <g id="phase_labels" data-qc-group="phase_labels" data-qc-layer="labels">
+    <text fill="#031334" x="350" y="38" class="phase-title" text-anchor="middle">Frühausfälle</text>
+    <circle cx="350" cy="82" r="23" fill="#FFFFFF" stroke="#031334" stroke-width="2"/>
+    <text fill="#031334" x="350" y="90" class="phase-number" text-anchor="middle">1</text>
+
+    <text fill="#031334" x="908" y="38" class="phase-title" text-anchor="middle">Zufallsausfälle</text>
+    <circle cx="908" cy="82" r="23" fill="#FFFFFF" stroke="#031334" stroke-width="2"/>
+    <text fill="#031334" x="908" y="90" class="phase-number" text-anchor="middle">2</text>
+
+    <text fill="#031334" x="1467" y="38" class="phase-title" text-anchor="middle">Ermüdungsausfälle</text>
+    <circle cx="1467" cy="82" r="23" fill="#FFFFFF" stroke="#031334" stroke-width="2"/>
+    <text fill="#031334" x="1467" y="90" class="phase-number" text-anchor="middle">3</text>
+  </g>
+
+  <path id="bathtub_curve_path" data-qc-role="data-series" data-qc-layer="data" d="M176 214 C218 326 330 384 514 416 C754 458 1038 482 1214 456 C1438 423 1592 337 1691 196" fill="none" stroke="#031334" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

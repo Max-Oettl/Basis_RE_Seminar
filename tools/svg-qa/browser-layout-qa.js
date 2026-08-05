@@ -179,7 +179,9 @@ async function launchBrowser() {
   const userDataDir = fs.mkdtempSync(path.join(os.tmpdir(), "svg-layout-qa-"));
   const child = spawn(executable, [
     "--headless=new",
+    "--no-sandbox",
     "--disable-gpu",
+    "--run-all-compositor-stages-before-draw",
     "--disable-extensions",
     "--disable-background-networking",
     "--disable-default-apps",
@@ -294,7 +296,14 @@ function runRules(layout, context, config) {
 
 async function runSvgLayoutQa(page, svgPath, repoRoot, options, config) {
   const relativeFile = toPosixPath(repoRoot, svgPath);
-  const manifestPath = path.join(path.dirname(svgPath), "scene.animation.v1.json");
+  const internalManifestPath = path.join(path.dirname(svgPath), "scene.animation.v1.json");
+  const handoffManifestPath = path.join(
+    path.dirname(svgPath),
+    `${path.basename(svgPath, path.extname(svgPath))}.animation.v1.json`,
+  );
+  const manifestPath = fs.existsSync(internalManifestPath)
+    ? internalManifestPath
+    : handoffManifestPath;
   const manifest = readJsonIfExists(manifestPath);
   const animation = buildAnimationStates(manifest, {
     timesSeconds: options.timesSeconds,
@@ -422,5 +431,9 @@ async function runBrowserLayoutQa({ svgFiles, repoRoot, options = {}, config = d
 }
 
 module.exports = {
+  closePage,
+  createPage,
+  launchBrowser,
   runBrowserLayoutQa,
+  stopBrowser,
 };

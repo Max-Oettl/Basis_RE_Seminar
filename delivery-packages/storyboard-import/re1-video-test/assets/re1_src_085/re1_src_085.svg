@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_085" data-brand-profile="reltest-academy">
+  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"mechanism-separation-probability-plot","contentTitle":"Ausfallmechanismen im Weibullnetz trennen","layoutIntent":"dominant-segmented-weibull-paper-with-explicit-kink-diagnosis-and-separation-rule","takeaway":"Ein Knick weist auf mehrere Ausfallmechanismen hin; für eine belastbare Weibull-Schätzung müssen ihre Daten getrennt ausgewertet werden.","density":"balanced","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-academy","brandVariant":"academy-production","sourceSlides":[85],"officialLogoStatus":"pending-original-asset"}]]></metadata>
+  <title id="accessible_title">Ausfallmechanismen im Weibullnetz trennen</title>
+  <desc id="accessible_description">Ein Knick weist auf mehrere Ausfallmechanismen hin; für eine belastbare Weibull-Schätzung müssen ihre Daten getrennt ausgewertet werden.</desc>
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F9FBFC"/>
+      <stop offset="56%" stop-color="#F1F5F8"/>
+      <stop offset="100%" stop-color="#E9F0F4"/>
+    </linearGradient>
+    <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#102A43" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="shadowSoft" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#102A43" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow_007EA7" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#007EA7"/></marker>
+    <marker id="arrow_102A43" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#102A43"/></marker>
+    <marker id="arrow_D1495B" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#D1495B"/></marker>
+    <marker id="arrow_2F6F55" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#2F6F55"/></marker>
+    <marker id="arrow_B7791F" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#B7791F"/></marker>
+  </defs>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+    .slide-title { fill: #102A43; }
+  </style>
+  <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
+  <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
+  <rect x="74" y="36" width="118" height="5" rx="3" fill="#007EA7"/>
+  <text x="78" y="116" class="slide-title" font-size="56" font-weight="800">Ausfallmechanismen im Weibullnetz trennen</text>
+  <line x1="78" y1="148" x2="1842" y2="148" stroke="#102A43" stroke-opacity="0.12" stroke-width="1.5"/>
+  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><svg id="weibull_mechanisms_plot" x="66" y="192" width="1300" height="640" viewBox="0 0 741.734916 413.449742" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="weibull_mechanisms_plot__figure_1">
+  <g id="weibull_mechanisms_plot__patch_1">
+   <path d="M 0 413.449742  L 741.734916 413.449742  L 741.734916 0  L 0 0  L 0 413.449742  z " style="fill: none; opacity: 0" />
+  </g>
+  <g id="weibull_mechanisms_plot__axes_1">
+   <g id="weibull_mechanisms_plot__patch_2">
+    <path d="M 75.649531 351.402477  L 705.505531 351.402477  L 705.505531 12.138477  L 75.649531 12.138477  L 75.649531 351.402477  z " style="fill: none" />
+   </g>
+   <g id="weibull_mechanisms_plot__matplotlib.axis_1">
+    <g id="weibull_mechanisms_plot__xtick_1">
+     <g id="weibull_mechanisms_plot__line2d_1">
+      <path d="M 75.649531 351.402477  L 75.649531 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_2">
+      <defs>
+       <path id="weibull_mechanisms_plot__m9da103744a" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m9da103744a" x="75.649531" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_mechanisms_plot__text_1">
+      
+      <g style="fill: #6a7a86" transform="translate(60.374531 372.992477)">
+       <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.991938" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">1</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="8.270996" y="-0.991938" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">0</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="16.666406" y="-6.360938" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #6a7a86">−</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="24.291211" y="-6.360938" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #6a7a86">1</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_2">
+     <g id="weibull_mechanisms_plot__line2d_3">
+      <path d="M 285.601531 351.402477  L 285.601531 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_4">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m9da103744a" x="285.601531" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_mechanisms_plot__text_2">
+      
+      <g style="fill: #6a7a86" transform="translate(274.161531 373.122477)">
+       <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.871625" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">1</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="8.270996" y="-0.871625" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">0</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="16.666406" y="-6.240625" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #6a7a86">0</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_3">
+     <g id="weibull_mechanisms_plot__line2d_5">
+      <path d="M 495.553531 351.402477  L 495.553531 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_6">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m9da103744a" x="495.553531" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_mechanisms_plot__text_3">
+      
+      <g style="fill: #6a7a86" transform="translate(484.113531 372.992477)">
+       <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.991938" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">1</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="8.270996" y="-0.991938" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">0</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="16.666406" y="-6.360938" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #6a7a86">1</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_4">
+     <g id="weibull_mechanisms_plot__line2d_7">
+      <path d="M 705.505531 351.402477  L 705.505531 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_8">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m9da103744a" x="705.505531" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_mechanisms_plot__text_4">
+      
+      <g style="fill: #6a7a86" transform="translate(694.065531 373.122477)">
+       <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.871625" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">1</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="8.270996" y="-0.871625" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">0</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="16.666406" y="-6.240625" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #6a7a86">2</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_5">
+     <g id="weibull_mechanisms_plot__line2d_9">
+      <path d="M 138.851381 351.402477  L 138.851381 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_10">
+      <defs>
+       <path id="weibull_mechanisms_plot__m03ab7118df" d="M 0 0  L 0 3.5  " style="stroke: #6a7a86; stroke-width: 0.9" />
+      </defs>
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="138.851381" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_6">
+     <g id="weibull_mechanisms_plot__line2d_11">
+      <path d="M 175.822093 351.402477  L 175.822093 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_12">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="175.822093" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_7">
+     <g id="weibull_mechanisms_plot__line2d_13">
+      <path d="M 202.053231 351.402477  L 202.053231 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_14">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="202.053231" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_8">
+     <g id="weibull_mechanisms_plot__line2d_15">
+      <path d="M 222.399682 351.402477  L 222.399682 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_16">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="222.399682" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_9">
+     <g id="weibull_mechanisms_plot__line2d_17">
+      <path d="M 239.023943 351.402477  L 239.023943 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_18">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="239.023943" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_10">
+     <g id="weibull_mechanisms_plot__line2d_19">
+      <path d="M 253.079555 351.402477  L 253.079555 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_20">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="253.079555" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_11">
+     <g id="weibull_mechanisms_plot__line2d_21">
+      <path d="M 265.25508 351.402477  L 265.25508 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_22">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="265.25508" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_12">
+     <g id="weibull_mechanisms_plot__line2d_23">
+      <path d="M 275.994655 351.402477  L 275.994655 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_24">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="275.994655" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_13">
+     <g id="weibull_mechanisms_plot__line2d_25">
+      <path d="M 348.803381 351.402477  L 348.803381 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_26">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="348.803381" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_14">
+     <g id="weibull_mechanisms_plot__line2d_27">
+      <path d="M 385.774093 351.402477  L 385.774093 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_28">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="385.774093" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_15">
+     <g id="weibull_mechanisms_plot__line2d_29">
+      <path d="M 412.005231 351.402477  L 412.005231 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_30">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="412.005231" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_16">
+     <g id="weibull_mechanisms_plot__line2d_31">
+      <path d="M 432.351682 351.402477  L 432.351682 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_32">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="432.351682" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_17">
+     <g id="weibull_mechanisms_plot__line2d_33">
+      <path d="M 448.975943 351.402477  L 448.975943 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_34">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="448.975943" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_18">
+     <g id="weibull_mechanisms_plot__line2d_35">
+      <path d="M 463.031555 351.402477  L 463.031555 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_36">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="463.031555" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_19">
+     <g id="weibull_mechanisms_plot__line2d_37">
+      <path d="M 475.20708 351.402477  L 475.20708 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_38">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="475.20708" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_20">
+     <g id="weibull_mechanisms_plot__line2d_39">
+      <path d="M 485.946655 351.402477  L 485.946655 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_40">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="485.946655" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_21">
+     <g id="weibull_mechanisms_plot__line2d_41">
+      <path d="M 558.755381 351.402477  L 558.755381 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_42">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="558.755381" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_22">
+     <g id="weibull_mechanisms_plot__line2d_43">
+      <path d="M 595.726093 351.402477  L 595.726093 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_44">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="595.726093" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_23">
+     <g id="weibull_mechanisms_plot__line2d_45">
+      <path d="M 621.957231 351.402477  L 621.957231 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_46">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="621.957231" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_24">
+     <g id="weibull_mechanisms_plot__line2d_47">
+      <path d="M 642.303682 351.402477  L 642.303682 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_48">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="642.303682" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_25">
+     <g id="weibull_mechanisms_plot__line2d_49">
+      <path d="M 658.927943 351.402477  L 658.927943 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_50">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="658.927943" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_26">
+     <g id="weibull_mechanisms_plot__line2d_51">
+      <path d="M 672.983555 351.402477  L 672.983555 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_52">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="672.983555" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_27">
+     <g id="weibull_mechanisms_plot__line2d_53">
+      <path d="M 685.15908 351.402477  L 685.15908 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_54">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="685.15908" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__xtick_28">
+     <g id="weibull_mechanisms_plot__line2d_55">
+      <path d="M 695.898655 351.402477  L 695.898655 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_56">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__m03ab7118df" x="695.898655" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__text_5">
+     
+     <g style="fill: #062d46" transform="translate(318.217531 401.925523)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.677734" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">b</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="36.5625" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="48.770508" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="61.584961" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="72.298828" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">d</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="85.183594" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="97.330078" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="110.144531" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="122.352539" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="131.229492" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="137.496094" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="weibull_mechanisms_plot__matplotlib.axis_2">
+    <g id="weibull_mechanisms_plot__ytick_1">
+     <g id="weibull_mechanisms_plot__line2d_57">
+      <path d="M 75.649531 351.402477  L 705.505531 351.402477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_58">
+      <defs>
+       <path id="weibull_mechanisms_plot__mc69ba028ee" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__mc69ba028ee" x="75.649531" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_mechanisms_plot__text_6">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="356.340953" transform="rotate(-0 66.149531 356.340953)">0,1</text>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__ytick_2">
+     <g id="weibull_mechanisms_plot__line2d_59">
+      <path d="M 75.649531 323.501409  L 705.505531 323.501409  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_60">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__mc69ba028ee" x="75.649531" y="323.501409" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_mechanisms_plot__text_7">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="328.439886" transform="rotate(-0 66.149531 328.439886)">0,2</text>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__ytick_3">
+     <g id="weibull_mechanisms_plot__line2d_61">
+      <path d="M 75.649531 286.584312  L 705.505531 286.584312  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_62">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__mc69ba028ee" x="75.649531" y="286.584312" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_mechanisms_plot__text_8">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="291.522789" transform="rotate(-0 66.149531 291.522789)">0,5</text>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__ytick_4">
+     <g id="weibull_mechanisms_plot__line2d_63">
+      <path d="M 75.649531 258.60219  L 705.505531 258.60219  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_64">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__mc69ba028ee" x="75.649531" y="258.60219" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_mechanisms_plot__text_9">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="263.540667" transform="rotate(-0 66.149531 263.540667)">1</text>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__ytick_5">
+     <g id="weibull_mechanisms_plot__line2d_65">
+      <path d="M 75.649531 230.517592  L 705.505531 230.517592  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_66">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__mc69ba028ee" x="75.649531" y="230.517592" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_mechanisms_plot__text_10">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="235.456068" transform="rotate(-0 66.149531 235.456068)">2</text>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__ytick_6">
+     <g id="weibull_mechanisms_plot__line2d_67">
+      <path d="M 75.649531 193.039443  L 705.505531 193.039443  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_68">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__mc69ba028ee" x="75.649531" y="193.039443" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_mechanisms_plot__text_11">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="197.97792" transform="rotate(-0 66.149531 197.97792)">5</text>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__ytick_7">
+     <g id="weibull_mechanisms_plot__line2d_69">
+      <path d="M 75.649531 164.085315  L 705.505531 164.085315  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_70">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__mc69ba028ee" x="75.649531" y="164.085315" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_mechanisms_plot__text_12">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="169.023792" transform="rotate(-0 66.149531 169.023792)">10</text>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__ytick_8">
+     <g id="weibull_mechanisms_plot__line2d_71">
+      <path d="M 75.649531 133.900366  L 705.505531 133.900366  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_72">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__mc69ba028ee" x="75.649531" y="133.900366" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_mechanisms_plot__text_13">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="138.838843" transform="rotate(-0 66.149531 138.838843)">20</text>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__ytick_9">
+     <g id="weibull_mechanisms_plot__line2d_73">
+      <path d="M 75.649531 115.035076  L 705.505531 115.035076  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_74">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__mc69ba028ee" x="75.649531" y="115.035076" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_mechanisms_plot__text_14">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="119.973553" transform="rotate(-0 66.149531 119.973553)">30</text>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__ytick_10">
+     <g id="weibull_mechanisms_plot__line2d_75">
+      <path d="M 75.649531 88.309759  L 705.505531 88.309759  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_76">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__mc69ba028ee" x="75.649531" y="88.309759" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_mechanisms_plot__text_15">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="93.248236" transform="rotate(-0 66.149531 93.248236)">50</text>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__ytick_11">
+     <g id="weibull_mechanisms_plot__line2d_77">
+      <path d="M 75.649531 73.580443  L 705.505531 73.580443  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_78">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__mc69ba028ee" x="75.649531" y="73.580443" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_mechanisms_plot__text_16">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="78.518919" transform="rotate(-0 66.149531 78.518919)">63,2</text>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__ytick_12">
+     <g id="weibull_mechanisms_plot__line2d_79">
+      <path d="M 75.649531 54.425415  L 705.505531 54.425415  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_80">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__mc69ba028ee" x="75.649531" y="54.425415" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_mechanisms_plot__text_17">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="59.363892" transform="rotate(-0 66.149531 59.363892)">80</text>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__ytick_13">
+     <g id="weibull_mechanisms_plot__line2d_81">
+      <path d="M 75.649531 40.019407  L 705.505531 40.019407  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_82">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__mc69ba028ee" x="75.649531" y="40.019407" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_mechanisms_plot__text_18">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="44.957883" transform="rotate(-0 66.149531 44.957883)">90</text>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__ytick_14">
+     <g id="weibull_mechanisms_plot__line2d_83">
+      <path d="M 75.649531 29.434294  L 705.505531 29.434294  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_84">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__mc69ba028ee" x="75.649531" y="29.434294" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_mechanisms_plot__text_19">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="34.37277" transform="rotate(-0 66.149531 34.37277)">95</text>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__ytick_15">
+     <g id="weibull_mechanisms_plot__line2d_85">
+      <path d="M 75.649531 12.138477  L 705.505531 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_mechanisms_plot__line2d_86">
+      <g>
+       <use ns4:href="#weibull_mechanisms_plot__mc69ba028ee" x="75.649531" y="12.138477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_mechanisms_plot__text_20">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="17.076953" transform="rotate(-0 66.149531 17.076953)">99</text>
+     </g>
+    </g>
+    <g id="weibull_mechanisms_plot__text_21">
+     
+     <g style="fill: #062d46" transform="translate(20.88 330.630477) rotate(-90)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">A</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="13.930664" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="26.745117" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.458984" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">f</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.290039" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="57.436523" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="63.606445" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="69.776367" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">w</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="86.405273" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="98.551758" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="111.366211" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="120.243164" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="130.957031" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="141.626953" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="154.441406" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="166.649414" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="172.819336" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="185.633789" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="191.803711" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="197.973633" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="208.643555" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="221.458008" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">k</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="233.428711" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="245.636719" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="251.806641" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="260.411133" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="266.677734" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">F</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="284.053711" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="277.03125" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">(</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="291.111328" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">)</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="mechanism_early" data-anim-target="true" data-anim-label="Frühausfallmechanismus"><g id="weibull_mechanisms_plot__mechanism_early_line">
+    <path d="M 75.649531 323.501409  L 78.008542 323.086611  L 80.367554 322.671812  L 82.726565 322.257013  L 85.085576 321.842214  L 87.444587 321.427415  L 89.803599 321.012616  L 92.16261 320.597817  L 94.521621 320.183019  L 96.880632 319.76822  L 99.239644 319.353421  L 101.598655 318.938622  L 103.957666 318.523823  L 106.316677 318.109024  L 108.675689 317.694226  L 111.0347 317.279427  L 113.393711 316.864628  L 115.752722 316.449829  L 118.111733 316.03503  L 120.470745 315.620231  L 122.829756 315.205432  L 125.188767 314.790634  L 127.547778 314.375835  L 129.90679 313.961036  L 132.265801 313.546237  L 134.624812 313.131438  L 136.983823 312.716639  L 139.342835 312.301841  L 141.701846 311.887042  L 144.060857 311.472243  L 146.419868 311.057444  L 148.77888 310.642645  L 151.137891 310.227846  L 153.496902 309.813048  L 155.855913 309.398249  L 158.214925 308.98345  L 160.573936 308.568651  L 162.932947 308.153852  L 165.291958 307.739053  L 167.650969 307.324254  L 170.009981 306.909456  L 172.368992 306.494657  L 174.728003 306.079858  L 177.087014 305.665059  L 179.446026 305.25026  L 181.805037 304.835461  L 184.164048 304.420663  L 186.523059 304.005864  L 188.882071 303.591065  L 191.241082 303.176266  L 193.600093 302.761467  L 195.959104 302.346668  L 198.318116 301.93187  L 200.677127 301.517071  L 203.036138 301.102272  L 205.395149 300.687473  L 207.75416 300.272674  L 210.113172 299.857875  L 212.472183 299.443076  L 214.831194 299.028278  L 217.190205 298.613479  L 219.549217 298.19868  L 221.908228 297.783881  L 224.267239 297.369082  L 226.62625 296.954283  L 228.985262 296.539485  L 231.344273 296.124686  L 233.703284 295.709887  L 236.062295 295.295088  L 238.421307 294.880289  L 240.780318 294.46549  L 243.139329 294.050691  L 245.49834 293.635893  L 247.857351 293.221094  L 250.216363 292.806295  L 252.575374 292.391496  L 254.934385 291.976697  L 257.293396 291.561898  L 259.652408 291.1471  L 262.011419 290.732301  L 264.37043 290.317502  L 266.729441 289.902703  L 269.088453 289.487904  L 271.447464 289.073105  L 273.806475 288.658307  L 276.165486 288.243508  L 278.524498 287.828709  L 280.883509 287.41391  L 283.24252 286.999111  L 285.601531 286.584312  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #2f6f55; stroke-width: 3.8; stroke-linecap: square" />
+   </g>
+   <g id="weibull_mechanisms_plot__mechanism_early_label">
+    <g id="weibull_mechanisms_plot__patch_5">
+     <path d="M 167.731254 306.791708  L 330.031254 306.791708  L 330.031254 287.888192  L 167.731254 287.888192  z " style="fill: #ffffff; opacity: 0.9" />
+    </g>
+    
+    <g style="fill: #2f6f55" transform="translate(169.531254 301.388192)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.390625" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">b</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.443848" y="-0.390625" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">&lt;</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.93457" y="-0.390625" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">1</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.478027" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55"> </tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="42.700195" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">·</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="48.398438" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55"> </tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="53.620605" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">F</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="62.867188" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">r</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="70.264648" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">ü</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="80.943359" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">h</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="91.62207" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">a</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="101.744141" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">u</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="112.422852" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">s</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="121.351074" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">f</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="127.876953" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">ä</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="137.999023" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">l</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="143.140625" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">l</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="148.282227" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">e</tspan>
+     </text>
+    </g>
+   </g>
+   </g><g id="mechanism_random" data-anim-target="true" data-anim-label="Zufallsausfallmechanismus"><g id="weibull_mechanisms_plot__mechanism_random_line">
+    <path d="M 285.601531 286.584312  L 287.960542 285.207919  L 290.319554 283.831526  L 292.678565 282.455133  L 295.037576 281.078739  L 297.396587 279.702346  L 299.755599 278.325953  L 302.11461 276.94956  L 304.473621 275.573167  L 306.832632 274.196773  L 309.191644 272.82038  L 311.550655 271.443987  L 313.909666 270.067594  L 316.268677 268.6912  L 318.627689 267.314807  L 320.9867 265.938414  L 323.345711 264.562021  L 325.704722 263.185628  L 328.063733 261.809234  L 330.422745 260.432841  L 332.781756 259.056448  L 335.140767 257.680055  L 337.499778 256.303661  L 339.85879 254.927268  L 342.217801 253.550875  L 344.576812 252.174482  L 346.935823 250.798088  L 349.294835 249.421695  L 351.653846 248.045302  L 354.012857 246.668909  L 356.371868 245.292516  L 358.73088 243.916122  L 361.089891 242.539729  L 363.448902 241.163336  L 365.807913 239.786943  L 368.166925 238.410549  L 370.525936 237.034156  L 372.884947 235.657763  L 375.243958 234.28137  L 377.602969 232.904977  L 379.961981 231.528583  L 382.320992 230.15219  L 384.680003 228.775797  L 387.039014 227.399404  L 389.398026 226.02301  L 391.757037 224.646617  L 394.116048 223.270224  L 396.475059 221.893831  L 398.834071 220.517438  L 401.193082 219.141044  L 403.552093 217.764651  L 405.911104 216.388258  L 408.270116 215.011865  L 410.629127 213.635471  L 412.988138 212.259078  L 415.347149 210.882685  L 417.70616 209.506292  L 420.065172 208.129899  L 422.424183 206.753505  L 424.783194 205.377112  L 427.142205 204.000719  L 429.501217 202.624326  L 431.860228 201.247932  L 434.219239 199.871539  L 436.57825 198.495146  L 438.937262 197.118753  L 441.296273 195.74236  L 443.655284 194.365966  L 446.014295 192.989573  L 448.373307 191.61318  L 450.732318 190.236787  L 453.091329 188.860393  L 455.45034 187.484  L 457.809351 186.107607  L 460.168363 184.731214  L 462.527374 183.354821  L 464.886385 181.978427  L 467.245396 180.602034  L 469.604408 179.225641  L 471.963419 177.849248  L 474.32243 176.472854  L 476.681441 175.096461  L 479.040453 173.720068  L 481.399464 172.343675  L 483.758475 170.967282  L 486.117486 169.590888  L 488.476498 168.214495  L 490.835509 166.838102  L 493.19452 165.461709  L 495.553531 164.085315  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #007ea7; stroke-width: 3.8; stroke-linecap: square" />
+   </g>
+   <g id="weibull_mechanisms_plot__mechanism_random_label">
+    <g id="weibull_mechanisms_plot__patch_6">
+     <path d="M 383.974093 227.935512  L 565.474093 227.935512  L 565.474093 209.031996  L 383.974093 209.031996  z " style="fill: #ffffff; opacity: 0.9" />
+    </g>
+    
+    <g style="fill: #007ea7" transform="translate(385.774093 222.531996)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.390625" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">b</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.443848" y="-0.390625" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.93457" y="-0.390625" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">1</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.478027" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7"> </tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="42.700195" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">·</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="48.398438" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7"> </tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="53.620605" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">Z</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="64.49707" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">u</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="75.175781" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">f</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="81.70166" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">a</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="91.82373" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">l</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="96.965332" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">l</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="102.106934" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">s</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="111.035156" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">a</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="121.157227" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">u</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="131.835938" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">s</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="140.76416" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">f</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="147.290039" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">ä</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="157.412109" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">l</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="162.553711" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">l</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="167.695312" y="-0.390625" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">e</tspan>
+     </text>
+    </g>
+   </g>
+   </g><g id="mechanism_wear" data-anim-target="true" data-anim-label="Verschleißmechanismus"><g id="weibull_mechanisms_plot__mechanism_wear_line">
+    <path d="M 495.553531 164.085315  L 497.912542 162.378048  L 500.271554 160.67078  L 502.630565 158.963512  L 504.989576 157.256244  L 507.348587 155.548976  L 509.707599 153.841708  L 512.06661 152.13444  L 514.425621 150.427173  L 516.784632 148.719905  L 519.143644 147.012637  L 521.502655 145.305369  L 523.861666 143.598101  L 526.220677 141.890833  L 528.579689 140.183565  L 530.9387 138.476298  L 533.297711 136.76903  L 535.656722 135.061762  L 538.015733 133.354494  L 540.374745 131.647226  L 542.733756 129.939958  L 545.092767 128.232691  L 547.451778 126.525423  L 549.81079 124.818155  L 552.169801 123.110887  L 554.528812 121.403619  L 556.887823 119.696351  L 559.246835 117.989083  L 561.605846 116.281816  L 563.964857 114.574548  L 566.323868 112.86728  L 568.68288 111.160012  L 571.041891 109.452744  L 573.400902 107.745476  L 575.759913 106.038208  L 578.118925 104.330941  L 580.477936 102.623673  L 582.836947 100.916405  L 585.195958 99.209137  L 587.554969 97.501869  L 589.913981 95.794601  L 592.272992 94.087333  L 594.632003 92.380066  L 596.991014 90.672798  L 599.350026 88.96553  L 601.709037 87.258262  L 604.068048 85.550994  L 606.427059 83.843726  L 608.786071 82.136458  L 611.145082 80.429191  L 613.504093 78.721923  L 615.863104 77.014655  L 618.222116 75.307387  L 620.581127 73.600119  L 622.940138 71.892851  L 625.299149 70.185584  L 627.65816 68.478316  L 630.017172 66.771048  L 632.376183 65.06378  L 634.735194 63.356512  L 637.094205 61.649244  L 639.453217 59.941976  L 641.812228 58.234709  L 644.171239 56.527441  L 646.53025 54.820173  L 648.889262 53.112905  L 651.248273 51.405637  L 653.607284 49.698369  L 655.966295 47.991101  L 658.325307 46.283834  L 660.684318 44.576566  L 663.043329 42.869298  L 665.40234 41.16203  L 667.761351 39.454762  L 670.120363 37.747494  L 672.479374 36.040226  L 674.838385 34.332959  L 677.197396 32.625691  L 679.556408 30.918423  L 681.915419 29.211155  L 684.27443 27.503887  L 686.633441 25.796619  L 688.992453 24.089352  L 691.351464 22.382084  L 693.710475 20.674816  L 696.069486 18.967548  L 698.428498 17.26028  L 700.787509 15.553012  L 703.14652 13.845744  L 705.505531 12.138477  " clip-path="url(#weibull_mechanisms_plot__p364b4042fa)" style="fill: none; stroke: #d1495b; stroke-width: 3.8; stroke-linecap: square" />
+   </g>
+   <g id="weibull_mechanisms_plot__mechanism_wear_label">
+    <g id="weibull_mechanisms_plot__patch_7">
+     <path d="M 590.834916 93.473476  L 736.334916 93.473476  L 736.334916 74.86996  L 590.834916 74.86996  z " style="fill: #ffffff; opacity: 0.9" />
+    </g>
+    
+    <g style="fill: #d1495b" transform="translate(592.634916 88.06996)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.609375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">b</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.443848" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">&gt;</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.93457" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">1</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.478027" y="-0.609375" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b"> </tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="42.700195" y="-0.609375" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">·</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="48.398438" y="-0.609375" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b"> </tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="53.620605" y="-0.609375" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">V</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="65.229492" y="-0.609375" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">e</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="75.402832" y="-0.609375" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">r</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="82.800293" y="-0.609375" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">s</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="91.728516" y="-0.609375" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">c</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="100.620117" y="-0.609375" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">h</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="111.298828" y="-0.609375" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">l</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="116.44043" y="-0.609375" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">e</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="126.61377" y="-0.609375" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">i</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="131.755371" y="-0.609375" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">ß</tspan>
+     </text>
+    </g>
+   </g>
+   </g><g id="weibull_mechanisms_plot__patch_3">
+    <path d="M 75.649531 351.402477  L 75.649531 12.138477  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="weibull_mechanisms_plot__patch_4">
+    <path d="M 75.649531 351.402477  L 705.505531 351.402477  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="mechanism_kink_warning" data-anim-target="true" data-anim-label="Knick als Warnsignal für mehrere Mechanismen"><g id="weibull_mechanisms_plot__mechanism_kink_label">
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d1495b" x="391.658779" y="136.204385" transform="rotate(-0 391.658779 136.204385)">Knick = Mechanismenwechsel</text>
+   </g>
+   <g id="weibull_mechanisms_plot__mechanism_kink_markers">
+    <defs>
+     <path id="weibull_mechanisms_plot__m6e52be6c18" d="M 0 5.123475  C 1.358762 5.123475 2.662055 4.583634 3.622844 3.622844  C 4.583634 2.662055 5.123475 1.358762 5.123475 0  C 5.123475 -1.358762 4.583634 -2.662055 3.622844 -3.622844  C 2.662055 -4.583634 1.358762 -5.123475 0 -5.123475  C -1.358762 -5.123475 -2.662055 -4.583634 -3.622844 -3.622844  C -4.583634 -2.662055 -5.123475 -1.358762 -5.123475 0  C -5.123475 1.358762 -4.583634 2.662055 -3.622844 3.622844  C -2.662055 4.583634 -1.358762 5.123475 0 5.123475  z " style="stroke: #d1495b; stroke-width: 2.4" />
+    </defs>
+    <g clip-path="url(#weibull_mechanisms_plot__p364b4042fa)">
+     <use ns4:href="#weibull_mechanisms_plot__m6e52be6c18" x="285.601531" y="286.584312" style="fill: #ffffff; stroke: #d1495b; stroke-width: 2.4" />
+     <use ns4:href="#weibull_mechanisms_plot__m6e52be6c18" x="495.553531" y="164.085315" style="fill: #ffffff; stroke: #d1495b; stroke-width: 2.4" />
+    </g>
+   </g>
+  </g></g>
+ </g>
+ <defs>
+  <clipPath id="weibull_mechanisms_plot__p364b4042fa">
+   <rect data-qc-allow-overlap="true" x="75.649531" y="12.138477" width="629.856" height="339.264" />
+  </clipPath>
+ </defs>
+</svg><g id="weibull_mechanism_separation" data-anim-target="true" data-anim-label="Ausfallmechanismen getrennt auswerten"><title>Ausfallmechanismen getrennt auswerten</title><rect data-qc-allow-overlap="true" x="1402" y="230" width="420" height="626" rx="8" fill="#FFFFFF" stroke="#C8D5DF" stroke-width="1.5" filter="url(#shadowSoft)"/><circle cx="1612" cy="312" r="48" fill="#F9E4E7"/><g transform="translate(1583 283) scale(2.4166666666666665)" fill="none" stroke="#D1495B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M8 10.5l1.8 1.8 3.6-4"/></g><text x="1612" y="394" class="" font-size="18" font-weight="850" fill="#D1495B" text-anchor="middle" data-qc-role="text"><tspan x="1612" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">KNICK ≠ EIN MECHANISMUS</tspan></text><text x="1440" y="462" class="" font-size="22" font-weight="730" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1440" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Ein abknickender Verlauf kann</tspan><tspan x="1440" dy="30" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">aus mehreren Ausfallmechanismen</tspan><tspan x="1440" dy="30" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">mit unterschiedlichen b-Werten</tspan><tspan x="1440" dy="30" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">entstehen.</tspan></text><line x1="1440" y1="612" x2="1784" y2="612" stroke="#C8D5DF"/><text x="1440" y="666" class="" font-size="17" font-weight="850" fill="#2F6F55" text-anchor="start" data-qc-role="text"><tspan x="1440" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">ZIEL DER AUSWERTUNG</tspan></text><text x="1440" y="716" class="" font-size="22" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1440" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Datenpunkte nach Mechanismus</tspan><tspan x="1440" dy="29" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">trennen und jeweils durch eine</tspan><tspan x="1440" dy="29" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">eigene Weibullverteilung</tspan><tspan x="1440" dy="29" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">beschreiben.</tspan></text></g><rect data-qc-allow-overlap="true" x="434" y="868" width="1052" height="68" rx="8" fill="#F7EEDC" stroke="#B7791F" stroke-width="1.5"/><text x="960" y="911" class="" font-size="22" font-weight="790" fill="#102A43" text-anchor="middle" data-qc-role="text"><tspan x="960" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Schematische Darstellung: reale Daten ergeben pro Mechanismus genau eine Fit-Gerade.</tspan></text></g>
+  <line x1="78" y1="982" x2="1842" y2="982" stroke="#102A43" stroke-opacity="0.12" stroke-width="1.5"/>
+  <text x="78" y="1026" font-size="20" font-weight="700" fill="#627D98">Professional Reliability Training | Reliability Engineer</text>
+  <text x="1580" y="1026" font-size="20" font-weight="700" fill="#627D98" text-anchor="end">RE1 · Szene 67</text>
+  <g id="official_logo_reserved" data-logo-status="pending-original-asset" aria-label="Reservierter Bereich für das offizielle RelTest-Academy-Logo"/>
+</svg>

@@ -1,0 +1,272 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re1_src_005",
+  "svgPath": "rebuild-proposals/svg/RE1/slide_005/slide_005.svg",
+  "spokenText": "In unseren Beispielen zu Produkt-Rückrufen haben wir die spezifischen Folgen für die einzelnen Unternehmen bereits diskutiert. Diese können sowohl rechtlicher als auch nicht-rechtlicher Natur sein.\n\nZu den nicht-rechtlichen Folgen zählen beispielsweise wirtschaftliche Verluste und Image-Schäden, die Marken oder Unternehmen treffen können.\n\nZudem stehen Unternehmen vor zivilrechtlichen Konsequenzen, die sich aus Gewährleistungsansprüchen oder der Produkthaftung für verursachte Schäden ergeben können.\n\nIn besonders schwerwiegenden Fällen können auch strafrechtliche Sanktionen wie Geld- oder Freiheitsstrafen zur Anwendung kommen.\n\nDoch wie kommt es zu solchen Rückrufaktionen?\n\nUnd was sind die Gründe für die Unzuverlässigkeit der Produkte?\n\nUm das zu beantworten, schauen wir uns zunächst an, welchen Einflüssen die Zuverlässigkeit unterliegt.",
+  "animationDecision": "animated",
+  "animationRationale": "Die gemeinsame Wurzel bleibt sichtbar; jeder Konsequenzast erscheint vollständig mit eigenem Verbinder und Endpunkt.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Show wird als reines Fade bewertet.",
+      "Gleiche sourceText-Phrase startet alle Schritte derselben Triggergruppe gleichzeitig."
+    ]
+  },
+  "initialStateRationale": "Die Wurzel benennt den Gegenstand. Die drei Klassen würden spätere Sprecherabschnitte vorwegnehmen.",
+  "semanticGroups": [
+    {
+      "groupId": "brand_background",
+      "label": "RelTest-Education-Hintergrund",
+      "role": "background",
+      "members": [
+        "Education-Farbverlauf",
+        "ruhiges technisches Raster"
+      ],
+      "initialState": "static_decorative",
+      "dependsOn": [],
+      "groupingRationale": "Der Hintergrund ist ruhiger Markenrahmen und trägt keine vorweggenommene Fachinformation."
+    },
+    {
+      "groupId": "consequence_root",
+      "label": "Folgen fehlerhafter Produkte",
+      "role": "context",
+      "members": [
+        "dunkle Wurzelkarte",
+        "weißer Wurzeltext"
+      ],
+      "initialState": "visible_context",
+      "dependsOn": [],
+      "groupingRationale": "Karte und Text bilden den gemeinsamen Ausgangspunkt."
+    },
+    {
+      "groupId": "nonlegal_consequences",
+      "label": "Nicht-rechtliche Folgen",
+      "role": "concept_relationship_bundle",
+      "members": [
+        "linker Verbinder",
+        "vollständige Wirtschaftskarte",
+        "alle drei wirtschaftlichen Folgen"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "consequence_root"
+      ],
+      "groupingRationale": "Verbinder, Endpunkt und Inhalt dürfen nicht getrennt erscheinen."
+    },
+    {
+      "groupId": "civil_consequences",
+      "label": "Zivilrechtliche Folgen",
+      "role": "concept_relationship_bundle",
+      "members": [
+        "mittlerer Verbinder",
+        "vollständige Zivilrechtskarte",
+        "Gewährleistung",
+        "Produkthaftung"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "consequence_root"
+      ],
+      "groupingRationale": "Verbinder, Endpunkt und Inhalt dürfen nicht getrennt erscheinen."
+    },
+    {
+      "groupId": "criminal_consequences",
+      "label": "Strafrechtliche Folgen",
+      "role": "concept_relationship_bundle",
+      "members": [
+        "rechter Verbinder",
+        "vollständige Strafrechtskarte",
+        "alle drei Sanktionen"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "consequence_root"
+      ],
+      "groupingRationale": "Verbinder, Endpunkt und Inhalt dürfen nicht getrennt erscheinen."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "show_nonlegal_branch",
+      "claim": "Nicht-rechtliche Folgen treffen Wirtschaft und Image.",
+      "sourceText": "Zu den nicht-rechtlichen Folgen zählen beispielsweise wirtschaftliche Verluste",
+      "occurrence": 1,
+      "requiredContext": [
+        "consequence_root"
+      ],
+      "revealTogether": [
+        "nonlegal_consequences"
+      ],
+      "learnerStateBefore": "Nur die gemeinsame Wurzel ist sichtbar.",
+      "learnerStateAfter": "Der vollständige linke Ast ist sichtbar."
+    },
+    {
+      "beatId": "show_civil_branch",
+      "claim": "Zivilrechtliche Folgen umfassen Gewährleistung und Produkthaftung.",
+      "sourceText": "Zudem stehen Unternehmen vor zivilrechtlichen Konsequenzen",
+      "occurrence": 1,
+      "requiredContext": [
+        "consequence_root",
+        "nonlegal_consequences"
+      ],
+      "revealTogether": [
+        "civil_consequences"
+      ],
+      "learnerStateBefore": "Wurzel und wirtschaftlicher Ast sind sichtbar.",
+      "learnerStateAfter": "Der zivilrechtliche Ast ist ergänzt."
+    },
+    {
+      "beatId": "show_criminal_branch",
+      "claim": "Schwere Fälle können strafrechtliche Sanktionen auslösen.",
+      "sourceText": "In besonders schwerwiegenden Fällen können auch strafrechtliche Sanktionen",
+      "occurrence": 1,
+      "requiredContext": [
+        "consequence_root",
+        "nonlegal_consequences",
+        "civil_consequences"
+      ],
+      "revealTogether": [
+        "criminal_consequences"
+      ],
+      "learnerStateBefore": "Wirtschaftliche und zivilrechtliche Folgen sind sichtbar.",
+      "learnerStateAfter": "Alle drei Konsequenzklassen sind vollständig."
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_nonlegal_consequences",
+      "beatId": "show_nonlegal_branch",
+      "targetId": "nonlegal_consequences",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Der linke Ast erscheint atomar inklusive Verbinder."
+    },
+    {
+      "stepId": "show_civil_consequences",
+      "beatId": "show_civil_branch",
+      "targetId": "civil_consequences",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Der mittlere Ast erscheint atomar inklusive Verbinder."
+    },
+    {
+      "stepId": "show_criminal_consequences",
+      "beatId": "show_criminal_branch",
+      "targetId": "criminal_consequences",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Der rechte Ast erscheint atomar inklusive Verbinder."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "consequence_root"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Die Wurzel benennt den Gegenstand. Die drei Klassen würden spätere Sprecherabschnitte vorwegnehmen."
+    },
+    {
+      "stateId": "before_show_nonlegal_branch",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "consequence_root"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Nur die gemeinsame Wurzel ist sichtbar."
+    },
+    {
+      "stateId": "after_show_nonlegal_branch",
+      "afterBeatId": "show_nonlegal_branch",
+      "visibleGroups": [
+        "brand_background",
+        "consequence_root",
+        "nonlegal_consequences"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der vollständige linke Ast ist sichtbar."
+    },
+    {
+      "stateId": "before_show_civil_branch",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "consequence_root",
+        "nonlegal_consequences"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Wurzel und wirtschaftlicher Ast sind sichtbar."
+    },
+    {
+      "stateId": "after_show_civil_branch",
+      "afterBeatId": "show_civil_branch",
+      "visibleGroups": [
+        "brand_background",
+        "consequence_root",
+        "nonlegal_consequences",
+        "civil_consequences"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der zivilrechtliche Ast ist ergänzt."
+    },
+    {
+      "stateId": "before_show_criminal_branch",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "consequence_root",
+        "nonlegal_consequences",
+        "civil_consequences"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Wirtschaftliche und zivilrechtliche Folgen sind sichtbar."
+    },
+    {
+      "stateId": "after_show_criminal_branch",
+      "afterBeatId": "show_criminal_branch",
+      "visibleGroups": [
+        "brand_background",
+        "consequence_root",
+        "nonlegal_consequences",
+        "civil_consequences",
+        "criminal_consequences"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Alle drei Konsequenzklassen sind vollständig."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "show_criminal_branch",
+      "visibleGroups": [
+        "brand_background",
+        "consequence_root",
+        "nonlegal_consequences",
+        "civil_consequences",
+        "criminal_consequences"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der vollständige statische Endzustand bleibt ohne Animation fachlich verständlich."
+    }
+  ]
+}

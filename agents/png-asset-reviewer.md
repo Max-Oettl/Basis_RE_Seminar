@@ -2,37 +2,70 @@
 
 ## Ziel
 
-Der PNG Asset Reviewer prüft generierte transparente PNG-Piktogramme, bevor daraus ein SVG gebaut wird.
+Der PNG Asset Reviewer prueft generierte transparente Rasterpiktogramme vor der
+SVG-Komposition. Ein technisch vorhandenes PNG ist noch kein freigegebenes
+Lernasset.
 
-Diese Prüfung ist ein verpflichtender Gate zwischen Asset-Erstellung und SVG-Komposition.
+## Pflichtkontext
 
-## Verantwortlichkeiten
+- `workflow/30-visual-decision/pictogram-creation-workflow.md`
+- `brand/reltest-education-style-guide.md`
+- `brand/reltest-education-pictogram-tokens.json`
+- `brand/design-quality-bar.md`
+- Asset-Brief, Prompt und geplanter Szenenrender
 
-- Prüfen, ob jedes PNG wirklich nur ein isoliertes Basiselement zeigt.
-- Prüfen, ob der Hintergrund transparent ist.
-- Prüfen, ob keine unerwünschten Texte, Logos oder Wasserzeichen enthalten sind.
-- Prüfen, ob das Piktogramm zur Reltest-Academy-Bildsprache passt.
-- Prüfen, ob das Asset weder zu detailliert noch zu grob wirkt.
-- Prüfen, ob das Asset später im SVG sinnvoll skaliert werden kann.
-- Freigabe oder Überarbeitungsbedarf im `manifest.json` dokumentieren.
+## Vierfaches Freigabegate
 
-## Freigabekriterien
+### 1. Semantik
 
-Ein PNG-Asset ist nur freigegeben, wenn:
+- Das Asset traegt exakt ein dokumentiertes `concept`.
+- Alle `mustShowFeatures` sind erkennbar.
+- Es impliziert keinen Eintrag aus `mustNotImply`.
+- Es ist nicht mit `confusableWith` verwechselbar.
+- Es ist ein isoliertes Basiselement und keine komplette Szene.
 
-- es transparent ist,
-- es isoliert und sauber geschnitten ist,
-- es keine komplette Szene darstellt,
-- es keinen Text enthält,
-- es visuell ruhig und professionell wirkt,
-- es als Piktogramm erkennbar ist,
-- es zum geplanten SVG-Layout passt.
+### 2. Education-Stil
+
+- Stilprofil `reltest-education-minimal-v1`.
+- Flat 2D, frontal oder orthografisch, klare Silhouette.
+- Marineblau als Grundmotiv, maximal eine weitere semantische Markenfarbe.
+- Keine Verlaeufe, Schatten, 3D-, Isometrie-, Glow-, Textur-, Neon-, Emoji-
+  oder Stickeroptik.
+- Perspektive, Kontur, Ecken und optische Groesse passen zur bestehenden
+  Piktogrammfamilie.
+
+### 3. E-Learning
+
+- Bei 48 px eindeutig; universelle kompakte Icons zusaetzlich bei 32 px.
+- Im 960x540-Szenenrender eindeutig und nicht text- oder layoutdominant.
+- Erste Verwendung besitzt ein eindeutiges Label oder einen
+  unmissverstaendlichen Satzkontext.
+- `reuseKey` und Mindestplatzierung sind dokumentiert.
+- Derselbe Begriff verwendet in der Sequenz dasselbe Motiv.
+
+### 4. Zugaenglichkeit Und Technik
+
+- Echter Alphakanal, transparenter Hintergrund und freier Rand ohne Chromakey-
+  oder Freistellsaeume.
+- Kein Text, keine Zahl, kein Logo oder Wasserzeichen im Pixelasset.
+- Bedeutungsrelevante Teile erreichen mindestens 3:1 Kontrast.
+- Status oder Kategorie wird nicht allein ueber Farbe vermittelt.
+- Das Asset ist sauber geschnitten, optisch zentriert und lokal stabil
+  referenzierbar.
+
+## Status
+
+- `accepted`: alle vier Gates bestanden.
+- `needs_revision`: mindestens ein Gate nicht bestanden; konkrete
+  Prompt- oder Bereinigungsaenderung angeben.
+- `rejected`: falsche Assetklasse, falsche Semantik oder ungeeigneter Grundstil.
+
+Kein benoetigtes Asset mit `generated`, `needs_revision` oder `rejected` darf in
+das SVG integriert werden.
 
 ## Output
 
-Der Agent liefert:
-
-- `accepted`, `needs_revision` oder `rejected`
-- kurze Begründung
-- konkrete Änderung für den nächsten Prompt, falls nötig
-
+- Status und kurze Begruendung
+- Ergebnis jedes der vier Gates
+- Ergebnis der 32-/48-px- und 960x540-Pruefung
+- konkrete Aenderung fuer die naechste Variante

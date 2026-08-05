@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re2_ch3_fta_failure_mode_classes",
+  "targets": [
+    {
+      "targetId": "fta33_primary",
+      "label": "Primärausfall",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta33_secondary",
+      "label": "Sekundärausfall",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta33_commanded",
+      "label": "Kommandierter Ausfall",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta33_primary",
+      "targetId": "fta33_primary",
+      "action": "show",
+      "sourceText": "Bei einem Primärausfall erfolgt der Ausfall",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_fta33_secondary",
+      "targetId": "fta33_secondary",
+      "action": "show",
+      "sourceText": "Ein Sekundärausfall entsteht",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_fta33_commanded",
+      "targetId": "fta33_commanded",
+      "action": "show",
+      "sourceText": "Bei einem kommandierten Ausfall",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

@@ -54,12 +54,12 @@ def text(
     value: str,
     size: int = 30,
     weight: int = 650,
-    fill: str = "#062D46",
+    fill: str = "#031334",
     anchor: str = "start",
     extra: str = "",
 ) -> str:
     qc_role = "" if "data-qc-role=" in extra else 'data-qc-role="text"'
-    font_family = "" if "font-family=" in extra else 'font-family="Inter, Segoe UI, Arial, sans-serif"'
+    font_family = "" if "font-family=" in extra else 'font-family="Archivo, Arial, Helvetica, sans-serif"'
     return (
         f'<text id="{text_id}" x="{x}" y="{y}" text-anchor="{anchor}" '
         f'font-size="{size}" font-weight="{weight}" fill="{fill}" '
@@ -68,7 +68,7 @@ def text(
     )
 
 
-def panel(panel_id: str, x: int, y: int, w: int, h: int, fill: str = "#FFFFFF", stroke: str = "#CBD5E1") -> str:
+def panel(panel_id: str, x: int, y: int, w: int, h: int, fill: str = "#FFFFFF", stroke: str = "#CDD0D6") -> str:
     d = f"M {x} {y} H {x + w} V {y + h} H {x} Z"
     return (
         f'<path id="{panel_id}" d="{d}" fill="{fill}" stroke="{stroke}" stroke-width="2.5" '
@@ -80,24 +80,24 @@ def marker_defs() -> str:
     return """
   <defs>
     <style>
-      .font { font-family: Inter, "Segoe UI", Arial, sans-serif; }
-      .axis { stroke: #062D46; stroke-width: 5; stroke-linecap: round; fill: none; }
-      .thin-axis { stroke: #062D46; stroke-width: 3.2; stroke-linecap: round; fill: none; }
-      .guide { stroke: #139CCB; stroke-width: 3; stroke-dasharray: 8 7; fill: none; }
-      .failure-red { stroke: #D1495B; stroke-width: 8; stroke-linecap: round; }
-      .failure-blue { stroke: #139CCB; stroke-width: 8; stroke-linecap: round; }
-      .fit-red { stroke: #D1495B; stroke-width: 5; stroke-linecap: round; fill: none; }
-      .fit-blue { stroke: #139CCB; stroke-width: 5; stroke-linecap: round; fill: none; }
-      .muted { fill: #6A7A86; }
-      .ink { fill: #062D46; }
-      .accent { fill: #139CCB; }
-      .red { fill: #D1495B; }
+      .font { font-family: "Archivo", Arial, Helvetica, sans-serif; }
+      .axis { stroke: #031334; stroke-width: 5; stroke-linecap: round; fill: none; }
+      .thin-axis { stroke: #031334; stroke-width: 3.2; stroke-linecap: round; fill: none; }
+      .guide { stroke: #00A754; stroke-width: 3; stroke-dasharray: 8 7; fill: none; }
+      .failure-red { stroke: #EC6244; stroke-width: 8; stroke-linecap: round; }
+      .failure-blue { stroke: #0C84B4; stroke-width: 8; stroke-linecap: round; }
+      .fit-red { stroke: #EC6244; stroke-width: 5; stroke-linecap: round; fill: none; }
+      .fit-blue { stroke: #0C84B4; stroke-width: 5; stroke-linecap: round; fill: none; }
+      .muted { fill: #687185; }
+      .ink { fill: #031334; }
+      .accent { fill: #00A754; }
+      .red { fill: #EC6244; }
     </style>
     <marker id="arrow_ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#062D46"/>
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#031334"/>
     </marker>
     <marker id="arrow_blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#139CCB"/>
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#00A754"/>
     </marker>
     <g id="cross_red">
       <line class="failure-red" x1="0" y1="0" x2="28" y2="28" data-qc-allow-overlap="true"/>
@@ -112,12 +112,12 @@ def marker_defs() -> str:
 
 
 def step_marker(step_id: str, number: str, x: int, y: int, active: bool, line1: str, line2: str | None = None) -> str:
-    stroke = "#139CCB" if active else "#CBD5E1"
-    fill = "#062D46" if active else "#6A7A86"
+    stroke = "#00A754" if active else "#CDD0D6"
+    fill = "#031334" if active else "#687185"
     lines = [
         f'<g id="{step_id}" aria-label="{esc(line1)}">',
         f'<circle id="{step_id}_circle" cx="{x}" cy="{y}" r="34" fill="#FFFFFF" stroke="{stroke}" stroke-width="5" data-qc-role="timeline-marker" data-qc-allow-overlap="true"/>',
-        f'<text id="{step_id}_number" x="{x}" y="{y + 12}" text-anchor="middle" font-size="33" font-weight="800" fill="{fill}" font-family="Inter, Segoe UI, Arial, sans-serif" data-qc-role="text" data-qc-important="true" data-qc-allow-overlap="true">{number}</text>',
+        f'<text id="{step_id}_number" x="{x}" y="{y + 12}" text-anchor="middle" font-size="33" font-weight="800" fill="{fill}" font-family="Archivo, Arial, Helvetica, sans-serif" data-qc-role="text" data-qc-important="true" data-qc-allow-overlap="true">{number}</text>',
         text(f"{step_id}_text_1", x + 72, y - (12 if line2 else -12), line1, 34, 700 if active else 650, fill),
     ]
     if line2:
@@ -156,7 +156,7 @@ def timeline(tid: str, x: int, y: int, w: int, positions: list[int], colors: lis
     for idx, pos in enumerate(positions):
         xx = x + pos
         parts.append(failure_cross(xx, y, colors[idx]))
-        fill = "#139CCB" if colors[idx] == "blue" else "#D1495B"
+        fill = "#0C84B4" if colors[idx] == "blue" else "#EC6244"
         parts.append(text(f"{tid}_label_{idx+1}", xx, y + 52, labels[idx], 28, 650, fill, "middle", 'data-qc-role="timeline-label"'))
     parts.append(text(f"{tid}_axis_label", x + w + 46, y + 10, "t", 30, 650))
     parts.append("</g>")
@@ -190,9 +190,9 @@ def tool_icon(icon_id: str, x: int, y: int, scale: float = 1.0) -> str:
     s = scale
     return f"""
     <g id="{icon_id}" transform="translate({x} {y}) scale({s})" aria-label="Werkzeug-Symbol">
-      <path d="M 0 30 L 56 30 L 56 0 L 110 55 L 56 110 L 56 80 L 0 80 Z" fill="#E7F6FB" stroke="#062D46" stroke-width="4"/>
-      <line x1="42" y1="34" x2="76" y2="68" stroke="#062D46" stroke-width="7" stroke-linecap="round"/>
-      <line x1="76" y1="34" x2="42" y2="68" stroke="#062D46" stroke-width="7" stroke-linecap="round"/>
+      <path d="M 0 30 L 56 30 L 56 0 L 110 55 L 56 110 L 56 80 L 0 80 Z" fill="#E6F6EE" stroke="#031334" stroke-width="4"/>
+      <line x1="42" y1="34" x2="76" y2="68" stroke="#031334" stroke-width="7" stroke-linecap="round"/>
+      <line x1="76" y1="34" x2="42" y2="68" stroke="#031334" stroke-width="7" stroke-linecap="round"/>
     </g>
 """
 
@@ -200,14 +200,14 @@ def tool_icon(icon_id: str, x: int, y: int, scale: float = 1.0) -> str:
 def inline_weibull_formula(x: int, y: int) -> str:
     return f"""
     <g id="weibull_formula_inline" transform="translate({x} {y})" data-qc-role="formula" data-qc-allow-overlap="true">
-      <text x="0" y="42" font-family="Cambria Math, Cambria, Times New Roman, serif" font-size="54" fill="#062D46" data-qc-allow-overlap="true">F(t) = 1 - e</text>
-      <text x="266" y="10" font-family="Cambria Math, Cambria, Times New Roman, serif" font-size="31" fill="#062D46" data-qc-allow-overlap="true">-</text>
-      <text x="292" y="10" font-family="Cambria Math, Cambria, Times New Roman, serif" font-size="31" fill="#062D46" data-qc-allow-overlap="true">(</text>
-      <text x="312" y="-4" font-family="Cambria Math, Cambria, Times New Roman, serif" font-size="30" fill="#062D46" data-qc-allow-overlap="true">t</text>
-      <line x1="302" y1="7" x2="348" y2="7" stroke="#062D46" stroke-width="2" data-qc-allow-overlap="true"/>
-      <text x="310" y="38" font-family="Cambria Math, Cambria, Times New Roman, serif" font-size="30" fill="#062D46" data-qc-allow-overlap="true">8</text>
-      <text x="354" y="10" font-family="Cambria Math, Cambria, Times New Roman, serif" font-size="31" fill="#062D46" data-qc-allow-overlap="true">)</text>
-      <text x="376" y="0" font-family="Cambria Math, Cambria, Times New Roman, serif" font-size="30" fill="#062D46" data-qc-allow-overlap="true">3</text>
+      <text x="0" y="42" font-family="Cambria Math, Cambria, Times New Roman, serif" font-size="54" fill="#031334" data-qc-allow-overlap="true" data-qa-font-exception="allowed" data-qa-reason="Mathematical notation requires a dedicated math font.">F(t) = 1 - e</text>
+      <text x="266" y="10" font-family="Cambria Math, Cambria, Times New Roman, serif" font-size="31" fill="#031334" data-qc-allow-overlap="true" data-qa-font-exception="allowed" data-qa-reason="Mathematical notation requires a dedicated math font.">-</text>
+      <text x="292" y="10" font-family="Cambria Math, Cambria, Times New Roman, serif" font-size="31" fill="#031334" data-qc-allow-overlap="true" data-qa-font-exception="allowed" data-qa-reason="Mathematical notation requires a dedicated math font.">(</text>
+      <text x="312" y="-4" font-family="Cambria Math, Cambria, Times New Roman, serif" font-size="30" fill="#031334" data-qc-allow-overlap="true" data-qa-font-exception="allowed" data-qa-reason="Mathematical notation requires a dedicated math font.">t</text>
+      <line x1="302" y1="7" x2="348" y2="7" stroke="#031334" stroke-width="2" data-qc-allow-overlap="true"/>
+      <text x="310" y="38" font-family="Cambria Math, Cambria, Times New Roman, serif" font-size="30" fill="#031334" data-qc-allow-overlap="true" data-qa-font-exception="allowed" data-qa-reason="Mathematical notation requires a dedicated math font.">8</text>
+      <text x="354" y="10" font-family="Cambria Math, Cambria, Times New Roman, serif" font-size="31" fill="#031334" data-qc-allow-overlap="true" data-qa-font-exception="allowed" data-qa-reason="Mathematical notation requires a dedicated math font.">)</text>
+      <text x="376" y="0" font-family="Cambria Math, Cambria, Times New Roman, serif" font-size="30" fill="#031334" data-qc-allow-overlap="true" data-qa-font-exception="allowed" data-qa-reason="Mathematical notation requires a dedicated math font.">3</text>
     </g>
 """
 
@@ -224,8 +224,8 @@ def simple_probability_plot(pid: str, x: int, y: int, w: int = 420, h: int = 340
     if confidence:
         parts.append(f'<path class="guide" d="M {x0 + 40} {y0 - 64} C {x0 + 118} {y0 - 132}, {x0 + 210} {y0 - 170}, {x1 + 24} {y1 + 18}"/>')
         parts.append(f'<path class="guide" d="M {x0 + 98} {y0 - 12} C {x0 + 170} {y0 - 72}, {x0 + 232} {y0 - 120}, {x1 + 44} {y1 + 76}"/>')
-    parts.append(text(pid + "_ylabel", x + 40, y + 178, "Ausfallwahrscheinlichkeit", 24, 650, "#062D46", "middle", f'transform="rotate(-90 {x + 40} {y + 178})" data-qc-role="axis-label"'))
-    parts.append(text(pid + "_xlabel", x + w - 158, y + h - 28, "Lebensdauer", 24, 650, "#062D46", "middle", 'data-qc-role="axis-label"'))
+    parts.append(text(pid + "_ylabel", x + 40, y + 178, "Ausfallwahrscheinlichkeit", 24, 650, "#031334", "middle", f'transform="rotate(-90 {x + 40} {y + 178})" data-qc-role="axis-label"'))
+    parts.append(text(pid + "_xlabel", x + w - 158, y + h - 28, "Lebensdauer", 24, 650, "#031334", "middle", 'data-qc-role="axis-label"'))
     parts.append("</g>")
     return "\n".join(parts)
 
@@ -235,14 +235,14 @@ def object_time_diagram(oid: str, x: int, y: int, censored: bool = False) -> str
     parts = [f'<g id="{oid}">', panel(oid + "_box", x, y, 620, 430)]
     parts.append(f'<line class="axis" x1="{x + 112}" y1="{y + 356}" x2="{x + 548}" y2="{y + 356}" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>')
     parts.append(f'<line class="axis" x1="{x + 112}" y1="{y + 356}" x2="{x + 112}" y2="{y + 62}" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>')
-    parts.append(text(oid + "_ylabel", x + 42, y + 212, "Objekt Nr.", 28, 650, "#062D46", "middle", f'transform="rotate(-90 {x + 42} {y + 212})" data-qc-role="axis-label"'))
-    parts.append(text(oid + "_xlabel", x + 575, y + 392, "t", 28, 650, "#062D46", "middle", 'data-qc-role="axis-label"'))
+    parts.append(text(oid + "_ylabel", x + 42, y + 212, "Objekt Nr.", 28, 650, "#031334", "middle", f'transform="rotate(-90 {x + 42} {y + 212})" data-qc-role="axis-label"'))
+    parts.append(text(oid + "_xlabel", x + 575, y + 392, "t", 28, 650, "#031334", "middle", 'data-qc-role="axis-label"'))
     for nr, fail_x, yy in rows:
-        parts.append(text(f"{oid}_row_{nr}", x + 88, y + yy + 9, nr, 26, 600, "#062D46", "end"))
+        parts.append(text(f"{oid}_row_{nr}", x + 88, y + yy + 9, nr, 26, 600, "#031334", "end"))
         parts.append(f'<line class="thin-axis" x1="{x + 112}" y1="{y + yy}" x2="{x + 502}" y2="{y + yy}" data-qc-role="grid-line"/>')
         if censored and nr in {"3", "4"}:
-            parts.append(f'<line x1="{x + 112}" y1="{y + yy}" x2="{x + 458}" y2="{y + yy}" stroke="#062D46" stroke-width="3.2"/>')
-            parts.append(f'<line x1="{x + 458}" y1="{y + yy}" x2="{x + 506}" y2="{y + yy}" stroke="#139CCB" stroke-width="5" marker-end="url(#arrow_blue)"/>')
+            parts.append(f'<line x1="{x + 112}" y1="{y + yy}" x2="{x + 458}" y2="{y + yy}" stroke="#031334" stroke-width="3.2"/>')
+            parts.append(f'<line x1="{x + 458}" y1="{y + yy}" x2="{x + 506}" y2="{y + yy}" stroke="#00A754" stroke-width="5" marker-end="url(#arrow_blue)"/>')
         else:
             parts.append(failure_cross(x + fail_x, y + yy))
     parts.append("</g>")
@@ -260,11 +260,11 @@ def svg(slide: int, desc: str, body: str) -> str:
         "density": "normal",
         "contentMode": "transparent-content",
         "backgroundMode": "transparent",
-        "brandProfile": "reltest-academy",
-        "brandVariant": "technical",
+        "brandProfile": "reltest-education",
+        "brandVariant": "education-technical",
     }
     return f"""<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="scene_title scene_desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="scene_title scene_desc" data-brand-profile="reltest-education">
   <title id="scene_title">{esc(desc)}</title>
   <desc id="scene_desc">Content-SVG ohne sichtbare PowerPoint-Masterelemente.</desc>
   <metadata id="slide-quality-metadata" type="application/json"><![CDATA[
@@ -322,16 +322,16 @@ def slide_004() -> tuple[str, str, list[str]]:
 
 def slide_005() -> tuple[str, str, list[str]]:
     body = workflow_steps(2) + plot_image("fit_plot", "weibull", 790, 168, 900, 650)
-    body += "\n" + panel("fit_callout_box", 1320, 838, 370, 92, "#E7F6FB", "#CBD5E1")
+    body += "\n" + panel("fit_callout_box", 1320, 838, 370, 92, "#E6F6EE", "#CDD0D6")
     body += "\n" + text("fit_callout_text", 1362, 894, "Regressionsgerade", 28, 700)
     return "Regressionsgerade bestimmen", body, ["workflow_steps", "fit_plot", "fit_callout_box", "fit_callout_text"]
 
 
 def slide_006() -> tuple[str, str, list[str]]:
     body = workflow_steps(3, True) + plot_image("parameter_plot", "parameter", 790, 168, 900, 650)
-    body += "\n" + panel("parameter_note_t", 1345, 842, 190, 80, "#E7F6FB", "#CBD5E1")
+    body += "\n" + panel("parameter_note_t", 1345, 842, 190, 80, "#E6F6EE", "#CDD0D6")
     body += "\n" + text("parameter_note_t_text", 1382, 894, "T = 63,2 %", 26, 700)
-    body += "\n" + panel("parameter_note_b", 1560, 842, 180, 80, "#E7F6FB", "#CBD5E1")
+    body += "\n" + panel("parameter_note_b", 1560, 842, 180, 80, "#E6F6EE", "#CDD0D6")
     body += "\n" + text("parameter_note_b_text", 1616, 894, "b", 30, 800)
     return "Weibull-Parameter ablesen", body, ["workflow_steps", "parameter_plot", "parameter_note_t", "parameter_note_b"]
 
@@ -342,11 +342,11 @@ def slide_007() -> tuple[str, str, list[str]]:
     body += "\n" + f'<line class="axis" x1="630" y1="486" x2="630" y2="566" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>'
     body += "\n" + plot_image("weibull_context_plot", "weibull", 205, 560, 770, 360)
     body += "\n" + f'<line class="axis" x1="980" y1="724" x2="1070" y2="724" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>'
-    body += "\n" + panel("formula_panel", 1095, 330, 600, 350, "#FFFFFF", "#CBD5E1")
+    body += "\n" + panel("formula_panel", 1095, 330, 600, 350, "#FFFFFF", "#CDD0D6")
     body += "\n" + text("parameter_t", 1160, 410, "T -> 8", 34, 700)
     body += "\n" + text("parameter_b", 1160, 462, "b -> 3", 34, 700)
     body += "\n" + inline_weibull_formula(1160, 530)
-    body += "\n" + text("example_value", 1160, 790, "F(10) ≈ 85,8 %", 46, 650, "#062D46", "start", 'font-family="Cambria Math, Cambria, Times New Roman, serif"')
+    body += "\n" + text("example_value", 1160, 790, "F(10) ≈ 85,8 %", 46, 650, "#031334", "start", 'font-family="Cambria Math, Cambria, Times New Roman, serif" data-qa-font-exception="allowed" data-qa-reason="Mathematical notation requires a dedicated math font."')
     return "Weibull-Funktion mit Beispielwert", body, ["input_timeline", "tool_transform", "weibull_context_plot", "formula_panel", "weibull_formula_inline", "example_value"]
 
 
@@ -356,14 +356,14 @@ def slide_008() -> tuple[str, str, list[str]]:
 
 
 def slide_009() -> tuple[str, str, list[str]]:
-    body = text("mech_a_label", 245, 155, "Ausfallmechanismus A", 28, 650, "#D1495B")
-    body += "\n" + text("mech_b_label", 590, 155, "Ausfallmechanismus B", 28, 650, "#139CCB")
+    body = text("mech_a_label", 245, 155, "Ausfallmechanismus A", 28, 650, "#EC6244")
+    body += "\n" + text("mech_b_label", 590, 155, "Ausfallmechanismus B", 28, 650, "#0C84B4")
     body += "\n" + timeline("mixed_mechanisms", 280, 240, 540, [50, 158, 258, 363, 440, 505], ["red", "blue", "red", "blue", "blue", "red"], ["t₁", "t₂", "t₃", "t₄", "t₅", "t₆"])
     body += "\n" + f'<line id="split_arrow" class="axis" x1="890" y1="240" x2="1030" y2="240" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>'
     body += "\n" + '<g id="split_result">'
-    body += "\n" + text("split_a_title", 1135, 138, "Ausfallmechanismus A", 28, 650, "#D1495B")
+    body += "\n" + text("split_a_title", 1135, 138, "Ausfallmechanismus A", 28, 650, "#EC6244")
     body += "\n" + timeline("mechanism_a", 1240, 210, 360, [46, 165, 292], ["red", "red", "red"], ["t₁", "t₃", "t₆"])
-    body += "\n" + text("split_b_title", 1135, 338, "Ausfallmechanismus B", 28, 650, "#139CCB")
+    body += "\n" + text("split_b_title", 1135, 338, "Ausfallmechanismus B", 28, 650, "#0C84B4")
     body += "\n" + timeline("mechanism_b", 1240, 410, 360, [70, 202, 274], ["blue", "blue", "blue"], ["t₂", "t₄", "t₅"])
     body += "\n" + "</g>"
     body += "\n" + plot_image("mechanism_plot", "mechanism", 440, 548, 1040, 390)
@@ -374,7 +374,7 @@ def slide_010() -> tuple[str, str, list[str]]:
     body = plot_image("weibull_context_plot", "weibull", 120, 175, 760, 565)
     body += "\n" + f'<line id="assignment_arrow" class="axis" x1="920" y1="455" x2="1015" y2="455" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>'
     body += "\n" + plot_image("object_time_plot", "object_failures", 1045, 170, 760, 570)
-    body += "\n" + panel("assignment_note", 520, 805, 880, 92, "#E7F6FB", "#CBD5E1")
+    body += "\n" + panel("assignment_note", 520, 805, 880, 92, "#E6F6EE", "#CDD0D6")
     body += "\n" + text("assignment_note_text", 570, 862, "Ausfallzeitpunkte werden den Objekt-Nummern zugeordnet.", 31, 650)
     return "Ausfälle Objekt-Nummern zuordnen", body, ["weibull_context_plot", "assignment_arrow", "object_time_plot", "assignment_note"]
 
@@ -383,7 +383,7 @@ def slide_011() -> tuple[str, str, list[str]]:
     body = plot_image("weibull_context_plot", "weibull", 120, 175, 760, 565)
     body += "\n" + f'<line id="censoring_arrow" class="axis" x1="920" y1="455" x2="1015" y2="455" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>'
     body += "\n" + plot_image("object_time_plot", "object_censored", 1045, 170, 760, 570)
-    body += "\n" + panel("censoring_note", 520, 805, 880, 92, "#E7F6FB", "#CBD5E1")
+    body += "\n" + panel("censoring_note", 520, 805, 880, 92, "#E6F6EE", "#CDD0D6")
     body += "\n" + text("censoring_note_text", 570, 862, "Zensierte Beobachtungen bleiben als laufende Prüfzeit sichtbar.", 31, 650)
     return "Zensierte Beobachtungen ergänzen", body, ["weibull_context_plot", "censoring_arrow", "object_time_plot", "censoring_note"]
 
@@ -391,7 +391,7 @@ def slide_011() -> tuple[str, str, list[str]]:
 def slide_012() -> tuple[str, str, list[str]]:
     body = plot_image("weibull_context_plot", "weibull", 170, 190, 780, 570)
     body += "\n" + f'<line id="methods_arrow" class="axis" x1="965" y1="485" x2="1065" y2="485" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>'
-    body += "\n" + panel("methods_box", 1100, 300, 560, 420, "#FFFFFF", "#CBD5E1")
+    body += "\n" + panel("methods_box", 1100, 300, 560, 420, "#FFFFFF", "#CDD0D6")
     body += "\n" + text("graphic_method", 1170, 398, "Grafische Methode", 36, 750)
     body += "\n" + text("calculation_methods", 1170, 498, "Berechnungs-Methoden", 36, 750)
     body += "\n" + f'<path class="guide" d="M 1300 540 L 1240 632" marker-end="url(#arrow_blue)"/>'
@@ -405,7 +405,7 @@ def slide_013() -> tuple[str, str, list[str]]:
     body = timeline("input_timeline", 250, 210, 560, [52, 164, 270, 372, 462, 520], labels=["t₁", "t₂", "t₃", "t₄", "t₅", "t₆"])
     body += "\n" + f'<line id="confidence_arrow" class="axis" x1="920" y1="210" x2="1045" y2="210" marker-end="url(#arrow_ink)" data-qc-role="axis-line"/>'
     body += "\n" + plot_image("confidence_plot", "confidence", 230, 460, 1030, 455)
-    body += "\n" + panel("confidence_note", 1300, 535, 430, 190, "#E7F6FB", "#CBD5E1")
+    body += "\n" + panel("confidence_note", 1300, 535, 430, 190, "#E6F6EE", "#CDD0D6")
     body += "\n" + text("confidence_note_1", 1345, 596, "5 % / 95 %", 36, 780)
     body += "\n" + text("confidence_note_2", 1345, 648, "Vertrauensgrenzen", 34, 700)
     body += "\n" + text("confidence_note_3", 1345, 696, "als Kurven, nicht als Band", 28, 600)

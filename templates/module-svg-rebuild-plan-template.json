@@ -1,12 +1,12 @@
 {
   "schema_version": "moduleSvgRebuildPlan/v1",
-  "module_id": "RE3_TEST_1",
+  "module_id": "RE1",
   "status": "draft",
   "source_files": {
-    "pptx": "source-materials/basis-seminar/pptx/<file>.pptx",
-    "pdf": "source-materials/basis-seminar/pdf/<file>.pdf",
-    "png_directory": "source-materials/basis-seminar/png/<folder>/",
-    "narration": "source-materials/basis-seminar/narration/<folder>/"
+    "module_directory": "source-materials/basis-seminar/powerpoint-svg/<module_id>/",
+    "svg_directory": "source-materials/basis-seminar/powerpoint-svg/<module_id>/SVG/",
+    "text_directory": "source-materials/basis-seminar/powerpoint-svg/<module_id>/Text/",
+    "svg_text_map": "analysis/inventories/<module_id>_svg-text-map.json"
   },
   "global_rules": {
     "do_not_render_slide_titles_in_svg": true,
@@ -18,6 +18,8 @@
     "german_plot_labels_use_real_umlauts": true,
     "irregular_failure_times_must_remain_irregular": true,
     "one_active_work_unit_only": true,
+    "docx_extraction_and_mapping_before_svg_analysis": true,
+    "do_not_reconstruct_old_powerpoint_grouping": true,
     "scene_planning_before_svg_build": true,
     "asset_decision_gate_before_svg_build": true,
     "complex_pictograms_require_png_or_user_asset": true,

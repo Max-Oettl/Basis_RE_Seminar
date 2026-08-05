@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_086" data-brand-profile="reltest-academy">
+  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"distribution-introduction","contentTitle":"Die Lognormalverteilung","layoutIntent":"dominant-lognormal-density-family-with-transformation-parameter-and-multiplicative-process-anchors","takeaway":"Ist der Logarithmus einer positiven Zufallsvariablen normalverteilt, folgt die Variable selbst einer flexiblen rechtsschiefen Lognormalverteilung.","density":"balanced","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-academy","brandVariant":"academy-production","sourceSlides":[86],"officialLogoStatus":"pending-original-asset"}]]></metadata>
+  <title id="accessible_title">Die Lognormalverteilung</title>
+  <desc id="accessible_description">Ist der Logarithmus einer positiven Zufallsvariablen normalverteilt, folgt die Variable selbst einer flexiblen rechtsschiefen Lognormalverteilung.</desc>
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F9FBFC"/>
+      <stop offset="56%" stop-color="#F1F5F8"/>
+      <stop offset="100%" stop-color="#E9F0F4"/>
+    </linearGradient>
+    <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#102A43" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="shadowSoft" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#102A43" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow_007EA7" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#007EA7"/></marker>
+    <marker id="arrow_102A43" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#102A43"/></marker>
+    <marker id="arrow_D1495B" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#D1495B"/></marker>
+    <marker id="arrow_2F6F55" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#2F6F55"/></marker>
+    <marker id="arrow_B7791F" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#B7791F"/></marker>
+  </defs>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+  </style>
+  <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
+  <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
+  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><svg id="lognormal_density_plot" x="626" y="206" width="1198" height="654" viewBox="0 0 724.121906 410.632219" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="lognormal_density_plot__figure_1">
+  <g id="lognormal_density_plot__patch_1">
+   <path d="M 0 410.632219  L 724.121906 410.632219  L 724.121906 0  L 0 0  L 0 410.632219  z " style="fill: none; opacity: 0" />
+  </g>
+  <g id="lognormal_density_plot__axes_1">
+   <g id="lognormal_density_plot__patch_2">
+    <path d="M 67.378281 350.928  L 712.786281 350.928  L 712.786281 7.2  L 67.378281 7.2  L 67.378281 350.928  z " style="fill: none" />
+   </g>
+   <g id="lognormal_density_plot__matplotlib.axis_1">
+    <g id="lognormal_density_plot__xtick_1">
+     <g id="lognormal_density_plot__line2d_1">
+      <path d="M 67.378281 350.928  L 67.378281 7.2  " clip-path="url(#lognormal_density_plot__ped25b66066)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_plot__line2d_2">
+      <defs>
+       <path id="lognormal_density_plot__m6540e9873c" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#lognormal_density_plot__m6540e9873c" x="67.378281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_plot__text_1">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="67.378281" y="370.304953" transform="rotate(-0 67.378281 370.304953)">0</text>
+     </g>
+    </g>
+    <g id="lognormal_density_plot__xtick_2">
+     <g id="lognormal_density_plot__line2d_3">
+      <path d="M 196.459881 350.928  L 196.459881 7.2  " clip-path="url(#lognormal_density_plot__ped25b66066)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_plot__line2d_4">
+      <g>
+       <use ns4:href="#lognormal_density_plot__m6540e9873c" x="196.459881" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_plot__text_2">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="196.459881" y="370.304953" transform="rotate(-0 196.459881 370.304953)">1</text>
+     </g>
+    </g>
+    <g id="lognormal_density_plot__xtick_3">
+     <g id="lognormal_density_plot__line2d_5">
+      <path d="M 325.541481 350.928  L 325.541481 7.2  " clip-path="url(#lognormal_density_plot__ped25b66066)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_plot__line2d_6">
+      <g>
+       <use ns4:href="#lognormal_density_plot__m6540e9873c" x="325.541481" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_plot__text_3">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="325.541481" y="370.304953" transform="rotate(-0 325.541481 370.304953)">2</text>
+     </g>
+    </g>
+    <g id="lognormal_density_plot__xtick_4">
+     <g id="lognormal_density_plot__line2d_7">
+      <path d="M 454.623081 350.928  L 454.623081 7.2  " clip-path="url(#lognormal_density_plot__ped25b66066)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_plot__line2d_8">
+      <g>
+       <use ns4:href="#lognormal_density_plot__m6540e9873c" x="454.623081" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_plot__text_4">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="454.623081" y="370.304953" transform="rotate(-0 454.623081 370.304953)">3</text>
+     </g>
+    </g>
+    <g id="lognormal_density_plot__xtick_5">
+     <g id="lognormal_density_plot__line2d_9">
+      <path d="M 583.704681 350.928  L 583.704681 7.2  " clip-path="url(#lognormal_density_plot__ped25b66066)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_plot__line2d_10">
+      <g>
+       <use ns4:href="#lognormal_density_plot__m6540e9873c" x="583.704681" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_plot__text_5">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="583.704681" y="370.304953" transform="rotate(-0 583.704681 370.304953)">4</text>
+     </g>
+    </g>
+    <g id="lognormal_density_plot__xtick_6">
+     <g id="lognormal_density_plot__line2d_11">
+      <path d="M 712.786281 350.928  L 712.786281 7.2  " clip-path="url(#lognormal_density_plot__ped25b66066)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_plot__line2d_12">
+      <g>
+       <use ns4:href="#lognormal_density_plot__m6540e9873c" x="712.786281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_plot__text_6">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="712.786281" y="370.304953" transform="rotate(-0 712.786281 370.304953)">5</text>
+     </g>
+    </g>
+    <g id="lognormal_density_plot__text_7">
+     
+     <g style="fill: #062d46" transform="translate(317.722281 399.108)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.677734" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">b</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="36.5625" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="48.770508" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="61.584961" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="72.298828" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">d</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="85.183594" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="97.330078" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="110.144531" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="122.352539" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="131.229492" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="137.496094" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="lognormal_density_plot__matplotlib.axis_2">
+    <g id="lognormal_density_plot__ytick_1">
+     <g id="lognormal_density_plot__line2d_13">
+      <path d="M 67.378281 350.928  L 712.786281 350.928  " clip-path="url(#lognormal_density_plot__ped25b66066)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_plot__line2d_14">
+      <defs>
+       <path id="lognormal_density_plot__m3fb9853879" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#lognormal_density_plot__m3fb9853879" x="67.378281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_plot__text_8">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="355.866477" transform="rotate(-0 57.878281 355.866477)">0.0</text>
+     </g>
+    </g>
+    <g id="lognormal_density_plot__ytick_2">
+     <g id="lognormal_density_plot__line2d_15">
+      <path d="M 67.378281 309.009951  L 712.786281 309.009951  " clip-path="url(#lognormal_density_plot__ped25b66066)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_plot__line2d_16">
+      <g>
+       <use ns4:href="#lognormal_density_plot__m3fb9853879" x="67.378281" y="309.009951" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_plot__text_9">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="313.948428" transform="rotate(-0 57.878281 313.948428)">0.1</text>
+     </g>
+    </g>
+    <g id="lognormal_density_plot__ytick_3">
+     <g id="lognormal_density_plot__line2d_17">
+      <path d="M 67.378281 267.091902  L 712.786281 267.091902  " clip-path="url(#lognormal_density_plot__ped25b66066)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_plot__line2d_18">
+      <g>
+       <use ns4:href="#lognormal_density_plot__m3fb9853879" x="67.378281" y="267.091902" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_plot__text_10">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="272.030379" transform="rotate(-0 57.878281 272.030379)">0.2</text>
+     </g>
+    </g>
+    <g id="lognormal_density_plot__ytick_4">
+     <g id="lognormal_density_plot__line2d_19">
+      <path d="M 67.378281 225.173854  L 712.786281 225.173854  " clip-path="url(#lognormal_density_plot__ped25b66066)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_plot__line2d_20">
+      <g>
+       <use ns4:href="#lognormal_density_plot__m3fb9853879" x="67.378281" y="225.173854" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_plot__text_11">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="230.11233" transform="rotate(-0 57.878281 230.11233)">0.3</text>
+     </g>
+    </g>
+    <g id="lognormal_density_plot__ytick_5">
+     <g id="lognormal_density_plot__line2d_21">
+      <path d="M 67.378281 183.255805  L 712.786281 183.255805  " clip-path="url(#lognormal_density_plot__ped25b66066)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_plot__line2d_22">
+      <g>
+       <use ns4:href="#lognormal_density_plot__m3fb9853879" x="67.378281" y="183.255805" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_plot__text_12">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="188.194281" transform="rotate(-0 57.878281 188.194281)">0.4</text>
+     </g>
+    </g>
+    <g id="lognormal_density_plot__ytick_6">
+     <g id="lognormal_density_plot__line2d_23">
+      <path d="M 67.378281 141.337756  L 712.786281 141.337756  " clip-path="url(#lognormal_density_plot__ped25b66066)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_plot__line2d_24">
+      <g>
+       <use ns4:href="#lognormal_density_plot__m3fb9853879" x="67.378281" y="141.337756" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_plot__text_13">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="146.276233" transform="rotate(-0 57.878281 146.276233)">0.5</text>
+     </g>
+    </g>
+    <g id="lognormal_density_plot__ytick_7">
+     <g id="lognormal_density_plot__line2d_25">
+      <path d="M 67.378281 99.419707  L 712.786281 99.419707  " clip-path="url(#lognormal_density_plot__ped25b66066)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_plot__line2d_26">
+      <g>
+       <use ns4:href="#lognormal_density_plot__m3fb9853879" x="67.378281" y="99.419707" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_plot__text_14">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="104.358184" transform="rotate(-0 57.878281 104.358184)">0.6</text>
+     </g>
+    </g>
+    <g id="lognormal_density_plot__ytick_8">
+     <g id="lognormal_density_plot__line2d_27">
+      <path d="M 67.378281 57.501659  L 712.786281 57.501659  " clip-path="url(#lognormal_density_plot__ped25b66066)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_plot__line2d_28">
+      <g>
+       <use ns4:href="#lognormal_density_plot__m3fb9853879" x="67.378281" y="57.501659" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_plot__text_15">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="62.440135" transform="rotate(-0 57.878281 62.440135)">0.7</text>
+     </g>
+    </g>
+    <g id="lognormal_density_plot__ytick_9">
+     <g id="lognormal_density_plot__line2d_29">
+      <path d="M 67.378281 15.58361  L 712.786281 15.58361  " clip-path="url(#lognormal_density_plot__ped25b66066)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_plot__line2d_30">
+      <g>
+       <use ns4:href="#lognormal_density_plot__m3fb9853879" x="67.378281" y="15.58361" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_plot__text_16">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="20.522086" transform="rotate(-0 57.878281 20.522086)">0.8</text>
+     </g>
+    </g>
+    <g id="lognormal_density_plot__text_17">
+     
+     <g style="fill: #062d46" transform="translate(20.88 271.314) rotate(-90)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">D</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="14.941406" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="21.111328" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="31.78125" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="44.595703" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="53.200195" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="65.408203" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">f</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="73.239258" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="86.053711" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="98.868164" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">k</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="110.838867" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="119.443359" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="125.613281" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">o</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="137.979492" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="150.793945" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="157.060547" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">f</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="170.419922" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="163.397461" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">(</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="177.477539" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">)</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="lognormal_density_curves" data-anim-target="true" data-anim-label="Dichtekurven der Lognormalverteilung"><g id="lognormal_density_plot__lognormal_density_sigma_1">
+    <path d="M 71.250729 350.928  L 178.039501 350.820172  L 186.871655 350.580248  L 193.29504 350.195953  L 198.112578 349.712883  L 202.127194 349.130021  L 206.141809 348.334565  L 209.353501 347.510445  L 212.565194 346.488256  L 215.776886 345.237506  L 218.988579 343.726658  L 222.200271 341.923763  L 225.411963 339.79716  L 228.623656 337.316224  L 231.032425 335.205568  L 233.441194 332.868097  L 235.849963 330.293564  L 239.061656 326.476575  L 242.273348 322.204328  L 245.485041 317.463769  L 248.696733 312.247109  L 251.908425 306.55221  L 255.120118 300.382859  L 258.33181 293.748909  L 261.543502 286.6663  L 265.558118 277.216051  L 269.572733 267.15479  L 274.390272 254.371744  L 279.207811 240.94743  L 285.631195 222.328107  L 306.507196 161.049461  L 311.324734 147.825206  L 315.33935 137.334549  L 319.353965 127.415599  L 323.368581 118.143775  L 326.580273 111.236814  L 329.791965 104.815386  L 333.003658 98.904291  L 336.21535 93.524039  L 338.62412 89.847138  L 341.032889 86.483334  L 343.441658 83.436602  L 345.850427 80.709633  L 348.259197 78.303879  L 350.667966 76.219592  L 353.076735 74.455875  L 355.485504 73.010735  L 357.894274 71.88114  L 360.303043 71.063079  L 362.711812 70.551625  L 365.120582 70.340998  L 367.529351 70.424632  L 369.93812 70.79524  L 372.346889 71.44488  L 374.755659 72.365022  L 377.164428 73.546611  L 379.573197 74.980136  L 381.981967 76.655685  L 384.390736 78.563015  L 387.602428 81.448446  L 390.814121 84.701669  L 394.025813 88.296688  L 397.237505 92.207243  L 401.252121 97.499072  L 405.266736 103.191702  L 410.084275 110.481129  L 414.901813 118.190683  L 420.522275 127.608024  L 427.748583 140.19908  L 438.186583 158.904041  L 453.442122 186.222994  L 461.471353 200.155063  L 468.697661 212.254163  L 475.121045 222.586016  L 481.54443 232.471912  L 487.164892 240.72987  L 492.785354 248.605529  L 498.405815 256.089334  L 504.026277 263.176761  L 509.646739 269.867645  L 515.2672 276.165551  L 520.084739 281.255985  L 524.902277 286.068346  L 529.719816 290.609566  L 534.537354 294.887539  L 540.157816 299.557383  L 545.778278 303.895492  L 551.398739 307.917402  L 557.019201 311.639139  L 562.639663 315.076972  L 568.260124 318.247202  L 573.880586 321.16599  L 579.501048 323.849206  L 585.121509 326.312321  L 591.544894 328.876977  L 597.968279 331.19512  L 604.391664 333.287116  L 611.617971 335.394193  L 618.844279 337.264968  L 626.87351 339.095249  L 634.902741 340.69287  L 643.734895 342.213752  L 653.369972 343.627015  L 663.005049 344.819666  L 674.245973 345.975224  L 686.289819 346.978844  L 699.939512 347.878757  L 712.786281 348.541561  L 712.786281 348.541561  " clip-path="url(#lognormal_density_plot__ped25b66066)" style="fill: none; stroke: #007ea7; stroke-width: 3.3; stroke-linecap: square" />
+   </g>
+   <g id="lognormal_density_plot__lognormal_density_sigma_2">
+    <path d="M 71.250729 350.928  L 104.170576 350.819579  L 110.593961 350.577097  L 115.411499 350.210652  L 120.229038 349.610178  L 124.243653 348.87945  L 128.258269 347.897038  L 131.469961 346.905888  L 134.681654 345.715351  L 137.893346 344.312763  L 141.105038 342.688596  L 144.316731 340.836611  L 147.528423 338.753891  L 150.740116 336.440779  L 153.951808 333.900721  L 157.966423 330.416402  L 161.981039 326.605598  L 165.995654 322.491805  L 170.813193 317.194953  L 175.630731 311.557043  L 181.251193 304.628157  L 188.477501 295.316463  L 200.521347 279.324969  L 210.959348 265.589306  L 218.185655 256.431233  L 224.60904 248.661628  L 230.229502 242.214303  L 235.849963 236.139188  L 240.667502 231.253658  L 245.485041 226.68226  L 250.302579 222.436902  L 255.120118 218.525662  L 259.134733 215.52494  L 263.149349 212.760482  L 267.163964 210.231916  L 271.17858 207.937639  L 275.193195 205.874956  L 279.207811 204.040205  L 283.222426 202.428878  L 287.237042 201.035735  L 291.251657 199.85491  L 295.266272 198.880008  L 299.280888 198.104201  L 303.295503 197.520306  L 308.113042 197.062443  L 312.930581 196.856921  L 317.748119 196.890202  L 322.565658 197.148615  L 327.383196 197.61847  L 333.003658 198.415734  L 338.62412 199.460993  L 344.244581 200.733434  L 350.667966 202.439947  L 357.091351 204.387799  L 364.317659 206.833218  L 371.543966 209.511933  L 379.573197 212.719744  L 388.405351 216.479129  L 398.843352 221.16351  L 411.690121 227.17943  L 431.763198 236.861082  L 459.865507 250.392312  L 475.923969 257.873724  L 490.376584 264.359436  L 503.223354 269.892256  L 516.070123 275.185706  L 528.916893 280.227241  L 540.960739 284.718836  L 553.004586 288.981278  L 565.048432 293.015687  L 577.092278 296.825489  L 589.939048 300.647623  L 602.785817 304.2282  L 615.632587 307.576537  L 628.479356 310.702827  L 642.129049 313.793234  L 655.778742 316.658337  L 670.231357 319.461205  L 684.683973 322.042073  L 699.939512 324.542357  L 712.786281 326.481965  L 712.786281 326.481965  " clip-path="url(#lognormal_density_plot__ped25b66066)" style="fill: none; stroke: #b7791f; stroke-width: 3.3; stroke-linecap: square" />
+   </g>
+   <g id="lognormal_density_plot__lognormal_density_sigma_3">
+    <path d="M 71.250729 350.589407  L 72.856575 349.888613  L 74.462422 348.719931  L 76.068268 347.094222  L 77.674114 345.056808  L 79.27996 342.66679  L 81.688729 338.555111  L 84.097499 333.982255  L 88.112114 325.769412  L 97.747191 305.681543  L 101.761807 297.855392  L 105.776422 290.551108  L 108.988115 285.120136  L 112.199807 280.067402  L 115.411499 275.392649  L 118.623192 271.088658  L 121.834884 267.143541  L 125.046577 263.542397  L 128.258269 260.268503  L 131.469961 257.304172  L 134.681654 254.631366  L 137.893346 252.232121  L 141.105038 250.088845  L 144.316731 248.184521  L 147.528423 246.502835  L 150.740116 245.028253  L 154.754731 243.453939  L 158.769346 242.153413  L 162.783962 241.101806  L 166.798577 240.276203  L 170.813193 239.655555  L 175.630731 239.154258  L 180.44827 238.890129  L 185.265809 238.836003  L 190.88627 239.00593  L 196.506732 239.39431  L 202.930117 240.067123  L 210.156424 241.069492  L 218.185655 242.432581  L 227.017809 244.172285  L 237.45581 246.474017  L 249.499656 249.363554  L 265.558118 253.454038  L 336.21535 271.736582  L 355.485504 276.356401  L 373.952736 280.560238  L 392.419967 284.535902  L 410.887198 288.282458  L 429.354429 291.804322  L 448.624583 295.248194  L 467.894738 298.467056  L 487.967815 301.594164  L 508.843815 304.617367  L 530.522739 307.527103  L 553.004586 310.31622  L 576.289355 312.979748  L 600.377048 315.514674  L 626.070587 317.993875  L 653.369972 320.398208  L 681.472281 322.650806  L 711.180435 324.812486  L 712.786281 324.923384  L 712.786281 324.923384  " clip-path="url(#lognormal_density_plot__ped25b66066)" style="fill: none; stroke: #2f6f55; stroke-width: 3.3; stroke-linecap: square" />
+   </g>
+   <g id="lognormal_density_plot__lognormal_density_label_1">
+    <g id="lognormal_density_plot__patch_5">
+     <path d="M 446.369001 171.491642  L 514.319001 171.491642  L 514.319001 152.891642  L 446.369001 152.891642  z " style="fill: #ffffff; opacity: 0.9" />
+    </g>
+    
+    <g style="fill: #007ea7" transform="translate(448.169001 166.088126)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.859375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">σ</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.429199" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.919922" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">0</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.463379" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">,</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.153809" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">2</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="54.697266" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">5</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="lognormal_density_plot__lognormal_density_label_2">
+    <g id="lognormal_density_plot__patch_6">
+     <path d="M 510.909801 268.453642  L 569.259801 268.453642  L 569.259801 249.853642  L 510.909801 249.853642  z " style="fill: #ffffff; opacity: 0.9" />
+    </g>
+    
+    <g style="fill: #b7791f" transform="translate(512.709801 263.050127)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.859375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #b7791f">σ</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.429199" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #b7791f">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.919922" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #b7791f">0</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.463379" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #b7791f">,</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.153809" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #b7791f">5</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="lognormal_density_plot__lognormal_density_label_3">
+    <g id="lognormal_density_plot__patch_7">
+     <path d="M 601.266921 310.413373  L 642.366921 310.413373  L 642.366921 291.813373  L 601.266921 291.813373  z " style="fill: #ffffff; opacity: 0.9" />
+    </g>
+    
+    <g style="fill: #2f6f55" transform="translate(603.066921 305.009857)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.0625" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">σ</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.429199" y="-0.0625" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.919922" y="-0.0625" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">1</tspan>
+     </text>
+    </g>
+   </g>
+  </g><g id="lognormal_density_plot__patch_3">
+    <path d="M 67.378281 350.928  L 67.378281 7.2  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="lognormal_density_plot__patch_4">
+    <path d="M 67.378281 350.928  L 712.786281 350.928  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   </g>
+ </g>
+ <defs>
+  <clipPath id="lognormal_density_plot__ped25b66066">
+   <rect data-qc-allow-overlap="true" x="67.378281" y="7.2" width="645.408" height="343.728" />
+  </clipPath>
+ </defs>
+</svg><g id="lognormal_transformation" data-anim-target="true" data-anim-label="Logarithmische Transformation"><title>Logarithmische Transformation</title><rect data-qc-allow-overlap="true" x="84" y="226" width="482" height="174" rx="8" fill="#D9F0F7" stroke="#007EA7" stroke-width="1.5"/><text x="325" y="270" class="" font-size="17" font-weight="850" fill="#007EA7" text-anchor="middle" data-qc-role="text"><tspan x="325" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">LOGARITHMISCHE TRANSFORMATION</tspan></text><svg id="lognormal_transformation_formula" x="180" y="300" width="290" height="74" viewBox="0 0 180.84 45.609844" preserveAspectRatio="xMidYMid meet" overflow="visible" data-formula-asset="true" data-qc-role="formula" data-qc-allow-overlap="true" xmlns:xlink="http://www.w3.org/1999/xlink">
+ 
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="lognormal_transformation_formula__figure_1">
+  
+  <g id="lognormal_transformation_formula__text_1">
+   <!-- $Y=\ln(X)$ -->
+   <g style="fill: #102a43" transform="translate(1.8 33.72)">
+    <text data-qc-role="formula" data-qc-allow-overlap="true">
+     <tspan data-qc-role="formula" data-qc-allow-overlap="true" x="0" y="-0.09375" style="font-style: oblique; font-size: 42px; font-family: 'DejaVu Sans'; fill: #102a43">Y</tspan>
+     <tspan data-qc-role="formula" data-qc-allow-overlap="true" x="131.885742" y="-0.09375" style="font-style: oblique; font-size: 42px; font-family: 'DejaVu Sans'; fill: #102a43">X</tspan>
+     <tspan data-qc-role="formula" data-qc-allow-overlap="true" x="33.837891" y="-0.09375" style="font-size: 42px; font-family: 'DejaVu Sans'; fill: #102a43">=</tspan>
+     <tspan data-qc-role="formula" data-qc-allow-overlap="true" x="77.211914" y="-0.09375" style="font-size: 42px; font-family: 'DejaVu Sans'; fill: #102a43">l</tspan>
+     <tspan data-qc-role="formula" data-qc-allow-overlap="true" x="88.880859" y="-0.09375" style="font-size: 42px; font-family: 'DejaVu Sans'; fill: #102a43">n</tspan>
+     <tspan data-qc-role="formula" data-qc-allow-overlap="true" x="115.5" y="-0.09375" style="font-size: 42px; font-family: 'DejaVu Sans'; fill: #102a43">(</tspan>
+     <tspan data-qc-role="formula" data-qc-allow-overlap="true" x="160.658203" y="-0.09375" style="font-size: 42px; font-family: 'DejaVu Sans'; fill: #102a43">)</tspan>
+    </text>
+   </g>
+  </g>
+ </g>
+</svg></g><g id="lognormal_parameters" data-anim-target="true" data-anim-label="Parameter der Lognormalverteilung"><title>Parameter der Lognormalverteilung</title><rect data-qc-allow-overlap="true" x="84" y="430" width="482" height="138" rx="8" fill="#FFFFFF" stroke="#C8D5DF" stroke-width="1.5"/><circle cx="148" cy="499" r="37" fill="#F7EEDC"/><g transform="translate(126 477) scale(1.8333333333333333)" fill="none" stroke="#B7791F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/><path d="M15.5 8.5L21 3M17 3h4v4"/></g><text x="210" y="484" class="" font-size="21" font-weight="850" fill="#B7791F" text-anchor="start" data-qc-role="text"><tspan x="210" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">μ · LAGE</tspan></text><text x="210" y="529" class="" font-size="21" font-weight="850" fill="#2F6F55" text-anchor="start" data-qc-role="text"><tspan x="210" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">σ · STREUUNG</tspan></text></g><g id="lognormal_multiplicative_process" data-anim-target="true" data-anim-label="Multiplikative Zufallsprozesse"><title>Multiplikative Zufallsprozesse</title><rect data-qc-allow-overlap="true" x="84" y="598" width="482" height="126" rx="8" fill="#E3F0EA" stroke="#2F6F55" stroke-width="1.5"/><circle cx="148" cy="661" r="37" fill="#FFFFFF"/><g transform="translate(126 639) scale(1.8333333333333333)" fill="none" stroke="#2F6F55" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M4 12l8 4 8-4M4 16l8 4 8-4"/></g><text x="210" y="646" class="" font-size="18" font-weight="850" fill="#2F6F55" text-anchor="start" data-qc-role="text"><tspan x="210" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">MULTIPLIKATIVE PROZESSE</tspan></text><text x="210" y="690" class="" font-size="20" font-weight="740" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="210" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Produkt positiver Zufallsvariablen</tspan></text></g><g id="lognormal_applications" data-anim-target="true" data-anim-label="Typische Anwendungen"><title>Typische Anwendungen</title><text x="98" y="782" class="" font-size="17" font-weight="850" fill="#52606D" text-anchor="start" data-qc-role="text"><tspan x="98" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">TYPISCHE ANWENDUNGEN</tspan></text><circle cx="122" cy="832" r="32" fill="#D9F0F7"/><g transform="translate(103 813) scale(1.5833333333333333)" fill="none" stroke="#007EA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="12" r="4"/><path d="M10 2v3M10 19v3M0 12h3M17 12h3M3 5l2 2M15 17l2 2M17 5l-2 2M5 17l-2 2M21 8v6M21 17h.01"/></g><text x="174" y="840" class="" font-size="21" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="174" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Lebensdauerdaten</tspan></text><circle cx="122" cy="884" r="32" fill="#F7EEDC"/><g transform="translate(103 865) scale(1.5833333333333333)" fill="none" stroke="#B7791F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7"/></g><text x="174" y="892" class="" font-size="21" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="174" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Finanzwesen</tspan></text><circle cx="122" cy="936" r="32" fill="#E3F0EA"/><g transform="translate(103 917) scale(1.5833333333333333)" fill="none" stroke="#2F6F55" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3"/><path d="M7.5 16h9M9 13h6"/></g><text x="174" y="944" class="" font-size="21" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="174" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Biologie, Medizin, Öl und Gas</tspan></text></g></g>
+</svg>

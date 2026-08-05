@@ -1,24 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
-  <title id="title">Reltest Academy SVG Template</title>
-  <desc id="desc">16:9 template for Reltest Academy e-learning visuals.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc" data-brand-profile="reltest-education">
+  <title id="title">RelTest Education SVG Template</title>
+  <desc id="desc">16:9 content template for RelTest Education learning visuals without downstream slide chrome.</desc>
+
+  <metadata id="slide-quality-metadata" type="application/json"><![CDATA[
+{
+  "artifactScope": "content-svg",
+  "embeddingTarget": "powerpoint-slide",
+  "slideType": "content-module",
+  "contentTitle": "",
+  "layoutIntent": "",
+  "takeaway": "",
+  "density": "normal",
+  "contentMode": "transparent-content",
+  "backgroundMode": "transparent",
+  "brandProfile": "reltest-education",
+  "brandVariant": "education-technical"
+}
+  ]]></metadata>
 
   <defs>
     <style>
-      .bg { fill: #ffffff; }
-      .title { fill: #062d46; font-family: Inter, "Segoe UI", Arial, sans-serif; font-size: 56px; font-weight: 700; }
-      .label { fill: #062d46; font-family: Inter, "Segoe UI", Arial, sans-serif; font-size: 30px; font-weight: 600; }
-      .small { fill: #6a7a86; font-family: Inter, "Segoe UI", Arial, sans-serif; font-size: 24px; font-weight: 500; }
-      .axis { stroke: #062d46; stroke-width: 4; stroke-linecap: round; }
-      .grid { stroke: #eef3f6; stroke-width: 3; }
-      .primary-line { fill: none; stroke: #139ccb; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
-      .accent-fill { fill: #e7f6fb; }
+      .display { fill: #031334; font-family: "Oxanium", "Archivo", Arial, sans-serif; font-size: 54px; font-weight: 700; }
+      .label { fill: #031334; font-family: "Archivo", Arial, Helvetica, sans-serif; font-size: 30px; font-weight: 600; }
+      .body { fill: #031334; font-family: "Archivo", Arial, Helvetica, sans-serif; font-size: 26px; font-weight: 400; }
+      .small { fill: #25495f; font-family: "Archivo", Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 400; font-style: italic; }
+      .axis { stroke: #031334; stroke-width: 4; stroke-linecap: round; }
+      .grid { stroke: #e6e7eb; stroke-width: 2; }
+      .primary-line { fill: none; stroke: #00a754; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+      .accent-fill { fill: #e6f6ee; }
     </style>
   </defs>
 
-  <rect id="background" class="bg" width="1920" height="1080" />
-
   <g id="slide-content">
-    <text id="slide-title" class="title" x="120" y="130">Slide Title</text>
+    <!-- Content only. The downstream repository owns title, logo, footer and scene label. -->
   </g>
 </svg>
-

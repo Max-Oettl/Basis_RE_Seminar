@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_055" data-brand-profile="reltest-academy">
+  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"distribution-introduction","contentTitle":"Die Normalverteilung","layoutIntent":"dominant-normal-density-plot-with-compact-parameter-and-application-context","takeaway":"Der Erwartungswert legt die Lage fest, die Standardabweichung die Streuung der symmetrischen Glockenkurve.","density":"balanced","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-academy","brandVariant":"academy-production","sourceSlides":[55],"officialLogoStatus":"pending-original-asset"}]]></metadata>
+  <title id="accessible_title">Die Normalverteilung</title>
+  <desc id="accessible_description">Der Erwartungswert legt die Lage fest, die Standardabweichung die Streuung der symmetrischen Glockenkurve.</desc>
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F9FBFC"/>
+      <stop offset="56%" stop-color="#F1F5F8"/>
+      <stop offset="100%" stop-color="#E9F0F4"/>
+    </linearGradient>
+    <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#102A43" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="shadowSoft" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#102A43" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow_007EA7" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#007EA7"/></marker>
+    <marker id="arrow_102A43" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#102A43"/></marker>
+    <marker id="arrow_D1495B" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#D1495B"/></marker>
+    <marker id="arrow_2F6F55" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#2F6F55"/></marker>
+    <marker id="arrow_B7791F" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#B7791F"/></marker>
+  </defs>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+    .slide-title { fill: #102A43; }
+  </style>
+  <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
+  <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
+  <rect x="74" y="36" width="118" height="5" rx="3" fill="#007EA7"/>
+  <text x="78" y="116" class="slide-title" font-size="56" font-weight="800">Die Normalverteilung</text>
+  <line x1="78" y1="148" x2="1842" y2="148" stroke="#102A43" stroke-opacity="0.12" stroke-width="1.5"/>
+  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><svg id="normal_density_plot" x="560" y="204" width="1270" height="672" viewBox="0 0 724.121906 415.570695" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="normal_density_plot__figure_1">
+  <g id="normal_density_plot__patch_1">
+   <path d="M 0 415.570695  L 724.121906 415.570695  L 724.121906 0  L 0 0  L 0 415.570695  z " style="fill: none; opacity: 0" />
+  </g>
+  <g id="normal_density_plot__axes_1">
+   <g id="normal_density_plot__patch_2">
+    <path d="M 67.378281 355.866477  L 712.786281 355.866477  L 712.786281 12.138477  L 67.378281 12.138477  L 67.378281 355.866477  z " style="fill: none" />
+   </g>
+   <g id="normal_density_plot__matplotlib.axis_1">
+    <g id="normal_density_plot__xtick_1">
+     <g id="normal_density_plot__line2d_1">
+      <path d="M 67.378281 355.866477  L 67.378281 12.138477  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_density_plot__line2d_2">
+      <defs>
+       <path id="normal_density_plot__mec6b526794" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#normal_density_plot__mec6b526794" x="67.378281" y="355.866477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_density_plot__text_1">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="67.378281" y="375.24343" transform="rotate(-0 67.378281 375.24343)">0</text>
+     </g>
+    </g>
+    <g id="normal_density_plot__xtick_2">
+     <g id="normal_density_plot__line2d_3">
+      <path d="M 196.459881 355.866477  L 196.459881 12.138477  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_density_plot__line2d_4">
+      <g>
+       <use ns4:href="#normal_density_plot__mec6b526794" x="196.459881" y="355.866477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_density_plot__text_2">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="196.459881" y="375.24343" transform="rotate(-0 196.459881 375.24343)">1</text>
+     </g>
+    </g>
+    <g id="normal_density_plot__xtick_3">
+     <g id="normal_density_plot__line2d_5">
+      <path d="M 325.541481 355.866477  L 325.541481 12.138477  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_density_plot__line2d_6">
+      <g>
+       <use ns4:href="#normal_density_plot__mec6b526794" x="325.541481" y="355.866477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_density_plot__text_3">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="325.541481" y="375.24343" transform="rotate(-0 325.541481 375.24343)">2</text>
+     </g>
+    </g>
+    <g id="normal_density_plot__xtick_4">
+     <g id="normal_density_plot__line2d_7">
+      <path d="M 454.623081 355.866477  L 454.623081 12.138477  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_density_plot__line2d_8">
+      <g>
+       <use ns4:href="#normal_density_plot__mec6b526794" x="454.623081" y="355.866477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_density_plot__text_4">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="454.623081" y="375.24343" transform="rotate(-0 454.623081 375.24343)">3</text>
+     </g>
+    </g>
+    <g id="normal_density_plot__xtick_5">
+     <g id="normal_density_plot__line2d_9">
+      <path d="M 583.704681 355.866477  L 583.704681 12.138477  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_density_plot__line2d_10">
+      <g>
+       <use ns4:href="#normal_density_plot__mec6b526794" x="583.704681" y="355.866477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_density_plot__text_5">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="583.704681" y="375.24343" transform="rotate(-0 583.704681 375.24343)">4</text>
+     </g>
+    </g>
+    <g id="normal_density_plot__xtick_6">
+     <g id="normal_density_plot__line2d_11">
+      <path d="M 712.786281 355.866477  L 712.786281 12.138477  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_density_plot__line2d_12">
+      <g>
+       <use ns4:href="#normal_density_plot__mec6b526794" x="712.786281" y="355.866477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_density_plot__text_6">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="712.786281" y="375.24343" transform="rotate(-0 712.786281 375.24343)">5</text>
+     </g>
+    </g>
+    <g id="normal_density_plot__text_7">
+     
+     <g style="fill: #062d46" transform="translate(317.722281 404.046477)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.677734" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">b</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="36.5625" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="48.770508" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="61.584961" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="72.298828" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">d</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="85.183594" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="97.330078" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="110.144531" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="122.352539" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="131.229492" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="137.496094" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="normal_density_plot__matplotlib.axis_2">
+    <g id="normal_density_plot__ytick_1">
+     <g id="normal_density_plot__line2d_13">
+      <path d="M 67.378281 355.866477  L 712.786281 355.866477  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_density_plot__line2d_14">
+      <defs>
+       <path id="normal_density_plot__mbb508d0cb3" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#normal_density_plot__mbb508d0cb3" x="67.378281" y="355.866477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_density_plot__text_8">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="360.804953" transform="rotate(-0 57.878281 360.804953)">0.0</text>
+     </g>
+    </g>
+    <g id="normal_density_plot__ytick_2">
+     <g id="normal_density_plot__line2d_15">
+      <path d="M 67.378281 317.674477  L 712.786281 317.674477  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_density_plot__line2d_16">
+      <g>
+       <use ns4:href="#normal_density_plot__mbb508d0cb3" x="67.378281" y="317.674477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_density_plot__text_9">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="322.612953" transform="rotate(-0 57.878281 322.612953)">0.1</text>
+     </g>
+    </g>
+    <g id="normal_density_plot__ytick_3">
+     <g id="normal_density_plot__line2d_17">
+      <path d="M 67.378281 279.482477  L 712.786281 279.482477  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_density_plot__line2d_18">
+      <g>
+       <use ns4:href="#normal_density_plot__mbb508d0cb3" x="67.378281" y="279.482477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_density_plot__text_10">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="284.420953" transform="rotate(-0 57.878281 284.420953)">0.2</text>
+     </g>
+    </g>
+    <g id="normal_density_plot__ytick_4">
+     <g id="normal_density_plot__line2d_19">
+      <path d="M 67.378281 241.290477  L 712.786281 241.290477  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_density_plot__line2d_20">
+      <g>
+       <use ns4:href="#normal_density_plot__mbb508d0cb3" x="67.378281" y="241.290477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_density_plot__text_11">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="246.228953" transform="rotate(-0 57.878281 246.228953)">0.3</text>
+     </g>
+    </g>
+    <g id="normal_density_plot__ytick_5">
+     <g id="normal_density_plot__line2d_21">
+      <path d="M 67.378281 203.098477  L 712.786281 203.098477  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_density_plot__line2d_22">
+      <g>
+       <use ns4:href="#normal_density_plot__mbb508d0cb3" x="67.378281" y="203.098477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_density_plot__text_12">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="208.036953" transform="rotate(-0 57.878281 208.036953)">0.4</text>
+     </g>
+    </g>
+    <g id="normal_density_plot__ytick_6">
+     <g id="normal_density_plot__line2d_23">
+      <path d="M 67.378281 164.906477  L 712.786281 164.906477  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_density_plot__line2d_24">
+      <g>
+       <use ns4:href="#normal_density_plot__mbb508d0cb3" x="67.378281" y="164.906477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_density_plot__text_13">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="169.844953" transform="rotate(-0 57.878281 169.844953)">0.5</text>
+     </g>
+    </g>
+    <g id="normal_density_plot__ytick_7">
+     <g id="normal_density_plot__line2d_25">
+      <path d="M 67.378281 126.714477  L 712.786281 126.714477  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_density_plot__line2d_26">
+      <g>
+       <use ns4:href="#normal_density_plot__mbb508d0cb3" x="67.378281" y="126.714477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_density_plot__text_14">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="131.652953" transform="rotate(-0 57.878281 131.652953)">0.6</text>
+     </g>
+    </g>
+    <g id="normal_density_plot__ytick_8">
+     <g id="normal_density_plot__line2d_27">
+      <path d="M 67.378281 88.522477  L 712.786281 88.522477  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_density_plot__line2d_28">
+      <g>
+       <use ns4:href="#normal_density_plot__mbb508d0cb3" x="67.378281" y="88.522477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_density_plot__text_15">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="93.460953" transform="rotate(-0 57.878281 93.460953)">0.7</text>
+     </g>
+    </g>
+    <g id="normal_density_plot__ytick_9">
+     <g id="normal_density_plot__line2d_29">
+      <path d="M 67.378281 50.330477  L 712.786281 50.330477  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_density_plot__line2d_30">
+      <g>
+       <use ns4:href="#normal_density_plot__mbb508d0cb3" x="67.378281" y="50.330477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_density_plot__text_16">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="55.268953" transform="rotate(-0 57.878281 55.268953)">0.8</text>
+     </g>
+    </g>
+    <g id="normal_density_plot__ytick_10">
+     <g id="normal_density_plot__line2d_31">
+      <path d="M 67.378281 12.138477  L 712.786281 12.138477  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_density_plot__line2d_32">
+      <g>
+       <use ns4:href="#normal_density_plot__mbb508d0cb3" x="67.378281" y="12.138477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_density_plot__text_17">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="17.076953" transform="rotate(-0 57.878281 17.076953)">0.9</text>
+     </g>
+    </g>
+    <g id="normal_density_plot__text_18">
+     
+     <g style="fill: #062d46" transform="translate(20.88 276.252477) rotate(-90)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">D</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="14.941406" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="21.111328" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="31.78125" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="44.595703" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="53.200195" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="65.408203" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">f</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="73.239258" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="86.053711" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="98.868164" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">k</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="110.838867" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="119.443359" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="125.613281" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">o</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="137.979492" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="150.793945" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="157.060547" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">f</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="170.419922" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="163.397461" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">(</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="177.477539" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">)</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="normal_density_curves" data-anim-target="true" data-anim-label="Dichtekurven der Normalverteilung"><g id="normal_density_plot__normal_density_sigma_1">
+    <path d="M 67.378281 355.865341  L 133.858075 355.751251  L 153.248015 355.503457  L 166.174642 355.124472  L 176.331277 354.601359  L 184.641251 353.944609  L 191.104565 353.236302  L 197.567878 352.302865  L 203.107861 351.279928  L 208.647843 350.006692  L 213.264496 348.719861  L 217.881148 347.19492  L 222.497801 345.398288  L 226.191122 343.741214  L 229.884444 341.867746  L 233.577766 339.757648  L 237.271088 337.390087  L 240.96441 334.743841  L 244.657732 331.797538  L 248.351054 328.529934  L 252.044376 324.920223  L 255.737698 320.948392  L 259.431019 316.595601  L 263.124341 311.844597  L 266.817663 306.680147  L 270.510985 301.089497  L 274.204307 295.062835  L 277.897629 288.593766  L 281.590951 281.679768  L 285.284273 274.322645  L 288.977595 266.528943  L 293.594247 256.191167  L 298.210899 245.22471  L 302.827552 233.6785  L 308.367534 219.148222  L 314.830848 201.443024  L 323.140822 177.911239  L 336.990779 138.609393  L 342.530762 123.571702  L 347.147414 111.626731  L 350.840736 102.564882  L 354.534058 94.025662  L 358.22738 86.083466  L 360.997371 80.561386  L 363.767363 75.443291  L 366.537354 70.755703  L 369.307346 66.523216  L 372.077337 62.768281  L 374.847328 59.511004  L 376.693989 57.624756  L 378.54065 55.972116  L 380.387311 54.55709  L 382.233972 53.383121  L 384.080633 52.453074  L 385.927294 51.769222  L 387.773955 51.333241  L 389.620616 51.146201  L 391.467277 51.20856  L 393.313938 51.520167  L 395.160599 52.080255  L 397.00726 52.887451  L 398.853921 53.939781  L 400.700582 55.234673  L 402.547243 56.768972  L 404.393904 58.538951  L 406.240565 60.540328  L 409.010556 63.965573  L 411.780547 67.882046  L 414.550539 72.268838  L 417.32053 77.10276  L 420.090522 82.358553  L 422.860513 88.0091  L 426.553835 96.10735  L 430.247157 104.784317  L 434.863809 116.329681  L 439.480462 128.510443  L 445.020444 143.750019  L 453.330419 167.338229  L 466.257045 204.013026  L 472.720359 221.616038  L 478.260341 236.031287  L 482.876994 247.466155  L 487.493646 258.31033  L 492.110298 268.517751  L 495.80362 276.203196  L 499.496942 283.449959  L 503.190264 290.252717  L 506.883586 296.610789  L 510.576908 302.527707  L 514.27023 308.010765  L 517.963552 313.070553  L 521.656874 317.720489  L 525.350195 321.976352  L 529.043517 325.855834  L 532.736839 329.378105  L 536.430161 332.563411  L 540.123483 335.432698  L 543.816805 338.00727  L 547.510127 340.308487  L 551.203449 342.357495  L 554.896771 344.174994  L 558.590092 345.781047  L 563.206745 347.520532  L 567.823397 348.995247  L 572.440049 350.238254  L 577.980032 351.466582  L 583.520015 352.452085  L 589.983328 353.350044  L 596.446642 354.030353  L 604.756616 354.660026  L 613.989921 355.124472  L 625.993217 355.483929  L 641.689835 355.713802  L 667.543088 355.836915  L 712.786281 355.865341  L 712.786281 355.865341  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke: #007ea7; stroke-width: 3.3; stroke-linecap: square" />
+   </g>
+   <g id="normal_density_plot__normal_density_sigma_2">
+    <path d="M 67.378281 349.172068  L 77.534916 347.741957  L 86.768221 346.230276  L 96.001526 344.495656  L 105.234831 342.517263  L 113.544805 340.511356  L 121.854779 338.277084  L 130.164753 335.801044  L 138.474728 333.071125  L 145.861371 330.422926  L 153.248015 327.559926  L 160.634659 324.477726  L 168.021303 321.173709  L 175.407946 317.647268  L 183.717921 313.416265  L 192.027895 308.911883  L 200.337869 304.144347  L 208.647843 299.128379  L 217.881148 293.287478  L 228.037783 286.576363  L 239.117749 278.97655  L 253.891037 268.537955  L 283.437612 247.557751  L 293.594247 240.640274  L 302.827552 234.622138  L 311.137526 229.4916  L 318.52417 225.204553  L 324.987483 221.695156  L 331.450796 218.436492  L 337.91411 215.45117  L 343.454092 213.125883  L 348.994075 211.029124  L 354.534058 209.172025  L 360.074041 207.564537  L 365.614024 206.215345  L 371.154007 205.131787  L 375.770659 204.436055  L 380.387311 203.931586  L 385.003964 203.620309  L 389.620616 203.503415  L 394.237268 203.581354  L 398.853921 203.853827  L 403.470573 204.319788  L 408.087225 204.977457  L 412.703878 205.824322  L 418.243861 207.085716  L 423.783843 208.608006  L 429.323826 210.382946  L 434.863809 212.400998  L 440.403792 214.651415  L 445.943775 217.122332  L 452.407088 220.266533  L 458.870401 223.67133  L 465.333715 227.313343  L 472.720359 231.734612  L 481.030333 236.993254  L 490.263637 243.124676  L 501.343603 250.77854  L 517.040221 261.932762  L 540.123483 278.332595  L 552.126779 286.576363  L 562.283414 293.287478  L 571.516719 299.128379  L 579.826693 304.144347  L 588.136668 308.911883  L 596.446642 313.416265  L 604.756616 317.647268  L 612.14326 321.173709  L 619.529904 324.477726  L 626.916547 327.559926  L 634.303191 330.422926  L 641.689835 333.071125  L 649.999809 335.801044  L 658.309783 338.277084  L 666.619758 340.511356  L 674.929732 342.517263  L 683.239706 344.309128  L 692.473011 346.067191  L 701.706316 347.600227  L 711.862951 349.051452  L 712.786281 349.172068  L 712.786281 349.172068  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke: #b7791f; stroke-width: 3.3; stroke-linecap: square" />
+   </g>
+   <g id="normal_density_plot__normal_density_sigma_3">
+    <path d="M 67.378281 320.987807  L 96.924856 315.886144  L 146.784702 307.002041  L 184.641251 300.360384  L 209.571174 296.205633  L 230.807775 292.886926  L 250.197715 290.085731  L 267.740994 287.77589  L 284.360942 285.811889  L 300.05756 284.178341  L 314.830848 282.853085  L 329.604135 281.746446  L 344.377423 280.869027  L 358.22738 280.262201  L 372.077337 279.869509  L 385.927294 279.694325  L 399.777251 279.738159  L 413.627208 280.000632  L 427.477165 280.479486  L 441.327122 281.170611  L 456.10041 282.135099  L 470.873698 283.325071  L 486.570316 284.823742  L 502.266934 286.548181  L 518.886882 288.600043  L 536.430161 290.99239  L 555.820101 293.871659  L 577.056702 297.259298  L 601.986625 301.472336  L 636.149852 307.496442  L 702.629646 319.258032  L 712.786281 320.987807  L 712.786281 320.987807  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke: #2f6f55; stroke-width: 3.3; stroke-linecap: square" />
+   </g>
+   <g id="normal_density_plot__normal_density_legend">
+    <g id="normal_density_plot__line2d_33">
+     <path d="M 596.536281 31.786133  L 614.536281 31.786133  L 632.536281 31.786133  " style="fill: none; stroke: #007ea7; stroke-width: 3.3; stroke-linecap: square" />
+    </g>
+    <g id="normal_density_plot__text_19">
+     
+     <g transform="translate(644.536281 37.036133)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.859375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'">σ</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.429199" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'">=</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.919922" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'">0</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.463379" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'">,</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.153809" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'">5</tspan>
+      </text>
+     </g>
+    </g>
+    <g id="normal_density_plot__line2d_34">
+     <path d="M 596.536281 55.037305  L 614.536281 55.037305  L 632.536281 55.037305  " style="fill: none; stroke: #b7791f; stroke-width: 3.3; stroke-linecap: square" />
+    </g>
+    <g id="normal_density_plot__text_20">
+     
+     <g transform="translate(644.536281 60.287305)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.0625" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'">σ</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.429199" y="-0.0625" style="font-size: 15px; font-family: 'DejaVu Sans'">=</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.919922" y="-0.0625" style="font-size: 15px; font-family: 'DejaVu Sans'">1</tspan>
+      </text>
+     </g>
+    </g>
+    <g id="normal_density_plot__line2d_35">
+     <path d="M 596.536281 78.288477  L 614.536281 78.288477  L 632.536281 78.288477  " style="fill: none; stroke: #2f6f55; stroke-width: 3.3; stroke-linecap: square" />
+    </g>
+    <g id="normal_density_plot__text_21">
+     
+     <g transform="translate(644.536281 83.538477)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.859375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'">σ</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.429199" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'">=</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.919922" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'">2</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+  </g><g id="normal_mean_marker" data-anim-target="true" data-anim-label="Lageparameter mü"><g id="normal_density_plot__normal_mean_line">
+    <path d="M 390.082281 355.866477  L 390.082281 12.138477  " clip-path="url(#normal_density_plot__pffec4c3102)" style="fill: none; stroke-dasharray: 8.14,3.52; stroke-dashoffset: 0; stroke: #6a7a86; stroke-width: 2.2" />
+   </g>
+   <g id="normal_density_plot__normal_mean_label">
+    
+    <g style="fill: #062d46" transform="translate(384.002281 35.053677)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.609375" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #062d46">μ</tspan>
+     </text>
+    </g>
+   </g>
+   </g><g id="normal_density_plot__patch_3">
+    <path d="M 67.378281 355.866477  L 67.378281 12.138477  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="normal_density_plot__patch_4">
+    <path d="M 67.378281 355.866477  L 712.786281 355.866477  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   </g>
+ </g>
+ <defs>
+  <clipPath id="normal_density_plot__pffec4c3102">
+   <rect data-qc-allow-overlap="true" x="67.378281" y="12.138477" width="645.408" height="343.728" />
+  </clipPath>
+ </defs>
+</svg><g id="normal_mu_meaning" data-anim-target="true" data-anim-label="Erwartungswert mü als Lageparameter"><title>Erwartungswert mü als Lageparameter</title><circle cx="138" cy="308" r="36" fill="#D9F0F7"/><g transform="translate(117 287) scale(1.75)" fill="none" stroke="#007EA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/><path d="M15.5 8.5L21 3M17 3h4v4"/></g><text x="198" y="298" class="" font-size="20" font-weight="850" fill="#007EA7" text-anchor="start" data-qc-role="text"><tspan x="198" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">μ  ·  LAGE</tspan></text><text x="198" y="340" class="" font-size="24" font-weight="720" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="198" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">verschiebt die Kurve</tspan><tspan x="198" dy="32" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">auf der Lebensdauerachse</tspan></text></g><g id="normal_sigma_meaning" data-anim-target="true" data-anim-label="Standardabweichung als Streuparameter"><title>Standardabweichung als Streuparameter</title><circle cx="138" cy="466" r="36" fill="#F7EEDC"/><g transform="translate(117 445) scale(1.75)" fill="none" stroke="#B7791F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M4 12l8 4 8-4M4 16l8 4 8-4"/></g><text x="198" y="456" class="" font-size="20" font-weight="850" fill="#B7791F" text-anchor="start" data-qc-role="text"><tspan x="198" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">σ  ·  STREUUNG</tspan></text><text x="198" y="498" class="" font-size="23" font-weight="780" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="198" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">kleineres σ:</tspan></text><text x="198" y="532" class="" font-size="23" font-weight="720" fill="#243B53" text-anchor="start" data-qc-role="text"><tspan x="198" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">schmaler und höher</tspan></text></g><g id="normal_symmetry_properties" data-anim-target="true" data-anim-label="Symmetrie und Lagewerte"><title>Symmetrie und Lagewerte</title><rect data-qc-allow-overlap="true" x="84" y="592" width="430" height="176" rx="8" fill="#FFFFFF" stroke="#C8D5DF" stroke-width="1.5"/><text x="116" y="630" class="" font-size="17" font-weight="850" fill="#2F6F55" text-anchor="start" data-qc-role="text"><tspan x="116" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">SYMMETRISCHE GLOCKENFORM</tspan></text><text x="116" y="676" class="" font-size="25" font-weight="790" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="116" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">μ = Median = Modalwert</tspan></text><text x="116" y="710" class="" font-size="19" font-weight="760" fill="#2F6F55" text-anchor="start" data-qc-role="text"><tspan x="116" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">bei 50 %</tspan></text><text x="116" y="744" class="" font-size="18" font-weight="690" fill="#52606D" text-anchor="start" data-qc-role="text"><tspan x="116" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">theoretisch in beide Richtungen unbegrenzt</tspan></text></g><g id="normal_application_fields" data-anim-target="true" data-anim-label="Typische Anwendungen"><title>Typische Anwendungen</title><circle cx="122" cy="804" r="32" fill="#D9F0F7"/><g transform="translate(103 785) scale(1.5833333333333333)" fill="none" stroke="#007EA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3"/><path d="M7.5 16h9M9 13h6"/></g><text x="174" y="812" class="" font-size="21" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="174" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Naturwissenschaften</tspan></text><circle cx="122" cy="866" r="32" fill="#F7EEDC"/><g transform="translate(103 847) scale(1.5833333333333333)" fill="none" stroke="#B7791F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7"/></g><text x="174" y="874" class="" font-size="21" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="174" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Finanzwesen</tspan></text><circle cx="122" cy="928" r="32" fill="#E3F0EA"/><g transform="translate(103 909) scale(1.5833333333333333)" fill="none" stroke="#2F6F55" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-2.9 8.1-7 10-4.1-1.9-7-5.4-7-10V6z"/><path d="M8.5 12l2.2 2.2 4.8-5"/></g><text x="174" y="936" class="" font-size="21" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="174" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Medizin</tspan></text></g></g>
+  <line x1="78" y1="982" x2="1842" y2="982" stroke="#102A43" stroke-opacity="0.12" stroke-width="1.5"/>
+  <text x="78" y="1026" font-size="20" font-weight="700" fill="#627D98">Professional Reliability Training | Reliability Engineer</text>
+  <text x="1580" y="1026" font-size="20" font-weight="700" fill="#627D98" text-anchor="end">RE1 · Szene 50</text>
+  <g id="official_logo_reserved" data-logo-status="pending-original-asset" aria-label="Reservierter Bereich für das offizielle RelTest-Academy-Logo"/>
+</svg>

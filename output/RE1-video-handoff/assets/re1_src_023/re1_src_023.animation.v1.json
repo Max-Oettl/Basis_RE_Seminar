@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_023.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "test_goal_improvement",
+      "label": "Zuverlässigkeit verbessern",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "test_goal_measurement",
+      "label": "Zuverlässigkeit messen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "test_goal_comparison",
+      "label": "Produktgenerationen vergleichen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_test_goal_improvement",
+      "targetId": "test_goal_improvement",
+      "action": "show",
+      "sourceText": "um die Zuverlässigkeit zu verbessern",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_test_goal_measurement",
+      "targetId": "test_goal_measurement",
+      "action": "show",
+      "sourceText": "Es kann aber auch beispielsweise der",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_test_goal_comparison",
+      "targetId": "test_goal_comparison",
+      "action": "show",
+      "sourceText": "Darüber hinaus sind aber auch andere Ziele denkbar",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

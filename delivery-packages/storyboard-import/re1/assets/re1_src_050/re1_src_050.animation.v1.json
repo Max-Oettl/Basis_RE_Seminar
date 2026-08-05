@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_050.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 16,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 36,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "state_001_data_shapes_01",
+      "label": "Daten und Formen 1",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "state_001_text_content_01",
+      "label": "Textblock 1",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "state_001_supporting_visuals_01",
+      "label": "Visuelles Element 1",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "state_001_text_content_02",
+      "label": "Textblock 2",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_state_001_data_shapes_01",
+      "targetId": "state_001_data_shapes_01",
+      "action": "show",
+      "sourceText": "Willkommen zum zweiten Teil unserer Einführung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Semantische Elementgruppe passend zum Sprechertext aufbauen.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_state_001_text_content_01",
+      "targetId": "state_001_text_content_01",
+      "action": "show",
+      "sourceText": "und die Bewertung der Zuverlässigkeit von",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Semantische Elementgruppe passend zum Sprechertext aufbauen.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_state_001_supporting_visuals_01",
+      "targetId": "state_001_supporting_visuals_01",
+      "action": "show",
+      "sourceText": "Zunächst betrachten wir die Mean Time",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Semantische Elementgruppe passend zum Sprechertext aufbauen.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_state_001_text_content_02",
+      "targetId": "state_001_text_content_02",
+      "action": "show",
+      "sourceText": "und Zuverlässigkeit von Produkten Anschließend werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Semantische Elementgruppe passend zum Sprechertext aufbauen.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "highlight_state_001_text_content_02",
+      "targetId": "state_001_text_content_02",
+      "action": "highlight",
+      "sourceText": "Beschreibung der Produktzuverlässigkeit eingesetzt werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Erklaerten Schwerpunkt sichtbar hervorheben.",
+      "durFrames": 30,
+      "stroke": "#F2A93B",
+      "strokeWidth": 4
+    }
+  ]
+}

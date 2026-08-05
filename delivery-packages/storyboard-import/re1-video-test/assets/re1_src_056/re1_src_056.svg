@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_056" data-brand-profile="reltest-academy">
+  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"two-evidence-distribution-assessment","contentTitle":"Normalverteilung in der Zuverlässigkeitstechnik","layoutIntent":"paired-hazard-and-cdf-evidence-with-source-faithful-lifecycle-and-zero-time-conclusions","takeaway":"Die steigende Ausfallrate passt zu Verschleiß, negative Ausfallzeiten begrenzen jedoch die Eignung für Lebensdauerprognosen.","density":"balanced","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-academy","brandVariant":"academy-production","sourceSlides":[56,57,58,59,60,61],"officialLogoStatus":"pending-original-asset"}]]></metadata>
+  <title id="accessible_title">Normalverteilung in der Zuverlässigkeitstechnik</title>
+  <desc id="accessible_description">Die steigende Ausfallrate passt zu Verschleiß, negative Ausfallzeiten begrenzen jedoch die Eignung für Lebensdauerprognosen.</desc>
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F9FBFC"/>
+      <stop offset="56%" stop-color="#F1F5F8"/>
+      <stop offset="100%" stop-color="#E9F0F4"/>
+    </linearGradient>
+    <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#102A43" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="shadowSoft" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#102A43" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow_007EA7" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#007EA7"/></marker>
+    <marker id="arrow_102A43" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#102A43"/></marker>
+    <marker id="arrow_D1495B" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#D1495B"/></marker>
+    <marker id="arrow_2F6F55" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#2F6F55"/></marker>
+    <marker id="arrow_B7791F" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#B7791F"/></marker>
+  </defs>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+    .slide-title { fill: #102A43; }
+  </style>
+  <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
+  <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
+  <rect x="74" y="36" width="118" height="5" rx="3" fill="#007EA7"/>
+  <text x="78" y="116" class="slide-title" font-size="50" font-weight="800">Normalverteilung in der Zuverlässigkeitstechnik</text>
+  <line x1="78" y1="148" x2="1842" y2="148" stroke="#102A43" stroke-opacity="0.12" stroke-width="1.5"/>
+  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><svg id="normal_hazard_plot" x="70" y="224" width="850" height="520" viewBox="0 0 575.702344 350.728219" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="normal_hazard_plot__figure_1">
+  <g id="normal_hazard_plot__patch_1">
+   <path d="M -0 350.728219  L 575.702344 350.728219  L 575.702344 0  L -0 0  L -0 350.728219  z " style="fill: none; opacity: 0" />
+  </g>
+  <g id="normal_hazard_plot__axes_1">
+   <g id="normal_hazard_plot__patch_2">
+    <path d="M 63.246719 291.024  L 564.366719 291.024  L 564.366719 7.2  L 63.246719 7.2  L 63.246719 291.024  z " style="fill: none" />
+   </g>
+   <g id="normal_hazard_plot__matplotlib.axis_1">
+    <g id="normal_hazard_plot__xtick_1">
+     <g id="normal_hazard_plot__line2d_1">
+      <path d="M 63.246719 291.024  L 63.246719 7.2  " clip-path="url(#normal_hazard_plot__p0cca0cbac5)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_hazard_plot__line2d_2">
+      <defs>
+       <path id="normal_hazard_plot__m21784b16bc" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#normal_hazard_plot__m21784b16bc" x="63.246719" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_hazard_plot__text_1">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="63.246719" y="310.400953" transform="rotate(-0 63.246719 310.400953)">0</text>
+     </g>
+    </g>
+    <g id="normal_hazard_plot__xtick_2">
+     <g id="normal_hazard_plot__line2d_3">
+      <path d="M 163.470719 291.024  L 163.470719 7.2  " clip-path="url(#normal_hazard_plot__p0cca0cbac5)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_hazard_plot__line2d_4">
+      <g>
+       <use ns4:href="#normal_hazard_plot__m21784b16bc" x="163.470719" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_hazard_plot__text_2">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="163.470719" y="310.400953" transform="rotate(-0 163.470719 310.400953)">1</text>
+     </g>
+    </g>
+    <g id="normal_hazard_plot__xtick_3">
+     <g id="normal_hazard_plot__line2d_5">
+      <path d="M 263.694719 291.024  L 263.694719 7.2  " clip-path="url(#normal_hazard_plot__p0cca0cbac5)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_hazard_plot__line2d_6">
+      <g>
+       <use ns4:href="#normal_hazard_plot__m21784b16bc" x="263.694719" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_hazard_plot__text_3">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="263.694719" y="310.400953" transform="rotate(-0 263.694719 310.400953)">2</text>
+     </g>
+    </g>
+    <g id="normal_hazard_plot__xtick_4">
+     <g id="normal_hazard_plot__line2d_7">
+      <path d="M 363.918719 291.024  L 363.918719 7.2  " clip-path="url(#normal_hazard_plot__p0cca0cbac5)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_hazard_plot__line2d_8">
+      <g>
+       <use ns4:href="#normal_hazard_plot__m21784b16bc" x="363.918719" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_hazard_plot__text_4">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="363.918719" y="310.400953" transform="rotate(-0 363.918719 310.400953)">3</text>
+     </g>
+    </g>
+    <g id="normal_hazard_plot__xtick_5">
+     <g id="normal_hazard_plot__line2d_9">
+      <path d="M 464.142719 291.024  L 464.142719 7.2  " clip-path="url(#normal_hazard_plot__p0cca0cbac5)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_hazard_plot__line2d_10">
+      <g>
+       <use ns4:href="#normal_hazard_plot__m21784b16bc" x="464.142719" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_hazard_plot__text_5">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="464.142719" y="310.400953" transform="rotate(-0 464.142719 310.400953)">4</text>
+     </g>
+    </g>
+    <g id="normal_hazard_plot__xtick_6">
+     <g id="normal_hazard_plot__line2d_11">
+      <path d="M 564.366719 291.024  L 564.366719 7.2  " clip-path="url(#normal_hazard_plot__p0cca0cbac5)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_hazard_plot__line2d_12">
+      <g>
+       <use ns4:href="#normal_hazard_plot__m21784b16bc" x="564.366719" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_hazard_plot__text_6">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="564.366719" y="310.400953" transform="rotate(-0 564.366719 310.400953)">5</text>
+     </g>
+    </g>
+    <g id="normal_hazard_plot__text_7">
+     
+     <g style="fill: #062d46" transform="translate(241.446719 339.204)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.677734" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">b</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="36.5625" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="48.770508" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="61.584961" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="72.298828" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">d</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="85.183594" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="97.330078" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="110.144531" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="122.352539" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="131.229492" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="137.496094" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="normal_hazard_plot__matplotlib.axis_2">
+    <g id="normal_hazard_plot__ytick_1">
+     <g id="normal_hazard_plot__line2d_13">
+      <path d="M 63.246719 291.024  L 564.366719 291.024  " clip-path="url(#normal_hazard_plot__p0cca0cbac5)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_hazard_plot__line2d_14">
+      <defs>
+       <path id="normal_hazard_plot__mba326cfcc1" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#normal_hazard_plot__mba326cfcc1" x="63.246719" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_hazard_plot__text_8">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="53.746719" y="295.962477" transform="rotate(-0 53.746719 295.962477)">0</text>
+     </g>
+    </g>
+    <g id="normal_hazard_plot__ytick_2">
+     <g id="normal_hazard_plot__line2d_15">
+      <path d="M 63.246719 236.962286  L 564.366719 236.962286  " clip-path="url(#normal_hazard_plot__p0cca0cbac5)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_hazard_plot__line2d_16">
+      <g>
+       <use ns4:href="#normal_hazard_plot__mba326cfcc1" x="63.246719" y="236.962286" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_hazard_plot__text_9">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="53.746719" y="241.900762" transform="rotate(-0 53.746719 241.900762)">2</text>
+     </g>
+    </g>
+    <g id="normal_hazard_plot__ytick_3">
+     <g id="normal_hazard_plot__line2d_17">
+      <path d="M 63.246719 182.900571  L 564.366719 182.900571  " clip-path="url(#normal_hazard_plot__p0cca0cbac5)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_hazard_plot__line2d_18">
+      <g>
+       <use ns4:href="#normal_hazard_plot__mba326cfcc1" x="63.246719" y="182.900571" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_hazard_plot__text_10">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="53.746719" y="187.839048" transform="rotate(-0 53.746719 187.839048)">4</text>
+     </g>
+    </g>
+    <g id="normal_hazard_plot__ytick_4">
+     <g id="normal_hazard_plot__line2d_19">
+      <path d="M 63.246719 128.838857  L 564.366719 128.838857  " clip-path="url(#normal_hazard_plot__p0cca0cbac5)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_hazard_plot__line2d_20">
+      <g>
+       <use ns4:href="#normal_hazard_plot__mba326cfcc1" x="63.246719" y="128.838857" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_hazard_plot__text_11">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="53.746719" y="133.777334" transform="rotate(-0 53.746719 133.777334)">6</text>
+     </g>
+    </g>
+    <g id="normal_hazard_plot__ytick_5">
+     <g id="normal_hazard_plot__line2d_21">
+      <path d="M 63.246719 74.777143  L 564.366719 74.777143  " clip-path="url(#normal_hazard_plot__p0cca0cbac5)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_hazard_plot__line2d_22">
+      <g>
+       <use ns4:href="#normal_hazard_plot__mba326cfcc1" x="63.246719" y="74.777143" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_hazard_plot__text_12">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="53.746719" y="79.715619" transform="rotate(-0 53.746719 79.715619)">8</text>
+     </g>
+    </g>
+    <g id="normal_hazard_plot__ytick_6">
+     <g id="normal_hazard_plot__line2d_23">
+      <path d="M 63.246719 20.715429  L 564.366719 20.715429  " clip-path="url(#normal_hazard_plot__p0cca0cbac5)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_hazard_plot__line2d_24">
+      <g>
+       <use ns4:href="#normal_hazard_plot__mba326cfcc1" x="63.246719" y="20.715429" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_hazard_plot__text_13">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="53.746719" y="25.653905" transform="rotate(-0 53.746719 25.653905)">10</text>
+     </g>
+    </g>
+    <g id="normal_hazard_plot__text_14">
+     
+     <g style="fill: #062d46" transform="translate(20.88 223.992) rotate(-90)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">A</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="13.930664" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="26.745117" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.458984" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">f</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.290039" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="57.436523" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="63.606445" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="69.776367" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="78.65332" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="90.799805" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="99.404297" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="111.612305" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="117.878906" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">λ</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="135.553711" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="128.53125" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">(</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="142.611328" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">)</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="normal_hazard_curves" data-anim-target="true" data-anim-label="Steigende Ausfallrate der Normalverteilung"><g id="normal_hazard_plot__normal_hazard_sigma_1">
+    <path d="M 63.246719 291.02392  L 150.709723 290.915891  L 170.06629 290.670743  L 183.687577 290.279596  L 194.441225 289.749015  L 203.761054 289.061659  L 211.647062 288.26698  L 218.816161 287.339842  L 225.98526 286.187398  L 232.437448 284.934683  L 238.889637 283.459039  L 245.341826 281.745166  L 251.794015 279.781015  L 258.246204 277.558112  L 264.698393 275.071677  L 271.150581 272.320544  L 277.60277 269.306903  L 284.054959 266.035929  L 290.507148 262.515321  L 296.959337 258.754798  L 304.128435 254.308775  L 311.297534 249.597388  L 319.183543 244.129642  L 327.069551 238.386468  L 335.67247 231.834994  L 344.992298 224.433976  L 354.312126 216.751602  L 364.348865 208.200682  L 375.819423 198.120985  L 388.00689 187.102914  L 401.628178 174.470998  L 416.683285 160.184846  L 433.172212 144.217981  L 451.811869 125.844002  L 472.602255 105.028259  L 496.260281 81.020656  L 523.502856 53.05312  L 555.7638 19.601368  L 564.366719 10.632704  L 564.366719 10.632704  " clip-path="url(#normal_hazard_plot__p0cca0cbac5)" style="fill: none; stroke: #007ea7; stroke-width: 3.2; stroke-linecap: square" />
+   </g>
+   <g id="normal_hazard_plot__normal_hazard_sigma_2">
+    <path d="M 63.246719 290.547234  L 90.489294 290.111294  L 113.43041 289.528406  L 134.220796 288.776204  L 152.860453 287.883721  L 170.783199 286.804514  L 187.989036 285.546567  L 205.194873 284.059682  L 221.6838 282.414728  L 238.172727 280.554343  L 255.378564 278.387979  L 272.584401 276.000488  L 290.507148 273.291312  L 309.146805 270.250178  L 329.220281 266.74219  L 350.010667 262.880088  L 372.234873 258.524094  L 395.892899 253.662248  L 421.701654 248.132211  L 450.378049 241.755236  L 481.922084 234.507838  L 517.050667 226.205425  L 557.19762 216.481281  L 564.366719 214.722789  L 564.366719 214.722789  " clip-path="url(#normal_hazard_plot__p0cca0cbac5)" style="fill: none; stroke: #b7791f; stroke-width: 3.2; stroke-linecap: square" />
+   </g>
+   <g id="normal_hazard_plot__normal_hazard_sigma_3">
+    <path d="M 63.246719 288.263805  L 110.56277 287.206386  L 157.878822 285.927089  L 205.911783 284.405547  L 255.378564 282.616742  L 307.712985 280.500452  L 363.631955 278.014446  L 424.569294 275.079042  L 491.958822 271.605134  L 564.366719 267.658302  L 564.366719 267.658302  " clip-path="url(#normal_hazard_plot__p0cca0cbac5)" style="fill: none; stroke: #2f6f55; stroke-width: 3.2; stroke-linecap: square" />
+   </g>
+   <g id="normal_hazard_plot__normal_hazard_annotation">
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d1495b" x="542.317439" y="27.06768" transform="rotate(-0 542.317439 27.06768)">kontinuierlich steigend</text>
+   </g>
+   <g id="normal_hazard_plot__normal_hazard_legend">
+    <g id="normal_hazard_plot__line2d_25">
+     <path d="M 76.746719 26.847656  L 94.746719 26.847656  L 112.746719 26.847656  " style="fill: none; stroke: #007ea7; stroke-width: 3.2; stroke-linecap: square" />
+    </g>
+    <g id="normal_hazard_plot__text_15">
+     
+     <g transform="translate(124.746719 32.097656)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.859375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'">σ</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.429199" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'">=</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.919922" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'">0</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.463379" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'">,</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.153809" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'">5</tspan>
+      </text>
+     </g>
+    </g>
+    <g id="normal_hazard_plot__line2d_26">
+     <path d="M 76.746719 50.098828  L 94.746719 50.098828  L 112.746719 50.098828  " style="fill: none; stroke: #b7791f; stroke-width: 3.2; stroke-linecap: square" />
+    </g>
+    <g id="normal_hazard_plot__text_16">
+     
+     <g transform="translate(124.746719 55.348828)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.0625" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'">σ</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.429199" y="-0.0625" style="font-size: 15px; font-family: 'DejaVu Sans'">=</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.919922" y="-0.0625" style="font-size: 15px; font-family: 'DejaVu Sans'">1</tspan>
+      </text>
+     </g>
+    </g>
+    <g id="normal_hazard_plot__line2d_27">
+     <path d="M 76.746719 73.35  L 94.746719 73.35  L 112.746719 73.35  " style="fill: none; stroke: #2f6f55; stroke-width: 3.2; stroke-linecap: square" />
+    </g>
+    <g id="normal_hazard_plot__text_17">
+     
+     <g transform="translate(124.746719 78.6)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.859375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'">σ</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.429199" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'">=</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.919922" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'">2</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+  </g><g id="normal_hazard_plot__patch_3">
+    <path d="M 63.246719 291.024  L 63.246719 7.2  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="normal_hazard_plot__patch_4">
+    <path d="M 63.246719 291.024  L 564.366719 291.024  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   </g>
+ </g>
+ <defs>
+  <clipPath id="normal_hazard_plot__p0cca0cbac5">
+   <rect data-qc-allow-overlap="true" x="63.246719" y="7.2" width="501.12" height="283.824" />
+  </clipPath>
+ </defs>
+</svg><svg id="normal_cdf_plot" x="996" y="224" width="850" height="520" viewBox="0 0 579.833906 350.728219" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="normal_cdf_plot__figure_1">
+  <g id="normal_cdf_plot__patch_1">
+   <path d="M 0 350.728219  L 579.833906 350.728219  L 579.833906 0  L 0 0  L 0 350.728219  z " style="fill: none; opacity: 0" />
+  </g>
+  <g id="normal_cdf_plot__axes_1">
+   <g id="normal_cdf_plot__patch_2">
+    <path d="M 67.378281 291.024  L 568.498281 291.024  L 568.498281 7.2  L 67.378281 7.2  L 67.378281 291.024  z " style="fill: none" />
+   </g>
+   <g id="normal_zero_problem" data-anim-target="true" data-anim-label="Ausfälle bei und vor t gleich null"><g id="normal_cdf_plot__normal_negative_time_region">
+    <path d="M 67.378281 291.024  L 210.555424 291.024  L 210.555424 7.2  L 67.378281 7.2  z " clip-path="url(#normal_cdf_plot__p8d622b9065)" style="fill: #d1495b; opacity: 0.11; stroke: #d1495b; stroke-linejoin: miter" />
+   </g>
+   <g id="normal_cdf_plot__normal_zero_line">
+    <path d="M 210.555424 291.024  L 210.555424 7.2  " clip-path="url(#normal_cdf_plot__p8d622b9065)" style="fill: none; stroke-dasharray: 8.88,3.84; stroke-dashoffset: 0; stroke: #d1495b; stroke-width: 2.4" />
+   </g>
+   <g id="normal_cdf_plot__normal_zero_label">
+    
+    <g style="fill: #d1495b" transform="translate(222.009596 239.365312)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.609375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">F</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="120.560351" y="-0.609375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">σ</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="8.62793" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">(</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="14.47998" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">0</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="24.023438" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">)</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="32.797852" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="48.288574" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">1</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="57.832031" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">1</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="69.81084" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">%</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="132.989551" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="148.480273" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">2</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="84.063769" y="-0.609375" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b"> </tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="89.285937" y="-0.609375" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">b</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="100.023242" y="-0.609375" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">e</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="110.196582" y="-0.609375" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">i</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="115.338183" y="-0.609375" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b"> </tspan>
+     </text>
+    </g>
+   </g>
+   <g id="normal_cdf_plot__normal_negative_label">
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #d1495b" x="77.400681" y="29.460706" transform="rotate(-0 77.400681 29.460706)">negative Ausfallzeiten</text>
+   </g>
+   <g id="normal_cdf_plot__normal_zero_point">
+    <defs>
+     <path id="normal_cdf_plot__m79e501a8a4" d="M 0 4.873397  C 1.29244 4.873397 2.532119 4.359905 3.446012 3.446012  C 4.359905 2.532119 4.873397 1.29244 4.873397 0  C 4.873397 -1.29244 4.359905 -2.532119 3.446012 -3.446012  C 2.532119 -4.359905 1.29244 -4.873397 0 -4.873397  C -1.29244 -4.873397 -2.532119 -4.359905 -3.446012 -3.446012  C -4.359905 -2.532119 -4.873397 -1.29244 -4.873397 0  C -4.873397 1.29244 -4.359905 2.532119 -3.446012 3.446012  C -2.532119 4.359905 -1.29244 4.873397 0 4.873397  z " style="stroke: #ffffff; stroke-width: 1.8" />
+    </defs>
+    <g clip-path="url(#normal_cdf_plot__p8d622b9065)">
+     <use ns4:href="#normal_cdf_plot__m79e501a8a4" x="210.555424" y="261.626018" style="fill: #d1495b; stroke: #ffffff; stroke-width: 1.8" />
+    </g>
+   </g>
+  </g><g id="normal_cdf_plot__matplotlib.axis_1">
+    <g id="normal_cdf_plot__xtick_1">
+     <g id="normal_cdf_plot__line2d_1">
+      <path d="M 67.378281 291.024  L 67.378281 7.2  " clip-path="url(#normal_cdf_plot__p8d622b9065)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_cdf_plot__line2d_2">
+      <defs>
+       <path id="normal_cdf_plot__m9180edb93c" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#normal_cdf_plot__m9180edb93c" x="67.378281" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_cdf_plot__text_1">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="67.378281" y="310.400953" transform="rotate(-0 67.378281 310.400953)">−2</text>
+     </g>
+    </g>
+    <g id="normal_cdf_plot__xtick_2">
+     <g id="normal_cdf_plot__line2d_3">
+      <path d="M 138.966853 291.024  L 138.966853 7.2  " clip-path="url(#normal_cdf_plot__p8d622b9065)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_cdf_plot__line2d_4">
+      <g>
+       <use ns4:href="#normal_cdf_plot__m9180edb93c" x="138.966853" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_cdf_plot__text_2">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="138.966853" y="310.400953" transform="rotate(-0 138.966853 310.400953)">−1</text>
+     </g>
+    </g>
+    <g id="normal_cdf_plot__xtick_3">
+     <g id="normal_cdf_plot__line2d_5">
+      <path d="M 210.555424 291.024  L 210.555424 7.2  " clip-path="url(#normal_cdf_plot__p8d622b9065)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_cdf_plot__line2d_6">
+      <g>
+       <use ns4:href="#normal_cdf_plot__m9180edb93c" x="210.555424" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_cdf_plot__text_3">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="210.555424" y="310.400953" transform="rotate(-0 210.555424 310.400953)">0</text>
+     </g>
+    </g>
+    <g id="normal_cdf_plot__xtick_4">
+     <g id="normal_cdf_plot__line2d_7">
+      <path d="M 282.143996 291.024  L 282.143996 7.2  " clip-path="url(#normal_cdf_plot__p8d622b9065)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_cdf_plot__line2d_8">
+      <g>
+       <use ns4:href="#normal_cdf_plot__m9180edb93c" x="282.143996" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_cdf_plot__text_4">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="282.143996" y="310.400953" transform="rotate(-0 282.143996 310.400953)">1</text>
+     </g>
+    </g>
+    <g id="normal_cdf_plot__xtick_5">
+     <g id="normal_cdf_plot__line2d_9">
+      <path d="M 353.732567 291.024  L 353.732567 7.2  " clip-path="url(#normal_cdf_plot__p8d622b9065)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_cdf_plot__line2d_10">
+      <g>
+       <use ns4:href="#normal_cdf_plot__m9180edb93c" x="353.732567" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_cdf_plot__text_5">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="353.732567" y="310.400953" transform="rotate(-0 353.732567 310.400953)">2</text>
+     </g>
+    </g>
+    <g id="normal_cdf_plot__xtick_6">
+     <g id="normal_cdf_plot__line2d_11">
+      <path d="M 425.321138 291.024  L 425.321138 7.2  " clip-path="url(#normal_cdf_plot__p8d622b9065)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_cdf_plot__line2d_12">
+      <g>
+       <use ns4:href="#normal_cdf_plot__m9180edb93c" x="425.321138" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_cdf_plot__text_6">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="425.321138" y="310.400953" transform="rotate(-0 425.321138 310.400953)">3</text>
+     </g>
+    </g>
+    <g id="normal_cdf_plot__xtick_7">
+     <g id="normal_cdf_plot__line2d_13">
+      <path d="M 496.90971 291.024  L 496.90971 7.2  " clip-path="url(#normal_cdf_plot__p8d622b9065)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_cdf_plot__line2d_14">
+      <g>
+       <use ns4:href="#normal_cdf_plot__m9180edb93c" x="496.90971" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_cdf_plot__text_7">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="496.90971" y="310.400953" transform="rotate(-0 496.90971 310.400953)">4</text>
+     </g>
+    </g>
+    <g id="normal_cdf_plot__xtick_8">
+     <g id="normal_cdf_plot__line2d_15">
+      <path d="M 568.498281 291.024  L 568.498281 7.2  " clip-path="url(#normal_cdf_plot__p8d622b9065)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_cdf_plot__line2d_16">
+      <g>
+       <use ns4:href="#normal_cdf_plot__m9180edb93c" x="568.498281" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_cdf_plot__text_8">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="568.498281" y="310.400953" transform="rotate(-0 568.498281 310.400953)">5</text>
+     </g>
+    </g>
+    <g id="normal_cdf_plot__text_9">
+     
+     <g style="fill: #062d46" transform="translate(245.578281 339.204)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.677734" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">b</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="36.5625" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="48.770508" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="61.584961" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="72.298828" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">d</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="85.183594" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="97.330078" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="110.144531" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="122.352539" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="131.229492" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="137.496094" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="normal_cdf_plot__matplotlib.axis_2">
+    <g id="normal_cdf_plot__ytick_1">
+     <g id="normal_cdf_plot__line2d_17">
+      <path d="M 67.378281 291.024  L 568.498281 291.024  " clip-path="url(#normal_cdf_plot__p8d622b9065)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_cdf_plot__line2d_18">
+      <defs>
+       <path id="normal_cdf_plot__m2e37fa8d59" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#normal_cdf_plot__m2e37fa8d59" x="67.378281" y="291.024" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_cdf_plot__text_10">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="295.962477" transform="rotate(-0 57.878281 295.962477)">0.0</text>
+     </g>
+    </g>
+    <g id="normal_cdf_plot__ytick_2">
+     <g id="normal_cdf_plot__line2d_19">
+      <path d="M 67.378281 235.372235  L 568.498281 235.372235  " clip-path="url(#normal_cdf_plot__p8d622b9065)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_cdf_plot__line2d_20">
+      <g>
+       <use ns4:href="#normal_cdf_plot__m2e37fa8d59" x="67.378281" y="235.372235" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_cdf_plot__text_11">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="240.310712" transform="rotate(-0 57.878281 240.310712)">0.2</text>
+     </g>
+    </g>
+    <g id="normal_cdf_plot__ytick_3">
+     <g id="normal_cdf_plot__line2d_21">
+      <path d="M 67.378281 179.720471  L 568.498281 179.720471  " clip-path="url(#normal_cdf_plot__p8d622b9065)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_cdf_plot__line2d_22">
+      <g>
+       <use ns4:href="#normal_cdf_plot__m2e37fa8d59" x="67.378281" y="179.720471" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_cdf_plot__text_12">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="184.658947" transform="rotate(-0 57.878281 184.658947)">0.4</text>
+     </g>
+    </g>
+    <g id="normal_cdf_plot__ytick_4">
+     <g id="normal_cdf_plot__line2d_23">
+      <path d="M 67.378281 124.068706  L 568.498281 124.068706  " clip-path="url(#normal_cdf_plot__p8d622b9065)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_cdf_plot__line2d_24">
+      <g>
+       <use ns4:href="#normal_cdf_plot__m2e37fa8d59" x="67.378281" y="124.068706" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_cdf_plot__text_13">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="129.007182" transform="rotate(-0 57.878281 129.007182)">0.6</text>
+     </g>
+    </g>
+    <g id="normal_cdf_plot__ytick_5">
+     <g id="normal_cdf_plot__line2d_25">
+      <path d="M 67.378281 68.416941  L 568.498281 68.416941  " clip-path="url(#normal_cdf_plot__p8d622b9065)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_cdf_plot__line2d_26">
+      <g>
+       <use ns4:href="#normal_cdf_plot__m2e37fa8d59" x="67.378281" y="68.416941" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_cdf_plot__text_14">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="73.355418" transform="rotate(-0 57.878281 73.355418)">0.8</text>
+     </g>
+    </g>
+    <g id="normal_cdf_plot__ytick_6">
+     <g id="normal_cdf_plot__line2d_27">
+      <path d="M 67.378281 12.765176  L 568.498281 12.765176  " clip-path="url(#normal_cdf_plot__p8d622b9065)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="normal_cdf_plot__line2d_28">
+      <g>
+       <use ns4:href="#normal_cdf_plot__m2e37fa8d59" x="67.378281" y="12.765176" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="normal_cdf_plot__text_15">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="17.703653" transform="rotate(-0 57.878281 17.703653)">1.0</text>
+     </g>
+    </g>
+    <g id="normal_cdf_plot__text_16">
+     
+     <g style="fill: #062d46" transform="translate(20.88 297.972) rotate(-90)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">A</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="13.930664" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="26.745117" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.458984" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">f</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.290039" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="57.436523" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="63.606445" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="69.776367" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">w</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="86.405273" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="98.551758" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="111.366211" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="120.243164" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="130.957031" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="141.626953" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="154.441406" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="166.649414" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="172.819336" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="185.633789" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="191.803711" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="197.973633" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="208.643555" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="221.458008" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">k</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="233.428711" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="245.636719" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="251.806641" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="260.411133" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="266.677734" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">F</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="284.053711" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="277.03125" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">(</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="291.111328" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">)</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="normal_cdf_curves" data-anim-target="true" data-anim-label="Ausfallwahrscheinlichkeit der Normalverteilung"><g id="normal_cdf_plot__normal_cdf_sigma_1">
+    <path d="M 67.378281 291.024  L 269.331523 290.914751  L 281.248018 290.678114  L 289.40141 290.306924  L 295.67325 289.807893  L 300.690722 289.205559  L 305.08101 288.475924  L 308.844114 287.658193  L 312.607217 286.622021  L 315.743137 285.560126  L 318.879057 284.288201  L 322.014977 282.776346  L 325.150897 280.993033  L 328.286817 278.905595  L 330.795553 276.994367  L 333.304289 274.850312  L 335.813025 272.456849  L 338.321761 269.798053  L 340.830497 266.858976  L 343.339232 263.625987  L 345.847968 260.087113  L 348.356704 256.232387  L 351.492624 250.958449  L 354.628544 245.170315  L 357.764464 238.866395  L 360.900384 232.053186  L 364.036304 224.745812  L 367.799408 215.359151  L 371.562512 205.354536  L 375.952799 193.004337  L 380.970271 178.180623  L 387.869295 157.033353  L 399.158607 122.380124  L 404.176078 107.699812  L 408.566366 95.517256  L 412.32947 85.682161  L 416.092574 76.483618  L 419.228494 69.343416  L 422.364414 62.703561  L 425.500334 56.576171  L 428.636254 50.964901  L 431.772174 45.865542  L 434.908094 41.266804  L 437.416829 37.936711  L 439.925565 34.904576  L 442.434301 32.157264  L 444.943037 29.680211  L 447.451773 27.457773  L 450.587693 25.012737  L 453.723613 22.906919  L 456.859533 21.107116  L 459.995453 19.580612  L 463.131373 18.295799  L 466.267293 17.222675  L 470.030396 16.175043  L 473.7935 15.347833  L 478.183788 14.609324  L 483.20126 13.999266  L 488.845916 13.53386  L 496.372124 13.159742  L 506.407067 12.917295  L 522.086667 12.794776  L 566.616729 12.765281  L 568.498281 12.765256  L 568.498281 12.765256  " clip-path="url(#normal_cdf_plot__p8d622b9065)" style="fill: none; stroke: #007ea7; stroke-width: 3.2; stroke-linecap: square" />
+   </g>
+   <g id="normal_cdf_plot__normal_cdf_sigma_2">
+    <path d="M 67.378281 291.023055  L 150.166567 290.908923  L 173.999558 290.661291  L 189.679157 290.294325  L 202.222837 289.787646  L 212.257781 289.176617  L 221.038356 288.436992  L 229.191748 287.530174  L 236.717956 286.460786  L 243.61698 285.245585  L 249.888819 283.913231  L 255.533475 282.502867  L 261.178131 280.86834  L 266.822787 278.985757  L 271.840259 277.08453  L 276.857731 274.951226  L 281.875202 272.569243  L 286.892674 269.922619  L 291.910146 266.996357  L 296.927618 263.776757  L 301.317906 260.709457  L 305.708194 257.401474  L 310.098482 253.847311  L 315.115953 249.47892  L 320.133425 244.78055  L 325.150897 239.752027  L 330.168369 234.396513  L 335.185841 228.720683  L 340.203313 222.734842  L 345.847968 215.647773  L 351.492624 208.211607  L 357.764464 199.577821  L 364.663488 189.687829  L 372.816879 177.57262  L 382.851823 162.230281  L 408.566366 122.715252  L 416.719758 110.720199  L 423.618782 100.961739  L 429.890622 92.468239  L 435.535277 85.17269  L 441.179933 78.237445  L 446.197405 72.394022  L 451.214877 66.865851  L 456.232349 61.66154  L 461.249821 56.786117  L 466.267293 52.241168  L 471.284764 48.025045  L 476.302236 44.133117  L 481.319708 40.558051  L 486.33718 37.290136  L 491.354652 34.317615  L 496.372124 31.627031  L 501.389595 29.203572  L 506.407067 27.031409  L 511.424539 25.094021  L 516.442011 23.374497  L 522.086667 21.679254  L 527.731323 20.214192  L 534.003162 18.827863  L 540.275002 17.666072  L 547.174026 16.61298  L 554.700234 15.692512  L 562.853625 14.917707  L 568.498281 14.493071  L 568.498281 14.493071  " clip-path="url(#normal_cdf_plot__p8d622b9065)" style="fill: none; stroke: #b7791f; stroke-width: 3.2; stroke-linecap: square" />
+   </g>
+   <g id="normal_cdf_plot__normal_cdf_sigma_3">
+    <path d="M 67.378281 287.622433  L 81.803513 286.625471  L 95.60156 285.447088  L 108.14524 284.153358  L 120.061736 282.699807  L 131.351047 281.095983  L 142.013175 279.356801  L 152.048119 277.502123  L 162.083062 275.418907  L 171.490822 273.243473  L 180.898582 270.839186  L 190.306341 268.193413  L 199.086917 265.4958  L 207.867493 262.568992  L 216.648068 259.405433  L 225.428644 255.998805  L 234.20922 252.344197  L 242.989796 248.438272  L 251.770371 244.279412  L 260.550947 239.867857  L 269.331523 235.205814  L 278.112099 230.297549  L 287.519858 224.772763  L 296.927618 218.983293  L 306.962562 212.531319  L 316.997505 205.813348  L 327.659633 198.410166  L 339.576129 189.851288  L 352.746992 180.100485  L 368.426592 168.195181  L 392.886767 149.289793  L 417.974126 129.982887  L 433.026542 118.679821  L 445.570221 109.52715  L 456.859533 101.551767  L 467.52166 94.285271  L 477.556604 87.709503  L 486.964364 81.796149  L 496.372124 76.141301  L 505.779883 70.756948  L 514.560459 65.983703  L 523.341035 61.45929  L 532.12161 57.18683  L 540.902186 53.167435  L 549.682762 49.400304  L 558.463338 45.882855  L 567.243913 42.610864  L 568.498281 42.163158  L 568.498281 42.163158  " clip-path="url(#normal_cdf_plot__p8d622b9065)" style="fill: none; stroke: #2f6f55; stroke-width: 3.2; stroke-linecap: square" />
+   </g>
+   <g id="normal_cdf_plot__normal_cdf_legend">
+    <g id="normal_cdf_plot__line2d_29">
+     <path d="M 452.248281 222.168141  L 470.248281 222.168141  L 488.248281 222.168141  " style="fill: none; stroke: #007ea7; stroke-width: 3.2; stroke-linecap: square" />
+    </g>
+    <g id="normal_cdf_plot__text_17">
+     
+     <g transform="translate(500.248281 227.418141)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.859375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'">σ</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.429199" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'">=</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.919922" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'">0</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.463379" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'">,</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.153809" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'">5</tspan>
+      </text>
+     </g>
+    </g>
+    <g id="normal_cdf_plot__line2d_30">
+     <path d="M 452.248281 245.419312  L 470.248281 245.419312  L 488.248281 245.419312  " style="fill: none; stroke: #b7791f; stroke-width: 3.2; stroke-linecap: square" />
+    </g>
+    <g id="normal_cdf_plot__text_18">
+     
+     <g transform="translate(500.248281 250.669312)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.0625" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'">σ</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.429199" y="-0.0625" style="font-size: 15px; font-family: 'DejaVu Sans'">=</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.919922" y="-0.0625" style="font-size: 15px; font-family: 'DejaVu Sans'">1</tspan>
+      </text>
+     </g>
+    </g>
+    <g id="normal_cdf_plot__line2d_31">
+     <path d="M 452.248281 268.670484  L 470.248281 268.670484  L 488.248281 268.670484  " style="fill: none; stroke: #2f6f55; stroke-width: 3.2; stroke-linecap: square" />
+    </g>
+    <g id="normal_cdf_plot__text_19">
+     
+     <g transform="translate(500.248281 273.920484)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.859375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'">σ</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.429199" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'">=</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.919922" y="-0.859375" style="font-size: 15px; font-family: 'DejaVu Sans'">2</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   </g><g id="normal_cdf_plot__patch_3">
+    <path d="M 67.378281 291.024  L 67.378281 7.2  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="normal_cdf_plot__patch_4">
+    <path d="M 67.378281 291.024  L 568.498281 291.024  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   </g>
+ </g>
+ <defs>
+  <clipPath id="normal_cdf_plot__p8d622b9065">
+   <rect data-qc-allow-overlap="true" x="67.378281" y="7.2" width="501.12" height="283.824" />
+  </clipPath>
+ </defs>
+</svg><g id="normal_wearout_mapping" data-anim-target="true" data-anim-label="Zuordnung zum Verschleißbereich"><title>Zuordnung zum Verschleißbereich</title><rect data-qc-allow-overlap="true" x="90" y="770" width="264.6666666666667" height="54" rx="6" fill="#F7FAFC" stroke="#C8D5DF" stroke-width="1.2"/><text x="222.33333333333334" y="804" class="" font-size="17" font-weight="700" fill="#52606D" text-anchor="middle" data-qc-role="text"><tspan x="222.33333333333334" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Frühausfälle</tspan></text><rect data-qc-allow-overlap="true" x="362.6666666666667" y="770" width="264.6666666666667" height="54" rx="6" fill="#F7FAFC" stroke="#C8D5DF" stroke-width="1.2"/><text x="495" y="804" class="" font-size="17" font-weight="700" fill="#52606D" text-anchor="middle" data-qc-role="text"><tspan x="495" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Zufallsausfälle</tspan></text><rect data-qc-allow-overlap="true" x="635.3333333333334" y="770" width="264.6666666666667" height="54" rx="6" fill="#F9E4E7" stroke="#D1495B" stroke-width="2.2"/><text x="767.6666666666667" y="804" class="" font-size="17" font-weight="840" fill="#D1495B" text-anchor="middle" data-qc-role="text"><tspan x="767.6666666666667" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Verschleiß / Ermüdung</tspan></text><text x="495" y="858" class="" font-size="23" font-weight="800" fill="#D1495B" text-anchor="middle" data-qc-role="text"><tspan x="495" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Steigende Ausfallrate beschreibt nur Bereich 3</tspan></text><text x="495" y="894" class="" font-size="20" font-weight="720" fill="#243B53" text-anchor="middle" data-qc-role="text"><tspan x="495" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Verschleiß- und Ermüdungsausfälle</tspan></text></g><g id="normal_lifetime_limitation" data-anim-target="true" data-anim-label="Einschränkung für Lebensdauerdaten"><title>Einschränkung für Lebensdauerdaten</title><rect data-qc-allow-overlap="true" x="1016" y="770" width="810" height="132" rx="8" fill="#F9E4E7" stroke="#D1495B" stroke-width="1.5"/><circle cx="1082" cy="836" r="38" fill="#FFFFFF"/><g transform="translate(1059 813) scale(1.9166666666666667)" fill="none" stroke="#D1495B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a4.5 4.5 0 0 1-5.8 5.8L4 17l3 3 4.7-4.7a4.5 4.5 0 0 1 5.8-5.8l-3 3-3-3z"/><path d="M20 3v4M20 10h.01"/></g><text x="1140" y="818" class="" font-size="18" font-weight="850" fill="#D1495B" text-anchor="start" data-qc-role="text"><tspan x="1140" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">F(0) &gt; 0 IST MÖGLICH</tspan></text><text x="1140" y="860" class="" font-size="22" font-weight="730" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1140" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Negative Ausfallzeiten sind für reale</tspan><tspan x="1140" dy="28" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Lebensdauern nicht plausibel.</tspan></text></g></g>
+  <line x1="78" y1="982" x2="1842" y2="982" stroke="#102A43" stroke-opacity="0.12" stroke-width="1.5"/>
+  <text x="78" y="1026" font-size="20" font-weight="700" fill="#627D98">Professional Reliability Training | Reliability Engineer</text>
+  <text x="1580" y="1026" font-size="20" font-weight="700" fill="#627D98" text-anchor="end">RE1 · Szene 51</text>
+  <g id="official_logo_reserved" data-logo-status="pending-original-asset" aria-label="Reservierter Bereich für das offizielle RelTest-Academy-Logo"/>
+</svg>

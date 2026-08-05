@@ -14,6 +14,13 @@ Diese Regeln gelten fuer alle echten Plots und technischen Diagramme: Achsendiag
 - Generische Timelines, Ausfall-Zeitstrahlen, einfache Objekt-Zeitachsen und Prozessachsen sind keine Python-Plots, solange sie nur Ereignisse, Ausfaelle mit `X`/Kreuzen oder Zensierungen didaktisch markieren.
 - Sobald eine Darstellung Achsenskalierung, Datenpunkte, Fit-Linien, Kurven, Verteilungen, Wahrscheinlichkeitsnetze oder Vertrauensgrenzen fachlich abbildet, ist sie ein Python-Plot.
 - Alle Plotgeneratoren verwenden `reltest_plot_style.py`.
+- `reltest_plot_style.py` laedt die verbindlichen Farbwerte aus
+  `brand/reltest-education-slide-design-tokens.json` und registriert Archivo als
+  Plot- und Achsenschrift.
+  Signalgruen ist der primaere Education-Datenakzent; Goldgelb, Koralle,
+  Stahlcyan und Graphitblau werden nur in ihren Diagrammrollen eingesetzt.
+- Oxanium bleibt Headlines vorbehalten und wird nicht fuer Achsen, Ticks,
+  Legenden oder Plotannotation verwendet.
 - Achsenlabels, Ticklabels und Legenden bleiben bewusst gross, weil Plots in Seminar-Szenen oft klein skaliert werden.
 - Wiederkehrende Plot-Aufbauten ueber mehrere Folien verwenden einen gemeinsamen Daten- und Achsenvertrag: gleiche Ausfallzeiten, gleiche daraus berechnete Wahrscheinlichkeiten, gleiche x-Achsenlimits, gleiche Marker- und Linienlogik. Aenderungen zwischen den Stufen muessen im Szenenplan ausdruecklich begruendet sein.
 - Erzeugte Plot-SVGs, Plot-Konfigurationen und folienspezifische Daten werden im Ordner der jeweiligen Folie gespeichert, nicht lose in einem globalen Asset-Ordner.
@@ -43,14 +50,14 @@ Wenn ein Diagramm in mehreren Szenen schrittweise aufgebaut wird, wird vor dem e
 
 ## Animation-Ready SVG
 
-Animierbare Plot-SVGs folgen bis zur finalen Gesamtstruktur `components/python-plot-library/svg-animation-structure.provisional.md`.
+Animierbare Plot-SVGs folgen `components/python-plot-library/svg-animation-structure.md` und dem Zielstrukturvertrag `external-svg-asset-package-handoff/v1`.
 
-- Animierbare Elemente bekommen stabile IDs oder stabile Gruppen.
-- Didaktische Plotinhalte bekommen standardmaessig stabile Einzel- oder Gruppenziele: `plot-data-points`, `plot-failure-marker-t1`, `plot-helper-horizontal-t1`, `plot-helper-vertical-t1`, `plot-fit-line`, `plot-parameter-t`, `plot-confidence-limits`, `plot-confidence-5`, `plot-confidence-95`.
-- Gewuenschte Elemente koennen per Zeittrigger sichtbar werden, z.B. nach 3 Sekunden.
+- Animierbare Elemente bekommen stabile semantische ASCII-`snake_case`-IDs, `data-anim-target="true"` und nach Moeglichkeit `data-anim-label`.
+- Didaktische Plotinhalte bekommen standardmaessig stabile Einzel- oder Gruppenziele: `plot_data_points`, `plot_failure_marker_t1`, `plot_helper_horizontal_t1`, `plot_helper_vertical_t1`, `plot_fit_line`, `plot_parameter_t`, `plot_confidence_limits`, `plot_confidence_5`, `plot_confidence_95`.
+- Gewuenschte Elemente werden ueber eindeutige `sourceText`-Phrasen aus dem Szenensprechertext ausgeloest; keine Sekunden- oder Wortindextrigger erzeugen.
 - Bei schrittweisen Erklaerplots ist die bevorzugte Reihenfolge: Basisplot mit Achsen/Grid, dann Datenpunkte oder Ausfallmarker, dann Hilfslinien/Ableselinien, dann Fit/Kurve, dann Parameter/Labels, dann Vertrauensgrenzen oder weitere Unsicherheitsinformationen.
 - Ob ein Plot-Element animiert wird, wird beim Erstellen oder spaeter in Verbesserungsnotizen festgelegt.
-- Szenen-SVGs sollen die groben Layer im Manifest behalten; plotinterne Animation darf im Plot-Asset liegen, wenn das fuer den Prototyp noetig ist. Fuer den Viewer und den Praesentationsmodus muessen plotinterne Targets aber im DOM erreichbar oder im Manifest eindeutig dokumentiert sein.
+- Szenen-SVGs behalten die Plotziele im Manifest. Plotinterne Targets muessen im DOM erreichbar und im Manifest eindeutig dokumentiert sein.
 
 ## Vertrauensgrenzen
 

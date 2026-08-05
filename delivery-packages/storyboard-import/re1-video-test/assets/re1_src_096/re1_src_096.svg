@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_096" data-brand-profile="reltest-academy">
+  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"coupled-bathtub-weibull-network-summary","contentTitle":"Badewannenkurve im Weibullnetz","layoutIntent":"aligned-bathtub-curve-and-segmented-weibull-paper-with-source-warning-and-separation-rule","takeaway":"Die drei Formparameterklassen ordnen sich den Bereichen der Badewannenkurve zu; ein geknickter Verlauf steht schematisch für getrennt auszuwertende Mechanismen.","density":"balanced","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-academy","brandVariant":"academy-production","sourceSlides":[96],"officialLogoStatus":"pending-original-asset"}]]></metadata>
+  <title id="accessible_title">Badewannenkurve im Weibullnetz</title>
+  <desc id="accessible_description">Die drei Formparameterklassen ordnen sich den Bereichen der Badewannenkurve zu; ein geknickter Verlauf steht schematisch für getrennt auszuwertende Mechanismen.</desc>
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F9FBFC"/>
+      <stop offset="56%" stop-color="#F1F5F8"/>
+      <stop offset="100%" stop-color="#E9F0F4"/>
+    </linearGradient>
+    <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#102A43" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="shadowSoft" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#102A43" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow_007EA7" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#007EA7"/></marker>
+    <marker id="arrow_102A43" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#102A43"/></marker>
+    <marker id="arrow_D1495B" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#D1495B"/></marker>
+    <marker id="arrow_2F6F55" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#2F6F55"/></marker>
+    <marker id="arrow_B7791F" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#B7791F"/></marker>
+  </defs>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+    .slide-title { fill: #102A43; }
+  </style>
+  <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
+  <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
+  <rect x="74" y="36" width="118" height="5" rx="3" fill="#007EA7"/>
+  <text x="78" y="116" class="slide-title" font-size="56" font-weight="800">Badewannenkurve im Weibullnetz</text>
+  <line x1="78" y1="148" x2="1842" y2="148" stroke="#102A43" stroke-opacity="0.12" stroke-width="1.5"/>
+  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><svg id="weibull_bathtub_network_plot" x="62" y="196" width="1280" height="736" viewBox="0 0 878.235201 492.607266" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="weibull_bathtub_network_plot__figure_1">
+  <g id="weibull_bathtub_network_plot__patch_1">
+   <path d="M 0 492.607266  L 878.235201 492.607266  L 878.235201 0  L 0 0  L 0 492.607266  z " style="fill: none; opacity: 0" />
+  </g>
+  <g id="weibull_bathtub_network_plot__axes_1">
+   <g id="weibull_bathtub_network_plot__patch_2">
+    <path d="M 75.649531 134.208  L 785.065531 134.208  L 785.065531 7.2  L 75.649531 7.2  L 75.649531 134.208  z " style="fill: none" />
+   </g>
+   <g id="weibull_bathtub_network_plot__patch_3">
+    <path d="M 75.649531 134.208  L 312.121531 134.208  L 312.121531 7.2  L 75.649531 7.2  z " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: #2f6f55; opacity: 0.075; stroke: #2f6f55; stroke-linejoin: miter" />
+   </g>
+   <g id="weibull_bathtub_network_plot__patch_4">
+    <path d="M 312.121531 134.208  L 548.593531 134.208  L 548.593531 7.2  L 312.121531 7.2  z " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: #007ea7; opacity: 0.075; stroke: #007ea7; stroke-linejoin: miter" />
+   </g>
+   <g id="weibull_bathtub_network_plot__patch_5">
+    <path d="M 548.593531 134.208  L 785.065531 134.208  L 785.065531 7.2  L 548.593531 7.2  z " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: #d1495b; opacity: 0.075; stroke: #d1495b; stroke-linejoin: miter" />
+   </g>
+   <g id="weibull_bathtub_network_plot__line2d_1">
+    <path d="M 312.121531 134.208  L 312.121531 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke-dasharray: 4.81,2.08; stroke-dashoffset: 0; stroke: #6a7a86; stroke-width: 1.3" />
+   </g>
+   <g id="weibull_bathtub_network_plot__line2d_2">
+    <path d="M 548.593531 134.208  L 548.593531 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke-dasharray: 4.81,2.08; stroke-dashoffset: 0; stroke: #6a7a86; stroke-width: 1.3" />
+   </g>
+   <g id="weibull_bathtub_network_plot__matplotlib.axis_1">
+    <g id="weibull_bathtub_network_plot__xtick_1">
+     <g id="weibull_bathtub_network_plot__line2d_3">
+      <path d="M 146.834696 134.208  L 146.834696 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_2">
+     <g id="weibull_bathtub_network_plot__line2d_4">
+      <path d="M 188.475349 134.208  L 188.475349 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_3">
+     <g id="weibull_bathtub_network_plot__line2d_5">
+      <path d="M 218.019862 134.208  L 218.019862 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_4">
+     <g id="weibull_bathtub_network_plot__line2d_6">
+      <path d="M 240.936366 134.208  L 240.936366 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_5">
+     <g id="weibull_bathtub_network_plot__line2d_7">
+      <path d="M 259.660514 134.208  L 259.660514 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_6">
+     <g id="weibull_bathtub_network_plot__line2d_8">
+      <path d="M 275.491555 134.208  L 275.491555 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_7">
+     <g id="weibull_bathtub_network_plot__line2d_9">
+      <path d="M 289.205027 134.208  L 289.205027 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_8">
+     <g id="weibull_bathtub_network_plot__line2d_10">
+      <path d="M 301.301166 134.208  L 301.301166 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_9">
+     <g id="weibull_bathtub_network_plot__line2d_11">
+      <path d="M 383.306696 134.208  L 383.306696 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_10">
+     <g id="weibull_bathtub_network_plot__line2d_12">
+      <path d="M 424.947349 134.208  L 424.947349 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_11">
+     <g id="weibull_bathtub_network_plot__line2d_13">
+      <path d="M 454.491862 134.208  L 454.491862 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_12">
+     <g id="weibull_bathtub_network_plot__line2d_14">
+      <path d="M 477.408366 134.208  L 477.408366 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_13">
+     <g id="weibull_bathtub_network_plot__line2d_15">
+      <path d="M 496.132514 134.208  L 496.132514 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_14">
+     <g id="weibull_bathtub_network_plot__line2d_16">
+      <path d="M 511.963555 134.208  L 511.963555 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_15">
+     <g id="weibull_bathtub_network_plot__line2d_17">
+      <path d="M 525.677027 134.208  L 525.677027 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_16">
+     <g id="weibull_bathtub_network_plot__line2d_18">
+      <path d="M 537.773166 134.208  L 537.773166 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_17">
+     <g id="weibull_bathtub_network_plot__line2d_19">
+      <path d="M 619.778696 134.208  L 619.778696 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_18">
+     <g id="weibull_bathtub_network_plot__line2d_20">
+      <path d="M 661.419349 134.208  L 661.419349 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_19">
+     <g id="weibull_bathtub_network_plot__line2d_21">
+      <path d="M 690.963862 134.208  L 690.963862 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_20">
+     <g id="weibull_bathtub_network_plot__line2d_22">
+      <path d="M 713.880366 134.208  L 713.880366 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_21">
+     <g id="weibull_bathtub_network_plot__line2d_23">
+      <path d="M 732.604514 134.208  L 732.604514 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_22">
+     <g id="weibull_bathtub_network_plot__line2d_24">
+      <path d="M 748.435555 134.208  L 748.435555 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_23">
+     <g id="weibull_bathtub_network_plot__line2d_25">
+      <path d="M 762.149027 134.208  L 762.149027 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_24">
+     <g id="weibull_bathtub_network_plot__line2d_26">
+      <path d="M 774.245166 134.208  L 774.245166 7.2  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+    </g>
+   </g>
+   <g id="weibull_bathtub_network_plot__matplotlib.axis_2">
+    <g id="weibull_bathtub_network_plot__text_1">
+     
+     <g style="fill: #062d46" transform="translate(59.325313 145.584) rotate(-90)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">A</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="13.930664" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="26.745117" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.458984" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">f</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.290039" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="57.436523" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="63.606445" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="69.776367" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="78.65332" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="90.799805" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="99.404297" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="111.612305" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="117.878906" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">λ</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="135.553711" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="128.53125" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">(</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="142.611328" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">)</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="weibull_bathtub_network_plot__patch_6">
+    <path d="M 75.649531 134.208  L 75.649531 7.2  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="weibull_bathtub_network_plot__patch_7">
+    <path d="M 75.649531 134.208  L 785.065531 134.208  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="weibull_bathtub_curve" data-anim-target="true" data-anim-label="Badewannenkurve und Lebenszyklusbereiche"><g id="weibull_bathtub_network_plot__weibull_bathtub_phase_1_label">
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2f6f55" x="193.885531" y="28.180105" transform="rotate(-0 193.885531 28.180105)">Bereich 1 · Frühausfälle</text>
+   </g>
+   <g id="weibull_bathtub_network_plot__weibull_bathtub_phase_2_label">
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #007ea7" x="430.357531" y="28.180105" transform="rotate(-0 430.357531 28.180105)">Bereich 2 · Zufallsausfälle</text>
+   </g>
+   <g id="weibull_bathtub_network_plot__weibull_bathtub_phase_3_label">
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d1495b" x="666.829531" y="28.180105" transform="rotate(-0 666.829531 28.180105)">Bereich 3 · Ermüdung / Verschleiß</text>
+   </g>
+   <g id="weibull_bathtub_network_plot__weibull_bathtub_curve_line">
+    <path d="M 75.649531 24.540184  L 79.709136 29.984549  L 83.768742 35.120184  L 87.828347 39.964591  L 92.902853 45.635621  L 97.97736 50.907537  L 103.051866 55.808417  L 108.126372 60.364363  L 113.200879 64.599637  L 118.275385 68.536798  L 123.349892 72.196814  L 128.424398 75.599178  L 133.498905 78.76201  L 139.588312 82.264862  L 145.67772 85.473854  L 151.767128 88.413603  L 157.856536 91.10666  L 163.945943 93.573684  L 171.050252 96.191359  L 178.154561 98.554413  L 185.25887 100.687528  L 193.378081 102.872296  L 201.497291 104.81558  L 209.616501 106.543902  L 218.750613 108.260584  L 228.899626 109.919811  L 239.048639 111.351883  L 250.212553 112.701162  L 262.391368 113.942566  L 275.585085 115.058773  L 289.793703 116.039738  L 306.032124 116.931186  L 324.300347 117.699029  L 344.598372 118.322366  L 367.941102 118.806995  L 394.328536 119.122216  L 422.745772 119.238438  L 452.177909 119.140695  L 480.595145 118.828554  L 505.967677 118.337353  L 528.295505 117.696812  L 548.593531 116.8984  L 566.861754 115.956403  L 583.100175 114.896687  L 597.308793 113.758872  L 610.50251 112.490505  L 622.681325 111.105173  L 633.845239 109.623518  L 643.994252 108.073401  L 654.143265 106.301511  L 663.277377 104.491333  L 672.411488 102.450166  L 680.530699 100.418279  L 688.649909 98.157751  L 696.769119 95.642952  L 703.873428 93.211584  L 710.977737 90.542656  L 718.082046 87.613002  L 724.171454 84.875145  L 730.260862 81.909639  L 736.350269 78.697576  L 742.439677 75.218478  L 748.529085 71.450161  L 753.603591 68.071693  L 758.678098 64.460773  L 763.752604 60.601418  L 768.827111 56.47654  L 773.901617 52.067881  L 778.976124 47.355923  L 784.05063 42.319806  L 785.065531 41.271748  L 785.065531 41.271748  " clip-path="url(#weibull_bathtub_network_plot__p78f3f3c135)" style="fill: none; stroke: #062d46; stroke-width: 3.7; stroke-linecap: square" />
+   </g>
+  </g></g>
+  <g id="weibull_bathtub_network_plot__axes_2">
+   <g id="weibull_bathtub_network_plot__patch_8">
+    <path d="M 75.649531 430.56  L 785.065531 430.56  L 785.065531 150.491077  L 75.649531 150.491077  L 75.649531 430.56  z " style="fill: none" />
+   </g>
+   <g id="weibull_bathtub_network_plot__patch_9">
+    <path d="M 75.649531 430.56  L 312.121531 430.56  L 312.121531 150.491077  L 75.649531 150.491077  z " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: #2f6f55; opacity: 0.075; stroke: #2f6f55; stroke-linejoin: miter" />
+   </g>
+   <g id="weibull_bathtub_network_plot__patch_10">
+    <path d="M 312.121531 430.56  L 548.593531 430.56  L 548.593531 150.491077  L 312.121531 150.491077  z " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: #007ea7; opacity: 0.075; stroke: #007ea7; stroke-linejoin: miter" />
+   </g>
+   <g id="weibull_bathtub_network_plot__patch_11">
+    <path d="M 548.593531 430.56  L 785.065531 430.56  L 785.065531 150.491077  L 548.593531 150.491077  z " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: #d1495b; opacity: 0.075; stroke: #d1495b; stroke-linejoin: miter" />
+   </g>
+   <g id="weibull_bathtub_network_plot__line2d_27">
+    <path d="M 312.121531 430.56  L 312.121531 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke-dasharray: 4.81,2.08; stroke-dashoffset: 0; stroke: #6a7a86; stroke-width: 1.3" />
+   </g>
+   <g id="weibull_bathtub_network_plot__line2d_28">
+    <path d="M 548.593531 430.56  L 548.593531 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke-dasharray: 4.81,2.08; stroke-dashoffset: 0; stroke: #6a7a86; stroke-width: 1.3" />
+   </g>
+   <g id="weibull_bathtub_network_plot__matplotlib.axis_3">
+    <g id="weibull_bathtub_network_plot__xtick_25">
+     <g id="weibull_bathtub_network_plot__line2d_29">
+      <path d="M 75.649531 430.56  L 75.649531 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_30">
+      <defs>
+       <path id="weibull_bathtub_network_plot__mb5949bd18d" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mb5949bd18d" x="75.649531" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_bathtub_network_plot__text_2">
+      
+      <g style="fill: #6a7a86" transform="translate(60.374531 452.15)">
+       <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.991938" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">1</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="8.270996" y="-0.991938" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">0</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="16.666406" y="-6.360938" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #6a7a86">−</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="24.291211" y="-6.360938" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #6a7a86">1</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_26">
+     <g id="weibull_bathtub_network_plot__line2d_31">
+      <path d="M 312.121531 430.56  L 312.121531 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_32">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mb5949bd18d" x="312.121531" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_bathtub_network_plot__text_3">
+      
+      <g style="fill: #6a7a86" transform="translate(300.681531 452.28)">
+       <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.871625" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">1</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="8.270996" y="-0.871625" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">0</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="16.666406" y="-6.240625" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #6a7a86">0</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_27">
+     <g id="weibull_bathtub_network_plot__line2d_33">
+      <path d="M 548.593531 430.56  L 548.593531 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_34">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mb5949bd18d" x="548.593531" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_bathtub_network_plot__text_4">
+      
+      <g style="fill: #6a7a86" transform="translate(537.153531 452.15)">
+       <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.991938" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">1</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="8.270996" y="-0.991938" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">0</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="16.666406" y="-6.360938" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #6a7a86">1</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_28">
+     <g id="weibull_bathtub_network_plot__line2d_35">
+      <path d="M 785.065531 430.56  L 785.065531 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_36">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mb5949bd18d" x="785.065531" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_bathtub_network_plot__text_5">
+      
+      <g style="fill: #6a7a86" transform="translate(773.625531 452.28)">
+       <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.871625" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">1</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="8.270996" y="-0.871625" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">0</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="16.666406" y="-6.240625" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #6a7a86">2</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_29">
+     <g id="weibull_bathtub_network_plot__line2d_37">
+      <path d="M 146.834696 430.56  L 146.834696 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_38">
+      <defs>
+       <path id="weibull_bathtub_network_plot__mbc3f0d4414" d="M 0 0  L 0 3.5  " style="stroke: #6a7a86; stroke-width: 0.9" />
+      </defs>
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="146.834696" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_30">
+     <g id="weibull_bathtub_network_plot__line2d_39">
+      <path d="M 188.475349 430.56  L 188.475349 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_40">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="188.475349" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_31">
+     <g id="weibull_bathtub_network_plot__line2d_41">
+      <path d="M 218.019862 430.56  L 218.019862 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_42">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="218.019862" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_32">
+     <g id="weibull_bathtub_network_plot__line2d_43">
+      <path d="M 240.936366 430.56  L 240.936366 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_44">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="240.936366" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_33">
+     <g id="weibull_bathtub_network_plot__line2d_45">
+      <path d="M 259.660514 430.56  L 259.660514 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_46">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="259.660514" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_34">
+     <g id="weibull_bathtub_network_plot__line2d_47">
+      <path d="M 275.491555 430.56  L 275.491555 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_48">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="275.491555" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_35">
+     <g id="weibull_bathtub_network_plot__line2d_49">
+      <path d="M 289.205027 430.56  L 289.205027 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_50">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="289.205027" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_36">
+     <g id="weibull_bathtub_network_plot__line2d_51">
+      <path d="M 301.301166 430.56  L 301.301166 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_52">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="301.301166" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_37">
+     <g id="weibull_bathtub_network_plot__line2d_53">
+      <path d="M 383.306696 430.56  L 383.306696 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_54">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="383.306696" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_38">
+     <g id="weibull_bathtub_network_plot__line2d_55">
+      <path d="M 424.947349 430.56  L 424.947349 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_56">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="424.947349" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_39">
+     <g id="weibull_bathtub_network_plot__line2d_57">
+      <path d="M 454.491862 430.56  L 454.491862 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_58">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="454.491862" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_40">
+     <g id="weibull_bathtub_network_plot__line2d_59">
+      <path d="M 477.408366 430.56  L 477.408366 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_60">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="477.408366" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_41">
+     <g id="weibull_bathtub_network_plot__line2d_61">
+      <path d="M 496.132514 430.56  L 496.132514 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_62">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="496.132514" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_42">
+     <g id="weibull_bathtub_network_plot__line2d_63">
+      <path d="M 511.963555 430.56  L 511.963555 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_64">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="511.963555" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_43">
+     <g id="weibull_bathtub_network_plot__line2d_65">
+      <path d="M 525.677027 430.56  L 525.677027 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_66">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="525.677027" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_44">
+     <g id="weibull_bathtub_network_plot__line2d_67">
+      <path d="M 537.773166 430.56  L 537.773166 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_68">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="537.773166" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_45">
+     <g id="weibull_bathtub_network_plot__line2d_69">
+      <path d="M 619.778696 430.56  L 619.778696 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_70">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="619.778696" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_46">
+     <g id="weibull_bathtub_network_plot__line2d_71">
+      <path d="M 661.419349 430.56  L 661.419349 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_72">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="661.419349" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_47">
+     <g id="weibull_bathtub_network_plot__line2d_73">
+      <path d="M 690.963862 430.56  L 690.963862 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_74">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="690.963862" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_48">
+     <g id="weibull_bathtub_network_plot__line2d_75">
+      <path d="M 713.880366 430.56  L 713.880366 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_76">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="713.880366" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_49">
+     <g id="weibull_bathtub_network_plot__line2d_77">
+      <path d="M 732.604514 430.56  L 732.604514 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_78">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="732.604514" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_50">
+     <g id="weibull_bathtub_network_plot__line2d_79">
+      <path d="M 748.435555 430.56  L 748.435555 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_80">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="748.435555" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_51">
+     <g id="weibull_bathtub_network_plot__line2d_81">
+      <path d="M 762.149027 430.56  L 762.149027 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_82">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="762.149027" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__xtick_52">
+     <g id="weibull_bathtub_network_plot__line2d_83">
+      <path d="M 774.245166 430.56  L 774.245166 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_84">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__mbc3f0d4414" x="774.245166" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+      </g>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__text_6">
+     
+     <g style="fill: #062d46" transform="translate(357.997531 481.083047)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.677734" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">b</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="36.5625" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="48.770508" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="61.584961" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="72.298828" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">d</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="85.183594" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="97.330078" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="110.144531" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="122.352539" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="131.229492" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="137.496094" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="weibull_bathtub_network_plot__matplotlib.axis_4">
+    <g id="weibull_bathtub_network_plot__ytick_1">
+     <g id="weibull_bathtub_network_plot__line2d_85">
+      <path d="M 75.649531 430.56  L 785.065531 430.56  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_86">
+      <defs>
+       <path id="weibull_bathtub_network_plot__m7939edb507" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__m7939edb507" x="75.649531" y="430.56" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_bathtub_network_plot__text_7">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="435.498477" transform="rotate(-0 66.149531 435.498477)">0,1</text>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__ytick_2">
+     <g id="weibull_bathtub_network_plot__line2d_87">
+      <path d="M 75.649531 407.527135  L 785.065531 407.527135  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_88">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__m7939edb507" x="75.649531" y="407.527135" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_bathtub_network_plot__text_8">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="412.465612" transform="rotate(-0 66.149531 412.465612)">0,2</text>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__ytick_3">
+     <g id="weibull_bathtub_network_plot__line2d_89">
+      <path d="M 75.649531 377.051365  L 785.065531 377.051365  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_90">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__m7939edb507" x="75.649531" y="377.051365" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_bathtub_network_plot__text_9">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="381.989842" transform="rotate(-0 66.149531 381.989842)">0,5</text>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__ytick_4">
+     <g id="weibull_bathtub_network_plot__line2d_91">
+      <path d="M 75.649531 353.951588  L 785.065531 353.951588  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_92">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__m7939edb507" x="75.649531" y="353.951588" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_bathtub_network_plot__text_10">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="358.890064" transform="rotate(-0 66.149531 358.890064)">1</text>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__ytick_5">
+     <g id="weibull_bathtub_network_plot__line2d_93">
+      <path d="M 75.649531 330.767215  L 785.065531 330.767215  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_94">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__m7939edb507" x="75.649531" y="330.767215" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_bathtub_network_plot__text_11">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="335.705691" transform="rotate(-0 66.149531 335.705691)">2</text>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__ytick_6">
+     <g id="weibull_bathtub_network_plot__line2d_95">
+      <path d="M 75.649531 299.828286  L 785.065531 299.828286  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_96">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__m7939edb507" x="75.649531" y="299.828286" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_bathtub_network_plot__text_12">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="304.766763" transform="rotate(-0 66.149531 304.766763)">5</text>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__ytick_7">
+     <g id="weibull_bathtub_network_plot__line2d_97">
+      <path d="M 75.649531 275.9261  L 785.065531 275.9261  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_98">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__m7939edb507" x="75.649531" y="275.9261" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_bathtub_network_plot__text_13">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="280.864576" transform="rotate(-0 66.149531 280.864576)">10</text>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__ytick_8">
+     <g id="weibull_bathtub_network_plot__line2d_99">
+      <path d="M 75.649531 251.007847  L 785.065531 251.007847  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_100">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__m7939edb507" x="75.649531" y="251.007847" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_bathtub_network_plot__text_14">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="255.946323" transform="rotate(-0 66.149531 255.946323)">20</text>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__ytick_9">
+     <g id="weibull_bathtub_network_plot__line2d_101">
+      <path d="M 75.649531 235.434189  L 785.065531 235.434189  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_102">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__m7939edb507" x="75.649531" y="235.434189" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_bathtub_network_plot__text_15">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="240.372665" transform="rotate(-0 66.149531 240.372665)">30</text>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__ytick_10">
+     <g id="weibull_bathtub_network_plot__line2d_103">
+      <path d="M 75.649531 213.371928  L 785.065531 213.371928  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_104">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__m7939edb507" x="75.649531" y="213.371928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_bathtub_network_plot__text_16">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="218.310405" transform="rotate(-0 66.149531 218.310405)">50</text>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__ytick_11">
+     <g id="weibull_bathtub_network_plot__line2d_105">
+      <path d="M 75.649531 201.212595  L 785.065531 201.212595  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_106">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__m7939edb507" x="75.649531" y="201.212595" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_bathtub_network_plot__text_17">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="206.151072" transform="rotate(-0 66.149531 206.151072)">63,2</text>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__ytick_12">
+     <g id="weibull_bathtub_network_plot__line2d_107">
+      <path d="M 75.649531 185.399754  L 785.065531 185.399754  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_108">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__m7939edb507" x="75.649531" y="185.399754" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_bathtub_network_plot__text_18">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="190.33823" transform="rotate(-0 66.149531 190.33823)">80</text>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__ytick_13">
+     <g id="weibull_bathtub_network_plot__line2d_109">
+      <path d="M 75.649531 173.507318  L 785.065531 173.507318  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_110">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__m7939edb507" x="75.649531" y="173.507318" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_bathtub_network_plot__text_19">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="178.445795" transform="rotate(-0 66.149531 178.445795)">90</text>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__ytick_14">
+     <g id="weibull_bathtub_network_plot__line2d_111">
+      <path d="M 75.649531 164.769105  L 785.065531 164.769105  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_112">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__m7939edb507" x="75.649531" y="164.769105" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_bathtub_network_plot__text_20">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="169.707582" transform="rotate(-0 66.149531 169.707582)">95</text>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__ytick_15">
+     <g id="weibull_bathtub_network_plot__line2d_113">
+      <path d="M 75.649531 150.491077  L 785.065531 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_bathtub_network_plot__line2d_114">
+      <g>
+       <use ns4:href="#weibull_bathtub_network_plot__m7939edb507" x="75.649531" y="150.491077" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_bathtub_network_plot__text_21">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="155.429553" transform="rotate(-0 66.149531 155.429553)">99</text>
+     </g>
+    </g>
+    <g id="weibull_bathtub_network_plot__text_22">
+     
+     <g style="fill: #062d46" transform="translate(20.88 439.385538) rotate(-90)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">A</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="13.930664" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="26.745117" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.458984" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">f</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.290039" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="57.436523" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="63.606445" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="69.776367" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">w</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="86.405273" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="98.551758" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="111.366211" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="120.243164" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="130.957031" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="141.626953" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="154.441406" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="166.649414" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="172.819336" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="185.633789" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="191.803711" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="197.973633" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="208.643555" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="221.458008" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">k</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="233.428711" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="245.636719" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="251.806641" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="260.411133" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="266.677734" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">F</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="284.053711" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="277.03125" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">(</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="291.111328" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">)</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="weibull_bathtub_network_plot__patch_12">
+    <path d="M 75.649531 430.56  L 75.649531 150.491077  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="weibull_bathtub_network_plot__patch_13">
+    <path d="M 75.649531 430.56  L 785.065531 430.56  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="weibull_bathtub_early" data-anim-target="true" data-anim-label="b &lt; 1 · Frühausfälle"><g id="weibull_bathtub_network_plot__weibull_bathtub_early_label">
+    <g id="weibull_bathtub_network_plot__patch_14">
+     <path d="M 154.802907 398.747989  L 306.562907 398.747989  L 306.562907 380.824708  L 154.802907 380.824708  z " style="fill: #ffffff; opacity: 0.9" />
+    </g>
+    
+    <g style="fill: #2f6f55" transform="translate(156.622907 393.564708)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.171875" style="font-style: oblique; font-size: 14px; font-family: 'DejaVu Sans'; fill: #2f6f55">b</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.614258" y="-0.171875" style="font-size: 14px; font-family: 'DejaVu Sans'; fill: #2f6f55">&lt;</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="26.072266" y="-0.171875" style="font-size: 14px; font-family: 'DejaVu Sans'; fill: #2f6f55">1</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="34.979492" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #2f6f55"> </tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="39.853516" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #2f6f55">·</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.171875" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #2f6f55"> </tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="50.045898" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #2f6f55">F</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="59.609375" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #2f6f55">r</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="66.513672" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #2f6f55">ü</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="76.480469" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #2f6f55">h</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="86.447266" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #2f6f55">a</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="95.894531" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #2f6f55">u</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="105.861328" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #2f6f55">s</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="114.194336" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #2f6f55">f</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="120.285156" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #2f6f55">ä</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="129.732422" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #2f6f55">l</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="134.53125" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #2f6f55">l</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="139.330078" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #2f6f55">e</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="weibull_bathtub_network_plot__weibull_bathtub_early_line">
+    <path d="M 75.649531 407.527135  L 78.038137 407.219299  L 80.426743 406.911463  L 82.815349 406.603627  L 85.203955 406.295791  L 87.592562 405.987955  L 89.981168 405.680119  L 92.369774 405.372283  L 94.75838 405.064447  L 97.146986 404.756611  L 99.535592 404.448775  L 101.924198 404.140939  L 104.312804 403.833102  L 106.70141 403.525266  L 109.090016 403.21743  L 111.478622 402.909594  L 113.867228 402.601758  L 116.255834 402.293922  L 118.64444 401.986086  L 121.033046 401.67825  L 123.421652 401.370414  L 125.810259 401.062578  L 128.198865 400.754742  L 130.587471 400.446906  L 132.976077 400.13907  L 135.364683 399.831234  L 137.753289 399.523398  L 140.141895 399.215562  L 142.530501 398.907726  L 144.919107 398.599889  L 147.307713 398.292053  L 149.696319 397.984217  L 152.084925 397.676381  L 154.473531 397.368545  L 156.862137 397.060709  L 159.250743 396.752873  L 161.639349 396.445037  L 164.027955 396.137201  L 166.416562 395.829365  L 168.805168 395.521529  L 171.193774 395.213693  L 173.58238 394.905857  L 175.970986 394.598021  L 178.359592 394.290185  L 180.748198 393.982349  L 183.136804 393.674512  L 185.52541 393.366676  L 187.914016 393.05884  L 190.302622 392.751004  L 192.691228 392.443168  L 195.079834 392.135332  L 197.46844 391.827496  L 199.857046 391.51966  L 202.245652 391.211824  L 204.634259 390.903988  L 207.022865 390.596152  L 209.411471 390.288316  L 211.800077 389.98048  L 214.188683 389.672644  L 216.577289 389.364808  L 218.965895 389.056972  L 221.354501 388.749136  L 223.743107 388.441299  L 226.131713 388.133463  L 228.520319 387.825627  L 230.908925 387.517791  L 233.297531 387.209955  L 235.686137 386.902119  L 238.074743 386.594283  L 240.463349 386.286447  L 242.851955 385.978611  L 245.240562 385.670775  L 247.629168 385.362939  L 250.017774 385.055103  L 252.40638 384.747267  L 254.794986 384.439431  L 257.183592 384.131595  L 259.572198 383.823759  L 261.960804 383.515923  L 264.34941 383.208086  L 266.738016 382.90025  L 269.126622 382.592414  L 271.515228 382.284578  L 273.903834 381.976742  L 276.29244 381.668906  L 278.681046 381.36107  L 281.069652 381.053234  L 283.458259 380.745398  L 285.846865 380.437562  L 288.235471 380.129726  L 290.624077 379.82189  L 293.012683 379.514054  L 295.401289 379.206218  L 297.789895 378.898382  L 300.178501 378.590546  L 302.567107 378.282709  L 304.955713 377.974873  L 307.344319 377.667037  L 309.732925 377.359201  L 312.121531 377.051365  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #2f6f55; stroke-width: 3.8; stroke-linecap: square" />
+   </g>
+   </g><g id="weibull_bathtub_random" data-anim-target="true" data-anim-label="b = 1 · Zufallsausfälle"><g id="weibull_bathtub_network_plot__weibull_bathtub_random_label">
+    <g id="weibull_bathtub_network_plot__patch_15">
+     <path d="M 398.048691 341.183478  L 567.728691 341.183478  L 567.728691 323.260197  L 398.048691 323.260197  z " style="fill: #ffffff; opacity: 0.9" />
+    </g>
+    
+    <g style="fill: #007ea7" transform="translate(399.868691 336.000197)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.171875" style="font-style: oblique; font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7">b</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.614258" y="-0.171875" style="font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="26.072266" y="-0.171875" style="font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7">1</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="34.979492" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7"> </tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="39.853516" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7">·</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.171875" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7"> </tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="50.045898" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7">Z</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="60.197266" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7">u</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="70.164062" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7">f</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="76.254883" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7">a</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="85.702148" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7">l</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="90.500977" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7">l</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="95.299805" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7">s</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="103.632812" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7">a</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="113.080078" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7">u</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="123.046875" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7">s</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="131.379883" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7">f</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="137.470703" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7">ä</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="146.917969" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7">l</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="151.716797" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7">l</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="156.515625" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #007ea7">e</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="weibull_bathtub_network_plot__weibull_bathtub_random_line">
+    <path d="M 312.121531 377.051365  L 314.510137 376.029898  L 316.898743 375.008431  L 319.287349 373.986963  L 321.675955 372.965496  L 324.064562 371.944029  L 326.453168 370.922561  L 328.841774 369.901094  L 331.23038 368.879627  L 333.618986 367.858159  L 336.007592 366.836692  L 338.396198 365.815225  L 340.784804 364.793757  L 343.17341 363.77229  L 345.562016 362.750823  L 347.950622 361.729355  L 350.339228 360.707888  L 352.727834 359.686421  L 355.11644 358.664953  L 357.505046 357.643486  L 359.893652 356.622019  L 362.282259 355.600551  L 364.670865 354.579084  L 367.059471 353.557617  L 369.448077 352.536149  L 371.836683 351.514682  L 374.225289 350.493215  L 376.613895 349.471747  L 379.002501 348.45028  L 381.391107 347.428813  L 383.779713 346.407345  L 386.168319 345.385878  L 388.556925 344.364411  L 390.945531 343.342943  L 393.334137 342.321476  L 395.722743 341.300009  L 398.111349 340.278541  L 400.499955 339.257074  L 402.888562 338.235607  L 405.277168 337.214139  L 407.665774 336.192672  L 410.05438 335.171205  L 412.442986 334.149737  L 414.831592 333.12827  L 417.220198 332.106803  L 419.608804 331.085335  L 421.99741 330.063868  L 424.386016 329.042401  L 426.774622 328.020933  L 429.163228 326.999466  L 431.551834 325.977999  L 433.94044 324.956531  L 436.329046 323.935064  L 438.717652 322.913597  L 441.106259 321.892129  L 443.494865 320.870662  L 445.883471 319.849195  L 448.272077 318.827727  L 450.660683 317.80626  L 453.049289 316.784793  L 455.437895 315.763325  L 457.826501 314.741858  L 460.215107 313.720391  L 462.603713 312.698923  L 464.992319 311.677456  L 467.380925 310.655989  L 469.769531 309.634521  L 472.158137 308.613054  L 474.546743 307.591587  L 476.935349 306.570119  L 479.323955 305.548652  L 481.712562 304.527185  L 484.101168 303.505717  L 486.489774 302.48425  L 488.87838 301.462783  L 491.266986 300.441315  L 493.655592 299.419848  L 496.044198 298.398381  L 498.432804 297.376913  L 500.82141 296.355446  L 503.210016 295.333979  L 505.598622 294.312512  L 507.987228 293.291044  L 510.375834 292.269577  L 512.76444 291.24811  L 515.153046 290.226642  L 517.541652 289.205175  L 519.930259 288.183708  L 522.318865 287.16224  L 524.707471 286.140773  L 527.096077 285.119306  L 529.484683 284.097838  L 531.873289 283.076371  L 534.261895 282.054904  L 536.650501 281.033436  L 539.039107 280.011969  L 541.427713 278.990502  L 543.816319 277.969034  L 546.204925 276.947567  L 548.593531 275.9261  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #007ea7; stroke-width: 3.8; stroke-linecap: square" />
+   </g>
+   </g><g id="weibull_bathtub_wear" data-anim-target="true" data-anim-label="b &gt; 1 · Ermüdung / Verschleiß"><g id="weibull_bathtub_network_plot__weibull_bathtub_wear_label">
+    <g id="weibull_bathtub_network_plot__patch_16">
+     <path d="M 640.875201 227.666934  L 872.855201 227.666934  L 872.855201 209.743653  L 640.875201 209.743653  z " style="fill: #ffffff; opacity: 0.9" />
+    </g>
+    
+    <g style="fill: #d1495b" transform="translate(642.695201 222.483653)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.171875" style="font-style: oblique; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">b</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.614258" y="-0.171875" style="font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">&gt;</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="26.072266" y="-0.171875" style="font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">1</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="34.979492" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b"> </tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="39.853516" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">·</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.171875" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b"> </tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="50.045898" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">E</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="59.609375" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">r</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="66.513672" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">m</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="81.101562" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">ü</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="91.068359" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">d</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="101.089844" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">u</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="111.056641" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">n</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="121.023438" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">g</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="131.044922" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b"> </tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="135.918945" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">/</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="141.032227" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b"> </tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="145.90625" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">V</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="156.741211" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">e</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="166.236328" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">r</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="173.140625" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">s</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="181.473633" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">c</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="189.772461" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">h</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="199.739258" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">l</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="204.538086" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">e</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="214.033203" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">i</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="218.832031" y="-0.171875" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #d1495b">ß</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="weibull_bathtub_network_plot__weibull_bathtub_wear_line">
+    <path d="M 548.593531 275.9261  L 550.982137 274.659079  L 553.370743 273.392059  L 555.759349 272.125038  L 558.147955 270.858018  L 560.536562 269.590997  L 562.925168 268.323977  L 565.313774 267.056957  L 567.70238 265.789936  L 570.090986 264.522916  L 572.479592 263.255895  L 574.868198 261.988875  L 577.256804 260.721854  L 579.64541 259.454834  L 582.034016 258.187814  L 584.422622 256.920793  L 586.811228 255.653773  L 589.199834 254.386752  L 591.58844 253.119732  L 593.977046 251.852711  L 596.365652 250.585691  L 598.754259 249.318671  L 601.142865 248.05165  L 603.531471 246.78463  L 605.920077 245.517609  L 608.308683 244.250589  L 610.697289 242.983568  L 613.085895 241.716548  L 615.474501 240.449527  L 617.863107 239.182507  L 620.251713 237.915487  L 622.640319 236.648466  L 625.028925 235.381446  L 627.417531 234.114425  L 629.806137 232.847405  L 632.194743 231.580384  L 634.583349 230.313364  L 636.971955 229.046344  L 639.360562 227.779323  L 641.749168 226.512303  L 644.137774 225.245282  L 646.52638 223.978262  L 648.914986 222.711241  L 651.303592 221.444221  L 653.692198 220.177201  L 656.080804 218.91018  L 658.46941 217.64316  L 660.858016 216.376139  L 663.246622 215.109119  L 665.635228 213.842098  L 668.023834 212.575078  L 670.41244 211.308058  L 672.801046 210.041037  L 675.189652 208.774017  L 677.578259 207.506996  L 679.966865 206.239976  L 682.355471 204.972955  L 684.744077 203.705935  L 687.132683 202.438915  L 689.521289 201.171894  L 691.909895 199.904874  L 694.298501 198.637853  L 696.687107 197.370833  L 699.075713 196.103812  L 701.464319 194.836792  L 703.852925 193.569772  L 706.241531 192.302751  L 708.630137 191.035731  L 711.018743 189.76871  L 713.407349 188.50169  L 715.795955 187.234669  L 718.184562 185.967649  L 720.573168 184.700629  L 722.961774 183.433608  L 725.35038 182.166588  L 727.738986 180.899567  L 730.127592 179.632547  L 732.516198 178.365526  L 734.904804 177.098506  L 737.29341 175.831486  L 739.682016 174.564465  L 742.070622 173.297445  L 744.459228 172.030424  L 746.847834 170.763404  L 749.23644 169.496383  L 751.625046 168.229363  L 754.013652 166.962343  L 756.402259 165.695322  L 758.790865 164.428302  L 761.179471 163.161281  L 763.568077 161.894261  L 765.956683 160.62724  L 768.345289 159.36022  L 770.733895 158.0932  L 773.122501 156.826179  L 775.511107 155.559159  L 777.899713 154.292138  L 780.288319 153.025118  L 782.676925 151.758097  L 785.065531 150.491077  " clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)" style="fill: none; stroke: #d1495b; stroke-width: 3.8; stroke-linecap: square" />
+   </g>
+   </g><g id="weibull_bathtub_network_plot__weibull_bathtub_kink_label">
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d1495b" x="431.575357" y="247.439193" transform="rotate(-0 431.575357 247.439193)">Knick = Wechsel des Ausfallmechanismus</text>
+   </g>
+   <g id="weibull_bathtub_network_plot__weibull_bathtub_kink_markers">
+    <defs>
+     <path id="weibull_bathtub_network_plot__me9642d23f7" d="M 0 4.527693  C 1.200758 4.527693 2.352498 4.050626 3.201562 3.201562  C 4.050626 2.352498 4.527693 1.200758 4.527693 0  C 4.527693 -1.200758 4.050626 -2.352498 3.201562 -3.201562  C 2.352498 -4.050626 1.200758 -4.527693 0 -4.527693  C -1.200758 -4.527693 -2.352498 -4.050626 -3.201562 -3.201562  C -4.050626 -2.352498 -4.527693 -1.200758 -4.527693 0  C -4.527693 1.200758 -4.050626 2.352498 -3.201562 3.201562  C -2.352498 4.050626 -1.200758 4.527693 0 4.527693  z " style="stroke: #d1495b; stroke-width: 2.2" />
+    </defs>
+    <g clip-path="url(#weibull_bathtub_network_plot__p2b033b6aed)">
+     <use ns4:href="#weibull_bathtub_network_plot__me9642d23f7" x="312.121531" y="377.051365" style="fill: #ffffff; stroke: #d1495b; stroke-width: 2.2" />
+     <use ns4:href="#weibull_bathtub_network_plot__me9642d23f7" x="548.593531" y="275.9261" style="fill: #ffffff; stroke: #d1495b; stroke-width: 2.2" />
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="weibull_bathtub_network_plot__p78f3f3c135">
+   <rect data-qc-allow-overlap="true" x="75.649531" y="7.2" width="709.416" height="127.008" />
+  </clipPath>
+  <clipPath id="weibull_bathtub_network_plot__p2b033b6aed">
+   <rect data-qc-allow-overlap="true" x="75.649531" y="150.491077" width="709.416" height="280.068923" />
+  </clipPath>
+ </defs>
+</svg><rect data-qc-allow-overlap="true" x="1380" y="226" width="442" height="624" rx="8" fill="#FFFFFF" stroke="#C8D5DF" stroke-width="1.5" filter="url(#shadowSoft)"/><text x="1420" y="278" class="" font-size="18" font-weight="850" fill="#D1495B" text-anchor="start" data-qc-role="text"><tspan x="1420" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">SCHEMATISCHE DARSTELLUNG</tspan></text><line x1="1420" y1="302" x2="1782" y2="302" stroke="#D1495B" stroke-width="3"/><text x="1420" y="364" class="" font-size="25" font-weight="790" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1420" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Die geknickte Linie verbindet</tspan><tspan x="1420" dy="33" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">drei getrennte</tspan><tspan x="1420" dy="33" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Ausfallmechanismen.</tspan></text><line x1="1420" y1="502" x2="1782" y2="502" stroke="#C8D5DF" stroke-width="2"/><text x="1420" y="556" class="" font-size="18" font-weight="850" fill="#2F6F55" text-anchor="start" data-qc-role="text"><tspan x="1420" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">AUSWERTUNGSREGEL</tspan></text><text x="1420" y="618" class="" font-size="25" font-weight="810" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1420" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Datenpunkte nach</tspan><tspan x="1420" dy="33" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Ausfallmechanismus trennen.</tspan></text><rect data-qc-allow-overlap="true" x="1420" y="720" width="362" height="82" rx="8" fill="#E3F0EA" stroke="#2F6F55" stroke-width="1.5"/><text x="1601" y="754" class="" font-size="17" font-weight="850" fill="#2F6F55" text-anchor="middle" data-qc-role="text"><tspan x="1601" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">EIN MECHANISMUS</tspan></text><text x="1601" y="785" class="" font-size="20" font-weight="790" fill="#102A43" text-anchor="middle" data-qc-role="text"><tspan x="1601" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">eine Weibullverteilung</tspan></text></g>
+  <line x1="78" y1="982" x2="1842" y2="982" stroke="#102A43" stroke-opacity="0.12" stroke-width="1.5"/>
+  <text x="78" y="1026" font-size="20" font-weight="700" fill="#627D98">Professional Reliability Training | Reliability Engineer</text>
+  <text x="1580" y="1026" font-size="20" font-weight="700" fill="#627D98" text-anchor="end">RE1 · Szene 77</text>
+  <g id="official_logo_reserved" data-logo-status="pending-original-asset" aria-label="Reservierter Bereich für das offizielle RelTest-Academy-Logo"/>
+</svg>

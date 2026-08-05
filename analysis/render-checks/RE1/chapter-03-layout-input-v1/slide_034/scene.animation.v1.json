@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_034.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "nkw_distribution",
+      "label": "Ausfallwahrscheinlichkeitskurve",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "ten_percent_readout",
+      "label": "Leseweg zehn Prozent",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "ten_percent_context",
+      "label": "Erklärung zehn Prozent",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "time_one_readout",
+      "label": "Leseweg t gleich eins",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "time_one_context",
+      "label": "Erklärung t gleich eins",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_nkw_distribution",
+      "targetId": "nkw_distribution",
+      "action": "draw",
+      "sourceText": "Betrachten wir nun am bekannten Beispiel des Sechsgang-Nutzfahrzeuggetriebes die Ausfallwahrscheinlichkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_ten_percent_readout",
+      "targetId": "ten_percent_readout",
+      "action": "show",
+      "sourceText": "Interessiert uns beispielsweise, wann zehn Prozent der Getriebe ausgefallen sind",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_ten_percent_context",
+      "targetId": "ten_percent_context",
+      "action": "show",
+      "sourceText": "Interessiert uns beispielsweise, wann zehn Prozent der Getriebe ausgefallen sind",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_time_one_readout",
+      "targetId": "time_one_readout",
+      "action": "show",
+      "sourceText": "Interessiert uns aber wie viele Einheiten zum Zeitpunkt eins ausgefallen sind",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_time_one_context",
+      "targetId": "time_one_context",
+      "action": "show",
+      "sourceText": "Interessiert uns aber wie viele Einheiten zum Zeitpunkt eins ausgefallen sind",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

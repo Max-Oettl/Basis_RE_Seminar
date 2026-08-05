@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_085.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "s85_tree_nodes",
+      "label": "Systemelemente",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s85_tree_links",
+      "label": "Hierarchische Verknüpfungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s85_tree_nodes",
+      "targetId": "s85_tree_nodes",
+      "action": "show",
+      "sourceText": "Die erste Ebene besteht aus dem Systemelement eins. Dieses Element stellt die oberste Ebene dar und beschreibt in der Regel das Gesamtsystem.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_s85_tree_links",
+      "targetId": "s85_tree_links",
+      "action": "draw",
+      "sourceText": "Auf der zweiten Ebene befinden sich drei untergeordnete Systemelemente. Diese sind direkt mit dem Systemelement eins verbunden und repräsentieren die Hauptkomponenten oder Teilsysteme des Gesamtsystems.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung wird erst nach den zugehörigen fachlichen Endpunkten aufgebaut.",
+      "drawDurFrames": 42
+    }
+  ]
+}

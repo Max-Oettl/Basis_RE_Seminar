@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_037.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "men_distribution",
+      "label": "Ausfallwahrscheinlichkeit Männer",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "women_distribution",
+      "label": "Ausfallwahrscheinlichkeit Frauen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "age_80_readout",
+      "label": "Ablesung bei achtzig Jahren",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "human_cdf_comparison",
+      "label": "Werte bei achtzig Jahren",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_men_distribution",
+      "targetId": "men_distribution",
+      "action": "draw",
+      "sourceText": "Die Ausfallwahrscheinlichkeit also die Wahrscheinlichkeit zu",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "durFrames": 42
+    },
+    {
+      "stepId": "draw_women_distribution",
+      "targetId": "women_distribution",
+      "action": "draw",
+      "sourceText": "Die Ausfallwahrscheinlichkeit also die Wahrscheinlichkeit zu",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "durFrames": 42
+    },
+    {
+      "stepId": "show_age_80_readout",
+      "targetId": "age_80_readout",
+      "action": "show",
+      "sourceText": "Demnach sind auch bei einem Lebensalter",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_human_cdf_comparison",
+      "targetId": "human_cdf_comparison",
+      "action": "show",
+      "sourceText": "Demnach sind auch bei einem Lebensalter",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

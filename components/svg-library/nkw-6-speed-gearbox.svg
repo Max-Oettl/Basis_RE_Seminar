@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img" aria-labelledby="gearboxTitle gearboxDescription">
+  <title id="gearboxTitle">Schematische Zeichnung eines 6-Gang-NKW-Getriebes</title>
+  <desc id="gearboxDescription">Technische Schnittdarstellung mit Hauptwelle, Vorgelegewelle, Schaltmechanik und sechs nummerierten Zahnradpaaren fuer die Vorwaertsgaenge.</desc>
+  <defs>
+    <linearGradient id="housingFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EDF5F8"/>
+      <stop offset="1" stop-color="#D6E5EC"/>
+    </linearGradient>
+    <linearGradient id="steelFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7FAFC"/>
+      <stop offset="0.48" stop-color="#B8CAD4"/>
+      <stop offset="1" stop-color="#7F99A8"/>
+    </linearGradient>
+    <style>
+      .housing { fill: url(#housingFill); stroke: #0B3A53; stroke-width: 8; stroke-linejoin: round; }
+      .window { fill: #F8FBFD; stroke: #7F99A8; stroke-width: 3; }
+      .shaft { stroke: #183B56; stroke-width: 18; stroke-linecap: round; }
+      .shaft-highlight { stroke: #DCE8EF; stroke-width: 5; stroke-linecap: round; opacity: 0.9; }
+      .gear { fill: url(#steelFill); stroke: #183B56; stroke-width: 10; stroke-dasharray: 8 5; }
+      .hub { fill: #F7FAFC; stroke: #183B56; stroke-width: 7; }
+      .spoke { stroke: #496A7D; stroke-width: 7; stroke-linecap: round; }
+      .sync { fill: #00A754; stroke: #031334; stroke-width: 4; }
+      .fork { fill: none; stroke: #E9B400; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+      .bolt { fill: #FFFFFF; stroke: #496A7D; stroke-width: 3; }
+      .stage { fill: #FFFFFF; stroke: #00A754; stroke-width: 4; }
+      .stage-text { font-family: "Archivo", Arial, Helvetica, sans-serif; font-size: 24px; font-weight: 700; fill: #031334; text-anchor: middle; dominant-baseline: middle; }
+      .label { font-family: "Archivo", Arial, Helvetica, sans-serif; font-size: 22px; font-weight: 700; fill: #031334; }
+      .small-label { font-family: "Archivo", Arial, Helvetica, sans-serif; font-size: 17px; font-weight: 600; fill: #25495F; letter-spacing: 0; }
+    </style>
+  </defs>
+
+  <rect x="4" y="4" width="992" height="552" rx="28" fill="#F7FAFC" stroke="#CBD8E0" stroke-width="8"/>
+  <path class="housing" d="M58 153 L132 87 H855 L944 151 V413 L874 475 H132 L58 419 Z"/>
+  <path class="window" d="M124 154 H865 L905 186 V386 L858 424 H124 Z"/>
+  <path d="M58 199 C22 211 22 361 58 374 L124 399 V174 Z" fill="#C5D8E2" stroke="#0B3A53" stroke-width="8"/>
+  <path d="M944 208 H980 V356 H944" fill="#C5D8E2" stroke="#0B3A53" stroke-width="8"/>
+
+  <text x="814" y="126" class="label" text-anchor="middle">6-GANG NKW</text>
+  <line x1="734" y1="137" x2="894" y2="137" stroke="#00A754" stroke-width="5"/>
+
+  <line x1="38" y1="245" x2="958" y2="245" class="shaft"/>
+  <line x1="38" y1="241" x2="958" y2="241" class="shaft-highlight"/>
+  <line x1="150" y1="345" x2="905" y2="345" class="shaft"/>
+  <line x1="150" y1="341" x2="905" y2="341" class="shaft-highlight"/>
+  <circle cx="71" cy="245" r="42" fill="#E8F1F5" stroke="#0B3A53" stroke-width="8"/>
+  <circle cx="71" cy="245" r="17" class="hub"/>
+  <circle cx="948" cy="245" r="31" fill="#E8F1F5" stroke="#0B3A53" stroke-width="8"/>
+
+  <line x1="194" y1="143" x2="856" y2="143" stroke="#496A7D" stroke-width="11" stroke-linecap="round"/>
+  <path class="fork" d="M330 143 V193 Q330 215 309 224"/>
+  <path class="fork" d="M570 143 V193 Q570 215 549 224"/>
+  <path class="fork" d="M810 143 V193 Q810 215 789 224"/>
+  <rect x="292" y="222" width="38" height="46" rx="9" class="sync"/>
+  <rect x="532" y="222" width="38" height="46" rx="9" class="sync"/>
+  <rect x="772" y="222" width="38" height="46" rx="9" class="sync"/>
+
+  <g id="gear_pair_1" aria-label="Erster Gang">
+    <circle cx="220" cy="245" r="55" class="gear"/>
+    <circle cx="220" cy="245" r="21" class="hub"/>
+    <path d="M199 245 H241 M220 224 V266" class="spoke"/>
+    <circle cx="220" cy="345" r="35" class="gear"/>
+    <circle cx="220" cy="345" r="15" class="hub"/>
+    <path d="M205 345 H235 M220 330 V360" class="spoke"/>
+  </g>
+  <g id="gear_pair_2" aria-label="Zweiter Gang">
+    <circle cx="340" cy="245" r="49" class="gear"/>
+    <circle cx="340" cy="245" r="20" class="hub"/>
+    <path d="M320 245 H360 M340 225 V265" class="spoke"/>
+    <circle cx="340" cy="345" r="41" class="gear"/>
+    <circle cx="340" cy="345" r="17" class="hub"/>
+    <path d="M323 345 H357 M340 328 V362" class="spoke"/>
+  </g>
+  <g id="gear_pair_3" aria-label="Dritter Gang">
+    <circle cx="460" cy="245" r="45" class="gear"/>
+    <circle cx="460" cy="245" r="19" class="hub"/>
+    <path d="M441 245 H479 M460 226 V264" class="spoke"/>
+    <circle cx="460" cy="345" r="45" class="gear"/>
+    <circle cx="460" cy="345" r="19" class="hub"/>
+    <path d="M441 345 H479 M460 326 V364" class="spoke"/>
+  </g>
+  <g id="gear_pair_4" aria-label="Vierter Gang">
+    <circle cx="580" cy="245" r="41" class="gear"/>
+    <circle cx="580" cy="245" r="17" class="hub"/>
+    <path d="M563 245 H597 M580 228 V262" class="spoke"/>
+    <circle cx="580" cy="345" r="49" class="gear"/>
+    <circle cx="580" cy="345" r="20" class="hub"/>
+    <path d="M560 345 H600 M580 325 V365" class="spoke"/>
+  </g>
+  <g id="gear_pair_5" aria-label="Fuenfter Gang">
+    <circle cx="700" cy="245" r="37" class="gear"/>
+    <circle cx="700" cy="245" r="16" class="hub"/>
+    <path d="M684 245 H716 M700 229 V261" class="spoke"/>
+    <circle cx="700" cy="345" r="53" class="gear"/>
+    <circle cx="700" cy="345" r="21" class="hub"/>
+    <path d="M679 345 H721 M700 324 V366" class="spoke"/>
+  </g>
+  <g id="gear_pair_6" aria-label="Sechster Gang">
+    <circle cx="820" cy="245" r="33" class="gear"/>
+    <circle cx="820" cy="245" r="15" class="hub"/>
+    <path d="M805 245 H835 M820 230 V260" class="spoke"/>
+    <circle cx="820" cy="345" r="57" class="gear"/>
+    <circle cx="820" cy="345" r="22" class="hub"/>
+    <path d="M798 345 H842 M820 323 V367" class="spoke"/>
+  </g>
+
+  <text x="151" y="230" class="small-label" text-anchor="end">Hauptwelle</text>
+  <text x="151" y="374" class="small-label" text-anchor="end">Vorgelegewelle</text>
+
+  <g aria-label="Sechs Vorwaertsgaenge">
+    <circle cx="220" cy="478" r="24" class="stage"/><text x="220" y="479" class="stage-text">1</text>
+    <circle cx="340" cy="478" r="24" class="stage"/><text x="340" y="479" class="stage-text">2</text>
+    <circle cx="460" cy="478" r="24" class="stage"/><text x="460" y="479" class="stage-text">3</text>
+    <circle cx="580" cy="478" r="24" class="stage"/><text x="580" y="479" class="stage-text">4</text>
+    <circle cx="700" cy="478" r="24" class="stage"/><text x="700" y="479" class="stage-text">5</text>
+    <circle cx="820" cy="478" r="24" class="stage"/><text x="820" y="479" class="stage-text">6</text>
+  </g>
+
+  <circle cx="105" cy="119" r="9" class="bolt"/>
+  <circle cx="895" cy="119" r="9" class="bolt"/>
+  <circle cx="105" cy="447" r="9" class="bolt"/>
+  <circle cx="895" cy="447" r="9" class="bolt"/>
+</svg>

@@ -131,7 +131,12 @@ function runTextInsideBox(layout, context, config) {
   const issues = [];
   const tolerance = config.tolerances.geometryPx;
   const defaultPadding = config.tolerances.paddingPx;
-  const visibleTexts = layout.elements.filter((element) => element.visible && textRoles.has(element.role));
+  const visibleTexts = layout.elements.filter((element) =>
+    element.visible &&
+    !element.animationHidden &&
+    !element.qc?.allowOverlap &&
+    textRoles.has(element.role)
+  );
 
   for (const text of visibleTexts) {
     const box = inferBoxForText(text, layout.elements);
@@ -178,7 +183,12 @@ function runTextInsideBox(layout, context, config) {
 function runTextAboveBackground(layout, context, config) {
   if (!config.checks.textAboveBackground) return [];
   const issues = [];
-  const visibleTexts = layout.elements.filter((element) => element.visible && textRoles.has(element.role));
+  const visibleTexts = layout.elements.filter((element) =>
+    element.visible &&
+    !element.animationHidden &&
+    !element.qc?.allowOverlap &&
+    textRoles.has(element.role)
+  );
 
   for (const text of visibleTexts) {
     const box = inferBoxForText(text, layout.elements);
@@ -334,7 +344,7 @@ function runVisibilityAndOpacity(layout, context, config) {
   for (const element of layout.elements) {
     const explicitImportant = element.qc?.important || Boolean(element.qc?.role);
     if (!explicitImportant) continue;
-    if (element.animationHidden) continue;
+    if (element.animationHidden || element.qc?.allowHidden) continue;
     const style = element.computedStyle || {};
     const opacity = Number(style.opacity);
     const invisible =

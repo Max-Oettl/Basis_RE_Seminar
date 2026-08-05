@@ -1,0 +1,294 @@
+{
+  "schema_version": "svgQaReport/v1",
+  "module_id": "chapter-02",
+  "svg_root": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02",
+  "generated_at": "2026-07-31T16:42:46.372Z",
+  "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\tools\\svg-rebuild-qa.js analysis\\qa-inputs\\RE2\\full-sweep-2026-07-31\\chapter-02 --strict-design --report-dir analysis\\qa-reports\\RE2\\full-sweep-2026-07-31\\chapter-02-static",
+  "files": [
+    {
+      "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_004/slide_004.svg",
+      "ids": 16,
+      "animationManifest": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_004/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_006/slide_006.svg",
+      "ids": 17,
+      "animationManifest": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_006/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_008/slide_008.svg",
+      "ids": 18,
+      "animationManifest": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_008/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_009/slide_009.svg",
+      "ids": 18,
+      "animationManifest": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_009/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_010/slide_010.svg",
+      "ids": 19,
+      "animationManifest": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_010/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_011/slide_011.svg",
+      "ids": 17,
+      "animationManifest": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_011/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_013/slide_013.svg",
+      "ids": 18,
+      "animationManifest": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_013/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_014/slide_014.svg",
+      "ids": 16,
+      "animationManifest": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_014/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_016/slide_016.svg",
+      "ids": 15,
+      "animationManifest": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_016/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_017/slide_017.svg",
+      "ids": 18,
+      "animationManifest": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_017/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_018/slide_018.svg",
+      "ids": 16,
+      "animationManifest": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_018/scene.animation.v1.json"
+    },
+    {
+      "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_019/slide_019.svg",
+      "ids": 19,
+      "animationManifest": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_019/scene.animation.v1.json"
+    }
+  ],
+  "issues": [
+    {
+      "rule": "brand-token-color",
+      "severity": "error",
+      "file": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_011/slide_011.svg",
+      "slide": "",
+      "time_seconds": null,
+      "state": "",
+      "element_id": "",
+      "related_element_id": "",
+      "message": "Colors outside brand/design tokens found.",
+      "detail": "#E6EEF5",
+      "expected": null,
+      "actual": null,
+      "bbox": null,
+      "recommendation": "Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors."
+    },
+    {
+      "rule": "brand-token-near-duplicate",
+      "severity": "error",
+      "file": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_011/slide_011.svg",
+      "slide": "",
+      "time_seconds": null,
+      "state": "",
+      "element_id": "",
+      "related_element_id": "",
+      "message": "Very similar but non-identical colors found.",
+      "detail": "#E6F6EE ~ #E6EEF5",
+      "expected": null,
+      "actual": null,
+      "bbox": null,
+      "recommendation": ""
+    }
+  ],
+  "viewer": {
+    "checked": false
+  },
+  "layout": {
+    "checked": false
+  },
+  "design": {
+    "checked": true,
+    "strict": true,
+    "warnOnly": false,
+    "brandTokens": {
+      "loaded": true,
+      "path": "brand/reltest-education-slide-design-tokens.json",
+      "profile": "reltest-education",
+      "companyName": "RelTest Education"
+    },
+    "tokenSources": [
+      {
+        "loaded": true,
+        "path": "brand/reltest-education-slide-design-tokens.json",
+        "profile": "reltest-education"
+      }
+    ],
+    "files": [
+      {
+        "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_004/slide_004.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "full-slide",
+        "tokenSource": "brand/reltest-education-slide-design-tokens.json",
+        "colorCount": 8,
+        "textCount": 14
+      },
+      {
+        "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_006/slide_006.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "full-slide",
+        "tokenSource": "brand/reltest-education-slide-design-tokens.json",
+        "colorCount": 12,
+        "textCount": 13
+      },
+      {
+        "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_008/slide_008.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "full-slide",
+        "tokenSource": "brand/reltest-education-slide-design-tokens.json",
+        "colorCount": 10,
+        "textCount": 5
+      },
+      {
+        "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_009/slide_009.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "full-slide",
+        "tokenSource": "brand/reltest-education-slide-design-tokens.json",
+        "colorCount": 10,
+        "textCount": 8
+      },
+      {
+        "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_010/slide_010.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "full-slide",
+        "tokenSource": "brand/reltest-education-slide-design-tokens.json",
+        "colorCount": 10,
+        "textCount": 13
+      },
+      {
+        "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_011/slide_011.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "full-slide",
+        "tokenSource": "brand/reltest-education-slide-design-tokens.json",
+        "colorCount": 9,
+        "textCount": 8
+      },
+      {
+        "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_013/slide_013.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "full-slide",
+        "tokenSource": "brand/reltest-education-slide-design-tokens.json",
+        "colorCount": 11,
+        "textCount": 47
+      },
+      {
+        "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_014/slide_014.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "full-slide",
+        "tokenSource": "brand/reltest-education-slide-design-tokens.json",
+        "colorCount": 9,
+        "textCount": 12
+      },
+      {
+        "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_016/slide_016.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "full-slide",
+        "tokenSource": "brand/reltest-education-slide-design-tokens.json",
+        "colorCount": 10,
+        "textCount": 21
+      },
+      {
+        "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_017/slide_017.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "full-slide",
+        "tokenSource": "brand/reltest-education-slide-design-tokens.json",
+        "colorCount": 9,
+        "textCount": 20
+      },
+      {
+        "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_018/slide_018.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "full-slide",
+        "tokenSource": "brand/reltest-education-slide-design-tokens.json",
+        "colorCount": 11,
+        "textCount": 26
+      },
+      {
+        "path": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_019/slide_019.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "full-slide",
+        "tokenSource": "brand/reltest-education-slide-design-tokens.json",
+        "colorCount": 11,
+        "textCount": 38
+      }
+    ],
+    "issues": [
+      {
+        "rule": "brand-token-color",
+        "severity": "error",
+        "file": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_011/slide_011.svg",
+        "slide": "",
+        "time_seconds": null,
+        "state": "",
+        "element_id": "",
+        "related_element_id": "",
+        "message": "Colors outside brand/design tokens found.",
+        "detail": "#E6EEF5",
+        "expected": null,
+        "actual": null,
+        "bbox": null,
+        "recommendation": "Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors."
+      },
+      {
+        "rule": "brand-token-near-duplicate",
+        "severity": "error",
+        "file": "analysis/qa-inputs/RE2/full-sweep-2026-07-31/chapter-02/slide_011/slide_011.svg",
+        "slide": "",
+        "time_seconds": null,
+        "state": "",
+        "element_id": "",
+        "related_element_id": "",
+        "message": "Very similar but non-identical colors found.",
+        "detail": "#E6F6EE ~ #E6EEF5",
+        "expected": null,
+        "actual": null,
+        "bbox": null,
+        "recommendation": ""
+      }
+    ],
+    "summary": {
+      "files_checked": 12,
+      "errors": 2,
+      "warnings": 0
+    }
+  },
+  "handoff": {
+    "checked": false
+  },
+  "summary": {
+    "files_checked": 12,
+    "manifests_checked": 12,
+    "layout_files_checked": 0,
+    "layout_states_checked": 0,
+    "design_files_checked": 12,
+    "design_errors": 2,
+    "design_warnings": 0,
+    "handoff_scenes_checked": 0,
+    "handoff_manifests_checked": 0,
+    "handoff_errors": 0,
+    "handoff_warnings": 0,
+    "errors": 2,
+    "warnings": 0
+  }
+}

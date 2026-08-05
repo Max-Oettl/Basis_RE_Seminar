@@ -1,0 +1,166 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_064",
+  "scene_id": "re1_src_081",
+  "source_slides": [
+    81,
+    82
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "weibull_paper_reference",
+      "label": "Weibull-Wahrscheinlichkeitspapier",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_paper_axes_note",
+      "label": "Transformierte Achsen",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_paper_example",
+      "label": "Ermittelte Weibull-Gerade",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_paper_process_example",
+      "label": "Arbeitsschritt Weibull-Gerade",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_paper_parallel",
+      "label": "Parallele Verschiebung",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_paper_process_parallel",
+      "label": "Arbeitsschritt Polverschiebung",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_paper_beta",
+      "label": "Abgelesener Formparameter",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_paper_process_beta",
+      "label": "Arbeitsschritt Formparameter",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_weibull_paper_axes_note",
+      "targetId": "weibull_paper_axes_note",
+      "action": "show",
+      "sourceText": "Dafür wird die Ypsilon-Achse doppellogarithmiert und die x-Achse logarithmiert",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_paper_reference",
+      "targetId": "weibull_paper_reference",
+      "action": "show",
+      "sourceText": "Hier könnt ihr ein sogenanntes Weibull-Wahrscheinlichkeits-Papier sehen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_weibull_paper_example",
+      "targetId": "weibull_paper_example",
+      "action": "draw",
+      "sourceText": "Angenommen wir haben mit Hilfe der Ausfallzeiten die rot dargestellte Weibull-Gerade erhalten",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_weibull_paper_process_example",
+      "targetId": "weibull_paper_process_example",
+      "action": "show",
+      "sourceText": "Angenommen wir haben mit Hilfe der Ausfallzeiten die rot dargestellte Weibull-Gerade erhalten",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_weibull_paper_parallel",
+      "targetId": "weibull_paper_parallel",
+      "action": "draw",
+      "sourceText": "Im Anschluss kann man dann die Gerade parallel in den Pol verschieben",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_weibull_paper_process_parallel",
+      "targetId": "weibull_paper_process_parallel",
+      "action": "show",
+      "sourceText": "Im Anschluss kann man dann die Gerade parallel in den Pol verschieben",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_paper_beta",
+      "targetId": "weibull_paper_beta",
+      "action": "show",
+      "sourceText": "Auf der rechten Ypsilon-Achse kann dann mit Hilfe des Schnittpunktes der Formparameter der Weibullverteilung bestimmt werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_paper_process_beta",
+      "targetId": "weibull_paper_process_beta",
+      "action": "show",
+      "sourceText": "Auf der rechten Ypsilon-Achse kann dann mit Hilfe des Schnittpunktes der Formparameter der Weibullverteilung bestimmt werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

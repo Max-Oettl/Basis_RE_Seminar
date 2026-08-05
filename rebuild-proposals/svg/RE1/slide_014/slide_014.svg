@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_014" data-brand-profile="reltest-education">
+  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"diagram-method-mapping","contentTitle":"Einteilung der Zuverlässigkeitsmethoden","layoutIntent":"complete-bathtub-curve-with-reduction-effects-and-method-focus","takeaway":"Qualitative Methoden reduzieren Frühausfälle durch Systemanalyse; quantitative Methoden reduzieren Ermüdungsausfälle und weisen Zuverlässigkeit nach.","density":"balanced","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-education","brandVariant":"education-production","sourceSlides":[14],"officialLogoStatus":"downstream-owned"}]]></metadata>
+  <title id="accessible_title">Einteilung der Zuverlässigkeitsmethoden</title>
+  <desc id="accessible_description">Qualitative Methoden reduzieren Frühausfälle durch Systemanalyse; quantitative Methoden reduzieren Ermüdungsausfälle und weisen Zuverlässigkeit nach.</desc>
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="56%" stop-color="#F7F9FC"/>
+      <stop offset="100%" stop-color="#E6F6EE"/>
+    </linearGradient>
+    <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#031334" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow_00A754" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#00A754"/></marker>
+  </defs>
+  <style>
+    text { font-family: "Archivo", Arial, Helvetica, sans-serif; letter-spacing: 0; }
+    .display { font-family: "Oxanium", "Archivo", Arial, sans-serif; }
+  </style>
+  <g id="brand_background" data-semantic-group="true" aria-label="RelTest-Education-Hintergrund">
+    <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
+    <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
+  </g>
+  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><g id="bathtub_curve_plot" data-plot-asset="true" aria-label="Badewannenkurve mit drei Lebensdauerbereichen">
+    <rect data-role="functional" data-qc-allow-overlap="true" x="164" y="294" width="492" height="356" fill="#FCE7E2" opacity="0.42"/>
+    <rect data-role="functional" data-qc-allow-overlap="true" x="656" y="294" width="656" height="356" fill="#FFF5CC" opacity="0.36"/>
+    <rect data-role="functional" data-qc-allow-overlap="true" x="1312" y="294" width="492" height="356" fill="#FFF5CC" opacity="0.58"/>
+    <line data-role="functional" x1="164" y1="650" x2="1804" y2="650" stroke="#031334" stroke-width="3"/>
+    <line data-role="functional" x1="164" y1="294" x2="164" y2="650" stroke="#031334" stroke-width="3"/>
+    <line data-role="functional" x1="656" y1="294" x2="656" y2="650" stroke="#25495F" stroke-width="2" stroke-dasharray="8 7"/>
+    <line data-role="functional" x1="1312" y1="294" x2="1312" y2="650" stroke="#25495F" stroke-width="2" stroke-dasharray="8 7"/>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="984" y="700" font-size="25" font-weight="760" fill="#031334" text-anchor="middle">Lebensdauer <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-style="italic">t</tspan></text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="118" y="482" font-size="25" font-weight="760" fill="#031334" text-anchor="middle" transform="rotate(-90 118 482)">Ausfallrate λ(<tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-style="italic">t</tspan>)</text>
+    <g id="bathtub_curve_path" aria-label="Ausgangsverlauf der Badewannenkurve">
+      <path data-role="functional" d="M176 320 C232 505 450 584 656 604 C860 623 1110 617 1312 607 C1500 598 1706 530 1792 322" fill="none" stroke="#031334" stroke-width="6" stroke-linecap="round"/>
+    </g>
+    <g id="qualitative_plot_effect" aria-label="Risikoreduktion im Früh- und Zufallsausfallbereich">
+      <path data-role="functional" d="M176 445 C286 565 488 607 656 614 C880 623 1118 619 1312 617" fill="none" stroke="#00A754" stroke-width="5" stroke-linecap="round"/>
+      <path data-role="functional" d="M 270 462 L 270 548" fill="none" stroke="#00A754" stroke-width="5" marker-end="url(#arrow_00A754)"/>
+    </g>
+    <g id="quantitative_plot_effect" aria-label="Risikoreduktion im Ermüdungsausfallbereich">
+      <path data-role="functional" d="M1312 617 C1512 616 1684 584 1792 500" fill="none" stroke="#00A754" stroke-width="5" stroke-linecap="round"/>
+      <path data-role="functional" d="M 1680 516 L 1680 582" fill="none" stroke="#00A754" stroke-width="5" marker-end="url(#arrow_00A754)"/>
+    </g>
+    <circle data-role="functional" cx="410" cy="340" r="24" fill="#FFFFFF" stroke="#EC6244" stroke-width="2"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="410" y="349" font-size="25" font-weight="820" fill="#EC6244" text-anchor="middle">1</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="410" y="397" font-size="23" font-weight="800" fill="#EC6244" text-anchor="middle">Frühausfälle</text><circle data-role="functional" cx="984" cy="340" r="24" fill="#FFFFFF" stroke="#E9B400" stroke-width="2"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="984" y="349" font-size="25" font-weight="820" fill="#E9B400" text-anchor="middle">2</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="984" y="397" font-size="23" font-weight="800" fill="#E9B400" text-anchor="middle">Zufallsausfälle</text><circle data-role="functional" cx="1558" cy="340" r="24" fill="#FFFFFF" stroke="#E9B400" stroke-width="2"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1558" y="349" font-size="25" font-weight="820" fill="#E9B400" text-anchor="middle">3</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1558" y="397" font-size="23" font-weight="800" fill="#E9B400" text-anchor="middle">Ermüdungsausfälle</text>
+  </g><g id="qualitative_method_focus" data-anim-target="true" data-anim-label="Fokus qualitative Methoden"><title>Fokus qualitative Methoden</title><rect data-role="functional" data-qc-allow-overlap="true" x="164" y="194" width="1136" height="100" rx="8" fill="#E6F6EE" stroke="#00A754" stroke-width="1.5"/><text x="732" y="252" class="" font-size="27" font-weight="800" fill="#031334" text-anchor="middle" data-qc-role="text"><tspan x="732" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Fokus qualitative Zuverlässigkeitsmethoden</tspan></text><rect data-role="functional" data-qc-allow-overlap="true" x="164" y="756" width="1136" height="126" rx="8" fill="#E6F6EE" stroke="#00A754" stroke-width="1.5"/><text x="732" y="829" class="" font-size="31" font-weight="800" fill="#031334" text-anchor="middle" data-qc-role="text"><tspan x="732" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Risikoreduktion durch Systemanalyse</tspan></text></g><g id="quantitative_method_focus" data-anim-target="true" data-anim-label="Fokus quantitative Methoden"><title>Fokus quantitative Methoden</title><rect data-role="functional" data-qc-allow-overlap="true" x="1324" y="194" width="480" height="100" rx="8" fill="#FFF5CC" stroke="#E9B400" stroke-width="1.5"/><text x="1564" y="230" class="" font-size="23" font-weight="800" fill="#031334" text-anchor="middle" data-qc-role="text"><tspan x="1564" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Fokus quantitative</tspan><tspan x="1564" dy="27" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Zuverlässigkeitsmethoden</tspan></text><rect data-role="functional" data-qc-allow-overlap="true" x="1324" y="756" width="480" height="126" rx="8" fill="#FFF5CC" stroke="#E9B400" stroke-width="1.5"/><text x="1564" y="828" class="" font-size="25" font-weight="800" fill="#031334" text-anchor="middle" data-qc-role="text"><tspan x="1564" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Nachweis der Zuverlässigkeit</tspan></text></g></g>
+</svg>

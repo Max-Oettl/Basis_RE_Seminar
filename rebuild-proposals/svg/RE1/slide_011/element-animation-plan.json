@@ -1,0 +1,100 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_011",
+  "scene_id": "re1_src_011",
+  "source_slides": [
+    11
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "shifted_strength_distribution",
+      "label": "Nach rechts bewegte Belastbarkeit",
+      "action": "transform",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "shifted_strength_explanation",
+      "label": "Belastbarkeit erhöhen",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "failure_overlap",
+      "label": "Reduzierter Ausfallbereich",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "reduced_overlap_explanation",
+      "label": "Kleinerer Ausfallbereich",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "move_shifted_strength_distribution",
+      "targetId": "shifted_strength_distribution",
+      "action": "transform",
+      "sourceText": "wodurch dessen Kurve nach rechts verschoben wird",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte Bewegung desselben fachlichen Elements zwischen zwei Zuständen.",
+      "durFrames": 60,
+      "fromTranslateX": -74.8,
+      "fromTranslateY": 0,
+      "fromScale": 1,
+      "translateX": 0,
+      "translateY": 0,
+      "scale": 1,
+      "transformOrigin": "center"
+    },
+    {
+      "stepId": "show_shifted_strength_explanation",
+      "targetId": "shifted_strength_explanation",
+      "action": "show",
+      "sourceText": "wodurch dessen Kurve nach rechts verschoben wird",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_reduced_failure_overlap",
+      "targetId": "failure_overlap",
+      "action": "show",
+      "sourceText": "Die Folge ist ein kleinerer Überlappungsbereich",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_reduced_overlap_explanation",
+      "targetId": "reduced_overlap_explanation",
+      "action": "show",
+      "sourceText": "Die Folge ist ein kleinerer Überlappungsbereich",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

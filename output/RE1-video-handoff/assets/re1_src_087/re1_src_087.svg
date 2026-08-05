@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_087" data-brand-profile="reltest-academy">
+  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"distribution-suitability-assessment","contentTitle":"Eignungsgrenze der Lognormalverteilung","layoutIntent":"dominant-lognormal-hazard-evidence-with-small-complementary-probability-pair-and-explicit-limit","takeaway":"Die Lognormal-Ausfallrate erreicht ein Maximum und fällt danach; dauernd steigende Verschleiß- und Ermüdungsraten bildet sie daher nur unvollständig ab.","density":"balanced","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-academy","brandVariant":"academy-production","sourceSlides":[87,88],"officialLogoStatus":"pending-original-asset"}]]></metadata>
+  <title id="accessible_title">Eignungsgrenze der Lognormalverteilung</title>
+  <desc id="accessible_description">Die Lognormal-Ausfallrate erreicht ein Maximum und fällt danach; dauernd steigende Verschleiß- und Ermüdungsraten bildet sie daher nur unvollständig ab.</desc>
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F9FBFC"/>
+      <stop offset="56%" stop-color="#F1F5F8"/>
+      <stop offset="100%" stop-color="#E9F0F4"/>
+    </linearGradient>
+    <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#102A43" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="shadowSoft" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#102A43" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow_007EA7" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#007EA7"/></marker>
+    <marker id="arrow_102A43" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#102A43"/></marker>
+    <marker id="arrow_D1495B" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#D1495B"/></marker>
+    <marker id="arrow_2F6F55" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#2F6F55"/></marker>
+    <marker id="arrow_B7791F" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#B7791F"/></marker>
+  </defs>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+  </style>
+  <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
+  <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
+  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><svg id="lognormal_hazard_plot" x="66" y="210" width="1120" height="654" viewBox="0 0 724.121906 410.632219" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="lognormal_hazard_plot__figure_1">
+  <g id="lognormal_hazard_plot__patch_1">
+   <path d="M 0 410.632219  L 724.121906 410.632219  L 724.121906 0  L 0 0  L 0 410.632219  z " style="fill: none; opacity: 0" />
+  </g>
+  <g id="lognormal_hazard_plot__axes_1">
+   <g id="lognormal_hazard_plot__patch_2">
+    <path d="M 67.378281 350.928  L 712.786281 350.928  L 712.786281 7.2  L 67.378281 7.2  L 67.378281 350.928  z " style="fill: none" />
+   </g>
+   <g id="lognormal_hazard_plot__matplotlib.axis_1">
+    <g id="lognormal_hazard_plot__xtick_1">
+     <g id="lognormal_hazard_plot__line2d_1">
+      <path d="M 67.378281 350.928  L 67.378281 7.2  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_hazard_plot__line2d_2">
+      <defs>
+       <path id="lognormal_hazard_plot__m9291ed3753" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#lognormal_hazard_plot__m9291ed3753" x="67.378281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_hazard_plot__text_1">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="67.378281" y="370.304953" transform="rotate(-0 67.378281 370.304953)">0</text>
+     </g>
+    </g>
+    <g id="lognormal_hazard_plot__xtick_2">
+     <g id="lognormal_hazard_plot__line2d_3">
+      <path d="M 148.054281 350.928  L 148.054281 7.2  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_hazard_plot__line2d_4">
+      <g>
+       <use ns4:href="#lognormal_hazard_plot__m9291ed3753" x="148.054281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_hazard_plot__text_2">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="148.054281" y="370.304953" transform="rotate(-0 148.054281 370.304953)">1</text>
+     </g>
+    </g>
+    <g id="lognormal_hazard_plot__xtick_3">
+     <g id="lognormal_hazard_plot__line2d_5">
+      <path d="M 228.730281 350.928  L 228.730281 7.2  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_hazard_plot__line2d_6">
+      <g>
+       <use ns4:href="#lognormal_hazard_plot__m9291ed3753" x="228.730281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_hazard_plot__text_3">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="228.730281" y="370.304953" transform="rotate(-0 228.730281 370.304953)">2</text>
+     </g>
+    </g>
+    <g id="lognormal_hazard_plot__xtick_4">
+     <g id="lognormal_hazard_plot__line2d_7">
+      <path d="M 309.406281 350.928  L 309.406281 7.2  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_hazard_plot__line2d_8">
+      <g>
+       <use ns4:href="#lognormal_hazard_plot__m9291ed3753" x="309.406281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_hazard_plot__text_4">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="309.406281" y="370.304953" transform="rotate(-0 309.406281 370.304953)">3</text>
+     </g>
+    </g>
+    <g id="lognormal_hazard_plot__xtick_5">
+     <g id="lognormal_hazard_plot__line2d_9">
+      <path d="M 390.082281 350.928  L 390.082281 7.2  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_hazard_plot__line2d_10">
+      <g>
+       <use ns4:href="#lognormal_hazard_plot__m9291ed3753" x="390.082281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_hazard_plot__text_5">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="390.082281" y="370.304953" transform="rotate(-0 390.082281 370.304953)">4</text>
+     </g>
+    </g>
+    <g id="lognormal_hazard_plot__xtick_6">
+     <g id="lognormal_hazard_plot__line2d_11">
+      <path d="M 470.758281 350.928  L 470.758281 7.2  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_hazard_plot__line2d_12">
+      <g>
+       <use ns4:href="#lognormal_hazard_plot__m9291ed3753" x="470.758281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_hazard_plot__text_6">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="470.758281" y="370.304953" transform="rotate(-0 470.758281 370.304953)">5</text>
+     </g>
+    </g>
+    <g id="lognormal_hazard_plot__xtick_7">
+     <g id="lognormal_hazard_plot__line2d_13">
+      <path d="M 551.434281 350.928  L 551.434281 7.2  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_hazard_plot__line2d_14">
+      <g>
+       <use ns4:href="#lognormal_hazard_plot__m9291ed3753" x="551.434281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_hazard_plot__text_7">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="551.434281" y="370.304953" transform="rotate(-0 551.434281 370.304953)">6</text>
+     </g>
+    </g>
+    <g id="lognormal_hazard_plot__xtick_8">
+     <g id="lognormal_hazard_plot__line2d_15">
+      <path d="M 632.110281 350.928  L 632.110281 7.2  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_hazard_plot__line2d_16">
+      <g>
+       <use ns4:href="#lognormal_hazard_plot__m9291ed3753" x="632.110281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_hazard_plot__text_8">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="632.110281" y="370.304953" transform="rotate(-0 632.110281 370.304953)">7</text>
+     </g>
+    </g>
+    <g id="lognormal_hazard_plot__xtick_9">
+     <g id="lognormal_hazard_plot__line2d_17">
+      <path d="M 712.786281 350.928  L 712.786281 7.2  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_hazard_plot__line2d_18">
+      <g>
+       <use ns4:href="#lognormal_hazard_plot__m9291ed3753" x="712.786281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_hazard_plot__text_9">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="712.786281" y="370.304953" transform="rotate(-0 712.786281 370.304953)">8</text>
+     </g>
+    </g>
+    <g id="lognormal_hazard_plot__text_10">
+     
+     <g style="fill: #062d46" transform="translate(317.722281 399.108)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.677734" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">b</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="36.5625" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="48.770508" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="61.584961" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="72.298828" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">d</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="85.183594" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="97.330078" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="110.144531" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="122.352539" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="131.229492" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="137.496094" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="lognormal_hazard_plot__matplotlib.axis_2">
+    <g id="lognormal_hazard_plot__ytick_1">
+     <g id="lognormal_hazard_plot__line2d_19">
+      <path d="M 67.378281 350.928  L 712.786281 350.928  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_hazard_plot__line2d_20">
+      <defs>
+       <path id="lognormal_hazard_plot__m98c6f11da3" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#lognormal_hazard_plot__m98c6f11da3" x="67.378281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_hazard_plot__text_11">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="355.866477" transform="rotate(-0 57.878281 355.866477)">0.0</text>
+     </g>
+    </g>
+    <g id="lognormal_hazard_plot__ytick_2">
+     <g id="lognormal_hazard_plot__line2d_21">
+      <path d="M 67.378281 297.2205  L 712.786281 297.2205  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_hazard_plot__line2d_22">
+      <g>
+       <use ns4:href="#lognormal_hazard_plot__m98c6f11da3" x="67.378281" y="297.2205" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_hazard_plot__text_12">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="302.158977" transform="rotate(-0 57.878281 302.158977)">0.5</text>
+     </g>
+    </g>
+    <g id="lognormal_hazard_plot__ytick_3">
+     <g id="lognormal_hazard_plot__line2d_23">
+      <path d="M 67.378281 243.513  L 712.786281 243.513  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_hazard_plot__line2d_24">
+      <g>
+       <use ns4:href="#lognormal_hazard_plot__m98c6f11da3" x="67.378281" y="243.513" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_hazard_plot__text_13">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="248.451477" transform="rotate(-0 57.878281 248.451477)">1.0</text>
+     </g>
+    </g>
+    <g id="lognormal_hazard_plot__ytick_4">
+     <g id="lognormal_hazard_plot__line2d_25">
+      <path d="M 67.378281 189.8055  L 712.786281 189.8055  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_hazard_plot__line2d_26">
+      <g>
+       <use ns4:href="#lognormal_hazard_plot__m98c6f11da3" x="67.378281" y="189.8055" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_hazard_plot__text_14">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="194.743977" transform="rotate(-0 57.878281 194.743977)">1.5</text>
+     </g>
+    </g>
+    <g id="lognormal_hazard_plot__ytick_5">
+     <g id="lognormal_hazard_plot__line2d_27">
+      <path d="M 67.378281 136.098  L 712.786281 136.098  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_hazard_plot__line2d_28">
+      <g>
+       <use ns4:href="#lognormal_hazard_plot__m98c6f11da3" x="67.378281" y="136.098" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_hazard_plot__text_15">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="141.036477" transform="rotate(-0 57.878281 141.036477)">2.0</text>
+     </g>
+    </g>
+    <g id="lognormal_hazard_plot__ytick_6">
+     <g id="lognormal_hazard_plot__line2d_29">
+      <path d="M 67.378281 82.3905  L 712.786281 82.3905  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_hazard_plot__line2d_30">
+      <g>
+       <use ns4:href="#lognormal_hazard_plot__m98c6f11da3" x="67.378281" y="82.3905" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_hazard_plot__text_16">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="87.328977" transform="rotate(-0 57.878281 87.328977)">2.5</text>
+     </g>
+    </g>
+    <g id="lognormal_hazard_plot__ytick_7">
+     <g id="lognormal_hazard_plot__line2d_31">
+      <path d="M 67.378281 28.683  L 712.786281 28.683  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_hazard_plot__line2d_32">
+      <g>
+       <use ns4:href="#lognormal_hazard_plot__m98c6f11da3" x="67.378281" y="28.683" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_hazard_plot__text_17">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="33.621477" transform="rotate(-0 57.878281 33.621477)">3.0</text>
+     </g>
+    </g>
+    <g id="lognormal_hazard_plot__text_18">
+     
+     <g style="fill: #062d46" transform="translate(20.88 253.944) rotate(-90)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">A</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="13.930664" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="26.745117" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.458984" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">f</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.290039" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="57.436523" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="63.606445" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="69.776367" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="78.65332" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="90.799805" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="99.404297" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="111.612305" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="117.878906" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">λ</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="135.553711" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="128.53125" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">(</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="142.611328" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">)</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="lognormal_hazard_curves" data-anim-target="true" data-anim-label="Ausfallraten der Lognormalverteilung"><g id="lognormal_hazard_plot__lognormal_hazard_sigma_1">
+    <path d="M 71.412081 350.928  L 142.675881 350.827588  L 149.73806 350.582357  L 154.874189 350.187684  L 158.726287 349.698888  L 162.578384 348.984061  L 165.788465 348.173235  L 168.998546 347.130405  L 172.208627 345.823276  L 175.418708 344.223045  L 177.986773 342.715595  L 180.554838 340.995713  L 183.122903 339.056694  L 186.332984 336.319242  L 189.543065 333.232654  L 192.753146 329.802833  L 195.963227 326.042037  L 199.173308 321.968079  L 203.025406 316.697779  L 206.877503 311.05432  L 211.371616 304.065766  L 216.507746 295.648081  L 222.927908 284.662337  L 233.200168 266.543553  L 246.040492 243.977826  L 253.744687 230.902466  L 260.164849 220.413658  L 266.585011 210.357366  L 272.363157 201.707389  L 278.141303 193.453515  L 283.919449 185.602944  L 289.697595 178.156264  L 295.475741 171.108998  L 300.61187 165.173444  L 305.748 159.539282  L 311.526146 153.549923  L 317.304292 147.916596  L 323.082438 142.624345  L 328.860584 137.657746  L 334.63873 133.001225  L 340.416876 128.639296  L 346.195022 124.556749  L 351.973168 120.73877  L 357.751314 117.171042  L 364.171476 113.483682  L 370.591638 110.070275  L 377.0118 106.913732  L 383.431962 103.99791  L 390.494141 101.050411  L 397.556319 98.356823  L 404.618497 95.899449  L 412.322692 93.468752  L 420.026887 91.27976  L 427.731081 89.314175  L 436.077292 87.417359  L 444.423503 85.743239  L 453.41173 84.168721  L 463.041973 82.721809  L 472.672216 81.500863  L 482.944476 80.424274  L 493.858752 79.510989  L 505.415043 78.776476  L 517.613352 78.232747  L 530.453676 77.888467  L 543.936016 77.749136  L 558.702389 77.825174  L 574.110779 78.125881  L 590.8032 78.670973  L 609.42167 79.50741  L 629.966189 80.663609  L 652.436757 82.157114  L 677.475389 84.045772  L 706.366119 86.451131  L 712.786281 87.012071  L 712.786281 87.012071  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #007ea7; stroke-width: 3.3; stroke-linecap: square" />
+   </g>
+   <g id="lognormal_hazard_plot__lognormal_hazard_sigma_2">
+    <path d="M 71.412081 350.928  L 95.166681 350.818534  L 100.944827 350.555239  L 105.438941 350.149722  L 109.933054 349.508142  L 113.785152 348.7392  L 117.637249 347.752281  L 121.489346 346.543367  L 125.341443 345.118056  L 129.835557 343.200134  L 134.32967 341.037902  L 139.4658 338.316959  L 145.885962 334.631667  L 154.232173 329.550474  L 176.060724 316.133771  L 184.406935 311.340085  L 192.11113 307.183801  L 199.173308 303.623223  L 206.235487 300.309435  L 213.297665 297.242358  L 220.359843 294.416415  L 227.422022 291.822373  L 235.126216 289.243415  L 242.830411 286.91005  L 250.534606 284.804889  L 258.880816 282.761664  L 267.227027 280.944422  L 276.215254 279.216817  L 285.845497 277.603651  L 296.117757 276.12488  L 306.390016 274.867415  L 317.946308 273.685156  L 330.144616 272.669807  L 342.984941 271.823509  L 357.109297 271.117559  L 372.517687 270.574092  L 389.210108 270.207131  L 407.828579 270.020188  L 429.015114 270.035508  L 453.41173 270.286519  L 481.660443 270.810134  L 515.687303 271.675389  L 558.702389 273.006442  L 619.69393 275.138363  L 712.786281 278.567251  L 712.786281 278.567251  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #b7791f; stroke-width: 3.3; stroke-linecap: square" />
+   </g>
+   <g id="lognormal_hazard_plot__lognormal_hazard_sigma_3">
+    <path d="M 71.412081 350.494048  L 72.696114 349.998078  L 74.622162 348.935239  L 76.548211 347.584504  L 79.116276 345.50836  L 91.314584 335.231124  L 95.166681 332.454755  L 99.018779 329.979814  L 102.870876 327.793943  L 106.722973 325.874369  L 110.57507 324.194785  L 115.069184 322.503472  L 119.563297 321.063865  L 124.057411 319.841076  L 129.193541 318.670287  L 134.971687 317.596462  L 141.391849 316.652659  L 148.454027 315.8601  L 156.158222 315.229362  L 165.146449 314.734091  L 175.418708 314.409108  L 186.975 314.269689  L 201.099357 314.328719  L 218.433795 314.63011  L 241.546379 315.265633  L 277.499287 316.504126  L 405.260514 321.054948  L 464.968022 322.883797  L 527.243595 324.566269  L 594.655297 326.160856  L 668.487162 327.680572  L 712.786281 328.496273  L 712.786281 328.496273  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #2f6f55; stroke-width: 3.3; stroke-linecap: square" />
+   </g>
+   </g><g id="lognormal_hazard_plot__patch_3">
+    <path d="M 67.378281 350.928  L 67.378281 7.2  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="lognormal_hazard_plot__patch_4">
+    <path d="M 67.378281 350.928  L 712.786281 350.928  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="lognormal_hazard_limit" data-anim-target="true" data-anim-label="Maximum und anschließender Abfall"><g id="lognormal_hazard_plot__lognormal_hazard_max_label">
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d1495b" x="530.368881" y="116.415475" transform="rotate(-0 530.368881 116.415475)">Maximum, danach Abfall</text>
+   </g>
+   <g id="lognormal_hazard_plot__lognormal_hazard_max_marker">
+    <defs>
+     <path id="lognormal_hazard_plot__m5f70bd4a51" d="M 0 5.361903  C 1.421993 5.361903 2.785937 4.796939 3.791438 3.791438  C 4.796939 2.785937 5.361903 1.421993 5.361903 0  C 5.361903 -1.421993 4.796939 -2.785937 3.791438 -3.791438  C 2.785937 -4.796939 1.421993 -5.361903 0 -5.361903  C -1.421993 -5.361903 -2.785937 -4.796939 -3.791438 -3.791438  C -4.796939 -2.785937 -5.361903 -1.421993 -5.361903 0  C -5.361903 1.421993 -4.796939 2.785937 -3.791438 3.791438  C -2.785937 4.796939 -1.421993 5.361903 0 5.361903  z " style="stroke: #ffffff; stroke-width: 2" />
+    </defs>
+    <g clip-path="url(#lognormal_hazard_plot__p30808de63e)">
+     <use ns4:href="#lognormal_hazard_plot__m5f70bd4a51" x="546.504081" y="77.746075" style="fill: #d1495b; stroke: #ffffff; stroke-width: 2" />
+    </g>
+   </g>
+  </g></g>
+ </g>
+ <defs>
+  <clipPath id="lognormal_hazard_plot__p30808de63e">
+   <rect data-qc-allow-overlap="true" x="67.378281" y="7.2" width="645.408" height="343.728" />
+  </clipPath>
+ </defs>
+</svg><svg id="lognormal_probability_pair_plot" x="1222" y="230" width="596" height="354" viewBox="0 0 533.751094 315.795636" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="lognormal_probability_pair_plot__figure_1">
+  <g id="lognormal_probability_pair_plot__patch_1">
+   <path d="M 0 315.795636  L 533.751094 315.795636  L 533.751094 0  L 0 0  L 0 315.795636  z " style="fill: none; opacity: 0" />
+  </g>
+  <g id="lognormal_probability_pair_plot__axes_1">
+   <g id="lognormal_probability_pair_plot__patch_2">
+    <path d="M 67.375469 256.091418  L 522.415469 256.091418  L 522.415469 7.259418  L 67.375469 7.259418  L 67.375469 256.091418  z " style="fill: none" />
+   </g>
+   <g id="lognormal_probability_pair_plot__matplotlib.axis_1">
+    <g id="lognormal_probability_pair_plot__xtick_1">
+     <g id="lognormal_probability_pair_plot__line2d_1">
+      <path d="M 67.375469 256.091418  L 67.375469 7.259418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_probability_pair_plot__line2d_2">
+      <defs>
+       <path id="lognormal_probability_pair_plot__mc0c508625d" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#lognormal_probability_pair_plot__mc0c508625d" x="67.375469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_probability_pair_plot__text_1">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="67.375469" y="275.468371" transform="rotate(-0 67.375469 275.468371)">0</text>
+     </g>
+    </g>
+    <g id="lognormal_probability_pair_plot__xtick_2">
+     <g id="lognormal_probability_pair_plot__line2d_3">
+      <path d="M 124.255469 256.091418  L 124.255469 7.259418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_probability_pair_plot__line2d_4">
+      <g>
+       <use ns4:href="#lognormal_probability_pair_plot__mc0c508625d" x="124.255469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_probability_pair_plot__text_2">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="124.255469" y="275.468371" transform="rotate(-0 124.255469 275.468371)">1</text>
+     </g>
+    </g>
+    <g id="lognormal_probability_pair_plot__xtick_3">
+     <g id="lognormal_probability_pair_plot__line2d_5">
+      <path d="M 181.135469 256.091418  L 181.135469 7.259418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_probability_pair_plot__line2d_6">
+      <g>
+       <use ns4:href="#lognormal_probability_pair_plot__mc0c508625d" x="181.135469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_probability_pair_plot__text_3">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="181.135469" y="275.468371" transform="rotate(-0 181.135469 275.468371)">2</text>
+     </g>
+    </g>
+    <g id="lognormal_probability_pair_plot__xtick_4">
+     <g id="lognormal_probability_pair_plot__line2d_7">
+      <path d="M 238.015469 256.091418  L 238.015469 7.259418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_probability_pair_plot__line2d_8">
+      <g>
+       <use ns4:href="#lognormal_probability_pair_plot__mc0c508625d" x="238.015469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_probability_pair_plot__text_4">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="238.015469" y="275.468371" transform="rotate(-0 238.015469 275.468371)">3</text>
+     </g>
+    </g>
+    <g id="lognormal_probability_pair_plot__xtick_5">
+     <g id="lognormal_probability_pair_plot__line2d_9">
+      <path d="M 294.895469 256.091418  L 294.895469 7.259418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_probability_pair_plot__line2d_10">
+      <g>
+       <use ns4:href="#lognormal_probability_pair_plot__mc0c508625d" x="294.895469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_probability_pair_plot__text_5">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="294.895469" y="275.468371" transform="rotate(-0 294.895469 275.468371)">4</text>
+     </g>
+    </g>
+    <g id="lognormal_probability_pair_plot__xtick_6">
+     <g id="lognormal_probability_pair_plot__line2d_11">
+      <path d="M 351.775469 256.091418  L 351.775469 7.259418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_probability_pair_plot__line2d_12">
+      <g>
+       <use ns4:href="#lognormal_probability_pair_plot__mc0c508625d" x="351.775469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_probability_pair_plot__text_6">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="351.775469" y="275.468371" transform="rotate(-0 351.775469 275.468371)">5</text>
+     </g>
+    </g>
+    <g id="lognormal_probability_pair_plot__xtick_7">
+     <g id="lognormal_probability_pair_plot__line2d_13">
+      <path d="M 408.655469 256.091418  L 408.655469 7.259418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_probability_pair_plot__line2d_14">
+      <g>
+       <use ns4:href="#lognormal_probability_pair_plot__mc0c508625d" x="408.655469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_probability_pair_plot__text_7">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="408.655469" y="275.468371" transform="rotate(-0 408.655469 275.468371)">6</text>
+     </g>
+    </g>
+    <g id="lognormal_probability_pair_plot__xtick_8">
+     <g id="lognormal_probability_pair_plot__line2d_15">
+      <path d="M 465.535469 256.091418  L 465.535469 7.259418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_probability_pair_plot__line2d_16">
+      <g>
+       <use ns4:href="#lognormal_probability_pair_plot__mc0c508625d" x="465.535469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_probability_pair_plot__text_8">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="465.535469" y="275.468371" transform="rotate(-0 465.535469 275.468371)">7</text>
+     </g>
+    </g>
+    <g id="lognormal_probability_pair_plot__xtick_9">
+     <g id="lognormal_probability_pair_plot__line2d_17">
+      <path d="M 522.415469 256.091418  L 522.415469 7.259418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_probability_pair_plot__line2d_18">
+      <g>
+       <use ns4:href="#lognormal_probability_pair_plot__mc0c508625d" x="522.415469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_probability_pair_plot__text_9">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="522.415469" y="275.468371" transform="rotate(-0 522.415469 275.468371)">8</text>
+     </g>
+    </g>
+    <g id="lognormal_probability_pair_plot__text_10">
+     
+     <g style="fill: #062d46" transform="translate(222.535469 304.271418)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.677734" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">b</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="36.5625" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="48.770508" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="61.584961" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="72.298828" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">d</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="85.183594" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="97.330078" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="110.144531" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="122.352539" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="131.229492" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="137.496094" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="lognormal_probability_pair_plot__matplotlib.axis_2">
+    <g id="lognormal_probability_pair_plot__ytick_1">
+     <g id="lognormal_probability_pair_plot__line2d_19">
+      <path d="M 67.375469 256.091418  L 522.415469 256.091418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_probability_pair_plot__line2d_20">
+      <defs>
+       <path id="lognormal_probability_pair_plot__m51762a9a60" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#lognormal_probability_pair_plot__m51762a9a60" x="67.375469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_probability_pair_plot__text_11">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.875469" y="261.029894" transform="rotate(-0 57.875469 261.029894)">0.0</text>
+     </g>
+    </g>
+    <g id="lognormal_probability_pair_plot__ytick_2">
+     <g id="lognormal_probability_pair_plot__line2d_21">
+      <path d="M 67.375469 207.30083  L 522.415469 207.30083  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_probability_pair_plot__line2d_22">
+      <g>
+       <use ns4:href="#lognormal_probability_pair_plot__m51762a9a60" x="67.375469" y="207.30083" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_probability_pair_plot__text_12">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.875469" y="212.239306" transform="rotate(-0 57.875469 212.239306)">0.2</text>
+     </g>
+    </g>
+    <g id="lognormal_probability_pair_plot__ytick_3">
+     <g id="lognormal_probability_pair_plot__line2d_23">
+      <path d="M 67.375469 158.510241  L 522.415469 158.510241  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_probability_pair_plot__line2d_24">
+      <g>
+       <use ns4:href="#lognormal_probability_pair_plot__m51762a9a60" x="67.375469" y="158.510241" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_probability_pair_plot__text_13">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.875469" y="163.448718" transform="rotate(-0 57.875469 163.448718)">0.4</text>
+     </g>
+    </g>
+    <g id="lognormal_probability_pair_plot__ytick_4">
+     <g id="lognormal_probability_pair_plot__line2d_25">
+      <path d="M 67.375469 109.719653  L 522.415469 109.719653  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_probability_pair_plot__line2d_26">
+      <g>
+       <use ns4:href="#lognormal_probability_pair_plot__m51762a9a60" x="67.375469" y="109.719653" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_probability_pair_plot__text_14">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.875469" y="114.65813" transform="rotate(-0 57.875469 114.65813)">0.6</text>
+     </g>
+    </g>
+    <g id="lognormal_probability_pair_plot__ytick_5">
+     <g id="lognormal_probability_pair_plot__line2d_27">
+      <path d="M 67.375469 60.929065  L 522.415469 60.929065  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_probability_pair_plot__line2d_28">
+      <g>
+       <use ns4:href="#lognormal_probability_pair_plot__m51762a9a60" x="67.375469" y="60.929065" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_probability_pair_plot__text_15">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.875469" y="65.867541" transform="rotate(-0 57.875469 65.867541)">0.8</text>
+     </g>
+    </g>
+    <g id="lognormal_probability_pair_plot__ytick_6">
+     <g id="lognormal_probability_pair_plot__line2d_29">
+      <path d="M 67.375469 12.138477  L 522.415469 12.138477  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_probability_pair_plot__line2d_30">
+      <g>
+       <use ns4:href="#lognormal_probability_pair_plot__m51762a9a60" x="67.375469" y="12.138477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_probability_pair_plot__text_16">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.875469" y="17.076953" transform="rotate(-0 57.875469 17.076953)">1.0</text>
+     </g>
+    </g>
+    <g id="lognormal_probability_pair_plot__text_17">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="20.877188" y="131.675418" transform="rotate(-90 20.877188 131.675418)">Wahrscheinlichkeit</text>
+    </g>
+   </g>
+   <g id="lognormal_probability_pair" data-anim-target="true" data-anim-label="Ausfall- und Überlebenswahrscheinlichkeit"><g id="lognormal_probability_pair_plot__lognormal_failure_line">
+    <path d="M 69.081869 256.091418  L 93.479046 255.995567  L 98.585432 255.762552  L 102.557066 255.388191  L 105.961323 254.872664  L 109.36558 254.129631  L 112.202461 253.306688  L 115.039343 252.27645  L 117.876224 251.022218  L 120.713105 249.531505  L 123.549986 247.796177  L 126.386867 245.81237  L 129.223748 243.580267  L 132.628005 240.579683  L 136.032263 237.240128  L 139.43652 233.580058  L 143.408154 228.93563  L 147.379787 223.928188  L 151.918797 217.819816  L 157.025183 210.541791  L 163.266321 201.205764  L 171.209588 188.885316  L 192.202509 156.116648  L 199.578399 145.109543  L 206.386914 135.358219  L 212.628052 126.816648  L 218.301815 119.407813  L 223.975577 112.352844  L 229.649339 105.658844  L 235.323101 99.327288  L 240.996863 93.3551  L 246.670626 87.735591  L 252.344388 82.459274  L 258.01815 77.514555  L 263.691912 72.888314  L 269.365675 68.566387  L 275.039437 64.533971  L 280.713199 60.775937  L 286.386961 57.277098  L 292.060723 54.022411  L 298.301862 50.706665  L 304.543 47.649485  L 310.784139 44.832601  L 317.592653 42.01325  L 324.401168 39.437786  L 331.777059 36.899708  L 339.15295 34.60066  L 347.096217 32.367025  L 355.039484 30.36022  L 363.550127 28.435939  L 372.628147 26.613086  L 382.273542 24.906084  L 392.486314 23.324958  L 403.266462 21.875596  L 415.181363 20.499457  L 428.231016 19.223286  L 442.415422 18.065233  L 458.301956 17.000992  L 475.890619 16.05385  L 495.748786 15.214036  L 518.443835 14.482149  L 522.415469 14.374309  L 522.415469 14.374309  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #d1495b; stroke-width: 3.2; stroke-linecap: square" />
+   </g>
+   <g id="lognormal_probability_pair_plot__lognormal_reliability_line">
+    <path d="M 69.081869 12.138477  L 93.479046 12.234328  L 98.585432 12.467342  L 102.557066 12.841704  L 105.961323 13.35723  L 109.36558 14.100263  L 112.202461 14.923206  L 115.039343 15.953444  L 117.876224 17.207676  L 120.713105 18.698389  L 123.549986 20.433718  L 126.386867 22.417524  L 129.223748 24.649627  L 132.628005 27.650212  L 136.032263 30.989766  L 139.43652 34.649837  L 143.408154 39.294264  L 147.379787 44.301707  L 151.918797 50.410078  L 157.025183 57.688103  L 163.266321 67.024131  L 171.209588 79.344578  L 192.202509 112.113247  L 199.578399 123.120351  L 206.386914 132.871675  L 212.628052 141.413246  L 218.301815 148.822081  L 223.975577 155.87705  L 229.649339 162.57105  L 235.323101 168.902606  L 240.996863 174.874795  L 246.670626 180.494304  L 252.344388 185.77062  L 258.01815 190.715339  L 263.691912 195.341581  L 269.365675 199.663507  L 275.039437 203.695924  L 280.713199 207.453957  L 286.386961 210.952796  L 292.060723 214.207484  L 298.301862 217.523229  L 304.543 220.58041  L 310.784139 223.397293  L 317.592653 226.216644  L 324.401168 228.792108  L 331.777059 231.330187  L 339.15295 233.629235  L 347.096217 235.86287  L 355.039484 237.869674  L 363.550127 239.793956  L 372.628147 241.616808  L 382.273542 243.323811  L 392.486314 244.904936  L 403.266462 246.354298  L 415.181363 247.730438  L 428.231016 249.006609  L 442.415422 250.164661  L 458.301956 251.228902  L 475.890619 252.176044  L 495.748786 253.015858  L 518.443835 253.747746  L 522.415469 253.855585  L 522.415469 253.855585  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #2f6f55; stroke-width: 3.2; stroke-linecap: square" />
+   </g>
+   <g id="lognormal_probability_pair_plot__lognormal_failure_label">
+    
+    <g style="fill: #d1495b" transform="translate(334.711469 34.094241)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.09375" style="font-style: oblique; font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">F</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="16.410645" y="-0.09375" style="font-style: oblique; font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">t</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="9.77832" y="-0.09375" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">(</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.076172" y="-0.09375" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">)</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="lognormal_probability_pair_plot__lognormal_reliability_label">
+    
+    <g style="fill: #2f6f55" transform="translate(334.711469 234.135653)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.09375" style="font-style: oblique; font-size: 17px; font-family: 'DejaVu Sans'; fill: #2f6f55">R</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="18.444336" y="-0.09375" style="font-style: oblique; font-size: 17px; font-family: 'DejaVu Sans'; fill: #2f6f55">t</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.812012" y="-0.09375" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #2f6f55">(</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="25.109863" y="-0.09375" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #2f6f55">)</tspan>
+     </text>
+    </g>
+   </g>
+  </g><g id="lognormal_probability_pair_plot__patch_3">
+    <path d="M 67.375469 256.091418  L 67.375469 7.259418  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="lognormal_probability_pair_plot__patch_4">
+    <path d="M 67.375469 256.091418  L 522.415469 256.091418  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   </g>
+ </g>
+ <defs>
+  <clipPath id="lognormal_probability_pair_plot__p4f39f73ad4">
+   <rect data-qc-allow-overlap="true" x="67.375469" y="7.259418" width="455.04" height="248.832" />
+  </clipPath>
+ </defs>
+</svg><g id="lognormal_wear_limitation" data-anim-target="true" data-anim-label="Eignungsgrenze für Verschleiß"><title>Eignungsgrenze für Verschleiß</title><rect data-qc-allow-overlap="true" x="1222" y="626" width="596" height="238" rx="8" fill="#F9E4E7" stroke="#D1495B" stroke-width="1.5"/><circle cx="1290" cy="714" r="42" fill="#FFFFFF"/><g transform="translate(1265 689) scale(2.0833333333333335)" fill="none" stroke="#D1495B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a4.5 4.5 0 0 1-5.8 5.8L4 17l3 3 4.7-4.7a4.5 4.5 0 0 1 5.8-5.8l-3 3-3-3z"/><path d="M20 3v4M20 10h.01"/></g><text x="1356" y="684" class="" font-size="18" font-weight="850" fill="#D1495B" text-anchor="start" data-qc-role="text"><tspan x="1356" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">EIGNUNGSGRENZE</tspan></text><text x="1356" y="728" class="" font-size="22" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1356" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Nach dem Maximum fällt λ(t)</tspan></text><text x="1260" y="786" class="" font-size="22" font-weight="740" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1260" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Verschleiß- und Ermüdungsausfälle</tspan><tspan x="1260" dy="29" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">werden deshalb nur unvollständig</tspan><tspan x="1260" dy="29" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">beschrieben.</tspan></text></g><rect data-qc-allow-overlap="true" x="356" y="876" width="1208" height="60" rx="8" fill="#F7EEDC" stroke="#B7791F" stroke-width="1.5"/><text x="960" y="915" class="" font-size="22" font-weight="790" fill="#102A43" text-anchor="middle" data-qc-role="text"><tspan x="960" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Flexibel in der Form, aber kein idealer Verlauf für dauernd steigende Verschleißraten.</tspan></text></g>
+</svg>

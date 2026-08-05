@@ -1,0 +1,606 @@
+{
+  "schema_version": "basisReSemanticAnimationPilot/v1",
+  "module_id": "RE1",
+  "scene_plan": "analysis/rebuild-plans/RE1_scene-plan.json",
+  "scenes": [
+    {
+      "work_unit": "slide_001",
+      "decision": "animated",
+      "rationale": "Der Sprechertext trennt den technischen Triebwerksfall klar von dessen wirtschaftlichem Ausmass.",
+      "narrative_beats": [
+        "Allgemeine Motivation durch Folgen unzuverlaessiger Produkte.",
+        "Materialmangel, Ursache und technische Folge am A320neo.",
+        "Betroffene Hersteller, Stueckzahl und wirtschaftliches Ausmass."
+      ],
+      "fragments": [
+        {
+          "fragment_id": "a320_impact_heading_fragment",
+          "source_id": "state_001_text_content_02",
+          "start_index": 5,
+          "end_index": 7,
+          "expected_texts": ["•", "Ausmaß", "•"]
+        }
+      ],
+      "groups": [
+        {
+          "group_id": "a320_case_context",
+          "label": "A320neo-Fall: Ursache und Folge",
+          "role": "case_context",
+          "action": "show",
+          "source_text": "Ein Fall aus der jüngsten Vergangenheit ist beispielsweise ein Materialmangel",
+          "members": [
+            { "id": "state_001_visual_media_01" },
+            { "id": "state_001_source_notes_01" },
+            { "id": "state_001_supporting_visuals_01" },
+            { "id": "state_001_text_content_01" },
+            { "id": "state_001_text_content_02" }
+          ]
+        },
+        {
+          "group_id": "a320_business_impact",
+          "label": "A320neo-Fall: Ausmass und Kosten",
+          "role": "business_impact",
+          "action": "show",
+          "source_text": "Die Auswirkungen erstrecken sich auf die Hersteller Pratt & Whitney",
+          "members": [
+            { "id": "a320_impact_heading_fragment" },
+            { "id": "state_001_text_content_03" },
+            { "id": "state_001_text_content_04" }
+          ]
+        }
+      ]
+    },
+    {
+      "work_unit": "slide_002",
+      "decision": "animated",
+      "rationale": "Die offizielle Rueckrufstatistik wird nach der einleitenden Einordnung als unteilbare Vergleichsgrafik eingefuehrt.",
+      "narrative_beats": [
+        "Zurueckhaltung der Hersteller bei Zuverlaessigkeitsaussagen.",
+        "KBA-Daten und Verdreifachung der Rueckrufe."
+      ],
+      "groups": [
+        {
+          "group_id": "recall_statistics_chart",
+          "label": "KBA-Rueckrufstatistik",
+          "role": "comparison_chart",
+          "action": "show",
+          "source_text": "Das Kraftfahrt-Bundesamt liefert jedoch offizielle Daten zu Rückrufaktionen",
+          "members": [
+            { "id": "state_001_visual_media_01" }
+          ]
+        }
+      ]
+    },
+    {
+      "work_unit": "slide_003",
+      "decision": "animated",
+      "rationale": "Ursache und Verletzungsfolge werden vor Ausmass und wirtschaftlichen Konsequenzen erklaert.",
+      "narrative_beats": [
+        "Takata-Rueckruf als Sicherheitsfall.",
+        "Fehlerhafter Gasgenerator und Verletzungsgefahr.",
+        "Rueckrufvolumen, Kosten, Recht und Image."
+      ],
+      "fragments": [
+        {
+          "fragment_id": "takata_scope_bullet_fragment",
+          "source_id": "state_001_text_content_02",
+          "start_index": 7,
+          "end_index": 7,
+          "expected_texts": ["•"]
+        }
+      ],
+      "groups": [
+        {
+          "group_id": "takata_case_context",
+          "label": "Takata-Fall: Ursache und Folge",
+          "role": "case_context",
+          "action": "show",
+          "source_text": "Der Rückruf im Zusammenhang mit den Takata-Airbags ist eine der größten",
+          "members": [
+            { "id": "state_001_visual_media_01" },
+            { "id": "state_001_source_notes_01" },
+            { "id": "state_001_supporting_visuals_01" },
+            { "id": "state_001_text_content_01" },
+            { "id": "state_001_text_content_02" }
+          ]
+        },
+        {
+          "group_id": "takata_scope_and_consequences",
+          "label": "Takata-Fall: Ausmass und Konsequenzen",
+          "role": "business_impact",
+          "action": "show",
+          "source_text": "Das Ausmaß dieses Problems zeigt sich in der Notwendigkeit",
+          "members": [
+            { "id": "takata_scope_bullet_fragment" },
+            { "id": "state_001_text_content_03" },
+            { "id": "state_001_text_content_04" }
+          ]
+        }
+      ]
+    },
+    {
+      "work_unit": "slide_004",
+      "decision": "animated",
+      "rationale": "Der Sprechertext leitet die wirtschaftlichen Konsequenzen ausdruecklich nach Ursache und Rueckrufumfang ein.",
+      "narrative_beats": [
+        "Rueckruf in der Unterhaltungselektronik.",
+        "Akkudesignfehler, Braende und betroffenes Volumen.",
+        "Finanzieller Verlust und Imageschaden."
+      ],
+      "groups": [
+        {
+          "group_id": "note7_case_context",
+          "label": "Note-7-Fall: Ursache und Folge",
+          "role": "case_context",
+          "action": "show",
+          "source_text": "Samsung initiierte im September Zweitausendsechzehn die bisher größte Rückrufaktion",
+          "members": [
+            { "id": "state_001_visual_media_01" },
+            { "id": "state_001_source_notes_01" },
+            { "id": "state_001_source_notes_02" },
+            { "id": "state_001_supporting_visuals_01" },
+            { "id": "state_001_supporting_visuals_02" },
+            { "id": "state_001_text_content_01" },
+            { "id": "state_001_text_content_02" }
+          ]
+        },
+        {
+          "group_id": "note7_business_impact",
+          "label": "Note-7-Fall: Konsequenzen",
+          "role": "business_impact",
+          "action": "show",
+          "source_text": "Die Konsequenzen für Samsung waren erheblich",
+          "members": [
+            { "id": "state_001_text_content_03" },
+            { "id": "state_001_text_content_04" }
+          ]
+        }
+      ]
+    },
+    {
+      "work_unit": "slide_005",
+      "decision": "animated",
+      "rationale": "Die Darstellung besitzt eine gemeinsame Gliederung und drei in der Sprecherreihenfolge eingefuehrte Konsequenzklassen.",
+      "narrative_beats": [
+        "Gliederung in rechtliche und nicht rechtliche Folgen.",
+        "Wirtschaftliche Verluste und Imageschaeden.",
+        "Zivilrecht mit Gewaehrleistung und Produkthaftung.",
+        "Strafrechtliche Sanktionen."
+      ],
+      "groups": [
+        {
+          "group_id": "consequence_structure",
+          "label": "Gliederung der Produktfolgen",
+          "role": "orientation",
+          "action": "show",
+          "source_text": "In unseren Beispielen zu Produkt-Rückrufen haben wir die spezifischen Folgen",
+          "members": [
+            { "id": "state_001_supporting_visuals_01" },
+            { "id": "state_001_text_content_01" },
+            { "id": "state_001_text_content_02" },
+            { "id": "state_001_supporting_visuals_02" },
+            { "id": "state_001_data_shapes_01" }
+          ]
+        },
+        {
+          "group_id": "nonlegal_consequences",
+          "label": "Nicht rechtliche Folgen",
+          "role": "nonlegal_branch",
+          "action": "show",
+          "source_text": "Zu den nicht-rechtlichen Folgen zählen beispielsweise wirtschaftliche Verluste",
+          "members": [
+            { "id": "state_001_text_content_07" }
+          ]
+        },
+        {
+          "group_id": "civil_consequences",
+          "label": "Zivilrechtliche Folgen",
+          "role": "civil_branch",
+          "action": "show",
+          "source_text": "Zudem stehen Unternehmen vor zivilrechtlichen Konsequenzen",
+          "members": [
+            { "id": "state_001_text_content_03" },
+            { "id": "state_001_text_content_04" }
+          ]
+        },
+        {
+          "group_id": "criminal_consequences",
+          "label": "Strafrechtliche Folgen",
+          "role": "criminal_branch",
+          "action": "show",
+          "source_text": "In besonders schwerwiegenden Fällen können auch strafrechtliche Sanktionen",
+          "members": [
+            { "id": "state_001_text_content_05" },
+            { "id": "state_001_text_content_06" }
+          ]
+        }
+      ]
+    },
+    {
+      "work_unit": "slide_006",
+      "decision": "animated",
+      "rationale": "Der Sprechertext ordnet die Einflussgroessen in ein Bezugszentrum und drei aufeinanderfolgende Einflussfamilien.",
+      "narrative_beats": [
+        "Zuverlaessigkeit als gemeinsamer Bezugspunkt.",
+        "Zeit- und Kostendruck in der Entwicklung.",
+        "Steigende Funktionalitaet und Komplexitaet.",
+        "Gegenkraefte aus Haftung, Fehlerkosten und Kundenanforderungen."
+      ],
+      "groups": [
+        {
+          "group_id": "reliability_core",
+          "label": "Zuverlaessigkeit als Bezugszentrum",
+          "role": "orientation",
+          "action": "show",
+          "source_text": "Generell gibt es viele unterschiedliche Faktoren, welche einen Einfluss auf die Zuverlässigkeit",
+          "members": [
+            { "id": "state_001_text_content_08" }
+          ]
+        },
+        {
+          "group_id": "development_pressure",
+          "label": "Entwicklungszeit und Entwicklungskosten",
+          "role": "negative_influences",
+          "action": "show",
+          "source_text": "Wichtige Einflussgrößen auf die Zuverlässigkeit sind vor allem die Entwicklungszeit",
+          "members": [
+            { "id": "state_001_text_content_03" },
+            { "id": "state_001_text_content_04" }
+          ]
+        },
+        {
+          "group_id": "complexity_pressure",
+          "label": "Funktionalitaet und Komplexitaet",
+          "role": "negative_influences",
+          "action": "show",
+          "source_text": "Zusätzlich steigen auch Komplexität und Funktionsumfang der Produkte",
+          "members": [
+            { "id": "state_001_text_content_01" },
+            { "id": "state_001_text_content_02" }
+          ]
+        },
+        {
+          "group_id": "counteracting_demands",
+          "label": "Haftung, Fehlerkosten und Kundenanforderungen",
+          "role": "positive_influences",
+          "action": "show",
+          "source_text": "Dem gegenüber stehen die steigende Produkthaftung",
+          "members": [
+            { "id": "state_001_text_content_05" },
+            { "id": "state_001_text_content_06" },
+            { "id": "state_001_text_content_07" }
+          ]
+        }
+      ]
+    },
+    {
+      "work_unit": "slide_007",
+      "decision": "static",
+      "rationale": "Die dichte Mehrjahresstatistik muss fuer den direkten Vergleich vollstaendig sichtbar sein; der Sprechertext fuehrt keine Einzelreihe separat ein.",
+      "narrative_beats": [
+        "Einordnung der Befragung.",
+        "Zuverlaessigkeit und Sicherheit als Top-Kriterien.",
+        "Spannungsfeld aus Kundenerwartung und Rueckrufentwicklung."
+      ],
+      "groups": []
+    },
+    {
+      "work_unit": "slide_008",
+      "decision": "animated",
+      "rationale": "Die Pointe des Zitats soll erst an ihrer gesprochenen Stelle erscheinen; Bildmotive und Hintergrund bleiben stabil.",
+      "narrative_beats": [
+        "Bedeutung planbarer Produktlebensdauer.",
+        "Zitat ueber Leben, Tod und Maschinenausfall.",
+        "Aufloesung: Maschinenausfall vorhersagbar machen."
+      ],
+      "groups": [
+        {
+          "group_id": "forecast_quote_setup",
+          "label": "Zitat: unvorhersagbare Ereignisse",
+          "role": "quote_setup",
+          "action": "show",
+          "source_text": "Drei Dinge kann keiner voraussagen",
+          "members": [
+            {
+              "parent_id": "state_001_text_content_01",
+              "texts": [
+                "Drei Dinge kann keiner voraussagen:",
+                "Leben, den Tod und den Ausfall einer Maschine"
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "forecast_quote_resolution",
+          "label": "Zitat: Aufloesung",
+          "role": "quote_resolution",
+          "action": "show",
+          "source_text": "Machen Sie zwei daraus",
+          "members": [
+            {
+              "parent_id": "state_001_text_content_01",
+              "texts": [
+                "Machen Sie zwei daraus."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "work_unit": "slide_009",
+      "decision": "animated",
+      "rationale": "Die Systemhierarchie wird vor den Funktions- und Fehlfunktionsbeispielen eingefuehrt.",
+      "narrative_beats": [
+        "PKW-Systemstruktur und Motorunterteilung.",
+        "Funktion als Bezugspunkt der Zuverlaessigkeit.",
+        "Ausfallwirkung ueber die Systemhierarchie."
+      ],
+      "groups": [
+        {
+          "group_id": "vehicle_system_hierarchy",
+          "label": "PKW-Systemhierarchie",
+          "role": "system_structure",
+          "action": "show",
+          "source_text": "schauen wir uns zunächst einmal die System-Struktur eines P-K-Ws an",
+          "members": [
+            { "id": "state_001_text_content_01" },
+            { "id": "state_001_text_content_02" },
+            { "id": "state_001_text_content_03" },
+            { "id": "state_001_text_content_04" },
+            { "id": "state_001_text_content_05" },
+            { "id": "state_001_text_content_06" },
+            { "id": "state_001_supporting_visuals_01" }
+          ]
+        },
+        {
+          "group_id": "function_examples",
+          "label": "Funktions- und Fehlfunktionsbeispiele",
+          "role": "function_definition",
+          "action": "show",
+          "source_text": "Im Falle eines PKWs ist die entsprechende Funktion einfach das Fahren",
+          "members": [
+            { "id": "state_001_text_content_07" },
+            { "id": "state_001_text_content_08" }
+          ]
+        }
+      ]
+    },
+    {
+      "work_unit": "slide_010",
+      "decision": "animated",
+      "rationale": "Das Stress-Strength-Modell wird in Diagrammorientierung, Belastung, Belastbarkeit und Ausfallfolge gelesen.",
+      "narrative_beats": [
+        "Stress-Strength-Interference als Modell.",
+        "Belastungsverteilung und Nutzungsbedingungen.",
+        "Belastbarkeitsverteilung und Produktstreuung.",
+        "Ueberlappung, Ausfaelle und Konsequenzen."
+      ],
+      "groups": [
+        {
+          "group_id": "ssi_diagram_frame",
+          "label": "Stress-Strength-Diagrammrahmen",
+          "role": "diagram_frame",
+          "action": "show",
+          "source_text": "Dazu gehen wir auf das Konzept der Stress Strength Interference ein",
+          "members": [
+            { "id": "state_001_text_content_01" },
+            { "id": "state_001_linework_01" },
+            { "id": "state_001_supporting_visuals_01" }
+          ]
+        },
+        {
+          "group_id": "ssi_stress_context",
+          "label": "Belastung und ihre Einfluesse",
+          "role": "primary_distribution",
+          "action": "show",
+          "source_text": "Zunächst einmal wirkt auf ein Produkt oder auch eine Komponente",
+          "members": [
+            { "id": "state_001_text_content_02" },
+            { "id": "state_001_text_content_06" }
+          ]
+        },
+        {
+          "group_id": "ssi_strength_context",
+          "label": "Belastbarkeit und ihre Einfluesse",
+          "role": "secondary_distribution",
+          "action": "show",
+          "source_text": "Dem gegenüber steht die Belastbarkeit, die jedes Produkt besitzt",
+          "members": [
+            { "id": "state_001_text_content_04" },
+            { "id": "state_001_text_content_05" }
+          ]
+        },
+        {
+          "group_id": "ssi_failure_consequences",
+          "label": "Ueberlappung und Ausfallfolgen",
+          "role": "failure_region",
+          "action": "show",
+          "source_text": "Zwischen den Verteilungen von Belastung und Belastbarkeit gibt es nun einen Überlappungsbereich",
+          "members": [
+            { "id": "state_001_text_content_03" },
+            { "id": "state_001_text_content_07" },
+            { "id": "state_001_text_content_08" }
+          ]
+        }
+      ]
+    },
+    {
+      "work_unit": "slide_011",
+      "decision": "animated",
+      "rationale": "Der bekannte Diagrammkontext bleibt sichtbar; nur Kurvenverschiebung und reduzierter Ueberlappungsbereich werden aufgebaut.",
+      "narrative_beats": [
+        "Belastbarkeit durch Qualitaet erhoehen.",
+        "Belastbarkeitskurve nach rechts verschieben.",
+        "Ueberlappung und Ausfaelle reduzieren."
+      ],
+      "groups": [
+        {
+          "group_id": "shifted_strength_curve",
+          "label": "Verschobene Belastbarkeitskurve",
+          "role": "state_change",
+          "action": "draw",
+          "source_text": "wodurch dessen Kurve nach rechts verschoben wird",
+          "members": [
+            { "id": "state_001_linework_02" }
+          ]
+        },
+        {
+          "group_id": "reduced_failure_overlap",
+          "label": "Reduzierter Ueberlappungsbereich",
+          "role": "result",
+          "action": "show",
+          "source_text": "Die Folge ist ein kleinerer Überlappungsbereich",
+          "members": [
+            { "id": "state_001_text_content_04" }
+          ]
+        }
+      ]
+    },
+    {
+      "work_unit": "slide_012",
+      "decision": "animated",
+      "rationale": "Das bekannte Stress-Strength-Modell bleibt sichtbar; neu ist nur der Zielkonflikt aus Ausfallreduktion und Mehrkosten.",
+      "narrative_beats": [
+        "Weitere Verschiebung reduziert Ausfaelle.",
+        "Qualitaetserhoehung verursacht Mehrkosten.",
+        "Zuverlaessigkeitstechnik sucht das wirtschaftliche Optimum."
+      ],
+      "groups": [
+        {
+          "group_id": "quality_cost_tradeoff",
+          "label": "Mehrkosten der Qualitaetserhoehung",
+          "role": "tradeoff",
+          "action": "show",
+          "source_text": "Durch die Qualitätserhöhung entstehen aber auch deutliche Mehrkosten",
+          "members": [
+            { "id": "state_001_linework_03" },
+            { "id": "state_001_text_content_05" }
+          ]
+        }
+      ]
+    },
+    {
+      "work_unit": "slide_013",
+      "decision": "animated",
+      "rationale": "Definition und unmittelbare visuelle Erlaeuterungen bilden eine unteilbare fachliche Einheit.",
+      "narrative_beats": [
+        "Definition der Zuverlaessigkeit.",
+        "Wahrscheinlichkeit statt diskretem Wert.",
+        "Abhaengigkeit von Zeit, Funktion und Umgebung."
+      ],
+      "groups": [
+        {
+          "group_id": "reliability_definition",
+          "label": "Definition der Zuverlaessigkeit",
+          "role": "definition",
+          "action": "show",
+          "source_text": "Die Zuverlässigkeit ist die Wahrscheinlichkeit dafür",
+          "members": [
+            { "id": "state_001_text_content_01" },
+            { "id": "state_001_text_content_02" },
+            { "id": "state_001_supporting_visuals_01" },
+            { "id": "state_001_data_shapes_01" },
+            { "id": "state_001_text_content_03" },
+            { "id": "state_001_supporting_visuals_02" }
+          ]
+        }
+      ]
+    },
+    {
+      "work_unit": "slide_014",
+      "decision": "animated",
+      "rationale": "Die Ausfalllogik der Badewannenkurve orientiert zuerst; qualitative und quantitative Methoden werden danach getrennt zugeordnet.",
+      "narrative_beats": [
+        "Badewannenkurve und drei Ausfallbereiche.",
+        "Qualitative Methoden gegen Fruehausfaelle.",
+        "Quantitative Methoden gegen Ermuedungsausfaelle."
+      ],
+      "groups": [
+        {
+          "group_id": "bathtub_curve_overview",
+          "label": "Badewannenkurve und Ausfallbereiche",
+          "role": "diagram_overview",
+          "action": "show",
+          "source_text": "Schauen wir uns hierfür zunächst einen typischen Verlauf von Ausfällen",
+          "members": [
+            { "id": "state_001_linework_01" },
+            { "id": "state_001_text_content_03" },
+            { "id": "state_001_text_content_04" }
+          ]
+        },
+        {
+          "group_id": "qualitative_method_focus",
+          "label": "Fokus qualitative Methoden",
+          "role": "qualitative_focus",
+          "action": "show",
+          "source_text": "Die qualitativen Methoden werden vor allem dazu genutzt",
+          "members": [
+            { "id": "state_001_text_content_01" },
+            { "id": "state_001_text_content_05" },
+            { "id": "state_001_text_content_07" }
+          ]
+        },
+        {
+          "group_id": "quantitative_method_focus",
+          "label": "Fokus quantitative Methoden",
+          "role": "quantitative_focus",
+          "action": "show",
+          "source_text": "Die quantitativen Methoden werden dagegen primär genutzt",
+          "members": [
+            { "id": "state_001_text_content_02" },
+            { "id": "state_001_text_content_06" },
+            { "id": "state_001_text_content_08" }
+          ]
+        }
+      ]
+    },
+    {
+      "work_unit": "slide_015",
+      "decision": "animated",
+      "rationale": "Die zwei Quellzustaende werden als gemeinsamer Methodenrahmen mit zwei fachlichen Werkzeugkaesten zusammengefuehrt.",
+      "narrative_beats": [
+        "Methoden als zwei Werkzeugkaesten.",
+        "Zweck und Beispiele qualitativer Methoden.",
+        "Zweck und Beispiele quantitativer Methoden.",
+        "Beide Werkzeugkaesten werden gemeinsam benoetigt."
+      ],
+      "groups": [
+        {
+          "group_id": "method_toolboxes",
+          "label": "Qualitativer und quantitativer Werkzeugkasten",
+          "role": "orientation",
+          "action": "show",
+          "source_text": "Man kann sich die Methoden zunächst einmal wie ein Werkzeugkasten vorstellen",
+          "members": [
+            { "id": "state_001_text_content_01" },
+            { "id": "state_001_text_content_02" },
+            { "id": "state_001_linework_01" }
+          ]
+        },
+        {
+          "group_id": "qualitative_toolbox",
+          "label": "Qualitativer Werkzeugkasten",
+          "role": "qualitative_methods",
+          "action": "show",
+          "source_text": "Den Werkzeugkasten der qualitativen Methoden brauchen wir",
+          "members": [
+            { "id": "state_001_text_content_03" },
+            { "id": "state_001_text_content_05" }
+          ]
+        },
+        {
+          "group_id": "quantitative_toolbox",
+          "label": "Quantitativer Werkzeugkasten",
+          "role": "quantitative_methods",
+          "action": "show",
+          "source_text": "Die quantitativen Methoden hingegen nutzen wir",
+          "members": [
+            { "id": "state_001_text_content_04" },
+            { "id": "state_001_text_content_06" }
+          ]
+        }
+      ]
+    }
+  ]
+}

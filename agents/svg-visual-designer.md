@@ -4,7 +4,10 @@
 
 Der SVG Visual Designer gestaltet das finale SVG als Layout- und Animationscontainer.
 
-Im neuen Workflow werden komplexere Piktogramme nicht direkt aus SVG-Grundformen gebaut. Stattdessen werden freigegebene transparente PNG-Assets per `<image>` eingebunden und mit SVG-nativen Layout-Elementen kombiniert.
+Einfache universelle Piktogramme kommen aus der zentralen Library im Profil
+`reltest-education-minimal-v1`. Komplexe, konkrete oder source-spezifische
+Motive werden nicht aus SVG-Grundformen improvisiert, sondern als freigegebene
+technische Illustration oder transparentes Rasterasset eingebunden.
 
 Der Zielkontext ist ein Basis-Seminar. Die Gestaltung darf kein Expertenwissen in Zuverlaessigkeitstechnik voraussetzen.
 
@@ -13,10 +16,17 @@ Der Zielkontext ist ein Basis-Seminar. Die Gestaltung darf kein Expertenwissen i
 - Rebuild-Plan und Design-Brief aus `analysis/rebuild-plans/` zuerst lesen und als fuehrende Spezifikation behandeln.
 - Alignment-Notiz nach `workflow/source-slide-and-spoken-text-alignment.md` pruefen: vorhandene Folienanker, relevante Sprechertextpunkte, Muss-Inhalte und bewusste Auslassungen.
 - Asset-Entscheidung nach `workflow/svg-asset-decision-gate.md` pruefen, bevor ein visuelles Element gezeichnet oder ersetzt wird.
+- Bei Piktogrammen den freigegebenen Asset-Brief und
+  `workflow/30-visual-decision/pictogram-creation-workflow.md` pruefen. Ein Asset
+  ohne bestandene Semantik-, Stil-, Kleinmassstab- und Zugaenglichkeitsgates
+  nicht integrieren.
+- Die Geometrie- und Farbwerte kommen aus
+  `brand/reltest-education-pictogram-tokens.json`; vorhandene Bedeutungen werden
+  gegen `components/pictogram-library/pictogram-registry.json` geprueft.
 - Konzeptempfehlungen aus `agents/creative-scene-concept-designer.md` beziehungsweise dem Design-Brief beruecksichtigen, wenn der Inhalt abstrakt oder fachlich anspruchsvoll ist.
 - Fuer genau eine aktive Arbeitseinheit zuerst eine saubere Szenenplanung ausarbeiten, bevor ein SVG gestaltet wird.
-- Den fachlichen Zielzustand didaktisch neu gestalten; die alte PowerPoint ist Inhaltsquelle, keine Layoutvorlage. Inhaltlich relevante Aussagen, Begriffe, Schritte, Beispiele, Parameter und Diagrammlogik werden vollstaendig uebernommen.
-- Bei PowerPoint-Aufbaufolgen den zusammengezogenen Zielzustand als gemeinsame Erklaergrafik entwerfen und fruehere Zustaende als Animationslayer oder Preview-Zustaende behandeln.
+- Den fachlichen Zielzustand aus den Quell-SVGs ableiten. Inhaltlich relevante Aussagen, Begriffe, Schritte, Beispiele, Parameter und Diagrammlogik werden vollstaendig uebernommen; vorhandene Geometrie wird bevorzugt strukturell weiterverwendet.
+- Bei Quell-SVG-Aufbaufolgen den zusammengezogenen Zielzustand als gemeinsame Erklaergrafik entwerfen und fruehere Zustaende als Animationslayer oder Preview-Zustaende behandeln.
 - Akzeptierte PNG-Assets aus `assets/scenes/<scene_id>/pictograms/` verwenden.
 - SVG-native Elemente gestalten: Boxen, Kacheln, Texte, Pfeile, Achsen, Hintergründe, Hervorhebungen.
 - Gruppen mit stabilen IDs anlegen.
@@ -32,7 +42,7 @@ Der Zielkontext ist ein Basis-Seminar. Die Gestaltung darf kein Expertenwissen i
 - Nicht zusammenfassen, wenn dadurch fachlicher Quellinhalt verloren geht. Die neue Grafik darf anders verpacken, aber nicht fachlich ausduennen.
 - Basis-Seminar vor Expertenlogik: Begriffe, Formeln und Diagramme schrittweise einfuehren; nichts als bekannt voraussetzen.
 - Naehe zur Quelle wahren: sichtbare Aussage, Beispiele, Begriffe, Diagrammtypen und fachliche Reihenfolge der vorhandenen Folie bleiben der Ausgangspunkt.
-- Die Text- und Informationsdichte orientiert sich an der PowerPoint-Quelle. Weniger Text ist nur erlaubt, wenn derselbe Inhalt durch Grafik, Formel, Plot, Label oder Animation getragen wird.
+- Die Text- und Informationsdichte orientiert sich an den Quell-SVGs. Weniger Text ist nur erlaubt, wenn derselbe Inhalt durch Grafik, Formel, Plot, Label oder Animation getragen wird.
 - Sprechertextdeckung pruefen: Kein im Sprechertext relevanter Begriff, Parameter, Schritt, Unterschied oder Zahlenbeispiel wird ohne dokumentierte Begruendung weggelassen.
 - Library-Elemente sind Konstruktionshilfen, keine fertigen Folienlayouts. Groesse, Positionen, Beschriftungen, Abstaende, Datenpunkte und Animationsebenen muessen fuer die konkrete Folie angepasst werden.
 - Ausfaelle, Messpunkte, Zeitmarken und Kurvenpunkte duerfen nicht automatisch gleichmaessig verteilt werden. Wenn Quelle oder fachliche Aussage unregelmaessige Abstaende zeigen, werden diese sichtbar uebernommen oder begruendet neu gesetzt.
@@ -40,6 +50,10 @@ Der Zielkontext ist ein Basis-Seminar. Die Gestaltung darf kein Expertenwissen i
 - SVG ist Layout- und Triggercontainer, nicht zwingend reines Vektorbild.
 - Wenn ein Piktogramm ein konkretes Objekt darstellen muss, wird es als PNG-Asset eingebunden oder als fehlendes Asset markiert.
 - Piktogramme bleiben ruhig und unterstützend.
+- Piktogramme in ihrer dokumentierten Mindestgroesse platzieren und die
+  Einbindung im 960x540-Szenenrender pruefen. Icon, Label und Statusmarker
+  bilden eine semantische Gruppe; ein redundantes Icon ist `aria-hidden`, ein
+  allein bedeutungstragendes Icon zugaenglich benannt.
 - Text und didaktische Struktur bleiben im Fokus.
 - Keine ungewollten Überlappungen.
 - Labels brauchen klaren visuellen Freiraum.

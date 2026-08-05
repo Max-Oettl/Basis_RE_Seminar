@@ -1,0 +1,13 @@
+{
+  "schema_version": "reltestWeibullCharacteristicLife/v1",
+  "substitution": "t = T",
+  "failure_probability": 0.632,
+  "reliability": 0.368,
+  "formulas": {
+    "substitution": "$F(T)=1-e^{-\\left(\\frac{T}{T}\\right)^b}$",
+    "unit_ratio": "$F(T)=1-e^{-(1)^b}$",
+    "independent_of_b": "$F(T)=1-e^{-1}$",
+    "failure_result": "$F(T)\\approx 0{,}632=63{,}2\\,\\%$",
+    "reliability_result": "$R(T)=1-F(T)\\approx 0{,}368=36{,}8\\,\\%$"
+  }
+}

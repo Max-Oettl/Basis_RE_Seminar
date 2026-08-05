@@ -1,0 +1,112 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_069",
+  "scene_id": "re1_src_087",
+  "source_slides": [
+    87,
+    88
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "lognormal_density_curves",
+      "label": "Dichtefunktionen",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "lognormal_probability_pair",
+      "label": "Ausfall- und Überlebenswahrscheinlichkeit",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "lognormal_hazard_curves",
+      "label": "Ausfallraten",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "lognormal_hazard_limit",
+      "label": "Maximum und Abfall",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "lognormal_wear_limitation",
+      "label": "Eignungsgrenze",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_lognormal_density_curves",
+      "targetId": "lognormal_density_curves",
+      "action": "draw",
+      "sourceText": "Verläufen für die Funktionen der Dichte, der Ausfallrate, der Ausfallwahrscheinlichkeit und der Überlebenswahrscheinlichkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_lognormal_probability_pair",
+      "targetId": "lognormal_probability_pair",
+      "action": "show",
+      "sourceText": "Verläufen für die Funktionen der Dichte, der Ausfallrate, der Ausfallwahrscheinlichkeit und der Überlebenswahrscheinlichkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_lognormal_hazard_curves",
+      "targetId": "lognormal_hazard_curves",
+      "action": "draw",
+      "sourceText": "Ein Nachteil zeigt sich bai der Ausfallrate für Verschleißmechanismen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_lognormal_hazard_limit",
+      "targetId": "lognormal_hazard_limit",
+      "action": "show",
+      "sourceText": "bis das Maximum erreicht ist und die Kurve wieder abfällt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_lognormal_wear_limitation",
+      "targetId": "lognormal_wear_limitation",
+      "action": "show",
+      "sourceText": "mit Hilfe der Log-Normalverteilung nur unvollständig beschrieben werden können",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

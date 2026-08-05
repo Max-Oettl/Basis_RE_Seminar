@@ -1,0 +1,94 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_028",
+  "scene_id": "re1_src_029",
+  "source_slides": [
+    29,
+    30
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "histogram_bars",
+      "label": "Stichprobe als Histogramm",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "histogram_classes",
+      "label": "Klassen und Klassenbreite",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "density_curve",
+      "label": "Dichtefunktion der Grundgesamtheit",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "density_interpretation",
+      "label": "Ablesung des Ausfallbereichs",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_histogram_bars",
+      "targetId": "histogram_bars",
+      "action": "show",
+      "sourceText": "Zunächst erstellen wir ein Histogramm für die Ausfallzeiten unserer Stichprobe",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_histogram_classes",
+      "targetId": "histogram_classes",
+      "action": "show",
+      "sourceText": "Die einzelnen Balken werden auch als Klassen bezeichnet",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_density_curve",
+      "targetId": "density_curve",
+      "action": "draw",
+      "sourceText": "Würden wir nun die Stichprobengröße und auch die Klassenanzahl immer weiter erhöhen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_density_interpretation",
+      "targetId": "density_interpretation",
+      "action": "show",
+      "sourceText": "So könnte man in unserem Schaubild direkt interpretieren",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_011.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "shifted_strength_distribution",
+      "label": "Nach rechts bewegte Belastbarkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "shifted_strength_explanation",
+      "label": "Belastbarkeit erhöhen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "failure_overlap",
+      "label": "Reduzierter Ausfallbereich",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "reduced_overlap_explanation",
+      "label": "Kleinerer Ausfallbereich",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "move_shifted_strength_distribution",
+      "targetId": "shifted_strength_distribution",
+      "action": "transform",
+      "sourceText": "wodurch dessen Kurve nach rechts verschoben wird",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte Bewegung desselben fachlichen Elements zwischen zwei Zuständen.",
+      "durFrames": 60,
+      "fromTranslateX": -74.8,
+      "fromTranslateY": 0,
+      "fromScale": 1,
+      "translateX": 0,
+      "translateY": 0,
+      "scale": 1,
+      "transformOrigin": "center"
+    },
+    {
+      "stepId": "show_shifted_strength_explanation",
+      "targetId": "shifted_strength_explanation",
+      "action": "show",
+      "sourceText": "wodurch dessen Kurve nach rechts verschoben wird",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_reduced_failure_overlap",
+      "targetId": "failure_overlap",
+      "action": "show",
+      "sourceText": "Die Folge ist ein kleinerer Überlappungsbereich",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_reduced_overlap_explanation",
+      "targetId": "reduced_overlap_explanation",
+      "action": "show",
+      "sourceText": "Die Folge ist ein kleinerer Überlappungsbereich",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

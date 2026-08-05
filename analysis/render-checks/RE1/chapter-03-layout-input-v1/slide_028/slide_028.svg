@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_029" data-brand-profile="reltest-academy">
+  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"animated-chart-build","contentTitle":"Vom Histogramm zur Dichtefunktion","layoutIntent":"shared-histogram-density-plot-with-sample-population-transfer","takeaway":"Das Histogramm beschreibt die Stichprobe; die Dichtefunktion schätzt das Ausfallverhalten der Grundgesamtheit.","density":"balanced","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-academy","brandVariant":"academy-production","sourceSlides":[29,30],"officialLogoStatus":"pending-original-asset"}]]></metadata>
+  <title id="accessible_title">Vom Histogramm zur Dichtefunktion</title>
+  <desc id="accessible_description">Das Histogramm beschreibt die Stichprobe; die Dichtefunktion schätzt das Ausfallverhalten der Grundgesamtheit.</desc>
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F9FBFC"/>
+      <stop offset="56%" stop-color="#F1F5F8"/>
+      <stop offset="100%" stop-color="#E9F0F4"/>
+    </linearGradient>
+    <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#102A43" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="shadowSoft" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#102A43" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow_007EA7" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#007EA7"/></marker>
+    <marker id="arrow_D1495B" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#D1495B"/></marker>
+    <marker id="arrow_2F6F55" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#2F6F55"/></marker>
+    <marker id="arrow_B7791F" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#B7791F"/></marker>
+  </defs>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+    .slide-title { fill: #102A43; }
+  </style>
+  <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
+  <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
+  <rect x="74" y="36" width="118" height="5" rx="3" fill="#007EA7"/>
+  <text x="78" y="116" class="slide-title" font-size="56" font-weight="800">Vom Histogramm zur Dichtefunktion</text>
+  <line x1="78" y1="148" x2="1842" y2="148" stroke="#102A43" stroke-opacity="0.12" stroke-width="1.5"/>
+  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><g id="reliability_function_rail" aria-label="Vier Zuverlässigkeitsfunktionen"><g data-reliability-function="density"><title>1. Dichtefunktion f(t)</title><rect data-qc-allow-overlap="true" x="98" y="174" width="400" height="70" rx="8" fill="#007EA7" stroke="#007EA7" stroke-width="1.5"/><circle cx="134" cy="209" r="21" fill="#FFFFFF"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="134" y="217" font-size="21" font-weight="820" fill="#007EA7" text-anchor="middle">1</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="170" y="202" font-size="18" font-weight="700" fill="#FFFFFF">Dichtefunktion</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="170" y="228" font-size="24" font-weight="820" fill="#FFFFFF">f(t)</text></g><g data-reliability-function="failure_probability"><title>2. Ausfallwahrscheinlichkeit F(t)</title><rect data-qc-allow-overlap="true" x="533" y="174" width="400" height="70" rx="8" fill="#E5ECF5" stroke="#4F78A8" stroke-width="1.5"/><circle cx="569" cy="209" r="21" fill="#FFFFFF"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="569" y="217" font-size="21" font-weight="820" fill="#4F78A8" text-anchor="middle">2</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="605" y="202" font-size="18" font-weight="700" fill="#4F78A8">Ausfallwahrscheinlichkeit</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="605" y="228" font-size="24" font-weight="820" fill="#4F78A8">F(t)</text></g><g data-reliability-function="reliability"><title>3. Zuverlässigkeit R(t)</title><rect data-qc-allow-overlap="true" x="968" y="174" width="400" height="70" rx="8" fill="#E3F0EA" stroke="#2F6F55" stroke-width="1.5"/><circle cx="1004" cy="209" r="21" fill="#FFFFFF"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1004" y="217" font-size="21" font-weight="820" fill="#2F6F55" text-anchor="middle">3</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1040" y="202" font-size="18" font-weight="700" fill="#2F6F55">Zuverlässigkeit</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1040" y="228" font-size="24" font-weight="820" fill="#2F6F55">R(t)</text></g><g data-reliability-function="hazard"><title>4. Ausfallrate λ(t)</title><rect data-qc-allow-overlap="true" x="1403" y="174" width="400" height="70" rx="8" fill="#F9E4E7" stroke="#D1495B" stroke-width="1.5"/><circle cx="1439" cy="209" r="21" fill="#FFFFFF"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1439" y="217" font-size="21" font-weight="820" fill="#D1495B" text-anchor="middle">4</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1475" y="202" font-size="18" font-weight="700" fill="#D1495B">Ausfallrate</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1475" y="228" font-size="24" font-weight="820" fill="#D1495B">λ(t)</text></g></g><svg id="histogram_density_plot" x="78" y="282" width="1250" height="610" viewBox="0 0 835.878108 456.68" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 456.68  L 835.878108 456.68  L 835.878108 0  L 0 0  L 0 456.68  z " style="fill: none; opacity: 0" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 67.628594 396.975781  L 824.095013 396.975781  L 824.095013 7.2  L 67.628594 7.2  L 67.628594 396.975781  z " style="fill: none" />
+   </g>
+   <g id="histogram_bars" data-anim-target="true" data-anim-label="Histogrammklassen der Stichprobe"><g id="histogram_bar_0">
+    <path d="M 99.818654 396.975781  L 196.388835 396.975781  L 196.388835 374.419312  L 99.818654 374.419312  z " clip-path="url(#p86322a63f8)" style="fill: #007ea7; opacity: 0.32; stroke: #007ea7; stroke-width: 2; stroke-linejoin: miter" />
+   </g>
+   <g id="histogram_bar_1">
+    <path d="M 196.388835 396.975781  L 292.959017 396.975781  L 292.959017 351.862844  L 196.388835 351.862844  z " clip-path="url(#p86322a63f8)" style="fill: #007ea7; opacity: 0.32; stroke: #007ea7; stroke-width: 2; stroke-linejoin: miter" />
+   </g>
+   <g id="histogram_bar_2">
+    <path d="M 292.959017 396.975781  L 389.529198 396.975781  L 389.529198 261.636968  L 292.959017 261.636968  z " clip-path="url(#p86322a63f8)" style="fill: #007ea7; opacity: 0.32; stroke: #007ea7; stroke-width: 2; stroke-linejoin: miter" />
+   </g>
+   <g id="histogram_bar_3">
+    <path d="M 389.529198 396.975781  L 486.099379 396.975781  L 486.099379 329.306375  L 389.529198 329.306375  z " clip-path="url(#p86322a63f8)" style="fill: #007ea7; opacity: 0.32; stroke: #007ea7; stroke-width: 2; stroke-linejoin: miter" />
+   </g>
+   <g id="histogram_bar_4">
+    <path d="M 486.099379 396.975781  L 582.66956 396.975781  L 582.66956 351.862844  L 486.099379 351.862844  z " clip-path="url(#p86322a63f8)" style="fill: #007ea7; opacity: 0.32; stroke: #007ea7; stroke-width: 2; stroke-linejoin: miter" />
+   </g>
+   <g id="histogram_bar_5">
+    <path d="M 582.66956 396.975781  L 679.239741 396.975781  L 679.239741 351.862844  L 582.66956 351.862844  z " clip-path="url(#p86322a63f8)" style="fill: #007ea7; opacity: 0.32; stroke: #007ea7; stroke-width: 2; stroke-linejoin: miter" />
+   </g>
+   <g id="histogram_bar_6">
+    <path d="M 679.239741 396.975781  L 775.809923 396.975781  L 775.809923 396.975781  L 679.239741 396.975781  z " clip-path="url(#p86322a63f8)" style="fill: #007ea7; opacity: 0.32; stroke: #007ea7; stroke-width: 2; stroke-linejoin: miter" />
+   </g>
+   </g><g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 164.198775 396.975781  L 164.198775 7.2  " clip-path="url(#p86322a63f8)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="mc96897fd67" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#mc96897fd67" x="164.198775" y="396.975781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_1">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="164.198775" y="416.352734" transform="rotate(-0 164.198775 416.352734)">25000</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 325.149077 396.975781  L 325.149077 7.2  " clip-path="url(#p86322a63f8)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use ns4:href="#mc96897fd67" x="325.149077" y="396.975781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_2">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="325.149077" y="416.352734" transform="rotate(-0 325.149077 416.352734)">30000</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 486.099379 396.975781  L 486.099379 7.2  " clip-path="url(#p86322a63f8)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use ns4:href="#mc96897fd67" x="486.099379" y="396.975781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_3">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="486.099379" y="416.352734" transform="rotate(-0 486.099379 416.352734)">35000</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 647.049681 396.975781  L 647.049681 7.2  " clip-path="url(#p86322a63f8)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use ns4:href="#mc96897fd67" x="647.049681" y="396.975781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_4">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="647.049681" y="416.352734" transform="rotate(-0 647.049681 416.352734)">40000</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 807.999983 396.975781  L 807.999983 7.2  " clip-path="url(#p86322a63f8)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use ns4:href="#mc96897fd67" x="807.999983" y="396.975781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_5">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="807.999983" y="416.352734" transform="rotate(-0 807.999983 416.352734)">45000</text>
+     </g>
+    </g>
+    <g id="text_6">
+     
+     <g style="fill: #062d46" transform="translate(365.041804 445.155781)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.616211" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="34.330078" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="42.93457" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">w</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="59.563477" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="71.771484" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="82.441406" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="95.255859" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="105.969727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="118.177734" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="124.347656" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="130.614258" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="142.022461" y="2.371866" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="148.342285" y="2.371866" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #062d46">W</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11">
+      <path d="M 67.628594 396.975781  L 824.095013 396.975781  " clip-path="url(#p86322a63f8)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_12">
+      <defs>
+       <path id="m3013863af7" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#m3013863af7" x="67.628594" y="396.975781" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_7">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="58.128594" y="401.914258" transform="rotate(-0 58.128594 401.914258)">0.0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_13">
+      <path d="M 67.628594 324.795081  L 824.095013 324.795081  " clip-path="url(#p86322a63f8)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use ns4:href="#m3013863af7" x="67.628594" y="324.795081" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_8">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="58.128594" y="329.733558" transform="rotate(-0 58.128594 329.733558)">0.2</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_15">
+      <path d="M 67.628594 252.614381  L 824.095013 252.614381  " clip-path="url(#p86322a63f8)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use ns4:href="#m3013863af7" x="67.628594" y="252.614381" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_9">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="58.128594" y="257.552857" transform="rotate(-0 58.128594 257.552857)">0.4</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_17">
+      <path d="M 67.628594 180.433681  L 824.095013 180.433681  " clip-path="url(#p86322a63f8)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use ns4:href="#m3013863af7" x="67.628594" y="180.433681" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_10">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="58.128594" y="185.372157" transform="rotate(-0 58.128594 185.372157)">0.6</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_19">
+      <path d="M 67.628594 108.25298  L 824.095013 108.25298  " clip-path="url(#p86322a63f8)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use ns4:href="#m3013863af7" x="67.628594" y="108.25298" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_11">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="58.128594" y="113.191457" transform="rotate(-0 58.128594 113.191457)">0.8</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_21">
+      <path d="M 67.628594 36.07228  L 824.095013 36.07228  " clip-path="url(#p86322a63f8)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="line2d_22">
+      <g>
+       <use ns4:href="#m3013863af7" x="67.628594" y="36.07228" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="text_12">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="58.128594" y="41.010757" transform="rotate(-0 58.128594 41.010757)">1.0</text>
+     </g>
+    </g>
+    <g id="text_13">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="21.130313" y="202.087891" transform="rotate(-90 21.130313 202.087891)">Relative Häufigkeit / Dichte</text>
+    </g>
+   </g>
+   <g id="line2d_23">
+    <path d="M 99.818654 396.975781  L 99.818654 7.2  " clip-path="url(#p86322a63f8)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #6a7a86; stroke-width: 1.4" />
+   </g>
+   <g id="line2d_24">
+    <path d="M 807.999983 396.975781  L 807.999983 7.2  " clip-path="url(#p86322a63f8)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #6a7a86; stroke-width: 1.4" />
+   </g>
+   <g id="patch_3">
+    <path d="M 67.628594 396.975781  L 67.628594 7.2  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="patch_4">
+    <path d="M 67.628594 396.975781  L 824.095013 396.975781  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="text_14">
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6a7a86" x="106.256666" y="36.07228" transform="rotate(-0 106.256666 36.07228)">Beginn ≈ 23.000</text>
+   </g>
+   <g id="text_15">
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="801.561971" y="36.07228" transform="rotate(-0 801.561971 36.07228)">alle ausgefallen ≈ 45.000</text>
+   </g>
+   <g id="density_curve" data-anim-target="true" data-anim-label="Glatte Dichtefunktion der Grundgesamtheit">
+    <path d="M 67.628594 365.207293  L 73.692453 361.574061  L 79.756312 357.663201  L 85.820171 353.468699  L 91.88403 348.985593  L 97.947889 344.20997  L 104.011748 339.138934  L 110.075607 333.77058  L 116.139466 328.103951  L 122.203325 322.139004  L 128.267184 315.876592  L 134.331044 309.31845  L 140.394903 302.467218  L 146.458762 295.326483  L 152.522621 287.900867  L 160.102445 278.227141  L 167.682268 268.131586  L 175.262092 257.632187  L 182.841916 246.751438  L 190.42174 235.517141  L 199.517529 221.617577  L 210.129282 204.91714  L 222.257 185.369248  L 254.09226 133.768553  L 263.188049 119.605836  L 270.767873 108.233381  L 276.831732 99.492615  L 282.895591 91.127871  L 288.95945 83.192255  L 293.507344 77.55316  L 298.055239 72.205186  L 302.603133 67.168115  L 307.151027 62.46054  L 311.698921 58.099693  L 316.246816 54.101275  L 320.79471 50.479306  L 325.342604 47.245987  L 328.374534 45.311512  L 331.406463 43.556922  L 334.438393 41.984351  L 337.470323 40.595513  L 340.502252 39.391697  L 343.534182 38.373764  L 346.566111 37.542141  L 349.598041 36.896826  L 352.62997 36.437385  L 355.6619 36.162962  L 358.693829 36.07228  L 361.725759 36.163654  L 364.757688 36.434996  L 367.789618 36.883832  L 370.821547 37.50731  L 373.853477 38.30222  L 376.885407 39.265007  L 379.917336 40.39179  L 384.46523 42.38022  L 389.013125 44.712833  L 393.561019 47.373015  L 398.108913 50.34303  L 402.656808 53.604193  L 407.204702 57.137045  L 411.752596 60.921536  L 417.816455 66.323541  L 423.880314 72.087365  L 429.944173 78.163823  L 437.523997 86.125121  L 445.103821 94.406998  L 455.715575 106.374803  L 473.907152 127.339614  L 490.582764 146.415503  L 501.194518 158.249512  L 511.806271 169.750256  L 520.90206 179.310533  L 529.997848 188.587266  L 539.093637 197.58754  L 549.70539 207.765137  L 560.317144 217.641034  L 572.444862 228.634665  L 589.120474 243.409449  L 622.471699 272.543928  L 660.370818 305.493906  L 674.014501 317.046466  L 684.626255 325.76169  L 693.722043 332.973202  L 702.817832 339.889807  L 710.397656 345.392234  L 717.977479 350.629183  L 725.557303 355.578269  L 733.137127 360.221313  L 739.200986 363.706152  L 745.264845 366.981725  L 751.328704 370.045421  L 757.392563 372.89665  L 763.456423 375.536772  L 769.520282 377.968986  L 775.584141 380.198179  L 781.648 382.230756  L 789.227824 384.506858  L 796.807647 386.50535  L 804.387471 388.245726  L 811.967295 389.748859  L 819.547119 391.036374  L 824.095013 391.714461  L 824.095013 391.714461  " clip-path="url(#p86322a63f8)" style="fill: none; stroke: #d1495b; stroke-width: 4; stroke-linecap: square" />
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p86322a63f8">
+   <rect data-qc-allow-overlap="true" x="67.628594" y="7.2" width="756.46642" height="389.775781" />
+  </clipPath>
+ </defs>
+</svg><g id="histogram_definition" data-anim-target="true" data-anim-label="Histogramm und Klassen"><title>Histogramm und Klassen</title><rect data-qc-allow-overlap="true" x="1360" y="286" width="470" height="178" rx="8" fill="#D9F0F7" stroke="#007EA7" stroke-width="1.5"/><circle cx="1428" cy="362" r="44" fill="#FFFFFF"/><g transform="translate(1401 335) scale(2.25)" fill="none" stroke="#007EA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M4 12l8 4 8-4M4 16l8 4 8-4"/></g><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1490" y="330" font-size="18" font-weight="760" fill="#007EA7">STICHPROBE</text><text x="1490" y="375" class="" font-size="27" font-weight="820" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1490" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Balken = Klassen</tspan></text><text x="1400" y="423" class="" font-size="21" font-weight="670" fill="#243B53" text-anchor="start" data-qc-role="text"><tspan x="1400" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Höhe zeigt die relative Häufigkeit.</tspan></text></g><g id="density_population_context" data-anim-target="true" data-anim-label="Dichtefunktion der Grundgesamtheit"><title>Dichtefunktion der Grundgesamtheit</title><rect data-qc-allow-overlap="true" x="1360" y="500" width="470" height="190" rx="8" fill="#E3F0EA" stroke="#2F6F55" stroke-width="1.5"/><circle cx="1428" cy="578" r="44" fill="#FFFFFF"/><g transform="translate(1401 551) scale(2.25)" fill="none" stroke="#2F6F55" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7"/></g><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1490" y="546" font-size="18" font-weight="760" fill="#2F6F55">GRUNDGESAMTHEIT</text><text x="1490" y="590" class="" font-size="27" font-weight="820" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1490" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Glatte Dichtefunktion</tspan></text><text x="1400" y="640" class="" font-size="20" font-weight="670" fill="#243B53" text-anchor="start" data-qc-role="text"><tspan x="1400" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Wahrscheinlichste Beschreibung</tspan><tspan x="1400" dy="27" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">des realen Ausfallverhaltens</tspan></text></g><g id="density_range_interpretation" data-anim-target="true" data-anim-label="Interpretierter Ausfallbereich"><title>Interpretierter Ausfallbereich</title><rect data-qc-allow-overlap="true" x="1360" y="726" width="470" height="166" rx="8" fill="#F7EEDC" stroke="#B7791F" stroke-width="1.5"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1400" y="770" font-size="18" font-weight="760" fill="#B7791F">DIREKT ABLESBAR</text><text x="1400" y="818" class="" font-size="21" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1400" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Beginn ≈ 23.000 Lastwechsel</tspan><tspan x="1400" dy="32" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">alle ausgefallen ≈ 45.000 Lastwechsel</tspan></text></g></g>
+  <line x1="78" y1="982" x2="1842" y2="982" stroke="#102A43" stroke-opacity="0.12" stroke-width="1.5"/>
+  <text x="78" y="1026" font-size="20" font-weight="700" fill="#627D98">Professional Reliability Training | Reliability Engineer</text>
+  <text x="1580" y="1026" font-size="20" font-weight="700" fill="#627D98" text-anchor="end">RE1 · Szene 28</text>
+  <g id="official_logo_reserved" data-logo-status="pending-original-asset" aria-label="Reservierter Bereich für das offizielle RelTest-Academy-Logo"/>
+</svg>

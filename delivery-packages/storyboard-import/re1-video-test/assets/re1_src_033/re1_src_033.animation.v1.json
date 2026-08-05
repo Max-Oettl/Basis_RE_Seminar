@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_033.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "men_density",
+      "label": "Dichte Männer",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "women_density",
+      "label": "Dichte Frauen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "men_peak",
+      "label": "Maximum Männer",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "women_peak",
+      "label": "Maximum Frauen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_men_density",
+      "targetId": "men_density",
+      "action": "draw",
+      "sourceText": "Hierbei kann die Sterblichkeit von Männern und Frauen auch mithilfe der Dichtefunktion beschrieben werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_women_density",
+      "targetId": "women_density",
+      "action": "draw",
+      "sourceText": "Hierbei kann die Sterblichkeit von Männern und Frauen auch mithilfe der Dichtefunktion beschrieben werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_men_peak",
+      "targetId": "men_peak",
+      "action": "show",
+      "sourceText": "Die meisten Männer sterben demnach",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_women_peak",
+      "targetId": "women_peak",
+      "action": "show",
+      "sourceText": "Bei den Frauen treten die häufigsten Todesfälle",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

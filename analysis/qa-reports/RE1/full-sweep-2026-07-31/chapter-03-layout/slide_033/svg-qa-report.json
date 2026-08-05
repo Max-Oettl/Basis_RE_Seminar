@@ -1,0 +1,746 @@
+{
+  "schema_version": "svgQaReport/v1",
+  "module_id": "slide_033",
+  "svg_root": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033",
+  "generated_at": "2026-07-31T15:29:56.246Z",
+  "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\tools\\svg-rebuild-qa.js analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033 --no-design --layout --layout-strict --report-dir analysis/qa-reports/RE1/full-sweep-2026-07-31/chapter-03-layout/slide_033",
+  "files": [
+    {
+      "path": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033/slide_033.svg",
+      "ids": 92,
+      "animationManifest": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033/scene.animation.v1.json"
+    }
+  ],
+  "issues": [
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033/slide_033.svg",
+      "slide": "033",
+      "time_seconds": 4.35,
+      "state": "time_4",
+      "element_id": "qc_runtime_321",
+      "related_element_id": "qc_runtime_334",
+      "message": "Text does not fit inside its background box (left, right, top, bottom).",
+      "expected": {
+        "left_min": 1567.328857421875,
+        "right_max": 1657.4505615234375,
+        "top_min": 602.4791870117188,
+        "bottom_max": 590.4564208984375
+      },
+      "actual": {
+        "left": 1368.227294921875,
+        "right": 1670.49365234375,
+        "top": 542.1732788085938,
+        "bottom": 643.8115234375
+      },
+      "bbox": {
+        "text": {
+          "left": 1368.227294921875,
+          "top": 542.1732788085938,
+          "right": 1670.49365234375,
+          "bottom": 643.8115234375,
+          "width": 302.266357421875,
+          "height": 101.63824462890625
+        },
+        "box": {
+          "left": 1559.328857421875,
+          "top": 594.4791870117188,
+          "right": 1665.4505615234375,
+          "bottom": 598.4564208984375,
+          "width": 106.1217041015625,
+          "height": 3.97723388671875
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "z_order_expected",
+      "severity": "error",
+      "file": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033/slide_033.svg",
+      "slide": "033",
+      "time_seconds": 4.35,
+      "state": "time_4",
+      "element_id": "qc_runtime_321",
+      "related_element_id": "qc_runtime_334",
+      "message": "Expected foreground element is not above the background/lower layer element.",
+      "expected": "qc_runtime_321 above qc_runtime_334",
+      "actual": "DOM order qc_runtime_334 after qc_runtime_321",
+      "bbox": {
+        "above": {
+          "left": 1368.227294921875,
+          "top": 542.1732788085938,
+          "right": 1670.49365234375,
+          "bottom": 643.8115234375,
+          "width": 302.266357421875,
+          "height": 101.63824462890625
+        },
+        "below": {
+          "left": 1559.328857421875,
+          "top": 594.4791870117188,
+          "right": 1665.4505615234375,
+          "bottom": 598.4564208984375,
+          "width": 106.1217041015625,
+          "height": 3.97723388671875
+        },
+        "overlap": {
+          "left": 1559.328857421875,
+          "top": 594.4791870117188,
+          "right": 1665.4505615234375,
+          "bottom": 598.4564208984375,
+          "width": 106.1217041015625,
+          "height": 3.97723388671875
+        },
+        "point": null
+      },
+      "recommendation": "Render foreground elements later or add/correct data-qc-layer relationships.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033/slide_033.svg",
+      "slide": "033",
+      "time_seconds": 5.333,
+      "state": "time_5",
+      "element_id": "qc_runtime_321",
+      "related_element_id": "qc_runtime_334",
+      "message": "Text does not fit inside its background box (left, right, top, bottom).",
+      "expected": {
+        "left_min": 1567.328857421875,
+        "right_max": 1657.4505615234375,
+        "top_min": 602.4791870117188,
+        "bottom_max": 590.4564208984375
+      },
+      "actual": {
+        "left": 1368.227294921875,
+        "right": 1670.49365234375,
+        "top": 542.1732788085938,
+        "bottom": 643.8115234375
+      },
+      "bbox": {
+        "text": {
+          "left": 1368.227294921875,
+          "top": 542.1732788085938,
+          "right": 1670.49365234375,
+          "bottom": 643.8115234375,
+          "width": 302.266357421875,
+          "height": 101.63824462890625
+        },
+        "box": {
+          "left": 1559.328857421875,
+          "top": 594.4791870117188,
+          "right": 1665.4505615234375,
+          "bottom": 598.4564208984375,
+          "width": 106.1217041015625,
+          "height": 3.97723388671875
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "z_order_expected",
+      "severity": "error",
+      "file": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033/slide_033.svg",
+      "slide": "033",
+      "time_seconds": 5.333,
+      "state": "time_5",
+      "element_id": "qc_runtime_321",
+      "related_element_id": "qc_runtime_334",
+      "message": "Expected foreground element is not above the background/lower layer element.",
+      "expected": "qc_runtime_321 above qc_runtime_334",
+      "actual": "DOM order qc_runtime_334 after qc_runtime_321",
+      "bbox": {
+        "above": {
+          "left": 1368.227294921875,
+          "top": 542.1732788085938,
+          "right": 1670.49365234375,
+          "bottom": 643.8115234375,
+          "width": 302.266357421875,
+          "height": 101.63824462890625
+        },
+        "below": {
+          "left": 1559.328857421875,
+          "top": 594.4791870117188,
+          "right": 1665.4505615234375,
+          "bottom": 598.4564208984375,
+          "width": 106.1217041015625,
+          "height": 3.97723388671875
+        },
+        "overlap": {
+          "left": 1559.328857421875,
+          "top": 594.4791870117188,
+          "right": 1665.4505615234375,
+          "bottom": 598.4564208984375,
+          "width": 106.1217041015625,
+          "height": 3.97723388671875
+        },
+        "point": null
+      },
+      "recommendation": "Render foreground elements later or add/correct data-qc-layer relationships.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033/slide_033.svg",
+      "slide": "033",
+      "time_seconds": 6.317,
+      "state": "time_6",
+      "element_id": "qc_runtime_321",
+      "related_element_id": "qc_runtime_334",
+      "message": "Text does not fit inside its background box (left, right, top, bottom).",
+      "expected": {
+        "left_min": 1567.328857421875,
+        "right_max": 1657.4505615234375,
+        "top_min": 602.4791870117188,
+        "bottom_max": 590.4564208984375
+      },
+      "actual": {
+        "left": 1368.227294921875,
+        "right": 1670.49365234375,
+        "top": 542.1732788085938,
+        "bottom": 643.8115234375
+      },
+      "bbox": {
+        "text": {
+          "left": 1368.227294921875,
+          "top": 542.1732788085938,
+          "right": 1670.49365234375,
+          "bottom": 643.8115234375,
+          "width": 302.266357421875,
+          "height": 101.63824462890625
+        },
+        "box": {
+          "left": 1559.328857421875,
+          "top": 594.4791870117188,
+          "right": 1665.4505615234375,
+          "bottom": 598.4564208984375,
+          "width": 106.1217041015625,
+          "height": 3.97723388671875
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "z_order_expected",
+      "severity": "error",
+      "file": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033/slide_033.svg",
+      "slide": "033",
+      "time_seconds": 6.317,
+      "state": "time_6",
+      "element_id": "qc_runtime_321",
+      "related_element_id": "qc_runtime_334",
+      "message": "Expected foreground element is not above the background/lower layer element.",
+      "expected": "qc_runtime_321 above qc_runtime_334",
+      "actual": "DOM order qc_runtime_334 after qc_runtime_321",
+      "bbox": {
+        "above": {
+          "left": 1368.227294921875,
+          "top": 542.1732788085938,
+          "right": 1670.49365234375,
+          "bottom": 643.8115234375,
+          "width": 302.266357421875,
+          "height": 101.63824462890625
+        },
+        "below": {
+          "left": 1559.328857421875,
+          "top": 594.4791870117188,
+          "right": 1665.4505615234375,
+          "bottom": 598.4564208984375,
+          "width": 106.1217041015625,
+          "height": 3.97723388671875
+        },
+        "overlap": {
+          "left": 1559.328857421875,
+          "top": 594.4791870117188,
+          "right": 1665.4505615234375,
+          "bottom": 598.4564208984375,
+          "width": 106.1217041015625,
+          "height": 3.97723388671875
+        },
+        "point": null
+      },
+      "recommendation": "Render foreground elements later or add/correct data-qc-layer relationships.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033/slide_033.svg",
+      "slide": "033",
+      "time_seconds": 7.3,
+      "state": "end",
+      "element_id": "qc_runtime_321",
+      "related_element_id": "qc_runtime_334",
+      "message": "Text does not fit inside its background box (left, right, top, bottom).",
+      "expected": {
+        "left_min": 1567.328857421875,
+        "right_max": 1657.4505615234375,
+        "top_min": 602.4791870117188,
+        "bottom_max": 590.4564208984375
+      },
+      "actual": {
+        "left": 1368.227294921875,
+        "right": 1670.49365234375,
+        "top": 542.1732788085938,
+        "bottom": 643.8115234375
+      },
+      "bbox": {
+        "text": {
+          "left": 1368.227294921875,
+          "top": 542.1732788085938,
+          "right": 1670.49365234375,
+          "bottom": 643.8115234375,
+          "width": 302.266357421875,
+          "height": 101.63824462890625
+        },
+        "box": {
+          "left": 1559.328857421875,
+          "top": 594.4791870117188,
+          "right": 1665.4505615234375,
+          "bottom": 598.4564208984375,
+          "width": 106.1217041015625,
+          "height": 3.97723388671875
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "z_order_expected",
+      "severity": "error",
+      "file": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033/slide_033.svg",
+      "slide": "033",
+      "time_seconds": 7.3,
+      "state": "end",
+      "element_id": "qc_runtime_321",
+      "related_element_id": "qc_runtime_334",
+      "message": "Expected foreground element is not above the background/lower layer element.",
+      "expected": "qc_runtime_321 above qc_runtime_334",
+      "actual": "DOM order qc_runtime_334 after qc_runtime_321",
+      "bbox": {
+        "above": {
+          "left": 1368.227294921875,
+          "top": 542.1732788085938,
+          "right": 1670.49365234375,
+          "bottom": 643.8115234375,
+          "width": 302.266357421875,
+          "height": 101.63824462890625
+        },
+        "below": {
+          "left": 1559.328857421875,
+          "top": 594.4791870117188,
+          "right": 1665.4505615234375,
+          "bottom": 598.4564208984375,
+          "width": 106.1217041015625,
+          "height": 3.97723388671875
+        },
+        "overlap": {
+          "left": 1559.328857421875,
+          "top": 594.4791870117188,
+          "right": 1665.4505615234375,
+          "bottom": 598.4564208984375,
+          "width": 106.1217041015625,
+          "height": 3.97723388671875
+        },
+        "point": null
+      },
+      "recommendation": "Render foreground elements later or add/correct data-qc-layer relationships.",
+      "detail": ""
+    }
+  ],
+  "viewer": {
+    "checked": false
+  },
+  "layout": {
+    "checked": true,
+    "strict": true,
+    "warnOnly": false,
+    "browser": {
+      "executable": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "port": 5266
+    },
+    "files": [
+      {
+        "path": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033/slide_033.svg",
+        "slide": "033",
+        "states_checked": 8,
+        "browser_rendered": true
+      }
+    ],
+    "issues": [
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033/slide_033.svg",
+        "slide": "033",
+        "time_seconds": 4.35,
+        "state": "time_4",
+        "element_id": "qc_runtime_321",
+        "related_element_id": "qc_runtime_334",
+        "message": "Text does not fit inside its background box (left, right, top, bottom).",
+        "expected": {
+          "left_min": 1567.328857421875,
+          "right_max": 1657.4505615234375,
+          "top_min": 602.4791870117188,
+          "bottom_max": 590.4564208984375
+        },
+        "actual": {
+          "left": 1368.227294921875,
+          "right": 1670.49365234375,
+          "top": 542.1732788085938,
+          "bottom": 643.8115234375
+        },
+        "bbox": {
+          "text": {
+            "left": 1368.227294921875,
+            "top": 542.1732788085938,
+            "right": 1670.49365234375,
+            "bottom": 643.8115234375,
+            "width": 302.266357421875,
+            "height": 101.63824462890625
+          },
+          "box": {
+            "left": 1559.328857421875,
+            "top": 594.4791870117188,
+            "right": 1665.4505615234375,
+            "bottom": 598.4564208984375,
+            "width": 106.1217041015625,
+            "height": 3.97723388671875
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "z_order_expected",
+        "severity": "error",
+        "file": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033/slide_033.svg",
+        "slide": "033",
+        "time_seconds": 4.35,
+        "state": "time_4",
+        "element_id": "qc_runtime_321",
+        "related_element_id": "qc_runtime_334",
+        "message": "Expected foreground element is not above the background/lower layer element.",
+        "expected": "qc_runtime_321 above qc_runtime_334",
+        "actual": "DOM order qc_runtime_334 after qc_runtime_321",
+        "bbox": {
+          "above": {
+            "left": 1368.227294921875,
+            "top": 542.1732788085938,
+            "right": 1670.49365234375,
+            "bottom": 643.8115234375,
+            "width": 302.266357421875,
+            "height": 101.63824462890625
+          },
+          "below": {
+            "left": 1559.328857421875,
+            "top": 594.4791870117188,
+            "right": 1665.4505615234375,
+            "bottom": 598.4564208984375,
+            "width": 106.1217041015625,
+            "height": 3.97723388671875
+          },
+          "overlap": {
+            "left": 1559.328857421875,
+            "top": 594.4791870117188,
+            "right": 1665.4505615234375,
+            "bottom": 598.4564208984375,
+            "width": 106.1217041015625,
+            "height": 3.97723388671875
+          },
+          "point": null
+        },
+        "recommendation": "Render foreground elements later or add/correct data-qc-layer relationships.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033/slide_033.svg",
+        "slide": "033",
+        "time_seconds": 5.333,
+        "state": "time_5",
+        "element_id": "qc_runtime_321",
+        "related_element_id": "qc_runtime_334",
+        "message": "Text does not fit inside its background box (left, right, top, bottom).",
+        "expected": {
+          "left_min": 1567.328857421875,
+          "right_max": 1657.4505615234375,
+          "top_min": 602.4791870117188,
+          "bottom_max": 590.4564208984375
+        },
+        "actual": {
+          "left": 1368.227294921875,
+          "right": 1670.49365234375,
+          "top": 542.1732788085938,
+          "bottom": 643.8115234375
+        },
+        "bbox": {
+          "text": {
+            "left": 1368.227294921875,
+            "top": 542.1732788085938,
+            "right": 1670.49365234375,
+            "bottom": 643.8115234375,
+            "width": 302.266357421875,
+            "height": 101.63824462890625
+          },
+          "box": {
+            "left": 1559.328857421875,
+            "top": 594.4791870117188,
+            "right": 1665.4505615234375,
+            "bottom": 598.4564208984375,
+            "width": 106.1217041015625,
+            "height": 3.97723388671875
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "z_order_expected",
+        "severity": "error",
+        "file": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033/slide_033.svg",
+        "slide": "033",
+        "time_seconds": 5.333,
+        "state": "time_5",
+        "element_id": "qc_runtime_321",
+        "related_element_id": "qc_runtime_334",
+        "message": "Expected foreground element is not above the background/lower layer element.",
+        "expected": "qc_runtime_321 above qc_runtime_334",
+        "actual": "DOM order qc_runtime_334 after qc_runtime_321",
+        "bbox": {
+          "above": {
+            "left": 1368.227294921875,
+            "top": 542.1732788085938,
+            "right": 1670.49365234375,
+            "bottom": 643.8115234375,
+            "width": 302.266357421875,
+            "height": 101.63824462890625
+          },
+          "below": {
+            "left": 1559.328857421875,
+            "top": 594.4791870117188,
+            "right": 1665.4505615234375,
+            "bottom": 598.4564208984375,
+            "width": 106.1217041015625,
+            "height": 3.97723388671875
+          },
+          "overlap": {
+            "left": 1559.328857421875,
+            "top": 594.4791870117188,
+            "right": 1665.4505615234375,
+            "bottom": 598.4564208984375,
+            "width": 106.1217041015625,
+            "height": 3.97723388671875
+          },
+          "point": null
+        },
+        "recommendation": "Render foreground elements later or add/correct data-qc-layer relationships.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033/slide_033.svg",
+        "slide": "033",
+        "time_seconds": 6.317,
+        "state": "time_6",
+        "element_id": "qc_runtime_321",
+        "related_element_id": "qc_runtime_334",
+        "message": "Text does not fit inside its background box (left, right, top, bottom).",
+        "expected": {
+          "left_min": 1567.328857421875,
+          "right_max": 1657.4505615234375,
+          "top_min": 602.4791870117188,
+          "bottom_max": 590.4564208984375
+        },
+        "actual": {
+          "left": 1368.227294921875,
+          "right": 1670.49365234375,
+          "top": 542.1732788085938,
+          "bottom": 643.8115234375
+        },
+        "bbox": {
+          "text": {
+            "left": 1368.227294921875,
+            "top": 542.1732788085938,
+            "right": 1670.49365234375,
+            "bottom": 643.8115234375,
+            "width": 302.266357421875,
+            "height": 101.63824462890625
+          },
+          "box": {
+            "left": 1559.328857421875,
+            "top": 594.4791870117188,
+            "right": 1665.4505615234375,
+            "bottom": 598.4564208984375,
+            "width": 106.1217041015625,
+            "height": 3.97723388671875
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "z_order_expected",
+        "severity": "error",
+        "file": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033/slide_033.svg",
+        "slide": "033",
+        "time_seconds": 6.317,
+        "state": "time_6",
+        "element_id": "qc_runtime_321",
+        "related_element_id": "qc_runtime_334",
+        "message": "Expected foreground element is not above the background/lower layer element.",
+        "expected": "qc_runtime_321 above qc_runtime_334",
+        "actual": "DOM order qc_runtime_334 after qc_runtime_321",
+        "bbox": {
+          "above": {
+            "left": 1368.227294921875,
+            "top": 542.1732788085938,
+            "right": 1670.49365234375,
+            "bottom": 643.8115234375,
+            "width": 302.266357421875,
+            "height": 101.63824462890625
+          },
+          "below": {
+            "left": 1559.328857421875,
+            "top": 594.4791870117188,
+            "right": 1665.4505615234375,
+            "bottom": 598.4564208984375,
+            "width": 106.1217041015625,
+            "height": 3.97723388671875
+          },
+          "overlap": {
+            "left": 1559.328857421875,
+            "top": 594.4791870117188,
+            "right": 1665.4505615234375,
+            "bottom": 598.4564208984375,
+            "width": 106.1217041015625,
+            "height": 3.97723388671875
+          },
+          "point": null
+        },
+        "recommendation": "Render foreground elements later or add/correct data-qc-layer relationships.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033/slide_033.svg",
+        "slide": "033",
+        "time_seconds": 7.3,
+        "state": "end",
+        "element_id": "qc_runtime_321",
+        "related_element_id": "qc_runtime_334",
+        "message": "Text does not fit inside its background box (left, right, top, bottom).",
+        "expected": {
+          "left_min": 1567.328857421875,
+          "right_max": 1657.4505615234375,
+          "top_min": 602.4791870117188,
+          "bottom_max": 590.4564208984375
+        },
+        "actual": {
+          "left": 1368.227294921875,
+          "right": 1670.49365234375,
+          "top": 542.1732788085938,
+          "bottom": 643.8115234375
+        },
+        "bbox": {
+          "text": {
+            "left": 1368.227294921875,
+            "top": 542.1732788085938,
+            "right": 1670.49365234375,
+            "bottom": 643.8115234375,
+            "width": 302.266357421875,
+            "height": 101.63824462890625
+          },
+          "box": {
+            "left": 1559.328857421875,
+            "top": 594.4791870117188,
+            "right": 1665.4505615234375,
+            "bottom": 598.4564208984375,
+            "width": 106.1217041015625,
+            "height": 3.97723388671875
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "z_order_expected",
+        "severity": "error",
+        "file": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_033/slide_033.svg",
+        "slide": "033",
+        "time_seconds": 7.3,
+        "state": "end",
+        "element_id": "qc_runtime_321",
+        "related_element_id": "qc_runtime_334",
+        "message": "Expected foreground element is not above the background/lower layer element.",
+        "expected": "qc_runtime_321 above qc_runtime_334",
+        "actual": "DOM order qc_runtime_334 after qc_runtime_321",
+        "bbox": {
+          "above": {
+            "left": 1368.227294921875,
+            "top": 542.1732788085938,
+            "right": 1670.49365234375,
+            "bottom": 643.8115234375,
+            "width": 302.266357421875,
+            "height": 101.63824462890625
+          },
+          "below": {
+            "left": 1559.328857421875,
+            "top": 594.4791870117188,
+            "right": 1665.4505615234375,
+            "bottom": 598.4564208984375,
+            "width": 106.1217041015625,
+            "height": 3.97723388671875
+          },
+          "overlap": {
+            "left": 1559.328857421875,
+            "top": 594.4791870117188,
+            "right": 1665.4505615234375,
+            "bottom": 598.4564208984375,
+            "width": 106.1217041015625,
+            "height": 3.97723388671875
+          },
+          "point": null
+        },
+        "recommendation": "Render foreground elements later or add/correct data-qc-layer relationships.",
+        "detail": ""
+      }
+    ],
+    "summary": {
+      "checked": true,
+      "files_checked": 1,
+      "states_checked": 8,
+      "errors": 8,
+      "warnings": 0
+    }
+  },
+  "design": {
+    "checked": false
+  },
+  "handoff": {
+    "checked": false
+  },
+  "summary": {
+    "files_checked": 1,
+    "manifests_checked": 1,
+    "layout_files_checked": 1,
+    "layout_states_checked": 8,
+    "design_files_checked": 0,
+    "design_errors": 0,
+    "design_warnings": 0,
+    "handoff_scenes_checked": 0,
+    "handoff_manifests_checked": 0,
+    "handoff_errors": 0,
+    "handoff_warnings": 0,
+    "errors": 8,
+    "warnings": 0
+  }
+}

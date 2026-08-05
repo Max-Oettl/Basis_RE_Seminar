@@ -1,93 +1,82 @@
-# Basis Seminar Rebuild Analyse
+# Basis Seminar SVG Transformation
 
-Dieses Repo ist jetzt das Arbeitsrepo fuer eine neue Version des bestehenden Basis-Seminars `Reliability Engineer`.
+Dieses Repo transformiert bestehende Folien des Basis-Seminars `Reliability Engineer` in strukturierte, animierbare Content-SVGs.
 
-Der Primaerworkflow ist nicht mehr die freie Erstellung eines Expertentrainings. Codex soll vorhandene Basis-Seminar-Folien aus mehreren Quellen auswerten und daraus praezise Rebuild-Spezifikationen erzeugen.
+## Aktiver Eingang
+
+Der neue Eingang besteht aus den fuenf Modulen `RE1` bis `RE5`. Jedes Modul liefert die aus PowerPoint exportierten Folien-SVGs und den zugehoerigen Sprechertext als Word-Dokumente:
+
+```text
+source-materials/basis-seminar/powerpoint-svg/RE1/SVG/*.svg
+source-materials/basis-seminar/powerpoint-svg/RE1/Text/*.docx
+```
+
+Dasselbe Schema gilt fuer `RE2` bis `RE5`. PPTX-, PDF-, PNG- und separate Narration-Ablagen sind fuer neue Module kein paralleler Eingang. Die fruehere Gliederung nach mehreren PowerPoint-Dateien wird nicht wiederhergestellt.
 
 ## Fuehrender Workflow
 
-Verbindlich ist der Basis-Seminar-Rebuild:
+1. Word-Dokumente vollstaendig extrahieren und jede Textquelle eindeutig einer einzelnen Quell-SVG zuordnen.
+2. Das SVG-Text-Mapping pruefen; offene oder mehrdeutige Zuordnungen stoppen die weitere Bearbeitung.
+3. Alle Quell-SVGs eines Moduls inventarisieren und technisch pruefen.
+4. Jede Quell-SVG zusammen mit ihrem gemappten Sprechertext einzeln analysieren, danach zusammengehoerige Zustandsfolgen erkennen.
+5. Im Modul-Sequenzplan festhalten, welche Ursprungsfolien einzeln bleiben und welche zu einem animierten Ziel-SVG zusammengefuehrt werden.
+6. Fuer jede Zielarbeitseinheit stabile `Scene_ID`, Sprechertextzuordnung, Quellreferenzen, Layer, Animationen, Spezialassets und QA-Schwerpunkte planen.
+7. Quell-SVG-Geometrie und -Inhalte in die vereinbarte Zielstruktur transformieren. Ein erneuter Nachbau aus Raster- oder PowerPoint-Quellen findet nicht statt.
+8. Arbeitseinheit fuer Arbeitseinheit Crosscheck, technisches SVG-QA und Korrekturschleife ausfuehren.
+9. Nach Freigabe aller Szenen ein `storyboardImportPackage/v1` erzeugen und als Ganzes streng validieren.
 
-1. Originalquellen pro Folie sammeln: PowerPoint, PDF, PNG-Export und freigegebener Sprechertext.
-2. Quellen gegeneinander pruefen.
-3. Sichtbaren Inhalt, Layout, Objektstruktur, Animationen und Sprechertext-Verknuepfung dokumentieren.
-4. Pro Folie eine Rebuild-JSON-Datei nach `workflow/10-source-analysis/slide-rebuild-json-contract.md` erzeugen.
-5. Pro Modul einen kurzen QA-/Modulreport erstellen.
-
-Die wichtigste Regel: Der Sprechertext bleibt unveraendert. Er wird verknuepft, nicht neu geschrieben.
-
-## Quellenrangfolge
-
-Wenn Quellen voneinander abweichen, gilt:
-
-1. Sprechertext-Datei gewinnt fuer gesprochenen Text.
-2. PNG gewinnt fuer sichtbaren Zustand, Layoutgewichtung und visuelle Wahrheit.
-3. PDF gewinnt fuer final gerenderten Text, Formeln und Seitenreihenfolge.
-4. PPTX gewinnt fuer Objektstruktur, Koordinaten, Ebenen, Gruppen und Animationen.
-
-Abweichungen werden in `qa.issues` dokumentiert, nicht stillschweigend geglaettet.
-
-## Neue Standardablage
+Die Quell-SVGs sind unveraenderliche Eingangsartefakte. Ergebnisse liegen unter:
 
 ```text
-source-materials/
-  basis-seminar/
-    pptx/
-    pdf/
-    png/
-    narration/
-    extracted-assets/
-
-analysis/
-  inventories/
-  slides/
-  modules/
-  reports/
-  slide-rebuild.schema.json
-
-rebuild-proposals/
-  svg/
-    RE1/
-      slide_001.svg
+rebuild-proposals/svg/<module_id>/slide_###/
 ```
 
-Neue oder neu sortierte Basis-Seminar-Quellen sollen unter `source-materials/basis-seminar/` abgelegt werden.
+## Struktur Und Uebergabe
 
-## Workflow-Struktur
+Die verbindliche Zielstruktur steht in `workflow/40-svg-production/target-svg-structure-contract.md`. Finale Moduluebergaben liegen unter:
 
-Die Projektregeln sind hierarchisch aufgebaut, damit Codex nur den Kontext laden muss, der zum aktuellen Arbeitsschritt passt.
+```text
+delivery-packages/storyboard-import/<external-module-id>/
+```
 
-- `AGENT.md`: kompakter verpflichtender Router fuer Codex.
-- `workflow/README.md`: Uebersicht der Workflow-Ebenen.
-- `workflow/00-router/context-loading-map.md`: Entscheidung, welche Detailregeln zu laden sind.
-- `workflow/10-source-analysis/`: Folienanalyse, Sprechertext-Abgleich und Rebuild-JSON.
-- `workflow/20-scene-planning/`: Szenenbrief, Sequenzkarte und Layerplanung.
-- `workflow/30-visual-decision/`: Asset-Entscheidung und Elementklassifikation.
-- `workflow/31-python-plots/`: Diagramme, Python-Plotgeneratoren und Vertrauensgrenzen.
+Der Paket-, Storyboard-, SVG- und Animationsvertrag steht in `workflow/70-integration/storyboard-import-package-handoff.md`.
+
+## Workflow-Ebenen
+
+- `AGENT.md`: verpflichtender Router und harte Regeln.
+- `workflow/00-router/`: Kontextauswahl und Migration.
+- `workflow/10-source-analysis/`: Quell-SVG-Intake, Inventar und Transformationsvertrag.
+- `workflow/20-scene-planning/`: Modul-Sequenzplan, Zusammenfuehrungen und Layerplanung.
+- `workflow/30-visual-decision/`: Behandlung von Spezialelementen und Assets.
+- `workflow/31-python-plots/`: technische Diagramme und Python-Plots.
 - `workflow/32-formulas/`: Formeldarstellung.
 - `workflow/33-timelines/`: Timelines und Ausfall-Zeitachsen.
-- `workflow/40-svg-production/`: SVG-Komposition.
-- `workflow/50-animation/`: Animation und Manifest.
-- `workflow/60-quality/`: technische und visuelle Freigabe.
+- `workflow/40-svg-production/`: SVG-Strukturtransformation und Produktion.
+- `workflow/50-animation/`: Animationsmanifest und Trigger.
+- `workflow/60-quality/`: Crosscheck und technische Freigabe.
+- `workflow/70-integration/`: finales Storyboard-Importpaket und Downstream-Grenzen.
 
-Alte Dateien direkt unter `workflow/` sind Compatibility Redirects und zeigen auf die neuen kanonischen Pfade.
+Alte Dateien direkt unter `workflow/` und die bisherigen Mehrquellen-Vertraege bleiben aus Kompatibilitaetsgruenden erhalten. Der aktive Router verweist nur noch auf die kanonischen SVG-Input-Workflows.
 
 ## Wichtige Dateien
 
-- `AGENT.md`: verpflichtende Arbeitsregeln fuer Codex in diesem Repo.
-- `workflow/10-source-analysis/basis-seminar-slide-rebuild-runbook.md`: Ablauf fuer die Folienanalyse.
-- `workflow/10-source-analysis/slide-rebuild-json-contract.md`: JSON-Vertrag pro Folie.
-- `analysis/slide-rebuild.schema.json`: maschinenlesbares Schema fuer Rebuild-JSON.
-- `templates/slide-inventory-template.json`: Starttemplate fuer ein Modul-/Folieninventar.
-- `templates/slide-rebuild-template.json`: Starttemplate fuer eine Folienanalyse.
-- `templates/module-rebuild-report-template.md`: Template fuer Modulreports.
-- `source-materials/basis-seminar/README.md`: erwartete Quellenstruktur.
-- `tools/basis-rebuild-viewer/`: lokaler Viewer fuer Abgleich alte Folie gegen neuen SVG-Vorschlag.
-- `rebuild-proposals/svg/`: Ablage fuer neue SVG-Vorschlaege.
+- `source-materials/basis-seminar/powerpoint-svg/README.md`: Ablage- und Benennungsregeln.
+- `workflow/10-source-analysis/source-text-docx-intake-and-mapping.md`: verlustfreie DOCX-Extraktion und SVG-Text-Mapping.
+- `analysis/svg-text-map.schema.json`: maschinenlesbarer Mappingvertrag.
+- `workflow/10-source-analysis/source-svg-intake-workflow.md`: Modulaufnahme und Quell-SVG-Analyse.
+- `workflow/10-source-analysis/source-svg-transformation-contract.md`: maschinenlesbare Planungsfelder.
+- `workflow/20-scene-planning/preflight-sequence-planning.md`: Zusammenfuehrungs- und Animationsplanung.
+- `workflow/40-svg-production/target-svg-structure-contract.md`: zentraler Zielstrukturvertrag.
+- `workflow/40-svg-production/svg-rebuild-production-runbook.md`: arbeitseinheitsweise Transformation.
+- `workflow/60-quality/content-transfer-crosscheck.md`: Quell-SVG-gegen-Ziel-SVG-Abgleich.
+- `workflow/70-integration/storyboard-import-package-handoff.md`: finale Paketstruktur, SVG- und Animationsvertrag.
+- `templates/storyboard-import-package/`: gueltige Startvorlagen fuer die Lieferung.
+- `tools/svg-rebuild-qa.js --handoff-package ...`: zentraler finaler Paketcheck.
+- `tools/basis-rebuild-viewer/`: Viewer fuer Quell-SVG, Ziel-SVG, Animation und Review.
 
-## Basis Rebuild Viewer
+## Viewer
 
-Der neue Viewer startet unter Windows mit:
+Unter Windows:
 
 ```text
 start-basis-rebuild-viewer.cmd
@@ -99,27 +88,10 @@ Standardadresse:
 http://127.0.0.1:4174
 ```
 
-Der Viewer zeigt pro Folie:
+Ist der konfigurierte Port beim Start bereits belegt, beendet das Startskript
+den dort lauschenden Prozess, wartet auf die Freigabe und startet danach den
+Viewer. Ein abweichender Port kann als erstes Argument uebergeben werden, zum
+Beispiel `start-basis-rebuild-viewer.cmd 4180`, oder ueber
+`BASIS_REBUILD_VIEWER_PORT` gesetzt werden.
 
-- alte Foliengrafik aus `source-materials/basis-seminar/png/<module_id>/`
-- neuen SVG-Vorschlag aus `rebuild-proposals/svg/<module_id>/`
-- Analyse-JSON aus `analysis/slides/` oder `analysis/modules/`
-- QA-Issues, offene Fragen, Bildasset-Hinweise und sichtbaren Text
-- Review-Notizen unter `analysis/viewer-notes/`
-
-Fuer den visuellen Abgleich gibt es eine Nebenansicht und eine Overlay-Ansicht mit Deckkraftregler.
-
-## Aktueller Migrationsstand
-
-Der erste Repo-Umzug stellt die Leitplanken vom alten `Life Data Expert`-Storyboard-/SVG-Workflow auf Basis-Seminar-Rebuild-Analyse um.
-
-Noch offen fuer echte Folienanalyse:
-
-- PowerPoint-Dateien je Modul
-- PDF-Exporte je Modul
-- PNG-Exporte pro Folie
-- freigegebene Sprechertextdateien je Modul
-- eindeutige Zuordnung der Sprechertextdateien zu Folien/Szenen
-- optionale wiederverwendbare Bildassets oder markierte Screenshots komplexer Darstellungen
-
-Sobald diese Quellen im Repo liegen, kann pro Modul das Slide-Inventar und danach die erste Rebuild-JSON-Serie entstehen.
+Der Viewer erkennt Quell-SVGs rekursiv unter `powerpoint-svg/<module_id>/SVG/`. Fuer bestehende Altmodule kann er voruebergehend auf vorhandene PNG-Referenzen zurueckfallen.

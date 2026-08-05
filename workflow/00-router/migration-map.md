@@ -23,9 +23,16 @@ Diese Karte dokumentiert die verlustfreie Umstrukturierung der Workflow-Regeln. 
 
 Neue Spezialregeln:
 
+- `workflow/10-source-analysis/source-svg-intake-workflow.md` ersetzt fuer neue Module den bisherigen PPTX/PDF/PNG-Mehrquellen-Intake.
+- `workflow/10-source-analysis/source-svg-transformation-contract.md` ersetzt fuer neue Module den bisherigen Slide-Rebuild-JSON-Vertrag.
+- `analysis/source-svg-inventory.schema.json` ist das aktive Inventarschema; `analysis/slide-rebuild.schema.json` bleibt Legacy.
 - `workflow/20-scene-planning/scene-planning-workflow.md`
 - `workflow/30-visual-decision/visual-decision-router.md`
 - `workflow/31-python-plots/python-plot-workflow.md`
 - `workflow/32-formulas/formula-workflow.md`
 - `workflow/33-timelines/timeline-workflow.md`
+- `workflow/40-svg-production/target-svg-structure-contract.md`
 - `workflow/60-quality/rebuild-quality-gate.md`
+- `workflow/70-integration/storyboard-import-package-handoff.md`
+- `templates/storyboard-import-package/`
+- `tools/svg-qa/handoff-package-qa.js`, aufgerufen ueber den zentralen Entry Point `tools/svg-rebuild-qa.js --handoff-package`

@@ -1,0 +1,152 @@
+{
+  "schema_version": "svgQaReport/v1",
+  "module_id": "slide_036",
+  "svg_root": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_036",
+  "generated_at": "2026-07-31T15:29:59.711Z",
+  "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\tools\\svg-rebuild-qa.js analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_036 --no-design --layout --layout-strict --report-dir analysis/qa-reports/RE1/full-sweep-2026-07-31/chapter-03-layout/slide_036",
+  "files": [
+    {
+      "path": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_036/slide_036.svg",
+      "ids": 99,
+      "animationManifest": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_036/scene.animation.v1.json"
+    }
+  ],
+  "issues": [
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_036/slide_036.svg",
+      "slide": "036",
+      "time_seconds": 5.333,
+      "state": "time_5",
+      "element_id": "qc_runtime_333",
+      "related_element_id": "qc_runtime_324",
+      "message": "Text does not fit inside its background box (top).",
+      "expected": {
+        "left_min": 968,
+        "right_max": 1814,
+        "top_min": 850,
+        "bottom_max": 928
+      },
+      "actual": {
+        "left": 1336.810546875,
+        "right": 1602.4656982421875,
+        "top": 846.3642578125,
+        "bottom": 921.9589233398438
+      },
+      "bbox": {
+        "text": {
+          "left": 1336.810546875,
+          "top": 846.3642578125,
+          "right": 1602.4656982421875,
+          "bottom": 921.9589233398438,
+          "width": 265.6551513671875,
+          "height": 75.59466552734375
+        },
+        "box": {
+          "left": 960,
+          "top": 842,
+          "right": 1822,
+          "bottom": 936,
+          "width": 862,
+          "height": 94
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    }
+  ],
+  "viewer": {
+    "checked": false
+  },
+  "layout": {
+    "checked": true,
+    "strict": true,
+    "warnOnly": false,
+    "browser": {
+      "executable": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "port": 5851
+    },
+    "files": [
+      {
+        "path": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_036/slide_036.svg",
+        "slide": "036",
+        "states_checked": 6,
+        "browser_rendered": true
+      }
+    ],
+    "issues": [
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "analysis/qa-inputs/RE1/full-sweep-2026-07-31/chapter-03/slide_036/slide_036.svg",
+        "slide": "036",
+        "time_seconds": 5.333,
+        "state": "time_5",
+        "element_id": "qc_runtime_333",
+        "related_element_id": "qc_runtime_324",
+        "message": "Text does not fit inside its background box (top).",
+        "expected": {
+          "left_min": 968,
+          "right_max": 1814,
+          "top_min": 850,
+          "bottom_max": 928
+        },
+        "actual": {
+          "left": 1336.810546875,
+          "right": 1602.4656982421875,
+          "top": 846.3642578125,
+          "bottom": 921.9589233398438
+        },
+        "bbox": {
+          "text": {
+            "left": 1336.810546875,
+            "top": 846.3642578125,
+            "right": 1602.4656982421875,
+            "bottom": 921.9589233398438,
+            "width": 265.6551513671875,
+            "height": 75.59466552734375
+          },
+          "box": {
+            "left": 960,
+            "top": 842,
+            "right": 1822,
+            "bottom": 936,
+            "width": 862,
+            "height": 94
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      }
+    ],
+    "summary": {
+      "checked": true,
+      "files_checked": 1,
+      "states_checked": 6,
+      "errors": 1,
+      "warnings": 0
+    }
+  },
+  "design": {
+    "checked": false
+  },
+  "handoff": {
+    "checked": false
+  },
+  "summary": {
+    "files_checked": 1,
+    "manifests_checked": 1,
+    "layout_files_checked": 1,
+    "layout_states_checked": 6,
+    "design_files_checked": 0,
+    "design_errors": 0,
+    "design_warnings": 0,
+    "handoff_scenes_checked": 0,
+    "handoff_manifests_checked": 0,
+    "handoff_errors": 0,
+    "handoff_warnings": 0,
+    "errors": 1,
+    "warnings": 0
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_040.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "men_hazard",
+      "label": "Ausfallrate Männer",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "women_hazard",
+      "label": "Ausfallrate Frauen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "human_hazard_early_phase",
+      "label": "Frühe Phase",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "human_hazard_constant_phase",
+      "label": "Konstante Phase",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "human_hazard_ageing_phase",
+      "label": "Altersanstieg",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_men_hazard",
+      "targetId": "men_hazard",
+      "action": "draw",
+      "sourceText": "Am Beispiel der Sterblichkeitsraten von Männern und Frauen lässt sich ebenfalls ein Verlauf erkennen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_women_hazard",
+      "targetId": "women_hazard",
+      "action": "draw",
+      "sourceText": "Am Beispiel der Sterblichkeitsraten von Männern und Frauen lässt sich ebenfalls ein Verlauf erkennen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_human_hazard_early_phase",
+      "targetId": "human_hazard_early_phase",
+      "action": "show",
+      "sourceText": "Zu Beginn fällt die Sterberate geringfügig ab",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_human_hazard_constant_phase",
+      "targetId": "human_hazard_constant_phase",
+      "action": "show",
+      "sourceText": "Anschließend bleibt die Sterberate für eine längere Phase nahezu konstant",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_human_hazard_ageing_phase",
+      "targetId": "human_hazard_ageing_phase",
+      "action": "show",
+      "sourceText": "Mit zunehmendem Alter steigt die Sterberate dann deutlich an",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

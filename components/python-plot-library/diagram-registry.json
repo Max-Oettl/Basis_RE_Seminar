@@ -1,7 +1,7 @@
 {
   "schema": "reltestDiagramRegistry/v1",
-  "rule": "Use Python plot generators for all real plots and technical diagrams. Use an existing generator before creating a new one. Generic one-dimensional failure timelines with only an x-axis, X/cross markers or censor markers stay SVG-native. As soon as a graphic has a y-axis, object rows, ablesbare Achsenskalierung, data points, curves, fit lines, probability nets, distributions or confidence limits, the Python-plot workflow applies. Python plots must not include visible titles. Python plot generators export SVG only. Plot text is optimized for small seminar-scene usage: axis labels, tick labels, and legends must remain readable when scaled down. Animation-ready plot SVGs follow components/python-plot-library/svg-animation-structure.provisional.md until the project-wide animation structure exists. Weibull confidence limits are drawn as reproducible, non-parallel 5 and 95 percent bootstrap boundary curves, not filled confidence bands or linear regression confidence lines. Multi-slide plot build-up sequences must share one documented data and axis contract across sorting, probability plotting, fit, parameter readout and confidence-limit stages.",
-  "provisional_animation_structure": "components/python-plot-library/svg-animation-structure.provisional.md",
+  "rule": "Use Python plot generators for all real plots and technical diagrams. Use an existing generator before creating a new one. Generic one-dimensional failure timelines with only an x-axis, X/cross markers or censor markers stay SVG-native. As soon as a graphic has a y-axis, object rows, ablesbare Achsenskalierung, data points, curves, fit lines, probability nets, distributions or confidence limits, the Python-plot workflow applies. Python plots must not include visible titles. Python plot generators export SVG only. Plot text is optimized for small seminar-scene usage: axis labels, tick labels, and legends must remain readable when scaled down. Animation-ready plot SVGs follow components/python-plot-library/svg-animation-structure.md and expose semantic ASCII snake_case targets through data-anim-target without embedded timing or animate elements. Weibull confidence limits are drawn as reproducible, non-parallel 5 and 95 percent bootstrap boundary curves, not filled confidence bands or linear regression confidence lines. Multi-slide plot build-up sequences must share one documented data and axis contract across sorting, probability plotting, fit, parameter readout and confidence-limit stages.",
+  "animation_structure": "components/python-plot-library/svg-animation-structure.md",
   "style_module": "components/python-plot-library/reltest_plot_style.py",
   "shared_sequence_data": {
     "RE3_TEST_1_weibull_median_rank": "components/python-plot-library/basis_seminar_plot_data.py"
@@ -75,6 +75,99 @@
         "object-time diagrams with object rows and a time axis",
         "failure and censoring row diagrams with y-axis/object numbering",
         "basis-seminar object-number assignment and censored-observation visuals"
+      ],
+      "exports": ["svg"]
+    },
+    {
+      "diagram_type": "recall_statistics_plot",
+      "file": "components/python-plot-library/recall_statistics_plot.py",
+      "use_for": [
+        "recall actions combined with affected-vehicle counts",
+        "dual-axis recall statistics over calendar years"
+      ],
+      "exports": ["svg"]
+    },
+    {
+      "diagram_type": "purchase_criteria_plot",
+      "file": "components/python-plot-library/purchase_criteria_plot.py",
+      "use_for": [
+        "multi-year purchase-criteria comparisons",
+        "grouped horizontal percentage-bar comparisons"
+      ],
+      "exports": ["svg"]
+    },
+    {
+      "diagram_type": "stress_strength_interference_plot",
+      "file": "components/python-plot-library/stress_strength_interference_plot.py",
+      "use_for": [
+        "stress-strength interference distributions",
+        "failure-overlap areas",
+        "strength-shift explanation sequences"
+      ],
+      "exports": ["svg"]
+    },
+    {
+      "diagram_type": "bathtub_curve_plot",
+      "file": "components/python-plot-library/bathtub_curve_plot.py",
+      "use_for": [
+        "schematic bathtub failure-rate curves",
+        "early, random and wear-out failure regions",
+        "source-aligned lifecycle diagrams with shared phase boundaries"
+      ],
+      "exports": ["svg"]
+    },
+    {
+      "diagram_type": "reliability_function_plots",
+      "file": "components/python-plot-library/reliability_function_plots.py",
+      "use_for": [
+        "Woehler plots with stress levels and scattered lifetimes",
+        "histograms and density functions",
+        "empirical and smooth cumulative distribution functions",
+        "failure probability and reliability area diagrams",
+        "human and technical hazard-rate examples",
+        "three-dimensional Woehler density representations",
+        "compact four-panel summaries of density, failure probability, reliability and hazard"
+      ],
+      "exports": ["svg"]
+    },
+    {
+      "diagram_type": "location_measure_plots",
+      "file": "components/python-plot-library/location_measure_plots.py",
+      "use_for": [
+        "mean as centroid of failure-time mass points",
+        "median as equal-area split of a density function",
+        "mode at the maximum of a density function",
+        "mean median and mode in right-skewed distributions"
+      ],
+      "exports": ["svg"]
+    },
+    {
+      "diagram_type": "reliability_metric_plots",
+      "file": "components/python-plot-library/reliability_metric_plots.py",
+      "use_for": [
+        "MTTF diagrams with multiple failure observations and a density reference",
+        "Bq-life diagrams linking failure probabilities to lifetimes"
+      ],
+      "exports": ["svg"]
+    },
+    {
+      "diagram_type": "distribution_model_plots",
+      "file": "components/python-plot-library/distribution_model_plots.py",
+      "use_for": [
+        "Normal distribution density, hazard and cumulative failure plots",
+        "exponential distribution density, constant hazard and cumulative failure plots",
+        "speaker-text-guided comparison of distribution parameters and reliability suitability"
+      ],
+      "exports": ["svg"]
+    },
+    {
+      "diagram_type": "advanced_distribution_plots",
+      "file": "components/python-plot-library/advanced_distribution_plots.py",
+      "use_for": [
+        "Weibull density, hazard and cumulative failure plots with stable form-parameter semantics",
+        "two-parameter versus three-parameter Weibull shift diagrams",
+        "Weibull probability paper, transformed gearbox examples and mechanism separation",
+        "lognormal density, hazard, failure and reliability plots"
       ],
       "exports": ["svg"]
     }

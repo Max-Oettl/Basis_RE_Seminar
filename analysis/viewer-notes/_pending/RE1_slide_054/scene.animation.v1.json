@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_054.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "exponential_hazard_curves",
+      "label": "Konstante Ausfallrate",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "exponential_random_mapping",
+      "label": "Bereich 2 der Badewannenkurve",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "exponential_cdf_curves",
+      "label": "Ausfallwahrscheinlichkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "exponential_zero_start",
+      "label": "Start bei F von null gleich null",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "exponential_lifetime_suitability",
+      "label": "Eignung und Parameterwirkung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_exponential_hazard_curves",
+      "targetId": "exponential_hazard_curves",
+      "action": "draw",
+      "sourceText": "Links unten ist die Ausfallrate dargestellt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_exponential_random_mapping",
+      "targetId": "exponential_random_mapping",
+      "action": "show",
+      "sourceText": "Wenn wir uns hierzu nochmals die Badewannenkurve anschauen, sehen wir, dass wir mit einer konstanten Ausfallrate nur den zweiten Bereich, also die Zufallsausfälle, beschreiben können",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_exponential_cdf_curves",
+      "targetId": "exponential_cdf_curves",
+      "action": "draw",
+      "sourceText": "schauen uns die Verläufe der Ausfallwahrscheinlichkeit mal etwas näher an",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_exponential_zero_start",
+      "targetId": "exponential_zero_start",
+      "action": "show",
+      "sourceText": "Demnach beginnen auch alle Kurven bei einer Lebensdauer von t gleich null mit einer Ausfallwahrscheinlichkeit von null Prozent",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_exponential_lifetime_suitability",
+      "targetId": "exponential_lifetime_suitability",
+      "action": "show",
+      "sourceText": "Je größer die Ausfallrate ist, desto steiler ist hier der Anstieg",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

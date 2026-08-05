@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_040.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "location_measures_overview",
+      "label": "Mittelwert, Median und Modalwert",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_location_measures_overview",
+      "targetId": "location_measures_overview",
+      "action": "show",
+      "sourceText": "den Mittelwert, den Median und den Modalwert",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

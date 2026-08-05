@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_020.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "system_context",
+      "label": "Systemgrenze und Einflussgrößen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "critical_system_analysis",
+      "label": "Kritische Systemanalyse",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "design_improvement",
+      "label": "Designverbesserung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_system_context",
+      "targetId": "system_context",
+      "action": "show",
+      "sourceText": "Ziel hier ist es ein tiefes Systemverständnis aufzubauen",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_critical_system_analysis",
+      "targetId": "critical_system_analysis",
+      "action": "show",
+      "sourceText": "Das System wird Innerhalb dieser Grenze",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_design_improvement",
+      "targetId": "design_improvement",
+      "action": "show",
+      "sourceText": "Im Anschluss daran werden Design Schwachstellen abgeleitet",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

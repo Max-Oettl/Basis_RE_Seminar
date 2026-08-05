@@ -1,0 +1,82 @@
+{
+  "schema_version": "basisRebuildContentCrosscheck/v2",
+  "module_id": "RE1",
+  "output_slide_number": 46,
+  "checked_at": "2026-07-19T19:42:51.406Z",
+  "status": "precheck_passed",
+  "manual_review_required": true,
+  "reference_mapping": {
+    "work_unit": "slide_046",
+    "output_slide_number": 46,
+    "source_slides": [
+      51
+    ],
+    "primary_source_slide": 51,
+    "output_slide_numbers": [],
+    "mapping_type": "direct",
+    "rationale": "Quell-SVG 51 besitzt einen eigenen Sprechertextabschnitt und bleibt eine eigenstaendige Content-SVG-Szene.",
+    "mapping_source": "reference_map",
+    "reference_map_path": "analysis/rebuild-plans/RE1_source-reference-map.json",
+    "sequence_plan": "analysis/rebuild-plans/RE1_sequence_plan.md",
+    "read_error": ""
+  },
+  "references": [
+    {
+      "source_slide_number": 51,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE1/SVG/Folie51.SVG",
+      "source_svg_sha256": "b6e9a4b58bdc7d1d0894f4a514f50bcf60eab541d4cc920d2ac2dc3058a91d9d",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE1/SVG/Folie51.SVG",
+      "analysis_path": ""
+    }
+  ],
+  "proposal": {
+    "path": "rebuild-proposals/svg/RE1/slide_046/slide_046.svg",
+    "svg_sha256": "58be4194d410efd8d7f04e2b7db20490e863890a19774ab72b94a3fc80ec7a12",
+    "animation_manifest": "/files/rebuild-proposals/svg/RE1/slide_046/scene.animation.v1.json"
+  },
+  "summary": {
+    "source_count": 1,
+    "checked_content_items": 3,
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "animation_steps": 5
+  },
+  "findings": [],
+  "content_checks": [
+    {
+      "source_slide_number": 51,
+      "source_item_id": "source-svg-text-1",
+      "expected": "MTTF (Mean Time To Failure)",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 51,
+      "source_item_id": "source-svg-text-2",
+      "expected": "MTTF",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 51,
+      "source_item_id": "source-svg-text-3",
+      "expected": "= mittlere Lebensdauer nicht reparierbarer Einheiten",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    }
+  ],
+  "manual_review_focus": [
+    "Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.",
+    "Sprechertext-Reihenfolge gegen die semantisch geplanten Animationsschritte pruefen."
+  ],
+  "reference_mapping_sha256": "d94a0c219221c7c38b7b73fdb371602a4c8a3994b347c3b15467743f20a12b6f",
+  "reference_map_path": "analysis/rebuild-plans/RE1_source-reference-map.json",
+  "sequence_plan": "analysis/rebuild-plans/RE1_sequence_plan.md"
+}

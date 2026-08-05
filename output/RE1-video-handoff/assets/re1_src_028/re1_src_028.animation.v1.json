@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re1_src_028.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "woehler_data",
+      "label": "Versuchsdaten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "woehler_curve",
+      "label": "Wöhlerkurve",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "selected_load_level",
+      "label": "Stichprobe bei 640 N/mm²",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "selected_640_context",
+      "label": "Streuung bei 640 N/mm²",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "statistical_description_task",
+      "label": "Statistische Beschreibungsaufgabe",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_woehler_curve",
+      "targetId": "woehler_curve",
+      "action": "draw",
+      "sourceText": "Die Wöhlerkurve beschreibt den Zusammenhang",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "durFrames": 42
+    },
+    {
+      "stepId": "show_woehler_data",
+      "targetId": "woehler_data",
+      "action": "show",
+      "sourceText": "Dabei wurden mehrere Versuche auf unterschiedlichen Lastniveaus",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_selected_load_level",
+      "targetId": "selected_load_level",
+      "action": "show",
+      "sourceText": "Betrachten wir nun die erreichten Ausfallzeiten",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_selected_640_context",
+      "targetId": "selected_640_context",
+      "action": "show",
+      "sourceText": "Betrachten wir nun die erreichten Ausfallzeiten",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_statistical_description_task",
+      "targetId": "statistical_description_task",
+      "action": "show",
+      "sourceText": "Die Aufgabe der Zuverlässigkeitstechnik ist es nun",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

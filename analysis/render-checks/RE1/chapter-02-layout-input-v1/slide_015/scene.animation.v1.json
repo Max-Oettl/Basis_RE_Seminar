@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_015.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "method_toolboxes",
+      "label": "Zwei Werkzeugkästen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "qualitative_toolbox",
+      "label": "Qualitativer Werkzeugkasten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "quantitative_toolbox",
+      "label": "Quantitativer Werkzeugkasten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_method_toolboxes",
+      "targetId": "method_toolboxes",
+      "action": "show",
+      "sourceText": "Man kann sich die Methoden zunächst einmal wie ein Werkzeugkasten vorstellen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_qualitative_toolbox",
+      "targetId": "qualitative_toolbox",
+      "action": "show",
+      "sourceText": "Den Werkzeugkasten der qualitativen Methoden brauchen wir",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_quantitative_toolbox",
+      "targetId": "quantitative_toolbox",
+      "action": "show",
+      "sourceText": "Die quantitativen Methoden hingegen nutzen wir",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_071" data-brand-profile="reltest-academy">
+  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"distribution-introduction","contentTitle":"Die Weibullverteilung","layoutIntent":"dominant-weibull-density-family-with-two-parameter-anchors-and-compact-applications","takeaway":"Die charakteristische Lebensdauer T bestimmt die Lage, der Formparameter b die flexible Form der Verteilung.","density":"balanced","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-academy","brandVariant":"academy-production","sourceSlides":[71],"officialLogoStatus":"pending-original-asset"}]]></metadata>
+  <title id="accessible_title">Die Weibullverteilung</title>
+  <desc id="accessible_description">Die charakteristische Lebensdauer T bestimmt die Lage, der Formparameter b die flexible Form der Verteilung.</desc>
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F9FBFC"/>
+      <stop offset="56%" stop-color="#F1F5F8"/>
+      <stop offset="100%" stop-color="#E9F0F4"/>
+    </linearGradient>
+    <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#102A43" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="shadowSoft" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#102A43" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow_007EA7" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#007EA7"/></marker>
+    <marker id="arrow_102A43" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#102A43"/></marker>
+    <marker id="arrow_D1495B" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#D1495B"/></marker>
+    <marker id="arrow_2F6F55" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#2F6F55"/></marker>
+    <marker id="arrow_B7791F" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#B7791F"/></marker>
+  </defs>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+  </style>
+  <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
+  <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
+  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><svg id="weibull_density_plot" x="612" y="208" width="1218" height="664" viewBox="0 0 738.594563 410.632219" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="weibull_density_plot__figure_1">
+  <g id="weibull_density_plot__patch_1">
+   <path d="M 0 410.632219  L 738.594563 410.632219  L 738.594563 0  L 0 0  L 0 410.632219  z " style="fill: none; opacity: 0" />
+  </g>
+  <g id="weibull_density_plot__axes_1">
+   <g id="weibull_density_plot__patch_2">
+    <path d="M 75.649531 350.928  L 721.057531 350.928  L 721.057531 7.2  L 75.649531 7.2  L 75.649531 350.928  z " style="fill: none" />
+   </g>
+   <g id="weibull_density_plot__matplotlib.axis_1">
+    <g id="weibull_density_plot__xtick_1">
+     <g id="weibull_density_plot__line2d_1">
+      <path d="M 196.33558 350.928  L 196.33558 7.2  " clip-path="url(#weibull_density_plot__p4b575515c3)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_density_plot__line2d_2">
+      <defs>
+       <path id="weibull_density_plot__m19c26374ab" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#weibull_density_plot__m19c26374ab" x="196.33558" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_density_plot__text_1">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="196.33558" y="370.304953" transform="rotate(-0 196.33558 370.304953)">0.5</text>
+     </g>
+    </g>
+    <g id="weibull_density_plot__xtick_2">
+     <g id="weibull_density_plot__line2d_3">
+      <path d="M 327.516068 350.928  L 327.516068 7.2  " clip-path="url(#weibull_density_plot__p4b575515c3)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_density_plot__line2d_4">
+      <g>
+       <use ns4:href="#weibull_density_plot__m19c26374ab" x="327.516068" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_density_plot__text_2">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="327.516068" y="370.304953" transform="rotate(-0 327.516068 370.304953)">1.0</text>
+     </g>
+    </g>
+    <g id="weibull_density_plot__xtick_3">
+     <g id="weibull_density_plot__line2d_5">
+      <path d="M 458.696556 350.928  L 458.696556 7.2  " clip-path="url(#weibull_density_plot__p4b575515c3)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_density_plot__line2d_6">
+      <g>
+       <use ns4:href="#weibull_density_plot__m19c26374ab" x="458.696556" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_density_plot__text_3">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="458.696556" y="370.304953" transform="rotate(-0 458.696556 370.304953)">1.5</text>
+     </g>
+    </g>
+    <g id="weibull_density_plot__xtick_4">
+     <g id="weibull_density_plot__line2d_7">
+      <path d="M 589.877043 350.928  L 589.877043 7.2  " clip-path="url(#weibull_density_plot__p4b575515c3)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_density_plot__line2d_8">
+      <g>
+       <use ns4:href="#weibull_density_plot__m19c26374ab" x="589.877043" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_density_plot__text_4">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="589.877043" y="370.304953" transform="rotate(-0 589.877043 370.304953)">2.0</text>
+     </g>
+    </g>
+    <g id="weibull_density_plot__xtick_5">
+     <g id="weibull_density_plot__line2d_9">
+      <path d="M 721.057531 350.928  L 721.057531 7.2  " clip-path="url(#weibull_density_plot__p4b575515c3)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_density_plot__line2d_10">
+      <g>
+       <use ns4:href="#weibull_density_plot__m19c26374ab" x="721.057531" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_density_plot__text_5">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="721.057531" y="370.304953" transform="rotate(-0 721.057531 370.304953)">2.5</text>
+     </g>
+    </g>
+    <g id="weibull_density_plot__text_6">
+     
+     <g style="fill: #062d46" transform="translate(325.993531 399.108)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.677734" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">b</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="36.5625" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="48.770508" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="61.584961" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="72.298828" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">d</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="85.183594" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="97.330078" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="110.144531" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="122.352539" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="131.229492" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="137.496094" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="weibull_density_plot__matplotlib.axis_2">
+    <g id="weibull_density_plot__ytick_1">
+     <g id="weibull_density_plot__line2d_11">
+      <path d="M 75.649531 350.928  L 721.057531 350.928  " clip-path="url(#weibull_density_plot__p4b575515c3)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_density_plot__line2d_12">
+      <defs>
+       <path id="weibull_density_plot__mbe28bc5a42" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#weibull_density_plot__mbe28bc5a42" x="75.649531" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_density_plot__text_7">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="355.866477" transform="rotate(-0 66.149531 355.866477)">0.00</text>
+     </g>
+    </g>
+    <g id="weibull_density_plot__ytick_2">
+     <g id="weibull_density_plot__line2d_13">
+      <path d="M 75.649531 310.959628  L 721.057531 310.959628  " clip-path="url(#weibull_density_plot__p4b575515c3)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_density_plot__line2d_14">
+      <g>
+       <use ns4:href="#weibull_density_plot__mbe28bc5a42" x="75.649531" y="310.959628" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_density_plot__text_8">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="315.898104" transform="rotate(-0 66.149531 315.898104)">0.25</text>
+     </g>
+    </g>
+    <g id="weibull_density_plot__ytick_3">
+     <g id="weibull_density_plot__line2d_15">
+      <path d="M 75.649531 270.991256  L 721.057531 270.991256  " clip-path="url(#weibull_density_plot__p4b575515c3)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_density_plot__line2d_16">
+      <g>
+       <use ns4:href="#weibull_density_plot__mbe28bc5a42" x="75.649531" y="270.991256" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_density_plot__text_9">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="275.929732" transform="rotate(-0 66.149531 275.929732)">0.50</text>
+     </g>
+    </g>
+    <g id="weibull_density_plot__ytick_4">
+     <g id="weibull_density_plot__line2d_17">
+      <path d="M 75.649531 231.022884  L 721.057531 231.022884  " clip-path="url(#weibull_density_plot__p4b575515c3)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_density_plot__line2d_18">
+      <g>
+       <use ns4:href="#weibull_density_plot__mbe28bc5a42" x="75.649531" y="231.022884" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_density_plot__text_10">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="235.96136" transform="rotate(-0 66.149531 235.96136)">0.75</text>
+     </g>
+    </g>
+    <g id="weibull_density_plot__ytick_5">
+     <g id="weibull_density_plot__line2d_19">
+      <path d="M 75.649531 191.054512  L 721.057531 191.054512  " clip-path="url(#weibull_density_plot__p4b575515c3)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_density_plot__line2d_20">
+      <g>
+       <use ns4:href="#weibull_density_plot__mbe28bc5a42" x="75.649531" y="191.054512" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_density_plot__text_11">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="195.992988" transform="rotate(-0 66.149531 195.992988)">1.00</text>
+     </g>
+    </g>
+    <g id="weibull_density_plot__ytick_6">
+     <g id="weibull_density_plot__line2d_21">
+      <path d="M 75.649531 151.08614  L 721.057531 151.08614  " clip-path="url(#weibull_density_plot__p4b575515c3)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_density_plot__line2d_22">
+      <g>
+       <use ns4:href="#weibull_density_plot__mbe28bc5a42" x="75.649531" y="151.08614" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_density_plot__text_12">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="156.024616" transform="rotate(-0 66.149531 156.024616)">1.25</text>
+     </g>
+    </g>
+    <g id="weibull_density_plot__ytick_7">
+     <g id="weibull_density_plot__line2d_23">
+      <path d="M 75.649531 111.117767  L 721.057531 111.117767  " clip-path="url(#weibull_density_plot__p4b575515c3)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_density_plot__line2d_24">
+      <g>
+       <use ns4:href="#weibull_density_plot__mbe28bc5a42" x="75.649531" y="111.117767" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_density_plot__text_13">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="116.056244" transform="rotate(-0 66.149531 116.056244)">1.50</text>
+     </g>
+    </g>
+    <g id="weibull_density_plot__ytick_8">
+     <g id="weibull_density_plot__line2d_25">
+      <path d="M 75.649531 71.149395  L 721.057531 71.149395  " clip-path="url(#weibull_density_plot__p4b575515c3)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_density_plot__line2d_26">
+      <g>
+       <use ns4:href="#weibull_density_plot__mbe28bc5a42" x="75.649531" y="71.149395" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_density_plot__text_14">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="76.087872" transform="rotate(-0 66.149531 76.087872)">1.75</text>
+     </g>
+    </g>
+    <g id="weibull_density_plot__ytick_9">
+     <g id="weibull_density_plot__line2d_27">
+      <path d="M 75.649531 31.181023  L 721.057531 31.181023  " clip-path="url(#weibull_density_plot__p4b575515c3)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="weibull_density_plot__line2d_28">
+      <g>
+       <use ns4:href="#weibull_density_plot__mbe28bc5a42" x="75.649531" y="31.181023" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="weibull_density_plot__text_15">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="36.1195" transform="rotate(-0 66.149531 36.1195)">2.00</text>
+     </g>
+    </g>
+    <g id="weibull_density_plot__text_16">
+     
+     <g style="fill: #062d46" transform="translate(20.88 271.314) rotate(-90)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">D</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="14.941406" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="21.111328" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="31.78125" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="44.595703" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="53.200195" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="65.408203" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">f</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="73.239258" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="86.053711" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="98.868164" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">k</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="110.838867" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="119.443359" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="125.613281" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">o</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="137.979492" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="150.793945" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="157.060547" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">f</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="170.419922" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="163.397461" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">(</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="177.477539" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">)</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="weibull_density_curves" data-anim-target="true" data-anim-label="Dichtekurven der Weibullverteilung"><g id="weibull_density_plot__weibull_density_beta_1">
+    <path d="M 75.649531 23.694646  L 77.265071 50.791319  L 78.88061 72.894297  L 80.49615 91.360229  L 82.111689 107.080763  L 83.727228 120.669169  L 85.342768 132.56291  L 86.958307 143.083515  L 88.573847 152.473285  L 90.189386 160.918729  L 92.612695 172.127758  L 95.036004 181.909713  L 97.459313 190.539333  L 99.882623 198.222799  L 102.305932 205.11825  L 104.729241 211.349265  L 107.15255 217.013989  L 109.575859 222.191486  L 111.999168 226.946249  L 115.230247 232.718978  L 118.461326 237.936131  L 121.692405 242.679212  L 124.923484 247.014003  L 128.154563 250.994251  L 131.385641 254.664353  L 135.42449 258.871685  L 139.463339 262.711621  L 143.502187 266.232921  L 147.541036 269.475811  L 152.387654 273.046576  L 157.234272 276.312373  L 162.08089 279.312588  L 167.735278 282.520466  L 173.389666 285.454036  L 179.044054 288.148584  L 185.506212 290.972757  L 191.96837 293.559141  L 199.238297 296.221708  L 206.508225 298.656371  L 214.585922 301.129433  L 223.471389 303.605223  L 233.164625 306.054326  L 242.857862 308.277261  L 253.358868 310.46571  L 264.667644 312.602344  L 276.78419 314.673953  L 290.516275 316.78916  L 305.056129 318.799482  L 321.211524 320.799082  L 338.174688 322.674599  L 356.753391 324.506991  L 376.947634 326.277804  L 399.565186 328.032914  L 424.606047 329.742633  L 452.070217 331.385268  L 481.957696 332.94604  L 515.076255 334.450091  L 552.233661 335.908617  L 593.429917 337.297708  L 639.47279 338.623492  L 691.170052 339.885912  L 721.057531 340.526485  L 721.057531 340.526485  " clip-path="url(#weibull_density_plot__p4b575515c3)" style="fill: none; stroke: #2f6f55; stroke-width: 3.2; stroke-linecap: square" />
+   </g>
+   <g id="weibull_density_plot__weibull_density_beta_2">
+    <path d="M 75.649531 197.323241  L 86.150538 203.349864  L 97.459313 209.575907  L 108.768089 215.539285  L 120.076865 221.251079  L 131.385641 226.721904  L 143.502187 232.32764  L 155.618733 237.680374  L 167.735278 242.791527  L 179.851824 247.672  L 192.77614 252.6353  L 205.700455 257.360024  L 218.62477 261.857641  L 232.356855 266.399717  L 246.088941 270.710174  L 260.628795 275.034846  L 275.16865 279.126368  L 290.516275 283.206136  L 305.863899 287.054091  L 322.019293 290.868605  L 338.174688 294.455318  L 355.137852 297.99107  L 372.908785 301.457995  L 390.679719 304.697865  L 409.258422 307.85836  L 428.644895 310.926139  L 448.839138 313.889616  L 469.841151 316.738974  L 491.650933 319.466147  L 514.268485 322.064782  L 537.693807 324.53018  L 561.926898 326.85921  L 587.775529 329.117471  L 614.431929 331.224608  L 642.703869 333.237441  L 672.591349 335.142154  L 704.094367 336.928262  L 721.057531 337.804785  L 721.057531 337.804785  " clip-path="url(#weibull_density_plot__p4b575515c3)" style="fill: none; stroke: #007ea7; stroke-width: 3.2; stroke-linecap: square" />
+   </g>
+   <g id="weibull_density_plot__weibull_density_beta_3">
+    <path d="M 75.649531 338.158568  L 90.189386 320.694504  L 100.690392 308.40734  L 109.575859 298.320994  L 117.653556 289.457799  L 125.731253 280.934628  L 133.001181 273.590625  L 140.271108 266.586819  L 146.733266 260.668618  L 153.195424 255.057644  L 159.657581 249.769296  L 165.311969 245.417376  L 170.966357 241.330844  L 176.620745 237.516536  L 182.275133 233.980169  L 187.929521 230.726331  L 193.583909 227.758486  L 199.238297 225.078977  L 204.084915 223.01271  L 208.931534 221.159345  L 213.778152 219.518441  L 218.62477 218.088993  L 223.471389 216.869447  L 228.318007 215.857715  L 233.164625 215.051194  L 238.011243 214.446785  L 242.857862 214.040919  L 247.70448 213.829576  L 253.358868 213.822914  L 259.013256 214.067212  L 264.667644 214.554049  L 270.322032 215.274379  L 275.97642 216.218595  L 281.630808 217.376591  L 288.092966 218.948245  L 294.555123 220.769014  L 301.017281 222.822057  L 308.287208 225.387902  L 315.557136 228.20096  L 323.634833 231.585905  L 331.71253 235.210419  L 340.597997 239.433182  L 351.099003 244.682773  L 363.215549 251.000017  L 380.178713 260.12307  L 413.297271 277.990696  L 427.029356 285.126713  L 439.145902 291.185637  L 450.454678 296.597499  L 460.955684 301.386398  L 471.45669 305.929391  L 481.149927 309.893577  L 490.843163 313.630814  L 500.5364 317.137632  L 510.229636 320.413321  L 519.922873 323.459623  L 529.616109 326.280424  L 539.309346 328.881453  L 549.810352 331.459692  L 560.311359 333.799456  L 570.812365 335.912984  L 582.121141 337.951244  L 593.429917 339.759758  L 605.546462 341.462661  L 617.663008 342.944072  L 630.587323 344.304355  L 644.319409 345.528549  L 658.859263 346.607619  L 675.014658 347.582183  L 692.785591 348.42636  L 712.979834 349.151894  L 721.057531 349.384858  L 721.057531 349.384858  " clip-path="url(#weibull_density_plot__p4b575515c3)" style="fill: none; stroke: #b7791f; stroke-width: 3.2; stroke-linecap: square" />
+   </g>
+   <g id="weibull_density_plot__weibull_density_beta_4">
+    <path d="M 75.649531 350.748944  L 81.303919 350.402075  L 86.958307 349.814152  L 91.804925 349.088552  L 96.651544 348.13552  L 101.498162 346.935722  L 106.34478 345.471656  L 110.383629 344.038242  L 114.422477 342.401929  L 118.461326 340.555118  L 122.500175 338.49097  L 126.539023 336.203428  L 130.577872 333.687249  L 134.61672 330.93805  L 138.655569 327.952362  L 142.694417 324.727681  L 147.541036 320.540602  L 152.387654 316.006876  L 157.234272 311.128509  L 162.08089 305.910127  L 166.927509 300.359151  L 171.774127 294.485958  L 177.428515 287.244834  L 183.082903 279.610679  L 188.737291 271.616817  L 195.199449 262.091862  L 202.469376 250.964565  L 211.354843 236.93856  L 236.395704 197.092763  L 242.857862 187.333164  L 248.51225 179.172681  L 253.358868 172.531173  L 258.205486 166.27521  L 262.244335 161.39645  L 266.283183 156.855165  L 270.322032 152.681467  L 273.553111 149.626513  L 276.78419 146.839134  L 280.015268 144.332444  L 283.246347 142.118656  L 286.477426 140.208986  L 289.708505 138.613561  L 292.131814 137.628647  L 294.555123 136.82887  L 296.978432 136.217129  L 299.401742 135.795888  L 301.825051 135.567162  L 304.24836 135.532502  L 306.671669 135.692983  L 309.094978 136.049195  L 311.518287 136.601231  L 313.941596 137.348682  L 316.364905 138.290632  L 318.788215 139.425653  L 321.211524 140.751809  L 324.442603 142.813035  L 327.673681 145.202451  L 330.90476 147.911291  L 334.135839 150.929258  L 337.366918 154.244577  L 340.597997 157.844062  L 344.636845 162.720782  L 348.675694 167.987652  L 352.714543 173.610869  L 357.561161 180.778009  L 362.407779 188.339809  L 368.062167 197.568018  L 375.332094 209.90034  L 388.25641 232.411894  L 398.757416 250.494296  L 406.027344 262.542558  L 411.681732 271.514915  L 417.336119 280.062487  L 422.182738 287.007886  L 427.029356 293.571662  L 431.875974 299.732732  L 435.914823 304.54881  L 439.953671 309.070356  L 443.99252 313.295536  L 448.031369 317.225313  L 452.070217 320.863225  L 456.109066 324.215149  L 460.147914 327.289033  L 464.186763 330.094624  L 468.225611 332.643193  L 472.26446 334.947247  L 476.303308 337.020263  L 480.342157 338.876412  L 485.188775 340.838135  L 490.035394 342.534271  L 494.882012 343.990377  L 499.72863 345.231476  L 505.383018 346.439776  L 511.037406 347.424327  L 517.499564 348.318234  L 524.769491 349.082217  L 532.847188 349.695502  L 542.540425 350.189162  L 553.849201 350.536629  L 569.196825 350.773717  L 593.429917 350.89802  L 660.474803 350.927901  L 721.057531 350.928  L 721.057531 350.928  " clip-path="url(#weibull_density_plot__p4b575515c3)" style="fill: none; stroke: #d1495b; stroke-width: 3.2; stroke-linecap: square" />
+   </g>
+   <g id="weibull_density_plot__weibull_density_label_1">
+    <g id="weibull_density_plot__patch_5">
+     <path d="M 113.203678 230.440414  L 171.553678 230.440414  L 171.553678 211.836898  L 113.203678 211.836898  z " style="fill: #ffffff; opacity: 0.9" />
+    </g>
+    
+    <g style="fill: #2f6f55" transform="translate(115.003678 225.036898)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.609375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">b</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.443848" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.93457" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">0</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.478027" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">,</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.168457" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #2f6f55">5</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="weibull_density_plot__weibull_density_label_2">
+    <g id="weibull_density_plot__patch_6">
+     <path d="M 627.43119 330.415866  L 668.53119 330.415866  L 668.53119 311.81235  L 627.43119 311.81235  z " style="fill: #ffffff; opacity: 0.9" />
+    </g>
+    
+    <g style="fill: #007ea7" transform="translate(629.23119 325.01235)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.609375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">b</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.443848" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.93457" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #007ea7">1</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="weibull_density_plot__weibull_density_label_3">
+    <g id="weibull_density_plot__patch_7">
+     <path d="M 519.86319 322.093044  L 560.96319 322.093044  L 560.96319 303.489529  L 519.86319 303.489529  z " style="fill: #ffffff; opacity: 0.9" />
+    </g>
+    
+    <g style="fill: #b7791f" transform="translate(521.66319 316.689529)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.609375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #b7791f">b</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.443848" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #b7791f">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.93457" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #b7791f">2</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="weibull_density_plot__weibull_density_label_4">
+    <g id="weibull_density_plot__patch_8">
+     <path d="M 401.800751 256.689007  L 460.150751 256.689007  L 460.150751 238.085491  L 401.800751 238.085491  z " style="fill: #ffffff; opacity: 0.9" />
+    </g>
+    
+    <g style="fill: #d1495b" transform="translate(403.600751 251.285491)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.609375" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">b</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.443848" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.93457" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">3</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.478027" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">,</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.168457" y="-0.609375" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #d1495b">5</tspan>
+     </text>
+    </g>
+   </g>
+   </g><g id="weibull_density_eta" data-anim-target="true" data-anim-label="Charakteristische Lebensdauer"><g id="weibull_density_plot__weibull_density_eta_line">
+    <path d="M 327.516068 350.928  L 327.516068 7.2  " clip-path="url(#weibull_density_plot__p4b575515c3)" style="fill: none; stroke-dasharray: 8.14,3.52; stroke-dashoffset: 0; stroke: #6a7a86; stroke-width: 2.2" />
+   </g>
+   <g id="weibull_density_plot__weibull_density_eta_label">
+    
+    <g style="fill: #062d46" transform="translate(306.436068 27.983553)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.609375" style="font-style: oblique; font-size: 17px; font-family: 'DejaVu Sans'; fill: #062d46">T</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="13.696289" y="-0.609375" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #062d46">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="31.252441" y="-0.609375" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #062d46">1</tspan>
+     </text>
+    </g>
+   </g>
+  </g><g id="weibull_density_plot__patch_3">
+    <path d="M 75.649531 350.928  L 75.649531 7.2  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="weibull_density_plot__patch_4">
+    <path d="M 75.649531 350.928  L 721.057531 350.928  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   </g>
+ </g>
+ <defs>
+  <clipPath id="weibull_density_plot__p4b575515c3">
+   <rect data-qc-allow-overlap="true" x="75.649531" y="7.2" width="645.408" height="343.728" />
+  </clipPath>
+ </defs>
+</svg><g id="weibull_eta_meaning" data-anim-target="true" data-anim-label="Charakteristische Lebensdauer als Lageparameter"><title>Charakteristische Lebensdauer als Lageparameter</title><rect data-qc-allow-overlap="true" x="84" y="234" width="462" height="142" rx="8" fill="#D9F0F7" stroke="#007EA7" stroke-width="1.5"/><circle cx="146" cy="305" r="38" fill="#FFFFFF"/><g transform="translate(123 282) scale(1.9166666666666667)" fill="none" stroke="#007EA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/><path d="M15.5 8.5L21 3M17 3h4v4"/></g><text x="210" y="288" class="" font-size="20" font-weight="850" fill="#007EA7" text-anchor="start" data-qc-role="text"><tspan x="210" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">T · LAGEPARAMETER</tspan></text><text x="210" y="330" class="" font-size="22" font-weight="730" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="210" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">verschiebt die Verteilung</tspan><tspan x="210" dy="28" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">entlang der Zeitachse</tspan></text></g><g id="weibull_beta_meaning" data-anim-target="true" data-anim-label="Formparameter steuert die Kurvenform"><title>Formparameter steuert die Kurvenform</title><rect data-qc-allow-overlap="true" x="84" y="404" width="462" height="142" rx="8" fill="#F7EEDC" stroke="#B7791F" stroke-width="1.5"/><circle cx="146" cy="475" r="38" fill="#FFFFFF"/><g transform="translate(123 452) scale(1.9166666666666667)" fill="none" stroke="#B7791F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M4 12l8 4 8-4M4 16l8 4 8-4"/></g><text x="210" y="458" class="" font-size="20" font-weight="850" fill="#B7791F" text-anchor="start" data-qc-role="text"><tspan x="210" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">b · FORMPARAMETER</tspan></text><text x="210" y="500" class="" font-size="22" font-weight="730" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="210" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">bestimmt Form und</tspan><tspan x="210" dy="28" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Ausfallverhalten</tspan></text></g><g id="weibull_special_cases" data-anim-target="true" data-anim-label="Spezialfälle der Weibullverteilung"><title>Spezialfälle der Weibullverteilung</title><rect data-qc-allow-overlap="true" x="84" y="574" width="462" height="138" rx="8" fill="#FFFFFF" stroke="#C8D5DF" stroke-width="1.5"/><text x="116" y="612" class="" font-size="17" font-weight="850" fill="#52606D" text-anchor="start" data-qc-role="text"><tspan x="116" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">SPEZIALFÄLLE</tspan></text><text x="116" y="655" font-size="21" text-anchor="start" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true"><tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" fill="#007EA7" font-weight="850">b = 1</tspan><tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" fill="#102A43" font-weight="720">  Exponentialverteilung</tspan></text><text x="116" y="690" font-size="21" text-anchor="start" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true"><tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" fill="#D1495B" font-weight="850">b ≈ 3,5</tspan><tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" fill="#102A43" font-weight="720">  normalähnlich</tspan></text></g><g id="weibull_applications" data-anim-target="true" data-anim-label="Typische Anwendungen"><title>Typische Anwendungen</title><text x="100" y="770" class="" font-size="17" font-weight="850" fill="#2F6F55" text-anchor="start" data-qc-role="text"><tspan x="100" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">BREITES ANWENDUNGSSPEKTRUM</tspan></text><circle cx="124" cy="824" r="32" fill="#E3F0EA"/><g transform="translate(105 805) scale(1.5833333333333333)" fill="none" stroke="#2F6F55" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="12" r="4"/><path d="M10 2v3M10 19v3M0 12h3M17 12h3M3 5l2 2M15 17l2 2M17 5l-2 2M5 17l-2 2M21 8v6M21 17h.01"/></g><text x="176" y="832" class="" font-size="21" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="176" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Lebensdauerdaten</tspan></text><circle cx="124" cy="882" r="32" fill="#D9F0F7"/><g transform="translate(105 863) scale(1.5833333333333333)" fill="none" stroke="#007EA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-2.9 8.1-7 10-4.1-1.9-7-5.4-7-10V6z"/><path d="M8.5 12l2.2 2.2 4.8-5"/></g><text x="176" y="890" class="" font-size="21" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="176" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Versicherungswesen</tspan></text><circle cx="124" cy="940" r="32" fill="#F7EEDC"/><g transform="translate(105 921) scale(1.5833333333333333)" fill="none" stroke="#B7791F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3"/><path d="M7.5 16h9M9 13h6"/></g><text x="176" y="948" class="" font-size="21" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="176" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Medizin</tspan></text></g></g>
+</svg>

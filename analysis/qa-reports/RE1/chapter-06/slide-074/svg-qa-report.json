@@ -1,0 +1,1421 @@
+{
+  "schema_version": "svgQaReport/v1",
+  "module_id": "slide_074",
+  "svg_root": "rebuild-proposals/svg/RE1/slide_074",
+  "generated_at": "2026-07-20T06:53:41.476Z",
+  "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\tools\\svg-rebuild-qa.js rebuild-proposals/svg/RE1/slide_074 --no-design --layout --report-dir analysis/qa-reports/RE1/chapter-06/slide-074",
+  "files": [
+    {
+      "path": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+      "ids": 190,
+      "animationManifest": ""
+    },
+    {
+      "path": "rebuild-proposals/svg/RE1/slide_074/slide_074.svg",
+      "ids": 205,
+      "animationManifest": "rebuild-proposals/svg/RE1/slide_074/scene.animation.v1.json"
+    }
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+      "message": "ViewBox is not close to 16:9.",
+      "detail": "805.35575x462.192219"
+    },
+    {
+      "rule": "group_integrity",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+      "slide": "074",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "",
+      "related_element_id": "",
+      "message": "No data-qc-* attributes found; layout QA is using heuristics only.",
+      "expected": "Explicit data-qc roles and relationships for text boxes, arrows, axes, formulas, and timelines.",
+      "actual": {
+        "elementsWithDataQc": 0,
+        "totalElements": 604
+      },
+      "bbox": null,
+      "recommendation": "Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+      "slide": "074",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_128",
+      "related_element_id": "qc_runtime_129",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 173.80441284179688,
+          "top": 22.861499786376953,
+          "right": 175.43048095703125,
+          "bottom": 37.861724853515625,
+          "width": 1.626068115234375,
+          "height": 15.000225067138672
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 171.93043518066406,
+          "top": 22.861499786376953,
+          "right": 175.43048095703125,
+          "bottom": 37.861724853515625,
+          "width": 3.5000457763671875,
+          "height": 15.000225067138672
+        },
+        "right": {
+          "left": 173.80441284179688,
+          "top": 22.861499786376953,
+          "right": 183.8045654296875,
+          "bottom": 37.861724853515625,
+          "width": 10.000152587890625,
+          "height": 15.000225067138672
+        },
+        "overlap": {
+          "left": 173.80441284179688,
+          "top": 22.861499786376953,
+          "right": 175.43048095703125,
+          "bottom": 37.861724853515625,
+          "width": 1.626068115234375,
+          "height": 15.000225067138672
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+      "slide": "074",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_129",
+      "related_element_id": "qc_runtime_131",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 181.73316955566406,
+          "top": 22.861499786376953,
+          "right": 183.8045654296875,
+          "bottom": 37.861724853515625,
+          "width": 2.0713958740234375,
+          "height": 15.000225067138672
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 173.80441284179688,
+          "top": 22.861499786376953,
+          "right": 183.8045654296875,
+          "bottom": 37.861724853515625,
+          "width": 10.000152587890625,
+          "height": 15.000225067138672
+        },
+        "right": {
+          "left": 181.73316955566406,
+          "top": 22.861499786376953,
+          "right": 186.73324584960938,
+          "bottom": 37.861724853515625,
+          "width": 5.0000762939453125,
+          "height": 15.000225067138672
+        },
+        "overlap": {
+          "left": 181.73316955566406,
+          "top": 22.861499786376953,
+          "right": 183.8045654296875,
+          "bottom": 37.861724853515625,
+          "width": 2.0713958740234375,
+          "height": 15.000225067138672
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+      "slide": "074",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_136",
+      "related_element_id": "qc_runtime_137",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 56.639156341552734,
+          "top": 45.6506462097168,
+          "right": 58.772361755371094,
+          "bottom": 57.65082550048828,
+          "width": 2.1332054138183594,
+          "height": 12.000179290771484
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 48.772212982177734,
+          "top": 45.6506462097168,
+          "right": 58.772361755371094,
+          "bottom": 57.65082550048828,
+          "width": 10.00014877319336,
+          "height": 12.000179290771484
+        },
+        "right": {
+          "left": 56.639156341552734,
+          "top": 45.6506462097168,
+          "right": 63.639259338378906,
+          "bottom": 57.65082550048828,
+          "width": 7.000102996826172,
+          "height": 12.000179290771484
+        },
+        "overlap": {
+          "left": 56.639156341552734,
+          "top": 45.6506462097168,
+          "right": 58.772361755371094,
+          "bottom": 57.65082550048828,
+          "width": 2.1332054138183594,
+          "height": 12.000179290771484
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+      "slide": "074",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_139",
+      "related_element_id": "qc_runtime_140",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 74.96778869628906,
+          "top": 45.6506462097168,
+          "right": 76.9192886352539,
+          "bottom": 57.65082550048828,
+          "width": 1.9514999389648438,
+          "height": 12.000179290771484
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 70.91920471191406,
+          "top": 45.6506462097168,
+          "right": 76.9192886352539,
+          "bottom": 57.65082550048828,
+          "width": 6.000083923339844,
+          "height": 12.000179290771484
+        },
+        "right": {
+          "left": 74.96778869628906,
+          "top": 45.6506462097168,
+          "right": 80.9678726196289,
+          "bottom": 57.65082550048828,
+          "width": 6.000083923339844,
+          "height": 12.000179290771484
+        },
+        "overlap": {
+          "left": 74.96778869628906,
+          "top": 45.6506462097168,
+          "right": 76.9192886352539,
+          "bottom": 57.65082550048828,
+          "width": 1.9514999389648438,
+          "height": 12.000179290771484
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+      "slide": "074",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_154",
+      "related_element_id": "qc_runtime_155",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 163.749755859375,
+          "top": 45.6506462097168,
+          "right": 165.5547637939453,
+          "bottom": 57.65082550048828,
+          "width": 1.8050079345703125,
+          "height": 12.000179290771484
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 161.55470275878906,
+          "top": 45.6506462097168,
+          "right": 165.5547637939453,
+          "bottom": 57.65082550048828,
+          "width": 4.00006103515625,
+          "height": 12.000179290771484
+        },
+        "right": {
+          "left": 163.749755859375,
+          "top": 45.6506462097168,
+          "right": 168.7498321533203,
+          "bottom": 57.65082550048828,
+          "width": 5.0000762939453125,
+          "height": 12.000179290771484
+        },
+        "overlap": {
+          "left": 163.749755859375,
+          "top": 45.6506462097168,
+          "right": 165.5547637939453,
+          "bottom": 57.65082550048828,
+          "width": 1.8050079345703125,
+          "height": 12.000179290771484
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+      "slide": "074",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_266",
+      "related_element_id": "qc_runtime_267",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 515.7028198242188,
+          "top": 22.861499786376953,
+          "right": 516.904052734375,
+          "bottom": 37.861724853515625,
+          "width": 1.20123291015625,
+          "height": 15.000225067138672
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 511.90399169921875,
+          "top": 22.861499786376953,
+          "right": 516.904052734375,
+          "bottom": 37.861724853515625,
+          "width": 5.00006103515625,
+          "height": 15.000225067138672
+        },
+        "right": {
+          "left": 515.7028198242188,
+          "top": 22.861499786376953,
+          "right": 527.7030029296875,
+          "bottom": 37.861724853515625,
+          "width": 12.00018310546875,
+          "height": 15.000225067138672
+        },
+        "overlap": {
+          "left": 515.7028198242188,
+          "top": 22.861499786376953,
+          "right": 516.904052734375,
+          "bottom": 37.861724853515625,
+          "width": 1.20123291015625,
+          "height": 15.000225067138672
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+      "slide": "074",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_283",
+      "related_element_id": "qc_runtime_284",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 657.2819213867188,
+          "top": 22.861499786376953,
+          "right": 658.483154296875,
+          "bottom": 37.861724853515625,
+          "width": 1.20123291015625,
+          "height": 15.000225067138672
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 653.4830932617188,
+          "top": 22.861499786376953,
+          "right": 658.483154296875,
+          "bottom": 37.861724853515625,
+          "width": 5.00006103515625,
+          "height": 15.000225067138672
+        },
+        "right": {
+          "left": 657.2819213867188,
+          "top": 22.861499786376953,
+          "right": 663.281982421875,
+          "bottom": 37.861724853515625,
+          "width": 6.00006103515625,
+          "height": 15.000225067138672
+        },
+        "overlap": {
+          "left": 657.2819213867188,
+          "top": 22.861499786376953,
+          "right": 658.483154296875,
+          "bottom": 37.861724853515625,
+          "width": 1.20123291015625,
+          "height": 15.000225067138672
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+      "slide": "074",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_287",
+      "related_element_id": "qc_runtime_289",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 682.7750854492188,
+          "top": 22.861499786376953,
+          "right": 684.7225341796875,
+          "bottom": 37.861724853515625,
+          "width": 1.94744873046875,
+          "height": 15.000225067138672
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 673.7223510742188,
+          "top": 22.861499786376953,
+          "right": 684.7225341796875,
+          "bottom": 37.861724853515625,
+          "width": 11.00018310546875,
+          "height": 15.000225067138672
+        },
+        "right": {
+          "left": 682.7750854492188,
+          "top": 22.861499786376953,
+          "right": 687.775146484375,
+          "bottom": 37.861724853515625,
+          "width": 5.00006103515625,
+          "height": 15.000225067138672
+        },
+        "overlap": {
+          "left": 682.7750854492188,
+          "top": 22.861499786376953,
+          "right": 684.7225341796875,
+          "bottom": 37.861724853515625,
+          "width": 1.94744873046875,
+          "height": 15.000225067138672
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+      "slide": "074",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_304",
+      "related_element_id": "qc_runtime_305",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 529.4894409179688,
+          "top": 45.6506462097168,
+          "right": 531.44091796875,
+          "bottom": 57.65082550048828,
+          "width": 1.95147705078125,
+          "height": 12.000179290771484
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 525.4408569335938,
+          "top": 45.6506462097168,
+          "right": 531.44091796875,
+          "bottom": 57.65082550048828,
+          "width": 6.00006103515625,
+          "height": 12.000179290771484
+        },
+        "right": {
+          "left": 529.4894409179688,
+          "top": 45.6506462097168,
+          "right": 535.489501953125,
+          "bottom": 57.65082550048828,
+          "width": 6.00006103515625,
+          "height": 12.000179290771484
+        },
+        "overlap": {
+          "left": 529.4894409179688,
+          "top": 45.6506462097168,
+          "right": 531.44091796875,
+          "bottom": 57.65082550048828,
+          "width": 1.95147705078125,
+          "height": 12.000179290771484
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+      "slide": "074",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_437",
+      "related_element_id": "qc_runtime_438",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 69.144287109375,
+          "top": 268.12811279296875,
+          "right": 70.94928741455078,
+          "bottom": 280.1282958984375,
+          "width": 1.8050003051757812,
+          "height": 12.00018310546875
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 66.94923400878906,
+          "top": 268.12811279296875,
+          "right": 70.94928741455078,
+          "bottom": 280.1282958984375,
+          "width": 4.000053405761719,
+          "height": 12.00018310546875
+        },
+        "right": {
+          "left": 69.144287109375,
+          "top": 268.12811279296875,
+          "right": 76.1443862915039,
+          "bottom": 280.1282958984375,
+          "width": 7.000099182128906,
+          "height": 12.00018310546875
+        },
+        "overlap": {
+          "left": 69.144287109375,
+          "top": 268.12811279296875,
+          "right": 70.94928741455078,
+          "bottom": 280.1282958984375,
+          "width": 1.8050003051757812,
+          "height": 12.00018310546875
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+      "slide": "074",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_447",
+      "related_element_id": "qc_runtime_448",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 132.82666015625,
+          "top": 268.12811279296875,
+          "right": 134.6316680908203,
+          "bottom": 280.1282958984375,
+          "width": 1.8050079345703125,
+          "height": 12.00018310546875
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 130.63160705566406,
+          "top": 268.12811279296875,
+          "right": 134.6316680908203,
+          "bottom": 280.1282958984375,
+          "width": 4.00006103515625,
+          "height": 12.00018310546875
+        },
+        "right": {
+          "left": 132.82666015625,
+          "top": 268.12811279296875,
+          "right": 137.8267364501953,
+          "bottom": 280.1282958984375,
+          "width": 5.0000762939453125,
+          "height": 12.00018310546875
+        },
+        "overlap": {
+          "left": 132.82666015625,
+          "top": 268.12811279296875,
+          "right": 134.6316680908203,
+          "bottom": 280.1282958984375,
+          "width": 1.8050079345703125,
+          "height": 12.00018310546875
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+      "slide": "074",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_585",
+      "related_element_id": "qc_runtime_586",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 692.9108276367188,
+          "top": 248.06271362304688,
+          "right": 694.112060546875,
+          "bottom": 263.06292724609375,
+          "width": 1.20123291015625,
+          "height": 15.000213623046875
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 689.1119995117188,
+          "top": 248.06271362304688,
+          "right": 694.112060546875,
+          "bottom": 263.06292724609375,
+          "width": 5.00006103515625,
+          "height": 15.000213623046875
+        },
+        "right": {
+          "left": 692.9108276367188,
+          "top": 248.06271362304688,
+          "right": 698.910888671875,
+          "bottom": 263.06292724609375,
+          "width": 6.00006103515625,
+          "height": 15.000213623046875
+        },
+        "overlap": {
+          "left": 692.9108276367188,
+          "top": 248.06271362304688,
+          "right": 694.112060546875,
+          "bottom": 263.06292724609375,
+          "width": 1.20123291015625,
+          "height": 15.000213623046875
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+      "slide": "074",
+      "time_seconds": 0,
+      "state": "static",
+      "element_id": "qc_runtime_601",
+      "related_element_id": "qc_runtime_602",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 492.93377685546875,
+          "top": 268.12811279296875,
+          "right": 494.73876953125,
+          "bottom": 280.1282958984375,
+          "width": 1.80499267578125,
+          "height": 12.00018310546875
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 490.73870849609375,
+          "top": 268.12811279296875,
+          "right": 494.73876953125,
+          "bottom": 280.1282958984375,
+          "width": 4.00006103515625,
+          "height": 12.00018310546875
+        },
+        "right": {
+          "left": 492.93377685546875,
+          "top": 268.12811279296875,
+          "right": 499.9338684082031,
+          "bottom": 280.1282958984375,
+          "width": 7.000091552734375,
+          "height": 12.00018310546875
+        },
+        "overlap": {
+          "left": 492.93377685546875,
+          "top": 268.12811279296875,
+          "right": 494.73876953125,
+          "bottom": 280.1282958984375,
+          "width": 1.80499267578125,
+          "height": 12.00018310546875
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    }
+  ],
+  "viewer": {
+    "checked": false
+  },
+  "layout": {
+    "checked": true,
+    "strict": false,
+    "warnOnly": true,
+    "browser": {
+      "executable": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "port": 5686
+    },
+    "files": [
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+        "slide": "074",
+        "states_checked": 1,
+        "browser_rendered": true
+      },
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_074/slide_074.svg",
+        "slide": "074",
+        "states_checked": 4,
+        "browser_rendered": true
+      }
+    ],
+    "issues": [
+      {
+        "rule": "group_integrity",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+        "slide": "074",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "",
+        "related_element_id": "",
+        "message": "No data-qc-* attributes found; layout QA is using heuristics only.",
+        "expected": "Explicit data-qc roles and relationships for text boxes, arrows, axes, formulas, and timelines.",
+        "actual": {
+          "elementsWithDataQc": 0,
+          "totalElements": 604
+        },
+        "bbox": null,
+        "recommendation": "Add data-qc-role, data-qc-box, data-qc-group, and data-qc-layer to newly generated SVGs.",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+        "slide": "074",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_128",
+        "related_element_id": "qc_runtime_129",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 173.80441284179688,
+            "top": 22.861499786376953,
+            "right": 175.43048095703125,
+            "bottom": 37.861724853515625,
+            "width": 1.626068115234375,
+            "height": 15.000225067138672
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 171.93043518066406,
+            "top": 22.861499786376953,
+            "right": 175.43048095703125,
+            "bottom": 37.861724853515625,
+            "width": 3.5000457763671875,
+            "height": 15.000225067138672
+          },
+          "right": {
+            "left": 173.80441284179688,
+            "top": 22.861499786376953,
+            "right": 183.8045654296875,
+            "bottom": 37.861724853515625,
+            "width": 10.000152587890625,
+            "height": 15.000225067138672
+          },
+          "overlap": {
+            "left": 173.80441284179688,
+            "top": 22.861499786376953,
+            "right": 175.43048095703125,
+            "bottom": 37.861724853515625,
+            "width": 1.626068115234375,
+            "height": 15.000225067138672
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+        "slide": "074",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_129",
+        "related_element_id": "qc_runtime_131",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 181.73316955566406,
+            "top": 22.861499786376953,
+            "right": 183.8045654296875,
+            "bottom": 37.861724853515625,
+            "width": 2.0713958740234375,
+            "height": 15.000225067138672
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 173.80441284179688,
+            "top": 22.861499786376953,
+            "right": 183.8045654296875,
+            "bottom": 37.861724853515625,
+            "width": 10.000152587890625,
+            "height": 15.000225067138672
+          },
+          "right": {
+            "left": 181.73316955566406,
+            "top": 22.861499786376953,
+            "right": 186.73324584960938,
+            "bottom": 37.861724853515625,
+            "width": 5.0000762939453125,
+            "height": 15.000225067138672
+          },
+          "overlap": {
+            "left": 181.73316955566406,
+            "top": 22.861499786376953,
+            "right": 183.8045654296875,
+            "bottom": 37.861724853515625,
+            "width": 2.0713958740234375,
+            "height": 15.000225067138672
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+        "slide": "074",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_136",
+        "related_element_id": "qc_runtime_137",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 56.639156341552734,
+            "top": 45.6506462097168,
+            "right": 58.772361755371094,
+            "bottom": 57.65082550048828,
+            "width": 2.1332054138183594,
+            "height": 12.000179290771484
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 48.772212982177734,
+            "top": 45.6506462097168,
+            "right": 58.772361755371094,
+            "bottom": 57.65082550048828,
+            "width": 10.00014877319336,
+            "height": 12.000179290771484
+          },
+          "right": {
+            "left": 56.639156341552734,
+            "top": 45.6506462097168,
+            "right": 63.639259338378906,
+            "bottom": 57.65082550048828,
+            "width": 7.000102996826172,
+            "height": 12.000179290771484
+          },
+          "overlap": {
+            "left": 56.639156341552734,
+            "top": 45.6506462097168,
+            "right": 58.772361755371094,
+            "bottom": 57.65082550048828,
+            "width": 2.1332054138183594,
+            "height": 12.000179290771484
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+        "slide": "074",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_139",
+        "related_element_id": "qc_runtime_140",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 74.96778869628906,
+            "top": 45.6506462097168,
+            "right": 76.9192886352539,
+            "bottom": 57.65082550048828,
+            "width": 1.9514999389648438,
+            "height": 12.000179290771484
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 70.91920471191406,
+            "top": 45.6506462097168,
+            "right": 76.9192886352539,
+            "bottom": 57.65082550048828,
+            "width": 6.000083923339844,
+            "height": 12.000179290771484
+          },
+          "right": {
+            "left": 74.96778869628906,
+            "top": 45.6506462097168,
+            "right": 80.9678726196289,
+            "bottom": 57.65082550048828,
+            "width": 6.000083923339844,
+            "height": 12.000179290771484
+          },
+          "overlap": {
+            "left": 74.96778869628906,
+            "top": 45.6506462097168,
+            "right": 76.9192886352539,
+            "bottom": 57.65082550048828,
+            "width": 1.9514999389648438,
+            "height": 12.000179290771484
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+        "slide": "074",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_154",
+        "related_element_id": "qc_runtime_155",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 163.749755859375,
+            "top": 45.6506462097168,
+            "right": 165.5547637939453,
+            "bottom": 57.65082550048828,
+            "width": 1.8050079345703125,
+            "height": 12.000179290771484
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 161.55470275878906,
+            "top": 45.6506462097168,
+            "right": 165.5547637939453,
+            "bottom": 57.65082550048828,
+            "width": 4.00006103515625,
+            "height": 12.000179290771484
+          },
+          "right": {
+            "left": 163.749755859375,
+            "top": 45.6506462097168,
+            "right": 168.7498321533203,
+            "bottom": 57.65082550048828,
+            "width": 5.0000762939453125,
+            "height": 12.000179290771484
+          },
+          "overlap": {
+            "left": 163.749755859375,
+            "top": 45.6506462097168,
+            "right": 165.5547637939453,
+            "bottom": 57.65082550048828,
+            "width": 1.8050079345703125,
+            "height": 12.000179290771484
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+        "slide": "074",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_266",
+        "related_element_id": "qc_runtime_267",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 515.7028198242188,
+            "top": 22.861499786376953,
+            "right": 516.904052734375,
+            "bottom": 37.861724853515625,
+            "width": 1.20123291015625,
+            "height": 15.000225067138672
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 511.90399169921875,
+            "top": 22.861499786376953,
+            "right": 516.904052734375,
+            "bottom": 37.861724853515625,
+            "width": 5.00006103515625,
+            "height": 15.000225067138672
+          },
+          "right": {
+            "left": 515.7028198242188,
+            "top": 22.861499786376953,
+            "right": 527.7030029296875,
+            "bottom": 37.861724853515625,
+            "width": 12.00018310546875,
+            "height": 15.000225067138672
+          },
+          "overlap": {
+            "left": 515.7028198242188,
+            "top": 22.861499786376953,
+            "right": 516.904052734375,
+            "bottom": 37.861724853515625,
+            "width": 1.20123291015625,
+            "height": 15.000225067138672
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+        "slide": "074",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_283",
+        "related_element_id": "qc_runtime_284",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 657.2819213867188,
+            "top": 22.861499786376953,
+            "right": 658.483154296875,
+            "bottom": 37.861724853515625,
+            "width": 1.20123291015625,
+            "height": 15.000225067138672
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 653.4830932617188,
+            "top": 22.861499786376953,
+            "right": 658.483154296875,
+            "bottom": 37.861724853515625,
+            "width": 5.00006103515625,
+            "height": 15.000225067138672
+          },
+          "right": {
+            "left": 657.2819213867188,
+            "top": 22.861499786376953,
+            "right": 663.281982421875,
+            "bottom": 37.861724853515625,
+            "width": 6.00006103515625,
+            "height": 15.000225067138672
+          },
+          "overlap": {
+            "left": 657.2819213867188,
+            "top": 22.861499786376953,
+            "right": 658.483154296875,
+            "bottom": 37.861724853515625,
+            "width": 1.20123291015625,
+            "height": 15.000225067138672
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+        "slide": "074",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_287",
+        "related_element_id": "qc_runtime_289",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 682.7750854492188,
+            "top": 22.861499786376953,
+            "right": 684.7225341796875,
+            "bottom": 37.861724853515625,
+            "width": 1.94744873046875,
+            "height": 15.000225067138672
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 673.7223510742188,
+            "top": 22.861499786376953,
+            "right": 684.7225341796875,
+            "bottom": 37.861724853515625,
+            "width": 11.00018310546875,
+            "height": 15.000225067138672
+          },
+          "right": {
+            "left": 682.7750854492188,
+            "top": 22.861499786376953,
+            "right": 687.775146484375,
+            "bottom": 37.861724853515625,
+            "width": 5.00006103515625,
+            "height": 15.000225067138672
+          },
+          "overlap": {
+            "left": 682.7750854492188,
+            "top": 22.861499786376953,
+            "right": 684.7225341796875,
+            "bottom": 37.861724853515625,
+            "width": 1.94744873046875,
+            "height": 15.000225067138672
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+        "slide": "074",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_304",
+        "related_element_id": "qc_runtime_305",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 529.4894409179688,
+            "top": 45.6506462097168,
+            "right": 531.44091796875,
+            "bottom": 57.65082550048828,
+            "width": 1.95147705078125,
+            "height": 12.000179290771484
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 525.4408569335938,
+            "top": 45.6506462097168,
+            "right": 531.44091796875,
+            "bottom": 57.65082550048828,
+            "width": 6.00006103515625,
+            "height": 12.000179290771484
+          },
+          "right": {
+            "left": 529.4894409179688,
+            "top": 45.6506462097168,
+            "right": 535.489501953125,
+            "bottom": 57.65082550048828,
+            "width": 6.00006103515625,
+            "height": 12.000179290771484
+          },
+          "overlap": {
+            "left": 529.4894409179688,
+            "top": 45.6506462097168,
+            "right": 531.44091796875,
+            "bottom": 57.65082550048828,
+            "width": 1.95147705078125,
+            "height": 12.000179290771484
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+        "slide": "074",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_437",
+        "related_element_id": "qc_runtime_438",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 69.144287109375,
+            "top": 268.12811279296875,
+            "right": 70.94928741455078,
+            "bottom": 280.1282958984375,
+            "width": 1.8050003051757812,
+            "height": 12.00018310546875
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 66.94923400878906,
+            "top": 268.12811279296875,
+            "right": 70.94928741455078,
+            "bottom": 280.1282958984375,
+            "width": 4.000053405761719,
+            "height": 12.00018310546875
+          },
+          "right": {
+            "left": 69.144287109375,
+            "top": 268.12811279296875,
+            "right": 76.1443862915039,
+            "bottom": 280.1282958984375,
+            "width": 7.000099182128906,
+            "height": 12.00018310546875
+          },
+          "overlap": {
+            "left": 69.144287109375,
+            "top": 268.12811279296875,
+            "right": 70.94928741455078,
+            "bottom": 280.1282958984375,
+            "width": 1.8050003051757812,
+            "height": 12.00018310546875
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+        "slide": "074",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_447",
+        "related_element_id": "qc_runtime_448",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 132.82666015625,
+            "top": 268.12811279296875,
+            "right": 134.6316680908203,
+            "bottom": 280.1282958984375,
+            "width": 1.8050079345703125,
+            "height": 12.00018310546875
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 130.63160705566406,
+            "top": 268.12811279296875,
+            "right": 134.6316680908203,
+            "bottom": 280.1282958984375,
+            "width": 4.00006103515625,
+            "height": 12.00018310546875
+          },
+          "right": {
+            "left": 132.82666015625,
+            "top": 268.12811279296875,
+            "right": 137.8267364501953,
+            "bottom": 280.1282958984375,
+            "width": 5.0000762939453125,
+            "height": 12.00018310546875
+          },
+          "overlap": {
+            "left": 132.82666015625,
+            "top": 268.12811279296875,
+            "right": 134.6316680908203,
+            "bottom": 280.1282958984375,
+            "width": 1.8050079345703125,
+            "height": 12.00018310546875
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+        "slide": "074",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_585",
+        "related_element_id": "qc_runtime_586",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 692.9108276367188,
+            "top": 248.06271362304688,
+            "right": 694.112060546875,
+            "bottom": 263.06292724609375,
+            "width": 1.20123291015625,
+            "height": 15.000213623046875
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 689.1119995117188,
+            "top": 248.06271362304688,
+            "right": 694.112060546875,
+            "bottom": 263.06292724609375,
+            "width": 5.00006103515625,
+            "height": 15.000213623046875
+          },
+          "right": {
+            "left": 692.9108276367188,
+            "top": 248.06271362304688,
+            "right": 698.910888671875,
+            "bottom": 263.06292724609375,
+            "width": 6.00006103515625,
+            "height": 15.000213623046875
+          },
+          "overlap": {
+            "left": 692.9108276367188,
+            "top": 248.06271362304688,
+            "right": 694.112060546875,
+            "bottom": 263.06292724609375,
+            "width": 1.20123291015625,
+            "height": 15.000213623046875
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "warning",
+        "file": "rebuild-proposals/svg/RE1/slide_074/plots/reliability_function_summary.svg",
+        "slide": "074",
+        "time_seconds": 0,
+        "state": "static",
+        "element_id": "qc_runtime_601",
+        "related_element_id": "qc_runtime_602",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 492.93377685546875,
+            "top": 268.12811279296875,
+            "right": 494.73876953125,
+            "bottom": 280.1282958984375,
+            "width": 1.80499267578125,
+            "height": 12.00018310546875
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 490.73870849609375,
+            "top": 268.12811279296875,
+            "right": 494.73876953125,
+            "bottom": 280.1282958984375,
+            "width": 4.00006103515625,
+            "height": 12.00018310546875
+          },
+          "right": {
+            "left": 492.93377685546875,
+            "top": 268.12811279296875,
+            "right": 499.9338684082031,
+            "bottom": 280.1282958984375,
+            "width": 7.000091552734375,
+            "height": 12.00018310546875
+          },
+          "overlap": {
+            "left": 492.93377685546875,
+            "top": 268.12811279296875,
+            "right": 494.73876953125,
+            "bottom": 280.1282958984375,
+            "width": 1.80499267578125,
+            "height": 12.00018310546875
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      }
+    ],
+    "summary": {
+      "checked": true,
+      "files_checked": 2,
+      "states_checked": 5,
+      "errors": 0,
+      "warnings": 14
+    }
+  },
+  "design": {
+    "checked": false
+  },
+  "handoff": {
+    "checked": false
+  },
+  "summary": {
+    "files_checked": 2,
+    "manifests_checked": 1,
+    "layout_files_checked": 2,
+    "layout_states_checked": 5,
+    "design_files_checked": 0,
+    "design_errors": 0,
+    "design_warnings": 0,
+    "handoff_scenes_checked": 0,
+    "handoff_manifests_checked": 0,
+    "handoff_errors": 0,
+    "handoff_warnings": 0,
+    "errors": 0,
+    "warnings": 15
+  }
+}

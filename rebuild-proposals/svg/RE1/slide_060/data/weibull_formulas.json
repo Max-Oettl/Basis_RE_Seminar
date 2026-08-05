@@ -1,0 +1,11 @@
+{
+  "schema_version": "reltestWeibullFormulaSet/v1",
+  "parameters": ["t", "T", "b"],
+  "parameterization": "two_parameter",
+  "formulas": {
+    "density": "$f(t)=\\frac{b}{T}\\left(\\frac{t}{T}\\right)^{b-1}e^{-\\left(\\frac{t}{T}\\right)^b}$",
+    "failure_probability": "$F(t)=1-e^{-\\left(\\frac{t}{T}\\right)^b}$",
+    "reliability": "$R(t)=e^{-\\left(\\frac{t}{T}\\right)^b}$",
+    "hazard": "$\\lambda(t)=\\frac{f(t)}{R(t)}=\\frac{b}{T}\\left(\\frac{t}{T}\\right)^{b-1}$"
+  }
+}

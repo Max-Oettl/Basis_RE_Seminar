@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_022.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "test_goal_improvement",
+      "label": "Zuverlässigkeit verbessern",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "test_goal_measurement",
+      "label": "Zuverlässigkeit messen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "test_goal_comparison",
+      "label": "Weitere Zielsetzungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_test_goal_improvement",
+      "targetId": "test_goal_improvement",
+      "action": "show",
+      "sourceText": "um die Zuverlässigkeit zu verbessern",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_test_goal_measurement",
+      "targetId": "test_goal_measurement",
+      "action": "show",
+      "sourceText": "Es kann aber auch beispielsweise der Degradationsverlauf einer Komponente gemessen werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_test_goal_comparison",
+      "targetId": "test_goal_comparison",
+      "action": "show",
+      "sourceText": "Darüber hinaus sind aber auch andere Ziele denkbar",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_030.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "observed_density",
+      "label": "Reale Ausfalldichte",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "nkw_density_question",
+      "label": "Prüffragen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "nkw_density_diagnosis",
+      "label": "Diagnose",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "desired_density",
+      "label": "Gewünschte Dichte",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "nkw_density_desired_state",
+      "label": "Zielzustand",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_observed_density",
+      "targetId": "observed_density",
+      "action": "draw",
+      "sourceText": "Im Schaubild ist die Dichtefunktion der Ausfälle eines Sechsgang-Nutzfahrzeuggetriebes zu sehen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_nkw_density_question",
+      "targetId": "nkw_density_question",
+      "action": "show",
+      "sourceText": "Nun zu zwei Fragen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_nkw_density_diagnosis",
+      "targetId": "nkw_density_diagnosis",
+      "action": "show",
+      "sourceText": "Was dir als erstes auffallen sollte",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_desired_density",
+      "targetId": "desired_density",
+      "action": "draw",
+      "sourceText": "Es wäre also wünschenswert",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_nkw_density_desired_state",
+      "targetId": "nkw_density_desired_state",
+      "action": "show",
+      "sourceText": "Es wäre also wünschenswert",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

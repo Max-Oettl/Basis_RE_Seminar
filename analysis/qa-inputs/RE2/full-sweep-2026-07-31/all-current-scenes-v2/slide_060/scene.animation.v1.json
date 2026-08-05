@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_060.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 40,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "fta60_asset",
+      "label": "Krankenhaus-Stromversorgung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta60_nodes",
+      "label": "Fehlerbaum",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta60_links",
+      "label": "Fehlerbaum-Beziehungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta60_warning",
+      "label": "Common Mode",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta60_asset",
+      "targetId": "fta60_asset",
+      "action": "show",
+      "sourceText": "Der Operationssaal wird über ein eigenes Stromnetzwerk betrieben",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_fta60_nodes",
+      "targetId": "fta60_nodes",
+      "action": "show",
+      "sourceText": "Wir beginnen zunächst mit dem Top-Ereignis",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_fta60_links",
+      "targetId": "fta60_links",
+      "action": "draw",
+      "sourceText": "Daher sind diese beiden Ereignisse mit einem Und-Gatter verbunden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung wird erst nach den zugehörigen Ereignissen gezeichnet; kleine Linien- und Pfeilskalierung.",
+      "drawDurFrames": 40
+    },
+    {
+      "stepId": "step_04_fta60_warning",
+      "targetId": "fta60_warning",
+      "action": "show",
+      "sourceText": "Dadurch entsteht eine gemeinsame Schwachstelle im System",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}
