@@ -268,34 +268,32 @@ function frame(scene, content) {
   const n = scene.output_slide_number;
   const title = titles[n];
   const metadata = {
-    artifactScope: "full-slide",
-    embeddingTarget: "standalone-slide",
+    artifactScope: "content-svg",
+    embeddingTarget: "powerpoint-slide",
     slideType: content.archetype,
     contentTitle: title,
     layoutIntent: content.layout,
     takeaway: content.takeaway || `Quelltreuer Zustand der FMEA-Sequenz auf Folie ${n}.`,
     density: content.density || "balanced",
-    contentMode: "full-slide",
-    backgroundMode: "brand-frame",
+    contentMode: "transparent-content",
+    backgroundMode: "transparent",
     brandProfile: educationTheme.brandProfile,
     brandVariant: educationTheme.brandVariant,
     sourceSlides: [n],
     officialLogoStatus: "pending-original-asset",
   };
-  const markerColors = [...new Set([C.accent, C.deep, C.failure, C.success, C.secondary, C.soft])];
+  const markerColors = [...new Set([C.accent, C.deep, C.failure, C.success, C.secondary, C.soft, C.border])]
+    .filter((color) => content.body.includes(color));
   const markers = markerColors.map((color) =>
     `<marker id="arrow_${color.slice(1)}" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="${color}"/></marker>`).join("");
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="${scene.scene_id}" data-brand-profile="${educationTheme.brandProfile}">
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="content-svg" data-embedding-target="powerpoint-slide" data-scene-id="${scene.scene_id}" data-brand-profile="${educationTheme.brandProfile}">
 <metadata id="slide_quality_metadata" type="application/json"><![CDATA[${JSON.stringify(metadata)}]]></metadata>
 <title id="accessible_title">${esc(title)}</title><desc id="accessible_description">${esc(metadata.takeaway)}</desc>
 <defs>
-  <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="${educationTheme.background.start}"/><stop offset="56%" stop-color="${educationTheme.background.mid}"/><stop offset="100%" stop-color="${educationTheme.background.end}"/></linearGradient>
-  <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#031334" stroke-opacity=".035" stroke-width="1"/></pattern>
   ${markers}
 </defs>
 <style>text{font-family:${educationTheme.bodyFontFamily};letter-spacing:0}</style>
-<rect width="1920" height="1080" fill="url(#backgroundGradient)"/><rect width="1920" height="1080" fill="url(#technicalGrid)"/>
 <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content">${annotate(evidence(content.body, `Quellfolie ${n}: ${sourceEntry(n).source_text_title}`))}</g>
 </svg>`;
 }
@@ -374,7 +372,7 @@ function genericSystemTree(n, options = {}) {
   const y3 = 714;
   const focus = [y1 - 42, y2 - 42, y3 - 42][focusLevel - 1];
   const focusBand = focusLevel
-    ? `${box(42, focus, 8, focusLevel === 3 ? 194 : 154, C.accent, C.accent, 0, 4)}`
+    ? `${box(202, focus, 8, focusLevel === 3 ? 194 : 154, C.accent, C.accent, 0, 4)}`
     : "";
   const connectors = group(`s${n}_tree_links`, "Hierarchische Verknüpfungen",
     `${pathLine(`M 960 ${y1 + 76} V ${y2 - 32} H 470 V ${y2}`, C.deep, 2.2)}
@@ -392,9 +390,9 @@ function genericSystemTree(n, options = {}) {
   }
   const nodes = group(`s${n}_tree_nodes`, "Systemelemente",
     `${focusBand}
-     ${annotationTxt(60, y1 + 40, "SYSTEMEBENE 1")}
-     ${annotationTxt(60, y2 + 40, "SYSTEMEBENE 2")}
-     ${annotationTxt(60, y3 + 40, "SYSTEMEBENE 3")}
+     ${annotationTxt(188, y1 + 40, "SYSTEMEBENE 1", 18, 820, C.soft, "end")}
+     ${annotationTxt(188, y2 + 40, "SYSTEMEBENE 2", 18, 820, C.soft, "end")}
+     ${annotationTxt(188, y3 + 40, "SYSTEMEBENE 3", 18, 820, C.soft, "end")}
      ${node(800, y1, 320, labels.root, "Funktion 1.1", "Fehler 1.1.1")}
      ${node(340, y2, 260, labels.level2[0], "Funktion 2.1.1", "Fehler 2.1.1.1")}
      ${node(830, y2, 260, labels.level2[1], "Funktion 2.2.1", "Fehler 2.2.1.1")}
@@ -402,7 +400,7 @@ function genericSystemTree(n, options = {}) {
      ${node(210, y3, 240, labels.level3[0], "Funktion 3.1.1", "Fehler 3.1.1.1")}
      ${node(490, y3, 240, labels.level3[1], "Funktion 3.1.2", "Fehler 3.1.2.1")}
      ${node(1190, y3, 240, labels.level3[2], "Funktion 3.2.1", "Fehler 3.2.1.1")}
-     ${node(1470, y3, 240, labels.level3[2].replace("3.2", "3.3"), "Funktion 3.3.1", "Fehler 3.3.1.1")}`);
+     ${node(1470, y3, 240, labels.level3[3] || labels.level3[2].replace("3.3", "3.4"), "Funktion 3.4.1", "Fehler 3.4.1.1")}`);
   const targets = [
     target(`s${n}_tree_nodes`, "Systemelemente", n, ["Systemelement", "Systemstruktur", "hierarchisch"]),
     target(`s${n}_tree_links`, "Hierarchische Verknüpfungen", n, options.linkCues || ["hierarchisch", "verknüpft", "Systembaum"], "draw"),
@@ -954,9 +952,9 @@ function buildStructureAndFailureScene(n) {
 
 function baeTabs(focus = "") {
   const tabs = [
-    ["B", "BEDEUTUNG", C.failure, C.failureSoft],
+    ["B", "BEDEUTUNG", C.accent, C.accentSoft],
     ["A", "AUFTRETENSWAHRSCHEINLICHKEIT", C.secondary, C.secondarySoft],
-    ["E", "ENTDECKUNGSWAHRSCHEINLICHKEIT", C.accent, C.accentSoft],
+    ["E", "ENTDECKUNGSWAHRSCHEINLICHKEIT", C.success, C.successSoft],
   ];
   return tabs.map(([key, label, color, fill], index) => {
     const x = 196 + index * 530;
@@ -973,7 +971,7 @@ function scene113() {
     `${line(306, 584, 1614, 584, C.deep, 3)}
      ${Array.from({ length: 10 }, (_, index) => {
        const x = 306 + index * (1308 / 9);
-       const color = index < 3 ? C.success : index < 7 ? C.secondary : C.failure;
+       const color = index < 3 ? C.semanticSuccess : index < 7 ? C.semanticWarning : C.failure;
        return `${line(x, 568, x, 600, color, 3)}${txt(x, 642, String(index + 1), 20, 800, color, "middle")}`;
      }).join("")}
      ${pill(650, 700, 620, "BEWERTUNGSSKALA VON 1 BIS 10", C.deep, C.surface)}`);
@@ -997,7 +995,7 @@ function ratingDetailScene(n, key, title, description, low, high, note, color, f
      ${txt(218, 494, title.toUpperCase(), 28, 850, color)}
      ${multi(218, 548, 1460, description, 25, 700, C.deep)}
      ${box(220, 640, 560, 90, C.surface, color, 1.5, 9)}
-     ${txt(258, 696, "1", 32, 850, C.success)}${multi(318, 687, 410, low, 21, 700, C.deep)}
+     ${txt(258, 696, "1", 32, 850, C.semanticSuccess)}${multi(318, 687, 410, low, 21, 700, C.deep)}
      ${line(820, 686, 1100, 686, color, 3, true)}
      ${box(1140, 640, 560, 90, C.surface, color, 1.5, 9)}
      ${txt(1178, 696, "10", 32, 850, C.failure)}${multi(1258, 687, 390, high, 21, 700, C.deep)}
@@ -1014,9 +1012,9 @@ function ratingDetailScene(n, key, title, description, low, high, note, color, f
 function scene117() {
   const tabs = group("s117_tabs", "B, A und E", baeTabs(""));
   const summaries = group("s117_summary", "Bewertungslogik",
-    `${card(196, 454, 470, 300, "B · BEDEUTUNG", "Ausmaß der Fehlerfolge aus Sicht des Endverbrauchers.", C.failure, C.failureSoft)}
+    `${card(196, 454, 470, 300, "B · BEDEUTUNG", "Ausmaß der Fehlerfolge aus Sicht des Endverbrauchers.", C.accent, C.accentSoft)}
      ${card(726, 454, 470, 300, "A · AUFTRETEN", "Wirksamkeit präventiver Maßnahmen gegen das Auftreten.", C.secondary, C.secondarySoft)}
-     ${card(1256, 454, 470, 300, "E · ENTDECKUNG", "Wirksamkeit von Maßnahmen zum Aufdecken der Fehlerursache.", C.accent, C.accentSoft)}`);
+     ${card(1256, 454, 470, 300, "E · ENTDECKUNG", "Wirksamkeit von Maßnahmen zum Aufdecken der Fehlerursache.", C.success, C.successSoft)}`);
   return {
     archetype: "rating-summary",
     layout: "Drei identische Bewertungsrollen in einer gemeinsamen Zusammenfassung.",
@@ -1062,11 +1060,11 @@ function scene119() {
 function rpzFormulaMarkup(x, y, scale = 1) {
   return `${txt(x, y, "RPZ", 66 * scale, 850, C.deep)}
     ${txt(x + 176 * scale, y, "=", 60 * scale, 700, C.soft)}
-    ${txt(x + 270 * scale, y, "B", 66 * scale, 850, C.failure)}
+    ${txt(x + 270 * scale, y, "B", 66 * scale, 850, C.accent)}
     ${txt(x + 365 * scale, y, "·", 58 * scale, 760, C.soft)}
     ${txt(x + 430 * scale, y, "A", 66 * scale, 850, C.secondary)}
     ${txt(x + 525 * scale, y, "·", 58 * scale, 760, C.soft)}
-    ${txt(x + 590 * scale, y, "E", 66 * scale, 850, C.accent)}`;
+    ${txt(x + 590 * scale, y, "E", 66 * scale, 850, C.success)}`;
 }
 
 function scene120() {
@@ -1076,9 +1074,9 @@ function scene120() {
      ${rpzFormulaMarkup(570, 500, 1)}
      ${pill(706, 550, 508, "WERTEBEREICH 1 BIS 1000", C.deep, C.surface)}`);
   const parameters = group("s120_parameters", "Bewertungsgrößen",
-    `${card(246, 662, 430, 174, "B · BEDEUTUNG", "Wertebereich 1 bis 10", C.failure, C.failureSoft)}
+    `${card(246, 662, 430, 174, "B · BEDEUTUNG", "Wertebereich 1 bis 10", C.accent, C.accentSoft)}
      ${card(744, 662, 430, 174, "A · AUFTRETEN", "Wertebereich 1 bis 10", C.secondary, C.secondarySoft)}
-     ${card(1242, 662, 430, 174, "E · ENTDECKUNG", "Wertebereich 1 bis 10", C.accent, C.accentSoft)}`);
+     ${card(1242, 662, 430, 174, "E · ENTDECKUNG", "Wertebereich 1 bis 10", C.success, C.successSoft)}`);
   return {
     archetype: "formula",
     layout: "Kontrolliert gesetzte kurze Produktformel mit drei direkt zugeordneten Parametern.",
@@ -1118,8 +1116,8 @@ function scene121() {
 }
 
 function taskPriorityScene(n, level = "") {
-  const color = level === "hoch" ? C.failure : level === "mittel" ? C.secondary : level === "niedrig" ? C.success : C.accent;
-  const fill = level === "hoch" ? C.failureSoft : level === "mittel" ? C.secondarySoft : level === "niedrig" ? C.successSoft : C.accentSoft;
+  const color = level === "hoch" ? C.failure : level === "mittel" ? C.semanticWarning : level === "niedrig" ? C.semanticSuccess : C.accent;
+  const fill = level === "hoch" ? C.failureSoft : level === "mittel" ? C.semanticWarningSoft : level === "niedrig" ? C.semanticSuccessSoft : C.accentSoft;
   const texts = {
     hoch: ["HOCH · HOHE PRIORITÄT", "Eine angemessene Maßnahme muss definiert werden – oder die Angemessenheit bestehender Maßnahmen wird begründet und dokumentiert."],
     mittel: ["MITTEL · MITTLERE PRIORITÄT", "Eine angemessene Maßnahme sollte definiert werden – oder die Angemessenheit bestehender Maßnahmen wird begründet und dokumentiert."],
@@ -1188,6 +1186,44 @@ function formScene(n, stage) {
   };
 }
 
+function nativeFormScene(n, stage) {
+  const columns = [
+    ["STRUKTUR", "Systemelement · nächsthöhere Ebene", C.secondarySoft, C.secondary],
+    ["FUNKTION", "Funktion · Anforderung", C.accentSoft, C.accent],
+    ["FEHLER", "Fehlerfolge · Fehler · Ursache", C.failureSoft, C.failure],
+    ["RISIKO", "B · A · E · Aufgabenpriorität", C.secondarySoft, C.secondary],
+    ["OPTIMIERUNG", "Maßnahme · verantwortlich · Termin · Neubewertung", C.accentSoft, C.accent],
+  ];
+  const widths = [280, 280, 360, 330, 450];
+  let cursor = 110;
+  const columnMarkup = columns.map(([title, fields, fill, color], index) => {
+    const width = widths[index];
+    const active = stage === 4 || index < Math.min(columns.length, stage + 1);
+    const markup = `${box(cursor, 354, width, 388, active ? fill : C.surfaceSoft, active ? color : C.border, active ? 2 : 1.5, 10)}
+      ${box(cursor, 354, width, 76, active ? color : C.soft, active ? color : C.soft, 1, 10)}
+      ${txt(cursor + width / 2, 402, title, 22, 840, C.surface, "middle")}
+      ${multi(cursor + 24, 478, width - 48, fields, 21, 680, C.deep)}
+      ${line(cursor + 24, 562, cursor + width - 24, 562, C.border, 1.5, "none")}
+      ${line(cursor + 24, 646, cursor + width - 24, 646, C.border, 1.5, "none")}`;
+    cursor += width + 12;
+    return markup;
+  }).join("");
+  const media = group(`s${n}_form`, `FMEA-Formblatt Stufe ${stage}`,
+    `${box(92, 278, 1736, 588, C.surface, C.border, 1.5, 14)}
+     ${txt(122, 326, "FMEA-FORMBLATT", 24, 840, C.deep)}
+     ${pill(1390, 296, 390, "EINE ZEILE = EIN FEHLERZUSAMMENHANG", C.accent, C.surface)}
+     ${columnMarkup}
+     ${pill(650, 804, 620, stage === 4 ? "VOLLSTÄNDIGE DOKUMENTATIONSLOGIK" : `AUSBAUSTUFE ${stage} VON 4`, stage === 4 ? C.secondary : C.accent, C.surface)}`);
+  return {
+    archetype: "documentation-form",
+    layout: "Native FMEA-Formularübersicht ohne Crop- oder Rasterartefakte.",
+    takeaway: ["Das Formblatt ordnet die vollständige FMEA-Dokumentation in feste Spalten.", "Struktur- und Funktionsanalyse bilden die linke Informationsbasis.", "Fehler- und Risikoanalyse ergänzen die Bewertungsfelder.", "Der Optimierungsbereich dokumentiert Verantwortlichkeiten, Termine und Neubewertung."][stage - 1],
+    density: "dense",
+    body: processStrip(7, 172, true) + media,
+    targets: [target(`s${n}_form`, `FMEA-Formblatt Stufe ${stage}`, n, ["Formblatt", "Dokumentation", "Struktur"])],
+  };
+}
+
 function scene137() {
   const intro = group("s137_intro", "Dokumentationsprinzip",
     `${box(92, 278, 1736, 150, C.deep, C.deep, 1.5, 10)}
@@ -1237,7 +1273,7 @@ function buildRiskAndDocumentationScene(n) {
   if (n === 130) return goalScene(n, 6, "Reduziere das Risiko durch weitere Maßnahmen, Neubewertung und Zuverlässigkeitsabsicherung.");
   if (n === 131) return processOnly(n, 0);
   if (n === 132) return processOnly(n, 7);
-  if (n >= 133 && n <= 136) return formScene(n, n - 132);
+  if (n >= 133 && n <= 136) return nativeFormScene(n, n - 132);
   if (n === 137) return scene137();
   if (n === 138) return processOnly(n, 0);
   return null;
@@ -1524,13 +1560,15 @@ function main() {
   for (const scene of scenes) {
     const n = scene.output_slide_number;
     if (!selected.has(n)) continue;
-    const content = buildScene(n);
+    const renderN = scene.render_source_slide || scene.primary_source_slide || n;
+    const renderScene = { ...scene, output_slide_number: renderN };
+    const content = buildScene(renderN);
     if (!content) throw new Error(`Keine Kapitel-4-Szenendefinition für Folie ${n}.`);
     const sceneDir = path.join(outRoot, scene.work_unit);
     fs.mkdirSync(sceneDir, { recursive: true });
-    fs.writeFileSync(path.join(sceneDir, `${scene.work_unit}.svg`), frame(scene, content), "utf8");
-    writeBrief(scene, content);
-    if (animated) writeManifest(scene, content);
+    fs.writeFileSync(path.join(sceneDir, `${scene.work_unit}.svg`), frame(renderScene, content), "utf8");
+    writeBrief(renderScene, content);
+    if (animated) writeManifest(renderScene, content);
     generated.push(scene.work_unit);
   }
   process.stdout.write(`Generated ${generated.length} RE2 chapter-4 scene(s)${animated ? " with animation manifests" : " as static pilots/end states"}: ${generated.join(", ")}.\n`);

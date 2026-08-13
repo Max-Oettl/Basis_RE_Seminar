@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SVG-Editor · RelTest Education</title>
+  <link rel="stylesheet" href="/viewer-assets/svg-editor.css">
+</head>
+<body>
+  <div id="app" class="app-shell" aria-busy="true">
+    <header class="app-header">
+      <a class="brand" href="/" aria-label="Zum Viewer">
+        <span><strong>RelTest</strong> Education</span>
+      </a>
+      <div class="document-title">
+        <span id="moduleLabel">SVG-Editor</span>
+        <span class="crumb" aria-hidden="true">›</span>
+        <strong id="slideTitle">Folie wird geladen</strong>
+      </div>
+      <div id="sharedWarning" class="shared-warning" hidden></div>
+    </header>
+
+    <nav class="main-toolbar" aria-label="Editor-Werkzeuge">
+      <div class="toolbar-group">
+        <button id="parentButton" class="tool-button" type="button" title="Übergeordnetes Element auswählen (Esc)" disabled>
+          <span class="tool-icon">↖</span><span>Übergeordnet</span>
+        </button>
+      </div>
+      <div class="toolbar-group">
+        <button id="undoButton" class="tool-button" type="button" title="Rückgängig (Strg+Z)" disabled><span class="tool-icon">↶</span><span>Rückgängig</span></button>
+        <button id="redoButton" class="tool-button" type="button" title="Wiederholen (Strg+Y)" disabled><span class="tool-icon">↷</span><span>Wiederholen</span></button>
+      </div>
+      <div class="toolbar-group">
+        <button id="formulaButton" class="tool-button" type="button"><span class="formula-icon">ƒx</span><span>Formel</span></button>
+      </div>
+      <div class="zoom-controls" role="group" aria-label="Zoom">
+        <button id="zoomOutButton" class="icon-button" type="button" aria-label="Verkleinern">−</button>
+        <button id="zoomValue" class="zoom-value" type="button" title="Auf Folie einpassen">100%</button>
+        <button id="zoomInButton" class="icon-button" type="button" aria-label="Vergrößern">+</button>
+      </div>
+      <div class="toolbar-spacer"></div>
+      <span id="saveState" class="save-state" aria-live="polite">Lädt …</span>
+      <button id="saveButton" class="save-button" type="button" disabled><span aria-hidden="true">▣</span> Speichern</button>
+      <button id="viewerButton" class="viewer-button" type="button"><span aria-hidden="true">◉</span> Viewer</button>
+    </nav>
+
+    <div class="context-toolbar" aria-label="Auswahl und Maße">
+      <div id="breadcrumb" class="breadcrumb"><span>Kein Element ausgewählt</span></div>
+      <div class="measure-fields">
+        <label>X <input id="topX" data-geometry="x" inputmode="decimal" disabled></label>
+        <label>Y <input id="topY" data-geometry="y" inputmode="decimal" disabled></label>
+        <label>Breite <input id="topWidth" data-geometry="width" inputmode="decimal" disabled></label>
+        <label>Höhe <input id="topHeight" data-geometry="height" inputmode="decimal" disabled></label>
+      </div>
+      <div class="toolbar-spacer"></div>
+      <button id="duplicateButton" class="small-button" type="button" disabled>Duplizieren</button>
+      <button id="deleteButton" class="small-button danger" type="button" disabled>Löschen</button>
+    </div>
+
+    <main class="workspace">
+      <aside class="layers-panel panel" aria-label="Ebenen">
+        <div class="panel-heading">
+          <div><strong>Ebenen</strong><span id="layerCount">0</span></div>
+          <button id="collapseLayersButton" class="quiet-button" type="button" title="Alle Ebenen ein-/ausklappen">−</button>
+        </div>
+        <label class="layer-search"><span aria-hidden="true">⌕</span><input id="layerSearch" type="search" placeholder="Element suchen" aria-label="Element suchen"></label>
+        <div id="layerTree" class="layer-tree" role="tree" aria-label="SVG-Ebenen"></div>
+        <section class="versions-section">
+          <button id="versionsToggle" class="versions-toggle" type="button" aria-expanded="false"><span>Versionen</span><span id="versionCount">0</span></button>
+          <div id="versionList" class="version-list" hidden></div>
+        </section>
+      </aside>
+
+      <section class="stage-column" aria-label="Arbeitsfläche">
+        <div id="canvasViewport" class="canvas-viewport">
+          <div id="canvasDocument" class="canvas-document">
+            <div id="canvasEmpty" class="canvas-empty">SVG wird geladen …</div>
+            <div id="selectionBox" class="selection-box" hidden aria-hidden="true">
+              <i data-handle="nw"></i><i data-handle="n"></i><i data-handle="ne"></i>
+              <i data-handle="e"></i><i data-handle="se"></i><i data-handle="s"></i>
+              <i data-handle="sw"></i><i data-handle="w"></i>
+              <i class="line-endpoint" data-line-handle="start"></i>
+              <i class="line-endpoint" data-line-handle="end"></i>
+              <span id="connectorHandles" class="connector-handles"></span>
+            </div>
+            <div id="multiSelectionBoxes" class="multi-selection-boxes" aria-hidden="true"></div>
+            <div id="selectionMarquee" class="selection-marquee" hidden aria-hidden="true"></div>
+            <div id="referenceBox" class="reference-box" hidden aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="stage-hint"><span>Shift + Klick oder vollständig umrahmen: Mehrfachauswahl · Mausrad: Ansicht bewegen</span><span>Strg/Cmd + Mausrad: am Zeiger zoomen · horizontales Rad: seitlich</span></div>
+      </section>
+
+      <aside class="inspector-panel panel" aria-label="Eigenschaften">
+        <div class="inspector-tabs" role="tablist" aria-label="Eigenschaftsbereiche">
+          <button class="inspector-tab active" data-tab="element" role="tab" aria-selected="true" type="button">Element</button>
+          <button class="inspector-tab" data-tab="text" role="tab" aria-selected="false" type="button">Text</button>
+          <button class="inspector-tab" data-tab="formula" role="tab" aria-selected="false" type="button">Formel</button>
+        </div>
+
+        <div id="emptyInspector" class="empty-inspector">
+          <span class="empty-inspector-icon">↖</span>
+          <strong>Element auswählen</strong>
+          <p>Klicke ein sichtbares Element auf der Folie oder wähle es in den Ebenen aus.</p>
+        </div>
+
+        <div id="elementInspector" class="inspector-content" data-panel="element" hidden>
+          <section class="property-section">
+            <div class="property-title"><strong>Position und Größe</strong><span id="elementType" class="type-chip"></span></div>
+            <div class="field-grid">
+              <label>X <input id="fieldX" data-geometry="x" inputmode="decimal"></label>
+              <label>Y <input id="fieldY" data-geometry="y" inputmode="decimal"></label>
+              <label>Breite <input id="fieldWidth" data-geometry="width" inputmode="decimal"></label>
+              <label>Höhe <input id="fieldHeight" data-geometry="height" inputmode="decimal"></label>
+            </div>
+          </section>
+          <section id="connectorSection" class="property-section connector-section" hidden>
+            <div class="property-title"><strong>Verbinder und Pfeile</strong><span id="connectorPointStatus" class="type-chip">Kein Punkt</span></div>
+            <div class="connector-actions">
+              <button id="addConnectorCorner" type="button">Ecke hinzufügen</button>
+              <button id="removeConnectorCorner" type="button">Ecke entfernen</button>
+              <button id="straightenConnectorHorizontal" type="button">Horizontal</button>
+              <button id="straightenConnectorVertical" type="button">Vertikal</button>
+            </div>
+            <label class="stacked-label">Zu bearbeitendes Ende
+              <select id="connectorEndpoint"><option value="end">Pfeilende</option><option value="start">Pfeilanfang</option></select>
+            </label>
+            <div class="reference-heading"><strong>An Referenzbox andocken</strong><span class="type-chip">Seitenmitte</span></div>
+            <div class="connector-dock-grid" role="group" aria-label="Pfeil an Referenzbox andocken">
+              <button type="button" data-connector-dock="left">Links</button>
+              <button type="button" data-connector-dock="top">Oben</button>
+              <button type="button" data-connector-dock="right">Rechts</button>
+              <button type="button" data-connector-dock="bottom">Unten</button>
+            </div>
+            <p class="field-help">Weiße Punkte verschieben Ecken und Enden. Die kleinen blauen Pluspunkte fügen direkt auf einem Segment eine weitere Ecke ein. Mit Umschalt bleibt die Bewegung horizontal oder vertikal.</p>
+          </section>
+          <section class="property-section">
+            <strong>Darstellung</strong>
+            <div class="field-grid visual-grid">
+              <label>Füllung <input id="fillField" type="color" value="#ffffff"></label>
+              <label>Füllwert <input id="fillTextField" spellcheck="false" placeholder="none / #FFFFFF"></label>
+              <label>Kontur <input id="strokeField" type="color" value="#142452"></label>
+              <label>Konturwert <input id="strokeTextField" spellcheck="false" placeholder="none / #142452"></label>
+              <label>Linienstärke <input id="strokeWidthField" inputmode="decimal"></label>
+              <label>Deckkraft <input id="opacityField" inputmode="decimal" placeholder="1"></label>
+            </div>
+            <div class="brand-palette" data-brand-palette="element" data-palette-target="fill">
+              <div class="brand-palette-heading">
+                <span>RelTest Corporate Design</span>
+                <div class="palette-target" role="group" aria-label="Corporate-Design-Farbe anwenden auf">
+                  <button type="button" data-palette-target-button="fill" class="active">Füllung</button>
+                  <button type="button" data-palette-target-button="stroke">Kontur</button>
+                </div>
+              </div>
+              <div class="brand-swatches" role="group" aria-label="RelTest Corporate-Design-Farben"></div>
+              <p class="field-help">Marineblau und seine Abstufungen sind die Standardwahl. Grün und Diagrammfarben bitte nur gezielt einsetzen.</p>
+            </div>
+          </section>
+          <section class="property-section arrange-section">
+            <div class="property-title"><strong>Anordnen</strong><span id="layerPosition" class="type-chip">—</span></div>
+            <div class="arrange-grid" role="group" aria-label="Ebenenreihenfolge">
+              <button type="button" data-layer-action="back" title="Ganz nach hinten">Ganz nach hinten</button>
+              <button type="button" data-layer-action="backward" title="Eine Ebene nach hinten">Ebene zurück</button>
+              <button type="button" data-layer-action="forward" title="Eine Ebene nach vorn">Ebene vor</button>
+              <button type="button" data-layer-action="front" title="Ganz nach vorn">Ganz nach vorn</button>
+            </div>
+            <div class="reference-heading">
+              <strong>Referenz ausrichten</strong>
+              <span id="referenceStatus" class="type-chip">Keine Referenz</span>
+            </div>
+            <div class="reference-actions">
+              <button id="pickReferenceButton" class="secondary-button" type="button">Referenz wählen</button>
+              <button id="clearReferenceButton" class="secondary-button" type="button" disabled>Leeren</button>
+            </div>
+            <div class="align-grid" role="group" aria-label="An Referenz ausrichten">
+              <button type="button" data-align="center-x" title="Horizontal zur Referenz zentrieren">Mitte X</button>
+              <button type="button" data-align="center-y" title="Vertikal zur Referenz zentrieren">Mitte Y</button>
+              <button type="button" data-align="center-both" title="Mittelpunkt auf Mittelpunkt">Mittelpunkt</button>
+              <button type="button" data-align="dock" title="Box an einer horizontalen oder vertikalen Linie andocken">An Linie</button>
+            </div>
+            <p class="field-help">„Referenz wählen“ aktivieren und danach eine Linie oder ein anderes Element anklicken. „An Linie“ setzt die nächstgelegene Boxkante an die Linie.</p>
+          </section>
+          <section class="property-section compact-actions">
+            <button id="inspectorDuplicate" class="secondary-button" type="button">Duplizieren</button>
+            <button id="inspectorDelete" class="secondary-button danger" type="button">Löschen</button>
+          </section>
+        </div>
+
+        <div id="textInspector" class="inspector-content" data-panel="text" hidden>
+          <section class="property-section">
+            <div class="property-title"><strong>Textinhalt</strong><span id="textTargetHint" class="type-chip"></span></div>
+            <label class="stacked-label">Text und Zeilenumbrüche
+              <textarea id="textField" rows="7" placeholder="Text eingeben …"></textarea>
+            </label>
+            <p class="field-help">Enter erzeugt sofort eine neue SVG-Zeile. Der Zeilenumbruch wird als eigener <code>tspan</code> gespeichert.</p>
+          </section>
+          <section class="property-section">
+            <strong>Typografie</strong>
+            <div class="field-grid">
+              <label class="full-field">Schriftart <select id="fontFamilyField">
+                <option value="&quot;Archivo&quot;, Arial, Helvetica, sans-serif">Archivo · RelTest Fließtext</option>
+                <option value="&quot;Oxanium&quot;, &quot;Archivo&quot;, Arial, sans-serif">Oxanium · RelTest Überschrift</option>
+                <option value="Arial, Helvetica, sans-serif">Arial</option>
+                <option value="Helvetica, Arial, sans-serif">Helvetica</option>
+                <option value="Georgia, serif">Georgia</option>
+                <option value="&quot;Times New Roman&quot;, Times, serif">Times New Roman</option>
+              </select></label>
+              <label>Schriftgröße <input id="fontSizeField" inputmode="decimal"></label>
+              <label>Zeilenhöhe <input id="lineHeightField" inputmode="decimal" placeholder="1,25"></label>
+              <label>Schriftstärke <select id="fontWeightField"><option value="400">Normal</option><option value="600">Semibold</option><option value="700">Fett</option><option value="800">Extra fett</option></select></label>
+              <label>Farbe <input id="textFillField" type="color" value="#142452"></label>
+            </div>
+            <div class="brand-palette" data-brand-palette="text" data-palette-target="text-fill">
+              <div class="brand-palette-heading"><span>RelTest Corporate Design</span></div>
+              <div class="brand-swatches" role="group" aria-label="RelTest Corporate-Design-Textfarben"></div>
+            </div>
+            <div class="text-align-controls" role="group" aria-label="Textausrichtung">
+              <button type="button" data-anchor="start">Links</button><button type="button" data-anchor="middle">Mitte</button><button type="button" data-anchor="end">Rechts</button>
+            </div>
+          </section>
+          <section class="property-section">
+            <strong>Stichpunkte</strong>
+            <div class="field-grid">
+              <label>Art <select id="bulletStyleField">
+                <option value="none">Keine</option>
+                <option value="dash">Spiegelstrich</option>
+                <option value="round">Rund</option>
+                <option value="square">Eckig</option>
+                <option value="arrow">Pfeil</option>
+              </select></label>
+              <label>Farbe <input id="bulletColorField" type="color" value="#142452"></label>
+            </div>
+            <div class="brand-palette" data-brand-palette="bullet" data-palette-target="bullet-color">
+              <div class="brand-palette-heading"><span>Stichpunktfarbe</span></div>
+              <div class="brand-swatches" role="group" aria-label="Corporate-Design-Stichpunktfarben"></div>
+            </div>
+            <p class="field-help">Die Markierung wird jeder nicht leeren Zeile vorangestellt. Text- und Stichpunktfarbe bleiben unabhängig.</p>
+          </section>
+        </div>
+
+        <div id="formulaInspector" class="inspector-content" data-panel="formula" hidden>
+          <section class="property-section formula-editor">
+            <div class="property-title"><strong>Formel bearbeiten</strong><span id="formulaMode" class="type-chip">MathJax SVG-Pfadrenderer</span></div>
+            <label class="stacked-label">LaTeX / Mathtext
+              <textarea id="formulaSourceField" rows="5" spellcheck="false" placeholder="z. B. \\frac{R_1}{R_2}"></textarea>
+            </label>
+            <div id="formulaPreview" class="formula-preview" aria-label="Formelvorschau"></div>
+            <div class="formula-library-group">
+              <strong class="mini-heading">Grundstrukturen</strong>
+              <div class="formula-inserts">
+                <button type="button" data-insert="\frac{}{}">Bruch</button>
+                <button type="button" data-insert="_{}">Index</button>
+                <button type="button" data-insert="^{}">Exponent</button>
+                <button type="button" data-insert="\sqrt{}">Wurzel</button>
+                <button type="button" data-insert="\sqrt[]{}">n-te Wurzel</button>
+                <button type="button" data-insert="\overline{}">Überstrich</button>
+                <button type="button" data-insert="\hat{}">Dach</button>
+                <button type="button" data-insert="\vec{}">Vektor</button>
+                <button type="button" data-insert="\mathrm{}">Gerader Text</button>
+              </div>
+            </div>
+            <div class="formula-library-group">
+              <strong class="mini-heading">Klammern und mehrzeilige Strukturen</strong>
+              <div class="formula-inserts">
+                <button type="button" data-insert="\left({}\right)">( )</button>
+                <button type="button" data-insert="\left[{}\right]">[ ]</button>
+                <button type="button" data-insert="\left\{{}\right\}">{ }</button>
+                <button type="button" data-insert="\left|{}\right|">Betrag</button>
+                <button type="button" data-insert="\left\|{}\right\|">Norm</button>
+                <button type="button" data-insert="\begin{bmatrix}{} &amp; {} \\ {} &amp; {}\end{bmatrix}">2×2-Matrix</button>
+                <button type="button" data-insert="\begin{cases}{} &amp; {} \\ {} &amp; {}\end{cases}">Fallunterscheidung</button>
+              </div>
+            </div>
+            <div class="formula-library-group">
+              <strong class="mini-heading">Operatoren</strong>
+              <div class="formula-inserts">
+                <button type="button" data-insert="\sum_{}^{}">Summe</button>
+                <button type="button" data-insert="\prod_{}^{}">Produkt</button>
+                <button type="button" data-insert="\int_{}^{}">Integral</button>
+                <button type="button" data-insert="\lim_{}">Grenzwert</button>
+                <button type="button" data-insert="\frac{d}{d{}}">Ableitung</button>
+                <button type="button" data-insert="\frac{\partial}{\partial {}}">Partiell</button>
+                <button type="button" data-insert="\ln\left({}\right)">ln</button>
+                <button type="button" data-insert="\log_{}\left({}\right)">log</button>
+                <button type="button" data-insert="\exp\left({}\right)">exp</button>
+              </div>
+            </div>
+            <div class="formula-library-group">
+              <strong class="mini-heading">Griechische Buchstaben</strong>
+              <div class="formula-inserts formula-symbols" aria-label="Griechische Buchstaben">
+                <button type="button" data-insert="\alpha" title="alpha">α</button>
+                <button type="button" data-insert="\beta" title="beta">β</button>
+                <button type="button" data-insert="\gamma" title="gamma">γ</button>
+                <button type="button" data-insert="\delta" title="delta">δ</button>
+                <button type="button" data-insert="\epsilon" title="epsilon">ε</button>
+                <button type="button" data-insert="\eta" title="eta">η</button>
+                <button type="button" data-insert="\theta" title="theta">θ</button>
+                <button type="button" data-insert="\lambda" title="lambda">λ</button>
+                <button type="button" data-insert="\mu" title="mu">μ</button>
+                <button type="button" data-insert="\nu" title="nu">ν</button>
+                <button type="button" data-insert="\xi" title="xi">ξ</button>
+                <button type="button" data-insert="\pi" title="pi">π</button>
+                <button type="button" data-insert="\rho" title="rho">ρ</button>
+                <button type="button" data-insert="\sigma" title="sigma">σ</button>
+                <button type="button" data-insert="\tau" title="tau">τ</button>
+                <button type="button" data-insert="\phi" title="phi">φ</button>
+                <button type="button" data-insert="\chi" title="chi">χ</button>
+                <button type="button" data-insert="\psi" title="psi">ψ</button>
+                <button type="button" data-insert="\omega" title="omega">ω</button>
+                <button type="button" data-insert="\Delta" title="Delta">Δ</button>
+                <button type="button" data-insert="\Gamma" title="Gamma">Γ</button>
+                <button type="button" data-insert="\Lambda" title="Lambda">Λ</button>
+                <button type="button" data-insert="\Pi" title="Pi">Π</button>
+                <button type="button" data-insert="\Sigma" title="Sigma">Σ</button>
+                <button type="button" data-insert="\Theta" title="Theta">Θ</button>
+                <button type="button" data-insert="\Phi" title="Phi">Φ</button>
+                <button type="button" data-insert="\Psi" title="Psi">Ψ</button>
+                <button type="button" data-insert="\Omega" title="Omega">Ω</button>
+              </div>
+            </div>
+            <div class="formula-library-group">
+              <strong class="mini-heading">Zeichen und Beziehungen</strong>
+              <div class="formula-inserts formula-symbols">
+                <button type="button" data-insert="\cdot" title="Malpunkt">·</button>
+                <button type="button" data-insert="\times" title="Kreuzprodukt">×</button>
+                <button type="button" data-insert="\pm" title="Plusminus">±</button>
+                <button type="button" data-insert="\infty" title="Unendlich">∞</button>
+                <button type="button" data-insert="\approx" title="Ungefähr gleich">≈</button>
+                <button type="button" data-insert="\neq" title="Ungleich">≠</button>
+                <button type="button" data-insert="\leq" title="Kleiner gleich">≤</button>
+                <button type="button" data-insert="\geq" title="Größer gleich">≥</button>
+                <button type="button" data-insert="\rightarrow" title="Pfeil rechts">→</button>
+                <button type="button" data-insert="\Rightarrow" title="Folgerung">⇒</button>
+                <button type="button" data-insert="\in" title="Element von">∈</button>
+                <button type="button" data-insert="\partial" title="Partielle Ableitung">∂</button>
+              </div>
+            </div>
+          </section>
+          <section class="property-section">
+            <strong>Formeleinstellungen</strong>
+            <div class="field-grid">
+              <label>Schriftgrad <input id="formulaFontSize" type="number" min="12" max="96" value="34"></label>
+              <label>Farbe <input id="formulaColor" type="color" value="#142452"></label>
+            </div>
+            <button id="applyFormulaButton" class="apply-button" type="button">Formel übernehmen</button>
+            <p id="formulaHelp" class="field-help">Die Vorschau wird mit demselben MathJax-Pfad-SVG erzeugt, das beim Übernehmen gespeichert wird.</p>
+          </section>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="status-bar">
+      <span id="statusMessage"><i class="status-dot"></i> Bereit</span>
+      <span id="documentDimensions">—</span>
+      <span id="selectedStatus">Nichts ausgewählt</span>
+      <span class="shortcut"><kbd>Entf</kbd> Löschen</span>
+      <span class="shortcut"><kbd>Strg</kbd> + <kbd>D</kbd> Duplizieren</span>
+      <span class="shortcut"><kbd>Strg</kbd> + <kbd>S</kbd> Speichern</span>
+    </footer>
+  </div>
+
+  <div id="fatalError" class="fatal-error" hidden role="alert">
+    <strong>Der SVG-Editor konnte nicht geöffnet werden.</strong>
+    <p id="fatalErrorText"></p>
+    <button id="fatalBackButton" class="viewer-button" type="button">Zum Viewer</button>
+  </div>
+
+  <div id="toast" class="toast" hidden role="status" aria-live="polite"></div>
+  <script src="/viewer-assets/svg-editor-domain.js"></script>
+  <script src="/viewer-assets/svg-editor.js"></script>
+</body>
+</html>

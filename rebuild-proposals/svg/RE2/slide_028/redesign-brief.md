@@ -2,12 +2,12 @@
 
 - Kapitel: 3
 - Lektion: 3
-- Quellfolie: 28
+- Quellfolie: 30
 - Sprechertext: section_004 — 2. Schritt: Definition der unerwünschten Ereignisse
-- Titel: 2. Schritt: Unerwünschtes Ereignis definieren
-- Takeaway: Quelltreuer Aufbauzustand innerhalb der FTA-Erklärfolge.
-- Archetyp: process-flow
-- Layout: Fünfstufiger Ablaufstreifen mit eindeutig hervorgehobenem aktuellem Schritt.
+- Titel: Präventiv oder korrektiv?
+- Takeaway: Präventive Analyse wirkt proaktiv im Design; korrektive Analyse reagiert nach einem Ausfall.
+- Archetyp: two-column-comparison
+- Layout: Symmetrischer Zeit- und Wirkungsvergleich mit klarer Proaktiv/Reaktiv-Kennung.
 - Produktionsmodus: Full-Slide 1920×1080
 - Mapping: 1:1, keine Zusammenfassung mit benachbarten Quellfolien
 - Konnektoren: hinter Knoten und Text; Normalstärke 2,0–2,5 px

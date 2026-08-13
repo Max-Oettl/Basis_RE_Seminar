@@ -48,6 +48,14 @@
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
+    },
+    {
+      "targetId": "weibull_formula_transition",
+      "label": "Übergang zur Herleitung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
     }
   ],
   "steps": [
@@ -90,6 +98,15 @@
     {
       "stepId": "show_weibull_hazard_formula",
       "targetId": "weibull_hazard_formula",
+      "action": "show",
+      "sourceText": "Und zum Schluss noch die Ausfallrate",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_formula_transition",
+      "targetId": "weibull_formula_transition",
       "action": "show",
       "sourceText": "Und zum Schluss noch die Ausfallrate",
       "confidence": "high",

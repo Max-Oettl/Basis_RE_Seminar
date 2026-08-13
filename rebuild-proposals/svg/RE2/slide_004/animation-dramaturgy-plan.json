@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch2_pv_system_boundaries",
+  "svgPath": "slide_004.svg",
+  "spokenText": "Der erste Schritt der Systemanalyse ist immer eine genaue Abgrenzung des zu untersuchenden Systems.\n\nDies geschieht durch die Festlegung einer geeigneten Systemgrenze.\n\nDies wollen wir nun anhand eines Beispiels genauer erläutern. Zu sehen ist hier eine schematische Darstellung einer Photovoltaik-Anlage oder auch kurz nur PV-Anlage.\n\nUm die Wechselwirkungen der PV-Anlage mit der Umgebung zu betrachten sind zusätzlich auch das öffentliche Stromnetz, mehrere Hausverbraucher und ein Stromzähler dargestellt.\n\nEs sollte also nicht nur das technische System selbst, sondern eben auch immer die Umgebung mitberücksichtigt werden.\n\nUm zu beschreiben, welche Komponenten zu der PV-Anlage gehören, können wir nun eine Systemgrenze definieren.\n\nDiese Systemgrenze schließt alle zur PV-Anlage gehörenden Komponenten mit ein.\n\nDazu zählen die PV-Module, der Wechselrichter und das Batteriesystem.\n\nJedes dieser Elemente kann wiederum als eigenes Subsystem betrachtet werden.\n\nSo hat der Wechselrichter beispielsweise wieder eine eigene Systemgrenze.\n\nSteht also in der Untersuchung nur der Wechselrichter im Fokus, würde man nur die Komponenten innerhalb dessen Systemgrenze und die Wechselwirkungen zur Umgebung betrachten.\n\nDie Definition von System- und Subsystemgrenzen ermöglicht es uns, komplexe Systeme zu strukturieren, zu vereinfachen und in handhabbare Einheiten zu zerlegen.\n\nDurch diese Unterteilung und klare Abgrenzung können wir spezifische Analysen für einzelne Subsysteme oder Komponenten durchführen und somit gezielt potenzielle Ausfallrisiken identifizieren, um letztendlich die Zuverlässigkeit des gewünschten Systems zu verbessern.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "pv_environment",
+      "label": "Umwelt und Schnittstellen",
+      "role": "content",
+      "members": [
+        "pv_environment"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "pv_system",
+      "label": "System PV-Anlage",
+      "role": "content",
+      "members": [
+        "pv_system"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "pv_flows",
+      "label": "Energieflüsse und DC/DC-Wandler",
+      "role": "content",
+      "members": [
+        "pv_flows"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "pv_inverter_boundary",
+      "label": "Subsystem Wechselrichter",
+      "role": "content",
+      "members": [
+        "pv_inverter_boundary"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Umwelt und Schnittstellen",
+      "sourceText": "Um die Wechselwirkungen der PV-Anlage mit",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "pv_environment"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "System PV-Anlage",
+      "sourceText": "Um zu beschreiben, welche Komponenten zu",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "pv_system"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Energieflüsse und DC/DC-Wandler",
+      "sourceText": "Jedes dieser Elemente kann wiederum als",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "pv_flows"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Subsystem Wechselrichter",
+      "sourceText": "So hat der Wechselrichter beispielsweise wieder",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "pv_inverter_boundary"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_pv_environment",
+      "beatId": "beat_01",
+      "targetId": "pv_environment",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_pv_system",
+      "beatId": "beat_02",
+      "targetId": "pv_system",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_pv_flows",
+      "beatId": "beat_03",
+      "targetId": "pv_flows",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    },
+    {
+      "stepId": "step_04_pv_inverter_boundary",
+      "beatId": "beat_04",
+      "targetId": "pv_inverter_boundary",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_04",
+      "visibleGroups": [
+        "canvas_context",
+        "pv_environment",
+        "pv_system",
+        "pv_flows",
+        "pv_inverter_boundary"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

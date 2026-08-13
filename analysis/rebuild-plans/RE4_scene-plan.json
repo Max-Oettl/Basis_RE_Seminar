@@ -1,0 +1,641 @@
+{
+  "schema_version": "basisReScenePlan/v1",
+  "module_id": "RE4",
+  "source_state_count": 68,
+  "target_scene_count": 22,
+  "removed_source_slides": [
+    53
+  ],
+  "sequence_decision": "PowerPoint-Aufbaustände werden konsolidiert; fachlich eigenständige Rechenwege, Referenzen, Anwendungen und Übungen bleiben getrennte Arbeitseinheiten.",
+  "structure_status": "deferred_by_user",
+  "reference_lock": {
+    "named_reference": "Modul 3 – Umsetzung auf gleiche Weise",
+    "approved_targets": [
+      "RE3::2",
+      "RE3::24",
+      "RE3::43",
+      "RE3::70"
+    ],
+    "inherited_rules": [
+      "full_slide 1920×1080 ohne duplizierte Masterelemente",
+      "ruhige Navy-Tonalität für gleichrangige Inhalte",
+      "semantische Akzente nur für Fokus, Erfolg oder Ausfall",
+      "sprechertextgebundene semantische Gruppen statt Mikroanimationen"
+    ]
+  },
+  "scenes": [
+    {
+      "output_slide_number": 1,
+      "work_unit": "slide_001",
+      "scene_id": "re4_src_001",
+      "source_slides": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "primary_source_slide": 4,
+      "render_source_slide": 4,
+      "source_text_section_id": "section_001",
+      "title": "Vom Fahrzeug zur Komponente",
+      "takeaway": "Systemzuverlässigkeit entsteht aus Funktionen, Teilsystemen und den zugehörigen Ausfallursachen.",
+      "archetype": "system-hierarchy",
+      "builder": "system_hierarchy",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 1,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::4",
+      "absorbed_source_states": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "output_slide_number": 5,
+      "work_unit": "slide_005",
+      "scene_id": "re4_src_005",
+      "source_slides": [
+        5,
+        6
+      ],
+      "primary_source_slide": 6,
+      "render_source_slide": 6,
+      "source_text_section_id": "section_001",
+      "title": "Vom Wöhlertest zur Zahnradzuverlässigkeit",
+      "takeaway": "Versuchsdaten werden als Weibull-Modell ausgewertet und mit einem Vertrauensbereich abgesichert.",
+      "archetype": "evidence-pipeline",
+      "builder": "gear_weibull",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 2,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::6",
+      "absorbed_source_states": [
+        6
+      ]
+    },
+    {
+      "output_slide_number": 7,
+      "work_unit": "slide_007",
+      "scene_id": "re4_src_007",
+      "source_slides": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "primary_source_slide": 12,
+      "render_source_slide": 12,
+      "source_text_section_id": "section_001",
+      "title": "Zuverlässigkeit über Systemebenen verknüpfen",
+      "takeaway": "Komponentenzuverlässigkeiten werden zu Getriebe-, Teilsystem- und Fahrzeugzuverlässigkeit verknüpft.",
+      "archetype": "aggregation-hierarchy",
+      "builder": "reliability_aggregation",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 3,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::12",
+      "absorbed_source_states": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "output_slide_number": 13,
+      "work_unit": "slide_013",
+      "scene_id": "re4_src_013",
+      "source_slides": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "primary_source_slide": 16,
+      "render_source_slide": 16,
+      "source_text_section_id": "section_002",
+      "title": "Quantitative FTA systematisch aufbauen",
+      "takeaway": "Die quantitative FTA führt in sechs Schritten vom Systemverständnis zur Gesamtbewertung.",
+      "archetype": "workflow-tree",
+      "builder": "fta_workflow",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 4,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::16",
+      "absorbed_source_states": [
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "output_slide_number": 17,
+      "work_unit": "slide_017",
+      "scene_id": "re4_src_017",
+      "source_slides": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "primary_source_slide": 20,
+      "render_source_slide": 20,
+      "source_text_section_id": "section_003",
+      "title": "Basisereignisse quantitativ bewerten",
+      "takeaway": "Für jedes Basisereignis wird eine Ausfallwahrscheinlichkeit aus belastbaren Datenquellen bestimmt.",
+      "archetype": "tree-evidence",
+      "builder": "basis_probabilities",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 5,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::20",
+      "absorbed_source_states": [
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "output_slide_number": 21,
+      "work_unit": "slide_021",
+      "scene_id": "re4_src_021",
+      "source_slides": [
+        21,
+        22
+      ],
+      "primary_source_slide": 22,
+      "render_source_slide": 22,
+      "source_text_section_id": "section_004",
+      "title": "Vom Fehlerbaum zur Gesamtwahrscheinlichkeit",
+      "takeaway": "Die quantitative Bewertung verknüpft die Basisereignisse entlang der Fehlerlogik zum Top-Ereignis.",
+      "archetype": "tree-calculation",
+      "builder": "quantitative_tree",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 6,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::22",
+      "absorbed_source_states": [
+        22
+      ]
+    },
+    {
+      "output_slide_number": 23,
+      "work_unit": "slide_023",
+      "scene_id": "re4_src_023",
+      "source_slides": [
+        23,
+        24
+      ],
+      "primary_source_slide": 24,
+      "render_source_slide": 24,
+      "source_text_section_id": "section_004",
+      "title": "Fehlerlogik in Funktionslogik umkehren",
+      "takeaway": "Beim Wechsel vom Fehler- zum Funktionsbaum werden Ereignisse und Gatter systematisch invertiert.",
+      "archetype": "logic-comparison",
+      "builder": "logic_inversion",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 7,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::24",
+      "absorbed_source_states": [
+        24
+      ]
+    },
+    {
+      "output_slide_number": 25,
+      "work_unit": "slide_025",
+      "scene_id": "re4_src_025",
+      "source_slides": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "primary_source_slide": 30,
+      "render_source_slide": 30,
+      "source_text_section_id": "section_004",
+      "title": "Vom Funktionsbaum zum Blockdiagramm",
+      "takeaway": "Der Funktionsbaum wird in ein boolesches Zuverlässigkeitsblockdiagramm übersetzt.",
+      "archetype": "logic-to-rbd",
+      "builder": "tree_to_rbd",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 8,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::30",
+      "absorbed_source_states": [
+        26,
+        27,
+        28,
+        29,
+        30
+      ]
+    },
+    {
+      "output_slide_number": 31,
+      "work_unit": "slide_031",
+      "scene_id": "re4_src_031",
+      "source_slides": [
+        31,
+        32
+      ],
+      "primary_source_slide": 32,
+      "render_source_slide": 32,
+      "source_text_section_id": "section_005",
+      "title": "Das Zuverlässigkeitsblockdiagramm lesen",
+      "takeaway": "Blöcke repräsentieren Komponenten; Verbindungen bilden die für die Systemfunktion nötigen Pfade ab.",
+      "archetype": "rbd-introduction",
+      "builder": "rbd_intro",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 9,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::32",
+      "absorbed_source_states": [
+        32
+      ]
+    },
+    {
+      "output_slide_number": 33,
+      "work_unit": "slide_033",
+      "scene_id": "re4_src_033",
+      "source_slides": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "primary_source_slide": 38,
+      "render_source_slide": 38,
+      "source_text_section_id": "section_005",
+      "title": "Serie und Parallelität unterscheiden",
+      "takeaway": "In Serie müssen alle Komponenten funktionieren; parallel genügt mindestens ein funktionsfähiger Pfad.",
+      "archetype": "rbd-comparison",
+      "builder": "series_parallel_behavior",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 10,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::38",
+      "absorbed_source_states": [
+        34,
+        35,
+        36,
+        37,
+        38
+      ]
+    },
+    {
+      "output_slide_number": 39,
+      "work_unit": "slide_039",
+      "scene_id": "re4_src_039",
+      "source_slides": [
+        39,
+        40
+      ],
+      "primary_source_slide": 40,
+      "render_source_slide": 40,
+      "source_text_section_id": "section_005",
+      "title": "Systemzuverlässigkeit berechnen",
+      "takeaway": "Die Serien- und Parallelformeln führen bei gleichen Komponenten zu sehr unterschiedlichen Systemwerten.",
+      "archetype": "formula-comparison",
+      "builder": "series_parallel_math",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 11,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::40",
+      "absorbed_source_states": [
+        40
+      ]
+    },
+    {
+      "output_slide_number": 41,
+      "work_unit": "slide_041",
+      "scene_id": "re4_src_041",
+      "source_slides": [
+        41,
+        42,
+        43
+      ],
+      "primary_source_slide": 43,
+      "render_source_slide": 43,
+      "source_text_section_id": "section_005",
+      "title": "Gemischte Strukturen schrittweise reduzieren",
+      "takeaway": "Gemischte Systeme werden zuerst in Teilstrukturen reduziert und anschließend insgesamt berechnet.",
+      "archetype": "worked-reduction",
+      "builder": "mixed_reduction",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 12,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::43",
+      "absorbed_source_states": [
+        42,
+        43
+      ]
+    },
+    {
+      "output_slide_number": 44,
+      "work_unit": "slide_044",
+      "scene_id": "re4_src_044",
+      "source_slides": [
+        44,
+        45,
+        46,
+        47
+      ],
+      "primary_source_slide": 47,
+      "render_source_slide": 47,
+      "source_text_section_id": "section_005",
+      "title": "FTA, Funktionsbaum und RBD zusammenführen",
+      "takeaway": "Fehlerbaum, Funktionsbaum und Blockdiagramm sind drei konsistente Sichten derselben Systemlogik.",
+      "archetype": "cross-model-map",
+      "builder": "fta_function_rbd",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 13,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::47",
+      "absorbed_source_states": [
+        45,
+        46,
+        47
+      ]
+    },
+    {
+      "output_slide_number": 48,
+      "work_unit": "slide_048",
+      "scene_id": "re4_src_048",
+      "source_slides": [
+        48,
+        49,
+        50,
+        51,
+        52
+      ],
+      "primary_source_slide": 52,
+      "render_source_slide": 52,
+      "source_text_section_id": "section_006",
+      "title": "Voraussetzungen des booleschen Modells",
+      "takeaway": "Boolesche Blockdiagramme setzen binäre Zustände, nicht reparierbare und unabhängige Komponenten voraus.",
+      "archetype": "assumption-checklist",
+      "builder": "boolean_prerequisites",
+      "animation_decision": "animated",
+      "notes": "Review-Korrektur: Die Fünf-Komponenten-Brücke bleibt groß und quellengetreu; Komponente 5 liegt vertikal zwischen den mittleren Knoten.",
+      "order": 14,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::52",
+      "absorbed_source_states": [
+        49,
+        50,
+        51,
+        52
+      ]
+    },
+    {
+      "output_slide_number": 54,
+      "work_unit": "slide_054",
+      "scene_id": "re4_src_054",
+      "source_slides": [
+        54
+      ],
+      "primary_source_slide": 54,
+      "render_source_slide": 54,
+      "source_text_section_id": "section_006",
+      "title": "Boolesche Zustände eindeutig codieren",
+      "takeaway": "Die positive Logik codiert funktionsfähig mit 1 und ausgefallen mit 0.",
+      "archetype": "definition",
+      "builder": "boolean_states",
+      "animation_decision": "static",
+      "notes": "Die Definition ist in der Quelle vorhanden, wird aber im gelieferten Sprechertext nicht als eigener Aufbau erklärt.",
+      "order": 15,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::54",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 55,
+      "work_unit": "slide_055",
+      "scene_id": "re4_src_055",
+      "source_slides": [
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "primary_source_slide": 60,
+      "render_source_slide": 60,
+      "source_text_section_id": "section_007",
+      "title": "Brückenschaltung durch Separation lösen",
+      "takeaway": "Die Separation zerlegt die Brücke nach dem Zustand einer ausgewählten Komponente in zwei berechenbare Fälle.",
+      "archetype": "worked-method",
+      "builder": "bridge_separation",
+      "animation_decision": "animated",
+      "notes": "Review-Korrektur: Originalbrücke und beide separierten Ersatzstrukturen verwenden eine einheitliche, bei 960x540 lesbare RBD-Geometrie.",
+      "order": 16,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::60",
+      "absorbed_source_states": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    {
+      "output_slide_number": 61,
+      "work_unit": "slide_061",
+      "scene_id": "re4_src_061",
+      "source_slides": [
+        61
+      ],
+      "primary_source_slide": 61,
+      "render_source_slide": 61,
+      "source_text_section_id": "section_007",
+      "title": "Methoden zur Systemzuverlässigkeit einordnen",
+      "takeaway": "Einfache boolesche Systeme, reparierbare Systeme und komplexe Modelle benötigen unterschiedliche Berechnungsmethoden.",
+      "archetype": "method-map",
+      "builder": "method_overview",
+      "animation_decision": "static",
+      "notes": "Methodenübersicht ohne eigenen belastbaren Sprechertext-Trigger.",
+      "order": 17,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::61",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 62,
+      "work_unit": "slide_062",
+      "scene_id": "re4_src_062",
+      "source_slides": [
+        62
+      ],
+      "primary_source_slide": 62,
+      "render_source_slide": 62,
+      "source_text_section_id": "section_007",
+      "title": "Boolesche Modellannahmen im Überblick",
+      "takeaway": "Die drei Kernannahmen bilden den Prüfrahmen vor jeder booleschen Berechnung.",
+      "archetype": "assumption-summary",
+      "builder": "boolean_summary",
+      "animation_decision": "static",
+      "notes": "Wiederholung als statische Referenzszene ohne erfundene Trigger.",
+      "order": 18,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::62",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 63,
+      "work_unit": "slide_063",
+      "scene_id": "re4_src_063",
+      "source_slides": [
+        63,
+        64
+      ],
+      "primary_source_slide": 64,
+      "render_source_slide": 64,
+      "source_text_section_id": "section_007",
+      "title": "Grundstrukturen sicher anwenden",
+      "takeaway": "Serien-, Parallel- und Mischstrukturen lassen sich mit einem einheitlichen Formelbaukasten auswerten.",
+      "archetype": "formula-reference",
+      "builder": "structure_reference",
+      "animation_decision": "static",
+      "notes": "Formelreferenz und Zahlenbeispiel sind nicht eigenständig eingesprochen.",
+      "order": 19,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::64",
+      "absorbed_source_states": [
+        64
+      ]
+    },
+    {
+      "output_slide_number": 65,
+      "work_unit": "slide_065",
+      "scene_id": "re4_src_065",
+      "source_slides": [
+        65
+      ],
+      "primary_source_slide": 65,
+      "render_source_slide": 65,
+      "source_text_section_id": "section_007",
+      "title": "Viele Komponenten senken die Systemzuverlässigkeit",
+      "takeaway": "Bei einer Serienstruktur fällt die Systemzuverlässigkeit mit jeder zusätzlichen Komponente – besonders bei geringerer Einzelzuverlässigkeit.",
+      "archetype": "technical-plot",
+      "builder": "component_count_plot",
+      "animation_decision": "static",
+      "notes": "Das technische Diagramm wird als statische Referenz gezeigt; kein separater Sprechertext-Trigger.",
+      "order": 20,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::65",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 66,
+      "work_unit": "slide_066",
+      "scene_id": "re4_src_066",
+      "source_slides": [
+        66,
+        67
+      ],
+      "primary_source_slide": 67,
+      "render_source_slide": 67,
+      "source_text_section_id": "section_007",
+      "title": "Vom technischen System zum RBD",
+      "takeaway": "Konstruktion und Funktionsstruktur werden schrittweise in ein Zuverlässigkeitsblockdiagramm überführt.",
+      "archetype": "application-transfer",
+      "builder": "freewheel_transfer",
+      "animation_decision": "static",
+      "notes": "Beispiel und Arbeitsauftrag sind nicht im gelieferten Sprechertext ausformuliert.",
+      "order": 21,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::67",
+      "absorbed_source_states": [
+        67
+      ]
+    },
+    {
+      "output_slide_number": 68,
+      "work_unit": "slide_068",
+      "scene_id": "re4_src_068",
+      "source_slides": [
+        68
+      ],
+      "primary_source_slide": 68,
+      "render_source_slide": 68,
+      "source_text_section_id": "section_007",
+      "title": "Übung · Systemfunktionen aus Blockdiagrammen",
+      "takeaway": "Fünf Netzwerke werden in Systemzuverlässigkeitsfunktionen übersetzt und bei R_K(t)=0,9 bewertet.",
+      "archetype": "exercise",
+      "builder": "network_exercise",
+      "animation_decision": "static",
+      "notes": "Statischer Arbeitsauftrag; keine Animationszeitpunkte erfinden.",
+      "order": 22,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::68",
+      "absorbed_source_states": []
+    }
+  ]
+}

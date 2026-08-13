@@ -1,619 +1,884 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_087" data-brand-profile="reltest-academy">
-  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"distribution-suitability-assessment","contentTitle":"Eignungsgrenze der Lognormalverteilung","layoutIntent":"dominant-lognormal-hazard-evidence-with-small-complementary-probability-pair-and-explicit-limit","takeaway":"Die Lognormal-Ausfallrate erreicht ein Maximum und fällt danach; dauernd steigende Verschleiß- und Ermüdungsraten bildet sie daher nur unvollständig ab.","density":"balanced","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-academy","brandVariant":"academy-production","sourceSlides":[87,88],"officialLogoStatus":"pending-original-asset"}]]></metadata>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_087" data-brand-profile="reltest-education">
+  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"distribution-suitability-assessment","contentTitle":"Eignungsgrenze der Lognormalverteilung","layoutIntent":"dominant-lognormal-hazard-evidence-with-density-and-complementary-probability-context","takeaway":"Die Lognormal-Ausfallrate erreicht ein Maximum und fällt danach; dauernd steigende Verschleiß- und Ermüdungsraten bildet sie daher nur unvollständig ab.","density":"dense","designException":"Dichte, Hazard-Verlauf, komplementäre Wahrscheinlichkeiten und Eignungsgrenze bilden die vollständige Quellenargumentation.","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-education","brandVariant":"education-production","sourceSlides":[87,88],"officialLogoStatus":"downstream-owned"}]]></metadata>
   <title id="accessible_title">Eignungsgrenze der Lognormalverteilung</title>
   <desc id="accessible_description">Die Lognormal-Ausfallrate erreicht ein Maximum und fällt danach; dauernd steigende Verschleiß- und Ermüdungsraten bildet sie daher nur unvollständig ab.</desc>
   <defs>
     <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#F9FBFC"/>
-      <stop offset="56%" stop-color="#F1F5F8"/>
-      <stop offset="100%" stop-color="#E9F0F4"/>
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="56%" stop-color="#F7F9FC"/>
+      <stop offset="100%" stop-color="#E6F6EE"/>
     </linearGradient>
     <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse">
-      <path d="M80 0H0V80" fill="none" stroke="#102A43" stroke-opacity="0.035" stroke-width="1"/>
+      <path d="M80 0H0V80" fill="none" stroke="#031334" stroke-opacity="0.035" stroke-width="1"/>
     </pattern>
-    <filter id="shadowSoft" x="-15%" y="-15%" width="130%" height="140%">
-      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#102A43" flood-opacity="0.10"/>
-    </filter>
-    <marker id="arrow_007EA7" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#007EA7"/></marker>
-    <marker id="arrow_102A43" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#102A43"/></marker>
-    <marker id="arrow_D1495B" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#D1495B"/></marker>
-    <marker id="arrow_2F6F55" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#2F6F55"/></marker>
-    <marker id="arrow_B7791F" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#B7791F"/></marker>
+    
   </defs>
   <style>
-    text { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+    text { font-family: "Archivo", Arial, Helvetica, sans-serif; letter-spacing: 0; }
+    .display { font-family: "Oxanium", "Archivo", Arial, sans-serif; }
   </style>
-  <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
-  <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
-  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><svg id="lognormal_hazard_plot" x="66" y="210" width="1120" height="654" viewBox="0 0 724.121906 410.632219" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <g id="brand_background" data-semantic-group="true" aria-label="RelTest-Education-Hintergrund">
+    <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
+    <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
+  </g>
+  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><svg id="lognormal_hazard_plot" x="66" y="210" width="1120" height="654" viewBox="0 0 732.192312 418.796" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
  
  <defs>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
  <g id="lognormal_hazard_plot__figure_1">
   <g id="lognormal_hazard_plot__patch_1">
-   <path d="M 0 410.632219  L 724.121906 410.632219  L 724.121906 0  L 0 0  L 0 410.632219  z " style="fill: none; opacity: 0" />
+   <path data-role="functional" d="M 0 418.796  L 732.192312 418.796  L 732.192312 0  L 0 0  L 0 418.796  z " style="fill: none; opacity: 0" />
   </g>
   <g id="lognormal_hazard_plot__axes_1">
    <g id="lognormal_hazard_plot__patch_2">
-    <path d="M 67.378281 350.928  L 712.786281 350.928  L 712.786281 7.2  L 67.378281 7.2  L 67.378281 350.928  z " style="fill: none" />
+    <path data-role="functional" d="M 74.400875 350.928  L 719.808875 350.928  L 719.808875 7.2  L 74.400875 7.2  L 74.400875 350.928  z " style="fill: none" />
    </g>
    <g id="lognormal_hazard_plot__matplotlib.axis_1">
     <g id="lognormal_hazard_plot__xtick_1">
      <g id="lognormal_hazard_plot__line2d_1">
-      <path d="M 67.378281 350.928  L 67.378281 7.2  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 74.400875 350.928  L 74.400875 7.2  " clip-path="url(#lognormal_hazard_plot__p5789f663e6)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_hazard_plot__line2d_2">
       <defs>
-       <path id="lognormal_hazard_plot__m9291ed3753" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+       <path data-role="functional" id="lognormal_hazard_plot__m77c328628f" d="M 0 0  L 0 6  " style="stroke: #25495f; stroke-width: 1.2" />
       </defs>
       <g>
-       <use ns4:href="#lognormal_hazard_plot__m9291ed3753" x="67.378281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_hazard_plot__m77c328628f" x="74.400875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_hazard_plot__text_1">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="67.378281" y="370.304953" transform="rotate(-0 67.378281 370.304953)">0</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="74.400875" y="376.232" transform="rotate(-0 74.400875 376.232)">0</text>
      </g>
     </g>
     <g id="lognormal_hazard_plot__xtick_2">
      <g id="lognormal_hazard_plot__line2d_3">
-      <path d="M 148.054281 350.928  L 148.054281 7.2  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 155.076875 350.928  L 155.076875 7.2  " clip-path="url(#lognormal_hazard_plot__p5789f663e6)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_hazard_plot__line2d_4">
       <g>
-       <use ns4:href="#lognormal_hazard_plot__m9291ed3753" x="148.054281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_hazard_plot__m77c328628f" x="155.076875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_hazard_plot__text_2">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="148.054281" y="370.304953" transform="rotate(-0 148.054281 370.304953)">1</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="155.076875" y="376.232" transform="rotate(-0 155.076875 376.232)">1</text>
      </g>
     </g>
     <g id="lognormal_hazard_plot__xtick_3">
      <g id="lognormal_hazard_plot__line2d_5">
-      <path d="M 228.730281 350.928  L 228.730281 7.2  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 235.752875 350.928  L 235.752875 7.2  " clip-path="url(#lognormal_hazard_plot__p5789f663e6)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_hazard_plot__line2d_6">
       <g>
-       <use ns4:href="#lognormal_hazard_plot__m9291ed3753" x="228.730281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_hazard_plot__m77c328628f" x="235.752875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_hazard_plot__text_3">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="228.730281" y="370.304953" transform="rotate(-0 228.730281 370.304953)">2</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="235.752875" y="376.232" transform="rotate(-0 235.752875 376.232)">2</text>
      </g>
     </g>
     <g id="lognormal_hazard_plot__xtick_4">
      <g id="lognormal_hazard_plot__line2d_7">
-      <path d="M 309.406281 350.928  L 309.406281 7.2  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 316.428875 350.928  L 316.428875 7.2  " clip-path="url(#lognormal_hazard_plot__p5789f663e6)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_hazard_plot__line2d_8">
       <g>
-       <use ns4:href="#lognormal_hazard_plot__m9291ed3753" x="309.406281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_hazard_plot__m77c328628f" x="316.428875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_hazard_plot__text_4">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="309.406281" y="370.304953" transform="rotate(-0 309.406281 370.304953)">3</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="316.428875" y="376.232" transform="rotate(-0 316.428875 376.232)">3</text>
      </g>
     </g>
     <g id="lognormal_hazard_plot__xtick_5">
      <g id="lognormal_hazard_plot__line2d_9">
-      <path d="M 390.082281 350.928  L 390.082281 7.2  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 397.104875 350.928  L 397.104875 7.2  " clip-path="url(#lognormal_hazard_plot__p5789f663e6)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_hazard_plot__line2d_10">
       <g>
-       <use ns4:href="#lognormal_hazard_plot__m9291ed3753" x="390.082281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_hazard_plot__m77c328628f" x="397.104875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_hazard_plot__text_5">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="390.082281" y="370.304953" transform="rotate(-0 390.082281 370.304953)">4</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="397.104875" y="376.232" transform="rotate(-0 397.104875 376.232)">4</text>
      </g>
     </g>
     <g id="lognormal_hazard_plot__xtick_6">
      <g id="lognormal_hazard_plot__line2d_11">
-      <path d="M 470.758281 350.928  L 470.758281 7.2  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 477.780875 350.928  L 477.780875 7.2  " clip-path="url(#lognormal_hazard_plot__p5789f663e6)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_hazard_plot__line2d_12">
       <g>
-       <use ns4:href="#lognormal_hazard_plot__m9291ed3753" x="470.758281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_hazard_plot__m77c328628f" x="477.780875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_hazard_plot__text_6">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="470.758281" y="370.304953" transform="rotate(-0 470.758281 370.304953)">5</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="477.780875" y="376.232" transform="rotate(-0 477.780875 376.232)">5</text>
      </g>
     </g>
     <g id="lognormal_hazard_plot__xtick_7">
      <g id="lognormal_hazard_plot__line2d_13">
-      <path d="M 551.434281 350.928  L 551.434281 7.2  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 558.456875 350.928  L 558.456875 7.2  " clip-path="url(#lognormal_hazard_plot__p5789f663e6)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_hazard_plot__line2d_14">
       <g>
-       <use ns4:href="#lognormal_hazard_plot__m9291ed3753" x="551.434281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_hazard_plot__m77c328628f" x="558.456875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_hazard_plot__text_7">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="551.434281" y="370.304953" transform="rotate(-0 551.434281 370.304953)">6</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="558.456875" y="376.232" transform="rotate(-0 558.456875 376.232)">6</text>
      </g>
     </g>
     <g id="lognormal_hazard_plot__xtick_8">
      <g id="lognormal_hazard_plot__line2d_15">
-      <path d="M 632.110281 350.928  L 632.110281 7.2  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 639.132875 350.928  L 639.132875 7.2  " clip-path="url(#lognormal_hazard_plot__p5789f663e6)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_hazard_plot__line2d_16">
       <g>
-       <use ns4:href="#lognormal_hazard_plot__m9291ed3753" x="632.110281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_hazard_plot__m77c328628f" x="639.132875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_hazard_plot__text_8">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="632.110281" y="370.304953" transform="rotate(-0 632.110281 370.304953)">7</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="639.132875" y="376.232" transform="rotate(-0 639.132875 376.232)">7</text>
      </g>
     </g>
     <g id="lognormal_hazard_plot__xtick_9">
      <g id="lognormal_hazard_plot__line2d_17">
-      <path d="M 712.786281 350.928  L 712.786281 7.2  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 719.808875 350.928  L 719.808875 7.2  " clip-path="url(#lognormal_hazard_plot__p5789f663e6)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_hazard_plot__line2d_18">
       <g>
-       <use ns4:href="#lognormal_hazard_plot__m9291ed3753" x="712.786281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_hazard_plot__m77c328628f" x="719.808875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_hazard_plot__text_9">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="712.786281" y="370.304953" transform="rotate(-0 712.786281 370.304953)">8</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="719.808875" y="376.232" transform="rotate(-0 719.808875 376.232)">8</text>
      </g>
     </g>
     <g id="lognormal_hazard_plot__text_10">
-     
-     <g style="fill: #062d46" transform="translate(317.722281 399.108)">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.677734" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">b</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="36.5625" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="48.770508" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="61.584961" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="72.298828" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">d</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="85.183594" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="97.330078" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="110.144531" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="122.352539" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="131.229492" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="137.496094" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
-      </text>
-     </g>
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #031334" x="397.104875" y="407.816" transform="rotate(-0 397.104875 407.816)">Lebensdauer t</text>
     </g>
    </g>
    <g id="lognormal_hazard_plot__matplotlib.axis_2">
     <g id="lognormal_hazard_plot__ytick_1">
      <g id="lognormal_hazard_plot__line2d_19">
-      <path d="M 67.378281 350.928  L 712.786281 350.928  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 74.400875 350.928  L 719.808875 350.928  " clip-path="url(#lognormal_hazard_plot__p5789f663e6)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_hazard_plot__line2d_20">
       <defs>
-       <path id="lognormal_hazard_plot__m98c6f11da3" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+       <path data-role="functional" id="lognormal_hazard_plot__mcb964f3dda" d="M 0 0  L -6 0  " style="stroke: #25495f; stroke-width: 1.2" />
       </defs>
       <g>
-       <use ns4:href="#lognormal_hazard_plot__m98c6f11da3" x="67.378281" y="350.928" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_hazard_plot__mcb964f3dda" x="74.400875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_hazard_plot__text_11">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="355.866477" transform="rotate(-0 57.878281 355.866477)">0.0</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.900875" y="358.83" transform="rotate(-0 64.900875 358.83)">0.0</text>
      </g>
     </g>
     <g id="lognormal_hazard_plot__ytick_2">
      <g id="lognormal_hazard_plot__line2d_21">
-      <path d="M 67.378281 297.2205  L 712.786281 297.2205  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 74.400875 297.2205  L 719.808875 297.2205  " clip-path="url(#lognormal_hazard_plot__p5789f663e6)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_hazard_plot__line2d_22">
       <g>
-       <use ns4:href="#lognormal_hazard_plot__m98c6f11da3" x="67.378281" y="297.2205" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_hazard_plot__mcb964f3dda" x="74.400875" y="297.2205" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_hazard_plot__text_12">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="302.158977" transform="rotate(-0 57.878281 302.158977)">0.5</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.900875" y="305.1225" transform="rotate(-0 64.900875 305.1225)">0.5</text>
      </g>
     </g>
     <g id="lognormal_hazard_plot__ytick_3">
      <g id="lognormal_hazard_plot__line2d_23">
-      <path d="M 67.378281 243.513  L 712.786281 243.513  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 74.400875 243.513  L 719.808875 243.513  " clip-path="url(#lognormal_hazard_plot__p5789f663e6)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_hazard_plot__line2d_24">
       <g>
-       <use ns4:href="#lognormal_hazard_plot__m98c6f11da3" x="67.378281" y="243.513" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_hazard_plot__mcb964f3dda" x="74.400875" y="243.513" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_hazard_plot__text_13">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="248.451477" transform="rotate(-0 57.878281 248.451477)">1.0</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.900875" y="251.415" transform="rotate(-0 64.900875 251.415)">1.0</text>
      </g>
     </g>
     <g id="lognormal_hazard_plot__ytick_4">
      <g id="lognormal_hazard_plot__line2d_25">
-      <path d="M 67.378281 189.8055  L 712.786281 189.8055  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 74.400875 189.8055  L 719.808875 189.8055  " clip-path="url(#lognormal_hazard_plot__p5789f663e6)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_hazard_plot__line2d_26">
       <g>
-       <use ns4:href="#lognormal_hazard_plot__m98c6f11da3" x="67.378281" y="189.8055" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_hazard_plot__mcb964f3dda" x="74.400875" y="189.8055" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_hazard_plot__text_14">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="194.743977" transform="rotate(-0 57.878281 194.743977)">1.5</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.900875" y="197.7075" transform="rotate(-0 64.900875 197.7075)">1.5</text>
      </g>
     </g>
     <g id="lognormal_hazard_plot__ytick_5">
      <g id="lognormal_hazard_plot__line2d_27">
-      <path d="M 67.378281 136.098  L 712.786281 136.098  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 74.400875 136.098  L 719.808875 136.098  " clip-path="url(#lognormal_hazard_plot__p5789f663e6)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_hazard_plot__line2d_28">
       <g>
-       <use ns4:href="#lognormal_hazard_plot__m98c6f11da3" x="67.378281" y="136.098" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_hazard_plot__mcb964f3dda" x="74.400875" y="136.098" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_hazard_plot__text_15">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="141.036477" transform="rotate(-0 57.878281 141.036477)">2.0</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.900875" y="144" transform="rotate(-0 64.900875 144)">2.0</text>
      </g>
     </g>
     <g id="lognormal_hazard_plot__ytick_6">
      <g id="lognormal_hazard_plot__line2d_29">
-      <path d="M 67.378281 82.3905  L 712.786281 82.3905  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 74.400875 82.3905  L 719.808875 82.3905  " clip-path="url(#lognormal_hazard_plot__p5789f663e6)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_hazard_plot__line2d_30">
       <g>
-       <use ns4:href="#lognormal_hazard_plot__m98c6f11da3" x="67.378281" y="82.3905" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_hazard_plot__mcb964f3dda" x="74.400875" y="82.3905" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_hazard_plot__text_16">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="87.328977" transform="rotate(-0 57.878281 87.328977)">2.5</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.900875" y="90.2925" transform="rotate(-0 64.900875 90.2925)">2.5</text>
      </g>
     </g>
     <g id="lognormal_hazard_plot__ytick_7">
      <g id="lognormal_hazard_plot__line2d_31">
-      <path d="M 67.378281 28.683  L 712.786281 28.683  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 74.400875 28.683  L 719.808875 28.683  " clip-path="url(#lognormal_hazard_plot__p5789f663e6)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_hazard_plot__line2d_32">
       <g>
-       <use ns4:href="#lognormal_hazard_plot__m98c6f11da3" x="67.378281" y="28.683" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_hazard_plot__mcb964f3dda" x="74.400875" y="28.683" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_hazard_plot__text_17">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.878281" y="33.621477" transform="rotate(-0 57.878281 33.621477)">3.0</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.900875" y="36.585" transform="rotate(-0 64.900875 36.585)">3.0</text>
      </g>
     </g>
     <g id="lognormal_hazard_plot__text_18">
      
-     <g style="fill: #062d46" transform="translate(20.88 253.944) rotate(-90)">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">A</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="13.930664" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="26.745117" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.458984" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">f</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.290039" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="57.436523" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="63.606445" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="69.776367" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="78.65332" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="90.799805" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="99.404297" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="111.612305" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="117.878906" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">λ</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="135.553711" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="128.53125" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">(</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="142.611328" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">)</tspan>
+     <g style="fill: #031334" transform="translate(23.004 241.704) rotate(-90)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">A</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.761917" y="-0.328125" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">u</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.255844" y="-0.328125" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="32.99379" y="-0.328125" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">f</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="38.51976" y="-0.328125" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="48.527695" y="-0.328125" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="53.06366" y="-0.328125" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="57.599625" y="-0.328125" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">r</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="64.115585" y="-0.328125" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="74.12352" y="-0.328125" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="79.775482" y="-0.328125" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="89.873413" y="-0.328125" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="93.473389" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #031334">λ</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="111.148193" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #031334">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="104.125732" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #031334">(</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="118.205811" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #031334">)</tspan>
       </text>
      </g>
     </g>
    </g>
    <g id="lognormal_hazard_curves" data-anim-target="true" data-anim-label="Ausfallraten der Lognormalverteilung"><g id="lognormal_hazard_plot__lognormal_hazard_sigma_1">
-    <path d="M 71.412081 350.928  L 142.675881 350.827588  L 149.73806 350.582357  L 154.874189 350.187684  L 158.726287 349.698888  L 162.578384 348.984061  L 165.788465 348.173235  L 168.998546 347.130405  L 172.208627 345.823276  L 175.418708 344.223045  L 177.986773 342.715595  L 180.554838 340.995713  L 183.122903 339.056694  L 186.332984 336.319242  L 189.543065 333.232654  L 192.753146 329.802833  L 195.963227 326.042037  L 199.173308 321.968079  L 203.025406 316.697779  L 206.877503 311.05432  L 211.371616 304.065766  L 216.507746 295.648081  L 222.927908 284.662337  L 233.200168 266.543553  L 246.040492 243.977826  L 253.744687 230.902466  L 260.164849 220.413658  L 266.585011 210.357366  L 272.363157 201.707389  L 278.141303 193.453515  L 283.919449 185.602944  L 289.697595 178.156264  L 295.475741 171.108998  L 300.61187 165.173444  L 305.748 159.539282  L 311.526146 153.549923  L 317.304292 147.916596  L 323.082438 142.624345  L 328.860584 137.657746  L 334.63873 133.001225  L 340.416876 128.639296  L 346.195022 124.556749  L 351.973168 120.73877  L 357.751314 117.171042  L 364.171476 113.483682  L 370.591638 110.070275  L 377.0118 106.913732  L 383.431962 103.99791  L 390.494141 101.050411  L 397.556319 98.356823  L 404.618497 95.899449  L 412.322692 93.468752  L 420.026887 91.27976  L 427.731081 89.314175  L 436.077292 87.417359  L 444.423503 85.743239  L 453.41173 84.168721  L 463.041973 82.721809  L 472.672216 81.500863  L 482.944476 80.424274  L 493.858752 79.510989  L 505.415043 78.776476  L 517.613352 78.232747  L 530.453676 77.888467  L 543.936016 77.749136  L 558.702389 77.825174  L 574.110779 78.125881  L 590.8032 78.670973  L 609.42167 79.50741  L 629.966189 80.663609  L 652.436757 82.157114  L 677.475389 84.045772  L 706.366119 86.451131  L 712.786281 87.012071  L 712.786281 87.012071  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #007ea7; stroke-width: 3.3; stroke-linecap: square" />
+    <path data-role="functional" d="M 78.434675 350.928  L 149.698475 350.827588  L 156.760653 350.582357  L 161.896783 350.187684  L 165.74888 349.698888  L 169.600978 348.984061  L 172.811059 348.173235  L 176.02114 347.130405  L 179.231221 345.823276  L 182.441302 344.223045  L 185.009367 342.715595  L 187.577432 340.995713  L 190.145497 339.056694  L 193.355578 336.319242  L 196.565659 333.232654  L 199.77574 329.802833  L 202.985821 326.042037  L 206.195902 321.968079  L 210.047999 316.697779  L 213.900097 311.05432  L 218.39421 304.065766  L 223.53034 295.648081  L 229.950502 284.662337  L 240.222761 266.543553  L 253.063086 243.977826  L 260.76728 230.902466  L 267.187443 220.413658  L 273.607605 210.357366  L 279.385751 201.707389  L 285.163897 193.453515  L 290.942043 185.602944  L 296.720189 178.156264  L 302.498334 171.108998  L 307.634464 165.173444  L 312.770594 159.539282  L 318.54874 153.549923  L 324.326886 147.916596  L 330.105032 142.624345  L 335.883178 137.657746  L 341.661324 133.001225  L 347.43947 128.639296  L 353.217616 124.556749  L 358.995761 120.73877  L 364.773907 117.171042  L 371.19407 113.483682  L 377.614232 110.070275  L 384.034394 106.913732  L 390.454556 103.99791  L 397.516734 101.050411  L 404.578913 98.356823  L 411.641091 95.899449  L 419.345286 93.468752  L 427.04948 91.27976  L 434.753675 89.314175  L 443.099886 87.417359  L 451.446097 85.743239  L 460.434324 84.168721  L 470.064567 82.721809  L 479.69481 81.500863  L 489.96707 80.424274  L 500.881345 79.510989  L 512.437637 78.776476  L 524.635945 78.232747  L 537.47627 77.888467  L 550.95861 77.749136  L 565.724983 77.825174  L 581.133372 78.125881  L 597.825794 78.670973  L 616.444264 79.50741  L 636.988783 80.663609  L 659.459351 82.157114  L 684.497983 84.045772  L 713.388713 86.451131  L 719.808875 87.012071  L 719.808875 87.012071  " clip-path="url(#lognormal_hazard_plot__p5789f663e6)" style="fill: none; stroke: #0c84b4; stroke-width: 3.3; stroke-linecap: square" />
    </g>
    <g id="lognormal_hazard_plot__lognormal_hazard_sigma_2">
-    <path d="M 71.412081 350.928  L 95.166681 350.818534  L 100.944827 350.555239  L 105.438941 350.149722  L 109.933054 349.508142  L 113.785152 348.7392  L 117.637249 347.752281  L 121.489346 346.543367  L 125.341443 345.118056  L 129.835557 343.200134  L 134.32967 341.037902  L 139.4658 338.316959  L 145.885962 334.631667  L 154.232173 329.550474  L 176.060724 316.133771  L 184.406935 311.340085  L 192.11113 307.183801  L 199.173308 303.623223  L 206.235487 300.309435  L 213.297665 297.242358  L 220.359843 294.416415  L 227.422022 291.822373  L 235.126216 289.243415  L 242.830411 286.91005  L 250.534606 284.804889  L 258.880816 282.761664  L 267.227027 280.944422  L 276.215254 279.216817  L 285.845497 277.603651  L 296.117757 276.12488  L 306.390016 274.867415  L 317.946308 273.685156  L 330.144616 272.669807  L 342.984941 271.823509  L 357.109297 271.117559  L 372.517687 270.574092  L 389.210108 270.207131  L 407.828579 270.020188  L 429.015114 270.035508  L 453.41173 270.286519  L 481.660443 270.810134  L 515.687303 271.675389  L 558.702389 273.006442  L 619.69393 275.138363  L 712.786281 278.567251  L 712.786281 278.567251  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #b7791f; stroke-width: 3.3; stroke-linecap: square" />
+    <path data-role="functional" d="M 78.434675 350.928  L 102.189275 350.818534  L 107.967421 350.555239  L 112.461534 350.149722  L 116.955648 349.508142  L 120.807745 348.7392  L 124.659843 347.752281  L 128.51194 346.543367  L 132.364037 345.118056  L 136.858151 343.200134  L 141.352264 341.037902  L 146.488394 338.316959  L 152.908556 334.631667  L 161.254767 329.550474  L 183.083318 316.133771  L 191.429529 311.340085  L 199.133724 307.183801  L 206.195902 303.623223  L 213.25808 300.309435  L 220.320259 297.242358  L 227.382437 294.416415  L 234.444616 291.822373  L 242.14881 289.243415  L 249.853005 286.91005  L 257.557199 284.804889  L 265.90341 282.761664  L 274.249621 280.944422  L 283.237848 279.216817  L 292.868091 277.603651  L 303.140351 276.12488  L 313.41261 274.867415  L 324.968902 273.685156  L 337.16721 272.669807  L 350.007534 271.823509  L 364.131891 271.117559  L 379.54028 270.574092  L 396.232702 270.207131  L 414.851172 270.020188  L 436.037707 270.035508  L 460.434324 270.286519  L 488.683037 270.810134  L 522.709897 271.675389  L 565.724983 273.006442  L 626.716524 275.138363  L 719.808875 278.567251  L 719.808875 278.567251  " clip-path="url(#lognormal_hazard_plot__p5789f663e6)" style="fill: none; stroke: #e9b400; stroke-width: 3.3; stroke-linecap: square" />
    </g>
    <g id="lognormal_hazard_plot__lognormal_hazard_sigma_3">
-    <path d="M 71.412081 350.494048  L 72.696114 349.998078  L 74.622162 348.935239  L 76.548211 347.584504  L 79.116276 345.50836  L 91.314584 335.231124  L 95.166681 332.454755  L 99.018779 329.979814  L 102.870876 327.793943  L 106.722973 325.874369  L 110.57507 324.194785  L 115.069184 322.503472  L 119.563297 321.063865  L 124.057411 319.841076  L 129.193541 318.670287  L 134.971687 317.596462  L 141.391849 316.652659  L 148.454027 315.8601  L 156.158222 315.229362  L 165.146449 314.734091  L 175.418708 314.409108  L 186.975 314.269689  L 201.099357 314.328719  L 218.433795 314.63011  L 241.546379 315.265633  L 277.499287 316.504126  L 405.260514 321.054948  L 464.968022 322.883797  L 527.243595 324.566269  L 594.655297 326.160856  L 668.487162 327.680572  L 712.786281 328.496273  L 712.786281 328.496273  " clip-path="url(#lognormal_hazard_plot__p30808de63e)" style="fill: none; stroke: #2f6f55; stroke-width: 3.3; stroke-linecap: square" />
+    <path data-role="functional" d="M 78.434675 350.494048  L 79.718707 349.998078  L 81.644756 348.935239  L 83.570805 347.584504  L 86.13887 345.50836  L 98.337178 335.231124  L 102.189275 332.454755  L 106.041372 329.979814  L 109.89347 327.793943  L 113.745567 325.874369  L 117.597664 324.194785  L 122.091778 322.503472  L 126.585891 321.063865  L 131.080005 319.841076  L 136.216134 318.670287  L 141.99428 317.596462  L 148.414443 316.652659  L 155.476621 315.8601  L 163.180816 315.229362  L 172.169043 314.734091  L 182.441302 314.409108  L 193.997594 314.269689  L 208.121951 314.328719  L 225.456389 314.63011  L 248.568972 315.265633  L 284.52188 316.504126  L 412.283107 321.054948  L 471.990616 322.883797  L 534.266189 324.566269  L 601.677891 326.160856  L 675.509756 327.680572  L 719.808875 328.496273  L 719.808875 328.496273  " clip-path="url(#lognormal_hazard_plot__p5789f663e6)" style="fill: none; stroke: #00a754; stroke-width: 3.3; stroke-linecap: square" />
    </g>
    </g><g id="lognormal_hazard_plot__patch_3">
-    <path d="M 67.378281 350.928  L 67.378281 7.2  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+    <path data-role="functional" d="M 74.400875 350.928  L 74.400875 7.2  " style="fill: none; stroke: #031334; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
    </g>
    <g id="lognormal_hazard_plot__patch_4">
-    <path d="M 67.378281 350.928  L 712.786281 350.928  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+    <path data-role="functional" d="M 74.400875 350.928  L 719.808875 350.928  " style="fill: none; stroke: #031334; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
    </g>
    <g id="lognormal_hazard_limit" data-anim-target="true" data-anim-label="Maximum und anschließender Abfall"><g id="lognormal_hazard_plot__lognormal_hazard_max_label">
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d1495b" x="530.368881" y="116.415475" transform="rotate(-0 530.368881 116.415475)">Maximum, danach Abfall</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #ec6244" x="537.391475" y="116.415475" transform="rotate(-0 537.391475 116.415475)">Maximum, danach Abfall</text>
    </g>
    <g id="lognormal_hazard_plot__lognormal_hazard_max_marker">
     <defs>
-     <path id="lognormal_hazard_plot__m5f70bd4a51" d="M 0 5.361903  C 1.421993 5.361903 2.785937 4.796939 3.791438 3.791438  C 4.796939 2.785937 5.361903 1.421993 5.361903 0  C 5.361903 -1.421993 4.796939 -2.785937 3.791438 -3.791438  C 2.785937 -4.796939 1.421993 -5.361903 0 -5.361903  C -1.421993 -5.361903 -2.785937 -4.796939 -3.791438 -3.791438  C -4.796939 -2.785937 -5.361903 -1.421993 -5.361903 0  C -5.361903 1.421993 -4.796939 2.785937 -3.791438 3.791438  C -2.785937 4.796939 -1.421993 5.361903 0 5.361903  z " style="stroke: #ffffff; stroke-width: 2" />
+     <path data-role="functional" id="lognormal_hazard_plot__m7acd1a1f09" d="M 0 5.361903  C 1.421993 5.361903 2.785937 4.796939 3.791438 3.791438  C 4.796939 2.785937 5.361903 1.421993 5.361903 0  C 5.361903 -1.421993 4.796939 -2.785937 3.791438 -3.791438  C 2.785937 -4.796939 1.421993 -5.361903 0 -5.361903  C -1.421993 -5.361903 -2.785937 -4.796939 -3.791438 -3.791438  C -4.796939 -2.785937 -5.361903 -1.421993 -5.361903 0  C -5.361903 1.421993 -4.796939 2.785937 -3.791438 3.791438  C -2.785937 4.796939 -1.421993 5.361903 0 5.361903  z " style="stroke: #ffffff; stroke-width: 2" />
     </defs>
-    <g clip-path="url(#lognormal_hazard_plot__p30808de63e)">
-     <use ns4:href="#lognormal_hazard_plot__m5f70bd4a51" x="546.504081" y="77.746075" style="fill: #d1495b; stroke: #ffffff; stroke-width: 2" />
+    <g clip-path="url(#lognormal_hazard_plot__p5789f663e6)">
+     <use ns4:href="#lognormal_hazard_plot__m7acd1a1f09" x="553.526675" y="77.746075" style="fill: #ec6244; stroke: #ffffff; stroke-width: 2" />
     </g>
    </g>
   </g></g>
  </g>
  <defs>
-  <clipPath id="lognormal_hazard_plot__p30808de63e">
-   <rect data-qc-allow-overlap="true" x="67.378281" y="7.2" width="645.408" height="343.728" />
+  <clipPath id="lognormal_hazard_plot__p5789f663e6">
+   <rect data-role="functional" data-qc-allow-overlap="true" x="74.400875" y="7.2" width="645.408" height="343.728" />
   </clipPath>
  </defs>
-</svg><svg id="lognormal_probability_pair_plot" x="1222" y="230" width="596" height="354" viewBox="0 0 533.751094 315.795636" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+</svg><svg id="lognormal_density_context_plot" x="1222" y="210" width="596" height="272" viewBox="0 0 732.192312 418.796" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="lognormal_density_context_plot__figure_1">
+  <g id="lognormal_density_context_plot__patch_1">
+   <path data-role="functional" d="M 0 418.796  L 732.192312 418.796  L 732.192312 0  L 0 0  L 0 418.796  z " style="fill: none; opacity: 0" />
+  </g>
+  <g id="lognormal_density_context_plot__axes_1">
+   <g id="lognormal_density_context_plot__patch_2">
+    <path data-role="functional" d="M 74.400875 350.928  L 719.808875 350.928  L 719.808875 7.2  L 74.400875 7.2  L 74.400875 350.928  z " style="fill: none" />
+   </g>
+   <g id="lognormal_density_context_plot__matplotlib.axis_1">
+    <g id="lognormal_density_context_plot__xtick_1">
+     <g id="lognormal_density_context_plot__line2d_1">
+      <path data-role="functional" d="M 74.400875 350.928  L 74.400875 7.2  " clip-path="url(#lognormal_density_context_plot__pfe6b9b5c6f)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_context_plot__line2d_2">
+      <defs>
+       <path data-role="functional" id="lognormal_density_context_plot__m0567bbe937" d="M 0 0  L 0 6  " style="stroke: #25495f; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#lognormal_density_context_plot__m0567bbe937" x="74.400875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_context_plot__text_1">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="74.400875" y="376.232" transform="rotate(-0 74.400875 376.232)">0</text>
+     </g>
+    </g>
+    <g id="lognormal_density_context_plot__xtick_2">
+     <g id="lognormal_density_context_plot__line2d_3">
+      <path data-role="functional" d="M 155.076875 350.928  L 155.076875 7.2  " clip-path="url(#lognormal_density_context_plot__pfe6b9b5c6f)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_context_plot__line2d_4">
+      <g>
+       <use ns4:href="#lognormal_density_context_plot__m0567bbe937" x="155.076875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_context_plot__text_2">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="155.076875" y="376.232" transform="rotate(-0 155.076875 376.232)">1</text>
+     </g>
+    </g>
+    <g id="lognormal_density_context_plot__xtick_3">
+     <g id="lognormal_density_context_plot__line2d_5">
+      <path data-role="functional" d="M 235.752875 350.928  L 235.752875 7.2  " clip-path="url(#lognormal_density_context_plot__pfe6b9b5c6f)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_context_plot__line2d_6">
+      <g>
+       <use ns4:href="#lognormal_density_context_plot__m0567bbe937" x="235.752875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_context_plot__text_3">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="235.752875" y="376.232" transform="rotate(-0 235.752875 376.232)">2</text>
+     </g>
+    </g>
+    <g id="lognormal_density_context_plot__xtick_4">
+     <g id="lognormal_density_context_plot__line2d_7">
+      <path data-role="functional" d="M 316.428875 350.928  L 316.428875 7.2  " clip-path="url(#lognormal_density_context_plot__pfe6b9b5c6f)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_context_plot__line2d_8">
+      <g>
+       <use ns4:href="#lognormal_density_context_plot__m0567bbe937" x="316.428875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_context_plot__text_4">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="316.428875" y="376.232" transform="rotate(-0 316.428875 376.232)">3</text>
+     </g>
+    </g>
+    <g id="lognormal_density_context_plot__xtick_5">
+     <g id="lognormal_density_context_plot__line2d_9">
+      <path data-role="functional" d="M 397.104875 350.928  L 397.104875 7.2  " clip-path="url(#lognormal_density_context_plot__pfe6b9b5c6f)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_context_plot__line2d_10">
+      <g>
+       <use ns4:href="#lognormal_density_context_plot__m0567bbe937" x="397.104875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_context_plot__text_5">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="397.104875" y="376.232" transform="rotate(-0 397.104875 376.232)">4</text>
+     </g>
+    </g>
+    <g id="lognormal_density_context_plot__xtick_6">
+     <g id="lognormal_density_context_plot__line2d_11">
+      <path data-role="functional" d="M 477.780875 350.928  L 477.780875 7.2  " clip-path="url(#lognormal_density_context_plot__pfe6b9b5c6f)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_context_plot__line2d_12">
+      <g>
+       <use ns4:href="#lognormal_density_context_plot__m0567bbe937" x="477.780875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_context_plot__text_6">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="477.780875" y="376.232" transform="rotate(-0 477.780875 376.232)">5</text>
+     </g>
+    </g>
+    <g id="lognormal_density_context_plot__xtick_7">
+     <g id="lognormal_density_context_plot__line2d_13">
+      <path data-role="functional" d="M 558.456875 350.928  L 558.456875 7.2  " clip-path="url(#lognormal_density_context_plot__pfe6b9b5c6f)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_context_plot__line2d_14">
+      <g>
+       <use ns4:href="#lognormal_density_context_plot__m0567bbe937" x="558.456875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_context_plot__text_7">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="558.456875" y="376.232" transform="rotate(-0 558.456875 376.232)">6</text>
+     </g>
+    </g>
+    <g id="lognormal_density_context_plot__xtick_8">
+     <g id="lognormal_density_context_plot__line2d_15">
+      <path data-role="functional" d="M 639.132875 350.928  L 639.132875 7.2  " clip-path="url(#lognormal_density_context_plot__pfe6b9b5c6f)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_context_plot__line2d_16">
+      <g>
+       <use ns4:href="#lognormal_density_context_plot__m0567bbe937" x="639.132875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_context_plot__text_8">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="639.132875" y="376.232" transform="rotate(-0 639.132875 376.232)">7</text>
+     </g>
+    </g>
+    <g id="lognormal_density_context_plot__xtick_9">
+     <g id="lognormal_density_context_plot__line2d_17">
+      <path data-role="functional" d="M 719.808875 350.928  L 719.808875 7.2  " clip-path="url(#lognormal_density_context_plot__pfe6b9b5c6f)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_context_plot__line2d_18">
+      <g>
+       <use ns4:href="#lognormal_density_context_plot__m0567bbe937" x="719.808875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_context_plot__text_9">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="719.808875" y="376.232" transform="rotate(-0 719.808875 376.232)">8</text>
+     </g>
+    </g>
+    <g id="lognormal_density_context_plot__text_10">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #031334" x="397.104875" y="407.816" transform="rotate(-0 397.104875 407.816)">Lebensdauer t</text>
+    </g>
+   </g>
+   <g id="lognormal_density_context_plot__matplotlib.axis_2">
+    <g id="lognormal_density_context_plot__ytick_1">
+     <g id="lognormal_density_context_plot__line2d_19">
+      <path data-role="functional" d="M 74.400875 350.928  L 719.808875 350.928  " clip-path="url(#lognormal_density_context_plot__pfe6b9b5c6f)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_context_plot__line2d_20">
+      <defs>
+       <path data-role="functional" id="lognormal_density_context_plot__m8b37cea56c" d="M 0 0  L -6 0  " style="stroke: #25495f; stroke-width: 1.2" />
+      </defs>
+      <g>
+       <use ns4:href="#lognormal_density_context_plot__m8b37cea56c" x="74.400875" y="350.928" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_context_plot__text_11">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.900875" y="358.83" transform="rotate(-0 64.900875 358.83)">0.0</text>
+     </g>
+    </g>
+    <g id="lognormal_density_context_plot__ytick_2">
+     <g id="lognormal_density_context_plot__line2d_21">
+      <path data-role="functional" d="M 74.400875 297.2205  L 719.808875 297.2205  " clip-path="url(#lognormal_density_context_plot__pfe6b9b5c6f)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_context_plot__line2d_22">
+      <g>
+       <use ns4:href="#lognormal_density_context_plot__m8b37cea56c" x="74.400875" y="297.2205" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_context_plot__text_12">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.900875" y="305.1225" transform="rotate(-0 64.900875 305.1225)">0.5</text>
+     </g>
+    </g>
+    <g id="lognormal_density_context_plot__ytick_3">
+     <g id="lognormal_density_context_plot__line2d_23">
+      <path data-role="functional" d="M 74.400875 243.513  L 719.808875 243.513  " clip-path="url(#lognormal_density_context_plot__pfe6b9b5c6f)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_context_plot__line2d_24">
+      <g>
+       <use ns4:href="#lognormal_density_context_plot__m8b37cea56c" x="74.400875" y="243.513" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_context_plot__text_13">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.900875" y="251.415" transform="rotate(-0 64.900875 251.415)">1.0</text>
+     </g>
+    </g>
+    <g id="lognormal_density_context_plot__ytick_4">
+     <g id="lognormal_density_context_plot__line2d_25">
+      <path data-role="functional" d="M 74.400875 189.8055  L 719.808875 189.8055  " clip-path="url(#lognormal_density_context_plot__pfe6b9b5c6f)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_context_plot__line2d_26">
+      <g>
+       <use ns4:href="#lognormal_density_context_plot__m8b37cea56c" x="74.400875" y="189.8055" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_context_plot__text_14">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.900875" y="197.7075" transform="rotate(-0 64.900875 197.7075)">1.5</text>
+     </g>
+    </g>
+    <g id="lognormal_density_context_plot__ytick_5">
+     <g id="lognormal_density_context_plot__line2d_27">
+      <path data-role="functional" d="M 74.400875 136.098  L 719.808875 136.098  " clip-path="url(#lognormal_density_context_plot__pfe6b9b5c6f)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_context_plot__line2d_28">
+      <g>
+       <use ns4:href="#lognormal_density_context_plot__m8b37cea56c" x="74.400875" y="136.098" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_context_plot__text_15">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.900875" y="144" transform="rotate(-0 64.900875 144)">2.0</text>
+     </g>
+    </g>
+    <g id="lognormal_density_context_plot__ytick_6">
+     <g id="lognormal_density_context_plot__line2d_29">
+      <path data-role="functional" d="M 74.400875 82.3905  L 719.808875 82.3905  " clip-path="url(#lognormal_density_context_plot__pfe6b9b5c6f)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_context_plot__line2d_30">
+      <g>
+       <use ns4:href="#lognormal_density_context_plot__m8b37cea56c" x="74.400875" y="82.3905" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_context_plot__text_16">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.900875" y="90.2925" transform="rotate(-0 64.900875 90.2925)">2.5</text>
+     </g>
+    </g>
+    <g id="lognormal_density_context_plot__ytick_7">
+     <g id="lognormal_density_context_plot__line2d_31">
+      <path data-role="functional" d="M 74.400875 28.683  L 719.808875 28.683  " clip-path="url(#lognormal_density_context_plot__pfe6b9b5c6f)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     </g>
+     <g id="lognormal_density_context_plot__line2d_32">
+      <g>
+       <use ns4:href="#lognormal_density_context_plot__m8b37cea56c" x="74.400875" y="28.683" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
+      </g>
+     </g>
+     <g id="lognormal_density_context_plot__text_17">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.900875" y="36.585" transform="rotate(-0 64.900875 36.585)">3.0</text>
+     </g>
+    </g>
+    <g id="lognormal_density_context_plot__text_18">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #031334" x="23.004" y="179.064" transform="rotate(-90 23.004 179.064)">Dichtefunktion f(t)</text>
+    </g>
+   </g>
+   <g id="lognormal_density_curves" data-anim-target="true" data-anim-label="Dichtekurven der Lognormalverteilung"><g id="lognormal_density_context_plot__lognormal_density_sigma_1">
+    <path data-role="functional" d="M 76.821155 350.928  L 150.052547 350.820543  L 157.295213 350.552068  L 162.123656 350.164561  L 166.147359 349.637724  L 170.171062 348.859203  L 173.390024 348.011181  L 176.608986 346.927698  L 179.827949 345.579479  L 183.046911 343.942498  L 186.265873 341.999828  L 189.484836 339.743152  L 192.703798 337.173825  L 195.92276 334.303411  L 199.141723 331.153668  L 203.165425 326.872382  L 207.993869 321.338194  L 215.236534 312.585917  L 223.28394 302.932968  L 228.112383 297.532061  L 232.136086 293.408088  L 235.355048 290.415293  L 238.574011 287.732448  L 241.792973 285.386742  L 244.207195 283.860977  L 246.621416 282.54197  L 249.035638 281.433264  L 251.44986 280.536286  L 253.864082 279.850464  L 256.278303 279.373372  L 258.692525 279.100885  L 261.106747 279.027346  L 263.520969 279.145745  L 265.93519 279.447894  L 269.154153 280.120602  L 272.373115 281.079603  L 275.592077 282.299058  L 278.81104 283.751905  L 282.834742 285.854  L 286.858445 288.223444  L 291.686889 291.345386  L 297.320073 295.262815  L 306.172219 301.733811  L 319.048068 311.123772  L 326.290733 316.105872  L 332.728658 320.248516  L 338.361842 323.618014  L 343.995026 326.732756  L 349.62821 329.586588  L 355.261394 332.180698  L 360.894578 334.521947  L 366.527762 336.621387  L 372.160946 338.492999  L 377.79413 340.152636  L 384.232055 341.811453  L 390.66998 343.241085  L 397.912645 344.606845  L 405.15531 345.74863  L 413.202716 346.792941  L 422.054862 347.713679  L 431.711749 348.496799  L 442.978117 349.181722  L 455.853966 349.738513  L 471.948778 350.197204  L 492.067292 350.53398  L 520.233212 350.763984  L 566.908166 350.89023  L 692.447695 350.927267  L 719.808875 350.927685  L 719.808875 350.927685  " clip-path="url(#lognormal_density_context_plot__pfe6b9b5c6f)" style="fill: none; stroke: #0c84b4; stroke-width: 3.3; stroke-linecap: square" />
+   </g>
+   <g id="lognormal_density_context_plot__lognormal_density_sigma_2">
+    <path data-role="functional" d="M 76.821155 350.928  L 101.768113 350.829477  L 107.401297 350.592279  L 112.22974 350.176335  L 116.253443 349.627002  L 120.277146 348.861366  L 124.300849 347.862512  L 128.324552 346.627068  L 132.348255 345.164435  L 137.176698 343.138545  L 142.005142 340.865546  L 148.443066 337.557011  L 161.318915 330.56816  L 169.366321 326.353467  L 175.804246 323.243783  L 181.43743 320.779568  L 186.265873 318.885641  L 191.094317 317.20739  L 195.92276 315.751602  L 200.751204 314.519637  L 205.579647 313.508381  L 210.408091 312.711134  L 215.236534 312.118418  L 220.869718 311.669952  L 226.502902 311.463421  L 232.136086 311.476586  L 238.574011 311.731294  L 245.011935 312.209089  L 252.254601 312.972419  L 260.302006 314.04961  L 269.958893 315.586174  L 281.225261 317.611697  L 298.124813 320.899399  L 330.314436 327.190108  L 346.409248 330.094278  L 361.699319 332.627854  L 376.184649 334.807935  L 390.66998 336.771694  L 405.96005 338.617461  L 421.250121 340.2442  L 437.344933 341.739674  L 455.049226 343.154357  L 473.558259 344.406982  L 493.676773 345.543368  L 515.404769 346.549388  L 539.546986 347.446389  L 566.908166 348.239373  L 598.293048 348.924322  L 635.311115 349.505737  L 680.376587 349.984522  L 719.808875 350.264813  L 719.808875 350.264813  " clip-path="url(#lognormal_density_context_plot__pfe6b9b5c6f)" style="fill: none; stroke: #e9b400; stroke-width: 3.3; stroke-linecap: square" />
+   </g>
+   <g id="lognormal_density_context_plot__lognormal_density_sigma_3">
+    <path data-role="functional" d="M 76.821155 350.841235  L 78.430636 350.495327  L 80.040117 349.845589  L 81.649598 348.93309  L 84.06382 347.209833  L 87.282782 344.547078  L 94.525448 338.404013  L 98.549151 335.349513  L 101.768113 333.17618  L 104.987075 331.251892  L 108.206037 329.569623  L 111.425 328.115056  L 114.643962 326.870436  L 118.667665 325.581058  L 122.691368 324.553661  L 126.715071 323.754043  L 131.543514 323.051735  L 136.371958 322.58584  L 142.005142 322.28771  L 148.443066 322.206081  L 155.685731 322.368741  L 163.733137 322.782847  L 173.390024 323.505053  L 186.265873 324.70439  L 207.189128 326.910779  L 245.011935 330.894473  L 268.349412 333.107516  L 290.882148 335.018627  L 314.219625 336.768655  L 338.361842 338.353311  L 364.113541 339.819604  L 392.279461 341.195169  L 422.859603 342.46119  L 456.658707 343.63317  L 494.481514 344.715884  L 537.132764 345.707472  L 585.417199 346.603137  L 641.749039 347.418686  L 707.737766 348.14439  L 719.808875 348.25613  L 719.808875 348.25613  " clip-path="url(#lognormal_density_context_plot__pfe6b9b5c6f)" style="fill: none; stroke: #00a754; stroke-width: 3.3; stroke-linecap: square" />
+   </g>
+   <g id="lognormal_density_context_plot__lognormal_density_label_1">
+    <g id="lognormal_density_context_plot__patch_5">
+     <path data-role="functional" d="M 310.595075 312.52423  L 378.545075 312.52423  L 378.545075 292.60423  L 310.595075 292.60423  z " style="fill: #ffffff; opacity: 0.9" />
+    </g>
+    
+    <g style="fill: #0c84b4" transform="translate(312.395075 307.57423)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.859375" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #0c84b4">σ</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.429199" y="-0.859375" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #0c84b4">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.919922" y="-0.859375" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #0c84b4">0</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.463379" y="-0.859375" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #0c84b4">,</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.153809" y="-0.859375" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #0c84b4">2</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="54.697266" y="-0.859375" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #0c84b4">5</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="lognormal_density_context_plot__lognormal_density_label_2">
+    <g id="lognormal_density_context_plot__patch_6">
+     <path data-role="functional" d="M 350.933075 337.370801  L 409.283075 337.370801  L 409.283075 317.450801  L 350.933075 317.450801  z " style="fill: #ffffff; opacity: 0.9" />
+    </g>
+    
+    <g style="fill: #e9b400" transform="translate(352.733075 332.420801)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.859375" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #e9b400">σ</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.429199" y="-0.859375" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #e9b400">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.919922" y="-0.859375" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #e9b400">0</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.463379" y="-0.859375" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #e9b400">,</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.153809" y="-0.859375" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #e9b400">5</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="lognormal_density_context_plot__lognormal_density_label_3">
+    <g id="lognormal_density_context_plot__patch_7">
+     <path data-role="functional" d="M 407.406275 348.123006  L 448.506275 348.123006  L 448.506275 328.203006  L 407.406275 328.203006  z " style="fill: #ffffff; opacity: 0.9" />
+    </g>
+    
+    <g style="fill: #00a754" transform="translate(409.206275 343.173006)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.0625" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #00a754">σ</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="12.429199" y="-0.0625" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #00a754">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="27.919922" y="-0.0625" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #00a754">1</tspan>
+     </text>
+    </g>
+   </g>
+  </g><g id="lognormal_density_context_plot__patch_3">
+    <path data-role="functional" d="M 74.400875 350.928  L 74.400875 7.2  " style="fill: none; stroke: #031334; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="lognormal_density_context_plot__patch_4">
+    <path data-role="functional" d="M 74.400875 350.928  L 719.808875 350.928  " style="fill: none; stroke: #031334; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   </g>
+ </g>
+ <defs>
+  <clipPath id="lognormal_density_context_plot__pfe6b9b5c6f">
+   <rect data-role="functional" data-qc-allow-overlap="true" x="74.400875" y="7.2" width="645.408" height="343.728" />
+  </clipPath>
+ </defs>
+</svg><svg id="lognormal_probability_pair_plot" x="1222" y="500" width="596" height="264" viewBox="0 0 541.844 326.922941" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
  
  <defs>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
  <g id="lognormal_probability_pair_plot__figure_1">
   <g id="lognormal_probability_pair_plot__patch_1">
-   <path d="M 0 315.795636  L 533.751094 315.795636  L 533.751094 0  L 0 0  L 0 315.795636  z " style="fill: none; opacity: 0" />
+   <path data-role="functional" d="M 0 326.922941  L 541.844 326.922941  L 541.844 0  L 0 0  L 0 326.922941  z " style="fill: none; opacity: 0" />
   </g>
   <g id="lognormal_probability_pair_plot__axes_1">
    <g id="lognormal_probability_pair_plot__patch_2">
-    <path d="M 67.375469 256.091418  L 522.415469 256.091418  L 522.415469 7.259418  L 67.375469 7.259418  L 67.375469 256.091418  z " style="fill: none" />
+    <path data-role="functional" d="M 74.420563 259.054941  L 529.460563 259.054941  L 529.460563 10.222941  L 74.420563 10.222941  L 74.420563 259.054941  z " style="fill: none" />
    </g>
    <g id="lognormal_probability_pair_plot__matplotlib.axis_1">
     <g id="lognormal_probability_pair_plot__xtick_1">
      <g id="lognormal_probability_pair_plot__line2d_1">
-      <path d="M 67.375469 256.091418  L 67.375469 7.259418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 74.420563 259.054941  L 74.420563 10.222941  " clip-path="url(#lognormal_probability_pair_plot__p0feb345c57)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_probability_pair_plot__line2d_2">
       <defs>
-       <path id="lognormal_probability_pair_plot__mc0c508625d" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+       <path data-role="functional" id="lognormal_probability_pair_plot__m57c15fd1e6" d="M 0 0  L 0 6  " style="stroke: #25495f; stroke-width: 1.2" />
       </defs>
       <g>
-       <use ns4:href="#lognormal_probability_pair_plot__mc0c508625d" x="67.375469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_probability_pair_plot__m57c15fd1e6" x="74.420563" y="259.054941" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_probability_pair_plot__text_1">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="67.375469" y="275.468371" transform="rotate(-0 67.375469 275.468371)">0</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="74.420563" y="284.358941" transform="rotate(-0 74.420563 284.358941)">0</text>
      </g>
     </g>
     <g id="lognormal_probability_pair_plot__xtick_2">
      <g id="lognormal_probability_pair_plot__line2d_3">
-      <path d="M 124.255469 256.091418  L 124.255469 7.259418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 131.300563 259.054941  L 131.300563 10.222941  " clip-path="url(#lognormal_probability_pair_plot__p0feb345c57)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_probability_pair_plot__line2d_4">
       <g>
-       <use ns4:href="#lognormal_probability_pair_plot__mc0c508625d" x="124.255469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_probability_pair_plot__m57c15fd1e6" x="131.300563" y="259.054941" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_probability_pair_plot__text_2">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="124.255469" y="275.468371" transform="rotate(-0 124.255469 275.468371)">1</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="131.300563" y="284.358941" transform="rotate(-0 131.300563 284.358941)">1</text>
      </g>
     </g>
     <g id="lognormal_probability_pair_plot__xtick_3">
      <g id="lognormal_probability_pair_plot__line2d_5">
-      <path d="M 181.135469 256.091418  L 181.135469 7.259418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 188.180563 259.054941  L 188.180563 10.222941  " clip-path="url(#lognormal_probability_pair_plot__p0feb345c57)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_probability_pair_plot__line2d_6">
       <g>
-       <use ns4:href="#lognormal_probability_pair_plot__mc0c508625d" x="181.135469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_probability_pair_plot__m57c15fd1e6" x="188.180563" y="259.054941" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_probability_pair_plot__text_3">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="181.135469" y="275.468371" transform="rotate(-0 181.135469 275.468371)">2</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="188.180563" y="284.358941" transform="rotate(-0 188.180563 284.358941)">2</text>
      </g>
     </g>
     <g id="lognormal_probability_pair_plot__xtick_4">
      <g id="lognormal_probability_pair_plot__line2d_7">
-      <path d="M 238.015469 256.091418  L 238.015469 7.259418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 245.060563 259.054941  L 245.060563 10.222941  " clip-path="url(#lognormal_probability_pair_plot__p0feb345c57)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_probability_pair_plot__line2d_8">
       <g>
-       <use ns4:href="#lognormal_probability_pair_plot__mc0c508625d" x="238.015469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_probability_pair_plot__m57c15fd1e6" x="245.060563" y="259.054941" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_probability_pair_plot__text_4">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="238.015469" y="275.468371" transform="rotate(-0 238.015469 275.468371)">3</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="245.060563" y="284.358941" transform="rotate(-0 245.060563 284.358941)">3</text>
      </g>
     </g>
     <g id="lognormal_probability_pair_plot__xtick_5">
      <g id="lognormal_probability_pair_plot__line2d_9">
-      <path d="M 294.895469 256.091418  L 294.895469 7.259418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 301.940563 259.054941  L 301.940563 10.222941  " clip-path="url(#lognormal_probability_pair_plot__p0feb345c57)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_probability_pair_plot__line2d_10">
       <g>
-       <use ns4:href="#lognormal_probability_pair_plot__mc0c508625d" x="294.895469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_probability_pair_plot__m57c15fd1e6" x="301.940563" y="259.054941" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_probability_pair_plot__text_5">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="294.895469" y="275.468371" transform="rotate(-0 294.895469 275.468371)">4</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="301.940563" y="284.358941" transform="rotate(-0 301.940563 284.358941)">4</text>
      </g>
     </g>
     <g id="lognormal_probability_pair_plot__xtick_6">
      <g id="lognormal_probability_pair_plot__line2d_11">
-      <path d="M 351.775469 256.091418  L 351.775469 7.259418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 358.820563 259.054941  L 358.820563 10.222941  " clip-path="url(#lognormal_probability_pair_plot__p0feb345c57)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_probability_pair_plot__line2d_12">
       <g>
-       <use ns4:href="#lognormal_probability_pair_plot__mc0c508625d" x="351.775469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_probability_pair_plot__m57c15fd1e6" x="358.820563" y="259.054941" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_probability_pair_plot__text_6">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="351.775469" y="275.468371" transform="rotate(-0 351.775469 275.468371)">5</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="358.820563" y="284.358941" transform="rotate(-0 358.820563 284.358941)">5</text>
      </g>
     </g>
     <g id="lognormal_probability_pair_plot__xtick_7">
      <g id="lognormal_probability_pair_plot__line2d_13">
-      <path d="M 408.655469 256.091418  L 408.655469 7.259418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 415.700563 259.054941  L 415.700563 10.222941  " clip-path="url(#lognormal_probability_pair_plot__p0feb345c57)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_probability_pair_plot__line2d_14">
       <g>
-       <use ns4:href="#lognormal_probability_pair_plot__mc0c508625d" x="408.655469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_probability_pair_plot__m57c15fd1e6" x="415.700563" y="259.054941" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_probability_pair_plot__text_7">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="408.655469" y="275.468371" transform="rotate(-0 408.655469 275.468371)">6</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="415.700563" y="284.358941" transform="rotate(-0 415.700563 284.358941)">6</text>
      </g>
     </g>
     <g id="lognormal_probability_pair_plot__xtick_8">
      <g id="lognormal_probability_pair_plot__line2d_15">
-      <path d="M 465.535469 256.091418  L 465.535469 7.259418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 472.580563 259.054941  L 472.580563 10.222941  " clip-path="url(#lognormal_probability_pair_plot__p0feb345c57)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_probability_pair_plot__line2d_16">
       <g>
-       <use ns4:href="#lognormal_probability_pair_plot__mc0c508625d" x="465.535469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_probability_pair_plot__m57c15fd1e6" x="472.580563" y="259.054941" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_probability_pair_plot__text_8">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="465.535469" y="275.468371" transform="rotate(-0 465.535469 275.468371)">7</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="472.580563" y="284.358941" transform="rotate(-0 472.580563 284.358941)">7</text>
      </g>
     </g>
     <g id="lognormal_probability_pair_plot__xtick_9">
      <g id="lognormal_probability_pair_plot__line2d_17">
-      <path d="M 522.415469 256.091418  L 522.415469 7.259418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 529.460563 259.054941  L 529.460563 10.222941  " clip-path="url(#lognormal_probability_pair_plot__p0feb345c57)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_probability_pair_plot__line2d_18">
       <g>
-       <use ns4:href="#lognormal_probability_pair_plot__mc0c508625d" x="522.415469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_probability_pair_plot__m57c15fd1e6" x="529.460563" y="259.054941" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_probability_pair_plot__text_9">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="522.415469" y="275.468371" transform="rotate(-0 522.415469 275.468371)">8</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="529.460563" y="284.358941" transform="rotate(-0 529.460563 284.358941)">8</text>
      </g>
     </g>
     <g id="lognormal_probability_pair_plot__text_10">
-     
-     <g style="fill: #062d46" transform="translate(222.535469 304.271418)">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.677734" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">b</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="36.5625" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="48.770508" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="61.584961" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="72.298828" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">d</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="85.183594" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="97.330078" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="110.144531" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="122.352539" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="131.229492" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="137.496094" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
-      </text>
-     </g>
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #031334" x="301.940563" y="315.942941" transform="rotate(-0 301.940563 315.942941)">Lebensdauer t</text>
     </g>
    </g>
    <g id="lognormal_probability_pair_plot__matplotlib.axis_2">
     <g id="lognormal_probability_pair_plot__ytick_1">
      <g id="lognormal_probability_pair_plot__line2d_19">
-      <path d="M 67.375469 256.091418  L 522.415469 256.091418  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 74.420563 259.054941  L 529.460563 259.054941  " clip-path="url(#lognormal_probability_pair_plot__p0feb345c57)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_probability_pair_plot__line2d_20">
       <defs>
-       <path id="lognormal_probability_pair_plot__m51762a9a60" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+       <path data-role="functional" id="lognormal_probability_pair_plot__m0f8d4302aa" d="M 0 0  L -6 0  " style="stroke: #25495f; stroke-width: 1.2" />
       </defs>
       <g>
-       <use ns4:href="#lognormal_probability_pair_plot__m51762a9a60" x="67.375469" y="256.091418" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_probability_pair_plot__m0f8d4302aa" x="74.420563" y="259.054941" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_probability_pair_plot__text_11">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.875469" y="261.029894" transform="rotate(-0 57.875469 261.029894)">0.0</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.920563" y="266.956941" transform="rotate(-0 64.920563 266.956941)">0.0</text>
      </g>
     </g>
     <g id="lognormal_probability_pair_plot__ytick_2">
      <g id="lognormal_probability_pair_plot__line2d_21">
-      <path d="M 67.375469 207.30083  L 522.415469 207.30083  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 74.420563 210.264353  L 529.460563 210.264353  " clip-path="url(#lognormal_probability_pair_plot__p0feb345c57)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_probability_pair_plot__line2d_22">
       <g>
-       <use ns4:href="#lognormal_probability_pair_plot__m51762a9a60" x="67.375469" y="207.30083" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_probability_pair_plot__m0f8d4302aa" x="74.420563" y="210.264353" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_probability_pair_plot__text_12">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.875469" y="212.239306" transform="rotate(-0 57.875469 212.239306)">0.2</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.920563" y="218.166353" transform="rotate(-0 64.920563 218.166353)">0.2</text>
      </g>
     </g>
     <g id="lognormal_probability_pair_plot__ytick_3">
      <g id="lognormal_probability_pair_plot__line2d_23">
-      <path d="M 67.375469 158.510241  L 522.415469 158.510241  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 74.420563 161.473765  L 529.460563 161.473765  " clip-path="url(#lognormal_probability_pair_plot__p0feb345c57)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_probability_pair_plot__line2d_24">
       <g>
-       <use ns4:href="#lognormal_probability_pair_plot__m51762a9a60" x="67.375469" y="158.510241" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_probability_pair_plot__m0f8d4302aa" x="74.420563" y="161.473765" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_probability_pair_plot__text_13">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.875469" y="163.448718" transform="rotate(-0 57.875469 163.448718)">0.4</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.920563" y="169.375765" transform="rotate(-0 64.920563 169.375765)">0.4</text>
      </g>
     </g>
     <g id="lognormal_probability_pair_plot__ytick_4">
      <g id="lognormal_probability_pair_plot__line2d_25">
-      <path d="M 67.375469 109.719653  L 522.415469 109.719653  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 74.420563 112.683176  L 529.460563 112.683176  " clip-path="url(#lognormal_probability_pair_plot__p0feb345c57)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_probability_pair_plot__line2d_26">
       <g>
-       <use ns4:href="#lognormal_probability_pair_plot__m51762a9a60" x="67.375469" y="109.719653" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_probability_pair_plot__m0f8d4302aa" x="74.420563" y="112.683176" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_probability_pair_plot__text_14">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.875469" y="114.65813" transform="rotate(-0 57.875469 114.65813)">0.6</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.920563" y="120.585176" transform="rotate(-0 64.920563 120.585176)">0.6</text>
      </g>
     </g>
     <g id="lognormal_probability_pair_plot__ytick_5">
      <g id="lognormal_probability_pair_plot__line2d_27">
-      <path d="M 67.375469 60.929065  L 522.415469 60.929065  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 74.420563 63.892588  L 529.460563 63.892588  " clip-path="url(#lognormal_probability_pair_plot__p0feb345c57)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_probability_pair_plot__line2d_28">
       <g>
-       <use ns4:href="#lognormal_probability_pair_plot__m51762a9a60" x="67.375469" y="60.929065" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_probability_pair_plot__m0f8d4302aa" x="74.420563" y="63.892588" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_probability_pair_plot__text_15">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.875469" y="65.867541" transform="rotate(-0 57.875469 65.867541)">0.8</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.920563" y="71.794588" transform="rotate(-0 64.920563 71.794588)">0.8</text>
      </g>
     </g>
     <g id="lognormal_probability_pair_plot__ytick_6">
      <g id="lognormal_probability_pair_plot__line2d_29">
-      <path d="M 67.375469 12.138477  L 522.415469 12.138477  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 74.420563 15.102  L 529.460563 15.102  " clip-path="url(#lognormal_probability_pair_plot__p0feb345c57)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="lognormal_probability_pair_plot__line2d_30">
       <g>
-       <use ns4:href="#lognormal_probability_pair_plot__m51762a9a60" x="67.375469" y="12.138477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#lognormal_probability_pair_plot__m0f8d4302aa" x="74.420563" y="15.102" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="lognormal_probability_pair_plot__text_16">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="57.875469" y="17.076953" transform="rotate(-0 57.875469 17.076953)">1.0</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="64.920563" y="23.004" transform="rotate(-0 64.920563 23.004)">1.0</text>
      </g>
     </g>
     <g id="lognormal_probability_pair_plot__text_17">
-     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="20.877188" y="131.675418" transform="rotate(-90 20.877188 131.675418)">Wahrscheinlichkeit</text>
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #031334" x="23.004" y="134.638941" transform="rotate(-90 23.004 134.638941)">Wahrscheinlichkeit</text>
     </g>
    </g>
    <g id="lognormal_probability_pair" data-anim-target="true" data-anim-label="Ausfall- und Überlebenswahrscheinlichkeit"><g id="lognormal_probability_pair_plot__lognormal_failure_line">
-    <path d="M 69.081869 256.091418  L 93.479046 255.995567  L 98.585432 255.762552  L 102.557066 255.388191  L 105.961323 254.872664  L 109.36558 254.129631  L 112.202461 253.306688  L 115.039343 252.27645  L 117.876224 251.022218  L 120.713105 249.531505  L 123.549986 247.796177  L 126.386867 245.81237  L 129.223748 243.580267  L 132.628005 240.579683  L 136.032263 237.240128  L 139.43652 233.580058  L 143.408154 228.93563  L 147.379787 223.928188  L 151.918797 217.819816  L 157.025183 210.541791  L 163.266321 201.205764  L 171.209588 188.885316  L 192.202509 156.116648  L 199.578399 145.109543  L 206.386914 135.358219  L 212.628052 126.816648  L 218.301815 119.407813  L 223.975577 112.352844  L 229.649339 105.658844  L 235.323101 99.327288  L 240.996863 93.3551  L 246.670626 87.735591  L 252.344388 82.459274  L 258.01815 77.514555  L 263.691912 72.888314  L 269.365675 68.566387  L 275.039437 64.533971  L 280.713199 60.775937  L 286.386961 57.277098  L 292.060723 54.022411  L 298.301862 50.706665  L 304.543 47.649485  L 310.784139 44.832601  L 317.592653 42.01325  L 324.401168 39.437786  L 331.777059 36.899708  L 339.15295 34.60066  L 347.096217 32.367025  L 355.039484 30.36022  L 363.550127 28.435939  L 372.628147 26.613086  L 382.273542 24.906084  L 392.486314 23.324958  L 403.266462 21.875596  L 415.181363 20.499457  L 428.231016 19.223286  L 442.415422 18.065233  L 458.301956 17.000992  L 475.890619 16.05385  L 495.748786 15.214036  L 518.443835 14.482149  L 522.415469 14.374309  L 522.415469 14.374309  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #d1495b; stroke-width: 3.2; stroke-linecap: square" />
+    <path data-role="functional" d="M 76.126963 259.054941  L 100.52414 258.95909  L 105.630526 258.726076  L 109.602159 258.351714  L 113.006417 257.836188  L 116.410674 257.093154  L 119.247555 256.270211  L 122.084436 255.239974  L 124.921317 253.985741  L 127.758199 252.495029  L 130.59508 250.7597  L 133.431961 248.775894  L 136.268842 246.543791  L 139.673099 243.543206  L 143.077356 240.203652  L 146.481614 236.543581  L 150.453247 231.899154  L 154.424881 226.891711  L 158.963891 220.783339  L 164.070277 213.505314  L 170.311415 204.169287  L 178.254682 191.84884  L 199.247602 159.080171  L 206.623493 148.073067  L 213.432008 138.321743  L 219.673146 129.780172  L 225.346908 122.371336  L 231.020671 115.316368  L 236.694433 108.622368  L 242.368195 102.290812  L 248.041957 96.318623  L 253.715719 90.699114  L 259.389482 85.422798  L 265.063244 80.478079  L 270.737006 75.851837  L 276.410768 71.529911  L 282.08453 67.497494  L 287.758293 63.73946  L 293.432055 60.240622  L 299.105817 56.985934  L 305.346955 53.670188  L 311.588094 50.613008  L 317.829232 47.796124  L 324.637747 44.976774  L 331.446262 42.401309  L 338.822152 39.863231  L 346.198043 37.564183  L 354.14131 35.330548  L 362.084578 33.323743  L 370.595221 31.399462  L 379.67324 29.57661  L 389.318636 27.869607  L 399.531408 26.288481  L 410.311556 24.839119  L 422.226457 23.46298  L 435.27611 22.186809  L 449.460515 21.028756  L 465.34705 19.964516  L 482.935712 19.017373  L 502.79388 18.17756  L 525.488929 17.445672  L 529.460563 17.337832  L 529.460563 17.337832  " clip-path="url(#lognormal_probability_pair_plot__p0feb345c57)" style="fill: none; stroke: #ec6244; stroke-width: 3.2; stroke-linecap: square" />
    </g>
    <g id="lognormal_probability_pair_plot__lognormal_reliability_line">
-    <path d="M 69.081869 12.138477  L 93.479046 12.234328  L 98.585432 12.467342  L 102.557066 12.841704  L 105.961323 13.35723  L 109.36558 14.100263  L 112.202461 14.923206  L 115.039343 15.953444  L 117.876224 17.207676  L 120.713105 18.698389  L 123.549986 20.433718  L 126.386867 22.417524  L 129.223748 24.649627  L 132.628005 27.650212  L 136.032263 30.989766  L 139.43652 34.649837  L 143.408154 39.294264  L 147.379787 44.301707  L 151.918797 50.410078  L 157.025183 57.688103  L 163.266321 67.024131  L 171.209588 79.344578  L 192.202509 112.113247  L 199.578399 123.120351  L 206.386914 132.871675  L 212.628052 141.413246  L 218.301815 148.822081  L 223.975577 155.87705  L 229.649339 162.57105  L 235.323101 168.902606  L 240.996863 174.874795  L 246.670626 180.494304  L 252.344388 185.77062  L 258.01815 190.715339  L 263.691912 195.341581  L 269.365675 199.663507  L 275.039437 203.695924  L 280.713199 207.453957  L 286.386961 210.952796  L 292.060723 214.207484  L 298.301862 217.523229  L 304.543 220.58041  L 310.784139 223.397293  L 317.592653 226.216644  L 324.401168 228.792108  L 331.777059 231.330187  L 339.15295 233.629235  L 347.096217 235.86287  L 355.039484 237.869674  L 363.550127 239.793956  L 372.628147 241.616808  L 382.273542 243.323811  L 392.486314 244.904936  L 403.266462 246.354298  L 415.181363 247.730438  L 428.231016 249.006609  L 442.415422 250.164661  L 458.301956 251.228902  L 475.890619 252.176044  L 495.748786 253.015858  L 518.443835 253.747746  L 522.415469 253.855585  L 522.415469 253.855585  " clip-path="url(#lognormal_probability_pair_plot__p4f39f73ad4)" style="fill: none; stroke: #2f6f55; stroke-width: 3.2; stroke-linecap: square" />
+    <path data-role="functional" d="M 76.126963 15.102  L 100.52414 15.197851  L 105.630526 15.430866  L 109.602159 15.805227  L 113.006417 16.320753  L 116.410674 17.063787  L 119.247555 17.88673  L 122.084436 18.916968  L 124.921317 20.1712  L 127.758199 21.661912  L 130.59508 23.397241  L 133.431961 25.381048  L 136.268842 27.613151  L 139.673099 30.613735  L 143.077356 33.953289  L 146.481614 37.61336  L 150.453247 42.257787  L 154.424881 47.26523  L 158.963891 53.373602  L 164.070277 60.651627  L 170.311415 69.987654  L 178.254682 82.308102  L 199.247602 115.07677  L 206.623493 126.083874  L 213.432008 135.835198  L 219.673146 144.376769  L 225.346908 151.785605  L 231.020671 158.840573  L 236.694433 165.534573  L 242.368195 171.866129  L 248.041957 177.838318  L 253.715719 183.457827  L 259.389482 188.734144  L 265.063244 193.678862  L 270.737006 198.305104  L 276.410768 202.62703  L 282.08453 206.659447  L 287.758293 210.417481  L 293.432055 213.916319  L 299.105817 217.171007  L 305.346955 220.486753  L 311.588094 223.543933  L 317.829232 226.360817  L 324.637747 229.180167  L 331.446262 231.755632  L 338.822152 234.29371  L 346.198043 236.592758  L 354.14131 238.826393  L 362.084578 240.833198  L 370.595221 242.757479  L 379.67324 244.580332  L 389.318636 246.287334  L 399.531408 247.86846  L 410.311556 249.317822  L 422.226457 250.693961  L 435.27611 251.970132  L 449.460515 253.128185  L 465.34705 254.192425  L 482.935712 255.139568  L 502.79388 255.979381  L 525.488929 256.711269  L 529.460563 256.819109  L 529.460563 256.819109  " clip-path="url(#lognormal_probability_pair_plot__p0feb345c57)" style="fill: none; stroke: #00a754; stroke-width: 3.2; stroke-linecap: square" />
    </g>
    <g id="lognormal_probability_pair_plot__lognormal_failure_label">
     
-    <g style="fill: #d1495b" transform="translate(334.711469 34.094241)">
-     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
-      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.09375" style="font-style: oblique; font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">F</tspan>
-      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="16.410645" y="-0.09375" style="font-style: oblique; font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">t</tspan>
-      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="9.77832" y="-0.09375" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">(</tspan>
-      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.076172" y="-0.09375" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">)</tspan>
+    <g style="fill: #ec6244" transform="translate(341.756563 37.057765)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.09375" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #ec6244">F</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="16.410645" y="-0.09375" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #ec6244">t</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="9.77832" y="-0.09375" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #ec6244">(</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.076172" y="-0.09375" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #ec6244">)</tspan>
      </text>
     </g>
    </g>
    <g id="lognormal_probability_pair_plot__lognormal_reliability_label">
     
-    <g style="fill: #2f6f55" transform="translate(334.711469 234.135653)">
-     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
-      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.09375" style="font-style: oblique; font-size: 17px; font-family: 'DejaVu Sans'; fill: #2f6f55">R</tspan>
-      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="18.444336" y="-0.09375" style="font-style: oblique; font-size: 17px; font-family: 'DejaVu Sans'; fill: #2f6f55">t</tspan>
-      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.812012" y="-0.09375" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #2f6f55">(</tspan>
-      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="25.109863" y="-0.09375" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #2f6f55">)</tspan>
+    <g style="fill: #00a754" transform="translate(341.756563 237.099176)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.09375" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #00a754">R</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="18.444336" y="-0.09375" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #00a754">t</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.812012" y="-0.09375" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #00a754">(</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="25.109863" y="-0.09375" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #00a754">)</tspan>
      </text>
     </g>
    </g>
   </g><g id="lognormal_probability_pair_plot__patch_3">
-    <path d="M 67.375469 256.091418  L 67.375469 7.259418  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+    <path data-role="functional" d="M 74.420563 259.054941  L 74.420563 10.222941  " style="fill: none; stroke: #031334; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
    </g>
    <g id="lognormal_probability_pair_plot__patch_4">
-    <path d="M 67.375469 256.091418  L 522.415469 256.091418  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+    <path data-role="functional" d="M 74.420563 259.054941  L 529.460563 259.054941  " style="fill: none; stroke: #031334; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
    </g>
    </g>
  </g>
  <defs>
-  <clipPath id="lognormal_probability_pair_plot__p4f39f73ad4">
-   <rect data-qc-allow-overlap="true" x="67.375469" y="7.259418" width="455.04" height="248.832" />
+  <clipPath id="lognormal_probability_pair_plot__p0feb345c57">
+   <rect data-role="functional" data-qc-allow-overlap="true" x="74.420563" y="10.222941" width="455.04" height="248.832" />
   </clipPath>
  </defs>
-</svg><g id="lognormal_wear_limitation" data-anim-target="true" data-anim-label="Eignungsgrenze für Verschleiß"><title>Eignungsgrenze für Verschleiß</title><rect data-qc-allow-overlap="true" x="1222" y="626" width="596" height="238" rx="8" fill="#F9E4E7" stroke="#D1495B" stroke-width="1.5"/><circle cx="1290" cy="714" r="42" fill="#FFFFFF"/><g transform="translate(1265 689) scale(2.0833333333333335)" fill="none" stroke="#D1495B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a4.5 4.5 0 0 1-5.8 5.8L4 17l3 3 4.7-4.7a4.5 4.5 0 0 1 5.8-5.8l-3 3-3-3z"/><path d="M20 3v4M20 10h.01"/></g><text x="1356" y="684" class="" font-size="18" font-weight="850" fill="#D1495B" text-anchor="start" data-qc-role="text"><tspan x="1356" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">EIGNUNGSGRENZE</tspan></text><text x="1356" y="728" class="" font-size="22" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1356" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Nach dem Maximum fällt λ(t)</tspan></text><text x="1260" y="786" class="" font-size="22" font-weight="740" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1260" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Verschleiß- und Ermüdungsausfälle</tspan><tspan x="1260" dy="29" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">werden deshalb nur unvollständig</tspan><tspan x="1260" dy="29" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">beschrieben.</tspan></text></g><rect data-qc-allow-overlap="true" x="356" y="876" width="1208" height="60" rx="8" fill="#F7EEDC" stroke="#B7791F" stroke-width="1.5"/><text x="960" y="915" class="" font-size="22" font-weight="790" fill="#102A43" text-anchor="middle" data-qc-role="text"><tspan x="960" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Flexibel in der Form, aber kein idealer Verlauf für dauernd steigende Verschleißraten.</tspan></text></g>
+</svg><g id="lognormal_wear_limitation" data-anim-target="true" data-anim-label="Eignungsgrenze für Verschleiß"><title>Eignungsgrenze für Verschleiß</title><rect data-role="functional" data-qc-allow-overlap="true" x="98" y="872" width="1724" height="64" rx="8" fill="#FCE7E2" stroke="#EC6244" stroke-width="1.5"/><g aria-label="wrenchAlert" data-pictogram-asset-type="generated_png" data-pictogram-style="reltest-education-minimal-v1"><circle data-role="functional" cx="144" cy="904" r="32" fill="#FFFFFF" data-pictogram-backdrop="true"/><image data-qa-embedded-image="allowed" data-qa-reason="Portable RE1 source asset embedded by the approved slide generator" data-qc-allow-overlap="true" x="121.58" y="881.58" width="44.839999999999996" height="44.839999999999996" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAKFHSURBVHhe7b0JmF1XcSd++71373uv931vyYts2bIkS9bSklrdraVX7ZK1ecdgwGCI2XfHgbDZxhDAxta+eJFXIMskk4Wsk2QywGRCmElCJhv/DEmABEIIYQv1/+pU1Tl1T8vGsgFb6vp93/nee3c996r1qzq/qlMnSQwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDIbZibYkaWgqX3RBtWHuqoaGrq21DUPXl+tWvSpruOKNWf2St2b1S96W1S95S1a/9M1Zw/Jbyw2jN9ZXl+0pl5vWZ9ncS5qSpCW+psFgMBheYKhP6jvqynPXV5oWvK7asvBYuXXNfyu1LftiqX30W6XOEch61kKlZyOUe8cgc20jZD0bqHVvgHLPBqj0bIBy9zCUOtdAsXP026WOlV8qtw/9QbV10clK48Vvqavr3die1PbE9zYYDAbDTxDdSX1Hbe3iLdXm1XeWW5f8Trl98Mtp1zCUekch7R2BUu8w1PSOQk3vMBR6R6DGtWGo6Rvh38NQ0zMENT1ruA1BAZs7Hs8bgULfeigNjELaPwyl/rVQ6lsDWe/Kr5U7l/9uuWnNu8rlBRs60PYYDAaD4ceLlkrLnNqmxS8pt679hXL76JfLXeuh1DcJxb4NUHSEv5ZJfQgSIfbeNVDA1jcENa6thYI7DvevgppubKvdb9xe6JN9q6HQs9qdj+cVBoahOGcU0rkboDR3Akr901DuGIa0aeXflhqXHWzIGubH/TUYDAbDc0B/klSbmi7dUdu89OFy58i/Zj3roNg3BjV96x3po9de0x08eUfaTPzU0Kunht/1ce5YNAD43e1f61rYvgpqenEfGpC1UOwfgUL/KBT7RqHYMwTFzpVQ6FwJpa4hKLct/Vpd3dz9cf8NBoPBcIZoqfQO1DYuelulde2fZ93o6W+Emt51kHQjQbN3370GCq6R1y+t0IPHEJmHbWgo8Bwk99XuPPdbyz9ynDMAfJwzJiINYcNrD0Gha7Uj/0LnMih0DUJxAGMI41BXt2Jj/CwGg8FgeAboSXrm1LcO3lnpWvfVUt+Y0+ELPajXryVP35O4GAHe7jR9Iv0kR+ZM9EzoRO5sOLTRkFGEvraMFpwhYWOC+5D8u1ZBTdcqKHSvotFD/0Yonrcdyu3r/3RBkmTxcxkMBoPhKVCb1PZUGxffUeka+Vo6ZwIKAxuhpi8QvyPsLiRfIfQ1juiFmB0Ji/7vyD0ifm8AyON3zUk+fA0+tuCO4X1sUJwx4XvifiR/d5wbIWDcAKWhdVDTu9FlEdXWnjcRP5/BYDAYIsxNkkql/tI3ZS1r/rHUMwqF/vVQ0zfqsnW0ARDPW8jfkzgagq41jvSxec+df4sxkH0kHzHpewOA+7WRUPEACRh3r4IEvX4xEmxMnAEQeahniOIBDYt/Nn5Og8FgMCi0NC6YqrQNfjbtHWOZh8mbyVcMgPP0HfmLPBO8fdyGxJx444AELVKRHKe/czDYkz/vRzL3I4twjyAjBQPhYxAiNUmfuoeg2LMRsoY198TPajAYDIYkSapJ0l9tGny43D0OxYEpF9wVb15InoiXZJjEEbo07f2vhoQ9czEC5PUrsleNRgPosYeRg/fk+brO2PB3JHqKFXDzmUQoOYVgMBqnpGvQSUNZzyjUNl36pviZDQaDYdajWp27K2tZ+PfFHpR4kPhpspbX4ZXM42QbR9RC4iEY64ieA7HBOxcPPnj2RPp0vB8F+OtGowoxMpHHT0aCRg0i9/jYgItLrIKkcznUdCyDrG0ZNDYOLI+f22AwGGYtliVJWm1ceEexawiKOBNXk7wj/2HnuUvwNkfO3UjgpzEAOYIO2r8QP+0X4ldZP36kERmAp9zPx3DAmAwAav6SGbQaajqXQ6ltGaQNS34TkqQmfn6DwWCYlWhJeuZUW5f/VtY/4dIlEyfBoHSCHjzKNii98ChAeeiBnEXWQTlIcvtxuxA/XoOO1UaBNH1N8kL0YixIzw/poGQsSOPn89gQed0f5wS4ftKcAApWr4MilqBoWfiN5rq+xfHzGwwGw6xEQ2XOmrR1+d+U+sd9hk+CufpIyKyfBw/89B4+BmUlMJvz7FUwVrx8bwBUqqYYAB/Q1UaAtX3X9DYVAKZRSTAqvuFIoH8DFOZOQ9a5/t/r6s4fj5/fYDAYZiXq6i66Kmsb/lYBdX4kUEeoqmZPzggguXPQl0k4yEBE4G6k4DN8hPiF0PX1YglHDAgbAT/CkACvnikczSyWTCEZDbhrcw0hPLd/HWTd099prL3ccv8NBoMBUVs/56VZ9/APavo2MLGyTMPEKoTrSF6PAnygdoizejDDhrJ7SKKhRr8DUTuC5/u4zBydr+8kHBkZKMPA52gjEDx/zvTxs4CDscKMn5quFa4ERKlj5DvNzZPb4uc3GAyGWYnmxsG3l7uGIUG9nydyCdFLZg81yc6JW5B0POFrr16kGjnfEXYwAPnMoHzDzCGd3ilyUiB9/ORaQvyJcxToU0YCg1DoXAHF5iu+W1+/dFf8/AaDwTArUd+45C3lrjGX3onkjwFfkW6cJ8/ePmn5RNw5qUdLNE8xESsEf1XevjtejmMDINdl7z/M4JWRA53nRwB65q8c44wRGQFaT4DSQIttK/8zrVy6N35+g8FgmJWoazjv1rQTCRZTOomMfb0eGQWwxy0ETwQbE7gQc9gfpCLx7mkEELx3PsddRxkLuTYTvTME4u3zOSRNyfmqPyJNuWtizZ9RKAxMQql7w/crjcuuip/fYDAYZiVq6y98WblrHRR61zP5S4rn6Yg+aPdhuyJt77nLMdoAcEpmjtz5GK70iWQuGT2a3Oma7O3nyF4bFRWYdk0tGNO/HkrdEz+oa1y8L35+g8FgmJVoqls0lnas/X5N7wZIuoc92fogbs5jV6TOhDtjUpcyFFoCkmJs0vAc8eKF+P2nGBc2BHJO0P+lwudp7ovfcwYA4wbDUOoahkrzimvi5zcYDIZZiabai5ZU2ka+7hZreTrP/ilGA8E4KC/frdYVDITU8M9dj7/77B5P6kL6UssH70XXDXn+tE+MTs6IcMlpihfgKGalq/FTahuC2obF18fPbzAYDLMSLUnSVGld/efFHlypS7x9JFLU/Km2D9XK4dHAadI5NalLgDi/X9JHg4Z/+ib7hfTDSCMn8ahUz9zcADnWZRtJmiptK7Ytg3LthS+Ln99gMBhmLWqblz2a9U/5oK/k7COJ5iZsaTJnks+lf4rmrzx5OkbFA/jYcJ546DLjl/eJ/OOlHzqW1gDmip5+dEAB4ZDiKd4/GYGang1Q6hiFcuO8V8bPbjAYDLMW9Y2L35r1TUPSv4Fm9iLpd66GpJMrdPIiLXm5Jy7ylg/ueoPA2TxyLEk35JF7omYDQBVB5Rp0HE0KEzlKDADN6g0LvEhaqPSRpSKfYrrWaf71TZeb528wGAyCarVrZdq24ntO98fKnr1UyVPIPARrJcDLJZq15n8a0s83tU88eb8cpJzLTeYXeO9fNzYoud/xvTl2INfuGYVS12qoNs17bfzsBoPBMGuBSzhWW6/406L30NHjFs2fdP+8V6+JXMtCtI9kmKDfSwAYt+uYgDck/nqREXDEfRril6AwF3vza/mqfvngMG8rtQ9BtWHerfGzGwwGw6xGY/PCny71bOSAL63CJWmVZACUnDLDAGii5QweTdQxsbMByGXpnO668t1dXwwHnyvbxdhwQDhkCNF+WuFrGEqdKyCrm/v6+LkNBoNhVqM5nb+otmvjt2oGJsI6va4JCVNAVWfg5DN7pEY/k677DMTvg8jeS1fkzi0UeFPSUO675O4rI+A9f4oX0IgjP8eg0LMO0s5hyJrm2HKOBoPBECNrXPFbxf6tkPSup9o4SLhK9/dkz4u2hEwgJmMhd5+vHxuKcIw3FLkm5wdZSMhfp4hi3r6bvCUBZHcMB3jdOUz+vTJqGHKaf6XhojfGz2wwGAyzHtXq4l1ZOwZ8ccIXFnrDFbww8IsjASJwZwS8dx7InQg9ELsEZEXXD567LLgSvPf8DGF1bZF3fEPCXzWT/Ll5j58DvtQHNAoo+wxCpXHu2+JnNhgMhlmPniSprTQt/YtCJ6/kxUsiUsNtrPnryV7smQfvnL1875FTJc/cfIBcmqjIQVqzDx583sCIAcFRyCAv1hKkHj/iYOInQ4DGZgjS9kHIageM/A0Gg+F0qNad/6q0A3P9iViJwGWhFEwB5WqfTOAhNz9M6iLCJo/eF22bEeBVMQNV+0eXe5ARBl6XSk8I+eP2QWcA/Hk54yCGh1v3Wsg6l0G5rudd8fMaDAaDIUmStiRpyFrX/G2hZ4wWZUEy9oFfbQhoJCCzd3OF25BwcQauS8VUpK1lHW8MRLeX+5CsRN68JnAxEhz0lSbXdHISrw7mRga0j/o3DGnHKig39Lwzfl6DwWAwMOoaF74q7dsKiVvaUWX+YN1/kWOeSpKRGjwSEJY6PDo4LNfLBWzVvshI0DVkPxqHQPze6PjlHykmIHEBquo5BFnXSig3DJjnbzAYDE+FBUmSVdrX/llxYBpq+tbRoigi8/iSD0i22gA8lYcv3r9IQcpQeCOgvXwJEsv5/OlGAoHg6VOupc7H335UgHEBCvgi+de19L83flaDwWAwKDQ3L7gm68TMHyr3gDn+btYvkrDL/JGJYBLcVemdIgcxIWN9HinIRiTOzRM5N7cf4wRUPsJ9sgFwxC+Sj/L8ZWQgIww/KmHDQv0YAlytLKvv/+n4OQ0Gg8EQodq04Lcp8wcJNAR9A9HqoC9p9ZQlRGSMBO7r8evGBoHIHbcJkc8kdC8fRYbCaftKYqJG8w/I+yejQUHlISh3o+zT+/74GQ0Gg8EQoba2d0m5dcX3Cx2rSO5xpBwCvn7GrzMCIQgr3jZWCJUCcOTtM4Gz1EOGIj8acF6+GACv96uF33XA1+n5+bRSIX8JDFO/0PNfCfXNF94ZP6PBYDAYToNqw+Adxe5xV+K5RpV4JolHpCCe8csTuGZ477l4gHyS167nC0huviN7HiXktP+cpq9HAuL9i/EI96D5AKuh3Lkcqk3974ufz2AwGAynR1puGfyzUv8Ez/QNAV8ibSR3Tv10IwEi6PykriD5zJzNyx687NcTttRoIKSSymeUXsrGgVI7wyiEDMQayDpXQrWxxzx/g8FgeKaor583mnaNQU3fBih0D/tlHamhxMJGgL18Cg7LzN6Y7EMg2BsKXzcIW17v9wZEST3aALgRgxzjgshsLGSU4qShNVDq2QCV5kWfiJ/NYDAYDE+D2uYrPpj1bnTZPwWp8R/X7VFeP5G/SEK8nwneTeJistZGQPYJocsIQMpD+OCwjDwk40gHe3VWEO7j+AKmrJY7hv+9qdx5QfxsBoPBYHgK7EmSYtay/E+wPLL3srFWvltKUbJxJLuG9iP5h/1a/lHfcwFb8frzxd4kMCypoj64LHn87joUYM5n/NBxFFdYC2nvBii3LD0eP5vBYDAYngbNdZ2Lyu1D30+6R5l0T0e4ygDoSWC5gK8QfSB4T+BKPgrnPFWj2b5hlq/ck7OQcplBtC9rH/zPlvoL1sbPZjAYDIanQbluzqvTLsz1H/Epn1LsLcg3RLShvEPs9eumavswgZPEo9I7ed+MAK+6hj4/TDZTsQnc17UGil1DUG5d+Pnbk6QQP5vBYDAYngblxiW/UOjGsg80+9d5/7zgu3j9RPzaKATi1qUchMBxm68AmpOBwnc3S5g9flq2kWYFY4YQBZqD/CST0Lxh4VIQSfcwlLrXQW3Lgnvj55qtaK7rX1TbsvyNacuqe9PmwQ+mjZfsb02Sxvg4g8FgqM2al/x1EfV/LPMsso/U2nHVQEPAV8o/y+SuuBFBK7LXpM/NEbzfTgZAgrp+FCBykT9P7ifrBPCIoHcdlPo2QEPrRTfEDzbb0JP0tNd2jDxY6R37bqlvwi15WexeB2nfOsh6hv6q2jRvT3yOwWCYxUiTzkVZ2+rvF/rWQdKlPHxJ+2SilZTPQMai7YdMIW8YOFXTF4LzGT5c28cv4p43AC6jB/eJAVDn+/pBPrDMUlTvOsh610JDZ+/q+NlmE+qT+gWV1uWfTwe2QGHOFOC/p8vE6lwFxe41UByYhHLvWqg0DFwfn2swGGYp0spFV5W6MP0TDYB4/ki2SLzo9dMKYD746j3xvJdOhC6y0MwRAM34jTx+FStwNYVUkblgPLC2EG7X54j3j5lII1DtWvnt9vbzL46fbbagnDSdlzUu/KuiG62thULfKKXzuvId+H5pxbRi3wbIWpf9WzlpOj++hsFgmIUoN1z+zmLvpNP/3WQvL++w5s+F4LS+72v6eHlGjQqYwL3X742AvoYK4qpr+FIQbABccwZGjRLcfk5B7RuGYt8oVDsXfnlubdIdP9tsQHtte0+ldfh/lXpHIela6esyFTCW0zPM6bzh36fUNQzV5gutQJ7BYEiSupZVT5Z6N1DWjwR9XW69GACeFMYxgbCwy2mIX0YFbABIBlJGQMg9l/2jloRkI+FjBI7MwuLycryQf03fCBT7N0Cle8nf9zbgQmazC82V7rnVjtHPFwe2QIJev4ym+H06I9A3QkaAK6yWetdBpePyT8fXMhgMsww4AazatvSzac8ol3ug7BpK1xTy14Qf/36KJgbAjxIiI6E+Y/LPaf5cKdTXCpLruaUmkdyGodi/HqrdS/6huz7piJ/vXEZtUttTbl31+dLAJCT9GxzRu/eC780v3YkjATQANBLA38W+9VDqWPXvlUrLQHxNg8Ewi9BT39OetQ1+ucjef0764XIQoUlMQDz8aCEWL9VEhuC0UlH+t5SWyMUTXAuafwHJje+N38m7RQloGKqdg99ub7/0ovj5zlVUkpY5leaVnyt0j9JoCRfv8bEatS6Cr7pKIwD691gLxa61UK3v3xlf12AwzCI0NLRfXGpf9e1C19oQgFUGQGQf8SZDO802JvPg9VPL5+/LNj6Xf/tyEO7efExkAGhmsiwxiYFOMgDo4abdg1BtaB2Mn+9cRGdyfle1be3nSn1jrPfzbGi1XoMjfpHX/HoLEkhfDVnXaqg2z/tAfG2DwTCL0FzfPFrqWAk1OAvYL+1Iuf6enP2EK54M5r1KZQTcsdoQCPEToecLykWSj9+evwZl/khWEBslqU/kGhoA/FwHpd4RqDT3XxM/37mGzqSzq7Zl9H+UBqagpm/UZ1WFdRTo/fkaTRwTkEaT7VZDqWcEstbLfiO+vsFgmEVobZp/ZeqWf5S6P7r2j5B2ntj9b14Uxm/3Xr06Nh4p+Gv8sO306YO/YgC8lCGLyeCxw1DqWw/l1ovPaY8WPf+61pE/LvZNUcDXZflw2q7URJJ3o4v0iRFw74o/ezdAqW3x33Xg9AGDwTA7UdvU/+LU5Y5jBgkt9OK8Sg4GC3F4/ZhJJjcpzAcc2Ti4kQRto2weSecUglejgFz8gPf7e4tR0ZKRHiHQtbC/pZ4hKDdf+ofx850rqMcZvi3Dny7iYj2i97vlN/HfS96tGGYxBPLO9LtEKQ33jULavuR79fXZgvheBoNhlqCuaeC1KeaP965X6Z4UgA31/Nnbd1IOkbAQuzvekzqTdTxiEMOBx0imkTcAbCi8AciXnA7zABTBicwhx7PhKbYu+naWJZfGz3i2oyPp6K60DP3PQs9YPlDO704CvN4gs+RGaZ+chuvevYym8N9oLZQ7lkN90/lXxvczGAyzBPXt592e9m1gA6Bm+uZSM5WeLF4+G4VARoHUc3V6coYgaNHaMOh4Q9gv1xJvX13HncvpqN5AYSB4LVRq590WP+PZDKztU20d+Wyxb5yNJL0b/b7l38al7ur36dddwNLagzyJTgr3DUOKJbSbel8f39NgMMwSNLSd/660fyMkvbwQjE+/DOTiiEcHFd0kMdGUeZsYATYSNHpgT132a6PiSEobD+WpCrHJyICPl0yhYIA4JsAB4ULfOKSty/5iHlZGOAdA5L/q94t9k16ac+Uy3ChJv8e8EfX/DmyMwwI7uGymxABGAbOI6pqX3B/f12AwzBI0tJ3/zgwnEWEZaL/CFlfldBPCwiiAyFh56rJYfM7Lj7x+OVaIK/JaZb+XhWQbX0eXhhDDIqMBZ2Scns3ZQVjxsm89pHVnfzZQf7Kgta51/WeKfRMs7YT37X7L+5Ft6j2H9xW9O4ml4DvrG4VC/ySkbSufiO9tMBhmCRra5r4z7cUaQCj/qBW4HMmKpizediD3UJqByCcvPdC5XqYQz56JyJOSHO9jApztk/P6I1Jz5+B+ilFgI493tSO2Qt9GKLVe/gU3UfYsRWOStNa2rfuDYv8UyTr47+JkHD0iEiNLMZAZBtTLY8qI+4l00jZA2jr/t+P7GwyGWYKGtrk/k6J3L6mELNOgl+kmFXkpQRkBJu6QAqoNhcwOlvNCBo+kbwpxec8/F28QA8LneaOimxgJMh6ka6MBIAOC6xqU6xd+MH7WswG9SW9bbfPwf0c5K8Esn9zoiL3+aE3lnDHVGVtKfiOZTP59+LyuIahtXfrnexYsyOJ+GAyGWYD65rlvz1xmDpIpBgqFaFQdoC7R9POeey546/PyA/kTiSuj4FYZk+Pz9X0kk8d7rHK/2AD47eq6rjSEOqZ3GNLONT8olwcm4ud9IWNekjTWtoz+d9L8Mccfn5NlNjUq8sQfj7pyTRmC3P58VlBt2+AX57W22kphBsNsRF1z/y2pqwAaSgcQ+VMpYUcw3kvXcgwTsBCQbqr6pzcIbnKSeKaByEnPD+QUExwdr0cU+T5QqWNeF0DJVKW+dVBqv/z/JeXyWVH3viVJmtLmy36jgJo/TvCSgK88v34/MulL3gHvz825YG8f//3wHYuhxXdHs4HxXWIq6Mp/7G9sbI37YzAYZgFqmy+8rtSJOrMQaGi5ReHZAPgyw0y+LgtHETSRkjISQlJes5YWvFUKagrZBwMgcw6CAQjrB4ss4shN98MZAzIIxYFxyNoHP1dN2nrj534hAWfjZq2LPlXTO8Hvnt8fP7ubdKcMsIvTCNlzaQw9B8CPrPy7D5PmQiYQxks2QLlrzZd76uvb4z4ZDIZZgIaGC7fhAiFJD9WMF9kHiTVMzpqZHur1fB8XiOQJ2S/Ggmerek/UVfPMB5Y1+eNv8oC1AQh90WsJSD9QM/daN0pCvVgqegxKrUv+1CXWvADRliQNacvi3yj0T7t/Az/Scp68SGYqDiDvyRk7eVZ5j9rL5/PkHP9eV5NchgayfyOUu4e+MtvKaBsMBkZDQ2UNrhdb07eeNXoiHVqwJXiROb3fkzV7mLlSw2qf3x/kC4oT6JGGkL8EM4m0qABcdE+fbRQIkVJLxQiEPtBoAGMLq6HYswZKTQs/nyS1PfHzP5/AVM9q85rfL/RiwBdLcaCnj8/JhtUZVTS6OjuL/z3Y6OWL40nQN5B9/t8ijA7wHFwXIOtc9ZV6MwAGw+xEY7nxwlLnum8VBjaS7u+CvkQ65GkzcYu0wl4pka6kYOa9+LwkRCSUmxjmsluExPTIYabBIALU3m80InDHyUhDxTHcffH7ICRdg7QISvvqP65L6jrjd/B8AD3/atPQHxR7sbwDe/ouGK4lOJrEJW2mAeD3Kd/dqIriJHI8fqd3T4aigNVT+fgiVgRtX/7l+vrEJCCDYTYCi4xlnSNfKQyMEUm4bKBgALzk473M4LWHPH/xWhUhIelEgWPv+YtcJFKGNhy8LRgBJjPRvdV9tDEgkuOUUE+W2Pi8/vVQPG8zpJ3rPl2fdD+vHu+CJKlPmy79tZruER7NBAMY4i7s/av35wyCj72oUZkf9YRPMYZS+sEZcCT/vmAECl1DUG5d/qU5TU0tcR8NBsMswLIkSSsdV3yu1L9xhvcvFTlljQBXftiVIFbSjXjeQuaelNlIeE078t7Zw5dgpfNoZ0xUCgYgJwnxfi/9+OvxveR4bo4w+0ehZmAjFOZshmLLmv/xfBmBZUlSm7Vf/uuFvkn28qXPoQqq1vt1MNdPApN342QzbSToN40C9L+LirngAjpsAHDyX13r2r/Z0tNz1k6aMxgMzxHV1pW/nPbgbOA8+fssHDEA0tgD9dq/9/ZDXronHiEwRdKUhYIB3lDJk67JAWgeAeQmOwkJ4vFSosKPKqTqJfZTCJWbI0FZQJ6WvSx2rYFi85LP4jS4+F38ONGatDZWWgZ/vTCwCWr6sP4SBt/53Uh/ndyDz4AjF5bXZBlOn9oZjKozdG7EQ7OF3XvvJYkoBNllCU3y/kXOS3pGobZ9zZ/enoyW4r4aDIZZgqxh/j24JnDSqXLMHbHSXAAKDgePn0iFA8biibPX6rNOHHGJ4dByhni1fBwbGCEryhgKBkP07UD0QvCicWvjogyWXMPPfsWG562ApGOpW26y2Lz607VJ+08kMNybJG3lxuV/UOjEYC+/15zeT8/m9X6MvzgDKtk+QuZ8nHs+eaeh2Js3GkL4zuuXd4vvk+MCzghshLRt4S/HfTUYDLMIpeplr3HEJKTpiZtIyi2+7gknHOMDlp5wlbceeec5iYa9V7pPIGh/njue98m5+rcyAM7onGbtAkeq/rvkwuN5ONt5BRmXOdOQdg39ZaVy3kj8Tn6U6EHZp2nJ7xRQ8+/U8QkeZUXGLY6t0KSuYADy71Jfj9+9ePxO86eRj0zCk9EXGggMQNe3jzwY99dgMMwiFItzxtIOJBoMSkqtGZlBijKPZAcx+bMUg00WIfdSjyPhcJx8pziCIj4hIiFtRWLk9XP1UXcsXSMYEiFA9nqFOLUB4LRIMRooj7jj2Fg4ozawAYrnTULatfp7xfqFd9W7OVk/WvRWLhyotK76VM3AJkr1FI3fFXgLE+sCucv8C63vK+L3zxPel7tO7n3ycZL142ZJ598x7k971kFDy6L3xn02GAyzCLXJnJ5Kx+qvF/rWQ9IdvH3KCBJPXc0Uzi1BKOTFUoYnIE028bGy0Lw6RjxfT/AiHQUSzzV3HOvmuevoY5QByAVWkRiHodA/4lMnMS5Qal31N+X6OS/tT5Jq/I7OFLgmQbV+3iuytrX/WBzYDDVzxlwJZnwufHZvBES68e9TN21QJZ4hz0eE7+v7qxb+DTgQrNJDZSY17suwGFzzRTfEfTcYDLMLNVn7yk8XejdwGuLMmb+O4CUDSHv8nmjJ03RlCzwJs6YtxK8IjorPaRIM5B2OZ1L0cwYU+fGxIZ6gZSEZceTXISZPmWbB0gQqvDbq5yugpnsllZKeMwbl3rVfqLRe/o7m9PzFo0lyRgHSjvLAhXVNl72m3LroT0qdg2Q0cQ3fPmzy/kKVT13iIbxPen5N5Nqgorfvg+z+/XOqp5znr8mBYT9CkBjACGSdy6C+vn04fgaDwTDLUGqYfxADwTnPWxOUI5UQF6BjxKNmqUhJLvF6AUJSntT8fiIpfw8mNalfE3Ld9UiAyTK6VhhBqD67TBk+XwdGff8xZXQVecj966AwdwIK509DOjAGacfgfxablv1JVjf/cLV60U8Vi23r6tL+RR3J0nnYatO5S4rFxqna8iU3lesuvitrXfW75e6N38r6JwBHU2LgqG9i/PKxCf1MQdYhw6bfW3hPlO3jsqhwv5+gx8ZQntkZDAoOUwotnUOxAZwTsA7SthXfbK1WX5AlMgwGw08QWd0Ft6YuvVK8VJIpvEbtWn4G6ozmUzEjT1YmMWnSnmEEgoYdJoTpe+tzom28XQjU18HhVFPXL0eUHNAW0mX5xRGnI0WUhUah0DfCsQ2UwVZD2rkSSk72GoFS94b/LHdN/kela+o/ss713yu0D0KxYxXguyv2r4canFA3sAEKKPc4Q6OMk4xCPLFTy70bOc7Pso5GOcpIeAPgriPBeLkXS0vOAHDD67gJYficGyFrX/T5BUliawEYDLMd1frO7eUuJKx1TEpa/okJSDxP0v19Bs8Mwg6GgYhPSRfcgkQj2+SeImWc5v6yXQyOPzcyEH7hFB6l+LkG+eu5fW6G7DDr5eKVE3G641C+GdgANXM2QmEuNiF6zOXnRdfxWPdeMPMGr8XBc5HCOPAbnkkMAH1KoDYco96372t+u8/ucc8mx4lhw++D4Rnw+s4AjEDavwGqbQsejf8ODAbDLES1vmdnGReG711PxOvkizyJ+wwaJtMw0Yi1dvG2PQGrc1nzlolm7jt7+5LrnyNwZTi8RCTk71oYafjzFaEGOUUIlI8Xo6BnF8ssWU/8gWhRLqF0Smls+PB7P8+qdYvRCOlKqWaJmUTX9LKW6pv0PRdbkWc+zbNznITeHb93/+6CAXApr14ykuckA1XqGYZKQ+8b4r8Dg8EwC1FpvPgtmBZY040erUycCnn83ivVxK4IScg8v13ITwwAT1jyk7jkWCZuvlZY9IWaLuvgyU6TqTIGuWt5UlQkOuNaIg3hSOY0xCxEj80ZCTYMuPwkfkcD4b1vJlt3bfa2vZHU/ZNYCD+feod+f67PPHLw56lRjxsxcGyAl8f0BoBHAe7fT71nbIW2ZVAtNQzGfwcGg2EWImu69NcKXZiiiATBUonk/4vH6ohHkZp49TmjIN6spHoKqVJlyxz5un3qPCEnITF9PDchRiJEJje5n/byc2SuG5OjJ19VMkHKVMj1hcBdPv0wG0Q2AMoQkWGIpaU86aLnrbX/nIHCERHHLOL++jRRf79QKkOMTuh39L58thAZI5HhSt2rIWte8MWuJKmL/w4MBsMsQ1164WVZy4rvkGQgBgAJTxkARzg8OcuTjxCNIjbvycYErIhbzskdGwxAkH20waDj9Ugk7w2z9CP3dcaBA598n5wspPrs+y1Eio0XTaGmJS/pcyBZ91sMhfTH6fPh+UI/xADwvf0zxY1HQvw8LijMfaYUV9pPFT9XQaFrkOIQOSMbUkPl+bEVu4eh0rzwifjvwGAwzEJUW5f9csHJP6z7ezIOk7+w7IP3sJWnm5Ng2LNFktEyDmUTITGJ/i2kqMjSX5fJVYicydB/KiKjJvvUSEU1CTrrLBsaPah+q/PEY9bZTv54LrKW75sQrRgLFRdBAyDP5J/jdE0WwBEDGfpK/eTjdP/lHUuaKev97jcbMdL7RcoLhqjUtR6qjQtvjv8ODAbDLENDy9x3ZSzreJLPSSoiB4lMwoSVI6ZApMGb1cRHjYhUvFFFrlHzpO7Jm8lRyS7hHjPv5a85o3/5vknWjRBm8OYlt56bP4bvnesDXy86R1I7RerBe8WTvsSI+dGEO149j9ru3oP00T9fXvKhbB+eIyAGQIyR/xyBSseyb7c3NFwU/y0YDIZZhLqmha+rdA27hUGIfJB4ggEg8pARAJMaBhqFxF0ap5AMEaJ4sHmyCwZD0hbFmHjv+nSSjzuGyCvo6Yrs1drAMw2J5MiH88K9aH8I+obJVb6PvLwitThQS0ZKRhX+eCbcMNqQe/P7jN6J72dsXPy1wzHSV1obgd6Vz+6RfwttHHyQnf893fkoH62DcsslvxP/LRgMhlmESsP8N5S710NN3xjX/5G8fyF09vpdSqUmtJDtIzIJFY1jklIE65sQoCI5L3UwAecMgCdEZVzkGpo8Pfmj/MFSkx9ByPm6H/IphkBIluQpPwdAe//SZyfn8H39c+hjQsXNMIKhZ8y9P/0evCQWjy7yRE7Hcj/9XIJQATUQvT5HHePeCaXfZp0rodo451Xx34PBYJglqKtefEu5faUL9CY9I0ReSBTeQ0XSkJGABEg1qQrh5Ik9eNRyDSIvydIJ5KiPk8bkz1lFFEBlA8MkS163Opa/h8wgfX0xSPn75GMNqmSFEKnz/Ol+PtsmHmFo0s01IXae+MXHh5GHbnK9+Ld+LjFoPKuZr6ufxcs87nmiNFBX+ppHDF0r3THl9mX/1tfaauUfDIbZiPr6xTeXO3DtX1wARlb/Uk0IyOeUIzmJt6+DnLRdiDSQmCIzOeap9vtjVFPeP0lS1PLGRfqoZJ1YH9fk6Q1EiCOQV67TKYOUQwQfDFt8XeqPHinQb7mffydeltHPL+dH70l+S9qnN3JsCFlWcxKQNgJ8LWxiHDEjyBG++8TR0aCLF6S9I1DbtuSx+G/CYDDMAtTV9VxV6cQJTaOu6meYmbsKks7gfXuy8gutENHlU0CFmPO/fXOkpfVnuqaXaWZ4yOJB06d48nRs3vMN9xCSPY08xHJJbpsnWkX67jphP3nVgZApziHHhW2un3GQVfrgyVi3uH8z+yXn0OSt2JjwsfzvpeUyMlZoMPm5vRGQrKA1bk3krG8DtLXN3xb/XRgMhnMczY1DV5c713yvpncDp3cGr1I8/0C63HgiFwWAmew4P13SFl0QOCZ9ubbfJ+TFBOVJTJGjylQJGn7wevOkqe+nyVNI8TTHK+MSzhfCzk/C0vn3/ljXlJHSsQL9nHydYABo+8xJXkrPl9FLfE9vsOh9Sz2hMDNa5jmoa7jvYrT4PJzT0b8R6jqHvrCqf9VzXuvAYDCcRajUde2tdm2AQv8U1ODi717bD8TuJB787RdqESNAhiF4pCI7SIBRE2rwiPG3Hx0ISbGhyZV2cAZGyFU39npnEKeQvRCkkJ4ickWEjgxzOrk8H/eFf/ssID4mePSR8fDfo2uK9637q+4VZBp5X8rL9+ervrlz1VrLUkwuMoZ+pnB0H3oGlqB61uDSl9DQdPFr4r8Ng8FwDqNabboya1v4XV/H3y1GIt69lHXAbfm1fQNJ5wmTSIayfnIE6b5r8s7vFynndOcFEpRjw/6cNy5EqYg1bFf39L9Df/QMYU/UPmiqnlWRv49B6NTO0z0fG5Bc/R5/jCb5cLy8BzFmOnjrSF2IXJO/GA15FjeK4IJv+OnfDTU6f9DJQVnzJf/UlCQt8d+HwWA4R9HQ0Lmt3LbkuzWdQ1DTyZpwpxCKkIVO92SyzAWFhWyYuBRR5ghTiFGTIlf9JEJXJCtNiNZ9p/156STcIxCwvr5IPup6UitHe/2qTzl5SL4zcfp+xBq+3Dd3PdnH/dbeudfl6Tq6bhAZwtBvkducnOODv/nnDB5+eBfSPyR+R/4oDbFRC/0chJrOFVBqWw6V+jm3xX8fBoPhHEVTXdf6rGv1v6Hm79agRRLBrJ9O8lRpolaQaXyQU5Gc99ajQKuc64nKk398jDRFYLnlHYmkqXyE1vu1zCHHyfXZSDHRinet+y8GCeMTIglpbzqWaYKnzwZAiN1/F0LWRiVk4Lh+yLl8HwkkC/mLEdRGwktZnvjleYIhJs8fl5aUe3EtIHcsZfmgh4/GQ96dm5fhRjD4fQ1kLZd/ubExaY3/RgwGwzmIxsb+yXLXyNcLA5ugpnfUe/hINjpn3pG8yA/K4/cevRA6E6DXlBX553R+IVIhTbmuJnN/regeQro+c4WJ3ZMzkRqRn75nuL4PTvO9QhqrBENVHyLCl+ykHElLU88WZjLr88UgyXHh3KD5K0mHj6XRQEj91CMDPDZIP2pU4N83nZe4kR0ZAP/s3iCNQNazHuqbLn1T/DdiMBjOQZTLbRvStsFv1fRPQdIzqrxWXedHGhOGEI/INY6o+DxP1IrcvWyhyE0TKzc/CvBlobkpQp157ahp8lVesBgPIVUhvpnX4d/inccpm94g0qhI+kx6u6rDL9fCPogR0PeIjsk9a9yn3HsiGQdJ3BkAybzyfQujp9MF1X3cwRtC3t87BMW+Mah2DP55T5LUxn8nBoPhHEOl0j6Sti79Wk03ZfqIrEKEgr9nFnYT2UC8XyIX2kfBXiJaHxcQklE6dEjp1GSnDICq5UNyT/DUJdXU3StHpDL7lUlXZBRP5LydDRl5zLp/TNws5dD91X2k7+zxU9NEqo1GVKRNztPvgkmdZCf1Dvj+TpKRe7jtwQiRjq/fIX5iLn94t578pW+83b1PMYwYZHfXxxHUEJS7R6C+ac6V8d+JwWA4x1BfP7A2bVv9r4XuUfIMJSjpSEQ8dgn0igHQnjARvJdcpHli0+SqvFDW3zUBB4INx/q5BIpESXqKjIcneiE8NQIRuYbvK33LkbSXebSnn2+5+ITX4uU8TfxiEOVZ1fuJz/P9UNu10eL7ktQUHedz++W9sbF170YbYtwXSjy4375kBv478L7O5VDsGoJK82X/Jf47MRgM5xg60/MXZx3D/1ToH1fr0AqJKAnmtITIWSru+8z9JLlE+rVOE3X7ZTShiDUmxhnXpmPyert4/3n5SYg8rnZJ11Z9UAuwhP4LcYonHl8j6qs7LlyDRisiP4VjQ8ZNODZINCIhcfOGhM/PvSeZFMf384ab5R8VZ3Hvxu3TC73L/bGfYhxWQrVj2be7WgYui/9WDAbDOYSGytzVWdvIlwp9E27GJ9b0p+JuskShbsHjFyKUyVz5YGUgMjk2eLVClrzPZ6WEbZLxQt/leCF02pcjfvZ2RR7xBM4T1Lwn7+4tWr0crzxzZTRCfICfl2UYHTNwfVCBZkfy/j3E5Ep9k9FHuI7urzrXv1f6Hq4tzywB3vAe3TlM/igLhfRRNrB8nhgB3y93X4kXrIWsawhqG+e9Of5bMRgM5xCa0/MXlVqHv1zTO+4WcyfpBwmFCDDU7hECGXKjgUByRFpI2EEbDy14okxa/hz1W0jbHS+SB5OmSCBewxYDwNKUJ0PRrplkc7ECvp5rdIzEIzyBynZPwOoc/zzcT9U3T6D+GmG/W1BFn6fJ35WNDr+FpGW0FO6P+6W0haTfhnRN/458jATvpbx/6RfLPCQfYb4/7ceicNR/ShXFY0t9G6DSvOhTSZLUxH8vBoPhHEFL3YWXldvW/H1N3wZayQvJQSZ7eVIm0nXErAhWmqRUSoDWGwoxJHyOqz7Jv4XkhGzpWE2U4T5iULy37D126YMcG1pYSJ6u7e/HpOpJVq7prkeGJRAwX4vvRSQ7s48k0ej4BpGujyVEhO61eB9vUGsI+FETv0t5z+63XFsRuxis6HmCceDfuRGYkn1EcpOKn27EMAJp6+BXK0llTvz3YjAYzhG0ZksWlFtHv1TASV4uvZO94U7JHCFi86TnDYIidSEqllkka8gTqDIAREx0jSAPESnTvZm4ncwR7u/XF3bfWb7wZBaI3hOl/x7um2tC5IqU899Vf3n0IPJOuEfYT9eM7xEMR2jhdzBA+WNIwjmdBCX3E49f7jnzOX2f5P7uezAc+G71v5szAm4y2Eoodq2CrH0pVKsdu+K/F4PBcI6gqZxckLVe8deFvnFIelHzRyJgWQFLOjuyQ4LIr+HrZQWvITOR5I4NpCVGhUhICFT0fvaCvRfKx8lIwBsh7UVHcpInT7q/18Clv76xdOL7wemt/lw6Jw60kndPZIvPREtXKlJlEvYGwhO/NJF4JEhOza8ZoALOYmhlhCCF9YigtZERA6r6kpOEeH9unoHo/SrzRzKq3L3o+bLO1VBtHLgz/nsxGAznCNqzkYvKLSu+UOxdDwkvzOIDrkr2kUCwJ4ocoapjHWFpQxE3TeREODmP2h9DBKYNRggqy32D8Qm6eyjbIMSuz8kFivm6Yii0fCJkHyp6Bi87XF8RqjcOcg09IuDjlAGQY/R184vAy37pj/qtv+Pz4jm8TfR7vK4vGaENhM88oqCwyHt+vgQe0zsMpb71UGlZ+otgur/BcG6iuVKZW2lZ/1fF3kmX7UMEwZ4met6K1D2JcHnnIC0E4hYP2ksXMwg7nBPHCMJx9JkPbMp+PlZGCFFcgZqMJjT5h+tTEJqPFcOjSJK0/WDQtISC3wP5RxU0leHwRkDOFRnLfRdS5mN4dCCZNwU0wmII5L2qkQf1N/xb+BEWX0v6K0YV7+MaP2foE3/694cBX8oCKvZuhErH8s81JUlz/DdjMBjOAXRXzptbbl38efzPTgFfJode9vbZAIhOP4NIHZEIgYqHSaTlSNSTshC2HiWo8/RvnUHjvHv+9PdVBkM8VzEG+l66b3xd6Zf75HsQsYbj/EiA+xSTtid4Pl5GSkL6weOXPgQjk1u8RV1PSFl0fLoWevVkCILmr57Rvevw3kLWjuxnQzLjXF7sxf97cUzFzRpeATWdK6HQNQRZy4q/mVsePC/+mzEYDOcAWpOkv7Z13V8Weyeono/ILY6ogvc8w7vOyTJC4IH8tSYeZ/3kDIk6L3im2EK64oxYwYymYg/6OGUA8vJPfH7cuJ/q0z1DTNhi4Hyf6VyZ+BakGiF/OV+uzf09jRGQ7RITCNlAar+7vj5H/u10BpBeZzkcI40C2ap8B/cNjWnavOjLdWnXwvhvxmAwnAOoT5L2csuSzxb7x0n24dx3R3o+e4eILZA2kQjNCkVyxm1M/Lz4S07yEc/9NATtgprak2dCdWmJuVIT5J2LnOS9c5/SyamMuZEGbRfJRILJlPoZyBNjGMFY5a+XI0tF+jouIkXe3EQwT7LUQiE1MgTBgIRttF2ur7xxbiFoK0ZAGRYm/hA3Cc8fvPt8PMP1iyeCUcPj8bi1FPTvWwfFgQnIOq74SrXaOhj/zRgMhnMA1STpLTcv+XSpd4xm+HovV4hDFnEJhCYEKR69IxI+nsgpIn9HkkygKjjr6smL5++PD/eQ0YKfKIW/OUUyNytYRhRe1lDXUWQXRhNBovF95H4EL15753Jdpfc7T1muTatlBQOhjZl6bzkCPl2Te+TjIfidnpmP8deh7Bz3nd+rzySSQLDcy/0bhfLX7lx5Rmdg2RDg795hKDjyH/1itTqwPP6bMRgM5wAaMdW/acmnSz0bKc9fygY4A8C6vyPaMCJwxOw0ZjEAwbvNzwjOk2A4P5Q7EOJ10kNEgq6JXJQjTHWuIzYiad0/N6Jgcg6NCFpmtYZRh3jygWz9ffxoha6d08qdkWMPXI0QxLD4xWjE03fb6RrSNwnG0nXywWLKvIkygOQ5ciMX6YO8WzEw+nnU88v7kGcRQ6o1/+41UG5b+YW27OJL4r8Zg8FwDsDJPk1L/lupBz1/Wr+XSAKJgSQcZwRYMqGGRM4GAMlDPHQhLT/Ji0nFkU8gx0DeisA8ESlS9+SrNXe6r0hQWn7JXd8ZDPbmsZ+8X6SqQOrcP+Wtz8yMYVJXRs4FxGXEIgQv6ZNKdw8ZUnhNOj9IP/mgs/utqm0Ggg7989567l3KcfHx9B7zz8Ln8vPT+8N5EcPOmFH5jtVQ6lwNxcaL/7AlSQbivxmDwXAOoC1JGrKmZX9Y6l4PNV1U3oGIQTxHzu1HssflHZUBIIImEnSEzGTuvzP5CJFr/X4GSeUMBadbClkp0tUGwBsPfW13vGrumnRt5xFr4vcGQ0iRn5n77Ena7w9NCDWntYt2L5651+TlWYmg5bnIWMp9NTkHsvcTtPS7VFq/N0rRO6Usn1h6YllKtrksKfVv2bcWavrWQWFgDMo9a6HatORB8g8MBsM5h3lJUq5rXf0rpb6xUDdfpBzn3YcZpjO8f+fdBvL3hOnJLibMQHQ+pdQbACU/RAFMJ9HMIF4thcREyI0JLpBreDYtQdE1WRP3fcqTpEhhdLwQvzw3bXcBZ/nur8HXZ8PlDKO+tidsuq4u/ewqkkrOPz9r0PRD38MoQPovx4dRh+8HF7Kjfqh9rp7/SjK8/Rsg69kI9S2XW2VPg+FcRWuSNFYal/9G1ovlHUaJENhrRk+f5B2WHFh+cXKBGwUgcYSMIDEAM0lZk2wgT0/InFX0dAYgvhYRWERwjvRp1qqQHG2X8/OE7EcK6vp+tBG3SHrCe+YCqvpYT+gcrFX7hXjz70iMiaohlGv8/hVZe/nKj1xiGUjJUloe88/DHj/KTH5C2WpnAEodKyFtW/R3tY2XTcZ/LwaD4RzBaJKUqs2rf7nUg4XdsLYPzvLlQKYzAOwlOhIJnn8gSSQVRTKceqkzcoLHHEksitjotxAif3odnc4L0pIiaSZQvK8PogopKknDnSszlt1+bYD0szBZu310HX9/d67U9VEGi+8b7qcNBMtmckxudBFGVfTMnC4q71SurWMQ3KREgzyPX6CFn1UbkBkGzd+Tr9GzChIk/75RKPaPQtq1BkoN5z1UTZK++O/FYDCcI+hKkrra5pUfz/omyfOPFm73nr7Op2cyJJLME6AcX3CF3k5DPKoFgoq8YJZJPKl6L1ePBkRGUWQr52pjIzKH9v69LJSfDZvvX3xvlSUjxs33nYh7huTk9odJVj4eEHvo/hpKRsq9G/2OcRvLPr7InB7FqHP8M+SfIxzDabz+3wyvNwzljlV/V1e35Kr4b8VgMJxTWJZmDct/Le1aBzW963g1LyZ+L8Ew2YoB8J518GCFnIiIlH7uyVKIOxCsX2nKk5E2GOyte0LXIw5tMFhGycUFgiGggKYaATjvH/fx9WQUINcUz1/6zM8j5Ej3Y/KVfvI7kElhck8XA2ADIJPSqJ8zDYA2fkEa0h68GAdF5iqtVOYfiFHyxfX8CEEZJX9fKuKGHr/z+nuHIWu7/D8rTZfe35XUdcZ/KQaD4RzC7UlSKDfMO5V2otaPk3xYqlEE6slIjIFIJ0LG3tMU8pTRggRJiZA8cbv9ijiZ6OS+uXt7wlKSD28LowPl5bJh0p6+yDXUb5GhyCC4a+qqoMoIEKlGZM3nzjQ06rm4f35lMUeyck3ahtcUqQYnamE/JDYQjIv0IfRHnp9q70u/Qq0eKQMh51AMQZ5XGzs2OG4S3RAU+tZD1rMOspalv1qpdAzFfycGg+Ecw4JkQVbbsPrJrHuEiNGt4oUEIx5yRMqS3eNITsiNg77eAAgxChEHAvckqUnTk7j8DrIFSTZCcqo/cm99Dbl2zstV1/WGgM/110DCzRsrbBSzoOegkUf8DDPvIRIMXifnteOayC5oTudSwJYzmXLP/1TPpaUf7cmjEcnX5sc4A3r+3gD4NQTwOXAewgo2PGgkRqHUMwyl9kGoti75b9WGy7bGfyMGg+EcRbV+6MGsC1M9sbwDyTou0wcXc3G54CHIOWOhFknZdEQVvH9PYs67FpIMmn0YEYhuHwhUkx/dQwg1pFv6iVhRcNNLS4ocY4IWj19r9LqP3kD46wYDkJeJQvwAz/EGiYmYiF6KphEhh/dF3n0I5AbZhvbJ+5R+50dX1Hepx8/PyfclCQjvOexnTnvZzdUFwuNWuFW7Sp2roNS+HCrNK3+ltvaSzfHfhsFgOEcBCdRUGxceSHsnIOkZUTp/INBAusoAMInGxBpn+HgpQ3vUTHA+huC925nX8UTJ9wmadyB8In193NM1dR8hff+M+dGFGJ0wwlH3ZC+fSknL89C1CrIeridinD2LRIzGNaTSuswhNgxOe+f3KnMC6J5saJ03r42BjGJwxbX8mstU2oL/rfC67tpyLkpEKPOsg6xnGNKWxV8p1S08XCl1rIn/NgwGwzmOusY1Jyt9WyHBpRydAdDEF8gxkCcRkid0T+xhstdM0g3Em5Ns5FxvEMJvITsh5pAvL0FRWSQ93FMHlfX3Gf0QMpS+qGfMS0ryDuh9iLZO5wdvO+lir9yNmlZC0rkcarpWQNJFE6dw5mxN3wao6SF5zY0+3H2YoPtGXEVNb1jlnXjSFm+eDYT8+/AzOLnJTwCTPnL/cTsan75RKPUNQ6l7CEptK75baVv46/WNS29uT9p74r8Jg8EwC1CuPf/DGPBNMNunF7N+RqimjzcAIoVogg7eKxKQ1649cbHco3V0r3kHEvfkmyPbYATIgw1BZEd8jviZEP39ZD3g0xM+xSzoux8l5OIa6lk5ViHE7s5x+9gIuedU5Oq97pC26WInHcsh6VgBxc7lkGHrXQtZ3yikPSNcaoL7iwahfz0U+te7jCt5/36U5b/nZTcKXov8hdvyx9IktGG3vdS5AtLO5ZB2DH2j2r7iU5WGha+rS4Yui/8WDAbDLEKl7rxDadtKt2B70KlRosiXZnYEKmQpWrMaEXi5QY5jD1dIW3uykk7pj5HfnrzpE41AkHqUkcgZGvke7u+vowmcn4FGFeH6wQCpZ5MYgH9GeV59vD6Hm+Tgi6fduQbSxkVfyhoufTCrH3hzWttxQ7mx9xV1zQvvzJoX/Urauvhvyu3Lv1tGCWbONBTnTkNh7gQU+9ZDqW8Eir1DUOxbC4XeEXc99+kkJDJ2zuh2r4JizyCUetdCsX8DFAbGodg3DmnXEJQ7lkG5bflXs5ZF/73SctE91fq+Pbh6W/w3YDAYZiGqdQvuSDvXQk2HlHRAkiMy9XKDSD0sOfjsFybCnKeuveKYtFUTGUfSJiUTJn8sfteSE7UgL4WAr/Qtfy731WfV6CCrGA7VRzYk9IxiPHQLz+sDxtw3kX4oDXOlk1fSztX/Um5c/Or6JOmI37sAJ9o1ZL3z6+oGxqvNI69MWxfeVW5Z9Ymsafnvpi3z/6zSOviVcvvaf0s7h76LhF7qWAPFjkEotq+AYtsyKLUu+17WOvjNSsvqr5RbLvuzcsfq381alz+UNi1+d6Vx4TXVatfKnqSnPb6vwWCY5ahvXH571rMZkr71RMAu04eblzNC1ooQay4OMMODjz1wRbBC4LJNed5+myfvPJFjiwOf2HIjDh070MSuWi5WkDMCiuBFKmIj4NIk9TPzO0CJxweLXcorzpJeC8XOQchaLv7b2tqOy+N3foYo1ScXt1eSS+dmWfeltWnHkjRtX1Yqta4slVpW43fcjvsbko1tSZIU4wsYDAbDDNQ1LX1vuXcLJANTXOKBA5KY6skGgOQXGgXMXHhFZKA8WQuR+1LKEbk6stYetejXcj8vG6nRRo7Y6XifPorX8HJOIOdA1rEx4ElQfp8i9Oi8ECfgOQHeKPDooHMVFLDhdxxd9I1A2j8Gte2rv1yXNi+K37nBYDA876itXfT2tHsjJH0bfcCRqnvipC+RgohQw8QnJkZdj4YJMZfe6b37QKg6119KIgip0nV4Bi0HNLW8lCfyKPXT/46InK+by6FXffbzBPwz8PFyLYlzyKxbf66Ke/B8CNdPl3q5Eko9o1DpGP9qW+M2WwrRYDC88FCuXvT+tI08e6lFI1ki4nXnSZcIksoXsNYuko1vikzd8arcQUTYRLDaSxfSnnlM7lzOBHLeP29z2S9ynB8F5DN3ctf0hiA828zj5ZxwX19e2R2r8+xlAtkgZdi0rPh6pbRidfzODQaD4XlHVjv/jWnbWq/zo0fr0wdlGUcJ/opUkyNINbMWm3jKnjBDUFeTr/PqpYSxT++MmjI8ROxC0OE6/nqKzEmmUgSuPPTQZ0mf1KOZMPrQgWaSfdT9+DySqejaLr3TvT9a5KbYOwpZ+4pvlOrPG43fucFgMDzvqKtb+rpSJ2r9o+T1IoFJsBcbBzHjSUbkIQeidqmUyiB4QsbfueJiMZGK564JOzIoXosPhkO8fJ/5E3nx+RIO4ToyOvFpq0LmOdKPPf9ohm/UN+mTNwJdg1DoGYG0c+13axsu2BS/c4PBYHjeUdcw+Pq0cwJqejZSfr+rTc8LuYgREDnIjQYwv5zJL5I7cmTIn1o6ylXIlPRMCQrHZKubkLcPPgtp873l+q6fIRuIArMciOW+0Gde2gkT1ILByM0FUM8VRgvhOjTJjVM9fW3/Qcg6B6G2eeCG+J0bDAbD8476+vk3l7rHoaZ3Pen8vSz1iOcfe+tIirG0kyPTEAfwhOk9d5ZFohGCEPsMI6BJPdo+w+ufod+ra+s+KtKnUUc4lp5Ze/+nuY66F2ULEdHTM8m6uzgRaxTSjvXQ2Lzm1fE7NxgMhucddXVDt2adU5D0UXE37+H7oC0To5JSxBvW0glJQUKQyjtWE7q0AdDX9uSa87KF+ENJhvy5erQhxobvx8FgOgbTL/U9IilITxDzIwy1NKIYvhnGRfWTr0klk1c5A1ro3whpzyTUNYy8Pn7nBoPB8LyjXL7splIrFh1bR3VmfIExbQD0TN+8F02EL2QvpKvll5mETt4zSSVh0pbsZ2LWow13vZkjAZ9v766pru0nmdG23ChBiP503n00OiCDpkYLIivlZB/2+n26p1T1HIK0dwNU2ta+KX7nBoPB8Lyjtnz5S4stK39Q0ymkKIFdaUK+a2nRFkd6iqzVEoc+NsAFxmbU2ombECkf62QUJmYdQyCSDyOIfIu8dumHPzackys+555JtvN9cuSvRhneWPD1IgNAQV5lIHB75ypIO1ZDueHS98fv3GAwGJ531NZecVPaNg41bjUvIT8kMPHkVaaPJ7yIgJV3TEFXdawvzxyOd/IRE6lfA0Bn+ETkq0lbTxLTsYN8YFZ7+rz/NMbAST45Q6HI3187Okd+Sz/YALgRABqB7kGaB4A183vXQrX5giPxOzcYDIbnHZVK1/5SGxIak70QnVvJi40Ak79L+ZTRgJCjJ10+T3vXor0rDT7XJOCqPWm5jszOzck/eSOCDQ1APjNHk3nchLDVbzX6kPv6iVuqnyInUX9puyzW7kdDeP9OrJC6wh1b6ZuAho4rHo7fucFgMDzvqFT6ry61rv5PrC+PAUuRWKi2j8rscQQpklCs0ysyVsHhQLY8AnAkKV45fyoDEbxzbqfxvgPBs+GJjI82AN6rz40K5B5iJPje3viw4XFa/iATvDqXDYXvq0zucscoI+Lq+A9BQ+Oaj++xYmsGg+GFhiybt6XUsfF7NX2T3rOWQKqs4+uCmYr4iCSDx+yzZXKEzuUihHQdwfMxOYLWpCmELMfNJH+aN0DfQzlopcdL/3NyjuoHP5sfUch9T2N8XHaS1/OVFKTiGbScY6iE6q7VN+Jkn7R3BCrNS38V4+rxezcYDIbnFVmxd2upZeRbhf5pqOnD1aSwrg9n+ijy94QvBKvJM2cUkNDVNteE+CPJRRp7/jpFMxAwfxeNPSoF4Ylfe/d8bJxJ5NJGvRGJArj+2WJDEWUBufPC9SlQLe+J19TF372jkA5MQ7V9xe9hzf74vRsMBsPziiybO11qWfXtAgZ83SQvTPXkdE/RsTUBe6IXQmXyluAt7nNLCOZHCTMmagnxatLlnHuftpnz6Nmo6OAuE67MH6C1bMWYyPVm3jNfa+g0WUDu+trTV5q+75MKNstcBp8aOgiFzpVuda1KxxWff7rFXAwGg+F5QX3lktGsY8M3irjAuBCxI+68vi/ZM0iUuhxCvg6O9uJVxo/ywoWMfY18fz/2ouWcXDZPbHjCvUmbj48jOYkWbeF7+MaE7UcQYbuPUziy5+vFM5z9NYLhoREBblfP2zkIxc5VUG1Z/jcd5cYL4/duMBgMzyvKxfPHs9aRbxZwMZe+dVSeQLJauKIn5fczmcdSiif+mZk+aABmxgoiAo2InQwAk7EjdWoSNKbrhD44r99P2GJi52Dv6bx++a7TTalFowpH7tRyUpM8ixgIzAxSQV9nvHD0hGvqdg9D2jT4/7UlCy+J3/u5AkigZt/g+85bcfWLR5a88k2vOP8NL/nZS9726ocueNdb/2v3e275VPt7X/p77e+76ffb73jZ73e+7+bf63vv63/jotte9fMXvOOqgxe+8ZVvG7z55v2DV9+07OaumzvjaxsMhh8jKsmFa0qNK/614Iq6UUPicqmdSIq+5k4YDdBqXmgQyLPGTzdBSxOj8vz1qEEMxAypRQeLtYEQA6C0dndNNhCBqOO6+hJ7YCPAo4P8qEWMDj0fGTk6lorBCaFLv+naVNOH++lIXwwAZwfhvt51UJgzDqXOtf+QposXxu/9bAYkUBzaeePlS972kpvmvXPvyTnvv+ZPOj50/X80HbgaGk5cC5UHr4Lyw3sge2QXpI/shPTRHZA+sQPSJ3dC9sQuSB/dCenDuyB7eA9UT10NdQ9fDU2Hr4Guu/f9S/+7933mop/efd/yW/ft27X+9bbYvMHw40K1tGhV1jT0VZQoko6VTJ4qaJsLhOJ3KvwmHnDIkOFjPJHy8ULmOdIV4tXbaV/I1FHErqUl3idSDAVxlQTDx+msI38NP5JQK3XlDJYeodDxuCC7XDcXQPaT1zggzORPdf1XOiNQ6JuAtHvkX2pr5y2N3/vZiP+X/ELtyK1v2jX/nbcc7L7r6j9rvHcL1J7aCukTWyF9dDOUHpqG9OQ0ZMcmITsyCeXDk1A5NAXlg5NQPjQFlSPTUD46BZXDU+53+dAklI9MQnZ8CrIHpyF9aBOkD2+G7MFNUH14CzQ9sAXa7939zbkfuOl3Fv30rW/cdPW7l8R9MhgMzxKNpTXLy23j/1zqG2N5g1MW2YMmr5fz4OW7ImnnLftAbSBPCv4SuftAsCZLZQRClo82IDInQJM67QsafGQY3DlB7sF+eRnJGQkVxBVCl/v3KslJGyoeBciErhzx89wFV5JCgsHcKEV0NaQdy77d1DRnLH7vZxt27759weK3vOI9A3fd+JeND10DlU/uhuzxTVB+YBLSw+NQPjAO5UMTkEk7PAHZkdDcvoPUkPRxf+qOmYTy0Qlqh7kdHIfqgXGoHhyH2qOTUHdqC9Q/sQcaH7ke2j52ww/mfOiG373iHS+/9cPz3mOBdIPh2aIpXbSs3LL2H0qY6tmLBd4w1ZOJ1xkBCniShy+reoWAqOybkd7pjqVzcqTOnvuM7J/TkH+c1um2yTGxPu/7En6TXKWI3McGwgjAyVZOumLjlTtHnl/WFdYGQAyWDvyyAcLWiUZhLWRtl3+/Wm3dHb/3swmjr3zL1IXvvu7B9vv2/0fdo3udh186PgbZiXEoH5+A7BiT/KFxR/wpkjx+HhqH9OiEa6Wj41A6Mg7ZYSR+MhgZ/j42ASk2PO7wuDvHXYf3l4+NQ+XYBFSPTUHt0WmoHsaRxVbIntwL9f/lGuh5eN+XLrrj+vddO/z68+N+GwyGp0Ft0rGk3Dj4lSLO5nVBXaxFj4FaqezJ5IaykCfZPAl7Uo7IPyf7eAIORC4NDYFexYs+1Xk680cbCd4n2jwFf9lI+ICvxBc0+dN3SQ3Vgd8ZRoAXZxFDQ99VX9D7d8RPnr47x6W60oin0r4GGmovvS5+72cLxq95y8T5t7/4t5sPXg3ZY9uh+NCUI2ok6PQgkzWS9pEJSI/g57jz6FNH/mwA8DfuRyPgjlMNSZ/Jv+TOo2s6Q4DXOsYN74kjBZSKDk5C5fAklB+YhjLKTb+0DWp/8Spov+eGfzn/zVfdsa1tf2/8HAaDYSYuKjUt/mIJV+5izd/r4Tm5JkptVF6/HBP0f24i+UTXyS/mrkcEcj559VLLP+fhx+TP5zjvXPrlj5P7qn65Y7AeULi/SD1yHmn5NCrwcw6ivuZmF7tyzqz7Y18x2N07AoXeESi3r4Jy/bKXxC/9bMBLJm6fd/G7b3io5eBVUHpkKxSPjhHRHx2jdngcSofGoXSQP/H3kXHv5VMjwnf742McsU+4TzpnkgzAYTQEdBze0+3H49AYOINCshGOGsonJ6Dy4ARUHpqGyolpSB/cCtlDu6D1ju3/cMmrNr3288mCLH4ug8GAk7ySbH6pZeX/LfVvomwfJC80BCK5CIm6Jtq2at5DVl6+O0c8bDlGZvDKtSJDIcZGyFzt1573jCwhn8evryXETdfz8g8Tv190Rd9XYhd8PVe2we3XIw65vhgUvqZk++iCcDh66tsI5d5hKNdf/Mr4vb/Q8YXkw+WVb33j3V33XvNv5Ue3Q+EEkvIYZIfGIMXmPPMx5507oj40DsVDY1DCdngMSkfGoITEjaQuxkCMhTMgwQDEx6Dn742EI3463p2D290+HDGMQ3qcWsbyk4sZHJiA7L5xKJ2chtontkP/h2/6zMSL37o+fkaDYVYjy7KL05Ylf5MObIKkf4OrS+NSObHQmyvvwFq297418UZELNuEKMU4zJhoFY4NkguTu0oDDYFdjjvEBiA3WtD79GhB7efMIJJtFPn7PmvjRcfKusM0CqH++mC3OxalMfH6dZE3lJXWOPKvbb3krfF7f6Fj//5bll9413V/WH1sH5QenCYd/iCSPhJ7nsipIemLAcB9fBwbAfTgi2gsnFfPnr0mfTzOXZOkHzIgcgx5/04mYuPgPtEgoGSEBgBHBvjbxRNQGpqAysEJqB6ZhMrDm6H8q/ug7dEX/WDxe6+/A5I9NhowGBrLyby06dK/LHVRjn/BreaFkoWs6BUHf4k0xYv3aZ98XI5Q4xx/OSYaNYT4gRgATdxM5rxNS0CSxeN+s5EiQp5pFMI2IvKcIeGWP5fvyzKXGAE/OuDjUNZy11AjAIo9YCxgCLKulVBunPOB+L2/0HHFG1/5xq779n2n8uR2KDm9nQKxnvylibd/aAyKnrSFyMkYOINwZAyKh8kAoNdeRAPgiJ3kHOfxs+RDja+F+5nY6Zo08nCfjvzHoeTIn2IEdMykl4YwlbR8YgoqD05D5dRmSD9xJdT90j7ovGvnHy3ddt3y+LkNhlmDcpKclyH5d2Ce/woiui4kcyZ/mdDFhB08cE2SRJRS30aTrqSK5qQSTcq5pvfPvL4nfp/OSUbFF1ZT1wmZRvE9qIXgMBmy/AQ13Q+dyaPW9sX7cg0jem4J+nLJiW6UltZAuXs91DVecSh+7y9kvD850HTpbdefanhgH5Qe2OSCrJi9E+vxnvwPjkHpAH8i4YsBEI9e9H4nCRHJI5kXXRYQNQkAU0CYidz9Dvdy3r7IQkj+MjJw8g8GjYX82YBIQBn3HZ+E7AS2aWpHpqD44HZo+ui+b11y855b4ndgMMwGdJSbV34O15slj1xmyiLJCYESGSKh6uaJOSJ8nw0jzXvK+cAvNZR3grTkyNzXD6L9/t6c90/3kNGAHKevx9sViVP8Ihwn1w8SEhko7f0Hj56lH38PFQcQw+H6n59ohvV90s41UG5cezx+6S9k7Fx5U3/f+679dPXxK6F4YgwqLu1SyJxlG+e9o2c/DsWDY1A8uJHI3xsAMgLk7csIQYxAyOZxUo2Tczg7yF17MqSIuvsp46HiCnhtyggKqaTuWj7LiEcWYhyw+QloE1C+fxzSj01A8cQ2qH9gLyy+7aV3xu/CYDhnUU2qfeWWwc+mA5shccXdZN1eRWZCzH5Clqrz4wjy9OmYEjx1RMrb/TXEcOQIWhGnNi6O0Pm7pHSqY70kpAyAO8ffIxibkOUTiJ+km6hP2vtXBkDOdffj0hZhW4gP1PTicw5D2r0WSg0LTyVJUojf/QsV01vfOdR3x/V/Wzy11RGqk3xUkNZ56IqQiwfJACDxk0EgqcfJQF4OokaGALN/eJLXUb7+oXGn0yMpuzkDxyaJqI9iBpDo/Jw1hIaGpSQZXYR0UTYu7vohroDE74LHPIJAA+bmIhzAWAaPQB7ZBnW/dD30fuCmk7+V3FCJ34vBcE6hNqntyRoX/wl6/knvOqrtw/V7XJpmTu4QYpQ6OESYQRISeSR4xTpdMnjziqQliMrneTkmKszmvXnuD838Ddu1FEUjB56JrLbL9f29nYFSK3752cNhBJLrq7+PPJ8YCbouviNv5HA7Fnfrn4C0ffknz6bVvAavffl4193X/VuKpRsObaQMHxe4Fc+fiR/J3sk94/zJ3r0L/kapoHiMyD7uGkjqk+57hjEFNDIHySAUH5yA0hNboPj4Fiid3ATpoWnI7p+C7CBq+XT9IA2FEQZ5/nwPJn8aXXC6qASX/QiEjQkbCZc1dHIK0oe3Q/YL10L/u/b92vuTsab4/RgM5wTqkqQza1j86RJO8pLFWxyBhkXbvZaviFRKOgQCDjGBQOpCupFH7Uk1vx/JWrJqwjb5HsUclCfuRgV8TX++ukYg8DyRe62fn8cbrBnHk+ETo0Lkrwyc61vQ/OV4l97aOwJZ25LfnXcWrea1/Mbrp1s+svcbxYc2M5HG5D/hiV9In7x/TaxaqiFD4TV/yf13+f/8eXwCig9PQ/XhbdB83xR0fXDbl1s+tOUzXR/a8YWOD+78duPB7ZAd3walQ5sgO4wTzZDQN3KwmNNLnVHgNFQ9UUwCw05K4vvrPqLxcLEDHEGMu9EGxgTwXumju6H/Z3f87oeTqcb4PRkMZzVak9bG2pZVf1jsHnX1aAo+aCmeOxdyY/J1zRE7jgpou3j8XoNnUqRgrFT/DIRLx5BkdHrdXhkGqbcjxM8ePy3nqI71xkgMBRsGde0ZIwEkcCdZqb65/rFBiIyHSxP15ypj4UYMmO5JzdX16VnltmP2VKnlwv95Ni3osmr/y6baPrLvO0jG6UGc2MUpmjJLV0hTNH7n1bMHLp6/iwWoY9gIOA+dr+Wuh3WBDk5A8fgUlH9+B3Qd3vUPl//sle+dvOWq1e+95C1t2J8fJB8uXztx7by1r7zyqr6f3fZfG47uhPTxbVRAzpG5SD0cBFbZRmRsZJ6ABIXzshWeh1lIfkIZfvKEsuwAGrppKH5yDwy8/+pPHTM5yHCuoCNJ6mubRz6V9k9CgmmemmAdyUnGT5B3PDEi8fllDtXIIOd1K/nExwCYYL2XnSdZ37ynfbr99DsYgNB0TMARvjrfGRCVqhkHgSXW4D5FvvHHht/5qqDcNzEAXv7C49dDqXnl52uTpCd+9y9UbJi85YqOD1/79eIjm6B0eCOkBzdSeqVk+6C3fkC8eSJ+IVqt9ecMhDrGNZ/ZQ7N6i8c2Qd1De+GyD/7UkTfsOdYd9ynGyGtesrXt6O6/q/n5LS6AS2UhaB6CGxWI9y/yj6ov5Ecvqk9oIMgAqIlnuB1LWKAROzwOBaxp9MtXQ+979p+I+2MwnHVoSpqaqw2rf7PUM+E0f5fiyRJMIGpNnkyqXvIIOryQcp6whbTpu4wCJMga6vILySoi9qMFuY5cN28ActlJLAnFBkATuO+XXN/tl/ueTu+X0Y6QvUoJ9aMFGQHp4PAaKHaPQKn1ir9qTpaeNbXpJy/fd17P+678/0qnNkMJNX+c3MXyjiNU1vDdbzfxi4lfmsg/Xgoi8qcUTTEAIae/dHQSCsenoPaBK+Hit1/9prg/T4fpHddd3Hnf3i9j+Yn0Y2OQHVwPpSMoB7EM5OoPUfqoTxsVAxQZI28gUP5xk9LYAMjcAjQqJ8ah8OAWqD6+Hy583VUfjvtjMJw1WJYsq61tWPlbaQ8Ge0eCp++8ffH4iQgdoYpnG1XC1IFU72l7fV6RaM4o0PmxvBKkGtpOsYBwDnnoivzlU4LFXVxmWSZmCfl7AxBSOv2iLHxvKevgMnZyowe6Dxk2Tf4cHHfGQ0ZAeD26L5J/2nbFF7OG3vnxu3+h4pNtn2w4713XfSZ9bBuUDm+AMnr+PrhLMk9oqPeLZ68md7HU4whfHeMNgBRw4+JwRZxLcGoXzHvnTSfj/jwTbNj3muHGj2z9dum+MSjfvwHSo2QA8NrZAbwP1wZiA0ATwqi/EiymOQec1cTGA40ZGQie3Yw1jdA44DyBo9ug/siVMP/aa18U98dgeMGjP0mq9Q2rfi3tGiWSR+IUuUXr31K8zKd0aq83SB9E0uEc8YJzWTbsMUtMIEzGCiQcjAAd70cMnnSDN05kTeeG4LOef6AMB/fVGxg9ElD3k5EAkX4061jkIe/5I/nTMwSjhPcfoqUc2xb/c11d5+L43b+Qcck7rnus8uQuKB7DOv1Y02cjkZ8jfJJMAqGjLk5evpeAJMPHyUPi/fP5QvpsSNzo4SDKKlPQ+bE9X3rLooda4v48U8x73dSd5QenXPqo8+CRtA9QSqczPGgQJE7gvX81cQ0nn6EspDKbSPLi/nP8ALOT3IgC4wEPboWmj+z995XbrlkQ98dgeCGjXG666BfT7nWhlo+vT0OebSAz2i9E6Nf39TKPIm5nJNQkKT+jNpBsOE8INZBrnoxxu87Fl+vL9chQkPfNhoqvEbx2+vTZPX7eAl9HyF4MBqeAhoVo8v2S49w1/LPLflocBlM9S/0bIetY9K+V+vqR+MW/kDH8sptvaTq5D4rHMNWT6/S7WbNa4xcjgL/lO8cExNtn4g+jAyUDsddPmjsRa/XRK+GK99zw03F/zgQ7pvZd2Pqxnd8uPoLrDrBxwQldeD9J/xRJh5/BZQC5Wces+3PZCckMklnFQv5UtI6MgjMERyeh5hd3QdcH9n3OgsKGswXFtPHiJ0s9GyDpHgm6tZQndqUUwnq8YgAoMMzGQUk3WmtHAg7Ey0FkJlDynJmsNXn6AKwQaSBjOVcHef3kL3WO74ucKxlAMXmr69Bx0tcQJ5BFavSIJjQZzUgGEo6OxBigUVwLpb71kHWs+I9yXetZtZrXtm03Luj9uT3/nmLN/INI/uSdywQtbwC4uUAve/WU5SMefyB8bQB8zr8YEUegE1A8OQV1h3Z9f8MrXvGcR0rn3Xnjr5U+sY1iEvdjCQrqh/vtyJ+LyMkEMhd/CPEB1PxlQpsb3bD840cIx9gA8PwCZxSOb4HKE3tg7hu3fzTuj8HwQkMpa5r/aBHJ32X78KLkbj1alndYmtGrdXmvOyf7MMmycXDePLYcyfL5fCx5zizFCJGzoSHpiQyC1vwDeauSC2xIyJuXY5T05FNFJauHjpcRhA8O5wwb9YHSVek9kOwUjADNFWBD4Ff8YvmnZw0Ue9ZC1rH6P+urC3fEL/6FDEig5vz3X/MHxSe30QIqbiYs6edIohQDUBk/YhgwbdMRapCCnEzkRwAqIOwlFanrQx534YFN0PNzV3/10MSh1rhfZ4olP33jbbWP7qS+3kcBatcPIXJlnMgo8FwAmQ/g0lEnw+Q2bxho3oOXkCTbiA1J4cQU1B/YDSuuu2Uy7pPB8ILA7UlSyJrmnyr1roeanlFPgLKOL5IpEl9u9S4mQJkk5eUY8Zy9vh+88aduTNoyIlBZPkKuORkIv3uyxlIKQtp0vyDBqCYGINefuK/isYc+hT7oPgUDIkYsGABuqn+l7iFIO1ZD2nD2rea17KeufUkDLtv4AK21i+TvNX8n2XAGEBsEIng1KhCSV7EAVwdIjxp8QFU8a8r+KT64DXrv3Pe/0AjF/TpTLHrDzltqcYLYfeOQYkMDwMXnXF/YMPkRgQ8KT4SMHzc6obRU2h+Cw24eAZ4r8QtOOUWprHhqO/R+aNvnIVmWxv0yGJ5XIPmXmy55CD3/GvT8HQkKMSoS1JJIzpNXpOyIVjR+3qcyavISDY8MIrL1RBp7+u5aKrbg6+qQt+2D0P74mUQv/Zf70bPk6wQ5oxZNTAv72KPn+EVuFMDnUQorL4HZjQHfIUjbV0Kp8exb0OWa4df09N695x8Lj2ziWa+qvg7n+1M2D5P/AQrwavIXqYdInz1/T/5SHI725a7tDMAW6Llj/59Ccnsp7tuZYv5rt/xU7dHNkN43AaX78d4hHdTLOjIJTYLBkVESaUgmvGFg2AWHVfBYFrqROAYageLRTW7B+3lv2n9GaawGw48d5aZLTpZ6xmglL0duQpxCZCFw62avslcbvOnTE22etKVOUJQR44lVkf0MKUmNOvR5OSOhNXzdD3UNZcB0P6lSqDIeEhTGfX5iWvDmg3GT8/gY1xc8F5dxXAs1fcNQ7N8IafdqyOr7z8r/+Be/Zv/95VNXOnIss6ThZBCvgYt8w8Qdaf1O2/fbWP6R73yOJ17+Hoh4HGpOTsKcu1/01d9b+3fPOgNIsPTNN72renIrZf9gH7gkhF+ARslR2Gg2smwL5E/EnpeB3PESx4iDwu6YKag5tQ1aPnLNN/cNHx2I+2YwPC/IGhYfKPaMe8/f56t78seVvTiY62IBXALCxQQU8SnSdCQfee85UlYjA30NSt3UmT1xw+1BrtGGxI0AZGQyY3TyVNujfslvKQwn2/lZJJ8/f//QJPtHsoQKfesAJbViw9x3xe/9bMDWK195WftHd32nBqWfg1juAHVz0vax+YCt8ub9d20ITvedi715w6GapI8imaJ+3vDRPV8fv/auzrh/Z4oLf+Yl91Ye2UFGzPV9Y9D+XXYSkboQv1t0ho/VIxOJBzhZSBkAbwx5RCBzBkgawm2bIHt0Lwy86WX3xn0zGH7iqDRc/rFiF3r+I+RhuwVdiAiprk8o70ABUSY/PwoQ8lZ5/55QT0ewMdGqY+LvrKujZETGRM47TWxBlWrQ99OevvRfpJswoggze+kd8POre3gpSdckyhk4NpoyKuBAdal7PVQal561s0Hnv/PaR9JPbHEk5oK+qG0rjZ+MAHvyyqv3+f8x4XMaqAvCRqQfyF9mEjMJn9gE6X3T3+5/yei8uH9niq73bHui9MR2V1qCJphxiWjdT28AxNuXkUqQfSgriEgejYCTgJQBkNgAlZqWgnM88e34NDTeu+s/tu+7/by4fwbDTwyVxst/Lu1GzR9LO3Bp4pjU3WpeEvwNBKrJX2cDufN8Lv7pmhA8X1tkHiHT036Pz5/5WweOA2HTfkfu+N0RNPdbJrSp6zkDwCSO78G9D5+WGvru4hMo7/hnpnN8hpFbzQtn+Y5C1rzkSPzezxbctOOmi7s+tuO7hYfGIOO6Od47dxOdeCTAZO/z9yUmgNq+9/yDly9rAND3QPqeiOU76/CF49NQf2wrTLz6+ue8GPvAHVf+Uc3jW2jNXzEyfl6C9CPvzfsRTo78T+P5q+8oXZGx4AC5myuAcwOwYN4kVH5+J1z0/t3vj/tnMPxEUG1Y+r5S10aWd4i4nOcvOes57zYQpZdRvLcbiNpnzmiiPW0LBO/LKvN98kHXpzIA+hwVRNblmuV4fZwq/aDrFJHR4/6K4fKevMQwwvHuUwxALjuJz8FKqR2rodS06BQkyXPOXHm+cNnbrv5I9YkdjvCcARCvVhVnoxmvwRjk5BwlFWkPP3jbXB3UzwUIwVi6FxuAY5PQ+Mh+GLv9HbviPp4JHkseK/bctfcvCqemaR0BJ2dJ7SK1Epiai+AkIDZ4IgflyT/EBDz5cyxDnsl5/5xplB2jCWKFxzZDyz3b/mli1Wufc2qrwXBGqNZ335y68sxU1VPKOAgJey9azap1BOuzd9SkKWcwAkH7HH82ADljIqmSisR9nEB75Dnjo8k/InU535V+kMlZaiSSu4YieSFx90y8nd/BDE1fDBQ3vRAMPSe/HzEKvaOU8dN03i8tS5KzNt3vzS0va+q6c+9Xah5GsqTVt3x1TNa/3fKLLhjMHj4bAPR8Kb8/kOcM4+CNgIwQhEDFAHBdHfc5CdVHd8EFt+95TjV19iTLmho/MPn3pYewdLWqVCpGQI0AaJLXTAkojAIU6WvCd0YjxBC8UZHnwRnUbhH6TVB58kq47HUvvTXup8HwY0N95byRSvua7+LCI+TZs+yDRCa5/I4Y85q/TwX15BoWes/JQnxskEyETOlc0do9wUb6um98rowIvEcfjTpmEL3bnp+IllvOUY71BE4GQIifAtB0jDtP1RSS0QEFeSUVNIw+kPxLfWOQtVzyqR5cOO0sxqpbXnpDw4O7oYAShiuXECY1CRG6kYBIJNhUDEDknzDxS48MmDSZ/HOGwcspYWIVGoDKYztg0bv2vzPu55lg3+X7zmv64NS/F08o+UcmawnxizF6iqCvyDvUT5G4eEazGAM8BucVyEjGr0bGtYYwLnB8CoqPb4aOO/b9yW8l8JzTWw2GHwpcaCRrXfp3xT6c5TvMNXkkGKo86NOQuiNJ8a4dQTJRerknkH+ehE/jUYtEIyTtjleGQks4ObKPt0kMQcUR/LEh5RNbPugbyD8YtzCKyN1LLybD78IbTG0Ue4ag1DMMleblf9iWJA3xuz/bcN5d1/566cnNLl0yu581fvaMxTsOKZHUior8Q5PRgRgC9RkZBG8AnPRDTYKtlSd2wuBHX/Oc4inj+1852HbvLmdYsI7RTK8//5vmKrCnL0FflniE7Gf0XQwAVwpFQ0B1hnj1MWcIyLAVT0xA3ck9MPS6162N+2ow/MhRaZ7/8ZJbw1cmKAXiD569eP+y2hdn+ziSD4RHBdtUENUfEwiRrqnI00swmji5D3Id/gyjiJDrL56488BxJOEkFx2MDV67J34ZkbB8Q0ZAZC/VH2+0dF8kIyoyhq40BhkAd73eEUj7N0C5bdmfdiQLfugiJS907Bm7bk7rvVu/XTiFC6BPOiPgvXsth0hWTET+PitISNIbAWkRYUrw13vWXEPH59BPOrlk7vFrDsd9PRPMv3lssuEILgyDFUHFuxfCDzWApPnJar5f5PXrvkvgmnT/OH7B6w5LFpBvFAzGOEr5Ezth4V1Xfyjuq8HwI0W1OvDytBMDvijdkAebYBzAF24LKZea0H19f/GWmbgLUgxOSF68Y6+bKzJ1+waZjJl0vfcfjIXX1z1x8/FsJFz/+JhwD1mbINTwd94+38d/8j0ozrCa5jPovnhjxAaC8/1lxi+t38tev3+ele6z1DMKlY41f9Za7euP3/vZiMtfv+tldQ9vofVu0dP3hD1TE6cZvLKdj1MkTyQasnsoPVQMBJ8zo/HkLFy0xcUBJiF7cic0HRr/+bivZ4KFrxm+pu7kNJQPTXvZKXj8HARmqcpt031SpC8ymJO/PPmHY/UEMb+uAGcIuRLUbADKGD95dBt0H9z9l59JPnPWxosML3C017b3ZC0r/rnQjbIPr0XryA/JUNbxpXRPPwpwxEdkJ94yncOeuJZfHMnrUYCSVLw3zZ60fHdSUfDu88FbPob7SXIRGwmdNiptxihGvH8OYvvj9LPpEYva7vtJffXxAzleZB93/UEoda2Acuul/9DQ0HbWLOjywzD/Z3d/svTEJi+TCPmT9h3JP97bl+9EpmQIlDctJMm6vxBq0NPZm9Zk6zRzNAATUHx8Cwx8bNf/hgQKcX+fKVa8dd9bak9thvLBKVebRwwSTQpTzyA1ivy6xTqrR0lGOQMWj3jCc5AEFGQgMQxlPOfYJmg6eiWsv+EVy+L+Ggw/ElSbFx4o9aLuL5k8LK8w4YssQsQWSNSVRxDS0wToSTCSgnQuvDqGCJpJ1pExGxYJpPp7R2Qs8osPBqv8exeDoPP8Pu/FyzXDdYP+H+7t98s53iiEkQHVJOJRAz87ykJ4PVzQJWu97J8bGhpWxe/8bMWtc29t7rp725cLD086A+AqZQohM8nR7yD7hCAub1NzAwLh6xx/RfL+k1NAPcHygi2ONCeg+Mhm6Dt09Rc/n0AW9/mZ4vy3b70zewwNAE0Cc/eW5SBZ2vFSDvfLGSg+Vp+DI5sQJH4KI8DPJamlXhpieYsWjpmG6sM7Yd5b97wl7q/B8JzR3XbxikrXuh/U9K2nxUjYWya5R0hWvH1FxEzaOc8c9+MMYFkgxpGnXiIyZBA5ovRGIhxDC8UEWcgTrowwdAlonsDlydoZgNB/GrXEZC/HnmZUwZO78qOP/H4X83Dni1GhJR3JkMm7GoRi92pIW1Z+s1KpH4rf+dmMwb0v2tRwZCcUsAY+k7LPjedPzIf3pCZSEEsnjkBVxo8jTZaBRCMXgiXipeO0Vk4kK1lHLKk8vAUajmz/p4kFu5913nzvT4+dKD2+xY0ARPahfmoJi42crxGkCF0tVOMrmXryD0FiGkngp5a+aAQQ0kFxdDMB2eFpKDy6Ddrfs/3X4/4aDM8Ztc2LH8OFXTBQiQFTJGPXkNBynr0QsQRfkTyFuNlwuOPRAFBsgKQhJNFhVz7apZb6wnFiSOh+eIwOPhPZs8Sj4gz+/mpSV47ghdT1yENp9s5TZyPmDQ+Tu7T8RDAxbqofPOKg+3N/ZRTB/Uo7Vnw7q718c/y+z3Zc+Kor35ad2uY8X1zwRSZjOVLzqZDaABBpSv1/PwLgAKrM+nXf3Tk8K1bp745UMWB6ZCPV1UdDoPZleM+HtkDj0a3f3XLVrkviPj9TXPgz1/x24bFNUD447b13CsqyEVNk77J4HIkHY0bHB9lHB3190Tj/TuQ5w/NSLIAD22gEMCX02BTUPLwZWu7a+Y/3dDxWH/fZYHjWSNPaJWnr0u+5CV+ik7vaPkzEsQGICDj27oUoazpXQtK5HJKOZVDTscLlzhf7N0DNwATUzJmAmoGNUNOPI44RKLgCc2ggVKDWGwA18oj6EFJOoxGINwJhJi6NAgK567iAyDf+2rI/NiLi/fOoREYecm2pFlroGYW0Y+3365suPasWdHmmOO8dV3289Phm5527Fb9kBjDr/jntnz1mn/XjvGT5riWgQICeNIVYeTlGt88FfvNSEI5CcP2B0onN0HpiP4ze8uZ1cZ+fCSBJCl3v3f85lJIyHAH4Z2HCdpJWvp/BIETylfb6tUzkjQmTPRs7Gf3g9bQc5ALEuOLZiWlovGfXD9bseeWSuN8Gw7NGWnvxzxV7NipvHxtn+niJhD117SEzUVJFSzEASOLDlHaJZNh5BRQ6lkKhfQVk7SsgbV/+H8X2VX+dtY/8aalj+P8UOpf/fdY1+IO0dwMUeoahyKMG8rJZZnFedSzTiCcfEf2MQK385kJ1KlZAIxjx1jk1NGdAZJ4Bne8zfdw2fg96VILbepD810CpaxBqm+bdGL/rcwGfSQ6kfXfs+bPio1jmgchXlzvQpCm6v9TxFzKXJnX/3TE8EsBGso4Qo5AnGQXKmAkE6UgSc/YP4yI0W6Du+B7oeuO+LXG/nwnuShbXtd659W+LD22FDGMAmry1QWIip/6S8cqlqbKxoHNPYyiieAfNB+B0UGfcaL/IW66i6MkpqD91NSx73c9cFffbYHhWaE2Sxqxl+d8X+tAAhHo/RPCKQLWHLQTMdYHoOCJhJ+9gHKF/AxQHxmh1q+bL/l/WsPRjWfWSneWk8wJUnPYkSRFLIOD9a5P2pVndwtcXGy/9/WLrQih0SAaSeOhkXJzG7vsRUjcdObugL49AfIBX9ou3L6QeGwlF8vFoQpN9fCw+t8v116OCtVDsWA7Vhp7XxO/6XMHLht48p+2eHd+seURKOuQlEpkEJmsBeA1ckXzpgKr9L4u/sAzil36MPWkmTE+KeE8ceaBOjqmobgWyLVB5cAf0v3nDTXG/nwluWnRTf9sHd3yzcHITGwAq5ZyXbmSJyiDbaEOWz/oR46ZHB8oA4KccJ82PbrgqKMtmpWNTkD65F+bd/vLntOi9weBRVzlvb6l7HGr6cGnHvNxDBKu9bCZXJlin7fNkJ0eGSMB966BmYByK501D1j301bqmxa/vTuo74vs+Fcrl1vGsef6nUjQk/eOQ9Kzj2IEEWdfS3AJZdyA3ClF9zBG36PkhOyhkNAVy96UalGxE20MdJBopkCREgWxZ+AZz/VdCqWMt1NYuekf8XOcSxm961Ybm41dC4SQuYUikhoTsJoPlDIAK8ubIUypr0lKIQpDFg6rksnjGzgCE/HgyAEyMMhHsGGrkWIgOM5K2QOXUbrj0tpveG/f7mWDp1EsWN96zAwrH8Vo0AiADoA1RiFl4A+A9/LzXr8/xTeId+hpM/jK68Z/+eHyHU1B65Eo4/92vPBX322B4Vqg2XfpwqWc9JL1IslpCoeZHAUoPJ09cCr9Jxg/KNWug0LceSgPTuKD5rzWW+591Xfa6hsHXl3vGv1fTP0WykidsHhWoYnTBy9feu2zPG7GkV40kZBQh3n3uGaP9YgCcFCT30DGHISh1r4Zy05JzvnTvvNdOX13FAPBxLu2syj9g3rwYACI+loJ4sRQhQC33EImGEYBbflERK5GjEGg43m1TJRPcCODwFsge3w3t77nqvrjfzwQX7Bofqh7czAaA0zGV8cqTufRR6/v4vFzewWc05Y2aNxhq5OOLwvG9vAHwown8nIL0gZ3Q9L4tvxb322A4Y1yQXNCUti77Rwq6CtGrgK7ygqVRvjuSqHjBPBu3cwXUdCyDtGMY6hrXnECJJ77fmaI269uUtq/6JsoqiaSUeimGPfUZhkCMFXvvMxaAEeKWZ5t5rntGtT0YCT3hTKWIYp5/9whUWi79aPwM5yKWvmn/m2of3k7pia7EM5GaaP95SYgMgzMIIptIsBfJ8eDGQII5A6C8f02+volh4LgDpqO6hVU2Q/HJK6H1vZs/Gff7mWD5i67bV3tyBxT52fz93bPM9OjJgNE27/EL0fu4Bzc2dvpZtSEQg+LfjZO4eKKbK6g3BcVj26Dn/Tv/GpLPP+t5DgaDQ32lfbTUvoIWckGCk7o5sRGQwDBLLWIESJbhkhEdy6HQcQWU6hY+Ed/nuaBavWhX1jYIBamrI566KzFBjco+qJiAGICooqgQvs77n5lCmm/588NogGoJkayU9g5BtWX+ibjv5youe9tVH6w9td0RvDMAOk1SvFgmwJD1w+UTfPAzEKCXQSKCpJYnRJf9w4XThCxFbnL3P7YJkk9ug/PuvvHTcb+fCS675ZZbq4/scSt3kQFQhM+GwHnrypOXwLDvqzJUROzUfyL6YBScvCTPKLEQmQshspdUOnUGYBJKx7ZAz4eu+fID8365Me67wXBGyOrOfz0uQk5lHjinniUSqokjQVfxlJFUWQeXdYDZYBS710K5ef7nm5LkOS/IHSOtXvzu1KWojlKfekWiocliVLyNRgh5IyATwkLNICFzt4C7yDjaCHhNPwSYvSTEQd+Cy06iY7Ku1VBpuuAXz+aa/meKntsm7q+cwtWygqzjDIDS6X2TMs4q88dp+HycNwBKD5fJVZ74mUR92WRpfIyfC4BEfHQKap7YAm0fueb/3J7cfsblIAZev+Nd6WM4vwENQLiHGBoX5PaEL1IPjxD8s0sGFPU/GEQu/SzGTBkH/+xSE4nfp18zmA1A8fhmaL5nx9c2je4564sJGp5nlOoveaDYq/V/Jas4rVvkEF2ALaRJOlLEcwfGnATS1NQ7Ft/jR4RCtXPws8U5k5D0shHgfnjpSorTCcHrSVyK4HUaaND6OSjsA+BYwE0ZARX3oOsPQqFrJeBiOdXmpb/ZlXTVxR0+l9F+24bj2alNnnhFjsHFYDwZC2nmDEDw/AOpRuQvowJHvPo3G4ycERAZSAiS1twtPrQF6u+e/tL2psub477/MFzy1j0PuvkNuBQk9vF0Rk2MDfcnFyDOxStCk0wo/yzyPHEwGK/tDZyW0SjNtXRiEzTct/lbG3ftwmw6g+HZI20a/J2a/km30HvQ/FkaYcnHySC+gmaYdevXBO4bhtLAFFQ6Vj+nCow/DPX1F+/I+qYh6V1HfRRZyjUmetbwvYfvSF8HhrEFAyF6f9gvMk/eAIjsFUZCKPsMQ9a88veTZP5ZX9P/TNF++4YHs1NYKVN5uTgRSwifmydAKZesPd6c1ytBX20IMDawMWTTqPN9RpGUS2CZhALPk1A8NgUtH9j6nd1bX3vGSQgXvfvGX00f3xQMgOTmK1KX/nj5h0cBYgj06EZLWHpeg34PIgm5xsbMGzYXP6FPNAC48H3DfZu/s373tnOmqKDhecC8JCkX25b+RTIwSTq6Cor6YmZeG+f0SZaHaHTA2TW4wEn3emhovuTHXe4gy9pW/GWpd5TKU3NWjoxGcgu+OHKX2kASDxC5h2Ss4M1zUwaPRhUiB/F93LPSdUq966HctviPk6TxWdebOZvRfvuGk9kjOAtYyTqY0qnJX3LXozLPZBDGoHhgY077F09YDIonSC8HCekqb9uVSmDydwXT0FumNYgbP7wfll53x/K47z8MXXfv/v3S41QCggyAjC5ohCH3Ji1faf9uJKAmiamYgA4Uy2//TnKjh2BQcZ/z/n2AnUYAaAAa791iBsDw3NCRdHRXO9f+syvFwOTvi77lyiOTLIRaen5hFQ6ydq2CcuvyL8+Z0/Qj1/5jZHULDmNlTV9JVHL32UOniqPipSty11JQzpOX+Q7K29cjBzQGnOJKxd9WQbF3GNLWy/+ipVIZiPs3W9B+29jxDGMAbsH0cbdmrnziBK9gAITkKFPHEZkyAloS8lKPTg3lom9+NOCJUUYAFCR1RkBIGg3AkSko378Lem6+Zjju+9MBktuz7g9u/0LhMZoA5jxv96nSWkUSkuaeRwWL3TY6XgK+esQgxiAnBQn5KwMixoe2ywphE1A8vgkaPrr1W2umpi6M+28wPGM0ljsurHSs/pYr/KblFEeYKh7A3ynzh7c7Y4CkuhZKXcNQ27L4J5KXXCif9/JCh/LqXYBX1R9STdI/vXSlVwRTQWOq+hkIXkY8/prOQKx0RgCNT9q65Ev1Wf2CuG+zCV3vmDxQeWgzefv3j0PpfpzZi+RPHmswAErDPijr4gr5izSkvHu3XclB0ngUgEYgl/0j3rksvi4keWwKKsf2wJLXvPSGuO9Ph9sX39XZ9XN7/rXmYdbbZQQgpK4MD8k0OhYgRk5IPBgF7/FLwJifyRkECWTnngvvFQyglIbG7RgEbvnQ9q+PLd3fG/ffYHjGyLL6S8ptS7+LHnTeABCxh0ZBYPGmZSUvbBg8LvaOQW3z0p/IUnXl8kVjGc467qWKoTipyweEtcfvUz01+fPcBTdKYOPgvH61lKXOEnLrIPOxXRj0XQOl1sGv1NYumvULcsx9y/Z7qg9sIbLHkg5I/iwB5TxY7+1HNf/FC3beviL8A/RbtnvjcHgjkaFk/jBZimfuDAGSr5sHgIHSaag8cjVc9q43vjHu+9Nh9ZZdl9Tfu/V7hZNBexcD4J/He+xE+CG4G0Y5/jj+HktA1N8wkhHyDxITp4BK9g9+OmMwAYWj0zBw196vfmzOQz/2EbfhHEaW1V9ablv6fRfgdUQX5B5N/rGkItUvnYfdtw6KfeNQ2zz37fH1fxyorU2XlbHSZv9GWqyeid3PY8gZsUj2cUaBZy/nDAaTvshKrPv7lNEuNIDDUGwZ/Hqpesk5s6DLc8Flr937rtqTWxw5i7fv5BJV4dPLGW5/0LIlLjBDAmLvf4ZRiEYB9J29ZDY02DIM2uJkMGwnN0H6ib1Qe+fu2+O+Px02vHjv+vrDW6BwQrxwLcOILENELyMOInVF/srr9wZAG8Oo5a/L56tUV5G23JKbeK1jm6H//du/AAmU4v4bDM8YzgB0LP9eAYOqPKkqFFQ7nawSyF/ItKZvhEcAF5zRf7Rni2q1uryM3jgWm1OjE1fl0zUifb/6GBd+82WgVW0gFwh2z6UkIYkJuHkAVIm00L0Osvbl3yrX9T2r8sLnIs6/eeymysktUET9nT1xkn5E5w8zf6U5TVyNEMg45OcAeO+fS0E4Q6DiAW6bkKTcw3vUTP5YD+jEZsg+sRda75q6P+7702Hlq2/a3XBsBxSxtpAjeTXpLI4FiOTjiTtvADzxi0TE2T9iGKjvejEbOZdHMYr8ycjRjOv0xDZofve2T8V9NxjOCE1J5wWVjuFv1fThEpBC+Er71nWA1CInIS5Av4tIkE2LnlXdlTOFk4A6Yg9eqpGiUZKVxMIIxs0H0BJPlN8vBgOfj8o9S4AZJ3ythXLH4A/qm/p3xn2Zzbj8hhs21x27EgquFpAOBKusFTYI+Hm6YKg2AEWUfg4g+bPnr0YGYaQghkONBpy3HAKk1CYhO7bZ1QOa94Frfjnu+9Ph/FdNvaTu5FYqLifzDJSXT6TNhO8zgMQAiMyjRztiCEKA229XhsKd40cUPMLArJ8jFIsIUtckpA/tgrnvfNljcd8NhjNCd9LdUe5Y9WVnAJzHz4TqST8smuKLn7ng7zDPFiajgHXvq43zfw9jtPE9ftQoVee/uoAGwK8TwJ6/9+T1DGYVG/ClmgehIJo/P1toNPlNJpYVOtdApX01tNSvfHncj9mOHWuvu7jxnp3frnlwEtKDk+z9h0lfFAtg0uLvnuycFxwHg8MIIEhCHANgY+BkEqkl5DVyXgzep4LiegBYEG4K0ge3QfvP7flfcd+fDhfetu395ce2cFZRKMtMGr14/3oEQJ9oBMLIhPupiF/LQXhMyADSgWa6no8LSJE7MWxHJyE9Ngnpqb0w7003vifuu8FwpigVWhd/PundGIKdKHm44CcbAk2O0jDzxi+4jguer4Gseek3Wiotc+Ib/KhRbljwRFH65/P1RePX8Qv8LQXrRNsPRoAMCEtB8tx+VIOprUj+g5A1LLo17oMhSe5OHq1233H1F4sPT0N6AI1A5CErCchLJkKATP4+M0bLQFE6KBkDKgwnBkBiAJQCqieCEVFiLKCMhHxkGpoO7fre5O6bn3G+/JwP7f8fhSc2Ue0dycLxklbQ6injJ3jrjtT93AD1rPq59TZF9HKdEBjmEQCnuLrnOoYNVzubhLqTV8OSV7/6Wa11YDDkUGpY8is1WG+fdXAiS54FLLNrff17Jbv4ACtuo1TQuuZ518TX/1GiIelty1qv+EpRp3NKGqh4/kz6VMCNRy5+FKAJX+IBOgOIYggY8C13DkGlftGb4j4YAvrecc2vpVgR9L5JkoBypIfkrwxATvvW5Q/I+/fauGo+AyjaTvfIjwLy8wAkYDoN2eM74LyfueqhuO+nw8brbt7SdnwXFE7gHACetesnpqnAtpNr8L7K6/cjAdH986TvA+IifflPNi5iUCTwizEAv84Bk/+xSVoS8mN7Yd2NLx2N+28wnDGK9Rd8oNSDC8FgWiXLKNKEZHUaaJQq6WIDODO2fww95h9rYKqx8eJXpL3jkPSPQk2fePokR4URCWn+vgQ0j2T8+sIujiEZQ0z+apKX0/yxvk/TJT8b39+Qx3m37n9f+eGdkN03BWWuCOo9W/yupR/JdOEm3n8cC3Devvsun2IMQtyAPGdOCRWZRDxnR6b0GxdzwYyZ2keugmVvecnTSiZX7bhnbe9HXva1Akpa96PhotIWuT4K+fMz+Vm/fiRA32VdAMki8u8j15QkJE0MiTMA7P078p9wC93govCFBzZB691X/due0TutEJzhuaNS6bsudUXUZMEVZQS8ly1SSj7wSiOB1VDTuwYK/Rsg7VkH5druqfgePwrMTZJKtXXFFwpYtqJvxJek8KMQGan42EXI+HFBYA5gU7CXRwBI+rycI30fhAx1/6aLZ0VN/+eKi6/avqP2yE5ID0w7ycURMJIyk7+ThTQpCkHLEpHShORZ8skFgr1hINnHVwmVADBfV8hfvvt2dAoKj22Dhl+8Fpbce92x3btvzclBL+u5qn3ZbTfc3Pmxa79WeITnNdxPZS1ypKzu5frhDYJ8ykLxnDqqSJ2yfCjjJxC+GA/1HCr1081n4DkNPq5xZBPUPLIdut53ze/rZzAYnjXKSXleoe3yb+OCKz77xeXAB5knV1FTSkGrImpSIqLQPwGltqH/W59c3B7f57mivmnVh7O+KSoE55dzVAbJ5//PzOnXkpU3ZLiugKR64mzgjlWQdqyFatMyy654htg555qe1g9u+UbxgWkoH56EzNWsVwZAe/86ndETNB3rtnnyj1ND2VuOiZ9LLIsu7+oQeSJlQ4Qe9IlJyB7cBIXHtkDlV7ZD8+Ht/9Fzx4t/f97tt/xmz3v3/3bL3Zv+sf7RbVA8hTED8valL2RwAsHjNXFpSHd9vd2PPvh5lNcvzyzPSUZAMnrkuBDTkPdE74yD2ocn3PtNj2yCymN74aJ3vOh98b+FwfCskbZc8ke5+jq+ABqWSVABUqe3a4+bg8Eox2BJ6L5RKA5MQ9p8+a9jeCG+z7NFQ8MVN2Q9uGYx1iyKRiEx0fOKXa7vHCj2/RUZSOocuXPIAJS6RiFtWvYLOD0ivr/hqTHnfZt/O31iG1QPTzsD4EiNg7xBElLk6IPEwUvW0pAEiH22jydjnhuQ8/xFPlLniyeNxuj4GJQwTRUlFE4PTU9NQfZJXDJyE2SnpiB9eALSE5RJhLONfdxBJKdcYJbX+fX3D/eUZ9TP6rb7Z1Pev5ynm7qmP4eNQPnIBFSOTEHp5GZofGA/rL/5zRvifweD4Vmj0jjvtmIPpoKiDKS86dyC62EegPeipcRCH5L/MBuBESj1jECh4aLHXdz2OaKh9rLryp0bv5f0raeRCPdLDFNotEKXL2sh2zkYHALBuD0YArxWsWsEsuZlv4EyU3x/w9Pj0tu2/kz1ie1QOYzVM3UlUPRyRbNncoyI2hGdePziCXvNXwiTpSHJyOERhowuwnF0rLsXHnMMVwbDQCp61KTnlw+NQeXIOFROTkD55ARkxyegfHwCMgy0OgMgxE9pqjRpjUch+NuTP2UB+WCvbyJFRaTu+hsMi/SV7hfuGZ6BA9A8ksnQgB2fhNJjW6H70N5/umvxXbNq7QnDjxl1aeeitHP1DwouGIxloQNphrLIeUL19YBE/nFzA6hAHO7DVM20aeWn07RpSXy/Z4IFWPiz4Yr3pZ3roMbV/88TuO4jGSP5VHX7XZP+51f5csbE9Xk9ZC0L/0cLzosznDE27Nx7RcuBHZAenybyd3WB8ro9EWPwbKVomveqhSzFIOjPmEyFYPk3kTKvyiVZQSxFuVINToIZg/TARsgObIDKoQ1QOboRykfHoHxsHMrHUFvXxM2ZPEj4+BxC0GiU9OhDjWL8ufIMM5pIW/IswbjlRwg80pH7YJaRG8mQAcie3AmXf/DGU/G/gcHwnJG1XPa7hZ51PCFMBYE5jdLPCBbdX8iViZYycXA7euGUUlno2whp59A361uX/HQ1qT6jyoW4kHy1fu6OrH3xH6U4PwHLVLh+iFePRM9pny54HYjfyzxerhKjQeWeqawzf8c+909BuWP1/+6oTSyj4lkCktsL3R/Y98elR7ZAdv8EpFgV1AVxWU5BQmbvniQhIX4tA6nvmig1qWopRu8TwpRJW7JCmN+P2UDjkN03Bul9GyA7uBHSE+NQegClnynIjkxDdmiKSkgzsZM3HghZe+naCMSTu/xIR57Dp7uG55c4gM9ocufKPdQ9XWYT1xs6ihVAp6Dh5H5Y/bqbtsT/BgbDc0aanrcPc/ldOqjMCdCkKsSK+5zHjyTMpRPYELgMHFmEBc/HmMDcKUjPn4ase/irWdPKB8u1c1+Ups2XtydJD3rdHUnSXZ91L8iqA9vLDZe9t9Sx8rNp33ooDIyxoSHSpzRUDP5in8IktCD1SHxCt2AASDridM/OVVDqHoJq+8gXO8prrKb6c8Slr73ujdVHd7uyDxmuBXAYSzaP0eLtnsA5aKuCv0SAHBMQKciRZQiuCil6Pd4dL/VzVGAWJ4MdC0HojFcow20ooRDRTkPl6DaoPbYdykc2Qe3RbVB3bC+UT14JxQc2QwllFiRcT8LqGVhuck1GHvwMQvJ+DoA8h3+mMBoi48DPxNlOsuoZ7ad76wA3GoDCqWno+uDVf3/Pgnvq4/dvMPwokJVal/xZgWcFJ72y8HsgWdL+iYCltn5uv0hD+Imjgf4RKAwQmeNavqXecUiRfNtX/yBtX/XVUvviv0tbl3651DL4nbRjJaR9G6EwZxoKAxuY5Mm4kKSD0pSUd4jKP6uRSM4AyDE+noEGYDWUuoag0rrkH+vqzl8UvwTDmWP78CsGWj965bewBn8ZUyjRADjPn4hQCsR5r9x/DyMBITsZJZB0E6QVqZnvDYdIR1yrx0klIv1wLCI7gLV0JqD06BTUProTuu7c9RfnvfnKdy+/9cbpjleOLln0qiuHF7127yv737n1keZDu76b/sIuKOEzYJ/xfkfpuhL0DfMBxACwYRKy98eId6+zmmRUEDx9n+6qRgASr8BncMtrOmM4CdkTu+DSd73qJ1Jy3TBLkdb1X5P24OLwuD5wnjyF4Ilk8wZA4gH+eC/DUFC40DcKhd4RKOAsXVy5C1NOu0ec/l7TPRrOccFkPJZGFyL5UL4/E78ekXjDJPeUUQp/97OASULCzKZi11qotF7xtYZqn5V1/hHikrdf81Dl1DbIcHEYV7ufJ3K5eICq/eMDnkL+YgC0kZA0S/4ux2j5SPaz9++Ltkn+PBLofROQntoMrQc2f2PxW170ui8mf1CN+y3Y8qIXrZj74f2/U3lsBxSPTjjylZXGRFrKBZwlRZT7LvIPGQU2BP65+TwZCbhraNLPS0FkCKkPbgnIk5ug5f4939t6/Tsui/ttMPwoUVNuXfIHJbdEJBWHcwu/59IsRQ7ictD4XfY5TV6XieA1hNEQsGzjvHm31nC4HhkWTil1cQTl3cs+GX3Ids5UEtmJCJ+C1n4dYFkUhtNUUfaptC3693Jd58b4wQ3PDVN7t6xoObCJPXeKATg5w8s6KoDqiFskHs6Jl1o7+hhvAJgg/Sdl4ZA+HgjaESmSv6R9Ht8C7fdt+6ctL9u9Ou7v6YDxjPPeveuB7LFtNKJwheY2soGhZ/CGjA0AjUxExqJy13oU4Enee//6OfJGwBkAFWPAZ8DZzOnHd8L579/9ybi/BsOPHPX1A2tTnCSFGUGO0GU2LRK2ELGMCBQZx8TvDUVYjSuUa8DjuR4/nqPWGkbCDjn6eYMjXr/ri+j6cl8ZEXiDFSSpmt4RKA6MQ7Vr9fcbGtotiPZjQu+7tn0Kg8Hem8VRgDMEwWt2hM5euidDWUOAA72OXDVZihFQmUPB+9eeOnv/WDfn5DQ033P199de87IzMva/lRyr9L732j+peWQzpWCiATjGcpD0y3nyNBKRAnDOKOVGOUTsPr1Te/8sZ5GnL4Qfgr/OiMo7OjINLQevg/GX3zYU99Vg+LEgrZ93d4qELauEOSLW2nogWiRrH/QVbx/J3MsvwYv3a/Ky8fCppOz9u1RSZwDytYZ8Wqcm+ZzBkfIOoV9uhMEpoMWeYSh3jUBd40X742c1/OgweOWNgw3374LCg0hcY5C5YDBX8vQkTwTujUI8QmDPWGfYSFzAk79kFukms2iPTkLp+DSUH9sLc99x3RktBiNYu+sNQ00H9/ygcAJr8GAgmQyAeOe+70z8bpvMC/DzIMQA8LwGrf9rzd8bRio/LUZQKoEWT22HOW+/7uNxHw2GHyfKWcvC/17sGVGpluzZs4QTPG0eDciEMOfJ06QwChqLl64Jm+MGeC7PJfCZRXgf9uxD/Z5wXs4wyMxkLgBHBglnAKMBGHT3LPYOQda1CspNl780fkjDjx7977jqkfTxXZAdmIQyF1QTeURkHk98ymP2xMjBVe35u+b0/aixwSDpiEomZEenoPjwVmg6fPW3x8ZeflHcv2eK3nfu+FTp8WmqKioSkDY82giIUWLP3/WHjYCLCcQxAPH49TwAMQLKANScmIDGe3d9f/2VrzTt3/CTRZY1XFxqW/kvKAUlmB4qGj4Gcb23TZ80J0CKxskoQAyAXmVLHe9IO9L3cySv4wJRMTrl+cuIIgSruXWthGIn1vdZA1nTJa+Ln8/w48Gm9VfPbfvojn/DssVlXCFMsoBy5MdetHj/XgJR35UEJMZAiqMJGYuMJKuOZS5wOgXFj2+DrsP7Phv37Uyw6K273lT76CZ3TbcwDJMyTS6TZwjxi9ysYDZsWuen0tKa7IPeH0YUtAaA3K/8iW1wye0vPhz3zWD4iaBcnjtV6hr8fqFv3GUGOeIWIufMHZ+h4wO+YgRE88djFEGjd+4IPI4L5L17Inc5JtrvzmdZKe6Tn5OwCkodyyGtm/uu+LkMP14sfNue26qP7nABTEegLptFvNvg9bp0R0eIigzR68+NDLR3rJZN5Pr/ZAAka2YCsoNTUPnELmh/bMvxuF9ngqWvXXdlw/EpZ1AyJnPXONNI0lJD9g/HL/SIx0tBvF1LXf6Z+TpiTI5i3GEMig9vgv6De776hj1vsEmKhucPaV3ftRgPwFm9LijsyicLUSMBYzonlWcmQmavX3npubo9LPuIZ08kfxpt3y/0okYFKjZA8w9kuy7uhnLUMJSwNHXjRZY3/TzgWHJ7pfPOPX9WfHQrGQHMaJFUTZFP2PN3pCkpnEyU5NHL5C0t+QQj4YOkyoN22w9NQvnJndDxyN4Dcb/OBAtvXbuj/ti0Myi42I3P4nH94QXbeVJbuH8YGYQRQJhARkQf5hU4uUukIJ73QNr/BNQ/sB9WvfE1tuqX4flHub7rJVn3ciq01oFEK/IMEj/OGcDPYSJlDAprMmaJRgq1EcETuYegcGwAwpKTPpNHpB0ZIci9xNjIwu/dg5D2jEFt0+U/kUXqDafH0hdfPdJ8ePd/Zsc3Q9kZAAwIs7cu0pAPigbvWccJhDy9EdCeMgdf3bnOQHCg9sgklB7fDq33bj6jxeBjLHnTppfUPbSJ70WBXPddgtHOIOVTWWW+QhgZiIFQ0pd/TjZ4TvJhI+mOmYTssSvh/Pfe8F/jPhkMzxvS2tbri+1LvkuTuNB7J9LHTxwF+Nm5Xh7iBeV9jEDp9t7z14u2C8kHjR+NR57cQ9aQGBuSfTD/H7cNQ9q1Esn/Y3H/DT95LHzz1e92JSIOTTkj4Mkf6wVJoTXvNUuuPDfvJcsoQElEMoJgr9vFBdzSifS9cGoLtH10xz/cnbz2KSd+/TBc+vZd92ZPbGXCl9RPJfnIaESvDcAGKvcMMqrh/vs6Qxz/oOtPUslnjJU8tB3a7r32H6+55v39cZ8MhucV5fK8ibRt5d+nA+Pg4gK962mGby8uJ8mevJdjtGSjgrkyKcwRtp70RRPCcJtbtctt57WJlSGRlFAcUeB8ALrXEBR71kHWPvjdrGn+G+J+G54fQPKytPd9+/6w9NgWWjgeSf/+ja4ypysY58o7szQkBoA9bSJ9IX81Sczr67xNAsO8dm6GcwCOb4bak1fC/Bff8KK4T88Etycvq+25c/vfFnHtAMkCYjIXecePTKTJbGUeCVDMgJ6DjlVVS/E3GsIDFCdwGUy45OPxTdB0bC8sff0rtsZ9MhheEKgkLXMqnZc/mc6dgOKcTVyqmWYN52IAKBN5D10MAK8Z4CuMqslcPvArmT1SV0iMCRoEjge4QC9NTsP9afcQlNqW/J9yucsWyniBYf2+l17Y8eHd/5I+sAWyj41DGQ0AL+wiVTwdWXIg15GoBHq5ro/ztFk/l99+NMBeOOb/uxGAWz93ExQe3A6t7979169PXn/GtfPnv/yan8ke2ua8erfU5ZGN3hg56UaPVJynH+YCyDYv8cSjGImD8GgIi+e5exydguqTe+Cy2258f9wfg+EFh3LjJa9KO9d8tdC3AQqdQ1DolKAsp3SytOOqeDq9n4LFNALAXH82EFw6OswylpFEfjJYuLZcdw0Uu9dA1nEFZE3zP9qaJI1xHw0vDFx+/YvXN9677Tuu0BqWjHbEz2mV7Pl7+UcFeJ1nrzxvL68I6TtDEY7PsIbPUazvPwXpwU2QHbsS+l+184zkwNFr3ryu+Z6936l5gLOKnEHCkhBskMQAqD57o4T9EJ2f+y3kj56/bPc1hKRg3YFJqDy+By78wPW/FPfHYHgBo3xBqX7esVLbgu+j9k51g9A7H4bEzQMgnb/QgwuvYOOMIdb+fbBYDIAnf4kJcFO6PxqUUvcaSNtXQbn50v9mdX3ODiy4Ze+NdSd2QxEXNkFidSWPcTRAco73nHPr4oYmQVV3nIwOcLUvXjRdMnLcZLBDE1A+iPdBKWgvXPzOW+5/LHnsh5ZRHrn11us777vhG8WHNtO1xJOXLCRfaZSzfMQIeJkHv6u1iaXGj+j+bnvor0uNPbARCg9tgrkf3P+ZY5d/ojnuk8HwgkepVFpTapz7RNq28PtIzoX+Da4ENKaOFvrWQaF3lFff4lEAB4zRADipyEtG4unrNE8mf0zt7B2BtHMZZK1Lf7danb8n7ofhhY3z33z922of2Aul45tcwJPy6ye5SQokpUFSWqSSgNgIUNCXM3/4WG8oJF//IBoAXEt3CtJTO6D6yy+CvoM3/fman7nupTetvCYXXIXk9mzvy181dNn7X/1Y04lroHhqM2RYA0gmo4nnzmTupR1H/rIuARE/jQJE6uFPH/Dl+QBI/DhacW0Sah6dhta7N//1xMS+Ad0vg+GsQ5o2LSs2XvihtPPyvyzPGYPieVuhNHcKiv24uAvGCmjBGSoLjY2IH6UcMgRYKppGAsWeIaftYzmKtHstVDqu+ErWesnJusae8fi+hrMHC97yorfWn9oNpQcxvx4Dw6LtBwNAmTUSTJW0S5okRSmf0jgfn6WX4JWzfIOLwJ+chtLDW6D45E5oOLUD2j64+esdP7v3D85/z42fGrjj2t/q/OCVf95xZBdUHt8FRVwhTEpKsESVk6BY6yc5R9JRVSzAT1ILEhduD+sLS64/tklIP7ENOu7f9tfrd++eH78ng+GsRUeS1Dc0X7S52rXo7nL30j8sda76WrFzEEqdKyDrXgVZ7zBkvRsg7dsAae86SHtGIOsZhqxrCNIuPG4VBnX/vdx26eey5gs/Vq2ft6ejttZmRJ4jmP+uG97ecGoPFI9Ou8Cwk1rE82dJh0hVaepO8uHjxADwiCB46RJMVufgmr8Ye8BRBmbdHJ2E8mNbIPv57ZB9chukj2xyi8fjhDU8xs1cdgZHpXgqA+AI30s8FMNwnz4uwZ4/359KRpMxwxGPW2fg8AQUPr4Z2u7b+Re7XnTVs65XZDCcLegrFlvHC9Wm16T1F3+42LjwZKFxwZOlpgW/UGq69BdLjZd+vFS/+Hi59tK7C9XWn8pq52wuJ8k8VJfiCxnODSy59cZXNHxk6jslDNrimrzHKJXTpV0eJkkop71reUhiBLnJVzxRS48OeIlI1NrLh7CRZ5+dGIcU1wQ+SQvCu3uy8XDX81KOMjIs9ziPHpvIPGIM2CCE1FYezbjaRZIWykbt8e3Q+XN7/tfw9leY7GMwGGYnLnvplonmD2/7t+yxHZAdn4KKI2MltyDhu8ldQfcPAVYpuKYKzSlD4VJCpbwyky9l9KjrYeMgdCbzChz5I4krXV/LPEzyZCB4zWDn8UvNHzIablQishXOgsbRwPEJyB7dAvPu3P97b7nko23x+zAYDIZZheGrrl/Z86Hdf1L55JWQolRzYJKCw06+QS9eyUKOjDFtVK80xp61I9zgdbumg7bccsbEpXVy8Fh7/Uq/l5IUROyhro+XepSxkHWC3X1kJHMUg9HjUHp4EzQ8tAcuet+19/5y8upy/B4MBoNhVuJw8saGC9571eGmE7shO7GVZBlcjAU9ZjEAWCNHNHg2AOLZO6J38hDXA4oMhidx9NL96mEs14jx8AZAFabLFYCTc7icgz7WXU9GARshPYhtjEcc007yaTu4+1+veNvLn9XMZIPBYDjnserm667u+rk9X8p+YReUHpuG8olpqGDQlr1pDNBiGQgkZkeu7PVjqQby7JGEucSEI3UuMSGykSfrEDTW3n0geWU0ZuyjTyrrwMaBjQpKPdmRjZDhPe/fCKXj41D30A6Y83NX/+qm6269NH5eg8FgMChcv+ptfZd86MYHWx7fDcVPbIXs8GYoH8S6/JJ2Sc2NBryeL5VAA3lTBU8l44ixcOQvE7RwHd+Q7++8ey/z5Ov9FJH0xQCoRoYmjEIw9lA4OQ7p41PQ8tGpr81/6/5Xx89oMBgMhqfB+K0vne67Z//n6h7aB6UHt1Gdf9cmqLy0I38KFPv0UCfpsDzEzRkBRf7BQFAGkRRqI/Kn76TjS60iJP4JIn9V+VMmi5UPjblJZxi3wCBv8YlpaDy6FS760N5H903fcnH8XAaDwWB4Bvib5LcqS9507U91fejK/1t9dCcUHtvkKmZWjkxDGev+uMJvbAyQmCU24Ffh4hiByvxxBO5TMimPXzJ/KGd/Y6jeiUXgcGF2nm3sgrouFoGflLGEI5Hi8TFIT01A46GdMPcDN/z66le9yooSGgwGw48CH05e3bjw7Xtffd7dO/5n0yN7ofrxqyB7eBukJyahfIxHBIfGIOPgqzMAOVlmIjSpG+RnGXO6psg7bgQRSlVLKikVhqM5C2Wct3BkE5Qe2gqVx3dC15GdMO+uXZ8c+qmfslnqBoPB8OMAJFDY+Iabti+48/pPdBzc+Y26x7dC9sQmR+zl+7HU9ARUsLomZuAcHiOZRiqESnOrbyGRh1m/VP6BSkhQKQk+340u+DpSs/+BLVB+ZCc0HtsD3fde9VcL7r7qrv2veePyuK8Gg8Fg+DHhFROvGFjx5htedN67d3+i7e4tX288uhmyU5ug9MBmSI9vhgzX8z02RWUgjk5BGWWjw9OuQFwZV+DiQHJoOP+AGs1CnoDiiUkoPrgJSo9OQ/bENDQd2gwdd+/6u3nvvPHQ4E+9ctNnks/Uxv0yGAwGw08Q1294bd/6N1x99WV37Dved/dVf9z94b3fRA+9/pH9UHlsF2SP7IDsUaz7swVKj2yB4iOboXhqGopoMB7Z5OoBZY9shuyhLZA9sB2qD+6E2gd2Q8tHdkHH3Tv/38AHdv3Wop/d8f51N183+Vhyzw8tK20wGAyG5wk37XxT/9AtLxpf8taXvmLObVvee8nPXPd493v3/0bLnVv+qPnOzZ9ruWvL/2m9a8sX2j6w9a/aPrTlL1s/sPWzrXfu+M057772Vy+5bf9D/bdte8fy17/+xolrb7z8QMubm+LrGwwGg+EsBCRJAZJl6ReSqfLfJDdU8DM+xmAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGJ5XFOINBoPBYDjnUfP/A06olNhR1lbeAAAAAElFTkSuQmCC" preserveAspectRatio="xMidYMid meet" data-source-media="true" aria-hidden="true"/></g><text x="196" y="912" class="" font-size="21" font-weight="790" fill="#031334" text-anchor="start" data-qc-role="text"><tspan x="196" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Nach dem Maximum fällt λ(t): Verschleiß- und Ermüdungsausfälle werden nur unvollständig beschrieben.</tspan></text></g></g>
 </svg>

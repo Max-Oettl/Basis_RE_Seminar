@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re3_src_060",
+  "decision": "animated",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "brake_result",
+      "label": "Auswertung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "brake_rule",
+      "label": "Unsicherheit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_brake_result",
+      "targetId": "brake_result",
+      "action": "show",
+      "sourceText": "Wenn Minitab beispielsweise einen negativen Schwellenwert berechnet, ist das physikalisch nicht sinnvoll, auch wenn die Daten dadurch rechnerisch besser beschrieben werden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_brake_rule",
+      "targetId": "brake_rule",
+      "action": "show",
+      "sourceText": "Ein solches Ergebnis deutet häufig auf eine zu kleine Stichprobe hin.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

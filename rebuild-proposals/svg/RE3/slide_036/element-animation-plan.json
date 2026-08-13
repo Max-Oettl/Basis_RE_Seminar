@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re3_src_036",
+  "decision": "animated",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "censor_type_i",
+      "label": "Typ I",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "censor_type_ii",
+      "label": "Typ II",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "censor_types_rule",
+      "label": "Vergleich",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_censor_type_i",
+      "targetId": "censor_type_i",
+      "action": "show",
+      "sourceText": "Beginnen wir mit der Rechtszensierung vom Typ eins.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_censor_type_ii",
+      "targetId": "censor_type_ii",
+      "action": "show",
+      "sourceText": "Im Gegensatz dazu steht die Rechtszensierung vom Typ zwei.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_censor_types_rule",
+      "targetId": "censor_types_rule",
+      "action": "show",
+      "sourceText": "Beide Varianten haben gemeinsam, dass nicht alle Ausfallzeiten bekannt sind.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

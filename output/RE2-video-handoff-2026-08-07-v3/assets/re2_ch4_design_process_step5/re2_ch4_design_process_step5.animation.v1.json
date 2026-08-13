@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re2_ch4_design_process_step5.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "s159_formula",
+      "label": "Risikoprioritätszahl",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s159_matrix",
+      "label": "Aufgabenpriorität",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s159_shared",
+      "label": "Gemeinsame Bewertungslogik",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s159_formula",
+      "targetId": "s159_formula",
+      "action": "show",
+      "sourceText": "Im fünften Schritt, der Risikoanalyse, bewerten",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_s159_matrix",
+      "targetId": "s159_matrix",
+      "action": "show",
+      "sourceText": "In beiden Fällen erfolgt die Priorisierung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_s159_shared",
+      "targetId": "s159_shared",
+      "action": "show",
+      "sourceText": "In beiden Fällen erfolgt die Priorisierung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    }
+  ]
+}

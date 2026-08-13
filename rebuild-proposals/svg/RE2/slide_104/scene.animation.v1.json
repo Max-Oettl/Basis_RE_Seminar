@@ -10,24 +10,8 @@
   },
   "targets": [
     {
-      "targetId": "s104_tree",
-      "label": "Funktions- und Fehlerbaum",
-      "status": "animated",
-      "visibleInEditor": true,
-      "render": true,
-      "confidence": "high"
-    },
-    {
-      "targetId": "s104_network",
-      "label": "Fehlernetz",
-      "status": "animated",
-      "visibleInEditor": true,
-      "render": true,
-      "confidence": "high"
-    },
-    {
-      "targetId": "s104_links",
-      "label": "Überführung",
+      "targetId": "s108_relation_nodes",
+      "label": "Fehlerzusammenhang",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -36,34 +20,14 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_s104_tree",
-      "targetId": "s104_tree",
+      "stepId": "step_01_s108_relation_nodes",
+      "targetId": "s108_relation_nodes",
       "action": "show",
-      "sourceText": "Die Fehler innerhalb der Systemstruktur werden also nach dem Ursache-Wirkung-Prinzip miteinander verknüpft und überlappen sich innerhalb der Systemhierarchie.",
+      "sourceText": "Darüber hinaus besitzt jeder Fehler auch eine Fehlerfolge, also eine Auswirkung auf das System. In diesem Beispiel könnte das ein Ausbrechen und Verunfallen des Fahrzeugs oder einfach die Fahruntüchtigkeit sein.",
       "occurrence": 1,
       "confidence": "high",
       "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
       "enterFrames": 16
-    },
-    {
-      "stepId": "step_02_s104_network",
-      "targetId": "s104_network",
-      "action": "show",
-      "sourceText": "Am oberen Ende der Fehlerkette, also an der Systemgrenze, steht immer mindestens eine Fehlerfolge. Die unteren Enden der Kette werden jeweils von mindestens einer Fehlerursache abgeschlossen.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
-      "enterFrames": 16
-    },
-    {
-      "stepId": "step_03_s104_links",
-      "targetId": "s104_links",
-      "action": "draw",
-      "sourceText": "Am oberen Ende der Fehlerkette, also an der Systemgrenze, steht immer mindestens eine Fehlerfolge. Die unteren Enden der Kette werden jeweils von mindestens einer Fehlerursache abgeschlossen.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Beziehung wird erst nach den zugehörigen fachlichen Endpunkten aufgebaut.",
-      "drawDurFrames": 42
     }
   ]
 }

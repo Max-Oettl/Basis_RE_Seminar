@@ -1,0 +1,229 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch1_lifecycle",
+  "svgPath": "slide_003.svg",
+  "spokenText": "Die Badewannenkurve kann in die drei Bereiche Frühausfälle, Zufallsausfälle und Ermüdungsausfälle eingeteilt werden.\n\nDer erste Bereich der Frühausfälle ist durch eine abfallende Anzahl an Ausfällen charakterisiert. Im zweiten Bereich der Zufallsausfälle ist die Anzahl der Ausfälle konstant. Und im dritten Bereich der Ermüdungsausfälle steigt die Anzahl der Ausfälle wieder an.Die qualitativen und quantitativen Zuverlässigkeitsmethoden werden für unterschiedliche Ausfallarten und damit auch für die verschiedenen Lebensphasen des Produktes eingesetzt.\n\nWie hier schön zu sehen ist, werden die qualitativen Methoden vor allem dazu genutzt, die Ausfälle zu Beginn der Lebensdauer zu reduzieren.\n\nWir befinden uns also im Bereich eins und zwei der Badewannenkurve, in dem vor allem eine Risikoreduktion durch eine Systemanalyse im Vordergrund steht.Die Systemanalyse bildet immer die Grundlage für eine saubere qualitative Zuverlässigkeitsanalyse.\n\nWas man dabei genau macht und welche Punkte besonders wichtig sind, schauen wir uns nun im Folgenden genauer an.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "bathtub_curve_overview",
+      "label": "Badewannenkurve mit drei Ausfallbereichen",
+      "role": "content",
+      "members": [
+        "bathtub_curve_overview"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "qualitative_lifecycle_focus",
+      "label": "Qualitative Methoden in den Bereichen eins und zwei",
+      "role": "content",
+      "members": [
+        "qualitative_lifecycle_focus"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "quantitative_lifecycle_focus",
+      "label": "Quantitative Methoden im dritten Bereich",
+      "role": "content",
+      "members": [
+        "quantitative_lifecycle_focus"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "system_analysis_outcome",
+      "label": "Risikoreduktion durch Systemanalyse",
+      "role": "content",
+      "members": [
+        "system_analysis_outcome"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_05",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Badewannenkurve mit drei Ausfallbereichen",
+      "sourceText": "Die Badewannenkurve kann in die drei",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "bathtub_curve_overview"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Qualitative Methoden in den Bereichen eins und zwei",
+      "sourceText": "Die qualitativen und quantitativen Zuverlässigkeitsmethoden werden",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "qualitative_lifecycle_focus"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Quantitative Methoden im dritten Bereich",
+      "sourceText": "Die qualitativen und quantitativen Zuverlässigkeitsmethoden werden",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "quantitative_lifecycle_focus"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Qualitative Methoden in den Bereichen eins und zwei",
+      "sourceText": "werden die qualitativen Methoden vor allem",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "qualitative_lifecycle_focus"
+      ]
+    },
+    {
+      "beatId": "beat_05",
+      "claim": "Risikoreduktion durch Systemanalyse",
+      "sourceText": "in dem vor allem eine Risikoreduktion",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "system_analysis_outcome"
+      ]
+    },
+    {
+      "beatId": "beat_06",
+      "claim": "Risikoreduktion durch Systemanalyse",
+      "sourceText": "Die Systemanalyse bildet immer die Grundlage",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "system_analysis_outcome"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_bathtub_curve",
+      "beatId": "beat_01",
+      "targetId": "bathtub_curve_overview",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "show_qualitative_lifecycle_focus",
+      "beatId": "beat_02",
+      "targetId": "qualitative_lifecycle_focus",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "show_quantitative_lifecycle_focus",
+      "beatId": "beat_03",
+      "targetId": "quantitative_lifecycle_focus",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "highlight_qualitative_lifecycle_focus",
+      "beatId": "beat_04",
+      "targetId": "qualitative_lifecycle_focus",
+      "action": "highlight",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "show_system_analysis_outcome",
+      "beatId": "beat_05",
+      "targetId": "system_analysis_outcome",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "highlight_system_analysis_outcome",
+      "beatId": "beat_06",
+      "targetId": "system_analysis_outcome",
+      "action": "highlight",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_06",
+      "visibleGroups": [
+        "canvas_context",
+        "bathtub_curve_overview",
+        "qualitative_lifecycle_focus",
+        "quantitative_lifecycle_focus",
+        "system_analysis_outcome"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

@@ -123,8 +123,11 @@ Bei `full_slide`:
 
 - 1920x1080 und 16:9 verwenden.
 - Aktive Produktionspalette aus `brand/reltest-education-slide-design-tokens.json` verwenden.
-- Signalgruen `#00A754` als primaeren Education-Akzent verwenden; Stahlcyan
-  `#0C84B4` bleibt eine definierte Diagrammfarbe.
+- Marineblau `#142452` als visuell fuehrende Inhaltsfarbe verwenden.
+  Signalgruen `#00A653` bleibt der Education-Submarkenakzent und wird ebenso wie
+  Stahlcyan `#0C84B4` nur sparsam und semantisch eingesetzt. Gleichrangige
+  Infoboxen verwenden blaue Tonwert- oder Transparenzabstufungen statt
+  unterschiedlicher Buntfarben.
 - Oxanium fuer Headlines/Auszeichnungen und Archivo fuer Inhaltstexte verwenden.
 - Neue Metadaten verwenden `brandProfile=reltest-education`; die Altbezeichnung
   `Academy` nicht in neue sichtbare Texte oder Brandhinweise schreiben.

@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch3_fta_step3_focus",
+  "svgPath": "slide_032.svg",
+  "spokenText": "Kommen wir nun zum dritten Schritt in der Fehlerbaumanalyse.\n\nHier werden die Ausfallarten der einzelnen Komponenten im System ermittelt.\n\nDas bedeutet, wir überlegen uns, auf welche Weise jede Komponente ausfallen kann und welche Auswirkungen dies für das Gesamtsystem hat.\n\nDazu werden die Systemkomponenten im Fehlerbaum üblicherweise in drei Fehlerkategorien bzw. Ausfallarten unterteilt.\n\nBei einem Primärausfall erfolgt der Ausfall der Systemkomponente durch technisches Versagen unter sonst zulässigen Einsatzbedingungen.\n\nEin Beispiel hierfür könnte das Materialversagen einer Systemkomponente sein.\n\nEin Sekundärausfall entsteht, wenn die Systemkomponente aufgrund unzulässiger Einsatz- oder Umgebungsbedingungen ausfällt.\n\nDies kann beispielsweise durch den Betrieb unter unzulässigen Umgebungstemperaturen, aber auch aufgrund der Verwendung unzulässiger Betriebsmittel geschehen.\n\nBei einem kommandierten Ausfall wird eine funktionsfähige Systemkomponente zu einem falschen Zeitpunkt oder am falschen Ort aktiviert oder deaktiviert.\n\nDies kann infolge des Ausfalls einer Energieversorgung oder durch eine fehlerhafte bzw. falsche Ansteuerung verursacht werden.\n\nSchauen wir uns hierzu ein Beispiel einer Schaltung zur Steuerung eines Motors an.\n\nZur Ansteuerung des Motors wird ein Steuergerät, zwei Schalter und eine Stromquelle genutzt.\n\nDas unerwünschte Ereignis können wir einfach als „Motor läuft nicht an“ definieren.\n\nNun kann der Fehlerbaum in drei Pfade entsprechend der eben beschriebenen Ausfallarten Primärausfall, Sekundärausfall und Kommandierter Ausfall aufgeteilt werden.\n\nDer Primärausfall des Motors kann beispielsweise aufgrund einer durchgebrannten Wicklung oder aufgrund eines Lagerschadens verursacht werden.Das Blockieren des Motors aufgrund von Verschmutzung oder der Motorgehäusebruch, verursacht durch eine zu hohe Temperatur oder Vibration, führt zu einem Sekundärausfall.Ist hingegen die Stromquelle. einer der beiden Schalter oder auch das Steuergerät ausgefallen, kann der Motor nicht mehr richtig angesteuert werden.Dies führt demnach zu einem Kommandierten Ausfall des Motors.\n\nDie drei verschiedenen Ausfallarten lassen sich im Normalfall immer durch unterschiedliche Pfade im Fehlerbaum darstellen.\n\nDieses Vorgehen unterstützt die Identifizierung möglicher Fehlerquellen.\n\nEs ist jedoch wichtig zu betonen, dass diese Aufteilung im Fehlerbaum, also die Darstellung der unterschiedlichen Ausfallarten als separate Pfade, nicht zwingend angewendet werden muss.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "fta34_circuit",
+      "label": "Motorschaltung",
+      "role": "content",
+      "members": [
+        "fta34_circuit"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta34_event",
+      "label": "Unerwünschtes Ereignis",
+      "role": "content",
+      "members": [
+        "fta34_event"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta34_categories",
+      "label": "Ausfallpfade",
+      "role": "content",
+      "members": [
+        "fta34_categories"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Motorschaltung",
+      "sourceText": "Schauen wir uns hierzu ein Beispiel",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta34_circuit"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Unerwünschtes Ereignis",
+      "sourceText": "Das unerwünschte Ereignis können wir einfach",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta34_event"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Ausfallpfade",
+      "sourceText": "Nun kann der Fehlerbaum in drei",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta34_categories"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta34_circuit",
+      "beatId": "beat_01",
+      "targetId": "fta34_circuit",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_fta34_event",
+      "beatId": "beat_02",
+      "targetId": "fta34_event",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_fta34_categories",
+      "beatId": "beat_03",
+      "targetId": "fta34_categories",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_03",
+      "visibleGroups": [
+        "canvas_context",
+        "fta34_circuit",
+        "fta34_event",
+        "fta34_categories"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

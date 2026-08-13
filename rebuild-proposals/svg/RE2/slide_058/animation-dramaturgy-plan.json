@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch3_fta_hospital_power_system",
+  "svgPath": "slide_058.svg",
+  "spokenText": "Als weiteres Beispiel betrachten wir die Stromversorgung eines Operationssaals im Krankenhaus.\n\nDer Operationssaal wird über ein eigenes Stromnetzwerk betrieben, das aus einem Stromgenerator, einem Energiepuffer, einem Steuergerät und einem Notstromaggregat besteht.\n\nIm Standardbetrieb versorgt der Stromgenerator über den Energiepuffer den Operationssaal mit Energie.\n\nDer Energiepuffer dient dabei als Zwischenspeicher, um eine konstante Energieversorgung sicherzustellen und eventuelle Schwankungen auszugleichen.\n\nFällt der Stromgenerator jedoch aus, wird dies durch das Steuergerät erkannt.\n\nIm Anschluss wird das Notstromaggregat aktiviert, um die Energieversorgung des Operationssaals aufrechtzuerhalten.\n\nDie Startzeit des Notstromaggregats wird dabei mit Hilfe des Energiepuffers überbrückt.\n\nAuf diese Weise wird sichergestellt, dass der Operationssaal auch im Falle eines Ausfalls des Stromgenerators ohne Unterbrechung mit Energie versorgt bleibt.Schauen wir hierfür mal den Fehlerbaum an.\n\nAuch hier könnt ihr das Video wieder pausieren und es selbst versuchen.\n\nWir beginnen zunächst mit dem Top-Ereignis, der Unterbrechung der Energieversorgung.\n\nDieses Top-Ereignis tritt nur ein, wenn sowohl die erste als auch die zweite Energieversorgung ausfallen. Daher sind diese beiden Ereignisse mit einem Und-Gatter verbunden.\n\nDer Ausfall der ersten Energieversorgung tritt ein, wenn entweder der Stromgenerator ausfällt oder der Energiepuffer versagt. Da nur eins der beiden Ereignisse ausreicht, die erste Energieversorgung zu unterbrechen, sind beide mit einem Oder-Gatter verbunden.\n\nDer Ausfall der zweiten Energieversorgung tritt ein, wenn entweder das Steuergerät, das Notstromaggregat oder der Energiepuffer ausfallen.\n\nAuch hier sind die Ereignisse mit einem Oder Gatter verbunden.\n\nAuf den ersten Blick wirkt das System redundant, da sowohl ein Stromgenerator als auch ein Notstromaggregat vorhanden ist.\n\nBeide sollen im Falle eines Ausfalls des einen Systems das andere ersetzen.\n\nAber allein durch Betrachtung des Fehlerbaums fällt hier eine große Schwäche im Aufbau der Stromversorgung auf.\n\nWie zu erkennen ist, spielt der Energiepuffer in beiden Energieversorgungspfaden eine zentrale Rolle.\n\nSein Ausfall beeinflusst sowohl die erste als auch die zweite Energieversorgung.\n\nDadurch entsteht eine gemeinsame Schwachstelle im System, die zu einem Common-Mode-Ausfall führen kann.\n\nAus diesem Grund ist hier nicht wirklich eine echte Redundanz vorhanden, was die Zuverlässigkeit des Systems negativ beeinflusst.\n\nZusätzlich können wir den Fehlerbaum unseres Stromnetzwerks im Operationssaal auch um die möglichen Ausfallursachen erweitern.\n\nBetrachten wir nun die Ursachen für den Ausfall des Stromgenerators und ebenso für den Ausfall des Notstromaggregats.Beide Systeme können sowohl durch eine defekte Einspritzung oder einen leeren Kraftstofftank ausfallen.\n\nNun ist die Frage: sind die Kraftstofftanks unabhängig?\n\nWenn beide Systeme beispielsweise den gleichen Kraftstofftank verwenden, besitzen beide Ereignisse damit eine gemeinsame Ausfallursache.\n\nDas bedeutet, dass ein leerer Kraftstofftank sowohl den Stromgenerator als auch das Notstromaggregat gleichzeitig lahmlegen kann.\n\nDieses Phänomen wird Common Cause genannt und führt ebenfalls dazu, dass eine vermeintliche Redundanz nicht mehr vorhanden ist.\n\nUm die Zuverlässigkeit des Systems zu erhöhen und echte Redundanz zu gewährleisten, müssen solche Common Cause-Ausfälle ebenfalls identifiziert und vermieden werden.\n\nMögliche Maßnahmen sind beispielsweise die Verwendung separater Kraftstofftanks für den Stromgenerator und das Notstromaggregat, um das Risiko eines gemeinsamen Ausfalls durch einen leeren Tank zu eliminieren.\n\nDiese Beispiele verdeutlichen die Bedeutung der Analyse gemeinsamer Ausfallarten und Ausfallursachen während der Planung redundanter Systeme. Nur durch das Berücksichtigen und Eliminieren von Common Mode und Common Cause-Ausfällen können wir eine effektive Redundanz sicherstellen und die Sicherheit sowie den kontinuierlichen Betrieb in kritischen Anwendungen wie beispielsweise in einem Operationssaal gewährleisten.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "fta62_nodes",
+      "label": "Kraftstoff-Ursachen",
+      "role": "content",
+      "members": [
+        "fta62_nodes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta62_links",
+      "label": "Ursachen-Beziehungen",
+      "role": "content",
+      "members": [
+        "fta62_links"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta62_common",
+      "label": "Common Cause",
+      "role": "content",
+      "members": [
+        "fta62_common"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Kraftstoff-Ursachen",
+      "sourceText": "Betrachten wir nun die Ursachen für",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta62_nodes"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Ursachen-Beziehungen",
+      "sourceText": "Beide Systeme können sowohl durch eine",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta62_links"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Common Cause",
+      "sourceText": "Dieses Phänomen wird Common Cause genannt",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta62_common"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta62_nodes",
+      "beatId": "beat_01",
+      "targetId": "fta62_nodes",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_fta62_links",
+      "beatId": "beat_02",
+      "targetId": "fta62_links",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    },
+    {
+      "stepId": "step_03_fta62_common",
+      "beatId": "beat_03",
+      "targetId": "fta62_common",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_03",
+      "visibleGroups": [
+        "canvas_context",
+        "fta62_nodes",
+        "fta62_links",
+        "fta62_common"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

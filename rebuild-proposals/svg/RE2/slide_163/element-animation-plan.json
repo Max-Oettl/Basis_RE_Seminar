@@ -1,6 +1,44 @@
 {
   "schemaVersion": "elementAnimationPlan/v1",
   "sceneId": "re2_ch4_design_process_step7",
-  "targets": [],
-  "steps": []
+  "targets": [
+    {
+      "targetId": "s165_left",
+      "label": "DESIGN-FMEA",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s165_right",
+      "label": "PROZESS-FMEA",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s165_left",
+      "targetId": "s165_left",
+      "action": "show",
+      "sourceText": "Im Kontext der Produktentwicklung liegt der Schwerpunkt auf der Dokumentation aller relevanten Erkenntnisse und Anpassungen, welche das Design des Produktes betreffen. Dazu zählen unter anderem aktualisierte Zeichnungen, technische Spezifikationen und Konstruktionsunterlagen, die die vorgenommenen Änderungen transparent und nachvollziehbar machen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_s165_right",
+      "targetId": "s165_right",
+      "action": "show",
+      "sourceText": "Bei der Betrachtung der Fertigungsprozesse steht hingegen die Aktualisierung von Prozessdokumenten im Mittelpunkt. Hierzu gehören überarbeitete Arbeitsanweisungen, Prozessbeschreibungen oder auch Schulungsunterlagen. Sie dienen dazu, sicherzustellen, dass alle Beteiligten über die implementierten Änderungen informiert sind und diese im Produktionsalltag angewendet werden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    }
+  ]
 }

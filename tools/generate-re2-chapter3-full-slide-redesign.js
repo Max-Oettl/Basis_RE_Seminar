@@ -192,34 +192,32 @@ function frame(scene, content) {
   const takeaway = takeaways[n] || "Der dargestellte Zustand übernimmt Inhalt und Erklärlogik der entsprechenden Quellfolie.";
   const dense = [21, 22, 26, 30, 34, 37, 38, 39, 40, 41, 42, 43, 50, 51, 52, 53, 54, 55, 56, 57, 59, 60, 61, 62].includes(n);
   const metadata = {
-    artifactScope: "full-slide",
-    embeddingTarget: "standalone-slide",
+    artifactScope: "content-svg",
+    embeddingTarget: "powerpoint-slide",
     slideType: content.archetype,
     contentTitle: title,
     layoutIntent: content.layout,
     takeaway,
     density: dense ? "dense" : "balanced",
-    contentMode: "full-slide",
-    backgroundMode: "brand-frame",
+    contentMode: "transparent-content",
+    backgroundMode: "transparent",
     brandProfile: educationTheme.brandProfile,
     brandVariant: educationTheme.brandVariant,
     sourceSlides: [n],
     officialLogoStatus: "pending-original-asset",
   };
-  const markerColors = [...new Set([C.accent, C.deep, C.failure, C.success, C.secondary, C.soft])];
+  const markerColors = [...new Set([C.accent, C.deep, C.failure, C.success, C.secondary, C.soft, C.border])]
+    .filter((color) => content.body.includes(color));
   const markers = markerColors.map((color) =>
     `<marker id="arrow_${color.slice(1)}" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="${color}"/></marker>`).join("");
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="${scene.scene_id}" data-brand-profile="${educationTheme.brandProfile}">
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="content-svg" data-embedding-target="powerpoint-slide" data-scene-id="${scene.scene_id}" data-brand-profile="${educationTheme.brandProfile}">
 <metadata id="slide_quality_metadata" type="application/json"><![CDATA[${JSON.stringify(metadata)}]]></metadata>
 <title id="accessible_title">${esc(title)}</title><desc id="accessible_description">${esc(takeaway)}</desc>
 <defs>
-  <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="${educationTheme.background.start}"/><stop offset="56%" stop-color="${educationTheme.background.mid}"/><stop offset="100%" stop-color="${educationTheme.background.end}"/></linearGradient>
-  <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#031334" stroke-opacity=".035" stroke-width="1"/></pattern>
   ${markers}
 </defs>
 <style>text{font-family:${educationTheme.bodyFontFamily};letter-spacing:0}</style>
-<rect width="1920" height="1080" fill="url(#backgroundGradient)"/><rect width="1920" height="1080" fill="url(#technicalGrid)"/>
 <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content">${annotate(evidence(content.body, `Quellfolie ${n}: ${sceneInventory(n).source_text_title}`))}</g>
 </svg>`;
 }
@@ -1117,13 +1115,15 @@ function main() {
   for (const scene of scenes) {
     const n = scene.output_slide_number;
     if (!wanted.has(n)) continue;
+    const renderN = scene.render_source_slide || scene.primary_source_slide || n;
+    const renderScene = { ...scene, output_slide_number: renderN };
     const dir = path.join(outRoot, scene.work_unit);
     fs.mkdirSync(dir, { recursive: true });
-    prepareMedia(scene);
-    const content = makeScene(n);
-    fs.writeFileSync(path.join(dir, `${scene.work_unit}.svg`), `${frame(scene, content)}\n`, "utf8");
-    writeBrief(scene, content);
-    if (animated) writeManifest(scene, content);
+    prepareMedia(renderScene);
+    const content = makeScene(renderN);
+    fs.writeFileSync(path.join(dir, `${scene.work_unit}.svg`), `${frame(renderScene, content)}\n`, "utf8");
+    writeBrief(renderScene, content);
+    if (animated) writeManifest(renderScene, content);
     generated.push(scene.work_unit);
   }
   process.stdout.write(`Generated ${generated.length} RE2 chapter-3 scene(s)${animated ? " with animation" : " as static end states"}: ${generated.join(", ")}.\n`);

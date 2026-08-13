@@ -2,12 +2,12 @@
 
 - Kapitel: 4
 - Lektion: 3
-- Quellfolie: 79
+- Quellfolie: 81
 - Zielmodus: full_slide, 1920×1080
-- Titel: Systemgrenze festlegen
-- Dominante Lernbotschaft: Die Strukturanalyse beginnt mit einer eindeutigen Systemgrenze.
-- Archetyp: system-boundary
-- Layout: Große Systemgrenze mit drei neutralen Systemelementen.
+- Titel: Vorgehen in der Strukturanalyse
+- Dominante Lernbotschaft: Abgrenzen, aufteilen und hierarchisch strukturieren bilden die Strukturanalyse.
+- Archetyp: three-step-method
+- Layout: Drei nummerierte Arbeitsschritte der Strukturanalyse.
 - Inhaltsinventar: Fachbegriffe, Beziehungen, Hierarchien, Tabellenzustände und Beispiele bleiben erhalten; PowerPoint-Bedienelemente und Masterdekoration entfallen.
 - Referenz-Lock: RE1 slide_013, slide_009, slide_027 und slide_022
 - Assetstrategie: native RelTest-SVG-Komposition

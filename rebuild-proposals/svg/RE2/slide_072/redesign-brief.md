@@ -2,15 +2,15 @@
 
 - Kapitel: 4
 - Lektion: 2
-- Quellfolie: 72
+- Quellfolie: 75
 - Zielmodus: full_slide, 1920×1080
-- Titel: Die 7 Schritte der FMEA
-- Dominante Lernbotschaft: Die FMEA folgt einem klaren Ablauf aus sieben Schritten.
-- Archetyp: process-overview
-- Layout: Kanonische siebenstufige FMEA-Prozessleiste als dominante Erklärfläche.
+- Titel: Das FMEA-Team
+- Dominante Lernbotschaft: Moderator, Basisteam und erweiterte Experten bringen unterschiedliche Kompetenzen in die FMEA ein.
+- Archetyp: team-hierarchy
+- Layout: Dreistufige Teamhierarchie mit Rollen und Kompetenzen.
 - Inhaltsinventar: Fachbegriffe, Beziehungen, Hierarchien, Tabellenzustände und Beispiele bleiben erhalten; PowerPoint-Bedienelemente und Masterdekoration entfallen.
 - Referenz-Lock: RE1 slide_013, slide_009, slide_027 und slide_022
 - Assetstrategie: native RelTest-SVG-Komposition
-- Animation: static — der Zustand ist als vollständiger Aufbau-/Fokuszustand sofort verständlich
+- Animation: animated — sprechertextgeführte semantische Gruppen
 - Statisches Freigabekriterium: vollständiger Quellen-Ziel-Referenzvergleich ohne Text-, Kontrast-, Pfeil- oder Assetbefund
 - QA-Schwerpunkte: 1:1-Inhaltstransfer, Mindestschrift 18 px, Verbinder 1,5–2,5 px, Pfeile hinter Knoten, keine unbelegte fachliche Ergänzung

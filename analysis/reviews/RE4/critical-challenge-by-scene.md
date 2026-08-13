@@ -1,0 +1,35 @@
+# RE4 — kritischer Challenge jeder Ziel-SVG
+
+- Ziel-SVGs: 22
+- Animiert: 15
+- Statisch mangels belastbarer Einzeltrigger: 7
+- Gerenderte Animationszustände: 88
+- Striktes Modul-QA: 0 Fehler; 21 erwartete fragmentbezogene Warnungen; 0 Layoutprobleme
+- Kapitel-/Lektionsstruktur: deferred_by_user
+
+| Szene | Quellen | Animation | Design-Challenge | Korrektur/Entscheidung | Urteil |
+|---|---:|---|---|---|---|
+| slide_001 | 1, 2, 3, 4 | 5 Schritte / 6 Zustände | System, Getriebe, Komponenten und Ausfallarten bilden eine ruhige Navy-Hierarchie; Grün bleibt dem methodischen Ziel vorbehalten. | Im visuellen und animationslogischen Challenge keine zusätzliche Korrektur erforderlich. | freigegeben |
+| slide_005 | 5, 6 | 5 Schritte / 6 Zustände | Quellfoto, Prüfkette und Weibull-Auswertung sind klar getrennt; die Farblogik unterstützt den Ablauf statt gleichrangige Karten bunt zu codieren. | Im visuellen und animationslogischen Challenge keine zusätzliche Korrektur erforderlich. | freigegeben |
+| slide_007 | 7, 8, 9, 10, 11, 12 | 4 Schritte / 5 Zustände | Die Zuverlässigkeitsaggregation liest sich konsequent von unten nach oben; Ebenen werden durch Helligkeit und Abstand, nicht durch zusätzliche Farben unterschieden. | Im visuellen und animationslogischen Challenge keine zusätzliche Korrektur erforderlich. | freigegeben |
+| slide_013 | 13, 14, 15, 16 | 5 Schritte / 6 Zustände | Top-Ereignis, Ursachen und Basisereignisse sind als ein zusammenhängender Fehlerbaum lesbar und bleiben auch in Zwischenzuständen vollständig ausgerichtet. | Den zuvor monolithischen Baumaufbau in Top-Ereignis, Ursachenebene und Basisereignisse getrennt. | freigegeben |
+| slide_017 | 17, 18, 19, 20 | 4 Schritte / 5 Zustände | Datenquellen und Basisereignisse sind visuell getrennt; Koralle kennzeichnet ausschließlich Ausfallwahrscheinlichkeiten. | Im visuellen und animationslogischen Challenge keine zusätzliche Korrektur erforderlich. | freigegeben |
+| slide_021 | 21, 22 | 4 Schritte / 5 Zustände | Eingang, Gatterlogik und Ergebnis besitzen eine eindeutige Links-rechts-Hierarchie; Verbindungen erscheinen erst nach allen Endpunkten. | Ergebnis und Berechnungspfeile hinter die Gatterlogik verschoben; dadurch erscheinen keine Verbindungen vor ihren Zielknoten. | freigegeben |
+| slide_023 | 23, 24 | 3 Schritte / 4 Zustände | Fehler- und Funktionslogik sind symmetrisch aufgebaut; Grün wird nur für die positive Funktionssicht verwendet. | Logikumkehr einschließlich Pfeilen hinter beide Modell-Endpunkte verschoben. | freigegeben |
+| slide_025 | 25, 26, 27, 28, 29, 30 | 4 Schritte / 5 Zustände | Fehlerbaum, Funktionsbaum und RBD werden als drei ruhige Modellstufen verglichen; der Transferpfeil konkurriert nicht mit den Inhalten. | Im visuellen und animationslogischen Challenge keine zusätzliche Korrektur erforderlich. | freigegeben |
+| slide_031 | 31, 32 | 4 Schritte / 4 Zustände | Das RBD bleibt der visuelle Fokus; die Funktionspfade sind klar erkennbar, ohne die Komponentenblöcke zu überzeichnen. | Grüne Pfadmarkierung auf die Verbindungen begrenzt und Strichstärke reduziert. | freigegeben |
+| slide_033 | 33, 34, 35, 36, 37, 38 | 5 Schritte / 6 Zustände | Serie und Parallelität sind gleichgewichtet und tonal konsistent; Hervorhebungen bleiben auf den jeweiligen Funktionspfad begrenzt. | Zu dominante Pfad-Hervorhebungen reduziert. | freigegeben |
+| slide_039 | 39, 40 | 5 Schritte / 6 Zustände | Formel, Struktur und Zahlenbeispiel stehen in zwei symmetrischen Spalten; die beiden Ergebnisse erhalten getrennte Sprechertext-Zeitpunkte. | Serien- und Parallelergebnis in zwei getrennte Animationsgruppen mit eigenen wörtlichen Cues aufgeteilt. | freigegeben |
+| slide_041 | 41, 42, 43 | 4 Schritte / 5 Zustände | Teilreduktion und Gesamtformel folgen derselben Leserichtung wie das Blockdiagramm; Formeln bleiben kollisionsfrei in ihren Karten. | Formelpositionen korrigiert und Überlagerungen beseitigt. | freigegeben |
+| slide_044 | 44, 45, 46, 47 | 5 Schritte / 5 Zustände | FTA, Funktionsbaum und RBD bilden eine konsistente Dreiersequenz; Beziehungen werden erst nach den drei Modellen sichtbar. | Im visuellen und animationslogischen Challenge keine zusätzliche Korrektur erforderlich. | freigegeben |
+| slide_048 | 48, 49, 50, 51, 52 | 4 Schritte / 5 Zustände | Die drei Voraussetzungen bleiben Navy-tonal; die Brückenschaltung ist als große, quellengetreue Fünf-Komponenten-Topologie auch in der 960×540-Ansicht eindeutig lesbar. | Zu kleine und topologisch fehlerhafte Vorschau durch eine große Brücke mit vertikaler Komponente 5 zwischen den mittleren Knoten ersetzt. | freigegeben |
+| slide_054 | 54 | statisch | Die binäre Zustandsdefinition ist als statische Referenz bewusst knapp und ohne unbelegte Animation umgesetzt. | Im visuellen und animationslogischen Challenge keine zusätzliche Korrektur erforderlich. | freigegeben |
+| slide_055 | 55, 56, 57, 58, 59, 60 | 7 Schritte / 8 Zustände | Ausgangsbrücke, beide Separationsfälle und Gesamtformel bleiben trotz hoher Informationsdichte eindeutig; alle drei RBDs verwenden dieselbe Komponentensprache. | Gemeinsame Bridge-Komponente fachlich neu aufgebaut; Ausgangsbrücke und beide Ersatzstrukturen vergrößert sowie die Reveal-Reihenfolge um einen frühen Ausgangszustand ergänzt. | freigegeben |
+| slide_061 | 61 | statisch | Die Methodenübersicht nutzt ein einheitliches Kartensystem; keine Methode wird ohne fachlichen Grund farblich bevorzugt. | Im visuellen und animationslogischen Challenge keine zusätzliche Korrektur erforderlich. | freigegeben |
+| slide_062 | 62 | statisch | Die drei Modellannahmen sind als ruhige Wiederholungsfolie gleichrangig und statisch aufgebaut. | Im visuellen und animationslogischen Challenge keine zusätzliche Korrektur erforderlich. | freigegeben |
+| slide_063 | 63, 64 | statisch | Serie, Parallel- und Mischstruktur passen vollständig in die Referenzkarten; Formeln und Mini-RBDs bleiben lesbar. | Mischstruktur skaliert, damit Diagramm und Formel vollständig innerhalb der Karte bleiben. | freigegeben |
+| slide_065 | 65 | statisch | Das technische Diagramm nutzt vier Navy-Tonwerte und nur eine grüne Referenzkurve; Achsen, Legende und Kurven sind vollständig sichtbar. | Defekte externe Einbettung durch internes Vektor-Markup ersetzt, XML-Fehler behoben und Farbpalette beruhigt. | freigegeben |
+| slide_066 | 66, 67 | statisch | Das technische Quellbild bleibt groß genug für die Bauteilerkennung; der Transfer zum RBD wird ohne zusätzliche Farbcodierung erklärt. | Im visuellen und animationslogischen Challenge keine zusätzliche Korrektur erforderlich. | freigegeben |
+| slide_068 | 68 | statisch | Die fünf Übungsnetzwerke und der Arbeitsauftrag stehen ohne Ablenkung im Vordergrund; die Szene bleibt mangels Sprechertext-Trigger statisch. | Im visuellen und animationslogischen Challenge keine zusätzliche Korrektur erforderlich. | freigegeben |
+
+Technischer Nachweis: [analysis/reports/RE4-viewer-final-qa/svg-qa-report.md](../../reports/RE4-viewer-final-qa/svg-qa-report.md)

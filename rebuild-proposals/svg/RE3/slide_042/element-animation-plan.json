@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re3_src_042",
+  "decision": "animated",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "interval_windows",
+      "label": "Intervall",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "interval_known",
+      "label": "Bekannte Grenzen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "interval_unknown",
+      "label": "Unbekannter Zeitpunkt",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "interval_rule",
+      "label": "Intervall codieren",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_interval_windows",
+      "targetId": "interval_windows",
+      "action": "show",
+      "sourceText": "Eine weitere Form der Zensierung ist die sogenannte Intervallzensierung.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_interval_known",
+      "targetId": "interval_known",
+      "action": "show",
+      "sourceText": "Stattdessen wissen wir nur, dass der Ausfall innerhalb eines bestimmten Zeitintervalls stattgefunden hat.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_interval_rule",
+      "targetId": "interval_rule",
+      "action": "show",
+      "sourceText": "Das bedeutet: Wir kennen zwei Zeitpunkte, zwischen denen der Ausfall liegen muss – aber nicht, wann genau er eingetreten ist.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_interval_unknown",
+      "targetId": "interval_unknown",
+      "action": "show",
+      "sourceText": "Der tatsächliche Ausfallzeitpunkt bleibt also innerhalb eines Intervalls verborgen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

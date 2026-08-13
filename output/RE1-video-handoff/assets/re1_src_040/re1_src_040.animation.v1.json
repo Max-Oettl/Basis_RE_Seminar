@@ -26,6 +26,22 @@
       "confidence": "high"
     },
     {
+      "targetId": "human_hazard_early_span",
+      "label": "Hintergrund der frühen Phase",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "human_hazard_early_label",
+      "label": "Beschriftung der frühen Phase",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
       "targetId": "human_hazard_early_phase",
       "label": "Frühe Phase",
       "status": "animated",
@@ -34,8 +50,40 @@
       "confidence": "high"
     },
     {
+      "targetId": "human_hazard_constant_span",
+      "label": "Hintergrund der konstanten Phase",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "human_hazard_constant_label",
+      "label": "Beschriftung der konstanten Phase",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
       "targetId": "human_hazard_constant_phase",
       "label": "Konstante Phase",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "human_hazard_ageing_span",
+      "label": "Hintergrund der altersbedingten Phase",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "human_hazard_ageing_label",
+      "label": "Beschriftung der altersbedingten Phase",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -70,6 +118,24 @@
       "durFrames": 42
     },
     {
+      "stepId": "show_human_hazard_early_span",
+      "targetId": "human_hazard_early_span",
+      "action": "show",
+      "sourceText": "Zu Beginn fällt die Sterberate geringfügig ab",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_human_hazard_early_label",
+      "targetId": "human_hazard_early_label",
+      "action": "show",
+      "sourceText": "Zu Beginn fällt die Sterberate geringfügig ab",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
       "stepId": "show_human_hazard_early_phase",
       "targetId": "human_hazard_early_phase",
       "action": "show",
@@ -79,10 +145,46 @@
       "enterFrames": 16
     },
     {
+      "stepId": "show_human_hazard_constant_span",
+      "targetId": "human_hazard_constant_span",
+      "action": "show",
+      "sourceText": "Anschließend bleibt die Sterberate für eine",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_human_hazard_constant_label",
+      "targetId": "human_hazard_constant_label",
+      "action": "show",
+      "sourceText": "Anschließend bleibt die Sterberate für eine",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
       "stepId": "show_human_hazard_constant_phase",
       "targetId": "human_hazard_constant_phase",
       "action": "show",
       "sourceText": "Anschließend bleibt die Sterberate für eine",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_human_hazard_ageing_span",
+      "targetId": "human_hazard_ageing_span",
+      "action": "show",
+      "sourceText": "Mit zunehmendem Alter steigt die Sterberate",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_human_hazard_ageing_label",
+      "targetId": "human_hazard_ageing_label",
+      "action": "show",
+      "sourceText": "Mit zunehmendem Alter steigt die Sterberate",
       "confidence": "high",
       "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
       "enterFrames": 16

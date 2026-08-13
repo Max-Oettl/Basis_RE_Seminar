@@ -2,10 +2,10 @@
 
 - Kapitel: 3
 - Lektion: 4
-- Quellfolie: 52
+- Quellfolie: 56
 - Sprechertext: section_008 — Beispiel: Fahrwerk eines Flugzeugs
-- Titel: Beispiel: Fahrwerk eines Flugzeugs
-- Takeaway: Quelltreuer Aufbauzustand innerhalb der FTA-Erklärfolge.
+- Titel: Fahrwerk: kritische Pfade und Minimalschnitte
+- Takeaway: Je zwei ausgefallene Reifen einer Fahrwerksgruppe bilden einen minimalen Ausfallschnitt.
 - Archetyp: technical-example-fault-tree
 - Layout: Konkretes Flugzeugmotiv links, großer und vollständig lesbarer Fahrwerk-Fehlerbaum rechts.
 - Produktionsmodus: Full-Slide 1920×1080

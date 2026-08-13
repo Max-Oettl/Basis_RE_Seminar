@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re3_src_013",
+  "decision": "animated",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "method_mls",
+      "label": "MLS",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "method_mle",
+      "label": "MLE",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "method_decision",
+      "label": "Methodenwahl",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_method_mls",
+      "targetId": "method_mls",
+      "action": "show",
+      "sourceText": "Zu den bekanntesten zählen die Methode der kleinsten Quadrate, abgekürzt als M-L-S, sowie die Maximum-Likelihood-Schätzung, abgekürzt als M-L-E.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_method_mle",
+      "targetId": "method_mle",
+      "action": "show",
+      "sourceText": "Zu den bekanntesten zählen die Methode der kleinsten Quadrate, abgekürzt als M-L-S, sowie die Maximum-Likelihood-Schätzung, abgekürzt als M-L-E.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_method_decision",
+      "targetId": "method_decision",
+      "action": "show",
+      "sourceText": "Nur so können wir sicherstellen, dass die richtige Methode angewendet wurde.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

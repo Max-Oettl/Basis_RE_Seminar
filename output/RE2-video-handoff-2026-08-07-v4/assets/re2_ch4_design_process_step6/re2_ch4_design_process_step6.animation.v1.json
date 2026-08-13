@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re2_ch4_design_process_step6.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "s162_left",
+      "label": "DESIGN-FMEA",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s162_right",
+      "label": "PROZESS-FMEA",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s162_left",
+      "targetId": "s162_left",
+      "action": "show",
+      "sourceText": "Beim Produktdesign stehen dabei Änderungen im",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_s162_right",
+      "targetId": "s162_right",
+      "action": "show",
+      "sourceText": "Ein praxisnahes Beispiel ist die Einführung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    }
+  ]
+}

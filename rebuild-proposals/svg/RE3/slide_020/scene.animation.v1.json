@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_020.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "drivers_sample",
+      "label": "Stichprobenumfang",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "drivers_level",
+      "label": "Konfidenzniveau",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "drivers_rule",
+      "label": "Breite",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_drivers_level",
+      "targetId": "drivers_level",
+      "action": "show",
+      "sourceText": "In diesem Fall betrachten wir einen neunzigprozentigen Vertrauensbereich, der durch die fünf-Prozent- und die fünfundneunzig-Prozent-Vertrauensgrenze definiert ist.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_drivers_sample",
+      "targetId": "drivers_sample",
+      "action": "show",
+      "sourceText": "Auch die Größe unserer Stichprobe hat einen starken Einfluss auf die Breite des Vertrauensbereichs.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_drivers_rule",
+      "targetId": "drivers_rule",
+      "action": "show",
+      "sourceText": "Dabei gilt: Je größer die Stichprobe, desto präziser ist die Schätzung und desto schmaler wird der Vertrauensbereich.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

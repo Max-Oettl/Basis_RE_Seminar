@@ -32,6 +32,14 @@
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
+    },
+    {
+      "targetId": "reliability_collaboration_links",
+      "label": "Zusammenspiel beider Beiträge",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
     }
   ],
   "steps": [
@@ -61,6 +69,15 @@
       "confidence": "high",
       "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
       "enterFrames": 16
+    },
+    {
+      "stepId": "draw_reliability_collaboration_links",
+      "targetId": "reliability_collaboration_links",
+      "action": "draw",
+      "sourceText": "Ein zuverlässiges Produkt resultiert also immer",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "durFrames": 42
     }
   ]
 }

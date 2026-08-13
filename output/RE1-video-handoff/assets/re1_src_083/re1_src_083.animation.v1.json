@@ -26,6 +26,14 @@
       "confidence": "high"
     },
     {
+      "targetId": "nkw_weibull_model",
+      "label": "Weibullmodell",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
       "targetId": "nkw_cdf_curve",
       "label": "S-förmige Ausfallwahrscheinlichkeit",
       "status": "animated",
@@ -55,6 +63,15 @@
     {
       "stepId": "show_nkw_cdf_data",
       "targetId": "nkw_cdf_data",
+      "action": "show",
+      "sourceText": "Der Formparameter wurde dabei zu eins",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_nkw_weibull_model",
+      "targetId": "nkw_weibull_model",
       "action": "show",
       "sourceText": "Der Formparameter wurde dabei zu eins",
       "confidence": "high",

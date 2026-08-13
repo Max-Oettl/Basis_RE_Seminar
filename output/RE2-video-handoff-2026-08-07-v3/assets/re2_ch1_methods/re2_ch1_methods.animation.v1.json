@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re2_ch1_methods.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "highlightDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "method_categories",
+      "label": "Zwei Kategorien der Zuverlässigkeitsmethoden",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "qualitative_focus",
+      "label": "Schwerpunkt qualitative Methoden",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "quantitative_outcomes",
+      "label": "Aufgaben quantitativer Methoden",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "qualitative_outcomes",
+      "label": "Aufgaben qualitativer Methoden",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "improvement_path",
+      "label": "Von der Systemanalyse zu Abstellmaßnahmen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta_method",
+      "label": "Fehlerbaumanalyse FTA",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fmea_method",
+      "label": "Fehlermöglichkeits- und Einflussanalyse FMEA",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_method_categories",
+      "targetId": "method_categories",
+      "action": "show",
+      "sourceText": "dass die Zuverlässigkeitsmethoden in zwei Kategorien",
+      "occurrence": 1,
+      "confidence": "high",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_quantitative_outcomes",
+      "targetId": "quantitative_outcomes",
+      "action": "show",
+      "sourceText": "dass die Zuverlässigkeitsmethoden in zwei Kategorien",
+      "occurrence": 1,
+      "confidence": "high",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "highlight_qualitative_focus",
+      "targetId": "qualitative_focus",
+      "action": "show",
+      "sourceText": "In diesem Modul werden wir ausschließlich",
+      "occurrence": 1,
+      "confidence": "high"
+    },
+    {
+      "stepId": "show_qualitative_outcomes",
+      "targetId": "qualitative_outcomes",
+      "action": "show",
+      "sourceText": "Mit Hilfe dieser werden vor allem",
+      "occurrence": 1,
+      "confidence": "high",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_improvement_path",
+      "targetId": "improvement_path",
+      "action": "show",
+      "sourceText": "Im Anschluss werden geeignete Abstellmaßnahmen festgelegt",
+      "occurrence": 1,
+      "confidence": "high",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_fta_method",
+      "targetId": "fta_method",
+      "action": "show",
+      "sourceText": "Dazu schauen wir uns hauptsächlich die",
+      "occurrence": 1,
+      "confidence": "high",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_fmea_method",
+      "targetId": "fmea_method",
+      "action": "show",
+      "sourceText": "Im Anschluss daran gehen wir auch",
+      "occurrence": 1,
+      "confidence": "high",
+      "enterFrames": 16
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch3_fta_step5_focus",
+  "svgPath": "slide_049.svg",
+  "spokenText": "Kommen wir nun zum fünften und damit auch letzten Schritt, der qualitativen Bewertung des Fehlerbaums.\n\nIn diesem Schritt analysieren wir die Struktur des Fehlerbaums.\n\nDurch die Visualisierung der logischen Verknüpfungen zwischen den verschiedenen Ausfällen und ihren Ursachen, können wir genau sehen, welche Ausfälle oder Ausfallkombinationen zum Ausfall des übergeordneten Elements und letztendlich zum Systemausfall führen.\n\nDies ermöglicht es uns, die kritischen Pfade zu identifizieren, also der direkte und minimale Weg, der zu einem unerwünschten Top-Ereignis führt.\n\nIn unserem Beispiel von vorher sind alle Ereignisse im Fehlerbaum mit einem Oder Gatter verbunden.\n\nAus diesem Grund führt jeder Ausfall direkt zum Ausfall des Motors.\n\nDemnach ist jeder Pfad im Fehlerbaum auch ein kritischer Pfad.\n\nNehmen wir mal an, wir hätten in der Schaltung zur Steuerung des Motors eine zweite Stromversorgung installiert.\n\nDiese kann die Stromversorgung übernehmen, wenn die erste ausgefallen ist.\n\nDa die gesamte Stromversorgung erst ausgefallen ist, wenn beide Stromquellen ausgefallen sind, können die Ereignisse im Fehlerbaum mit einem Und-Gatter verbunden werden.\n\nErst wenn beide Ausfall-Ereignisse eingetreten sind, führt dies zum Ausfall des übergeordneten Elements.\n\nDie beiden Ausfall-Ereignisse können wir als minimale Ausfallschnitte verstehen.\n\nDie minimalen Ausfallschnitte, auch Minimalschnitte, kritische Mengen oder Cut Sets genannt, sind die kleinsten Kombinationen von Basisereignissen, deren gemeinsames Eintreten zu einem unerwünschten Top-Ereignis führt.\n\nAllein durch Betrachtung des Fehlerbaums erhalten wir wertvolle Erkenntnisse über das Ursachen-Wirkungsgefüge innerhalb des Systems.\n\nDabei können wir kritische Pfade und minimale Ausfallschnitte identifizieren.\n\nDiese helfen uns qualitative Aussagen über die schwächsten Äste des Systems zu treffen und zu erkennen, ob Einzel- oder Mehrfachausfälle, zu kritischen Zuständen führen.\n\nMit Hilfe dieser Analysen können wir erste Näherungen über das momentane Risiko möglicher Systemschwachstellen ableiten und sehen welche Basisereignisse den größten Einfluss auf das Eintreten des Top-Ereignisses haben.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "fta51_circuit",
+      "label": "Redundante Stromversorgung",
+      "role": "content",
+      "members": [
+        "fta51_circuit"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta51_nodes",
+      "label": "Minimaler Ausfallschnitt",
+      "role": "content",
+      "members": [
+        "fta51_nodes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta51_links",
+      "label": "UND-Verknüpfung",
+      "role": "content",
+      "members": [
+        "fta51_links"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Redundante Stromversorgung",
+      "sourceText": "Nehmen wir mal an, wir hätten",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta51_circuit"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Minimaler Ausfallschnitt",
+      "sourceText": "Da die gesamte Stromversorgung erst ausgefallen",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta51_nodes"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "UND-Verknüpfung",
+      "sourceText": "Erst wenn beide Ausfall-Ereignisse eingetreten sind",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta51_links"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta51_circuit",
+      "beatId": "beat_01",
+      "targetId": "fta51_circuit",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_fta51_nodes",
+      "beatId": "beat_02",
+      "targetId": "fta51_nodes",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_fta51_links",
+      "beatId": "beat_03",
+      "targetId": "fta51_links",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_03",
+      "visibleGroups": [
+        "canvas_context",
+        "fta51_circuit",
+        "fta51_nodes",
+        "fta51_links"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

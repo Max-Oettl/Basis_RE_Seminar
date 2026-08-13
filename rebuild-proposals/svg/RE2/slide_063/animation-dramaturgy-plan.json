@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_fmea_intro",
+  "svgPath": "slide_063.svg",
+  "spokenText": "In diesem Abschnitt lernst du eine weitere qualitative Methode kennen – die sogenannte FMEA.\n\nVielleicht fragst du dich: Wofür steht diese Abkürzung eigentlich?\n\nFMEA bedeutet Fehler-Möglichkeits- und Einfluss-Analyse.\n\nIm englischsprachigen Raum nennt man sie Failure Mode and Effects Analysis.\n\nDie FMEA ist eine systematische, vorausschauende und entwicklungsbegleitende Methode.\n\nSie wird im Team durchgeführt, um mögliche Arten von Ausfällen, deren Folgen und Ursachen frühzeitig zu erkennen.\n\nAußerdem hilft sie dabei, das Risiko einzuschätzen und Maßnahmen zur Optimierung festzulegen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s65_acronym",
+      "label": "Akronym FMEA",
+      "role": "content",
+      "members": [
+        "s65_acronym"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s65_definition",
+      "label": "Definition",
+      "role": "content",
+      "members": [
+        "s65_definition"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s65_roles",
+      "label": "Aufgaben der FMEA",
+      "role": "content",
+      "members": [
+        "s65_roles"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Akronym FMEA",
+      "sourceText": "FMEA bedeutet Fehler-Möglichkeits- und Einfluss-Analyse",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s65_acronym"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Definition",
+      "sourceText": "Die FMEA ist eine systematische, vorausschauende",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s65_definition"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Aufgaben der FMEA",
+      "sourceText": "Sie wird im Team durchgeführt, um",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s65_roles"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s65_acronym",
+      "beatId": "beat_01",
+      "targetId": "s65_acronym",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s65_definition",
+      "beatId": "beat_02",
+      "targetId": "s65_definition",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_s65_roles",
+      "beatId": "beat_03",
+      "targetId": "s65_roles",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_03",
+      "visibleGroups": [
+        "canvas_context",
+        "s65_acronym",
+        "s65_definition",
+        "s65_roles"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

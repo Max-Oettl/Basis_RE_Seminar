@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch1_methods",
+  "svgPath": "slide_001.svg",
+  "spokenText": "Wir haben bereits im Modul Einführung in die Zuverlässigkeitstechnik kennengelernt, dass die Zuverlässigkeitsmethoden in zwei Kategorien eingeteilt werden können:\n\nNämlich in die qualitativen und in die quantitativen Zuverlässigkeitsmethoden.\n\nIn diesem Modul werden wir ausschließlich die qualitativen Methoden betrachten.\n\nMit Hilfe dieser werden vor allem die kritischen Ausfallmechanismen eines Produktes identifiziert.\n\nIm Anschluss werden geeignete Abstellmaßnahmen festgelegt, um das Ausfallrisiko zu reduzieren und die Zuverlässigkeit zu verbessern.\n\nWir werden noch im weiteren Verlauf dieses Moduls die typischen Werkzeuge kennenlernen, die hierfür eingesetzt werden.\n\nDazu schauen wir uns hauptsächlich die Fehlerbaumanalyse an, die hier einfach nur mit FTA abgekürzt wird.Im Anschluss daran gehen wir auch auf die Fehlermöglichkeits- und Einflussanalyse ein, die man umgangssprachlich einfach nur FMEA nennt.\n\nUm zu schauen, wann die Methoden genau eingesetzt werden, werfen wir nochmals einen Blick auf die Badewannen-Kurve, welche den typischen Verlauf von Ausfällen über der Lebensdauer eines Produktes beschreibt.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "qualitative_toolbox",
+      "label": "Qualitative Methoden",
+      "role": "content",
+      "members": [
+        "qualitative_toolbox"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "quantitative_toolbox",
+      "label": "Quantitative Methoden – zurückgenommen",
+      "role": "content",
+      "members": [
+        "quantitative_toolbox"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "qualitative_focus_badge",
+      "label": "Fokus dieses Moduls",
+      "role": "content",
+      "members": [
+        "qualitative_focus_badge"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "qualitative_tools",
+      "label": "FTA und FMEA",
+      "role": "content",
+      "members": [
+        "qualitative_tools"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Qualitative Methoden",
+      "sourceText": "Nämlich in die qualitativen und in",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "qualitative_toolbox"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Quantitative Methoden – zurückgenommen",
+      "sourceText": "Nämlich in die qualitativen und in",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "quantitative_toolbox"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Fokus dieses Moduls",
+      "sourceText": "In diesem Modul werden wir ausschließlich",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "qualitative_focus_badge"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "FTA und FMEA",
+      "sourceText": "Dazu schauen wir uns hauptsächlich die",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "qualitative_tools"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_qualitative_toolbox",
+      "beatId": "beat_01",
+      "targetId": "qualitative_toolbox",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_quantitative_toolbox",
+      "beatId": "beat_02",
+      "targetId": "quantitative_toolbox",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_qualitative_focus_badge",
+      "beatId": "beat_03",
+      "targetId": "qualitative_focus_badge",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_04_qualitative_tools",
+      "beatId": "beat_04",
+      "targetId": "qualitative_tools",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_04",
+      "visibleGroups": [
+        "canvas_context",
+        "qualitative_toolbox",
+        "quantitative_toolbox",
+        "qualitative_focus_badge",
+        "qualitative_tools"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

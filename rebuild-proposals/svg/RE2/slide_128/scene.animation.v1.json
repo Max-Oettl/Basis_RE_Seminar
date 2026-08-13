@@ -8,6 +8,62 @@
     "drawDurFrames": 42,
     "transformDurFrames": 30
   },
-  "targets": [],
-  "steps": []
+  "targets": [
+    {
+      "targetId": "s129_lever_1",
+      "label": "01 AUFTRETEN REDUZIEREN",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s129_lever_2",
+      "label": "02 BEDEUTUNG REDUZIEREN",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s129_lever_3",
+      "label": "03 ENTDECKUNG ERHÖHEN",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s129_lever_1",
+      "targetId": "s129_lever_1",
+      "action": "show",
+      "sourceText": "Erstens: Das Beseitigen der Fehlerursachen oder das Verringern der Auftretenswahrscheinlichkeit von Fehlern. Das Ziel ist es hierbei, Fehlerquellen vollständig zu eliminieren oder das Auftreten von Fehlern deutlich zu reduzieren. Solche Maßnahmen lassen sich in der Regel nur durch Änderungen in der Konstruktion oder im Produktionsprozess umsetzen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_s129_lever_2",
+      "targetId": "s129_lever_2",
+      "action": "show",
+      "sourceText": "Zweitens: Das Verringern der Bedeutung eines Fehlers. Damit soll erreicht werden, dass die Auswirkungen eines Fehlers auf das Gesamtsystem minimiert werden. Dies gelingt vor allem durch konzeptionelle Anpassungen am Produkt, wie zum Beispiel die Einführung von Redundanzen oder Fehleranzeigen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_s129_lever_3",
+      "targetId": "s129_lever_3",
+      "action": "show",
+      "sourceText": "Und zum Schluss werden wirksame Entdeckungsmaßnahmen umgesetzt. Diese können zwar kostspielig sein, sind aber entscheidend, um verbleibende Fehler frühzeitig zu erkennen und zu beheben.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    }
+  ]
 }

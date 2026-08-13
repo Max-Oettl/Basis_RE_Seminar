@@ -91,3 +91,14 @@
 - Szenen 50, 53 und 56: dekorative Anwendungsicons entfernt und durch ruhige Textzeilen ersetzt; in Szene 50 Mittelwertlabel und Achsenbeschriftung bereinigt.
 - Szenen 52, 54 und 55: Formelausrichtung vereinheitlicht, Integralgrenzen korrekt gesetzt und Kurven-/Parameterlabels aus den Plotflächen herausgeschoben.
 - Verifikation: Laufzeit-/Manifest-QA und strenge Layout-QA der vollständigen Szenen ohne Fehler.
+
+## Feedbackrunde 2026-08-06: konsistenter Formelsatz
+
+- Szenen: 52 und 55; übertragbar auf alle Formelmatrizen.
+- Nutzerbeobachtung: Die Ausfallwahrscheinlichkeit erschien fett, Integralgrenzen standen zu weit vom Integral entfernt, und gleichrangige Formeln wirkten durch stark unterschiedliche Abstände und Größen uneinheitlich.
+- Reproduzierte Ursache: Szene 52 setzte das Integral manuell aus mehreren SVG-Textobjekten zusammen. Die übrigen Mathtext-Assets blieben fontabhängige `<text>/<tspan>`-Elemente und wurden jeweils auf dieselbe Boxhöhe skaliert; einfache Formeln wurden dadurch stärker vergrößert als hohe Bruch- oder Integralformeln.
+- Lokale Korrektur: `F(t)` in Szene 52 verwendet nun dasselbe zusammenhängende Formelasset wie die anderen Zeilen. Die Formelassets wurden mit STIX als Pfadgeometrie neu erzeugt und anhand ihrer nominalen Grundschrift statt ihrer individuellen Bounding-Box-Höhe eingebettet.
+- Reichweite: `domain_rule` und `qa_gap`.
+- Übertragbare Regel: Gleichrangige Formeln besitzen eine gemeinsame nominale Grundschrift; komplexe Notation bleibt ein einzelnes Pfad-SVG und wird nicht aus Textobjekten gebaut oder boxbezogen gestreckt.
+- Aktualisierte Schubladen: `components/formula-library`, `workflow/32-formulas/formula-workflow.md`, Redesign-Reviewregeln und statisches SVG-QA.
+- Verifikation: neue 1920x1080-Previews unter `analysis/render-checks/RE1/feedback-2026-08-06-formula-v2/`; Szenen 52 und 55 visuell ohne abweichende Fettung oder lose Integralgrenzen. Viewer-/Layout-QA: 0 Fehler; verbleibende Warnungen betreffen unter anderem die erwartungsgemäß nicht-16:9 zugeschnittenen Einzelassets.

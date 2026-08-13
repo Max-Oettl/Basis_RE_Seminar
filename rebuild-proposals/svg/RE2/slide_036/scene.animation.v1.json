@@ -10,8 +10,32 @@
   },
   "targets": [
     {
-      "targetId": "process_36",
-      "label": "FTA-Ablauf",
+      "targetId": "fta43_circuit",
+      "label": "Motorschaltung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta43_nodes",
+      "label": "Fehlerbaum-Ereignisse",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta43_links",
+      "label": "Fehlerbaum-Beziehungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta43_note",
+      "label": "Fokus",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -20,10 +44,40 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_process_36",
-      "targetId": "process_36",
+      "stepId": "step_01_fta43_circuit",
+      "targetId": "fta43_circuit",
       "action": "show",
-      "sourceText": "Kommen wir nun zum vierten Schritt: der Erstellung des Fehlerbaums.",
+      "sourceText": "Schauen wir uns hierzu nochmals das vorherige Beispiel an.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_fta43_nodes",
+      "targetId": "fta43_nodes",
+      "action": "show",
+      "sourceText": "Wir wissen ja bereits, dass das Top-Fehler-Ereignis an die Spitze des Baumes platziert wird.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_fta43_links",
+      "targetId": "fta43_links",
+      "action": "draw",
+      "sourceText": "verknüpfen wir diese mit einem Oder Gatter.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung wird erst nach den zugehörigen Ereignissen gezeichnet; kleine Linien- und Pfeilskalierung.",
+      "drawDurFrames": 40
+    },
+    {
+      "stepId": "step_04_fta43_note",
+      "targetId": "fta43_note",
+      "action": "show",
+      "sourceText": "Auf diese Weise wird der Fehlerbaum nach unten hin immer weiter verästelt",
       "occurrence": 1,
       "confidence": "high",
       "notes": "Sprechertextgeführte semantische Gruppe.",

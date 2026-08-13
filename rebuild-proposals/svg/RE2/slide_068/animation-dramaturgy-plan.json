@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_fmea_types",
+  "svgPath": "slide_068.svg",
+  "spokenText": "Nun möchten wir die unterschiedlichen Arten der FME-A betrachten.Grundsätzlich lässt sich die FME-A in zwei Hauptkategorien unterteilen: die Design-FME-A und die Prozess-FME-A.Schauen wir uns die Unterschiede genauer an.\n\nDie Design-FMEA konzentriert sich darauf, mögliche Fehler und Schwachstellen im Produktdesign frühzeitig zu erkennen und zu beheben.Der Schwerpunkt liegt hier vor allem auf der Produktqualität. Das bedeutet, es werden Aspekte wie die Leistung und die Sicherheit des Produkts untersucht.Dabei analysiert die Methode alle Komponenten, Baugruppen und die Interaktionen innerhalb des Produktdesigns.Es wird überprüft, wie die einzelnen Elemente zusammenwirken und wo potenzielle Risiken auftreten könnten.\n\nDie Prozess-FME-A hingegen beschäftigt sich damit, potenzielle Fehler und Schwachstellen in den Produktionsprozessen frühzeitig zu identifizieren und zu beheben.\n\nHier liegt der Schwerpunkt auf der Effizienz der Produktion.Das Ziel ist, zu verstehen, welchen Einfluss die verschiedenen Produktionsparameter auf die Qualität und Effizienz des Endprodukts haben.Gleichzeitig wird untersucht, ob der Produktionsprozess reibungslos funktioniert.Die Analyse konzentriert sich auf die einzelnen Schritte, Abläufe und eingesetzten Materialien, um den Prozess zu optimieren und Fehler während der Herstellung zu vermeiden.\n\nDie Design-FME-A wird während der Designphase eines Produkts durchgeführt – idealerweise noch bevor der erste Prototyp erstellt wird.Auf diese Weise können Änderungen auch möglichst kostengünstig umgesetzt werden.\n\nMit der Anwendung der Design-FME-A wird ein sicheres und funktionales Produkt sichergestellt.Ein Beispiel hierfür wäre die Analyse eines neu entwickelten Autobatteriesystems.\n\nDie Prozess-FME-A wird dagegen kontinuierlich während des gesamten Produktionsprozesses angewendet.Sie sollte bereits in der Planungsphase der Produktion beginnen.Durch die Prozess-FMEA wird eine effizientere und kosteneffektivere Produktion erreicht.Zusätzlich unterstützt sie die Qualitätssicherung während der Herstellung eines Produkts.Ein Beispiel hierfür wäre die Optimierung der Montage-Linie für Elektronikgeräte.\n\nZusammenfassend sind sowohl die Design-FMEA als auch die Prozess-FMEA essenziell, um Produkte und Prozesse zu verbessern und dabei die Risiken und Kosten zu minimieren.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s70_left",
+      "label": "DESIGN-FMEA",
+      "role": "content",
+      "members": [
+        "s70_left"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s70_right",
+      "label": "PROZESS-FMEA",
+      "role": "content",
+      "members": [
+        "s70_right"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "DESIGN-FMEA",
+      "sourceText": "Die Design-FME-A wird während der Designphase",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s70_left"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "PROZESS-FMEA",
+      "sourceText": "Die Prozess-FME-A wird dagegen kontinuierlich während",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s70_right"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s70_left",
+      "beatId": "beat_01",
+      "targetId": "s70_left",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s70_right",
+      "beatId": "beat_02",
+      "targetId": "s70_right",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_02",
+      "visibleGroups": [
+        "canvas_context",
+        "s70_left",
+        "s70_right"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_044.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "cross_function",
+      "label": "Gemeinsame Systemlogik",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "cross_error",
+      "label": "Fehlerbaum",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "cross_series",
+      "label": "UND zu Serie",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "cross_parallel",
+      "label": "ODER zu Parallel",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "cross_links",
+      "label": "Transformation",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_cross_function",
+      "targetId": "cross_function",
+      "action": "show",
+      "sourceText": "Die Grundlage für ein solches Blockdiagramm bildet der Funktionsbaum, der die logische Abfolge der Systemfunktionen darstellt.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_cross_error",
+      "targetId": "cross_error",
+      "action": "show",
+      "sourceText": "Die Grundlage für ein solches Blockdiagramm bildet der Funktionsbaum, der die logische Abfolge der Systemfunktionen darstellt.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_cross_series",
+      "targetId": "cross_series",
+      "action": "show",
+      "sourceText": "Eine und-Verknüpfung im Funktionsbaum entspricht dabei einer Reihenschaltung im Zuverlässigkeitsblockdiagramm – alle Komponenten müssen funktionieren, damit die Funktion erfüllt ist.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_cross_parallel",
+      "targetId": "cross_parallel",
+      "action": "show",
+      "sourceText": "Eine ODER-Verknüpfung entspricht einer Parallelschaltung – es reicht, wenn mindestens eine Komponente funktioniert.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_05_cross_links",
+      "targetId": "cross_links",
+      "action": "draw",
+      "sourceText": "Man muss jedoch nicht zwingend immer den Umweg über Funktions- oder Fehlerbaum gehen – für einfache Systeme lassen sich Zuverlässigkeitsblockdiagramme oft auch direkt aufstellen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung erscheint nach ihren fachlichen Endpunkten.",
+      "drawDurFrames": 42
+    }
+  ]
+}

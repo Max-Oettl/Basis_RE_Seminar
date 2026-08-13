@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_gearbox_structure",
+  "svgPath": "slide_086.svg",
+  "spokenText": "Schauen wir uns das Ganze mal am Beispiel eines Anpassungsgetriebes an.\n\nDas Getriebe besteht hauptsächlich aus einer Eingangswelle mit Ritzel und Passfeder sowie einer Ausgangswelle mit Zahnrad. Beide Wellen sind gelagert, was durch Rollenlager ermöglicht wird. Zusätzlich ist hierfür auch rechts der schematische Aufbau dargestellt.\n\nDer gesamte Verbund ist in einem Gehäuse eingebettet. Dieses enthält zusätzliche Komponenten wie Radialwellendichtringe und statische Dichtungen, um die Dichtheit des Systems sicherzustellen. Außerdem befinden sich Lagerdeckel, Schrauben und Passstifte im Gehäuse.\n\nUm sicherzustellen, dass kein Systemelement in der Analyse vergessen wird, eignet sich besonders ein Blick auf die Stückliste. Hier wurde das System bereits in die drei Baugruppen Antrieb, Abtrieb und Gehäuse unterteilt. Den Baugruppen wurden dann die jeweiligen Bauteile zugeordnet.\n\nDiese Aufteilung hilft uns jetzt, eine klare und vollständige Systemstruktur zu erstellen. Ganz oben, auf der ersten Systemebene, befindet sich das Getriebe. Entsprechend der Stückliste kann es in die drei Baugruppen Antrieb, Abtrieb und Gehäuse untergliedert werden.\n\nDer Antrieb umfasst die Eingangswelle, das Ritzel, ein Rollenlager, einen Radialwellendichtring, eine Passfeder und eine Hülse. Für den Abtrieb lässt sich die Struktur auf die gleiche Weise aufbauen. Dies kann natürlich auch analog für das Gehäuse fortgeführt werden.\n\nEs ist entscheidend, dass diese Analyse vollständig und sorgfältig durchgeführt wird, damit keine Systemelemente oder Bauteile übersehen werden. Das gilt auch für Standardbauteile wie Schrauben oder Hülsen. Werden solche Bauteile vergessen, könnten sie in der weiteren Analyse unbeachtet bleiben – selbst, wenn von ihnen ein Risiko ausgehen könnte.\n\nDamit haben wir den zweiten Schritt der FME-A abgeschlossen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s89_gear_nodes",
+      "label": "Anpassungsgetriebe",
+      "role": "content",
+      "members": [
+        "s89_gear_nodes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s89_gear_links",
+      "label": "Hierarchische Verknüpfungen",
+      "role": "content",
+      "members": [
+        "s89_gear_links"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Anpassungsgetriebe",
+      "sourceText": "Schauen wir uns das Ganze mal",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s89_gear_nodes"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Hierarchische Verknüpfungen",
+      "sourceText": "Diese Aufteilung hilft uns jetzt, eine",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s89_gear_links"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s89_gear_nodes",
+      "beatId": "beat_01",
+      "targetId": "s89_gear_nodes",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s89_gear_links",
+      "beatId": "beat_02",
+      "targetId": "s89_gear_links",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_02",
+      "visibleGroups": [
+        "canvas_context",
+        "s89_gear_nodes",
+        "s89_gear_links"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

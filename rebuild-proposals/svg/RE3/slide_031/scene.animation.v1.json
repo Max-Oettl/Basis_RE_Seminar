@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_031.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "sources_development",
+      "label": "Entwicklung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "sources_testing",
+      "label": "Erprobung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "sources_field",
+      "label": "Feld",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "sources_evidence",
+      "label": "Evidenzbasis",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_sources_development",
+      "targetId": "sources_development",
+      "action": "show",
+      "sourceText": "Wir können die verschiedenen Arten von Datenquellen in eine typische Reihenfolge bringen, die sich entlang des Entwicklungsprozesses eines Produkts einordnen lässt.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_sources_testing",
+      "targetId": "sources_testing",
+      "action": "show",
+      "sourceText": "An erster Stelle stehen stark beschleunigte Lebensdauerversuche.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_sources_field",
+      "targetId": "sources_field",
+      "action": "show",
+      "sourceText": "Abschließend betrachten wir Felddaten oder sogenannte Feldversuche.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_sources_evidence",
+      "targetId": "sources_evidence",
+      "action": "show",
+      "sourceText": "Zusammenfassend lässt sich sagen: Je weiter wir uns im Entwicklungsprozess befinden, desto repräsentativer werden die Daten – gleichzeitig nimmt jedoch auch die Unsicherheit zu.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

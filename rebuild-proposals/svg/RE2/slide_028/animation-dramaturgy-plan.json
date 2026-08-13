@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch3_fta_step2_focus",
+  "svgPath": "slide_028.svg",
+  "spokenText": "Im zweiten Schritt legen wir das unerwünschte Ereignis fest, das wir vermeiden möchten.\n\nDieses wird im Fehlerbaum an oberster Stelle als Top-Ereignis dargestellt.\n\nDas Top-Ereignis könnte beispielsweise ganz einfach, als Systemausfall definiert werden.Um überhaupt zu entscheiden, ab wann das System als ausgefallen gilt, müssen in diesem Schritt auch immer die Ausfallkriterien festgelegt werden.\n\nDies sind die Bedingungen, unter denen das System als ausgefallen gilt.\n\nDie Definition des Top-Ereignisses und der Kriterien kann durch zwei verschiedene Ansätze erfolgen.\n\nZum einen gibt es den präventiven Ansatz.\n\nDabei kann das unerwünschte Ereignis aus der Nicht-Erfüllung von Funktionen oder Anforderungen definiert werden.\n\nDemgegenüber steht der korrektive Ansatz.\n\nHier wird die Definition eines aufgetretenen Ausfalls bzw. einer Fehlfunktion des Systems als unerwünschtes Ereignis festgelegt.\n\nAber wie genau unterscheiden sich diese beiden Ansätze?Beim präventiven Ansatz erfolgt die frühzeitige Identifizierung von Fehlerquellen oder Risiken bevor sie auftreten.\n\nDies führt zu einer Verbesserung der Systemzuverlässigkeit und -sicherheit, indem potenzielle Risiken beseitigt werden.\n\nAuf diese Weise werden ebenfalls spätere Korrekturmaßnahmen und Reparaturen reduziert.\n\nDieser Ansatz ist folglich proaktiv, das heißt, es werden Fehler und Risiken schon während der Design- und Entwicklungsphase vermieden.\n\nBeim korrektiven Ansatz dagegen werden die aufgetretenen Fehler und dessen Ursachen erst nach einem Vorfall oder nach einem Systemausfall analysiert.\n\nDurch die Ergebnisse der Analyse kann dann eine effizientere Verbesserung der Systemwartung und Reparatur erfolgen, vor allem durch gezieltere Korrekturmaßnahmen.\n\nAuf diese Weise können auch ähnliche Probleme in der Zukunft vermieden werden.\n\nDieser Ansatz ist also reaktiv, da die Fehler erst nach dem Auftreten analysiert und behoben werden.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "fta30_preventive",
+      "label": "Präventiver Ansatz",
+      "role": "content",
+      "members": [
+        "fta30_preventive"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta30_corrective",
+      "label": "Korrektiver Ansatz",
+      "role": "content",
+      "members": [
+        "fta30_corrective"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta30_comparison",
+      "label": "Zeitlicher Unterschied",
+      "role": "content",
+      "members": [
+        "fta30_comparison"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Präventiver Ansatz",
+      "sourceText": "Beim präventiven Ansatz erfolgt die frühzeitige",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta30_preventive"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Korrektiver Ansatz",
+      "sourceText": "Beim korrektiven Ansatz dagegen werden die",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta30_corrective"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Zeitlicher Unterschied",
+      "sourceText": "Dieser Ansatz ist also reaktiv",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta30_comparison"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta30_preventive",
+      "beatId": "beat_01",
+      "targetId": "fta30_preventive",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_fta30_corrective",
+      "beatId": "beat_02",
+      "targetId": "fta30_corrective",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_fta30_comparison",
+      "beatId": "beat_03",
+      "targetId": "fta30_comparison",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_03",
+      "visibleGroups": [
+        "canvas_context",
+        "fta30_preventive",
+        "fta30_corrective",
+        "fta30_comparison"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

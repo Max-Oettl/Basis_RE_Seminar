@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_fmea_use",
+  "svgPath": "slide_071.svg",
+  "spokenText": "Nachdem wir die verschiedenen Arten der FMEA besprochen haben, schauen wir uns nun an, in welchen Branchen diese Methode eingesetzt wird.\n\nDie FMEA findet in allen Bereichen Anwendung, in denen die Identifikation und Analyse potenzieller Fehler eine wichtige Rolle spielt, um die Qualität und Zuverlässigkeit von Produkten oder Dienstleistungen sicherzustellen.Zu den Hauptbranchen zählen die Automobilindustrie, die Luft- und Raumfahrt, die Medizintechnik, die Elektronikbranche und die Chemieindustrie.Aber auch im Dienstleistungssektor wird die Methode zunehmend genutzt.\n\nZur Unterstützung der Durchführung der FMEA gibt es verschiedene Standards und Leitfäden.Das A-IAG- und VDA-FMEA-Handbuch ist ein gemeinsamer Standard der amerikanischen Automobilindustrie und des Verbands der deutschen Automobilindustrie.Es bietet einen einheitlichen Ansatz für die Durchführung von FME-As speziell in der Automobilbranche.\n\nDie IEC sechzigtausend achthundertzwölf ist eine internationale Norm, die allgemeine Anforderungen und Verfahren für FME-As festlegt.Diese Norm wird für verschiedene Branchen eingesetzt und bietet eine solide Grundlage für Fehleranalysen.\n\nDie S A E Jott siebzehnhundertneununddreißig ist ein Standard der Society of Automotive Engineers, der speziell auf die Automobilindustrie ausgerichtet ist.Er enthält Richtlinien für die Durchführung von Design- und Prozess-FMEA-s.\n\nUnabhängig von Branche oder verwendetem Standard bleibt das zentrale Ziel jeder FME-A potenzielle Fehler, deren Ursachen und Auswirkungen zu identifizieren und Maßnahmen zur Risikominderung zu entwickeln.\n\nIn den meisten Fällen ähneln sich die grundlegenden Vorgehensweisen der FME-A über die verschiedenen Normen hinweg.Allerdings haben viele Unternehmen ihre eigenen Standards entwickelt, die auf bewährten Grundlagen basieren und an ihre spezifischen Anforderungen angepasst wurden.Dabei werden Ablauf und Detaillierungsgrad der FME-A individuell festgelegt.\n\nIm nächsten Schritt stellen wir die Vorgehensweise der Design-FME-A anhand des A-IAG-Standards vor.Einzelne Schritte können dabei je nach Bedarf pragmatisch vereinfacht oder auch übersprungen werden.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s71_use",
+      "label": "Einsatzbereiche",
+      "role": "content",
+      "members": [
+        "s71_use"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s71_goal",
+      "label": "Ziel der Anwendung",
+      "role": "content",
+      "members": [
+        "s71_goal"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Einsatzbereiche",
+      "sourceText": "Nachdem wir die verschiedenen Arten der",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s71_use"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Ziel der Anwendung",
+      "sourceText": "Die FMEA findet in allen Bereichen",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s71_goal"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s71_use",
+      "beatId": "beat_01",
+      "targetId": "s71_use",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s71_goal",
+      "beatId": "beat_02",
+      "targetId": "s71_goal",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_02",
+      "visibleGroups": [
+        "canvas_context",
+        "s71_use",
+        "s71_goal"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

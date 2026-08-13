@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_021.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "quant_input",
+      "label": "Basiswerte",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "quant_logic",
+      "label": "Fehlerlogik",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "quant_output",
+      "label": "Systemwert",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "quant_flow",
+      "label": "Berechnungsweg",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_quant_input",
+      "targetId": "quant_input",
+      "action": "show",
+      "sourceText": "Im sechsten Schritt der Fehlerbaumanalyse geht es nun darum, aus den einzelnen Ausfallwahrscheinlichkeiten der Basisereignisse die Gesamtausfallwahrscheinlichkeit des Systems zu berechnen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_quant_logic",
+      "targetId": "quant_logic",
+      "action": "show",
+      "sourceText": "Dabei greifen wir auf die logische Struktur des Fehlerbaums zurück, wie wir sie zuvor aufgebaut haben.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_quant_output",
+      "targetId": "quant_output",
+      "action": "show",
+      "sourceText": "Durch die Umwandlung von Fehlerbaum zu Funktionsbaum lässt sich die Systemzuverlässigkeit einfach berechnen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_quant_flow",
+      "targetId": "quant_flow",
+      "action": "draw",
+      "sourceText": "Für die eigentliche Berechnung greifen wir auf Regeln der Wahrscheinlichkeitsrechnung zurück.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung erscheint nach ihren fachlichen Endpunkten.",
+      "drawDurFrames": 42
+    }
+  ]
+}

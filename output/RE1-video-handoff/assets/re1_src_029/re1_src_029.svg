@@ -1,118 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_029" data-brand-profile="reltest-academy">
-  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"animated-chart-build","contentTitle":"Vom Histogramm zur Dichtefunktion","layoutIntent":"single-axes-histogram-to-density-animation","takeaway":"Das Histogramm beschreibt die Stichprobe; die Dichtefunktion schätzt im selben Koordinatensystem das Ausfallverhalten der Grundgesamtheit.","density":"balanced","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-academy","brandVariant":"academy-production","sourceSlides":[29,30],"officialLogoStatus":"pending-original-asset"}]]></metadata>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_029" data-brand-profile="reltest-education">
+  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"animated-chart-build","contentTitle":"Vom Histogramm zur Dichtefunktion","layoutIntent":"single-axes-histogram-to-density-animation","takeaway":"Das Histogramm beschreibt die Stichprobe; die Dichtefunktion schätzt im selben Koordinatensystem das Ausfallverhalten der Grundgesamtheit.","density":"balanced","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-education","brandVariant":"education-production","sourceSlides":[29,30],"officialLogoStatus":"downstream-owned"}]]></metadata>
   <title id="accessible_title">Vom Histogramm zur Dichtefunktion</title>
   <desc id="accessible_description">Das Histogramm beschreibt die Stichprobe; die Dichtefunktion schätzt im selben Koordinatensystem das Ausfallverhalten der Grundgesamtheit.</desc>
   <defs>
     <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#F9FBFC"/>
-      <stop offset="56%" stop-color="#F1F5F8"/>
-      <stop offset="100%" stop-color="#E9F0F4"/>
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="56%" stop-color="#F7F9FC"/>
+      <stop offset="100%" stop-color="#E6F6EE"/>
     </linearGradient>
     <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse">
-      <path d="M80 0H0V80" fill="none" stroke="#102A43" stroke-opacity="0.035" stroke-width="1"/>
+      <path d="M80 0H0V80" fill="none" stroke="#031334" stroke-opacity="0.035" stroke-width="1"/>
     </pattern>
-    <filter id="shadowSoft" x="-15%" y="-15%" width="130%" height="140%">
-      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#102A43" flood-opacity="0.10"/>
-    </filter>
-    <marker id="arrow_007EA7" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#007EA7"/></marker>
-    <marker id="arrow_D1495B" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#D1495B"/></marker>
-    <marker id="arrow_2F6F55" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#2F6F55"/></marker>
-    <marker id="arrow_B7791F" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#B7791F"/></marker>
+    
   </defs>
   <style>
-    text { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+    text { font-family: "Archivo", Arial, Helvetica, sans-serif; letter-spacing: 0; }
+    .display { font-family: "Oxanium", "Archivo", Arial, sans-serif; }
   </style>
-  <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
-  <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
-  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><g id="reliability_function_tag" aria-label="1. Dichtefunktion f(t)"><rect data-qc-allow-overlap="true" x="98" y="174" width="326" height="42" rx="6" fill="#D9F0F7" stroke="#007EA7" stroke-width="1.5"/><circle cx="123" cy="195" r="14" fill="#FFFFFF"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="123" y="201" font-size="16" font-weight="820" fill="#007EA7" text-anchor="middle">1</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="149" y="202" font-size="18" font-weight="800" fill="#007EA7">f(t) · Dichtefunktion</text></g><svg id="histogram_density_plot" x="96" y="224" width="1728" height="690" viewBox="0 0 965.13158 360.808219" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <g id="brand_background" data-semantic-group="true" aria-label="RelTest-Education-Hintergrund">
+    <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
+    <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
+  </g>
+  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><g id="reliability_function_rail" aria-label="Vier Zuverlässigkeitsfunktionen"><g data-reliability-function="density"><title>1. Dichtefunktion f(t)</title><rect data-role="functional" data-qc-allow-overlap="true" x="98" y="174" width="400" height="52" rx="6" fill="#00A754" stroke="#00A754" stroke-width="1.5"/><circle data-role="functional" cx="126" cy="200" r="16" fill="#FFFFFF"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="126" y="207" font-size="18" font-weight="820" fill="#00A754" text-anchor="middle">1</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="154" y="207" font-size="19" font-weight="780" fill="#FFFFFF">f(t) · Dichtefunktion</text></g><g data-reliability-function="failure_probability"><title>2. Ausfallwahrscheinlichkeit F(t)</title><rect data-role="functional" data-qc-allow-overlap="true" x="533" y="174" width="400" height="52" rx="6" fill="#FFFFFF" stroke="#CDD0D6" stroke-width="1.5"/><circle data-role="functional" cx="561" cy="200" r="16" fill="#F7F9FC"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="561" y="207" font-size="18" font-weight="820" fill="#0C84B4" text-anchor="middle">2</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="589" y="207" font-size="19" font-weight="780" fill="#25495F">F(t) · Ausfallwahrscheinlichkeit</text></g><g data-reliability-function="reliability"><title>3. Zuverlässigkeit R(t)</title><rect data-role="functional" data-qc-allow-overlap="true" x="968" y="174" width="400" height="52" rx="6" fill="#FFFFFF" stroke="#CDD0D6" stroke-width="1.5"/><circle data-role="functional" cx="996" cy="200" r="16" fill="#E6F6EE"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="996" y="207" font-size="18" font-weight="820" fill="#00A754" text-anchor="middle">3</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1024" y="207" font-size="19" font-weight="780" fill="#25495F">R(t) · Zuverlässigkeit</text></g><g data-reliability-function="hazard"><title>4. Ausfallrate λ(t)</title><rect data-role="functional" data-qc-allow-overlap="true" x="1403" y="174" width="400" height="52" rx="6" fill="#FFFFFF" stroke="#CDD0D6" stroke-width="1.5"/><circle data-role="functional" cx="1431" cy="200" r="16" fill="#FCE7E2"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1431" y="207" font-size="18" font-weight="820" fill="#EC6244" text-anchor="middle">4</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1459" y="207" font-size="19" font-weight="780" fill="#25495F">λ(t) · Ausfallrate</text></g></g><svg id="histogram_density_plot" x="96" y="224" width="1728" height="690" viewBox="0 0 979.831986 368.972" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
  
  <defs>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
  <g id="histogram_density_plot__figure_1">
   <g id="histogram_density_plot__patch_1">
-   <path d="M 0 360.808219  L 965.13158 360.808219  L 965.13158 0  L 0 0  L 0 360.808219  z " style="fill: none; opacity: 0" />
+   <path data-role="functional" d="M 0 368.972  L 979.831986 368.972  L 979.831986 0  L 0 0  L 0 368.972  z " style="fill: none; opacity: 0" />
   </g>
   <g id="histogram_density_plot__axes_1">
    <g id="histogram_density_plot__patch_2">
-    <path d="M 75.899844 301.104  L 953.867844 301.104  L 953.867844 7.2  L 75.899844 7.2  L 75.899844 301.104  z " style="fill: none" />
+    <path data-role="functional" d="M 84.750875 301.104  L 962.718875 301.104  L 962.718875 7.2  L 84.750875 7.2  L 84.750875 301.104  z " style="fill: none" />
    </g>
    <g id="histogram_density_plot__matplotlib.axis_1">
     <g id="histogram_density_plot__xtick_1">
      <g id="histogram_density_plot__line2d_1">
-      <path d="M 113.260184 301.104  L 113.260184 7.2  " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 122.111215 301.104  L 122.111215 7.2  " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="histogram_density_plot__line2d_2">
       <defs>
-       <path id="histogram_density_plot__m2b7eed979f" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+       <path data-role="functional" id="histogram_density_plot__m8d47868315" d="M 0 0  L 0 6  " style="stroke: #25495f; stroke-width: 1.2" />
       </defs>
       <g>
-       <use ns4:href="#histogram_density_plot__m2b7eed979f" x="113.260184" y="301.104" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#histogram_density_plot__m8d47868315" x="122.111215" y="301.104" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="histogram_density_plot__text_1">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="113.260184" y="320.480953" transform="rotate(-0 113.260184 320.480953)">23.000</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="122.111215" y="326.408" transform="rotate(-0 122.111215 326.408)">23.000</text>
      </g>
     </g>
     <g id="histogram_density_plot__xtick_2">
      <g id="histogram_density_plot__line2d_3">
-      <path d="M 374.782567 301.104  L 374.782567 7.2  " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 383.633598 301.104  L 383.633598 7.2  " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="histogram_density_plot__line2d_4">
       <g>
-       <use ns4:href="#histogram_density_plot__m2b7eed979f" x="374.782567" y="301.104" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#histogram_density_plot__m8d47868315" x="383.633598" y="301.104" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="histogram_density_plot__text_2">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="374.782567" y="320.480953" transform="rotate(-0 374.782567 320.480953)">30.000</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="383.633598" y="326.408" transform="rotate(-0 383.633598 326.408)">30.000</text>
      </g>
     </g>
     <g id="histogram_density_plot__xtick_3">
      <g id="histogram_density_plot__line2d_5">
-      <path d="M 673.665291 301.104  L 673.665291 7.2  " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 682.516322 301.104  L 682.516322 7.2  " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="histogram_density_plot__line2d_6">
       <g>
-       <use ns4:href="#histogram_density_plot__m2b7eed979f" x="673.665291" y="301.104" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#histogram_density_plot__m8d47868315" x="682.516322" y="301.104" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="histogram_density_plot__text_3">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="673.665291" y="320.480953" transform="rotate(-0 673.665291 320.480953)">38.000</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="682.516322" y="326.408" transform="rotate(-0 682.516322 326.408)">38.000</text>
      </g>
     </g>
     <g id="histogram_density_plot__xtick_4">
      <g id="histogram_density_plot__line2d_7">
-      <path d="M 935.187674 301.104  L 935.187674 7.2  " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 944.038705 301.104  L 944.038705 7.2  " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="histogram_density_plot__line2d_8">
       <g>
-       <use ns4:href="#histogram_density_plot__m2b7eed979f" x="935.187674" y="301.104" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#histogram_density_plot__m8d47868315" x="944.038705" y="301.104" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="histogram_density_plot__text_4">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="935.187674" y="320.480953" transform="rotate(-0 935.187674 320.480953)">45.000</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="944.038705" y="326.408" transform="rotate(-0 944.038705 326.408)">45.000</text>
      </g>
     </g>
     <g id="histogram_density_plot__text_5">
      
-     <g style="fill: #062d46" transform="translate(434.063844 349.284)">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.616211" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="34.330078" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="42.93457" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">w</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="59.563477" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="71.771484" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="82.441406" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="95.255859" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="105.969727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="118.177734" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="124.347656" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="130.614258" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="142.022461" y="2.371866" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="148.342285" y="2.371866" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #062d46">W</tspan>
+     <g style="fill: #031334" transform="translate(454.344875 357.992)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.984375" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="10.259933" y="-0.984375" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="20.267868" y="-0.984375" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="30.005814" y="-0.984375" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="35.657776" y="-0.984375" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">w</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="49.301697" y="-0.984375" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="59.399628" y="-0.984375" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="69.24556" y="-0.984375" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="79.757492" y="-0.984375" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="89.495438" y="-0.984375" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="99.593369" y="-0.984375" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="104.129333" y="-0.984375" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="107.729309" y="-0.984375" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #031334">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="119.137512" y="1.715616" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #031334">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="125.457336" y="1.715616" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #031334">W</tspan>
       </text>
      </g>
     </g>
@@ -120,180 +117,180 @@
    <g id="histogram_density_plot__matplotlib.axis_2">
     <g id="histogram_density_plot__ytick_1">
      <g id="histogram_density_plot__line2d_9">
-      <path d="M 75.899844 301.104  L 953.867844 301.104  " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.750875 301.104  L 962.718875 301.104  " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="histogram_density_plot__line2d_10">
       <defs>
-       <path id="histogram_density_plot__mbfcf3ef0e7" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+       <path data-role="functional" id="histogram_density_plot__m4f09356436" d="M 0 0  L -6 0  " style="stroke: #25495f; stroke-width: 1.2" />
       </defs>
       <g>
-       <use ns4:href="#histogram_density_plot__mbfcf3ef0e7" x="75.899844" y="301.104" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#histogram_density_plot__m4f09356436" x="84.750875" y="301.104" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="histogram_density_plot__text_6">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.399844" y="306.042477" transform="rotate(-0 66.399844 306.042477)">0.00</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.250875" y="309.006" transform="rotate(-0 75.250875 309.006)">0.00</text>
      </g>
     </g>
     <g id="histogram_density_plot__ytick_2">
      <g id="histogram_density_plot__line2d_11">
-      <path d="M 75.899844 262.432421  L 953.867844 262.432421  " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.750875 262.432421  L 962.718875 262.432421  " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="histogram_density_plot__line2d_12">
       <g>
-       <use ns4:href="#histogram_density_plot__mbfcf3ef0e7" x="75.899844" y="262.432421" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#histogram_density_plot__m4f09356436" x="84.750875" y="262.432421" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="histogram_density_plot__text_7">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.399844" y="267.370898" transform="rotate(-0 66.399844 267.370898)">0.05</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.250875" y="270.334421" transform="rotate(-0 75.250875 270.334421)">0.05</text>
      </g>
     </g>
     <g id="histogram_density_plot__ytick_3">
      <g id="histogram_density_plot__line2d_13">
-      <path d="M 75.899844 223.760842  L 953.867844 223.760842  " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.750875 223.760842  L 962.718875 223.760842  " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="histogram_density_plot__line2d_14">
       <g>
-       <use ns4:href="#histogram_density_plot__mbfcf3ef0e7" x="75.899844" y="223.760842" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#histogram_density_plot__m4f09356436" x="84.750875" y="223.760842" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="histogram_density_plot__text_8">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.399844" y="228.699319" transform="rotate(-0 66.399844 228.699319)">0.10</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.250875" y="231.662842" transform="rotate(-0 75.250875 231.662842)">0.10</text>
      </g>
     </g>
     <g id="histogram_density_plot__ytick_4">
      <g id="histogram_density_plot__line2d_15">
-      <path d="M 75.899844 185.089263  L 953.867844 185.089263  " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.750875 185.089263  L 962.718875 185.089263  " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="histogram_density_plot__line2d_16">
       <g>
-       <use ns4:href="#histogram_density_plot__mbfcf3ef0e7" x="75.899844" y="185.089263" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#histogram_density_plot__m4f09356436" x="84.750875" y="185.089263" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="histogram_density_plot__text_9">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.399844" y="190.02774" transform="rotate(-0 66.399844 190.02774)">0.15</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.250875" y="192.991263" transform="rotate(-0 75.250875 192.991263)">0.15</text>
      </g>
     </g>
     <g id="histogram_density_plot__ytick_5">
      <g id="histogram_density_plot__line2d_17">
-      <path d="M 75.899844 146.417684  L 953.867844 146.417684  " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.750875 146.417684  L 962.718875 146.417684  " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="histogram_density_plot__line2d_18">
       <g>
-       <use ns4:href="#histogram_density_plot__mbfcf3ef0e7" x="75.899844" y="146.417684" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#histogram_density_plot__m4f09356436" x="84.750875" y="146.417684" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="histogram_density_plot__text_10">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.399844" y="151.356161" transform="rotate(-0 66.399844 151.356161)">0.20</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.250875" y="154.319684" transform="rotate(-0 75.250875 154.319684)">0.20</text>
      </g>
     </g>
     <g id="histogram_density_plot__ytick_6">
      <g id="histogram_density_plot__line2d_19">
-      <path d="M 75.899844 107.746105  L 953.867844 107.746105  " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.750875 107.746105  L 962.718875 107.746105  " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="histogram_density_plot__line2d_20">
       <g>
-       <use ns4:href="#histogram_density_plot__mbfcf3ef0e7" x="75.899844" y="107.746105" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#histogram_density_plot__m4f09356436" x="84.750875" y="107.746105" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="histogram_density_plot__text_11">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.399844" y="112.684582" transform="rotate(-0 66.399844 112.684582)">0.25</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.250875" y="115.648105" transform="rotate(-0 75.250875 115.648105)">0.25</text>
      </g>
     </g>
     <g id="histogram_density_plot__ytick_7">
      <g id="histogram_density_plot__line2d_21">
-      <path d="M 75.899844 69.074526  L 953.867844 69.074526  " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.750875 69.074526  L 962.718875 69.074526  " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="histogram_density_plot__line2d_22">
       <g>
-       <use ns4:href="#histogram_density_plot__mbfcf3ef0e7" x="75.899844" y="69.074526" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#histogram_density_plot__m4f09356436" x="84.750875" y="69.074526" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="histogram_density_plot__text_12">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.399844" y="74.013003" transform="rotate(-0 66.399844 74.013003)">0.30</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.250875" y="76.976526" transform="rotate(-0 75.250875 76.976526)">0.30</text>
      </g>
     </g>
     <g id="histogram_density_plot__ytick_8">
      <g id="histogram_density_plot__line2d_23">
-      <path d="M 75.899844 30.402947  L 953.867844 30.402947  " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.750875 30.402947  L 962.718875 30.402947  " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="histogram_density_plot__line2d_24">
       <g>
-       <use ns4:href="#histogram_density_plot__mbfcf3ef0e7" x="75.899844" y="30.402947" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#histogram_density_plot__m4f09356436" x="84.750875" y="30.402947" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="histogram_density_plot__text_13">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.399844" y="35.341424" transform="rotate(-0 66.399844 35.341424)">0.35</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.250875" y="38.304947" transform="rotate(-0 75.250875 38.304947)">0.35</text>
      </g>
     </g>
     <g id="histogram_density_plot__text_14">
-     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="21.130313" y="154.152" transform="rotate(-90 21.130313 154.152)">Relative Häufigkeit / Dichte</text>
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #031334" x="23.004" y="154.152" transform="rotate(-90 23.004 154.152)">Relative Häufigkeit / Dichte</text>
     </g>
    </g>
    <g id="histogram_density_plot__patch_3">
-    <path d="M 75.899844 301.104  L 75.899844 7.2  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+    <path data-role="functional" d="M 84.750875 301.104  L 84.750875 7.2  " style="fill: none; stroke: #031334; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
    </g>
    <g id="histogram_density_plot__patch_4">
-    <path d="M 75.899844 301.104  L 953.867844 301.104  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+    <path data-role="functional" d="M 84.750875 301.104  L 962.718875 301.104  " style="fill: none; stroke: #031334; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
    </g>
    <g id="histogram_bars" data-anim-target="true" data-anim-label="Histogrammklassen der Stichprobe"><g id="histogram_density_plot__histogram_bar_0">
-    <path d="M 113.260184 301.104  L 225.341205 301.104  L 225.341205 252.764526  L 113.260184 252.764526  z " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: #007ea7; opacity: 0.28; stroke: #007ea7; stroke-width: 2.2; stroke-linejoin: miter" />
+    <path data-role="functional" d="M 122.111215 301.104  L 234.192237 301.104  L 234.192237 252.764526  L 122.111215 252.764526  z " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: #0c84b4; opacity: 0.28; stroke: #0c84b4; stroke-width: 2.2; stroke-linejoin: miter" />
    </g>
    <g id="histogram_density_plot__histogram_bar_1">
-    <path d="M 225.341205 301.104  L 337.422227 301.104  L 337.422227 204.425053  L 225.341205 204.425053  z " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: #007ea7; opacity: 0.28; stroke: #007ea7; stroke-width: 2.2; stroke-linejoin: miter" />
+    <path data-role="functional" d="M 234.192237 301.104  L 346.273258 301.104  L 346.273258 204.425053  L 234.192237 204.425053  z " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: #0c84b4; opacity: 0.28; stroke: #0c84b4; stroke-width: 2.2; stroke-linejoin: miter" />
    </g>
    <g id="histogram_density_plot__histogram_bar_2">
-    <path d="M 337.422227 301.104  L 449.503248 301.104  L 449.503248 11.067158  L 337.422227 11.067158  z " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: #007ea7; opacity: 0.28; stroke: #007ea7; stroke-width: 2.2; stroke-linejoin: miter" />
+    <path data-role="functional" d="M 346.273258 301.104  L 458.354279 301.104  L 458.354279 11.067158  L 346.273258 11.067158  z " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: #0c84b4; opacity: 0.28; stroke: #0c84b4; stroke-width: 2.2; stroke-linejoin: miter" />
    </g>
    <g id="histogram_density_plot__histogram_bar_3">
-    <path d="M 449.503248 301.104  L 561.584269 301.104  L 561.584269 156.085579  L 449.503248 156.085579  z " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: #007ea7; opacity: 0.28; stroke: #007ea7; stroke-width: 2.2; stroke-linejoin: miter" />
+    <path data-role="functional" d="M 458.354279 301.104  L 570.435301 301.104  L 570.435301 156.085579  L 458.354279 156.085579  z " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: #0c84b4; opacity: 0.28; stroke: #0c84b4; stroke-width: 2.2; stroke-linejoin: miter" />
    </g>
    <g id="histogram_density_plot__histogram_bar_4">
-    <path d="M 561.584269 301.104  L 673.665291 301.104  L 673.665291 204.425053  L 561.584269 204.425053  z " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: #007ea7; opacity: 0.28; stroke: #007ea7; stroke-width: 2.2; stroke-linejoin: miter" />
+    <path data-role="functional" d="M 570.435301 301.104  L 682.516322 301.104  L 682.516322 204.425053  L 570.435301 204.425053  z " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: #0c84b4; opacity: 0.28; stroke: #0c84b4; stroke-width: 2.2; stroke-linejoin: miter" />
    </g>
    <g id="histogram_density_plot__histogram_bar_5">
-    <path d="M 673.665291 301.104  L 785.746312 301.104  L 785.746312 204.425053  L 673.665291 204.425053  z " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: #007ea7; opacity: 0.28; stroke: #007ea7; stroke-width: 2.2; stroke-linejoin: miter" />
+    <path data-role="functional" d="M 682.516322 301.104  L 794.597343 301.104  L 794.597343 204.425053  L 682.516322 204.425053  z " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: #0c84b4; opacity: 0.28; stroke: #0c84b4; stroke-width: 2.2; stroke-linejoin: miter" />
    </g>
    <g id="histogram_density_plot__histogram_bar_6">
-    <path d="M 785.746312 301.104  L 897.827333 301.104  L 897.827333 301.104  L 785.746312 301.104  z " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: #007ea7; opacity: 0.28; stroke: #007ea7; stroke-width: 2.2; stroke-linejoin: miter" />
+    <path data-role="functional" d="M 794.597343 301.104  L 906.678364 301.104  L 906.678364 301.104  L 794.597343 301.104  z " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: #0c84b4; opacity: 0.28; stroke: #0c84b4; stroke-width: 2.2; stroke-linejoin: miter" />
    </g>
    <g id="histogram_density_plot__histogram_label">
     <g id="histogram_density_plot__patch_5">
-     <path d="M 97.849044 46.43549  L 323.759044 46.43549  Q 329.359044 46.43549 329.359044 40.83549  L 329.359044 24.83424  Q 329.359044 19.23424 323.759044 19.23424  L 97.849044 19.23424  Q 92.249044 19.23424 92.249044 24.83424  L 92.249044 40.83549  Q 92.249044 46.43549 97.849044 46.43549  z " style="fill: #ffffff; opacity: 0.94; stroke: #007ea7; stroke-linejoin: miter" />
+     <path data-role="functional" d="M 757.569675 47.84224  L 940.769675 47.84224  Q 946.369675 47.84224 946.369675 42.24224  L 946.369675 24.83424  Q 946.369675 19.23424 940.769675 19.23424  L 757.569675 19.23424  Q 751.969675 19.23424 751.969675 24.83424  L 751.969675 42.24224  Q 751.969675 47.84224 757.569675 47.84224  z " style="fill: #ffffff; opacity: 0.94; stroke: #0c84b4; stroke-linejoin: miter" />
     </g>
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #007ea7" x="97.849044" y="36.99174" transform="rotate(-0 97.849044 36.99174)">Stichprobe · Histogramm</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #0c84b4" x="940.769675" y="38.88224" transform="rotate(-0 940.769675 38.88224)">Stichprobe · Histogramm</text>
    </g>
    </g><g id="density_interpretation" data-anim-target="true" data-anim-label="Beginn und Ende des Ausfallbereichs"><g id="histogram_density_plot__density_start_guide">
-    <path d="M 113.260184 301.104  L 113.260184 7.2  " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: none; stroke-dasharray: 7.4,3.2; stroke-dashoffset: 0; stroke: #d1495b; stroke-opacity: 0.85; stroke-width: 2" />
+    <path data-role="functional" d="M 122.111215 301.104  L 122.111215 7.2  " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: none; stroke-dasharray: 7.4,3.2; stroke-dashoffset: 0; stroke: #ec6244; stroke-opacity: 0.85; stroke-width: 2" />
    </g>
    <g id="histogram_density_plot__density_end_guide">
-    <path d="M 935.187674 301.104  L 935.187674 7.2  " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: none; stroke-dasharray: 7.4,3.2; stroke-dashoffset: 0; stroke: #2f6f55; stroke-opacity: 0.85; stroke-width: 2" />
+    <path data-role="functional" d="M 944.038705 301.104  L 944.038705 7.2  " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: none; stroke-dasharray: 7.4,3.2; stroke-dashoffset: 0; stroke: #00a754; stroke-opacity: 0.85; stroke-width: 2" />
    </g>
    <g id="histogram_density_plot__density_start_label">
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #d1495b" x="126.336303" y="263.056415" transform="rotate(-0 126.336303 263.056415)">Beginn ≈ 23.000</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: start; fill: #ec6244" x="135.187335" y="263.464579" transform="rotate(-0 135.187335 263.464579)">Beginn ≈ 23.000</text>
    </g>
    <g id="histogram_density_plot__density_end_label">
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #2f6f55" x="922.111554" y="263.056415" transform="rotate(-0 922.111554 263.056415)">vollständig ausgefallen ≈ 45.000</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #00a754" x="930.962586" y="263.464579" transform="rotate(-0 930.962586 263.464579)">vollständig ausgefallen ≈ 45.000</text>
    </g>
   </g><g id="density_curve" data-anim-target="true" data-anim-label="Glatte Dichtefunktion der Grundgesamtheit"><g id="histogram_density_plot__density_curve_path">
-    <path d="M 75.899844 283.70674  L 84.697118 281.196056  L 93.494393 278.446487  L 102.291667 275.452021  L 111.088942 272.208054  L 119.886216 268.711352  L 128.683491 264.960003  L 137.480766 260.953351  L 146.27804 256.691951  L 155.075315 252.177541  L 163.872589 247.413071  L 172.669864 242.402788  L 181.467138 237.152395  L 190.264413 231.669289  L 200.821142 224.795783  L 211.377872 217.621704  L 221.934601 210.173953  L 234.250786 201.1849  L 248.326425 190.6012  L 269.439884 174.387559  L 288.793888 159.60282  L 301.110072 150.482464  L 309.907347 144.20645  L 318.704621 138.194394  L 325.742441 133.61364  L 332.780261 129.267888  L 339.81808 125.185279  L 346.8559 121.392564  L 353.89372 117.914655  L 359.172084 115.526541  L 364.450449 113.336902  L 369.728814 111.353417  L 375.007178 109.582766  L 380.285543 108.030575  L 385.563908 106.701355  L 390.842273 105.59847  L 396.120637 104.724103  L 401.399002 104.079245  L 406.677367 103.663691  L 411.955732 103.476055  L 417.234096 103.513789  L 422.512461 103.773223  L 427.790826 104.24961  L 433.06919 104.937184  L 438.347555 105.829228  L 443.62592 106.918144  L 448.904285 108.195544  L 454.182649 109.65233  L 461.220469 111.85689  L 468.258289 114.338616  L 475.296108 117.071856  L 482.333928 120.030136  L 491.131202 124.003462  L 499.928477 128.233865  L 510.485206 133.577291  L 522.801391 140.072413  L 542.155395 150.566688  L 566.787764 163.890601  L 582.622858 172.190629  L 596.698497 179.306403  L 610.774136 186.148981  L 624.849776 192.721166  L 638.925415 199.048032  L 654.760509 205.924189  L 674.114513 214.082883  L 709.303611 228.61503  L 769.125078 253.133623  L 786.719627 260.079183  L 800.795267 265.406746  L 813.111451 269.842219  L 825.427635 274.020829  L 835.984365 277.369143  L 846.541094 280.481557  L 857.097824 283.343942  L 867.654553 285.9477  L 878.211283 288.289871  L 888.768012 290.372936  L 899.324742 292.204358  L 909.881471 293.795916  L 920.4382 295.162894  L 930.99493 296.323192  L 943.311114 297.441878  L 953.867844 298.222763  L 953.867844 298.222763  " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: none; stroke: #d1495b; stroke-width: 4.2; stroke-linecap: square" />
+    <path data-role="functional" d="M 84.750875 283.70674  L 93.54815 281.196056  L 102.345424 278.446487  L 111.142699 275.452021  L 119.939973 272.208054  L 128.737248 268.711352  L 137.534522 264.960003  L 146.331797 260.953351  L 155.129071 256.691951  L 163.926346 252.177541  L 172.72362 247.413071  L 181.520895 242.402788  L 190.31817 237.152395  L 199.115444 231.669289  L 209.672174 224.795783  L 220.228903 217.621704  L 230.785633 210.173953  L 243.101817 201.1849  L 257.177456 190.6012  L 278.290915 174.387559  L 297.644919 159.60282  L 309.961103 150.482464  L 318.758378 144.20645  L 327.555653 138.194394  L 334.593472 133.61364  L 341.631292 129.267888  L 348.669111 125.185279  L 355.706931 121.392564  L 362.744751 117.914655  L 368.023115 115.526541  L 373.30148 113.336902  L 378.579845 111.353417  L 383.85821 109.582766  L 389.136574 108.030575  L 394.414939 106.701355  L 399.693304 105.59847  L 404.971669 104.724103  L 410.250033 104.079245  L 415.528398 103.663691  L 420.806763 103.476055  L 426.085128 103.513789  L 431.363492 103.773223  L 436.641857 104.24961  L 441.920222 104.937184  L 447.198586 105.829228  L 452.476951 106.918144  L 457.755316 108.195544  L 463.033681 109.65233  L 470.0715 111.85689  L 477.10932 114.338616  L 484.14714 117.071856  L 491.184959 120.030136  L 499.982234 124.003462  L 508.779508 128.233865  L 519.336238 133.577291  L 531.652422 140.072413  L 551.006426 150.566688  L 575.638795 163.890601  L 591.473889 172.190629  L 605.549528 179.306403  L 619.625168 186.148981  L 633.700807 192.721166  L 647.776446 199.048032  L 663.61154 205.924189  L 682.965544 214.082883  L 718.154643 228.61503  L 777.976109 253.133623  L 795.570659 260.079183  L 809.646298 265.406746  L 821.962482 269.842219  L 834.278667 274.020829  L 844.835396 277.369143  L 855.392126 280.481557  L 865.948855 283.343942  L 876.505584 285.9477  L 887.062314 288.289871  L 897.619043 290.372936  L 908.175773 292.204358  L 918.732502 293.795916  L 929.289232 295.162894  L 939.845961 296.323192  L 952.162146 297.441878  L 962.718875 298.222763  L 962.718875 298.222763  " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: none; stroke: #ec6244; stroke-width: 4.2; stroke-linecap: square" />
    </g>
    <g id="histogram_density_plot__density_curve_label">
     <g id="histogram_density_plot__patch_6">
-     <path d="M 623.088644 46.43549  L 931.918644 46.43549  Q 937.518644 46.43549 937.518644 40.83549  L 937.518644 24.83424  Q 937.518644 19.23424 931.918644 19.23424  L 623.088644 19.23424  Q 617.488644 19.23424 617.488644 24.83424  L 617.488644 40.83549  Q 617.488644 46.43549 623.088644 46.43549  z " style="fill: #ffffff; opacity: 0.94; stroke: #d1495b; stroke-linejoin: miter" />
+     <path data-role="functional" d="M 692.222175 88.9888  L 940.769675 88.9888  Q 946.369675 88.9888 946.369675 83.3888  L 946.369675 65.9808  Q 946.369675 60.3808 940.769675 60.3808  L 692.222175 60.3808  Q 686.622175 60.3808 686.622175 65.9808  L 686.622175 83.3888  Q 686.622175 88.9888 692.222175 88.9888  z " style="fill: #ffffff; opacity: 0.94; stroke: #ec6244; stroke-linejoin: miter" />
     </g>
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d1495b" x="931.918644" y="36.99174" transform="rotate(-0 931.918644 36.99174)">Grundgesamtheit · Dichtefunktion</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #ec6244" x="940.769675" y="80.0288" transform="rotate(-0 940.769675 80.0288)">Grundgesamtheit · Dichtefunktion</text>
    </g>
    </g><g id="histogram_classes" data-anim-target="true" data-anim-label="Klassen und Klassenbreite"><g id="histogram_density_plot__histogram_class_bracket">
-    <path d="M 337.422227 88.410316  L 337.422227 79.129137  L 449.503248 79.129137  L 449.503248 88.410316  " clip-path="url(#histogram_density_plot__p8925a4e3ba)" style="fill: none; stroke: #2aa876; stroke-width: 2.4; stroke-linecap: square" />
+    <path data-role="functional" d="M 346.273258 88.410316  L 346.273258 79.129137  L 458.354279 79.129137  L 458.354279 88.410316  " clip-path="url(#histogram_density_plot__p4b77e5eb2c)" style="fill: none; stroke: #0c84b4; stroke-width: 2.4; stroke-linecap: square" />
    </g>
    <g id="histogram_density_plot__histogram_class_label">
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2aa876" x="393.462737" y="69.69852" transform="rotate(-0 393.462737 69.69852)">7 Klassen · Breite je 3.000 Lastwechsel</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #0c84b4" x="402.313769" y="70.106684" transform="rotate(-0 402.313769 70.106684)">7 Klassen · Breite je 3.000 Lastwechsel</text>
    </g>
    </g></g>
  </g>
  <defs>
-  <clipPath id="histogram_density_plot__p8925a4e3ba">
-   <rect data-qc-allow-overlap="true" x="75.899844" y="7.2" width="877.968" height="293.904" />
+  <clipPath id="histogram_density_plot__p4b77e5eb2c">
+   <rect data-role="functional" data-qc-allow-overlap="true" x="84.750875" y="7.2" width="877.968" height="293.904" />
   </clipPath>
  </defs>
 </svg></g>

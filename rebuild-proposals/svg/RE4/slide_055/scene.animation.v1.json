@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_055.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "separation_bridge",
+      "label": "Brückenschaltung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "separation_methods",
+      "label": "Lösungsmethoden",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "separation_focus",
+      "label": "Komponente 5",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "separation_cases",
+      "label": "Falltrennung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "separation_case_working",
+      "label": "Fall I",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "separation_case_failed",
+      "label": "Fall II",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "separation_sum",
+      "label": "Gesamtergebnis",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_separation_bridge",
+      "targetId": "separation_bridge",
+      "action": "show",
+      "sourceText": "Bei einer Brückenschaltung lässt sich die Zuverlässigkeit nicht mit den einfachen Formeln für Reihen- oder Parallelschaltungen berechnen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_separation_methods",
+      "targetId": "separation_methods",
+      "action": "show",
+      "sourceText": "Aber keine Sorge – es gibt zwei Methoden, mit denen wir trotzdem zu einer exakten Lösung kommen können.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_separation_focus",
+      "targetId": "separation_focus",
+      "action": "show",
+      "sourceText": "Wenn wir uns das Blockdiagramm ansehen, fällt auf:Komponente fünf nimmt eine Schlüsselrolle ein.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_separation_cases",
+      "targetId": "separation_cases",
+      "action": "draw",
+      "sourceText": "Deshalb betrachten wir zwei Fälle.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung erscheint nach ihren fachlichen Endpunkten.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "step_05_separation_case_working",
+      "targetId": "separation_case_working",
+      "action": "show",
+      "sourceText": "Erstens, Komponente fünf ist ständig funktionsfähig.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_06_separation_case_failed",
+      "targetId": "separation_case_failed",
+      "action": "show",
+      "sourceText": "Und zweitens, Komponente fünf ist ständig ausgefallen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_07_separation_sum",
+      "targetId": "separation_sum",
+      "action": "show",
+      "sourceText": "Am Ende addieren wir beide Teilergebnisse, um die gesamte Systemzuverlässigkeit zu berechnen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

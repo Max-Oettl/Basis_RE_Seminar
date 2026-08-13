@@ -10,6 +10,14 @@
   },
   "targets": [
     {
+      "targetId": "lognormal_density_curves",
+      "label": "Dichtefunktionen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
       "targetId": "lognormal_probability_pair",
       "label": "Ausfall- und Überlebenswahrscheinlichkeit",
       "status": "animated",
@@ -43,6 +51,15 @@
     }
   ],
   "steps": [
+    {
+      "stepId": "draw_lognormal_density_curves",
+      "targetId": "lognormal_density_curves",
+      "action": "draw",
+      "sourceText": "Verläufen für die Funktionen der Dichte",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "durFrames": 42
+    },
     {
       "stepId": "show_lognormal_probability_pair",
       "targetId": "lognormal_probability_pair",

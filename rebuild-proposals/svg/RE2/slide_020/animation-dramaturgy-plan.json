@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch3_fta_acronym",
+  "svgPath": "slide_020.svg",
+  "spokenText": "In diesem Abschnitt befassen wir uns mit der Fehlerbaumanalyse, die häufig auch einfach als F-T-A abgekürzt wird.\n\nAber wofür steht diese Abkürzung eigentlich?\n\nF-T-A steht für den englischen Begriff Fault Tree Analysis.\n\nIm Deutschen findet man manchmal auch die Abkürzung F-B-A für Fehlerbaumanalyse oder Fehlzustandsbaumanalyse.\n\nSchauen wir uns einmal den Ablauf der Fehlerbaumanalyse an.\n\nDie Fehlerbaumanalyse ist eine strukturierte Top-Down-Methode.\n\nDas heißt, zuerst wird auf der obersten Ebene ein unerwünschtes Ereignis, das sogenannte Top-Ereignis, definiert.\n\nDa diese Ebene meist die Systemebene darstellt, können wir als unerwünschtes Top-Ereignis beispielsweise den Systemausfall definieren.\n\nAnschließend werden systematisch alle Ausfälle bzw. Ausfallarten und deren Ausfallfolgen auf den nächsttieferen Ebenen ermittelt.\n\nDas bedeutet, wir betrachten zunächst die Ebene der unterschiedlichen Teilsysteme, im Anschluss dann die Baugruppen und schließlich gelangen wir zu den einzelnen Bauteilen und ihren spezifischen Ausfallarten.\n\nAuf der untersten Ebene befindet sich immer das Basisereignis bzw. die Schadensursache.\n\nIn der Zuverlässigkeitstechnik verwenden wir hierfür auch oft den Begriff Ausfallmechanismus.\n\nDie einzelnen Ausfälle und ihre Beziehungen können wir auch in einem Diagramm darstellen.Dieses Diagramm wird Fehlerbaum genannt und zeigt die logischen Verknüpfungen von Ausfällen, Ausfallkombinationen und Ausfallursachen der einzelnen Teilsysteme, Baugruppen oder Komponenten.\n\nAuf diese Weise können kritische Ereignisse identifiziert werden, die zu einem unerwünschten Top-Ereignis, wie dem Systemausfall, führen können.\n\nDurch die Fehlerbaumanalyse sehen wir nicht nur die Auswirkungen einzelner Komponentenausfälle, sondern auch wie sich deren Ausfall-Kombinationen auf das System auswirken können.\n\nDamit können wir also die Fehlerpfade innerhalb eines Systems visualisieren und besser verstehen.\n\nDurch die Identifikation dieser Pfade, verstehen wir die Schwachstellen des Systems besser und können gezielt Maßnahmen ergreifen, um diese potenziellen Risiken zu minimieren.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "fta22_tree",
+      "label": "Beispiel-Fehlerbaum",
+      "role": "content",
+      "members": [
+        "fta22_tree"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta22_links",
+      "label": "Logische Beziehungen",
+      "role": "content",
+      "members": [
+        "fta22_links"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta22_value",
+      "label": "Nutzen des Fehlerbaums",
+      "role": "content",
+      "members": [
+        "fta22_value"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Beispiel-Fehlerbaum",
+      "sourceText": "Dieses Diagramm wird Fehlerbaum genannt",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta22_tree"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Logische Beziehungen",
+      "sourceText": "zeigt die logischen Verknüpfungen von Ausfällen",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta22_links"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Nutzen des Fehlerbaums",
+      "sourceText": "Auf diese Weise können kritische Ereignisse",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta22_value"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta22_tree",
+      "beatId": "beat_01",
+      "targetId": "fta22_tree",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_fta22_links",
+      "beatId": "beat_02",
+      "targetId": "fta22_links",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    },
+    {
+      "stepId": "step_03_fta22_value",
+      "beatId": "beat_03",
+      "targetId": "fta22_value",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_03",
+      "visibleGroups": [
+        "canvas_context",
+        "fta22_tree",
+        "fta22_links",
+        "fta22_value"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

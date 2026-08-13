@@ -2,12 +2,12 @@
 
 - Kapitel: 4
 - Lektion: 9
-- Quellfolie: 139
+- Quellfolie: 142
 - Zielmodus: full_slide, 1920×1080
-- Titel: Design- und Prozess-FMEA
-- Dominante Lernbotschaft: Beide FMEA-Arten nutzen sieben Schritte, untersuchen aber unterschiedliche Objekte.
-- Archetyp: two-column-comparison
-- Layout: Zwei gleichgewichtige, semantisch farbcodierte Vergleichsspalten.
+- Titel: Planung und Vorbereitung in der Prozess-FMEA
+- Dominante Lernbotschaft: Auch die Prozess-FMEA beginnt mit Analyseumfang, Unterlagen und Team.
+- Archetyp: three-part-workflow
+- Layout: Drei nummerierte Aufgaben der Planung und Vorbereitung in der Prozess-FMEA.
 - Inhaltsinventar: Fachbegriffe, Beziehungen, Hierarchien, Tabellenzustände und Beispiele bleiben erhalten; PowerPoint-Bedienelemente und Masterdekoration entfallen.
 - Referenz-Lock: RE1 slide_013, slide_009, slide_027 und slide_022
 - Assetstrategie: native RelTest-SVG-Komposition

@@ -59,7 +59,7 @@ def generate_formulas() -> None:
                 output=formula_dir / f"{formula_id}.svg",
                 fontsize=fontsize,
                 color="#102A43",
-                fontset="dejavusans",
+                fontset="stix",
             )
 
 

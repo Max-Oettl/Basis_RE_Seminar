@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_fmea_goals",
+  "svgPath": "slide_066.svg",
+  "spokenText": "Schauen wir uns die Ziele dieser Methode einmal genauer an.\n\nDurch das Erkennen und Priorisieren von Risiken können wir Ausfälle minimieren oder sogar ganz vermeiden.\n\nIndem potenzielle Fehler frühzeitig erkannt werden, sinkt die Wahrscheinlichkeit, dass später Probleme auftreten. Dadurch sorgen wir auch für eine reibungslose Produkteinführung.\n\nDas frühzeitige Erkennen von Fehlern hat auch direkte Auswirkungen auf die Reduzierung von Kosten.Zum einen lassen sich teure Nachbesserungen verhindern, und zum anderen können Ressourcen effizienter genutzt werden.\n\nAußerdem ermöglicht die proaktive Fehlervermeidung, die Produktqualität zu steigern. Mit der F-ME-A lassen sich Schwachstellen im Design oder im Prozess erkennen und gezielt Maßnahmen zur Verbesserung umsetzen.\n\nEin weiterer wichtiger Punkt ist die lückenlose Dokumentation innerhalb der FMEA.Diese umfasst alle Erkenntnisse, Ergebnisse und Risiken. Das fördert nicht nur den Wissensaustausch im Team, sondern hilft auch, regulatorische Anforderungen einzuhalten.\n\nFassen wir das Ganze noch einmal zusammen:Eine gut durchgeführte FME-A verhindert Fehler und Ausfälle, bevor sie überhaupt auftreten.Statt Fehler nur zu korrigieren, sorgt die Methode dafür, dass Risiken frühzeitig erkannt und durch gezielte Maßnahmen behoben werden.\n\nDas Ergebnis? Höhere Sicherheit und Zuverlässigkeit von Produkten oder Prozessen.Das steigert direkt die Produktqualität und hat gleichzeitig einen positiven Einfluss auf die Kundenzufriedenheit.\n\nEin zuverlässiges und hochwertiges Produkt sorgt nämlich für zufriedene Kunden und stärkt das Vertrauen in dein Unternehmen.\n\nDie FMEA ist daher ein unverzichtbares Werkzeug, um Risiken zu minimieren, Kosten zu senken und gleichzeitig Qualität und Kundenzufriedenheit zu steigern.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s66_goal_1",
+      "label": "AUSFÄLLE VERMEIDEN",
+      "role": "content",
+      "members": [
+        "s66_goal_1"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s66_goal_2",
+      "label": "KOSTEN REDUZIEREN",
+      "role": "content",
+      "members": [
+        "s66_goal_2"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s66_goal_3",
+      "label": "PRODUKTQUALITÄT STEIGERN",
+      "role": "content",
+      "members": [
+        "s66_goal_3"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s66_goal_4",
+      "label": "WISSEN SICHERN",
+      "role": "content",
+      "members": [
+        "s66_goal_4"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "AUSFÄLLE VERMEIDEN",
+      "sourceText": "Durch das Erkennen und Priorisieren von",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s66_goal_1"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "KOSTEN REDUZIEREN",
+      "sourceText": "Das frühzeitige Erkennen von Fehlern hat",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s66_goal_2"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "PRODUKTQUALITÄT STEIGERN",
+      "sourceText": "Außerdem ermöglicht die proaktive Fehlervermeidung, die",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s66_goal_3"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "WISSEN SICHERN",
+      "sourceText": "Ein weiterer wichtiger Punkt ist die",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s66_goal_4"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s66_goal_1",
+      "beatId": "beat_01",
+      "targetId": "s66_goal_1",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s66_goal_2",
+      "beatId": "beat_02",
+      "targetId": "s66_goal_2",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_s66_goal_3",
+      "beatId": "beat_03",
+      "targetId": "s66_goal_3",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_04_s66_goal_4",
+      "beatId": "beat_04",
+      "targetId": "s66_goal_4",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_04",
+      "visibleGroups": [
+        "canvas_context",
+        "s66_goal_1",
+        "s66_goal_2",
+        "s66_goal_3",
+        "s66_goal_4"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_function_analysis",
+  "svgPath": "slide_091.svg",
+  "spokenText": "Der dritte Schritt der FME-A ist die Funktionsanalyse. Dabei werden die Funktionen der einzelnen Systemelemente ermittelt. Jedem Systemelement in der Struktur muss mindestens eine Funktion zugeordnet werden.\n\nDas Vorgehen dazu kann auf zwei Arten erfolgen:\n\nZum einen lässt sich die Ermittlung der Funktionen mit der sogenannten Top-Down-Methode durchführen. Hierbei wird zunächst die Funktion des gesamten Systems, also die sogenannte Top-Funktion, bestimmt. Anschließend werden die Funktionen der untergeordneten Systemelemente ermittelt, die zur Erfüllung der übergeordneten Funktion beitragen.\n\nAlternativ können die Funktionen der einzelnen Systemelemente direkt ermittelt werden. Dabei wird das Systemelement wie eine Blackbox betrachtet, in die Eingangsgrößen einfließen und aus der Ausgangsgrößen austreten. Die Funktion beschreibt dann die Transformation der Eingangsgrößen in Ausgangsgrößen. Voraussetzung für diese Methode ist allerdings eine fundierte Kenntnis der Eingangs- und Ausgangsgrößen des jeweiligen Systemelements. Zu diesen Informationen gehören unter anderem die Einsatzbedingungen sowie die Ergebnisse des Systemelements. Solche Informationen lassen sich häufig aus dem Lastenheft entnehmen.\n\nNachdem die Funktionen ermittelt wurden, werden sie den einzelnen Systemelementen im Strukturbaum zugeordnet. Jedes Systemelement erhält mindestens eine Funktion, es ist jedoch auch möglich, dass ein Systemelement mehrere Funktionen besitzt.\n\nDas Ziel dieses Schrittes ist es, die Funktionen den Systemelementen zuzuordnen und miteinander zu verknüpfen. So entsteht die Funktionsstruktur des Systems.\n\nSchauen wir uns das Ganze anhand unseres Beispiels des Anpassungsgetriebes an.\n\nWir nutzen hierbei die Top-Down-Methode.\n\nZuerst definieren wir die Funktion auf System-Ebene. Für das Getriebe lässt sich die Hauptfunktion „Drehmoment und Drehzahl wandeln“ festlegen. Zusätzlich gibt es auch Nebenfunktionen wie „Umweltverträglichkeit gewährleisten“.\n\nAuf der nächsten Ebene werden die Funktionen den Baugruppen zugewiesen. Die Hauptfunktion des Antriebs ist die Übertragung des Antriebsdrehmoments. Für den Abtrieb gilt entsprechend die Übertragung des Abtriebsdrehmoments. Das Gehäuse hingegen ist für die Dichtheit des Systems verantwortlich.\n\nDanach können die Funktionen der einzelnen Komponenten innerhalb des Antriebs abgeleitet werden. Die Eingangswelle, das Ritzel und die Passfeder sind gemeinsam für die Übertragung des Drehmoments zuständig. Das Rollenlager übernimmt die Funktion der Lagerung der Wellen. Der Radialwellendichtring gewährleistet die Dichtheit, während die Hülse für den Abstand zwischen Welle und Lager sorgt.\n\nWir haben nun die Funktionsstruktur des Getriebes erstellt. Damit sind wir am Ende des dritten Schrittes der FME-A angekommen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s95_gear_nodes",
+      "label": "Anpassungsgetriebe",
+      "role": "content",
+      "members": [
+        "s95_gear_nodes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s95_gear_links",
+      "label": "Hierarchische Verknüpfungen",
+      "role": "content",
+      "members": [
+        "s95_gear_links"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Anpassungsgetriebe",
+      "sourceText": "Schauen wir uns das Ganze anhand",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s95_gear_nodes"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Hierarchische Verknüpfungen",
+      "sourceText": "Wir nutzen hierbei die Top-Down-Methode",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s95_gear_links"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s95_gear_nodes",
+      "beatId": "beat_01",
+      "targetId": "s95_gear_nodes",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s95_gear_links",
+      "beatId": "beat_02",
+      "targetId": "s95_gear_links",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_02",
+      "visibleGroups": [
+        "canvas_context",
+        "s95_gear_nodes",
+        "s95_gear_links"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

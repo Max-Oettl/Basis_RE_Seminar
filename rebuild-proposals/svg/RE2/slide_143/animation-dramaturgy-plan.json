@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_design_process_step2",
+  "svgPath": "slide_143.svg",
+  "spokenText": "Im zweiten Schritt der FME-A, der Strukturanalyse, gibt es deutliche Unterschiede zwischen der Design-FME-A und der Prozess-FME-A.\n\nDie Design-FME-A analysiert die Systemstruktur eines Produkts. Das Produkt wird in Systeme, Subsysteme und Komponenten unterteilt, um mögliche Designfehler zu identifizieren.\n\nDie Prozess-FME-A hingegen zerlegt den Gesamtprozess in einzelne Prozessschritte und nutzt Flussdiagramme oder Prozessabbildungen, um die Beziehungen zwischen den Schritten darzustellen. Diese Struktur hilft, alle wichtigen Abläufe zu erfassen und zu analysieren.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s146_asset",
+      "label": "Prozessstruktur",
+      "role": "content",
+      "members": [
+        "s146_asset"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Prozessstruktur",
+      "sourceText": "Im zweiten Schritt der FME-A, der",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s146_asset"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s146_asset",
+      "beatId": "beat_01",
+      "targetId": "s146_asset",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_01",
+      "visibleGroups": [
+        "canvas_context",
+        "s146_asset"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_035.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "right_censored_plot",
+      "label": "Zensierte Verläufe",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "right_censored_definition",
+      "label": "Definition",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "right_censored_coding",
+      "label": "Zeit und Status",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "right_censored_rule",
+      "label": "Bedeutung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_right_censored_definition",
+      "targetId": "right_censored_definition",
+      "action": "show",
+      "sourceText": "Das bedeutet: Wir wissen nur, dass das Objekt bis zu einem bestimmten Zeitpunkt funktioniert hat – aber nicht, wann es tatsächlich ausfallen wird.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_right_censored_rule",
+      "targetId": "right_censored_rule",
+      "action": "show",
+      "sourceText": "Man sagt auch: Der wahre Ausfallzeitpunkt liegt jenseits der bekannten Beobachtungsdauer.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_right_censored_coding",
+      "targetId": "right_censored_coding",
+      "action": "show",
+      "sourceText": "Für die Auswertung ist es wichtig, jeden dieser Zensierungszeitpunkte korrekt zu erfassen, da sie die statistische Analyse beeinflussen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_right_censored_plot",
+      "targetId": "right_censored_plot",
+      "action": "show",
+      "sourceText": "In der Abbildung sehen wir dies an den blauen Pfeilen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

@@ -29,15 +29,22 @@ test("Education token sources use the active profile and official palette", () =
 
   assert.equal(company.brand.companyName, "RelTest Education");
   assert.equal(company.brand.profile, "reltest-education");
-  assert.equal(company.colors.brandPrimary, "#031334");
-  assert.equal(company.colors.accentPrimary, "#00A754");
+  assert.equal(company.colors.brandPrimary, "#142452");
+  assert.equal(company.colors.brandPrimaryDeep, "#031334");
+  assert.equal(company.colors.accentPrimary, "#00A653");
   assert.equal(company.colors.educationGold, "#E9B400");
   assert.equal(company.colors.educationCoral, "#EC6244");
   assert.equal(company.colors.educationSteelCyan, "#0C84B4");
   assert.equal(company.colors.educationGraphiteBlue, "#25495F");
+  assert.equal(company.colorUsage.contentDominant, "brandPrimary");
+  assert.equal(company.colorUsage.equalRankBoxes.rotateAccentHues, false);
+  assert.equal(company.colorUsage.maxSaturatedAccentFamiliesOutsideCharts, 1);
 
   assert.equal(fullSlide.brand.profile, "reltest-education");
-  assert.equal(fullSlide.colors.educationGreen, "#00A754");
+  assert.equal(fullSlide.colors.navy, "#142452");
+  assert.equal(fullSlide.colors.educationGreen, "#00A653");
+  assert.equal(fullSlide.informationBoxFamily.equalRankRule,
+    "Use one navy family for equal-rank boxes; vary opacity or tone, not hue.");
   assert.equal(fullSlide.typography.h1.family, "Oxanium");
   assert.equal(fullSlide.typography.body.family, "Archivo");
   assert.equal(fullSlide.brandFrame.chromeOwner, "downstream-repository");

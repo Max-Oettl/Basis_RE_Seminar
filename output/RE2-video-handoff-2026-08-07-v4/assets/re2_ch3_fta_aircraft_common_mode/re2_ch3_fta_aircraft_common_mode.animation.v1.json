@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re2_ch3_fta_aircraft_common_mode.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 40,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "fta57_tree",
+      "label": "Fahrwerksgruppen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta57_links",
+      "label": "Gemeinsame Ausfallart",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta57_statement",
+      "label": "Folge für die Zuverlässigkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta57_tree",
+      "targetId": "fta57_tree",
+      "action": "show",
+      "sourceText": "Ein Common-Mode-Ausfall bezieht sich auf den",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_fta57_links",
+      "targetId": "fta57_links",
+      "action": "draw",
+      "sourceText": "Das heißt der Ausfall einer Komponente",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung wird erst nach den zugehörigen Ereignissen gezeichnet; kleine Linien- und Pfeilskalierung."
+    },
+    {
+      "stepId": "step_03_fta57_statement",
+      "targetId": "fta57_statement",
+      "action": "show",
+      "sourceText": "Solche Ausfälle erhöhen die Wahrscheinlichkeit eines",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

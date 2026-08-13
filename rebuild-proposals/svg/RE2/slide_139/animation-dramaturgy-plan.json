@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_design_process_step1",
+  "svgPath": "slide_139.svg",
+  "spokenText": "Zu Beginn dieses Moduls hast du gelernt, dass es zwei Arten der FME-A gibt: eine für das Produktdesign und eine für die Fertigungsprozesse.\n\nDie Design-Variante beschäftigt sich mit der Analyse der Produktgestaltung und deren Anforderungen. Ziel ist es, Schwachstellen zu erkennen und potenzielle Risiken frühzeitig zu bewerten.\n\nDie prozessorientierte Analyse hingegen betrachtet Abläufe in der Fertigung und Montage – einschließlich Logistik und Transport. Hier steht im Vordergrund, mögliche Fehlerquellen im Prozess aufzudecken, um Qualität und Effizienz zu verbessern.\n\nDen Ablauf der Design-FME-A kennst du ja bereits. Doch wie sieht er in der Anwendung auf Prozesse aus?\n\nDie gute Nachricht ist: Die sieben Schritte, die du bereits gelernt hast, bleiben bestehen. Der Unterschied liegt allein im inhaltlichen Fokus.\n\nSchauen wir uns die Unterschiede zwischen beiden Varianten nun Schritt für Schritt an.\n\nWir beginnen wieder mit dem ersten Schritt: der Planung und Vorbereitung.\n\nIn diesem Schritt geht es darum, den Analyseumfang zu definieren und die Detaillierungsebene festzulegen. Das Ziel ist hierbei dasselbe wie bei der Betrachtung des Designs – allerdings liegt der Schwerpunkt nun auf den Fertigungs- und Montage-Prozessen.\n\nEs wird der zu analysierende Prozessabschnitt ausgewählt und festgelegt, in welcher Tiefe die Analyse erfolgen soll.\n\nAußerdem sammeln wir in diesem Schritt ebenfalls alle benötigten Unterlagen und Materialien. Dazu gehören beispielsweise Prozessablaufpläne, Arbeitsanweisungen sowie Maschinen- und Werkzeuglisten.\n\nAuch das interdisziplinäre Team wird entsprechend zusammengestellt. Es besteht aus Spezialistinnen und Spezialisten der betroffenen Bereiche, die gemeinsam ihre Perspektiven in die Bewertung einbringen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s142_part_1",
+      "label": "01 ANALYSEUMFANG ABGRENZEN",
+      "role": "content",
+      "members": [
+        "s142_part_1"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s142_part_2",
+      "label": "02 UNTERLAGEN SAMMELN",
+      "role": "content",
+      "members": [
+        "s142_part_2"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s142_part_3",
+      "label": "03 TEAM ZUSAMMENSTELLEN",
+      "role": "content",
+      "members": [
+        "s142_part_3"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "01 ANALYSEUMFANG ABGRENZEN",
+      "sourceText": "In diesem Schritt geht es darum",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s142_part_1"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "02 UNTERLAGEN SAMMELN",
+      "sourceText": "Außerdem sammeln wir in diesem Schritt",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s142_part_2"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "03 TEAM ZUSAMMENSTELLEN",
+      "sourceText": "Auch das interdisziplinäre Team wird entsprechend",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s142_part_3"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s142_part_1",
+      "beatId": "beat_01",
+      "targetId": "s142_part_1",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s142_part_2",
+      "beatId": "beat_02",
+      "targetId": "s142_part_2",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_s142_part_3",
+      "beatId": "beat_03",
+      "targetId": "s142_part_3",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_03",
+      "visibleGroups": [
+        "canvas_context",
+        "s142_part_1",
+        "s142_part_2",
+        "s142_part_3"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch3_fta_aircraft_common_mode",
+  "svgPath": "slide_057.svg",
+  "spokenText": "Nachdem wir gelernt haben, wie man die einzelnen Ausfallpfade und Ausfall-Kombinationen analysiert, möchten wir nun noch auf das Konzept des Common-Mode-Ausfalls eingehen.\n\nEin Common-Mode-Ausfall bezieht sich auf den Ausfall von mehreren Komponenten, welche durch die gleiche Ausfallart verursacht werden.\n\nDas heißt der Ausfall einer Komponente bedingt direkt den Ausfall einer anderen Komponente.\n\nDabei können die beiden Ausfälle gleichzeitig oder kurz nacheinander entstehen, wodurch das Risiko für das Gesamtsystem erhöht wird.\n\nEin Beispiel hierfür wäre, wenn ein Feuer zum Ausfall eines Reifens führt und dann auf einen zweiten Reifen übergreift.\n\nDamit sind dann beide Reifen aufgrund der gleichen Ausfallart, nämlich aufgrund des Brandes, ausgefallen.\n\nZusätzlich kann es auch passieren, dass das Platzen eines Reifens direkt zu einer Beschädigung des anderen Reifens führt. Dies kann zum Beispiel durch Trümmerteile geschehen.\n\nDas Platzen des Reifens kann aber auch dazu führen, dass der andere Reifen plötzlich einer erhöhten Belastung ausgesetzt ist.\n\nDiese Überbeanspruchung kann dann dazu führen, dass der Reifen ebenfalls platzt.\n\nDas Konzept des Common-Mode-Ausfalls ist wichtig, um zu verstehen, wie mehrere Komponenten durch die gleiche Ausfallart betroffen sein können.\n\nSolche Ausfälle erhöhen die Wahrscheinlichkeit eines Systemausfalls, da sie vermeintlich redundante oder parallele Systeme gleichzeitig beeinträchtigen können.\n\nDie Folge ist eine erhebliche Reduzierung der Zuverlässigkeit des Gesamtsystems.\n\nDurch die Identifizierung von Common-Mode-Ausfällen können wir Maßnahmen entwickeln, um solche Ausfallarten zu verhindern oder ihre Auswirkungen zu minimieren.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "fta57_tree",
+      "label": "Fahrwerksgruppen",
+      "role": "content",
+      "members": [
+        "fta57_tree"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta57_links",
+      "label": "Gemeinsame Ausfallart",
+      "role": "content",
+      "members": [
+        "fta57_links"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta57_statement",
+      "label": "Folge für die Zuverlässigkeit",
+      "role": "content",
+      "members": [
+        "fta57_statement"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Fahrwerksgruppen",
+      "sourceText": "Ein Common-Mode-Ausfall bezieht sich auf den",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta57_tree"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Gemeinsame Ausfallart",
+      "sourceText": "Das heißt der Ausfall einer Komponente",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta57_links"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Folge für die Zuverlässigkeit",
+      "sourceText": "Solche Ausfälle erhöhen die Wahrscheinlichkeit eines",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta57_statement"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta57_tree",
+      "beatId": "beat_01",
+      "targetId": "fta57_tree",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_fta57_links",
+      "beatId": "beat_02",
+      "targetId": "fta57_links",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    },
+    {
+      "stepId": "step_03_fta57_statement",
+      "beatId": "beat_03",
+      "targetId": "fta57_statement",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_03",
+      "visibleGroups": [
+        "canvas_context",
+        "fta57_tree",
+        "fta57_links",
+        "fta57_statement"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

@@ -1,0 +1,908 @@
+{
+  "schema_version": "basisReScenePlan/v1",
+  "module_id": "RE3",
+  "source_state_count": 72,
+  "target_scene_count": 35,
+  "removed_source_slides": [
+    44
+  ],
+  "sequence_decision": "Aufbauzustände werden konsolidiert; eigenständige Übungen, Ergebnisse und fachliche Übergänge bleiben getrennte Arbeitseinheiten.",
+  "structure_status": "deferred_by_user",
+  "scenes": [
+    {
+      "output_slide_number": 1,
+      "work_unit": "slide_001",
+      "scene_id": "re3_src_001",
+      "source_slides": [
+        1
+      ],
+      "primary_source_slide": 1,
+      "render_source_slide": 1,
+      "source_text_section_id": "section_001",
+      "title": "Lebensdauerdaten in belastbare Aussagen übersetzen",
+      "takeaway": "Die Lebensdauerdatenanalyse verbindet beobachtete Ausfälle mit statistischen Modellen und Prognosen.",
+      "archetype": "module-introduction",
+      "builder": "intro",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 1,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::1",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 2,
+      "work_unit": "slide_002",
+      "scene_id": "re3_src_002",
+      "source_slides": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "primary_source_slide": 8,
+      "render_source_slide": 8,
+      "source_text_section_id": "section_002",
+      "title": "Von Ausfallzeiten zur Weibull-Prognose",
+      "takeaway": "Sortieren, Median Ranks, Auftragung und Fit führen zu T, b und einer auswertbaren Ausfallwahrscheinlichkeit.",
+      "archetype": "workflow",
+      "builder": "workflow",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 2,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::8",
+      "absorbed_source_states": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "output_slide_number": 9,
+      "work_unit": "slide_009",
+      "scene_id": "re3_src_009",
+      "source_slides": [
+        9,
+        10
+      ],
+      "primary_source_slide": 10,
+      "render_source_slide": 10,
+      "source_text_section_id": "section_003",
+      "title": "Wenn eine Gerade nicht genügt",
+      "takeaway": "Mehrere Geraden im Weibullnetz weisen auf unterschiedliche Ausfallmechanismen hin.",
+      "archetype": "diagnostic-comparison",
+      "builder": "mechanisms_overview",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 3,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::10",
+      "absorbed_source_states": [
+        10
+      ]
+    },
+    {
+      "output_slide_number": 11,
+      "work_unit": "slide_011",
+      "scene_id": "re3_src_011",
+      "source_slides": [
+        11,
+        12
+      ],
+      "primary_source_slide": 12,
+      "render_source_slide": 12,
+      "source_text_section_id": "section_003",
+      "title": "Zensierte Beobachtungen richtig einordnen",
+      "takeaway": "Nicht jedes Bauteil fällt während der Beobachtungszeit aus; zensierte Laufzeiten bleiben dennoch wertvolle Information.",
+      "archetype": "object-time-diagram",
+      "builder": "censored_overview",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 4,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::12",
+      "absorbed_source_states": [
+        12
+      ]
+    },
+    {
+      "output_slide_number": 13,
+      "work_unit": "slide_013",
+      "scene_id": "re3_src_013",
+      "source_slides": [
+        13
+      ],
+      "primary_source_slide": 13,
+      "render_source_slide": 13,
+      "source_text_section_id": "section_003",
+      "title": "Schätzmethode passend zu den Daten wählen",
+      "takeaway": "Vollständige und zensierte Datensätze stellen unterschiedliche Anforderungen an MLS und MLE.",
+      "archetype": "method-comparison",
+      "builder": "method_choice",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 5,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::13",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 14,
+      "work_unit": "slide_014",
+      "scene_id": "re3_src_014",
+      "source_slides": [
+        14
+      ],
+      "primary_source_slide": 14,
+      "render_source_slide": 14,
+      "source_text_section_id": "section_003",
+      "title": "Punktschätzung plus statistische Sicherheit",
+      "takeaway": "Vertrauensgrenzen zeigen, wie unsicher die aus der Stichprobe abgeleitete Verteilung ist.",
+      "archetype": "confidence-introduction",
+      "builder": "confidence_intro",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 6,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::14",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 15,
+      "work_unit": "slide_015",
+      "scene_id": "re3_src_015",
+      "source_slides": [
+        15,
+        16
+      ],
+      "primary_source_slide": 16,
+      "render_source_slide": 16,
+      "source_text_section_id": "section_004",
+      "title": "Von der Stichprobe zur Grundgesamtheit",
+      "takeaway": "Eine Stichprobe liefert eine Schätzung; ein Vertrauensbereich beschreibt die plausible Unsicherheit der Grundgesamtheit.",
+      "archetype": "sample-to-population",
+      "builder": "sample_population",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 7,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::16",
+      "absorbed_source_states": [
+        16
+      ]
+    },
+    {
+      "output_slide_number": 17,
+      "work_unit": "slide_017",
+      "scene_id": "re3_src_017",
+      "source_slides": [
+        17,
+        18,
+        19
+      ],
+      "primary_source_slide": 19,
+      "render_source_slide": 19,
+      "source_text_section_id": "section_005",
+      "title": "Was Vertrauensgrenzen bedeuten",
+      "takeaway": "Ein Konfidenzniveau von 95 Prozent bedeutet nicht, dass ein einzelner berechneter Bereich mit 95 Prozent Wahrscheinlichkeit richtig ist.",
+      "archetype": "confidence-meaning",
+      "builder": "confidence_meaning",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 8,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::19",
+      "absorbed_source_states": [
+        18,
+        19
+      ]
+    },
+    {
+      "output_slide_number": 20,
+      "work_unit": "slide_020",
+      "scene_id": "re3_src_020",
+      "source_slides": [
+        20,
+        21,
+        22
+      ],
+      "primary_source_slide": 22,
+      "render_source_slide": 22,
+      "source_text_section_id": "section_006",
+      "title": "Breite des Vertrauensbereichs verstehen",
+      "takeaway": "Mehr Daten verengen den Bereich; ein höheres Konfidenzniveau verbreitert ihn.",
+      "archetype": "confidence-drivers",
+      "builder": "confidence_drivers",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 9,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::22",
+      "absorbed_source_states": [
+        21,
+        22
+      ]
+    },
+    {
+      "output_slide_number": 23,
+      "work_unit": "slide_023",
+      "scene_id": "re3_src_023",
+      "source_slides": [
+        23
+      ],
+      "primary_source_slide": 23,
+      "render_source_slide": 23,
+      "source_text_section_id": "section_007",
+      "title": "Ausfallwahrscheinlichkeit als Verteilung verstehen",
+      "takeaway": "Für jeden Zeitpunkt beschreibt eine Dichteverteilung die Unsicherheit; ihre Mediane bilden gemeinsam die Weibullgerade.",
+      "archetype": "probability-surface",
+      "builder": "probability_surface",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 10,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::23",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 24,
+      "work_unit": "slide_024",
+      "scene_id": "re3_src_024",
+      "source_slides": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "primary_source_slide": 30,
+      "render_source_slide": 30,
+      "source_text_section_id": "section_008",
+      "title": "Zweiseitig, linksseitig oder rechtsseitig",
+      "takeaway": "Die Richtung des Vertrauensintervalls richtet sich nach der fachlichen Fragestellung.",
+      "archetype": "confidence-types",
+      "builder": "confidence_types",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 11,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::30",
+      "absorbed_source_states": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ]
+    },
+    {
+      "output_slide_number": 31,
+      "work_unit": "slide_031",
+      "scene_id": "re3_src_031",
+      "source_slides": [
+        31,
+        32,
+        33
+      ],
+      "primary_source_slide": 33,
+      "render_source_slide": 33,
+      "source_text_section_id": "section_009",
+      "title": "Lebensdauerdaten entstehen über den Produktlebenszyklus",
+      "takeaway": "Simulation, Versuch und Feld liefern unterschiedliche, aber gemeinsam auswertbare Lebensdauerinformationen.",
+      "archetype": "lifecycle-sources",
+      "builder": "life_data_sources",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 12,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::33",
+      "absorbed_source_states": [
+        32,
+        33
+      ]
+    },
+    {
+      "output_slide_number": 34,
+      "work_unit": "slide_034",
+      "scene_id": "re3_src_034",
+      "source_slides": [
+        34
+      ],
+      "primary_source_slide": 34,
+      "render_source_slide": 34,
+      "source_text_section_id": "section_010",
+      "title": "Vollständige Lebensdauerdaten",
+      "takeaway": "Bei vollständigen Daten endet jede Beobachtung mit einem Ausfall.",
+      "archetype": "object-time-diagram",
+      "builder": "complete_data",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 13,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::34",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 35,
+      "work_unit": "slide_035",
+      "scene_id": "re3_src_035",
+      "source_slides": [
+        35
+      ],
+      "primary_source_slide": 35,
+      "render_source_slide": 35,
+      "source_text_section_id": "section_011",
+      "title": "Rechtszensierte Lebensdauerdaten",
+      "takeaway": "Bei rechtszensierten Daten bleibt ein Teil der Objekte bis zum Beobachtungsende funktionsfähig.",
+      "archetype": "object-time-diagram",
+      "builder": "right_censored",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 14,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::35",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 36,
+      "work_unit": "slide_036",
+      "scene_id": "re3_src_036",
+      "source_slides": [
+        36,
+        37
+      ],
+      "primary_source_slide": 37,
+      "render_source_slide": 37,
+      "source_text_section_id": "section_012",
+      "title": "Typ I und Typ II der Rechtszensierung",
+      "takeaway": "Typ I endet nach einer festen Zeit, Typ II nach einer festgelegten Zahl von Ausfällen.",
+      "archetype": "censoring-comparison",
+      "builder": "censoring_types",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 15,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::37",
+      "absorbed_source_states": [
+        37
+      ]
+    },
+    {
+      "output_slide_number": 38,
+      "work_unit": "slide_038",
+      "scene_id": "re3_src_038",
+      "source_slides": [
+        38,
+        39,
+        40,
+        41
+      ],
+      "primary_source_slide": 41,
+      "render_source_slide": 41,
+      "source_text_section_id": "section_013",
+      "title": "Multiple Zensierung und konkurrierende Risiken",
+      "takeaway": "Unterschiedliche Eintritts- und Austrittszeitpunkte sowie konkurrierende Mechanismen müssen explizit dokumentiert werden.",
+      "archetype": "multi-censoring",
+      "builder": "multiple_censoring",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 16,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::41",
+      "absorbed_source_states": [
+        39,
+        40,
+        41
+      ]
+    },
+    {
+      "output_slide_number": 42,
+      "work_unit": "slide_042",
+      "scene_id": "re3_src_042",
+      "source_slides": [
+        42
+      ],
+      "primary_source_slide": 42,
+      "render_source_slide": 42,
+      "source_text_section_id": "section_014",
+      "title": "Intervallzensierung",
+      "takeaway": "Der genaue Ausfallzeitpunkt ist unbekannt, liegt aber zwischen zwei Beobachtungen.",
+      "archetype": "interval-censoring",
+      "builder": "interval_censoring",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 17,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::42",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 43,
+      "work_unit": "slide_043",
+      "scene_id": "re3_src_043",
+      "source_slides": [
+        43
+      ],
+      "primary_source_slide": 43,
+      "render_source_slide": 43,
+      "source_text_section_id": "section_015",
+      "title": "MLS und MLE im direkten Vergleich",
+      "takeaway": "MLS ist anschaulich für vollständige Daten; MLE nutzt zensierte Informationen systematisch mit.",
+      "archetype": "method-comparison",
+      "builder": "mls_mle",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 18,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::43",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 45,
+      "work_unit": "slide_045",
+      "scene_id": "re3_src_045",
+      "source_slides": [
+        45,
+        46
+      ],
+      "primary_source_slide": 46,
+      "render_source_slide": 46,
+      "source_text_section_id": "section_016",
+      "title": "Lösung · Zahnrad-Grübchenversuch",
+      "takeaway": "Sortierte Ausfallzeiten, Median Ranks und Weibull-Fit führen zu einer nachvollziehbaren Parameterschätzung.",
+      "archetype": "exercise-solution",
+      "builder": "exercise_bike_solution",
+      "animation_decision": "static",
+      "notes": "Gelieferter Sprechertext enthält nur 'Text Separat!'; keine Trigger erfinden.",
+      "order": 19,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::46",
+      "absorbed_source_states": [
+        46
+      ]
+    },
+    {
+      "output_slide_number": 47,
+      "work_unit": "slide_047",
+      "scene_id": "re3_src_047",
+      "source_slides": [
+        47
+      ],
+      "primary_source_slide": 47,
+      "render_source_slide": 47,
+      "source_text_section_id": "section_016",
+      "title": "Übung 1 · Weibull-Analyse durchführen",
+      "takeaway": "Ausfallzeiten werden in Minitab ausgewertet und anhand der Modellparameter interpretiert.",
+      "archetype": "exercise",
+      "builder": "exercise_one",
+      "animation_decision": "static",
+      "notes": "Gelieferter Sprechertext enthält nur 'Text Separat!'; statischer Arbeitsauftrag.",
+      "order": 20,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::47",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 48,
+      "work_unit": "slide_048",
+      "scene_id": "re3_src_048",
+      "source_slides": [
+        48,
+        49
+      ],
+      "primary_source_slide": 49,
+      "render_source_slide": 49,
+      "source_text_section_id": "section_016",
+      "title": "Vertrauensgrenzen im Ergebnis lesen",
+      "takeaway": "Neben der Fit-Gerade sind die Grenzen und ihre fachliche Aussage zu interpretieren.",
+      "archetype": "exercise-solution",
+      "builder": "exercise_confidence",
+      "animation_decision": "static",
+      "notes": "Gelieferter Sprechertext enthält nur 'Text Separat!'; statischer Ergebniszustand.",
+      "order": 21,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::49",
+      "absorbed_source_states": [
+        49
+      ]
+    },
+    {
+      "output_slide_number": 50,
+      "work_unit": "slide_050",
+      "scene_id": "re3_src_050",
+      "source_slides": [
+        50
+      ],
+      "primary_source_slide": 50,
+      "render_source_slide": 50,
+      "source_text_section_id": "section_016",
+      "title": "Übung 2 · Wellentest mit Vertrauensbereichen",
+      "takeaway": "Aus acht vollständigen Ausfällen werden b, T, deren Vertrauensbereiche und abgesicherte Lebensdaueraussagen bestimmt.",
+      "archetype": "exercise",
+      "builder": "exercise_two",
+      "animation_decision": "static",
+      "notes": "Gelieferter Sprechertext enthält nur 'Text Separat!'; statischer Arbeitsauftrag.",
+      "order": 22,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::50",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 51,
+      "work_unit": "slide_051",
+      "scene_id": "re3_src_051",
+      "source_slides": [
+        51
+      ],
+      "primary_source_slide": 51,
+      "render_source_slide": 51,
+      "source_text_section_id": "section_016",
+      "title": "Überblick · Datensätze, Auswertung und Sonderfälle",
+      "takeaway": "Der Themenraum reicht von der Klassifikation der Lebensdauerdaten bis zur kritischen Prüfung besonderer Modellsituationen.",
+      "archetype": "transition",
+      "builder": "exercise_transition",
+      "animation_decision": "static",
+      "notes": "Neutraler Themenüberblick ohne vorweggenommene Kapitel-/Lektionsnummerierung.",
+      "order": 23,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::51",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 52,
+      "work_unit": "slide_052",
+      "scene_id": "re3_src_052",
+      "source_slides": [
+        52
+      ],
+      "primary_source_slide": 52,
+      "render_source_slide": 52,
+      "source_text_section_id": "section_016",
+      "title": "Typ I und Typ II im Versuch vergleichen",
+      "takeaway": "Feste Prüfzeit und feste Ausfallzahl führen zu unterschiedlichen rechtszensierten Datensätzen.",
+      "archetype": "exercise-comparison",
+      "builder": "exercise_censoring_compare",
+      "animation_decision": "static",
+      "notes": "",
+      "order": 24,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::52",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 53,
+      "work_unit": "slide_053",
+      "scene_id": "re3_src_053",
+      "source_slides": [
+        53,
+        54
+      ],
+      "primary_source_slide": 54,
+      "render_source_slide": 54,
+      "source_text_section_id": "section_016",
+      "title": "Zensierungsart am Versuch erkennen",
+      "takeaway": "Zeitgrenze, Ausfallzahl und Statusspalte entscheiden über die korrekte Datencodierung.",
+      "archetype": "exercise-solution",
+      "builder": "exercise_censoring_example",
+      "animation_decision": "static",
+      "notes": "",
+      "order": 25,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::54",
+      "absorbed_source_states": [
+        54
+      ]
+    },
+    {
+      "output_slide_number": 55,
+      "work_unit": "slide_055",
+      "scene_id": "re3_src_055",
+      "source_slides": [
+        55,
+        56
+      ],
+      "primary_source_slide": 56,
+      "render_source_slide": 56,
+      "source_text_section_id": "section_016",
+      "title": "Übung 3 · Datensatz und Ergebnis prüfen",
+      "takeaway": "Die Übung führt von der Datencodierung zur kritischen Beurteilung des Weibull-Ergebnisses.",
+      "archetype": "exercise-solution",
+      "builder": "exercise_three",
+      "animation_decision": "static",
+      "notes": "",
+      "order": 26,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::56",
+      "absorbed_source_states": [
+        56
+      ]
+    },
+    {
+      "output_slide_number": 57,
+      "work_unit": "slide_057",
+      "scene_id": "re3_src_057",
+      "source_slides": [
+        57
+      ],
+      "primary_source_slide": 57,
+      "render_source_slide": 57,
+      "source_text_section_id": "section_017",
+      "title": "Von den Übungen zu Sonderfällen",
+      "takeaway": "Nach vollständigen und rechtszensierten Daten folgen typische Stolpersteine der praktischen Auswertung.",
+      "archetype": "transition",
+      "builder": "special_cases_transition",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 27,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::57",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 58,
+      "work_unit": "slide_058",
+      "scene_id": "re3_src_058",
+      "source_slides": [
+        58
+      ],
+      "primary_source_slide": 58,
+      "render_source_slide": 58,
+      "source_text_section_id": "section_018",
+      "title": "Wann ein dritter Weibull-Parameter naheliegt",
+      "takeaway": "Eine deutlich gekrümmte Gerade im Zweiparameter-Weibullnetz kann auf eine ausfallfreie Zeit t₀ hindeuten.",
+      "archetype": "three-parameter-introduction",
+      "builder": "three_parameter_intro",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 28,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::58",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 59,
+      "work_unit": "slide_059",
+      "scene_id": "re3_src_059",
+      "source_slides": [
+        59
+      ],
+      "primary_source_slide": 59,
+      "render_source_slide": 59,
+      "source_text_section_id": "section_018",
+      "title": "Voraussetzungen für die 3-Parameter-Weibullverteilung",
+      "takeaway": "t₀ muss physikalisch begründbar sein; bei Unsicherheit bleibt die Zweiparameter-Verteilung die konservative Wahl.",
+      "archetype": "decision-checklist",
+      "builder": "three_parameter_rules",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 29,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::59",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 60,
+      "work_unit": "slide_060",
+      "scene_id": "re3_src_060",
+      "source_slides": [
+        60,
+        61,
+        62
+      ],
+      "primary_source_slide": 62,
+      "render_source_slide": 62,
+      "source_text_section_id": "section_018",
+      "title": "Beispiel · Ausfallfreie Zeit einer Bremsanlage",
+      "takeaway": "Trotz 30 Prüflingen kann der Nachweis einer ausfallfreien Zeit statistisch unsicher bleiben.",
+      "archetype": "worked-example",
+      "builder": "brake_example",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 30,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::62",
+      "absorbed_source_states": [
+        61,
+        62
+      ]
+    },
+    {
+      "output_slide_number": 63,
+      "work_unit": "slide_063",
+      "scene_id": "re3_src_063",
+      "source_slides": [
+        63,
+        64,
+        65
+      ],
+      "primary_source_slide": 65,
+      "render_source_slide": 65,
+      "source_text_section_id": "section_018",
+      "title": "3-Parameter-Ergebnis kritisch prüfen",
+      "takeaway": "Ein rechnerisch besserer Fit ist wertlos, wenn t₀ negativ, physikalisch unsinnig oder extrem unsicher ist.",
+      "archetype": "result-challenge",
+      "builder": "three_parameter_challenge",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 31,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::65",
+      "absorbed_source_states": [
+        64,
+        65
+      ]
+    },
+    {
+      "output_slide_number": 66,
+      "work_unit": "slide_066",
+      "scene_id": "re3_src_066",
+      "source_slides": [
+        66
+      ],
+      "primary_source_slide": 66,
+      "render_source_slide": 66,
+      "source_text_section_id": "section_019",
+      "title": "Zweiter Sonderfall · mehrere Ausfallmechanismen",
+      "takeaway": "Ein sichtbarer Knick im Weibullnetz ist ein Signal, die Mechanismen getrennt zu untersuchen.",
+      "archetype": "transition",
+      "builder": "multiple_modes_transition",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 32,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::66",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 67,
+      "work_unit": "slide_067",
+      "scene_id": "re3_src_067",
+      "source_slides": [
+        67
+      ],
+      "primary_source_slide": 67,
+      "render_source_slide": 67,
+      "source_text_section_id": "section_019",
+      "title": "Mehrere Mechanismen nicht gemeinsam fitten",
+      "takeaway": "Eine gemeinsame Gerade erzeugt ungenaue Parameter und Prognosen, wenn verschiedene Mechanismen vorliegen.",
+      "archetype": "mechanism-separation",
+      "builder": "multiple_modes",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 33,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::67",
+      "absorbed_source_states": []
+    },
+    {
+      "output_slide_number": 68,
+      "work_unit": "slide_068",
+      "scene_id": "re3_src_068",
+      "source_slides": [
+        68,
+        69
+      ],
+      "primary_source_slide": 69,
+      "render_source_slide": 69,
+      "source_text_section_id": "section_019",
+      "title": "Übung 4 · Ausfallmechanismen erkennen",
+      "takeaway": "Die Ausfalldaten des Fahrwerks werden auf mehrere plausible Mechanismen und getrennte Fits geprüft.",
+      "archetype": "exercise",
+      "builder": "exercise_four",
+      "animation_decision": "static",
+      "notes": "Der gelieferte Sprechertext leitet nur allgemein zum Beispiel über; für die konkreten Arbeitsschritte werden keine Trigger erfunden.",
+      "order": 34,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::69",
+      "absorbed_source_states": [
+        69
+      ]
+    },
+    {
+      "output_slide_number": 70,
+      "work_unit": "slide_070",
+      "scene_id": "re3_src_070",
+      "source_slides": [
+        70,
+        71,
+        72
+      ],
+      "primary_source_slide": 72,
+      "render_source_slide": 72,
+      "source_text_section_id": "section_019",
+      "title": "Ausfallmechanismen getrennt auswerten",
+      "takeaway": "Getrennte Weibull-Geraden beschreiben die Mechanismen präziser als ein gemeinsamer Fit.",
+      "archetype": "mechanism-result",
+      "builder": "multiple_modes_result",
+      "animation_decision": "animated",
+      "notes": "",
+      "order": 35,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE3::72",
+      "absorbed_source_states": [
+        71,
+        72
+      ]
+    }
+  ]
+}

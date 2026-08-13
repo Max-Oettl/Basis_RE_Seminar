@@ -130,8 +130,8 @@ Keine Freigabe fuer:
 
 ## Corporate-Identity-Regeln
 
-- Marineblau `#031334` ist die Standardfarbe des Grundmotivs.
-- Signalgruen `#00A754` ist der primaere Education-Akzent und wird nur fuer
+- Marineblau `#142452` ist die Standardfarbe des Grundmotivs.
+- Signalgruen `#00A653` ist der Education-Submarkenakzent und wird nur fuer
   aktive, positive oder fokussierte Bedeutung eingesetzt.
 - Koralle `#EC6244` kennzeichnet Fehler, Ausfall oder negative Abweichung.
 - Goldgelb `#E9B400` kennzeichnet Warnung oder Aufmerksamkeit.
@@ -225,8 +225,9 @@ Standardformulierung:
 ```text
 Ein einzelnes isoliertes, minimalistisches 2D-Piktogramm von [MOTIV].
 Erkennungsmerkmale: [MAXIMAL DREI MERKMALE]. Frontale oder orthografische
-Ansicht, flache geometrische Silhouette, ruhige abgerundete Konturen,
-RelTest-Education-Marineblau #031334, optional Signalgruen #00A754 nur fuer
+Ansicht, flache geometrische Silhouette, hauptsaechlich eckige und ausreichend
+kraeftige Konturen, RelTest-Education-Marineblau #142452, optional Signalgruen
+#00A653 nur fuer
 [SEMANTISCHE ROLLE]. Vollstaendig transparenter Hintergrund, mittig, 8 Prozent
 transparenter Sicherheitsrand, bei 48 px eindeutig erkennbar. Kein Text, keine
 Zahl, kein Logo, kein Wasserzeichen, keine Szene, kein 3D, keine Isometrie, kein

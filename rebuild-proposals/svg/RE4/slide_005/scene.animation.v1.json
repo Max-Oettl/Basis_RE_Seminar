@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_005.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "gear_test",
+      "label": "Wöhlertest",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "gear_failures",
+      "label": "Ausfallzeiten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "gear_weibull",
+      "label": "Weibull-Modell",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "gear_confidence",
+      "label": "Vertrauensbereich",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "gear_flow",
+      "label": "Auswertungskette",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_gear_test",
+      "targetId": "gear_test",
+      "action": "show",
+      "sourceText": "Schauen wir uns beispielhaft die Zahnräder an.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_gear_failures",
+      "targetId": "gear_failures",
+      "action": "show",
+      "sourceText": "Dabei wird das Zahnrad unter wechselnder Last geprüft, bis es versagt – und wir erhalten Ausfallzeiten.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_gear_weibull",
+      "targetId": "gear_weibull",
+      "action": "show",
+      "sourceText": "Diese Ausfallzeiten können wir auswerten, um eine Weibull-Verteilung zu bestimmen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_gear_confidence",
+      "targetId": "gear_confidence",
+      "action": "show",
+      "sourceText": "Deshalb berücksichtigen wir zusätzlich einen Vertrauensbereich, um die statistische Unsicherheit abzudecken.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_05_gear_flow",
+      "targetId": "gear_flow",
+      "action": "draw",
+      "sourceText": "Erst dann können beispielsweise mit einer fünfundneunzig-prozentigen Aussagewahrscheinlichkeit die Zuverlässigkeit eines Zahnrads bis zu einem bestimmten Zeitpunkt bestimmen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung erscheint nach ihren fachlichen Endpunkten.",
+      "drawDurFrames": 42
+    }
+  ]
+}

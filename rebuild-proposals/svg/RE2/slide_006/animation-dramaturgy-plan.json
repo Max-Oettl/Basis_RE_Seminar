@@ -1,0 +1,225 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch2_system_levels",
+  "svgPath": "slide_006.svg",
+  "spokenText": "Haben wir die Systemgrenze festgelegt, müssen wir im nächsten Schritt alle Schnittstellen zwischen dem System und seiner Umgebung identifizieren.\n\nDabei kann uns gedanklich folgendes Schema helfen, das die unterschiedlichen Systemebenen darstellt.\n\nDa jedes technische System in einer Umwelt existiert, ist dies immer die oberste Ebene.\n\nIm Falle der PV-Anlage umfasst die Umwelt den Standort, Umwelteinflüsse, Umgebungseinflüsse, aber auch gesetzliche Regularien und Anforderungen.\n\nAnschließend betrachten wir das technische System selbst.\n\nFür die PV-Anlage sind beispielsweise der Anlagentyp, die elektrische Verschaltung, die Betriebsstrategie und auch die Nennleistung von zentraler Bedeutung.Wir betrachten also nicht nur die physischen Komponenten, sondern eben auch Anforderungen und Vorgaben, die das Verhalten der PV-Anlage beeinflussen.\n\nDiese Faktoren definieren letztendlich das Gesamtsystem und dessen Hauptfunktionen.\n\nDas System kann dann weiter in Subsysteme unterteilt werden. Diese Ebene beinhaltet spezifische Baugruppen und Komponenten wie den Wechselrichter, das PV-Modul oder auch das Batteriesystem.\n\nJedes Subsystem besitzt dabei ganz bestimmte Eigenschaften und typische Ausfallrisiken.\n\nSchließlich gelangen wir zur Komponentenebene.\n\nHier finden wir einzelne Elemente wie Mikrocontroller und andere Baugruppen oder Bauteile.\n\nNehmen wir an wir wollen im weiteren Verlauf nun den Wechselrichter näher analysieren.\n\nDas heißt die Systemgrenze umschließt die Subsystem- und auch Komponentenebene.\n\nDie Systemgrenze definiert nicht nur den Bereich, innerhalb dessen wir unsere Analyse durchführen, sondern markiert auch die Schnittstellen, an denen es Wechselwirkungen zur Umgebung gibt.\n\nIm nächsten Schritt wollen wir genau diese Schnittstellen zur Umgebung identifizieren.\n\nAuf diese Weise können wir die Einflussfaktoren auf den Wechselrichter besser verstehen und gezielt Maßnahmen zur Verbesserung der Zuverlässigkeit entwickeln.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "level_environment",
+      "label": "Umwelt",
+      "role": "content",
+      "members": [
+        "level_environment"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "level_system",
+      "label": "System",
+      "role": "content",
+      "members": [
+        "level_system"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "level_subsystem",
+      "label": "Subsystem",
+      "role": "content",
+      "members": [
+        "level_subsystem"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "level_component",
+      "label": "Komponente",
+      "role": "content",
+      "members": [
+        "level_component"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "level_focus",
+      "label": "Fokus Wechselrichter",
+      "role": "content",
+      "members": [
+        "level_focus"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_05",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Umwelt",
+      "sourceText": "Da jedes technische System in einer",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "level_environment"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "System",
+      "sourceText": "Anschließend betrachten wir das technische System",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "level_system"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Subsystem",
+      "sourceText": "Das System kann dann weiter in",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "level_subsystem"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Komponente",
+      "sourceText": "Schließlich gelangen wir zur Komponentenebene",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "level_component"
+      ]
+    },
+    {
+      "beatId": "beat_05",
+      "claim": "Fokus Wechselrichter",
+      "sourceText": "Nehmen wir an wir wollen im",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "level_focus"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_level_environment",
+      "beatId": "beat_01",
+      "targetId": "level_environment",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_level_system",
+      "beatId": "beat_02",
+      "targetId": "level_system",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_level_subsystem",
+      "beatId": "beat_03",
+      "targetId": "level_subsystem",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_04_level_component",
+      "beatId": "beat_04",
+      "targetId": "level_component",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_05_level_focus",
+      "beatId": "beat_05",
+      "targetId": "level_focus",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_05",
+      "visibleGroups": [
+        "canvas_context",
+        "level_environment",
+        "level_system",
+        "level_subsystem",
+        "level_component",
+        "level_focus"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

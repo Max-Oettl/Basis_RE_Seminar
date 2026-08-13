@@ -1,0 +1,289 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch2_ishikawa",
+  "svgPath": "slide_010.svg",
+  "spokenText": "Um die Suche nach einzelnen Einflussgrößen des Wechselrichters zu unterstützen, kann das sogenannte Ursache-Wirkungs-Diagramm, auch bekannt als Ishikawa-Diagramm oder Fischgräten-Diagramm angewendet werden.\n\nDieses Werkzeug hilft uns dabei, die möglichen Ursachen für ein bestimmtes Problem bzw. eine unerwünschte Wirkung systematisch zu identifizieren und zu analysieren.\n\nIn unserem Fall ist die unerwünschte Wirkung der Leistungsverlust der PV-Anlage. Das Diagramm stellt diese Wirkung am Kopf des Fisches dar.\n\nDie möglichen Ursachen werden mittels der Fischgräten in Hauptkategorien eingeteilt, die man oft als die fünf Ems bezeichnet. Dazu zählen Materialien, Maschinen, Mensch, Methoden und auch Milieu bzw. Umwelt.Zunächst werden alle Materialien bzw. Bauteile betrachtet, die in der PV-Anlage verwendet werden, wie zum Beispiel die Qualität elektrischer Bauteile oder auch die Verkabelung. Mögliche Fragen sind beispielsweise:Sind die Materialien von guter Qualität und können Materialfehler auftreten?\n\nOder unterliegen einzelne Bauteile einem Verschleiß?\n\nIn der zweiten Gräte können die eingesetzten Maschinen und Ausrüstungen erfasst werden. Hierzu zählt beispielsweise die Montage-Struktur oder auch Überwachungssysteme. Hier wird untersucht, ob die Ausrüstung korrekt funktioniert oder ob es technische Probleme geben kann.\n\nDer Mensch spielt natürlich auch in technischen Systemen meist eine relevante Rolle. Unter dieser Kategorie wird das Personal, das an der Installation, Wartung und Bedienung der PV-Anlage beteiligt ist, erfasst. Dabei muss also berücksichtigt werden, welche Einflüsse menschliche Fehler während der Installations- und Wartungsvorgängen haben können. Aspekte wie unzureichende Qualifikationen, Erfahrung und Sorgfalt spielen hier eine wichtige Rolle.\n\nUnter Methoden verstehen wir die Prozesse und Verfahren, die während der Planung, Installation und Wartung angewendet werden. Wichtig hierbei ist zu prüfen, ob die Verfahren effizient und korrekt ausgeführt werden. Hierzu zählt beispielsweise die Einhaltung von Standards während der Installation, aber auch korrekt durchgeführte Wartungsintervalle und -protokolle.\n\nZum Schluss gibt es noch die Umweltfaktoren, die sich auf äußere Einflüsse wie Wetterbedingungen, Verschmutzung oder geografische Lage beziehen. Hierbei muss geklärt werden, wie sich Temperatur, Feuchtigkeit oder auch Schattenwurf auf die Leistung der Anlage auswirken.\n\nDas Ishikawa-Diagramm wird von rechts nach links gelesen, wobei die Wirkung am rechten Ende steht und die Ursachen sich entlang der Gräten nach links verzweigen.\n\nDurch diese visuelle Darstellung können wir die möglichen Ursachen für den Leistungsverlust der PV-Anlage strukturiert erfassen und analysieren.\n\nDie fünf Ems helfen uns dabei, alle relevanten Bereiche zu berücksichtigen und keine potenziellen Ursachen zu übersehen. Dieses Diagramm ist ein effektives Werkzeug, um in der Zuverlässigkeitsanalyse die Wurzel von Problemen zu finden.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "ishi_effect",
+      "label": "Wirkung Leistungsverlust",
+      "role": "content",
+      "members": [
+        "ishi_effect"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "ishi_material",
+      "label": "Materialien",
+      "role": "content",
+      "members": [
+        "ishi_material"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "ishi_machine",
+      "label": "Maschinen und Ausrüstung",
+      "role": "content",
+      "members": [
+        "ishi_machine"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "ishi_human",
+      "label": "Mensch",
+      "role": "content",
+      "members": [
+        "ishi_human"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "ishi_methods",
+      "label": "Methoden",
+      "role": "content",
+      "members": [
+        "ishi_methods"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_05",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "ishi_environment",
+      "label": "Milieu und Umwelt",
+      "role": "content",
+      "members": [
+        "ishi_environment"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_06",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "ishi_spine",
+      "label": "Ursache-Wirkungs-Beziehungen",
+      "role": "content",
+      "members": [
+        "ishi_spine"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_07",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Wirkung Leistungsverlust",
+      "sourceText": "In unserem Fall ist die unerwünschte",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "ishi_effect"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Materialien",
+      "sourceText": "Zunächst werden alle Materialien bzw. Bauteile",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "ishi_material"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Maschinen und Ausrüstung",
+      "sourceText": "In der zweiten Gräte können die",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "ishi_machine"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Mensch",
+      "sourceText": "Der Mensch spielt natürlich auch in",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "ishi_human"
+      ]
+    },
+    {
+      "beatId": "beat_05",
+      "claim": "Methoden",
+      "sourceText": "Unter Methoden verstehen wir die Prozesse",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "ishi_methods"
+      ]
+    },
+    {
+      "beatId": "beat_06",
+      "claim": "Milieu und Umwelt",
+      "sourceText": "Zum Schluss gibt es noch die",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "ishi_environment"
+      ]
+    },
+    {
+      "beatId": "beat_07",
+      "claim": "Ursache-Wirkungs-Beziehungen",
+      "sourceText": "Das Ishikawa-Diagramm wird von rechts nach",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "ishi_spine"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_ishi_effect",
+      "beatId": "beat_01",
+      "targetId": "ishi_effect",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_ishi_material",
+      "beatId": "beat_02",
+      "targetId": "ishi_material",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_ishi_machine",
+      "beatId": "beat_03",
+      "targetId": "ishi_machine",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_04_ishi_human",
+      "beatId": "beat_04",
+      "targetId": "ishi_human",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_05_ishi_methods",
+      "beatId": "beat_05",
+      "targetId": "ishi_methods",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_06_ishi_environment",
+      "beatId": "beat_06",
+      "targetId": "ishi_environment",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_07_ishi_spine",
+      "beatId": "beat_07",
+      "targetId": "ishi_spine",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_07",
+      "visibleGroups": [
+        "canvas_context",
+        "ishi_effect",
+        "ishi_material",
+        "ishi_machine",
+        "ishi_human",
+        "ishi_methods",
+        "ishi_environment",
+        "ishi_spine"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

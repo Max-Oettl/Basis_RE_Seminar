@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_034.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "complete_plot",
+      "label": "Objekt-Zeit-Verläufe",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "complete_definition",
+      "label": "Definition",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "complete_data",
+      "label": "Datensatz",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "complete_rule",
+      "label": "Ausfallmarker",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_complete_definition",
+      "targetId": "complete_definition",
+      "action": "show",
+      "sourceText": "Das bedeutet: Wir kennen für jedes einzelne Objekt den genauen Ausfallzeitpunkt.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_complete_plot",
+      "targetId": "complete_plot",
+      "action": "show",
+      "sourceText": "In der Abbildung sehen wir dies anhand der roten Kreuze, die jeweils den Ausfall eines Objekts markieren.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_complete_data",
+      "targetId": "complete_data",
+      "action": "show",
+      "sourceText": "Da alle sechs Objekte ausgefallen sind, sprechen wir von vollständigen Daten.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_complete_rule",
+      "targetId": "complete_rule",
+      "action": "show",
+      "sourceText": "Solche vollständigen Lebensdauerdaten sind besonders einfach auszuwerten, da keinerlei Unsicherheiten durch unvollständige Beobachtungen bestehen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

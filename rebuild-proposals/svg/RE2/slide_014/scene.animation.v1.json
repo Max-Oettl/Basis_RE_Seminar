@@ -10,31 +10,23 @@
   },
   "targets": [
     {
-      "targetId": "func_blackbox",
-      "label": "Black Box",
+      "targetId": "func16_main",
+      "label": "Hauptfunktionskette",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "func_definition",
-      "label": "Abstrakte Aufgabenbeschreibung",
+      "targetId": "func16_controls",
+      "label": "Regelungs- und Überwachungsfunktionen",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "func_decomposition",
-      "label": "Zerlegung in Teilfunktionen",
-      "status": "animated",
-      "visibleInEditor": true,
-      "render": true,
-      "confidence": "high"
-    },
-    {
-      "targetId": "func_relations",
+      "targetId": "func16_relations",
       "label": "Funktionsbeziehungen",
       "status": "animated",
       "visibleInEditor": true,
@@ -44,40 +36,30 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_func_blackbox",
-      "targetId": "func_blackbox",
+      "stepId": "step_01_func16_main",
+      "targetId": "func16_main",
       "action": "show",
-      "sourceText": "Dabei kann das System zunächst als Black-Box aufgefasst werden",
+      "sourceText": "Im Falle des Wechselrichters ist die Hauptfunktion die Umwandlung von Gleichstrom in Wechselstrom.",
       "occurrence": 1,
       "confidence": "high",
       "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
       "enterFrames": 16
     },
     {
-      "stepId": "step_02_func_definition",
-      "targetId": "func_definition",
+      "stepId": "step_02_func16_controls",
+      "targetId": "func16_controls",
       "action": "show",
-      "sourceText": "Die Funktion selbst ist die Aufgabenbeschreibung in neutraler Form",
+      "sourceText": "Dies kann dann wieder weiter aufgeteilt werden in alle für den Wechselrichter relevanten Teilfunktionen.",
       "occurrence": 1,
       "confidence": "high",
       "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
       "enterFrames": 16
     },
     {
-      "stepId": "step_03_func_decomposition",
-      "targetId": "func_decomposition",
-      "action": "show",
-      "sourceText": "Auf System-Ebene kann eine Funktion meist in untergeordnete Teilfunktionen aufgeteilt werden",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",
-      "enterFrames": 16
-    },
-    {
-      "stepId": "step_04_func_relations",
-      "targetId": "func_relations",
+      "stepId": "step_03_func16_relations",
+      "targetId": "func16_relations",
       "action": "draw",
-      "sourceText": "Wird die Summe dieser Teilfunktionen erfüllt, so ist auch die übergeordnete Funktion des Systems erfüllt.",
+      "sourceText": "Jeder dieser Teilfunktionen hat natürlich wieder seine eigene Aufgabenbeschreibung und individuelle Ein- und Ausgangsgrößen.",
       "occurrence": 1,
       "confidence": "high",
       "notes": "Sprechertextgeführte semantische Gruppe; Beziehungen folgen erst nach ihren Endpunkten.",

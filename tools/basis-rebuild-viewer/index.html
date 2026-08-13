@@ -1119,6 +1119,7 @@
               <div class="frame-header">
                 <span>Neuer SVG-Vorschlag</span>
                 <div class="frame-actions">
+                  <button id="svgEdit" class="link-button" type="button" disabled>SVG bearbeiten</button>
                   <button id="svgAnimationEdit" class="link-button" type="button" disabled>Animation bearbeiten</button>
                   <button id="svgFullscreen" class="link-button" type="button">Vollbild</button>
                   <a id="svgOpen" class="path-link" target="_blank" rel="noreferrer">oeffnen</a>
@@ -1345,6 +1346,7 @@
       svgFrame: document.getElementById("svgFrame"),
       oldOpen: document.getElementById("oldOpen"),
       svgOpen: document.getElementById("svgOpen"),
+      svgEdit: document.getElementById("svgEdit"),
       svgAnimationEdit: document.getElementById("svgAnimationEdit"),
       svgFullscreen: document.getElementById("svgFullscreen"),
       spokenTextBody: document.getElementById("spokenTextBody"),
@@ -1451,6 +1453,9 @@
     function slideDisplayLabel(slide) {
       if (slide?.isAdditionalSlide) {
         return slide.additionalSlide?.title || `Zusatzfolie ${String((slide.slideNumber || 1001) - 1000).padStart(3, "0")}`;
+      }
+      if (Number.isFinite(Number(slide?.sequenceNumber))) {
+        return `Szene ${String(slide.sequenceNumber).padStart(3, "0")} · Quelle ${String(slide.slideNumber || 0).padStart(3, "0")}`;
       }
       return `Folie ${String(slide?.slideNumber || 0).padStart(3, "0")}`;
     }
@@ -2097,6 +2102,8 @@
       elements.fullscreenDelay.disabled = !available;
       elements.fullscreenTimeline.disabled = !available;
       elements.svgFullscreen.disabled = !(state.previewSvg || state.animationSvg);
+      elements.svgEdit.disabled =
+        !activeSvgProposal(selectedSlide()) || state.selectedVersionId !== "current";
       elements.svgAnimationEdit.disabled =
         !activeSvgProposal(selectedSlide()) || state.selectedVersionId !== "current";
       const playLabel = state.animationPlaying
@@ -2597,7 +2604,9 @@
       title.textContent = slide.title;
       const meta = document.createElement("div");
       meta.className = "slide-meta";
-      meta.textContent = `${slide.slideId} · Szene ${String(slide.slideNumber || 0).padStart(3, "0")}`;
+      meta.textContent = Number.isFinite(Number(slide.sequenceNumber))
+        ? `Szene ${String(slide.sequenceNumber).padStart(3, "0")} · Quelle ${String(slide.slideNumber || 0).padStart(3, "0")}`
+        : `${slide.slideId} · Szene ${String(slide.slideNumber || 0).padStart(3, "0")}`;
       const badges = document.createElement("div");
       badges.className = "badges";
       statusBadges(slide).forEach((item) => badges.append(item));
@@ -3504,7 +3513,10 @@
       }
       renderList();
       if (!state.selectedId && state.filtered[0]) selectSlide(state.filtered[0].id);
-      elements.count.textContent = `${state.filtered.length} von ${moduleSlides.length} Szenen in ${moduleId}`;
+      const hiddenCount = moduleSlides.filter((slide) => slideIsHidden(slide)).length;
+      elements.count.textContent = hiddenCount
+        ? `${state.filtered.length} aktive Szenen · ${hiddenCount} absorbierte Zustände in ${moduleId}`
+        : `${state.filtered.length} Szenen in ${moduleId}`;
       updateNavigation();
     }
 
@@ -4006,6 +4018,11 @@
     elements.saveScenePlacement.addEventListener("click", saveScenePlacement);
     elements.includeInPresentation.addEventListener("change", savePresentationPreference);
     elements.svgFullscreen.addEventListener("click", openFullscreenViewer);
+    elements.svgEdit.addEventListener("click", () => {
+      const slide = selectedSlide();
+      if (!slide || !activeSvgProposal(slide) || state.selectedVersionId !== "current") return;
+      location.href = `/svg-editor?id=${encodeURIComponent(slide.id)}`;
+    });
     elements.svgAnimationEdit.addEventListener("click", () => {
       const slide = selectedSlide();
       if (!slide || !activeSvgProposal(slide) || state.selectedVersionId !== "current") return;

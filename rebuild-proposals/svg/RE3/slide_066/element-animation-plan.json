@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re3_src_066",
+  "decision": "animated",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "modes_transition_joint",
+      "label": "Gemeinsamer Fit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "modes_transition_signal",
+      "label": "Knick",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "modes_transition_arrow",
+      "label": "Trennen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "modes_transition_split",
+      "label": "Separate Fits",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_modes_transition_joint",
+      "targetId": "modes_transition_joint",
+      "action": "show",
+      "sourceText": "Angenommen, wir haben eine Liste von Ausfallzeiten und führen damit direkt eine Weibull-Analyse durch.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_modes_transition_signal",
+      "targetId": "modes_transition_signal",
+      "action": "show",
+      "sourceText": "Wenn sich die Daten besser durch mehrere Geraden beschreiben lassen, ist das ein deutliches Anzeichen dafür, dass mehrere unterschiedliche Ausfallmechanismen vorliegen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_modes_transition_split",
+      "targetId": "modes_transition_split",
+      "action": "show",
+      "sourceText": "Stattdessen sollten die Daten nach Ausfallmechanismen getrennt und jeweils separat analysiert werden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_modes_transition_arrow",
+      "targetId": "modes_transition_arrow",
+      "action": "draw",
+      "sourceText": "So erhält man für jeden Mechanismus eine eigene Weibull-Verteilung, die eine deutlich präzisere Beschreibung und bessere Prognose ermöglicht.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung erscheint nach ihren fachlichen Endpunkten.",
+      "drawDurFrames": 42
+    }
+  ]
+}

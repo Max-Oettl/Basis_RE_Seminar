@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_design_process_step5",
+  "svgPath": "slide_156.svg",
+  "spokenText": "Im fünften Schritt, der Risikoanalyse, bewerten wir die Risiken potenzieller Fehler mithilfe der drei bekannten Größen: Bedeutung, Auftretenswahrscheinlichkeit und Entdeckungswahrscheinlichkeit.\n\nDie Design-FME-A bewertet Risiken, die durch Designfehler oder konstruktive Schwächen entstehen.\n\nDie Bedeutung beschreibt die Auswirkung eines möglichen Fehlers auf die Funktion oder Sicherheit des Produkts, während die Entdeckungswahrscheinlichkeit angibt, wie gut dieser Fehler im Entwicklungsprozess identifiziert werden kann. Die Auftretenswahrscheinlichkeit lässt sich in vielen Fällen sogar quantitativ anhand der Ausfallwahrscheinlichkeit des Produkts abschätzen.\n\nIn der Betrachtung von Fertigungs- und Montage-Prozessen stehen Risiken im Fokus, welche durch Prozessfehler verursacht werden.\n\nHierbei stehen vor allem die Auswirkungen auf die Effizienz und Qualität des Prozesses im Vordergrund.\n\nAuch hier beschreibt die Bedeutung die Auswirkungen eines Prozessfehlers, während die Entdeckungswahrscheinlichkeit angibt, wie gut dieser im Prozess erkannt werden kann.\n\nZur Bewertung der Auftretenswahrscheinlichkeit kommen häufig statistische Methoden wie die Prozesskontrolle zum Einsatz, um die Wahrscheinlichkeit von Fehlern zuverlässig einzuschätzen.\n\nIn beiden Fällen erfolgt die Priorisierung und Ableitung von Maßnahmen mithilfe der Risiko-Prioritätszahl oder der Aufgabenpriorität.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s159_formula",
+      "label": "Risikoprioritätszahl",
+      "role": "content",
+      "members": [
+        "s159_formula"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s159_matrix",
+      "label": "Aufgabenpriorität",
+      "role": "content",
+      "members": [
+        "s159_matrix"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s159_shared",
+      "label": "Gemeinsame Bewertungslogik",
+      "role": "content",
+      "members": [
+        "s159_shared"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Risikoprioritätszahl",
+      "sourceText": "Im fünften Schritt, der Risikoanalyse, bewerten",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s159_formula"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Aufgabenpriorität",
+      "sourceText": "In beiden Fällen erfolgt die Priorisierung",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s159_matrix"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Gemeinsame Bewertungslogik",
+      "sourceText": "In beiden Fällen erfolgt die Priorisierung",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s159_shared"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s159_formula",
+      "beatId": "beat_01",
+      "targetId": "s159_formula",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s159_matrix",
+      "beatId": "beat_02",
+      "targetId": "s159_matrix",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_s159_shared",
+      "beatId": "beat_03",
+      "targetId": "s159_shared",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_03",
+      "visibleGroups": [
+        "canvas_context",
+        "s159_formula",
+        "s159_matrix",
+        "s159_shared"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

@@ -1,6 +1,44 @@
 {
   "schemaVersion": "elementAnimationPlan/v1",
   "sceneId": "re2_ch4_risk_analysis",
-  "targets": [],
-  "steps": []
+  "targets": [
+    {
+      "targetId": "s118_guidance",
+      "label": "Bewertungsgrundsätze",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s118_table",
+      "label": "Bewertungskriterien",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s118_guidance",
+      "targetId": "s118_guidance",
+      "action": "show",
+      "sourceText": "Für die systematische Bewertung dieser drei Größen sollten immer eindeutige und einheitliche Kriterien definiert werden. Diese Kriterien hängen stark von den spezifischen Anforderungen des Unternehmens, seiner Strategie und dem Produkt ab. Als Richtlinien können beispielsweise die Tabellen der A-IA-G oder des VDA verwendet werden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_s118_table",
+      "targetId": "s118_table",
+      "action": "show",
+      "sourceText": "Für die systematische Bewertung dieser drei Größen sollten immer eindeutige und einheitliche Kriterien definiert werden. Diese Kriterien hängen stark von den spezifischen Anforderungen des Unternehmens, seiner Strategie und dem Produkt ab. Als Richtlinien können beispielsweise die Tabellen der A-IA-G oder des VDA verwendet werden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    }
+  ]
 }

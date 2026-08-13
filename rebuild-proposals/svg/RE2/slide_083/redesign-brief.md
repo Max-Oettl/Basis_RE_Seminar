@@ -2,9 +2,9 @@
 
 - Kapitel: 4
 - Lektion: 3
-- Quellfolie: 83
+- Quellfolie: 85
 - Zielmodus: full_slide, 1920×1080
-- Titel: Systembaum: Systemebene 1
+- Titel: Systembaum: Systemebene 3
 - Dominante Lernbotschaft: Der Systembaum ordnet jedes Systemelement eindeutig einer Hierarchieebene zu.
 - Archetyp: hierarchy-tree
 - Layout: Kanonischer dreistufiger Systembaum mit optionalen Funktions- und Fehlerlagen.

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_step4_bridge",
+  "svgPath": "slide_096.svg",
+  "spokenText": "Kommen wir nun zum vierten Schritt der FME-A, der Fehleranalyse.\n\nIn diesem Schritt identifizieren wir die Fehlfunktionen der einzelnen Systemelemente. Dabei wird jeder Funktion eines Systemelements mindestens eine Fehlfunktion oder ein Fehler zugeordnet.\n\nEin Fehler entsteht in der Regel durch die Nichterfüllung oder die eingeschränkte Erfüllung einer Funktion. Der Fehler lässt sich somit einfach durch die Negation der Funktion ableiten.\n\nDas bedeutet, wir hängen an das Ende der Funktion Formulierungen wie „nicht erfüllt“ oder „nur teilweise erfüllt“ an.\n\nEin Beispiel: Aus der Funktion „Drehmoment übertragen“ wird die Fehlfunktion „Drehmoment wird nicht übertragen“ oder „Drehmoment wird nur teilweise übertragen“. Jede Funktion hat also mindestens eine Fehlfunktion, kann jedoch auch mehrere Fehlfunktionen besitzen.\n\nDas Ziel dieses Schrittes ist es, die Fehlfunktionen den jeweiligen Systemelementen zuzuordnen und miteinander zu verknüpfen.\n\nWerfen wir dazu einen Blick auf unsere Systemstruktur. Wir kennen bereits die Systemelemente und ihre zugeordneten Funktionen. Nun können wir jeder Funktion eine oder mehrere Fehlfunktionen zuordnen.\n\nWenn wir die Fehlfunktionen miteinander verknüpfen, entsteht eine Art Fehlerbaum oder Fehlernetz. Den Fehlerbaum solltet ihr bereits schon aus dem Abschnitt Fehlerbaumanalyse kennen.\n\nSchauen wir uns jetzt noch die Fehlerzusammenhänge innerhalb der Systemstruktur etwas genauer an.",
+  "animationDecision": "static",
+  "animationRationale": "Die Szene ist ein kurzer Orientierungs- oder Brückenzustand und benötigt keinen künstlichen Gesamt-Reveal.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    }
+  ],
+  "narrativeBeats": [],
+  "steps": [],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

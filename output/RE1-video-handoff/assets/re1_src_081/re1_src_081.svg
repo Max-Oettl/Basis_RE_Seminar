@@ -1,687 +1,632 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_081" data-brand-profile="reltest-academy">
-  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"probability-paper-workflow","contentTitle":"Weibull-Wahrscheinlichkeitspapier","layoutIntent":"dominant-weibull-probability-paper-with-three-step-manual-parameter-reading","takeaway":"Durch transformierte Achsen wird die S-Kurve zur Geraden; ihre parallele Verschiebung zum Pol erlaubt die Ablesung von b.","density":"balanced","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-academy","brandVariant":"academy-production","sourceSlides":[81,82],"officialLogoStatus":"pending-original-asset"}]]></metadata>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_081" data-brand-profile="reltest-education">
+  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"probability-paper-workflow","contentTitle":"Weibull-Wahrscheinlichkeitspapier","layoutIntent":"dominant-weibull-probability-paper-with-compact-reading-sequence","takeaway":"Durch transformierte Achsen wird die S-Kurve zur Geraden; ihre parallele Verschiebung zum Pol erlaubt die Ablesung von b.","density":"dense","designException":"Der eingebettete Wahrscheinlichkeitspapier-Plot und die vier didaktischen Leseschritte erzeugen bewusst eine hohe, aber klar gegliederte technische Elementdichte.","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-education","brandVariant":"education-production","sourceSlides":[81,82],"officialLogoStatus":"downstream-owned"}]]></metadata>
   <title id="accessible_title">Weibull-Wahrscheinlichkeitspapier</title>
   <desc id="accessible_description">Durch transformierte Achsen wird die S-Kurve zur Geraden; ihre parallele Verschiebung zum Pol erlaubt die Ablesung von b.</desc>
   <defs>
     <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#F9FBFC"/>
-      <stop offset="56%" stop-color="#F1F5F8"/>
-      <stop offset="100%" stop-color="#E9F0F4"/>
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="56%" stop-color="#F7F9FC"/>
+      <stop offset="100%" stop-color="#E6F6EE"/>
     </linearGradient>
     <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse">
-      <path d="M80 0H0V80" fill="none" stroke="#102A43" stroke-opacity="0.035" stroke-width="1"/>
+      <path d="M80 0H0V80" fill="none" stroke="#031334" stroke-opacity="0.035" stroke-width="1"/>
     </pattern>
-    <filter id="shadowSoft" x="-15%" y="-15%" width="130%" height="140%">
-      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#102A43" flood-opacity="0.10"/>
-    </filter>
-    <marker id="arrow_007EA7" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#007EA7"/></marker>
-    <marker id="arrow_102A43" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#102A43"/></marker>
-    <marker id="arrow_D1495B" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#D1495B"/></marker>
-    <marker id="arrow_2F6F55" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#2F6F55"/></marker>
-    <marker id="arrow_B7791F" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#B7791F"/></marker>
+    
   </defs>
   <style>
-    text { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+    text { font-family: "Archivo", Arial, Helvetica, sans-serif; letter-spacing: 0; }
+    .display { font-family: "Oxanium", "Archivo", Arial, sans-serif; }
   </style>
-  <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
-  <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
-  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><svg id="weibull_paper_plot" x="78" y="204" width="1290" height="700" viewBox="0 0 724.145531 413.449742" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <g id="brand_background" data-semantic-group="true" aria-label="RelTest-Education-Hintergrund">
+    <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
+    <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
+  </g>
+  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><svg id="weibull_paper_plot" x="84" y="204" width="1752" height="610" viewBox="0 0 736.240625 422.81" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
  
  <defs>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
  <g id="weibull_paper_plot__figure_1">
   <g id="weibull_paper_plot__patch_1">
-   <path d="M 0 413.449742  L 724.145531 413.449742  L 724.145531 0  L 0 0  L 0 413.449742  z " style="fill: none; opacity: 0" />
+   <path data-role="functional" d="M 0 422.81  L 736.240625 422.81  L 736.240625 0  L 0 0  L 0 422.81  z " style="fill: none; opacity: 0" />
   </g>
   <g id="weibull_paper_plot__axes_1">
    <g id="weibull_paper_plot__patch_2">
-    <path d="M 75.649531 351.402477  L 705.505531 351.402477  L 705.505531 12.138477  L 75.649531 12.138477  L 75.649531 351.402477  z " style="fill: none" />
+    <path data-role="functional" d="M 84.784625 354.366  L 714.640625 354.366  L 714.640625 15.102  L 84.784625 15.102  L 84.784625 354.366  z " style="fill: none" />
    </g>
    <g id="weibull_paper_plot__matplotlib.axis_1">
     <g id="weibull_paper_plot__xtick_1">
      <g id="weibull_paper_plot__line2d_1">
-      <path d="M 75.649531 351.402477  L 75.649531 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.784625 354.366  L 84.784625 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_2">
       <defs>
-       <path id="weibull_paper_plot__m5016b24505" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+       <path data-role="functional" id="weibull_paper_plot__m33e4f5fd2c" d="M 0 0  L 0 6  " style="stroke: #25495f; stroke-width: 1.2" />
       </defs>
       <g>
-       <use ns4:href="#weibull_paper_plot__m5016b24505" x="75.649531" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#weibull_paper_plot__m33e4f5fd2c" x="84.784625" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="weibull_paper_plot__text_1">
       
-      <g style="fill: #6a7a86" transform="translate(60.374531 372.992477)">
-       <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
-        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.991938" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">1</tspan>
-        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="8.270996" y="-0.991938" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">0</tspan>
-        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="16.666406" y="-6.360938" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #6a7a86">−</tspan>
-        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="24.291211" y="-6.360938" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #6a7a86">1</tspan>
+      <g style="fill: #25495f" transform="translate(66.424625 380.066)">
+       <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18">
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.925375" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #25495f">1</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="10.367935" y="-0.925375" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #25495f">0</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="20.890131" y="-8.359375" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #25495f">−</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="28.903676" y="-8.359375" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #25495f">1</tspan>
        </text>
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_2">
      <g id="weibull_paper_plot__line2d_3">
-      <path d="M 285.601531 351.402477  L 285.601531 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 294.736625 354.366  L 294.736625 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_4">
       <g>
-       <use ns4:href="#weibull_paper_plot__m5016b24505" x="285.601531" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#weibull_paper_plot__m33e4f5fd2c" x="294.736625" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="weibull_paper_plot__text_2">
       
-      <g style="fill: #6a7a86" transform="translate(274.161531 373.122477)">
-       <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
-        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.871625" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">1</tspan>
-        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="8.270996" y="-0.871625" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">0</tspan>
-        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="16.666406" y="-6.240625" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #6a7a86">0</tspan>
+      <g style="fill: #25495f" transform="translate(280.336625 380.246)">
+       <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18">
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.77225" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #25495f">1</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="10.367935" y="-0.77225" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #25495f">0</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="20.890131" y="-8.20625" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #25495f">0</tspan>
        </text>
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_3">
      <g id="weibull_paper_plot__line2d_5">
-      <path d="M 495.553531 351.402477  L 495.553531 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 504.688625 354.366  L 504.688625 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_6">
       <g>
-       <use ns4:href="#weibull_paper_plot__m5016b24505" x="495.553531" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#weibull_paper_plot__m33e4f5fd2c" x="504.688625" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="weibull_paper_plot__text_3">
       
-      <g style="fill: #6a7a86" transform="translate(484.113531 372.992477)">
-       <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
-        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.991938" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">1</tspan>
-        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="8.270996" y="-0.991938" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">0</tspan>
-        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="16.666406" y="-6.360938" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #6a7a86">1</tspan>
+      <g style="fill: #25495f" transform="translate(490.288625 380.066)">
+       <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18">
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.925375" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #25495f">1</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="10.367935" y="-0.925375" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #25495f">0</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="20.890131" y="-8.359375" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #25495f">1</tspan>
        </text>
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_4">
      <g id="weibull_paper_plot__line2d_7">
-      <path d="M 705.505531 351.402477  L 705.505531 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 714.640625 354.366  L 714.640625 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_8">
       <g>
-       <use ns4:href="#weibull_paper_plot__m5016b24505" x="705.505531" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#weibull_paper_plot__m33e4f5fd2c" x="714.640625" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="weibull_paper_plot__text_4">
       
-      <g style="fill: #6a7a86" transform="translate(694.065531 373.122477)">
-       <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
-        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.871625" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">1</tspan>
-        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="8.270996" y="-0.871625" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #6a7a86">0</tspan>
-        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="16.666406" y="-6.240625" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #6a7a86">2</tspan>
+      <g style="fill: #25495f" transform="translate(700.240625 380.246)">
+       <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18">
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.77225" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #25495f">1</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="10.367935" y="-0.77225" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #25495f">0</tspan>
+        <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="20.890131" y="-8.20625" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #25495f">2</tspan>
        </text>
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_5">
      <g id="weibull_paper_plot__line2d_9">
-      <path d="M 138.851381 351.402477  L 138.851381 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 147.986475 354.366  L 147.986475 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_10">
       <defs>
-       <path id="weibull_paper_plot__m24665d2880" d="M 0 0  L 0 3.5  " style="stroke: #6a7a86; stroke-width: 0.9" />
+       <path data-role="functional" id="weibull_paper_plot__m06319af5a2" d="M 0 0  L 0 3.5  " style="stroke: #25495f; stroke-width: 0.9" />
       </defs>
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="138.851381" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="147.986475" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_6">
      <g id="weibull_paper_plot__line2d_11">
-      <path d="M 175.822093 351.402477  L 175.822093 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 184.957187 354.366  L 184.957187 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_12">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="175.822093" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="184.957187" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_7">
      <g id="weibull_paper_plot__line2d_13">
-      <path d="M 202.053231 351.402477  L 202.053231 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 211.188324 354.366  L 211.188324 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_14">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="202.053231" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="211.188324" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_8">
      <g id="weibull_paper_plot__line2d_15">
-      <path d="M 222.399682 351.402477  L 222.399682 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 231.534775 354.366  L 231.534775 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_16">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="222.399682" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="231.534775" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_9">
      <g id="weibull_paper_plot__line2d_17">
-      <path d="M 239.023943 351.402477  L 239.023943 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 248.159036 354.366  L 248.159036 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_18">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="239.023943" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="248.159036" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_10">
      <g id="weibull_paper_plot__line2d_19">
-      <path d="M 253.079555 351.402477  L 253.079555 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 262.214649 354.366  L 262.214649 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_20">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="253.079555" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="262.214649" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_11">
      <g id="weibull_paper_plot__line2d_21">
-      <path d="M 265.25508 351.402477  L 265.25508 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 274.390174 354.366  L 274.390174 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_22">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="265.25508" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="274.390174" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_12">
      <g id="weibull_paper_plot__line2d_23">
-      <path d="M 275.994655 351.402477  L 275.994655 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 285.129748 354.366  L 285.129748 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_24">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="275.994655" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="285.129748" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_13">
      <g id="weibull_paper_plot__line2d_25">
-      <path d="M 348.803381 351.402477  L 348.803381 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 357.938475 354.366  L 357.938475 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_26">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="348.803381" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="357.938475" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_14">
      <g id="weibull_paper_plot__line2d_27">
-      <path d="M 385.774093 351.402477  L 385.774093 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 394.909187 354.366  L 394.909187 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_28">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="385.774093" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="394.909187" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_15">
      <g id="weibull_paper_plot__line2d_29">
-      <path d="M 412.005231 351.402477  L 412.005231 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 421.140324 354.366  L 421.140324 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_30">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="412.005231" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="421.140324" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_16">
      <g id="weibull_paper_plot__line2d_31">
-      <path d="M 432.351682 351.402477  L 432.351682 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 441.486775 354.366  L 441.486775 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_32">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="432.351682" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="441.486775" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_17">
      <g id="weibull_paper_plot__line2d_33">
-      <path d="M 448.975943 351.402477  L 448.975943 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 458.111036 354.366  L 458.111036 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_34">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="448.975943" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="458.111036" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_18">
      <g id="weibull_paper_plot__line2d_35">
-      <path d="M 463.031555 351.402477  L 463.031555 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 472.166649 354.366  L 472.166649 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_36">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="463.031555" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="472.166649" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_19">
      <g id="weibull_paper_plot__line2d_37">
-      <path d="M 475.20708 351.402477  L 475.20708 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 484.342174 354.366  L 484.342174 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_38">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="475.20708" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="484.342174" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_20">
      <g id="weibull_paper_plot__line2d_39">
-      <path d="M 485.946655 351.402477  L 485.946655 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 495.081748 354.366  L 495.081748 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_40">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="485.946655" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="495.081748" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_21">
      <g id="weibull_paper_plot__line2d_41">
-      <path d="M 558.755381 351.402477  L 558.755381 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 567.890475 354.366  L 567.890475 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_42">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="558.755381" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="567.890475" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_22">
      <g id="weibull_paper_plot__line2d_43">
-      <path d="M 595.726093 351.402477  L 595.726093 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 604.861187 354.366  L 604.861187 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_44">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="595.726093" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="604.861187" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_23">
      <g id="weibull_paper_plot__line2d_45">
-      <path d="M 621.957231 351.402477  L 621.957231 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 631.092324 354.366  L 631.092324 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_46">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="621.957231" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="631.092324" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_24">
      <g id="weibull_paper_plot__line2d_47">
-      <path d="M 642.303682 351.402477  L 642.303682 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 651.438775 354.366  L 651.438775 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_48">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="642.303682" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="651.438775" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_25">
      <g id="weibull_paper_plot__line2d_49">
-      <path d="M 658.927943 351.402477  L 658.927943 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 668.063036 354.366  L 668.063036 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_50">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="658.927943" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="668.063036" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_26">
      <g id="weibull_paper_plot__line2d_51">
-      <path d="M 672.983555 351.402477  L 672.983555 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 682.118649 354.366  L 682.118649 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_52">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="672.983555" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="682.118649" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_27">
      <g id="weibull_paper_plot__line2d_53">
-      <path d="M 685.15908 351.402477  L 685.15908 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 694.294174 354.366  L 694.294174 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_54">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="685.15908" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="694.294174" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__xtick_28">
      <g id="weibull_paper_plot__line2d_55">
-      <path d="M 695.898655 351.402477  L 695.898655 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
+      <path data-role="functional" d="M 705.033748 354.366  L 705.033748 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.45; stroke-width: 0.45; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_56">
       <g>
-       <use ns4:href="#weibull_paper_plot__m24665d2880" x="695.898655" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 0.9" />
+       <use ns4:href="#weibull_paper_plot__m06319af5a2" x="705.033748" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 0.9" />
       </g>
      </g>
     </g>
     <g id="weibull_paper_plot__text_5">
-     
-     <g style="fill: #062d46" transform="translate(318.217531 401.925523)">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.677734" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">b</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="36.5625" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="48.770508" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="61.584961" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="72.298828" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">d</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="85.183594" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="97.330078" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="110.144531" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="122.352539" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="131.229492" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="137.496094" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
-      </text>
-     </g>
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #031334" x="399.712625" y="411.83" transform="rotate(-0 399.712625 411.83)">Lebensdauer t</text>
     </g>
    </g>
    <g id="weibull_paper_plot__matplotlib.axis_2">
     <g id="weibull_paper_plot__ytick_1">
      <g id="weibull_paper_plot__line2d_57">
-      <path d="M 75.649531 351.402477  L 705.505531 351.402477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.784625 354.366  L 714.640625 354.366  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_58">
       <defs>
-       <path id="weibull_paper_plot__m5d6591357a" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+       <path data-role="functional" id="weibull_paper_plot__mc28a5bd953" d="M 0 0  L -6 0  " style="stroke: #25495f; stroke-width: 1.2" />
       </defs>
       <g>
-       <use ns4:href="#weibull_paper_plot__m5d6591357a" x="75.649531" y="351.402477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#weibull_paper_plot__mc28a5bd953" x="84.784625" y="354.366" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="weibull_paper_plot__text_6">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="356.340953" transform="rotate(-0 66.149531 356.340953)">0,1</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.284625" y="362.268" transform="rotate(-0 75.284625 362.268)">0,1</text>
      </g>
     </g>
     <g id="weibull_paper_plot__ytick_2">
      <g id="weibull_paper_plot__line2d_59">
-      <path d="M 75.649531 323.501409  L 705.505531 323.501409  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.784625 326.464933  L 714.640625 326.464933  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_60">
       <g>
-       <use ns4:href="#weibull_paper_plot__m5d6591357a" x="75.649531" y="323.501409" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#weibull_paper_plot__mc28a5bd953" x="84.784625" y="326.464933" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="weibull_paper_plot__text_7">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="328.439886" transform="rotate(-0 66.149531 328.439886)">0,2</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.284625" y="334.366933" transform="rotate(-0 75.284625 334.366933)">0,2</text>
      </g>
     </g>
     <g id="weibull_paper_plot__ytick_3">
      <g id="weibull_paper_plot__line2d_61">
-      <path d="M 75.649531 286.584312  L 705.505531 286.584312  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.784625 289.547836  L 714.640625 289.547836  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_62">
       <g>
-       <use ns4:href="#weibull_paper_plot__m5d6591357a" x="75.649531" y="286.584312" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#weibull_paper_plot__mc28a5bd953" x="84.784625" y="289.547836" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="weibull_paper_plot__text_8">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="291.522789" transform="rotate(-0 66.149531 291.522789)">0,5</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.284625" y="297.449836" transform="rotate(-0 75.284625 297.449836)">0,5</text>
      </g>
     </g>
     <g id="weibull_paper_plot__ytick_4">
      <g id="weibull_paper_plot__line2d_63">
-      <path d="M 75.649531 258.60219  L 705.505531 258.60219  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.784625 261.565713  L 714.640625 261.565713  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_64">
       <g>
-       <use ns4:href="#weibull_paper_plot__m5d6591357a" x="75.649531" y="258.60219" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#weibull_paper_plot__mc28a5bd953" x="84.784625" y="261.565713" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="weibull_paper_plot__text_9">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="263.540667" transform="rotate(-0 66.149531 263.540667)">1</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.284625" y="269.467713" transform="rotate(-0 75.284625 269.467713)">1</text>
      </g>
     </g>
     <g id="weibull_paper_plot__ytick_5">
      <g id="weibull_paper_plot__line2d_65">
-      <path d="M 75.649531 230.517592  L 705.505531 230.517592  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.784625 233.481115  L 714.640625 233.481115  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_66">
       <g>
-       <use ns4:href="#weibull_paper_plot__m5d6591357a" x="75.649531" y="230.517592" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#weibull_paper_plot__mc28a5bd953" x="84.784625" y="233.481115" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="weibull_paper_plot__text_10">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="235.456068" transform="rotate(-0 66.149531 235.456068)">2</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.284625" y="241.383115" transform="rotate(-0 75.284625 241.383115)">2</text>
      </g>
     </g>
     <g id="weibull_paper_plot__ytick_6">
      <g id="weibull_paper_plot__line2d_67">
-      <path d="M 75.649531 193.039443  L 705.505531 193.039443  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.784625 196.002967  L 714.640625 196.002967  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_68">
       <g>
-       <use ns4:href="#weibull_paper_plot__m5d6591357a" x="75.649531" y="193.039443" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#weibull_paper_plot__mc28a5bd953" x="84.784625" y="196.002967" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="weibull_paper_plot__text_11">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="197.97792" transform="rotate(-0 66.149531 197.97792)">5</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.284625" y="203.904967" transform="rotate(-0 75.284625 203.904967)">5</text>
      </g>
     </g>
     <g id="weibull_paper_plot__ytick_7">
      <g id="weibull_paper_plot__line2d_69">
-      <path d="M 75.649531 164.085315  L 705.505531 164.085315  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.784625 167.048839  L 714.640625 167.048839  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_70">
       <g>
-       <use ns4:href="#weibull_paper_plot__m5d6591357a" x="75.649531" y="164.085315" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#weibull_paper_plot__mc28a5bd953" x="84.784625" y="167.048839" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="weibull_paper_plot__text_12">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="169.023792" transform="rotate(-0 66.149531 169.023792)">10</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.284625" y="174.950839" transform="rotate(-0 75.284625 174.950839)">10</text>
      </g>
     </g>
     <g id="weibull_paper_plot__ytick_8">
      <g id="weibull_paper_plot__line2d_71">
-      <path d="M 75.649531 133.900366  L 705.505531 133.900366  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.784625 136.86389  L 714.640625 136.86389  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_72">
       <g>
-       <use ns4:href="#weibull_paper_plot__m5d6591357a" x="75.649531" y="133.900366" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#weibull_paper_plot__mc28a5bd953" x="84.784625" y="136.86389" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="weibull_paper_plot__text_13">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="138.838843" transform="rotate(-0 66.149531 138.838843)">20</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.284625" y="144.76589" transform="rotate(-0 75.284625 144.76589)">20</text>
      </g>
     </g>
     <g id="weibull_paper_plot__ytick_9">
      <g id="weibull_paper_plot__line2d_73">
-      <path d="M 75.649531 115.035076  L 705.505531 115.035076  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.784625 117.9986  L 714.640625 117.9986  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_74">
       <g>
-       <use ns4:href="#weibull_paper_plot__m5d6591357a" x="75.649531" y="115.035076" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#weibull_paper_plot__mc28a5bd953" x="84.784625" y="117.9986" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="weibull_paper_plot__text_14">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="119.973553" transform="rotate(-0 66.149531 119.973553)">30</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.284625" y="125.9006" transform="rotate(-0 75.284625 125.9006)">30</text>
      </g>
     </g>
     <g id="weibull_paper_plot__ytick_10">
      <g id="weibull_paper_plot__line2d_75">
-      <path d="M 75.649531 88.309759  L 705.505531 88.309759  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.784625 91.273283  L 714.640625 91.273283  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_76">
       <g>
-       <use ns4:href="#weibull_paper_plot__m5d6591357a" x="75.649531" y="88.309759" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#weibull_paper_plot__mc28a5bd953" x="84.784625" y="91.273283" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="weibull_paper_plot__text_15">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="93.248236" transform="rotate(-0 66.149531 93.248236)">50</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.284625" y="99.175283" transform="rotate(-0 75.284625 99.175283)">50</text>
      </g>
     </g>
     <g id="weibull_paper_plot__ytick_11">
      <g id="weibull_paper_plot__line2d_77">
-      <path d="M 75.649531 73.580443  L 705.505531 73.580443  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.784625 76.543966  L 714.640625 76.543966  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_78">
       <g>
-       <use ns4:href="#weibull_paper_plot__m5d6591357a" x="75.649531" y="73.580443" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#weibull_paper_plot__mc28a5bd953" x="84.784625" y="76.543966" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="weibull_paper_plot__text_16">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="78.518919" transform="rotate(-0 66.149531 78.518919)">63,2</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.284625" y="84.445966" transform="rotate(-0 75.284625 84.445966)">63,2</text>
      </g>
     </g>
     <g id="weibull_paper_plot__ytick_12">
      <g id="weibull_paper_plot__line2d_79">
-      <path d="M 75.649531 54.425415  L 705.505531 54.425415  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.784625 57.388939  L 714.640625 57.388939  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_80">
       <g>
-       <use ns4:href="#weibull_paper_plot__m5d6591357a" x="75.649531" y="54.425415" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#weibull_paper_plot__mc28a5bd953" x="84.784625" y="57.388939" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="weibull_paper_plot__text_17">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="59.363892" transform="rotate(-0 66.149531 59.363892)">80</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.284625" y="65.290939" transform="rotate(-0 75.284625 65.290939)">80</text>
      </g>
     </g>
     <g id="weibull_paper_plot__ytick_13">
      <g id="weibull_paper_plot__line2d_81">
-      <path d="M 75.649531 40.019407  L 705.505531 40.019407  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.784625 42.98293  L 714.640625 42.98293  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_82">
       <g>
-       <use ns4:href="#weibull_paper_plot__m5d6591357a" x="75.649531" y="40.019407" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#weibull_paper_plot__mc28a5bd953" x="84.784625" y="42.98293" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="weibull_paper_plot__text_18">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="44.957883" transform="rotate(-0 66.149531 44.957883)">90</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.284625" y="50.88493" transform="rotate(-0 75.284625 50.88493)">90</text>
      </g>
     </g>
     <g id="weibull_paper_plot__ytick_14">
      <g id="weibull_paper_plot__line2d_83">
-      <path d="M 75.649531 29.434294  L 705.505531 29.434294  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.784625 32.397817  L 714.640625 32.397817  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_84">
       <g>
-       <use ns4:href="#weibull_paper_plot__m5d6591357a" x="75.649531" y="29.434294" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#weibull_paper_plot__mc28a5bd953" x="84.784625" y="32.397817" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="weibull_paper_plot__text_19">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="34.37277" transform="rotate(-0 66.149531 34.37277)">95</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.284625" y="40.299817" transform="rotate(-0 75.284625 40.299817)">95</text>
      </g>
     </g>
     <g id="weibull_paper_plot__ytick_15">
      <g id="weibull_paper_plot__line2d_85">
-      <path d="M 75.649531 12.138477  L 705.505531 12.138477  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 84.784625 15.102  L 714.640625 15.102  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="weibull_paper_plot__line2d_86">
       <g>
-       <use ns4:href="#weibull_paper_plot__m5d6591357a" x="75.649531" y="12.138477" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#weibull_paper_plot__mc28a5bd953" x="84.784625" y="15.102" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="weibull_paper_plot__text_20">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="66.149531" y="17.076953" transform="rotate(-0 66.149531 17.076953)">99</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="75.284625" y="23.004" transform="rotate(-0 75.284625 23.004)">99</text>
      </g>
     </g>
     <g id="weibull_paper_plot__text_21">
-     
-     <g style="fill: #062d46" transform="translate(20.88 330.630477) rotate(-90)">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">A</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="13.930664" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">u</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="26.745117" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="37.458984" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">f</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="45.290039" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="57.436523" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="63.606445" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="69.776367" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">w</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="86.405273" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="98.551758" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="111.366211" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">r</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="120.243164" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="130.957031" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="141.626953" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="154.441406" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="166.649414" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="172.819336" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="185.633789" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="191.803711" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="197.973633" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="208.643555" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="221.458008" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">k</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="233.428711" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="245.636719" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">i</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="251.806641" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="260.411133" y="-0.328125" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="266.677734" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">F</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="284.053711" y="-0.328125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="277.03125" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">(</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="291.111328" y="-0.328125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">)</tspan>
-      </text>
-     </g>
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #031334" x="23.004" y="184.734" transform="rotate(-90 23.004 184.734)">Ausfallwahrscheinlichkeit F(t)</text>
     </g>
    </g>
    <g id="weibull_paper_reference" data-anim-target="true" data-anim-label="Referenzgeraden des Weibullpapiers"><g id="weibull_paper_plot__weibull_paper_reference_1">
-    <path d="M 75.649531 166.185706  L 705.505531 27.258038  L 705.505531 27.258038  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #2f6f55; stroke-opacity: 0.78; stroke-width: 2; stroke-linecap: square" />
+    <path data-role="functional" d="M 84.784625 169.14923  L 714.640625 30.221561  L 714.640625 30.221561  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #00a754; stroke-opacity: 0.78; stroke-width: 2; stroke-linecap: square" />
    </g>
    <g id="weibull_paper_plot__weibull_paper_reference_2">
-    <path d="M 75.649531 258.804151  L 664.586227 -1  L 664.586227 -1  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #007ea7; stroke-opacity: 0.78; stroke-width: 2; stroke-linecap: square" />
+    <path data-role="functional" d="M 84.784625 261.767675  L 680.43918 -1  L 680.43918 -1  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #0c84b4; stroke-opacity: 0.78; stroke-width: 2; stroke-linecap: square" />
    </g>
    <g id="weibull_paper_plot__weibull_paper_reference_3">
-    <path d="M 109.189031 414.449742  L 580.069879 -1  L 580.069879 -1  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #b7791f; stroke-opacity: 0.78; stroke-width: 2; stroke-linecap: square" />
+    <path data-role="functional" d="M 111.07391 423.81  L 592.563903 -1  L 592.563903 -1  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #e9b400; stroke-opacity: 0.78; stroke-width: 2; stroke-linecap: square" />
    </g>
    <g id="weibull_paper_plot__weibull_paper_reference_4">
-    <path d="M 274.773817 414.449742  L 543.848587 -1  L 543.848587 -1  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #7a5c99; stroke-opacity: 0.78; stroke-width: 2; stroke-linecap: square" />
+    <path data-role="functional" d="M 279.765931 423.81  L 554.903069 -1  L 554.903069 -1  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #25495f; stroke-opacity: 0.78; stroke-width: 2; stroke-linecap: square" />
    </g>
    </g><g id="weibull_paper_example" data-anim-target="true" data-anim-label="Ermittelte Weibull-Gerade"><g id="weibull_paper_plot__weibull_paper_example_line">
-    <path d="M 75.649531 244.578103  L 521.00025 -1  L 521.00025 -1  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke: #d1495b; stroke-width: 3.6; stroke-linecap: square" />
+    <path data-role="functional" d="M 84.784625 247.541627  L 535.509631 -1  L 535.509631 -1  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke: #ec6244; stroke-width: 3.6; stroke-linecap: square" />
    </g>
    <g id="weibull_paper_plot__weibull_paper_example_label">
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #d1495b" x="129.244504" y="63.859302" transform="rotate(-0 129.244504 63.859302)">ermittelte Weibull-Gerade</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: start; fill: #ec6244" x="138.379598" y="66.822825" transform="rotate(-0 138.379598 66.822825)">ermittelte Weibull-Gerade</text>
    </g>
    </g><g id="weibull_paper_parallel" data-anim-target="true" data-anim-label="Parallele Verschiebung zum Pol"><g id="weibull_paper_plot__weibull_paper_parallel_line">
-    <path d="M 75.649531 305.113374  L 630.779688 -1  L 630.779688 -1  " clip-path="url(#weibull_paper_plot__p6ea31a0f55)" style="fill: none; stroke-dasharray: 9.99,4.32; stroke-dashoffset: 0; stroke: #d1495b; stroke-width: 2.7" />
+    <path data-role="functional" d="M 84.784625 308.076898  L 645.289069 -1  L 645.289069 -1  " clip-path="url(#weibull_paper_plot__p3624c2e569)" style="fill: none; stroke-dasharray: 9.99,4.32; stroke-dashoffset: 0; stroke: #ec6244; stroke-width: 2.7" />
    </g>
    <g id="weibull_paper_plot__weibull_paper_pole_label">
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="495.553531" y="330.044562" transform="rotate(-0 495.553531 330.044562)">Pol</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #031334" x="504.688625" y="333.008085" transform="rotate(-0 504.688625 333.008085)">Pol</text>
    </g>
    <g id="weibull_paper_plot__weibull_paper_pole">
     <defs>
-     <path id="weibull_paper_plot__m7aa852a406" d="M 0 5.123475  C 1.358762 5.123475 2.662055 4.583634 3.622844 3.622844  C 4.583634 2.662055 5.123475 1.358762 5.123475 0  C 5.123475 -1.358762 4.583634 -2.662055 3.622844 -3.622844  C 2.662055 -4.583634 1.358762 -5.123475 0 -5.123475  C -1.358762 -5.123475 -2.662055 -4.583634 -3.622844 -3.622844  C -4.583634 -2.662055 -5.123475 -1.358762 -5.123475 0  C -5.123475 1.358762 -4.583634 2.662055 -3.622844 3.622844  C -2.662055 4.583634 -1.358762 5.123475 0 5.123475  z " style="stroke: #062d46" />
+     <path data-role="functional" id="weibull_paper_plot__m33fd4582d4" d="M 0 5.123475  C 1.358762 5.123475 2.662055 4.583634 3.622844 3.622844  C 4.583634 2.662055 5.123475 1.358762 5.123475 0  C 5.123475 -1.358762 4.583634 -2.662055 3.622844 -3.622844  C 2.662055 -4.583634 1.358762 -5.123475 0 -5.123475  C -1.358762 -5.123475 -2.662055 -4.583634 -3.622844 -3.622844  C -4.583634 -2.662055 -5.123475 -1.358762 -5.123475 0  C -5.123475 1.358762 -4.583634 2.662055 -3.622844 3.622844  C -2.662055 4.583634 -1.358762 5.123475 0 5.123475  z " style="stroke: #031334" />
     </defs>
-    <g clip-path="url(#weibull_paper_plot__p6ea31a0f55)">
-     <use ns4:href="#weibull_paper_plot__m7aa852a406" x="495.553531" y="344.064807" style="fill: #062d46; stroke: #062d46" />
+    <g clip-path="url(#weibull_paper_plot__p3624c2e569)">
+     <use ns4:href="#weibull_paper_plot__m33fd4582d4" x="504.688625" y="347.02833" style="fill: #031334; stroke: #031334" />
     </g>
    </g>
   </g><g id="weibull_paper_plot__patch_3">
-    <path d="M 75.649531 351.402477  L 75.649531 12.138477  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+    <path data-role="functional" d="M 84.784625 354.366  L 84.784625 15.102  " style="fill: none; stroke: #031334; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
    </g>
    <g id="weibull_paper_plot__patch_4">
-    <path d="M 75.649531 351.402477  L 705.505531 351.402477  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+    <path data-role="functional" d="M 84.784625 354.366  L 714.640625 354.366  " style="fill: none; stroke: #031334; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
    </g>
    <g id="weibull_paper_beta" data-anim-target="true" data-anim-label="Abgelesener Formparameter">
     
-    <g style="fill: #d1495b" transform="translate(608.520469 216.819256)">
-     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
-      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.078125" style="font-style: oblique; font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">b</tspan>
-      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="14.103027" y="-0.078125" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">=</tspan>
-      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="31.65918" y="-0.078125" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">1</tspan>
-      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="42.475098" y="-0.078125" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">,</tspan>
-      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="47.878906" y="-0.078125" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">2</tspan>
-      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="58.694824" y="-0.078125" style="font-size: 17px; font-family: 'DejaVu Sans'; fill: #d1495b">5</tspan>
+    <g style="fill: #ec6244" transform="translate(617.655563 219.782779)">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18">
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.078125" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #ec6244">b</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="14.103027" y="-0.078125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #ec6244">=</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="31.65918" y="-0.078125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #ec6244">1</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="42.475098" y="-0.078125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #ec6244">,</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="47.878906" y="-0.078125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #ec6244">2</tspan>
+      <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="58.694824" y="-0.078125" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #ec6244">5</tspan>
      </text>
     </g>
    </g>
    </g>
  </g>
  <defs>
-  <clipPath id="weibull_paper_plot__p6ea31a0f55">
-   <rect data-qc-allow-overlap="true" x="75.649531" y="12.138477" width="629.856" height="339.264" />
+  <clipPath id="weibull_paper_plot__p3624c2e569">
+   <rect data-role="functional" data-qc-allow-overlap="true" x="84.784625" y="15.102" width="629.856" height="339.264" />
   </clipPath>
  </defs>
-</svg><g id="weibull_paper_axes_note" data-anim-target="true" data-anim-label="Transformierte Achsen"><title>Transformierte Achsen</title><rect data-qc-allow-overlap="true" x="1400" y="222" width="420" height="168" rx="8" fill="#D9F0F7" stroke="#007EA7" stroke-width="1.5"/><circle cx="1464" cy="306" r="38" fill="#FFFFFF"/><g transform="translate(1441 283) scale(1.9166666666666667)" fill="none" stroke="#007EA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M4 12l8 4 8-4M4 16l8 4 8-4"/></g><text x="1524" y="280" class="" font-size="18" font-weight="850" fill="#007EA7" text-anchor="start" data-qc-role="text"><tspan x="1524" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">TRANSFORMIERTE ACHSEN</tspan></text><text x="1524" y="324" class="" font-size="22" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1524" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">x logarithmisch</tspan></text><text x="1524" y="358" class="" font-size="22" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1524" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">y doppellogarithmisch</tspan></text></g><rect data-qc-allow-overlap="true" x="1400" y="430" width="420" height="430" rx="8" fill="#FFFFFF" stroke="#C8D5DF" stroke-width="1.5"/><text x="1434" y="472" class="" font-size="17" font-weight="850" fill="#52606D" text-anchor="start" data-qc-role="text"><tspan x="1434" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">PARAMETERABLESUNG</tspan></text><text x="1434" y="530" class="" font-size="27" font-weight="860" fill="#007EA7" text-anchor="start" data-qc-role="text"><tspan x="1434" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">1</tspan></text><text x="1480" y="530" class="" font-size="21" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1480" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Weibull-Gerade aus Daten</tspan></text><path d="M 1450 554 L 1450 612" fill="none" stroke="#007EA7" stroke-width="3" marker-end="url(#arrow_007EA7)"/><text x="1434" y="658" class="" font-size="27" font-weight="860" fill="#B7791F" text-anchor="start" data-qc-role="text"><tspan x="1434" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">2</tspan></text><text x="1480" y="658" class="" font-size="21" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1480" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">parallel in den Pol</tspan></text><path d="M 1450 682 L 1450 740" fill="none" stroke="#B7791F" stroke-width="3" marker-end="url(#arrow_B7791F)"/><text x="1434" y="786" class="" font-size="27" font-weight="860" fill="#2F6F55" text-anchor="start" data-qc-role="text"><tspan x="1434" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">3</tspan></text><text x="1480" y="786" class="" font-size="21" font-weight="760" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="1480" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Formparameter b ablesen</tspan></text><text x="1434" y="824" class="" font-size="16" font-weight="700" fill="#52606D" text-anchor="start" data-qc-role="text"><tspan x="1434" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Heute übernimmt Statistik-Software</tspan><tspan x="1434" dy="20" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">diese Schritte.</tspan></text></g>
+</svg><g id="weibull_paper_axes_note" data-anim-target="true" data-anim-label="Transformierte Achsen"><title>Transformierte Achsen</title><rect data-role="functional" data-qc-allow-overlap="true" x="96" y="838" width="390" height="96" rx="8" fill="#E6F6EE" stroke="#00A754" stroke-width="1.5"/><text x="128" y="876" class="" font-size="18" font-weight="850" fill="#00A754" text-anchor="start" data-qc-role="text"><tspan x="128" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">ACHSEN</tspan></text><text x="128" y="910" class="" font-size="18" font-weight="760" fill="#031334" text-anchor="start" data-qc-role="text"><tspan x="128" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">x logarithmisch · y doppellogarithmisch</tspan></text></g><g id="weibull_paper_process_example" data-anim-target="true" data-anim-label="Arbeitsschritt Weibull-Gerade"><title>Arbeitsschritt Weibull-Gerade</title><rect data-role="functional" data-qc-allow-overlap="true" x="506" y="838" width="410" height="96" rx="8" fill="#FFFFFF" stroke="#CDD0D6" stroke-width="1.5"/><circle data-role="functional" cx="548" cy="886" r="22" fill="#00A754"/><text x="548" y="894" class="" font-size="21" font-weight="860" fill="#FFFFFF" text-anchor="middle" data-qc-role="text"><tspan x="548" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">1</tspan></text><text x="586" y="894" class="" font-size="20" font-weight="780" fill="#031334" text-anchor="start" data-qc-role="text"><tspan x="586" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Gerade aus Daten</tspan></text></g><g id="weibull_paper_process_parallel" data-anim-target="true" data-anim-label="Arbeitsschritt Polverschiebung"><title>Arbeitsschritt Polverschiebung</title><rect data-role="functional" data-qc-allow-overlap="true" x="936" y="838" width="410" height="96" rx="8" fill="#FFFFFF" stroke="#CDD0D6" stroke-width="1.5"/><circle data-role="functional" cx="978" cy="886" r="22" fill="#E9B400"/><text x="978" y="894" class="" font-size="21" font-weight="860" fill="#FFFFFF" text-anchor="middle" data-qc-role="text"><tspan x="978" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">2</tspan></text><text x="1016" y="894" class="" font-size="20" font-weight="780" fill="#031334" text-anchor="start" data-qc-role="text"><tspan x="1016" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">parallel in den Pol</tspan></text></g><g id="weibull_paper_process_beta" data-anim-target="true" data-anim-label="Arbeitsschritt Formparameter ablesen"><title>Arbeitsschritt Formparameter ablesen</title><rect data-role="functional" data-qc-allow-overlap="true" x="1366" y="838" width="458" height="96" rx="8" fill="#E6F6EE" stroke="#00A754" stroke-width="1.5"/><circle data-role="functional" cx="1408" cy="886" r="22" fill="#00A754"/><text x="1408" y="894" class="" font-size="21" font-weight="860" fill="#FFFFFF" text-anchor="middle" data-qc-role="text"><tspan x="1408" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">3</tspan></text><text x="1446" y="894" class="" font-size="20" font-weight="780" fill="#031334" text-anchor="start" data-qc-role="text"><tspan x="1446" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Formparameter b ablesen</tspan></text></g></g>
 </svg>

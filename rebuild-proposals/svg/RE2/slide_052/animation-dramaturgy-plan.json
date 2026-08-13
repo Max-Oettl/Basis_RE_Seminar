@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch3_fta_aircraft_landing_gear",
+  "svgPath": "slide_052.svg",
+  "spokenText": "Schauen wir uns zum Schluss noch ein paar Beispiele und Besonderheiten im Fehlerbaum an.\n\nHierzu betrachten wir das Bugradfahrwerk eines Flugzeuges, welches für den Start- und Landevorgang sowie für die Beweglichkeit am Boden eingesetzt wird.\n\nDas Bugradfahrwerk besteht aus drei Fahrwerksgruppen.\n\nDem Bugrad und dem linken und rechten Hauptfahrwerk.\n\nJede Fahrwerksgruppe besitzt jeweils zwei Reifen.\n\nEine Fahrwerksgruppe fällt aus, wenn keines ihrer Reifen zur Verfügung steht, das heißt, wenn beide Reifen einer jeweiligen Gruppe ausgefallen sind.\n\nDer Ausfall einer Fahrwerksgruppe führt direkt zum Komplettausfall des Bugradfahrwerks.\n\nUm dieses Szenario zu analysieren, erstellen wir nun einen Fehlerbaum.\n\nAn dieser Stelle könnt ihr das Video auch kurz pausieren und versuchen den Fehlerbaum selbst zu erstellen.\n\nFangen wir nun an den Fehlerbaum gemeinsam zu erstellen.\n\nDas Top-Ereignis kann als der Ausfall des Bugradfahrwerks definiert werden.\n\nNun identifizieren wir die unmittelbaren Ursachen, die dazu führen können.\n\nZunächst Betrachten wir die Ausfälle unserer Fahrwerksgruppen. Also der Ausfall des Bugrades sowie des linken und rechten Hauptfahrwerks.\n\nDiese Ereignisse sind mit einem Oder-Gatter verbunden, da der Ausfall einer der Fahrwerksgruppen direkt zu einem Ausfall des gesamten Bugradfahrwerks führt.\n\nJede Fahrwerksgruppe fällt aus, wenn beide ihrer Reifen ausgefallen sind.\n\nDaher verbinden wir die Ausfälle der Reifen innerhalb jeder Fahrwerksgruppe mit einem Und-Gatter.\n\nDas Bugrad ist beispielsweise ausgefallen, wenn die beiden Reifen eins und zwei ausgefallen sind.\n\nDas gleiche Prinzip gilt für das linke und rechte Hauptfahrwerk.\n\nAuch hier sind die Ausfälle der Reifen jeweils mit einem Und-Gatter verbunden.\n\nNun können wir die kritischen Pfade identifizieren, die zum Top-Ereignis, also zum Ausfall des Bugradfahrwerks, führen.\n\nWir erkennen, dass der gleichzeitige Ausfall beider Reifen einer Fahrwerksgruppe zum Ausfall dieser Fahrwerksgruppe führt.\n\nJede Kombination von zwei ausgefallenen Reifen stellt demnach einen minimalen Ausfallschnitt dar.\n\nEntlang der kritischen Pfade sehen wir dann, dass die Ausfälle einer Fahrwerksgruppe zum Ausfall des Bugradfahrwerks führen.\n\nDurch diese Analyse können wir die Zuverlässigkeit des Bugradfahrwerks bewerten und gezielte Maßnahmen ergreifen, um die Ausfallwahrscheinlichkeit zu reduzieren.\n\nZum Beispiel können wir regelmäßige Wartungen der Reifen durchführen oder zusätzliche Sicherheitsmechanismen einführen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "fta56_asset",
+      "label": "Flugzeug mit drei Fahrwerksgruppen",
+      "role": "content",
+      "members": [
+        "fta56_asset"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta56_nodes",
+      "label": "Fahrwerk-Fehlerbaum",
+      "role": "content",
+      "members": [
+        "fta56_nodes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta56_focus",
+      "label": "Minimale Ausfallschnitte",
+      "role": "content",
+      "members": [
+        "fta56_focus"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta56_links",
+      "label": "Fehlerbaum-Beziehungen",
+      "role": "content",
+      "members": [
+        "fta56_links"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Flugzeug mit drei Fahrwerksgruppen",
+      "sourceText": "Hierzu betrachten wir das Bugradfahrwerk eines",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta56_asset"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Fahrwerk-Fehlerbaum",
+      "sourceText": "Jede Kombination von zwei ausgefallenen Reifen",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta56_nodes"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Minimale Ausfallschnitte",
+      "sourceText": "Jede Kombination von zwei ausgefallenen Reifen",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta56_focus"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Fehlerbaum-Beziehungen",
+      "sourceText": "Entlang der kritischen Pfade sehen wir",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta56_links"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta56_asset",
+      "beatId": "beat_01",
+      "targetId": "fta56_asset",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_fta56_nodes",
+      "beatId": "beat_02",
+      "targetId": "fta56_nodes",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_fta56_focus",
+      "beatId": "beat_03",
+      "targetId": "fta56_focus",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_04_fta56_links",
+      "beatId": "beat_04",
+      "targetId": "fta56_links",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_04",
+      "visibleGroups": [
+        "canvas_context",
+        "fta56_asset",
+        "fta56_nodes",
+        "fta56_focus",
+        "fta56_links"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

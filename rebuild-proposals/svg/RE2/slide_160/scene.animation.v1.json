@@ -8,6 +8,44 @@
     "drawDurFrames": 42,
     "transformDurFrames": 30
   },
-  "targets": [],
-  "steps": []
+  "targets": [
+    {
+      "targetId": "s162_left",
+      "label": "DESIGN-FMEA",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s162_right",
+      "label": "PROZESS-FMEA",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s162_left",
+      "targetId": "s162_left",
+      "action": "show",
+      "sourceText": "Beim Produktdesign stehen dabei Änderungen im Konstruktionskonzept im Vordergrund. Dazu zählen zum Beispiel die Anpassungen des Designs, zum Beispiel durch Änderung der Geometrie von Bauteilen oder die Auswahl robusterer Materialien. Ein konkretes Beispiel wäre die Verwendung eines stabileren Werkstoffs, um das Bruchrisiko zu reduzieren.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_s162_right",
+      "targetId": "s162_right",
+      "action": "show",
+      "sourceText": "Ein praxisnahes Beispiel ist die Einführung regelmäßiger Wartungen, um Maschinenausfälle zu vermeiden und so die Zuverlässigkeit der Produktionsanlagen zu steigern.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    }
+  ]
 }

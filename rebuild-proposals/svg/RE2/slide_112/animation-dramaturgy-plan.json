@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_risk_analysis",
+  "svgPath": "slide_112.svg",
+  "spokenText": "Kommen wir nun zum fünften Schritt der FMEA: der Risikoanalyse.\n\nFür die Bewertung der Risiken möglicher Fehler werden drei Bewertungsgrößen festgelegt. Die Bedeutung, die Auftretenswahrscheinlichkeit und die Entdeckungswahrscheinlichkeit. Jede dieser Größen wird auf einer Skala von eins bis zehn bewertet.\n\nDie Bedeutung bewertet das Ausmaß der Folgen eines Fehlers für das Gesamtsystem aus Sicht des Endverbrauchers, also des Kunden. Ein Wert von eins steht für eine sehr geringe Bedeutung der Fehlerfolge. Ein Wert von zehn hingegen zeigt an, dass die Fehlerfolge eine sehr hohe Bedeutung hat. Dabei gilt, dass gleiche Fehlerfolgen immer gleich bewertet werden müssen.\n\nDie Auftretenswahrscheinlichkeit bezieht sich auf die Wirksamkeit der Vermeidungsmaßnahmen, um das Auftreten der Fehlerursache zu verhindern.\n\nDie Bewertung der Auftretenswahrscheinlichkeit erfolgt unter Berücksichtigung aller aufgelisteten Vermeidungsmaßnahmen. Ein Wert von eins wird vergeben, wenn es sehr unwahrscheinlich ist, dass die Fehlerursache auftritt. Ein Wert von zehn zeigt an, dass die Fehlerursache nahezu sicher auftritt. Vermeidungsmaßnahmen umfassen alle präventiven Maßnahmen, die das Auftreten der Fehlerursache einschränken oder vermeiden sollen, wie zum Beispiel Berechnungen während der Entwicklungsphase oder auch Redundanzen im System.\n\nDie Entdeckungswahrscheinlichkeit bewertet, wie wahrscheinlich es ist, dass Fehler oder ihre Ursachen vor der Auslieferung entdeckt werden. Die Bewertung erfolgt dabei unter Berücksichtigung aller aufgelisteten Entdeckungsmaßnahmen. Dazu gehören Maßnahmen, die entweder die Fehlerursachen oder die Fehlerfolgen erkennen können. Ein Wert von eins bedeutet, dass ein Fehler mit sehr hoher Wahrscheinlichkeit entdeckt wird, während ein Wert von zehn darauf hinweist, dass die Entdeckung des Fehlers sehr unwahrscheinlich ist. Dies ist beispielsweise der Fall, wenn es keine Entdeckungsmaßnahmen gibt.\n\nFür die systematische Bewertung dieser drei Größen sollten immer eindeutige und einheitliche Kriterien definiert werden. Diese Kriterien hängen stark von den spezifischen Anforderungen des Unternehmens, seiner Strategie und dem Produkt ab. Als Richtlinien können beispielsweise die Tabellen der A-IA-G oder des VDA verwendet werden.\n\nSchauen wir uns einige Beispiele zur Orientierung an.\n\nFür die Bedeutung ergibt sich ein Wert von zehn, wenn ein Sicherheitsrisiko besteht oder gesetzliche Vorschriften nicht eingehalten werden können. Ein Wert von eins wird vergeben, wenn die Funktionsbeeinträchtigung so gering ist, dass sie nur von Fachpersonal, aber nie vom Kunden selbst, wahrgenommen werden kann.\n\nFür die Auftretenswahrscheinlichkeit wird ein Wert von zehn vergeben, wenn die Fehlerursache mit einer Wahrscheinlichkeit von über zehn Prozent auftritt. Je geringer die Ausfallwahrscheinlichkeit, desto niedriger die Bewertung.\n\nBei der Entdeckungswahrscheinlichkeit erhält ein Fehler einen Wert von zehn, wenn nur maximal neunzig Prozent der Fehlerursachen entdeckt werden können. Wird die Fehlerursache jedoch nahezu sicher entdeckt, kann der Wert bis auf eins reduziert werden.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s118_guidance",
+      "label": "Bewertungsgrundsätze",
+      "role": "content",
+      "members": [
+        "s118_guidance"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s118_table",
+      "label": "Bewertungskriterien",
+      "role": "content",
+      "members": [
+        "s118_table"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Bewertungsgrundsätze",
+      "sourceText": "Für die systematische Bewertung dieser drei",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s118_guidance"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Bewertungskriterien",
+      "sourceText": "Für die systematische Bewertung dieser drei",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s118_table"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s118_guidance",
+      "beatId": "beat_01",
+      "targetId": "s118_guidance",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s118_table",
+      "beatId": "beat_02",
+      "targetId": "s118_table",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_02",
+      "visibleGroups": [
+        "canvas_context",
+        "s118_guidance",
+        "s118_table"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

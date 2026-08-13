@@ -2,10 +2,10 @@
 
 - Kapitel: 4
 - Lektion: 1
-- Quellfolie: 68
+- Quellfolie: 70
 - Zielmodus: full_slide, 1920×1080
-- Titel: Welche Arten einer FMEA gibt es?
-- Dominante Lernbotschaft: FMEA wird als Design-FMEA oder Prozess-FMEA eingesetzt.
+- Titel: Design-FMEA und Prozess-FMEA: Zeitpunkt und Ergebnis
+- Dominante Lernbotschaft: Beide FMEA-Arten setzen früh an, aber an unterschiedlichen Entwicklungsobjekten.
 - Archetyp: two-column-comparison
 - Layout: Zwei gleichgewichtige, semantisch farbcodierte Vergleichsspalten.
 - Inhaltsinventar: Fachbegriffe, Beziehungen, Hierarchien, Tabellenzustände und Beispiele bleiben erhalten; PowerPoint-Bedienelemente und Masterdekoration entfallen.

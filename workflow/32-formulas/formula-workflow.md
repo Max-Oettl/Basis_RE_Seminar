@@ -37,6 +37,10 @@ Parameterdefinitionen werden nicht mit ASCII-Pfeilen wie `i -> Rangnummer...` ge
 7. Parameter direkt in der Naehe der Formel erklaeren, wenn sie fuer Einsteiger nicht offensichtlich sind.
 8. Nach Rendern pruefen: Bruchstriche, Exponenten, Indizes, Klammern, Minuszeichen, Dezimaltrennzeichen.
 
+Der Standardrenderer exportiert mathematische Glyphen als Pfade im STIX-Schriftsatz. Dadurch bleiben Gewicht, Laufweite und Operatorgeometrie unabhaengig von installierten Viewer-Fonts und umgebenden CSS-Regeln. Ein Text-SVG ist nur mit dokumentierter Ausnahme zulaessig.
+
+Beim Einbetten wird die im Formelasset gespeicherte nominale Schriftgroesse verwendet. Formeln derselben Matrix erhalten dieselbe nominale Grundschrift. Sie duerfen nicht einzeln auf eine gemeinsame Boxhoehe gestreckt werden: Brueche und Integrale sind konstruktionsbedingt hoeher, ihre Grundzeichen muessen aber optisch dieselbe Groesse wie die Grundzeichen einfacher Formeln behalten.
+
 ## Darstellung
 
 - Keine sichtbaren Folientitel, globalen Szenentitel, Modul-/Folien-Kicker, Workflow-Hinweise oder Fokuszeilen in die SVG-Grafik uebernehmen, ausser der Nutzer verlangt sie ausdruecklich als Teil der Grafik.
@@ -47,6 +51,7 @@ Parameterdefinitionen werden nicht mit ASCII-Pfeilen wie `i -> Rangnummer...` ge
 - Lange Formeln lieber aufteilen als in kleine Schrift pressen.
 - Wenn eine Formel als Transformationsschritt erklaert wird, muss die visuelle Reihenfolge der gesprochenen Reihenfolge folgen.
 - Formel-SVGs bleiben transparent und werden nicht als PNG/JPG gerendert.
+- Eine Formel wird als ein zusammenhaengendes Mathematik-Asset gesetzt. Integrale, Grenzen, Praefix und Integrand duerfen nicht aus separaten SVG-Textobjekten zusammengesetzt werden.
 - Keine duennen dekorativen Aussenrahmen nur um die Formel selbst setzen. Wenn ein Berechnungsbereich didaktisch gruppiert werden muss, dann ueber klare Naehe, grosszuegige Abstaende oder eine ruhige Inhaltsflaeche; die Formel darf nicht wie ein kaputtes eingebettetes Bild oder ein Formularfeld wirken.
 
 ## Animation
@@ -60,6 +65,9 @@ Eine Formel ist nicht fertig, wenn:
 - Parameter im Sprechertext fehlen,
 - ein Vorzeichen, Exponent, Index oder Dezimaltrennzeichen falsch ist,
 - die Formel optisch ueberladen oder zu klein ist,
+- Grundzeichen gleichrangiger Formeln durch boxbezogene Skalierung sichtbar unterschiedliche Groessen besitzen,
+- einzelne Glyphen durch Font-Fallback oder CSS-Vererbung fett, anders proportioniert oder anders beabstandet erscheinen,
+- das Formelasset noch `<text>`- oder `<tspan>`-Glyphen enthaelt oder keine `data-formula-fontsize`-Metadaten besitzt,
 - Text oder Formelzeichen aus Boxen laufen,
 - dekorative Formelrahmen die Lesbarkeit oder wissenschaftliche Wirkung verschlechtern,
 - ein Rechenschritt sichtbar eine andere Aussage erzeugt als die Quelle,

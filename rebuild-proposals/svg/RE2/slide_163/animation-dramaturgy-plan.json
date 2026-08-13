@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_design_process_step7",
+  "svgPath": "slide_163.svg",
+  "spokenText": "Im siebten und letzten Schritt, der Ergebnisdokumentation, werden alle identifizierten Fehlfunktionen, Risiken und Optimierungsmaßnahmen systematisch festgehalten. Dies gilt für beide Methoden, also sowohl im Design- als auch im Prozessbereich.\n\nIm Kontext der Produktentwicklung liegt der Schwerpunkt auf der Dokumentation aller relevanten Erkenntnisse und Anpassungen, welche das Design des Produktes betreffen. Dazu zählen unter anderem aktualisierte Zeichnungen, technische Spezifikationen und Konstruktionsunterlagen, die die vorgenommenen Änderungen transparent und nachvollziehbar machen.\n\nBei der Betrachtung der Fertigungsprozesse steht hingegen die Aktualisierung von Prozessdokumenten im Mittelpunkt. Hierzu gehören überarbeitete Arbeitsanweisungen, Prozessbeschreibungen oder auch Schulungsunterlagen. Sie dienen dazu, sicherzustellen, dass alle Beteiligten über die implementierten Änderungen informiert sind und diese im Produktionsalltag angewendet werden.\n\nEine vollständige und nachvollziehbare Dokumentation stellt sicher, dass alle Maßnahmen lückenlos rückverfolgt werden können – und leistet damit einen wichtigen Beitrag zur kontinuierlichen Verbesserung von Produkt- und Prozessqualität.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s165_left",
+      "label": "DESIGN-FMEA",
+      "role": "content",
+      "members": [
+        "s165_left"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s165_right",
+      "label": "PROZESS-FMEA",
+      "role": "content",
+      "members": [
+        "s165_right"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "DESIGN-FMEA",
+      "sourceText": "Im Kontext der Produktentwicklung liegt der",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s165_left"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "PROZESS-FMEA",
+      "sourceText": "Bei der Betrachtung der Fertigungsprozesse steht",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s165_right"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s165_left",
+      "beatId": "beat_01",
+      "targetId": "s165_left",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s165_right",
+      "beatId": "beat_02",
+      "targetId": "s165_right",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_02",
+      "visibleGroups": [
+        "canvas_context",
+        "s165_left",
+        "s165_right"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

@@ -34,6 +34,14 @@
       "confidence": "high"
     },
     {
+      "targetId": "weibull_paper_process_example",
+      "label": "Arbeitsschritt Weibull-Gerade",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
       "targetId": "weibull_paper_parallel",
       "label": "Parallele Verschiebung",
       "status": "animated",
@@ -42,8 +50,24 @@
       "confidence": "high"
     },
     {
+      "targetId": "weibull_paper_process_parallel",
+      "label": "Arbeitsschritt Polverschiebung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
       "targetId": "weibull_paper_beta",
       "label": "Abgelesener Formparameter",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_paper_process_beta",
+      "label": "Arbeitsschritt Formparameter",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -79,6 +103,15 @@
       "durFrames": 42
     },
     {
+      "stepId": "show_weibull_paper_process_example",
+      "targetId": "weibull_paper_process_example",
+      "action": "show",
+      "sourceText": "Angenommen wir haben mit Hilfe der",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
       "stepId": "draw_weibull_paper_parallel",
       "targetId": "weibull_paper_parallel",
       "action": "draw",
@@ -88,8 +121,26 @@
       "durFrames": 42
     },
     {
+      "stepId": "show_weibull_paper_process_parallel",
+      "targetId": "weibull_paper_process_parallel",
+      "action": "show",
+      "sourceText": "Im Anschluss kann man dann die",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
       "stepId": "show_weibull_paper_beta",
       "targetId": "weibull_paper_beta",
+      "action": "show",
+      "sourceText": "Auf der rechten Ypsilon Achse kann",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_paper_process_beta",
+      "targetId": "weibull_paper_process_beta",
       "action": "show",
       "sourceText": "Auf der rechten Ypsilon Achse kann",
       "confidence": "high",

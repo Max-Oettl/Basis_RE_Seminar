@@ -127,7 +127,8 @@ historischer Altbestand.
 Bei `full_slide` ist `brand/reltest-education-slide-design-tokens.json` die technische Quelle. Verwenden:
 
 - `brandProfile=reltest-education` und `brandVariant=education-production`,
-- Signalgruen `#00A754` als primaeren Education-Akzent,
+- Marineblau `#142452` als visuell fuehrende Inhaltsfarbe; Signalgruen
+  `#00A653` nur als Education-Kennung oder bewussten semantischen Fokus,
 - Archivo fuer alle sichtbaren Inhaltstexte und Oxanium nur fuer echte
   Headlines, Slogans oder Auszeichnungen,
 - 1920x1080 Inhaltscanvas,
@@ -158,8 +159,9 @@ Bei `content_svg` weiterhin `brand/company-brand-tokens.json` und den Content-SV
 Das Template oder PowerPoint setzt diese Elemente spaeter.
 
 Auch Content-SVGs verwenden `brandProfile=reltest-education`, Archivo fuer
-Inhaltstext und Signalgruen als primaeren Education-Akzent. Stahlcyan bleibt eine
-sekundaere Diagrammfarbe.
+Inhaltstext und Marineblau als fuehrende Inhaltsfarbe. Signalgruen bleibt ein
+sparsamer Education-/Fokusakzent; Stahlcyan bleibt eine sekundaere
+Diagrammfarbe.
 
 ## 7. Komposition
 
@@ -181,6 +183,9 @@ sekundaere Diagrammfarbe.
 - Keine Karten verschachteln und keine Vollflaechenkarte um den gesamten Inhalt legen.
 - Medien die groessere Flaeche geben, wenn sie die Aussage tragen.
 - Semantische Farben sparsam und nicht dekorativ rotierend verwenden.
+- Gleichrangige Infoboxen in derselben marineblauen Farbfamilie gestalten und
+  ueber Tonwert, Deckkraft, Kontur oder Typografie differenzieren. Ausserhalb
+  echter Diagramme standardmaessig hoechstens eine Buntakzentfamilie einsetzen.
 - Professionelle Icons, saubere Pfeile und kontrollierte Layerreihenfolge sicherstellen.
 - Keine globale `text { fill: ... }`-Regel verwenden, wenn Texte unterschiedliche
   Vordergrundfarben benoetigen. Vorgesehene Textfarben im berechneten Renderstil
@@ -283,8 +288,10 @@ Pruefen:
 - Typografiestufen und Mindestlesbarkeit,
 - Farben ausschliesslich aus dem passenden Tokensystem,
 - aktives Brandprofil `reltest-education`,
-- Signalgruen als primaeren Education-Akzent und Stahlcyan nur in seiner
-  definierten Diagrammrolle,
+- Marineblau als fuehrende Inhaltsfarbe, Signalgruen als sparsamen
+  Education-/Fokusakzent und Stahlcyan nur in seiner definierten Diagrammrolle,
+- gleiche blaue Farbfamilie fuer gleichrangige Karten und keine dekorative
+  Mehrfarbenrotation,
 - Oxanium/Archivo gemaess Typorolle und keine Legacy-Schrift als fuehrende
   Schrift,
 - Kartenradius, Kontur, Schatten und Padding,

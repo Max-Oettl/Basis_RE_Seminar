@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re3_src_063",
+  "decision": "animated",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "three_challenge_negative",
+      "label": "Negatives t null",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "three_challenge_confidence",
+      "label": "Vertrauensbereich",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "three_challenge_rule",
+      "label": "Plausibilitätsregel",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_three_challenge_negative",
+      "targetId": "three_challenge_negative",
+      "action": "show",
+      "sourceText": "Wenn Minitab beispielsweise einen negativen Schwellenwert berechnet, ist das physikalisch nicht sinnvoll, auch wenn die Daten dadurch rechnerisch besser beschrieben werden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_three_challenge_rule",
+      "targetId": "three_challenge_rule",
+      "action": "show",
+      "sourceText": "Wenn Minitab beispielsweise einen negativen Schwellenwert berechnet, ist das physikalisch nicht sinnvoll, auch wenn die Daten dadurch rechnerisch besser beschrieben werden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_three_challenge_confidence",
+      "targetId": "three_challenge_confidence",
+      "action": "show",
+      "sourceText": "Ein solches Ergebnis deutet häufig auf eine zu kleine Stichprobe hin.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

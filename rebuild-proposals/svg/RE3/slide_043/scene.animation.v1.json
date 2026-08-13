@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_043.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "mls_panel",
+      "label": "MLS",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mle_panel",
+      "label": "MLE",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mls_mle_arrow",
+      "label": "Mehr Information",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mls_mle_rule",
+      "label": "Methodenregel",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_mls_panel",
+      "targetId": "mls_panel",
+      "action": "show",
+      "sourceText": "Die M-L-S-Methode basiert auf dem Prinzip der Regressionsanalyse.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_mle_panel",
+      "targetId": "mle_panel",
+      "action": "show",
+      "sourceText": "Anders verhält es sich mit der Maximum-Likelihood-Methode.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_mls_mle_arrow",
+      "targetId": "mls_mle_arrow",
+      "action": "draw",
+      "sourceText": "Das Besondere an dieser Methode: Sie kann sowohl vollständige als auch zensierte Daten verarbeiten.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung erscheint nach ihren fachlichen Endpunkten.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "step_04_mls_mle_rule",
+      "targetId": "mls_mle_rule",
+      "action": "show",
+      "sourceText": "Dennoch ist es wichtig, die Unterschiede zu kennen, um die Ergebnisse richtig zu interpretieren.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

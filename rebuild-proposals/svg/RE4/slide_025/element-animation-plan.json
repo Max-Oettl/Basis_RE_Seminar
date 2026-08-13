@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re4_src_025",
+  "decision": "animated",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "transform_error",
+      "label": "Fehlerbaum",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transform_function",
+      "label": "Funktionsbaum",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transform_rbd",
+      "label": "Blockdiagramm",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transform_boolean",
+      "label": "Boolesches Modell",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_transform_error",
+      "targetId": "transform_error",
+      "action": "show",
+      "sourceText": "Auf dieser Grundlage wandeln wir also unseren Fehlerbaum systematisch in einen Funktionsbaum um:",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_transform_function",
+      "targetId": "transform_function",
+      "action": "show",
+      "sourceText": "Auf diese Weise erhalten wir den vollständigen Funktionsbaum des Getriebes.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_transform_rbd",
+      "targetId": "transform_rbd",
+      "action": "show",
+      "sourceText": "Um die resultierende Zuverlässigkeit des Systems anschaulich darzustellen, nutzt man in der Praxis häufig sogenannte Zuverlässigkeitsblockdiagramme.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_transform_boolean",
+      "targetId": "transform_boolean",
+      "action": "draw",
+      "sourceText": "Die Grundlage hierfür bildet das sogenannte boolesche Modell – also eine logische Verknüpfung der Einzelwahrscheinlichkeiten, aus der sich dann die Systemzuverlässigkeit ergibt.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung erscheint nach ihren fachlichen Endpunkten.",
+      "drawDurFrames": 42
+    }
+  ]
+}

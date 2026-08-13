@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_gearbox_failure_modes",
+  "svgPath": "slide_110.svg",
+  "spokenText": "Schauen wir uns das Ganze wieder an unserem Beispiel des Anpassungsgetriebes an.\n\nAuf Systemebene lassen sich die Fehlfunktionen wie folgt definieren: Drehmoment und Drehzahl werden nicht gewandelt oder die Umweltverträglichkeit ist nicht gewährleistet.\n\nFür den Antrieb und den Abtrieb ergibt sich die Fehlfunktion: Drehmoment wird nicht übertragen.\n\nDas Gehäuse hat die Fehlfunktion: Dichtheit ist nicht gewährleistet.\n\nNach der gleichen Logik können auch die Fehlfunktionen für die einzelnen Bauteile auf der untersten Systemebene definiert werden.\n\nMit Definition der Fehlfunktionen haben wir den vierten Schritt der FME-A abgeschlossen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s110_gear_nodes",
+      "label": "Anpassungsgetriebe",
+      "role": "content",
+      "members": [
+        "s110_gear_nodes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s110_gear_links",
+      "label": "Hierarchische Verknüpfungen",
+      "role": "content",
+      "members": [
+        "s110_gear_links"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Anpassungsgetriebe",
+      "sourceText": "Schauen wir uns das Ganze wieder",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s110_gear_nodes"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Hierarchische Verknüpfungen",
+      "sourceText": "Schauen wir uns das Ganze wieder",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s110_gear_links"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s110_gear_nodes",
+      "beatId": "beat_01",
+      "targetId": "s110_gear_nodes",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s110_gear_links",
+      "beatId": "beat_02",
+      "targetId": "s110_gear_links",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_02",
+      "visibleGroups": [
+        "canvas_context",
+        "s110_gear_nodes",
+        "s110_gear_links"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

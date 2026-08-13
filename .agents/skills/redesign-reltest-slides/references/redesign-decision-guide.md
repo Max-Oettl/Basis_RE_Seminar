@@ -14,16 +14,16 @@
 | --- | --- | --- |
 | Titelfolie | Kapitel- oder Modulstart | zentrierter Display-Titel, warme Akzentlinie, optionale Unterzeile |
 | Agenda | 3-6 Themen | bis 3 Punkte einspaltig, ab 4 zweispaltige nummerierte Karten |
-| Lernziele | 3-5 beobachtbare Ziele | vertikale Liste, gruene Akzentkante, Nummernbadge |
+| Lernziele | 3-5 beobachtbare Ziele | vertikale Liste, marineblaue Tonwerte, optional eine schmale gruene Education-Akzentkante |
 | Bullet/Kernaussagen | 3-6 kurze Aussagen | `cards` bei echten Einheiten, sonst ruhige `plain`-Liste |
 | Definition | Begriff plus Erklaerung | eine dominante Definitionskarte, maximal 3 Detailrollen |
 | Key Takeaway | genau eine Kernaussage | zentrierte starke Karte mit warmer linker Kante |
 | Workflow/Prozess | echte Reihenfolge | nummerierte Knoten, konsistente Verbinder hinter Karten |
-| Media Aside | Bild/SVG plus kurze Einordnung | grosse Medienspalte, schmale Textspalte mit signalgruener Linie |
+| Media Aside | Bild/SVG plus kurze Einordnung | grosse Medienspalte, schmale Textspalte mit ruhiger marineblauer Linie; Signalgruen nur bei bewusstem Education-Fokus |
 | SVG-Diagramm | eigenstaendiges Diagrammasset | gross und rahmenlos; Template liefert Frame |
 | Vergleich/Do-Don't | symmetrischer Vergleich | 2 gleichgewichtige Spalten, Farbe nur als Zusatzcode |
 | Formel/Rechenweg | Formel, Eingaben, Ergebnis | grosser Weissraum, kontrollierter Formelsatz, klare Stufen |
-| Daten/Diagramm | fachlicher Plot | marineblaue Achsen, signalgruene Hauptreihe, dezentes Raster |
+| Daten/Diagramm | fachlicher Plot | marineblaue Achsen, fachlich begruendete Hauptreihe, dezentes Raster |
 
 ## Auswahlregeln
 
@@ -47,7 +47,10 @@ Vor dem Layout jeden Quellbestandteil genau einer Kategorie zuweisen:
 
 - Canvas: 1920x1080.
 - Inhaltsrand: 74 px links/rechts, 56 px oben, 118 px unten reserviert.
-- Hauptfarben: Marineblau `#031334`, Signalgruen `#00A754`, Weiss `#FFFFFF`.
+- Grundfarben: Marineblau `#142452`, tiefes Marineblau `#031334`, Weiss
+  `#FFFFFF`; Signalgruen `#00A653` als sparsamer Education-Akzent.
+- Gleichrangige Infoboxen: eine marineblaue Farbfamilie; Abstufung ueber Tonwert
+  oder Transparenz, keine dekorative Mehrfarbenrotation.
 - Education-Diagrammfarben: Goldgelb `#E9B400`, Koralle `#EC6244`,
   Stahlcyan `#0C84B4`, Graphitblau `#25495F`.
 - Standardtitel: 54 px, Oxanium Bold/SemiBold, Marineblau.

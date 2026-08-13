@@ -30,10 +30,21 @@ Diese Referenz buendelt bestaetigte, wiederverwendbare Learnings aus dem Review 
 - Reduktion vor Verkleinerung: erklaerende Absatztexte entfernen, wenn Grafik und Sprechertext dieselbe Aussage bereits tragen.
 - Textboxen mit sichtbarem Innenabstand planen. Der laengste Begriff muss auch in der verkleinerten Viewer-Ansicht Luft zum Rand besitzen.
 - Karten nur fuer echte fachliche Einheiten, Prozessstufen oder Vergleichsklassen einsetzen.
+- Seminarweite Nutzerentscheidung: Marineblau traegt die visuelle Grundordnung.
+  Gleichrangige Infoboxen verwenden dieselbe blaue Farbfamilie mit abgestuften
+  Tonwerten oder Deckkraeften; keine dekorative Rotation durch Gelb, Blau, Gruen
+  oder weitere Akzentfarben.
+- Signalgruen und weitere Akzentfarben nur fuer einen belegten Status, eine
+  Diagrammrolle, die Education-Kennung oder einen einzelnen wichtigen Fokus
+  verwenden. Ausserhalb echter Diagramme standardmaessig hoechstens eine
+  Buntakzentfarbe pro Folie.
+- Gleichrangige Formeln verwenden dieselbe nominale mathematische Grundschrift. Einfache Formeln, Brueche und Integrale niemals einzeln auf dieselbe Boxhoehe skalieren; Formelglyphen als Pfade exportieren, damit Viewer-Fonts und CSS weder Fettung noch Abstaende veraendern.
 
 ## Diagramme Und Technische Grafiken
 
 - Echte Plots aus Python erzeugen und die Quelle als fachlichen Geometrieanker behandeln.
+- Die kanonische Fünf-Komponenten-Brückenschaltung zeigt die Komponenten 1 und 3 im oberen Pfad, 2 und 4 im unteren Pfad und Komponente 5 als vertikale Kopplung zwischen den beiden mittleren Knoten. Vorschau, Ausgangsdiagramm und separierte Ersatzstrukturen verwenden dieselbe Topologie- und Komponentensprache; die Schaltung darf in der 960×540-Vieweransicht nicht zu einer unlesbaren Miniatur schrumpfen.
+- Brückenschaltungen nicht horizontal auf die verfügbare Kartenbreite strecken. Die Schaltung bleibt als kompakte technische Einheit mit ausgewogenem Verhältnis von Pfadlänge und Pfadabstand erkennbar; zusätzlicher Platz wird als Weißraum genutzt und nicht durch längere Leitungen gefüllt.
 - Wenn die Quelle Methodenboxen, Wirkungen oder Ergebnisbänder über gemeinsame Achsen und Phasengrenzen zuordnet, diese als eine integrierte Diagrammkomposition erhalten. Plot und Zuordnung nicht in unabhängige Karten- oder Inhaltszonen zerlegen.
 - Methoden- oder Ergebnisbänder, die mehreren Diagrammbereichen zugeordnet sind, durch ihre exakte horizontale Spannweite und semantische Farbe abbilden. Redundante Zusätze wie `Fall 1 und 2` entfallen, wenn die Geometrie die Zuordnung eindeutig trägt. Fokusbänder brauchen einen sichtbaren Abstand zu Bereichsnummern, Kurvenlabels und Phasengrenzen.
 - Kurvenlabel, Marker, Wert und Fuehrungslinie gemeinsam mit ihrer Geometrie zeigen; Beschriftungen nie vor der Kurve einblenden.
@@ -90,9 +101,19 @@ Diese Referenz buendelt bestaetigte, wiederverwendbare Learnings aus dem Review 
 
 ## Designreferenz Und Serienproduktion
 
+- Seminarweite Nutzerentscheidung: Content-SVGs enthalten niemals einen
+  vollflaechigen Folienhintergrund, auch keinen weissen oder nahezu weissen
+  Verlauf, kein technisches Raster und keine Gruppe `brand_background`. Der
+  Folienmaster beziehungsweise das Downstream-System liefert den Hintergrund;
+  im SVG verbleiben ausschliesslich die fachlichen Elemente.
+
 - Nennt der Nutzer ein bestehendes Modul als Stilreferenz, dessen tatsaechliche
   freigegebene Ziel-SVGs untersuchen. Nicht mit einem gleichnamigen Kapitel oder
   einer allgemeinen Palette verwechseln.
+- Verlangt der Nutzer die Wiederverwendung einer konkreten Szene, muss das
+  Zielartefakt technisch aus genau dieser Referenz abgeleitet werden. Eine nur
+  aehnliche Neugestaltung gilt nicht als Wiederverwendung; die Referenz wird in
+  Metadaten und Redesign-Brief dokumentiert.
 - Vollfolien als Referenz bedeuten Vollfolien als Ziel, sofern der Nutzer nicht
   ausdruecklich nur ein Content-SVG verlangt.
 - Die erste Szene jedes neuen Archetyps statisch als Pilot freigeben. Ungepruefte

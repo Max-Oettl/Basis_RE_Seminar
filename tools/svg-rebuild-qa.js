@@ -270,6 +270,26 @@ function validateSvg(svgPath, report) {
     addIssue(report, "error", svgPath, "Possible mojibake or replacement character found.");
   }
 
+  const isFormulaAsset = /(?:^|[\\/])formulas[\\/][^\\/]+\.svg$/i.test(svgPath);
+  if (isFormulaAsset && /<(?:text|tspan)\b/i.test(svgText)) {
+    addIssue(
+      report,
+      "warning",
+      svgPath,
+      "Formula asset contains live text glyphs and may change through font fallback or surrounding CSS.",
+      "Render formula glyphs as paths with components/formula-library/render_formula_svg.py.",
+    );
+  }
+  if (isFormulaAsset && !/\bdata-formula-fontsize\s*=\s*["'][\d.]+["']/i.test(svgText)) {
+    addIssue(
+      report,
+      "warning",
+      svgPath,
+      "Formula asset has no nominal font-size metadata.",
+      "Without data-formula-fontsize, formula matrices can accidentally scale each expression by its bounding-box height.",
+    );
+  }
+
   const textNodes = [...svgText.matchAll(/<text\b[^>]*>([\s\S]*?)<\/text>/gi)]
     .map((match) => decodeXmlText(match[1]))
     .filter(Boolean);

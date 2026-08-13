@@ -4,7 +4,9 @@
     "renderer": "matplotlib_mathtext",
     "output": "svg",
     "background": "transparent",
-    "fontset": "dejavusans",
+    "fontset": "stix",
+    "glyph_output": "path",
+    "embedding_scale": "nominal_fontsize",
     "color": "#062d46",
     "fontsize": 34
   },
@@ -13,7 +15,9 @@
     "Simple axis labels and single-symbol parameter labels may remain native SVG text.",
     "Do not hand-compose complex formulas with SVG text/tspan unless the formula renderer cannot express the notation.",
     "Formula SVGs are assets and may be embedded into scene SVGs with a data-formula-asset attribute.",
-    "Rendered formula SVGs used by a specific slide must be stored under that slide folder, for example rebuild-proposals/svg/<module_id>/slide_###/formulas/."
+    "Rendered formula SVGs used by a specific slide must be stored under that slide folder, for example rebuild-proposals/svg/<module_id>/slide_###/formulas/.",
+    "Embed formulas by their nominal font size; never stretch unrelated formulas to a common box height.",
+    "Formula glyphs are exported as paths so viewer fonts and surrounding CSS cannot alter weight, spacing, or operator geometry."
   ],
   "modules": {
     "RE3_TEST_1": {

@@ -40,6 +40,14 @@
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
+    },
+    {
+      "targetId": "weibull_separation_rule",
+      "label": "Schematische Darstellung und Trennregel",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
     }
   ],
   "steps": [
@@ -78,6 +86,15 @@
       "confidence": "high",
       "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
       "durFrames": 42
+    },
+    {
+      "stepId": "show_weibull_separation_rule",
+      "targetId": "weibull_separation_rule",
+      "action": "show",
+      "sourceText": "Wir können also hiermit Ermüdungs- und Verschleißausfälle modellieren.",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
     }
   ]
 }

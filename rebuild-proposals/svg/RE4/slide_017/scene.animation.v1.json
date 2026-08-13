@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_017.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "basis_events",
+      "label": "Basisereignisse",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "basis_metric",
+      "label": "Ausfallwahrscheinlichkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "basis_sources",
+      "label": "Datenquellen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "basis_assignment",
+      "label": "Zuordnung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_basis_events",
+      "targetId": "basis_events",
+      "action": "show",
+      "sourceText": "Das bedeutet: Für jedes der blau hinterlegten Basisereignisse im Fehlerbaum – also zum Beispiel Ermüdung, Materialfehler, Verschleiß oder thermische Alterung – benötigen wir einen entsprechenden Zuverlässigkeitskennwert.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_basis_metric",
+      "targetId": "basis_metric",
+      "action": "show",
+      "sourceText": "Typischerweise verwenden wir hier die Ausfallwahrscheinlichkeit zu einem bestimmten Zeitpunkt, beispielsweise nach fünftausend oder fünfzigtausend Betriebsstunden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_basis_sources",
+      "targetId": "basis_sources",
+      "action": "show",
+      "sourceText": "Um diese Ausfallwahrscheinlichkeiten zu bestimmen, gibt es unterschiedliche Datenquellen wie Labortests beziehungsweise Lebensdauerversuche oder auch Felddaten aus dem Betrieb.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_basis_assignment",
+      "targetId": "basis_assignment",
+      "action": "show",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis im Fehlerbaum einen Wahrscheinlichkeitswert zuordnen – passend zum Zeitpunkt, für den wir eine Aussage über das System treffen wollen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

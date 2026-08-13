@@ -10,8 +10,24 @@
   },
   "targets": [
     {
-      "targetId": "process_32",
-      "label": "FTA-Ablauf",
+      "targetId": "fta34_circuit",
+      "label": "Motorschaltung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta34_event",
+      "label": "Unerwünschtes Ereignis",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta34_categories",
+      "label": "Ausfallpfade",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -20,10 +36,30 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_process_32",
-      "targetId": "process_32",
+      "stepId": "step_01_fta34_circuit",
+      "targetId": "fta34_circuit",
       "action": "show",
-      "sourceText": "Kommen wir nun zum dritten Schritt in der Fehlerbaumanalyse.",
+      "sourceText": "Schauen wir uns hierzu ein Beispiel einer Schaltung zur Steuerung eines Motors an.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_fta34_event",
+      "targetId": "fta34_event",
+      "action": "show",
+      "sourceText": "Das unerwünschte Ereignis können wir einfach als „Motor läuft nicht an“ definieren.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_fta34_categories",
+      "targetId": "fta34_categories",
+      "action": "show",
+      "sourceText": "Nun kann der Fehlerbaum in drei Pfade",
       "occurrence": 1,
       "confidence": "high",
       "notes": "Sprechertextgeführte semantische Gruppe.",

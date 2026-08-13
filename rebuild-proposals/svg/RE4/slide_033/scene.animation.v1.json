@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_033.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "behavior_basis",
+      "label": "Basisstrukturen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "behavior_series",
+      "label": "Serienstruktur",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "behavior_series_failure",
+      "label": "Serienausfall",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "behavior_parallel",
+      "label": "Parallelstruktur",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "behavior_parallel_rule",
+      "label": "Parallelregel",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_behavior_basis",
+      "targetId": "behavior_basis",
+      "action": "show",
+      "sourceText": "Grundsätzlich unterscheiden wir zwei Basisstrukturen: die Serienstruktur und die Parallelstruktur.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_behavior_series",
+      "targetId": "behavior_series",
+      "action": "show",
+      "sourceText": "In der Serienstruktur sind alle Komponenten hintereinandergeschaltet.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_behavior_series_failure",
+      "targetId": "behavior_series_failure",
+      "action": "show",
+      "sourceText": "Fällt auch nur eine Komponente aus, ist die Verbindung unterbrochen – das gesamte System fällt aus.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_behavior_parallel",
+      "targetId": "behavior_parallel",
+      "action": "show",
+      "sourceText": "In der Parallelstruktur hingegen gibt es Redundanz: Mehrere Komponenten übernehmen die gleiche Funktion, sind also parallel geschaltet.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_05_behavior_parallel_rule",
+      "targetId": "behavior_parallel_rule",
+      "action": "show",
+      "sourceText": "Dadurch bleibt das System funktionsfähig, solange mindestens eine der Komponenten funktioniert.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

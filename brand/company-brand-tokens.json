@@ -4,23 +4,36 @@
     "companyName": "RelTest Education",
     "profile": "reltest-education",
     "subbrand": "education",
-    "version": "1.0.0",
-    "effectiveDate": "2026-07-31",
+    "version": "1.1.0",
+    "effectiveDate": "2026-08-12",
     "source": [
-      "source-materials/brand/Corporate_Design_RELTEST_19.pdf",
+      "source-materials/brand/Reltest_Corporate_Design_zwischenstand_2026-08-02.pdf",
       "brand/reltest-education-style-guide.md",
       "brand/design-quality-bar.md"
     ],
     "personality": [
-      "modern",
-      "reduziert",
-      "international",
-      "technisch",
       "praezise",
-      "professionell",
-      "digital-affin",
-      "didaktisch-klar"
+      "praxisorientiert",
+      "souveraen",
+      "partnerschaftlich",
+      "zukunftsweisend",
+      "modern",
+      "reduziert"
     ],
+    "values": [
+      "fundiert-und-faktenbasiert",
+      "praxisorientiert",
+      "befaehigend",
+      "verantwortungsbewusst",
+      "qualitaetsorientiert",
+      "unabhaengig-und-ehrlich"
+    ],
+    "claim": {
+      "de": "Wissen aufbauen, das Zuverlässigkeit verankert.",
+      "en": "Building knowledge that anchors reliability.",
+      "alterationAllowed": false,
+      "requiresAssociatedLogo": true
+    },
     "avoid": [
       "solutions-dominante-cyanpalette",
       "academy-altmarke",
@@ -28,7 +41,8 @@
       "bunt-zufaellig",
       "ueberladen",
       "generische-ki-aesthetik",
-      "dekorative-effekte"
+      "dekorative-effekte",
+      "mehrfarbige-rotation-gleichrangiger-infoboxen"
     ]
   },
   "canvas": {
@@ -104,18 +118,20 @@
     "backgroundLight": "#F7F9FC",
     "backgroundDark": "#031334",
     "panelLight": "#FFFFFF",
-    "panelSoft": "#E6F6EE",
-    "textPrimary": "#031334",
+    "panelSoft": "#E8E9EE",
+    "textPrimary": "#142452",
     "textSecondary": "#25495F",
     "textInverse": "#FFFFFF",
-    "brandPrimary": "#031334",
-    "brandPrimary80": "#35425D",
-    "brandPrimary60": "#687185",
-    "brandPrimary40": "#9AA1AE",
-    "brandPrimary20": "#CDD0D6",
-    "brandPrimary10": "#E6E7EB",
-    "accentPrimary": "#00A754",
-    "accentPrimary80": "#33B976",
+    "brandPrimary": "#142452",
+    "brandPrimaryDeep": "#031334",
+    "brandPrimaryDark": "#0D173D",
+    "brandPrimary80": "#435075",
+    "brandPrimary60": "#727C97",
+    "brandPrimary40": "#A1A8BA",
+    "brandPrimary20": "#D0D3DC",
+    "brandPrimary10": "#E8E9EE",
+    "accentPrimary": "#00A653",
+    "accentPrimary80": "#33B875",
     "accentPrimary60": "#66CA98",
     "accentPrimary40": "#99DCBA",
     "accentPrimary20": "#CCEDDD",
@@ -124,9 +140,9 @@
     "educationCoral": "#EC6244",
     "educationSteelCyan": "#0C84B4",
     "educationGraphiteBlue": "#25495F",
-    "lineMuted": "#CDD0D6",
-    "gridMuted": "#E6E7EB",
-    "riskLow": "#00A754",
+    "lineMuted": "#D0D3DC",
+    "gridMuted": "#E8E9EE",
+    "riskLow": "#00A653",
     "riskMedium": "#E9B400",
     "riskHigh": "#EC6244",
     "black": "#000000",
@@ -150,10 +166,21 @@
   "shadow": {
     "allowed": false
   },
+  "colorUsage": {
+    "contentDominant": "brandPrimary",
+    "subbrandMarker": "accentPrimary",
+    "equalRankBoxes": {
+      "hueFamily": "brandPrimary",
+      "allowedOpacitySteps": [0.08, 0.14, 0.22],
+      "rotateAccentHues": false
+    },
+    "maxSaturatedAccentFamiliesOutsideCharts": 1,
+    "additionalAccentRequiresDocumentedSemantics": true
+  },
   "variants": {
     "education-technical": {
       "defaultBackgroundMode": "transparent",
-      "primaryAccent": "accentPrimary",
+      "primaryAccent": "brandPrimary",
       "density": "normal"
     },
     "education-management": {
@@ -163,12 +190,12 @@
     },
     "education-light": {
       "defaultBackgroundMode": "transparent",
-      "primaryAccent": "accentPrimary",
+      "primaryAccent": "brandPrimary",
       "density": "normal"
     },
     "education-dark": {
       "defaultBackgroundMode": "dark",
-      "primaryAccent": "accentPrimary",
+      "primaryAccent": "brandPrimary",
       "density": "low"
     },
     "education-minimal": {
@@ -213,9 +240,10 @@
       "dense"
     ],
     "maxVisibleColors": {
-      "low": 6,
-      "normal": 8,
-      "dense": 12
-    }
+      "low": 5,
+      "normal": 7,
+      "dense": 10
+    },
+    "equalRankCardsMustShareHueFamily": true
   }
 }

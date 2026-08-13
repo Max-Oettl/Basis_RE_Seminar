@@ -51,8 +51,9 @@ Eine Review-Korrektur gilt ebenfalls nicht als erledigt, wenn sie nur lokal gepa
 - Neue oder grundlegend ueberarbeitete SVGs verwenden
   `brandProfile=reltest-education`, Archivo fuer Inhaltstext und Oxanium fuer
   Headlines/Auszeichnungen.
-- Der primaere Education-Akzent ist Signalgruen `#00A754`; Stahlcyan
-  `#0C84B4` wird nur als definierte Diagrammfarbe eingesetzt.
+- Marineblau `#142452` ist die visuell fuehrende Inhaltsfarbe. Signalgruen
+  `#00A653` kennzeichnet Education oder einen belegten semantischen Fokus;
+  Stahlcyan `#0C84B4` bleibt eine definierte Diagrammfarbe.
 - Keine externen Fonts oder externen Stylesheets, sofern nicht ausdruecklich dokumentiert und durch QA akzeptiert.
 - Keine konflikttraechtige globale `text { fill: ... }`-Regel, wenn einzelne
   Textknoten andere Vordergrundfarben deklarieren. Die Strict-Design-QA behandelt
@@ -84,6 +85,13 @@ Eine Review-Korrektur gilt ebenfalls nicht als erledigt, wenn sie nur lokal gepa
   `<title>`, `contentTitle` und Storyboard-Titel bleiben erhalten.
 - PowerPoint-Bedienelemente aus dem Export, insbesondere der Lautsprecher unten rechts, sind vollstaendig entfernt. Zugehoerige ungenutzte `image`-, `clipPath`- und `use`-Knoten verbleiben ebenfalls nicht im Ziel-SVG.
 - Farben, Schriften, Abstaende, Radien und semantische Statusfarben folgen `brand/company-brand-tokens.json`; Abweichungen brauchen `data-qa-brand-exception="true"` und `data-qa-reason`.
+- Gleichrangige Karten oder Infoboxen verwenden dieselbe marineblaue
+  Farbfamilie. Unterschiede werden bevorzugt ueber Tonwert, Deckkraft, Kontur,
+  Typografie oder Position getragen; eine dekorative Rotation durch Gelb, Blau,
+  Gruen oder weitere Akzentfarben ist ein Designbefund.
+- Ausserhalb echter Diagramme wird standardmaessig hoechstens eine satte
+  Akzentfarbfamilie pro Folie eingesetzt. Weitere Akzentfarben brauchen eine
+  konkrete fachliche Semantik und bleiben flaechenmaessig untergeordnet.
 - Ausfallmarker auf Zeitachsen wirken natuerlich unregelmaessig, sofern keine echten gleichmaessigen Zeitdaten oder abstrakten Prozessschritte dargestellt werden.
 - Layout nutzt stabile Abstaende und klare Hierarchie.
 - Endzustand und fachlich relevante Animationszustaende werden sowohl in Zielaufloesung als auch in realistischer verkleinerter Viewer-Ansicht visuell geprueft. Automatische Fehlerfreiheit ersetzt diese Pruefung nicht.

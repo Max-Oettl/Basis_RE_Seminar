@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re2_ch4_fmea_use.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "s71_use",
+      "label": "Einsatzbereiche",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s71_goal",
+      "label": "Ziel der Anwendung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s71_use",
+      "targetId": "s71_use",
+      "action": "show",
+      "sourceText": "Nachdem wir die verschiedenen Arten der",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_s71_goal",
+      "targetId": "s71_goal",
+      "action": "show",
+      "sourceText": "Die FMEA findet in allen Bereichen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    }
+  ]
+}

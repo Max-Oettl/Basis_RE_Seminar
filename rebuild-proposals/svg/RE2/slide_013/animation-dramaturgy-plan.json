@@ -1,0 +1,257 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch2_component_block_inverter",
+  "svgPath": "slide_013.svg",
+  "spokenText": "Als Beispiel betrachten wir das Bauteilblockdiagramm eines Wechselrichters. Darin sind alle elektronischen Baugruppen und Komponenten dargestellt.\n\nDer Energiestrom im Leistungspfad des Wechselrichters kann eingezeichnet werden, um die Energieflüsse zu visualisieren.\n\nSämtliche Bauteile zur Kommunikation werden ebenfalls erfasst, ebenso alle Informationsströme und Messsignale innerhalb des Wechselrichters.\n\nWirkt eine Eingangsgröße generell auf alle Baugruppen oder Komponenten innerhalb des Systems, kann der Pfeil direkt an die Systemgrenze angesetzt werden.\n\nEin solcher Fall tritt beispielsweise durch thermische Energie, Verschmutzung, Feuchtigkeit und Störsignale auf",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "inv_boundary",
+      "label": "Systemgrenze und Schnittstellen",
+      "role": "content",
+      "members": [
+        "inv_boundary"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "inv_aux",
+      "label": "Bordnetz und Lüfter",
+      "role": "content",
+      "members": [
+        "inv_aux"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "inv_energy",
+      "label": "Energiepfad",
+      "role": "content",
+      "members": [
+        "inv_energy"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "inv_communication",
+      "label": "Kommunikation",
+      "role": "content",
+      "members": [
+        "inv_communication"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "inv_control",
+      "label": "Steuerung und Überwachung",
+      "role": "content",
+      "members": [
+        "inv_control"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_05",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "inv_environment",
+      "label": "Umwelteinflüsse und Abgaben",
+      "role": "content",
+      "members": [
+        "inv_environment"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_06",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Systemgrenze und Schnittstellen",
+      "sourceText": "Als Beispiel betrachten wir das Bauteilblockdiagramm",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "inv_boundary"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Bordnetz und Lüfter",
+      "sourceText": "Darin sind alle elektronischen Baugruppen und",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "inv_aux"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Energiepfad",
+      "sourceText": "Der Energiestrom im Leistungspfad des Wechselrichters",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "inv_energy"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Kommunikation",
+      "sourceText": "Sämtliche Bauteile zur Kommunikation werden ebenfalls",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "inv_communication"
+      ]
+    },
+    {
+      "beatId": "beat_05",
+      "claim": "Steuerung und Überwachung",
+      "sourceText": "ebenso alle Informationsströme und Messsignale innerhalb",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "inv_control"
+      ]
+    },
+    {
+      "beatId": "beat_06",
+      "claim": "Umwelteinflüsse und Abgaben",
+      "sourceText": "Ein solcher Fall tritt beispielsweise durch",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "inv_environment"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_inv_boundary",
+      "beatId": "beat_01",
+      "targetId": "inv_boundary",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_inv_aux",
+      "beatId": "beat_02",
+      "targetId": "inv_aux",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_inv_energy",
+      "beatId": "beat_03",
+      "targetId": "inv_energy",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_04_inv_communication",
+      "beatId": "beat_04",
+      "targetId": "inv_communication",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_05_inv_control",
+      "beatId": "beat_05",
+      "targetId": "inv_control",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_06_inv_environment",
+      "beatId": "beat_06",
+      "targetId": "inv_environment",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_06",
+      "visibleGroups": [
+        "canvas_context",
+        "inv_boundary",
+        "inv_aux",
+        "inv_energy",
+        "inv_communication",
+        "inv_control",
+        "inv_environment"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

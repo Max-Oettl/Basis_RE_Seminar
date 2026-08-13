@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re2_ch1_methods",
+  "decision": "animated",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "qualitative_toolbox",
+      "label": "Qualitative Methoden",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "quantitative_toolbox",
+      "label": "Quantitative Methoden – zurückgenommen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "qualitative_focus_badge",
+      "label": "Fokus dieses Moduls",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "qualitative_tools",
+      "label": "FTA und FMEA",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_qualitative_toolbox",
+      "targetId": "qualitative_toolbox",
+      "action": "show",
+      "sourceText": "Nämlich in die qualitativen und in die quantitativen Zuverlässigkeitsmethoden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beide Methodenkategorien erscheinen gemeinsam.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_quantitative_toolbox",
+      "targetId": "quantitative_toolbox",
+      "action": "show",
+      "sourceText": "Nämlich in die qualitativen und in die quantitativen Zuverlässigkeitsmethoden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Der quantitative Werkzeugkasten bleibt neutral-grau.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_qualitative_focus_badge",
+      "targetId": "qualitative_focus_badge",
+      "action": "show",
+      "sourceText": "In diesem Modul werden wir ausschließlich die qualitativen Methoden betrachten",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Der Modulfokus wird erst mit der expliziten Einschränkung sichtbar.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_qualitative_tools",
+      "targetId": "qualitative_tools",
+      "action": "show",
+      "sourceText": "Dazu schauen wir uns hauptsächlich die Fehlerbaumanalyse an",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "FTA und FMEA werden als atomare Werkzeuggruppe eingeführt.",
+      "enterFrames": 16
+    }
+  ]
+}

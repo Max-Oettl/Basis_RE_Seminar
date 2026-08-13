@@ -8,6 +8,62 @@
     "drawDurFrames": 42,
     "transformDurFrames": 30
   },
-  "targets": [],
-  "steps": []
+  "targets": [
+    {
+      "targetId": "s65_acronym",
+      "label": "Akronym FMEA",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s65_definition",
+      "label": "Definition",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s65_roles",
+      "label": "Aufgaben der FMEA",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s65_acronym",
+      "targetId": "s65_acronym",
+      "action": "show",
+      "sourceText": "FMEA bedeutet Fehler-Möglichkeits- und Einfluss-Analyse.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_s65_definition",
+      "targetId": "s65_definition",
+      "action": "show",
+      "sourceText": "Die FMEA ist eine systematische, vorausschauende und entwicklungsbegleitende Methode.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_s65_roles",
+      "targetId": "s65_roles",
+      "action": "show",
+      "sourceText": "Sie wird im Team durchgeführt, um mögliche Arten von Ausfällen, deren Folgen und Ursachen frühzeitig zu erkennen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    }
+  ]
 }

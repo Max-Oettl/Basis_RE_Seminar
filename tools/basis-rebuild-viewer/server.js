@@ -7,16 +7,24 @@ const svgAnimationDomain = require("./svg-animation-domain");
 const narrationPauseDomain = require("./narration-pause-domain");
 const contentCrosscheckDomain = require("./content-crosscheck-domain");
 const trainingStructureDomain = require("./training-structure-domain");
+const svgEditorServerDomain = require("./svg-editor-server-domain");
+const { renderFormulaSvg } = require("./svg-formula-renderer");
 
 const repoRoot = path.resolve(__dirname, "..", "..");
 const realRepoRoot = fs.realpathSync(repoRoot);
 const indexPath = path.join(__dirname, "index.html");
 const svgAnimationEditorPath = path.join(__dirname, "svg-animation-editor.html");
+const svgEditorPath = path.join(__dirname, "svg-editor.html");
+const archivoFontPath = path.join(repoRoot, "brand", "fonts", "archivo", "Archivo-wdth-wght.ttf");
 const viewerAssetPaths = new Map([
   ["svg-animation-domain.js", path.join(__dirname, "svg-animation-domain.js")],
   ["narration-pause-domain.js", path.join(__dirname, "narration-pause-domain.js")],
   ["svg-animation-editor.js", path.join(__dirname, "svg-animation-editor.js")],
   ["svg-animation-editor.css", path.join(__dirname, "svg-animation-editor.css")],
+  ["svg-editor-domain.js", path.join(__dirname, "svg-editor-domain.js")],
+  ["svg-editor.js", path.join(__dirname, "svg-editor.js")],
+  ["svg-editor.css", path.join(__dirname, "svg-editor.css")],
+  ["Archivo-wdth-wght.ttf", archivoFontPath],
 ]);
 const sourceRoot = path.join(repoRoot, "source-materials", "basis-seminar");
 const sourceSvgRoot = path.join(sourceRoot, "powerpoint-svg");
@@ -169,6 +177,18 @@ function readScenePlan(moduleId) {
   }
 }
 
+function plannedSceneForSlide(scenePlan, slideNumber) {
+  const safeSlideNumber = Number(slideNumber);
+  const workUnit = `slide_${padSlideNumber(safeSlideNumber)}`;
+  return scenePlan.scenes.find((entry) => String(entry?.work_unit || "") === workUnit) ||
+    scenePlan.scenes.find((entry) => {
+      const targetSvg = String(entry?.target_svg || "").replaceAll("\\", "/");
+      return targetSvg.includes(`/${workUnit}/`) || targetSvg.endsWith(`/${workUnit}.svg`);
+    }) ||
+    scenePlan.scenes.find((entry) => Number(entry?.output_slide_number) === safeSlideNumber) ||
+    null;
+}
+
 function readSpokenTextOverrides() {
   const fallback = {
     schema_version: "basisRebuildSpokenTextOverrides/v1",
@@ -260,9 +280,7 @@ function mappedSpeakerTextForSlide(sourceTextMap, slideNumber) {
 
 function spokenTextForSlide(scenePlan, slideNumber, slide, override = null, sourceTextMap = null) {
   const safeSlideNumber = Number(slideNumber);
-  const scene = scenePlan.scenes.find(
-    (entry) => Number(entry?.output_slide_number) === safeSlideNumber,
-  );
+  const scene = plannedSceneForSlide(scenePlan, safeSlideNumber);
   const sceneText = typeof scene?.spoken_text === "string" ? scene.spoken_text.trim() : "";
   let resolved;
   if (sceneText) {
@@ -313,9 +331,7 @@ function spokenTextForSlide(scenePlan, slideNumber, slide, override = null, sour
 
 function animationDecisionForSlide(scenePlan, slideNumber) {
   const safeSlideNumber = Number(slideNumber);
-  const scene = scenePlan.scenes.find(
-    (entry) => Number(entry?.output_slide_number) === safeSlideNumber,
-  );
+  const scene = plannedSceneForSlide(scenePlan, safeSlideNumber);
   const decision = String(scene?.animation_plan?.decision || "");
   if (["static", "animated", "needs_review"].includes(decision)) {
     return {
@@ -992,6 +1008,12 @@ function versionRecordFromMetadata(moduleId, slideNumber, versionRoot, metadata)
     notes: typeof metadata.notes === "string" ? metadata.notes : "",
     source_svg_path: metadata.source_svg_path || "",
     svg_sha256: metadata.svg_sha256 || "",
+    document_sha256: metadata.document_sha256 || "",
+    editor_schema_version: metadata.editor_schema_version || "",
+    editor_action: metadata.editor_action || "",
+    formula_asset_count: Array.isArray(metadata.formula_assets)
+      ? metadata.formula_assets.filter((asset) => asset?.exists !== false).length
+      : 0,
     proposal: {
       path: toWebPath(svgPath),
       url: fileUrl(svgPath),
@@ -1649,6 +1671,8 @@ function listSlides() {
 
   const slides = [...map.values()]
     .map((record) => {
+      const scenePlan = scenePlans.get(record.moduleId) || { path: "", scenes: [], readError: "" };
+      const plannedScene = plannedSceneForSlide(scenePlan, record.slideNumber);
       const sourceTextMap = sourceTextMaps.get(record.moduleId);
       const sourceTextMapping = sourceTextMap?.mappings?.get(Number(record.slideNumber));
       const review = readReview(record.moduleId, record.slideNumber);
@@ -1677,19 +1701,25 @@ function listSlides() {
         referenceMapping,
       );
       const spokenText = spokenTextForSlide(
-        scenePlans.get(record.moduleId) || { path: "", scenes: [], readError: "" },
+        scenePlan,
         record.slideNumber,
         record,
         spokenTextOverrides.slides[slideKey(record.moduleId, record.slideNumber)] || null,
         sourceTextMap,
       );
       const animationDecision = animationDecisionForSlide(
-        scenePlans.get(record.moduleId) || { path: "", scenes: [], readError: "" },
+        scenePlan,
         record.slideNumber,
       );
       return {
         ...record,
+        sequenceNumber: Number(plannedScene?.output_slide_number) || null,
+        workUnit: String(plannedScene?.work_unit || ""),
+        consolidatedSourceSlides: Array.isArray(plannedScene?.source_slides)
+          ? plannedScene.source_slides.map(Number).filter(Number.isFinite)
+          : [],
         title:
+          plannedScene?.content_title ||
           record.title ||
           sourceTextMapping?.source_text_title ||
           record.oldSlide?.fileName ||
@@ -1891,8 +1921,627 @@ function resolveNarrationText(slide) {
   };
 }
 
+function proposalPathIsAllowed(absolutePath) {
+  return proposalRoots.some((root) => {
+    const relativePath = path.relative(path.resolve(root), absolutePath);
+    return !relativePath.startsWith("..") && !path.isAbsolute(relativePath);
+  });
+}
+
+function resolveKnownProposalPath(proposal) {
+  const requestedSvgPath = proposal?.path ? path.resolve(repoRoot, proposal.path) : "";
+  if (
+    !requestedSvgPath ||
+    !proposalPathIsAllowed(requestedSvgPath) ||
+    !isInsideRepo(requestedSvgPath) ||
+    path.extname(requestedSvgPath).toLowerCase() !== ".svg" ||
+    !fs.existsSync(requestedSvgPath) ||
+    !fs.statSync(requestedSvgPath).isFile() ||
+    !isInsideRepoReal(requestedSvgPath)
+  ) {
+    throw createHttpError("Der SVG-Vorschlag ist nicht sicher aufloesbar.", 400);
+  }
+  return fs.realpathSync(requestedSvgPath);
+}
+
+function resolveCurrentProposalTarget(slideId) {
+  const collection = listSlides();
+  const slide = collection.slides.find((item) => item.id === String(slideId || ""));
+  if (!slide) throw createHttpError("Folie wurde nicht gefunden.", 404);
+  const proposal = slide.svgProposal;
+  if (!proposal?.path) throw createHttpError("Fuer diese Folie gibt es keinen SVG-Vorschlag.", 404);
+  const svgPath = resolveKnownProposalPath(proposal);
+  const sharedSlides = collection.slides.filter((item) => {
+    if (!item.svgProposal?.path) return false;
+    try {
+      return resolveKnownProposalPath(item.svgProposal) === svgPath;
+    } catch {
+      return false;
+    }
+  }).map((item) => ({
+    id: item.id,
+    moduleId: item.moduleId,
+    slideNumber: item.slideNumber,
+    reviewStatus: item.review?.status || "open",
+    aliasForSlideNumber: item.svgProposal?.aliasForSlideNumber || null,
+  }));
+  const linkedFinalSlides = sharedSlides.filter((item) => item.reviewStatus === "final");
+  const warnings = [];
+  if (proposal.aliasForSlideNumber) {
+    warnings.push({
+      code: "proposal-alias",
+      severity: "warning",
+      message: `Diese Folie verwendet physisch den SVG-Vorschlag von Folie ${proposal.aliasForSlideNumber}.`,
+      aliasForSlideNumber: proposal.aliasForSlideNumber,
+    });
+  }
+  if (sharedSlides.length > 1) {
+    warnings.push({
+      code: "shared-physical-svg",
+      severity: "warning",
+      message: `Dieses SVG wird von ${sharedSlides.length} Viewer-Folien gemeinsam verwendet. Eine Bearbeitung wirkt auf alle Verknuepfungen.`,
+      slides: sharedSlides,
+    });
+  }
+  const readOnly = slide.review?.status === "final" || linkedFinalSlides.length > 0;
+  const readOnlyReason = slide.review?.status === "final"
+    ? "Final freigegebene Folien sind schreibgeschuetzt."
+    : linkedFinalSlides.length
+      ? "Das physische SVG ist mit mindestens einer final freigegebenen Folie verknuepft."
+      : "";
+  return {
+    slide,
+    proposal,
+    svgPath,
+    sceneDirectory: path.dirname(svgPath),
+    sharedSlides,
+    warnings,
+    readOnly,
+    readOnlyReason,
+  };
+}
+
+function isInsideDirectory(root, candidate) {
+  const relativePath = path.relative(root, candidate);
+  return !relativePath.startsWith("..") && !path.isAbsolute(relativePath);
+}
+
+function resolveSceneFormulaPath(target, relativeFormulaPath, options = {}) {
+  const normalizedPath = svgEditorServerDomain.normalizeFormulaAssetPath(relativeFormulaPath);
+  if (!normalizedPath || normalizedPath !== String(relativeFormulaPath).replaceAll("\\", "/")) {
+    throw createHttpError(`Ungueltiger Formelpfad: ${relativeFormulaPath}`, 400);
+  }
+  const sceneDirectory = fs.realpathSync(target.sceneDirectory);
+  const assetPath = path.resolve(sceneDirectory, ...normalizedPath.split("/"));
+  if (
+    !isInsideDirectory(sceneDirectory, assetPath) ||
+    assetPath === target.svgPath ||
+    path.extname(assetPath).toLowerCase() !== ".svg"
+  ) {
+    throw createHttpError(`Der Formelpfad liegt ausserhalb des Szenenordners: ${normalizedPath}`, 400);
+  }
+  if (fs.existsSync(assetPath)) {
+    if (!fs.statSync(assetPath).isFile() || !isInsideRepoReal(assetPath)) {
+      throw createHttpError(`Das Formel-Asset ist nicht sicher aufloesbar: ${normalizedPath}`, 400);
+    }
+    const realAssetPath = fs.realpathSync(assetPath);
+    if (!isInsideDirectory(sceneDirectory, realAssetPath)) {
+      throw createHttpError(`Das Formel-Asset liegt ausserhalb des Szenenordners: ${normalizedPath}`, 400);
+    }
+    return realAssetPath;
+  }
+  if (options.mustExist) {
+    throw createHttpError(`Das archivierte Formel-Asset fehlt: ${normalizedPath}`, 422);
+  }
+  let existingParent = path.dirname(assetPath);
+  while (!fs.existsSync(existingParent) && existingParent !== sceneDirectory) {
+    existingParent = path.dirname(existingParent);
+  }
+  if (
+    !fs.existsSync(existingParent) ||
+    !fs.statSync(existingParent).isDirectory() ||
+    !isInsideDirectory(sceneDirectory, fs.realpathSync(existingParent))
+  ) {
+    throw createHttpError(`Der Zielordner des Formel-Assets ist nicht sicher: ${normalizedPath}`, 400);
+  }
+  return assetPath;
+}
+
+function formulaAssetsForSource(target, svgSource) {
+  const discovery = svgEditorServerDomain.discoverFormulaAssetReferences(svgSource);
+  const warnings = [...discovery.issues];
+  const assets = [];
+  for (const reference of discovery.references) {
+    try {
+      const absolutePath = resolveSceneFormulaPath(target, reference.path);
+      const exists = fs.existsSync(absolutePath);
+      const source = exists ? fs.readFileSync(absolutePath, "utf8") : "";
+      assets.push({
+        path: reference.path,
+        absolutePath,
+        exists,
+        source,
+        sha256: exists ? svgEditorServerDomain.sha256(source) : "",
+        sizeBytes: exists ? Buffer.byteLength(source, "utf8") : 0,
+        metadata: exists ? svgEditorServerDomain.extractSvgMetadata(source) : {},
+      });
+      if (!exists) {
+        warnings.push({
+          code: "missing-formula-asset",
+          severity: "warning",
+          path: reference.path,
+          message: `Das referenzierte Formel-Asset fehlt: ${reference.path}`,
+        });
+      }
+    } catch (error) {
+      warnings.push({
+        code: "unsafe-formula-asset",
+        severity: "error",
+        path: reference.path,
+        message: error.message,
+      });
+    }
+  }
+  return { assets, warnings, references: discovery.references };
+}
+
+function currentSvgEditorDocument(target) {
+  const source = fs.readFileSync(target.svgPath, "utf8");
+  const formulaResult = formulaAssetsForSource(target, source);
+  return {
+    source,
+    sha256: svgEditorServerDomain.sha256(source),
+    documentSha256: svgEditorServerDomain.documentSha256(source, formulaResult.assets),
+    dimensions: svgEditorServerDomain.extractRootAttributes(source),
+    formulaAssets: formulaResult.assets,
+    warnings: formulaResult.warnings,
+    formulaReferences: formulaResult.references,
+  };
+}
+
+function publicFormulaAsset(asset) {
+  return {
+    path: asset.path,
+    exists: asset.exists,
+    source: asset.source,
+    sha256: asset.sha256,
+    sizeBytes: asset.sizeBytes,
+    metadata: asset.metadata,
+  };
+}
+
+function readSvgEditorVersions(target) {
+  const root = reviewVersionDirectory(target.slide.moduleId, target.slide.slideNumber);
+  if (!fs.existsSync(root)) return [];
+  const versions = [];
+  for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
+    if (!entry.isDirectory() || !/^[A-Za-z0-9][A-Za-z0-9._-]*$/.test(entry.name)) continue;
+    const versionRoot = path.join(root, entry.name);
+    const metadataPath = path.join(versionRoot, "version.json");
+    if (!fs.existsSync(metadataPath) || !fs.statSync(metadataPath).isFile()) continue;
+    try {
+      const metadata = readJsonFile(metadataPath);
+      if (metadata.editor_schema_version !== "basisSvgEditorVersion/v1") continue;
+      const sameTarget =
+        cleanModuleId(metadata.module_id) === target.slide.moduleId &&
+        Number(metadata.source_slide_number) === Number(target.slide.slideNumber) &&
+        String(metadata.source_svg_path || "").replaceAll("\\", "/") ===
+          String(target.proposal.path || "").replaceAll("\\", "/");
+      versions.push({
+        versionId: entry.name,
+        label: String(metadata.label || versionLabel(metadata.created_at)),
+        createdAt: metadata.created_at || null,
+        action: metadata.editor_action || "save",
+        svgSha256: metadata.svg_sha256 || "",
+        documentSha256: metadata.document_sha256 || "",
+        formulaAssetCount: Array.isArray(metadata.formula_assets)
+          ? metadata.formula_assets.filter((asset) => asset?.exists !== false).length
+          : 0,
+        restorable: sameTarget && metadata.version_id === entry.name,
+      });
+    } catch {
+      // Broken archives remain untouched and are not offered for restore.
+    }
+  }
+  return versions.sort((left, right) =>
+    naturalCompare(right.createdAt || right.versionId, left.createdAt || left.versionId)
+  );
+}
+
+function readSvgEditorState(slideId) {
+  const target = resolveCurrentProposalTarget(slideId);
+  const document = currentSvgEditorDocument(target);
+  const currentValidation = svgEditorServerDomain.validateSvgSource(document.source);
+  return {
+    slide: {
+      id: target.slide.id,
+      moduleId: target.slide.moduleId,
+      slideNumber: target.slide.slideNumber,
+      slideId: target.slide.slideId,
+      title: target.slide.title,
+      reviewStatus: target.slide.review?.status || "open",
+      aliasForSlideNumber: target.proposal.aliasForSlideNumber || null,
+      sharedSlides: target.sharedSlides,
+    },
+    svg: {
+      path: target.proposal.path,
+      assetUrl: fileUrl(target.svgPath),
+      source: document.source,
+      sha256: document.sha256,
+      documentSha256: document.documentSha256,
+      width: document.dimensions.width,
+      height: document.dimensions.height,
+      viewBox: document.dimensions.viewBox,
+    },
+    formulaAssets: document.formulaAssets.map(publicFormulaAsset),
+    versions: readSvgEditorVersions(target),
+    warnings: [...target.warnings, ...document.warnings],
+    validationErrors: currentValidation.errors,
+    readOnly: target.readOnly,
+    readOnlyReason: target.readOnlyReason,
+    saveBlocked: target.readOnly,
+  };
+}
+
+function archiveSvgEditorVersion(target, label, action = "save") {
+  const document = currentSvgEditorDocument(target);
+  const createdAt = new Date().toISOString();
+  const versionId = makeVersionId(target.slide.moduleId, target.slide.slideNumber, createdAt);
+  const versionRoot = path.join(reviewVersionDirectory(target.slide.moduleId, target.slide.slideNumber), versionId);
+  fs.mkdirSync(versionRoot, { recursive: true });
+  try {
+    const targetSvgPath = path.join(versionRoot, path.basename(target.svgPath));
+    fs.writeFileSync(targetSvgPath, document.source, "utf8");
+    const formulaAssets = [];
+    for (const asset of document.formulaAssets) {
+      const archivedPath = path.resolve(versionRoot, ...asset.path.split("/"));
+      if (!isInsideDirectory(versionRoot, archivedPath)) {
+        throw createHttpError(`Archivpfad fuer Formel-Asset ist ungueltig: ${asset.path}`, 400);
+      }
+      if (asset.exists) {
+        fs.mkdirSync(path.dirname(archivedPath), { recursive: true });
+        fs.writeFileSync(archivedPath, asset.source, "utf8");
+      }
+      formulaAssets.push({
+        path: asset.path,
+        exists: asset.exists,
+        archived_path: asset.exists ? toWebPath(archivedPath) : "",
+        sha256: asset.sha256,
+      });
+    }
+    const metadata = {
+      schema_version: "basisRebuildViewerVersion/v1",
+      editor_schema_version: "basisSvgEditorVersion/v1",
+      editor_action: action,
+      module_id: target.slide.moduleId,
+      source_slide_number: Number(target.slide.slideNumber),
+      version_id: versionId,
+      label: svgEditorServerDomain.normalizeVersionLabel(label, versionLabel(createdAt)),
+      created_at: createdAt,
+      review_status: normalizedReviewStatus(target.slide.review?.status),
+      notes: "",
+      source_svg_path: target.proposal.path,
+      svg_path: toWebPath(targetSvgPath),
+      animation_path: "",
+      svg_sha256: document.sha256,
+      document_sha256: document.documentSha256,
+      formula_assets: formulaAssets,
+    };
+    writeJsonFile(path.join(versionRoot, "version.json"), metadata);
+    return {
+      ...versionRecordFromMetadata(target.slide.moduleId, target.slide.slideNumber, versionRoot, metadata),
+      documentSha256: document.documentSha256,
+      formulaAssets: formulaAssets.map((asset) => ({
+        path: asset.path,
+        exists: asset.exists,
+        sha256: asset.sha256,
+      })),
+    };
+  } catch (error) {
+    if (isInsideDirectory(reviewVersionDirectory(target.slide.moduleId, target.slide.slideNumber), versionRoot)) {
+      fs.rmSync(versionRoot, { recursive: true, force: true });
+    }
+    throw error;
+  }
+}
+
+function writeTextFilesAtomic(entries) {
+  const normalizedEntries = [];
+  const seen = new Set();
+  const transactionId = `${process.pid}-${Date.now()}-${crypto.randomBytes(5).toString("hex")}`;
+  try {
+    for (const entry of entries) {
+      const targetPath = path.resolve(entry.path);
+      if (seen.has(targetPath)) throw new Error(`Doppeltes Schreibziel: ${targetPath}`);
+      seen.add(targetPath);
+      fs.mkdirSync(path.dirname(targetPath), { recursive: true });
+      const temporaryPath = `${targetPath}.svg-editor-tmp-${transactionId}`;
+      fs.writeFileSync(temporaryPath, String(entry.source), "utf8");
+      normalizedEntries.push({
+        targetPath,
+        temporaryPath,
+        backupPath: `${targetPath}.svg-editor-backup-${transactionId}`,
+        backupCreated: false,
+        applied: false,
+      });
+    }
+    for (const entry of normalizedEntries) {
+      if (fs.existsSync(entry.targetPath)) {
+        fs.renameSync(entry.targetPath, entry.backupPath);
+        entry.backupCreated = true;
+      }
+      fs.renameSync(entry.temporaryPath, entry.targetPath);
+      entry.applied = true;
+    }
+  } catch (error) {
+    for (const entry of [...normalizedEntries].reverse()) {
+      try {
+        if (entry.applied && fs.existsSync(entry.targetPath)) fs.rmSync(entry.targetPath, { force: true });
+        if (entry.backupCreated && fs.existsSync(entry.backupPath)) {
+          if (fs.existsSync(entry.targetPath)) fs.rmSync(entry.targetPath, { force: true });
+          fs.renameSync(entry.backupPath, entry.targetPath);
+        }
+        if (fs.existsSync(entry.temporaryPath)) fs.rmSync(entry.temporaryPath, { force: true });
+      } catch {
+        // Preserve the original write error; rollback is best-effort per entry.
+      }
+    }
+    throw error;
+  }
+  for (const entry of normalizedEntries) {
+    try {
+      if (fs.existsSync(entry.backupPath)) fs.rmSync(entry.backupPath, { force: true });
+      if (fs.existsSync(entry.temporaryPath)) fs.rmSync(entry.temporaryPath, { force: true });
+    } catch {
+      // A stale backup does not invalidate a successfully committed target file.
+    }
+  }
+}
+
+function assertSvgEditorWritable(target) {
+  if (target.readOnly) throw createHttpError(target.readOnlyReason, 409);
+}
+
+function assertExpectedDocumentSha(expectedSha256, currentDocument) {
+  if (!/^[a-f0-9]{64}$/i.test(String(expectedSha256 || ""))) {
+    throw createHttpError("expectedSha256 fehlt oder ist ungueltig.", 400);
+  }
+  if (String(expectedSha256).toLowerCase() !== currentDocument.documentSha256.toLowerCase()) {
+    throw createHttpError(
+      "Das SVG oder ein Formel-Asset wurde zwischenzeitlich geaendert. Bitte neu laden.",
+      409,
+      { expectedSha256, currentSha256: currentDocument.documentSha256 },
+    );
+  }
+}
+
+function validatedFormulaWrites(target, currentDocument, nextValidation, formulaAssets) {
+  if (formulaAssets == null) return [];
+  if (!Array.isArray(formulaAssets)) throw createHttpError("formulaAssets muss eine Liste sein.", 400);
+  if (formulaAssets.length > 200) throw createHttpError("Zu viele Formel-Assets in einer Anfrage.", 400);
+  const allowedCurrentPaths = new Set(currentDocument.formulaReferences.map((reference) => reference.path));
+  const currentAssetsByPath = new Map(currentDocument.formulaAssets.map((asset) => [asset.path, asset]));
+  const writes = [];
+  const seen = new Set();
+  for (const asset of formulaAssets) {
+    if (!asset || typeof asset !== "object" || Array.isArray(asset)) {
+      throw createHttpError("Ungueltiger Formel-Asset-Eintrag.", 400);
+    }
+    const normalizedPath = svgEditorServerDomain.normalizeFormulaAssetPath(asset.path);
+    if (!normalizedPath || seen.has(normalizedPath)) {
+      throw createHttpError(`Ungueltiger oder doppelter Formelpfad: ${asset.path}`, 400);
+    }
+    seen.add(normalizedPath);
+    if (!allowedCurrentPaths.has(normalizedPath)) {
+      throw createHttpError(
+        `Formel-Assets duerfen nur ueber vorhandene data-formula-asset-Referenzen bearbeitet werden: ${normalizedPath}`,
+        400,
+      );
+    }
+    if (typeof asset.source !== "string") {
+      throw createHttpError(`SVG-Quelltext fuer Formel-Asset fehlt: ${normalizedPath}`, 400);
+    }
+    if (!asset.source && currentAssetsByPath.get(normalizedPath)?.exists === false) {
+      continue;
+    }
+    const validation = svgEditorServerDomain.validateSvgSource(asset.source);
+    if (!validation.valid || validation.formulaReferences.length) {
+      throw createHttpError(
+        `Das Formel-Asset ${normalizedPath} ist nicht sicher oder nicht gueltig.`,
+        422,
+        validation.errors.length
+          ? validation.errors
+          : [{ code: "nested-formula-assets", message: "Verschachtelte Formel-Assets sind nicht erlaubt." }],
+      );
+    }
+    writes.push({ path: resolveSceneFormulaPath(target, normalizedPath), source: asset.source });
+  }
+  return writes;
+}
+
+function saveSvgEditorState(slideId, draft) {
+  const target = resolveCurrentProposalTarget(slideId);
+  assertSvgEditorWritable(target);
+  if (!draft || typeof draft !== "object" || Array.isArray(draft)) {
+    throw createHttpError("SVG-Editor-Daten fehlen.", 400);
+  }
+  if (typeof draft.source !== "string") throw createHttpError("SVG-Quelltext fehlt.", 400);
+  const currentDocument = currentSvgEditorDocument(target);
+  assertExpectedDocumentSha(draft.expectedSha256, currentDocument);
+  const validation = svgEditorServerDomain.validateSvgSource(draft.source);
+  if (!validation.valid) {
+    throw createHttpError("Das SVG ist nicht sicher oder nicht gueltig.", 422, validation.errors);
+  }
+  const allowedPaths = new Set(currentDocument.formulaReferences.map((reference) => reference.path));
+  const introducedPaths = validation.formulaReferences
+    .map((reference) => reference.path)
+    .filter((formulaPath) => !allowedPaths.has(formulaPath));
+  if (introducedPaths.length) {
+    throw createHttpError(
+      "Neue Formeldateipfade duerfen im SVG-Editor nicht eingefuehrt werden.",
+      400,
+      introducedPaths,
+    );
+  }
+  const formulaWrites = validatedFormulaWrites(target, currentDocument, validation, draft.formulaAssets);
+  const archivedVersion = archiveSvgEditorVersion(target, draft.label, "save");
+  writeTextFilesAtomic([{ path: target.svgPath, source: draft.source }, ...formulaWrites]);
+  return { svgEditor: readSvgEditorState(slideId), archivedVersion };
+}
+
+function simpleVersionId(value) {
+  const versionId = String(value || "");
+  if (
+    !/^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$/.test(versionId) ||
+    versionId === "." ||
+    versionId === ".." ||
+    path.basename(versionId) !== versionId
+  ) {
+    throw createHttpError("Ungueltige Versions-ID.", 400);
+  }
+  return versionId;
+}
+
+function loadSvgEditorVersion(target, requestedVersionId) {
+  const versionId = simpleVersionId(requestedVersionId);
+  const versionsRoot = reviewVersionDirectory(target.slide.moduleId, target.slide.slideNumber);
+  const versionRoot = path.resolve(versionsRoot, versionId);
+  if (
+    !isInsideDirectory(versionsRoot, versionRoot) ||
+    !fs.existsSync(versionRoot) ||
+    !fs.statSync(versionRoot).isDirectory() ||
+    !isInsideRepoReal(versionRoot)
+  ) {
+    throw createHttpError("SVG-Editor-Version wurde nicht gefunden.", 404);
+  }
+  const realVersionRoot = fs.realpathSync(versionRoot);
+  if (!isInsideDirectory(path.resolve(versionsRoot), realVersionRoot)) {
+    throw createHttpError("Der Versionspfad ist nicht sicher.", 400);
+  }
+  const metadataPath = path.join(realVersionRoot, "version.json");
+  if (!fs.existsSync(metadataPath) || !fs.statSync(metadataPath).isFile()) {
+    throw createHttpError("Versionsmetadaten fehlen.", 422);
+  }
+  let metadata;
+  try {
+    metadata = readJsonFile(metadataPath);
+  } catch {
+    throw createHttpError("Versionsmetadaten sind kein gueltiges JSON.", 422);
+  }
+  const expectedProposalPath = String(target.proposal.path || "").replaceAll("\\", "/");
+  if (
+    metadata.schema_version !== "basisRebuildViewerVersion/v1" ||
+    metadata.editor_schema_version !== "basisSvgEditorVersion/v1" ||
+    metadata.version_id !== versionId ||
+    cleanModuleId(metadata.module_id) !== target.slide.moduleId ||
+    Number(metadata.source_slide_number) !== Number(target.slide.slideNumber) ||
+    String(metadata.source_svg_path || "").replaceAll("\\", "/") !== expectedProposalPath
+  ) {
+    throw createHttpError("Versionsmetadaten gehoeren nicht zu dieser Folie.", 422);
+  }
+  const archivedSvgPath = metadata.svg_path ? path.resolve(repoRoot, metadata.svg_path) : "";
+  if (
+    !archivedSvgPath ||
+    path.extname(archivedSvgPath).toLowerCase() !== ".svg" ||
+    !fs.existsSync(archivedSvgPath) ||
+    !fs.statSync(archivedSvgPath).isFile() ||
+    !isInsideRepoReal(archivedSvgPath) ||
+    path.dirname(fs.realpathSync(archivedSvgPath)) !== realVersionRoot ||
+    path.basename(archivedSvgPath) !== path.basename(target.svgPath)
+  ) {
+    throw createHttpError("Der archivierte SVG-Pfad ist nicht sicher oder unvollstaendig.", 422);
+  }
+  const source = fs.readFileSync(archivedSvgPath, "utf8");
+  const validation = svgEditorServerDomain.validateSvgSource(source);
+  if (!validation.valid) {
+    throw createHttpError("Das archivierte SVG ist nicht sicher oder nicht gueltig.", 422, validation.errors);
+  }
+  if (metadata.svg_sha256 !== svgEditorServerDomain.sha256(source)) {
+    throw createHttpError("Die Pruefsumme des archivierten SVGs stimmt nicht.", 422);
+  }
+  if (!Array.isArray(metadata.formula_assets)) {
+    throw createHttpError("Die Formel-Asset-Metadaten der Version fehlen.", 422);
+  }
+  const referencePaths = new Set(validation.formulaReferences.map((reference) => reference.path));
+  const archivedAssets = [];
+  const seen = new Set();
+  for (const assetMetadata of metadata.formula_assets) {
+    const formulaPath = svgEditorServerDomain.normalizeFormulaAssetPath(assetMetadata?.path);
+    if (!formulaPath || seen.has(formulaPath) || !referencePaths.has(formulaPath)) {
+      throw createHttpError("Die Formel-Asset-Metadaten sind inkonsistent.", 422);
+    }
+    seen.add(formulaPath);
+    if (assetMetadata.exists === false) {
+      throw createHttpError(`Die Version enthaelt ein fehlendes Formel-Asset: ${formulaPath}`, 422);
+    }
+    const expectedArchivedPath = path.resolve(realVersionRoot, ...formulaPath.split("/"));
+    const archivedPath = assetMetadata.archived_path
+      ? path.resolve(repoRoot, assetMetadata.archived_path)
+      : "";
+    if (
+      !archivedPath ||
+      archivedPath !== expectedArchivedPath ||
+      !isInsideDirectory(realVersionRoot, archivedPath) ||
+      !fs.existsSync(archivedPath) ||
+      !fs.statSync(archivedPath).isFile() ||
+      !isInsideRepoReal(archivedPath) ||
+      fs.realpathSync(archivedPath) !== expectedArchivedPath
+    ) {
+      throw createHttpError(`Das archivierte Formel-Asset ist nicht sicher: ${formulaPath}`, 422);
+    }
+    const assetSource = fs.readFileSync(archivedPath, "utf8");
+    const assetValidation = svgEditorServerDomain.validateSvgSource(assetSource);
+    if (!assetValidation.valid || assetValidation.formulaReferences.length) {
+      throw createHttpError(`Das archivierte Formel-Asset ist nicht gueltig: ${formulaPath}`, 422);
+    }
+    if (assetMetadata.sha256 !== svgEditorServerDomain.sha256(assetSource)) {
+      throw createHttpError(`Die Pruefsumme des Formel-Assets stimmt nicht: ${formulaPath}`, 422);
+    }
+    archivedAssets.push({
+      path: formulaPath,
+      source: assetSource,
+      exists: true,
+      absolutePath: resolveSceneFormulaPath(target, formulaPath),
+    });
+  }
+  if (seen.size !== referencePaths.size) {
+    throw createHttpError("Nicht alle referenzierten Formel-Assets sind in der Version enthalten.", 422);
+  }
+  const documentSha256 = svgEditorServerDomain.documentSha256(source, archivedAssets);
+  if (metadata.document_sha256 !== documentSha256) {
+    throw createHttpError("Die Dokument-Pruefsumme der Version stimmt nicht.", 422);
+  }
+  return { versionId, metadata, source, formulaAssets: archivedAssets, documentSha256 };
+}
+
+function restoreSvgEditorVersion(slideId, draft) {
+  const target = resolveCurrentProposalTarget(slideId);
+  assertSvgEditorWritable(target);
+  if (!draft || typeof draft !== "object" || Array.isArray(draft)) {
+    throw createHttpError("Wiederherstellungsdaten fehlen.", 400);
+  }
+  const currentDocument = currentSvgEditorDocument(target);
+  assertExpectedDocumentSha(draft.expectedSha256, currentDocument);
+  const version = loadSvgEditorVersion(target, draft.versionId);
+  const archivedVersion = archiveSvgEditorVersion(
+    target,
+    `Vor Wiederherstellung: ${version.metadata.label || version.versionId}`,
+    "restore-backup",
+  );
+  writeTextFilesAtomic([
+    { path: target.svgPath, source: version.source },
+    ...version.formulaAssets.map((asset) => ({ path: asset.absolutePath, source: asset.source })),
+  ]);
+  return {
+    svgEditor: readSvgEditorState(slideId),
+    archivedVersion,
+    restoredVersionId: version.versionId,
+  };
+}
+
 function resolveAnimationEditorTarget(slideId) {
-  const slide = listSlides().slides.find((item) => item.id === String(slideId || ""));
+  const currentTarget = resolveCurrentProposalTarget(slideId);
+  const slide = currentTarget.slide;
   if (!slide) throw createHttpError("Folie wurde nicht gefunden.", 404);
   const proposal = slide.svgProposal;
   if (!proposal?.path) throw createHttpError("Für diese Folie gibt es keinen SVG-Vorschlag.", 404);
@@ -1921,7 +2570,7 @@ function resolveAnimationEditorTarget(slideId) {
     throw createHttpError("Der Manifestpfad liegt außerhalb des SVG-Ordners.", 400);
   }
   const relativeSvgPath = path.relative(path.dirname(manifestPath), svgPath).split(path.sep).join("/");
-  return { slide, proposal, svgPath, manifestPath, relativeSvgPath };
+  return { ...currentTarget, slide, proposal, svgPath, manifestPath, relativeSvgPath };
 }
 
 function readAnimationEditorState(slideId) {
@@ -1969,7 +2618,7 @@ function readAnimationEditorState(slideId) {
   const duplicateIdError = inventoryResult.warnings.some(
     (warning) => warning.code === "duplicate-id" && warning.severity === "error",
   );
-  const readOnly = target.slide.review?.status === "final";
+  const readOnly = target.readOnly;
   return {
     slide: {
       id: target.slide.id,
@@ -1995,15 +2644,15 @@ function readAnimationEditorState(slideId) {
     spokenTextScope: narration.scope,
     spokenTextReadOnly: true,
     readOnly,
-    readOnlyReason: readOnly ? "Final freigegebene Folien sind schreibgeschützt." : "",
+    readOnlyReason: target.readOnlyReason,
     saveBlocked: schemaErrors.length > 0 || duplicateIdError,
   };
 }
 
 function saveAnimationEditorState(slideId, draft) {
   const target = resolveAnimationEditorTarget(slideId);
-  if (target.slide.review?.status === "final") {
-    throw createHttpError("Final freigegebene Folien sind schreibgeschützt.", 409);
+  if (target.readOnly) {
+    throw createHttpError(target.readOnlyReason, 409);
   }
   if (!draft || typeof draft !== "object" || Array.isArray(draft)) {
     throw createHttpError("Animationsmanifest fehlt.", 400);
@@ -2047,6 +2696,7 @@ function contentTypeFor(filePath) {
     ".jpg": "image/jpeg",
     ".jpeg": "image/jpeg",
     ".webp": "image/webp",
+    ".ttf": "font/ttf",
   }[extension] || "application/octet-stream";
 }
 
@@ -2152,25 +2802,37 @@ function serveViewerAsset(response, fileName) {
   send(response, 200, fs.readFileSync(assetPath), contentTypeFor(assetPath));
 }
 
-function readJsonBody(request) {
+function readJsonBody(request, maxBytes = 2_000_000) {
   return new Promise((resolve, reject) => {
     let body = "";
+    let bodyBytes = 0;
+    let settled = false;
     request.setEncoding("utf8");
     request.on("data", (chunk) => {
-      body += chunk;
-      if (body.length > 2_000_000) {
-        reject(new Error("Anfrage ist zu gross."));
-        request.destroy();
+      if (settled) return;
+      bodyBytes += Buffer.byteLength(chunk, "utf8");
+      if (bodyBytes > maxBytes) {
+        settled = true;
+        body = "";
+        reject(createHttpError("Anfrage ist zu gross.", 413));
+        return;
       }
+      body += chunk;
     });
     request.on("end", () => {
+      if (settled) return;
       try {
+        settled = true;
         resolve(JSON.parse(body || "{}"));
       } catch {
-        reject(new Error("Ungueltiges JSON."));
+        reject(createHttpError("Ungueltiges JSON.", 400));
       }
     });
-    request.on("error", reject);
+    request.on("error", (error) => {
+      if (settled) return;
+      settled = true;
+      reject(error);
+    });
   });
 }
 
@@ -2187,6 +2849,11 @@ const server = http.createServer((request, response) => {
     return;
   }
 
+  if (request.method === "GET" && requestUrl.pathname === "/svg-editor") {
+    send(response, 200, fs.readFileSync(svgEditorPath), "text/html; charset=utf-8");
+    return;
+  }
+
   if (request.method === "GET" && requestUrl.pathname.startsWith("/viewer-assets/")) {
     serveViewerAsset(response, requestUrl.pathname.slice("/viewer-assets/".length));
     return;
@@ -2194,6 +2861,60 @@ const server = http.createServer((request, response) => {
 
   if (request.method === "GET" && requestUrl.pathname === "/api/slides") {
     sendJson(response, 200, listSlides());
+    return;
+  }
+
+  if (request.method === "GET" && requestUrl.pathname === "/api/svg-editor") {
+    try {
+      sendJson(response, 200, { svgEditor: readSvgEditorState(requestUrl.searchParams.get("id")) });
+    } catch (error) {
+      sendJson(response, error.status || 500, {
+        error: error.message,
+        details: error.details || undefined,
+      });
+    }
+    return;
+  }
+
+  if (request.method === "POST" && requestUrl.pathname === "/api/svg-editor/save") {
+    readJsonBody(request, 12_000_000)
+      .then((body) => {
+        const result = saveSvgEditorState(body.id, body);
+        sendJson(response, 200, { ok: true, ...result });
+      })
+      .catch((error) => sendJson(response, error.status || 400, {
+        error: error.message,
+        details: error.details || undefined,
+      }));
+    return;
+  }
+
+  if (request.method === "POST" && requestUrl.pathname === "/api/svg-editor/formula-preview") {
+    readJsonBody(request, 100_000)
+      .then((body) => renderFormulaSvg(body.formula, {
+        fontSize: body.fontSize,
+        color: body.color,
+        width: body.width,
+        height: body.height,
+      }))
+      .then((formula) => sendJson(response, 200, { ok: true, formula }))
+      .catch((error) => sendJson(response, error.status || 400, {
+        error: error.message,
+        details: error.details || undefined,
+      }));
+    return;
+  }
+
+  if (request.method === "POST" && requestUrl.pathname === "/api/svg-editor/restore") {
+    readJsonBody(request, 12_000_000)
+      .then((body) => {
+        const result = restoreSvgEditorVersion(body.id, body);
+        sendJson(response, 200, { ok: true, ...result });
+      })
+      .catch((error) => sendJson(response, error.status || 400, {
+        error: error.message,
+        details: error.details || undefined,
+      }));
     return;
   }
 
@@ -2370,13 +3091,17 @@ module.exports = {
   mappedSpeakerTextForSlide,
   narrationPauseDomain,
   readAnimationEditorState,
+  readSvgEditorState,
   readSvgTextMap,
   reviewStatusAfterNoteSave,
   resolveNarrationText,
   runContentCrosscheck,
   saveAnimationEditorState,
+  saveSvgEditorState,
   spokenTextForSlide,
   validateSpokenTextOverride,
+  restoreSvgEditorVersion,
   server,
+  writeTextFilesAtomic,
   writeJsonFileAtomic,
 };

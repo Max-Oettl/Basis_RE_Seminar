@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch2_function_structure",
+  "svgPath": "slide_014.svg",
+  "spokenText": "Als nächstes befassen wir uns mit der Funktionsstruktur eines Systems.\n\nJedes technische Gebilde oder System besitzt eine eindeutige Funktion, die sich aus dem Zusammenhang zwischen den Ein- und Ausgangsgrößen ergibt.\n\nDabei kann das System zunächst als Black-Box aufgefasst werden: Eingangsgrößen treten ein und Ausgangsgrößen treten aus.\n\nDie Funktion selbst ist die Aufgabenbeschreibung in neutraler Form, also eine Aufgabenformulierung auf abstrakter und lösungsneutraler Ebene.\n\nAuf System-Ebene kann eine Funktion meist in untergeordnete Teilfunktionen aufgeteilt werden, wodurch sich eine Art Funktionsstruktur ergibt.\n\nWird die Summe dieser Teilfunktionen erfüllt, so ist auch die übergeordnete Funktion des Systems erfüllt.\n\nDa die Teilfunktionen oftmals direkt an physische Baugruppen oder Komponenten geknüpft sind, sind Systemstruktur und Funktionsstruktur häufig sehr ähnlich.\n\nIm Falle des Wechselrichters ist die Hauptfunktion die Umwandlung von Gleichstrom in Wechselstrom.Dies kann dann wieder weiter aufgeteilt werden in alle für den Wechselrichter relevanten Teilfunktionen. Jeder dieser Teilfunktionen hat natürlich wieder seine eigene Aufgabenbeschreibung und individuelle Ein- und Ausgangsgrößen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "func16_main",
+      "label": "Hauptfunktionskette",
+      "role": "content",
+      "members": [
+        "func16_main"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "func16_controls",
+      "label": "Regelungs- und Überwachungsfunktionen",
+      "role": "content",
+      "members": [
+        "func16_controls"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "func16_relations",
+      "label": "Funktionsbeziehungen",
+      "role": "content",
+      "members": [
+        "func16_relations"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Hauptfunktionskette",
+      "sourceText": "Im Falle des Wechselrichters ist die",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "func16_main"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Regelungs- und Überwachungsfunktionen",
+      "sourceText": "Dies kann dann wieder weiter aufgeteilt",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "func16_controls"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Funktionsbeziehungen",
+      "sourceText": "Jeder dieser Teilfunktionen hat natürlich wieder",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "func16_relations"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_func16_main",
+      "beatId": "beat_01",
+      "targetId": "func16_main",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_func16_controls",
+      "beatId": "beat_02",
+      "targetId": "func16_controls",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_func16_relations",
+      "beatId": "beat_03",
+      "targetId": "func16_relations",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_03",
+      "visibleGroups": [
+        "canvas_context",
+        "func16_main",
+        "func16_controls",
+        "func16_relations"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

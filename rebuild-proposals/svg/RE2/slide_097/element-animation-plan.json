@@ -1,6 +1,26 @@
 {
   "schemaVersion": "elementAnimationPlan/v1",
   "sceneId": "re2_ch4_failure_analysis",
-  "targets": [],
-  "steps": []
+  "targets": [
+    {
+      "targetId": "s103_media",
+      "label": "Vollständiger Funktions- und Fehlerbaum",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s103_media",
+      "targetId": "s103_media",
+      "action": "show",
+      "sourceText": "Kommen wir nun zum vierten Schritt der FME-A, der Fehleranalyse.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    }
+  ]
 }

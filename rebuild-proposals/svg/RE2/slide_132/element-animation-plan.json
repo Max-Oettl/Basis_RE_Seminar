@@ -1,6 +1,26 @@
 {
   "schemaVersion": "elementAnimationPlan/v1",
   "sceneId": "re2_ch4_documentation",
-  "targets": [],
-  "steps": []
+  "targets": [
+    {
+      "targetId": "s136_form",
+      "label": "FMEA-Formblatt Stufe 4",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s136_form",
+      "targetId": "s136_form",
+      "action": "show",
+      "sourceText": "Einen beispielhaften Aufbau eines solchen Formblatts könnt ihr hier sehen. Je nach den Anforderungen des Unternehmens kann das Formblatt unterschiedlich gestaltet sein. Wichtig ist, dass alle relevanten Informationen aus den vorherigen Schritten der FME-A enthalten sind. Dazu gehören die Ergebnisse der Struktur- und Funktionsanalyse.  Außerdem werden die identifizierten Fehlfunktionen samt Ursachen und Auswirkungen sowie die Ergebnisse der durchgeführten Risikobewertung, basierend auf den Bewertungsgrößen Bedeutung, Auftretenswahrscheinlichkeit und Entdeckungswahrscheinlichkeit erfasst.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    }
+  ]
 }

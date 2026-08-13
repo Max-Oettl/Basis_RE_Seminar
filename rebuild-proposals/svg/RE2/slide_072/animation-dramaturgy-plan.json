@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_step1_planning",
+  "svgPath": "slide_072.svg",
+  "spokenText": "Die Vorgehensweise der Design-FME-A lässt sich in sieben Schritte aufteilen. Beginnen wir mit dem ersten Schritt: der Planung und Vorbereitung.\n\nIn dieser Phase legen wir die Grundlagen für eine erfolgreiche Design-FME-A. Zunächst wird der Analyseumfang festgelegt und genau definiert. Das bedeutet, wir bestimmen das spezifische Produkt oder den Produktbereich, den wir untersuchen wollen. Gleichzeitig legen wir die Betrachtungsebene der Analyse fest.\n\nAuf System-Ebene betrachten wir das Gesamtsystem und seine Hauptfunktionen.\n\nAuf Teilsystem-Ebene hingegen, fokussieren wir uns auf bestimmte Teilsysteme oder Baugruppen.\n\nUnd auf Komponenten-Ebene analysieren wir einzelne Komponenten oder Bauteile innerhalb des Gesamtsystems.\n\nEine klare Abgrenzung des Analyseumfangs hilft uns, den Fokus zu behalten und unsere Ressourcen gezielt einzusetzen.\n\nAnschließend sammeln wir alle verfügbaren Informationen, Dokumente und Materialien, die relevant sein könnten. Dazu gehören zum Beispiel Erkenntnisse und Erfahrungen aus früheren Projekten oder bereits durchgeführte FME-A‘s. Auch Lessons-Learned Dokumentationen können hier eine wertvolle Quelle sein, da sie oft wichtige Informationen über frühere Fehler und deren Lösungen enthalten.\n\nEin weiterer wichtiger Aspekt ist die Zusammenstellung eines geeigneten Teams. Ein interdisziplinäres Team, das unterschiedliche Rollen und Fachbereiche repräsentiert, ist entscheidend für den Erfolg der FME-A.\n\nWerfen wir einen genaueren Blick auf die Teamzusammensetzung.\n\nDas Team wird in der Regel von einem Moderator begleitet. Dieser Moderator ist nicht der Fachexperte oder Verantwortliche, sondern eine neutrale Instanz, die den Prozess leitet. Er sorgt dafür, dass die FME-A-Methodik korrekt angewendet wird und die einzelnen Schritte eingehalten werden. Dafür benötigt der Moderator umfangreiche Methodenkompetenz, Teamfähigkeit und Sozialkompetenz. Außerdem sollte er Fähigkeiten in Moderation, Organisation, Überzeugung und Präsentation mitbringen.\n\nDas Basis-Team bildet das Rückgrat der FME-A. Es setzt sich aus Mitgliedern zusammen, die über Grundkenntnisse der FME-A-Methodik verfügen und Expertenwissen zu den analysierten Bereichen mitbringen. Dazu zählen unter anderem Designingenieure, Qualitätssicherungsexperten, Produktions-Ingenieure sowie Service- und Wartungspersonal. Dieses Fachwissen ist unverzichtbar, um mögliche Fehler systematisch zu identifizieren, zu bewerten und zu priorisieren.\n\nFalls erforderlich, kann das Team durch zusätzliche Experten ergänzt werden. Diese bringen spezielles Wissen ein, das für komplexe oder kritische Themen hilfreich ist. Beispiele hierfür sind Spezialisten aus den Bereichen Labor, Kundendienst oder der Rechtsabteilung.\n\nDie Vielfalt im Team und die unterschiedlichen Perspektiven unterstützen eine umfassende Analyse, wodurch sich blinde Flecken vermeiden und innovative Lösungen fördern lassen.\n\nMit einer gründlichen Planung und Vorbereitung legen wir den Grundstein für eine erfolgreiche FME-A.\n\nUnser Ziel in diesem Schritt ist es, den Analyseumfang klar zu definieren, alle relevanten Informationen zu sammeln und ein kompetentes Team zusammenzustellen.\n\nDamit haben wir den ersten Schritt der FME-A abgeschlossen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s75_structure",
+      "label": "FMEA-Team",
+      "role": "content",
+      "members": [
+        "s75_structure"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s75_links",
+      "label": "Teamstruktur",
+      "role": "content",
+      "members": [
+        "s75_links"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "FMEA-Team",
+      "sourceText": "Ein weiterer wichtiger Aspekt ist die",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s75_structure"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Teamstruktur",
+      "sourceText": "Das Team wird in der Regel",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s75_links"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s75_structure",
+      "beatId": "beat_01",
+      "targetId": "s75_structure",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s75_links",
+      "beatId": "beat_02",
+      "targetId": "s75_links",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_02",
+      "visibleGroups": [
+        "canvas_context",
+        "s75_structure",
+        "s75_links"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

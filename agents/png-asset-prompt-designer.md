@@ -37,8 +37,10 @@ SVG.
 
 - Jeder Prompt erzeugt genau ein isoliertes, separat pruefbares Motiv.
 - Stilprofil: flat 2D, frontal oder orthografisch, eine dominante Silhouette,
-  hoechstens ein semantischer Zusatz, ruhige abgerundete Konturen.
-- Marineblau `#031334` traegt das Grundmotiv. Höchstens eine weitere
+  hoechstens ein semantischer Zusatz, hauptsaechlich eckige und ausreichend
+  kraeftige Konturen. Eine Hintergrundform greift bei Bedarf die gerundete Ecke
+  oben links und die abgeschraegte Ecke unten rechts des Logo-Icons auf.
+- Marineblau `#142452` traegt das Grundmotiv. Hoechstens eine weitere
   semantische Education-Farbe verwenden.
 - Vollstaendig transparenter Hintergrund und mindestens 8 Prozent freier Rand.
 - Ziel: bei 48 px eindeutig erkennbar; universelle kompakte Icons zusaetzlich

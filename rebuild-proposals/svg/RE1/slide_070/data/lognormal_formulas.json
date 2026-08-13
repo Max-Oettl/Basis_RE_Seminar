@@ -4,7 +4,7 @@
   "median": "exp(mu)",
   "formulas": {
     "density": "$f(t)=\\frac{1}{t\\sigma\\sqrt{2\\pi}}e^{-\\frac{(\\ln t-\\mu)^2}{2\\sigma^2}}$",
-    "failure_probability": "$F(t)=\\int_0^t\\frac{1}{\\tau\\sigma\\sqrt{2\\pi}}e^{-\\frac{(\\ln \\tau-\\mu)^2}{2\\sigma^2}}\\,d\\tau$",
+    "failure_probability": "$F(t)=\\int_0^t\\frac{1}{\\tau\\sigma\\sqrt{2\\pi}}e^{-\\frac{(\\ln \\tau-\\mu)^2}{2\\sigma^2}}\\,\\mathrm{d}\\tau$",
     "reliability": "$R(t)=1-F(t)$",
     "hazard": "$\\lambda(t)=\\frac{f(t)}{R(t)}$",
     "median": "$t_{\\mathrm{Median}}=e^{\\mu}$"

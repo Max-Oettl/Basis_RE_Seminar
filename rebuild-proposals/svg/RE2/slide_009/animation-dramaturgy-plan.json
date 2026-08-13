@@ -1,0 +1,257 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch2_p_diagram_inverter",
+  "svgPath": "slide_009.svg",
+  "spokenText": "Die verschiedenen Systemparameter des Wechselrichters können wie folgt klassifiziert werden.\n\nAls Eingangsgröße oder Stellgröße wird der elektrische Gleichstrom definiert, der von den PV-Modulen erzeugt und in den Wechselrichter eingespeist wird.\n\nZusätzlich können sämtliche Signale, aber auch die Betätigungsenergie für den Notausschalter als kontrollierbare Größen bzw. Steuergrößen aufgefasst werden. Daneben gibt es noch eine ganze Reihe an Störgrößen. Hierzu zählen beispielsweise Vibration, Schmutz, Wärme und Feuchtigkeit. Diese Umgebungsbedingungen können wir nicht direkt kontrollieren, sie beeinflussen jedoch die Funktion und Zuverlässigkeit des Wechselrichters.\n\nDie Zielgröße und damit die Ausgangsgröße des Wechselrichters ist der Wechselstrom. Dieser ist die vom Wechselrichter erzeugte elektrische Energie, die in das Stromnetz oder zu den Verbrauchern weitergeleitet wird.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "pi_system",
+      "label": "System Wechselrichter",
+      "role": "content",
+      "members": [
+        "pi_system"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "pi_inputs",
+      "label": "Gleichstrom",
+      "role": "content",
+      "members": [
+        "pi_inputs"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "pi_controls",
+      "label": "Steuersignale",
+      "role": "content",
+      "members": [
+        "pi_controls"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "pi_disturbances",
+      "label": "Störgrößen",
+      "role": "content",
+      "members": [
+        "pi_disturbances"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "pi_outputs",
+      "label": "Wechselstrom",
+      "role": "content",
+      "members": [
+        "pi_outputs"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_05",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "pi_relations",
+      "label": "Wirkbeziehungen",
+      "role": "content",
+      "members": [
+        "pi_relations"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_06",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "System Wechselrichter",
+      "sourceText": "Die verschiedenen Systemparameter des Wechselrichters können",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "pi_system"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Gleichstrom",
+      "sourceText": "Als Eingangsgröße oder Stellgröße wird der",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "pi_inputs"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Steuersignale",
+      "sourceText": "Zusätzlich können sämtliche Signale, aber auch",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "pi_controls"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Störgrößen",
+      "sourceText": "Daneben gibt es noch eine ganze",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "pi_disturbances"
+      ]
+    },
+    {
+      "beatId": "beat_05",
+      "claim": "Wechselstrom",
+      "sourceText": "Die Zielgröße und damit die Ausgangsgröße",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "pi_outputs"
+      ]
+    },
+    {
+      "beatId": "beat_06",
+      "claim": "Wirkbeziehungen",
+      "sourceText": "Dieser ist die vom Wechselrichter erzeugte",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "pi_relations"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_pi_system",
+      "beatId": "beat_01",
+      "targetId": "pi_system",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_pi_inputs",
+      "beatId": "beat_02",
+      "targetId": "pi_inputs",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_pi_controls",
+      "beatId": "beat_03",
+      "targetId": "pi_controls",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_04_pi_disturbances",
+      "beatId": "beat_04",
+      "targetId": "pi_disturbances",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_05_pi_outputs",
+      "beatId": "beat_05",
+      "targetId": "pi_outputs",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_06_pi_relations",
+      "beatId": "beat_06",
+      "targetId": "pi_relations",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_06",
+      "visibleGroups": [
+        "canvas_context",
+        "pi_system",
+        "pi_inputs",
+        "pi_controls",
+        "pi_disturbances",
+        "pi_outputs",
+        "pi_relations"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

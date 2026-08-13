@@ -10,24 +10,24 @@
   },
   "targets": [
     {
-      "targetId": "s139_left",
-      "label": "DESIGN-FMEA",
+      "targetId": "s142_part_1",
+      "label": "01 ANALYSEUMFANG ABGRENZEN",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "s139_right",
-      "label": "PROZESS-FMEA",
+      "targetId": "s142_part_2",
+      "label": "02 UNTERLAGEN SAMMELN",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "s139_summary",
-      "label": "Gemeinsamer Ablauf und unterschiedlicher Fokus",
+      "targetId": "s142_part_3",
+      "label": "03 TEAM ZUSAMMENSTELLEN",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -36,30 +36,30 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_s139_left",
-      "targetId": "s139_left",
+      "stepId": "step_01_s142_part_1",
+      "targetId": "s142_part_1",
       "action": "show",
-      "sourceText": "Die Design-Variante beschäftigt sich mit der Analyse der Produktgestaltung und deren Anforderungen. Ziel ist es, Schwachstellen zu erkennen und potenzielle Risiken frühzeitig zu bewerten.",
+      "sourceText": "In diesem Schritt geht es darum, den Analyseumfang zu definieren und die Detaillierungsebene festzulegen. Das Ziel ist hierbei dasselbe wie bei der Betrachtung des Designs – allerdings liegt der Schwerpunkt nun auf den Fertigungs- und Montage-Prozessen.",
       "occurrence": 1,
       "confidence": "high",
       "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
       "enterFrames": 16
     },
     {
-      "stepId": "step_02_s139_right",
-      "targetId": "s139_right",
+      "stepId": "step_02_s142_part_2",
+      "targetId": "s142_part_2",
       "action": "show",
-      "sourceText": "Die prozessorientierte Analyse hingegen betrachtet Abläufe in der Fertigung und Montage – einschließlich Logistik und Transport. Hier steht im Vordergrund, mögliche Fehlerquellen im Prozess aufzudecken, um Qualität und Effizienz zu verbessern.",
+      "sourceText": "Außerdem sammeln wir in diesem Schritt ebenfalls alle benötigten Unterlagen und Materialien. Dazu gehören beispielsweise Prozessablaufpläne, Arbeitsanweisungen sowie Maschinen- und Werkzeuglisten.",
       "occurrence": 1,
       "confidence": "high",
       "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
       "enterFrames": 16
     },
     {
-      "stepId": "step_03_s139_summary",
-      "targetId": "s139_summary",
+      "stepId": "step_03_s142_part_3",
+      "targetId": "s142_part_3",
       "action": "show",
-      "sourceText": "Die gute Nachricht ist: Die sieben Schritte, die du bereits gelernt hast, bleiben bestehen. Der Unterschied liegt allein im inhaltlichen Fokus.",
+      "sourceText": "Auch das interdisziplinäre Team wird entsprechend zusammengestellt. Es besteht aus Spezialistinnen und Spezialisten der betroffenen Bereiche, die gemeinsam ihre Perspektiven in die Bewertung einbringen.",
       "occurrence": 1,
       "confidence": "high",
       "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",

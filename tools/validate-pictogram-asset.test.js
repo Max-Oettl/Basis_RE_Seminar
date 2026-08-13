@@ -76,7 +76,7 @@ function acceptedBrief(file) {
       perspective: "front",
       dominantSilhouette: true,
       semanticLayers: 1,
-      brandColors: ["#031334"],
+      brandColors: ["#142452"],
       gradients: false,
       shadows: false,
       threeDimensional: false,
@@ -103,7 +103,7 @@ function acceptedBrief(file) {
     accessibility: {
       redundantWithVisibleLabel: true,
       accessibleName: "",
-      contrastPairs: [{ foreground: "#031334", background: "#FFFFFF", minimumRatio: 3 }],
+      contrastPairs: [{ foreground: "#142452", background: "#FFFFFF", minimumRatio: 3 }],
     },
     review: {
       semantic: "passed",
@@ -128,7 +128,7 @@ test("accepts a minimal transparent Education pictogram", () => withTempRoot((ro
   const pngPath = path.join(root, "valid.png");
   writeRgbaPng(pngPath, 1024, 1024, (x, y) => {
     const visible = x >= 112 && x < 912 && y >= 112 && y < 912;
-    return visible ? [3, 19, 52, 255] : [0, 0, 0, 0];
+    return visible ? [20, 36, 82, 255] : [0, 0, 0, 0];
   });
   const brief = acceptedBrief("valid.png");
   const briefPath = path.join(root, "valid.asset.json");

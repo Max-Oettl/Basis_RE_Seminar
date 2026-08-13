@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re3_src_002",
+  "decision": "animated",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "workflow_1",
+      "label": "Ausfallzeiten sortieren",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "workflow_2",
+      "label": "Median Ranks berechnen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "workflow_3",
+      "label": "Punkte auftragen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "workflow_4",
+      "label": "Gerade fitten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "workflow_5",
+      "label": "T und b ablesen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "workflow_plot",
+      "label": "Weibullnetz",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "workflow_result",
+      "label": "Weibull-Funktion",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_workflow_1",
+      "targetId": "workflow_1",
+      "action": "show",
+      "sourceText": "Diese müssen zunächst der Größe nach sortiert werden.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_workflow_2",
+      "targetId": "workflow_2",
+      "action": "show",
+      "sourceText": "Stattdessen nutzen wir eine Näherungsformel des Median-Rang-Verfahrens.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_workflow_3",
+      "targetId": "workflow_3",
+      "action": "show",
+      "sourceText": "Im Anschluss können wir unsere Ausfallzeiten zusammen mit den entsprechenden Ausfallwahrscheinlichkeiten als Punkte in das Weibull-Wahrscheinlichkeits-Papier mit doppellogarithmischer Darstellung eintragen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_workflow_plot",
+      "targetId": "workflow_plot",
+      "action": "show",
+      "sourceText": "Im Anschluss können wir unsere Ausfallzeiten zusammen mit den entsprechenden Ausfallwahrscheinlichkeiten als Punkte in das Weibull-Wahrscheinlichkeits-Papier mit doppellogarithmischer Darstellung eintragen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_05_workflow_4",
+      "targetId": "workflow_4",
+      "action": "show",
+      "sourceText": "Im nächsten Schritt legen wir eine Ausgleichsgerade durch die Punkte.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_06_workflow_5",
+      "targetId": "workflow_5",
+      "action": "show",
+      "sourceText": "Sobald die Gerade festgelegt ist, lassen sich die gesuchten Parameter für die Weibullverteilung ableiten.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_07_workflow_result",
+      "targetId": "workflow_result",
+      "action": "show",
+      "sourceText": "Damit haben wir die Weibullverteilung bestimmt, die das Ausfallverhalten am besten beschreibt.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

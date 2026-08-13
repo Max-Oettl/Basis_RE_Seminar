@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_design_process_step4",
+  "svgPath": "slide_153.svg",
+  "spokenText": "Im vierten Schritt, der Fehleranalyse, werden mögliche Fehler den jeweiligen Funktionen zugeordnet.\n\nIm Designkontext geschieht dies innerhalb der Systemstruktur – im Prozesskontext entsprechend innerhalb der Prozessstruktur.\n\nDie Design-FME-A fokussiert sich auf mögliche Fehler im Produktdesign, die die Sicherheit oder die Leistung des Produktes beeinträchtigen könnten.\n\nZur Erreichung dieses Ziels werden Hilfsmittel wie Brainstorming und Fehlerbaumanalyse genutzt.\n\nAm unteren Ende der Systemhierarchie stehen die konkreten Versagensarten von Bauteilen, also die physikalischen Ausfallmechanismen wie Bruch, Verschleiß oder Klemmen.\n\nIn der Prozessbetrachtung hingegen geht es um Fehler innerhalb der Fertigungs- und Montage-Abläufe, die zu Produktionsausfällen oder Qualitätsmängeln führen können.\n\nHier kommen Werkzeuge wie detaillierte Prozessanalysen oder Ursache-Wirkungs-Diagramme zum Einsatz – zum Beispiel das bekannte Ishikawa-Diagramm.\n\nAls letzte Strukturebene dienen in der Prozessanalyse die sogenannten fünf Ms: Mensch, Maschine, Material, Methode und Milieu – auch Mitwelt genannt. Diese Kategorien unterstützen dabei, die verschiedenen Einflussfaktoren auf den Prozess systematisch zu erfassen und potenzielle Fehlerquellen zu identifizieren.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s155_left",
+      "label": "DESIGN-FMEA",
+      "role": "content",
+      "members": [
+        "s155_left"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s155_right",
+      "label": "PROZESS-FMEA",
+      "role": "content",
+      "members": [
+        "s155_right"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "DESIGN-FMEA",
+      "sourceText": "Die Design-FME-A fokussiert sich auf mögliche",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s155_left"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "PROZESS-FMEA",
+      "sourceText": "In der Prozessbetrachtung hingegen geht es",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s155_right"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s155_left",
+      "beatId": "beat_01",
+      "targetId": "s155_left",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s155_right",
+      "beatId": "beat_02",
+      "targetId": "s155_right",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_02",
+      "visibleGroups": [
+        "canvas_context",
+        "s155_left",
+        "s155_right"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

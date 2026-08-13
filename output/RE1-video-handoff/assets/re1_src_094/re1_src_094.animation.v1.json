@@ -34,6 +34,14 @@
       "confidence": "high"
     },
     {
+      "targetId": "bathtub_early_zone",
+      "label": "Frühausfallzone",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
       "targetId": "early_failure_region",
       "label": "Frühausfälle",
       "status": "animated",
@@ -42,8 +50,24 @@
       "confidence": "high"
     },
     {
+      "targetId": "bathtub_random_zone",
+      "label": "Zufallsausfallzone",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
       "targetId": "random_failure_region",
       "label": "Zufallsausfälle",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "bathtub_wear_zone",
+      "label": "Ermüdungsausfallzone",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -87,6 +111,15 @@
       "durFrames": 42
     },
     {
+      "stepId": "show_bathtub_early_zone",
+      "targetId": "bathtub_early_zone",
+      "action": "show",
+      "sourceText": "Dabei lässt sich die Badewannen Kurve",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
       "stepId": "show_early_failure_region",
       "targetId": "early_failure_region",
       "action": "show",
@@ -96,10 +129,28 @@
       "enterFrames": 16
     },
     {
+      "stepId": "show_bathtub_random_zone",
+      "targetId": "bathtub_random_zone",
+      "action": "show",
+      "sourceText": "Dabei lässt sich die Badewannen Kurve",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
       "stepId": "show_random_failure_region",
       "targetId": "random_failure_region",
       "action": "show",
       "sourceText": "Die Ausfälle in den verschiedenen Bereichen",
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_bathtub_wear_zone",
+      "targetId": "bathtub_wear_zone",
+      "action": "show",
+      "sourceText": "Dabei lässt sich die Badewannen Kurve",
       "confidence": "high",
       "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
       "enterFrames": 16

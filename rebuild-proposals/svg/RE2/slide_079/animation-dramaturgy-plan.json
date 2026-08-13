@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_structural_method",
+  "svgPath": "slide_079.svg",
+  "spokenText": "Im zweiten Schritt der FME-A erfolgt die Strukturanalyse. Dabei analysieren wir die Struktur eines Produktes innerhalb der festgelegten Systemgrenzen und ordnen die Systemelemente in einer baumartigen Hierarchie an.\n\nDie Strukturanalyse besteht aus drei wesentlichen Schritten.\n\nZuerst wird das zu analysierende System abgegrenzt, um den Umfang der Untersuchung festzulegen. Dazu definieren wir die Systemgrenzen und die Schnittstellen des Systems zu seiner Umgebung.\n\nIm nächsten Schritt wird das System in seine einzelnen Elemente zerlegt. Dabei beginnen wir mit der Identifikation der Teilsysteme. Diese werden dann weiter in Baugruppen und schließlich in Bauteile oder einzelne Komponenten unterteilt.\n\nDer dritte Schritt umfasst die Erstellung der Systemstruktur, auch Systembaum genannt. Hierbei ordnen wir die einzelnen Systemelemente hierarchisch an, basierend auf der Struktur des Systems. Wichtig ist, dass beliebig viele Hierarchieebenen verwendet werden können. Die Anzahl der Ebenen hängt vom jeweiligen System und dem gewünschten Detaillierungsgrad ab.\n\nDabei gilt: Jedes Systemelement darf nur ein einziges Mal in der Struktur vorkommen, um eine eindeutige Darstellung zu gewährleisten.\n\nZur besseren Übersicht können auch sogenannte Dummy-Systemelemente verwendet werden. Diese existieren nicht physisch im System, sondern dienen lediglich der Strukturierung. In der weiteren Analyse werden Dummy-Elemente nicht weiter berücksichtigt. Sie eignen sich beispielsweise gut, um Funktionseinheiten zu benennen oder klar abzugrenzen.\n\nDas Ziel der Strukturanalyse ist es, alle beteiligten Systemelemente zu erfassen und zu strukturieren. Damit schaffen wir eine klare und übersichtliche Grundlage für die nächsten Schritte.\n\nSchauen wir uns dazu nun ein Beispiel an.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s81_step_1",
+      "label": "01 SYSTEM ABGRENZEN",
+      "role": "content",
+      "members": [
+        "s81_step_1"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s81_step_2",
+      "label": "02 SYSTEM AUFTEILEN",
+      "role": "content",
+      "members": [
+        "s81_step_2"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s81_step_3",
+      "label": "03 SYSTEMBAUM ERSTELLEN",
+      "role": "content",
+      "members": [
+        "s81_step_3"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "01 SYSTEM ABGRENZEN",
+      "sourceText": "Im zweiten Schritt der FME-A erfolgt",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s81_step_1"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "02 SYSTEM AUFTEILEN",
+      "sourceText": "Im zweiten Schritt der FME-A erfolgt",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s81_step_2"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "03 SYSTEMBAUM ERSTELLEN",
+      "sourceText": "Der dritte Schritt umfasst die Erstellung",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s81_step_3"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s81_step_1",
+      "beatId": "beat_01",
+      "targetId": "s81_step_1",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s81_step_2",
+      "beatId": "beat_02",
+      "targetId": "s81_step_2",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_s81_step_3",
+      "beatId": "beat_03",
+      "targetId": "s81_step_3",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_03",
+      "visibleGroups": [
+        "canvas_context",
+        "s81_step_1",
+        "s81_step_2",
+        "s81_step_3"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 from pathlib import Path
 
 
@@ -13,7 +14,7 @@ def render_formula_svg(
     *,
     fontsize: float = 34,
     color: str = "#062d46",
-    fontset: str = "dejavusans",
+    fontset: str = "stix",
     pad_inches: float = 0.025,
 ) -> None:
     import matplotlib
@@ -27,7 +28,11 @@ def render_formula_svg(
         {
             "font.family": "DejaVu Sans",
             "mathtext.fontset": fontset,
-            "svg.fonttype": "none",
+            # Formula glyphs must not depend on fonts installed in the viewer.
+            # Paths also prevent surrounding SVG/CSS rules from changing the
+            # weight or metrics of individual math glyphs after embedding.
+            "svg.fonttype": "path",
+            "svg.hashsalt": "reltest-formula-v2",
             "figure.facecolor": "none",
             "savefig.facecolor": "none",
         }
@@ -49,6 +54,22 @@ def render_formula_svg(
     fig.savefig(output, format="svg", transparent=True, bbox_inches="tight", pad_inches=pad_inches)
     plt.close(fig)
 
+    # Preserve the nominal math size for deterministic embedding.  The scene
+    # renderer uses this value instead of stretching every formula to the same
+    # bounding-box height (which made simple formulas much larger than fractions
+    # and integrals).
+    source = output.read_text(encoding="utf-8")
+    source = re.sub(
+        r"<svg\b",
+        (
+            f'<svg data-formula-fontsize="{fontsize:g}" data-formula-fontset="{fontset}" '
+            'data-qc-role="formula" data-qc-group="formula_asset"'
+        ),
+        source,
+        count=1,
+    )
+    output.write_text(source, encoding="utf-8")
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -56,7 +77,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output", required=True, type=Path, help="Target SVG file.")
     parser.add_argument("--fontsize", type=float, default=34)
     parser.add_argument("--color", default="#062d46")
-    parser.add_argument("--fontset", default="dejavusans")
+    parser.add_argument("--fontset", default="stix")
     parser.add_argument("--pad-inches", type=float, default=0.025)
     return parser.parse_args()
 

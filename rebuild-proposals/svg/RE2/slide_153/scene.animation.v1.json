@@ -10,8 +10,16 @@
   },
   "targets": [
     {
-      "targetId": "s153_asset",
-      "label": "Produktfehlfunktionen",
+      "targetId": "s155_left",
+      "label": "DESIGN-FMEA",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s155_right",
+      "label": "PROZESS-FMEA",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -20,10 +28,20 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_s153_asset",
-      "targetId": "s153_asset",
+      "stepId": "step_01_s155_left",
+      "targetId": "s155_left",
       "action": "show",
-      "sourceText": "Im Designkontext geschieht dies innerhalb der Systemstruktur – im Prozesskontext entsprechend innerhalb der Prozessstruktur.",
+      "sourceText": "Die Design-FME-A fokussiert sich auf mögliche Fehler im Produktdesign, die die Sicherheit oder die Leistung des Produktes beeinträchtigen könnten.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_s155_right",
+      "targetId": "s155_right",
+      "action": "show",
+      "sourceText": "In der Prozessbetrachtung hingegen geht es um Fehler innerhalb der Fertigungs- und Montage-Abläufe, die zu Produktionsausfällen oder Qualitätsmängeln führen können.",
       "occurrence": 1,
       "confidence": "high",
       "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",

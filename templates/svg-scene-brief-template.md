@@ -162,7 +162,11 @@ Hard stop:
 - brand tokens used: `brand/company-brand-tokens.json`
 - color roles:
 - typography roles:
-- Education identity confirmed: Signalgruen `#00A754` is the primary accent; Stahlcyan `#0C84B4` is diagram-only:
+- Education identity confirmed: Marineblau `#142452` leads the content;
+  Signalgruen `#00A653` is a sparse Education/semantic accent and Stahlcyan
+  `#0C84B4` is diagram-only:
+- equal-rank information boxes use one navy hue family with tone/opacity
+  variation; no decorative multi-color rotation:
 - font roles confirmed: Oxanium for display headings; Archivo for body, labels, tables and captions:
 - spacing logic:
 - reused/adapted components:

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "reltestEducationSlideDesign/v1",
   "status": "active-production-full-slide",
-  "source": "source-materials/brand/Corporate_Design_RELTEST_19.pdf",
-  "sourceVersion": "corporate-design-19-2026-07",
+  "source": "source-materials/brand/Reltest_Corporate_Design_zwischenstand_2026-08-02.pdf",
+  "sourceVersion": "corporate-design-interim-2026-08-02",
   "brand": {
     "companyName": "RelTest Education",
     "profile": "reltest-education",
@@ -49,7 +49,7 @@
       "width": 118,
       "height": 5,
       "radius": 4,
-      "color": "#00A754"
+      "color": "#00A653"
     },
     "titleRuleY": 148,
     "titleMaxWidth": 1460,
@@ -60,21 +60,23 @@
     "logoHeight": 80
   },
   "background": {
-    "gradient": "linear-gradient(135deg, #FFFFFF 0%, #F7F9FC 56%, #E6F6EE 100%)",
+    "gradient": "linear-gradient(135deg, #FFFFFF 0%, #F7F9FC 56%, #E8E9EE 100%)",
     "gridSize": 80,
     "gridOpacity": 0.28,
-    "verticalGridColor": "rgba(3,19,52,0.035)",
-    "horizontalGridColor": "rgba(3,19,52,0.03)"
+    "verticalGridColor": "rgba(20,36,82,0.035)",
+    "horizontalGridColor": "rgba(20,36,82,0.03)"
   },
   "colors": {
-    "navy": "#031334",
-    "navy80": "#35425D",
-    "navy60": "#687185",
-    "navy40": "#9AA1AE",
-    "navy20": "#CDD0D6",
-    "navy10": "#E6E7EB",
-    "educationGreen": "#00A754",
-    "educationGreen80": "#33B976",
+    "navy": "#142452",
+    "navyDeep": "#031334",
+    "navyDark": "#0D173D",
+    "navy80": "#435075",
+    "navy60": "#727C97",
+    "navy40": "#A1A8BA",
+    "navy20": "#D0D3DC",
+    "navy10": "#E8E9EE",
+    "educationGreen": "#00A653",
+    "educationGreen80": "#33B875",
     "educationGreen60": "#66CA98",
     "educationGreen40": "#99DCBA",
     "educationGreen20": "#CCEDDD",
@@ -83,28 +85,29 @@
     "educationCoral": "#EC6244",
     "educationSteelCyan": "#0C84B4",
     "educationGraphiteBlue": "#25495F",
-    "text": "#031334",
+    "text": "#142452",
     "textMuted": "#25495F",
     "textSoft": "#687185",
     "backgroundStart": "#FFFFFF",
     "backgroundMid": "#F7F9FC",
-    "backgroundEnd": "#E6F6EE",
+    "backgroundEnd": "#E8E9EE",
     "surface": "#FFFFFF",
     "surfaceSoft": "#F7F9FC",
-    "surfaceAlt": "#E6E7EB",
+    "surfaceAlt": "#E8E9EE",
     "surfaceElevated": "#FFFFFF",
     "panel": "rgba(255,255,255,0.90)",
     "panelStrong": "rgba(255,255,255,0.97)",
-    "border": "rgba(3,19,52,0.14)",
-    "borderStrong": "rgba(3,19,52,0.24)",
-    "mediaBorder": "#CDD0D6",
-    "accentTint": "#E6F6EE",
+    "border": "rgba(20,36,82,0.14)",
+    "borderStrong": "rgba(20,36,82,0.24)",
+    "mediaBorder": "#D0D3DC",
+    "accentTint": "#E8E9EE",
     "failureTint": "#FCE7E2",
     "warningTint": "#FFF5CC"
   },
   "compatibleSvgAssetPalette": {
-    "primaryNavy": "#031334",
-    "educationGreen": "#00A754",
+    "primaryNavy": "#142452",
+    "deepNavy": "#031334",
+    "educationGreen": "#00A653",
     "educationGreenLight": "#E6F6EE",
     "goldYellow": "#E9B400",
     "coral": "#EC6244",
@@ -178,17 +181,17 @@
   },
   "cards": {
     "standard": {
-      "border": "1px solid rgba(3,19,52,0.24)",
+      "border": "1px solid rgba(20,36,82,0.24)",
       "background": "rgba(255,255,255,0.94)",
       "shadow": "none"
     },
     "strong": {
-      "border": "1px solid rgba(3,19,52,0.24)",
+      "border": "1px solid rgba(20,36,82,0.24)",
       "background": "rgba(255,255,255,0.97)",
       "shadow": "none"
     },
     "soft": {
-      "border": "1px solid rgba(3,19,52,0.14)",
+      "border": "1px solid rgba(20,36,82,0.14)",
       "background": "rgba(255,255,255,0.90)",
       "shadow": "none"
     }
@@ -197,8 +200,22 @@
     "tokenSource": "brand/reltest-education-pictogram-tokens.json",
     "styleProfile": "reltest-education-minimal-v1"
   },
+  "informationBoxFamily": {
+    "defaultFill": "rgba(20,36,82,0.08)",
+    "secondaryFill": "rgba(20,36,82,0.14)",
+    "strongFill": "rgba(20,36,82,0.22)",
+    "border": "rgba(20,36,82,0.24)",
+    "equalRankRule": "Use one navy family for equal-rank boxes; vary opacity or tone, not hue.",
+    "accentRule": "Use green, gold, coral or cyan only for documented semantics or one deliberate focus."
+  },
+  "shapeLanguage": {
+    "bevelAngleDegrees": 45,
+    "signatureCorner": "rounded-top-left-and-beveled-bottom-right",
+    "shadowAllowed": false
+  },
   "chartPalette": [
-    "#00A754",
+    "#142452",
+    "#00A653",
     "#E9B400",
     "#EC6244",
     "#0C84B4",
@@ -239,11 +256,13 @@
     "backgroundModes": ["brand-frame", "light", "dark"],
     "densities": ["low", "balanced", "normal", "dense"],
     "maxVisibleColors": {
-      "low": 8,
-      "balanced": 12,
-      "normal": 14,
-      "dense": 18
-    }
+      "low": 6,
+      "balanced": 8,
+      "normal": 10,
+      "dense": 12
+    },
+    "maxSaturatedAccentFamiliesOutsideCharts": 1,
+    "equalRankCardsMustShareHueFamily": true
   },
   "logo": {
     "subbrand": "RelTest Education",
@@ -251,7 +270,8 @@
     "owner": "downstream-repository",
     "recolorAllowed": false,
     "reconstructionAllowed": false,
-    "minimumWidthHorizontalPx": 190,
+    "minimumWidthHorizontalPx": 170,
+    "minimumWidthVerticalPx": 115,
     "minimumWidthWithoutTaglinePx": 170,
     "minimumWidthWordmarkPx": 90,
     "minimumWidthIconPx": 35,

@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re4_src_013",
+  "decision": "animated",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "fta_process",
+      "label": "FTA-Prozess",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta_first_four",
+      "label": "Vier gemeinsame Schritte",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta_top",
+      "label": "Top-Ereignis",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta_tree",
+      "label": "Ursachenstruktur",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta_basis",
+      "label": "Basisereignisse",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta_process",
+      "targetId": "fta_process",
+      "action": "show",
+      "sourceText": "Hierfür eignet sich die quantitative Fehlerbaumanalyse hervorragend.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_fta_first_four",
+      "targetId": "fta_first_four",
+      "action": "show",
+      "sourceText": "Die ersten vier Schritte sind in beiden Methoden identisch – egal ob qualitativ oder quantitativ.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_fta_top",
+      "targetId": "fta_top",
+      "action": "show",
+      "sourceText": "Im Fall des Getriebes lautet das Top-Ereignis: Getriebe defekt.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_fta_tree",
+      "targetId": "fta_tree",
+      "action": "show",
+      "sourceText": "Anschließend zerlegen wir diesen Systemausfall schrittweise in seine unmittelbaren Ursachen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_05_fta_basis",
+      "targetId": "fta_basis",
+      "action": "show",
+      "sourceText": "Wir unterteilen die Ereignisse immer weiter, bis wir schließlich auf die sogenannten Basisereignisse stoßen – also die primären Ausfallmechanismen wie zum Beispiel Materialermüdung oder thermische Alterung.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

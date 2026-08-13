@@ -1,0 +1,134 @@
+{
+  "schema_version": "svgQaReport/v1",
+  "module_id": "test-module",
+  "svg_root": "tools/svg-qa/fixtures/handoff-package-good",
+  "generated_at": "2026-08-12T13:02:27.744Z",
+  "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\tools\\svg-rebuild-qa.js --handoff-package tools/svg-qa/fixtures/handoff-package-good --strict-handoff --strict-design",
+  "files": [
+    {
+      "path": "tools/svg-qa/fixtures/handoff-package-good/assets/scene_001/diagram.svg",
+      "ids": 4,
+      "animationManifest": ""
+    }
+  ],
+  "issues": [
+    {
+      "rule": "brand-token-color",
+      "severity": "error",
+      "file": "tools/svg-qa/fixtures/handoff-package-good/assets/scene_001/diagram.svg",
+      "slide": "",
+      "time_seconds": null,
+      "state": "",
+      "element_id": "",
+      "related_element_id": "",
+      "message": "Colors outside brand/design tokens found.",
+      "detail": "#00A754",
+      "expected": null,
+      "actual": null,
+      "bbox": null,
+      "recommendation": "Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors."
+    }
+  ],
+  "viewer": {
+    "checked": false
+  },
+  "layout": {
+    "checked": false
+  },
+  "design": {
+    "checked": true,
+    "strict": true,
+    "warnOnly": false,
+    "brandTokens": {
+      "loaded": true,
+      "path": "brand/company-brand-tokens.json",
+      "profile": "reltest-education",
+      "companyName": "RelTest Education"
+    },
+    "tokenSources": [
+      {
+        "loaded": true,
+        "path": "brand/company-brand-tokens.json",
+        "profile": "reltest-education"
+      }
+    ],
+    "files": [
+      {
+        "path": "tools/svg-qa/fixtures/handoff-package-good/assets/scene_001/diagram.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 3,
+        "textCount": 1
+      }
+    ],
+    "issues": [
+      {
+        "rule": "brand-token-color",
+        "severity": "error",
+        "file": "tools/svg-qa/fixtures/handoff-package-good/assets/scene_001/diagram.svg",
+        "slide": "",
+        "time_seconds": null,
+        "state": "",
+        "element_id": "",
+        "related_element_id": "",
+        "message": "Colors outside brand/design tokens found.",
+        "detail": "#00A754",
+        "expected": null,
+        "actual": null,
+        "bbox": null,
+        "recommendation": "Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors."
+      }
+    ],
+    "summary": {
+      "files_checked": 1,
+      "errors": 1,
+      "warnings": 0
+    }
+  },
+  "handoff": {
+    "checked": true,
+    "strict": true,
+    "packageRoot": "tools/svg-qa/fixtures/handoff-package-good",
+    "package": "import.package.v1.json",
+    "moduleId": "test-module",
+    "files": [
+      "assets/scene_001/diagram.svg"
+    ],
+    "manifests": [
+      "assets/scene_001/diagram.animation.v1.json"
+    ],
+    "scenes": [
+      {
+        "sceneId": "scene_001",
+        "svg": "assets/scene_001/diagram.svg",
+        "animationManifest": "assets/scene_001/diagram.animation.v1.json",
+        "spokenText": true
+      }
+    ],
+    "issues": [],
+    "summary": {
+      "scenes_checked": 1,
+      "svg_files_checked": 1,
+      "manifests_checked": 1,
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "summary": {
+    "files_checked": 1,
+    "manifests_checked": 0,
+    "layout_files_checked": 0,
+    "layout_states_checked": 0,
+    "design_files_checked": 1,
+    "design_errors": 1,
+    "design_warnings": 0,
+    "handoff_scenes_checked": 1,
+    "handoff_manifests_checked": 1,
+    "handoff_errors": 0,
+    "handoff_warnings": 0,
+    "errors": 1,
+    "warnings": 0
+  }
+}

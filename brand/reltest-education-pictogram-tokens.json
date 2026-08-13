@@ -4,7 +4,7 @@
   "brandProfile": "reltest-education",
   "style": "reltest-education-minimal-v1",
   "source": [
-    "source-materials/brand/Corporate_Design_RELTEST_19.pdf",
+    "source-materials/brand/Reltest_Corporate_Design_zwischenstand_2026-08-02.pdf",
     "brand/reltest-education-style-guide.md",
     "workflow/30-visual-decision/pictogram-creation-workflow.md"
   ],
@@ -18,8 +18,8 @@
   "geometry": {
     "defaultMode": "outline",
     "strokeWidth": 1.8,
-    "strokeLinecap": "round",
-    "strokeLinejoin": "round",
+    "strokeLinecap": "square",
+    "strokeLinejoin": "bevel",
     "minimumGap": 1.5,
     "minimumFeatureLength": 1.5,
     "maximumSemanticLayers": 2,
@@ -33,8 +33,9 @@
     "textInsideIconAllowed": false
   },
   "colors": {
-    "defaultStroke": "#031334",
-    "educationAccent": "#00A754",
+    "defaultStroke": "#142452",
+    "deepNavy": "#031334",
+    "educationAccent": "#00A653",
     "inverse": "#FFFFFF",
     "failure": "#EC6244",
     "warning": "#E9B400",
@@ -45,21 +46,21 @@
     "softWarningBackground": "#FFF5CC",
     "softNeutralBackground": "#F7F9FC",
     "allowedForegroundOnLight": [
-      "#031334",
-      "#00A754",
+      "#142452",
+      "#00A653",
       "#EC6244",
       "#0C84B4",
       "#25495F"
     ],
     "allowedForegroundOnDark": [
       "#FFFFFF",
-      "#00A754",
+      "#00A653",
       "#E9B400",
       "#EC6244",
       "#0C84B4"
     ],
     "notes": {
-      "educationGreen": "Primary Education accent; may lead an icon family.",
+      "educationGreen": "Education subbrand or semantic focus accent; keep subordinate to navy.",
       "steelCyan": "Technical or comparison role only; never the default Education lead.",
       "goldOnLight": "Does not reach 3:1 against white and needs a dark field or a separate high-contrast outline."
     }
@@ -82,7 +83,8 @@
   },
   "backgroundField": {
     "allowed": true,
-    "defaultShape": "circle",
+    "defaultShape": "signature-corner-tile",
+    "signatureCorner": "rounded-top-left-and-beveled-bottom-right",
     "flatFillOnly": true,
     "outlineAllowed": false,
     "mustNotCarryIndependentMeaning": true

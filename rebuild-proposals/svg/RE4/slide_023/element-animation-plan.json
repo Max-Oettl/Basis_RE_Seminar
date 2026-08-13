@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re4_src_023",
+  "decision": "animated",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "inversion_error",
+      "label": "Fehlerbaum",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "inversion_swap",
+      "label": "Logikumkehr",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "inversion_function",
+      "label": "Funktionsbaum",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_inversion_error",
+      "targetId": "inversion_error",
+      "action": "show",
+      "sourceText": "Wir sprechen dann nicht mehr von einem Fehlerbaum, sondern von einem sogenannten Funktionsbaum.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_inversion_function",
+      "targetId": "inversion_function",
+      "action": "show",
+      "sourceText": "Ein ODER-Gatter, das im Fehlerbaum beschreibt, dass das System ausfällt, wenn eine der Ursachen eintritt, wird im Funktionsbaum zu einem und-Gatter.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_inversion_swap",
+      "targetId": "inversion_swap",
+      "action": "draw",
+      "sourceText": "Auf dieser Grundlage wandeln wir also unseren Fehlerbaum systematisch in einen Funktionsbaum um:",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung erscheint nach ihren fachlichen Endpunkten.",
+      "drawDurFrames": 42
+    }
+  ]
+}

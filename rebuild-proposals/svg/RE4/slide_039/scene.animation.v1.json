@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_039.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "math_series",
+      "label": "Serienformel",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "math_parallel",
+      "label": "Parallelformel",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "math_example",
+      "label": "Zahlenbeispiel",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "math_result_series",
+      "label": "Ergebnis Serienschaltung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "math_result_parallel",
+      "label": "Ergebnis Parallelschaltung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_math_series",
+      "targetId": "math_series",
+      "action": "show",
+      "sourceText": "Für die Serienstruktur ergibt sich die Systemzuverlässigkeit einfach durch Multiplikation der Einzelzuverlässigkeiten ​der Komponenten.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_math_parallel",
+      "targetId": "math_parallel",
+      "action": "show",
+      "sourceText": "In der Parallelstruktur ist die Berechnung etwas anders: Hier berechnet man zunächst die Ausfallwahrscheinlichkeit jeder Komponente, welche einfach als eins minus seiner Zuverlässigkeit berechnet werden kann.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_math_example",
+      "targetId": "math_example",
+      "action": "show",
+      "sourceText": "Schauen wir uns dazu ein kleines Beispiel mit jeweils drei Komponenten an.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_math_result_series",
+      "targetId": "math_result_series",
+      "action": "show",
+      "sourceText": "Das ergibt für das System ein Zuverlässigkeitswert von Zweiundsiebzigkomma neun Prozent.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_05_math_result_parallel",
+      "targetId": "math_result_parallel",
+      "action": "show",
+      "sourceText": "Bei der Parallelstruktur der drei Komponenten liegt der Wert entsprechend bei neunundneunzigkomma neun Prozent.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

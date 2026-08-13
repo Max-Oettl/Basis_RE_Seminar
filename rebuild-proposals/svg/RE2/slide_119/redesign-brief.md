@@ -2,12 +2,12 @@
 
 - Kapitel: 4
 - Lektion: 6
-- Quellfolie: 119
+- Quellfolie: 122
 - Zielmodus: full_slide, 1920×1080
-- Titel: Bewertungstabelle der System-FMEA
-- Dominante Lernbotschaft: Die Kriterien für Bedeutung, Auftreten und Entdeckung werden in einer gemeinsamen Tabelle dokumentiert.
-- Archetyp: source-asset-diagram
-- Layout: Vergrößertes, bereinigtes Quellasset als dominante technische Erklärfläche.
+- Titel: Aufgabenpriorität: risikoorientiert entscheiden
+- Dominante Lernbotschaft: Die Aufgabenpriorität übersetzt kombinierte Bewertungen in konkrete Handlungsempfehlungen.
+- Archetyp: priority-matrix
+- Layout: Handlungsaussage links und vergrößerte Aufgabenprioritätsmatrix rechts.
 - Inhaltsinventar: Fachbegriffe, Beziehungen, Hierarchien, Tabellenzustände und Beispiele bleiben erhalten; PowerPoint-Bedienelemente und Masterdekoration entfallen.
 - Referenz-Lock: RE1 slide_013, slide_009, slide_027 und slide_022
 - Assetstrategie: bereinigtes und vergrößertes Quellasset

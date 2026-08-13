@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "re2_ch3_fta_step3_focus.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 40,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "fta34_circuit",
+      "label": "Motorschaltung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta34_event",
+      "label": "Unerwünschtes Ereignis",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta34_categories",
+      "label": "Ausfallpfade",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta34_circuit",
+      "targetId": "fta34_circuit",
+      "action": "show",
+      "sourceText": "Schauen wir uns hierzu ein Beispiel",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_fta34_event",
+      "targetId": "fta34_event",
+      "action": "show",
+      "sourceText": "Das unerwünschte Ereignis können wir einfach",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_fta34_categories",
+      "targetId": "fta34_categories",
+      "action": "show",
+      "sourceText": "Nun kann der Fehlerbaum in drei",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

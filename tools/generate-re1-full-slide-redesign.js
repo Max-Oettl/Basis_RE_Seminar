@@ -631,7 +631,7 @@ function hierarchyCard(x, y, width, height, title, subtitle, accent = C.accent) 
 function renderSlide9(scene) {
   const root = semanticGroup("vehicle_root", "PKW als Systembezug", `
     <rect x="810" y="205" width="300" height="95" rx="8" fill="${C.deep}"/>
-    ${pictogram("car", { cx: 866, cy: 252, size: 46, color: "#FFFFFF" })}
+    ${pictogram("car", { cx: 866, cy: 252, size: 64, color: "#FFFFFF", background: C.deep, radius: 36 })}
     ${textLines({ x: 910, y: 252, lines: ["PKW"], size: 32, weight: 820, fill: "#FFFFFF", fontFamily: educationTheme.displayFontFamily })}
   `);
   const hierarchy = animGroup("vehicle_system_hierarchy", "Systemstruktur eines PKW", `
@@ -668,7 +668,7 @@ function renderSlide9(scene) {
     <line x1="1264" y1="775" x2="1806" y2="775" stroke="${C.border}" stroke-width="2"/>
   `);
   const failure = animGroup("failure_propagation", "Fehlerwirkung vom Kolben bis zum PKW", `
-    ${pictogram("bolt", { cx: 350, cy: 680, size: 38, color: "#FFFFFF", background: C.failure, radius: 30 })}
+    ${pictogram("bolt", { cx: 350, cy: 680, size: 64, color: "#FFFFFF", background: C.failure, radius: 36 })}
     ${textLines({ x: 1264, y: 813, lines: ["FEHLERWIRKUNG"], size: 18, weight: 800, fill: C.failure })}
     ${textLines({ x: 1320, y: 846, lines: ["Kolben", "fällt aus"], size: 18, weight: 760, fill: C.failure, anchor: "middle", lineHeight: 1.15 })}
     ${arrow(1400, 850, 1450, 850, C.failure, 3)}
@@ -1045,8 +1045,21 @@ function plotAsset(slideNumber, filename, x, y, width, height, assetId) {
     .replace(/font-size=["']([0-9.]+)(?:px)?["']/gi, (match, value) => `font-size="${Math.max(18, Number(value))}"`);
 }
 
-function formulaAsset(slideNumber, filename, x, y, width, height, assetId) {
-  const embedded = nestedSvg(path.join(outputRoot, `slide_${String(slideNumber).padStart(3, "0")}`, "formulas", filename), x, y, width, height, assetId)
+function formulaAsset(slideNumber, filename, x, y, width, height, assetId, targetFontSize = 42) {
+  const filePath = path.join(outputRoot, `slide_${String(slideNumber).padStart(3, "0")}`, "formulas", filename);
+  const source = fs.readFileSync(filePath, "utf8");
+  const viewBoxMatch = source.match(/viewBox=["']([\d.]+)\s+([\d.]+)\s+([\d.]+)\s+([\d.]+)["']/i);
+  if (!viewBoxMatch) throw new Error(`Formula SVG has no numeric viewBox: ${filePath}`);
+  const sourceWidth = Number(viewBoxMatch[3]);
+  const sourceHeight = Number(viewBoxMatch[4]);
+  const nominalMatch = source.match(/data-formula-fontsize=["']([\d.]+)["']/i);
+  const scale = nominalMatch
+    ? Math.min(targetFontSize / Number(nominalMatch[1]), width / sourceWidth, height / sourceHeight)
+    : Math.min(width / sourceWidth, height / sourceHeight);
+  const displayWidth = Math.round(sourceWidth * scale * 1000) / 1000;
+  const displayHeight = Math.round(sourceHeight * scale * 1000) / 1000;
+  const centeredY = Math.round((y + (height - displayHeight) / 2) * 1000) / 1000;
+  const embedded = nestedSvg(filePath, x, centeredY, displayWidth, displayHeight, assetId)
     .replace('preserveAspectRatio="xMidYMid meet"', 'preserveAspectRatio="xMinYMid meet"')
     .replace(new RegExp(`<g id="${assetId}__patch_1">[\\s\\S]*?<\\/g>`), "")
     .replaceAll("#062d46", C.deep)
@@ -1337,7 +1350,7 @@ function renderSlide45(scene) {
 
 function renderSlide46(scene) {
   const definition = `${card(98, 205, 1724, 102, { fill: C.surface, stroke: C.border, shadow: false })}${pictogram("clock", { cx: 158, cy: 256, size: 46, color: C.secondary, background: C.secondarySoft, radius: 38 })}${richTextLine(220, 267, [{ text: "MTTF", fill: C.secondary, weight: 860 }, { text: " = mittlere Lebensdauer nicht reparierbarer Einheiten", fill: C.deep, weight: 760 }], { size: 31 })}`;
-  const formula = animGroup("mttf_formula", "MTTF als Erwartungswert", `${card(98, 338, 760, 168, { fill: C.surface, stroke: C.secondary })}${label(132, 380, "Erwartungswert aus der Zuverlässigkeitsfunktion", C.secondary)}${integralExpression(140, 458, "MTTF = E(T) =", "∞", "0", "R(t) dt", 250)}`);
+  const formula = animGroup("mttf_formula", "MTTF als Erwartungswert", `${card(98, 338, 760, 168, { fill: C.surface, stroke: C.secondary })}${label(132, 380, "Erwartungswert aus der Zuverlässigkeitsfunktion", C.secondary)}${formulaAsset(46, "mttf.svg", 132, 402, 690, 88, "mttf_formula_asset", 34)}`);
   const half = animGroup("mttf_half_probability", "50-Prozent-Einordnung bei Normalverteilung", `${card(900, 338, 922, 168, { fill: C.accentSoft, stroke: C.accent, shadow: false })}${pictogram("percent", { cx: 958, cy: 422, size: 46, color: C.accent, background: "#FFFFFF", radius: 38 })}${textLines({ x: 1018, y: 390, lines: ["BEI NORMALVERTEILUNG"], size: 18, weight: 840, fill: C.accent })}${richTextLine(1018, 450, [{ text: "50 % ausgefallen", fill: C.failure, weight: 840 }, { text: "  |  ", fill: C.muted, weight: 700 }, { text: "50 % intakt", fill: C.success, weight: 840 }], { size: 28 })}`);
   const failurePositions = [662, 941, 1074, 1354];
   const failureIconHref = mediaDataUri(localMedia(46, "failed-industrial-system-pictogram.png"));
@@ -1443,13 +1456,8 @@ function applicationItem(kind, x, y, text, color, background) {
 }
 
 function formulaRow(slideNumber, id, y, labelText, formulaFile, formulaWidth, sourceLabel) {
-  const content = `${textLines({ x: 142, y: y + 66, lines: [labelText], size: 24, weight: 790, fill: C.deep })}${formulaAsset(slideNumber, formulaFile, 610, y + 18, formulaWidth, 78, `${id}_formula`)}`;
+  const content = `${textLines({ x: 142, y: y + 66, lines: [labelText], size: 24, weight: 790, fill: C.deep })}${formulaAsset(slideNumber, formulaFile, 610, y + 5, formulaWidth, 104, `${id}_formula`)}`;
   return animGroup(id, sourceLabel, content);
-}
-
-function integralExpression(x, y, prefix, upper, lower, integrand, prefixWidth = 150) {
-  const integralX = x + prefixWidth;
-  return `<g data-qc-role="formula" data-qc-allow-overlap="true"><text x="${x}" y="${y}" font-size="32" font-weight="720" fill="${C.deep}">${esc(prefix)}</text><text x="${integralX}" y="${y + 10}" font-size="62" font-weight="520" fill="${C.deep}">∫</text><text x="${integralX + 42}" y="${y - 25}" font-size="18" font-weight="760" fill="${C.deep}">${esc(upper)}</text><text x="${integralX + 42}" y="${y + 30}" font-size="18" font-weight="760" fill="${C.deep}">${esc(lower)}</text><text x="${integralX + 72}" y="${y}" font-size="32" font-weight="720" fill="${C.deep}">${esc(integrand)}</text></g>`;
 }
 
 function renderSlide50(scene) {
@@ -1496,7 +1504,7 @@ function renderSlide52(scene) {
   const panel = `${card(96, 248, 1728, 586, { fill: C.surface, stroke: C.border })}<line x1="560" y1="270" x2="560" y2="812" stroke="${C.border}" stroke-width="2"/><line x1="120" y1="380" x2="1800" y2="380" stroke="${C.border}"/><line x1="120" y1="512" x2="1800" y2="512" stroke="${C.border}"/><line x1="120" y1="644" x2="1800" y2="644" stroke="${C.border}"/>`;
   const parameters = animGroup("normal_formula_parameters", "Parameter der Normalverteilung", `${card(96, 178, 1728, 52, { fill: C.accentSoft, stroke: C.accent, shadow: false })}${textLines({ x: 132, y: 212, lines: ["t  ·  Lebensdauer / Beanspruchung"], size: 19, weight: 760, fill: C.deep })}${textLines({ x: 688, y: 212, lines: ["μ  ·  Erwartungswert und Lageparameter"], size: 19, weight: 760, fill: C.deep })}${textLines({ x: 1320, y: 212, lines: ["σ  ·  Standardabweichung"], size: 19, weight: 760, fill: C.deep })}`);
   const density = formulaRow(52, "normal_density_formula", 270, "Dichtefunktion  f(t)", "density.svg", 930, "Dichtefunktion der Normalverteilung");
-  const failure = animGroup("normal_failure_formula", "Ausfallwahrscheinlichkeit als Integral", `${textLines({ x: 142, y: 468, lines: ["Ausfallwahrscheinlichkeit  F(t)"], size: 24, weight: 790, fill: C.deep })}${integralExpression(610, 470, "F(t) =", "t", "0", "f(τ) dτ", 132)}`);
+  const failure = formulaRow(52, "normal_failure_formula", 402, "Ausfallwahrscheinlichkeit  F(t)", "failure_probability.svg", 760, "Ausfallwahrscheinlichkeit als Integral");
   const reliability = formulaRow(52, "normal_reliability_formula", 534, "Überlebenswahrscheinlichkeit  R(t)", "reliability.svg", 760, "Überlebenswahrscheinlichkeit als Gegenwahrscheinlichkeit");
   const hazard = formulaRow(52, "normal_hazard_formula", 666, "Ausfallrate  λ(t)", "hazard.svg", 380, "Ausfallrate als Quotient");
   const conclusion = animGroup("normal_formula_conclusion", "Mathematische Komplexität", `${card(366, 866, 1188, 70, { fill: C.failureSoft, stroke: C.failure, shadow: false })}${textLines({ x: 960, y: 910, lines: ["Die komplexe Dichtefunktion setzt sich in F(t), R(t) und λ(t) fort."], size: 23, weight: 790, fill: C.failure, anchor: "middle" })}`);
@@ -1584,7 +1592,7 @@ function renderSlide56(scene) {
   const cases = animGroup("weibull_special_cases", "Spezialfälle der Weibullverteilung", `${card(84, 574, 462, 138, { fill: C.surface, stroke: C.border, shadow: false })}${textLines({ x: 116, y: 612, lines: ["SPEZIALFÄLLE"], size: 18, weight: 850, fill: C.muted })}${richTextLine(116, 655, [{ text: "b = 1", fill: C.accent, weight: 850 }, { text: "  Exponentialverteilung", fill: C.deep, weight: 720 }], { size: 21 })}${richTextLine(116, 690, [{ text: "b ≈ 3,5", fill: C.failure, weight: 850 }, { text: "  normalähnlich", fill: C.deep, weight: 720 }], { size: 21 })}`);
   const applications = animGroup("weibull_applications", "Typische Anwendungen", `${textLines({ x: 100, y: 770, lines: ["BREITES ANWENDUNGSSPEKTRUM"], size: 18, weight: 850, fill: C.success })}${applicationItem("machineAlert", 124, 824, "Lebensdauerdaten", C.success, C.successSoft)}${applicationItem("shieldCheck", 124, 882, "Versicherungswesen", C.accent, C.accentSoft)}${applicationItem("flask", 124, 940, "Medizin", C.secondary, C.secondarySoft)}`);
   return {
-    svg: frame(scene, `${plot}${eta}${beta}${cases}${applications}`, { title: "Die Weibullverteilung", takeaway: "Die charakteristische Lebensdauer T bestimmt die Lage, der Formparameter b die flexible Form der Verteilung.", archetype: "distribution-introduction", layoutIntent: "dominant-weibull-density-family-with-two-parameter-anchors-and-compact-applications" }),
+    svg: frame(scene, `${plot}${eta}${beta}${cases}${applications}`, { title: "Die Weibullverteilung", takeaway: "Die charakteristische Lebensdauer T bestimmt die Lage, der Formparameter b die flexible Form der Verteilung.", archetype: "distribution-introduction", layoutIntent: "dominant-weibull-density-family-with-two-parameter-anchors-and-compact-applications", density: "dense", designException: "Der mehrfarbige Weibull-Familienplot benoetigt gemeinsam mit Parameterankern, Formfaellen und Anwendungen den erweiterten Farbraum einer dichten technischen Einfuehrungsfolie." }),
     targets: [target("weibull_density_curves", "Dichtekurven der Weibullverteilung"), target("weibull_density_eta", "Charakteristische Lebensdauer im Plot"), target("weibull_eta_meaning", "Bedeutung von T"), target("weibull_beta_meaning", "Bedeutung von b"), target("weibull_special_cases", "Spezialfälle"), target("weibull_applications", "Anwendungen")],
     steps: [
       step("draw_weibull_density_curves", "weibull_density_curves", "draw", "Auf der rechten Seite sind hierzu unterschiedliche Verläufe von Dichtefunktionen dargestellt"),
@@ -1729,12 +1737,12 @@ function renderSlide63(scene) {
 
 function renderSlide64(scene) {
   const plot = plotAsset(64, "weibull_paper.svg", 84, 204, 1752, 610, "weibull_paper_plot");
-  const axes = animGroup("weibull_paper_axes_note", "Transformierte Achsen", `${card(96, 838, 390, 96, { fill: C.accentSoft, stroke: C.accent, shadow: false })}${textLines({ x: 128, y: 876, lines: ["ACHSEN"], size: 17, weight: 850, fill: C.accent })}${textLines({ x: 128, y: 910, lines: ["x logarithmisch · y doppellogarithmisch"], size: 18, weight: 760, fill: C.deep })}`);
+  const axes = animGroup("weibull_paper_axes_note", "Transformierte Achsen", `${card(96, 838, 390, 96, { fill: C.accentSoft, stroke: C.accent, shadow: false })}${textLines({ x: 128, y: 876, lines: ["ACHSEN"], size: 18, weight: 850, fill: C.accent })}${textLines({ x: 128, y: 910, lines: ["x logarithmisch · y doppellogarithmisch"], size: 18, weight: 760, fill: C.deep })}`);
   const processExample = animGroup("weibull_paper_process_example", "Arbeitsschritt Weibull-Gerade", `${card(506, 838, 410, 96, { fill: C.surface, stroke: C.border, shadow: false })}<circle cx="548" cy="886" r="22" fill="${C.accent}"/>${textLines({ x: 548, y: 894, lines: ["1"], size: 21, weight: 860, fill: "#FFFFFF", anchor: "middle" })}${textLines({ x: 586, y: 894, lines: ["Gerade aus Daten"], size: 20, weight: 780, fill: C.deep })}`);
   const processParallel = animGroup("weibull_paper_process_parallel", "Arbeitsschritt Polverschiebung", `${card(936, 838, 410, 96, { fill: C.surface, stroke: C.border, shadow: false })}<circle cx="978" cy="886" r="22" fill="${C.secondary}"/>${textLines({ x: 978, y: 894, lines: ["2"], size: 21, weight: 860, fill: "#FFFFFF", anchor: "middle" })}${textLines({ x: 1016, y: 894, lines: ["parallel in den Pol"], size: 20, weight: 780, fill: C.deep })}`);
   const processBeta = animGroup("weibull_paper_process_beta", "Arbeitsschritt Formparameter ablesen", `${card(1366, 838, 458, 96, { fill: C.successSoft, stroke: C.success, shadow: false })}<circle cx="1408" cy="886" r="22" fill="${C.success}"/>${textLines({ x: 1408, y: 894, lines: ["3"], size: 21, weight: 860, fill: "#FFFFFF", anchor: "middle" })}${textLines({ x: 1446, y: 894, lines: ["Formparameter b ablesen"], size: 20, weight: 780, fill: C.deep })}`);
   return {
-    svg: frame(scene, `${plot}${axes}${processExample}${processParallel}${processBeta}`, { title: "Weibull-Wahrscheinlichkeitspapier", takeaway: "Durch transformierte Achsen wird die S-Kurve zur Geraden; ihre parallele Verschiebung zum Pol erlaubt die Ablesung von b.", archetype: "probability-paper-workflow", layoutIntent: "dominant-weibull-probability-paper-with-compact-reading-sequence", density: "normal" }),
+    svg: frame(scene, `${plot}${axes}${processExample}${processParallel}${processBeta}`, { title: "Weibull-Wahrscheinlichkeitspapier", takeaway: "Durch transformierte Achsen wird die S-Kurve zur Geraden; ihre parallele Verschiebung zum Pol erlaubt die Ablesung von b.", archetype: "probability-paper-workflow", layoutIntent: "dominant-weibull-probability-paper-with-compact-reading-sequence", density: "dense", designException: "Der eingebettete Wahrscheinlichkeitspapier-Plot und die vier didaktischen Leseschritte erzeugen bewusst eine hohe, aber klar gegliederte technische Elementdichte." }),
     targets: [target("weibull_paper_reference", "Weibull-Wahrscheinlichkeitspapier"), target("weibull_paper_axes_note", "Transformierte Achsen"), target("weibull_paper_example", "Ermittelte Weibull-Gerade"), target("weibull_paper_process_example", "Arbeitsschritt Weibull-Gerade"), target("weibull_paper_parallel", "Parallele Verschiebung"), target("weibull_paper_process_parallel", "Arbeitsschritt Polverschiebung"), target("weibull_paper_beta", "Abgelesener Formparameter"), target("weibull_paper_process_beta", "Arbeitsschritt Formparameter")],
     steps: [
       step("show_weibull_paper_axes_note", "weibull_paper_axes_note", "show", "Dafür wird die Ypsilon-Achse doppellogarithmiert und die x-Achse logarithmiert"),
@@ -1851,7 +1859,7 @@ function renderSlide70(scene) {
   const reliability = formulaLine(514, "Überlebenswahrscheinlichkeit  R(t)", "reliability.svg", 900, "lognormal_reliability_formula");
   const hazard = formulaLine(638, "Ausfallrate  λ(t)", "hazard.svg", 820, "lognormal_hazard_formula");
   const formulas = animGroup("lognormal_formula_system", "Zuverlässigkeitsfunktionen der Lognormalverteilung", `${formulaPanel}${density}${failure}${reliability}${hazard}`);
-  const median = animGroup("lognormal_median_formula", "Median der Lognormalverteilung", `${card(330, 814, 1260, 120, { fill: C.secondarySoft, stroke: C.secondary, shadow: false })}${textLines({ x: 384, y: 860, lines: ["MEDIAN"], size: 18, weight: 850, fill: C.secondary })}${textLines({ x: 590, y: 877, lines: ["Median = e^μ"], size: 34, weight: 850, fill: C.deep })}${textLines({ x: 1010, y: 870, lines: ["Folge der logarithmierten Zeit"], size: 23, weight: 800, fill: C.deep })}`);
+  const median = animGroup("lognormal_median_formula", "Median der Lognormalverteilung", `${card(330, 814, 1260, 120, { fill: C.secondarySoft, stroke: C.secondary, shadow: false })}${textLines({ x: 384, y: 860, lines: ["MEDIAN"], size: 18, weight: 850, fill: C.secondary })}${formulaAsset(70, "median.svg", 590, 825, 360, 70, "lognormal_median_value_formula", 34)}${textLines({ x: 1010, y: 870, lines: ["Folge der logarithmierten Zeit"], size: 23, weight: 800, fill: C.deep })}`);
   return {
     svg: frame(scene, `${parameters}${formulas}${median}`, { title: "Formeln der Lognormalverteilung", takeaway: "Die Lognormalformeln entsprechen der Normalverteilung mit logarithmierter Zeit; deshalb liegt der Median bei e hoch μ.", archetype: "formula-matrix", layoutIntent: "grouped-four-function-lognormal-formula-system-with-separate-median-consequence" }),
     targets: [target("lognormal_formula_parameters", "Parameter"), target("lognormal_formula_system", "Vier Zuverlässigkeitsfunktionen"), target("lognormal_median_formula", "Median")],
@@ -2133,11 +2141,11 @@ function prepareLocalAssets(selected = null) {
   if (wants(10)) writeJson(path.join(outputRoot, "slide_010", "data", "stress_strength.json"), { schema_version: "reltestStressStrength/v1", x_min: 0, x_max: 12, stress_mean: 4.3, stress_sigma: 1.15, strength_mean: 6.4, strength_sigma: 1.15, visible_support_sigma: 2.6, failure_peak_ratio: 0.3, failure_label_x: 8.5, failure_label_y_ratio: 0.22, failure_label_anchor_x: 6.0, animation_targets: ["stress_distribution", "strength_distribution", "failure_overlap"] });
   if (wants(11)) writeJson(path.join(outputRoot, "slide_011", "data", "stress_strength.json"), { schema_version: "reltestStressStrength/v1", x_min: 0, x_max: 12, stress_mean: 4.3, stress_sigma: 1.15, previous_strength_mean: 6.4, strength_mean: 7.55, strength_sigma: 1.15, visible_support_sigma: 2.6, failure_peak_ratio: 0.22, failure_label_x: 10.15, failure_label_y_ratio: 0.16, failure_label_anchor_x: 6.5, animate_strength_shift: true, include_initial_strength_distribution: false, animation_shift_user_units: 74.8, animation_targets: ["shifted_strength_distribution", "failure_overlap"] });
   if (wants(12)) writeJson(path.join(outputRoot, "slide_012", "data", "stress_strength.json"), { schema_version: "reltestStressStrength/v1", x_min: 0, x_max: 12, stress_mean: 4.3, stress_sigma: 1.15, previous_strength_mean: 6.4, strength_mean: 8.35, strength_sigma: 1.15, visible_support_sigma: 2.6, failure_peak_ratio: 0.3, failure_label_x: 10.65, failure_label_y_ratio: 0.14, failure_label_anchor_x: 6.45, animation_targets: [] });
-  if (wants(41)) writeJson(path.join(outputRoot, "slide_041", "data", "location_measure.json"), { schema_version: "reltestLocationMeasure/v1", measure: "mean", failure_times: [12, 18, 23, 29, 34, 42, 48], outlier: 82 });
-  if (wants(42)) writeJson(path.join(outputRoot, "slide_042", "data", "location_measure.json"), { schema_version: "reltestLocationMeasure/v1", measure: "median", distribution: "lognormal", mu: 1.32, sigma: 0.48, probability: 0.5 });
-  if (wants(43)) writeJson(path.join(outputRoot, "slide_043", "data", "location_measure.json"), { schema_version: "reltestLocationMeasure/v1", measure: "mode", distribution: "lognormal", mu: 1.32, sigma: 0.48 });
+  if (wants(41)) writeJson(path.join(outputRoot, "slide_041", "data", "location_measure.json"), { schema_version: "reltestLocationMeasure/v1", measure: "mean", failure_times: [12, 18, 23, 29, 34, 42, 48], outlier: 82, formula_asset: { file: "mean.svg", formula: "$\\mu=\\mathrm{E}(T)=\\int_{-\\infty}^{\\infty}t\\,f(t)\\,\\mathrm{d}t$" } });
+  if (wants(42)) writeJson(path.join(outputRoot, "slide_042", "data", "location_measure.json"), { schema_version: "reltestLocationMeasure/v1", measure: "median", distribution: "lognormal", mu: 1.32, sigma: 0.48, probability: 0.5, formula_asset: { file: "median.svg", formula: "$F(t_{0{,}5})=0{,}5$" } });
+  if (wants(43)) writeJson(path.join(outputRoot, "slide_043", "data", "location_measure.json"), { schema_version: "reltestLocationMeasure/v1", measure: "mode", distribution: "lognormal", mu: 1.32, sigma: 0.48, formula_asset: { file: "mode.svg", formula: "$f^{\\prime}(t_{\\mathrm{modal}})=0$" } });
   if (wants(44)) writeJson(path.join(outputRoot, "slide_044", "data", "location_measure.json"), { schema_version: "reltestLocationMeasure/v1", measure: "comparison", distribution: "right_skewed_lognormal", mu: 1.32, sigma: 0.48 });
-  if (wants(46)) writeJson(path.join(outputRoot, "slide_046", "data", "mttf.json"), { schema_version: "reltestMttf/v1", unit: "km", failure_times_thousand: [52, 92, 111, 151] });
+  if (wants(46)) writeJson(path.join(outputRoot, "slide_046", "data", "mttf.json"), { schema_version: "reltestMttf/v1", unit: "km", failure_times_thousand: [52, 92, 111, 151], formula_asset: { file: "mttf.svg", formula: "$\\mathrm{MTTF}=\\mathrm{E}(T)=\\int_0^{\\infty}t\\,f(t)\\,\\mathrm{d}t=\\int_0^{\\infty}R(t)\\,\\mathrm{d}t$" } });
   if (wants(49)) writeJson(path.join(outputRoot, "slide_049", "data", "bq_life.json"), { schema_version: "reltestBqLife/v1", unit: "km", probabilities_percent: [5, 10, 20, 50], lifetimes_km: [100000, 250000, 700000, 1200000] });
 }
 

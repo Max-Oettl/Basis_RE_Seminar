@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "elementAnimationPlan/v1",
+  "sceneId": "re3_src_001",
+  "decision": "animated",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "intro_1",
+      "label": "Lebensdauerdaten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "intro_2",
+      "label": "Auswertung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "intro_3",
+      "label": "Weibullverteilung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "intro_4",
+      "label": "Parameter",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "intro_5",
+      "label": "Prognosen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "intro_relation",
+      "label": "Gesamtweg",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_intro_1",
+      "targetId": "intro_1",
+      "action": "show",
+      "sourceText": "In diesem Abschnitt lernen wir die Lebensdauerdatenanalyse kennen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_intro_2",
+      "targetId": "intro_2",
+      "action": "show",
+      "sourceText": "Sobald wir die Lebensdauerdaten gesammelt haben, können wir sie auswerten.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_intro_3",
+      "targetId": "intro_3",
+      "action": "show",
+      "sourceText": "In diesem Fall nutzen wir die Weibullverteilung.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_intro_4",
+      "targetId": "intro_4",
+      "action": "show",
+      "sourceText": "Die charakteristische Lebensdauer gibt dabei eine Art Lageparameter an, während der Formparameter die Gestalt der Verteilung beeinflusst und damit die Steigung der Geraden im Weibull-Papier bestimmt.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_05_intro_5",
+      "targetId": "intro_5",
+      "action": "show",
+      "sourceText": "Sobald wir die Weibullverteilung basierend auf den Lebensdauerdaten ermittelt haben, können wir Vergleiche anstellen, Berechnungen durchführen und Prognosen erstellen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_06_intro_relation",
+      "targetId": "intro_relation",
+      "action": "draw",
+      "sourceText": "Zunächst konzentrieren wir uns jedoch auf das grundlegende Vorgehen für die Analyse von Lebensdauerdaten.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung erscheint nach ihren fachlichen Endpunkten.",
+      "drawDurFrames": 42
+    }
+  ]
+}

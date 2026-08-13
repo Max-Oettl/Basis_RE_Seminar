@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_failure_links",
+  "svgPath": "slide_104.svg",
+  "spokenText": "Ein Fehler ist, wie zuvor bereits beschrieben, die aus den bekannten Funktionen abgeleitete Fehlfunktion.\n\nBei einem Autoreifen könnte dies beispielsweise ein plötzlicher Druckverlust sein. Jeder Fehler hat grundsätzlich eine Fehlerursache, die zu diesem Fehler geführt hat. Für den Druckverlust im Reifen könnte ein spitzer Gegenstand wie ein Nagel auf der Straße verantwortlich sein.\n\nDarüber hinaus besitzt jeder Fehler auch eine Fehlerfolge, also eine Auswirkung auf das System. In diesem Beispiel könnte das ein Ausbrechen und Verunfallen des Fahrzeugs oder einfach die Fahruntüchtigkeit sein.\n\nWerfen wir nun einen Blick darauf, wie Fehler, Fehlerursachen und Fehlerfolgen innerhalb der Systemstruktur zusammenhängen.\n\nBetrachten wir dazu den Fehler eines Systemelements auf der zweiten Ebene im Strukturbaum. Jeder Fehler hat eine Fehlerursache und auch eine Fehlerfolge.\n\nSchauen wir uns noch die benachbarten Systemebenen genauer an.\n\nDer Fehler einer Ebene ist gleichzeitig auf der nächsthöheren Ebene als Fehlerursache wieder zu finden.\n\nAußerdem entspricht die Fehlerfolge unseres Fehlers gleich dem Fehler der nächsthöheren Ebene.\n\nDas Gleiche gilt auch für die nächsttiefere Ebene. Hier entspricht unser Fehler wieder der Fehlerfolge der nächsttieferen Ebene, während die Fehlerursache dem Fehler dieser Ebene entspricht.\n\nDie Fehler innerhalb der Systemstruktur werden also nach dem Ursache-Wirkung-Prinzip miteinander verknüpft und überlappen sich innerhalb der Systemhierarchie.\n\nAm oberen Ende der Fehlerkette, also an der Systemgrenze, steht immer mindestens eine Fehlerfolge. Die unteren Enden der Kette werden jeweils von mindestens einer Fehlerursache abgeschlossen.\n\nIm Normalfall besteht die unterste Ebene der Systemstruktur aus einzelnen Bauteilen. Demnach bilden die Fehlfunktion und Fehlerursache dieser Bauteile die letzten Elemente im Fehlernetz.\n\nDie Fehlfunktion eines Bauteils ist oft einfach die physikalische Ausfallart. Typische Ausfallarten sind Bruch, Kurzschluss, Undichtheit oder auch Leistungsabfall. Natürlich gibt es noch viele weitere Ausfallarten.\n\nDiese Ausfallarten werden wiederum durch unterschiedliche Ausfallursachen hervorgerufen. Typische Ursachen sind falsche Materialwahl, unzulässige Belastung, Materialfehler sowie Ermüdung, Korrosion oder falscher Einbau. Auch hier gibt es viele weitere mögliche Ursachen.\n\nDurch das Verständnis dieser Ausfallarten und ihrer Ursachen können wir gezielte Maßnahmen ergreifen, um die Zuverlässigkeit einzelner Bauteile und damit des gesamten Systems zu erhöhen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s108_relation_nodes",
+      "label": "Fehlerzusammenhang",
+      "role": "content",
+      "members": [
+        "s108_relation_nodes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Fehlerzusammenhang",
+      "sourceText": "Darüber hinaus besitzt jeder Fehler auch",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s108_relation_nodes"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s108_relation_nodes",
+      "beatId": "beat_01",
+      "targetId": "s108_relation_nodes",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_01",
+      "visibleGroups": [
+        "canvas_context",
+        "s108_relation_nodes"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

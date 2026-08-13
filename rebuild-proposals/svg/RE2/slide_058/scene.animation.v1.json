@@ -10,16 +10,24 @@
   },
   "targets": [
     {
-      "targetId": "fta58_asset",
-      "label": "Technische Komponenten",
+      "targetId": "fta62_nodes",
+      "label": "Kraftstoff-Ursachen",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "fta58_flow",
-      "label": "Leistungs- und Signalfluss",
+      "targetId": "fta62_links",
+      "label": "Ursachen-Beziehungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta62_common",
+      "label": "Common Cause",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -28,20 +36,30 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_fta58_asset",
-      "targetId": "fta58_asset",
+      "stepId": "step_01_fta62_nodes",
+      "targetId": "fta62_nodes",
       "action": "show",
-      "sourceText": "Der Operationssaal wird über ein eigenes Stromnetzwerk betrieben",
+      "sourceText": "Betrachten wir nun die Ursachen für den Ausfall des Stromgenerators",
       "occurrence": 1,
       "confidence": "high",
       "notes": "Sprechertextgeführte semantische Gruppe.",
       "enterFrames": 16
     },
     {
-      "stepId": "step_02_fta58_flow",
-      "targetId": "fta58_flow",
+      "stepId": "step_02_fta62_links",
+      "targetId": "fta62_links",
+      "action": "draw",
+      "sourceText": "Beide Systeme können sowohl durch eine defekte Einspritzung oder einen leeren Kraftstofftank ausfallen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung wird erst nach den zugehörigen Ereignissen gezeichnet; kleine Linien- und Pfeilskalierung.",
+      "drawDurFrames": 40
+    },
+    {
+      "stepId": "step_03_fta62_common",
+      "targetId": "fta62_common",
       "action": "show",
-      "sourceText": "Im Standardbetrieb versorgt der Stromgenerator über den Energiepuffer",
+      "sourceText": "Dieses Phänomen wird Common Cause genannt",
       "occurrence": 1,
       "confidence": "high",
       "notes": "Sprechertextgeführte semantische Gruppe.",

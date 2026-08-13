@@ -8,6 +8,44 @@
     "drawDurFrames": 42,
     "transformDurFrames": 30
   },
-  "targets": [],
-  "steps": []
+  "targets": [
+    {
+      "targetId": "s95_gear_nodes",
+      "label": "Anpassungsgetriebe",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "s95_gear_links",
+      "label": "Hierarchische Verknüpfungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s95_gear_nodes",
+      "targetId": "s95_gear_nodes",
+      "action": "show",
+      "sourceText": "Schauen wir uns das Ganze anhand unseres Beispiels des Anpassungsgetriebes an.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Vollständige semantische Einheit aus Form, Text und gegebenenfalls Bild.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_s95_gear_links",
+      "targetId": "s95_gear_links",
+      "action": "draw",
+      "sourceText": "Wir nutzen hierbei die Top-Down-Methode.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung wird erst nach den zugehörigen fachlichen Endpunkten aufgebaut.",
+      "drawDurFrames": 42
+    }
+  ]
 }

@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_optimization",
+  "svgPath": "slide_128.svg",
+  "spokenText": "Nachdem wir die Risiken bewertet haben, kommen wir nun zum sechsten Schritt der FME-A: der Optimierung. In diesem Schritt legen wir Optimierungsmaßnahmen fest, die auf den Ergebnissen der FME-A basieren.\n\nBesonders für hohe Risikoprioritätszahlen oder Aufgaben mit mittlerer und hoher Priorität sind geeignete Maßnahmen notwendig. Dabei gibt es drei zentrale Ansätze zur Optimierung:\n\nErstens: Das Beseitigen der Fehlerursachen oder das Verringern der Auftretenswahrscheinlichkeit von Fehlern. Das Ziel ist es hierbei, Fehlerquellen vollständig zu eliminieren oder das Auftreten von Fehlern deutlich zu reduzieren. Solche Maßnahmen lassen sich in der Regel nur durch Änderungen in der Konstruktion oder im Produktionsprozess umsetzen.\n\nZweitens: Das Verringern der Bedeutung eines Fehlers. Damit soll erreicht werden, dass die Auswirkungen eines Fehlers auf das Gesamtsystem minimiert werden. Dies gelingt vor allem durch konzeptionelle Anpassungen am Produkt, wie zum Beispiel die Einführung von Redundanzen oder Fehleranzeigen.\n\nUnd Drittens: Das Erhöhen der Wahrscheinlichkeit, Fehler frühzeitig zu entdecken. Ziel hierbei ist es, Fehler rechtzeitig zu erkennen, bevor sie beim Kunden auftreten und zu schwerwiegenden Systemausfällen führen. Dies lässt sich durch Änderungen in der Konstruktion, verbesserte Prüfverfahren oder durch zusätzliche Kontrollmechanismen erreichen.\n\nDie Priorisierung der Maßnahmen erfolgt nach ihrer Dringlichkeit und ihrem potenziellen Einfluss auf die Risikominimierung.\n\nZuerst setzen wir Maßnahmen um, die die Fehlerursachen direkt beseitigen oder die Wahrscheinlichkeit ihres Auftretens reduzieren. Diese haben den größten Effekt auf die Gesamtsicherheit und Zuverlässigkeit des Systems.\n\nAnschließend folgen Maßnahmen, die darauf abzielen, die Auswirkungen potenzieller Fehler auf das Gesamtsystem zu verringern.\n\nUnd zum Schluss werden wirksame Entdeckungsmaßnahmen umgesetzt. Diese können zwar kostspielig sein, sind aber entscheidend, um verbleibende Fehler frühzeitig zu erkennen und zu beheben.\n\nDas Ziel der Optimierung ist es, die identifizierten Risiken durch gezielte Maßnahmen effektiv zu minimieren und so die Zuverlässigkeit des gesamten Systems weiter zu steigern. Gleichzeitig erfolgt eine iterative Neubewertung der Risiken, basierend auf den umgesetzten Maßnahmen. Letztlich dient dieser Schritt auch zur Absicherung der Zuverlässigkeit des Systems.\n\nWir sind nun am Ende des sechsten Schrittes der FME-A angelangt.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s129_lever_1",
+      "label": "01 AUFTRETEN REDUZIEREN",
+      "role": "content",
+      "members": [
+        "s129_lever_1"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s129_lever_2",
+      "label": "02 BEDEUTUNG REDUZIEREN",
+      "role": "content",
+      "members": [
+        "s129_lever_2"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s129_lever_3",
+      "label": "03 ENTDECKUNG ERHÖHEN",
+      "role": "content",
+      "members": [
+        "s129_lever_3"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "01 AUFTRETEN REDUZIEREN",
+      "sourceText": "Erstens: Das Beseitigen der Fehlerursachen oder",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s129_lever_1"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "02 BEDEUTUNG REDUZIEREN",
+      "sourceText": "Zweitens: Das Verringern der Bedeutung eines",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s129_lever_2"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "03 ENTDECKUNG ERHÖHEN",
+      "sourceText": "Und zum Schluss werden wirksame Entdeckungsmaßnahmen",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s129_lever_3"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s129_lever_1",
+      "beatId": "beat_01",
+      "targetId": "s129_lever_1",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s129_lever_2",
+      "beatId": "beat_02",
+      "targetId": "s129_lever_2",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_s129_lever_3",
+      "beatId": "beat_03",
+      "targetId": "s129_lever_3",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_03",
+      "visibleGroups": [
+        "canvas_context",
+        "s129_lever_1",
+        "s129_lever_2",
+        "s129_lever_3"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

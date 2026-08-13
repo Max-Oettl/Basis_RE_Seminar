@@ -176,20 +176,21 @@ function annotate(markup) {
 function frame(scene, body) {
   const [title, takeaway, archetype, layoutIntent] = sceneMeta[scene.output_slide_number];
   const metadata = {
-    artifactScope: "full-slide", embeddingTarget: "standalone-slide", slideType: archetype,
+    artifactScope: "content-svg", embeddingTarget: "powerpoint-slide", slideType: archetype,
     contentTitle: title, layoutIntent, takeaway, density: [13, 17, 19].includes(scene.output_slide_number) ? "dense" : "balanced",
-    contentMode: "full-slide", backgroundMode: "brand-frame", brandProfile: educationTheme.brandProfile,
+    contentMode: "transparent-content", backgroundMode: "transparent", brandProfile: educationTheme.brandProfile,
     brandVariant: educationTheme.brandVariant, sourceSlides: scene.source_slides, officialLogoStatus: "pending-original-asset",
   };
-  const markers = [...new Set([C.accent, C.deep, C.failure, C.success, C.secondary, C.cyan])].map((color) =>
+  const markers = [...new Set([C.accent, C.deep, C.failure, C.success, C.secondary, C.cyan, C.border])]
+    .filter((color) => body.includes(color))
+    .map((color) =>
     `<marker id="arrow_${color.slice(1)}" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="${color}"/></marker>`).join("");
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="${scene.scene_id}" data-brand-profile="${educationTheme.brandProfile}">
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="content-svg" data-embedding-target="powerpoint-slide" data-scene-id="${scene.scene_id}" data-brand-profile="${educationTheme.brandProfile}">
 <metadata id="slide_quality_metadata" type="application/json"><![CDATA[${JSON.stringify(metadata)}]]></metadata>
 <title id="accessible_title">${esc(title)}</title><desc id="accessible_description">${esc(takeaway)}</desc>
-<defs><linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="${educationTheme.background.start}"/><stop offset="56%" stop-color="${educationTheme.background.mid}"/><stop offset="100%" stop-color="${educationTheme.background.end}"/></linearGradient><pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="${C.deep}" stroke-opacity=".035" stroke-width="1"/></pattern>${markers}</defs>
+<defs>${markers}</defs>
 <style>text{font-family:${educationTheme.bodyFontFamily};letter-spacing:0}</style>
-<rect width="1920" height="1080" fill="url(#backgroundGradient)"/><rect width="1920" height="1080" fill="url(#technicalGrid)"/>
 <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content">${annotate(body)}</g>
 </svg>`;
 }
@@ -286,7 +287,7 @@ function slide10() {
 
 function slide11() {
   const boundary = group("block_boundary", "Systemgrenze",
-    `<rect x="350" y="232" width="1220" height="630" rx="20" fill="${C.accentSoft}" fill-opacity=".25" stroke="${C.failure}" stroke-width="3" stroke-dasharray="12 8"/>${pill(382, 256, 170, "SYSTEMGRENZE", C.failure, C.surface)}`);
+    `<rect x="350" y="232" width="1220" height="630" rx="20" fill="${C.accentSoft}" fill-opacity=".25" stroke="${C.accent}" stroke-width="3" stroke-dasharray="12 8"/>${pill(382, 256, 170, "SYSTEMGRENZE", C.accent, C.surface)}`);
   const components = group("block_components", "Komponenten",
     `${box(560, 394, 300, 300, C.deep, C.deep, 2.5, 14)}${txt(710, 534, "Komponente 1", 34, 800, C.surface, "middle")}${multi(710, 580, 250, "Teilfunktion im System", 21, 600, C.border, "middle")}
      ${box(1060, 394, 300, 300, C.deep, C.deep, 2.5, 14)}${txt(1210, 534, "Komponente 2", 34, 800, C.surface, "middle")}${multi(1210, 580, 250, "gekoppelte Teilfunktion", 21, 600, C.border, "middle")}`);
@@ -306,7 +307,7 @@ function smallBlock(x, y, w, h, text, color = C.deep, fill = C.surface, size = 1
 }
 function slide13() {
   const boundary = group("inv_boundary", "Systemgrenze und Schnittstellen",
-    `<rect x="246" y="244" width="1430" height="620" rx="16" fill="${C.surface}" fill-opacity=".72" stroke="${C.failure}" stroke-width="3" stroke-dasharray="10 7"/>${pill(272, 262, 170, "SYSTEMGRENZE", C.failure, C.surface)}
+    `<rect x="246" y="244" width="1430" height="620" rx="16" fill="${C.surface}" fill-opacity=".72" stroke="${C.accent}" stroke-width="3" stroke-dasharray="10 7"/>${pill(272, 262, 170, "SYSTEMGRENZE", C.accent, C.surface)}
      ${multi(108, 374, 110, "Elektr. Energie (DC-Strom)", 18, 700, C.accent, "middle")}${multi(1760, 374, 120, "Elektr. Energie (AC-Strom)", 18, 700, C.secondary, "middle")}
      ${multi(110, 510, 150, "Betätigungsenergie · Thermische Energie · Verschmutzung · Feuchtigkeit · Störsignale", 18, 620, C.muted, "middle")}
      ${multi(1760, 520, 150, "Thermische Energie · Feuchtigkeit · Störsignale", 18, 620, C.muted, "middle")}`);
@@ -331,7 +332,7 @@ function slide13() {
     `${line(884, 228, 884, 768, C.accent, 2.2, "both")}${[385,575,765,955,1145,1335,1525].map((x) => line(x, 888, 884, 830, C.accent, 1.8, "both")).join("")}
      ${smallBlock(596, 768, 576, 62, "Kommunikationseinheit", C.accent, C.accentSoft, 20)}
      ${["Display", "Bluetooth", "RS232", "RS485", "Funk", "Ethernet", "WLAN"].map((t, i) => smallBlock(310 + i * 190, 888, 150, 52, t, C.accent, C.surface, 18)).join("")}
-     ${multi(884, 216, 600, "Kommunikationsdaten / Netzsignal ↕ Kommunikationsdaten / Betriebsdaten", 19, 700, C.accent, "middle")}`);
+     ${multi(884, 216, 600, "Kommunikationsdaten · Netzsignal ↕ Betriebsdaten", 19, 700, C.accent, "middle")}`);
   const environment = group("inv_environment", "Umwelteinflüsse und Abgaben",
     `${pill(80, 780, 150, "STÖRGRÖSSEN", C.failure, C.failureSoft)}${line(230, 799, 300, 718, C.failure, 2.5)}${pill(1690, 780, 150, "ABGABEN", C.secondary, C.secondarySoft)}${line(1648, 687, 1690, 799, C.secondary, 2.5)}`);
   return evidence(boundary + energy + aux + comm + control + environment, "Quellfolie 13: detailliertes Wechselrichter-Bauteilblockdiagramm");
@@ -368,7 +369,7 @@ function slide14() {
 function slide16() {
   const main = group("func16_main", "Hauptfunktionskette",
     `<rect x="92" y="214" width="1736" height="618" rx="18" fill="${C.surface}" fill-opacity=".8" stroke="${C.border}" stroke-width="1.8"/>
-     ${pill(122, 240, 328, "SYSTEMGRENZE WECHSELRICHTER", C.failure, C.surface)}
+     ${pill(122, 240, 328, "SYSTEMGRENZE WECHSELRICHTER", C.accent, C.surface)}
      ${txt(112, 508, "DC-STROM", 21, 800, C.accent)}${line(238, 500, 320, 500, C.accent, 3)}
      ${funcBox(320, 430, 196, 140, 1, "Eingang DC-Strom", C.accent, C.accentSoft)}
      ${funcBox(574, 430, 210, 140, 2, "DC/DC-Wandlung", C.accent, C.accentSoft)}
@@ -395,8 +396,8 @@ function slide16() {
 }
 
 function classBadge(x, y, value) {
-  const color = value === "A" ? C.failure : value === "B" ? C.secondary : C.success;
-  const fill = value === "A" ? C.failureSoft : value === "B" ? C.secondarySoft : C.successSoft;
+  const color = value === "A" ? C.failure : value === "B" ? C.semanticWarning : C.semanticSuccess;
+  const fill = value === "A" ? C.failureSoft : value === "B" ? C.semanticWarningSoft : C.semanticSuccessSoft;
   return `${box(x, y, 44, 32, fill, color, 1.5, 16)}${txt(x + 22, y + 23, value, 18, 820, color, "middle")}`;
 }
 function tableRow(id, label, y, component, functionText, risks) {
@@ -454,12 +455,12 @@ function slide18() {
     "Lebensdauerberechnung möglich und weitgehend gesichert",
     "Ausfallverhalten aus Wöhlerversuchen bekannt; Formparameter b > 1,0",
   ]);
-  const b = abcRuleCard("abc18_b", "B-Teile", 694, C.secondary, C.secondarySoft, "B-TEILE", "risikoreich · Belastung nicht sicher berechenbar", [
+  const b = abcRuleCard("abc18_b", "B-Teile", 694, C.semanticWarning, C.semanticWarningSoft, "B-TEILE", "risikoreich · Belastung nicht sicher berechenbar", [
     "Reibung, Verschleiß, extreme Temperaturen, Erschütterungen, Schmutz oder Korrosion",
     "Lebensdauerberechnung nicht möglich oder nicht gesichert",
     "Ausfallverhalten schätzen oder im Versuch bestimmen; Formparameter b ≥ 1,0",
   ]);
-  const c = abcRuleCard("abc18_c", "C-Teile", 1296, C.success, C.successSoft, "C-TEILE", "risikoneutral · stochastische Beanspruchung", [
+  const c = abcRuleCard("abc18_c", "C-Teile", 1296, C.semanticSuccess, C.semanticSuccessSoft, "C-TEILE", "risikoneutral · stochastische Beanspruchung", [
     "Beanspruchung durch Stöße, Reibung, Verschleiß und vergleichbare Einflüsse",
     "Keine rechnerische Auslegung möglich",
     "Nur Zufalls- oder Frühausfälle; Formparameter 0 < b ≤ 1,0",
@@ -548,11 +549,14 @@ function main() {
   for (const scene of scenes) {
     const n = scene.output_slide_number;
     if (!wanted.has(n)) continue;
+    const renderN = scene.render_source_slide || scene.primary_source_slide || n;
+    const renderScene = { ...scene, output_slide_number: renderN };
+    if (!builders[renderN]) throw new Error(`Keine Kapitel-2-Endzustandsdefinition für Quellfolie ${renderN}.`);
     const dir = path.join(outRoot, scene.work_unit); fs.mkdirSync(dir, { recursive: true }); prepareMedia(n);
-    const svg = frame(scene, builders[n]());
+    const svg = frame(renderScene, builders[renderN]());
     fs.writeFileSync(path.join(dir, `${scene.work_unit}.svg`), `${svg}\n`, "utf8");
-    writeBrief(scene);
-    if (animated) writeManifest(scene);
+    writeBrief(renderScene);
+    if (animated) writeManifest(renderScene);
     generated.push(scene.work_unit);
   }
   process.stdout.write(`Generated ${generated.length} RE2 chapter-2 scene(s)${animated ? " with animation" : " as static end states"}: ${generated.join(", ")}.\n`);

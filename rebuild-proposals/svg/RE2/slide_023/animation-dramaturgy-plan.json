@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch3_fta_types",
+  "svgPath": "slide_023.svg",
+  "spokenText": "Nachdem wir die Grundlagen der Fehlerbaumanalyse besprochen haben, möchten wir nun auf die beiden Arten dieser Methode eingehen.Zum einen gibt es die qualitative und zum anderen die quantitative Fehlerbaumanalyse.\n\nDie qualitative Fehlerbaumanalyse hat das Ziel, sämtliche Ausfälle, Ausfallkombinationen, Ursachen und deren logische Abhängigkeiten zu identifizieren.\n\nDabei werden alle möglichen Fehlfunktionen des Systems systematisch erfasst, ohne dabei Zahlenwerte oder Wahrscheinlichkeiten zu berücksichtigen.\n\nDas Ergebnis dieser Analyse sind die kritischsten Ereignisse oder Ereigniskombinationen, die zum Ausfall des Systems führen können.\n\nDie qualitative Fehlerbaumanalyse wird hauptsächlich für die Schwachstellenanalyse eingesetzt, um potenzielle Schwachstellen im System zu erkennen und Gegenmaßnahmen zu entwickeln.\n\nHierbei erfolgt keine Quantifizierung von Wahrscheinlichkeiten.\n\nDas Ziel der quantitativen Fehlerbaumanalyse hingegen ist die Berechnung der Ausfallwahrscheinlichkeit eines Systems.\n\nDurch die Zuweisung numerischer Wahrscheinlichkeiten zu den Basisereignissen kann die Wahrscheinlichkeit für ein Systemausfall entsprechend der logischen Verknüpfung berechnet werden.\n\nDas Ergebnis sind somit numerische Wahrscheinlichkeiten für Systemausfälle, die eine genaue Bewertung des Risikos ermöglichen.\n\nDie quantitative Fehlerbaumanalyse wird also zur Risikobewertung eingesetzt, unterstützt Entscheidungen über Risikominderungsmaßnahmen und dient auch dem Nachweis von Zuverlässigkeitsforderungen.\n\nWährend die qualitative Fehlerbaumanalyse sich nur auf die Identifizierung von Ausfallursachen und deren logische Verknüpfungen konzentriert, ermöglicht die quantitative Analyse darüber hinaus auch eine numerische Bewertung der Ausfallwahrscheinlichkeit.\n\nBeide Ansätze ergänzen sich und bieten gemeinsam ein umfassendes Verständnis über die Zuverlässigkeit eines Systems.\n\nIn diesem Modul befassen wir uns allerdings nur mit der qualitativen Fehlerbaumanalyse. Hierzu wollen wir uns einmal den Ablauf etwas näher anschauen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "fta23_qualitative",
+      "label": "Qualitative FTA",
+      "role": "content",
+      "members": [
+        "fta23_qualitative"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta23_quantitative",
+      "label": "Quantitative FTA",
+      "role": "content",
+      "members": [
+        "fta23_quantitative"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta23_scope",
+      "label": "Fokus des Moduls",
+      "role": "content",
+      "members": [
+        "fta23_scope"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Qualitative FTA",
+      "sourceText": "Die qualitative Fehlerbaumanalyse hat das Ziel",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta23_qualitative"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Quantitative FTA",
+      "sourceText": "Das Ziel der quantitativen Fehlerbaumanalyse hingegen",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta23_quantitative"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Fokus des Moduls",
+      "sourceText": "In diesem Modul befassen wir uns",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta23_scope"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta23_qualitative",
+      "beatId": "beat_01",
+      "targetId": "fta23_qualitative",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_fta23_quantitative",
+      "beatId": "beat_02",
+      "targetId": "fta23_quantitative",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_fta23_scope",
+      "beatId": "beat_03",
+      "targetId": "fta23_scope",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_03",
+      "visibleGroups": [
+        "canvas_context",
+        "fta23_qualitative",
+        "fta23_quantitative",
+        "fta23_scope"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch3_fta_process_overview",
+  "svgPath": "slide_024.svg",
+  "spokenText": "Die qualitative Fehlerbaumanalyse besteht aus insgesamt fünf Schritten.\n\nDer erste Schritt ist die System-Analyse.\n\nWie der Name schon sagt, wird in diesem Schritt eine umfassende System-Analyse durchgeführt.\n\nDazu nutzen wir sämtliche Methoden, die wir bereits im ersten Teil dieses Moduls kennengelernt haben.Im ersten Schritt definieren wir unsere Systemgrenze, um das zu untersuchende System abzugrenzen.\n\nIm Anschluss können wir dann die Einflussgrößen mit Hilfe des P-Diagramms ermitteln.\n\nDazu können wir auch auf das Ishikawa-Diagramm zurückgreifen.\n\nZusätzlich können wir auch Bauteilblockschaltbilder erstellen, um die Komponenten im inneren des Systems und deren Wechselwirkungen zu untersuchen.\n\nEine Funktionsanalyse hilft uns sämtliche Funktionen des Systems und der Komponenten besser zu verstehen und damit auch die System-Anforderungen zu ermitteln.Das Ziel im ersten Schritt ist es, ein tiefgreifendes Verständnis über das System und seine Wirkungsweise zu entwickeln.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "fta26_process",
+      "label": "Schritt 1 im Ablauf",
+      "role": "content",
+      "members": [
+        "fta26_process"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta26_boundary",
+      "label": "Systemgrenze",
+      "role": "content",
+      "members": [
+        "fta26_boundary"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta26_influences",
+      "label": "Einflussgrößen",
+      "role": "content",
+      "members": [
+        "fta26_influences"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta26_blocks",
+      "label": "Bauteilblockschaltbild",
+      "role": "content",
+      "members": [
+        "fta26_blocks"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta26_functions",
+      "label": "Funktionen und Anforderungen",
+      "role": "content",
+      "members": [
+        "fta26_functions"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_05",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta26_goal",
+      "label": "Ziel der Systemanalyse",
+      "role": "content",
+      "members": [
+        "fta26_goal"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_06",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Schritt 1 im Ablauf",
+      "sourceText": "Der erste Schritt ist die System-Analyse",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta26_process"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Systemgrenze",
+      "sourceText": "Im ersten Schritt definieren wir unsere",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta26_boundary"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Einflussgrößen",
+      "sourceText": "Im Anschluss können wir dann die",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta26_influences"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Bauteilblockschaltbild",
+      "sourceText": "Zusätzlich können wir auch Bauteilblockschaltbilder erstellen",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta26_blocks"
+      ]
+    },
+    {
+      "beatId": "beat_05",
+      "claim": "Funktionen und Anforderungen",
+      "sourceText": "Eine Funktionsanalyse hilft uns sämtliche Funktionen",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta26_functions"
+      ]
+    },
+    {
+      "beatId": "beat_06",
+      "claim": "Ziel der Systemanalyse",
+      "sourceText": "Das Ziel im ersten Schritt ist",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta26_goal"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta26_process",
+      "beatId": "beat_01",
+      "targetId": "fta26_process",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_fta26_boundary",
+      "beatId": "beat_02",
+      "targetId": "fta26_boundary",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_fta26_influences",
+      "beatId": "beat_03",
+      "targetId": "fta26_influences",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_04_fta26_blocks",
+      "beatId": "beat_04",
+      "targetId": "fta26_blocks",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_05_fta26_functions",
+      "beatId": "beat_05",
+      "targetId": "fta26_functions",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_06_fta26_goal",
+      "beatId": "beat_06",
+      "targetId": "fta26_goal",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_06",
+      "visibleGroups": [
+        "canvas_context",
+        "fta26_process",
+        "fta26_boundary",
+        "fta26_influences",
+        "fta26_blocks",
+        "fta26_functions",
+        "fta26_goal"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

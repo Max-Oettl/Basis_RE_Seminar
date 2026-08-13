@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch3_fta_step4_focus",
+  "svgPath": "slide_036.svg",
+  "spokenText": "Kommen wir nun zum vierten Schritt: der Erstellung des Fehlerbaums.\n\nIn diesem Schritt wird der Fehlerbaum systematisch aufgebaut, wobei die logischen Verknüpfungen zwischen den einzelnen Elementen sorgfältig berücksichtigt werden.\n\nDiese Verknüpfungen werden im Fehlerbaum durch logische Gatter dargestellt.\n\nDie logischen Gatter verdeutlichen, wie die untergeordneten Sub-Ereignisse zusammenwirken, um zum übergeordneten Ereignis zu führen.\n\nAbhängig von der Beziehung und Logik zwischen den Ereignissen im jeweiligen Anwendungsfall können dabei verschiedene logische Gatter zum Einsatz kommen.\n\nWir schauen uns hierzu die drei wichtigsten logischen Gatter genauer an.\n\nBeim UND-Gatter tritt das nachfolgende Ereignis Ypsilon nur ein, wenn alle Sub-Ereignisse, also in dem Beispiel x eins und x zwei, eintreten.\n\nBeim Oder Gatter tritt das nachfolgende Ereignis immer dann ein, wenn mindestens eines der Sub-Ereignisse eintritt.\n\nUnd beim NICHT-Gatter wird das Sub-Ereignis einfach invertiert. Das heißt das nachfolgende Ereignis Ypsilon tritt nur ein, wenn das Sub-Ereignis nicht eintritt.\n\nSchauen wir uns hierzu nochmals das vorherige Beispiel an.\n\nWir wissen ja bereits, dass das Top-Fehler-Ereignis an die Spitze des Baumes platziert wird.\n\nIm nächsten Schritt identifizieren wir die unmittelbar möglichen Ursachen des Top-Ereignisses und stellen sie als Sub-Ereignisse dar. In diesem Fall waren es die drei unterschiedlichen Ausfallarten.\n\nDa wir wissen, dass jeder dieser drei Ausfallarten zu einem Ausfall des Motors führt, verknüpfen wir diese mit einem Oder Gatter.\n\nIm Anschluss werden die Sub-Ereignisse weiter in ihre zugrunde liegenden Ursachen unterteilt und analog in Abhängigkeit der Beziehungen zwischen den einzelnen Ereignissen verknüpft.\n\nAuch hier verwenden wir für die einzelnen Ausfallursachen Oder Gatter, da jeder Ausfall zu einem Ausfall des Motors führt.\n\nAuf diese Weise wird der Fehlerbaum nach unten hin immer weiter verästelt und bildet die gesamte Fehlerhierarchie ab.\n\nGehen wir die Fehlerhierarchie von oben nach unten immer weiter durch, treffen wir irgendwann auf die primären Fehlerursachen bzw. Ausfallmechanismen.\n\nDiese nennen wir auch Basisereignisse.Die Basisereignisse stellen immer das Ende des Fehlerbaumes dar und können einfach durch ein Kreissymbol gekennzeichnet werden.\n\nDas heißt ab hier gibt es keine weiteren untergeordneten Hierarchieebenen und wir sind am Ende des Pfades angekommen.\n\nDer Fehlerbaum muss aber nicht immer bis zum Ende durchgeführt werden. Prinzipiell kann an jedem Ast beliebig abgebrochen werden.\n\nHierzu können wir neben den Basisereignissen noch weitere Symbole im Fehlerbaum verwenden.\n\nEs kann beispielsweise immer entschieden werden, dass ein Ereignis ab einer gewissen Stelle nicht mehr weiter untersucht werden soll.\n\nHierzu können wir einfach ein Rauten-Symbol verwenden.\n\nIn diesem Fall wollen wir den Primärausfall des Motors nicht weiter untersuchen.\n\nHierbei ist es sinnvoll, in einem kleinen Kommentarfeld daneben immer die entsprechenden Gründe zu notieren, um auch zu einem späteren Zeitpunkt nachvollziehen zu können, warum diese Entscheidung getroffen worden ist.\n\nWird der Fehlerbaum dagegen zu lang, kann er mit Hilfe eines Verweisungsgatters an einer anderen Stelle fortgeführt werden.\n\nDie Verweisungen sollten dabei auch durchnummeriert werden, um die entsprechende Stelle der Fortführung wieder zu finden.\n\nDurch das schrittweise Unterteilen der Ereignisse im Fehlerbaum, erhalten wir ein detailliertes Diagramm, das die logischen Verknüpfungen zwischen den verschiedenen Ausfällen und ihren Ursachen visualisiert.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "fta43_circuit",
+      "label": "Motorschaltung",
+      "role": "content",
+      "members": [
+        "fta43_circuit"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta43_nodes",
+      "label": "Fehlerbaum-Ereignisse",
+      "role": "content",
+      "members": [
+        "fta43_nodes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta43_links",
+      "label": "Fehlerbaum-Beziehungen",
+      "role": "content",
+      "members": [
+        "fta43_links"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta43_note",
+      "label": "Fokus",
+      "role": "content",
+      "members": [
+        "fta43_note"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Motorschaltung",
+      "sourceText": "Schauen wir uns hierzu nochmals das",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta43_circuit"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Fehlerbaum-Ereignisse",
+      "sourceText": "Wir wissen ja bereits, dass das",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta43_nodes"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Fehlerbaum-Beziehungen",
+      "sourceText": "verknüpfen wir diese mit einem Oder",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta43_links"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Fokus",
+      "sourceText": "Auf diese Weise wird der Fehlerbaum",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta43_note"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta43_circuit",
+      "beatId": "beat_01",
+      "targetId": "fta43_circuit",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_fta43_nodes",
+      "beatId": "beat_02",
+      "targetId": "fta43_nodes",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_fta43_links",
+      "beatId": "beat_03",
+      "targetId": "fta43_links",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    },
+    {
+      "stepId": "step_04_fta43_note",
+      "beatId": "beat_04",
+      "targetId": "fta43_note",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_04",
+      "visibleGroups": [
+        "canvas_context",
+        "fta43_circuit",
+        "fta43_nodes",
+        "fta43_links",
+        "fta43_note"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

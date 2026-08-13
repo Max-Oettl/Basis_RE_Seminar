@@ -1,621 +1,488 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_034" data-brand-profile="reltest-academy">
-  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"before-after-data-chart","contentTitle":"Von der Häufigkeit zur Summenhäufigkeit","layoutIntent":"classwise-left-to-right-cumulative-build-with-local-arithmetic","takeaway":"Kumulierte Klassen ergeben die empirische Verteilungsfunktion und zeigen alle Ausfälle bis zu einem Zeitpunkt.","density":"balanced","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-academy","brandVariant":"academy-production","sourceSlides":[34],"officialLogoStatus":"pending-original-asset"}]]></metadata>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="re1_src_034" data-brand-profile="reltest-education">
+  <metadata id="slide_quality_metadata" type="application/json"><![CDATA[{"artifactScope":"full-slide","embeddingTarget":"standalone-slide","slideType":"before-after-data-chart","contentTitle":"Von der Häufigkeit zur Summenhäufigkeit","layoutIntent":"classwise-left-to-right-cumulative-build-with-local-arithmetic","takeaway":"Kumulierte Klassen ergeben die empirische Verteilungsfunktion und zeigen alle Ausfälle bis zu einem Zeitpunkt.","density":"dense","designException":"Die hohe Elementzahl entsteht aus fünf einzeln nachvollziehbaren Kumulationsschritten im Datenplot.","contentMode":"full-slide","backgroundMode":"brand-frame","brandProfile":"reltest-education","brandVariant":"education-production","sourceSlides":[34],"officialLogoStatus":"downstream-owned"}]]></metadata>
   <title id="accessible_title">Von der Häufigkeit zur Summenhäufigkeit</title>
   <desc id="accessible_description">Kumulierte Klassen ergeben die empirische Verteilungsfunktion und zeigen alle Ausfälle bis zu einem Zeitpunkt.</desc>
   <defs>
     <linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#F9FBFC"/>
-      <stop offset="56%" stop-color="#F1F5F8"/>
-      <stop offset="100%" stop-color="#E9F0F4"/>
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="56%" stop-color="#F7F9FC"/>
+      <stop offset="100%" stop-color="#E6F6EE"/>
     </linearGradient>
     <pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse">
-      <path d="M80 0H0V80" fill="none" stroke="#102A43" stroke-opacity="0.035" stroke-width="1"/>
+      <path d="M80 0H0V80" fill="none" stroke="#031334" stroke-opacity="0.035" stroke-width="1"/>
     </pattern>
-    <filter id="shadowSoft" x="-15%" y="-15%" width="130%" height="140%">
-      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#102A43" flood-opacity="0.10"/>
-    </filter>
-    <marker id="arrow_007EA7" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#007EA7"/></marker>
-    <marker id="arrow_D1495B" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#D1495B"/></marker>
-    <marker id="arrow_2F6F55" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#2F6F55"/></marker>
-    <marker id="arrow_B7791F" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="#B7791F"/></marker>
+    
   </defs>
   <style>
-    text { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 0; }
+    text { font-family: "Archivo", Arial, Helvetica, sans-serif; letter-spacing: 0; }
+    .display { font-family: "Oxanium", "Archivo", Arial, sans-serif; }
   </style>
-  <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
-  <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
-  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><g id="reliability_function_rail" aria-label="Vier Zuverlässigkeitsfunktionen"><g data-reliability-function="density"><title>1. Dichtefunktion f(t)</title><rect data-qc-allow-overlap="true" x="98" y="174" width="400" height="52" rx="6" fill="#FFFFFF" stroke="#C8D5DF" stroke-width="1.5"/><circle cx="126" cy="200" r="16" fill="#D9F0F7"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="126" y="207" font-size="17" font-weight="820" fill="#007EA7" text-anchor="middle">1</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="154" y="207" font-size="19" font-weight="780" fill="#243B53">f(t) · Dichtefunktion</text></g><g data-reliability-function="failure_probability"><title>2. Ausfallwahrscheinlichkeit F(t)</title><rect data-qc-allow-overlap="true" x="533" y="174" width="400" height="52" rx="6" fill="#4F78A8" stroke="#4F78A8" stroke-width="1.5"/><circle cx="561" cy="200" r="16" fill="#FFFFFF"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="561" y="207" font-size="17" font-weight="820" fill="#4F78A8" text-anchor="middle">2</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="589" y="207" font-size="19" font-weight="780" fill="#FFFFFF">F(t) · Ausfallwahrscheinlichkeit</text></g><g data-reliability-function="reliability"><title>3. Zuverlässigkeit R(t)</title><rect data-qc-allow-overlap="true" x="968" y="174" width="400" height="52" rx="6" fill="#FFFFFF" stroke="#C8D5DF" stroke-width="1.5"/><circle cx="996" cy="200" r="16" fill="#E3F0EA"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="996" y="207" font-size="17" font-weight="820" fill="#2F6F55" text-anchor="middle">3</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1024" y="207" font-size="19" font-weight="780" fill="#243B53">R(t) · Zuverlässigkeit</text></g><g data-reliability-function="hazard"><title>4. Ausfallrate λ(t)</title><rect data-qc-allow-overlap="true" x="1403" y="174" width="400" height="52" rx="6" fill="#FFFFFF" stroke="#C8D5DF" stroke-width="1.5"/><circle cx="1431" cy="200" r="16" fill="#F9E4E7"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1431" y="207" font-size="17" font-weight="820" fill="#D1495B" text-anchor="middle">4</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1459" y="207" font-size="19" font-weight="780" fill="#243B53">λ(t) · Ausfallrate</text></g></g><svg id="empirical_cdf_plot" x="100" y="236" width="1720" height="620" viewBox="0 0 940.393781 381.500625" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <g id="brand_background" data-semantic-group="true" aria-label="RelTest-Education-Hintergrund">
+    <rect width="1920" height="1080" fill="url(#backgroundGradient)"/>
+    <rect width="1920" height="1080" fill="url(#technicalGrid)"/>
+  </g>
+  <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"><g id="reliability_function_rail" aria-label="Vier Zuverlässigkeitsfunktionen"><g data-reliability-function="density"><title>1. Dichtefunktion f(t)</title><rect data-role="functional" data-qc-allow-overlap="true" x="98" y="174" width="400" height="52" rx="6" fill="#FFFFFF" stroke="#CDD0D6" stroke-width="1.5"/><circle data-role="functional" cx="126" cy="200" r="16" fill="#E6F6EE"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="126" y="207" font-size="18" font-weight="820" fill="#00A754" text-anchor="middle">1</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="154" y="207" font-size="19" font-weight="780" fill="#25495F">f(t) · Dichtefunktion</text></g><g data-reliability-function="failure_probability"><title>2. Ausfallwahrscheinlichkeit F(t)</title><rect data-role="functional" data-qc-allow-overlap="true" x="533" y="174" width="400" height="52" rx="6" fill="#0C84B4" stroke="#0C84B4" stroke-width="1.5"/><circle data-role="functional" cx="561" cy="200" r="16" fill="#FFFFFF"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="561" y="207" font-size="18" font-weight="820" fill="#0C84B4" text-anchor="middle">2</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="589" y="207" font-size="19" font-weight="780" fill="#FFFFFF">F(t) · Ausfallwahrscheinlichkeit</text></g><g data-reliability-function="reliability"><title>3. Zuverlässigkeit R(t)</title><rect data-role="functional" data-qc-allow-overlap="true" x="968" y="174" width="400" height="52" rx="6" fill="#FFFFFF" stroke="#CDD0D6" stroke-width="1.5"/><circle data-role="functional" cx="996" cy="200" r="16" fill="#E6F6EE"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="996" y="207" font-size="18" font-weight="820" fill="#00A754" text-anchor="middle">3</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1024" y="207" font-size="19" font-weight="780" fill="#25495F">R(t) · Zuverlässigkeit</text></g><g data-reliability-function="hazard"><title>4. Ausfallrate λ(t)</title><rect data-role="functional" data-qc-allow-overlap="true" x="1403" y="174" width="400" height="52" rx="6" fill="#FFFFFF" stroke="#CDD0D6" stroke-width="1.5"/><circle data-role="functional" cx="1431" cy="200" r="16" fill="#FCE7E2"/><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1431" y="207" font-size="18" font-weight="820" fill="#EC6244" text-anchor="middle">4</text><text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="1459" y="207" font-size="19" font-weight="780" fill="#25495F">λ(t) · Ausfallrate</text></g></g><svg id="empirical_cdf_plot" x="100" y="236" width="1720" height="620" viewBox="0 0 943.838563 389.31" preserveAspectRatio="xMidYMid meet" overflow="visible" data-plot-asset="true" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
  
  <defs>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
  <g id="empirical_cdf_plot__figure_1">
   <g id="empirical_cdf_plot__patch_1">
-   <path d="M 0 381.500625  L 940.393781 381.500625  L 940.393781 -0  L 0 -0  L 0 381.500625  z " style="fill: none; opacity: 0" />
+   <path data-role="functional" d="M 0 389.31  L 943.838563 389.31  L 943.838563 -0  L 0 -0  L 0 389.31  z " style="fill: none; opacity: 0" />
   </g>
   <g id="empirical_cdf_plot__axes_1">
    <g id="empirical_cdf_plot__patch_2">
-    <path d="M 55.225781 318.556406  L 430.425781 318.556406  L 430.425781 32.356406  L 55.225781 32.356406  L 55.225781 318.556406  z " style="fill: none" />
+    <path data-role="functional" d="M 58.670563 320.326  L 433.870563 320.326  L 433.870563 34.126  L 58.670563 34.126  L 58.670563 320.326  z " style="fill: none" />
    </g>
    <g id="frequency_histogram" data-anim-target="true" data-anim-label="Histogramm der Einzelhäufigkeiten"><g id="empirical_cdf_plot__frequency_bar_0">
-    <path d="M 88.576892 318.556406  L 146.941337 318.556406  L 146.941337 272.395116  L 88.576892 272.395116  z " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: #007ea7; opacity: 0.34; stroke: #007ea7; stroke-width: 2; stroke-linejoin: miter" />
+    <path data-role="functional" d="M 92.021674 320.326  L 150.386118 320.326  L 150.386118 274.16471  L 92.021674 274.16471  z " clip-path="url(#empirical_cdf_plot__pde25967ec3)" style="fill: #0c84b4; opacity: 0.34; stroke: #0c84b4; stroke-width: 2; stroke-linejoin: miter" />
    </g>
    <g id="empirical_cdf_plot__frequency_bar_1">
-    <path d="M 151.110226 318.556406  L 209.47467 318.556406  L 209.47467 87.749955  L 151.110226 87.749955  z " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: #007ea7; opacity: 0.34; stroke: #007ea7; stroke-width: 2; stroke-linejoin: miter" />
+    <path data-role="functional" d="M 154.555007 320.326  L 212.919451 320.326  L 212.919451 89.519548  L 154.555007 89.519548  z " clip-path="url(#empirical_cdf_plot__pde25967ec3)" style="fill: #0c84b4; opacity: 0.34; stroke: #0c84b4; stroke-width: 2; stroke-linejoin: miter" />
    </g>
    <g id="empirical_cdf_plot__frequency_bar_2">
-    <path d="M 213.643559 318.556406  L 272.008003 318.556406  L 272.008003 180.072535  L 213.643559 180.072535  z " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: #007ea7; opacity: 0.34; stroke: #007ea7; stroke-width: 2; stroke-linejoin: miter" />
+    <path data-role="functional" d="M 217.08834 320.326  L 275.452785 320.326  L 275.452785 181.842129  L 217.08834 181.842129  z " clip-path="url(#empirical_cdf_plot__pde25967ec3)" style="fill: #0c84b4; opacity: 0.34; stroke: #0c84b4; stroke-width: 2; stroke-linejoin: miter" />
    </g>
    <g id="empirical_cdf_plot__frequency_bar_3">
-    <path d="M 276.176892 318.556406  L 334.541337 318.556406  L 334.541337 226.233826  L 276.176892 226.233826  z " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: #007ea7; opacity: 0.34; stroke: #007ea7; stroke-width: 2; stroke-linejoin: miter" />
+    <path data-role="functional" d="M 279.621674 320.326  L 337.986118 320.326  L 337.986118 228.003419  L 279.621674 228.003419  z " clip-path="url(#empirical_cdf_plot__pde25967ec3)" style="fill: #0c84b4; opacity: 0.34; stroke: #0c84b4; stroke-width: 2; stroke-linejoin: miter" />
    </g>
    <g id="empirical_cdf_plot__frequency_bar_4">
-    <path d="M 338.710226 318.556406  L 397.07467 318.556406  L 397.07467 272.395116  L 338.710226 272.395116  z " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: #007ea7; opacity: 0.34; stroke: #007ea7; stroke-width: 2; stroke-linejoin: miter" />
+    <path data-role="functional" d="M 342.155007 320.326  L 400.519451 320.326  L 400.519451 274.16471  L 342.155007 274.16471  z " clip-path="url(#empirical_cdf_plot__pde25967ec3)" style="fill: #0c84b4; opacity: 0.34; stroke: #0c84b4; stroke-width: 2; stroke-linejoin: miter" />
    </g>
    <g id="empirical_cdf_plot__frequency_bar_label_0">
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="117.759115" y="262.809488" transform="rotate(-0 117.759115 262.809488)">1</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #031334" x="121.203896" y="264.972129" transform="rotate(-0 121.203896 264.972129)">1</text>
    </g>
    <g id="empirical_cdf_plot__frequency_bar_label_1">
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="180.292448" y="78.164327" transform="rotate(-0 180.292448 78.164327)">5</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #031334" x="183.737229" y="80.326968" transform="rotate(-0 183.737229 80.326968)">5</text>
    </g>
    <g id="empirical_cdf_plot__frequency_bar_label_2">
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="242.825781" y="170.486908" transform="rotate(-0 242.825781 170.486908)">3</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #031334" x="246.270563" y="172.649548" transform="rotate(-0 246.270563 172.649548)">3</text>
    </g>
    <g id="empirical_cdf_plot__frequency_bar_label_3">
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="305.359115" y="216.648198" transform="rotate(-0 305.359115 216.648198)">2</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #031334" x="308.803896" y="218.810839" transform="rotate(-0 308.803896 218.810839)">2</text>
    </g>
    <g id="empirical_cdf_plot__frequency_bar_label_4">
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="367.892448" y="262.809488" transform="rotate(-0 367.892448 262.809488)">1</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #031334" x="371.337229" y="264.972129" transform="rotate(-0 371.337229 264.972129)">1</text>
    </g>
    <g id="empirical_cdf_plot__frequency_histogram_title">
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #007ea7" x="242.825781" y="20.356406" transform="rotate(-0 242.825781 20.356406)">Einzelhäufigkeiten je Klasse</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #0c84b4" x="246.270563" y="22.126" transform="rotate(-0 246.270563 22.126)">Einzelhäufigkeiten je Klasse</text>
    </g>
   </g><g id="empirical_cdf_plot__matplotlib.axis_1">
     <g id="empirical_cdf_plot__xtick_1">
      <g id="empirical_cdf_plot__line2d_1">
-      <path d="M 76.070226 318.556406  L 76.070226 32.356406  " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 100.359451 320.326  L 100.359451 34.126  " clip-path="url(#empirical_cdf_plot__pde25967ec3)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="empirical_cdf_plot__line2d_2">
       <defs>
-       <path id="empirical_cdf_plot__m6fbf6eafe5" d="M 0 0  L 0 6  " style="stroke: #6a7a86; stroke-width: 1.2" />
+       <path data-role="functional" id="empirical_cdf_plot__m86a81f1404" d="M 0 0  L 0 6  " style="stroke: #25495f; stroke-width: 1.2" />
       </defs>
       <g>
-       <use ns4:href="#empirical_cdf_plot__m6fbf6eafe5" x="76.070226" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m86a81f1404" x="100.359451" y="320.326" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="empirical_cdf_plot__text_1">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="76.070226" y="337.933359" transform="rotate(-0 76.070226 337.933359)">240</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="100.359451" y="345.63" transform="rotate(-0 100.359451 345.63)">250</text>
      </g>
     </g>
     <g id="empirical_cdf_plot__xtick_2">
      <g id="empirical_cdf_plot__line2d_3">
-      <path d="M 117.759115 318.556406  L 117.759115 32.356406  " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 204.581674 320.326  L 204.581674 34.126  " clip-path="url(#empirical_cdf_plot__pde25967ec3)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="empirical_cdf_plot__line2d_4">
       <g>
-       <use ns4:href="#empirical_cdf_plot__m6fbf6eafe5" x="117.759115" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m86a81f1404" x="204.581674" y="320.326" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="empirical_cdf_plot__text_2">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="117.759115" y="337.933359" transform="rotate(-0 117.759115 337.933359)">260</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="204.581674" y="345.63" transform="rotate(-0 204.581674 345.63)">300</text>
      </g>
     </g>
     <g id="empirical_cdf_plot__xtick_3">
      <g id="empirical_cdf_plot__line2d_5">
-      <path d="M 159.448003 318.556406  L 159.448003 32.356406  " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 308.803896 320.326  L 308.803896 34.126  " clip-path="url(#empirical_cdf_plot__pde25967ec3)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="empirical_cdf_plot__line2d_6">
       <g>
-       <use ns4:href="#empirical_cdf_plot__m6fbf6eafe5" x="159.448003" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m86a81f1404" x="308.803896" y="320.326" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="empirical_cdf_plot__text_3">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="159.448003" y="337.933359" transform="rotate(-0 159.448003 337.933359)">280</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="308.803896" y="345.63" transform="rotate(-0 308.803896 345.63)">350</text>
      </g>
     </g>
     <g id="empirical_cdf_plot__xtick_4">
      <g id="empirical_cdf_plot__line2d_7">
-      <path d="M 201.136892 318.556406  L 201.136892 32.356406  " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+      <path data-role="functional" d="M 413.026118 320.326  L 413.026118 34.126  " clip-path="url(#empirical_cdf_plot__pde25967ec3)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
      <g id="empirical_cdf_plot__line2d_8">
       <g>
-       <use ns4:href="#empirical_cdf_plot__m6fbf6eafe5" x="201.136892" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m86a81f1404" x="413.026118" y="320.326" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
      <g id="empirical_cdf_plot__text_4">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="201.136892" y="337.933359" transform="rotate(-0 201.136892 337.933359)">300</text>
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="413.026118" y="345.63" transform="rotate(-0 413.026118 345.63)">400</text>
      </g>
     </g>
-    <g id="empirical_cdf_plot__xtick_5">
-     <g id="empirical_cdf_plot__line2d_9">
-      <path d="M 242.825781 318.556406  L 242.825781 32.356406  " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
-     </g>
-     <g id="empirical_cdf_plot__line2d_10">
-      <g>
-       <use ns4:href="#empirical_cdf_plot__m6fbf6eafe5" x="242.825781" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
-      </g>
-     </g>
-     <g id="empirical_cdf_plot__text_5">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="242.825781" y="337.933359" transform="rotate(-0 242.825781 337.933359)">320</text>
-     </g>
-    </g>
-    <g id="empirical_cdf_plot__xtick_6">
-     <g id="empirical_cdf_plot__line2d_11">
-      <path d="M 284.51467 318.556406  L 284.51467 32.356406  " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
-     </g>
-     <g id="empirical_cdf_plot__line2d_12">
-      <g>
-       <use ns4:href="#empirical_cdf_plot__m6fbf6eafe5" x="284.51467" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
-      </g>
-     </g>
-     <g id="empirical_cdf_plot__text_6">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="284.51467" y="337.933359" transform="rotate(-0 284.51467 337.933359)">340</text>
-     </g>
-    </g>
-    <g id="empirical_cdf_plot__xtick_7">
-     <g id="empirical_cdf_plot__line2d_13">
-      <path d="M 326.203559 318.556406  L 326.203559 32.356406  " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
-     </g>
-     <g id="empirical_cdf_plot__line2d_14">
-      <g>
-       <use ns4:href="#empirical_cdf_plot__m6fbf6eafe5" x="326.203559" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
-      </g>
-     </g>
-     <g id="empirical_cdf_plot__text_7">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="326.203559" y="337.933359" transform="rotate(-0 326.203559 337.933359)">360</text>
-     </g>
-    </g>
-    <g id="empirical_cdf_plot__xtick_8">
-     <g id="empirical_cdf_plot__line2d_15">
-      <path d="M 367.892448 318.556406  L 367.892448 32.356406  " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
-     </g>
-     <g id="empirical_cdf_plot__line2d_16">
-      <g>
-       <use ns4:href="#empirical_cdf_plot__m6fbf6eafe5" x="367.892448" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
-      </g>
-     </g>
-     <g id="empirical_cdf_plot__text_8">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="367.892448" y="337.933359" transform="rotate(-0 367.892448 337.933359)">380</text>
-     </g>
-    </g>
-    <g id="empirical_cdf_plot__xtick_9">
-     <g id="empirical_cdf_plot__line2d_17">
-      <path d="M 409.581337 318.556406  L 409.581337 32.356406  " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
-     </g>
-     <g id="empirical_cdf_plot__line2d_18">
-      <g>
-       <use ns4:href="#empirical_cdf_plot__m6fbf6eafe5" x="409.581337" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
-      </g>
-     </g>
-     <g id="empirical_cdf_plot__text_9">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="409.581337" y="337.933359" transform="rotate(-0 409.581337 337.933359)">400</text>
-     </g>
-    </g>
-    <g id="empirical_cdf_plot__text_10">
+    <g id="empirical_cdf_plot__text_5">
      
-     <g style="fill: #062d46" transform="translate(136.535781 369.976406)">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.616211" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="34.330078" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="42.93457" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">w</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="59.563477" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="71.771484" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="82.441406" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="95.255859" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="105.969727" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="118.177734" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="124.347656" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="161.292969" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="167.55957" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">·</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="174.397461" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="130.614258" y="-0.214437" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="142.022461" y="2.485554" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="148.342285" y="2.485554" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #062d46">W</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="180.664062" y="-0.214437" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">1</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="192.116211" y="-0.214437" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">0</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="203.740625" y="-7.648438" style="font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #062d46">2</tspan>
+     <g style="fill: #031334" transform="translate(154.560563 378.33)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="10.259933" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="20.267868" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="30.005814" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="35.657776" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">w</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="49.301697" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="59.399628" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="69.24556" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="79.757492" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="89.495438" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="99.593369" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="104.129333" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="138.40802" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="142.007996" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">·</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="148.001953" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="107.729309" y="-0.214437" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #031334">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="119.137512" y="2.485554" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #031334">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="125.457336" y="2.485554" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #031334">W</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="151.601929" y="-0.214437" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #031334">1</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="163.054077" y="-0.214437" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #031334">0</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="174.678491" y="-7.648438" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #031334">2</tspan>
       </text>
      </g>
     </g>
    </g>
    <g id="empirical_cdf_plot__matplotlib.axis_2">
     <g id="empirical_cdf_plot__ytick_1">
-     <g id="empirical_cdf_plot__line2d_19">
-      <path d="M 55.225781 318.556406  L 430.425781 318.556406  " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     <g id="empirical_cdf_plot__line2d_9">
+      <path data-role="functional" d="M 58.670563 320.326  L 433.870563 320.326  " clip-path="url(#empirical_cdf_plot__pde25967ec3)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
-     <g id="empirical_cdf_plot__line2d_20">
+     <g id="empirical_cdf_plot__line2d_10">
       <defs>
-       <path id="empirical_cdf_plot__m5ce7071eb6" d="M 0 0  L -6 0  " style="stroke: #6a7a86; stroke-width: 1.2" />
+       <path data-role="functional" id="empirical_cdf_plot__m3aeb2e29d0" d="M 0 0  L -6 0  " style="stroke: #25495f; stroke-width: 1.2" />
       </defs>
       <g>
-       <use ns4:href="#empirical_cdf_plot__m5ce7071eb6" x="55.225781" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m3aeb2e29d0" x="58.670563" y="320.326" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
-     <g id="empirical_cdf_plot__text_11">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="45.725781" y="323.494883" transform="rotate(-0 45.725781 323.494883)">0</text>
+     <g id="empirical_cdf_plot__text_6">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="49.170563" y="328.228" transform="rotate(-0 49.170563 328.228)">0</text>
      </g>
     </g>
     <g id="empirical_cdf_plot__ytick_2">
-     <g id="empirical_cdf_plot__line2d_21">
-      <path d="M 55.225781 272.395116  L 430.425781 272.395116  " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     <g id="empirical_cdf_plot__line2d_11">
+      <path data-role="functional" d="M 58.670563 274.16471  L 433.870563 274.16471  " clip-path="url(#empirical_cdf_plot__pde25967ec3)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
-     <g id="empirical_cdf_plot__line2d_22">
+     <g id="empirical_cdf_plot__line2d_12">
       <g>
-       <use ns4:href="#empirical_cdf_plot__m5ce7071eb6" x="55.225781" y="272.395116" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m3aeb2e29d0" x="58.670563" y="274.16471" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
-     <g id="empirical_cdf_plot__text_12">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="45.725781" y="277.333592" transform="rotate(-0 45.725781 277.333592)">1</text>
+     <g id="empirical_cdf_plot__text_7">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="49.170563" y="282.06671" transform="rotate(-0 49.170563 282.06671)">1</text>
      </g>
     </g>
     <g id="empirical_cdf_plot__ytick_3">
-     <g id="empirical_cdf_plot__line2d_23">
-      <path d="M 55.225781 226.233826  L 430.425781 226.233826  " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     <g id="empirical_cdf_plot__line2d_13">
+      <path data-role="functional" d="M 58.670563 228.003419  L 433.870563 228.003419  " clip-path="url(#empirical_cdf_plot__pde25967ec3)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
-     <g id="empirical_cdf_plot__line2d_24">
+     <g id="empirical_cdf_plot__line2d_14">
       <g>
-       <use ns4:href="#empirical_cdf_plot__m5ce7071eb6" x="55.225781" y="226.233826" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m3aeb2e29d0" x="58.670563" y="228.003419" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
-     <g id="empirical_cdf_plot__text_13">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="45.725781" y="231.172302" transform="rotate(-0 45.725781 231.172302)">2</text>
+     <g id="empirical_cdf_plot__text_8">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="49.170563" y="235.905419" transform="rotate(-0 49.170563 235.905419)">2</text>
      </g>
     </g>
     <g id="empirical_cdf_plot__ytick_4">
-     <g id="empirical_cdf_plot__line2d_25">
-      <path d="M 55.225781 180.072535  L 430.425781 180.072535  " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     <g id="empirical_cdf_plot__line2d_15">
+      <path data-role="functional" d="M 58.670563 181.842129  L 433.870563 181.842129  " clip-path="url(#empirical_cdf_plot__pde25967ec3)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
-     <g id="empirical_cdf_plot__line2d_26">
+     <g id="empirical_cdf_plot__line2d_16">
       <g>
-       <use ns4:href="#empirical_cdf_plot__m5ce7071eb6" x="55.225781" y="180.072535" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m3aeb2e29d0" x="58.670563" y="181.842129" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
-     <g id="empirical_cdf_plot__text_14">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="45.725781" y="185.011012" transform="rotate(-0 45.725781 185.011012)">3</text>
+     <g id="empirical_cdf_plot__text_9">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="49.170563" y="189.744129" transform="rotate(-0 49.170563 189.744129)">3</text>
      </g>
     </g>
     <g id="empirical_cdf_plot__ytick_5">
-     <g id="empirical_cdf_plot__line2d_27">
-      <path d="M 55.225781 133.911245  L 430.425781 133.911245  " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     <g id="empirical_cdf_plot__line2d_17">
+      <path data-role="functional" d="M 58.670563 135.680839  L 433.870563 135.680839  " clip-path="url(#empirical_cdf_plot__pde25967ec3)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
-     <g id="empirical_cdf_plot__line2d_28">
+     <g id="empirical_cdf_plot__line2d_18">
       <g>
-       <use ns4:href="#empirical_cdf_plot__m5ce7071eb6" x="55.225781" y="133.911245" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m3aeb2e29d0" x="58.670563" y="135.680839" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
-     <g id="empirical_cdf_plot__text_15">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="45.725781" y="138.849722" transform="rotate(-0 45.725781 138.849722)">4</text>
+     <g id="empirical_cdf_plot__text_10">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="49.170563" y="143.582839" transform="rotate(-0 49.170563 143.582839)">4</text>
      </g>
     </g>
     <g id="empirical_cdf_plot__ytick_6">
-     <g id="empirical_cdf_plot__line2d_29">
-      <path d="M 55.225781 87.749955  L 430.425781 87.749955  " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     <g id="empirical_cdf_plot__line2d_19">
+      <path data-role="functional" d="M 58.670563 89.519548  L 433.870563 89.519548  " clip-path="url(#empirical_cdf_plot__pde25967ec3)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
-     <g id="empirical_cdf_plot__line2d_30">
+     <g id="empirical_cdf_plot__line2d_20">
       <g>
-       <use ns4:href="#empirical_cdf_plot__m5ce7071eb6" x="55.225781" y="87.749955" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m3aeb2e29d0" x="58.670563" y="89.519548" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
-     <g id="empirical_cdf_plot__text_16">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="45.725781" y="92.688431" transform="rotate(-0 45.725781 92.688431)">5</text>
+     <g id="empirical_cdf_plot__text_11">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="49.170563" y="97.421548" transform="rotate(-0 49.170563 97.421548)">5</text>
      </g>
     </g>
     <g id="empirical_cdf_plot__ytick_7">
-     <g id="empirical_cdf_plot__line2d_31">
-      <path d="M 55.225781 41.588664  L 430.425781 41.588664  " clip-path="url(#empirical_cdf_plot__p6e6e6b2db6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     <g id="empirical_cdf_plot__line2d_21">
+      <path data-role="functional" d="M 58.670563 43.358258  L 433.870563 43.358258  " clip-path="url(#empirical_cdf_plot__pde25967ec3)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
-     <g id="empirical_cdf_plot__line2d_32">
+     <g id="empirical_cdf_plot__line2d_22">
       <g>
-       <use ns4:href="#empirical_cdf_plot__m5ce7071eb6" x="55.225781" y="41.588664" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m3aeb2e29d0" x="58.670563" y="43.358258" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
-     <g id="empirical_cdf_plot__text_17">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="45.725781" y="46.527141" transform="rotate(-0 45.725781 46.527141)">6</text>
+     <g id="empirical_cdf_plot__text_12">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="49.170563" y="51.260258" transform="rotate(-0 49.170563 51.260258)">6</text>
      </g>
     </g>
-    <g id="empirical_cdf_plot__text_18">
-     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="21.130313" y="175.456406" transform="rotate(-90 21.130313 175.456406)">Ausfälle je Klasse</text>
+    <g id="empirical_cdf_plot__text_13">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #031334" x="23.004" y="177.226" transform="rotate(-90 23.004 177.226)">Ausfälle je Klasse</text>
     </g>
    </g>
    <g id="empirical_cdf_plot__patch_3">
-    <path d="M 55.225781 318.556406  L 55.225781 32.356406  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+    <path data-role="functional" d="M 58.670563 320.326  L 58.670563 34.126  " style="fill: none; stroke: #031334; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
    </g>
    <g id="empirical_cdf_plot__patch_4">
-    <path d="M 55.225781 318.556406  L 430.425781 318.556406  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+    <path data-role="functional" d="M 58.670563 320.326  L 433.870563 320.326  " style="fill: none; stroke: #031334; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
    </g>
    </g>
   <g id="empirical_cdf_plot__axes_2">
    <g id="empirical_cdf_plot__patch_5">
-    <path d="M 557.993781 318.556406  L 933.193781 318.556406  L 933.193781 32.356406  L 557.993781 32.356406  L 557.993781 318.556406  z " style="fill: none" />
+    <path data-role="functional" d="M 561.438563 320.326  L 936.638563 320.326  L 936.638563 34.126  L 561.438563 34.126  L 561.438563 320.326  z " style="fill: none" />
    </g>
    <g id="cumulative_class_1" data-anim-target="true" data-anim-label="Kumulierte Klasse 1: 1"><g id="empirical_cdf_plot__cumulative_bar_1">
-    <path d="M 591.344892 318.556406  L 649.709337 318.556406  L 649.709337 298.344542  L 591.344892 298.344542  z " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: #4f78a8; opacity: 0.22; stroke: #4f78a8; stroke-width: 2; stroke-linejoin: miter" />
+    <path data-role="functional" d="M 594.789674 320.326  L 653.154118 320.326  L 653.154118 300.114136  L 594.789674 300.114136  z " clip-path="url(#empirical_cdf_plot__pe5bbf9beaa)" style="fill: #0c84b4; opacity: 0.22; stroke: #0c84b4; stroke-width: 2; stroke-linejoin: miter" />
    </g>
    <g id="empirical_cdf_plot__cumulative_bar_label_1">
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #4f78a8" x="620.527115" y="291.648304" transform="rotate(-0 620.527115 291.648304)">1</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #0c84b4" x="623.971896" y="292.638629" transform="rotate(-0 623.971896 292.638629)">1</text>
    </g>
    <g id="empirical_cdf_plot__cumulative_histogram_title">
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #4f78a8" x="745.593781" y="20.356406" transform="rotate(-0 745.593781 20.356406)">Summenhäufigkeiten bis t</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #0c84b4" x="749.038563" y="22.126" transform="rotate(-0 749.038563 22.126)">Summenhäufigkeiten bis t</text>
    </g>
   </g><g id="cumulative_class_2" data-anim-target="true" data-anim-label="Kumulierte Klasse 2: 1 + 5 = 6"><g id="empirical_cdf_plot__cumulative_bar_2">
-    <path d="M 653.878226 318.556406  L 712.24267 318.556406  L 712.24267 197.28522  L 653.878226 197.28522  z " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: #4f78a8; opacity: 0.22; stroke: #4f78a8; stroke-width: 2; stroke-linejoin: miter" />
+    <path data-role="functional" d="M 657.323007 320.326  L 715.687451 320.326  L 715.687451 199.054814  L 657.323007 199.054814  z " clip-path="url(#empirical_cdf_plot__pe5bbf9beaa)" style="fill: #0c84b4; opacity: 0.22; stroke: #0c84b4; stroke-width: 2; stroke-linejoin: miter" />
    </g>
    <g id="empirical_cdf_plot__cumulative_bar_label_2">
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; fill: #4f78a8" transform="translate(666.237206 178.432224)">1 + 5</text>
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; fill: #4f78a8" transform="translate(672.239667 190.577302)">= 6</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; fill: #0c84b4" transform="translate(673.930698 178.372527)">1 + 5</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; fill: #0c84b4" transform="translate(678.386948 191.579307)">= 6</text>
    </g>
    </g><g id="cumulative_class_3" data-anim-target="true" data-anim-label="Kumulierte Klasse 3: 6 + 3 = 9"><g id="empirical_cdf_plot__cumulative_bar_3">
-    <path d="M 716.411559 318.556406  L 774.776003 318.556406  L 774.776003 136.649627  L 716.411559 136.649627  z " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: #4f78a8; opacity: 0.22; stroke: #4f78a8; stroke-width: 2; stroke-linejoin: miter" />
+    <path data-role="functional" d="M 719.85634 320.326  L 778.220785 320.326  L 778.220785 138.41922  L 719.85634 138.41922  z " clip-path="url(#empirical_cdf_plot__pe5bbf9beaa)" style="fill: #0c84b4; opacity: 0.22; stroke: #0c84b4; stroke-width: 2; stroke-linejoin: miter" />
    </g>
    <g id="empirical_cdf_plot__cumulative_bar_label_3">
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; fill: #4f78a8" transform="translate(728.770539 117.872099)">6 + 3</text>
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; fill: #4f78a8" transform="translate(734.773 129.941709)">= 9</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; fill: #0c84b4" transform="translate(736.458641 117.806114)">6 + 3</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; fill: #0c84b4" transform="translate(740.925672 130.943714)">= 9</text>
    </g>
    </g><g id="cumulative_class_4" data-anim-target="true" data-anim-label="Kumulierte Klasse 4: 9 + 2 = 11"><g id="empirical_cdf_plot__cumulative_bar_4">
-    <path d="M 778.944892 318.556406  L 837.309337 318.556406  L 837.309337 96.225898  L 778.944892 96.225898  z " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: #4f78a8; opacity: 0.22; stroke: #4f78a8; stroke-width: 2; stroke-linejoin: miter" />
+    <path data-role="functional" d="M 782.389674 320.326  L 840.754118 320.326  L 840.754118 97.995492  L 782.389674 97.995492  z " clip-path="url(#empirical_cdf_plot__pe5bbf9beaa)" style="fill: #0c84b4; opacity: 0.22; stroke: #0c84b4; stroke-width: 2; stroke-linejoin: miter" />
    </g>
    <g id="empirical_cdf_plot__cumulative_bar_label_4">
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; fill: #4f78a8" transform="translate(791.303872 77.448371)">9 + 2</text>
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; fill: #4f78a8" transform="translate(793.305591 89.52966)">= 11</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; fill: #0c84b4" transform="translate(798.997365 77.382385)">9 + 2</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; fill: #0c84b4" transform="translate(800.141974 90.519985)">= 11</text>
    </g>
    </g><g id="cumulative_class_5" data-anim-target="true" data-anim-label="Kumulierte Klasse 5: 11 + 1 = 12"><g id="empirical_cdf_plot__cumulative_bar_5">
-    <path d="M 841.478226 318.556406  L 899.84267 318.556406  L 899.84267 76.014033  L 841.478226 76.014033  z " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: #4f78a8; opacity: 0.22; stroke: #4f78a8; stroke-width: 2; stroke-linejoin: miter" />
+    <path data-role="functional" d="M 844.923007 320.326  L 903.287451 320.326  L 903.287451 77.783627  L 844.923007 77.783627  z " clip-path="url(#empirical_cdf_plot__pe5bbf9beaa)" style="fill: #0c84b4; opacity: 0.22; stroke: #0c84b4; stroke-width: 2; stroke-linejoin: miter" />
    </g>
    <g id="empirical_cdf_plot__cumulative_bar_label_5">
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; fill: #4f78a8" transform="translate(849.836464 57.242795)">11 + 1</text>
-    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Sans'; fill: #4f78a8" transform="translate(855.838924 69.393264)">= 12</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; fill: #0c84b4" transform="translate(858.213667 57.17052)">11 + 1</text>
+    <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; fill: #0c84b4" transform="translate(862.675307 70.3773)">= 12</text>
    </g>
    </g><g id="empirical_cdf_plot__matplotlib.axis_3">
-    <g id="empirical_cdf_plot__xtick_10">
-     <g id="empirical_cdf_plot__line2d_33">
-      <path d="M 578.838226 318.556406  L 578.838226 32.356406  " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+    <g id="empirical_cdf_plot__xtick_5">
+     <g id="empirical_cdf_plot__line2d_23">
+      <path data-role="functional" d="M 603.127451 320.326  L 603.127451 34.126  " clip-path="url(#empirical_cdf_plot__pe5bbf9beaa)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
-     <g id="empirical_cdf_plot__line2d_34">
+     <g id="empirical_cdf_plot__line2d_24">
       <g>
-       <use ns4:href="#empirical_cdf_plot__m6fbf6eafe5" x="578.838226" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m86a81f1404" x="603.127451" y="320.326" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
-     <g id="empirical_cdf_plot__text_19">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="578.838226" y="337.933359" transform="rotate(-0 578.838226 337.933359)">240</text>
+     <g id="empirical_cdf_plot__text_14">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="603.127451" y="345.63" transform="rotate(-0 603.127451 345.63)">250</text>
      </g>
     </g>
-    <g id="empirical_cdf_plot__xtick_11">
-     <g id="empirical_cdf_plot__line2d_35">
-      <path d="M 620.527115 318.556406  L 620.527115 32.356406  " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+    <g id="empirical_cdf_plot__xtick_6">
+     <g id="empirical_cdf_plot__line2d_25">
+      <path data-role="functional" d="M 707.349674 320.326  L 707.349674 34.126  " clip-path="url(#empirical_cdf_plot__pe5bbf9beaa)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
-     <g id="empirical_cdf_plot__line2d_36">
+     <g id="empirical_cdf_plot__line2d_26">
       <g>
-       <use ns4:href="#empirical_cdf_plot__m6fbf6eafe5" x="620.527115" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m86a81f1404" x="707.349674" y="320.326" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
-     <g id="empirical_cdf_plot__text_20">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="620.527115" y="337.933359" transform="rotate(-0 620.527115 337.933359)">260</text>
+     <g id="empirical_cdf_plot__text_15">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="707.349674" y="345.63" transform="rotate(-0 707.349674 345.63)">300</text>
      </g>
     </g>
-    <g id="empirical_cdf_plot__xtick_12">
-     <g id="empirical_cdf_plot__line2d_37">
-      <path d="M 662.216003 318.556406  L 662.216003 32.356406  " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+    <g id="empirical_cdf_plot__xtick_7">
+     <g id="empirical_cdf_plot__line2d_27">
+      <path data-role="functional" d="M 811.571896 320.326  L 811.571896 34.126  " clip-path="url(#empirical_cdf_plot__pe5bbf9beaa)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
-     <g id="empirical_cdf_plot__line2d_38">
+     <g id="empirical_cdf_plot__line2d_28">
       <g>
-       <use ns4:href="#empirical_cdf_plot__m6fbf6eafe5" x="662.216003" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m86a81f1404" x="811.571896" y="320.326" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
-     <g id="empirical_cdf_plot__text_21">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="662.216003" y="337.933359" transform="rotate(-0 662.216003 337.933359)">280</text>
+     <g id="empirical_cdf_plot__text_16">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="811.571896" y="345.63" transform="rotate(-0 811.571896 345.63)">350</text>
      </g>
     </g>
-    <g id="empirical_cdf_plot__xtick_13">
-     <g id="empirical_cdf_plot__line2d_39">
-      <path d="M 703.904892 318.556406  L 703.904892 32.356406  " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+    <g id="empirical_cdf_plot__xtick_8">
+     <g id="empirical_cdf_plot__line2d_29">
+      <path data-role="functional" d="M 915.794118 320.326  L 915.794118 34.126  " clip-path="url(#empirical_cdf_plot__pe5bbf9beaa)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
-     <g id="empirical_cdf_plot__line2d_40">
+     <g id="empirical_cdf_plot__line2d_30">
       <g>
-       <use ns4:href="#empirical_cdf_plot__m6fbf6eafe5" x="703.904892" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m86a81f1404" x="915.794118" y="320.326" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
-     <g id="empirical_cdf_plot__text_22">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="703.904892" y="337.933359" transform="rotate(-0 703.904892 337.933359)">300</text>
+     <g id="empirical_cdf_plot__text_17">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #25495f" x="915.794118" y="345.63" transform="rotate(-0 915.794118 345.63)">400</text>
      </g>
     </g>
-    <g id="empirical_cdf_plot__xtick_14">
-     <g id="empirical_cdf_plot__line2d_41">
-      <path d="M 745.593781 318.556406  L 745.593781 32.356406  " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
-     </g>
-     <g id="empirical_cdf_plot__line2d_42">
-      <g>
-       <use ns4:href="#empirical_cdf_plot__m6fbf6eafe5" x="745.593781" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
-      </g>
-     </g>
-     <g id="empirical_cdf_plot__text_23">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="745.593781" y="337.933359" transform="rotate(-0 745.593781 337.933359)">320</text>
-     </g>
-    </g>
-    <g id="empirical_cdf_plot__xtick_15">
-     <g id="empirical_cdf_plot__line2d_43">
-      <path d="M 787.28267 318.556406  L 787.28267 32.356406  " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
-     </g>
-     <g id="empirical_cdf_plot__line2d_44">
-      <g>
-       <use ns4:href="#empirical_cdf_plot__m6fbf6eafe5" x="787.28267" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
-      </g>
-     </g>
-     <g id="empirical_cdf_plot__text_24">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="787.28267" y="337.933359" transform="rotate(-0 787.28267 337.933359)">340</text>
-     </g>
-    </g>
-    <g id="empirical_cdf_plot__xtick_16">
-     <g id="empirical_cdf_plot__line2d_45">
-      <path d="M 828.971559 318.556406  L 828.971559 32.356406  " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
-     </g>
-     <g id="empirical_cdf_plot__line2d_46">
-      <g>
-       <use ns4:href="#empirical_cdf_plot__m6fbf6eafe5" x="828.971559" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
-      </g>
-     </g>
-     <g id="empirical_cdf_plot__text_25">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="828.971559" y="337.933359" transform="rotate(-0 828.971559 337.933359)">360</text>
-     </g>
-    </g>
-    <g id="empirical_cdf_plot__xtick_17">
-     <g id="empirical_cdf_plot__line2d_47">
-      <path d="M 870.660448 318.556406  L 870.660448 32.356406  " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
-     </g>
-     <g id="empirical_cdf_plot__line2d_48">
-      <g>
-       <use ns4:href="#empirical_cdf_plot__m6fbf6eafe5" x="870.660448" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
-      </g>
-     </g>
-     <g id="empirical_cdf_plot__text_26">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="870.660448" y="337.933359" transform="rotate(-0 870.660448 337.933359)">380</text>
-     </g>
-    </g>
-    <g id="empirical_cdf_plot__xtick_18">
-     <g id="empirical_cdf_plot__line2d_49">
-      <path d="M 912.349337 318.556406  L 912.349337 32.356406  " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
-     </g>
-     <g id="empirical_cdf_plot__line2d_50">
-      <g>
-       <use ns4:href="#empirical_cdf_plot__m6fbf6eafe5" x="912.349337" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
-      </g>
-     </g>
-     <g id="empirical_cdf_plot__text_27">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6a7a86" x="912.349337" y="337.933359" transform="rotate(-0 912.349337 337.933359)">400</text>
-     </g>
-    </g>
-    <g id="empirical_cdf_plot__text_28">
+    <g id="empirical_cdf_plot__text_18">
      
-     <g style="fill: #062d46" transform="translate(639.303781 369.976406)">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="11.469727" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">a</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="23.616211" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="34.330078" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">t</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="42.93457" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">w</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="59.563477" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="71.771484" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">c</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="82.441406" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">h</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="95.255859" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">s</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="105.969727" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">e</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="118.177734" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">l</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="124.347656" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="161.292969" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="167.55957" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">·</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="174.397461" y="-0.214437" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46"> </tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="130.614258" y="-0.214437" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">n</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="142.022461" y="2.485554" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #062d46">L</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="148.342285" y="2.485554" style="font-style: oblique; font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #062d46">W</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="180.664062" y="-0.214437" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">1</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="192.116211" y="-0.214437" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #062d46">0</tspan>
-       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="203.740625" y="-7.648438" style="font-size: 12.6px; font-family: 'DejaVu Sans'; fill: #062d46">2</tspan>
+     <g style="fill: #031334" transform="translate(657.328563 378.33)">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18">
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="0" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="10.259933" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">a</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="20.267868" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="30.005814" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">t</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="35.657776" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">w</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="49.301697" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="59.399628" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">c</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="69.24556" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">h</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="79.757492" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">s</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="89.495438" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">e</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="99.593369" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">l</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="104.129333" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="138.40802" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="142.007996" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334">·</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="148.001953" y="-0.214437" style="font-weight: 600; font-size: 18px; font-family: 'Archivo'; fill: #031334"> </tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="107.729309" y="-0.214437" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #031334">n</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="119.137512" y="2.485554" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #031334">L</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="125.457336" y="2.485554" style="font-style: oblique; font-size: 18px; font-family: 'DejaVu Sans'; fill: #031334">W</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="151.601929" y="-0.214437" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #031334">1</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="163.054077" y="-0.214437" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #031334">0</tspan>
+       <tspan data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" x="174.678491" y="-7.648438" style="font-size: 18px; font-family: 'DejaVu Sans'; fill: #031334">2</tspan>
       </text>
      </g>
     </g>
    </g>
    <g id="empirical_cdf_plot__matplotlib.axis_4">
     <g id="empirical_cdf_plot__ytick_8">
-     <g id="empirical_cdf_plot__line2d_51">
-      <path d="M 557.993781 318.556406  L 933.193781 318.556406  " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     <g id="empirical_cdf_plot__line2d_31">
+      <path data-role="functional" d="M 561.438563 320.326  L 936.638563 320.326  " clip-path="url(#empirical_cdf_plot__pe5bbf9beaa)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
-     <g id="empirical_cdf_plot__line2d_52">
+     <g id="empirical_cdf_plot__line2d_32">
       <g>
-       <use ns4:href="#empirical_cdf_plot__m5ce7071eb6" x="557.993781" y="318.556406" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m3aeb2e29d0" x="561.438563" y="320.326" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
-     <g id="empirical_cdf_plot__text_29">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="548.493781" y="323.494883" transform="rotate(-0 548.493781 323.494883)">0</text>
+     <g id="empirical_cdf_plot__text_19">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="551.938563" y="328.228" transform="rotate(-0 551.938563 328.228)">0</text>
      </g>
     </g>
     <g id="empirical_cdf_plot__ytick_9">
-     <g id="empirical_cdf_plot__line2d_53">
-      <path d="M 557.993781 270.047932  L 933.193781 270.047932  " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     <g id="empirical_cdf_plot__line2d_33">
+      <path data-role="functional" d="M 561.438563 271.817525  L 936.638563 271.817525  " clip-path="url(#empirical_cdf_plot__pe5bbf9beaa)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
-     <g id="empirical_cdf_plot__line2d_54">
+     <g id="empirical_cdf_plot__line2d_34">
       <g>
-       <use ns4:href="#empirical_cdf_plot__m5ce7071eb6" x="557.993781" y="270.047932" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m3aeb2e29d0" x="561.438563" y="271.817525" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
-     <g id="empirical_cdf_plot__text_30">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="548.493781" y="274.986408" transform="rotate(-0 548.493781 274.986408)">20</text>
+     <g id="empirical_cdf_plot__text_20">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="551.938563" y="279.719525" transform="rotate(-0 551.938563 279.719525)">20</text>
      </g>
     </g>
     <g id="empirical_cdf_plot__ytick_10">
-     <g id="empirical_cdf_plot__line2d_55">
-      <path d="M 557.993781 221.539457  L 933.193781 221.539457  " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     <g id="empirical_cdf_plot__line2d_35">
+      <path data-role="functional" d="M 561.438563 223.309051  L 936.638563 223.309051  " clip-path="url(#empirical_cdf_plot__pe5bbf9beaa)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
-     <g id="empirical_cdf_plot__line2d_56">
+     <g id="empirical_cdf_plot__line2d_36">
       <g>
-       <use ns4:href="#empirical_cdf_plot__m5ce7071eb6" x="557.993781" y="221.539457" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m3aeb2e29d0" x="561.438563" y="223.309051" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
-     <g id="empirical_cdf_plot__text_31">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="548.493781" y="226.477934" transform="rotate(-0 548.493781 226.477934)">40</text>
+     <g id="empirical_cdf_plot__text_21">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="551.938563" y="231.211051" transform="rotate(-0 551.938563 231.211051)">40</text>
      </g>
     </g>
     <g id="empirical_cdf_plot__ytick_11">
-     <g id="empirical_cdf_plot__line2d_57">
-      <path d="M 557.993781 173.030983  L 933.193781 173.030983  " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     <g id="empirical_cdf_plot__line2d_37">
+      <path data-role="functional" d="M 561.438563 174.800576  L 936.638563 174.800576  " clip-path="url(#empirical_cdf_plot__pe5bbf9beaa)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
-     <g id="empirical_cdf_plot__line2d_58">
+     <g id="empirical_cdf_plot__line2d_38">
       <g>
-       <use ns4:href="#empirical_cdf_plot__m5ce7071eb6" x="557.993781" y="173.030983" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m3aeb2e29d0" x="561.438563" y="174.800576" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
-     <g id="empirical_cdf_plot__text_32">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="548.493781" y="177.969459" transform="rotate(-0 548.493781 177.969459)">60</text>
+     <g id="empirical_cdf_plot__text_22">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="551.938563" y="182.702576" transform="rotate(-0 551.938563 182.702576)">60</text>
      </g>
     </g>
     <g id="empirical_cdf_plot__ytick_12">
-     <g id="empirical_cdf_plot__line2d_59">
-      <path d="M 557.993781 124.522508  L 933.193781 124.522508  " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     <g id="empirical_cdf_plot__line2d_39">
+      <path data-role="functional" d="M 561.438563 126.292102  L 936.638563 126.292102  " clip-path="url(#empirical_cdf_plot__pe5bbf9beaa)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
-     <g id="empirical_cdf_plot__line2d_60">
+     <g id="empirical_cdf_plot__line2d_40">
       <g>
-       <use ns4:href="#empirical_cdf_plot__m5ce7071eb6" x="557.993781" y="124.522508" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m3aeb2e29d0" x="561.438563" y="126.292102" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
-     <g id="empirical_cdf_plot__text_33">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="548.493781" y="129.460985" transform="rotate(-0 548.493781 129.460985)">80</text>
+     <g id="empirical_cdf_plot__text_23">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="551.938563" y="134.194102" transform="rotate(-0 551.938563 134.194102)">80</text>
      </g>
     </g>
     <g id="empirical_cdf_plot__ytick_13">
-     <g id="empirical_cdf_plot__line2d_61">
-      <path d="M 557.993781 76.014033  L 933.193781 76.014033  " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: none; stroke: #e2e8f0; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
+     <g id="empirical_cdf_plot__line2d_41">
+      <path data-role="functional" d="M 561.438563 77.783627  L 936.638563 77.783627  " clip-path="url(#empirical_cdf_plot__pe5bbf9beaa)" style="fill: none; stroke: #e6e7eb; stroke-opacity: 0.75; stroke-width: 0.8; stroke-linecap: square" />
      </g>
-     <g id="empirical_cdf_plot__line2d_62">
+     <g id="empirical_cdf_plot__line2d_42">
       <g>
-       <use ns4:href="#empirical_cdf_plot__m5ce7071eb6" x="557.993781" y="76.014033" style="fill: #6a7a86; stroke: #6a7a86; stroke-width: 1.2" />
+       <use ns4:href="#empirical_cdf_plot__m3aeb2e29d0" x="561.438563" y="77.783627" style="fill: #25495f; stroke: #25495f; stroke-width: 1.2" />
       </g>
      </g>
-     <g id="empirical_cdf_plot__text_34">
-      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #6a7a86" x="548.493781" y="80.95251" transform="rotate(-0 548.493781 80.95251)">100</text>
+     <g id="empirical_cdf_plot__text_24">
+      <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-size: 18px; font-family: 'Archivo'; text-anchor: end; fill: #25495f" x="551.938563" y="85.685627" transform="rotate(-0 551.938563 85.685627)">100</text>
      </g>
     </g>
-    <g id="empirical_cdf_plot__text_35">
-     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #062d46" x="507.355813" y="175.456406" transform="rotate(-90 507.355813 175.456406)">Summenhäufigkeit [%]</text>
+    <g id="empirical_cdf_plot__text_25">
+     <text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true" font-size="18" style="font-weight: 700; font-size: 18px; font-family: 'Archivo'; text-anchor: middle; fill: #031334" x="505.091688" y="177.226" transform="rotate(-90 505.091688 177.226)">Summenhäufigkeit [%]</text>
     </g>
    </g>
    <g id="empirical_distribution" data-anim-target="true" data-anim-label="Empirische Verteilungsfunktion F Stern von t">
-    <path d="M 620.527115 298.344542  L 651.793781 298.344542  L 651.793781 197.28522  L 714.327115 197.28522  L 714.327115 136.649627  L 776.860448 136.649627  L 776.860448 96.225898  L 839.393781 96.225898  L 839.393781 76.014033  L 870.660448 76.014033  " clip-path="url(#empirical_cdf_plot__p1aad9679f6)" style="fill: none; stroke: #d1495b; stroke-width: 3.5; stroke-linecap: square" />
+    <path data-role="functional" d="M 623.971896 300.114136  L 655.238563 300.114136  L 655.238563 199.054814  L 717.771896 199.054814  L 717.771896 138.41922  L 780.305229 138.41922  L 780.305229 97.995492  L 842.838563 97.995492  L 842.838563 77.783627  L 874.105229 77.783627  " clip-path="url(#empirical_cdf_plot__pe5bbf9beaa)" style="fill: none; stroke: #ec6244; stroke-width: 3.5; stroke-linecap: square" />
    </g>
    <g id="empirical_cdf_plot__patch_6">
-    <path d="M 557.993781 318.556406  L 557.993781 32.356406  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+    <path data-role="functional" d="M 561.438563 320.326  L 561.438563 34.126  " style="fill: none; stroke: #031334; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
    </g>
    <g id="empirical_cdf_plot__patch_7">
-    <path d="M 557.993781 318.556406  L 933.193781 318.556406  " style="fill: none; stroke: #062d46; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
+    <path data-role="functional" d="M 561.438562 320.326  L 936.638563 320.326  " style="fill: none; stroke: #031334; stroke-width: 1.6; stroke-linejoin: miter; stroke-linecap: square" />
    </g>
    </g>
  </g>
  <defs>
-  <clipPath id="empirical_cdf_plot__p6e6e6b2db6">
-   <rect data-qc-allow-overlap="true" x="55.225781" y="32.356406" width="375.2" height="286.2" />
+  <clipPath id="empirical_cdf_plot__pde25967ec3">
+   <rect data-role="functional" data-qc-allow-overlap="true" x="58.670563" y="34.126" width="375.2" height="286.2" />
   </clipPath>
-  <clipPath id="empirical_cdf_plot__p1aad9679f6">
-   <rect data-qc-allow-overlap="true" x="557.993781" y="32.356406" width="375.2" height="286.2" />
+  <clipPath id="empirical_cdf_plot__pe5bbf9beaa">
+   <rect data-role="functional" data-qc-allow-overlap="true" x="561.438563" y="34.126" width="375.2" height="286.2" />
   </clipPath>
  </defs>
-</svg><g id="cumulative_transition" data-anim-target="true" data-anim-label="Übergang durch Kumulieren"><title>Übergang durch Kumulieren</title><text x="960" y="286" class="" font-size="17" font-weight="800" fill="#4F78A8" text-anchor="middle" data-qc-role="text"><tspan x="960" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">kumulieren</tspan></text><line x1="900" y1="306" x2="1010" y2="306" stroke="#4F78A8" stroke-width="4"/><path d="M1010 296 L1032 306 L1010 316 Z" fill="#4F78A8"/></g><g id="empirical_cdf_definition" data-anim-target="true" data-anim-label="Empirische Verteilungsfunktion"><title>Empirische Verteilungsfunktion</title><rect data-qc-allow-overlap="true" x="98" y="872" width="1724" height="70" rx="8" fill="#F7FAFC" stroke="#C8D5DF" stroke-width="1.5"/><text x="138" y="916" class="" font-size="23" font-weight="840" fill="#D1495B" text-anchor="start" data-qc-role="text"><tspan x="138" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">F*(t)</tspan></text><text x="228" y="916" class="" font-size="20" font-weight="720" fill="#102A43" text-anchor="start" data-qc-role="text"><tspan x="228" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Empirische Verteilungsfunktion · Anteil aller Ausfälle bis zum Zeitpunkt t</tspan></text></g></g>
+</svg><g id="cumulative_transition" data-anim-target="true" data-anim-label="Übergang durch Kumulieren"><title>Übergang durch Kumulieren</title><text x="960" y="286" class="" font-size="18" font-weight="800" fill="#0C84B4" text-anchor="middle" data-qc-role="text"><tspan x="960" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">kumulieren</tspan></text><line data-role="functional" x1="900" y1="306" x2="1010" y2="306" stroke="#0C84B4" stroke-width="4"/><path data-role="functional" d="M1010 296 L1032 306 L1010 316 Z" fill="#0C84B4"/></g><g id="empirical_cdf_definition" data-anim-target="true" data-anim-label="Empirische Verteilungsfunktion"><title>Empirische Verteilungsfunktion</title><rect data-role="functional" data-qc-allow-overlap="true" x="98" y="872" width="1724" height="70" rx="8" fill="#F7F9FC" stroke="#CDD0D6" stroke-width="1.5"/><text x="138" y="916" class="" font-size="23" font-weight="840" fill="#EC6244" text-anchor="start" data-qc-role="text"><tspan x="138" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">F*(t)</tspan></text><text x="228" y="916" class="" font-size="20" font-weight="720" fill="#031334" text-anchor="start" data-qc-role="text"><tspan x="228" dy="0" data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true">Empirische Verteilungsfunktion · Anteil aller Ausfälle bis zum Zeitpunkt t</tspan></text></g></g>
 </svg>

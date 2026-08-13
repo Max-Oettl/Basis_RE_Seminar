@@ -15,12 +15,15 @@ in `workflow/30-visual-decision/pictogram-creation-workflow.md`.
 - Ausgabe ausschliesslich als generiertes PNG-Bildasset,
 - quadratisches Masterbild mit mindestens 1024 x 1024 px und echtem Alphakanal,
 - optisch zentriert und mit mindestens 8 Prozent transparentem Sicherheitsrand,
-- ruhige, kontrollierte Silhouette mit konsistenter Konturwirkung,
+- ruhige, kontrollierte und hauptsaechlich eckige Silhouette mit konsistenter,
+  ausreichend kraeftiger Kontur- oder Flaechenwirkung,
 - flache, orthogonale Ansicht ohne perspektivische Mischformen,
 - eine klare Silhouette und nur bedeutungstragende Details,
 - keine Schatten, Verlaeufe, Texturen, 3D-Effekte oder dekorativen Binnenlinien,
 - kein Text, keine Buchstaben und keine eingebauten Beschriftungen,
 - standardmaessig monochrom; hoechstens eine zweite semantische Farbe.
+- Wo ein Piktogramm eine Grundflaeche benoetigt, greift sie die Logoform mit
+  gerundeter Ecke oben links und abgeschraegter Ecke unten rechts auf.
 
 Das Piktogramm darf nicht im Szenen-SVG aus Pfaden, Grundformen oder einer
 SVG-Iconbibliothek rekonstruiert werden. Das SVG platziert und animiert nur das
@@ -31,8 +34,10 @@ keine eigene Bedeutung tragen und ersetzt keine erkennbare Silhouette.
 
 ## Education-Farbrollen
 
-- Marineblau `#031334`: Standardkontur und neutrale Bedeutung.
-- Signalgruen `#00A754`: primaerer Education-Akzent, positiver oder aktiver Fokus.
+- Marineblau `#142452`: Standardkontur, Grundmotiv und neutrale Bedeutung.
+- Tiefes Marineblau `#031334`: inverse oder besonders dunkle Flaechen.
+- Signalgruen `#00A653`: Education-Kennung, positiver oder aktiver Fokus; nicht
+  als dekorative zweite Grundfarbe verwenden.
 - Koralle `#EC6244`: Fehler, Risiko oder negative Abweichung.
 - Goldgelb `#E9B400`: Warnung; auf hellem Grund nicht allein als Kontur einsetzen.
 - Stahlcyan `#0C84B4`: technische oder vergleichende Nebenrolle, nicht Leitfarbe.

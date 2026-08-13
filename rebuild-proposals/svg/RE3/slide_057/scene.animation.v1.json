@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_057.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "special_completed",
+      "label": "Grundlagen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "special_next",
+      "label": "Sonderfälle",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "special_transition_arrow",
+      "label": "Übergang",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "special_transition_rule",
+      "label": "Kritische Prüfung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_special_completed",
+      "targetId": "special_completed",
+      "action": "show",
+      "sourceText": "Damit haben wir die ersten drei Übungen zur Analyse von Lebensdauerdaten erfolgreich abgeschlossen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_special_transition_rule",
+      "targetId": "special_transition_rule",
+      "action": "show",
+      "sourceText": "Doch du weißt ja bereits, es gibt auch weitere Zensierungsarten, etwa die Multiple Zensierung oder die Intervallzensierung, die in der Praxis ebenfalls eine wichtige Rolle spielen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_special_next",
+      "targetId": "special_next",
+      "action": "show",
+      "sourceText": "Im nächsten Schritt werfen wir noch einen Blick auf einige Sonderfälle in der Auswertung, die dir in der Praxis begegnen können.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_special_transition_arrow",
+      "targetId": "special_transition_arrow",
+      "action": "draw",
+      "sourceText": "Im nächsten Schritt werfen wir noch einen Blick auf einige Sonderfälle in der Auswertung, die dir in der Praxis begegnen können.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Beziehung erscheint nach ihren fachlichen Endpunkten.",
+      "drawDurFrames": 42
+    }
+  ]
+}
