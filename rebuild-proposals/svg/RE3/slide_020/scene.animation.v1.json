@@ -5,29 +5,109 @@
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "drivers_sample",
-      "label": "Stichprobenumfang",
+      "targetId": "drivers_level_context",
+      "label": "Vergleich der Aussagewahrscheinlichkeit",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "drivers_level",
-      "label": "Konfidenzniveau",
+      "targetId": "level_90",
+      "label": "level 90",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "drivers_rule",
-      "label": "Breite",
+      "targetId": "drivers_90_label",
+      "label": "90 Prozent und ihre Grenzen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "level_80",
+      "label": "level 80",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "drivers_80_label",
+      "label": "80 Prozent und ihre Grenzen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "drivers_level_rule",
+      "label": "Engerer Bereich bei kleinerem Niveau",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "drivers_sample_context",
+      "label": "Vergleich des Stichprobenumfangs",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "sample_large",
+      "label": "sample large",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "drivers_large_label",
+      "label": "Größere Stichprobe",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "drivers_sample_rule",
+      "label": "Präzision durch mehr Daten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "sample_small",
+      "label": "sample small",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "drivers_small_label",
+      "label": "Kleinere Stichprobe",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "drivers_risk",
+      "label": "Fehleinschätzungen vermeiden",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -36,34 +116,148 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_drivers_level",
-      "targetId": "drivers_level",
-      "action": "show",
-      "sourceText": "In diesem Fall betrachten wir einen neunzigprozentigen Vertrauensbereich, der durch die fünf-Prozent- und die fünfundneunzig-Prozent-Vertrauensgrenze definiert ist.",
+      "stepId": "step_01_drivers_level_context",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "drivers_level_context",
+      "sourceText": "Aber was bedeutet das",
+      "action": "show"
     },
     {
-      "stepId": "step_02_drivers_sample",
-      "targetId": "drivers_sample",
-      "action": "show",
-      "sourceText": "Auch die Größe unserer Stichprobe hat einen starken Einfluss auf die Breite des Vertrauensbereichs.",
+      "stepId": "step_02_level_90",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "level_90",
+      "sourceText": "In diesem Fall betrachten wir",
+      "action": "show"
     },
     {
-      "stepId": "step_03_drivers_rule",
-      "targetId": "drivers_rule",
-      "action": "show",
-      "sourceText": "Dabei gilt: Je größer die Stichprobe, desto präziser ist die Schätzung und desto schmaler wird der Vertrauensbereich.",
+      "stepId": "step_03_drivers_90_label",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "drivers_90_label",
+      "sourceText": "In diesem Fall betrachten wir",
+      "action": "show"
+    },
+    {
+      "stepId": "step_04_level_80",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "level_80",
+      "sourceText": "Alternativ könnten wir auch",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_drivers_80_label",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_80_label",
+      "sourceText": "Alternativ könnten wir auch",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_drivers_level_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_level_rule",
+      "sourceText": "Je kleiner der Vertrauensbereich gewählt wird",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_level_80",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "level_80",
+      "sourceText": "Je kleiner der Vertrauensbereich gewählt wird",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_08_level_90",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "level_90",
+      "sourceText": "Umgekehrt gilt: Je größer",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_09_drivers_sample_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_sample_context",
+      "sourceText": "Auch die Größe unserer Stichprobe",
+      "action": "show"
+    },
+    {
+      "stepId": "step_10_sample_large",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "sample_large",
+      "sourceText": "Je größer die Stichprobe",
+      "action": "show"
+    },
+    {
+      "stepId": "step_11_drivers_large_label",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_large_label",
+      "sourceText": "Je größer die Stichprobe",
+      "action": "show"
+    },
+    {
+      "stepId": "step_12_drivers_sample_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_sample_rule",
+      "sourceText": "Je größer die Stichprobe",
+      "action": "show"
+    },
+    {
+      "stepId": "step_13_sample_small",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "sample_small",
+      "sourceText": "Eine kleine Stichprobe hingegen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_14_drivers_small_label",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_small_label",
+      "sourceText": "Eine kleine Stichprobe hingegen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_15_drivers_risk",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_risk",
+      "sourceText": "Ohne ihn könnten wir",
+      "action": "show"
+    },
+    {
+      "stepId": "step_16_drivers_sample_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_sample_context",
+      "sourceText": "deutlich kürzer oder länger sein könnte",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_17_drivers_risk",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_risk",
+      "sourceText": "das Risiko von Fehleinschätzungen zu minimieren",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     }
   ]
 }

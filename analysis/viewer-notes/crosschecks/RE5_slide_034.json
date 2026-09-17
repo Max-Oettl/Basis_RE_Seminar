@@ -1,0 +1,742 @@
+{
+  "schema_version": "basisRebuildContentCrosscheck/v2",
+  "module_id": "RE5",
+  "output_slide_number": 34,
+  "checked_at": "2026-08-21T10:34:56.713Z",
+  "status": "review_required",
+  "manual_review_required": true,
+  "reference_mapping": {
+    "work_unit": "slide_034",
+    "output_slide_number": 34,
+    "source_slides": [
+      34,
+      35
+    ],
+    "primary_source_slide": 35,
+    "output_slide_numbers": [],
+    "mapping_type": "merged",
+    "rationale": "Aufbau-, Reveal- oder fachlich zusammengehörige Quellzustände werden in einem vollständigen Zielzustand mit semantischen Animationsebenen erhalten.",
+    "mapping_source": "reference_map",
+    "reference_map_path": "analysis/rebuild-plans/RE5_source-reference-map.json",
+    "sequence_plan": "",
+    "read_error": ""
+  },
+  "references": [
+    {
+      "source_slide_number": 34,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE5/SVG/Folie34.SVG",
+      "source_svg_sha256": "82ec324a296a12bbc32fa421085b9fa66fe81ea6a6ca2e1d2b5a983844afa76c",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE5/SVG/Folie34.SVG",
+      "analysis_path": ""
+    },
+    {
+      "source_slide_number": 35,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE5/SVG/Folie35.SVG",
+      "source_svg_sha256": "cf9a917efaa5b8b3a1902125455dfd1fdbdec597122544ff734f997341654184",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE5/SVG/Folie35.SVG",
+      "analysis_path": ""
+    }
+  ],
+  "proposal": {
+    "path": "rebuild-proposals/svg/RE5/slide_034/slide_034.svg",
+    "svg_sha256": "b9f90b27b4a0681b2dbbfe3926dee104c706e8032ed4da65d537121a135f5478",
+    "animation_manifest": "/files/rebuild-proposals/svg/RE5/slide_034/scene.animation.v1.json"
+  },
+  "summary": {
+    "source_count": 2,
+    "checked_content_items": 57,
+    "checked_target_text_items": 9,
+    "errors": 0,
+    "warnings": 14,
+    "infos": 0,
+    "animation_steps": 0
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 034: \"Einfluss unterschiedlicher Prüfzeiten\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Einfluss unterschiedlicher Prüfzeiten"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 034: \"Wie wirkt sich eine Verlängerung oder Verkürzung der\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Wie wirkt sich eine Verlängerung oder Verkürzung der"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 034: \"Testzeit auf den erforderlichen Stichprobenumfang aus?\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Testzeit auf den erforderlichen Stichprobenumfang aus?"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 035: \"Einfluss unterschiedlicher Prüfzeiten\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Einfluss unterschiedlicher Prüfzeiten"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 035: \"1\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-8",
+      "expected": "1"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 035: \"1\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-13",
+      "expected": "1"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 035: \"geforderten Lebensdauer\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-21",
+      "expected": "geforderten Lebensdauer"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 035: \"Lebensdauerverhältnis\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-22",
+      "expected": "Lebensdauerverhältnis"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 035: \"1\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-47",
+      "expected": "1"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 035: \"1\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-52",
+      "expected": "1"
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"REFERENZFALL\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "REFERENZFALL",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"PRAXISFALL\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "PRAXISFALL",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"t_p < t oder t_p > t Überlebenswahrscheinlichkeit muss korrigiert werden\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "t_p < t oder t_p > t Überlebenswahrscheinlichkeit muss korrigiert werden",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"KORREKTUR FÜR t_p ≠ t\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "KORREKTUR FÜR t_p ≠ t",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    }
+  ],
+  "content_checks": [
+    {
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Einfluss unterschiedlicher Prüfzeiten",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Wie wirkt sich eine Verlängerung oder Verkürzung der",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Testzeit auf den erforderlichen Stichprobenumfang aus?",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Einfluss unterschiedlicher Prüfzeiten",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-2",
+      "expected": "𝑅",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-3",
+      "expected": "(",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-4",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-5",
+      "expected": ")",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-6",
+      "expected": "=",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-7",
+      "expected": "(",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-8",
+      "expected": "1",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-9",
+      "expected": "−",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-10",
+      "expected": "𝑃",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-11",
+      "expected": "𝐴",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-12",
+      "expected": ")",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-13",
+      "expected": "1",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-14",
+      "expected": "𝑛",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-15",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-16",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-17",
+      "expected": "p",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-18",
+      "expected": "= Prüfdauer",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-19",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-20",
+      "expected": "t =",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-21",
+      "expected": "geforderten Lebensdauer",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:lebensdauer"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-22",
+      "expected": "Lebensdauerverhältnis",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-23",
+      "expected": "𝐿",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-24",
+      "expected": "𝑉",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-25",
+      "expected": "𝐿",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-26",
+      "expected": "𝑉",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-27",
+      "expected": "=",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-28",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-29",
+      "expected": "𝑝",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-30",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-31",
+      "expected": "für",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-32",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-33",
+      "expected": "p",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-34",
+      "expected": "=",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-35",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-36",
+      "expected": "für",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-37",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-38",
+      "expected": "p",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-39",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-40",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-41",
+      "expected": "𝑅",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-42",
+      "expected": "(",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-43",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-44",
+      "expected": ")",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-45",
+      "expected": "=",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-46",
+      "expected": "(",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-47",
+      "expected": "1",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-48",
+      "expected": "−",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-49",
+      "expected": "𝑃",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-50",
+      "expected": "𝐴",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-51",
+      "expected": ")",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-52",
+      "expected": "1",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-53",
+      "expected": "𝑛",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 35,
+      "source_item_id": "source-svg-text-54",
+      "expected": "?",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    }
+  ],
+  "target_text_checks": [
+    {
+      "target_text": "REFERENZFALL",
+      "result": "unsupported_target_text",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "target_text": "Prüfdauer = Lebensdauer",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "tokens:prüfdauer,lebensdauer"
+    },
+    {
+      "target_text": "t_p = t ursprüngliche Success-Run-Gleichung gilt direkt",
+      "result": "source_or_spoken_supported",
+      "score": 0.833,
+      "evidence": "tokens:ursprüngliche,success,run,gleichung,gilt"
+    },
+    {
+      "target_text": "PRAXISFALL",
+      "result": "unsupported_target_text",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "target_text": "Prüfdauer ≠ Lebensdauer",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "tokens:prüfdauer,lebensdauer"
+    },
+    {
+      "target_text": "t_p < t oder t_p > t Überlebenswahrscheinlichkeit muss korrigiert werden",
+      "result": "unsupported_target_text",
+      "score": 0.25,
+      "evidence": "tokens:überlebenswahrscheinlichkeit"
+    },
+    {
+      "target_text": "LEBENSDAUER-",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "VERHÄLTNIS",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "KORREKTUR FÜR t_p ≠ t",
+      "result": "unsupported_target_text",
+      "score": 0.5,
+      "evidence": "tokens:für"
+    }
+  ],
+  "manual_review_focus": [
+    "Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.",
+    "Bestaetigen, dass die vollstaendige statische Darstellung klarer als ein schrittweiser Aufbau ist."
+  ],
+  "reference_mapping_sha256": "298dabc8cedd6b787f726ac2f84d6b769fe0d9d4b4db6e74cb980ac1b381483b",
+  "reference_map_path": "analysis/rebuild-plans/RE5_source-reference-map.json",
+  "sequence_plan": ""
+}

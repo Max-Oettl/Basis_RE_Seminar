@@ -5,13 +5,21 @@
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
       "targetId": "mechanisms_joint",
-      "label": "Gemeinsamer Fit",
+      "label": "Gemeinsame Ausfallzeiten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mechanisms_split",
+      "label": "Nach Mechanismus trennen",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -19,15 +27,47 @@
     },
     {
       "targetId": "mechanisms_plot",
-      "label": "Mehrere Geraden",
+      "label": "Getrennte Auswertung im Weibullnetz",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "mechanisms_rule",
-      "label": "Trennregel",
+      "targetId": "mechanism_a",
+      "label": "mechanism a",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mechanism_a_label",
+      "label": "Weibullgerade A",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mechanism_b",
+      "label": "mechanism b",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mechanism_b_label",
+      "label": "Weibullgerade B",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mechanisms_total",
+      "label": "Gesamtzuverlässigkeit",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -37,33 +77,67 @@
   "steps": [
     {
       "stepId": "step_01_mechanisms_joint",
-      "targetId": "mechanisms_joint",
-      "action": "show",
-      "sourceText": "Es können auch Ausfallzeiten verschiedener Komponenten oder auch mehrere Ausfallmechanismen einer Komponente verfügbar sein.",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "mechanisms_joint",
+      "sourceText": "Als erstes müssen uns Lebensdauerdaten",
+      "action": "show"
     },
     {
-      "stepId": "step_02_mechanisms_rule",
-      "targetId": "mechanisms_rule",
-      "action": "show",
-      "sourceText": "Für jeden Ausfallmechanismus muss dann die Auswertung immer getrennt voneinander erfolgen.",
+      "stepId": "step_02_mechanisms_split",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "mechanisms_split",
+      "sourceText": "getrennt voneinander erfolgen",
+      "action": "show"
     },
     {
       "stepId": "step_03_mechanisms_plot",
-      "targetId": "mechanisms_plot",
-      "action": "show",
-      "sourceText": "Das bedeutet, wenn zwei Ausfallmechanismen A und B vorliegen, wie in dem Beispiel hier, dann erhalten wir natürlich auch immer zwei ermittelte Weibull-Geraden.",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "mechanisms_plot",
+      "sourceText": "zwei Ausfallmechanismen A und B vorliegen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_04_mechanism_a",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mechanism_a",
+      "sourceText": "Eine für den Ausfallmechanismus A",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_mechanism_a_label",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mechanism_a_label",
+      "sourceText": "Eine für den Ausfallmechanismus A",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_mechanism_b",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mechanism_b",
+      "sourceText": "und eine für den Ausfallmechanismus B",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_mechanism_b_label",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mechanism_b_label",
+      "sourceText": "und eine für den Ausfallmechanismus B",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_mechanisms_total",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mechanisms_total",
+      "sourceText": "Diese können dann wieder miteinander verrechnet werden",
+      "action": "show"
     }
   ]
 }

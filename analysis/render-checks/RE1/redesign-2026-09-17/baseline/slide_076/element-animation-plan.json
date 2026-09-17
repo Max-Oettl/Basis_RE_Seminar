@@ -1,0 +1,129 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_076",
+  "scene_id": "re1_src_095",
+  "source_slides": [
+    95
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "weibull_density_curves",
+      "label": "Dichtekurven der Weibullverteilung",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_density_eta",
+      "label": "Charakteristische Lebensdauer im Plot",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_eta_meaning",
+      "label": "Bedeutung von T",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_beta_meaning",
+      "label": "Bedeutung von b",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_flexibility_summary",
+      "label": "Flexibles Anwendungsspektrum",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_t0_parameter",
+      "label": "Ausfallfreie Zeit t null",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_weibull_density_curves",
+      "targetId": "weibull_density_curves",
+      "action": "draw",
+      "sourceText": "Die Weibullverteilung ist durch zwei Parameter definiert.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_weibull_density_eta",
+      "targetId": "weibull_density_eta",
+      "action": "show",
+      "sourceText": "Zum einen durch die charakteristische Lebensdauer groß T",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_eta_meaning",
+      "targetId": "weibull_eta_meaning",
+      "action": "show",
+      "sourceText": "Zum einen durch die charakteristische Lebensdauer groß T",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_beta_meaning",
+      "targetId": "weibull_beta_meaning",
+      "action": "show",
+      "sourceText": "Und zum anderen durch den Formparameter b",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_flexibility_summary",
+      "targetId": "weibull_flexibility_summary",
+      "action": "show",
+      "sourceText": "Aufgrund der Flexibilität besitzt die Weibullverteilung ein sehr breites Anwendungsspektrum",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_t0_parameter",
+      "targetId": "weibull_t0_parameter",
+      "action": "show",
+      "sourceText": "Darüber hinaus lässt sich die Weibullverteilung auch mit Hilfe eines zusätzlichen, dritten Parameters",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

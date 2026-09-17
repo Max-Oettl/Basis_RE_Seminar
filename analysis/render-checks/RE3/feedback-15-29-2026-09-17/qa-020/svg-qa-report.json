@@ -1,0 +1,149 @@
+{
+  "schema_version": "svgQaReport/v1",
+  "module_id": "slide_020",
+  "svg_root": "rebuild-proposals/svg/RE3/slide_020",
+  "generated_at": "2026-09-17T07:03:26.707Z",
+  "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\tools\\svg-rebuild-qa.js rebuild-proposals/svg/RE3/slide_020 --strict-design --layout --layout-strict --report-dir analysis/render-checks/RE3/feedback-15-29-2026-09-17/qa-020",
+  "files": [
+    {
+      "path": "rebuild-proposals/svg/RE3/slide_020/plots/level-comparison.svg",
+      "ids": 106,
+      "animationManifest": ""
+    },
+    {
+      "path": "rebuild-proposals/svg/RE3/slide_020/plots/sample-comparison.svg",
+      "ids": 106,
+      "animationManifest": ""
+    },
+    {
+      "path": "rebuild-proposals/svg/RE3/slide_020/slide_020.svg",
+      "ids": 227,
+      "animationManifest": "rebuild-proposals/svg/RE3/slide_020/scene.animation.v1.json"
+    }
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE3/slide_020/plots/level-comparison.svg",
+      "message": "ViewBox is not close to 16:9.",
+      "detail": "648x417.6"
+    },
+    {
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE3/slide_020/plots/sample-comparison.svg",
+      "message": "ViewBox is not close to 16:9.",
+      "detail": "648x417.6"
+    }
+  ],
+  "viewer": {
+    "checked": false
+  },
+  "layout": {
+    "checked": true,
+    "strict": true,
+    "warnOnly": false,
+    "browser": {
+      "executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "port": 5821
+    },
+    "files": [
+      {
+        "path": "rebuild-proposals/svg/RE3/slide_020/plots/level-comparison.svg",
+        "slide": "020",
+        "states_checked": 1,
+        "browser_rendered": true
+      },
+      {
+        "path": "rebuild-proposals/svg/RE3/slide_020/plots/sample-comparison.svg",
+        "slide": "020",
+        "states_checked": 1,
+        "browser_rendered": true
+      },
+      {
+        "path": "rebuild-proposals/svg/RE3/slide_020/slide_020.svg",
+        "slide": "020",
+        "states_checked": 13,
+        "browser_rendered": true
+      }
+    ],
+    "issues": [],
+    "summary": {
+      "checked": true,
+      "files_checked": 3,
+      "states_checked": 15,
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "design": {
+    "checked": true,
+    "strict": true,
+    "warnOnly": false,
+    "brandTokens": {
+      "loaded": true,
+      "path": "brand/company-brand-tokens.json",
+      "profile": "reltest-education",
+      "companyName": "RelTest Education"
+    },
+    "tokenSources": [
+      {
+        "loaded": true,
+        "path": "brand/company-brand-tokens.json",
+        "profile": "reltest-education"
+      }
+    ],
+    "files": [
+      {
+        "path": "rebuild-proposals/svg/RE3/slide_020/plots/level-comparison.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 6,
+        "textCount": 9
+      },
+      {
+        "path": "rebuild-proposals/svg/RE3/slide_020/plots/sample-comparison.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 6,
+        "textCount": 9
+      },
+      {
+        "path": "rebuild-proposals/svg/RE3/slide_020/slide_020.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 7,
+        "textCount": 27
+      }
+    ],
+    "issues": [],
+    "summary": {
+      "files_checked": 3,
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "handoff": {
+    "checked": false
+  },
+  "summary": {
+    "files_checked": 3,
+    "manifests_checked": 1,
+    "layout_files_checked": 3,
+    "layout_states_checked": 15,
+    "design_files_checked": 3,
+    "design_errors": 0,
+    "design_warnings": 0,
+    "handoff_scenes_checked": 0,
+    "handoff_manifests_checked": 0,
+    "handoff_errors": 0,
+    "handoff_warnings": 0,
+    "errors": 0,
+    "warnings": 2
+  }
+}

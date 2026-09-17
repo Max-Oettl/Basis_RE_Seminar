@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "reltestEducationPictogramAsset/v1",
+  "assetId": "re2_p_diagram_ac_output_v2",
+  "file": "components/image-library/generated-pictograms/re2-p-diagram-v2/re2-p-diagram-ac-output-v2.png",
+  "assetType": "generated_png",
+  "status": "accepted",
+  "styleProfile": "reltest-education-minimal-v1",
+  "source": {"evidenceType": "speaker_text", "reference": "RE2 Quelle 009: Wechselstrom ist Ziel- und Ausgangsgröße des Wechselrichters.", "license": "project_internal"},
+  "semantics": {
+    "concept": "gerichteter Wechselstrom-Ausgang eines Wandlers",
+    "learningFunction": "concept-anchor",
+    "mustShowFeatures": ["Wandlermodul", "Sinuswelle", "gerichteter Ausgang"],
+    "mustNotImply": ["Gleichstrom", "Messdiagramm"],
+    "confusableWith": ["Gleichstrom-Eingang", "Plot"],
+    "firstUseLabel": "Wechselstrom (AC)",
+    "reuseKey": "p-diagram-ac-output"
+  },
+  "visualStyle": {"flat2d": true, "perspective": "front", "dominantSilhouette": true, "semanticLayers": 2, "brandColors": ["#142452", "#0C84B4"], "gradients": false, "shadows": false, "threeDimensional": false, "isometric": false, "photorealistic": false, "glow": false, "texture": false, "embeddedText": false, "logo": false, "watermark": false},
+  "raster": {"widthPx": 1024, "heightPx": 1024, "transparentBackground": true, "safeMarginRatio": 0.10},
+  "learningUse": {"targetPlacementPx": 108, "requiresTextLabelOnFirstUse": true, "colorIndependentMeaning": true, "smallScaleTests": {"at32px": "not_required", "at48px": "passed", "scene960x540": "passed"}},
+  "accessibility": {"redundantWithVisibleLabel": true, "accessibleName": "", "contrastPairs": [{"foreground": "#142452", "background": "#FFFFFF", "minimumRatio": 3}]},
+  "review": {"semantic": "passed", "style": "passed", "eLearning": "passed", "accessibilityTechnical": "passed", "notes": ["Sinuswelle und Richtung bleiben in der Zielgröße eindeutig."]}
+}

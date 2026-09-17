@@ -1,0 +1,121 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re1_src_013",
+  "svgPath": "rebuild-proposals/svg/RE1/slide_013/slide_013.svg",
+  "spokenText": "Die Zuverlässigkeit ist die Wahrscheinlichkeit dafür, dass ein Produkt während einer definierten Zeitdauer unter gegebenen Funktions- und Umgebungsbedingungen nicht ausfällt.\n\nSomit beschreibt die Zuverlässigkeit statistisch die Lebenserwartung von Produkten und berücksichtigt, dass Ausfälle aufgrund zufälliger und statistisch verteilter Ursachen auftreten können. Aufgrund des zufälligen Ausfallverhaltens lässt sich die Zuverlässigkeit immer nur als Wahrscheinlichkeit und nicht als ein diskreter Wert ausdrücken.\n\nDiese Wahrscheinlichkeitsberechnung ist essenziell, da sie die unvermeidbare Unsicherheit von Ausfallursachen erfasst. Die Zuverlässigkeit eines Produkts hängt von den vorherrschenden Funktions- und Umgebungsbedingungen ab, da diese sich maßgeblich auf die Produktlebensdauer auswirken.Die hierfür notwendigen Methoden werden im nächsten Abschnitt eingeführt.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Definition ist eine unteilbare fachliche Aussage und erscheint vollständig mit dem ersten Definitionssatz.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Show wird als reines Fade bewertet.",
+      "Gleiche sourceText-Phrase startet alle Schritte derselben Triggergruppe gleichzeitig."
+    ]
+  },
+  "initialStateRationale": "Vor dem unmittelbar beginnenden Definitionssatz bleibt nur der ruhige Markenrahmen sichtbar; einzelne Begriffe würden die Definition fragmentieren.",
+  "semanticGroups": [
+    {
+      "groupId": "brand_background",
+      "label": "RelTest-Education-Hintergrund",
+      "role": "background",
+      "members": [
+        "Education-Farbverlauf",
+        "ruhiges technisches Raster"
+      ],
+      "initialState": "static_decorative",
+      "dependsOn": [],
+      "groupingRationale": "Der Hintergrund ist ruhiger Markenrahmen und trägt keine vorweggenommene Fachinformation."
+    },
+    {
+      "groupId": "reliability_definition",
+      "label": "Definition der Zuverlässigkeit",
+      "role": "definition",
+      "members": [
+        "vertikale Definitionsspur",
+        "fünf Piktogramme",
+        "vollständiger Definitionssatz",
+        "alle Hervorhebungen"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [],
+      "groupingRationale": "Satzstruktur, Icons und Schlüsselbegriffe bilden eine einzige Definition."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "show_reliability_definition",
+      "claim": "Zuverlässigkeit wird als Wahrscheinlichkeit des ausfallfreien Funktionserhalts definiert.",
+      "sourceText": "Die Zuverlässigkeit ist die Wahrscheinlichkeit dafür",
+      "occurrence": 1,
+      "requiredContext": [],
+      "revealTogether": [
+        "reliability_definition"
+      ],
+      "learnerStateBefore": "Nur der ruhige Markenrahmen ist sichtbar.",
+      "learnerStateAfter": "Die vollständige Definition ist sichtbar."
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_reliability_definition",
+      "beatId": "show_reliability_definition",
+      "targetId": "reliability_definition",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Die Definition wird nicht in Wortfragmente zerlegt."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Vor dem unmittelbar beginnenden Definitionssatz bleibt nur der ruhige Markenrahmen sichtbar; einzelne Begriffe würden die Definition fragmentieren."
+    },
+    {
+      "stateId": "before_show_reliability_definition",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Nur der ruhige Markenrahmen ist sichtbar."
+    },
+    {
+      "stateId": "after_show_reliability_definition",
+      "afterBeatId": "show_reliability_definition",
+      "visibleGroups": [
+        "brand_background",
+        "reliability_definition"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Die vollständige Definition ist sichtbar."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "show_reliability_definition",
+      "visibleGroups": [
+        "brand_background",
+        "reliability_definition"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der vollständige statische Endzustand bleibt ohne Animation fachlich verständlich."
+    }
+  ]
+}

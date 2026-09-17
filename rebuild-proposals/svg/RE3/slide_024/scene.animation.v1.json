@@ -5,37 +5,53 @@
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "types_two",
-      "label": "Zweiseitig",
+      "targetId": "two_context",
+      "label": "Zweiseitiger Vertrauensbereich",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "types_left",
-      "label": "Linksseitig",
+      "targetId": "two_region",
+      "label": "two region",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "types_right",
-      "label": "Rechtsseitig",
+      "targetId": "two_boundaries",
+      "label": "Untere und obere Grenze",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "types_rule",
-      "label": "Fragestellung",
+      "targetId": "two_values",
+      "label": "two values",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "two_probability",
+      "label": "90 Prozent Aussagewahrscheinlichkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "two_rule",
+      "label": "Unsicherheit in beide Richtungen",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -44,44 +60,52 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_types_two",
-      "targetId": "types_two",
-      "action": "show",
-      "sourceText": "Bereits kennengelernt haben wir den zweiseitigen Vertrauensbereich.",
+      "stepId": "step_01_two_context",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "two_context",
+      "sourceText": "Bereits kennengelernt haben wir",
+      "action": "show"
     },
     {
-      "stepId": "step_02_types_left",
-      "targetId": "types_left",
-      "action": "show",
-      "sourceText": "Beim linksseitigen Vertrauensbereich wird nur eine obere Grenze betrachtet, die sicherstellt, dass der wahre Wert mit einer bestimmten Wahrscheinlichkeit unterhalb dieser Grenze liegt.",
+      "stepId": "step_02_two_region",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "two_region",
+      "sourceText": "sowohl die untere als auch die obere Grenze",
+      "action": "show"
     },
     {
-      "stepId": "step_03_types_right",
-      "targetId": "types_right",
-      "action": "show",
-      "sourceText": "Analog dazu gibt es auch den rechtsseitigen Vertrauensbereich.",
+      "stepId": "step_03_two_boundaries",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "two_boundaries",
+      "sourceText": "sowohl die untere als auch die obere Grenze",
+      "action": "show"
     },
     {
-      "stepId": "step_04_types_rule",
-      "targetId": "types_rule",
-      "action": "show",
-      "sourceText": "Die Wahl des passenden Vertrauensbereichs hängt immer von der konkreten Fragestellung ab.",
+      "stepId": "step_04_two_values",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "two_values",
+      "sourceText": "Die Aussagewahrscheinlichkeit von neunzig Prozent",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_two_probability",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "two_probability",
+      "sourceText": "Die Aussagewahrscheinlichkeit von neunzig Prozent",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_two_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "two_rule",
+      "sourceText": "Unsicherheiten in beide Richtungen berücksichtigt",
+      "action": "show"
     }
   ]
 }

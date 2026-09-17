@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_006.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "strategy_root",
+      "label": "Testart wählen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "end_of_life_branch",
+      "label": "End-of-Life-Zweig",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "success_run_branch",
+      "label": "Success-Run-Zweig",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "test_configuration",
+      "label": "Testkonfiguration",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_strategy_root",
+      "targetId": "strategy_root",
+      "action": "show",
+      "sourceText": "Wir starten mit der Testart",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_end_of_life_branch",
+      "targetId": "end_of_life_branch",
+      "action": "show",
+      "sourceText": "Ein End-of-Life Test kann vollständig durchgeführt werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_success_run_branch",
+      "targetId": "success_run_branch",
+      "action": "show",
+      "sourceText": "Beim Success Run Test gilt die Definition",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_test_configuration",
+      "targetId": "test_configuration",
+      "action": "show",
+      "sourceText": "Ganz unten in der Grafik siehst du die Testkonfiguration",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

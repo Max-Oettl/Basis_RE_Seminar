@@ -1,0 +1,37 @@
+{
+  "sceneId": "re5_src_041",
+  "decision": "animated",
+  "staticGate": "passed_before_animation",
+  "targets": [
+    {
+      "id": "test_to_failure",
+      "label": "Bis zum Ausfall prüfen",
+      "cue": "prüfen wir bis zum Ausfall",
+      "action": "show"
+    },
+    {
+      "id": "weibull_evaluation",
+      "label": "Weibullverteilung bestimmen",
+      "cue": "bestimmen die Weibullverteilung",
+      "action": "show"
+    },
+    {
+      "id": "proof_result",
+      "label": "Nachweis bewerten",
+      "cue": "prüfen wir, ob die geforderte Zuverlässigkeit",
+      "action": "show"
+    },
+    {
+      "id": "end_of_life_plot",
+      "label": "End-of-Life-Weibullplot",
+      "cue": "die Weibullgerade mit Vertrauensbereich ermitteln",
+      "action": "draw"
+    },
+    {
+      "id": "long_lifetime_example",
+      "label": "Langzeitbeispiel Wechselrichter",
+      "cue": "Denke an einen Wechselrichter für Solaranlagen",
+      "action": "show"
+    }
+  ]
+}

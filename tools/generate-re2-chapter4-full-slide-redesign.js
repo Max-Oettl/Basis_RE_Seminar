@@ -32,7 +32,7 @@ const titles = {
   67: "Grundprinzipien der FMEA",
   68: "Welche Arten einer FMEA gibt es?",
   69: "Design-FMEA und Prozess-FMEA: Ziel und Fokus",
-  70: "Design-FMEA und Prozess-FMEA: Zeitpunkt und Ergebnis",
+  70: "Design-FMEA und Prozess-FMEA im Vergleich",
   71: "Einsatz der FMEA",
   72: "Die 7 Schritte der FMEA",
   73: "1. Schritt: Planung und Vorbereitung",
@@ -173,7 +173,7 @@ function annotationTxt(x, y, text, size = 18, weight = 820, fill = C.soft, ancho
 }
 
 function box(x, y, width, height, fill = C.surface, stroke = C.border, strokeWidth = 1.5, radius = 10) {
-  return `<rect x="${x}" y="${y}" width="${width}" height="${height}" rx="${radius}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
+  return `<rect data-role="functional" x="${x}" y="${y}" width="${width}" height="${height}" rx="${radius}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
 }
 
 function group(id, label, body, markForAnimation = true) {
@@ -219,6 +219,11 @@ function image(filename, x, y, width, height, label) {
   return `<image x="${x}" y="${y}" width="${width}" height="${height}" href="${assetData(filename)}" preserveAspectRatio="xMidYMid meet" aria-label="${esc(label)}" data-source-media="true" data-source-evidence="source_slide" data-source-reference="Extrahiertes und bereinigtes Quellasset"/>`;
 }
 
+function pictogram(relativePath, x, y, width, height, label) {
+  const data = fs.readFileSync(path.join(root, relativePath)).toString("base64");
+  return `<image x="${x}" y="${y}" width="${width}" height="${height}" href="data:image/png;base64,${data}" preserveAspectRatio="xMidYMid meet" aria-hidden="true" data-component="reltest-pictogram" data-style="reltest-education-minimal-v1" data-kind="universal_pictogram" data-source-evidence="user_request" data-source-reference="Quellnahe Prinzipiengrafik; freigegebenes PNG aus der Education-Piktogrammbibliothek: ${esc(relativePath)}"/>`;
+}
+
 function annotate(markup) {
   return markup
     .replace(/<text(?![^>]*data-qc-role)/g, '<text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true"')
@@ -246,27 +251,42 @@ function target(id, label, n, keywords, action = "show") {
   return { id, label, sourceText: cuePara(n, keywords), action };
 }
 
+function navText(x, y, text, size, weight, fill, anchor = "middle") {
+  return `<text x="${x}" y="${y}" font-size="${size}" font-weight="${weight}" fill="${fill}" text-anchor="${anchor}" data-qc-role="annotation" data-qc-layer="text" data-qc-padding="0">${esc(text)}</text>`;
+}
+
+function navMulti(x, y, width, text, size, weight, fill, lineHeight = 1) {
+  const max = Math.max(8, Math.floor(width / (size * 0.54)));
+  const spans = wrap(text, max)
+    .map((row, index) => `<tspan x="${x}" dy="${index ? Math.round(size * lineHeight) : 0}">${esc(row)}</tspan>`)
+    .join("");
+  return `<text x="${x}" y="${y}" font-size="${size}" font-weight="${weight}" fill="${fill}" text-anchor="middle" data-qc-role="annotation" data-qc-layer="text" data-qc-padding="0">${spans}</text>`;
+}
+
 function processStrip(activeStep = 0, y = 370, compact = false) {
-  const width = compact ? 218 : 218;
-  const gap = 14;
+  const width = compact ? 198 : 206;
+  const gap = compact ? 10 : 12;
   const total = width * 7 + gap * 6;
   const x0 = (1920 - total) / 2;
-  const height = compact ? 90 : 138;
+  const height = compact ? 72 : 96;
   const links = processLabels.slice(0, 6).map((_, index) =>
-    line(x0 + width + index * (width + gap), y + height / 2, x0 + (index + 1) * (width + gap), y + height / 2, C.soft, 2, true)).join("");
+    line(x0 + width + index * (width + gap), y + height / 2, x0 + (index + 1) * (width + gap), y + height / 2, C.soft, 1.5, true)).join("");
   const nodes = processLabels.map(([step, label], index) => {
     const active = activeStep === index + 1;
     const x = x0 + index * (width + gap);
-    return `${box(x, y, width, height, active ? C.accent : C.deep, active ? C.accent : C.deep, 1.8, 12)}
-      ${txt(x + width / 2, y + (compact ? 29 : 39), step.toUpperCase(), 18, 820, C.surface, "middle")}
-      ${multi(x + width / 2, y + (compact ? 55 : 75), width - 34, label, 18, 720, C.surface, "middle", 1.05)}`;
+    const fill = active ? C.educationAccent : C.surface;
+    const stroke = active ? C.educationAccent : C.accent;
+    const textFill = active ? C.surface : C.accent;
+    return `${box(x, y, width, height, fill, stroke, 1.5, 8)}
+      ${navText(x + width / 2, y + (compact ? 22 : 30), step.toUpperCase(), 18, 820, textFill)}
+      ${navMulti(x + width / 2, y + (compact ? 44 : 59), width - 22, label, 18, 720, textFill, 1)}`;
   }).join("");
   return `${links}${nodes}`;
 }
 
 function frame(scene, content) {
   const n = scene.output_slide_number;
-  const title = titles[n];
+  const title = scene.content_title_override || titles[n];
   const metadata = {
     artifactScope: "content-svg",
     embeddingTarget: "powerpoint-slide",
@@ -274,15 +294,15 @@ function frame(scene, content) {
     contentTitle: title,
     layoutIntent: content.layout,
     takeaway: content.takeaway || `Quelltreuer Zustand der FMEA-Sequenz auf Folie ${n}.`,
-    density: content.density || "balanced",
+    density: content.density || "normal",
     contentMode: "transparent-content",
     backgroundMode: "transparent",
     brandProfile: educationTheme.brandProfile,
     brandVariant: educationTheme.brandVariant,
-    sourceSlides: [n],
+    sourceSlides: scene.source_slides || [n],
     officialLogoStatus: "pending-original-asset",
   };
-  const markerColors = [...new Set([C.accent, C.deep, C.failure, C.success, C.secondary, C.soft, C.border])]
+  const markerColors = [...new Set([C.accent, C.deep, C.failure, C.success, C.secondary, C.soft, C.border, C.technical, C.educationAccent])]
     .filter((color) => content.body.includes(color));
   const markers = markerColors.map((color) =>
     `<marker id="arrow_${color.slice(1)}" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="${color}"/></marker>`).join("");
@@ -299,15 +319,62 @@ function frame(scene, content) {
 }
 
 function processOnly(n, activeStep = 0) {
-  const process = group(`s${n}_process`, "Sieben Schritte der FMEA", processStrip(activeStep, 386, false), false);
-  const note = activeStep
-    ? `${pill(736, 610, 448, `${activeStep}. SCHRITT IM FOKUS`, C.accent, C.accentSoft)}`
-    : `${pill(748, 610, 424, "VOLLSTÄNDIGER METHODENABLAUF", C.accent, C.accentSoft)}`;
+  const process = group(`s${n}_process`, "Sieben Schritte der FMEA", processStrip(activeStep, 156, true), false);
+  if (!activeStep) {
+    return {
+      archetype: "process-overview",
+      layout: "Kompakte siebenstufige FMEA-Schrittübersicht als ruhiger Orientierungsrahmen.",
+      takeaway: "Die FMEA folgt einem klaren Ablauf aus sieben Schritten.",
+      body: process + `${txt(960, 520, "7 SCHRITTE", 104, 880, C.accent, "middle")}${txt(960, 600, "EIN DURCHGÄNGIGER ARBEITSWEG", 25, 820, C.secondary, "middle")}`,
+      targets: [],
+    };
+  }
+  const [stepLabel, stepTitle] = processLabels[activeStep - 1];
+  const stepCounter = activeStep === 1
+    ? `${txt(258, 578, "0", 76, 880, C.surface, "middle")}${txt(310, 578, "1", 76, 880, C.surface, "middle")}`
+    : txt(286, 578, String(activeStep).padStart(2, "0"), 76, 880, C.surface, "middle");
+  const previewByStep = {
+    1: `${pathLine("M 1260 470 V 510 H 1080 V 560 M 1260 510 V 560 M 1260 510 H 1440 V 560", C.border, 3)}
+        ${box(1130, 392, 260, 78, C.accent, C.accent, 1.5, 4)}${txt(1260, 440, "ANALYSEUMFANG", 20, 820, C.surface, "middle")}
+        ${[1080, 1260, 1440].map((x, index) => `${box(x - 118, 560, 236, 82, C.surface, C.accent, 2, 4)}${txt(x, 610, ["SYSTEM", "TEILSYSTEM", "KOMPONENTE"][index], 19, 780, C.accent, "middle")}`).join("")}
+        ${txt(1260, 722, "Informationen sammeln  ·  Team zusammenstellen", 22, 720, C.secondary, "middle")}`,
+    2: `${pathLine("M 1260 456 V 510 H 1080 V 566 M 1260 510 V 566 M 1260 510 H 1440 V 566", C.border, 3)}
+        ${box(1130, 374, 260, 82, C.accent, C.accent, 1.5, 4)}${txt(1260, 425, "SYSTEM", 21, 820, C.surface, "middle")}
+        ${[1080, 1260, 1440].map((x, index) => `${box(x - 118, 566, 236, 82, C.surface, C.accent, 2, 4)}${txt(x, 616, ["TEILSYSTEM", "BAUGRUPPE", "BAUTEIL"][index], 19, 780, C.accent, "middle")}`).join("")}
+        ${txt(1260, 724, "abgrenzen  →  aufteilen  →  hierarchisch ordnen", 22, 720, C.secondary, "middle")}`,
+    3: `${box(1008, 438, 300, 92, C.surface, C.accent, 2, 4)}${txt(1158, 477, "SYSTEMELEMENT", 18, 820, C.soft, "middle")}${txt(1158, 512, "2.1", 25, 850, C.accent, "middle")}
+        ${line(1308, 484, 1446, 484, C.secondary, 3, true)}
+        ${box(1446, 438, 300, 92, C.surface, C.accent, 2, 4)}${txt(1596, 477, "FUNKTION", 18, 820, C.secondary, "middle")}${txt(1596, 512, "Funktion 2.1.1", 22, 780, C.accent, "middle")}
+        ${txt(1377, 650, "Jedem Systemelement mindestens eine Funktion zuordnen", 23, 720, C.accent, "middle")}`,
+    4: `${box(1000, 438, 300, 92, C.surface, C.accent, 2, 4)}${txt(1150, 477, "FUNKTION", 18, 820, C.secondary, "middle")}${txt(1150, 512, "Funktion 1", 24, 820, C.accent, "middle")}
+        ${line(1300, 484, 1434, 484, C.failure, 3, true)}
+        ${box(1434, 408, 312, 72, C.surface, C.failure, 2, 4)}${txt(1590, 452, "nicht erfüllt", 21, 760, C.failure, "middle")}
+        ${box(1434, 504, 312, 72, C.surface, C.failure, 2, 4)}${txt(1590, 548, "fehlerhaft erfüllt", 21, 760, C.failure, "middle")}
+        ${txt(1374, 674, "Funktion negieren  →  Fehlfunktionen verknüpfen", 23, 720, C.accent, "middle")}`,
+    5: `${[1080, 1370, 1660].map((x, index) => `<circle cx="${x}" cy="500" r="76" fill="${index === 2 ? C.educationAccent : C.accent}"/>${txt(x, 513, ["B", "A", "E"][index], 44, 880, C.surface, "middle")}${txt(x, 620, ["Bedeutung", "Auftreten", "Entdeckung"][index], 21, 800, index === 2 ? C.educationAccent : C.accent, "middle")}${txt(x, 660, "Skala 1–10", 19, 620, C.soft, "middle")}`).join("")}`,
+    6: `${txt(1370, 408, "RISIKO", 42, 880, C.failure, "middle")}
+        ${pathLine("M 1060 690 C 1100 590 1190 540 1300 500", C.accent, 3, true)}${pathLine("M 1370 690 V 500", C.accent, 3, true)}${pathLine("M 1680 690 C 1640 590 1550 540 1440 500", C.educationAccent, 3, true)}
+        ${txt(1020, 740, "Ursache beseitigen", 20, 760, C.accent, "middle")}${txt(1370, 740, "Bedeutung verringern", 20, 760, C.accent, "middle")}${txt(1720, 740, "Entdeckung erhöhen", 20, 760, C.educationAccent, "middle")}`,
+    7: `<rect x="1090" y="372" width="560" height="420" fill="${C.surface}" stroke="${C.accent}" stroke-width="2"/>
+        <rect x="1090" y="372" width="560" height="70" fill="${C.accent}"/>${txt(1370, 416, "FMEA-FORMBLATT", 23, 830, C.surface, "middle")}
+        ${[500, 570, 640, 710].map((y) => `<path d="M1090 ${y}H1650" stroke="${C.border}" stroke-width="2"/>`).join("")}
+        <path d="M1260 442V792M1430 442V792" stroke="${C.border}" stroke-width="2"/>
+        ${txt(1370, 846, "Ergebnisse  ·  Maßnahmen  ·  Verantwortlichkeiten", 21, 720, C.secondary, "middle")}`,
+  };
+  const focus = group(`s${n}_focus`, `${stepLabel}: ${stepTitle}`,
+    `${txt(112, 410, "ALS NÄCHSTES", 20, 840, C.secondary)}
+     <circle cx="286" cy="590" r="126" fill="${C.accent}"/>
+     ${stepCounter}
+     ${txt(286, 630, "VON 07", 20, 760, C.surface, "middle")}
+     ${txt(500, 530, stepLabel.toUpperCase(), 22, 830, C.secondary)}
+     ${multiRows(500, 590, 360, stepTitle, 40, 820, C.accent, "start", 1.08)}
+     <path d="M920 372V812" stroke="${C.border}" stroke-width="2"/>
+     ${previewByStep[activeStep]}`);
   return {
-    archetype: "process-overview",
-    layout: "Kanonische siebenstufige FMEA-Prozessleiste als dominante Erklärfläche.",
-    takeaway: activeStep ? `Schritt ${activeStep} ist der aktive FMEA-Arbeitsschritt.` : "Die FMEA folgt einem klaren Ablauf aus sieben Schritten.",
-    body: process + note,
+    archetype: "step-transition-preview",
+    layout: "Zurückhaltende Sieben-Schritt-Navigation oben mit signalgrünem aktuellem Schritt; darunter ein großer Schrittanker und eine fachliche Vorschau auf die kommende Denkoperation.",
+    takeaway: `Schritt ${activeStep} – ${stepTitle} – ist der nächste FMEA-Arbeitsschritt.`,
+    body: process + focus,
     targets: [],
   };
 }
@@ -333,24 +400,26 @@ function compareColumns(n, left, right, options = {}) {
   const y = options.y || 254;
   const height = options.height || 590;
   const leftColor = options.leftColor || C.accent;
-  const rightColor = options.rightColor || C.secondary;
-  const leftFill = options.leftFill || C.accentSoft;
-  const rightFill = options.rightFill || C.secondarySoft;
+  const rightColor = options.rightColor || C.accent;
   const leftGroup = group(`s${n}_left`, left.title,
-    `${box(92, y, 816, height, leftFill, leftColor, 2, 14)}
-     ${txt(500, y + 62, left.title, 30, 820, leftColor, "middle")}
-     ${left.subtitle ? multi(500, y + 104, 700, left.subtitle, 21, 700, C.deep, "middle") : ""}
-     ${bulletList(142, y + 178, 710, left.items, leftColor, options.bodySize || 21, options.gap || 82)}`);
+    `${box(110, y, 790, 68, C.deep, C.deep, 1.5, 3)}
+     ${txt(505, y + 45, left.title, 29, 840, C.surface, "middle")}
+     ${left.subtitle ? multi(505, y + 116, 700, left.subtitle, 21, 720, C.deep, "middle") : ""}
+     ${line(110, y + 150, 900, y + 150, C.border, 2)}
+     ${bulletList(142, y + 214, 710, left.items, leftColor, options.bodySize || 21, options.gap || 82)}`);
   const rightGroup = group(`s${n}_right`, right.title,
-    `${box(1012, y, 816, height, rightFill, rightColor, 2, 14)}
-     ${txt(1420, y + 62, right.title, 30, 820, rightColor, "middle")}
-     ${right.subtitle ? multi(1420, y + 104, 700, right.subtitle, 21, 700, C.deep, "middle") : ""}
-     ${bulletList(1062, y + 178, 710, right.items, rightColor, options.bodySize || 21, options.gap || 82)}`);
+    `${box(1020, y, 790, 68, C.deep, C.deep, 1.5, 3)}
+     ${txt(1415, y + 45, right.title, 29, 840, C.surface, "middle")}
+     ${right.subtitle ? multi(1415, y + 116, 700, right.subtitle, 21, 720, C.deep, "middle") : ""}
+     ${line(1020, y + 150, 1810, y + 150, C.border, 2)}
+     ${bulletList(1052, y + 214, 710, right.items, rightColor, options.bodySize || 21, options.gap || 82)}`);
+  const structure = `<path d="M960 ${y}V${y + height}" stroke="${C.border}" stroke-width="2"/>
+    ${line(110, y + height, 1810, y + height, C.border, 2)}`;
   return {
-    archetype: "two-column-comparison",
-    layout: "Zwei gleichgewichtige, semantisch farbcodierte Vergleichsspalten.",
+    archetype: "open-aligned-comparison",
+    layout: "Zwei gleichgewichtige Vergleichsspalten mit identischen Titelbändern, offener Textfläche und gemeinsamer Ausrichtung.",
     takeaway: options.takeaway || `${left.title} und ${right.title} werden anhand derselben Vergleichslogik gegenübergestellt.`,
-    body: leftGroup + rightGroup + (options.footer || ""),
+    body: structure + leftGroup + rightGroup + (options.footer || ""),
     targets: [
       target(`s${n}_left`, left.title, n, left.cues || [left.title]),
       target(`s${n}_right`, right.title, n, right.cues || [right.title]),
@@ -367,12 +436,14 @@ function genericSystemTree(n, options = {}) {
     level2: ["Systemelement 2.1", "Systemelement 2.2", "Systemelement 2.3"],
     level3: ["Systemelement 3.1", "Systemelement 3.2", "Systemelement 3.3"],
   };
-  const y1 = 286;
-  const y2 = 490;
-  const y3 = 714;
+  const y1 = 304;
+  const y2 = 494;
+  const y3 = 706;
   const focus = [y1 - 42, y2 - 42, y3 - 42][focusLevel - 1];
   const focusBand = focusLevel
-    ? `${box(202, focus, 8, focusLevel === 3 ? 194 : 154, C.accent, C.accent, 0, 4)}`
+    ? focusLevel === 3
+      ? `<rect x="82" y="${y3 - 38}" width="1756" height="194" rx="4" fill="${C.accentSoft}" fill-opacity=".72" stroke="${C.educationAccent}" stroke-width="2.5"/>`
+      : `${box(202, focus, 8, 154, C.accent, C.accent, 0, 4)}`
     : "";
   const connectors = group(`s${n}_tree_links`, "Hierarchische Verknüpfungen",
     `${pathLine(`M 960 ${y1 + 76} V ${y2 - 32} H 470 V ${y2}`, C.deep, 2.2)}
@@ -392,7 +463,7 @@ function genericSystemTree(n, options = {}) {
     `${focusBand}
      ${annotationTxt(188, y1 + 40, "SYSTEMEBENE 1", 18, 820, C.soft, "end")}
      ${annotationTxt(188, y2 + 40, "SYSTEMEBENE 2", 18, 820, C.soft, "end")}
-     ${annotationTxt(188, y3 + 40, "SYSTEMEBENE 3", 18, 820, C.soft, "end")}
+     ${annotationTxt(188, y3 + 40, "SYSTEMEBENE 3", 18, 820, focusLevel === 3 ? C.deep : C.soft, "end")}
      ${node(800, y1, 320, labels.root, "Funktion 1.1", "Fehler 1.1.1")}
      ${node(340, y2, 260, labels.level2[0], "Funktion 2.1.1", "Fehler 2.1.1.1")}
      ${node(830, y2, 260, labels.level2[1], "Funktion 2.2.1", "Fehler 2.2.1.1")}
@@ -409,7 +480,7 @@ function genericSystemTree(n, options = {}) {
     archetype: "hierarchy-tree",
     layout: "Kanonischer dreistufiger Systembaum mit optionalen Funktions- und Fehlerlagen.",
     takeaway: withFaults ? "Systemelemente, Funktionen und Fehlfunktionen bleiben hierarchisch miteinander verknüpft." : withFunctions ? "Jedes Systemelement erhält mindestens eine zugeordnete Funktion." : "Der Systembaum ordnet jedes Systemelement eindeutig einer Hierarchieebene zu.",
-    density: withFunctions ? "dense" : "balanced",
+    density: withFunctions ? "dense" : "normal",
     body: processStrip(withFaults ? 4 : withFunctions ? 3 : 2, 172, true) + connectors + nodes,
     targets,
   };
@@ -441,27 +512,47 @@ function scene64() {
 }
 
 function scene65() {
-  const acronym = group("s65_acronym", "Akronym FMEA",
-    `${box(92, 222, 480, 524, C.deep, C.deep, 2, 16)}
-     ${txt(332, 330, "FMEA", 88, 850, C.surface, "middle")}
-     ${multi(332, 426, 390, "Fehler-Möglichkeits- und Einfluss-Analyse", 27, 760, C.accentSoft, "middle", 1.18)}
-     ${multi(332, 570, 390, "Failure Mode and Effects Analysis", 24, 700, C.surface, "middle", 1.18)}`);
-  const definition = group("s65_definition", "Definition",
-    `${box(620, 222, 1208, 244, C.accentSoft, C.accent, 1.8, 14)}
-     ${txt(654, 270, "FMEA IST …", 20, 820, C.accent)}
-     ${multi(654, 326, 1120, "eine systematische, proaktive und entwicklungsbegleitende Methode, die im Team durchgeführt wird.", 29, 760, C.deep)}`);
-  const roles = group("s65_roles", "Aufgaben der FMEA",
-    `${card(620, 510, 380, 236, "FRÜH ERKENNEN", "Ausfallarten, Ausfallfolgen und Ausfallursachen identifizieren.", C.accent, C.surface)}
-     ${card(1034, 510, 380, 236, "RISIKO BEWERTEN", "Risiken strukturiert einschätzen und priorisieren.", C.secondary, C.surface)}
-     ${card(1448, 510, 380, 236, "OPTIMIEREN", "Geeignete Maßnahmen festlegen und dokumentieren.", C.success, C.surface)}`);
+  const letters = [
+    ["F", "FEHLER"],
+    ["M", "MÖGLICHKEITS-"],
+    ["E", "EINFLUSS-"],
+    ["A", "ANALYSE"],
+  ];
+  const acronym = letters.map(([letter, meaning], index) => {
+    const x = 108 + index * 438;
+    return group(`s65_letter_${letter.toLocaleLowerCase("de-DE")}`, `${letter} wie ${meaning}`,
+      `${txt(x, 338, letter, 106, 900, C.deep)}
+       ${line(x, 372, x + 330, 372, C.accent, 5)}
+       ${txt(x, 422, meaning, 22, 860, C.deep)}`);
+  }).join("");
+  const english = group("s65_english", "Englische Bezeichnung",
+    `${txt(108, 490, "ENGLISCH", 18, 850, C.soft)}
+     ${txt(260, 490, "Failure Mode and Effects Analysis", 23, 740, C.secondary)}`);
+  const definition = group("s65_definition", "Merkmale der FMEA",
+    `${txt(108, 574, "DIE FMEA IST …", 20, 860, C.accent)}
+     ${bulletList(108, 632, 760, [
+       "systematisch, proaktiv und entwicklungsbegleitend",
+       "eine Methode, die im Team durchgeführt wird",
+       "auf frühe Erkennung von Ausfallarten, Folgen und Ursachen ausgerichtet",
+     ], C.accent, 23, 78)}`);
+  const roles = group("s65_roles", "Ergebnis der FMEA",
+    `${txt(1030, 574, "SIE UNTERSTÜTZT …", 20, 860, C.accent)}
+     ${bulletList(1030, 632, 760, [
+       "die Einschätzung und Priorisierung des Risikos",
+       "die Festlegung wirksamer Optimierungsmaßnahmen",
+     ], C.accent, 23, 94)}`);
   return {
-    archetype: "definition",
-    layout: "Dominantes Akronym links, Definition und drei Aufgaben rechts.",
+    archetype: "animated-acronym-definition",
+    layout: "Die vier Buchstaben lösen sich nacheinander in ihre Bedeutungen auf; darunter folgen echte, unnummerierte Stichpunkte in zwei klaren Inhaltsgruppen.",
     takeaway: "Die FMEA erkennt potenzielle Fehler früh, bewertet ihr Risiko und leitet Optimierungen ab.",
-    body: acronym + definition + roles,
+    body: acronym + english + definition + roles,
     targets: [
-      target("s65_acronym", "Akronym FMEA", 65, ["FMEA bedeutet"]),
-      target("s65_definition", "Definition", 65, ["systematische"]),
+      ...letters.map(([letter, meaning], index) => ({
+        ...target(`s65_letter_${letter.toLocaleLowerCase("de-DE")}`, `${letter} wie ${meaning}`, 65, ["FMEA bedeutet"]),
+        sourceText: cuePara(65, ["FMEA bedeutet"]),
+      })),
+      target("s65_english", "Englische Bezeichnung", 65, ["englischsprachigen Raum"]),
+      target("s65_definition", "Merkmale der FMEA", 65, ["systematische"]),
       target("s65_roles", "Aufgaben der FMEA", 65, ["frühzeitig", "Risiko"]),
     ],
   };
@@ -469,50 +560,147 @@ function scene65() {
 
 function scene66() {
   const goals = [
-    ["AUSFÄLLE VERMEIDEN", "Potenzielle Fehler früh erkennen und eine problemfreie Produkteinführung unterstützen.", C.failure, C.failureSoft],
-    ["KOSTEN REDUZIEREN", "Nachbesserungen vermeiden und Ressourcen effizient einsetzen.", C.secondary, C.secondarySoft],
-    ["PRODUKTQUALITÄT STEIGERN", "Schwachstellen aufdecken und konkrete Verbesserungsmaßnahmen ableiten.", C.accent, C.accentSoft],
-    ["WISSEN SICHERN", "Erkenntnisse im Team dokumentieren und regulatorische Anforderungen erfüllen.", C.success, C.successSoft],
+    {
+      title: "Minimierung oder Vermeidung von Ausfällen",
+      bullets: ["Frühzeitige Erkennung potenzieller Fehler", "Problemfreie Produkteinführung"],
+      x: 92,
+      y: 220,
+      triggerKeywords: ["Ausfälle minimieren", "Erkennen und Priorisieren"],
+    },
+    {
+      title: "Reduktion der Kosten",
+      bullets: ["Vermeidung von Nachbesserungen", "Effiziente Nutzung von Ressourcen"],
+      x: 92,
+      y: 548,
+      triggerKeywords: ["Reduzierung von Kosten"],
+    },
+    {
+      title: "Steigerung der Produktqualität",
+      bullets: ["Aufdeckung von Schwachstellen", "Maßnahmen zur Verbesserung"],
+      x: 960,
+      y: 220,
+      triggerKeywords: ["Produktqualität zu steigern"],
+    },
+    {
+      title: "Dokumentation",
+      bullets: ["Wissensaustausch im Team", "Einhaltung regulatorischer Anforderungen"],
+      x: 960,
+      y: 548,
+      triggerKeywords: ["lückenlose Dokumentation"],
+    },
   ];
-  const body = goals.map(([title, text, color, fill], index) => {
-    const x = 92 + (index % 2) * 868;
-    const y = 220 + Math.floor(index / 2) * 326;
-    return group(`s66_goal_${index + 1}`, title, card(x, y, 812, 270, title, text, color, fill, { titleSize: 24, bodySize: 23 }));
+  const goalGrid = goals.map(({ title, bullets, x, y }, index) => {
+    const bulletMarkup = bullets.map((bullet, bulletIndex) => {
+      const baseline = y + 132 + bulletIndex * 62;
+      return `${txt(x + 38, baseline, "→", 27, 800, C.technical)}
+        ${multi(x + 80, baseline, 690, bullet, 24, 600, C.text, "start", 1.2)}`;
+    }).join("");
+    return group(`s66_goal_${index + 1}`, title,
+      `${box(x, y, 812, 270, C.surfaceSoft, C.deep, 1.8, 10)}
+       ${multi(x + 34, y + 58, 744, title, 28, 800, C.deep, "start", 1.12)}
+       ${bulletMarkup}`);
   }).join("");
+  const prevention = group("s66_prevention", "Wirkung der Fehlerprävention",
+    `${box(92, 854, 548, 104, C.deep, C.deep, 1.5, 8)}
+     ${multi(366, 906, 490, "PRÄVENTION VON FEHLERN UND AUSFÄLLEN", 21, 840, C.surface, "middle")}
+     ${box(686, 854, 548, 104, C.deep, C.deep, 1.5, 8)}
+     ${multi(960, 906, 490, "STEIGERUNG VON SICHERHEIT UND ZUVERLÄSSIGKEIT", 21, 840, C.surface, "middle")}
+     ${box(1280, 854, 548, 104, C.deep, C.deep, 1.5, 8)}
+     ${multi(1554, 906, 490, "HÖHERE KUNDENZUFRIEDENHEIT", 21, 840, C.surface, "middle")}`);
+  const body = goalGrid + prevention;
   return {
     archetype: "goals",
-    layout: "Vier gleichgewichtige Zielbereiche in einem ruhigen 2×2-Raster.",
-    takeaway: "FMEA reduziert Ausfälle und Kosten, steigert Qualität und sichert Wissen.",
+    layout: "Quellnahes 2×2-Raster: Ausfälle und Kosten links, Produktqualität und Dokumentation rechts; vier farblich und formal identische Themenboxen.",
+    takeaway: "Vier gleichrangige FMEA-Ziele: Ausfälle vermeiden, Kosten reduzieren, Produktqualität steigern und Ergebnisse dokumentieren.",
     body,
-    targets: goals.map(([title], index) => target(`s66_goal_${index + 1}`, title, 66, [title.split(" ")[0], "Ziel"])),
+    targets: [
+      ...goals.map(({ title, triggerKeywords }, index) => target(`s66_goal_${index + 1}`, title, 66, triggerKeywords)),
+      target("s66_prevention", "Wirkung der Fehlerprävention", 66, ["verhindert Fehler und Ausfälle", "Sicherheit und Zuverlässigkeit"]),
+    ],
   };
 }
 
 function scene67() {
   const principles = [
-    ["KONTINUITÄT", "begleitet Entwicklung und Optimierung fortlaufend", C.accent, C.accentSoft],
-    ["SYSTEMATIK", "identifiziert, bewertet und priorisiert Risiken strukturiert", C.deep, C.surfaceSoft],
-    ["PROAKTIVITÄT", "reagiert früh auf Veränderungen und Kundenfeedback", C.secondary, C.secondarySoft],
-    ["DOKUMENTATION", "macht Entscheidungen für Verbesserungen nachvollziehbar", C.success, C.successSoft],
-    ["TEAMARBEIT", "verbindet Expertenwissen aus mehreren Fachbereichen", C.failure, C.failureSoft],
+    {
+      id: "s67_principle_1",
+      title: "Kontinuität",
+      description: "Die FMEA ist ein fortlaufender Prozess, der die Entwicklung und Optimierung von Produkten und Prozessen kontinuierlich begleitet.",
+      titleX: 660,
+      titleY: 278,
+      textX: 660,
+      textY: 326,
+      textWidth: 520,
+      anchor: "end",
+      tileX: 730,
+      tileY: 240,
+      icon: "components/image-library/generated-pictograms/education-core/loop.png",
+    },
+    {
+      id: "s67_principle_2",
+      title: "Systematik",
+      description: "Nutzt einen strukturierten Ansatz zur Identifikation, Bewertung und Priorisierung von Risiken, um Produkten und Prozessen systematisch zu verbessern.",
+      titleX: 1260,
+      titleY: 278,
+      textX: 1260,
+      textY: 326,
+      textWidth: 560,
+      anchor: "start",
+      tileX: 970,
+      tileY: 240,
+      icon: "components/image-library/generated-pictograms/education-core/layers.png",
+    },
+    {
+      id: "s67_principle_3",
+      title: "Proaktivität",
+      description: "Regelmäßige Updates ermöglichen proaktiv auf Veränderungen und Kundenfeedback zu reagieren und Fehler frühzeitig zu erkennen.",
+      titleX: 660,
+      titleY: 520,
+      textX: 660,
+      textY: 568,
+      textWidth: 520,
+      anchor: "end",
+      tileX: 730,
+      tileY: 450,
+      icon: "components/image-library/generated-pictograms/education-core/clock.png",
+    },
+    {
+      id: "s67_principle_4",
+      title: "Dokumentation",
+      description: "Jeder Schritt und jede Entscheidung werden ausführlich dokumentiert, um eine Basis für zukünftige Verbesserungen zu schaffen.",
+      titleX: 1260,
+      titleY: 520,
+      textX: 1260,
+      textY: 568,
+      textWidth: 560,
+      anchor: "start",
+      tileX: 970,
+      tileY: 450,
+      icon: "components/image-library/generated-pictograms/education-core/list-check.png",
+    },
   ];
-  const width = 320;
-  const gap = 30;
-  const x0 = 100;
-  const cards = principles.map(([title, text, color, fill], index) =>
-    group(`s67_principle_${index + 1}`, title,
-      card(x0 + index * (width + gap), 288, width, 476, title, text, color, fill, { titleSize: 22, bodySize: 21 }))).join("");
+  const principleGroups = principles.map((principle) => group(principle.id, principle.title,
+    `${box(principle.tileX, principle.tileY, 220, 190, C.deep, C.deep, 1.5, 24)}
+     <circle cx="${principle.tileX + 110}" cy="${principle.tileY + 95}" r="66" fill="${C.surface}"/>
+     ${pictogram(principle.icon, principle.tileX + 58, principle.tileY + 43, 104, 104, principle.title)}
+     ${txt(principle.titleX, principle.titleY, principle.title, 27, 800, C.technical, principle.anchor)}
+     ${multiRows(principle.textX, principle.textY, principle.textWidth, principle.description, 20, 560, C.text, principle.anchor, 1.2)}`)).join("");
+  const teamwork = group("s67_principle_5", "Teamarbeit",
+    `<circle cx="960" cy="440" r="76" fill="${C.surface}" stroke="${C.deep}" stroke-width="2.5"/>
+     ${txt(960, 449, "TEAM", 25, 850, C.deep, "middle")}
+     ${txt(960, 706, "Teamarbeit", 28, 820, C.deep, "middle")}
+     ${multiRows(960, 752, 760, "Erfordert interdisziplinäre Teams zur effektiven Analyse und setzt auf die Zusammenarbeit von Experten aus verschiedenen Fachbereichen.", 20, 560, C.text, "middle", 1.18)}`);
   return {
-    archetype: "principles",
-    layout: "Fünf gleichwertige Prinzipien in einer einheitlichen horizontalen Kartenfolge.",
+    archetype: "principle-constellation",
+    layout: "Quellnahe Zentralgrafik: vier identische Symbolfelder um Teamarbeit als verbindenden Mittelpunkt; freie Erläuterungen links, rechts und darunter.",
     takeaway: "Kontinuität, Systematik, Proaktivität, Dokumentation und Teamarbeit tragen die FMEA.",
-    body: cards,
+    body: principleGroups + teamwork,
     targets: [
-      target("s67_principle_1", "KONTINUITÄT", 67, ["Kontinuität"]),
-      target("s67_principle_2", "SYSTEMATIK", 67, ["Systematik"]),
-      target("s67_principle_3", "PROAKTIVITÄT", 67, ["außerdem proaktiv"]),
-      target("s67_principle_4", "DOKUMENTATION", 67, ["wesentlicher Bestandteil", "Dokumentation"]),
-      target("s67_principle_5", "TEAMARBEIT", 67, ["Teamarbeit"]),
+      target("s67_principle_1", "Kontinuität", 67, ["Kontinuität"]),
+      target("s67_principle_2", "Systematik", 67, ["Systematik"]),
+      target("s67_principle_3", "Proaktivität", 67, ["außerdem proaktiv"]),
+      target("s67_principle_4", "Dokumentation", 67, ["wesentlicher Bestandteil", "Dokumentation"]),
+      target("s67_principle_5", "Teamarbeit", 67, ["Teamarbeit"]),
     ],
   };
 }
@@ -532,34 +720,96 @@ function scene69() {
 }
 
 function scene70() {
-  return compareColumns(70,
-    { title: "DESIGN-FMEA", subtitle: "während der Designphase", items: ["Idealerweise vor dem ersten Prototypen", "Ergebnis: sicheres und funktionales Produkt", "Beispiel: neu entwickeltes Autobatteriesystem"], cues: ["Designphase", "Prototyp"] },
-    { title: "PROZESS-FMEA", subtitle: "ab der Produktionsplanung", items: ["Beginnt in der Planungsphase der Produktion", "Ergebnis: effiziente und kosteneffektive Produktion", "Beispiel: Montagelinie für Elektronikgeräte"], cues: ["kontinuierlich während des gesamten Produktionsprozesses", "Planungsphase der Produktion"] },
-    { bodySize: 20, gap: 92, takeaway: "Beide FMEA-Arten setzen früh an, aber an unterschiedlichen Entwicklungsobjekten." });
+  const split = group("s70_split", "Aufteilung in Design- und Prozess-FMEA",
+    `${pill(824, 188, 272, "FMEA", C.accent, C.surface)}
+     ${pathLine("M 960 226 V 260 H 660 V 292", C.soft, 2.2)}
+     ${pathLine("M 960 260 H 1360 V 292", C.soft, 2.2)}
+     ${box(350, 292, 620, 72, C.deep, C.deep, 1.5, 10)}
+     ${txt(660, 338, "DESIGN-FMEA", 28, 840, C.surface, "middle")}
+     ${box(1050, 292, 620, 72, C.deep, C.deep, 1.5, 10)}
+     ${txt(1360, 338, "PROZESS-FMEA", 28, 840, C.surface, "middle")}
+     ${txt(302, 402, "ZIELSETZUNG", 18, 820, C.technical, "end")}
+     ${txt(302, 530, "SCHWERPUNKTE", 18, 820, C.technical, "end")}
+     ${txt(302, 658, "ANWENDUNGS-", 18, 820, C.technical, "end")}
+     ${txt(302, 682, "ZEITPUNKT", 18, 820, C.technical, "end")}
+     ${txt(302, 770, "ERGEBNIS", 18, 820, C.technical, "end")}
+     ${txt(302, 870, "BEISPIEL", 18, 820, C.technical, "end")}
+     ${line(326, 474, 1748, 474, C.border, 1.4)}
+     ${line(326, 602, 1748, 602, C.border, 1.4)}
+     ${line(326, 720, 1748, 720, C.border, 1.4)}
+     ${line(326, 816, 1748, 816, C.border, 1.4)}
+     ${line(1010, 382, 1010, 902, C.border, 1.4)}`);
+  const designAnalysis = group("s70_design_analysis", "Zielsetzung und Schwerpunkt der Design-FMEA",
+    `${multiRows(382, 398, 542, "Frühzeitige Identifizierung und Behebung potenzieller Fehler und Schwachstellen im Produktdesign", 20, 600, C.text, "start", 1.18)}
+     ${txt(382, 524, "Produktqualität", 21, 800, C.deep)}
+     ${multiRows(382, 556, 542, "Komponenten, Baugruppen und Interaktionen innerhalb des Produktdesigns", 19, 560, C.text, "start", 1.18)}`);
+  const processAnalysis = group("s70_process_analysis", "Zielsetzung und Schwerpunkt der Prozess-FMEA",
+    `${multiRows(1082, 398, 542, "Frühzeitige Identifizierung und Behebung potenzieller Fehler und Schwachstellen im Produktionsprozess", 20, 600, C.text, "start", 1.18)}
+     ${txt(1082, 524, "Produktionseffizienz", 21, 800, C.deep)}
+     ${multiRows(1082, 556, 542, "Schritte, Abläufe und Materialien innerhalb des Produktionsprozesses", 19, 560, C.text, "start", 1.18)}`);
+  const designApplication = group("s70_design_application", "Anwendung und Ergebnis der Design-FMEA",
+    `${multiRows(382, 650, 542, "Während der Designphase → idealerweise vor dem ersten Prototypen", 20, 600, C.text, "start", 1.18)}
+     ${multiRows(382, 764, 542, "Führt zu einem sicheren und funktionalen Produkt.", 20, 600, C.text, "start", 1.18)}
+     ${multiRows(382, 866, 542, "Analyse eines neu entwickelten Autobatteriesystems", 20, 720, C.technical, "start", 1.18)}`);
+  const processApplication = group("s70_process_application", "Anwendung und Ergebnis der Prozess-FMEA",
+    `${multiRows(1082, 650, 542, "Während des Produktionsprozesses → beginnt in der Planungsphase der Produktion", 20, 600, C.text, "start", 1.18)}
+     ${multiRows(1082, 764, 542, "Führt zu einer effizienteren und kosteneffektiveren Produktion.", 20, 600, C.text, "start", 1.18)}
+     ${multiRows(1082, 866, 542, "Optimierung der Montagelinie für Elektronikgeräte", 20, 720, C.technical, "start", 1.18)}`);
+  return {
+    archetype: "open-comparison-matrix",
+    layout: "Quellnahe Aufteilung mit echtem FMEA-Elternknoten, zwei gleichgewichtigen Kopfzeilen und fünf offenen, zeilenweise ausgerichteten Vergleichskriterien.",
+    takeaway: "Design-FMEA und Prozess-FMEA verfolgen dieselbe Risikologik, setzen aber an Produktdesign beziehungsweise Produktionsprozess an.",
+    density: "dense",
+    body: split + designAnalysis + processAnalysis + designApplication + processApplication,
+    targets: [
+      target("s70_split", "Aufteilung in Design- und Prozess-FMEA", 70, ["zwei Hauptkategorien"]),
+      target("s70_design_analysis", "Zielsetzung und Schwerpunkt der Design-FMEA", 70, ["Die Design-FMEA konzentriert"]),
+      target("s70_process_analysis", "Zielsetzung und Schwerpunkt der Prozess-FMEA", 70, ["Die Prozess-FME-A hingegen"]),
+      target("s70_design_application", "Anwendung und Ergebnis der Design-FMEA", 70, ["während der Designphase"]),
+      target("s70_process_application", "Anwendung und Ergebnis der Prozess-FMEA", 70, ["kontinuierlich während des gesamten Produktionsprozesses"]),
+    ],
+  };
 }
 
 function scene71() {
-  const use = group("s71_use", "Einsatzbereiche",
-    `${box(92, 224, 820, 290, C.accentSoft, C.accent, 1.8, 10)}
-     ${txt(116, 266, "EINSATZBEREICHE", 23, 800, C.accent)}
-     ${multiRows(116, 306, 772, "Qualität und Zuverlässigkeit in Automobilindustrie, Luft- und Raumfahrt, Medizintechnik, Elektronik, Chemie und Dienstleistungen absichern.", 22, 600, C.text)}
-     ${card(92, 548, 820, 266, "STANDARDS UND LEITFÄDEN", "AIAG & VDA FMEA-Handbuch · IEC 60812 · SAE J1739", C.secondary, C.secondarySoft, { bodySize: 24 })}`);
-  const goal = group("s71_goal", "Ziel der Anwendung",
-    `${box(980, 224, 848, 590, C.surface, C.deep, 2, 14)}
-     ${pill(1028, 270, 180, "ZIEL", C.accent, C.accentSoft)}
-     ${bulletList(1032, 376, 720, [
-       "Potenzielle Fehler identifizieren",
-       "Ursachen und Auswirkungen analysieren",
-       "Maßnahmen zur Risikominimierung entwickeln",
-     ], C.accent, 25, 116)}`);
+  const use = group("s71_use", "Einsatz der FMEA",
+    `${txt(150, 260, "EINSATZ DER FMEA", 28, 840, C.technical)}
+     ${line(150, 284, 990, 284, C.border, 1.5)}
+     ${multiRows(150, 340, 820, "In allen Bereichen zur Sicherstellung der Qualität und Zuverlässigkeit", 25, 760, C.deep, "start", 1.18)}
+     ${txt(150, 444, "BRANCHEN", 18, 820, C.soft)}
+     ${box(150, 474, 14, 14, C.semanticSuccess, C.semanticSuccess, 0, 7)}${txt(182, 489, "Automobilindustrie", 20, 620, C.text)}
+     ${box(150, 526, 14, 14, C.semanticSuccess, C.semanticSuccess, 0, 7)}${txt(182, 541, "Luft- und Raumfahrt", 20, 620, C.text)}
+     ${box(150, 578, 14, 14, C.semanticSuccess, C.semanticSuccess, 0, 7)}${txt(182, 593, "Medizintechnik", 20, 620, C.text)}
+     ${box(530, 474, 14, 14, C.semanticSuccess, C.semanticSuccess, 0, 7)}${txt(562, 489, "Elektronik", 20, 620, C.text)}
+     ${box(530, 526, 14, 14, C.semanticSuccess, C.semanticSuccess, 0, 7)}${txt(562, 541, "Chemieindustrie", 20, 620, C.text)}
+     ${box(530, 578, 14, 14, C.semanticSuccess, C.semanticSuccess, 0, 7)}${txt(562, 593, "Dienstleistungssektor", 20, 620, C.text)}`);
+  const standards = group("s71_standards", "Unterschiedliche Standards und Leitfäden",
+    `${line(1052, 250, 1052, 626, C.border, 1.5)}
+     ${txt(1120, 260, "UNTERSCHIEDLICHE STANDARDS", 28, 840, C.technical)}
+     ${txt(1120, 294, "UND LEITFÄDEN", 28, 840, C.technical)}
+     ${box(1120, 372, 16, 16, C.accent, C.accent, 1, 8)}
+     ${txt(1160, 390, "AIAG & VDA FMEA-Handbuch", 22, 720, C.deep)}
+     ${line(1120, 422, 1688, 422, C.border, 1.3)}
+     ${box(1120, 464, 16, 16, C.accent, C.accent, 1, 8)}
+     ${txt(1160, 482, "IEC 60812", 22, 720, C.deep)}
+     ${line(1120, 514, 1688, 514, C.border, 1.3)}
+     ${box(1120, 556, 16, 16, C.accent, C.accent, 1, 8)}
+     ${txt(1160, 574, "SAE J1739", 22, 720, C.deep)}`);
+  const goal = group("s71_goal", "Ziel der FMEA",
+    `${box(150, 684, 1620, 196, C.deep, C.deep, 1.5, 16)}
+     ${txt(198, 738, "ZIEL", 20, 840, C.technical)}
+     ${multiRows(198, 786, 1180, "Identifizierung potenzieller Fehler, die Analyse deren Ursachen und Auswirkungen, sowie die Entwicklung von Maßnahmen zur Risikominimierung", 25, 720, C.surface, "start", 1.2)}
+     <circle cx="1590" cy="782" r="72" fill="${C.surface}"/>
+     ${pictogram("components/image-library/generated-pictograms/education-core/target.png", 1536, 728, 108, 108, "Ziel und Risikominimierung")}`);
   return {
     archetype: "use-and-goal",
-    layout: "Einsatz und Standards links, methodisches Ziel rechts.",
-    takeaway: "FMEA identifiziert potenzielle Fehler, analysiert Ursachen und Auswirkungen und entwickelt Maßnahmen.",
-    body: use + goal,
+    layout: "Offene Informationsbereiche für Einsatz und Standards; genau ein hervorgehobenes Zielband als zentrale Lernbotschaft.",
+    takeaway: "FMEA wird branchenübergreifend und standardgestützt eingesetzt, um Fehler, Ursachen und Auswirkungen zu analysieren und Risiken zu minimieren.",
+    body: use + standards + goal,
     targets: [
-      target("s71_use", "Einsatzbereiche", 71, ["eingesetzt", "Branchen"]),
-      target("s71_goal", "Ziel der Anwendung", 71, ["Ziel", "potenzielle Fehler"]),
+      target("s71_use", "Einsatz der FMEA", 71, ["Die FMEA findet in allen Bereichen"]),
+      target("s71_standards", "Unterschiedliche Standards und Leitfäden", 71, ["Zur Unterstützung der Durchführung der FMEA"]),
+      target("s71_goal", "Ziel der FMEA", 71, ["Unabhängig von Branche oder verwendetem Standard"]),
     ],
   };
 }
@@ -585,23 +835,94 @@ function scene74() {
   };
 }
 
+function planningScopeDocuments(n) {
+  const scope = group(`s${n}_scope`, "Analyseumfang",
+    `${box(108, 304, 710, 54, C.deep, C.deep, 1.5, 7)}
+     ${txt(138, 340, "DEFINITION DES ANALYSEUMFANGS", 23, 860, C.surface)}
+     ${bulletList(120, 410, 720, [
+       "Produkt oder Produktbereich bestimmen",
+       "Betrachtungsebene festlegen: System, Teilsystem oder Komponente",
+     ], C.accent, 23, 72)}`);
+  const documents = group(`s${n}_documents`, "Informationsbasis",
+    `${box(108, 548, 1160, 54, C.deep, C.deep, 1.5, 7)}
+     ${txt(138, 584, "INFORMATIONEN, DOKUMENTE UND MATERIALIEN SAMMELN", 23, 860, C.surface)}
+     ${multi(120, 650, 1540, "Vorliegende Erkenntnisse und Erfahrungen zusammentragen:", 23, 720, C.deep)}
+     ${bulletList(164, 710, 1510, [
+       "frühere Projekte",
+       "Vorgänger-FMEA",
+       "Lessons Learned und bekannte wirksame Lösungen",
+     ], C.accent, 22, 62)}`);
+  const bridge = group(`s${n}_bridge`, "FMEA-Team",
+    `${box(108, 888, 330, 54, C.deep, C.deep, 1.5, 7)}
+     ${txt(138, 924, "FMEA-TEAM", 23, 860, C.surface)}
+     ${multi(482, 924, 1260, "Interdisziplinäres Team aus unterschiedlichen Rollen und Fachbereichen zusammenstellen.", 22, 730, C.deep)}`);
+  return {
+    archetype: "planning-foundation",
+    layout: "Drei quellnahe, klar gestaffelte Inhaltsabschnitte mit dunklen Abschnittsreitern und echten Stichpunkten.",
+    takeaway: "Planung beginnt mit einem klaren Analyseumfang und einer belastbaren Informationsbasis.",
+    body: processStrip(1, 172, true) + scope + documents + bridge,
+    targets: [
+      target(`s${n}_scope`, "Analyseumfang", n, ["Analyseumfang festgelegt", "Betrachtungsebene"]),
+      target(`s${n}_documents`, "Informationsbasis", n, ["Anschließend sammeln wir"]),
+      target(`s${n}_bridge`, "Nächster Vorbereitungsschritt", n, ["Zusammenstellung eines geeigneten Teams"]),
+    ],
+  };
+}
+
 function scene75() {
-  const links = group("s75_links", "Teamstruktur",
-    `${pathLine("M 960 360 V 414 M 960 550 V 612", C.deep, 2.2)}`);
-  const structure = group("s75_structure", "FMEA-Team",
-    `${box(690, 254, 540, 106, C.deep, C.deep, 2, 12)}${txt(960, 320, "FMEA-MODERATOR", 28, 820, C.surface, "middle")}
-     ${box(520, 414, 880, 136, C.accentSoft, C.accent, 2, 12)}${txt(960, 466, "BASISTEAM", 27, 820, C.accent, "middle")}
-     ${multi(960, 508, 760, "Methodenkompetenz · Moderation · Organisation · Grundkenntnisse der FMEA", 20, 640, C.deep, "middle")}
-     ${box(300, 612, 1320, 210, C.successSoft, C.success, 2, 12)}${txt(960, 664, "ERWEITERTES TEAM MIT EXPERTEN", 27, 820, C.success, "middle")}
-     ${multiRows(960, 718, 1160, "Expertenwissen aus Design, Qualität und weiteren Fachbereichen · Wissensträger aus Labor, Kundendienst und Rechtsabteilung", 22, 650, C.deep, "middle")}`);
+  const structure = group("s75_structure", "FMEA-Team als Kompetenzpyramide",
+    `<path d="M 100 850 L 600 270 L 1100 850 Z" fill="${C.surface}" stroke="${C.deep}" stroke-width="2"/>
+     <path d="M 600 270 L 798 500 H 402 Z" fill="${C.deep}"/>
+     <path d="M 402 500 H 798 L 953 680 H 247 Z" fill="${C.accent}"/>
+     <path d="M 247 680 H 953 L 1100 850 H 100 Z" fill="${C.accentSoft}"/>
+     ${txt(600, 398, "FMEA-", 27, 850, C.surface, "middle")}${txt(600, 436, "MODERATOR", 27, 850, C.surface, "middle")}
+     ${txt(600, 602, "BASISTEAM", 30, 850, C.surface, "middle")}
+     ${txt(600, 788, "ERWEITERTES TEAM MIT EXPERTEN", 25, 840, C.deep, "middle")}`);
+  const moderator = group("s75_moderator", "Kompetenzen des Moderators",
+    `${bulletList(1170, 302, 650, [
+       "neutrale Instanz",
+       "Methoden-, Team- und Sozialkompetenz",
+       "Moderation, Organisation, Überzeugung und Präsentation",
+     ], C.deep, 20, 62)}`);
+  const core = group("s75_core", "Kompetenzen des Basisteams",
+    `${bulletList(1170, 526, 650, [
+       "Grundkenntnisse der FMEA-Methodik",
+       "Expertenwissen für den betrachteten Umfang",
+       "Fachbereiche wie Design und Qualität",
+     ], C.accent, 20, 62)}`);
+  const experts = group("s75_experts", "Erweitertes Team",
+    `${bulletList(1170, 746, 650, [
+       "Wissensträger aus Labor, Kundendienst und Rechtsabteilung",
+     ], C.secondary, 20, 62)}`);
   return {
     archetype: "team-hierarchy",
-    layout: "Dreistufige Teamhierarchie mit Rollen und Kompetenzen.",
+    layout: "Quellengetreue dreistufige Kompetenzpyramide; Erläuterungen liegen offen und höhengleich neben den Stufen.",
     takeaway: "Moderator, Basisteam und erweiterte Experten bringen unterschiedliche Kompetenzen in die FMEA ein.",
-    body: processStrip(1, 172, true) + links + structure,
+    body: processStrip(1, 154, true) + structure + moderator + core + experts,
     targets: [
-      target("s75_structure", "FMEA-Team", 75, ["Zusammenstellung eines geeigneten Teams"]),
-      target("s75_links", "Teamstruktur", 75, ["Das Team wird in der Regel von einem Moderator begleitet"], "draw"),
+      target("s75_structure", "FMEA-Team", 75, ["Werfen wir einen genaueren Blick auf die Teamzusammensetzung"]),
+      target("s75_moderator", "FMEA-Moderator", 75, ["Moderator begleitet"]),
+      target("s75_core", "Basisteam", 75, ["Basis-Team"]),
+      target("s75_experts", "Erweitertes Team", 75, ["Falls erforderlich, kann das Team"]),
+    ],
+  };
+}
+
+function scene78() {
+  const process = group("s78_process", "Sieben Schritte mit aktivem Schritt 2",
+    `<path d="M 120 440 H 1640 V 352 L 1810 530 L 1640 708 V 620 H 120 Z" fill="${C.surfaceSoft}"/>
+     ${processStrip(2, 454, false)}`);
+  const focus = group("s78_focus", "Aktueller Fokus Strukturanalyse",
+    `${txt(960, 780, "AKTUELLER FOKUS", 18, 850, C.soft, "middle")}
+     ${txt(960, 836, "STRUKTURANALYSE", 34, 860, C.secondary, "middle")}`);
+  return {
+    archetype: "process-overview-active-step",
+    layout: "Eine einzige dominante Prozesspfeil-Grafik wie in der Ausgangsszene; Schritt 2 ist klar hervorgehoben.",
+    takeaway: "Nach Planung und Vorbereitung folgt die Strukturanalyse als zweiter FMEA-Schritt.",
+    body: process + focus,
+    targets: [
+      target("s78_process", "Sieben Schritte der FMEA", 78, ["zweiten Schritt"]),
+      target("s78_focus", "Strukturanalyse", 78, ["Strukturanalyse"]),
     ],
   };
 }
@@ -635,23 +956,40 @@ function scene80() {
 }
 
 function scene81() {
-  const steps = [
-    ["01", "SYSTEM ABGRENZEN", "Systemgrenze und Schnittstellen definieren."],
-    ["02", "SYSTEM AUFTEILEN", "Teilsysteme, Baugruppen und Bauteile als eindeutige Systemelemente erfassen."],
-    ["03", "SYSTEMBAUM ERSTELLEN", "Elemente hierarchisch anordnen; jedes Element kommt nur einmal vor."],
-  ];
-  const body = processStrip(2, 172, true) + steps.map(([number, title, text], index) =>
-    group(`s81_step_${index + 1}`, title,
-      `${box(92 + index * 584, 366, 540, 424, C.surface, [C.accent, C.secondary, C.success][index], 2, 14)}
-       ${txt(140 + index * 584, 434, number, 44, 850, [C.accent, C.secondary, C.success][index])}
-       ${txt(140 + index * 584, 492, title, 24, 820, C.deep)}
-       ${multi(140 + index * 584, 560, 440, text, 23, 620, C.text)}`)).join("");
+  const step1 = group("s81_step_1", "Abgrenzung des Systems",
+    `<circle cx="144" cy="354" r="34" fill="${C.surface}" stroke="${C.deep}" stroke-width="2.5"/>${txt(144, 364, "1", 26, 860, C.deep, "middle")}
+     ${txt(214, 362, "ABGRENZUNG DES SYSTEMS", 27, 850, C.deep)}
+     ${multi(720, 362, 1010, "Systemgrenze und Schnittstellen eindeutig definieren", 23, 700, C.text)}`);
+  const step2 = group("s81_step_2", "Aufteilen in Systemelemente",
+    `<circle cx="144" cy="524" r="34" fill="${C.surface}" stroke="${C.deep}" stroke-width="2.5"/>${txt(144, 534, "2", 26, 860, C.deep, "middle")}
+     ${multi(214, 516, 430, "SYSTEM IN ELEMENTE AUFTEILEN", 25, 850, C.deep, "start", 1.05)}
+     ${pill(760, 492, 270, "TEILSYSTEME", C.deep, C.surface)}
+     ${pill(1050, 492, 250, "BAUGRUPPEN", C.deep, C.surface)}
+     ${pill(1320, 492, 380, "BAUTEILE · KOMPONENTEN", C.deep, C.surface)}`);
+  const step3 = group("s81_step_3", "Systemstruktur erstellen",
+    `<circle cx="144" cy="694" r="34" fill="${C.surface}" stroke="${C.deep}" stroke-width="2.5"/>${txt(144, 704, "3", 26, 860, C.deep, "middle")}
+     ${multi(214, 686, 430, "SYSTEMSTRUKTUR ERSTELLEN", 25, 850, C.deep, "start", 1.05)}
+     ${bulletList(760, 700, 940, [
+       "Systemelemente hierarchisch anordnen",
+       "beliebig viele Hierarchieebenen möglich",
+       "jedes Systemelement kommt nur einmal vor",
+       "Dummy-Systemelemente nur zur besseren Übersicht nutzen",
+     ], C.accent, 20, 55)}`);
+  const separators = group("s81_links", "Arbeitsroute der Strukturanalyse",
+    `${line(108, 438, 1810, 438, C.border, 1.5)}${line(108, 608, 1810, 608, C.border, 1.5)}`);
+  const body = processStrip(2, 154, true) + separators + step1 + step2 + step3;
   return {
-    archetype: "three-step-method",
-    layout: "Drei nummerierte Arbeitsschritte der Strukturanalyse.",
+    archetype: "open-three-step-workroute",
+    layout: "Drei großzügige, quellnahe Arbeitszeilen mit klarer vertikaler Leserichtung und ohne gequetschte Mini-Diagramme.",
     takeaway: "Abgrenzen, aufteilen und hierarchisch strukturieren bilden die Strukturanalyse.",
+    density: "dense",
     body,
-    targets: steps.map(([number, title], index) => target(`s81_step_${index + 1}`, `${number} ${title}`, 81, [title.split(" ")[0].toLocaleLowerCase("de-DE"), "System"])),
+    targets: [
+      target("s81_step_1", "Abgrenzung des Systems", 81, ["Abgrenzung des Systems"]),
+      target("s81_step_2", "Aufteilen in Systemelemente", 81, ["Aufteilen des Systems"]),
+      target("s81_step_3", "Systemstruktur erstellen", 81, ["Erstellung Systemstruktur"]),
+      target("s81_links", "Leserichtung", 81, ["Schritte", "Strukturanalyse"], "draw"),
+    ],
   };
 }
 
@@ -722,11 +1060,67 @@ function gearHierarchy(n, mode = "structure", side = "antrieb") {
     archetype: "technical-hierarchy",
     layout: "Kanonischer Getriebebaum mit Systemelementen und optionalen Funktions-/Fehlerlagen.",
     takeaway: withFaults ? "Zu jeder Getriebefunktion wird eine konkrete Fehlfunktion dokumentiert." : withFunctions ? "Die Funktionen werden direkt an den Systemelementen des Getriebes geführt." : "Das Anpassungsgetriebe wird eindeutig in Antrieb, Abtrieb, Gehäuse und Komponenten zerlegt.",
-    density: withFunctions ? "dense" : "balanced",
+    density: withFunctions ? "dense" : "normal",
     body: processStrip(withFaults ? 4 : withFunctions ? 3 : 2, 172, true) + connectors + nodes,
     targets: [
       target(`s${n}_gear_nodes`, "Anpassungsgetriebe", n, ["Getriebe", "Systemstruktur", "Funktion"]),
       target(`s${n}_gear_links`, "Hierarchische Verknüpfungen", n, n === 95 ? ["Wir nutzen hierbei die Top-Down-Methode"] : ["Systembaum", "verknüpft", "Struktur"], "draw"),
+    ],
+  };
+}
+
+function gearboxFailureHierarchy(n, options = {}) {
+  const cues = options.cues || {};
+  const level2 = [
+    ["ANTRIEB", "Antriebsdrehmoment übertragen", "Antriebsdrehmoment wird nicht übertragen"],
+    ["ABTRIEB", "Abtriebsdrehmoment übertragen", "Abtriebsdrehmoment wird nicht übertragen"],
+    ["GEHÄUSE", "Dichtheit gewährleisten", "Dichtheit wird nicht gewährleistet"],
+  ];
+  const components = [
+    ["Eingangswelle", "Antriebsdrehmoment übertragen", "Antriebsdrehmoment wird nicht übertragen"],
+    ["Ritzel", "Antriebsdrehmoment übertragen", "Antriebsdrehmoment wird nicht übertragen"],
+    ["Rollenlager", "Lagerung der Wellen", "Lagerung der Wellen nicht sichergestellt"],
+    ["RWDR", "Dichtheit gewährleisten", "Dichtheit wird nicht gewährleistet"],
+    ["Passfeder", "Drehmoment übertragen", "Drehmoment wird nicht übertragen"],
+    ["Hülse", "Abstand gewährleisten", "Abstand wird nicht gewährleistet"],
+  ];
+  const root = group(`s${n}_gear_root`, "Systemebene 1: Getriebe",
+    `${box(754, 276, 412, 58, C.deep, C.deep, 1.5, 6)}${txt(960, 314, "GETRIEBE", 23, 840, C.surface, "middle")}
+     ${box(520, 348, 430, 46, C.successSoft, C.success, 1.3, 5)}${txt(735, 378, "DREHMOMENT & DREHZAHL WANDELN", 18, 760, C.success, "middle")}
+     ${box(970, 348, 430, 46, C.successSoft, C.success, 1.3, 5)}${txt(1185, 378, "UMWELTVERTRÄGLICHKEIT GEWÄHRLEISTEN", 18, 760, C.success, "middle")}
+     ${box(520, 402, 430, 64, C.failureSoft, C.failure, 1.5, 5)}${multi(735, 426, 396, "DREHMOMENT & DREHZAHL WIRD NICHT GEWANDELT", 18, 760, C.failure, "middle", 1.0)}
+     ${box(970, 402, 430, 64, C.failureSoft, C.failure, 1.5, 5)}${multi(1185, 426, 396, "UMWELTVERTRÄGLICHKEIT IST NICHT GEWÄHRLEISTET", 18, 760, C.failure, "middle", 1.0)}`);
+  const systemElements = group(`s${n}_gear_level2`, "Systemebene 2: Antrieb, Abtrieb und Gehäuse",
+    level2.map(([label, fn, fault], index) => {
+      const x = 126 + index * 598;
+      return `${box(x, 520, 470, 52, C.deep, C.deep, 1.4, 6)}${txt(x + 235, 554, label, 21, 830, C.surface, "middle")}
+        ${box(x, 580, 470, 48, C.successSoft, C.success, 1.2, 5)}${multi(x + 235, 610, 432, fn, 18, 700, C.success, "middle", 1.0)}
+        ${box(x, 636, 470, 52, C.failureSoft, C.failure, 1.4, 5)}${multi(x + 235, 668, 432, fault, 18, 730, C.failure, "middle", 1.0)}`;
+    }).join(""));
+  const componentNodes = group(`s${n}_gear_components`, "Systemebene 3: Bauteile des Antriebs",
+    `<rect x="44" y="696" width="286" height="42" fill="${C.surface}"/>
+     ${annotationTxt(54, 728, "BAUTEILE DES ANTRIEBS", 18, 830, C.soft)}
+     ${components.map(([label, fn, fault], index) => {
+       const x = 36 + index * 315;
+       return `${box(x, 756, 276, 50, C.deep, C.deep, 1.3, 5)}${multi(x + 138, 787, 250, label, 18, 820, C.surface, "middle", 1.0)}
+         ${box(x, 814, 276, 58, C.successSoft, C.success, 1.1, 5)}${multi(x + 138, 842, 248, fn, 18, 680, C.success, "middle", 1.0)}
+         ${box(x, 880, 276, 66, C.failureSoft, C.failure, 1.3, 5)}${multi(x + 138, 909, 248, fault, 18, 710, C.failure, "middle", 1.0)}`;
+     }).join("")}`);
+  const connectors = group(`s${n}_gear_links`, "Quellengetreue Systemhierarchie",
+    `${pathLine("M 960 452 V 486 H 361 V 520 M 960 486 V 520 M 960 486 H 1557 V 520", C.deep, 2.2)}
+     ${pathLine("M 361 688 V 716 H 174 V 756 M 361 716 H 1749 M 489 716 V 756 M 804 716 V 756 M 1119 716 V 756 M 1434 716 V 756 M 1749 716 V 756", C.deep, 1.8)}`);
+  return {
+    archetype: "source-faithful-technical-hierarchy",
+    layout: "Drei klar getrennte Systemebenen; Funktionen und Fehlfunktionen werden direkt und quellengetreu unter jedem Systemelement geführt.",
+    takeaway: "Die Fehlfunktionen werden vom Getriebe über Antrieb, Abtrieb und Gehäuse bis zu den Bauteilen des Antriebs abgeleitet.",
+    referenceLock: options.referenceLock,
+    density: "dense",
+    body: processStrip(4, 172, true) + connectors + root + systemElements + componentNodes,
+    targets: [
+      target(`s${n}_gear_root`, "Systemebene 1: Getriebe", n, cues.root || ["Systemebene", "Drehmoment und Drehzahl", "Umweltverträglichkeit"]),
+      target(`s${n}_gear_level2`, "Systemebene 2", n, cues.level2 || ["Antrieb", "Abtrieb", "Gehäuse"]),
+      target(`s${n}_gear_components`, "Systemebene 3", n, cues.components || ["Bauteile", "untersten Systemebene"]),
+      target(`s${n}_gear_links`, "Quellengetreue Systemhierarchie", n, cues.links || ["gleichen Logik", "definieren"], "draw"),
     ],
   };
 }
@@ -763,6 +1157,134 @@ function scene87() {
   };
 }
 
+function gearboxSourceBasis(n) {
+  const drawing = group(`s${n}_drawing`, "Technischer Schnitt",
+    `${txt(112, 312, "TECHNISCHER SCHNITT", 20, 840, C.deep)}
+     ${line(112, 344, 824, 344, C.accent, 4)}
+     ${image("gear-section.png", 112, 372, 712, 410, "Technischer Schnitt des Anpassungsgetriebes")}`);
+  const bom = group(`s${n}_bom`, "Stückliste",
+    `${txt(914, 312, "STÜCKLISTE ALS VOLLSTÄNDIGKEITSCHECK", 20, 840, C.deep)}
+     ${line(914, 344, 1810, 344, C.accent, 4)}
+     ${image("parts-antrieb.png", 914, 374, 896, 214, "Stückliste für Antrieb und Abtrieb")}
+     ${image("parts-housing.png", 914, 606, 896, 176, "Stückliste für das Gehäuse")}`);
+  const bridge = group(`s${n}_bridge`, "Arbeitsgrundlage",
+    `${line(112, 826, 1810, 826, C.border, 1.5)}
+     ${txt(112, 872, "ARBEITSGRUNDLAGE", 18, 840, C.accent)}
+     ${multi(360, 872, 1410, "Zeichnung erklärt den Aufbau · Stückliste sichert Baugruppen und Standardbauteile vollständig ab.", 22, 720, C.deep)}`);
+  return {
+    archetype: "technical-source-basis",
+    layout: "Technischer Schnitt links und zweistufige Stückliste rechts; eine gemeinsame Arbeitsregel verbindet beide Quellen.",
+    takeaway: "Zeichnung und Stückliste bilden gemeinsam die vollständige Basis für den Systembaum des Anpassungsgetriebes.",
+    density: "dense",
+    body: processStrip(2, 172, true) + drawing + bom + bridge,
+    targets: [
+      target(`s${n}_drawing`, "Technischer Schnitt", n, ["schematische Aufbau", "Anpassungsgetriebe"]),
+      target(`s${n}_bom`, "Stückliste", n, ["Stückliste"]),
+      target(`s${n}_bridge`, "Arbeitsgrundlage", n, ["kein Systemelement", "unterteilt"]),
+    ],
+  };
+}
+
+function gearboxHierarchyCombined(n) {
+  const root = group(`s${n}_root`, "System Getriebe",
+    `${annotationTxt(210, 332, "SYSTEMEBENE 1", 18, 830, C.soft, "end")}
+     ${box(800, 286, 320, 72, C.deep, C.deep, 1.5, 6)}
+     ${txt(960, 332, "GETRIEBE", 24, 860, C.surface, "middle")}`);
+  const connectors = group(`s${n}_links`, "Systemhierarchie",
+    `${pathLine("M 960 358 V 410 H 420 V 454 M 960 410 V 454 M 960 410 H 1500 V 454", C.deep, 2.4)}
+     ${pathLine("M 960 526 V 606 H 310 V 674 M 960 606 H 1610 M 570 606 V 674 M 830 606 V 674 M 1090 606 V 674 M 1350 606 V 674 M 1610 606 V 674", C.deep, 2.2)}`);
+  const headers = group(`s${n}_groups`, "Baugruppen",
+    `${annotationTxt(210, 500, "SYSTEMEBENE 2", 18, 830, C.soft, "end")}
+     ${box(290, 454, 260, 72, C.deep, C.deep, 1.5, 6)}${txt(420, 500, "ANTRIEB", 22, 850, C.surface, "middle")}
+     ${box(830, 454, 260, 72, C.deep, C.deep, 1.5, 6)}${txt(960, 500, "ABTRIEB", 22, 850, C.surface, "middle")}
+     ${box(1370, 454, 260, 72, C.deep, C.deep, 1.5, 6)}${txt(1500, 500, "GEHÄUSE", 22, 850, C.surface, "middle")}`);
+  const componentLabels = ["AUSGANGSWELLE", "ZAHNRAD", "ROLLENLAGER", "RWDR", "PASSFEDER", "HÜLSE"];
+  const components = group(`s${n}_components`, "Komponenten",
+    `${annotationTxt(210, 720, "SYSTEMEBENE 3", 18, 830, C.soft, "end")}
+     ${componentLabels.map((label, index) => {
+       const x = 190 + index * 260;
+       return `${box(x, 674, 240, 78, C.deep, C.deep, 1.4, 6)}${multi(x + 120, 718, 214, label, 18, 820, C.surface, "middle", 1.0)}`;
+     }).join("")}`);
+  const rule = group(`s${n}_rule`, "Vollständigkeitsregel",
+    `${line(190, 824, 1730, 824, C.border, 1.5)}
+     ${txt(190, 872, "VOLLSTÄNDIGKEITSREGEL", 18, 840, C.accent)}
+     ${multi(488, 872, 1200, "Auch Standardbauteile bleiben Teil der Analyse; für Antrieb und Gehäuse wird die Struktur analog fortgeführt.", 22, 730, C.deep)}`);
+  return {
+    archetype: "system-hierarchy",
+    layout: "Quellengetreuer Systembaum mit drei Ebenen: Getriebe, drei Baugruppen und sechs sichtbar unter dem Abtrieb verknüpfte Bauteile.",
+    takeaway: "Das Getriebe wird in Antrieb, Abtrieb und Gehäuse zerlegt; der Abtrieb wird vollständig bis auf Bauteilebene aufgeschlüsselt.",
+    density: "dense",
+    body: processStrip(2, 172, true) + connectors + root + headers + components + rule,
+    targets: [
+      target(`s${n}_root`, "System Getriebe", n, ["Ganz oben", "Getriebe"]),
+      target(`s${n}_groups`, "Baugruppen", n, ["Ganz oben, auf der ersten Systemebene"]),
+      target(`s${n}_components`, "Komponenten", n, ["Der Antrieb umfasst die Eingangswelle"]),
+      target(`s${n}_links`, "Systemhierarchie", n, ["untergliedert"], "draw"),
+      target(`s${n}_rule`, "Vollständigkeitsregel", n, ["Standardbauteile"]),
+    ],
+  };
+}
+
+function gearFunctionHierarchy(n, withFaults = false) {
+  const components = [
+    ["EINGANGSWELLE", "Antriebsdrehmoment übertragen", "Antriebsdrehmoment wird nicht übertragen"],
+    ["RITZEL", "Antriebsdrehmoment übertragen", "Antriebsdrehmoment wird nicht übertragen"],
+    ["ROLLENLAGER", "Lagerung der Wellen", "Lagerung der Wellen nicht sichergestellt"],
+    ["RWDR", "Dichtheit gewährleisten", "Dichtheit wird nicht gewährleistet"],
+    ["PASSFEDER", "Drehmoment übertragen", "Drehmoment wird nicht übertragen"],
+    ["HÜLSE", "Abstand gewährleisten", "Abstand wird nicht gewährleistet"],
+  ];
+  const groups = [
+    ["ANTRIEB", "Antriebsdrehmoment übertragen", "Antriebsdrehmoment wird nicht übertragen"],
+    ["ABTRIEB", "Abtriebsdrehmoment übertragen", "Abtriebsdrehmoment wird nicht übertragen"],
+    ["GEHÄUSE", "Dichtheit gewährleisten", "Dichtheit wird nicht gewährleistet"],
+  ];
+  const functionBox = (x, y, width, value) => `${box(x, y, width, 48, C.accentSoft, C.accent, 1.5, 4)}${multi(x + width / 2, y + 29, width - 26, value, 18, 720, C.deep, "middle", 1.0)}`;
+  const faultBox = (x, y, width, value) => `${box(x, y, width, 48, C.failureSoft, C.failure, 1.5, 4)}${multi(x + width / 2, y + 29, width - 26, value, 18, 740, C.failure, "middle", 1.0)}`;
+  const links = group(`s${n}_gear_links`, "Hierarchische Verknüpfungen",
+    `${pathLine("M 960 408 V 424 H 430 V 432 M 960 424 V 432 M 960 424 H 1490 V 432", C.deep, 2.2)}
+     ${pathLine("M 430 594 V 618 H 215 V 630 M 430 618 H 1715 M 515 618 V 630 M 815 618 V 630 M 1115 618 V 630 M 1415 618 V 630 M 1715 618 V 630", C.deep, 2)}`);
+  const root = group(`s${n}_gear_root`, "Systemebene 1 Getriebe",
+    `${annotationTxt(188, 284, "SYSTEMEBENE 1", 18, 830, C.soft, "end")}
+     ${box(780, 250, 360, 56, C.deep, C.deep, 1.5, 5)}${txt(960, 286, "GETRIEBE", 22, 850, C.surface, "middle")}
+     ${functionBox(530, 314, 420, "Drehmoment & Drehzahl wandeln")}
+     ${functionBox(970, 314, 420, "Umweltverträglichkeit gewährleisten")}
+     ${withFaults ? `${faultBox(545, 368, 390, "Drehmoment & Drehzahl wird nicht gewandelt")}${faultBox(985, 368, 390, "Umweltverträglichkeit ist nicht gewährleistet")}` : ""}`);
+  const level2 = group(`s${n}_gear_level2`, "Systemebene 2 mit Funktionen",
+    `${annotationTxt(188, 468, "SYSTEMEBENE 2", 18, 830, C.soft, "end")}
+     ${groups.map(([label, fn, fault], index) => {
+       const x = 200 + index * 530;
+       return `${box(x, 432, 460, 54, C.deep, C.deep, 1.5, 5)}${txt(x + 230, 467, label, 21, 850, C.surface, "middle")}
+         ${functionBox(x + 15, 492, 430, fn)}
+         ${withFaults ? faultBox(x + 30, 546, 400, fault) : ""}`;
+     }).join("")}`);
+  const level3 = group(`s${n}_gear_level3`, "Bauteile des Antriebs mit Funktionen",
+    `${annotationTxt(188, 606, "SYSTEMEBENE 3", 18, 830, C.soft, "end")}
+     ${components.map(([label, fn, fault], index) => {
+       const x = 80 + index * 300;
+       return `${box(x, 630, 270, 52, C.deep, C.deep, 1.4, 5)}${multi(x + 135, 662, 246, label, 18, 830, C.surface, "middle", 1.0)}
+         ${functionBox(x + 5, 688, 260, fn)}
+         ${withFaults ? faultBox(x + 10, 742, 250, fault) : ""}`;
+     }).join("")}`);
+  return {
+    archetype: withFaults ? "function-fault-hierarchy" : "function-hierarchy",
+    layout: withFaults
+      ? "Exakt dieselbe Getriebehierarchie wie in der Funktionsszene; pro Funktion wird lediglich die Fehlfunktion ergänzt."
+      : "Quellengetreuer dreistufiger Getriebebaum mit einheitlich gestalteten Funktionsfeldern auf jeder Ebene.",
+    takeaway: withFaults
+      ? "Fehlfunktionen werden direkt unter den zugehörigen Funktionen dokumentiert, ohne die Systemhierarchie zu verändern."
+      : "Vom Getriebe über Antrieb, Abtrieb und Gehäuse bis zu den Bauteilen ist jeder Ebene mindestens eine Funktion zugeordnet.",
+    density: "dense",
+    body: processStrip(withFaults ? 4 : 3, 154, true) + links + root + level2 + level3,
+    targets: [
+      target(`s${n}_gear_root`, "Getriebe und Top-Funktionen", n, withFaults ? ["Werfen wir dazu einen Blick auf unsere Systemstruktur"] : ["System-Ebene", "Hauptfunktion"]),
+      target(`s${n}_gear_level2`, "Funktionen der Baugruppen", n, withFaults ? ["Werfen wir dazu einen Blick auf unsere Systemstruktur"] : ["nächsten Ebene", "Baugruppen"]),
+      target(`s${n}_gear_level3`, "Funktionen der Bauteile", n, withFaults ? ["Werfen wir dazu einen Blick auf unsere Systemstruktur"] : ["Funktionen der einzelnen Komponenten", "Systemstruktur"]),
+      target(`s${n}_gear_links`, "Hierarchische Verknüpfungen", n, withFaults ? ["Wenn wir die Fehlfunktionen miteinander verknüpfen"] : ["Wir haben nun die Funktionsstruktur des Getriebes erstellt"], "draw"),
+    ],
+  };
+}
+
 function scene92() {
   const principle = group("s92_principle", "Top-down-Funktionszuordnung",
     `${box(92, 278, 1736, 578, C.surface, C.border, 1.5, 16)}
@@ -775,6 +1297,42 @@ function scene92() {
     takeaway: "Funktionen werden top-down vom System bis zum Bauteil zugeordnet.",
     body: processStrip(3, 172, true) + principle,
     targets: [target("s92_principle", "Top-down-Funktionszuordnung", 92, ["mindestens eine Funktion", "top-down"])],
+  };
+}
+
+function functionMethodsScene(n) {
+  const topDown = group(`s${n}_topdown`, "Top-down-Methode",
+    `${txt(148, 314, "01 · TOP-DOWN", 22, 860, C.accent)}
+     ${line(148, 348, 804, 348, C.accent, 4)}
+     ${box(326, 398, 300, 70, C.deep, C.deep, 1.5, 8)}${txt(476, 442, "TOP-FUNKTION", 21, 840, C.surface, "middle")}
+     ${pathLine("M 476 468 V 516 H 292 V 548 M 476 516 H 660 V 548", C.deep, 2.2)}
+     ${box(148, 548, 288, 86, C.surface, C.accent, 1.8, 8)}${multi(292, 588, 240, "Teilfunktion 1", 20, 730, C.deep, "middle")}
+     ${box(516, 548, 288, 86, C.surface, C.accent, 1.8, 8)}${multi(660, 588, 240, "Teilfunktion 2", 20, 730, C.deep, "middle")}
+     ${multi(148, 704, 656, "Vom Gesamtsystem zu den Funktionen der untergeordneten Systemelemente.", 22, 660, C.deep)}`);
+  const blackbox = group(`s${n}_blackbox`, "Blackbox-Methode",
+    `${txt(1052, 314, "02 · BLACKBOX", 22, 860, C.accent)}
+     ${line(1052, 348, 1772, 348, C.accent, 4)}
+     ${txt(1052, 462, "EINGANG", 17, 820, C.soft)}
+     ${line(1168, 454, 1274, 454, C.deep, 2.5, true)}
+     ${box(1274, 398, 300, 112, C.deep, C.deep, 1.5, 8)}${multi(1424, 446, 246, "SYSTEMELEMENT", 22, 840, C.surface, "middle")}
+     ${line(1574, 454, 1680, 454, C.deep, 2.5, true)}
+     ${txt(1772, 462, "AUSGANG", 17, 820, C.soft, "end")}
+     ${txt(1424, 570, "FUNKTION = TRANSFORMATION", 20, 840, C.accent, "middle")}
+     ${multi(1052, 704, 720, "Eingangs- und Ausgangsgrößen sowie Einsatzbedingungen werden aus Anforderungen und Lastenheft abgeleitet.", 22, 660, C.deep)}`);
+  const rule = group(`s${n}_rule`, "Zuordnungsregel",
+    `${line(148, 814, 1772, 814, C.border, 1.5)}
+     ${txt(148, 860, "ZUORDNUNGSREGEL", 18, 840, C.accent)}
+     ${multi(404, 860, 1320, "Jedes Systemelement erhält mindestens eine Funktion; mehrere Funktionen sind möglich.", 23, 740, C.deep)}`);
+  return {
+    archetype: "method-comparison",
+    layout: "Zwei offene Methodenfelder mit identischer Gewichtung; die gemeinsame Zuordnungsregel schließt die Szene ab.",
+    takeaway: "Funktionen werden entweder top-down abgeleitet oder aus Ein- und Ausgangsgrößen einer Blackbox bestimmt.",
+    body: processStrip(3, 172, true) + topDown + blackbox + rule,
+    targets: [
+      target(`s${n}_topdown`, "Top-down-Methode", n, ["Top-Down-Methode"]),
+      target(`s${n}_blackbox`, "Blackbox-Methode", n, ["Blackbox"]),
+      target(`s${n}_rule`, "Zuordnungsregel", n, ["mindestens eine Funktion"]),
+    ],
   };
 }
 
@@ -801,6 +1359,7 @@ function functionToFaultScene(n, concrete = false) {
     archetype: "function-fault-mapping",
     layout: "Eine Funktion links und zugeordnete Fehlfunktionen rechts; Verbinder liegen hinter den Knoten.",
     takeaway: "Jeder Funktion wird mindestens eine negierte oder eingeschränkte Fehlfunktion zugeordnet.",
+    density: "dense",
     body: processStrip(4, 172, true) + links + functionNode + faults + rule,
     targets: [
       target(`s${n}_function`, "Funktion", n, ["Funktion"]),
@@ -845,7 +1404,49 @@ function fmeaRelationScene(n, levels) {
     layout: `${levels} Systemebene(n) mit derselben kanonischen Fehlerfolge-Fehler-Ursache-Logik.`,
     takeaway: "In der FMEA-Sicht wird derselbe Fehler je nach Ebene als Folge, Fehlfunktion oder Ursache gelesen.",
     body: processStrip(4, 172, true) + nodes,
-    targets: [target(`s${n}_relation_nodes`, "Fehlerzusammenhang", n, ["Fehlerfolge", "Fehlerursache", "Systemebene"])],
+    targets: [target(`s${n}_relation_nodes`, "Fehlerzusammenhang", n, ["benachbarten Systemebenen", "nächsthöheren Ebene", "Ursache-Wirkung-Prinzip"])],
+  };
+}
+
+function scene108() {
+  const nodes = group("s108_relation_nodes", "Fehlerzusammenhang über drei Systemebenen",
+    `${annotationTxt(200, 342, "SYSTEMEBENE 1", 19, 840, C.deep, "end")}
+     ${annotationTxt(200, 566, "SYSTEMEBENE 2", 19, 840, C.deep, "end")}
+     ${annotationTxt(200, 790, "SYSTEMEBENE 3", 19, 840, C.deep, "end")}
+     ${box(270, 292, 370, 100, C.failureSoft, C.failure, 2, 4)}${multi(455, 348, 330, "FEHLERFOLGE", 24, 850, C.failure, "middle")}
+     ${box(650, 292, 410, 100, C.failureSoft, C.failure, 2, 4)}${multi(855, 348, 370, "FEHLER · FEHLFUNKTION", 24, 850, C.failure, "middle")}
+     ${box(1070, 292, 370, 100, C.accentSoft, C.accent, 2, 4)}${multi(1255, 348, 330, "FEHLERURSACHE", 24, 850, C.deep, "middle")}
+     ${txt(455, 570, "FEHLERFOLGE", 22, 820, C.deep, "middle")}
+     ${multi(855, 562, 340, "FEHLER · FEHLFUNKTION", 22, 820, C.deep, "middle")}
+     ${txt(1255, 570, "FEHLERURSACHE", 22, 820, C.deep, "middle")}
+     ${box(270, 726, 370, 100, C.accentSoft, C.accent, 2, 4)}${multi(455, 782, 330, "FEHLERFOLGE", 24, 850, C.deep, "middle")}
+     ${box(650, 726, 410, 100, C.failureSoft, C.failure, 2, 4)}${multi(855, 782, 370, "FEHLER · FEHLFUNKTION", 24, 850, C.failure, "middle")}
+     ${box(1070, 726, 370, 100, C.failureSoft, C.failure, 2, 4)}${multi(1255, 782, 330, "FEHLERURSACHE", 24, 850, C.failure, "middle")}`);
+  const links = group("s108_relation_links", "Überlappende Ursache-Wirkungs-Beziehungen",
+    `${line(455, 526, 455, 404, C.deep, 3, true)}
+     ${line(1255, 526, 1255, 404, C.deep, 3, true)}
+     ${line(455, 594, 455, 716, C.deep, 3, true)}
+     ${line(1255, 594, 1255, 716, C.deep, 3, true)}`);
+  const perspective = group("s108_perspective", "FMEA-Sicht auf ein Systemelement",
+    `<path d="M 1510 556 L 1590 458 V 500 H 1860 V 612 H 1590 V 654 Z" fill="${C.deep}"/>
+     ${multi(1720, 548, 250, "FMEA-SICHT", 20, 860, C.surface, "middle")}
+     ${multi(1720, 580, 250, "SYSTEMELEMENT", 20, 860, C.surface, "middle")}`);
+  const rule = group("s108_rule", "Leseregel",
+    `${line(270, 882, 1440, 882, C.border, 1.5)}
+     ${txt(270, 930, "LESELOGIK", 18, 850, C.accent)}
+     ${multi(468, 930, 970, "Fehler einer Ebene = Fehlerursache der höheren Ebene = Fehlerfolge der tieferen Ebene.", 22, 750, C.deep)}`);
+  return {
+    archetype: "cross-level-failure-hierarchy",
+    layout: "Quellennahe dreistufige Fehlerhierarchie mit klaren Systemebenen, vertikalen Überlappungsbeziehungen und markierter FMEA-Perspektive.",
+    takeaway: "Fehlerfolge, Fehlfunktion und Fehlerursache überlappen sich über benachbarte Systemebenen.",
+    density: "dense",
+    body: processStrip(4, 154, true) + links + nodes + perspective + rule,
+    targets: [
+      target("s108_relation_nodes", "Drei Systemebenen", 108, ["benachbarten Systemebenen"]),
+      target("s108_relation_links", "Überlappende Beziehungen", 108, ["nächsthöheren Ebene", "nächsttiefere Ebene"], "draw"),
+      target("s108_perspective", "FMEA-Sicht Systemelement", 108, ["innerhalb der Systemstruktur"]),
+      target("s108_rule", "Leseregel", 108, ["Ursache-Wirkung-Prinzip"]),
+    ],
   };
 }
 
@@ -879,19 +1480,31 @@ function scene104() {
 
 function scene105() {
   const links = group("s105_links", "Ursache-Wirkungs-Kette",
-    `${line(612, 536, 760, 536, C.failure, 2.5, true)}${line(1160, 536, 1308, 536, C.failure, 2.5, true)}`);
+    `${line(1450, 550, 1332, 550, C.failure, 3, true)}${line(992, 550, 874, 550, C.failure, 3, true)}`);
   const nodes = group("s105_nodes", "Autoreifen-Beispiel",
-    `${card(92, 392, 520, 290, "FEHLERFOLGE (FF)", "Fahrzeug fahruntüchtig", C.accent, C.accentSoft, { titleSize: 22, bodySize: 30 })}
-     ${card(760, 392, 400, 290, "FEHLER", "Plötzlicher Druckverlust", C.failure, C.failureSoft, { titleSize: 22, bodySize: 29 })}
-     ${card(1308, 392, 520, 290, "FEHLERURSACHE (FU)", "Spitzer Gegenstand", C.secondary, C.secondarySoft, { titleSize: 22, bodySize: 30 })}`);
+    `${txt(650, 414, "FEHLERFOLGE (FF)", 20, 850, C.accent, "middle")}
+     ${txt(1162, 414, "FEHLER", 20, 850, C.accent, "middle")}
+     ${txt(1620, 414, "FEHLERURSACHE (FU)", 20, 850, C.accent, "middle")}
+     ${box(426, 472, 448, 156, C.surface, C.accent, 2, 8)}${multi(650, 552, 390, "Fahrzeug fahruntüchtig", 27, 800, C.deep, "middle")}
+     ${box(992, 472, 340, 156, C.surface, C.accent, 2, 8)}${multi(1162, 552, 290, "Plötzlicher Druckverlust", 27, 820, C.deep, "middle")}
+     ${box(1450, 472, 340, 156, C.surface, C.accent, 2, 8)}${multi(1620, 552, 290, "Spitzer Gegenstand", 27, 800, C.deep, "middle")}`);
+  const tire = group("s105_tire", "Autoreifen",
+    `${image("car-tire-pictogram.png", 88, 360, 300, 360, "Minimalistisches Piktogramm eines Autoreifens")}
+     ${txt(238, 758, "AUTOREIFEN", 22, 860, C.deep, "middle")}`);
+  const reading = group("s105_reading", "Leserichtung Ursache zu Folge",
+    `${line(426, 706, 1790, 706, C.border, 1.5)}
+     ${txt(426, 756, "LESERICHTUNG", 18, 850, C.soft)}
+     ${txt(642, 756, "Ursache  →  Fehler  →  Folge", 22, 780, C.deep)}`);
   return {
     archetype: "cause-fault-effect",
-    layout: "Dreiteilige Ursache-Fehler-Folge-Kette am konkreten Autoreifen-Beispiel.",
+    layout: "Eindeutiges Reifenpiktogramm als Gegenstandsanker; daneben die vollständige Ursache-Fehler-Folge-Kette mit echter Leserichtung.",
     takeaway: "Ein spitzer Gegenstand verursacht Druckverlust und kann das Fahrzeug fahruntüchtig machen.",
-    body: processStrip(4, 172, true) + links + nodes,
+    body: processStrip(4, 154, true) + tire + links + nodes + reading,
     targets: [
-      target("s105_nodes", "Autoreifen-Beispiel", 105, ["Autoreifen", "Druckverlust"]),
+      target("s105_tire", "Autoreifen", 105, ["Autoreifen"]),
+      target("s105_nodes", "Autoreifen-Beispiel", 105, ["Druckverlust"]),
       target("s105_links", "Ursache-Wirkungs-Kette", 105, ["Fehlerursache", "Fehlerfolge"], "draw"),
+      target("s105_reading", "Leserichtung", 105, ["Darüber hinaus besitzt jeder Fehler auch eine Fehlerfolge"]),
     ],
   };
 }
@@ -925,28 +1538,36 @@ function buildStructureAndFailureScene(n) {
   if (n === 87) return scene87();
   if (n === 88) return gearHierarchy(n, "structure", "antrieb");
   if (n === 89) return gearHierarchy(n, "structure", "abtrieb");
-  if (n === 90) return processOnly(n, 0);
+  if (n === 90) return processOnly(n, 3);
   if (n === 91) return processOnly(n, 3);
   if (n === 92) return scene92();
   if (n === 93) return genericSystemTree(n, { withFunctions: true });
   if (n === 94) return goalScene(n, 3, "Ordne die Funktionen den Systemelementen zu und verknüpfe sie hierarchisch.");
-  if (n === 95) return gearHierarchy(n, "functions", "antrieb");
-  if (n === 96) return processOnly(n, 0);
+  if (n === 95) return gearFunctionHierarchy(n, false);
+  if (n === 96) return processOnly(n, 4);
   if (n === 97) return processOnly(n, 4);
   if (n === 98) return functionToFaultScene(n, false);
   if (n === 99) return functionToFaultScene(n, true);
   if (n === 100) return goalScene(n, 4, "Ordne den Systemelementen Fehlfunktionen zu und verknüpfe ihre Fehlerzusammenhänge.");
   if (n === 101) return genericSystemTree(n, { withFunctions: true, linkCues: ["Blick auf unsere Systemstruktur"] });
   if (n === 102) return genericSystemTree(n, { withFunctions: true, withFaults: true, linkCues: ["Blick auf unsere Systemstruktur"] });
-  if (n === 103) return sourceDiagramScene(n, "generic-function-error-tree.png", "Vollständiger Funktions- und Fehlerbaum", "Alle Systemelemente, Funktionen und Fehlfunktionen sind in einem gemeinsamen Baum verknüpft.", { imageX: 170, imageY: 286, imageW: 1580, imageH: 500, cues: ["Fehler", "Systemelement"] });
+  if (n === 103) return gearboxFailureHierarchy(n, {
+    referenceLock: "RE2 Viewer-Szene 51 / slide_110: source-faithful-technical-hierarchy",
+    cues: {
+      root: ["Werfen wir dazu einen Blick auf unsere Systemstruktur"],
+      level2: ["Werfen wir dazu einen Blick auf unsere Systemstruktur"],
+      components: ["Werfen wir dazu einen Blick auf unsere Systemstruktur"],
+      links: ["Wenn wir die Fehlfunktionen miteinander verknüpfen"],
+    },
+  });
   if (n === 104) return scene104();
   if (n === 105) return scene105();
   if (n === 106) return fmeaRelationScene(n, 1);
   if (n === 107) return fmeaRelationScene(n, 2);
-  if (n === 108) return fmeaRelationScene(n, 3);
+  if (n === 108) return scene108();
   if (n === 109) return scene109();
-  if (n === 110) return gearHierarchy(n, "faults", "antrieb");
-  if (n === 111) return processOnly(n, 0);
+  if (n === 110) return gearboxFailureHierarchy(n);
+  if (n === 111) return processOnly(n, 5);
   return null;
 }
 
@@ -1010,15 +1631,25 @@ function ratingDetailScene(n, key, title, description, low, high, note, color, f
 }
 
 function scene117() {
-  const tabs = group("s117_tabs", "B, A und E", baeTabs(""));
+  const tabs = group("s117_tabs", "B, A und E",
+    `${box(196, 310, 470, 80, C.deep, C.deep, 1.5, 8)}${txt(431, 360, "B · BEDEUTUNG", 22, 850, C.surface, "middle")}
+     ${box(726, 310, 470, 80, C.deep, C.deep, 1.5, 8)}${txt(961, 360, "A · AUFTRETEN", 22, 850, C.surface, "middle")}
+     ${box(1256, 310, 470, 80, C.deep, C.deep, 1.5, 8)}${txt(1491, 360, "E · ENTDECKUNG", 22, 850, C.surface, "middle")}`);
   const summaries = group("s117_summary", "Bewertungslogik",
     `${card(196, 454, 470, 300, "B · BEDEUTUNG", "Ausmaß der Fehlerfolge aus Sicht des Endverbrauchers.", C.accent, C.accentSoft)}
      ${card(726, 454, 470, 300, "A · AUFTRETEN", "Wirksamkeit präventiver Maßnahmen gegen das Auftreten.", C.secondary, C.secondarySoft)}
-     ${card(1256, 454, 470, 300, "E · ENTDECKUNG", "Wirksamkeit von Maßnahmen zum Aufdecken der Fehlerursache.", C.success, C.successSoft)}`);
+     ${card(1256, 454, 470, 300, "E · ENTDECKUNG", "Wirksamkeit von Maßnahmen zum Aufdecken der Fehlerursache.", C.success, C.successSoft)}
+     ${bulletList(220, 622, 400, ["Kundensicht", "Gleiche Folgen gleich bewerten"], C.accent, 18, 48)}
+     ${bulletList(750, 622, 400, ["Fehlerursache", "Vermeidungsmaßnahmen einbeziehen"], C.secondary, 18, 48)}
+     ${bulletList(1280, 622, 400, ["Vor der Auslieferung", "Entdeckungsmaßnahmen einbeziehen"], C.success, 18, 48)}
+     ${txt(196, 790, "1 · geringe Bedeutung", 17, 760, C.accent)}${txt(666, 790, "10 · hohe Bedeutung", 17, 760, C.accent, "end")}${line(196, 812, 666, 812, C.accent, 2.5, true)}
+     ${txt(726, 790, "1 · sehr unwahrscheinlich", 17, 760, C.secondary)}${txt(1196, 790, "10 · nahezu sicher", 17, 760, C.secondary, "end")}${line(726, 812, 1196, 812, C.secondary, 2.5, true)}
+     ${txt(1256, 790, "1 · sehr gut entdeckt", 17, 760, C.success)}${txt(1726, 790, "10 · kaum entdeckt", 17, 760, C.success, "end")}${line(1256, 812, 1726, 812, C.success, 2.5, true)}`);
   return {
     archetype: "rating-summary",
     layout: "Drei identische Bewertungsrollen in einer gemeinsamen Zusammenfassung.",
-    takeaway: "B bewertet die Folge, A das Auftreten und E die Entdeckung.",
+    takeaway: "B bewertet die Folge, A das Auftreten und E die Entdeckung; bei allen drei Größen steigt das Risiko von 1 nach 10.",
+    density: "dense",
     body: processStrip(5, 172, true) + tabs + summaries,
     targets: [
       target("s117_tabs", "B, A und E", 117, ["Bedeutung", "Auftretens", "Entdeckungs"]),
@@ -1029,19 +1660,20 @@ function scene117() {
 
 function scene118() {
   const guidance = group("s118_guidance", "Bewertungsgrundsätze",
-    `${box(92, 278, 610, 568, C.surface, C.border, 1.5, 14)}
-     ${txt(136, 336, "BEWERTUNG VON B, A UND E", 24, 820, C.deep)}
-     ${bulletList(136, 392, 510, [
+    `${txt(108, 338, "BEWERTUNG VON B, A UND E", 25, 840, C.deep)}
+     ${line(108, 372, 686, 372, C.accent, 5)}
+     ${bulletList(108, 448, 560, [
        "Eindeutige und einheitliche Kriterien verwenden",
        "Anforderungen, Strategie und Produkt des Unternehmens berücksichtigen",
        "Tabellen nach AIAG/VDA (2019) einsetzen",
-     ], C.accent, 22, 120)}`);
+     ], C.accent, 22, 130)}`);
   const table = group("s118_table", "Bewertungskriterien",
-    `${box(746, 278, 1082, 568, C.surface, C.border, 1.5, 14)}
-     ${image("risk-criteria-table.png", 786, 304, 1000, 504, "Kriterien für die Bewertungsgrößen B, A und E")}`);
+    `${txt(790, 338, "BEWERTUNGSKRITERIEN", 20, 820, C.secondary)}
+     ${line(790, 372, 1810, 372, C.border, 2)}
+     ${image("risk-criteria-table.png", 790, 394, 1000, 430, "Kriterien für die Bewertungsgrößen B, A und E")}`);
   return {
     archetype: "media-aside",
-    layout: "Bewertungsgrundsätze links und vergrößerte Kriterien-Tabelle rechts.",
+    layout: "Offene Bewertungsgrundsätze links und vergrößerte Kriterien-Tabelle rechts; nur das fachliche Dokument bleibt gerahmt.",
     takeaway: "B, A und E werden anhand eindeutiger, unternehmensspezifisch festgelegter Kriterien bewertet.",
     body: processStrip(5, 172, true) + guidance + table,
     targets: [
@@ -1124,23 +1756,24 @@ function taskPriorityScene(n, level = "") {
     niedrig: ["NIEDRIG · NIEDRIGE PRIORITÄT", "Maßnahmen können definiert werden. Ohne weitere Maßnahme ist keine zusätzliche Dokumentation notwendig."],
   };
   const explanation = group(`s${n}_explanation`, level ? texts[level][0] : "Aufgabenpriorität",
-    `${box(92, 278, 704, 546, fill, color, 2, 14)}
-     ${txt(138, 338, level ? texts[level][0] : "AUFGABENPRIORITÄT", 25, 840, color)}
+    `${txt(108, 338, level ? texts[level][0] : "AUFGABENPRIORITÄT", 26, 860, color)}
+     ${line(108, 372, 780, 372, color, 5)}
      ${level
-       ? multiRows(138, 400, 610, texts[level][1], 23, 650, C.deep)
-       : bulletList(138, 392, 610, [
+       ? multiRows(108, 446, 650, texts[level][1], 23, 650, C.deep)
+       : bulletList(108, 446, 650, [
          "Prioritätsstufen hoch, mittel und niedrig",
          "Kombination der Einzelbewertungen in einer Tabelle",
          "Priorisierung konkreter Maßnahmen",
          "Erleichterte Entscheidungsfindung",
-       ], color, 22, 92)}
-     ${level ? pill(210, 706, 470, level.toUpperCase(), color, C.surface) : ""}`);
+       ], color, 22, 98)}
+     ${level ? `${txt(108, 724, "HANDLUNGSVERBINDLICHKEIT", 18, 820, C.soft)}${line(108, 750, 528, 750, color, 4)}` : ""}`);
   const matrix = group(`s${n}_matrix`, "Aufgabenprioritätsmatrix",
-    `${box(850, 278, 978, 546, C.surface, C.border, 1.5, 14)}
-     ${image("task-priority-matrix.png", 998, 300, 680, 492, "Aufgabenprioritätsmatrix")}`);
+    `${txt(930, 338, "KOMBINATION VON B · A · E", 20, 820, C.secondary)}
+     ${line(930, 372, 1810, 372, C.border, 2)}
+     ${image("task-priority-matrix.png", 1050, 392, 680, 432, "Aufgabenprioritätsmatrix")}`);
   return {
     archetype: "priority-matrix",
-    layout: "Handlungsaussage links und vergrößerte Aufgabenprioritätsmatrix rechts.",
+    layout: "Offene Handlungsaussage links und vergrößerte Aufgabenprioritätsmatrix rechts; die Matrix bleibt das einzige gerahmte Fachobjekt.",
     takeaway: level ? `Die Aufgabenpriorität ${level} bestimmt die Verbindlichkeit weiterer Maßnahmen.` : "Die Aufgabenpriorität übersetzt kombinierte Bewertungen in konkrete Handlungsempfehlungen.",
     body: processStrip(5, 172, true) + explanation + matrix,
     targets: [
@@ -1150,35 +1783,210 @@ function taskPriorityScene(n, level = "") {
   };
 }
 
+function priorityActionsCombined(n) {
+  const actionRow = (id, y, label, modal, textValue, color) => group(id, label,
+    `${line(116, y, 116, y + 104, color, 4)}
+     ${txt(150, y + 34, label, 21, 860, C.deep)}
+     ${txt(150, y + 72, modal, 18, 860, color)}
+     ${multi(346, y + 34, 760, textValue, 20, 650, C.deep)}`);
+  const intro = group(`s${n}_intro`, "Aufgabenpriorität",
+    `${txt(108, 310, "HANDLUNGSPFLICHT AUS B · A · E", 24, 860, C.deep)}
+     ${line(108, 344, 1128, 344, C.accent, 4)}`);
+  const high = actionRow(`s${n}_high`, 390, "HOCH", "MUSS", "Maßnahme definieren – oder Angemessenheit bestehender Maßnahmen begründen und dokumentieren.", C.failure);
+  const medium = actionRow(`s${n}_medium`, 540, "MITTEL", "SOLLTE", "Maßnahme definieren – andernfalls Angemessenheit bestehender Maßnahmen begründen und dokumentieren.", C.semanticWarning);
+  const low = actionRow(`s${n}_low`, 690, "NIEDRIG", "KANN", "Maßnahme möglich. Ohne zusätzliche Maßnahme ist keine weitere Dokumentation erforderlich.", C.semanticSuccess);
+  const matrix = group(`s${n}_matrix`, "Aufgabenprioritätsmatrix",
+    `${txt(1260, 310, "PRIORITÄTSMATRIX", 20, 840, C.deep)}
+     ${line(1260, 344, 1810, 344, C.accent, 4)}
+     ${image("task-priority-matrix.png", 1240, 390, 590, 392, "Aufgabenprioritätsmatrix")}`);
+  const goal = group(`s${n}_goal`, "Ziel der Risikoanalyse",
+    `${line(108, 846, 1810, 846, C.border, 1.5)}
+     ${txt(108, 892, "ZIEL", 18, 840, C.accent)}
+     ${multi(216, 892, 1540, "Aktuellen Stand dokumentieren und eindeutig festlegen, ob weitere Maßnahmen erforderlich sind.", 22, 730, C.deep)}`);
+  return {
+    archetype: "priority-actions",
+    layout: "Drei offene Handlungszeilen mit schmaler Statusmarkierung links; Matrix als einziges gerahmtes Fachobjekt rechts.",
+    takeaway: "Hohe, mittlere und niedrige Aufgabenpriorität unterscheiden klar zwischen Muss-, Sollte- und Kann-Handlungen.",
+    density: "dense",
+    body: processStrip(5, 172, true) + intro + high + medium + low + matrix + goal,
+    targets: [
+      target(`s${n}_intro`, "Aufgabenpriorität", n, ["kategorisiert Risiken"]),
+      target(`s${n}_matrix`, "Aufgabenprioritätsmatrix", n, ["kombinierten Einzelbewertungen"]),
+      target(`s${n}_high`, "Hohe Aufgabenpriorität", n, ["Aufgabenpriorität hoch"]),
+      target(`s${n}_medium`, "Mittlere Aufgabenpriorität", n, ["Aufgabenpriorität mittel"]),
+      target(`s${n}_low`, "Niedrige Aufgabenpriorität", n, ["Aufgabenpriorität dagegen niedrig"]),
+      target(`s${n}_goal`, "Ziel der Risikoanalyse", n, ["Ziel des Schrittes Risikoanalyse"]),
+    ],
+  };
+}
+
 function scene129() {
   const levers = [
-    ["01", "AUFTRETEN REDUZIEREN", "Fehlerursachen abstellen; Konstruktion oder Prozess verändern.", C.failure, C.failureSoft],
-    ["02", "BEDEUTUNG REDUZIEREN", "Konzeptionelle Änderungen wie Redundanz oder Fehleranzeigen vorsehen.", C.secondary, C.secondarySoft],
-    ["03", "ENTDECKUNG ERHÖHEN", "Konstruktion, Prüfverfahren oder Kontrollmechanismen verbessern.", C.accent, C.accentSoft],
+    ["01", "AUFTRETEN REDUZIEREN", "Fehlerursachen abstellen; Konstruktion oder Prozess verändern.", C.accent],
+    ["02", "BEDEUTUNG REDUZIEREN", "Konzeptionelle Änderungen wie Redundanz oder Fehleranzeigen vorsehen.", C.accent],
+    ["03", "ENTDECKUNG ERHÖHEN", "Konstruktion, Prüfverfahren oder Kontrollmechanismen verbessern.", C.educationAccent],
   ];
-  const body = processStrip(6, 172, true) + levers.map(([number, title, text, color, fill], index) =>
-    group(`s129_lever_${index + 1}`, title,
-      `${box(92 + index * 584, 368, 540, 430, fill, color, 2, 14)}
-       ${txt(136 + index * 584, 438, number, 44, 850, color)}
-       ${multi(136 + index * 584, 504, 446, title, 24, 820, C.deep)}
-       ${multi(136 + index * 584, 602, 446, text, 22, 620, C.text)}`)).join("");
+  const risk = group("s129_risk", "Risiko reduzieren",
+    `<circle cx="960" cy="384" r="72" fill="${C.surface}" stroke="${C.failure}" stroke-width="3"/>
+     ${txt(960, 374, "RISIKO", 22, 860, C.failure, "middle")}
+     ${txt(960, 408, "REDUZIEREN", 18, 820, C.failure, "middle")}`);
+  const leversMarkup = levers.map(([number, title, text, color], index) => {
+    const x = 112 + index * 614;
+    return group(`s129_lever_${index + 1}`, title,
+      `${txt(x, 624, number, 52, 900, C.soft)}
+       ${multi(x + 86, 612, 476, title, 24, 850, color)}
+       ${line(x + 86, 646, x + 536, 646, color, 4)}
+       ${multi(x + 86, 704, 460, text, 22, 650, C.text)}`);
+  }).join("");
+  const links = group("s129_links", "Drei Wege zur Risikoreduktion",
+    `${pathLine("M 350 566 C 450 470 650 426 880 394", C.accent, 3, true)}
+     ${line(960, 566, 960, 458, C.accent, 3, true)}
+     ${pathLine("M 1570 566 C 1470 470 1270 426 1040 394", C.educationAccent, 3, true)}`);
+  const body = processStrip(6, 172, true) + risk + leversMarkup + links;
   return {
-    archetype: "three-lever-optimization",
-    layout: "Drei nummerierte Optimierungshebel mit klarer Bewertungszuordnung.",
+    archetype: "risk-reduction-levers",
+    layout: "Ein gemeinsames Risikoziel wird von drei offenen, nummerierten Optimierungshebeln adressiert.",
     takeaway: "Optimierung reduziert Auftreten oder Bedeutung und erhöht die Entdeckungswahrscheinlichkeit.",
     body,
-    targets: levers.map(([number, title], index) => target(`s129_lever_${index + 1}`, `${number} ${title}`, 129, [title.split(" ")[0].toLocaleLowerCase("de-DE"), "Optimierungsmaßnahmen"])),
+    targets: [
+      target("s129_risk", "Risiko reduzieren", 129, ["Risiko", "Optimierungsmaßnahmen"]),
+      ...levers.map(([number, title], index) => target(`s129_lever_${index + 1}`, `${number} ${title}`, 129, [title.split(" ")[0].toLocaleLowerCase("de-DE"), "Optimierungsmaßnahmen"])),
+      target("s129_links", "Drei Wege zur Risikoreduktion", 129, ["Risiko reduziert", "Maßnahmen"], "draw"),
+    ],
   };
+}
+
+function modernFmeaFieldMarkup(x, y, field, tint, dataTint, options = {}) {
+  const headerHeight = options.headerHeight || 76;
+  const rowHeights = options.rowHeights || [60];
+  const lines = field.lines || [field.label];
+  const compact = lines.length === 1 && field.label.length <= 3;
+  const lineGap = 20;
+  const firstBaseline = y + headerHeight / 2 + 6 - ((lines.length - 1) * lineGap) / 2;
+  const label = lines.map((lineText, lineIndex) => txt(
+    x + field.width / 2,
+    firstBaseline + lineIndex * lineGap,
+    lineText,
+    compact ? 19 : 18,
+    compact ? 850 : 690,
+    C.accent,
+    "middle",
+  )).join("");
+  let rowY = y + headerHeight;
+  const rows = rowHeights.map((height, rowIndex) => {
+    const row = box(x, rowY, field.width, height, rowIndex % 2 === 0 ? C.surface : dataTint, C.border, 1.2, 0);
+    rowY += height;
+    return row;
+  }).join("");
+  return `${box(x, y, field.width, headerHeight, tint, C.border, 1.2, 0)}
+    ${label}
+    ${rows}`;
+}
+
+function modernFmeaGroupMarkup(x, y, title, fields, options = {}) {
+  const width = fields.reduce((sum, field) => sum + field.width, 0);
+  const groupHeaderHeight = options.groupHeaderHeight || 44;
+  const headerFill = options.headerFill || C.accent;
+  const tint = options.tint || C.accentSoft;
+  const dataTint = options.dataTint || C.surfaceSoft;
+  let cursor = x;
+  const fieldMarkup = fields.map((field) => {
+    const markup = modernFmeaFieldMarkup(cursor, y + groupHeaderHeight, field, tint, dataTint, options);
+    cursor += field.width;
+    return markup;
+  }).join("");
+  return `${box(x, y, width, groupHeaderHeight, headerFill, headerFill, 1.2, 0)}
+    ${txt(x + width / 2, y + groupHeaderHeight / 2 + 7, title, 18, 850, C.surface, "middle")}
+    ${fieldMarkup}`;
+}
+
+function modernFmeaFormMarkup() {
+  const analysisGroups = [
+    {
+      title: "STRUKTURANALYSE",
+      fields: [
+        { label: "Nächsthöhere Ebene", lines: ["Obere", "Ebene"], width: 106 },
+        { label: "Fokuselement", lines: ["Fokus-", "element"], width: 106 },
+        { label: "Nächstniedrigere Ebene", lines: ["Untere", "Ebene"], width: 106 },
+      ],
+    },
+    {
+      title: "FUNKTIONSANALYSE",
+      fields: [
+        { label: "Funktion nächsthöhere Ebene", lines: ["Funktion", "oben"], width: 124 },
+        { label: "Funktion / Anforderung", lines: ["Funktion /", "Anforderung"], width: 124 },
+        { label: "Funktion nächstniedrigere Ebene", lines: ["Funktion", "unten"], width: 124 },
+      ],
+    },
+    {
+      title: "FEHLERANALYSE",
+      fields: [
+        { label: "Fehlerfolge", lines: ["Fehler-", "folge"], width: 145 },
+        { label: "B", width: 50 },
+        { label: "Fehlerart", lines: ["Fehler-", "art"], width: 140 },
+        { label: "Fehlerursache", lines: ["Fehler-", "ursache"], width: 175 },
+      ],
+    },
+    {
+      title: "RISIKOANALYSE",
+      fields: [
+        { label: "Aktuelle Vermeidung", lines: ["Aktuelle", "Vermeidung"], width: 145 },
+        { label: "A", width: 50 },
+        { label: "Aktuelle Entdeckung", lines: ["Aktuelle", "Entdeckung"], width: 145 },
+        { label: "E", width: 50 },
+        { label: "AP", width: 106 },
+      ],
+    },
+  ];
+  const optimizationGroup = {
+    title: "OPTIMIERUNG UND NEUBEWERTUNG",
+    headerFill: C.educationAccent,
+    tint: C.educationAccentSoft,
+    dataTint: C.educationAccentSoft,
+    fields: [
+      { label: "Vermeidungsmaßnahme", lines: ["Vermeidungs-", "maßnahme"], width: 240 },
+      { label: "Entdeckungsmaßnahme", lines: ["Entdeckungs-", "maßnahme"], width: 240 },
+      { label: "Verantwortlich", width: 180 },
+      { label: "Zieltermin", lines: ["Ziel-", "termin"], width: 140 },
+      { label: "Status", width: 120 },
+      { label: "Umsetzung / Nachweis", lines: ["Umsetzung /", "Nachweis"], width: 280 },
+      { label: "Abschluss", width: 160 },
+      { label: "B", width: 60 },
+      { label: "A", width: 60 },
+      { label: "E", width: 60 },
+      { label: "AP", width: 156 },
+    ],
+  };
+  let cursor = 112;
+  const analysisMarkup = analysisGroups.map((entry) => {
+    const markup = modernFmeaGroupMarkup(cursor, 398, entry.title, entry.fields, entry);
+    cursor += entry.fields.reduce((sum, field) => sum + field.width, 0);
+    return markup;
+  }).join("");
+  const optimizationMarkup = modernFmeaGroupMarkup(112, 598, optimizationGroup.title, optimizationGroup.fields, optimizationGroup);
+  const meta = [
+    [112, 430, "FMEA-Typ · Betrachtungsumfang"],
+    [542, 390, "System · Projekt · Verantwortliche"],
+    [932, 340, "Version · Datum"],
+    [1272, 536, "Status · Freigabe"],
+  ].map(([x, width, label]) => `${box(x, 340, width, 58, C.surface, C.border, 1.2, 0)}${txt(x + 18, 376, label, 18, 680, C.accent)}`).join("");
+  return `${txt(122, 322, "FMEA-FORMBLATT", 24, 850, C.deep)}
+    <g data-source-evidence="user_request" data-source-reference="Aktualisierung gemäß Nutzerauftrag und offizieller AIAG-VDA-Referenz">${pill(1370, 296, 408, "AIAG–VDA-LOGIK · 7 SCHRITTE · AP", C.accent, C.surface)}</g>
+    ${meta}
+    ${analysisMarkup}
+    ${optimizationMarkup}
+    ${box(112, 796, 1696, 34, C.surfaceSoft, C.border, 1.2, 6)}
+    ${txt(960, 819, "B · A · E werden einzeln bewertet · AP priorisiert die weitere Bearbeitung", 18, 760, C.accent, "middle")}`;
 }
 
 function formScene(n, stage) {
   const media = group(`s${n}_form`, `FMEA-Formblatt Stufe ${stage}`,
-    `${box(92, 278, 1736, 588, C.surface, C.border, 1.5, 14)}
-     ${image(`fmea-form-${n}.png`, 124, 306, 1672, 500, "FMEA-Formblatt mit stufenweise aktivierten Analysebereichen")}
-     ${pill(650, 828, 620, `AUSBAUSTUFE ${stage} VON 4`, stage === 4 ? C.secondary : C.accent, C.surface)}`);
+    `${box(92, 278, 1736, 610, C.surface, C.border, 1.5, 14)}
+     ${modernFmeaFormMarkup()}
+     ${pill(650, 842, 620, `AUSBAUSTUFE ${stage} VON 4`, C.educationAccent, C.surface)}`);
   return {
     archetype: "documentation-form",
-    layout: "Vergrößertes und vom PowerPoint-Bedienelement bereinigtes FMEA-Formblatt.",
+    layout: "Schematische, verlustfrei skalierbare FMEA-Formularansicht mit Analyse-, AP-, Maßnahmen- und Neubewertungsfeldern.",
     takeaway: ["Das Formblatt ordnet die vollständige FMEA-Dokumentation in feste Spalten.", "Struktur- und Funktionsanalyse bilden die linke Informationsbasis.", "Fehler- und Risikoanalyse ergänzen die Bewertungsfelder.", "Der Optimierungsbereich dokumentiert Verantwortlichkeiten, Termine und Neubewertung."][stage - 1],
     density: "dense",
     body: processStrip(7, 172, true) + media,
@@ -1226,27 +2034,34 @@ function nativeFormScene(n, stage) {
 
 function scene137() {
   const intro = group("s137_intro", "Dokumentationsprinzip",
-    `${box(92, 278, 1736, 150, C.deep, C.deep, 1.5, 10)}
-     ${txt(132, 326, "DOKUMENTATION DER FMEA-ERGEBNISSE", 23, 820, C.accentSoft)}
-     ${txt(132, 370, "Alle Erkenntnisse und Maßnahmen werden dynamisch, iterativ und nachvollziehbar", 22, 680, C.surface)}
-     ${txt(132, 399, "sowie transparent in den Formblättern dokumentiert.", 22, 680, C.surface)}`);
+    `${box(92, 286, 720, 54, C.deep, C.deep, 1.5, 7)}
+     ${txt(122, 322, "DOKUMENTATION DER FMEA-ERGEBNISSE", 22, 850, C.surface)}
+     ${bulletList(112, 388, 1640, [
+       "Zusammenfassung aller Erkenntnisse und Maßnahmen in Formblättern",
+       "dynamische und iterative Durchführung mit Aktualisierung nach jeder Neubewertung",
+       "Informationen nachvollziehbar und transparent festhalten",
+     ], C.accent, 21, 54)}`);
   const goals = group("s137_goals", "Ziele",
-    `${box(92, 456, 1736, 386, C.surface, C.border, 1.5, 14)}
-     ${bulletList(142, 518, 1600, [
-       "Aktuelle Risiken und getroffene Maßnahmen nachvollziehbar dokumentieren",
-       "Wissen an Teammitglieder und Abteilungen weitergeben",
-       "Wirksamkeit prüfen und Risiken iterativ neu bewerten",
-       "Fortschritt und Maßnahmenumsetzung überwachen",
-       "Stakeholder informieren und regulatorische Anforderungen einhalten",
-     ], C.accent, 22, 68)}`);
+    `${box(92, 570, 1736, 340, C.surface, C.deep, 2, 0)}
+     ${txt(124, 616, "ZIELE", 20, 860, C.educationAccent)}
+     ${bulletList(124, 674, 790, [
+       "Aktuelle Risiken und Maßnahmen dokumentieren und Risiken auf ein akzeptables Maß reduzieren",
+       "Wissensweitergabe an Teammitglieder und Abteilungen sicherstellen",
+       "Wirksamkeit der Maßnahmen prüfen und Risiken iterativ neu bewerten",
+     ], C.deep, 20, 82)}
+     ${bulletList(970, 674, 790, [
+       "Fortschritt und Umsetzung der Maßnahmen überwachen",
+       "Berichte ableiten und relevante Stakeholder gezielt informieren",
+       "Branchenstandards und regulatorische Anforderungen einhalten",
+     ], C.deep, 20, 82)}`);
   return {
     archetype: "documentation-goals",
-    layout: "Ein dokumentarisches Grundprinzip und fünf zusammengehörige Ergebnisziele.",
+    layout: "Quellnahe Hierarchie aus drei Dokumentationsprinzipien und sechs vollständig erhaltenen Zielstichpunkten in einem gemeinsamen Zielrahmen.",
     takeaway: "Ergebnisdokumentation schafft Transparenz, Wissensweitergabe, Wirksamkeitskontrolle und Nachweisfähigkeit.",
     body: processStrip(7, 172, true) + intro + goals,
     targets: [
-      target("s137_intro", "Dokumentationsprinzip", 137, ["Formblättern", "dokumentiert"]),
-      target("s137_goals", "Ziele", 137, ["Ziele", "Wissensweitergabe", "Überwachung"]),
+      target("s137_intro", "Dokumentationsprinzip", 137, ["dynamisch und iterativ"]),
+      target("s137_goals", "Ziele", 137, ["mehrere wichtige Ziele", "Wissensweitergabe", "Überwachung"]),
     ],
   };
 }
@@ -1267,13 +2082,14 @@ function buildRiskAndDocumentationScene(n) {
   if (n === 124) return taskPriorityScene(n, "mittel");
   if (n === 125) return taskPriorityScene(n, "niedrig");
   if (n === 126) return goalScene(n, 5, "Dokumentiere aktuelle Vermeidungs- und Entdeckungsmaßnahmen und bewerte den derzeitigen Stand.");
-  if (n === 127) return processOnly(n, 0);
-  if (n === 128) return processOnly(n, 6);
+  if (n === 127) return processOnly(n, 6);
+  if (n === 128) return { ...processOnly(n, 6), density: "dense" };
   if (n === 129) return scene129();
   if (n === 130) return goalScene(n, 6, "Reduziere das Risiko durch weitere Maßnahmen, Neubewertung und Zuverlässigkeitsabsicherung.");
-  if (n === 131) return processOnly(n, 0);
+  if (n === 131) return processOnly(n, 7);
   if (n === 132) return processOnly(n, 7);
-  if (n >= 133 && n <= 136) return nativeFormScene(n, n - 132);
+  if (n >= 133 && n <= 135) return nativeFormScene(n, n - 132);
+  if (n === 136) return formScene(n, 4);
   if (n === 137) return scene137();
   if (n === 138) return processOnly(n, 0);
   return null;
@@ -1292,23 +2108,37 @@ function scene139() {
 }
 
 function scene142() {
-  const items = [
-    ["01", "ANALYSEUMFANG ABGRENZEN", "Produkt- oder Prozessbereich und Schnittstellen festlegen.", C.accent, C.accentSoft],
-    ["02", "UNTERLAGEN SAMMELN", "Vorhandene Prozess-, Qualitäts- und Erfahrungsdaten zusammentragen.", C.secondary, C.secondarySoft],
-    ["03", "TEAM ZUSAMMENSTELLEN", "Prozessexperten und relevante Fachbereiche einbinden.", C.success, C.successSoft],
-  ];
-  const body = processStrip(1, 172, true) + items.map(([number, title, text, color, fill], index) =>
-    group(`s142_part_${index + 1}`, title,
-      `${box(92 + index * 584, 374, 540, 400, fill, color, 2, 14)}
-       ${txt(138 + index * 584, 442, number, 42, 850, color)}
-       ${multi(138 + index * 584, 504, 442, title, 23, 820, C.deep)}
-       ${multi(138 + index * 584, 602, 442, text, 22, 620, C.text)}`)).join("");
+  const context = group("s142_context", "Gleicher Ablauf, anderer Fokus",
+    `${txt(960, 318, "1. SCHRITT  ·  PLANUNG UND VORBEREITUNG", 24, 850, C.accent, "middle")}
+     ${txt(960, 354, "gleiche Aufgabe – unterschiedlicher Analysefokus", 20, 700, C.secondary, "middle")}
+     ${box(396, 390, 650, 66, C.accent, C.accent, 1.5, 4)}${txt(721, 432, "DESIGN-FMEA", 25, 840, C.surface, "middle")}
+     ${box(1080, 390, 650, 66, C.accent, C.accent, 1.5, 4)}${txt(1405, 432, "PROZESS-FMEA", 25, 840, C.surface, "middle")}
+     ${line(366, 486, 1760, 486, C.border, 2)}${line(366, 648, 1760, 648, C.border, 2)}${line(366, 810, 1760, 810, C.border, 2)}
+     ${line(1062, 390, 1062, 902, C.border, 2)}`);
+  const scope = group("s142_part_1", "Analyseumfang und Detaillierungsebene",
+    `${txt(118, 534, "01", 25, 860, C.secondary)}${txt(174, 534, "ANALYSEUMFANG", 20, 840, C.accent)}
+     ${multiRows(426, 526, 560, "Produkt oder Produktbereich auswählen; Produktgestaltung und Anforderungen betrachten.", 21, 620, C.text, "start", 1.22)}
+     ${multiRows(1110, 526, 570, "Prozessabschnitt auswählen; Fertigung, Montage, Logistik und Transport betrachten.", 21, 620, C.text, "start", 1.22)}`);
+  const documents = group("s142_part_2", "Unterlagen und Materialien",
+    `${txt(118, 696, "02", 25, 860, C.secondary)}${txt(174, 696, "UNTERLAGEN", 20, 840, C.accent)}
+     ${multiRows(426, 688, 560, "Relevante Unterlagen, Materialien und Erkenntnisse zur Produktgestaltung zusammentragen.", 21, 620, C.text, "start", 1.22)}
+     ${multiRows(1110, 688, 570, "Prozessablaufpläne, Arbeitsanweisungen sowie Maschinen- und Werkzeuglisten sammeln.", 21, 620, C.text, "start", 1.22)}`);
+  const team = group("s142_part_3", "Interdisziplinäres Team",
+    `${txt(118, 858, "03", 25, 860, C.secondary)}${txt(174, 858, "TEAM", 20, 840, C.accent)}
+     ${multiRows(426, 850, 560, "Fachbereiche mit Perspektiven auf Produktgestaltung und Anforderungen einbinden.", 21, 620, C.text, "start", 1.22)}
+     ${multiRows(1110, 850, 570, "Spezialistinnen und Spezialisten der betroffenen Prozessbereiche zusammenstellen.", 21, 620, C.text, "start", 1.22)}`);
   return {
-    archetype: "three-part-workflow",
-    layout: "Drei nummerierte Aufgaben der Planung und Vorbereitung in der Prozess-FMEA.",
-    takeaway: "Auch die Prozess-FMEA beginnt mit Analyseumfang, Unterlagen und Team.",
-    body,
-    targets: items.map(([number, title], index) => target(`s142_part_${index + 1}`, `${number} ${title}`, 142, [title.split(" ")[0].toLocaleLowerCase("de-DE"), "Unterlagen", "Team"])),
+    archetype: "open-aligned-comparison",
+    layout: "Kompakte Schritt-Navigation; darunter eine offene Vergleichsmatrix mit drei gemeinsamen Kriterien und gleichfarbigen Spalten für Design- und Prozess-FMEA.",
+    takeaway: "Planung und Vorbereitung folgen denselben drei Aufgaben; der Analysefokus wechselt vom Produkt zum Fertigungs- und Montageprozess.",
+    density: "dense",
+    body: processStrip(1, 172, true) + context + scope + documents + team,
+    targets: [
+      target("s142_context", "Gleicher Ablauf, anderer Fokus", 142, ["sieben Schritte", "inhaltlichen Fokus"]),
+      target("s142_part_1", "Analyseumfang und Detaillierungsebene", 142, ["Analyseumfang", "Detaillierungsebene"]),
+      target("s142_part_2", "Unterlagen und Materialien", 142, ["Unterlagen", "Materialien"]),
+      target("s142_part_3", "Interdisziplinäres Team", 142, ["interdisziplinäre Team"]),
+    ],
   };
 }
 
@@ -1316,16 +2146,44 @@ function compareAssetScene(n, filename, label, side, activeStep, takeaway) {
   const color = side === "Design-FMEA" ? C.accent : C.secondary;
   const fill = side === "Design-FMEA" ? C.accentSoft : C.secondarySoft;
   const media = group(`s${n}_asset`, label,
-    `${box(92, 278, 1736, 576, C.surface, C.border, 1.5, 14)}
-     ${pill(132, 304, 260, side.toUpperCase(), color, fill)}
-     ${image(filename, 170, 340, 1580, 452, label)}`);
+    `${txt(108, 324, side.toUpperCase(), 20, 840, color)}
+     ${line(108, 352, 1812, 352, color, 4)}
+     ${image(filename, 170, 374, 1580, 430, label)}`);
   return {
     archetype: "source-asset-diagram",
-    layout: "Vergrößertes, quelltreues Struktur-, Funktions- oder Fehlerdiagramm mit klarer FMEA-Zuordnung.",
+    layout: "Vergrößertes, quelltreues Struktur-, Funktions- oder Fehlerdiagramm auf offener Fläche mit klarer FMEA-Zuordnung.",
     takeaway,
     density: "dense",
     body: processStrip(activeStep, 172, true) + media,
     targets: [target(`s${n}_asset`, label, n, [side, "Struktur", "Funktion", "Fehler"])],
+  };
+}
+
+function comparisonPair(n, leftFile, rightFile, leftLabel, rightLabel, activeStep, takeaway, cueKeywords) {
+  const divider = group(`s${n}_divider`, "Vergleichsachse",
+    `${line(960, 294, 960, 830, C.border, 1.5)}
+     ${txt(960, 868, "GLEICHE FMEA-LOGIK · ANDERER ANALYSEGEGENSTAND", 18, 840, C.accent, "middle")}`);
+  const left = group(`s${n}_left`, leftLabel,
+    `${txt(116, 312, "DESIGN-FMEA", 18, 840, C.soft)}
+     ${txt(116, 352, leftLabel, 24, 860, C.deep)}
+     ${line(116, 382, 874, 382, C.accent, 4)}
+     ${image(leftFile, 116, 410, 758, 386, leftLabel)}`);
+  const right = group(`s${n}_right`, rightLabel,
+    `${txt(1046, 312, "PROZESS-FMEA", 18, 840, C.soft)}
+     ${txt(1046, 352, rightLabel, 24, 860, C.deep)}
+     ${line(1046, 382, 1804, 382, C.accent, 4)}
+     ${image(rightFile, 1046, 410, 758, 386, rightLabel)}`);
+  return {
+    archetype: "paired-technical-comparison",
+    layout: "Zwei gleich große, gleichfarbig gewichtete technische Diagramme auf einer offenen Vergleichsachse.",
+    takeaway,
+    density: "dense",
+    body: processStrip(activeStep, 172, true) + divider + left + right,
+    targets: [
+      target(`s${n}_left`, leftLabel, n, [cueKeywords[0]]),
+      target(`s${n}_right`, rightLabel, n, [cueKeywords[1]]),
+      target(`s${n}_divider`, "Gemeinsame FMEA-Logik", n, [cueKeywords[1]]),
+    ],
   };
 }
 
@@ -1373,20 +2231,23 @@ function scene158() {
 
 function scene159() {
   const formula = group("s159_formula", "Risikoprioritätszahl",
-    `${box(92, 274, 760, 516, C.surface, C.deep, 2, 14)}
-     ${txt(472, 346, "RISIKOPRIORITÄTSZAHL", 24, 820, C.deep, "middle")}
-     ${rpzFormulaMarkup(194, 486, .8)}
-     ${pill(280, 560, 384, "1 BIS 1000", C.deep, C.surface)}`);
+    `${txt(120, 350, "RISIKOPRIORITÄTSZAHL", 24, 840, C.deep)}
+     ${line(120, 384, 842, 384, C.accent, 5)}
+     ${rpzFormulaMarkup(170, 520, .82)}
+     ${txt(170, 590, "WERTEBEREICH", 18, 820, C.soft)}
+     ${txt(352, 590, "1 BIS 1000", 22, 850, C.deep)}
+     ${multi(170, 678, 620, "Multiplikative Priorisierung aus Bedeutung, Auftreten und Entdeckung.", 22, 650, C.text)}`);
   const matrix = group("s159_matrix", "Aufgabenpriorität",
-    `${box(1018, 274, 810, 516, C.accentSoft, C.accent, 2, 14)}
-     ${txt(1423, 346, "AUFGABENPRIORITÄT", 24, 820, C.accent, "middle")}
-     ${image("task-priority-combined.png", 1170, 390, 506, 328, "Aufgabenprioritätsmatrix")}`);
+    `${txt(1082, 350, "AUFGABENPRIORITÄT", 24, 840, C.deep)}
+     ${line(1082, 384, 1800, 384, C.accent, 5)}
+     ${image("task-priority-combined.png", 1180, 412, 520, 328, "Aufgabenprioritätsmatrix")}`);
   const braces = group("s159_shared", "Gemeinsame Bewertungslogik",
-    `${pathLine("M 92 232 H 852 M 1018 232 H 1828", C.accent, 3)}
-     ${pill(702, 830, 516, "GILT FÜR DESIGN- UND PROZESS-FMEA", C.accent, C.surface)}`);
+    `${line(960, 316, 960, 782, C.border, 2)}
+     ${line(420, 822, 1500, 822, C.border, 2)}
+     ${txt(960, 868, "GILT FÜR DESIGN- UND PROZESS-FMEA", 20, 840, C.accent, "middle")}`);
   return {
     archetype: "risk-method-comparison",
-    layout: "Gemeinsame RPZ-Formel und Aufgabenpriorität als zwei gleichwertige Bewertungsinstrumente.",
+    layout: "Gemeinsame RPZ-Formel und Aufgabenpriorität als zwei offene, gleichwertige Bewertungsinstrumente.",
     takeaway: "RPZ und Aufgabenpriorität werden in Design- und Prozess-FMEA nach derselben Grundlogik eingesetzt.",
     body: processStrip(5, 172, true) + braces + formula + matrix,
     targets: [
@@ -1478,7 +2339,15 @@ function buildComparisonScene(n) {
   return null;
 }
 
-function buildScene(n) {
+function buildScene(n, variant = "") {
+  if (variant === "planning_scope_documents") return planningScopeDocuments(n);
+  if (variant === "gearbox_source_basis") return gearboxSourceBasis(n);
+  if (variant === "gearbox_hierarchy_combined") return gearboxHierarchyCombined(n);
+  if (variant === "function_methods") return functionMethodsScene(n);
+  if (variant === "priority_actions_combined") return priorityActionsCombined(n);
+  if (variant === "comparison_structure_pair") return comparisonPair(n, "design-structure.png", "process-structure.png", "PRODUKTSTRUKTUR", "PROZESSSTRUKTUR", 2, "Produkt und Prozess werden mit derselben FMEA-Logik, aber in unterschiedlichen Hierarchien strukturiert.", ["Systemstruktur", "Gesamtprozess"]);
+  if (variant === "comparison_function_pair") return comparisonPair(n, "design-function-tree.png", "process-function-tree.png", "PRODUKTFUNKTIONEN", "PROZESSFUNKTIONEN", 3, "Die Funktionsanalyse ordnet Funktionen entweder Produktkomponenten oder Prozessschritten zu.", ["Beim Design", "prozessorientierten Variante"]);
+  if (variant === "comparison_error_pair") return comparisonPair(n, "design-error-tree.png", "process-error-tree.png", "PRODUKTFEHLFUNKTIONEN", "PROZESSFEHLER", 4, "Fehler werden den Funktionen in der jeweiligen Produkt- oder Prozessstruktur zugeordnet.", ["Im vierten Schritt", "im Prozesskontext"]);
   return buildIntroAndEarlyScene(n)
     || buildStructureAndFailureScene(n)
     || buildRiskAndDocumentationScene(n)
@@ -1539,13 +2408,13 @@ function writeBrief(scene, content) {
 - Kapitel: 4
 - Lektion: ${scene.lesson}
 - Quellfolie: ${n}
-- Zielmodus: full_slide, 1920×1080
-- Titel: ${titles[n]}
+- Zielmodus: content_svg, transparentes 1920×1080-Inhaltsmodul für den Downstream-Master
+- Titel: ${scene.content_title_override || titles[n]}
 - Dominante Lernbotschaft: ${content.takeaway}
 - Archetyp: ${content.archetype}
 - Layout: ${content.layout}
 - Inhaltsinventar: Fachbegriffe, Beziehungen, Hierarchien, Tabellenzustände und Beispiele bleiben erhalten; PowerPoint-Bedienelemente und Masterdekoration entfallen.
-- Referenz-Lock: RE1 slide_013, slide_009, slide_027 und slide_022
+- Referenz-Lock: ${content.referenceLock || "RE1 slide_013, slide_009, slide_027 und slide_022"}
 - Assetstrategie: ${content.body.includes("<image") ? "bereinigtes und vergrößertes Quellasset" : "native RelTest-SVG-Komposition"}
 - Animation: ${content.targets.length ? "animated — sprechertextgeführte semantische Gruppen" : "static — der Zustand ist als vollständiger Aufbau-/Fokuszustand sofort verständlich"}
 - Statisches Freigabekriterium: vollständiger Quellen-Ziel-Referenzvergleich ohne Text-, Kontrast-, Pfeil- oder Assetbefund
@@ -1562,7 +2431,7 @@ function main() {
     if (!selected.has(n)) continue;
     const renderN = scene.render_source_slide || scene.primary_source_slide || n;
     const renderScene = { ...scene, output_slide_number: renderN };
-    const content = buildScene(renderN);
+    const content = buildScene(renderN, scene.render_variant);
     if (!content) throw new Error(`Keine Kapitel-4-Szenendefinition für Folie ${n}.`);
     const sceneDir = path.join(outRoot, scene.work_unit);
     fs.mkdirSync(sceneDir, { recursive: true });

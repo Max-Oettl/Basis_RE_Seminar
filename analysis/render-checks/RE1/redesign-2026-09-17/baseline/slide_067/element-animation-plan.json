@@ -1,0 +1,111 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_067",
+  "scene_id": "re1_src_085",
+  "source_slides": [
+    85
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "mechanism_random",
+      "label": "Zufallsausfälle",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "mechanism_early",
+      "label": "Frühausfälle",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "mechanism_wear",
+      "label": "Verschleißausfälle",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "mechanism_kink_warning",
+      "label": "Knick als Warnsignal",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_mechanism_separation",
+      "label": "Mechanismen getrennt auswerten",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_mechanism_random",
+      "targetId": "mechanism_random",
+      "action": "draw",
+      "sourceText": "Für b gleich eins ist die Ausfallrate Lambda konstant",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_mechanism_early",
+      "targetId": "mechanism_early",
+      "action": "draw",
+      "sourceText": "Für b kleiner eins sinkt die Ausfallrate über der Zeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_mechanism_wear",
+      "targetId": "mechanism_wear",
+      "action": "draw",
+      "sourceText": "Und für b größer eins ist im Bereich drei eine ansteigende Ausfallrate zu erkennen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_mechanism_kink_warning",
+      "targetId": "mechanism_kink_warning",
+      "action": "show",
+      "sourceText": "In Realität kann dadurch auch ein abknickender Verlauf der Weibull-Gerade entstehen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_mechanism_separation",
+      "targetId": "weibull_mechanism_separation",
+      "action": "show",
+      "sourceText": "die einzelnen Datenpunkte getrennt nach den unterschiedlichen Ausfallmechanismen zu analysieren",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

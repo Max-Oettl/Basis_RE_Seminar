@@ -1,0 +1,31 @@
+{
+  "sceneId": "re5_src_068",
+  "decision": "animated",
+  "staticGate": "passed_before_animation",
+  "targets": [
+    {
+      "id": "allocation_plot",
+      "label": "Prüflingsverteilung",
+      "cue": "Ein Teil der Prüflinge läuft auf dem oberen Niveau",
+      "action": "draw"
+    },
+    {
+      "id": "extrapolation_factor_block",
+      "label": "Extrapolationsfaktor",
+      "cue": "Zunächst bestimmen wir den Extrapolationsfaktor",
+      "action": "show"
+    },
+    {
+      "id": "allocation_share_block",
+      "label": "Anteil auf unterem Niveau",
+      "cue": "Anschließend wird der Anteil p",
+      "action": "show"
+    },
+    {
+      "id": "allocation_rule",
+      "label": "Mehr Prüflinge unten",
+      "cue": "Auf dem unteren Versuchsniveau müssen immer mehr Prüflinge",
+      "action": "show"
+    }
+  ]
+}

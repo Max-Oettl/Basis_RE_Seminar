@@ -8,62 +8,6 @@
     "drawDurFrames": 42,
     "transformDurFrames": 30
   },
-  "targets": [
-    {
-      "targetId": "modes_result_joint",
-      "label": "Gemeinsamer Fit",
-      "status": "animated",
-      "visibleInEditor": true,
-      "render": true,
-      "confidence": "high"
-    },
-    {
-      "targetId": "modes_result_split",
-      "label": "Getrennte Fits",
-      "status": "animated",
-      "visibleInEditor": true,
-      "render": true,
-      "confidence": "high"
-    },
-    {
-      "targetId": "modes_result_rule",
-      "label": "Bessere Prognose",
-      "status": "animated",
-      "visibleInEditor": true,
-      "render": true,
-      "confidence": "high"
-    }
-  ],
-  "steps": [
-    {
-      "stepId": "step_01_modes_result_joint",
-      "targetId": "modes_result_joint",
-      "action": "show",
-      "sourceText": "Für alle Ausfälle werden die zugehörigen Ausfallwahrscheinlichkeiten ermittelt und die Daten werden gemeinsam in einer Weibull-Grafik dargestellt.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
-    },
-    {
-      "stepId": "step_02_modes_result_split",
-      "targetId": "modes_result_split",
-      "action": "show",
-      "sourceText": "Stattdessen sollten die Daten nach Ausfallmechanismen getrennt und jeweils separat analysiert werden.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
-    },
-    {
-      "stepId": "step_03_modes_result_rule",
-      "targetId": "modes_result_rule",
-      "action": "show",
-      "sourceText": "So erhält man für jeden Mechanismus eine eigene Weibull-Verteilung, die eine deutlich präzisere Beschreibung und bessere Prognose ermöglicht.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
-    }
-  ]
+  "targets": [],
+  "steps": []
 }

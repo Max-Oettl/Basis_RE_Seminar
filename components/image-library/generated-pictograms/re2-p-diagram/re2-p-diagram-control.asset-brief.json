@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "reltestEducationPictogramAsset/v1",
+  "assetId": "re2_p_diagram_control",
+  "file": "components/image-library/generated-pictograms/re2-p-diagram/re2-p-diagram-control.png",
+  "assetType": "generated_png",
+  "status": "accepted",
+  "styleProfile": "reltest-education-minimal-v1",
+  "source": {
+    "evidenceType": "speaker_text",
+    "reference": "RE2 Quellfolie 8: Kontrollierbare Größen / Steuergrößen sind gezielt beeinflussbar.",
+    "license": "project_internal"
+  },
+  "semantics": {
+    "concept": "gezielte Einstellung kontrollierbarer Größen",
+    "learningFunction": "concept-anchor",
+    "mustShowFeatures": ["drei klare Stellregler", "unterschiedliche Reglerpositionen", "mechanische Einstellbarkeit"],
+    "mustNotImply": ["Reparatur", "reine Messung"],
+    "confusableWith": ["Wartung", "Analyse"],
+    "firstUseLabel": "Kontrollierbare Größen / Steuergrößen",
+    "reuseKey": "p-diagram-control"
+  },
+  "visualStyle": {
+    "flat2d": true,
+    "perspective": "front",
+    "dominantSilhouette": true,
+    "semanticLayers": 2,
+    "brandColors": ["#142452"],
+    "gradients": false,
+    "shadows": false,
+    "threeDimensional": false,
+    "isometric": false,
+    "photorealistic": false,
+    "glow": false,
+    "texture": false,
+    "embeddedText": false,
+    "logo": false,
+    "watermark": false
+  },
+  "raster": {"widthPx": 1254, "heightPx": 1254, "transparentBackground": true, "safeMarginRatio": 0.08},
+  "learningUse": {
+    "targetPlacementPx": 112,
+    "requiresTextLabelOnFirstUse": true,
+    "colorIndependentMeaning": true,
+    "smallScaleTests": {"at32px": "not_required", "at48px": "passed", "scene960x540": "passed"}
+  },
+  "accessibility": {
+    "redundantWithVisibleLabel": true,
+    "accessibleName": "",
+    "contrastPairs": [{"foreground": "#142452", "background": "#FFFFFF", "minimumRatio": 3}]
+  },
+  "review": {"semantic": "passed", "style": "passed", "eLearning": "passed", "accessibilityTechnical": "passed", "notes": ["Drei unterschiedlich positionierte Regler bleiben bei 48 px unterscheidbar und wirken nicht wie Reparaturwerkzeug."]}
+}

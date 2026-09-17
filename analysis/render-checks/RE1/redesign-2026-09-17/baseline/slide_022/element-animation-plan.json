@@ -1,0 +1,75 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_022",
+  "scene_id": "re1_src_023",
+  "source_slides": [
+    23
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "test_goal_improvement",
+      "label": "Zuverlässigkeit verbessern",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "test_goal_measurement",
+      "label": "Zuverlässigkeit messen",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "test_goal_comparison",
+      "label": "Weitere Zielsetzungen",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_test_goal_improvement",
+      "targetId": "test_goal_improvement",
+      "action": "show",
+      "sourceText": "um die Zuverlässigkeit zu verbessern",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_test_goal_measurement",
+      "targetId": "test_goal_measurement",
+      "action": "show",
+      "sourceText": "Es kann aber auch beispielsweise der Degradationsverlauf einer Komponente gemessen werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_test_goal_comparison",
+      "targetId": "test_goal_comparison",
+      "action": "show",
+      "sourceText": "Darüber hinaus sind aber auch andere Ziele denkbar",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

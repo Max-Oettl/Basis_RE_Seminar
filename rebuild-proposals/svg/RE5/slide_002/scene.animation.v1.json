@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_002.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "risk_identification",
+      "label": "Risiken identifizieren",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "reliability_measurement",
+      "label": "Zuverlässigkeit messen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "reliability_proof",
+      "label": "Zuverlässigkeit nachweisen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_risk_identification",
+      "targetId": "risk_identification",
+      "action": "show",
+      "sourceText": "Erstens die Identifizierung von Risiken",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_reliability_measurement",
+      "targetId": "reliability_measurement",
+      "action": "show",
+      "sourceText": "Zweitens die Zuverlässigkeitsmessung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_reliability_proof",
+      "targetId": "reliability_proof",
+      "action": "show",
+      "sourceText": "Und drittens der Zuverlässigkeitsnachweis",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

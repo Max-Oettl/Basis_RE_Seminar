@@ -1,14 +1,7 @@
-# Redesign-Brief — slide_017
+# RE4 slide_017 – Feedbackrevision
 
-- Strukturstatus: Kapitel und Lektion noch nicht zugeordnet; Nutzervorgabe ausstehend
-- Quellfolien: 17, 18, 19, 20
-- Sprechertext: section_003 — 5. Schritt: Bestimmen der Zuverlässigkeitskenngrößen
-- Titel: Basisereignisse quantitativ bewerten
-- Takeaway: Für jedes Basisereignis wird eine Ausfallwahrscheinlichkeit aus belastbaren Datenquellen bestimmt.
-- Archetyp: tree-evidence
-- Zielmodus: full_slide, 1920×1080
-- Referenz-Lock: RE3 slide_002, slide_024, slide_043 und slide_070
-- Farbdramaturgie: Navy-Tonalität für gleichrangige Inhalte; Grün und Koralle nur semantisch für Fokus, Funktion oder Ausfall
-- Animation: sprechertextgeführt; semantische Gruppen statt Einzelobjekt-Mikroanimation
-- Quellenregel: PowerPoint-Sprechericons, gelbe Produktionsnotizen und Masterdekoration entfallen
-- Assets: native SVG-Komposition
+- Quellen: 17, 18, 19, 20; stabile ID re4_src_017.
+- Referenz-Lock: RE3 15, 31, 43. Transparente Content-SVG, Archivo und Oxanium, Marineblau mit semantischen Akzenten.
+- Inventar, Topologie und verlustfreie Sprechertextpartition: analysis/rebuild-plans/RE4_feedback_2026-09-17.md.
+- Statischer Pilot: analysis/render-checks/RE4/feedback-2026-09-17/after/slide_017.png.
+- Animation: 36 wortgetreue Schritte; technische und visuelle Prüfung im Reviewverzeichnis.

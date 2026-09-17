@@ -3,11 +3,11 @@
 - Kapitel: 4
 - Lektion: 5
 - Quellfolie: 110
-- Zielmodus: full_slide, 1920×1080
+- Zielmodus: content_svg, transparentes 1920×1080-Inhaltsmodul für den Downstream-Master
 - Titel: Fehleranalyse des Anpassungsgetriebes
-- Dominante Lernbotschaft: Zu jeder Getriebefunktion wird eine konkrete Fehlfunktion dokumentiert.
-- Archetyp: technical-hierarchy
-- Layout: Kanonischer Getriebebaum mit Systemelementen und optionalen Funktions-/Fehlerlagen.
+- Dominante Lernbotschaft: Die Fehlfunktionen werden vom Getriebe über Antrieb, Abtrieb und Gehäuse bis zu den Bauteilen des Antriebs abgeleitet.
+- Archetyp: source-faithful-technical-hierarchy
+- Layout: Drei klar getrennte Systemebenen; Funktionen und Fehlfunktionen werden direkt und quellengetreu unter jedem Systemelement geführt.
 - Inhaltsinventar: Fachbegriffe, Beziehungen, Hierarchien, Tabellenzustände und Beispiele bleiben erhalten; PowerPoint-Bedienelemente und Masterdekoration entfallen.
 - Referenz-Lock: RE1 slide_013, slide_009, slide_027 und slide_022
 - Assetstrategie: native RelTest-SVG-Komposition

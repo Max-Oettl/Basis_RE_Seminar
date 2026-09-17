@@ -1,0 +1,943 @@
+{
+  "schema_version": "basisRebuildContentCrosscheck/v2",
+  "module_id": "RE4",
+  "output_slide_number": 1,
+  "checked_at": "2026-09-17T09:48:39.563Z",
+  "status": "review_required",
+  "manual_review_required": true,
+  "reference_mapping": {
+    "work_unit": "slide_001",
+    "output_slide_number": 1,
+    "source_slides": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "primary_source_slide": 4,
+    "output_slide_numbers": [],
+    "mapping_type": "merged",
+    "rationale": "",
+    "mapping_source": "reference_map",
+    "reference_map_path": "analysis/rebuild-plans/RE4_source-reference-map.json",
+    "sequence_plan": "",
+    "read_error": ""
+  },
+  "references": [
+    {
+      "source_slide_number": 1,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE4/SVG/Folie1.SVG",
+      "source_svg_sha256": "c1f6de1ea7e1171e90f900429a597e98e0ea660889a05a580fff325e72bb7759",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE4/SVG/Folie1.SVG",
+      "analysis_path": ""
+    },
+    {
+      "source_slide_number": 2,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE4/SVG/Folie2.SVG",
+      "source_svg_sha256": "1fc99fb3532b8262b57f033be66e6399982d22c105b296531fe5958b97de990e",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE4/SVG/Folie2.SVG",
+      "analysis_path": ""
+    },
+    {
+      "source_slide_number": 3,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE4/SVG/Folie3.SVG",
+      "source_svg_sha256": "38157a7bedc2923eaddfb8138233c0e37d4fc780086246bd884c68258c29f5c0",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE4/SVG/Folie3.SVG",
+      "analysis_path": ""
+    },
+    {
+      "source_slide_number": 4,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE4/SVG/Folie4.SVG",
+      "source_svg_sha256": "5cfea2d8c7123ea6e5024ac3c8abd57c02731fdc567e8d7ed90b687e2740d5e5",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE4/SVG/Folie4.SVG",
+      "analysis_path": ""
+    }
+  ],
+  "proposal": {
+    "path": "rebuild-proposals/svg/RE4/slide_001/slide_001.svg",
+    "svg_sha256": "5609a7835f4ebeb8a15297252b7e4b46ace07d49e82501de77c130b5e5980596",
+    "animation_manifest": "/files/rebuild-proposals/svg/RE4/slide_001/scene.animation.v1.json"
+  },
+  "summary": {
+    "source_count": 4,
+    "checked_content_items": 66,
+    "checked_target_text_items": 24,
+    "errors": 0,
+    "warnings": 16,
+    "infos": 0,
+    "animation_steps": 11
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 001: \"Zuverlässigkeit eines Systems\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Zuverlässigkeit eines Systems"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 001: \"Überschriften\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-15",
+      "expected": "Überschriften"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 001: \"anpassen?\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-16",
+      "expected": "anpassen?"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 002: \"Zuverlässigkeit eines Systems\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Zuverlässigkeit eines Systems"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 003: \"Zuverlässigkeit eines Systems\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Zuverlässigkeit eines Systems"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 003: \"Fehlfunktion: Kein Drehmoment\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-16",
+      "expected": "Fehlfunktion: Kein Drehmoment"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 003: \"wird übertragen\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-17",
+      "expected": "wird übertragen"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 004: \"Zuverlässigkeit eines Systems\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Zuverlässigkeit eines Systems"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 004: \"Fehlfunktion: Kein Drehmoment\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-16",
+      "expected": "Fehlfunktion: Kein Drehmoment"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 004: \"wird übertragen\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-17",
+      "expected": "wird übertragen"
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Systemstruktur\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Systemstruktur",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Keine Drehmomentübertragung\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Keine Drehmomentübertragung",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Im Fokus: Zahnräder\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Im Fokus: Zahnräder",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Sie übertragen das Drehmoment\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Sie übertragen das Drehmoment",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"im Getriebe. Ihre Funktion ist\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "im Getriebe. Ihre Funktion ist",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"für das Getriebe erforderlich.\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "für das Getriebe erforderlich.",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    }
+  ],
+  "content_checks": [
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Zuverlässigkeit eines Systems",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-2",
+      "expected": "PKW",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Motor",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Getriebe",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-5",
+      "expected": "Fahrwerk",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-6",
+      "expected": "Eingangs",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-7",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-8",
+      "expected": "welle",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-9",
+      "expected": "Zahnräder",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-10",
+      "expected": "Gehäuse",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-11",
+      "expected": "Ausgangs",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-12",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-13",
+      "expected": "welle",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-14",
+      "expected": "Systemgrenze",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-15",
+      "expected": "Überschriften",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 1,
+      "source_item_id": "source-svg-text-16",
+      "expected": "anpassen?",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Zuverlässigkeit eines Systems",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-2",
+      "expected": "PKW",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Motor",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Getriebe",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-5",
+      "expected": "Fahrwerk",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-6",
+      "expected": "Eingangs",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-7",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-8",
+      "expected": "welle",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-9",
+      "expected": "Zahnräder",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-10",
+      "expected": "Gehäuse",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-11",
+      "expected": "Ausgangs",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-12",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-13",
+      "expected": "welle",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-14",
+      "expected": "Funktion: Fahren",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-15",
+      "expected": "Fehlfunktion: Fahren unmöglich",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 2,
+      "source_item_id": "source-svg-text-16",
+      "expected": "Systemgrenze",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Zuverlässigkeit eines Systems",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-2",
+      "expected": "PKW",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Motor",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Getriebe",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-5",
+      "expected": "Fahrwerk",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-6",
+      "expected": "Eingangs",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-7",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-8",
+      "expected": "welle",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-9",
+      "expected": "Zahnräder",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-10",
+      "expected": "Gehäuse",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-11",
+      "expected": "Ausgangs",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-12",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-13",
+      "expected": "welle",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-14",
+      "expected": "Systemgrenze",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-15",
+      "expected": "Funktion: Drehmoment übertragen",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "tokens:funktion,drehmoment,übertragen"
+    },
+    {
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-16",
+      "expected": "Fehlfunktion: Kein Drehmoment",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.667,
+      "evidence": "tokens:fehlfunktion,drehmoment"
+    },
+    {
+      "source_slide_number": 3,
+      "source_item_id": "source-svg-text-17",
+      "expected": "wird übertragen",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:übertragen"
+    },
+    {
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Zuverlässigkeit eines Systems",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-2",
+      "expected": "PKW",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Motor",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Getriebe",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-5",
+      "expected": "Fahrwerk",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-6",
+      "expected": "Eingangs",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-7",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-8",
+      "expected": "welle",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-9",
+      "expected": "Zahnräder",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-10",
+      "expected": "Gehäuse",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-11",
+      "expected": "Ausgangs",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-12",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-13",
+      "expected": "welle",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-14",
+      "expected": "Systemgrenze",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-15",
+      "expected": "Funktion: Drehmoment übertragen",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "tokens:funktion,drehmoment,übertragen"
+    },
+    {
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-16",
+      "expected": "Fehlfunktion: Kein Drehmoment",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.667,
+      "evidence": "tokens:fehlfunktion,drehmoment"
+    },
+    {
+      "source_slide_number": 4,
+      "source_item_id": "source-svg-text-17",
+      "expected": "wird übertragen",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:übertragen"
+    }
+  ],
+  "target_text_checks": [
+    {
+      "target_text": "Systemstruktur",
+      "result": "unsupported_target_text",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "target_text": "Systemgrenze",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "PKW",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Motor",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Getriebe",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Fahrwerk",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Eingangs-",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "welle",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Zahnräder",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Ausgangs-",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "welle",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Gehäuse",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "PKW",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Funktion: Fahren",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Fehlfunktion: Fahren unmöglich",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Getriebe",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Funktion: Drehmoment",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "vom Motor auf die Räder übertragen",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "tokens:vom,motor,auf,die,räder,übertragen"
+    },
+    {
+      "target_text": "Fehlfunktion:",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Keine Drehmomentübertragung",
+      "result": "unsupported_target_text",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "target_text": "Im Fokus: Zahnräder",
+      "result": "unsupported_target_text",
+      "score": 0.333,
+      "evidence": "tokens:zahnräder"
+    },
+    {
+      "target_text": "Sie übertragen das Drehmoment",
+      "result": "unsupported_target_text",
+      "score": 0.75,
+      "evidence": "tokens:übertragen,das,drehmoment"
+    },
+    {
+      "target_text": "im Getriebe. Ihre Funktion ist",
+      "result": "unsupported_target_text",
+      "score": 0.6,
+      "evidence": "tokens:getriebe,funktion,ist"
+    },
+    {
+      "target_text": "für das Getriebe erforderlich.",
+      "result": "unsupported_target_text",
+      "score": 0.5,
+      "evidence": "tokens:das,getriebe"
+    }
+  ],
+  "manual_review_focus": [
+    "Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.",
+    "Sprechertext-Reihenfolge gegen die semantisch geplanten Animationsschritte pruefen."
+  ],
+  "reference_mapping_sha256": "4e7120e18aaf238fbf99ed159ebb0dde3ad26978f0f598b82a9e9a292679ca3d",
+  "reference_map_path": "analysis/rebuild-plans/RE4_source-reference-map.json",
+  "sequence_plan": ""
+}

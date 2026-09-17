@@ -1,0 +1,528 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_035",
+  "svgPath": "slide_035.svg",
+  "spokenText": "In der Statistik spricht man von zensierten Daten, wenn das interessierende Ereignis bis zum Ende der Beobachtungszeit nicht eingetreten ist. In unserem Fall ist dieses Ereignis der Ausfall eines Objekts. Das bedeutet: Wir wissen nur, dass das Objekt bis zu einem bestimmten Zeitpunkt funktioniert hat – aber nicht, wann es tatsächlich ausfallen wird. Man sagt auch: Der wahre Ausfallzeitpunkt liegt jenseits der bekannten Beobachtungsdauer. Für die Auswertung ist es wichtig, jeden dieser Zensierungszeitpunkte korrekt zu erfassen, da sie die statistische Analyse beeinflussen. Die Unvollständigkeit der Daten erfordert besondere Methoden – auf diese gehen wir im weiteren Verlauf noch ein. Schauen wir uns aber zunächst erst einmal an, welche konkreten Formen der Zensierung es gibt.\n\nLiegen alle unbekannten Ausfallzeiten zeitlich gesehen rechts – also später – als die letzten beobachteten Ausfälle, sprechen wir von einer Rechtszensierung. In der Abbildung sehen wir dies an den blauen Pfeilen. Sie zeigen, dass nicht alle Objekte ausgefallen sind. Am Ende des Versuchs befinden sich also noch Objekte im Betrieb. Wir wissen nur, dass sie irgendwann nach dem Versuchsende ausfallen werden, dieser Zeitpunkt ist aber unbekannt. Die Zensierungszeit ist daher immer größer oder gleich der letzten beobachteten Ausfallzeit. Generell lässt sich die Rechtszensierung in zwei typische Varianten aufteilen, welche während Lebensdauerversuchen auftreten können.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/after/slide_035.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "In der Statistik spricht man von",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "In der Statistik spricht man",
+      "occurrence": 1,
+      "claim": "Beispiel Typ 1",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "censored_context"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "bis zum Ende der Beobachtungszeit",
+      "occurrence": 1,
+      "claim": "type one stop",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "type_one_stop"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "der Ausfall eines Objekts",
+      "occurrence": 1,
+      "claim": "type one failures",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "type_one_failures"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "der Ausfall eines Objekts",
+      "occurrence": 1,
+      "claim": "Ausfall",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "censored_failure_legend"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "Das bedeutet: Wir wissen nur",
+      "occurrence": 1,
+      "claim": "Beobachtungsdauer bekannt",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "censored_known"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "bis zu einem bestimmten Zeitpunkt",
+      "occurrence": 1,
+      "claim": "type one censored",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "type_one_censored"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "bis zu einem bestimmten Zeitpunkt",
+      "occurrence": 1,
+      "claim": "Zensierung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "censored_intact_legend"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "aber nicht, wann es tatsächlich ausfallen wird",
+      "occurrence": 1,
+      "claim": "Ausfallzeit unbekannt",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "censored_unknown"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "jeden dieser Zensierungszeitpunkte korrekt zu erfassen",
+      "occurrence": 1,
+      "claim": "Korrekt erfassen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "censored_record"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "Liegen alle unbekannten Ausfallzeiten",
+      "occurrence": 1,
+      "claim": "Ausfallzeit unbekannt",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "censored_unknown"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "sprechen wir von einer Rechtszensierung",
+      "occurrence": 1,
+      "claim": "type one censored",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "type_one_censored"
+      ]
+    },
+    {
+      "beatId": "beat_12",
+      "sourceText": "an den blauen Pfeilen",
+      "occurrence": 1,
+      "claim": "Zensierung",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "censored_intact_legend"
+      ]
+    },
+    {
+      "beatId": "beat_13",
+      "sourceText": "noch Objekte im Betrieb",
+      "occurrence": 1,
+      "claim": "Noch intakte Objekte",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "censored_later"
+      ]
+    },
+    {
+      "beatId": "beat_14",
+      "sourceText": "dieser Zeitpunkt ist aber unbekannt",
+      "occurrence": 1,
+      "claim": "Ausfallzeit unbekannt",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "censored_unknown"
+      ]
+    },
+    {
+      "beatId": "beat_15",
+      "sourceText": "Die Zensierungszeit ist daher immer",
+      "occurrence": 1,
+      "claim": "type one stop",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "type_one_stop"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "censored_context",
+      "label": "Beispiel Typ 1",
+      "role": "content",
+      "members": [
+        "censored_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "type_one_stop",
+      "label": "type one stop",
+      "role": "content",
+      "members": [
+        "type_one_stop"
+      ],
+      "dependsOn": [
+        "censored_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "type_one_failures",
+      "label": "type one failures",
+      "role": "content",
+      "members": [
+        "type_one_failures"
+      ],
+      "dependsOn": [
+        "censored_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "censored_failure_legend",
+      "label": "Ausfall",
+      "role": "content",
+      "members": [
+        "censored_failure_legend"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "censored_known",
+      "label": "Beobachtungsdauer bekannt",
+      "role": "content",
+      "members": [
+        "censored_known"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "type_one_censored",
+      "label": "type one censored",
+      "role": "content",
+      "members": [
+        "type_one_censored"
+      ],
+      "dependsOn": [
+        "censored_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "censored_intact_legend",
+      "label": "Zensierung",
+      "role": "content",
+      "members": [
+        "censored_intact_legend"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "censored_unknown",
+      "label": "Ausfallzeit unbekannt",
+      "role": "content",
+      "members": [
+        "censored_unknown"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    },
+    {
+      "groupId": "censored_record",
+      "label": "Korrekt erfassen",
+      "role": "content",
+      "members": [
+        "censored_record"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_9"
+    },
+    {
+      "groupId": "censored_later",
+      "label": "Noch intakte Objekte",
+      "role": "content",
+      "members": [
+        "censored_later"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_13"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_censored_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_context",
+      "sourceText": "In der Statistik spricht man",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_type_one_stop",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "type_one_stop",
+      "sourceText": "bis zum Ende der Beobachtungszeit",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_type_one_failures",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "type_one_failures",
+      "sourceText": "der Ausfall eines Objekts",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_censored_failure_legend",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_failure_legend",
+      "sourceText": "der Ausfall eines Objekts",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_censored_known",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_known",
+      "sourceText": "Das bedeutet: Wir wissen nur",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_type_one_censored",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "type_one_censored",
+      "sourceText": "bis zu einem bestimmten Zeitpunkt",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_censored_intact_legend",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_intact_legend",
+      "sourceText": "bis zu einem bestimmten Zeitpunkt",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_censored_unknown",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_unknown",
+      "sourceText": "aber nicht, wann es tatsächlich ausfallen wird",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_censored_record",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_record",
+      "sourceText": "jeden dieser Zensierungszeitpunkte korrekt zu erfassen",
+      "action": "show",
+      "beatId": "beat_9",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_10_censored_unknown",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_unknown",
+      "sourceText": "Liegen alle unbekannten Ausfallzeiten",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_10",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_11_type_one_censored",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "type_one_censored",
+      "sourceText": "sprechen wir von einer Rechtszensierung",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_11",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_12_censored_intact_legend",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_intact_legend",
+      "sourceText": "an den blauen Pfeilen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_12",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_13_censored_later",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_later",
+      "sourceText": "noch Objekte im Betrieb",
+      "action": "show",
+      "beatId": "beat_13",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_14_censored_unknown",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_unknown",
+      "sourceText": "dieser Zeitpunkt ist aber unbekannt",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_14",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_15_type_one_stop",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "type_one_stop",
+      "sourceText": "Die Zensierungszeit ist daher immer",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_15",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/states-v2/slide_035/00_initial.png"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "censored_context",
+        "type_one_stop",
+        "type_one_failures",
+        "censored_failure_legend",
+        "censored_known",
+        "type_one_censored",
+        "censored_intact_legend",
+        "censored_unknown",
+        "censored_record",
+        "censored_later"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/states-v2/slide_035/18_after_13_die_zensierungszeit_ist_daher_immer.png"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "reviewedAt": "2026-09-17",
+    "independentReviewer": "/root/visual_review",
+    "endState": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/after/slide_035.png",
+    "preview": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/preview/slide_035.png",
+    "stateDirectory": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/states-v2/slide_035",
+    "reviewedStateCount": 19,
+    "includesHighlights": true,
+    "findings": [],
+    "scope": "Discrete Chromium states, phrase triggers, source correspondence and legibility at 50 percent; no continuous audio playback test."
+  }
+}

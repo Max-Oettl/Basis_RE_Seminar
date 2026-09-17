@@ -1,0 +1,886 @@
+{
+  "schema_version": "svgQaReport/v1",
+  "module_id": "slide_009",
+  "svg_root": "rebuild-proposals/svg/RE2/slide_009",
+  "generated_at": "2026-08-28T06:42:34.391Z",
+  "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\tools\\svg-rebuild-qa.js rebuild-proposals/svg/RE2/slide_009 --strict-design --layout --layout-strict --layout-times 0,0.6,1,end --report-dir analysis/qa/RE2/scene-006-redesign-2026-08-28-v2",
+  "files": [
+    {
+      "path": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+      "ids": 21,
+      "animationManifest": "rebuild-proposals/svg/RE2/slide_009/scene.animation.v1.json"
+    }
+  ],
+  "issues": [
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+      "slide": "009",
+      "time_seconds": 0,
+      "state": "initial",
+      "element_id": "qc_runtime_25",
+      "related_element_id": "qc_runtime_22",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 696,
+        "right_max": 870,
+        "top_min": 648,
+        "bottom_max": 706
+      },
+      "actual": {
+        "left": 748,
+        "right": 879.0380859375,
+        "top": 684,
+        "bottom": 704
+      },
+      "bbox": {
+        "text": {
+          "left": 748,
+          "top": 684,
+          "right": 879.0380859375,
+          "bottom": 704,
+          "width": 131.0380859375,
+          "height": 20
+        },
+        "box": {
+          "left": 688,
+          "top": 640,
+          "right": 878,
+          "bottom": 714,
+          "width": 190,
+          "height": 74
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+      "slide": "009",
+      "time_seconds": 0,
+      "state": "initial",
+      "element_id": "qc_runtime_29",
+      "related_element_id": "qc_runtime_27",
+      "message": "Text does not fit inside its background box (left, right).",
+      "expected": {
+        "left_min": 1078,
+        "right_max": 1228,
+        "top_min": 648,
+        "bottom_max": 706
+      },
+      "actual": {
+        "left": 1071.4765625,
+        "right": 1234.5234375,
+        "top": 684,
+        "bottom": 704
+      },
+      "bbox": {
+        "text": {
+          "left": 1071.4765625,
+          "top": 684,
+          "right": 1234.5234375,
+          "bottom": 704,
+          "width": 163.046875,
+          "height": 20
+        },
+        "box": {
+          "left": 1070,
+          "top": 640,
+          "right": 1236,
+          "bottom": 714,
+          "width": 166,
+          "height": 74
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+      "slide": "009",
+      "time_seconds": 0.6,
+      "state": "time_1",
+      "element_id": "qc_runtime_25",
+      "related_element_id": "qc_runtime_22",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 696,
+        "right_max": 870,
+        "top_min": 648,
+        "bottom_max": 706
+      },
+      "actual": {
+        "left": 748,
+        "right": 879.0380859375,
+        "top": 684,
+        "bottom": 704
+      },
+      "bbox": {
+        "text": {
+          "left": 748,
+          "top": 684,
+          "right": 879.0380859375,
+          "bottom": 704,
+          "width": 131.0380859375,
+          "height": 20
+        },
+        "box": {
+          "left": 688,
+          "top": 640,
+          "right": 878,
+          "bottom": 714,
+          "width": 190,
+          "height": 74
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+      "slide": "009",
+      "time_seconds": 0.6,
+      "state": "time_1",
+      "element_id": "qc_runtime_29",
+      "related_element_id": "qc_runtime_27",
+      "message": "Text does not fit inside its background box (left, right).",
+      "expected": {
+        "left_min": 1078,
+        "right_max": 1228,
+        "top_min": 648,
+        "bottom_max": 706
+      },
+      "actual": {
+        "left": 1071.4765625,
+        "right": 1234.5234375,
+        "top": 684,
+        "bottom": 704
+      },
+      "bbox": {
+        "text": {
+          "left": 1071.4765625,
+          "top": 684,
+          "right": 1234.5234375,
+          "bottom": 704,
+          "width": 163.046875,
+          "height": 20
+        },
+        "box": {
+          "left": 1070,
+          "top": 640,
+          "right": 1236,
+          "bottom": 714,
+          "width": 166,
+          "height": 74
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+      "slide": "009",
+      "time_seconds": 1,
+      "state": "time_2",
+      "element_id": "qc_runtime_25",
+      "related_element_id": "qc_runtime_22",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 696,
+        "right_max": 870,
+        "top_min": 648,
+        "bottom_max": 706
+      },
+      "actual": {
+        "left": 748,
+        "right": 879.0380859375,
+        "top": 684,
+        "bottom": 704
+      },
+      "bbox": {
+        "text": {
+          "left": 748,
+          "top": 684,
+          "right": 879.0380859375,
+          "bottom": 704,
+          "width": 131.0380859375,
+          "height": 20
+        },
+        "box": {
+          "left": 688,
+          "top": 640,
+          "right": 878,
+          "bottom": 714,
+          "width": 190,
+          "height": 74
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+      "slide": "009",
+      "time_seconds": 1,
+      "state": "time_2",
+      "element_id": "qc_runtime_29",
+      "related_element_id": "qc_runtime_27",
+      "message": "Text does not fit inside its background box (left, right).",
+      "expected": {
+        "left_min": 1078,
+        "right_max": 1228,
+        "top_min": 648,
+        "bottom_max": 706
+      },
+      "actual": {
+        "left": 1071.4765625,
+        "right": 1234.5234375,
+        "top": 684,
+        "bottom": 704
+      },
+      "bbox": {
+        "text": {
+          "left": 1071.4765625,
+          "top": 684,
+          "right": 1234.5234375,
+          "bottom": 704,
+          "width": 163.046875,
+          "height": 20
+        },
+        "box": {
+          "left": 1070,
+          "top": 640,
+          "right": 1236,
+          "bottom": 714,
+          "width": 166,
+          "height": 74
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+      "slide": "009",
+      "time_seconds": 6.317,
+      "state": "end",
+      "element_id": "qc_runtime_25",
+      "related_element_id": "qc_runtime_22",
+      "message": "Text does not fit inside its background box (right).",
+      "expected": {
+        "left_min": 696,
+        "right_max": 870,
+        "top_min": 648,
+        "bottom_max": 706
+      },
+      "actual": {
+        "left": 748,
+        "right": 879.0380859375,
+        "top": 684,
+        "bottom": 704
+      },
+      "bbox": {
+        "text": {
+          "left": 748,
+          "top": 684,
+          "right": 879.0380859375,
+          "bottom": 704,
+          "width": 131.0380859375,
+          "height": 20
+        },
+        "box": {
+          "left": 688,
+          "top": 640,
+          "right": 878,
+          "bottom": 714,
+          "width": 190,
+          "height": 74
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "text_inside_box",
+      "severity": "error",
+      "file": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+      "slide": "009",
+      "time_seconds": 6.317,
+      "state": "end",
+      "element_id": "qc_runtime_29",
+      "related_element_id": "qc_runtime_27",
+      "message": "Text does not fit inside its background box (left, right).",
+      "expected": {
+        "left_min": 1078,
+        "right_max": 1228,
+        "top_min": 648,
+        "bottom_max": 706
+      },
+      "actual": {
+        "left": 1071.4765625,
+        "right": 1234.5234375,
+        "top": 684,
+        "bottom": 704
+      },
+      "bbox": {
+        "text": {
+          "left": 1071.4765625,
+          "top": 684,
+          "right": 1234.5234375,
+          "bottom": 704,
+          "width": 163.046875,
+          "height": 20
+        },
+        "box": {
+          "left": 1070,
+          "top": 640,
+          "right": 1236,
+          "bottom": 714,
+          "width": 166,
+          "height": 74
+        }
+      },
+      "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+      "detail": ""
+    },
+    {
+      "rule": "unexpected_overlap",
+      "severity": "error",
+      "file": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+      "slide": "009",
+      "time_seconds": 6.317,
+      "state": "end",
+      "element_id": "qc_runtime_52",
+      "related_element_id": "qc_runtime_53",
+      "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+      "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+      "actual": {
+        "overlap": {
+          "left": 1111.328125,
+          "top": 953,
+          "right": 1192.671875,
+          "bottom": 955,
+          "width": 81.34375,
+          "height": 2
+        }
+      },
+      "bbox": {
+        "left": {
+          "left": 1111.328125,
+          "top": 922,
+          "right": 1192.671875,
+          "bottom": 955,
+          "width": 81.34375,
+          "height": 33
+        },
+        "right": {
+          "left": 1055.6171875,
+          "top": 953,
+          "right": 1248.8818359375,
+          "bottom": 979,
+          "width": 193.2646484375,
+          "height": 26
+        },
+        "overlap": {
+          "left": 1111.328125,
+          "top": 953,
+          "right": 1192.671875,
+          "bottom": 955,
+          "width": 81.34375,
+          "height": 2
+        }
+      },
+      "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+      "detail": ""
+    }
+  ],
+  "viewer": {
+    "checked": false
+  },
+  "layout": {
+    "checked": true,
+    "strict": true,
+    "warnOnly": false,
+    "browser": {
+      "executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "port": 5460
+    },
+    "files": [
+      {
+        "path": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+        "slide": "009",
+        "states_checked": 4,
+        "browser_rendered": true
+      }
+    ],
+    "issues": [
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+        "slide": "009",
+        "time_seconds": 0,
+        "state": "initial",
+        "element_id": "qc_runtime_25",
+        "related_element_id": "qc_runtime_22",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 696,
+          "right_max": 870,
+          "top_min": 648,
+          "bottom_max": 706
+        },
+        "actual": {
+          "left": 748,
+          "right": 879.0380859375,
+          "top": 684,
+          "bottom": 704
+        },
+        "bbox": {
+          "text": {
+            "left": 748,
+            "top": 684,
+            "right": 879.0380859375,
+            "bottom": 704,
+            "width": 131.0380859375,
+            "height": 20
+          },
+          "box": {
+            "left": 688,
+            "top": 640,
+            "right": 878,
+            "bottom": 714,
+            "width": 190,
+            "height": 74
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+        "slide": "009",
+        "time_seconds": 0,
+        "state": "initial",
+        "element_id": "qc_runtime_29",
+        "related_element_id": "qc_runtime_27",
+        "message": "Text does not fit inside its background box (left, right).",
+        "expected": {
+          "left_min": 1078,
+          "right_max": 1228,
+          "top_min": 648,
+          "bottom_max": 706
+        },
+        "actual": {
+          "left": 1071.4765625,
+          "right": 1234.5234375,
+          "top": 684,
+          "bottom": 704
+        },
+        "bbox": {
+          "text": {
+            "left": 1071.4765625,
+            "top": 684,
+            "right": 1234.5234375,
+            "bottom": 704,
+            "width": 163.046875,
+            "height": 20
+          },
+          "box": {
+            "left": 1070,
+            "top": 640,
+            "right": 1236,
+            "bottom": 714,
+            "width": 166,
+            "height": 74
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+        "slide": "009",
+        "time_seconds": 0.6,
+        "state": "time_1",
+        "element_id": "qc_runtime_25",
+        "related_element_id": "qc_runtime_22",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 696,
+          "right_max": 870,
+          "top_min": 648,
+          "bottom_max": 706
+        },
+        "actual": {
+          "left": 748,
+          "right": 879.0380859375,
+          "top": 684,
+          "bottom": 704
+        },
+        "bbox": {
+          "text": {
+            "left": 748,
+            "top": 684,
+            "right": 879.0380859375,
+            "bottom": 704,
+            "width": 131.0380859375,
+            "height": 20
+          },
+          "box": {
+            "left": 688,
+            "top": 640,
+            "right": 878,
+            "bottom": 714,
+            "width": 190,
+            "height": 74
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+        "slide": "009",
+        "time_seconds": 0.6,
+        "state": "time_1",
+        "element_id": "qc_runtime_29",
+        "related_element_id": "qc_runtime_27",
+        "message": "Text does not fit inside its background box (left, right).",
+        "expected": {
+          "left_min": 1078,
+          "right_max": 1228,
+          "top_min": 648,
+          "bottom_max": 706
+        },
+        "actual": {
+          "left": 1071.4765625,
+          "right": 1234.5234375,
+          "top": 684,
+          "bottom": 704
+        },
+        "bbox": {
+          "text": {
+            "left": 1071.4765625,
+            "top": 684,
+            "right": 1234.5234375,
+            "bottom": 704,
+            "width": 163.046875,
+            "height": 20
+          },
+          "box": {
+            "left": 1070,
+            "top": 640,
+            "right": 1236,
+            "bottom": 714,
+            "width": 166,
+            "height": 74
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+        "slide": "009",
+        "time_seconds": 1,
+        "state": "time_2",
+        "element_id": "qc_runtime_25",
+        "related_element_id": "qc_runtime_22",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 696,
+          "right_max": 870,
+          "top_min": 648,
+          "bottom_max": 706
+        },
+        "actual": {
+          "left": 748,
+          "right": 879.0380859375,
+          "top": 684,
+          "bottom": 704
+        },
+        "bbox": {
+          "text": {
+            "left": 748,
+            "top": 684,
+            "right": 879.0380859375,
+            "bottom": 704,
+            "width": 131.0380859375,
+            "height": 20
+          },
+          "box": {
+            "left": 688,
+            "top": 640,
+            "right": 878,
+            "bottom": 714,
+            "width": 190,
+            "height": 74
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+        "slide": "009",
+        "time_seconds": 1,
+        "state": "time_2",
+        "element_id": "qc_runtime_29",
+        "related_element_id": "qc_runtime_27",
+        "message": "Text does not fit inside its background box (left, right).",
+        "expected": {
+          "left_min": 1078,
+          "right_max": 1228,
+          "top_min": 648,
+          "bottom_max": 706
+        },
+        "actual": {
+          "left": 1071.4765625,
+          "right": 1234.5234375,
+          "top": 684,
+          "bottom": 704
+        },
+        "bbox": {
+          "text": {
+            "left": 1071.4765625,
+            "top": 684,
+            "right": 1234.5234375,
+            "bottom": 704,
+            "width": 163.046875,
+            "height": 20
+          },
+          "box": {
+            "left": 1070,
+            "top": 640,
+            "right": 1236,
+            "bottom": 714,
+            "width": 166,
+            "height": 74
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+        "slide": "009",
+        "time_seconds": 6.317,
+        "state": "end",
+        "element_id": "qc_runtime_25",
+        "related_element_id": "qc_runtime_22",
+        "message": "Text does not fit inside its background box (right).",
+        "expected": {
+          "left_min": 696,
+          "right_max": 870,
+          "top_min": 648,
+          "bottom_max": 706
+        },
+        "actual": {
+          "left": 748,
+          "right": 879.0380859375,
+          "top": 684,
+          "bottom": 704
+        },
+        "bbox": {
+          "text": {
+            "left": 748,
+            "top": 684,
+            "right": 879.0380859375,
+            "bottom": 704,
+            "width": 131.0380859375,
+            "height": 20
+          },
+          "box": {
+            "left": 688,
+            "top": 640,
+            "right": 878,
+            "bottom": 714,
+            "width": 190,
+            "height": 74
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "text_inside_box",
+        "severity": "error",
+        "file": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+        "slide": "009",
+        "time_seconds": 6.317,
+        "state": "end",
+        "element_id": "qc_runtime_29",
+        "related_element_id": "qc_runtime_27",
+        "message": "Text does not fit inside its background box (left, right).",
+        "expected": {
+          "left_min": 1078,
+          "right_max": 1228,
+          "top_min": 648,
+          "bottom_max": 706
+        },
+        "actual": {
+          "left": 1071.4765625,
+          "right": 1234.5234375,
+          "top": 684,
+          "bottom": 704
+        },
+        "bbox": {
+          "text": {
+            "left": 1071.4765625,
+            "top": 684,
+            "right": 1234.5234375,
+            "bottom": 704,
+            "width": 163.046875,
+            "height": 20
+          },
+          "box": {
+            "left": 1070,
+            "top": 640,
+            "right": 1236,
+            "bottom": 714,
+            "width": 166,
+            "height": 74
+          }
+        },
+        "recommendation": "Box enlarge, text wrap, or move text so visible padding remains on every side.",
+        "detail": ""
+      },
+      {
+        "rule": "unexpected_overlap",
+        "severity": "error",
+        "file": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+        "slide": "009",
+        "time_seconds": 6.317,
+        "state": "end",
+        "element_id": "qc_runtime_52",
+        "related_element_id": "qc_runtime_53",
+        "message": "Important elements overlap without an explicit data-qc-allow-overlap exception.",
+        "expected": "No unexpected overlap between important labels, formulas, callouts, and markers.",
+        "actual": {
+          "overlap": {
+            "left": 1111.328125,
+            "top": 953,
+            "right": 1192.671875,
+            "bottom": 955,
+            "width": 81.34375,
+            "height": 2
+          }
+        },
+        "bbox": {
+          "left": {
+            "left": 1111.328125,
+            "top": 922,
+            "right": 1192.671875,
+            "bottom": 955,
+            "width": 81.34375,
+            "height": 33
+          },
+          "right": {
+            "left": 1055.6171875,
+            "top": 953,
+            "right": 1248.8818359375,
+            "bottom": 979,
+            "width": 193.2646484375,
+            "height": 26
+          },
+          "overlap": {
+            "left": 1111.328125,
+            "top": 953,
+            "right": 1192.671875,
+            "bottom": 955,
+            "width": 81.34375,
+            "height": 2
+          }
+        },
+        "recommendation": "Move one element, add wrapping, or mark the intentional overlap with data-qc-allow-overlap=\"true\".",
+        "detail": ""
+      }
+    ],
+    "summary": {
+      "checked": true,
+      "files_checked": 1,
+      "states_checked": 4,
+      "errors": 9,
+      "warnings": 0
+    }
+  },
+  "design": {
+    "checked": true,
+    "strict": true,
+    "warnOnly": false,
+    "brandTokens": {
+      "loaded": true,
+      "path": "brand/company-brand-tokens.json",
+      "profile": "reltest-education",
+      "companyName": "RelTest Education"
+    },
+    "tokenSources": [
+      {
+        "loaded": true,
+        "path": "brand/company-brand-tokens.json",
+        "profile": "reltest-education"
+      }
+    ],
+    "files": [
+      {
+        "path": "rebuild-proposals/svg/RE2/slide_009/slide_009.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 7,
+        "textCount": 24
+      }
+    ],
+    "issues": [],
+    "summary": {
+      "files_checked": 1,
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "handoff": {
+    "checked": false
+  },
+  "summary": {
+    "files_checked": 1,
+    "manifests_checked": 1,
+    "layout_files_checked": 1,
+    "layout_states_checked": 4,
+    "design_files_checked": 1,
+    "design_errors": 0,
+    "design_warnings": 0,
+    "handoff_scenes_checked": 0,
+    "handoff_manifests_checked": 0,
+    "handoff_errors": 0,
+    "handoff_warnings": 0,
+    "errors": 9,
+    "warnings": 0
+  }
+}

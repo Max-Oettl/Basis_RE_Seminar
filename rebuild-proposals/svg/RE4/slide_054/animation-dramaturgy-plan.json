@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re4_src_054",
+  "svgPath": "slide_054.svg",
+  "spokenText": "Damit man ein Zuverlässigkeitsblockdiagramm sinnvoll anwenden kann, müssen bestimmte Voraussetzungen erfüllt sein.\n\nErstens: Jede Komponente kann nur zwei Zustände einnehmen – sie ist entweder funktionsfähig oder ausgefallen. Es gibt also keine Zwischenstufen wie \"eingeschränkt funktionsfähig\" oder \"in Wartung\". Nur wenn alle benötigten Komponenten intakt sind, gilt das System als funktionstüchtig.\n\nZweitens: Die Komponenten sind nicht reparierbar. Das bedeutet: Sobald eine Komponente einmal ausgefallen ist, bleibt sie es auch – eine Reparatur findet nicht statt. Diese Annahme vereinfacht die Modellierung erheblich und ist gerade für viele technische Systeme mit begrenzter Lebensdauer durchaus realistisch.\n\nUnd Drittens: Die Komponenten sind unabhängig voneinander. Das heißt, der Ausfall einer Komponente beeinflusst nicht die Wahrscheinlichkeit, mit der eine andere Komponente ausfällt. Es gibt also keine gemeinsamen Ursachen, Koppelungen oder Wechselwirkungen zwischen den Komponenten.\n\nIn der Praxis lassen sich viele Systeme mit diesen Voraussetzungen gut modellieren. Doch es gibt auch Fälle, in denen das Zuverlässigkeitsblockdiagramm komplexer wird – zum Beispiel dann, wenn sich das System nicht direkt als reine Reihen- oder Parallelschaltung beschreiben lässt.\n\nEin typisches Beispiel dafür ist die sogenannte Brückenschaltung, in der der Signalfluss durch mehrere mögliche Pfade führen kann. Diese Strukturen erfordern eine genauere Betrachtung und lassen sich nicht mehr mit den einfachen Rechenregeln lösen.\n\nWie du in solchen Fällen vorgehst, lernst du in der nächsten Lektion.",
+  "animationDecision": "static",
+  "animationRationale": "Statische Referenz- oder Übungsszene. Der gemeinsame Quellabschnitt enthält keinen eigenen wortgetreuen Aufbau für diese Grafik.",
+  "initialStateRationale": "Der vollständige Inhalt ist sofort sichtbar; keine künstlichen Einzelreveal-Trigger.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/after/slide_054.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false
+  },
+  "narrativeBeats": [],
+  "semanticGroups": [
+    {
+      "groupId": "scene_content",
+      "label": "Boolesche Zustände eindeutig codieren",
+      "role": "content",
+      "members": [
+        "scene_content"
+      ],
+      "dependsOn": [],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Statische Referenz ohne eigene Aufbaunarration."
+    }
+  ],
+  "steps": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [
+        "scene_content"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/visual-review-54.md"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "scene_content"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/visual-review-54.md"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "reviewEvidence": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/visual-review-54.md",
+    "states": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/after/slide_054.png"
+  }
+}

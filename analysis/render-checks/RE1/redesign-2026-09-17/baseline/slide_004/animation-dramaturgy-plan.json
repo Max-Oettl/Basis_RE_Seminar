@@ -1,0 +1,205 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re1_src_004",
+  "svgPath": "rebuild-proposals/svg/RE1/slide_004/slide_004.svg",
+  "spokenText": "Das Rückrufe nicht nur die Auto- und Luftfahrtbranche betreffen, sehen wir an einem Beispiel aus dem Jahr Zweitausendsechzehn aus dem Bereich der Unterhaltungselektronik.\n\nSamsung initiierte im September Zweitausendsechzehn die bisher größte Rückrufaktion für ein Premium-Telefon in seiner Geschichte. Der Auslöser war ein Designfehler bai der Akkuproduktion des Samsung Galaxy Note Sieben, der zu Akkubränden führte. Diese Rückrufaktion betraf weltweit Zwei-Komma-Fünf Millionen verkaufte Geräte.\n\nDie Konsequenzen für Samsung waren erheblich. Der Verlust durch die Rückrufaktion belief sich auf etwa Fünf-Komma-Drei Milliarden US-Dollar, und das Image der Marke erlitt einen beträchtlichen Schaden. Der Vorfall diente als weiteres drastisches Beispiel dafür, wie Produktionsfehler nicht nur finanzielle Auswirkungen haben können, sondern auch das Vertrauen der Verbraucher nachhaltig beeinträchtigen kann.",
+  "animationDecision": "animated",
+  "animationRationale": "Der Produktkontext bleibt sichtbar; Rückrufauslöser und Geschäftswirkung werden als zwei vollständige Sinnabschnitte aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Show wird als reines Fade bewertet.",
+      "Gleiche sourceText-Phrase startet alle Schritte derselben Triggergruppe gleichzeitig."
+    ]
+  },
+  "initialStateRationale": "Das Gerätefoto stellt den Fall sofort her, ohne Ursache oder Ergebnis vorwegzunehmen.",
+  "semanticGroups": [
+    {
+      "groupId": "brand_background",
+      "label": "RelTest-Education-Hintergrund",
+      "role": "background",
+      "members": [
+        "Education-Farbverlauf",
+        "ruhiges technisches Raster"
+      ],
+      "initialState": "static_decorative",
+      "dependsOn": [],
+      "groupingRationale": "Der Hintergrund ist ruhiger Markenrahmen und trägt keine vorweggenommene Fachinformation."
+    },
+    {
+      "groupId": "case_media_004",
+      "label": "Galaxy-Note-7-Foto",
+      "role": "context",
+      "members": [
+        "vollständiges Gerätefoto",
+        "Medienkontur"
+      ],
+      "initialState": "visible_context",
+      "dependsOn": [],
+      "groupingRationale": "Foto und Kontur bilden ein untrennbares Quellmedium."
+    },
+    {
+      "groupId": "note7_case_context",
+      "label": "Akkufehler und Brandfolge",
+      "role": "case_context",
+      "members": [
+        "Ursachenkarte",
+        "Designfehler",
+        "Akkubrand",
+        "Rückruf"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "case_media_004"
+      ],
+      "groupingRationale": "Auslöser und unmittelbare Folge werden gemeinsam verstanden."
+    },
+    {
+      "groupId": "note7_business_impact",
+      "label": "Ausmaß und Geschäftswirkung",
+      "role": "result",
+      "members": [
+        "2,5-Millionen-Kennzahl",
+        "5,3-Milliarden-Kennzahl",
+        "Vertrauensschaden"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "note7_case_context"
+      ],
+      "groupingRationale": "Die drei Karten bilden die vollständige Geschäftswirkung."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "introduce_note7_case",
+      "claim": "Samsung startet den großen Note-7-Rückruf.",
+      "sourceText": "Samsung initiierte im September Zweitausendsechzehn",
+      "occurrence": 1,
+      "requiredContext": [
+        "case_media_004"
+      ],
+      "revealTogether": [
+        "note7_case_context"
+      ],
+      "learnerStateBefore": "Nur das Produktfoto ist sichtbar.",
+      "learnerStateAfter": "Auslöser und Brandfolge sind sichtbar."
+    },
+    {
+      "beatId": "show_note7_impact",
+      "claim": "Der Rückruf führt zu hohen Kosten und Vertrauensverlust.",
+      "sourceText": "Die Konsequenzen für Samsung waren erheblich",
+      "occurrence": 1,
+      "requiredContext": [
+        "case_media_004",
+        "note7_case_context"
+      ],
+      "revealTogether": [
+        "note7_business_impact"
+      ],
+      "learnerStateBefore": "Der technische Fall ist erklärt.",
+      "learnerStateAfter": "Umfang, Verlust und Vertrauensschaden sind sichtbar."
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_note7_case_context",
+      "beatId": "introduce_note7_case",
+      "targetId": "note7_case_context",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Der vollständige Fehlerkontext wird eingeblendet."
+    },
+    {
+      "stepId": "show_note7_business_impact",
+      "beatId": "show_note7_impact",
+      "targetId": "note7_business_impact",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Alle Konsequenzkarten erscheinen gemeinsam."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "case_media_004"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Das Gerätefoto stellt den Fall sofort her, ohne Ursache oder Ergebnis vorwegzunehmen."
+    },
+    {
+      "stateId": "before_introduce_note7_case",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "case_media_004"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Nur das Produktfoto ist sichtbar."
+    },
+    {
+      "stateId": "after_introduce_note7_case",
+      "afterBeatId": "introduce_note7_case",
+      "visibleGroups": [
+        "brand_background",
+        "case_media_004",
+        "note7_case_context"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Auslöser und Brandfolge sind sichtbar."
+    },
+    {
+      "stateId": "before_show_note7_impact",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "case_media_004",
+        "note7_case_context"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der technische Fall ist erklärt."
+    },
+    {
+      "stateId": "after_show_note7_impact",
+      "afterBeatId": "show_note7_impact",
+      "visibleGroups": [
+        "brand_background",
+        "case_media_004",
+        "note7_case_context",
+        "note7_business_impact"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Umfang, Verlust und Vertrauensschaden sind sichtbar."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "show_note7_impact",
+      "visibleGroups": [
+        "brand_background",
+        "case_media_004",
+        "note7_case_context",
+        "note7_business_impact"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der vollständige statische Endzustand bleibt ohne Animation fachlich verständlich."
+    }
+  ]
+}

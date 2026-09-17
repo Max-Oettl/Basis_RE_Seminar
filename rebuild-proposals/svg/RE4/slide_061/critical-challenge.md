@@ -1,10 +1,3 @@
-# Kritischer Challenge — slide_061
+# Prüffokus slide_061
 
-- Quellen: RE4::61
-- Struktur: Kapitel/Lektion bewusst nicht zugeordnet
-- Design-Challenge: Die Methodenübersicht nutzt ein einheitliches Kartensystem; keine Methode wird ohne fachlichen Grund farblich bevorzugt.
-- Animations-Challenge: Statisch: Methodenübersicht ohne eigenen belastbaren Sprechertext-Trigger.
-- Sichtprüfung: finaler statischer Zustand plus 1920×1080-Endzustand geprüft
-- Korrektur/Entscheidung: Im visuellen und animationslogischen Challenge keine zusätzliche Korrektur erforderlich.
-- Technisches Ergebnis: 0 Fehler; 21 erwartete Asset-Warnungen für nicht-16:9-Formel-/Plotfragmente und Live-Text-Formeln; 0 gerenderte Layoutprobleme
-- Urteil: FREIGEGEBEN
+Vollständige Quellenübertragung, beidseitiger Inhaltsabgleich und Lesbarkeit bei960×540 prüfen. Keine Masterelemente, übergroßen Zustandsziffern oder wiederholten Legendenbalken. Nachweise: analysis/render-checks/RE4/feedback-54-66-2026-09-17.

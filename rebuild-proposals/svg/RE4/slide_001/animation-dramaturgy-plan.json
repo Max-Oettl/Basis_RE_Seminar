@@ -1,0 +1,422 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re4_src_001",
+  "svgPath": "slide_001.svg",
+  "spokenText": "In dieser Lektion beschäftigen wir uns mit der Frage: Wie lässt sich die Zuverlässigkeit eines Systems berechnen?\n\nDazu schauen wir uns zunächst an, was ein „System“ überhaupt ist.\n\nEin System besteht aus verschiedenen Teilsystemen, Baugruppen und Komponenten – die miteinander in Beziehung stehen und gemeinsam eine übergeordnete Funktion erfüllen.\n\nNehmen wir als Beispiel einen PKW:\n\nDie Systemfunktion hier lautet ganz einfach – es soll fahren können.\n\nDie entsprechende Fehlfunktion wäre: Das Fahrzeug lässt sich nicht mehr bewegen und das Fahren ist unmöglich.\n\nDiese Systemfunktion wird aber nicht von einem einzelnen Bauteil getragen, sondern ist nur möglich, wenn mehrere Subsysteme gemeinsam funktionieren – zum Beispiel der Motor, das Getriebe oder das Fahrwerk.\n\nWerfen wir exemplarisch einen genaueren Blick auf das Getriebe.\n\nSeine Funktion ist es, das Drehmoment vom Motor auf die Räder zu übertragen.\n\nWenn diese Funktion ausfällt – also kein Drehmoment mehr übertragen wird – sprechen wir von einem Getriebeversagen.\n\nDoch auch das Getriebe ist nicht einfach ein Bauteil, sondern besteht wiederum aus der Eingangswelle, Zahnrädern, der Ausgangswelle, dem Gehäuse und weiterer Komponenten.\n\nAll diese einzelnen Komponenten müssen funktionieren, damit das Getriebe als Ganzes zuverlässig arbeitet.\n\nSchauen wir uns beispielhaft die Zahnräder an.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/after/slide_001.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "In dieser Lektion beschäftigen wir uns",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Ein System besteht",
+      "occurrence": 1,
+      "claim": "Drei Systemebenen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "system_context"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Nehmen wir als Beispiel einen PKW",
+      "occurrence": 1,
+      "claim": "PKW",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "system_pkw"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Die Systemfunktion hier lautet",
+      "occurrence": 1,
+      "claim": "Funktion des PKW",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "pkw_function"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "Die entsprechende Fehlfunktion wäre",
+      "occurrence": 1,
+      "claim": "Fehlfunktion des PKW",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "pkw_failure"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "mehrere Subsysteme gemeinsam funktionieren",
+      "occurrence": 1,
+      "claim": "Motor, Getriebe und Fahrwerk",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "system_subsystems"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "einen genaueren Blick auf das Getriebe",
+      "occurrence": 1,
+      "claim": "Motor, Getriebe und Fahrwerk",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "system_subsystems"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "Seine Funktion ist es",
+      "occurrence": 1,
+      "claim": "Funktion des Getriebes",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "gear_function"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Wenn diese Funktion ausfällt",
+      "occurrence": 1,
+      "claim": "Fehlfunktion des Getriebes",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "gear_failure"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "Doch auch das Getriebe",
+      "occurrence": 1,
+      "claim": "Vier Komponenten des Getriebes",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "system_components"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "All diese einzelnen Komponenten müssen funktionieren",
+      "occurrence": 1,
+      "claim": "Vier Komponenten des Getriebes",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "system_components"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "Schauen wir uns beispielhaft die Zahnräder an",
+      "occurrence": 1,
+      "claim": "Zahnräder im Kraftfluss",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "gear_focus"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "system_context",
+      "label": "Drei Systemebenen",
+      "role": "content",
+      "members": [
+        "system_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "system_pkw",
+      "label": "PKW",
+      "role": "content",
+      "members": [
+        "system_pkw"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "pkw_function",
+      "label": "Funktion des PKW",
+      "role": "content",
+      "members": [
+        "pkw_function"
+      ],
+      "dependsOn": [
+        "system_pkw"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "pkw_failure",
+      "label": "Fehlfunktion des PKW",
+      "role": "content",
+      "members": [
+        "pkw_failure"
+      ],
+      "dependsOn": [
+        "pkw_function"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "system_subsystems",
+      "label": "Motor, Getriebe und Fahrwerk",
+      "role": "content",
+      "members": [
+        "system_subsystems"
+      ],
+      "dependsOn": [
+        "system_pkw"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "gear_function",
+      "label": "Funktion des Getriebes",
+      "role": "content",
+      "members": [
+        "gear_function"
+      ],
+      "dependsOn": [
+        "system_subsystems"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "gear_failure",
+      "label": "Fehlfunktion des Getriebes",
+      "role": "content",
+      "members": [
+        "gear_failure"
+      ],
+      "dependsOn": [
+        "gear_function"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    },
+    {
+      "groupId": "system_components",
+      "label": "Vier Komponenten des Getriebes",
+      "role": "content",
+      "members": [
+        "system_components"
+      ],
+      "dependsOn": [
+        "system_subsystems"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_9"
+    },
+    {
+      "groupId": "gear_focus",
+      "label": "Zahnräder im Kraftfluss",
+      "role": "content",
+      "members": [
+        "gear_focus"
+      ],
+      "dependsOn": [
+        "system_components"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_11"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_system_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "system_context",
+      "sourceText": "Ein System besteht",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_system_pkw",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "system_pkw",
+      "sourceText": "Nehmen wir als Beispiel einen PKW",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_pkw_function",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "pkw_function",
+      "sourceText": "Die Systemfunktion hier lautet",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_pkw_failure",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "pkw_failure",
+      "sourceText": "Die entsprechende Fehlfunktion wäre",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_system_subsystems",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "system_subsystems",
+      "sourceText": "mehrere Subsysteme gemeinsam funktionieren",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_system_subsystems",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "system_subsystems",
+      "sourceText": "einen genaueren Blick auf das Getriebe",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_6",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_07_gear_function",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "gear_function",
+      "sourceText": "Seine Funktion ist es",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_gear_failure",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "gear_failure",
+      "sourceText": "Wenn diese Funktion ausfällt",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_system_components",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "system_components",
+      "sourceText": "Doch auch das Getriebe",
+      "action": "show",
+      "beatId": "beat_9",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_10_system_components",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "system_components",
+      "sourceText": "All diese einzelnen Komponenten müssen funktionieren",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_10",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_11_gear_focus",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "gear_focus",
+      "sourceText": "Schauen wir uns beispielhaft die Zahnräder an",
+      "action": "show",
+      "beatId": "beat_11",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/qa-final/svg-qa-report.md"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "system_context",
+        "system_pkw",
+        "pkw_function",
+        "pkw_failure",
+        "system_subsystems",
+        "gear_function",
+        "gear_failure",
+        "system_components",
+        "gear_focus"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/qa-final/svg-qa-report.md"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "reviewEvidence": "analysis/render-checks/RE4/feedback-2026-09-17/review-summary.md"
+}

@@ -226,6 +226,7 @@ function extractIds(svgText) {
 function validateSvg(svgPath, report) {
   const svgText = readUtf8(svgPath);
   const relative = toPosixPath(svgPath);
+  const isFormulaAsset = /(?:^|[\\/])formulas[\\/][^\\/]+\.svg$/i.test(svgPath);
   const fileResult = {
     path: relative,
     ids: 0,
@@ -245,7 +246,7 @@ function validateSvg(svgPath, report) {
     addIssue(report, "error", svgPath, "Missing or invalid viewBox.");
   } else {
     const ratio = viewBox.width / viewBox.height;
-    if (Math.abs(ratio - 16 / 9) > 0.02) {
+    if (!isFormulaAsset && Math.abs(ratio - 16 / 9) > 0.02) {
       addIssue(report, "warning", svgPath, "ViewBox is not close to 16:9.", `${viewBox.width}x${viewBox.height}`);
     }
 
@@ -270,7 +271,6 @@ function validateSvg(svgPath, report) {
     addIssue(report, "error", svgPath, "Possible mojibake or replacement character found.");
   }
 
-  const isFormulaAsset = /(?:^|[\\/])formulas[\\/][^\\/]+\.svg$/i.test(svgPath);
   if (isFormulaAsset && /<(?:text|tspan)\b/i.test(svgText)) {
     addIssue(
       report,

@@ -1,0 +1,53 @@
+{
+  "role": "illustrative_models_not_observed_seminar_data",
+  "source_slide": 43,
+  "mls": {
+    "x_transformed": [
+      1.1,
+      2.0,
+      3.2,
+      4.0,
+      5.8,
+      7.2
+    ],
+    "y_transformed": [
+      1.0,
+      1.4,
+      1.7,
+      4.1,
+      4.5,
+      4.8
+    ],
+    "slope": 0.6972714096666456,
+    "intercept": 0.2089293591278603,
+    "residual_sum_squares": 2.0494864200642757,
+    "selected_observation": 4,
+    "normal_equations_verified": true
+  },
+  "mle": {
+    "failures": [
+      8.0,
+      12.0,
+      17.0,
+      24.0,
+      31.0,
+      46.0
+    ],
+    "right_censored": [
+      35.0,
+      50.0
+    ],
+    "T_opt": 36.00620278378522,
+    "b_opt": 1.6233396894622412,
+    "log_likelihood_max": -26.879090345799156,
+    "profile_score": 0.0,
+    "nearby_log_likelihoods": [
+      -26.879893254724806,
+      -26.879868883959244,
+      -26.87951701191293,
+      -26.879512157482885
+    ],
+    "local_maximum_verified": true,
+    "formula": "d ln(b) - d b ln(T) + (b-1) sum_fail ln(t) - sum_all (t/T)^b"
+  }
+}

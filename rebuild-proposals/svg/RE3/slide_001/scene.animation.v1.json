@@ -5,13 +5,13 @@
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
       "targetId": "intro_1",
-      "label": "Lebensdauerdaten",
+      "label": "Ausfallzeiten",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -19,31 +19,7 @@
     },
     {
       "targetId": "intro_2",
-      "label": "Auswertung",
-      "status": "animated",
-      "visibleInEditor": true,
-      "render": true,
-      "confidence": "high"
-    },
-    {
-      "targetId": "intro_3",
-      "label": "Weibullverteilung",
-      "status": "animated",
-      "visibleInEditor": true,
-      "render": true,
-      "confidence": "high"
-    },
-    {
-      "targetId": "intro_4",
-      "label": "Parameter",
-      "status": "animated",
-      "visibleInEditor": true,
-      "render": true,
-      "confidence": "high"
-    },
-    {
-      "targetId": "intro_5",
-      "label": "Prognosen",
+      "label": "Auswertung von Ausfallzeiten",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -51,7 +27,55 @@
     },
     {
       "targetId": "intro_relation",
-      "label": "Gesamtweg",
+      "label": "Ziel der Auswertung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "intro_3",
+      "label": "Statistische Methoden",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "intro_4",
+      "label": "Verteilungsparameter",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "intro_5",
+      "label": "Weibullverteilung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "intro_formula",
+      "label": "Weibull-Funktion",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "intro_parameter_t",
+      "label": "Charakteristische Lebensdauer",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "intro_parameter_b",
+      "label": "Formparameter",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -61,63 +85,95 @@
   "steps": [
     {
       "stepId": "step_01_intro_1",
-      "targetId": "intro_1",
-      "action": "show",
-      "sourceText": "In diesem Abschnitt lernen wir die Lebensdauerdatenanalyse kennen.",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "intro_1",
+      "sourceText": "In diesem Abschnitt lernen wir",
+      "action": "show"
     },
     {
       "stepId": "step_02_intro_2",
+      "occurrence": 1,
+      "confidence": "high",
       "targetId": "intro_2",
-      "action": "show",
-      "sourceText": "Sobald wir die Lebensdauerdaten gesammelt haben, können wir sie auswerten.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "sourceText": "können wir sie auswerten",
+      "action": "show"
     },
     {
-      "stepId": "step_03_intro_3",
-      "targetId": "intro_3",
-      "action": "show",
-      "sourceText": "In diesem Fall nutzen wir die Weibullverteilung.",
+      "stepId": "step_03_intro_relation",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
-    },
-    {
-      "stepId": "step_04_intro_4",
-      "targetId": "intro_4",
-      "action": "show",
-      "sourceText": "Die charakteristische Lebensdauer gibt dabei eine Art Lageparameter an, während der Formparameter die Gestalt der Verteilung beeinflusst und damit die Steigung der Geraden im Weibull-Papier bestimmt.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
-    },
-    {
-      "stepId": "step_05_intro_5",
-      "targetId": "intro_5",
-      "action": "show",
-      "sourceText": "Sobald wir die Weibullverteilung basierend auf den Lebensdauerdaten ermittelt haben, können wir Vergleiche anstellen, Berechnungen durchführen und Prognosen erstellen.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
-    },
-    {
-      "stepId": "step_06_intro_relation",
       "targetId": "intro_relation",
-      "action": "draw",
-      "sourceText": "Zunächst konzentrieren wir uns jedoch auf das grundlegende Vorgehen für die Analyse von Lebensdauerdaten.",
+      "sourceText": "Das Ziel ist es",
+      "action": "show"
+    },
+    {
+      "stepId": "step_04_intro_3",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Beziehung erscheint nach ihren fachlichen Endpunkten.",
-      "drawDurFrames": 42
+      "targetId": "intro_3",
+      "sourceText": "Dafür wenden wir geeignete statistische Methoden an",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_intro_4",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "intro_4",
+      "sourceText": "die Parameter der zugrundeliegenden Lebensdauerverteilung",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_intro_5",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "intro_5",
+      "sourceText": "In diesem Fall nutzen wir die Weibullverteilung",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_intro_formula",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "intro_formula",
+      "sourceText": "mithilfe einer mathematischen Formel beschreiben",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_intro_parameter_t",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "intro_parameter_t",
+      "sourceText": "Die charakteristische Lebensdauer",
+      "action": "show"
+    },
+    {
+      "stepId": "step_09_intro_parameter_b",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "intro_parameter_b",
+      "sourceText": "während der Formparameter",
+      "action": "show"
+    },
+    {
+      "stepId": "step_10_intro_5",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "intro_5",
+      "sourceText": "Vergleiche anstellen, Berechnungen durchführen und Prognosen erstellen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_11_intro_3",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "intro_3",
+      "sourceText": "Dafür nutzen wir die grafische Methode",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     }
   ]
 }

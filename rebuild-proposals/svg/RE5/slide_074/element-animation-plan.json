@@ -1,0 +1,31 @@
+{
+  "sceneId": "re5_src_074",
+  "decision": "animated",
+  "staticGate": "passed_before_animation",
+  "targets": [
+    {
+      "id": "strategy_success_run",
+      "label": "Success Run",
+      "cue": "Der Success-Run Test ist eine ausfallfreie Teststrategie",
+      "action": "show"
+    },
+    {
+      "id": "strategy_eol",
+      "label": "End of Life",
+      "cue": "Der End-of-Life Test ist ausfallbasiert",
+      "action": "show"
+    },
+    {
+      "id": "strategy_alt",
+      "label": "Accelerated Life",
+      "cue": "Der Accelerated Life Test ist ebenfalls ausfallbasiert",
+      "action": "show"
+    },
+    {
+      "id": "strategy_degradation",
+      "label": "Degradation",
+      "cue": "Degradationstests sind die richtige Wahl",
+      "action": "show"
+    }
+  ]
+}

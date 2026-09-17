@@ -1,0 +1,1637 @@
+{
+  "schema_version": "basisRebuildScenePlan/v2",
+  "module_id": "RE5",
+  "source_state_count": 75,
+  "target_scene_count": 33,
+  "removed_source_slides": [],
+  "sequence_decision": "75 PowerPoint-Aufbauzustände werden zu 33 fachlich vollständigen, narrationssynchronen Szenen konsolidiert.",
+  "structure_status": "Kapitel 1-3 und Lektionen gemäß Nutzervorgabe vom 21.08.2026.",
+  "reference_lock": {
+    "named_reference": "Aktuelle RelTest-Education-CI des bereits redesigneten Moduls RE4",
+    "approved_targets": [
+      "RE4::1",
+      "RE4::13",
+      "RE4::48",
+      "RE4::65"
+    ],
+    "inherited_artifact_scope": "full-slide",
+    "inherited_embedding_target": "standalone-slide",
+    "downstream_owned_master_elements": [
+      "visible_title",
+      "title_rule",
+      "footer",
+      "logo",
+      "scene_id"
+    ],
+    "token_source": "brand/reltest-education-slide-design-tokens.json"
+  },
+  "scenes": [
+    {
+      "output_slide_number": 1,
+      "work_unit": "slide_001",
+      "scene_id": "re5_src_001",
+      "source_slides": [
+        1
+      ],
+      "primary_source_slide": 1,
+      "render_source_slide": 1,
+      "source_text_section_id": "section_001",
+      "title": "Tests im Zuverlässigkeitsmanagement",
+      "takeaway": "Lebensdauertests sind in Schwachstellenanalyse, Erprobung und formalen Nachweis eingebettet.",
+      "archetype": "lifecycle-map",
+      "builder": "reliability_management",
+      "animation_decision": "animated",
+      "plot_strategy": "none",
+      "formula_strategy": [],
+      "chapter": 1,
+      "lesson": 1,
+      "notes": "",
+      "spoken_text": "In diesem Modul beschäftigen wir uns mit der Lebensdauertestplanung und dem Zuverlässigkeitsnachweis.Um dieses Thema einzuordnen, schauen wir uns zuerst an, wie Tests im Gesamtprozess des Zuverlässigkeitsmanagements verankert sind.\n\nDu erinnerst dich: Das Zuverlässigkeitsmanagement besteht aus mehreren Phasen. Wir befinden uns nun in Phase drei: der Zuverlässigkeitserprobung und dem Nachweis. Genau hier spielen Lebensdauertests eine zentrale Rolle.Aber auch in Phase zwei, also in der Schwachstellenanalyse und Zuverlässigkeitsbewertung, werden bereits Tests eingesetzt.\n\nVielleicht hast du schon von verschiedenen Zuverlässigkeitstests gehört.Zum Beispiel vom Halt-Test – das steht für Highly Accelerated Life Test. Es ist ein hochbeschleunigter Lebensdauertest, mit dem Schwachstellen im Produkt frühzeitig aufgedeckt werden. Er zählt also zu den qualitativen Testmethoden.\n\nDaneben gibt es die sogenannten End-of-Life Tests. Sie dienen dazu, die tatsächliche Zuverlässigkeit zu ermitteln. Diese Tests können ebenfalls beschleunigt durchgeführt werden.Ein weiteres Beispiel ist der Success Run Test. Er wird genutzt, um die Zuverlässigkeit formell nachzuweisen – etwa für eine Produktfreigabe.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_001",
+      "order": 1,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::1",
+      "absorbed_source_states": [],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_001/slide_001.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_001/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "management_phases",
+          "phase_two_tests",
+          "phase_three_tests"
+        ],
+        "semantic_groups": [
+          "management_phases",
+          "phase_two_tests",
+          "phase_three_tests"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 2,
+      "work_unit": "slide_002",
+      "scene_id": "re5_src_002",
+      "source_slides": [
+        2
+      ],
+      "primary_source_slide": 2,
+      "render_source_slide": 2,
+      "source_text_section_id": "section_001",
+      "title": "Drei Ziele von Zuverlässigkeitstests",
+      "takeaway": "Tests identifizieren Risiken, messen Zuverlässigkeit oder sichern einen formalen Nachweis ab.",
+      "archetype": "three-goals",
+      "builder": "test_objectives",
+      "animation_decision": "animated",
+      "plot_strategy": "none",
+      "formula_strategy": [],
+      "chapter": 1,
+      "lesson": 1,
+      "notes": "",
+      "spoken_text": "Falls dir diese Begriffe noch nicht geläufig sind, ist das kein Problem. Im Laufe des Moduls wirst du die Methoden im Detail noch kennenlernen. Wichtig ist an dieser Stelle nur: Tests lassen sich grundsätzlich in drei Zielsetzungen einteilen.\n\nErstens die Identifizierung von Risiken – also die Schwachstellenanalyse.\n\nZweitens die Zuverlässigkeitsmessung. Hierbei wird ermittelt, wie zuverlässig das Produkt tatsächlich ist.\n\nUnd drittens der Zuverlässigkeitsnachweis. Dieser ist notwendig, um eine formale Produktfreigabe zu ermöglichen.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_001",
+      "order": 2,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::2",
+      "absorbed_source_states": [],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_002/slide_002.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_002/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "risk_identification",
+          "reliability_measurement",
+          "reliability_proof"
+        ],
+        "semantic_groups": [
+          "risk_identification",
+          "reliability_measurement",
+          "reliability_proof"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 3,
+      "work_unit": "slide_003",
+      "scene_id": "re5_src_003",
+      "source_slides": [
+        3
+      ],
+      "primary_source_slide": 3,
+      "render_source_slide": 3,
+      "source_text_section_id": "section_001",
+      "title": "Testmethoden im Entwicklungsprozess",
+      "takeaway": "Qualitative Tests starten früh; quantitative Messung und Nachweis folgen mit zunehmender Produktreife.",
+      "archetype": "phase-timeline",
+      "builder": "development_timeline",
+      "animation_decision": "animated",
+      "plot_strategy": "none",
+      "formula_strategy": [],
+      "chapter": 1,
+      "lesson": 1,
+      "notes": "",
+      "spoken_text": "Schauen wir uns nun an, wann diese Testmethoden entlang des Produktentwicklungsprozesses eingesetzt werden. Hierzu siehst du zunächst die einzelnen Prozessschritte, angefangen von der Planung über Konzeption, bis hin zum Entwurf, Design und Produktion.\n\nZusätzlich sind die Prozessschritte des Zuverlässigkeitsmanagements dargestellt.\n\nQualitative Methoden wie der Halt-Test kommen möglichst früh in der Entwicklung zum Einsatz. Sie dienen dazu, Fehlerursachen und Risiken aufzudecken, damit die Zuverlässigkeit verbessert werden kann – meist durch Designanpassungen.\n\nQuantitative Methoden wie der End-of-Life Tests oder Degradationstests folgen später. Sie werden genutzt, wenn das Produktdesign schon gereift ist, um die tatsächliche Lebensdauer und Zuverlässigkeit zu bestimmen. Man weiß danach also, wie gut das Produkt wirklich ist.\n\nFür den formalen Nachweis können sowohl Success Run Tests als auch quantitative Lebensdauertests eingesetzt werden. Beide Testarten eignen sich, um eine Produktfreigabe abzusichern.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_001",
+      "order": 3,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::3",
+      "absorbed_source_states": [],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_003/slide_003.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_003/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "development_axis",
+          "qualitative_window",
+          "quantitative_window",
+          "proof_window"
+        ],
+        "semantic_groups": [
+          "development_axis",
+          "qualitative_window",
+          "quantitative_window",
+          "proof_window"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 4,
+      "work_unit": "slide_004",
+      "scene_id": "re5_src_004",
+      "source_slides": [
+        4
+      ],
+      "primary_source_slide": 4,
+      "render_source_slide": 4,
+      "source_text_section_id": "section_002",
+      "title": "Lebensdauerversuche zweigleisig planen",
+      "takeaway": "Reproduzierbare Versuche verbinden praktische Prüfplanung mit statistischer Auslegung.",
+      "archetype": "dual-planning",
+      "builder": "dual_planning",
+      "animation_decision": "animated",
+      "plot_strategy": "none",
+      "formula_strategy": [],
+      "chapter": 1,
+      "lesson": 2,
+      "notes": "",
+      "spoken_text": "Schauen wir uns in diesem Abschnitt einmal die Planung von Lebensdauerversuchen an.\n\nDie Planung lässt sich grundsätzlich in zwei Bereiche aufteilen: in eine versuchstechnisch-messtechnische Planung und in eine statistische Planung.\n\nBeginnen wir mit der versuchstechnisch-messtechnischen Planung.Hier geht es darum, die praktischen Rahmenbedingungen für den Versuch festzulegen. Dazu gehören die Auswahl geeigneter Prüfstände und Messmittel, die Definition der Belastungen, die Festlegung von Umgebungsbedingungen wie Temperatur oder Feuchtigkeit sowie die Entscheidung über das Prüfobjekt, also welche Bauteile oder Systeme konkret getestet werden sollen.\n\nZiel dieser Planung ist es, sicherzustellen, dass die Tests unter reproduzierbaren und kontrollierten Bedingungen ablaufen, sodass die Ergebnisse später aussagekräftig sind.\n\nKommen wir nun zur statistischen Planung.Zuerst muss eine geeignete Teststrategie ausgewählt werden, die zum Ziel des Tests passt.Anschließend stellt sich die Frage, wie viele Prüflinge benötigt werden, wie lange die Prüfdauer sein muss und welche Lastniveaus getestet werden sollen.Ebenfalls wird festgelegt, wie die Stichproben entnommen werden – in der Regel geschieht dies über eine Zufallsstichprobe.\n\nDas Ziel dieser Planung ist es, den Test so aufzubauen, dass Aufwand, Dauer und Kosten zuverlässig abgeschätzt werden können. Dazu müssen alle zuvor genannten statistischen Größen – wie die Anzahl der Prüflinge, die Prüfdauer oder die Lastniveaus – sinnvoll geplant werden. Sie bilden die Grundlage, um Aufwand und Kosten realistisch zu bestimmen.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_002",
+      "order": 4,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::4",
+      "absorbed_source_states": [],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_004/slide_004.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_004/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "technical_planning",
+          "statistical_planning",
+          "shared_outcome"
+        ],
+        "semantic_groups": [
+          "technical_planning",
+          "statistical_planning",
+          "shared_outcome"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 5,
+      "work_unit": "slide_005",
+      "scene_id": "re5_src_005",
+      "source_slides": [
+        5
+      ],
+      "primary_source_slide": 5,
+      "render_source_slide": 5,
+      "source_text_section_id": "section_002",
+      "title": "Teststrategien über drei Entscheidungen wählen",
+      "takeaway": "Testart, Zensierung und Beschleunigung bestimmen gemeinsam die Teststrategie.",
+      "archetype": "decision-dimensions",
+      "builder": "strategy_dimensions",
+      "animation_decision": "animated",
+      "plot_strategy": "none",
+      "formula_strategy": [],
+      "chapter": 1,
+      "lesson": 2,
+      "notes": "",
+      "spoken_text": "Für die Auswahl der Teststrategie müssen drei Punkte betrachtet werden.\n\nErstens die Testart: Dazu zählen Tests bis zum Ausfall, die sogenannten End-of-Life Tests. Tests mit fester Laufzeit ohne Ausfall, die Success Run Tests. Und Tests, die gezielt Verschleißmechanismen berücksichtigen, die sogenannten Degradationstests.\n\nZweitens der Zensierungstyp – das bedeutet, ob ein Test vollständig unzensiert durchgeführt wird oder ob er zeitlich oder stückzahlmäßig begrenzt ist.\n\nErinnerst du dich? Von einer Zensierung sprechen wir dann, wenn ein Prüfling den Test zwar verlässt, aber noch funktionsfähig ist. Das heißt: Er ist nicht ausgefallen, sondern wurde nur aus dem Versuch genommen – zum Beispiel, weil die vorgesehene Testzeit abgelaufen ist.\n\nUnd drittens die Beschleunigungsart – also die Entscheidung, ob es sich um unbeschleunigte oder beschleunigte Tests handelt.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_002",
+      "order": 5,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::5",
+      "absorbed_source_states": [],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_005/slide_005.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_005/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "test_type",
+          "censoring_type",
+          "acceleration_type"
+        ],
+        "semantic_groups": [
+          "test_type",
+          "censoring_type",
+          "acceleration_type"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 6,
+      "work_unit": "slide_006",
+      "scene_id": "re5_src_006",
+      "source_slides": [
+        6
+      ],
+      "primary_source_slide": 6,
+      "render_source_slide": 6,
+      "source_text_section_id": "section_002",
+      "title": "Vom Testziel zur Testkonfiguration",
+      "takeaway": "Die gewählte Strategie wird erst durch Prüflingszahl, Lastniveaus, Prüfdauer und Ablauf ausführbar.",
+      "archetype": "decision-tree",
+      "builder": "strategy_tree",
+      "animation_decision": "animated",
+      "plot_strategy": "none",
+      "formula_strategy": [],
+      "chapter": 1,
+      "lesson": 2,
+      "notes": "",
+      "spoken_text": "Zu Auswahl der Teststrategie kann folgendes Schema helfen.\n\nWir starten mit der Testart. In diesem Modul betrachten wir nur zwei Varianten: den End-of-Life Test und den Success Run Test.Wenn du mehr über Degradationstests – also Tests mit Verschleißausfällen – erfahren möchtest, dann findest du diese im Experten-Training zum Thema Testplanung.\n\nIm nächsten Schritt unterscheiden wir nach dem Testtyp.Ein End-of-Life Test kann vollständig durchgeführt werden, also bis alle Prüflinge ausgefallen sind. Oder er kann zensiert sein – das bedeutet, der Test wird vorzeitig beendet, obwohl noch nicht alle Prüflinge ausgefallen sind.\n\nBeim Success Run Test gilt die Definition, dass kein Prüfling ausfallen darf.Hier macht die Unterscheidung zwischen vollständigen und zensierten Tests keinen Sinn, weil es im Prinzip immer nur eine Form der Zensierung gibt: Der Test endet nach einer festgelegten Laufzeit, solange kein Prüfling ausgefallen ist.\n\nIm Anschluss betrachten wir die Beschleunigungsart.Ein Test kann unbeschleunigt durchgeführt werden, also unter normalen Einsatzbedingungen.Oder er wird beschleunigt, zum Beispiel durch höhere Belastungen wie Temperatur, Spannung oder durch eine erhöhte Anzahl von Lastzyklen. Je nach Testart kommen hier unterschiedliche Beschleunigungsarten zum Einsatz. Diese wirst du noch im Laufe dieses Moduls kennenlernen.\n\nAus diesen Kombinationen ergeben sich verschiedene Teststrategien – vom klassischen End-of-Life Test über beschleunigte Varianten bis hin zum Success Run Test.\n\nGanz unten in der Grafik siehst du die Testkonfiguration.Damit sind die konkreten Testrandbedingungen gemeint, die für die Durchführung festgelegt werden. Dies hast du ja schon bereits zuvor gelernt.Dazu gehören zum Beispiel die Prüflingsanzahl, die gewählten Lastniveaus, die Prüfdauer und auch der genaue Ablauf des Tests.Diese Rahmenbedingungen sorgen dafür, dass ein Test reproduzierbar, aussagekräftig und statistisch korrekt durchgeführt werden kann.\n\nDamit haben wir gesehen: die Planung von Lebensdauerversuchen umfasst sowohl praktische als auch statistische Aspekte. Nur durch das Zusammenspiel beider Bereiche lassen sich Tests aufbauen, die einerseits realistisch sind und andererseits zuverlässige, statistisch abgesicherte Ergebnisse liefern.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_002",
+      "order": 6,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::6",
+      "absorbed_source_states": [],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_006/slide_006.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_006/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "strategy_root",
+          "end_of_life_branch",
+          "success_run_branch",
+          "test_configuration"
+        ],
+        "semantic_groups": [
+          "strategy_root",
+          "end_of_life_branch",
+          "success_run_branch",
+          "test_configuration"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 7,
+      "work_unit": "slide_007",
+      "scene_id": "re5_src_007",
+      "source_slides": [
+        7
+      ],
+      "primary_source_slide": 7,
+      "render_source_slide": 7,
+      "source_text_section_id": "section_003",
+      "title": "Zuverlässigkeit nachweisen",
+      "takeaway": "Ein Nachweis zeigt, dass die Produktzuverlässigkeit oberhalb der geforderten Grenze liegt.",
+      "archetype": "definition",
+      "builder": "proof_definition",
+      "animation_decision": "static",
+      "plot_strategy": "none",
+      "formula_strategy": [],
+      "chapter": 1,
+      "lesson": 3,
+      "notes": "",
+      "spoken_text": "Schauen wir uns nun genauer an, was wir eigentlich unter einem Zuverlässigkeitsnachweis verstehen.Im Grunde ist es ganz einfach: Wir müssen zeigen, dass die Zuverlässigkeit unseres Produktes höher ist als die geforderte. Doch wie gelingt uns das?Am besten lässt sich das mit Hilfe des Weibull-Diagramms erklären. Zuvor schauen wir uns aber noch einmal eine Wiederholung zu den Vertrauensbereichen an.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_003",
+      "order": 7,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::7",
+      "absorbed_source_states": [],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_007/slide_007.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_007/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "static",
+        "rationale": "Die Szene ist als ruhiger Orientierungspunkt vollständig sichtbar; ein Einzel-Reveal hätte keinen zusätzlichen Lernwert.",
+        "public_targets": [],
+        "semantic_groups": [],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 8,
+      "work_unit": "slide_008",
+      "scene_id": "re5_src_008",
+      "source_slides": [
+        8,
+        9
+      ],
+      "primary_source_slide": 9,
+      "render_source_slide": 9,
+      "source_text_section_id": "section_003",
+      "title": "Stichprobe, Weibullgerade und Vertrauensgrenzen",
+      "takeaway": "Erst der Vertrauensbereich überträgt Stichprobenergebnisse belastbar auf die Grundgesamtheit.",
+      "archetype": "weibull-confidence",
+      "builder": "confidence_recap",
+      "animation_decision": "animated",
+      "plot_strategy": "weibull_confidence",
+      "formula_strategy": [],
+      "chapter": 1,
+      "lesson": 3,
+      "notes": "",
+      "spoken_text": "Wenn wir Lebensdauerdaten auswerten, erhalten wir eine Weibull-Verteilung. Da diese Daten nur eine Stichprobe darstellen, brauchen wir zusätzlich den Vertrauensbereich, um Aussagen über die Grundgesamtheit treffen zu können. Das haben wir ja bereits im Modul Lebensdauerdatenanalyse gelernt.\n\nDer Vertrauensbereich wird durch zwei Vertrauensgrenzen definiert. Sie geben den Bereich an, in dem sich die wahre Weibull-Verteilung mit einer bestimmten Wahrscheinlichkeit befindet.Ein neunzig-Prozent-Vertrauensbereich bedeutet, dass die wahre Verteilung mit einer Wahrscheinlichkeit von neunzig Prozent innerhalb dieser Grenzen liegt.\n\nEine fünfundneunzig-Prozent-Vertrauensgrenze bedeutet, dass die wahre Weibullverteilung mit einer Wahrscheinlichkeit von fünfundneunzig Prozent rechts von dieser Grenze liegt – also im Bereich höherer Lebensdauern.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_003",
+      "order": 8,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::9",
+      "absorbed_source_states": [
+        9
+      ],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_008/slide_008.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_008/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "sample_context",
+          "plot_fit",
+          "plot_confidence_limits"
+        ],
+        "semantic_groups": [
+          "sample_context",
+          "plot_fit",
+          "plot_confidence_limits"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 10,
+      "work_unit": "slide_010",
+      "scene_id": "re5_src_010",
+      "source_slides": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "primary_source_slide": 14,
+      "render_source_slide": 14,
+      "source_text_section_id": "section_003",
+      "title": "Den Nachweispunkt im Weibulldiagramm prüfen",
+      "takeaway": "Die Anforderung ist erfüllt, wenn die maßgebliche Vertrauensgrenze rechts vom Zielpunkt liegt.",
+      "archetype": "proof-plot",
+      "builder": "proof_acceptance",
+      "animation_decision": "animated",
+      "plot_strategy": "weibull_confidence",
+      "formula_strategy": [],
+      "chapter": 1,
+      "lesson": 3,
+      "notes": "",
+      "spoken_text": "Diese Information ist wichtig, um zu verstehen, wie wir eine Zuverlässigkeitsanforderung definieren und diese auch anschließend nachweisen können.Eine typische Anforderung besteht dabei aus drei Parametern: einer Zeit, einer geforderten Zuverlässigkeit beziehungsweise einer Ausfallwahrscheinlichkeit und einer Aussagesicherheit.Ein Beispiel: Wir wollen nachweisen, dass unser Produkt für eine Lebensdauer von zehn hoch sechs Lastwechseln eine Zuverlässigkeit von neunzig Prozent erreicht – also eine Ausfallwahrscheinlichkeit von zehn Prozent – und das mit einer Aussagesicherheit von fünfundneunzig Prozent.\n\nDiesen Punkt können wir als Anforderung in das Weibull-Diagramm eintragen.Unabhängig davon, wie gut unser Produkt tatsächlich ist, bleibt dieser Punkt zunächst als Ziel definiert.Haben wir Lebensdauerdaten, zum Beispiel aus einem Test, vorliegen, können wir eine Weibull-Analyse durchführen. Auf diese Weise erhalten wir die Weibullgerade und den gewünschten Vertrauensbereich entsprechend der geforderten Aussagesicherheit. Die Lage dieser Beiden hängt von den ermittelten Weibullparametern und von der Stichprobengröße ab.\n\nNun prüfen wir, ob die obere Vertrauensgrenze rechts von unserem Ziel, also dem nachzuweisenden Punkt liegt.Ist das der Fall, dann haben wir die Anforderung erfüllt.Liegt die obere Vertrauensgrenze hingegen links vom Zielpunkt, dann können wir die Anforderung nicht erfüllen.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_003",
+      "order": 9,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::14",
+      "absorbed_source_states": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_010/slide_010.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_010/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "requirement_parameters",
+          "plot_target_point",
+          "plot_confidence_limits",
+          "acceptance_result"
+        ],
+        "semantic_groups": [
+          "requirement_parameters",
+          "plot_target_point",
+          "plot_confidence_limits",
+          "acceptance_result"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 15,
+      "work_unit": "slide_015",
+      "scene_id": "re5_src_015",
+      "source_slides": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "primary_source_slide": 18,
+      "render_source_slide": 18,
+      "source_text_section_id": "section_003",
+      "title": "Wenn die Anforderung nicht erfüllt ist",
+      "takeaway": "Dann sind nur geringere Zuverlässigkeit, kürzere Lebensdauer oder geringere Aussagesicherheit nachweisbar.",
+      "archetype": "proof-alternatives",
+      "builder": "proof_alternatives",
+      "animation_decision": "animated",
+      "plot_strategy": "weibull_confidence",
+      "formula_strategy": [],
+      "chapter": 1,
+      "lesson": 3,
+      "notes": "",
+      "spoken_text": "In diesem Fall können wir nur Folgendes nachweisen:\n\nErstens – eine geringere Zuverlässigkeit beziehungsweise eine höhere Ausfallwahrscheinlichkeit unter gleicher Lebensdauer. Wir können zum Beispiel nur dreiundachtzig Prozent Zuverlässigkeit beziehungsweise siebzehn Prozent Ausfallwahrscheinlichkeit nachweisen.\n\nZweitens – eine geringere Lebensdauer unter gleicher Zuverlässigkeit. Wir können hier bei einer Zuverlässigkeit von neunzig Prozent nur eine Lebensdauer von sechs mal zehn hoch fünf Lastwechseln nachweisen.\n\nOder drittens – wir können das Ziel nur mit einer geringeren Aussagesicherheit bestätigen. In diesem Fall zum Beispiel nur mit einer Aussagesicherheit von siebzig Prozent.\n\nZum Schluss noch ein wichtiger Hinweis: Die Breite des Vertrauensbereiches hängt stark von der Stichprobengröße ab. Je mehr Prüflinge wir also testen, desto schmaler wird der Vertrauensbereich. Dadurch steigen die Chancen, das Ziel auch wirklich nachweisen zu können.\n\nDies gelingt aber natürlich nur dann, wenn die Zuverlässigkeit unseres Produktes ohnehin besser ist als die geforderte.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_003",
+      "order": 10,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::18",
+      "absorbed_source_states": [
+        16,
+        17,
+        18
+      ],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_015/slide_015.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_015/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "proof_gap",
+          "lower_reliability",
+          "shorter_lifetime",
+          "lower_confidence"
+        ],
+        "semantic_groups": [
+          "proof_gap",
+          "lower_reliability",
+          "shorter_lifetime",
+          "lower_confidence"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 19,
+      "work_unit": "slide_019",
+      "scene_id": "re5_src_019",
+      "source_slides": [
+        19,
+        20
+      ],
+      "primary_source_slide": 20,
+      "render_source_slide": 20,
+      "source_text_section_id": "section_004",
+      "title": "Success Run: Nachweis ohne Ausfall",
+      "takeaway": "Ohne Ausfälle entstehen weder Weibullgerade noch Vertrauensbereich – der Nachweis braucht einen anderen statistischen Weg.",
+      "archetype": "problem-framing",
+      "builder": "success_run_problem",
+      "animation_decision": "animated",
+      "plot_strategy": "weibull_confidence",
+      "formula_strategy": [],
+      "chapter": 2,
+      "lesson": 1,
+      "notes": "",
+      "spoken_text": "Das Ziel eines Success Run Tests ist es, nachzuweisen, dass die geforderte Zuverlässigkeit erfüllt ist.\n\nDie Anforderung kann zum Beispiel so aussehen: Eine Mindestzuverlässigkeit von neunzig Prozent bei einer Lebensdauer von zweihunderttausend Kilometern. Das entspricht einer B-zehn Lebensdauer von zweihunderttausend Kilometern.\n\nZusätzlich wird ein Vertrauensniveau festgelegt – etwa fünfundneunzig Prozent – mit dem die Anforderung nachgewiesen werden soll.\n\nWenn wir die Weibullverteilung samt Vertrauensbereich unseres Produktes kennen, können wir direkt prüfen, ob wir das Ziel erfüllt haben. Wir schauen also, ob der nachzuweisende Punkt links von der jeweiligen Vertrauensgrenze liegt. Das hast du ja bereits zuvor schon gelernt.\n\nBeim Success Run Test gibt es jedoch eine Besonderheit. Hier wird nur bis zur geforderten Lebensdauer getestet. Und während des Testlaufs darf kein einziger Prüfling ausfallen.\n\nDarum spricht man auch von einem Erfolgslauf oder Success Run.\n\nDie Problematik liegt auf der Hand: Wenn kein Ausfall auftritt, können wir keine Weibullgerade berechnen und auch keinen Vertrauensbereich ableiten. Wir wissen also nicht, wie unsere Anforderung zur wahren Zuverlässigkeit des Produktes liegt.\n\nWie können wir aber trotzdem einen Nachweis führen?",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_004",
+      "order": 11,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::20",
+      "absorbed_source_states": [
+        20
+      ],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_019/slide_019.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_019/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "success_run_requirement",
+          "zero_failures",
+          "missing_weibull",
+          "proof_question"
+        ],
+        "semantic_groups": [
+          "success_run_requirement",
+          "zero_failures",
+          "missing_weibull",
+          "proof_question"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 21,
+      "work_unit": "slide_021",
+      "scene_id": "re5_src_021",
+      "source_slides": [
+        21
+      ],
+      "primary_source_slide": 21,
+      "render_source_slide": 21,
+      "source_text_section_id": "section_004",
+      "title": "Die Success-Run-Gleichung herleiten",
+      "takeaway": "Die Binomiallogik verknüpft Gruppenüberleben, Irrtumswahrscheinlichkeit und Aussagesicherheit.",
+      "archetype": "formula-derivation",
+      "builder": "success_run_derivation",
+      "animation_decision": "animated",
+      "plot_strategy": "none",
+      "formula_strategy": [
+        "group_survival",
+        "alpha_relation",
+        "success_run"
+      ],
+      "chapter": 2,
+      "lesson": 1,
+      "notes": "",
+      "spoken_text": "Die Lösung liegt in der Statistik, genauer in der Binomialverteilung.\n\nStellen wir uns n identische Prüflinge mit der Zuverlässigkeit R von t vor.\n\nDie Wahrscheinlichkeit, dass alle n Prüflinge bis zur Zeit t überleben, ergibt sich nach dem Produktgesetz der Wahrscheinlichkeiten zu R von t hoch n.\n\nUnd genau das ist die zentrale Idee hinter dem Success Run Test:\n\nDie Überlebenswahrscheinlichkeit der gesamten Prüflingsgruppe ergibt sich als Produkt der Überlebenswahrscheinlichkeiten der einzelnen Prüflinge.\n\nDu fragst dich bestimmt, wie wir nun diese Information für den Nachweis nutzen können?\n\nUm das zu beantworten, betrachten wir die Irrtumswahrscheinlichkeit Alpha.\n\nAlpha beschreibt die Wahrscheinlichkeit, dass die geforderte Zuverlässigkeit in Wirklichkeit nicht erfüllt ist, wir den Test aber zufällig trotzdem ohne Ausfälle bestehen.\n\nDie Irrtumswahrscheinlichkeit Alpha ist daher gleich der Überlebenswahrscheinlichkeit der Prüflingsgruppe – also R von t hoch n.\n\nAber warum ist das so?\n\nGanz einfach: Weil Alpha genau den Fall beschreibt, dass das Produkt schlechter ist als gefordert, wir aber durch Zufall eine Stichprobe erwischt haben, bei der alle Prüflinge die Testzeit überstehen.\n\nDamit gilt: Alpha gleich R von t hoch n.\n\nDie Aussagesicherheit ist das Gegenstück zur Irrtumswahrscheinlichkeit.\n\nSie gibt an, mit welcher Wahrscheinlichkeit wir mit unserem Test wirklich korrekt nachweisen, dass die geforderte Zuverlässigkeit erfüllt ist.\n\nSie berechnet sich demnach zu eins minus Alpha.\n\nSetzen wir nun für Alpha R von t hoch n ein, erhalten wir die Success Run Gleichung.\n\nDiese zeigt uns, wie viele Prüflinge n wir ohne Ausfall testen müssen, um mit einer bestimmten Aussagesicherheit P A eine geforderte Zuverlässigkeit R zum Zeitpunkt t nachweisen zu können.\n\nDamit hast du das Grundprinzip der Success Run Gleichung verstanden: Auch ohne Ausfälle können wir ihrer Hilfe einen formalen Zuverlässigkeitsnachweis führen.\n\nFalls dir die Herleitung etwas abstrakt vorkam, mach dir keine Sorgen. Wichtig ist vor allem, dass du die Gleichung anwenden kannst – und das ist wirklich einfach.\n\nAußerdem lässt sich die Gleichung je nach Fragestellung umstellen. Man kann damit zum Beispiel den erforderlichen Stichprobenumfang berechnen.Dies schauen wir uns im Folgenden anhand eines Beispiels einmal genauer an.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_004",
+      "order": 12,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::21",
+      "absorbed_source_states": [],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_021/slide_021.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_021/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "specimen_group",
+          "group_survival_formula",
+          "alpha_formula",
+          "success_run_formula"
+        ],
+        "semantic_groups": [
+          "specimen_group",
+          "group_survival_formula",
+          "alpha_formula",
+          "success_run_formula"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 22,
+      "work_unit": "slide_022",
+      "scene_id": "re5_src_022",
+      "source_slides": [
+        22
+      ],
+      "primary_source_slide": 22,
+      "render_source_slide": 22,
+      "source_text_section_id": "section_005",
+      "title": "Stichprobenumfang berechnen",
+      "takeaway": "Für R(t)=90 % und P_A=95 % werden 29 ausfallfreie Prüflinge benötigt.",
+      "archetype": "worked-formula",
+      "builder": "sample_size_example",
+      "animation_decision": "animated",
+      "plot_strategy": "none",
+      "formula_strategy": [
+        "sample_size",
+        "sample_size_example"
+      ],
+      "chapter": 2,
+      "lesson": 2,
+      "notes": "",
+      "spoken_text": "In diesem Beispiel geht es darum, wie wir den erforderlichen Stichprobenumfang für einen Nachweis mit Hilfe des Success Run Tests bestimmen können.\n\nIm Lastenheft für ein Fahrzeuggetriebe ist folgende Forderung festgelegt:Die B-zehn Lebensdauer soll mindestens zweihundertfünfzigtausend Kilometer betragen.Zusätzlich ist eine Aussagesicherheit von fünfundneunzig Prozent gefordert.\n\nGesucht ist also die erforderliche Anzahl an Prüflingen, in diesem Fall also die Anzahl an Getrieben, die ohne Ausfall getestet werden müssen.\n\nDie Berechnung erfolgt mit Hilfe der Success Run Gleichung.Hierbei gilt: Die Aussagesicherheit P A ist gleich eins minus der Zuverlässigkeit R von t hoch n.Nun stellen wir die Gleichung nach der Stichprobengröße n um.\n\nDamit ergibt sich:n ist gleich dem natürlichen Logarithmus von eins minus P A, geteilt durch den natürlichen Logarithmus der Zuverlässigkeit R.\n\nSetzen wir die geforderten Werte ein, erhalten wir:n ist gleich dem Logarithmus von eins minus null Komma neun fünf, geteilt durch den Logarithmus von null Komma neun.Das ergibt rund achtundzwanzig Komma vier drei.\n\nDa die Anzahl der Prüflinge eine ganze Zahl sein muss, und wir auf der sicheren Seite sein wollen, runden wir auf.Das bedeutet: Um den Nachweis zu erfüllen, benötigen wir neunundzwanzig Prüflinge, die ohne Ausfall bis zur geforderten Lebensdauer getestet werden müssen.\n\nHaben wir dies erreicht, können wir das Zuverlässigkeitsziel von neunzig Prozent bei zweihundertfünfzigtausend Kilometern mit einer Aussagesicherheit von fünfundneunzig Prozent nachweisen.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_005",
+      "order": 13,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::22",
+      "absorbed_source_states": [],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_022/slide_022.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_022/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "requirement_block",
+          "sample_size_formula",
+          "substitution",
+          "sample_size_result"
+        ],
+        "semantic_groups": [
+          "requirement_block",
+          "sample_size_formula",
+          "substitution",
+          "sample_size_result"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 23,
+      "work_unit": "slide_023",
+      "scene_id": "re5_src_023",
+      "source_slides": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "primary_source_slide": 28,
+      "render_source_slide": 28,
+      "source_text_section_id": "section_005",
+      "title": "Anforderungen treiben den Stichprobenumfang",
+      "takeaway": "Schon kleine Steigerungen von Zuverlässigkeit oder Aussagesicherheit erhöhen n deutlich.",
+      "archetype": "lookup-matrix",
+      "builder": "sample_size_table",
+      "animation_decision": "animated",
+      "plot_strategy": "none",
+      "formula_strategy": [],
+      "chapter": 2,
+      "lesson": 2,
+      "notes": "",
+      "spoken_text": "Schauen wir uns nun einige Beispiele für erforderliche Stichprobengrößen in Abhängigkeit von der geforderten Aussagesicherheit P A und der Zuverlässigkeit R an.\n\nDie Tabelle zeigt verschiedene Kombinationen.Nehmen wir zum Beispiel eine geforderte Aussagesicherheit von neunzig Prozent und eine Zuverlässigkeit von neunzig Prozent. In diesem Fall benötigen wir zweiundzwanzig Prüflinge.Steigern wir die Zuverlässigkeit auf fünfundneunzig Prozent bei gleicher Aussagesicherheit. Nun steigt die erforderliche Stichprobengröße bereits auf fünfundvierzig Prüflinge.\n\nNoch deutlicher wird der Effekt bei sehr hohen Anforderungen.Wenn wir eine Aussagesicherheit von fünfundneunzig Prozent und eine Zuverlässigkeit von ebenfalls fünfundneunzig Prozent fordern, benötigen wir schon neunundfünfzig Prüflinge.\n\nErhöhen wir nun noch die geforderte Zuverlässigkeit auf neunundneunzig Prozent, steigt die Zahl sogar auf zweihundertneunundneunzig Prüflinge.\n\nDiese Beispiele zeigen klar: Je höher die geforderte Zuverlässigkeit und je höher die Aussagesicherheit, desto mehr Prüflinge werden benötigt.In der Praxis ist das oft eine große Herausforderung, da so viele Prüflinge je nach Produkt nicht immer zur Verfügung stehen oder die Kosten dafür zu hoch wären.\n\nDarum ist es wichtig, schon früh im Projekt die Anforderungen realistisch zu definieren und die Teststrategie darauf abzustimmen.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_005",
+      "order": 14,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::28",
+      "absorbed_source_states": [
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_023/slide_023.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_023/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "lookup_table",
+          "example_90_90",
+          "example_95_90",
+          "example_95_95",
+          "example_99_95"
+        ],
+        "semantic_groups": [
+          "lookup_table",
+          "example_90_90",
+          "example_95_90",
+          "example_95_95",
+          "example_99_95"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 29,
+      "work_unit": "slide_029",
+      "scene_id": "re5_src_029",
+      "source_slides": [
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "primary_source_slide": 33,
+      "render_source_slide": 33,
+      "source_text_section_id": "section_005",
+      "title": "Stichprobengröße und Mindestzuverlässigkeit",
+      "takeaway": "Mehr Prüflinge erhöhen den möglichen Nachweis; höhere Aussagesicherheit verschiebt die Kurve nach rechts.",
+      "archetype": "technical-plot",
+      "builder": "success_run_curves",
+      "animation_decision": "animated",
+      "plot_strategy": "success_run_curves",
+      "formula_strategy": [],
+      "chapter": 2,
+      "lesson": 2,
+      "notes": "",
+      "spoken_text": "Nun schauen wir uns das Zusammenspiel der einzelnen Parameter in der Success Run Gleichung noch einmal grafisch an.Dieses Diagramm zeigt die Mindestzuverlässigkeit in Abhängigkeit vom Stichprobenumfang, jeweils für verschiedene Aussagesicherheiten.\n\nWichtig dabei: Bis zum Zeitpunkt t darf kein einziger Ausfall auftreten.\n\nWir sehen die Kurven für Aussagesicherheiten von achtzig, neunzig und fünfundneunzig Prozent.Mit zunehmender Stichprobengröße steigt die Zuverlässigkeit, die wir nachweisen können.\n\nEin Beispiel: Angenommen, wir möchten eine Mindestzuverlässigkeit von neunzig Prozent nachweisen.Bei einer Aussagesicherheit von fünfundneunzig Prozent benötigen wir dafür rund neunundzwanzig Prüflinge.Bei einer Aussagesicherheit von neunzig Prozent reichen hingegen bereits etwa zweiundzwanzig Prüflinge aus.\n\nDiese Werte findest du exakt so auch in der vorherigen Tabelle wieder.Das Diagramm macht den Zusammenhang zwischen Prüflingsanzahl, geforderter Mindestzuverlässigkeit und gewünschter Aussagesicherheit noch einmal anschaulich sichtbar.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_005",
+      "order": 15,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::33",
+      "absorbed_source_states": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_029/slide_029.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_029/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "plot_curves",
+          "plot_target_95",
+          "plot_target_90",
+          "zero_failure_note"
+        ],
+        "semantic_groups": [
+          "plot_curves",
+          "plot_target_95",
+          "plot_target_90",
+          "zero_failure_note"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 34,
+      "work_unit": "slide_034",
+      "scene_id": "re5_src_034",
+      "source_slides": [
+        34,
+        35
+      ],
+      "primary_source_slide": 35,
+      "render_source_slide": 35,
+      "source_text_section_id": "section_006",
+      "title": "Prüfzeit und geforderte Lebensdauer unterscheiden",
+      "takeaway": "Weicht die Prüfzeit von der Zielzeit ab, muss die Success-Run-Gleichung korrigiert werden.",
+      "archetype": "formula-framing",
+      "builder": "duration_ratio_intro",
+      "animation_decision": "static",
+      "plot_strategy": "none",
+      "formula_strategy": [
+        "duration_ratio"
+      ],
+      "chapter": 2,
+      "lesson": 3,
+      "notes": "",
+      "spoken_text": "Im nächsten Schritt betrachten wir den Einfluss unterschiedlicher Prüfzeiten auf den Success Run Test.Die zentrale Frage lautet: Wie wirkt sich eine Verlängerung oder Verkürzung der Testzeit auf den erforderlichen Stichprobenumfang aus?\n\nHierzu definieren wir zunächst die Prüfdauer t p und die geforderte Lebensdauer t.Wenn wir genau bis zur geforderten Lebensdauer t prüfen, also wenn te p gleich t ist, dann gilt die Success Run Gleichung so, wie wir sie bisher hergeleitet haben.\n\nIn der Praxis ist das aber selten der Fall. Oft weicht die Prüfdauer von der geforderten Lebensdauer ab – wir prüfen also entweder kürzer oder länger.Aber können wir dann einfach dieselbe Gleichung benutzen? Nein. Die ursprüngliche Gleichung gilt nur dann, wenn Prüfzeit und geforderte Lebensdauer identisch sind. Sobald sich die Prüfzeit ändert, verändert sich auch die Überlebenswahrscheinlichkeit.\n\nUm diesen Effekt korrekt zu berücksichtigen, führen wir das sogenannte Lebensdauerverhältnis ein.Es beschreibt das Verhältnis zwischen der tatsächlichen Prüfdauer und der geforderten Lebensdauer:L v ist gleich t p geteilt durch t.\n\nAber warum brauchen wir dieses Verhältnis?",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_006",
+      "order": 16,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::35",
+      "absorbed_source_states": [
+        35
+      ],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_034/slide_034.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_034/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "static",
+        "rationale": "Die Szene ist als ruhiger Orientierungspunkt vollständig sichtbar; ein Einzel-Reveal hätte keinen zusätzlichen Lernwert.",
+        "public_targets": [],
+        "semantic_groups": [],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 36,
+      "work_unit": "slide_036",
+      "scene_id": "re5_src_036",
+      "source_slides": [
+        36
+      ],
+      "primary_source_slide": 36,
+      "render_source_slide": 36,
+      "source_text_section_id": "section_006",
+      "title": "Warum der Formparameter b zählt",
+      "takeaway": "Die Weibullform bestimmt, wie sich Überlebenswahrscheinlichkeiten zwischen zwei Zeiten verändern.",
+      "archetype": "weibull-relation",
+      "builder": "duration_weibull_relation",
+      "animation_decision": "animated",
+      "plot_strategy": "weibull_probability",
+      "formula_strategy": [
+        "survival_ratio"
+      ],
+      "chapter": 2,
+      "lesson": 3,
+      "notes": "",
+      "spoken_text": "Die Überlebenswahrscheinlichkeit einer Komponente steigt nicht gleichmäßig mit der Zeit, sondern hängt vom Verlauf der Lebensdauerverteilung ab.\n\nHier kommt die Weibullverteilung ins Spiel. Sie beschreibt, wie stark die Wahrscheinlichkeit eines Ausfalls mit der Zeit zunimmt.\n\nDer entscheidende Parameter ist der Formparameter b. Er bestimmt die Steigung der Kurve:Ist b größer als eins, steigen die Ausfallraten mit der Zeit überproportional an. Ist b gleich eins, liegt ein konstanter Ausfallprozess vor, ähnlich wie bei der Exponentialverteilung.\n\nDas bedeutet: Wenn wir wissen wollen, wie sich die Überlebenswahrscheinlichkeit zwischen zwei verschiedenen Zeiten verändert, müssen wir die beiden Werte ins Verhältnis setzen.Genauer gesagt betrachten wir das Verhältnis der logarithmierten Überlebenswahrscheinlichkeiten zum Zeitpunkt der Prüfdauer und der geforderten Lebensdauer.Mathematisch lässt sich zeigen, dass dieses Verhältnis über L v hoch b beschrieben wird.\n\nEs hängt also genau vom Lebensdauerverhältnis ab.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_006",
+      "order": 17,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::36",
+      "absorbed_source_states": [],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_036/slide_036.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_036/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "plot_curve",
+          "duration_markers",
+          "survival_ratio_formula",
+          "shape_parameter"
+        ],
+        "semantic_groups": [
+          "plot_curve",
+          "duration_markers",
+          "survival_ratio_formula",
+          "shape_parameter"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 37,
+      "work_unit": "slide_037",
+      "scene_id": "re5_src_037",
+      "source_slides": [
+        37,
+        38,
+        39,
+        40
+      ],
+      "primary_source_slide": 40,
+      "render_source_slide": 40,
+      "source_text_section_id": "section_006",
+      "title": "Success Run für abweichende Prüfzeiten",
+      "takeaway": "Längere Prüfzeiten senken n, kürzere erhöhen n; dafür muss b belastbar geschätzt werden.",
+      "archetype": "formula-comparison",
+      "builder": "duration_adjusted_success_run",
+      "animation_decision": "animated",
+      "plot_strategy": "none",
+      "formula_strategy": [
+        "duration_adjusted_success_run"
+      ],
+      "chapter": 2,
+      "lesson": 3,
+      "notes": "",
+      "spoken_text": "Damit haben wir die Brücke geschlagen:Das Lebensdauerverhältnis korrigiert die Success Run Gleichung, wenn die Prüfzeit nicht exakt der geforderten Lebensdauer entspricht.Statt R von t gleich eins minus P A hoch eins geteilt durch n gilt nun:R von t gleich eins minus P A hoch eins geteilt durch L v hoch b mal n.\n\nWas heißt das praktisch?Wenn wir länger prüfen, also wenn t p größer als t ist, dann ist das Lebensdauerverhältnis größer als eins.Schauen wir in die Gleichung, sehen wir sofort: Wir brauchen weniger Prüflinge, um dieselbe Zuverlässigkeit nachzuweisen.Das ist auch logisch – die Prüflinge müssen länger durchhalten, die Bedingung ist strenger, und damit steigt die Aussagekraft jedes einzelnen Prüflings.\n\nPrüfen wir kürzer, also t p kleiner als t, dann ist das Lebensdauerverhältnis kleiner als eins.Die Bedingung ist schwächer, und um dieselbe Aussagesicherheit zu erreichen, brauchen wir nun mehr Prüflinge.\n\nDas Fazit ist einfach: Mit Hilfe des Lebensdauerverhältnisses können wir die Success Run Gleichung so erweitern, dass sie auch für Prüfzeiten gilt, die länger oder kürzer als die geforderte Lebensdauer sind.\n\nEin Nachteil bleibt jedoch: In die Berechnung geht der Formparameter b der Weibullverteilung ein.Und da wir im Success Run Test keine Lebensdauerverteilung bestimmen können – weil keine Ausfälle auftreten – müssen wir den Formparameter anderweitig abschätzen.Das kann zum Beispiel durch Erfahrungen mit Vorgängerprodukten oder durch Vorversuche erfolgen.Auch das ist logisch: Wenn wir die Steigung der Weibullgeraden nicht kennen, können wir auch nicht beurteilen, wie stark sich eine Änderung der Prüfzeit auf die Zuverlässigkeit beziehungsweise Ausfallwahrscheinlichkeit auswirkt.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_006",
+      "order": 18,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::40",
+      "absorbed_source_states": [
+        38,
+        39,
+        40
+      ],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_037/slide_037.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_037/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "adjusted_formula",
+          "longer_test",
+          "shorter_test",
+          "shape_warning"
+        ],
+        "semantic_groups": [
+          "adjusted_formula",
+          "longer_test",
+          "shorter_test",
+          "shape_warning"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 41,
+      "work_unit": "slide_041",
+      "scene_id": "re5_src_041",
+      "source_slides": [
+        41,
+        42,
+        43
+      ],
+      "primary_source_slide": 43,
+      "render_source_slide": 43,
+      "source_text_section_id": "section_007",
+      "title": "End-of-Life-Test bis zum Ausfall",
+      "takeaway": "Echte Ausfalldaten ermöglichen die Weibullanalyse, können bei langlebigen Produkten aber unpraktisch lange dauern.",
+      "archetype": "evidence-loop",
+      "builder": "end_of_life",
+      "animation_decision": "animated",
+      "plot_strategy": "weibull_confidence",
+      "formula_strategy": [],
+      "chapter": 3,
+      "lesson": 1,
+      "notes": "",
+      "spoken_text": "Kommen wir nun zum End-of-Life-Test. Wie der Name sagt, prüfen wir bis zum Ausfall, also bis zum Ende der Lebensdauer. Die dabei entstehenden Lebensdauerdaten werten wir aus und bestimmen die Weibullverteilung. Anschließend prüfen wir, ob die geforderte Zuverlässigkeit mit der gewünschten Aussagesicherheit erreicht wird. Dieses Vorgehen kennst du ja bereits: Zeit und Zielzuverlässigkeit festlegen, Daten erfassen, die Weibullgerade mit Vertrauensbereich ermitteln und den Nachweispunkt bewerten.\n\nIn der Realität sind Tests bis zum Ausfall oft sehr langwierig. Denke an einen Wechselrichter für Solaranlagen: Solche Geräte sind auf Lebensdauern von deutlich über zwanzig Jahren ausgelegt. So lange können wir nicht warten, um die Zuverlässigkeit in der Entwicklung nachzuweisen. Weil reale Einsatzzeiten häufig sehr lang sind, ist eine Erprobung unter Feldbelastung kaum praktikabel. Genau hier kommt die beschleunigte Erprobung ins Spiel.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_007",
+      "order": 19,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::43",
+      "absorbed_source_states": [
+        42,
+        43
+      ],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_041/slide_041.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_041/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "test_to_failure",
+          "weibull_evaluation",
+          "proof_result",
+          "long_lifetime_example"
+        ],
+        "semantic_groups": [
+          "test_to_failure",
+          "weibull_evaluation",
+          "proof_result",
+          "long_lifetime_example"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 44,
+      "work_unit": "slide_044",
+      "scene_id": "re5_src_044",
+      "source_slides": [
+        44,
+        45
+      ],
+      "primary_source_slide": 45,
+      "render_source_slide": 45,
+      "source_text_section_id": "section_007",
+      "title": "Beschleunigte Erprobung verkürzt Lebensdauer",
+      "takeaway": "Höhere Schädigung pro Zeiteinheit spart Prüfzeit und macht frühere Aussagen möglich.",
+      "archetype": "cause-effect",
+      "builder": "acceleration_principle",
+      "animation_decision": "animated",
+      "plot_strategy": "none",
+      "formula_strategy": [],
+      "chapter": 3,
+      "lesson": 1,
+      "notes": "",
+      "spoken_text": "Das Grundprinzip basiert darauf, dass die Schädigung pro Zeiteinheit im Versuch höher ist als im Feldeinsatz. Dadurch verkürzt sich die beobachtete Lebensdauer. Beschleunigte Tests sparen so Zeit und Kosten, erlauben frühere Aussagen im Entwicklungsprozess und machen den Zusammenhang zwischen Belastung und Lebensdauer sichtbar. Zusätzlich helfen sie, die Streuung durch unterschiedliche Nutzungsprofile besser zu verstehen und gezielt abzusichern.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_007",
+      "order": 20,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::45",
+      "absorbed_source_states": [
+        45
+      ],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_044/slide_044.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_044/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "field_condition",
+          "test_condition",
+          "damage_relation",
+          "benefits"
+        ],
+        "semantic_groups": [
+          "field_condition",
+          "test_condition",
+          "damage_relation",
+          "benefits"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 46,
+      "work_unit": "slide_046",
+      "scene_id": "re5_src_046",
+      "source_slides": [
+        46,
+        47,
+        48
+      ],
+      "primary_source_slide": 48,
+      "render_source_slide": 48,
+      "source_text_section_id": "section_007",
+      "title": "Drei Wege zur kürzeren Prüfzeit",
+      "takeaway": "Zeitliche Raffung, höheres Lastniveau und Zensierung verkürzen Tests auf unterschiedliche Weise.",
+      "archetype": "method-matrix",
+      "builder": "acceleration_methods",
+      "animation_decision": "animated",
+      "plot_strategy": "none",
+      "formula_strategy": [],
+      "chapter": 3,
+      "lesson": 1,
+      "notes": "",
+      "spoken_text": "Schauen wir uns einmal die unterschiedlichen Arten der Beschleunigung von Lebensdauertests an.\n\nAls Erstes sollte immer eine zeitliche Raffung in Betracht gezogen werden: Wir beschleunigen, indem wir Belastungen schneller aufbringen, Drehzahlen oder Schaltfrequenzen erhöhen und Standzeiten reduzieren.\n\nZweitens kann über ein höheres Belastungsniveau beschleunigt werden – zum Beispiel durch erhöhte Temperaturen, elektrische oder mechanische Spannungen, stärkere Temperaturwechsel, Feuchte oder Vibration. Hierbei ist es wichtig, den maßgeblichen Schädigungsparameter zu kennen. Auf typische Stolpersteine gehen wir später noch ein.\n\nDrittens gibt es zensierte Tests. Das ist streng genommen keine physikalische Beschleunigung: Die Prüfung endet vor Erreichen aller Ausfälle nach einer vorgegebenen Zeit oder Stückzahl und spart dadurch Testzeit.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_007",
+      "order": 21,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::48",
+      "absorbed_source_states": [
+        47,
+        48
+      ],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_046/slide_046.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_046/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "time_compression",
+          "stress_increase",
+          "censoring"
+        ],
+        "semantic_groups": [
+          "time_compression",
+          "stress_increase",
+          "censoring"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 49,
+      "work_unit": "slide_049",
+      "scene_id": "re5_src_049",
+      "source_slides": [
+        49,
+        50
+      ],
+      "primary_source_slide": 50,
+      "render_source_slide": 50,
+      "source_text_section_id": "section_007",
+      "title": "Degradation bis zum End-of-Life-Kriterium",
+      "takeaway": "Messbare Degradationspfade liefern geschätzte Ausfallzeiten und daraus eine Lebensdauerverteilung.",
+      "archetype": "degradation-plot",
+      "builder": "degradation_paths",
+      "animation_decision": "animated",
+      "plot_strategy": "degradation_paths",
+      "formula_strategy": [],
+      "chapter": 3,
+      "lesson": 1,
+      "notes": "",
+      "spoken_text": "Viertens sind Degradationstests möglich: Wir messen den Verlauf eines Degradationsmerkmals, zum Beispiel die Dicke eines Bremsbelags, beschreiben diesen Verlauf mit einem Modell und extrapolieren ihn in die Zukunft. Über einen festgelegten Grenzwert – das sogenannte End-of-Life-Kriterium – bestimmen wir daraus einen Ausfallzeitpunkt mit ausgewiesener Unsicherheit. Wiederholen wir dieses Vorgehen für mehrere Prüflinge, erhalten wir eine Menge geschätzter Ausfallzeitpunkte, aus denen sich die Lebensdauerverteilung und damit die Lebensdauer ableiten lässt. Wenn du hierzu mehr erfahren möchtest, besuche gern unser Experten-Training zur Testplanung.\n\nWichtig ist, dass nicht jede Beschleunigungsart immer für jedes Produkt geeignet ist. Entscheidend ist immer der Ausfallmechanismus. Bei Bedarf lassen sich aber auch mehrere Ansätze kombinieren.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_007",
+      "order": 22,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::50",
+      "absorbed_source_states": [
+        50
+      ],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_049/slide_049.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_049/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "plot_degradation_paths",
+          "plot_eol_threshold",
+          "plot_lifetime_estimates",
+          "lifetime_distribution"
+        ],
+        "semantic_groups": [
+          "plot_degradation_paths",
+          "plot_eol_threshold",
+          "plot_lifetime_estimates",
+          "lifetime_distribution"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 51,
+      "work_unit": "slide_051",
+      "scene_id": "re5_src_051",
+      "source_slides": [
+        51,
+        52,
+        53
+      ],
+      "primary_source_slide": 53,
+      "render_source_slide": 53,
+      "source_text_section_id": "section_007",
+      "title": "Raffungsfaktor: Versuch auf Feld übertragen",
+      "takeaway": "Übertragbar ist die Raffung nur bei gleichem Ausfallmechanismus und gleichem Formparameter.",
+      "archetype": "acceleration-factor",
+      "builder": "acceleration_factor",
+      "animation_decision": "animated",
+      "plot_strategy": "acceleration_factor",
+      "formula_strategy": [
+        "acceleration_factor"
+      ],
+      "chapter": 3,
+      "lesson": 1,
+      "notes": "",
+      "spoken_text": "Bei der Beschleunigung über ein höheres Belastungsniveau ist die Schädigung pro Zeiteinheit im Versuch höher als im Feldeinsatz. Entsprechend fällt die beobachtete Lebensdauer im Versuch kürzer aus. Um beide Ergebnisse miteinander vergleichen zu können, benötigen wir den sogenannten Raffungsfaktor. Er wird formal als Verhältnis von Feldlebensdauer zu Versuchslebensdauer definiert und beschreibt, wie stark die Zeit im Versuch gegenüber dem Feldeinsatz ‚zusammengedrückt‘ wird.\n\nAnschaulich verschiebt dieser Faktor die Weibullverteilung im Diagramm nach links: Ausfälle treten früher auf, wir sparen Prüfzeit und können bei bekanntem Raffungsfaktor dennoch auf das Feld schließen. Wichtig: Die Übertragbarkeit ist nur gegeben, wenn der Ausfallmechanismus gleichbleibt und der Formparameter – also die Steigung im Weibull-Diagramm – in Versuch und Feld identisch ist.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_007",
+      "order": 23,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::53",
+      "absorbed_source_states": [
+        52,
+        53
+      ],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_051/slide_051.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_051/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "field_distribution",
+          "test_distribution",
+          "acceleration_factor_formula",
+          "transferability_guardrail"
+        ],
+        "semantic_groups": [
+          "field_distribution",
+          "test_distribution",
+          "acceleration_factor_formula",
+          "transferability_guardrail"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 54,
+      "work_unit": "slide_054",
+      "scene_id": "re5_src_054",
+      "source_slides": [
+        54
+      ],
+      "primary_source_slide": 54,
+      "render_source_slide": 54,
+      "source_text_section_id": "section_007",
+      "title": "Raffungsfaktor aus Last und Lebensdauer",
+      "takeaway": "Nur ein belastbares Last-Lebensdauer-Modell erlaubt die sichere Extrapolation auf das Feld.",
+      "archetype": "model-map",
+      "builder": "load_life_models",
+      "animation_decision": "animated",
+      "plot_strategy": "load_life_correlation",
+      "formula_strategy": [],
+      "chapter": 3,
+      "lesson": 1,
+      "notes": "",
+      "spoken_text": "Aber woher kommt der Raffungsfaktor eigentlich? Die Grundlage jeder belastungsbeschleunigten Erprobung ist die Last-Lebensdauer-Korrelation. Wir beschreiben, wie die Lebensdauer mit der Belastung zusammenhängt – physikalisch begründet oder datengetrieben. Typische Modelle sind das Wöhler-Modell für strukturmechanischen Ermüdungsschaden, Arrhenius für temperaturgetriebene Prozesse oder inverse Potenzgesetze für elektro-mechanische Spannungen. Aus solchen Zusammenhängen leiten wir den Faktor ab, der Versuchsdauer und Feldbedingungen verknüpft, und validieren ihn an realen Daten. Dafür müssen wir die relevante Schädigungsgröße kennen und mit einem geeigneten Modell abbilden. Gibt es kein tragfähiges Modell oder keinen belastbaren Raffungsfaktor, ergibt eine beschleunigte Erprobung keinen Sinn, weil die Ergebnisse nicht sicher auf das Feld übertragen werden können.\n\nZum Schluss noch einmal kurz zusammengefasst:\n\nEnd-of-Life-Tests liefern die Basis über die Weibullanalyse. Beschleunigte Erprobung macht Nachweise zeit- und kosteneffizient, setzt aber zwingend voraus, dass der Ausfallmechanismus erhalten bleibt und der Raffungsfaktor belastbar bekannt ist. Nur dann ist die Übertragung auf den Feldeinsatz zuverlässig.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_007",
+      "order": 24,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::54",
+      "absorbed_source_states": [],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_054/slide_054.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_054/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "plot_load_life",
+          "model_catalog",
+          "model_guardrail"
+        ],
+        "semantic_groups": [
+          "plot_load_life",
+          "model_catalog",
+          "model_guardrail"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 55,
+      "work_unit": "slide_055",
+      "scene_id": "re5_src_055",
+      "source_slides": [
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "primary_source_slide": 61,
+      "render_source_slide": 61,
+      "source_text_section_id": "section_008",
+      "title": "Vier Fragen der beschleunigten Erprobung",
+      "takeaway": "Niveauanzahl, Niveaulage, Verteilung und Gesamtzahl bestimmen Aufwand und Aussagekraft.",
+      "archetype": "question-framework",
+      "builder": "alt_questions",
+      "animation_decision": "animated",
+      "plot_strategy": "test_level_overview",
+      "formula_strategy": [],
+      "chapter": 3,
+      "lesson": 2,
+      "notes": "",
+      "spoken_text": "Nachdem wir die Grundlagen zur beschleunigten Erprobung und den Raffungsfaktor kennengelernt haben, schauen wir uns nun an, wie man in der Praxis eine beschleunigte Lebensdauerprüfung plant. Die Basis dafür ist wieder die Last-Lebensdauer-Korrelation. Sie beschreibt, wie sich die Lebensdauer in Abhängigkeit von der Belastung verändert. Dabei gilt: Je stärker die Belastung, desto schneller schreitet der Schädigungsprozess voran – und desto kürzer ist die Lebensdauer. Genau diesen Zusammenhang müssen wir durch geeignete Modelle oder Daten erfassen.\n\nDamit verbunden stellen sich bei einer beschleunigten Erprobung mehrere praktische Fragen:\n\nZum einen möchten wir wissen, wie viele Versuchsniveaus wir überhaupt anfahren müssen.\n\nDazu ist auch entscheidend, welche Lage diese Niveaus haben sollen – also wie hoch oder niedrig müssen die Belastungen gewählt werden.\n\nAußerdem ist auch noch relevant, wie viele Prüflinge pro Niveau und insgesamt getestet werden müssen.\n\nDiese Fragen entscheiden maßgeblich über Aufwand, Kosten und Aussagekraft eines beschleunigten Tests.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_008",
+      "order": 25,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::61",
+      "absorbed_source_states": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_055/slide_055.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_055/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "plot_test_levels",
+          "question_level_count",
+          "question_level_location",
+          "question_allocation",
+          "question_total"
+        ],
+        "semantic_groups": [
+          "plot_test_levels",
+          "question_level_count",
+          "question_level_location",
+          "question_allocation",
+          "question_total"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 62,
+      "work_unit": "slide_062",
+      "scene_id": "re5_src_062",
+      "source_slides": [
+        62
+      ],
+      "primary_source_slide": 62,
+      "render_source_slide": 62,
+      "source_text_section_id": "section_008",
+      "title": "Zwei oder drei Versuchsniveaus?",
+      "takeaway": "Zwei Niveaus prüfen Linearität; ein drittes Niveau macht Krümmung sichtbar.",
+      "archetype": "technical-plot",
+      "builder": "number_of_levels",
+      "animation_decision": "animated",
+      "plot_strategy": "number_of_levels",
+      "formula_strategy": [],
+      "chapter": 3,
+      "lesson": 2,
+      "notes": "",
+      "spoken_text": "Schauen wir uns zunächst die Frage nach der Anzahl der Versuchsniveaus an. Wenn wir nur zwei Niveaus prüfen, können wir nur einen linearen Zusammenhang zwischen Belastung und Lebensdauer abbilden. Bestehen Zweifel daran, dass die Beziehung wirklich linear ist, empfiehlt es sich, ein drittes Niveau hinzuzunehmen. Damit lässt sich die Krümmung des Zusammenhangs erfassen und die Prognose für das Feld zuverlässiger machen.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_008",
+      "order": 26,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::62",
+      "absorbed_source_states": [],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_062/slide_062.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_062/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "plot_linear_levels",
+          "plot_third_level",
+          "linearity_rule"
+        ],
+        "semantic_groups": [
+          "plot_linear_levels",
+          "plot_third_level",
+          "linearity_rule"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 63,
+      "work_unit": "slide_063",
+      "scene_id": "re5_src_063",
+      "source_slides": [
+        63,
+        64
+      ],
+      "primary_source_slide": 64,
+      "render_source_slide": 64,
+      "source_text_section_id": "section_008",
+      "title": "Das obere Versuchsniveau festlegen",
+      "takeaway": "So hoch wie möglich – aber unterhalb der Grenze, an der sich der Ausfallmechanismus ändert.",
+      "archetype": "technical-plot",
+      "builder": "upper_test_level",
+      "animation_decision": "animated",
+      "plot_strategy": "upper_test_level",
+      "formula_strategy": [],
+      "chapter": 3,
+      "lesson": 2,
+      "notes": "",
+      "spoken_text": "Als nächstes schauen wir uns die Lage der Versuchsniveaus an. Für das obere Versuchsniveau gilt: Wir wählen es so hoch wie möglich, um eine maximale Raffung zu erzielen – allerdings ohne dabei den Ausfallmechanismus zu verändern. Das ist entscheidend, denn sonst wäre das Ergebnis nicht mehr auf das Feld übertragbar. In der Regel braucht man dazu Vorversuche, um die maximal mögliche Beschleunigung abzuschätzen.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_008",
+      "order": 27,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::64",
+      "absorbed_source_states": [
+        64
+      ],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_063/slide_063.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_063/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "plot_upper_level",
+          "mechanism_limit",
+          "pretest_note"
+        ],
+        "semantic_groups": [
+          "plot_upper_level",
+          "mechanism_limit",
+          "pretest_note"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 65,
+      "work_unit": "slide_065",
+      "scene_id": "re5_src_065",
+      "source_slides": [
+        65,
+        66,
+        67
+      ],
+      "primary_source_slide": 67,
+      "render_source_slide": 67,
+      "source_text_section_id": "section_008",
+      "title": "Das untere Versuchsniveau abwägen",
+      "takeaway": "Nähe zum Feld erhöht Prognosegüte; Nähe zum oberen Niveau verkürzt die Laufzeit.",
+      "archetype": "tradeoff-plot",
+      "builder": "lower_test_level",
+      "animation_decision": "animated",
+      "plot_strategy": "lower_test_level",
+      "formula_strategy": [],
+      "chapter": 3,
+      "lesson": 2,
+      "notes": "",
+      "spoken_text": "Das untere Versuchsniveau ist dagegen ein Kompromiss: Es sollte möglichst nah am Feldniveau liegen, um eine hohe Prognosegüte zu erreichen. Gleichzeitig darf die Laufzeit aber nicht so lang sein, dass der Test praktisch nicht mehr durchführbar ist. Je nachdem, ob man den Schwerpunkt stärker auf Kosten oder Genauigkeit legt, kann das untere Niveau näher am Feld oder näher am oberen Niveau gewählt werden. In der Praxis haben sich Raffungsfaktoren im Bereich von zwei bis drei bewährt – höhere Werte führen häufig zu einer zu großen Streuung.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_008",
+      "order": 28,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::67",
+      "absorbed_source_states": [
+        66,
+        67
+      ],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_065/slide_065.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_065/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "plot_lower_level",
+          "field_proximity",
+          "runtime_proximity",
+          "recommended_factor"
+        ],
+        "semantic_groups": [
+          "plot_lower_level",
+          "field_proximity",
+          "runtime_proximity",
+          "recommended_factor"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 68,
+      "work_unit": "slide_068",
+      "scene_id": "re5_src_068",
+      "source_slides": [
+        68,
+        69,
+        70
+      ],
+      "primary_source_slide": 70,
+      "render_source_slide": 70,
+      "source_text_section_id": "section_008",
+      "title": "Prüflinge auf Versuchsniveaus verteilen",
+      "takeaway": "Das untere Niveau erhält mehr Prüflinge, damit die Extrapolation zum Feld präziser wird.",
+      "archetype": "allocation-formula",
+      "builder": "sample_allocation",
+      "animation_decision": "animated",
+      "plot_strategy": "sample_allocation",
+      "formula_strategy": [
+        "extrapolation_factor",
+        "allocation_share"
+      ],
+      "chapter": 3,
+      "lesson": 2,
+      "notes": "",
+      "spoken_text": "Damit sind wir bei der nächsten Frage angelangt: Wie viele Prüflinge pro Niveau werden benötigt? Auch hier gilt: Je mehr Prüflinge, desto genauer die Schätzung – aber desto höher auch die Kosten. Die Kunst liegt darin, eine ausreichende Anzahl an Prüflingen zu wählen, die statistisch belastbare Ergebnisse liefert, ohne das Testbudget zu sprengen. Die Idee dahinter: Ein Teil der Prüflinge läuft auf dem oberen Niveau, ein anderer Teil auf dem unteren Niveau.\n\nUm diese Verteilung zu bestimmen, hilft der sogenannte Extrapolationsfaktor. Mit ihm kann berechnet werden, welcher Anteil der Prüflinge auf welchem Lastniveau getestet werden sollte. Die Berechnung erfolgt in zwei Schritten:\n\nZunächst bestimmen wir den Extrapolationsfaktor aus den Abständen der Niveaus mithilfe der folgenden Gleichung.\n\nDabei stellt x eins das obere und x zwei das untere Versuchsniveau sowie x null das Feldniveau dar.\n\nAnschließend wird der Anteil p der Prüflinge auf dem unteren Versuchsniveau x zwei berechnet. Hierzu kann diese Formel genutzt werden.\n\nMit diesem Anteil wissen wir nun, wie viele Prüflinge vom Gesamtbudget auf dem unteren Niveau getestet werden sollten.\n\nGenerell gilt: Auf dem unteren Versuchsniveau müssen immer mehr Prüflinge getestet werden als auf dem höheren. Der Grund ist, dass durch die höhere Anzahl an Prüflingen die Streuung beim unteren Niveau reduziert wird. Diese bessere statistische Basis ist nötig, um eine genauere Extrapolation auf das Feldniveau zu ermöglichen.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_008",
+      "order": 29,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::70",
+      "absorbed_source_states": [
+        69,
+        70
+      ],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_068/slide_068.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_068/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "plot_levels",
+          "extrapolation_formula",
+          "allocation_formula",
+          "allocation_rule"
+        ],
+        "semantic_groups": [
+          "plot_levels",
+          "extrapolation_formula",
+          "allocation_formula",
+          "allocation_rule"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 71,
+      "work_unit": "slide_071",
+      "scene_id": "re5_src_071",
+      "source_slides": [
+        71
+      ],
+      "primary_source_slide": 71,
+      "render_source_slide": 71,
+      "source_text_section_id": "section_008",
+      "title": "Beispiel: 20 Prüflinge aufteilen",
+      "takeaway": "Bei 180 °C, 220 °C und 260 °C gehen 14 Prüflinge auf das untere und 6 auf das obere Niveau.",
+      "archetype": "worked-allocation",
+      "builder": "allocation_example",
+      "animation_decision": "animated",
+      "plot_strategy": "sample_allocation",
+      "formula_strategy": [
+        "extrapolation_example",
+        "allocation_example"
+      ],
+      "chapter": 3,
+      "lesson": 2,
+      "notes": "",
+      "spoken_text": "Schauen wir uns hierzu noch kurz ein Beispiel an:\n\nEine Isolierung soll auf Lebensdauer geprüft werden. Wir haben ein Testbudget von zwanzig Prüflingen.\n\nDie Temperatur auf Feldniveau beträgt einhundertachtzig Grad Celsius. Für das obere Versuchsniveau ergibt sich zweihundertsechzig Grad und beim unteren Niveau zweihundertzwanzig Grad Celsius. Zuerst berechnen wir den Extrapolationsfaktor nach der vorherigen Gleichung zu: zweihundertsechzig minus einhundertachtzig, geteilt durch zweihundertsechzig minus zweihundertzwanzig. Es ergibt sich ein Wert von zwei.\n\nSetzen wir diesen nun in die zweite Gleichung ein, ergibt sich p zu zwei, geteilt durch zwei mal zwei minus eins, was rund siebenundsechzig Prozent ergibt.\n\nDas bedeutet: rund zwei Drittel der Prüflinge müssen auf dem unteren Versuchsniveau getestet werden. Bei einem Gesamtbudget von zwanzig Prüflingen sind das vierzehn Prüflinge, während die restlichen sechs Prüflinge auf dem oberen Niveau getestet werden.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_008",
+      "order": 30,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::71",
+      "absorbed_source_states": [],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_071/slide_071.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_071/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "example_inputs",
+          "extrapolation_example",
+          "allocation_example",
+          "allocation_result"
+        ],
+        "semantic_groups": [
+          "example_inputs",
+          "extrapolation_example",
+          "allocation_example",
+          "allocation_result"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 72,
+      "work_unit": "slide_072",
+      "scene_id": "re5_src_072",
+      "source_slides": [
+        72,
+        73
+      ],
+      "primary_source_slide": 73,
+      "render_source_slide": 73,
+      "source_text_section_id": "section_008",
+      "title": "Gesamtzahl per Monte-Carlo-Simulation festlegen",
+      "takeaway": "Simulationen balancieren Prognosegenauigkeit und Versuchsaufwand.",
+      "archetype": "simulation-plot",
+      "builder": "total_sample_size",
+      "animation_decision": "animated",
+      "plot_strategy": "monte_carlo_precision",
+      "formula_strategy": [],
+      "chapter": 3,
+      "lesson": 2,
+      "notes": "",
+      "spoken_text": "Nachdem wir nun geklärt haben, wie viele Versuchsniveaus sinnvoll sind, wo diese liegen sollten und wie die Prüflingsverteilung pro Niveau berechnet wird, bleibt noch die letzte Frage: Wie viele Prüflinge werden insgesamt benötigt?\n\nEntscheidend ist, dass wir eine ausreichende statistische Basis schaffen, um die Lebensdauer mit der gewünschten Genauigkeit prognostizieren zu können. Zu wenige Prüflinge führen zu großen Unsicherheiten, zu viele treiben die Kosten unnötig in die Höhe.\n\nUm hier die richtige Balance zu finden, nutzen wir die Monte-Carlo-Simulation. Mit ihr können wir durch viele zufällige Simulationsdurchläufe den Einfluss der Prüflingsanzahl auf die Genauigkeit der Ergebnisse bewerten. So lässt sich ableiten, wie stark die Prognose des Feldniveaus von der Stichprobengröße abhängt.\n\nAm Ende können wir damit die Gesamtzahl der Prüflinge festlegen – genauso viele, dass die Prognosequalität ausreichend hoch ist das Ziel zu erreichen, jedoch ohne Ressourcen zu verschwenden. Da dieser Schritt etwas komplexer ist, behandeln wir ihn ebenfalls erst im Experten Training zum Thema Testplanung.\n\nDu hast nun gelernt, wie sich die gesamte Planung eines beschleunigten Lebensdauertests – von der Anzahl der Versuchsniveaus über deren Lage bis hin zur Verteilung und Gesamtzahl der Prüflinge – zielgerichtet und effizient gestalten lässt.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_008",
+      "order": 31,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::73",
+      "absorbed_source_states": [
+        73
+      ],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_072/slide_072.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_072/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "plot_simulation_runs",
+          "plot_precision_envelope",
+          "sample_balance"
+        ],
+        "semantic_groups": [
+          "plot_simulation_runs",
+          "plot_precision_envelope",
+          "sample_balance"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 74,
+      "work_unit": "slide_074",
+      "scene_id": "re5_src_074",
+      "source_slides": [
+        74
+      ],
+      "primary_source_slide": 74,
+      "render_source_slide": 74,
+      "source_text_section_id": "section_009",
+      "title": "Vier Teststrategien im Vergleich",
+      "takeaway": "Teststrategie, Testebene, Lasten, Ergebnis und Planungsaufwand müssen zusammenpassen.",
+      "archetype": "comparison-matrix",
+      "builder": "strategy_comparison",
+      "animation_decision": "animated",
+      "plot_strategy": "none",
+      "formula_strategy": [],
+      "chapter": 3,
+      "lesson": 3,
+      "notes": "",
+      "spoken_text": "Schauen wir uns zum Abschluss noch einmal die unterschiedlichen Teststrategien im Vergleich genauer an.\n\nDer Success-Run Test ist eine ausfallfreie Teststrategie. Wir prüfen bis zu einer vorgegebenen Zeit, Ausfälle sind nicht erlaubt.\n\nDas macht diese Strategie besonders effizient auf Systemebene, wenn schnelle Freigabeentscheidungen gefragt sind. Dieser Test wird unter repräsentativen Betriebsbelastungen durchgeführt. Wir testen also genau die Einsatzbedingungen, für die wir freigeben wollen. Das Ergebnis ist ein formaler Nachweis der Mindestzuverlässigkeit bei einer definierten Aussagesicherheit. Wichtig: Wir erhalten keine Informationen zum Ausfallverhalten oder zur Verteilungsform. Das Resultat lautet schlicht „bestanden ohne Ausfall“ oder nicht.\n\nDer End-of-Life Test ist ausfallbasiert: Wir testen bis zum Ausfall und gewinnen echte Lebensdauerdaten. Er lässt sich sowohl auf Komponenten- als auch auf Systemebene einsetzen. Auch hier arbeiten wir mit repräsentativen Betriebsbelastungen, damit die Ergebnisse direkt für den Feldbetrieb gelten. Ausgewertet wird per Weibull-Analyse. Wir erhalten die Parameter der Verteilung samt Vertrauensbereichen und können daraus belastbare Lebensdauerkennwerte wie die B-zehn-Lebensdauer und die Zuverlässigkeit über der Zeit ableiten.\n\nDer Accelerated Life Test ist ebenfalls ausfallbasiert, aber mit beschleunigenden Lasten. Dadurch ist dieser Test besonders effizient auf Komponentenebene, wo sich Temperatur, Spannung, Frequenz oder Zyklen kontrolliert erhöhen lassen. Da die Lasten gezielt über dem Feldniveau gewählt werden, haben wir eine Raffung durch Lasterhöhung. Das Ziel ist es dadurch schneller zu belastbaren Ausfällen zu kommen.\n\nWie im End-of-Life Test ist das Resultat ein vollständiges Lebensdauermodell, was unser Ausfallverhalten sowie die Zuverlässigkeit über der Zeit abbildet. Darüber hinaus erhalten wir auch ein Alterungsmodell, das die Beziehung zwischen Last und Lebensdauer beschreibt. Mit diesem lassen sich die Ergebnisse nachvollziehbar auf Feldbedingungen extrapolieren.\n\nDegradationstests sind die richtige Wahl, wenn ein messbarer Verschleißmechanismus vorliegt, etwa Dicken- oder Leistungsverlust oder eine Risslänge. Sie funktionieren auf Komponenten- oder Systemebene und kommen ohne „harten“ Ausfall aus. Dieser Test wird unter repräsentativen Betriebsbelastungen durchgeführt. Ist eine stärkere Raffung gewünscht, können zusätzlich auch Lasten erhöht werden, um Laufzeit zu sparen.\n\nDas Ergebnis ist ein Verschleiß- bzw. Degradationsmodell. Über ein festgelegtes End-of-Life-Kriterium leiten wir daraus Ausfallzeitpunkte ab und erhalten analog zum End of Life Test ein vollständiges Lebensdauermodell, was unser Ausfallverhalten sowie die Zuverlässigkeit über der Zeit beschreibt.\n\nIn der Planung ist der Success-Run Test vergleichsweise einfach. Aufwand und Stichprobengröße lassen sich direkt über die Success-Run-Gleichung abschätzen. Abweichungen in der Prüfdauer können über das Lebensdauerverhältnis L “V” berücksichtigt werden. Für typische Nachweise, etwa eine Zuverlässigkeit und Aussagesicherheit von jeweils neunzig Prozent, sind zwar größere Stichproben erforderlich, dafür bleiben die Laufzeiten aber kurz und die Kosten gering. In der Anwendung ist der Success-Run Test nur sinnvoll, wenn eine ausreichende Überdimensionierung vorliegt. Kritische Ziele oder Ausfallmechanismen lassen sich damit nicht nachweisen.\n\nDie Planung des End-of-Life Tests ist deutlich aufwendiger. Es müssen zensierte und unzensierte Varianten berücksichtigt und Ausfallmechanismen klar voneinander getrennt werden. Da die Laufzeit bis zum Ausfall geht, ist der Test zeitintensiver und damit meistens teurer. In der Anwendung ist er universell für alle Dimensionierungen einsetzbar, wird jedoch bei sehr großen Produktlebensdauern unpraktisch.\n\nDer Accelerated Life Test erfordert eine anspruchsvolle Planung, da zusätzlich ein belastbares Alterungs- bzw. Last-Lebensdauer-Modell notwendig ist. Auch hier sind zensierte und unzensierte Varianten möglich, und die Trennung der Ausfallmechanismen bleibt zwingend erforderlich. Durch die Beschleunigung verkürzen sich jedoch die Laufzeiten deutlich, sodass der Test insgesamt oft günstiger ist als ein reiner End-of-Life Test. In der Anwendung ist der Accelerated Life Test für alle Dimensionierungen geeignet und besonders vorteilhaft bei Produkten mit sehr großen Lebensdauern.\n\nDer Degradationstest stellt ebenfalls hohe Anforderungen an die Planung. Neben dem Degradationsmodell muss ein End-of-Life-Kriterium definiert werden. Der Messaufwand ist hoch, da Verschleißmerkmale kontinuierlich überwacht werden müssen. Gleichzeitig erlauben Beschleunigung und Extrapolation kürzere Laufzeiten und dadurch oftmals auch geringere Kosten. In der Anwendung ist der Ansatz ausschließlich nur dort sinnvoll, wo ein relevanter Verschleißmechanismus messbar ist.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_009",
+      "order": 32,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::74",
+      "absorbed_source_states": [],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_074/slide_074.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_074/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "success_run_column",
+          "end_of_life_column",
+          "accelerated_life_column",
+          "degradation_column"
+        ],
+        "semantic_groups": [
+          "success_run_column",
+          "end_of_life_column",
+          "accelerated_life_column",
+          "degradation_column"
+        ],
+        "steps": []
+      }
+    },
+    {
+      "output_slide_number": 75,
+      "work_unit": "slide_075",
+      "scene_id": "re5_src_075",
+      "source_slides": [
+        75
+      ],
+      "primary_source_slide": 75,
+      "render_source_slide": 75,
+      "source_text_section_id": "section_009",
+      "title": "Guideline zur Testauswahl",
+      "takeaway": "Dimensionierung, messbarer Verschleiß und mögliche Raffung führen zur passenden Teststrategie.",
+      "archetype": "decision-tree",
+      "builder": "strategy_guideline",
+      "animation_decision": "animated",
+      "plot_strategy": "none",
+      "formula_strategy": [],
+      "chapter": 3,
+      "lesson": 3,
+      "notes": "",
+      "spoken_text": "Zum Abschluss schauen wir uns noch eine einfache Guideline zur Auswahl des passenden Zuverlässigkeitstests an. Zunächst prüfen wir, wie das Produktdesign im Verhältnis zur Anforderung ausgelegt ist. Ist es deutlich überdimensioniert, eignet sich der Success-Run Test. Er läuft ausfallfrei bis zur Zielzeit und ist besonders auf Systemebene nützlich, wenn schnelle Freigabeentscheidungen benötigt werden.\n\nLiegt das Design „on target“, prüfen wir als Nächstes, ob ein messbarer Verschleiß vorhanden ist. Wenn es keinen messbaren Verschleiß gibt, prüfen wir, ob eine Beschleunigung durch Lasterhöhung möglich ist. Wenn nicht, wählen wir den End-of-Life Test – je nach Fragestellung auf Komponenten- oder Systemebene. Wenn ja, kommt der Accelerated Life Test zum Einsatz, vorzugsweise auf Komponentenebene, da sich dort Lasten gezielt erhöhen und gut kontrollieren lassen.\n\nIst ein messbarer Verschleiß vorhanden, prüfen wir auch hier, ob eine Raffung durch Lasterhöhung möglich ist. Ist diese nicht sinnvoll, nutzen wir den Degradationstest mit End-of-Life-Kriterium, entweder auf Komponenten- oder Systemebene. Ist eine Beschleunigung möglich, wird der Accelerated Degradation Test angewandt, typischerweise auf Komponentenebene, um die Prüfzeit weiter zu reduzieren.\n\nNoch ein wichtiger Hinweis gilt unabhängig von der gewählten Strategie: Eine zeitliche Raffung – etwa durch höhere Taktfrequenzen oder reduzierte Standzeiten – sollte immer geprüft werden. Für beschleunigte Tests ist zudem ein belastbares Last-Lebensdauer-Modell notwendig. Für Degradationstests wird neben dem Degradationsmodell zusätzlich ein klar definiertes End-of-Life-Kriterium benötigt. Und in allen Fällen gilt: Der Ausfallmechanismus muss unverändert bleiben, damit die Ergebnisse repräsentativ sind und zuverlässig auf den Feldeinsatz übertragen werden können.",
+      "spoken_text_source": "analysis/source-text/RE5/extracted/05_Modul_Testplanung.md#section_009",
+      "order": 33,
+      "structure_status": "mapped_from_user_chapter_and_lesson_ranges",
+      "canonical_source_ref": "RE5::75",
+      "absorbed_source_states": [],
+      "target_svg": "rebuild-proposals/svg/RE5/slide_075/slide_075.svg",
+      "internal_animation_manifest": "rebuild-proposals/svg/RE5/slide_075/scene.animation.v1.json",
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Der Sprechertext führt fachliche Gruppen nacheinander ein; der Endzustand bleibt statisch vollständig verständlich.",
+        "public_targets": [
+          "design_gate",
+          "wear_gate",
+          "acceleration_gate",
+          "strategy_outcomes",
+          "universal_guardrail"
+        ],
+        "semantic_groups": [
+          "design_gate",
+          "wear_gate",
+          "acceleration_gate",
+          "strategy_outcomes",
+          "universal_guardrail"
+        ],
+        "steps": []
+      }
+    }
+  ]
+}

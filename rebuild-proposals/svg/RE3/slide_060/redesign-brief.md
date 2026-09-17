@@ -1,14 +1,14 @@
 # Redesign-Brief — slide_060
 
-- Strukturstatus: Kapitel und Lektion noch nicht zugeordnet; Nutzervorgabe ausstehend
-- Quellfolien: 60, 61, 62
-- Sprechertext: section_018 — Sonderfälle Video 12
-- Titel: Beispiel · Ausfallfreie Zeit einer Bremsanlage
-- Takeaway: Trotz 30 Prüflingen kann der Nachweis einer ausfallfreien Zeit statistisch unsicher bleiben.
-- Archetyp: worked-example
-- Zielmodus: full_slide, 1920×1080
-- Referenz-Lock: RE1 slide_009, slide_013, slide_027 und slide_064
+- Strukturstatus: Kapitel 5, Lektion 1 gemäß bestätigter RE3-Zuordnung
+- Quellfolien: 59
+- Sprechertext: section_018 — Sonderfälle Video 12 · Absätze 8, 9, 10, 11, 12, 13
+- Titel: Voraussetzungen für die Anwendung
+- Takeaway: Die Drei-Parameter-Weibullverteilung setzt eine begründbare ausfallfreie Zeit, einen konkaven Verlauf und eine große Stichprobe voraus.
+- Archetyp: decision-checklist
+- Zielmodus: content_svg, transparent, 1920×1080; Titel, Footer, Logo und Hintergrund bleiben im E-Learning-Master
+- Referenz-Lock: RE3-Quellfolie(n) der Szene sowie die freigegebene offene Hierarchie aus RE2
 - Farbdramaturgie: Navy-Tonalität für gleichrangige Inhalte; Grün, Gold und Koralle nur semantisch und sparsam
 - Animation: sprechertextgeführt; semantische Gruppen statt Einzelobjekt-Mikroanimation
 - Quellenregel: PowerPoint-Sprechericons, gelbe Produktionsnotizen und Masterdekoration entfallen
-- Assets: bereinigte Quellmedien bzw. vorhandene Python-Plotassets in neuem Full-Slide-Layout
+- Assets: native SVG-Komposition

@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch3_fta_tree_build",
+  "svgPath": "slide_038.svg",
+  "spokenText": "Schauen wir uns hierzu nochmals das vorherige Beispiel an.\n\nWir wissen ja bereits, dass das Top-Fehler-Ereignis an die Spitze des Baumes platziert wird.\n\nIm nächsten Schritt identifizieren wir die unmittelbar möglichen Ursachen des Top-Ereignisses und stellen sie als Sub-Ereignisse dar. In diesem Fall waren es die drei unterschiedlichen Ausfallarten.\n\nDa wir wissen, dass jeder dieser drei Ausfallarten zu einem Ausfall des Motors führt, verknüpfen wir diese mit einem Oder Gatter.\n\nIm Anschluss werden die Sub-Ereignisse weiter in ihre zugrunde liegenden Ursachen unterteilt und analog in Abhängigkeit der Beziehungen zwischen den einzelnen Ereignissen verknüpft.\n\nAuch hier verwenden wir für die einzelnen Ausfallursachen Oder Gatter, da jeder Ausfall zu einem Ausfall des Motors führt.\n\nAuf diese Weise wird der Fehlerbaum nach unten hin immer weiter verästelt und bildet die gesamte Fehlerhierarchie ab.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "fta43_circuit",
+      "label": "Motorschaltung",
+      "role": "content",
+      "members": [
+        "fta43_circuit"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta43_nodes",
+      "label": "Fehlerbaum-Ereignisse",
+      "role": "content",
+      "members": [
+        "fta43_nodes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta43_links",
+      "label": "Fehlerbaum-Beziehungen",
+      "role": "content",
+      "members": [
+        "fta43_links"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Motorschaltung",
+      "sourceText": "Schauen wir uns hierzu nochmals das",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta43_circuit"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Fehlerbaum-Ereignisse",
+      "sourceText": "Wir wissen ja bereits, dass das",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta43_nodes"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Fehlerbaum-Beziehungen",
+      "sourceText": "verknüpfen wir diese mit einem Oder",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta43_links"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta43_circuit",
+      "beatId": "beat_01",
+      "targetId": "fta43_circuit",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_fta43_nodes",
+      "beatId": "beat_02",
+      "targetId": "fta43_nodes",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_fta43_links",
+      "beatId": "beat_03",
+      "targetId": "fta43_links",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_03",
+      "visibleGroups": [
+        "canvas_context",
+        "fta43_circuit",
+        "fta43_nodes",
+        "fta43_links"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

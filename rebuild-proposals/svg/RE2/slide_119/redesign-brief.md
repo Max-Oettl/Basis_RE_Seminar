@@ -2,12 +2,12 @@
 
 - Kapitel: 4
 - Lektion: 6
-- Quellfolie: 122
-- Zielmodus: full_slide, 1920×1080
-- Titel: Aufgabenpriorität: risikoorientiert entscheiden
-- Dominante Lernbotschaft: Die Aufgabenpriorität übersetzt kombinierte Bewertungen in konkrete Handlungsempfehlungen.
-- Archetyp: priority-matrix
-- Layout: Handlungsaussage links und vergrößerte Aufgabenprioritätsmatrix rechts.
+- Quellfolie: 121
+- Zielmodus: content_svg, transparentes 1920×1080-Inhaltsmodul für den Downstream-Master
+- Titel: Risikobewertung: RPZ
+- Dominante Lernbotschaft: Das AIAG/VDA-Handbuch ergänzt die RPZ um die risikoorientierte Aufgabenpriorität.
+- Archetyp: method-transition
+- Layout: RPZ links, gerichtete Weiterentwicklung und Aufgabenpriorität rechts.
 - Inhaltsinventar: Fachbegriffe, Beziehungen, Hierarchien, Tabellenzustände und Beispiele bleiben erhalten; PowerPoint-Bedienelemente und Masterdekoration entfallen.
 - Referenz-Lock: RE1 slide_013, slide_009, slide_027 und slide_022
 - Assetstrategie: bereinigtes und vergrößertes Quellasset

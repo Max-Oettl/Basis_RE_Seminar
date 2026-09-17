@@ -271,6 +271,244 @@
       "preferredLabels": ["Zuverlässigkeit nachweisen", "zeitbezogener Test"],
       "avoidFor": ["Kalendertermin", "Rennen", "reine Zeitmessung"],
       "status": "active"
+    },
+    {
+      "id": "pDiagramInput",
+      "assetType": "generated_png",
+      "assetPath": "components/image-library/generated-pictograms/re2-p-diagram/re2-p-diagram-input.png",
+      "meaning": "Eingangs- oder Stellgröße wirkt gerichtet in ein System hinein",
+      "semanticRoles": ["concept-anchor", "orientation"],
+      "preferredLabels": ["Eingangsgröße", "Stellgröße", "Eingang"],
+      "avoidFor": ["Systemausgang", "Zielgröße", "Fehlerzustand"],
+      "status": "active"
+    },
+    {
+      "id": "pDiagramControl",
+      "assetType": "generated_png",
+      "assetPath": "components/image-library/generated-pictograms/re2-p-diagram/re2-p-diagram-control.png",
+      "meaning": "Kontrollierbare Größe oder Steuergröße kann gezielt eingestellt werden",
+      "semanticRoles": ["concept-anchor", "action-cue"],
+      "preferredLabels": ["Kontrollierbare Größe", "Steuergröße", "Einstellung"],
+      "avoidFor": ["Reparatur", "Wartung", "reine Messung"],
+      "status": "active"
+    },
+    {
+      "id": "pDiagramDisturbance",
+      "assetType": "generated_png",
+      "assetPath": "components/image-library/generated-pictograms/re2-p-diagram/re2-p-diagram-disturbance.png",
+      "meaning": "Nicht direkt kontrollierbare Störgröße wirkt von außen auf ein System",
+      "semanticRoles": ["concept-anchor", "status"],
+      "preferredLabels": ["Störgröße", "unkontrollierter Einfluss", "Störung"],
+      "avoidFor": ["allgemeines Warnschild", "Energieausgang", "Zielgröße"],
+      "status": "active"
+    },
+    {
+      "id": "pDiagramOutput",
+      "assetType": "generated_png",
+      "assetPath": "components/image-library/generated-pictograms/re2-p-diagram/re2-p-diagram-output.png",
+      "meaning": "Gewünschte Ausgangs- oder Zielgröße eines Systems",
+      "semanticRoles": ["concept-anchor", "orientation"],
+      "preferredLabels": ["Ausgangsgröße", "Zielgröße", "Ergebnis"],
+      "avoidFor": ["Eingangsgröße", "ungezielter Export", "Fehlerzustand"],
+      "status": "active"
+    },
+    {
+      "id": "abc-a-bearing-load",
+      "assetType": "generated_png",
+      "assetPath": "components/image-library/generated-pictograms/re2-abc-classes/abc-a-bearing-load.png",
+      "meaning": "Wälzlager als mechanisches A-Teil mit definierbarer Belastung",
+      "semanticRoles": ["concept-anchor", "comparison-marker"],
+      "preferredLabels": ["A-Teil", "berechenbare Belastung", "Wälzlager"],
+      "avoidFor": ["Gleitlager", "Elektromotor", "allgemeine Warnung"],
+      "status": "active"
+    },
+    {
+      "id": "abc-b-wear-bushing",
+      "assetType": "generated_png",
+      "assetPath": "components/image-library/generated-pictograms/re2-abc-classes/abc-b-wear-bushing.png",
+      "meaning": "Verschleißbeanspruchte Buchse als mechanisches B-Teil",
+      "semanticRoles": ["concept-anchor", "comparison-marker"],
+      "preferredLabels": ["B-Teil", "Reibung und Verschleiß", "Buchse"],
+      "avoidFor": ["Wälzlager", "Bruchereignis", "allgemeine Warnung"],
+      "status": "active"
+    },
+    {
+      "id": "abc-c-standard-fastener",
+      "assetType": "generated_png",
+      "assetPath": "components/image-library/generated-pictograms/re2-abc-classes/abc-c-standard-fastener.png",
+      "meaning": "Einfaches standardisiertes C-Teil ohne besondere technische Kritikalität",
+      "semanticRoles": ["concept-anchor", "comparison-marker"],
+      "preferredLabels": ["C-Teil", "Standardteil", "Befestiger"],
+      "avoidFor": ["Werkzeug", "Antriebswelle", "gebrochenes Bauteil"],
+      "status": "active"
+    },
+    {
+      "id": "system-level-environment",
+      "assetType": "generated_png",
+      "assetPath": "components/image-library/generated-pictograms/re2-system-levels/re2-level-environment.png",
+      "meaning": "Umwelt und äußere Bedingungen eines technischen Systems",
+      "semanticRoles": ["orientation", "concept-anchor"],
+      "preferredLabels": ["Umwelt", "äußere Bedingungen", "Systemumgebung"],
+      "avoidFor": ["reiner Naturschutz", "Navigation als Hauptfunktion"],
+      "status": "active"
+    },
+    {
+      "id": "system-level-pv-system",
+      "assetType": "generated_png",
+      "assetPath": "components/image-library/generated-pictograms/re2-system-levels/re2-level-pv-system.png",
+      "meaning": "PV-Anlage als technisches Gesamtsystem",
+      "semanticRoles": ["orientation", "concept-anchor"],
+      "preferredLabels": ["PV-System", "PV-Anlage", "Systemebene"],
+      "avoidFor": ["einzelne Solarzelle", "Batteriesystem"],
+      "status": "active"
+    },
+    {
+      "id": "system-level-inverter",
+      "assetType": "generated_png",
+      "assetPath": "components/image-library/generated-pictograms/re2-system-levels/re2-level-inverter.png",
+      "meaning": "Wechselrichter als technisches Subsystem einer PV-Anlage",
+      "semanticRoles": ["orientation", "concept-anchor"],
+      "preferredLabels": ["Wechselrichter", "Subsystem", "PV-Wechselrichter"],
+      "avoidFor": ["Batterie", "Elektroverteiler"],
+      "status": "active"
+    },
+    {
+      "id": "system-level-microcontroller",
+      "assetType": "generated_png",
+      "assetPath": "components/image-library/generated-pictograms/re2-system-levels/re2-level-microcontroller.png",
+      "meaning": "Mikrocontroller und elektronische Baugruppe auf Komponentenebene",
+      "semanticRoles": ["orientation", "concept-anchor"],
+      "preferredLabels": ["Mikrocontroller", "Komponente", "elektronische Baugruppe"],
+      "avoidFor": ["vollständiger Computer", "generische Datenverarbeitung"],
+      "status": "active"
+    },
+    {
+      "id": "pDiagramDcInputV2",
+      "assetType": "generated_png",
+      "assetPath": "components/image-library/generated-pictograms/re2-p-diagram-v2/re2-p-diagram-dc-input-v2.png",
+      "meaning": "Gerichteter elektrischer Gleichstrom-Eingang",
+      "semanticRoles": ["concept-anchor", "orientation"],
+      "preferredLabels": ["Gleichstrom", "DC", "Eingangsgröße"],
+      "avoidFor": ["Wechselstrom", "Ausgangsgröße"],
+      "status": "active"
+    },
+    {
+      "id": "pDiagramActivationEnergyV2",
+      "assetType": "generated_png",
+      "assetPath": "components/image-library/generated-pictograms/re2-p-diagram-v2/re2-p-diagram-activation-energy-v2.png",
+      "meaning": "Betätigungsenergie durch Drücken eines Notausschalters",
+      "semanticRoles": ["concept-anchor", "action-cue"],
+      "preferredLabels": ["Betätigungsenergie", "Notausschalter", "Tastendruck"],
+      "avoidFor": ["Touchscreen", "Reparatur"],
+      "status": "active"
+    },
+    {
+      "id": "pDiagramControlSignalV2",
+      "assetType": "generated_png",
+      "assetPath": "components/image-library/generated-pictograms/re2-p-diagram-v2/re2-p-diagram-control-signal-v2.png",
+      "meaning": "Technisches Steuersignal eines kontrollierbaren Einflusses",
+      "semanticRoles": ["concept-anchor", "orientation"],
+      "preferredLabels": ["Signal", "Steuersignal", "kontrollierbare Größe"],
+      "avoidFor": ["allgemeines WLAN", "Störgröße"],
+      "status": "active"
+    },
+    {
+      "id": "pDiagramVibrationV2",
+      "assetType": "generated_png",
+      "assetPath": "components/image-library/generated-pictograms/re2-p-diagram-v2/re2-p-diagram-vibration-v2.png",
+      "meaning": "Mechanische Vibration als äußere Störgröße",
+      "semanticRoles": ["concept-anchor", "status"],
+      "preferredLabels": ["Vibration", "mechanische Schwingung"],
+      "avoidFor": ["Funksignal", "Schall"],
+      "status": "active"
+    },
+    {
+      "id": "pDiagramDirtV2",
+      "assetType": "generated_png",
+      "assetPath": "components/image-library/generated-pictograms/re2-p-diagram-v2/re2-p-diagram-dirt-v2.png",
+      "meaning": "Schmutz- oder Staubpartikel wirken auf eine technische Oberfläche",
+      "semanticRoles": ["concept-anchor", "status"],
+      "preferredLabels": ["Schmutz", "Staub", "Partikel"],
+      "avoidFor": ["Rauch", "Explosion"],
+      "status": "active"
+    },
+    {
+      "id": "pDiagramHeatV2",
+      "assetType": "generated_png",
+      "assetPath": "components/image-library/generated-pictograms/re2-p-diagram-v2/re2-p-diagram-heat-v2.png",
+      "meaning": "Wärmeeinwirkung als äußere Störgröße",
+      "semanticRoles": ["concept-anchor", "status"],
+      "preferredLabels": ["Wärme", "Temperatur"],
+      "avoidFor": ["Brand", "Feuer"],
+      "status": "active"
+    },
+    {
+      "id": "pDiagramMoistureV2",
+      "assetType": "generated_png",
+      "assetPath": "components/image-library/generated-pictograms/re2-p-diagram-v2/re2-p-diagram-moisture-v2.png",
+      "meaning": "Feuchtigkeit oder Humidität als äußere Störgröße",
+      "semanticRoles": ["concept-anchor", "status"],
+      "preferredLabels": ["Feuchtigkeit", "Humidität"],
+      "avoidFor": ["Rohrbruch", "Regenwetter"],
+      "status": "active"
+    },
+    {
+      "id": "pDiagramAcOutputV2",
+      "assetType": "generated_png",
+      "assetPath": "components/image-library/generated-pictograms/re2-p-diagram-v2/re2-p-diagram-ac-output-v2.png",
+      "meaning": "Gerichteter Wechselstrom-Ausgang eines Wandlers",
+      "semanticRoles": ["concept-anchor", "orientation"],
+      "preferredLabels": ["Wechselstrom", "AC", "Ausgangsgröße"],
+      "avoidFor": ["Gleichstrom", "Messdiagramm"],
+      "status": "active"
+    },
+    {
+      "id": "endurance-extreme-test",
+      "assetType": "generated_png",
+      "assetPath": "rebuild-proposals/svg/RE3/slide_031/media/extreme-test.png",
+      "assetBrief": "rebuild-proposals/svg/RE3/slide_031/media/extreme-test.asset.json",
+      "scope": "RE3 scene 31",
+      "meaning": "Prüfkammer mit Temperaturbelastung als Beispiel stark beschleunigter Lebensdauerversuche",
+      "semanticRoles": ["concept-anchor"],
+      "preferredLabels": ["Stark beschleunigte Lebensdauerversuche"],
+      "avoidFor": ["Ausfallstatus", "Wetter"],
+      "status": "active"
+    },
+    {
+      "id": "endurance-laboratory-test",
+      "assetType": "generated_png",
+      "assetPath": "rebuild-proposals/svg/RE3/slide_031/media/laboratory-test.png",
+      "assetBrief": "rebuild-proposals/svg/RE3/slide_031/media/laboratory-test.asset.json",
+      "scope": "RE3 scene 31",
+      "meaning": "Elektronisches Prüfgerät für kontrollierte Lebensdauerversuche im Labor",
+      "semanticRoles": ["concept-anchor"],
+      "preferredLabels": ["Lebensdauerversuche im Labor"],
+      "avoidFor": ["Chemisches Experiment", "Felddaten"],
+      "status": "active"
+    },
+    {
+      "id": "endurance-test-drive",
+      "assetType": "generated_png",
+      "assetPath": "rebuild-proposals/svg/RE3/slide_031/media/test-drive.png",
+      "assetBrief": "rebuild-proposals/svg/RE3/slide_031/media/test-drive.asset.json",
+      "scope": "RE3 scene 31",
+      "meaning": "Pkw als Beispiel für Versuchsfahrten im Fahrzeugbereich",
+      "semanticRoles": ["concept-anchor"],
+      "preferredLabels": ["Versuchsfahrten"],
+      "avoidFor": ["Konkrete Fahrzeugmarke", "Bestimmtes Nutzfahrzeug"],
+      "status": "active"
+    },
+    {
+      "id": "endurance-customer-use",
+      "assetType": "generated_png",
+      "assetPath": "rebuild-proposals/svg/RE3/slide_031/media/customer-use.png",
+      "assetBrief": "rebuild-proposals/svg/RE3/slide_031/media/customer-use.asset.json",
+      "scope": "RE3 scene 31",
+      "meaning": "Technisches Produkt beim Anwender als Quelle von Felddaten",
+      "semanticRoles": ["concept-anchor"],
+      "preferredLabels": ["Felddaten / Feldversuche"],
+      "avoidFor": ["Reparaturauftrag", "Kundendienst"],
+      "status": "active"
     }
   ]
 }

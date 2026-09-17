@@ -64,7 +64,7 @@ async function evaluate(client, expression) {
   return result.result?.value;
 }
 
-function reviewStates(manifest) {
+function reviewStates(manifest, sampleHighlights = false) {
   const animation = buildAnimationStates(manifest);
   if (!animation.timeline.length) return animation;
 
@@ -87,6 +87,13 @@ function reviewStates(manifest) {
       };
     }),
   ];
+  if (sampleHighlights) {
+    for (const segment of animation.timeline.filter(item => item.step.action === "highlight")) {
+      const timeMs=(segment.start+segment.end)/2;
+      animation.states.push({label:`highlight_${safeLabel(segment.step.targetId)}_${segment.index}`,timeMs,timeSeconds:Number((timeMs/1000).toFixed(3))});
+    }
+    animation.states.sort((a,b)=>a.timeMs-b.timeMs);
+  }
   return animation;
 }
 
@@ -116,7 +123,7 @@ async function main() {
       const manifest = fs.existsSync(manifestPath)
         ? JSON.parse(fs.readFileSync(manifestPath, "utf8"))
         : { targets: [], steps: [] };
-      const animation = reviewStates(manifest);
+      const animation = reviewStates(manifest, args["sample-highlights"] === "true");
       const slideOutput = path.join(outputDir, `slide_${number}`);
       fs.mkdirSync(slideOutput, { recursive: true });
 

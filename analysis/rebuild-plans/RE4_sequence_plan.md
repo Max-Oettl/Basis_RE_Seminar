@@ -1,7 +1,7 @@
 # RE4 sequence plan
 
 - Source states: 68
-- Target scenes: 22
+- Target scenes: 23
 - Removed production notes: 53
 - Chapter/lesson structure: deferred by user
 - Reference lock: RE3 slide_002, slide_024, slide_043 and slide_070
@@ -24,10 +24,11 @@
 | 13 | slide_044 | 44, 45, 46, 47 | section_005 | animated | cross-model-map |
 | 14 | slide_048 | 48, 49, 50, 51, 52 | section_006 | animated | assumption-checklist |
 | 15 | slide_054 | 54 | section_006 | static | definition |
-| 16 | slide_055 | 55, 56, 57, 58, 59, 60 | section_007 | animated | worked-method |
-| 17 | slide_061 | 61 | section_007 | static | method-map |
-| 18 | slide_062 | 62 | section_007 | static | assumption-summary |
-| 19 | slide_063 | 63, 64 | section_007 | static | formula-reference |
-| 20 | slide_065 | 65 | section_007 | static | technical-plot |
-| 21 | slide_066 | 66, 67 | section_007 | static | application-transfer |
-| 22 | slide_068 | 68 | section_007 | static | exercise |
+| 16 | slide_055 | 55, 56, 57 | section_007 | animated | method-introduction |
+| 17 | slide_058 | 58, 59, 60 | section_007 | animated | formula-comparison |
+| 18 | slide_061 | 61 | section_007 | static | method-map |
+| 19 | slide_062 | 62 | section_007 | static | assumption-summary |
+| 20 | slide_063 | 63, 64 | section_007 | static | formula-reference |
+| 21 | slide_065 | 65 | section_007 | static | technical-plot |
+| 22 | slide_066 | 66, 67 | section_007 | static | application-transfer |
+| 23 | slide_068 | 68 | section_007 | static | exercise |

@@ -1,0 +1,498 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_042",
+  "svgPath": "slide_042.svg",
+  "spokenText": "Eine weitere Form der Zensierung ist die sogenannte Intervallzensierung. In der Statistik spricht man von Intervallzensierung, wenn der genaue Zeitpunkt eines Ereignisses – in unserem Fall der Ausfall – nicht bekannt ist.\n\nStattdessen wissen wir nur, dass der Ausfall innerhalb eines bestimmten Zeitintervalls stattgefunden hat. Das bedeutet: Wir kennen zwei Zeitpunkte, zwischen denen der Ausfall liegen muss – aber nicht, wann genau er eingetreten ist.\n\nDieses Phänomen tritt in der Praxis häufig auf. Zum Beispiel dann, wenn Objekte nicht kontinuierlich überwacht werden, sondern nur in regelmäßigen Abständen – etwa einmal täglich oder wöchentlich. Wird während einer Kontrolle ein Defekt festgestellt, wissen wir nur, dass der Ausfall irgendwann zwischen der letzten erfolgreichen Prüfung und der aktuellen Kontrolle passiert sein muss. Der tatsächliche Ausfallzeitpunkt bleibt also innerhalb eines Intervalls verborgen.\n\nWichtig ist: Intervallzensierung bezieht sich auf die Genauigkeit unserer Beobachtung des Ausfalls und ist prinzipiell unabhängig von den bisher betrachteten Zensierungsarten. Das heißt, sie kann sowohl in Fällen vollständigen Daten als auch in Fällen rechtszensierten oder multipel zensierten Daten auftreten. Strenggenommen liegt Intervallzensierung in vielen Fällen sogar automatisch vor – nämlich immer dann, wenn unsere zeitliche Auflösung nicht unendlich klein ist. Selbst kleinste Intervalle führen dazu, dass der Ausfallzeitpunkt nur geschätzt, aber nicht exakt bestimmt werden kann.\n\nDeshalb ist es wichtig zu verstehen: Intervallzensierung beschreibt nicht, wie der Versuch aufgebaut ist – sondern, wie genau wir über den Zeitpunkt des Ereignisses Bescheid wissen. Und dieses Wissen ist in der Praxis fast immer begrenzt.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/after/slide_042.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Eine weitere Form der Zensierung ist",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Eine weitere Form der Zensierung",
+      "occurrence": 1,
+      "claim": "Sechs beobachtete Objekte",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "interval_context"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "nicht bekannt ist",
+      "occurrence": 1,
+      "claim": "interval example",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "interval_example"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "innerhalb eines bestimmten Zeitintervalls",
+      "occurrence": 1,
+      "claim": "Beispiel Objekt 2",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "interval_detail_context"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "innerhalb eines bestimmten Zeitintervalls",
+      "occurrence": 1,
+      "claim": "Zwei bekannte Grenzen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "interval_window"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "aber nicht, wann genau",
+      "occurrence": 1,
+      "claim": "Zeitpunkt innerhalb unbekannt",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "interval_unknown"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "aber nicht, wann genau",
+      "occurrence": 1,
+      "claim": "Unbekannter Ausfall im Intervall",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "interval_legend"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "nicht kontinuierlich überwacht werden",
+      "occurrence": 1,
+      "claim": "Erfolgreiche Prüfung und Defekt",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "interval_controls"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "zwischen der letzten erfolgreichen Prüfung",
+      "occurrence": 1,
+      "claim": "Zwei bekannte Grenzen",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "interval_window"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "Der tatsächliche Ausfallzeitpunkt bleibt",
+      "occurrence": 1,
+      "claim": "interval others",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "interval_others"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "auf die Genauigkeit unserer Beobachtung",
+      "occurrence": 1,
+      "claim": "Beobachtungsauflösung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "interval_resolution"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "sowohl in Fällen vollständigen Daten",
+      "occurrence": 1,
+      "claim": "Beobachtungsauflösung",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "interval_resolution"
+      ]
+    },
+    {
+      "beatId": "beat_12",
+      "sourceText": "zeitliche Auflösung nicht unendlich klein ist",
+      "occurrence": 1,
+      "claim": "Zwei bekannte Grenzen",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "interval_window"
+      ]
+    },
+    {
+      "beatId": "beat_13",
+      "sourceText": "Selbst kleinste Intervalle führen dazu",
+      "occurrence": 1,
+      "claim": "Zeitpunkt innerhalb unbekannt",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "interval_unknown"
+      ]
+    },
+    {
+      "beatId": "beat_14",
+      "sourceText": "wie genau wir über den Zeitpunkt",
+      "occurrence": 1,
+      "claim": "Beobachtungsauflösung",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "interval_resolution"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "interval_context",
+      "label": "Sechs beobachtete Objekte",
+      "role": "content",
+      "members": [
+        "interval_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "interval_example",
+      "label": "interval example",
+      "role": "content",
+      "members": [
+        "interval_example"
+      ],
+      "dependsOn": [
+        "interval_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "interval_detail_context",
+      "label": "Beispiel Objekt 2",
+      "role": "content",
+      "members": [
+        "interval_detail_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "interval_window",
+      "label": "Zwei bekannte Grenzen",
+      "role": "content",
+      "members": [
+        "interval_window"
+      ],
+      "dependsOn": [
+        "interval_detail_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "interval_unknown",
+      "label": "Zeitpunkt innerhalb unbekannt",
+      "role": "content",
+      "members": [
+        "interval_unknown"
+      ],
+      "dependsOn": [
+        "interval_window"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "interval_legend",
+      "label": "Unbekannter Ausfall im Intervall",
+      "role": "content",
+      "members": [
+        "interval_legend"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "interval_controls",
+      "label": "Erfolgreiche Prüfung und Defekt",
+      "role": "content",
+      "members": [
+        "interval_controls"
+      ],
+      "dependsOn": [
+        "interval_window"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "interval_others",
+      "label": "interval others",
+      "role": "content",
+      "members": [
+        "interval_others"
+      ],
+      "dependsOn": [
+        "interval_example"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_9"
+    },
+    {
+      "groupId": "interval_resolution",
+      "label": "Beobachtungsauflösung",
+      "role": "content",
+      "members": [
+        "interval_resolution"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_10"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_interval_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_context",
+      "sourceText": "Eine weitere Form der Zensierung",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_interval_example",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_example",
+      "sourceText": "nicht bekannt ist",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_interval_detail_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_detail_context",
+      "sourceText": "innerhalb eines bestimmten Zeitintervalls",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_interval_window",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_window",
+      "sourceText": "innerhalb eines bestimmten Zeitintervalls",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_interval_unknown",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_unknown",
+      "sourceText": "aber nicht, wann genau",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_interval_legend",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_legend",
+      "sourceText": "aber nicht, wann genau",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_interval_controls",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_controls",
+      "sourceText": "nicht kontinuierlich überwacht werden",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_interval_window",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_window",
+      "sourceText": "zwischen der letzten erfolgreichen Prüfung",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_8",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_09_interval_others",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_others",
+      "sourceText": "Der tatsächliche Ausfallzeitpunkt bleibt",
+      "action": "show",
+      "beatId": "beat_9",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_10_interval_resolution",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_resolution",
+      "sourceText": "auf die Genauigkeit unserer Beobachtung",
+      "action": "show",
+      "beatId": "beat_10",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_11_interval_resolution",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_resolution",
+      "sourceText": "sowohl in Fällen vollständigen Daten",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_11",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_12_interval_window",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_window",
+      "sourceText": "zeitliche Auflösung nicht unendlich klein ist",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_12",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_13_interval_unknown",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_unknown",
+      "sourceText": "Selbst kleinste Intervalle führen dazu",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_13",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_14_interval_resolution",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_resolution",
+      "sourceText": "wie genau wir über den Zeitpunkt",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_14",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/states-v2/slide_042/00_initial.png"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "interval_context",
+        "interval_example",
+        "interval_detail_context",
+        "interval_window",
+        "interval_unknown",
+        "interval_legend",
+        "interval_controls",
+        "interval_others",
+        "interval_resolution"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/states-v2/slide_042/17_after_12_wie_genau_wir_uber_den_zeitpunkt.png"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "reviewedAt": "2026-09-17",
+    "independentReviewer": "/root/visual_review",
+    "endState": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/after/slide_042.png",
+    "preview": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/preview/slide_042.png",
+    "stateDirectory": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/states-v2/slide_042",
+    "reviewedStateCount": 18,
+    "includesHighlights": true,
+    "findings": [],
+    "scope": "Discrete Chromium states, phrase triggers, source correspondence and legibility at 50 percent; no continuous audio playback test."
+  }
+}

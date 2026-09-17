@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_076.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "weibull_density_curves",
+      "label": "Dichtekurven der Weibullverteilung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_density_eta",
+      "label": "Charakteristische Lebensdauer im Plot",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_eta_meaning",
+      "label": "Bedeutung von T",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_beta_meaning",
+      "label": "Bedeutung von b",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_flexibility_summary",
+      "label": "Flexibles Anwendungsspektrum",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_t0_parameter",
+      "label": "Ausfallfreie Zeit t null",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_weibull_density_curves",
+      "targetId": "weibull_density_curves",
+      "action": "draw",
+      "sourceText": "Die Weibullverteilung ist durch zwei Parameter definiert.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_weibull_density_eta",
+      "targetId": "weibull_density_eta",
+      "action": "show",
+      "sourceText": "Zum einen durch die charakteristische Lebensdauer groß T",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_eta_meaning",
+      "targetId": "weibull_eta_meaning",
+      "action": "show",
+      "sourceText": "Zum einen durch die charakteristische Lebensdauer groß T",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_beta_meaning",
+      "targetId": "weibull_beta_meaning",
+      "action": "show",
+      "sourceText": "Und zum anderen durch den Formparameter b",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_flexibility_summary",
+      "targetId": "weibull_flexibility_summary",
+      "action": "show",
+      "sourceText": "Aufgrund der Flexibilität besitzt die Weibullverteilung ein sehr breites Anwendungsspektrum",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_t0_parameter",
+      "targetId": "weibull_t0_parameter",
+      "action": "show",
+      "sourceText": "Darüber hinaus lässt sich die Weibullverteilung auch mit Hilfe eines zusätzlichen, dritten Parameters",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

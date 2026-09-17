@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "reltestEducationPictogramAsset/v1",
+  "assetId": "re2_p_diagram_output",
+  "file": "components/image-library/generated-pictograms/re2-p-diagram/re2-p-diagram-output.png",
+  "assetType": "generated_png",
+  "status": "accepted",
+  "styleProfile": "reltest-education-minimal-v1",
+  "source": {
+    "evidenceType": "speaker_text",
+    "reference": "RE2 Quellfolie 8: Ausgangsgrößen / Zielgrößen sind die gewünschte Systemreaktion.",
+    "license": "project_internal"
+  },
+  "semantics": {
+    "concept": "gewünschte Ziel- oder Ausgangsgröße",
+    "learningFunction": "concept-anchor",
+    "mustShowFeatures": ["Zielscheibe", "sichtbarer Treffer", "gerichteter Pfeil"],
+    "mustNotImply": ["ungezielter Export", "Fehlerzustand"],
+    "confusableWith": ["Eingangsgröße", "allgemeiner Fokus"],
+    "firstUseLabel": "Ausgangsgrößen / Zielgrößen",
+    "reuseKey": "p-diagram-output"
+  },
+  "visualStyle": {
+    "flat2d": true,
+    "perspective": "front",
+    "dominantSilhouette": true,
+    "semanticLayers": 2,
+    "brandColors": ["#142452", "#00A653"],
+    "gradients": false,
+    "shadows": false,
+    "threeDimensional": false,
+    "isometric": false,
+    "photorealistic": false,
+    "glow": false,
+    "texture": false,
+    "embeddedText": false,
+    "logo": false,
+    "watermark": false
+  },
+  "raster": {"widthPx": 1254, "heightPx": 1254, "transparentBackground": true, "safeMarginRatio": 0.08},
+  "learningUse": {
+    "targetPlacementPx": 112,
+    "requiresTextLabelOnFirstUse": true,
+    "colorIndependentMeaning": true,
+    "smallScaleTests": {"at32px": "not_required", "at48px": "passed", "scene960x540": "passed"}
+  },
+  "accessibility": {
+    "redundantWithVisibleLabel": true,
+    "accessibleName": "",
+    "contrastPairs": [
+      {"foreground": "#142452", "background": "#FFFFFF", "minimumRatio": 3},
+      {"foreground": "#00A653", "background": "#FFFFFF", "minimumRatio": 3}
+    ]
+  },
+  "review": {"semantic": "passed", "style": "passed", "eLearning": "passed", "accessibilityTechnical": "passed", "notes": ["Zielscheibe, Trefferpfeil und grüner Mittelpunkt sind bei 48 px klar; die Zielrichtung ist nicht mit dem Eingang verwechselbar."]}
+}

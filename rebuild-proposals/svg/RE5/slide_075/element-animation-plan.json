@@ -1,0 +1,37 @@
+{
+  "sceneId": "re5_src_075",
+  "decision": "animated",
+  "staticGate": "passed_before_animation",
+  "targets": [
+    {
+      "id": "design_gate",
+      "label": "Dimensionierung prüfen",
+      "cue": "wie das Produktdesign im Verhältnis zur Anforderung",
+      "action": "show"
+    },
+    {
+      "id": "wear_gate",
+      "label": "Messbaren Verschleiß prüfen",
+      "cue": "ob ein messbarer Verschleiß vorhanden ist",
+      "action": "show"
+    },
+    {
+      "id": "acceleration_gate",
+      "label": "Beschleunigung prüfen",
+      "cue": "ob eine Beschleunigung durch Lasterhöhung möglich ist",
+      "action": "show"
+    },
+    {
+      "id": "strategy_outcomes",
+      "label": "Vier Strategien",
+      "cue": "wählen wir den End-of-Life Test",
+      "action": "show"
+    },
+    {
+      "id": "universal_guardrail",
+      "label": "Universelle Guardrails",
+      "cue": "Noch ein wichtiger Hinweis gilt unabhängig",
+      "action": "show"
+    }
+  ]
+}

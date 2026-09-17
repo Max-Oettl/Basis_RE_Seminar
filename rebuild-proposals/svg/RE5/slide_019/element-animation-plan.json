@@ -1,0 +1,37 @@
+{
+  "sceneId": "re5_src_019",
+  "decision": "animated",
+  "staticGate": "passed_before_animation",
+  "targets": [
+    {
+      "id": "success_run_requirement",
+      "label": "Beispielanforderung",
+      "cue": "Die Anforderung kann zum Beispiel so aussehen",
+      "action": "show"
+    },
+    {
+      "id": "zero_failures",
+      "label": "Null Ausfälle",
+      "cue": "Und während des Testlaufs darf kein einziger Prüfling ausfallen",
+      "action": "show"
+    },
+    {
+      "id": "proof_plot",
+      "label": "Bekannter Nachweis mit Weibullverteilung",
+      "cue": "Wenn wir die Weibullverteilung samt Vertrauensbereich",
+      "action": "draw"
+    },
+    {
+      "id": "missing_weibull",
+      "label": "Fehlende Weibull-Auswertung",
+      "cue": "Wenn kein Ausfall auftritt",
+      "action": "show"
+    },
+    {
+      "id": "proof_question",
+      "label": "Zentrale Nachweisfrage",
+      "cue": "Wie können wir aber trotzdem einen Nachweis führen",
+      "action": "show"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": "basisReDesignFeedbackCrosscheck/v1",
+  "module_id": "RE2",
+  "viewer_scene": 47,
+  "work_unit": "slide_101",
+  "scene_id": "re2_ch4_failure_structure",
+  "source_slides": [101, 102, 103],
+  "reference_scene": {
+    "viewer_scene": 51,
+    "work_unit": "slide_110",
+    "renderer": "gearboxFailureHierarchy"
+  },
+  "preserved_inventory": {
+    "step_overview": true,
+    "active_step": 4,
+    "root_system": "Getriebe",
+    "root_function_fault_pairs": 2,
+    "level_2_system_elements": 3,
+    "level_2_function_fault_pairs": 3,
+    "level_3_components": 6,
+    "level_3_function_fault_pairs": 6,
+    "hierarchical_connectors": true
+  },
+  "checks": [
+    {
+      "check": "previous_target_to_revised_target",
+      "status": "passed",
+      "note": "Alle zuvor sichtbaren Getriebe-, Funktions- und Fehlfunktionsinhalte bleiben erhalten; geändert wurden ausschließlich Geometrie, Abstände und semantische Gruppen-IDs."
+    },
+    {
+      "check": "reference_reuse",
+      "status": "passed",
+      "note": "Szene 47 verwendet dieselbe zentrale Hierarchiekomponente wie die vom Nutzer benannte Szene 51."
+    },
+    {
+      "check": "speaker_text_and_triggers",
+      "status": "passed",
+      "note": "Die vier Animationstrigger sind exakte Ausschnitte aus dem wirksamen Sprechertext von Szene 47."
+    },
+    {
+      "check": "relationship_topology",
+      "status": "passed",
+      "note": "Getriebe, Baugruppen und Bauteile bleiben als dreistufiger Baum verbunden; Verbinder erscheinen erst nach allen Endpunkten."
+    }
+  ],
+  "status": "passed"
+}

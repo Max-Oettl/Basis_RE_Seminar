@@ -1,0 +1,47 @@
+{
+  "schema_version": "basisReContentCrosscheck/v1",
+  "module_id": "RE2",
+  "work_unit": "slide_008",
+  "scene_id": "re2_ch2_p_diagram_principle",
+  "target_svg": "rebuild-proposals/svg/RE2/slide_008/slide_008.svg",
+  "source_slides": [
+    8
+  ],
+  "mapping_type": "direct",
+  "source_checks": [
+    {
+      "source_slide": 8,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie8.SVG",
+      "expected_text_nodes": 11,
+      "missing_text_nodes": [
+        "(Parameter",
+        "-",
+        "Diagramm)",
+        "System:",
+        "Kontrollierbare Größen /",
+        "Steuergrößen",
+        "Eingangsgrößen /",
+        "Stellgrößen",
+        "Zielgrößen"
+      ],
+      "expected_image_assets": 5,
+      "missing_image_assets": [
+        "img1",
+        "img3",
+        "img5",
+        "img7",
+        "img8"
+      ],
+      "speaker_control_expected_removed": true
+    }
+  ],
+  "qa": {
+    "issues": [
+      "Quellfolie 8: 9 sichtbare Texte fehlen im Ziel.",
+      "Quellfolie 8: 5 Inhaltsbilder fehlen im Ziel."
+    ],
+    "warnings": [],
+    "open_questions": []
+  },
+  "status": "failed"
+}

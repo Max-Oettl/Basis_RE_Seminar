@@ -1,0 +1,50 @@
+{
+  "schema_version": "basisReContentCrosscheck/v1",
+  "module_id": "RE2",
+  "work_unit": "slide_003",
+  "scene_id": "re2_ch1_lifecycle",
+  "target_svg": "rebuild-proposals/svg/RE2/slide_003/slide_003.svg",
+  "source_slides": [
+    3
+  ],
+  "mapping_type": "direct",
+  "source_checks": [
+    {
+      "source_slide": 3,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie3.SVG",
+      "expected_text_nodes": 22,
+      "missing_text_nodes": [
+        "Nachweis",
+        "Zuverlässigkeit",
+        "Lebensdauer",
+        "t",
+        "# Ausfälle",
+        "Frühausfälle",
+        "Zufallsausfälle",
+        "Ermüdungsausfälle",
+        "Fokus",
+        "qualitative",
+        "ZUV",
+        "-",
+        "Methoden",
+        "quantitative",
+        "1",
+        "2"
+      ],
+      "expected_image_assets": 1,
+      "missing_image_assets": [
+        "img1"
+      ],
+      "speaker_control_expected_removed": true
+    }
+  ],
+  "qa": {
+    "issues": [
+      "Quellfolie 3: 16 sichtbare Texte fehlen im Ziel.",
+      "Quellfolie 3: 1 Inhaltsbilder fehlen im Ziel."
+    ],
+    "warnings": [],
+    "open_questions": []
+  },
+  "status": "failed"
+}

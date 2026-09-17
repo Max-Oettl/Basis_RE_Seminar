@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "reltestEducationPictogramAsset/v1",
+  "assetId": "abc_c_standard_fastener",
+  "file": "components/image-library/generated-pictograms/re2-abc-classes/abc-c-standard-fastener.png",
+  "assetType": "generated_png",
+  "status": "accepted",
+  "styleProfile": "reltest-education-minimal-v1",
+  "source": { "evidenceType": "user_request", "reference": "RE2 Szene 12: Bilder neu generieren", "license": "project_internal" },
+  "semantics": {
+    "concept": "Einfaches standardisiertes C-Teil",
+    "learningFunction": "concept-anchor",
+    "mustShowFeatures": ["Schraubenkopf", "gerader Schaft", "reduziertes Gewinde"],
+    "mustNotImply": ["Werkzeug", "Baugruppe", "gebrochenes Teil"],
+    "confusableWith": ["Schraubendreher", "Antriebswelle"],
+    "firstUseLabel": "C-TEILE",
+    "reuseKey": "abc-c-standard-fastener"
+  },
+  "visualStyle": { "flat2d": true, "perspective": "front", "dominantSilhouette": true, "semanticLayers": 1, "brandColors": ["#142452"], "gradients": false, "shadows": false, "threeDimensional": false, "isometric": false, "photorealistic": false, "glow": false, "texture": false, "embeddedText": false, "logo": false, "watermark": false },
+  "raster": { "widthPx": 1024, "heightPx": 1024, "transparentBackground": true, "safeMarginRatio": 0.08 },
+  "learningUse": { "targetPlacementPx": 154, "requiresTextLabelOnFirstUse": true, "colorIndependentMeaning": true, "smallScaleTests": { "at32px": "not_required", "at48px": "passed", "scene960x540": "passed" } },
+  "accessibility": { "redundantWithVisibleLabel": true, "accessibleName": "", "contrastPairs": [{ "foreground": "#142452", "background": "#FFFFFF", "minimumRatio": 3 }] },
+  "review": { "semantic": "passed", "style": "passed", "eLearning": "passed", "accessibilityTechnical": "passed", "notes": ["Mit integrierter Bildgenerierung erstellt und mit dem kanonischen Education-Flattener auf transparentes Marineblau-PNG normalisiert.", "Bei 64 px, 48 px und im 960-x-540-Szenenrender visuell geprueft; 32 px dokumentiert, fuer das konkrete Objektpiktogramm aber nicht als Zielgroesse erforderlich."] }
+}

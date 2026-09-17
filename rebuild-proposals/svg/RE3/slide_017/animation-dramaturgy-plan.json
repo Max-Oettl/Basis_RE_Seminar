@@ -1,0 +1,402 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_017",
+  "svgPath": "slide_017.svg",
+  "spokenText": "Nehmen wir an, wir haben aus unseren Ausfalldaten eine Weibullgerade ermittelt.\n\nDa diese Daten jedoch nur auf einer Stichprobe der Grundgesamtheit basieren, ergibt sich daraus auch ein Vertrauensbereich.\n\nDieser wird durch zwei Vertrauensgrenzen definiert.\n\nDie Vertrauensgrenzen geben den Bereich an, in dem sich die wahre Weibullverteilung der Grundgesamtheit mit einer bestimmten Wahrscheinlichkeit befindet.\n\nEin neunzigprozentiger Vertrauensbereich bedeutet beispielsweise, dass die tatsächliche Weibullverteilung der Grundgesamtheit mit einer Wahrscheinlichkeit von neunzig Prozent innerhalb dieser Grenzen liegt.\n\nWürden wir eine andere Stichprobe aus derselben Grundgesamtheit analysieren, würde die berechnete Weibullgerade in neunzig Prozent der Fälle innerhalb der Vertrauensgrenzen liegen.\n\nMan spricht in diesem Zusammenhang auch manchmal von der Aussagewahrscheinlichkeit oder auch Aussagesicherheit.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/after/slide_017.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Nehmen wir an, wir haben aus",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Nehmen wir an",
+      "occurrence": 1,
+      "claim": "Weibullnetz",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "meaning_plot"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Nehmen wir an",
+      "occurrence": 1,
+      "claim": "meaning fit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "meaning_fit"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Nehmen wir an",
+      "occurrence": 1,
+      "claim": "Schätzung aus einer Stichprobe",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "meaning_sample"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "nur auf einer Stichprobe der Grundgesamtheit",
+      "occurrence": 1,
+      "claim": "Schätzung aus einer Stichprobe",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "meaning_sample"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "durch zwei Vertrauensgrenzen definiert",
+      "occurrence": 1,
+      "claim": "meaning limits",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "meaning_limits"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "durch zwei Vertrauensgrenzen definiert",
+      "occurrence": 1,
+      "claim": "Zwei Vertrauensgrenzen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "meaning_bounds_note"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "Ein neunzigprozentiger Vertrauensbereich bedeutet",
+      "occurrence": 1,
+      "claim": "90 Prozent Aussagewahrscheinlichkeit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "meaning_level"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "eine andere Stichprobe aus derselben Grundgesamtheit",
+      "occurrence": 1,
+      "claim": "meaning alternatives",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "meaning_alternatives"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "eine andere Stichprobe aus derselben Grundgesamtheit",
+      "occurrence": 1,
+      "claim": "Eine weitere Stichprobe",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "meaning_resampling"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "Man spricht in diesem Zusammenhang",
+      "occurrence": 1,
+      "claim": "Bezeichnung Aussagesicherheit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "meaning_vocabulary"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "meaning_plot",
+      "label": "Weibullnetz",
+      "role": "content",
+      "members": [
+        "meaning_plot"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "meaning_fit",
+      "label": "meaning fit",
+      "role": "content",
+      "members": [
+        "meaning_fit"
+      ],
+      "dependsOn": [
+        "meaning_plot"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "meaning_sample",
+      "label": "Schätzung aus einer Stichprobe",
+      "role": "content",
+      "members": [
+        "meaning_sample"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "meaning_limits",
+      "label": "meaning limits",
+      "role": "content",
+      "members": [
+        "meaning_limits"
+      ],
+      "dependsOn": [
+        "meaning_fit"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "meaning_bounds_note",
+      "label": "Zwei Vertrauensgrenzen",
+      "role": "content",
+      "members": [
+        "meaning_bounds_note"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "meaning_level",
+      "label": "90 Prozent Aussagewahrscheinlichkeit",
+      "role": "content",
+      "members": [
+        "meaning_level"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "meaning_alternatives",
+      "label": "meaning alternatives",
+      "role": "content",
+      "members": [
+        "meaning_alternatives"
+      ],
+      "dependsOn": [
+        "meaning_limits"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    },
+    {
+      "groupId": "meaning_resampling",
+      "label": "Eine weitere Stichprobe",
+      "role": "content",
+      "members": [
+        "meaning_resampling"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_9"
+    },
+    {
+      "groupId": "meaning_vocabulary",
+      "label": "Bezeichnung Aussagesicherheit",
+      "role": "content",
+      "members": [
+        "meaning_vocabulary"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_10"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_meaning_plot",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "meaning_plot",
+      "sourceText": "Nehmen wir an",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_meaning_fit",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "meaning_fit",
+      "sourceText": "Nehmen wir an",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_meaning_sample",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "meaning_sample",
+      "sourceText": "Nehmen wir an",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_meaning_sample",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "meaning_sample",
+      "sourceText": "nur auf einer Stichprobe der Grundgesamtheit",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_4",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_05_meaning_limits",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "meaning_limits",
+      "sourceText": "durch zwei Vertrauensgrenzen definiert",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_meaning_bounds_note",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "meaning_bounds_note",
+      "sourceText": "durch zwei Vertrauensgrenzen definiert",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_meaning_level",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "meaning_level",
+      "sourceText": "Ein neunzigprozentiger Vertrauensbereich bedeutet",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_meaning_alternatives",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "meaning_alternatives",
+      "sourceText": "eine andere Stichprobe aus derselben Grundgesamtheit",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_meaning_resampling",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "meaning_resampling",
+      "sourceText": "eine andere Stichprobe aus derselben Grundgesamtheit",
+      "action": "show",
+      "beatId": "beat_9",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_10_meaning_vocabulary",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "meaning_vocabulary",
+      "sourceText": "Man spricht in diesem Zusammenhang",
+      "action": "show",
+      "beatId": "beat_10",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_017/00_initial.png"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "meaning_plot",
+        "meaning_fit",
+        "meaning_sample",
+        "meaning_limits",
+        "meaning_bounds_note",
+        "meaning_level",
+        "meaning_alternatives",
+        "meaning_resampling",
+        "meaning_vocabulary"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_017/07_after_06_man_spricht_in_diesem_zusammenhang.png"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "reviewedAt": "2026-09-17",
+    "endState": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/after/slide_017.png",
+    "preview": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/preview/slide_017.png",
+    "stateDirectory": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_017",
+    "reviewedStateCount": 8,
+    "includesHighlightStates": true,
+    "independentReviewer": "/root/visual_review",
+    "findings": [],
+    "scope": "Final composition and discrete animation states rendered in Chromium; legibility additionally reviewed at 50 percent. No continuous audio playback test."
+  }
+}

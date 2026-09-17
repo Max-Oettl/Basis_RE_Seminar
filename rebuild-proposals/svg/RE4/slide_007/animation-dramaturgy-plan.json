@@ -1,0 +1,362 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re4_src_007",
+  "svgPath": "slide_007.svg",
+  "spokenText": "Erst dann können beispielsweise mit einer fünfundneunzig-prozentigen Aussagewahrscheinlichkeit die Zuverlässigkeit eines Zahnrads bis zu einem bestimmten Zeitpunkt bestimmen.\n\nWir erhalten zum Beispiel eine Zuverlässigkeit von neunundneunzig Prozent.\n\nDasselbe Vorgehen gilt natürlich auch für die anderen Komponenten – also die Eingangs- und Ausgangswelle sowie das Gehäuse, für die wir ebenfalls Zuverlässigkeiten ermitteln können.\n\nHaben wir nun die Zuverlässigkeit aller Einzelteile bestimmt, können wir diese eine Hierarchieebene höher zusammenführen – zur Zuverlässigkeit des gesamten Getriebes.\n\nUnd dieses Prinzip lässt sich auch auf andere Teilsysteme anwenden – zum Beispiel auf den Motor oder das Fahrwerk.\n\nAm Ende können wir alle Informationen nutzen, um die Zuverlässigkeit des gesamten Fahrzeugs abzuschätzen.\n\nWie genau diese Verknüpfung und Berechnung funktioniert – also wie man Komponenten- und Systemzuverlässigkeit mathematisch zusammensetzt – das schauen wir uns jetzt Schritt für Schritt in dieser Lektion an.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/after/slide_007.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Erst dann können beispielsweise mit einer",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Erst dann können beispielsweise",
+      "occurrence": 1,
+      "claim": "Bewertung für einen Zeitpunkt",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "aggregation_context"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Erst dann können beispielsweise",
+      "occurrence": 1,
+      "claim": "Systemgrenze",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "aggregation_boundary"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Erst dann können beispielsweise",
+      "occurrence": 1,
+      "claim": "Bekannte Systemstruktur",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "aggregation_tree"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "Wir erhalten zum Beispiel",
+      "occurrence": 1,
+      "claim": "Zahnradzuverlässigkeit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "aggregation_gears"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "Dasselbe Vorgehen gilt natürlich auch",
+      "occurrence": 1,
+      "claim": "Zuverlässigkeit der übrigen Komponenten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "aggregation_components"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "eine Hierarchieebene höher zusammenführen",
+      "occurrence": 1,
+      "claim": "Zuverlässigkeit des Getriebes",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "aggregation_gearbox"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "auf andere Teilsysteme anwenden",
+      "occurrence": 1,
+      "claim": "Zuverlässigkeit der weiteren Teilsysteme",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "aggregation_subsystems"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Am Ende können wir alle Informationen nutzen",
+      "occurrence": 1,
+      "claim": "Zuverlässigkeit des Fahrzeugs",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "aggregation_vehicle"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "Wie genau diese Verknüpfung und Berechnung funktioniert",
+      "occurrence": 1,
+      "claim": "Bekannte Systemstruktur",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "aggregation_tree"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "aggregation_context",
+      "label": "Bewertung für einen Zeitpunkt",
+      "role": "content",
+      "members": [
+        "aggregation_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "aggregation_boundary",
+      "label": "Systemgrenze",
+      "role": "content",
+      "members": [
+        "aggregation_boundary"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "aggregation_tree",
+      "label": "Bekannte Systemstruktur",
+      "role": "content",
+      "members": [
+        "aggregation_tree"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "aggregation_gears",
+      "label": "Zahnradzuverlässigkeit",
+      "role": "content",
+      "members": [
+        "aggregation_gears"
+      ],
+      "dependsOn": [
+        "aggregation_tree"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "aggregation_components",
+      "label": "Zuverlässigkeit der übrigen Komponenten",
+      "role": "content",
+      "members": [
+        "aggregation_components"
+      ],
+      "dependsOn": [
+        "aggregation_tree"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "aggregation_gearbox",
+      "label": "Zuverlässigkeit des Getriebes",
+      "role": "content",
+      "members": [
+        "aggregation_gearbox"
+      ],
+      "dependsOn": [
+        "aggregation_components",
+        "aggregation_gears"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "aggregation_subsystems",
+      "label": "Zuverlässigkeit der weiteren Teilsysteme",
+      "role": "content",
+      "members": [
+        "aggregation_subsystems"
+      ],
+      "dependsOn": [
+        "aggregation_gearbox"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "aggregation_vehicle",
+      "label": "Zuverlässigkeit des Fahrzeugs",
+      "role": "content",
+      "members": [
+        "aggregation_vehicle"
+      ],
+      "dependsOn": [
+        "aggregation_subsystems"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_aggregation_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "aggregation_context",
+      "sourceText": "Erst dann können beispielsweise",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_aggregation_boundary",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "aggregation_boundary",
+      "sourceText": "Erst dann können beispielsweise",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_aggregation_tree",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "aggregation_tree",
+      "sourceText": "Erst dann können beispielsweise",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_aggregation_gears",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "aggregation_gears",
+      "sourceText": "Wir erhalten zum Beispiel",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_aggregation_components",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "aggregation_components",
+      "sourceText": "Dasselbe Vorgehen gilt natürlich auch",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_aggregation_gearbox",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "aggregation_gearbox",
+      "sourceText": "eine Hierarchieebene höher zusammenführen",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_aggregation_subsystems",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "aggregation_subsystems",
+      "sourceText": "auf andere Teilsysteme anwenden",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_aggregation_vehicle",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "aggregation_vehicle",
+      "sourceText": "Am Ende können wir alle Informationen nutzen",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_aggregation_tree",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "aggregation_tree",
+      "sourceText": "Wie genau diese Verknüpfung und Berechnung funktioniert",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_9",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/qa-final/svg-qa-report.md"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "aggregation_context",
+        "aggregation_boundary",
+        "aggregation_tree",
+        "aggregation_gears",
+        "aggregation_components",
+        "aggregation_gearbox",
+        "aggregation_subsystems",
+        "aggregation_vehicle"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/qa-final/svg-qa-report.md"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "reviewEvidence": "analysis/render-checks/RE4/feedback-2026-09-17/review-summary.md"
+}

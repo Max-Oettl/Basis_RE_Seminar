@@ -1,0 +1,225 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch2_component_block_principle",
+  "svgPath": "slide_011.svg",
+  "spokenText": "Nachdem wir die Systemgrenze definiert und die Wechselwirkungen mit der Umgebung analysiert haben, können wir nun das Innere des Systems betrachten.\n\nDazu wird das Bauteilblockdiagramm des Systems aufgestellt. Hierzu werden sämtliche Baugruppen und Komponenten innerhalb des Systems erfasst.\n\nDabei werden alle Wechselwirkungen zwischen den Komponenten und ihrer Umgebung betrachtet.\n\nZusätzlich werden jetzt auch die Wechselwirkungen zwischen den Komponenten selbst analysiert.\n\nAls Hilfe können die Wechselwirkungen in drei Kategorien eingeteilt werden: Energieströme, Stoffströme und Informationsströme.\n\nDer Energiestrom repräsentiert dabei den Austausch von Energie.\n\nDer Stoffstrom steht für den Transfer von Materialien oder Substanzen.\n\nUnd der Informationsstrom zeigt die Kommunikation oder den Datenaustausch an.\n\nDurch diese Visualisierung der Ströme im Bauteilblockdiagramm können wir die Schnittstellen und Wechselwirkungen innerhalb des Systems sowie mit seiner Umgebung visualisieren und besser verstehen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "block_boundary",
+      "label": "Systemgrenze",
+      "role": "content",
+      "members": [
+        "block_boundary"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "block_components",
+      "label": "Komponenten",
+      "role": "content",
+      "members": [
+        "block_components"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "block_energy",
+      "label": "Energiestrom",
+      "role": "content",
+      "members": [
+        "block_energy"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "block_material",
+      "label": "Stoffstrom",
+      "role": "content",
+      "members": [
+        "block_material"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "block_information",
+      "label": "Informationsstrom",
+      "role": "content",
+      "members": [
+        "block_information"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_05",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Systemgrenze",
+      "sourceText": "Nachdem wir die Systemgrenze definiert",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "block_boundary"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Komponenten",
+      "sourceText": "Hierzu werden sämtliche Baugruppen und Komponenten",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "block_components"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Energiestrom",
+      "sourceText": "Der Energiestrom repräsentiert dabei den Austausch",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "block_energy"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Stoffstrom",
+      "sourceText": "Der Stoffstrom steht für den Transfer",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "block_material"
+      ]
+    },
+    {
+      "beatId": "beat_05",
+      "claim": "Informationsstrom",
+      "sourceText": "Und der Informationsstrom zeigt die Kommunikation",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "block_information"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_block_boundary",
+      "beatId": "beat_01",
+      "targetId": "block_boundary",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_block_components",
+      "beatId": "beat_02",
+      "targetId": "block_components",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_block_energy",
+      "beatId": "beat_03",
+      "targetId": "block_energy",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_04_block_material",
+      "beatId": "beat_04",
+      "targetId": "block_material",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_05_block_information",
+      "beatId": "beat_05",
+      "targetId": "block_information",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_05",
+      "visibleGroups": [
+        "canvas_context",
+        "block_boundary",
+        "block_components",
+        "block_energy",
+        "block_material",
+        "block_information"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

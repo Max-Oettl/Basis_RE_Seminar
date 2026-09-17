@@ -1,0 +1,761 @@
+{
+  "schema_version": "basisRebuildContentCrosscheck/v2",
+  "module_id": "RE3",
+  "output_slide_number": 9,
+  "checked_at": "2026-09-17T06:33:48.381Z",
+  "status": "review_required",
+  "manual_review_required": true,
+  "reference_mapping": {
+    "work_unit": "slide_009",
+    "output_slide_number": 9,
+    "source_slides": [
+      9,
+      10
+    ],
+    "primary_source_slide": 10,
+    "output_slide_numbers": [],
+    "mapping_type": "merged_sequence",
+    "rationale": "",
+    "mapping_source": "reference_map",
+    "reference_map_path": "analysis/rebuild-plans/RE3_source-reference-map.json",
+    "sequence_plan": "",
+    "read_error": ""
+  },
+  "references": [
+    {
+      "source_slide_number": 9,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie9.SVG",
+      "source_svg_sha256": "b8d6fd7c15e1a34304a6c3456be00c28f4f976d2bcf821c299d0da0e7f2651e2",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie9.SVG",
+      "analysis_path": ""
+    },
+    {
+      "source_slide_number": 10,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie10.SVG",
+      "source_svg_sha256": "5a04a5927dcc51074a04986b7406f776795447f3f3a33368bbae0d69bc636c9b",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie10.SVG",
+      "analysis_path": ""
+    }
+  ],
+  "proposal": {
+    "path": "rebuild-proposals/svg/RE3/slide_009/slide_009.svg",
+    "svg_sha256": "1ba1301949f2e1288bd46f203fd0350478e546f67f723288ba95484c446166d9",
+    "animation_manifest": "/files/rebuild-proposals/svg/RE3/slide_009/scene.animation.v1.json"
+  },
+  "summary": {
+    "source_count": 2,
+    "checked_content_items": 54,
+    "checked_target_text_items": 32,
+    "errors": 0,
+    "warnings": 2,
+    "infos": 0,
+    "animation_steps": 8
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 009: \"Allgemeines Vorgehen in der Lebensdatenanalyse\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 9,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Allgemeines Vorgehen in der Lebensdatenanalyse"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 010: \"Allgemeines Vorgehen in der Lebensdatenanalyse\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Allgemeines Vorgehen in der Lebensdatenanalyse"
+    }
+  ],
+  "content_checks": [
+    {
+      "source_slide_number": 9,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Allgemeines Vorgehen in der Lebensdatenanalyse",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 9,
+      "source_item_id": "source-svg-text-2",
+      "expected": "10 %",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 9,
+      "source_item_id": "source-svg-text-3",
+      "expected": "99 %",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 9,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Lebensdauer",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 9,
+      "source_item_id": "source-svg-text-5",
+      "expected": "Ausfallwahrscheinlichkeit",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 9,
+      "source_item_id": "source-svg-text-6",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 9,
+      "source_item_id": "source-svg-text-7",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 9,
+      "source_item_id": "source-svg-text-8",
+      "expected": "1",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 9,
+      "source_item_id": "source-svg-text-9",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 9,
+      "source_item_id": "source-svg-text-10",
+      "expected": "2",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 9,
+      "source_item_id": "source-svg-text-11",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 9,
+      "source_item_id": "source-svg-text-12",
+      "expected": "3",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 9,
+      "source_item_id": "source-svg-text-13",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 9,
+      "source_item_id": "source-svg-text-14",
+      "expected": "4",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 9,
+      "source_item_id": "source-svg-text-15",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 9,
+      "source_item_id": "source-svg-text-16",
+      "expected": "5",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 9,
+      "source_item_id": "source-svg-text-17",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 9,
+      "source_item_id": "source-svg-text-18",
+      "expected": "6",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Allgemeines Vorgehen in der Lebensdatenanalyse",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-2",
+      "expected": "10 %",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-3",
+      "expected": "99 %",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Lebensdauer",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-5",
+      "expected": "Ausfallwahrscheinlichkeit",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-6",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-7",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-8",
+      "expected": "1",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-9",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-10",
+      "expected": "2",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-11",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-12",
+      "expected": "3",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-13",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-14",
+      "expected": "4",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-15",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-16",
+      "expected": "5",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-17",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-18",
+      "expected": "6",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-19",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-20",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-21",
+      "expected": "1",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-22",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-23",
+      "expected": "3",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-24",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-25",
+      "expected": "6",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-26",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-27",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-28",
+      "expected": "2",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-29",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-30",
+      "expected": "4",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-31",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-32",
+      "expected": "5",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-33",
+      "expected": "Ausfallmechanismus A",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-34",
+      "expected": "Ausfallmechanismus B",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-35",
+      "expected": "Ausfallmechanismus A",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-36",
+      "expected": "Ausfallmechanismus B",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    }
+  ],
+  "target_text_checks": [
+    {
+      "target_text": "Gemeinsame Ausfallzeiten",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_003: mehrere Ausfallmechanismen einer Komponente verfügbar sein"
+    },
+    {
+      "target_text": "t₁",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 9,10; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_009"
+    },
+    {
+      "target_text": "t₂",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 9,10; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_009"
+    },
+    {
+      "target_text": "t₃",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 9,10; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_009"
+    },
+    {
+      "target_text": "t₄",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 9,10; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_009"
+    },
+    {
+      "target_text": "t₅",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 9,10; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_009"
+    },
+    {
+      "target_text": "t₆",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 9,10; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_009"
+    },
+    {
+      "target_text": "t",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Mechanismus A",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Mechanismus B",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Ausfallmechanismus A",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "t₁",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 9,10; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_009"
+    },
+    {
+      "target_text": "t₃",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 9,10; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_009"
+    },
+    {
+      "target_text": "t₆",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 9,10; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_009"
+    },
+    {
+      "target_text": "t",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Ausfallmechanismus B",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "t₂",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 9,10; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_009"
+    },
+    {
+      "target_text": "t₄",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 9,10; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_009"
+    },
+    {
+      "target_text": "t₅",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 9,10; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_009"
+    },
+    {
+      "target_text": "t",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Lebensdauer t",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "tokens:lebensdauer"
+    },
+    {
+      "target_text": "1",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 9,10; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_009"
+    },
+    {
+      "target_text": "10",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 9,10; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_009"
+    },
+    {
+      "target_text": "50",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 9,10; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_009"
+    },
+    {
+      "target_text": "90",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 9,10; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_009"
+    },
+    {
+      "target_text": "99",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 9,10; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_009"
+    },
+    {
+      "target_text": "Ausfallwahrscheinlichkeit F(t) [%]",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "tokens:ausfallwahrscheinlichkeit"
+    },
+    {
+      "target_text": "Mechanismus A",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Mechanismus B",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Verteilungen wieder",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_003: Diese können dann wieder miteinander verrechnet werden"
+    },
+    {
+      "target_text": "zur Gesamtzuverlässigkeit",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_003: um die Gesamtzuverlässigkeit der Komponente zu erhalten"
+    },
+    {
+      "target_text": "zusammenführen",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_003: Diese können dann wieder miteinander verrechnet werden"
+    }
+  ],
+  "manual_review_focus": [
+    "Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.",
+    "Sprechertext-Reihenfolge gegen die semantisch geplanten Animationsschritte pruefen."
+  ],
+  "reference_mapping_sha256": "cf424a8f0e6835722b6bd75e17381e9bc14154e8868c27af20acc3e867802c60",
+  "reference_map_path": "analysis/rebuild-plans/RE3_source-reference-map.json",
+  "sequence_plan": ""
+}

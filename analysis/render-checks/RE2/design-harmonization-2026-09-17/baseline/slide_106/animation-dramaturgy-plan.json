@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_failure_links_levels",
+  "svgPath": "slide_106.svg",
+  "spokenText": "Werfen wir nun einen Blick darauf, wie Fehler, Fehlerursachen und Fehlerfolgen innerhalb der Systemstruktur zusammenhängen.\n\nBetrachten wir dazu den Fehler eines Systemelements auf der zweiten Ebene im Strukturbaum. Jeder Fehler hat eine Fehlerursache und auch eine Fehlerfolge.\n\nSchauen wir uns noch die benachbarten Systemebenen genauer an.\n\nDer Fehler einer Ebene ist gleichzeitig auf der nächsthöheren Ebene als Fehlerursache wieder zu finden.\n\nAußerdem entspricht die Fehlerfolge unseres Fehlers gleich dem Fehler der nächsthöheren Ebene.\n\nDas Gleiche gilt auch für die nächsttiefere Ebene. Hier entspricht unser Fehler wieder der Fehlerfolge der nächsttieferen Ebene, während die Fehlerursache dem Fehler dieser Ebene entspricht.\n\nDie Fehler innerhalb der Systemstruktur werden also nach dem Ursache-Wirkung-Prinzip miteinander verknüpft und überlappen sich innerhalb der Systemhierarchie.\n\nAm oberen Ende der Fehlerkette, also an der Systemgrenze, steht immer mindestens eine Fehlerfolge. Die unteren Enden der Kette werden jeweils von mindestens einer Fehlerursache abgeschlossen.\n\nIm Normalfall besteht die unterste Ebene der Systemstruktur aus einzelnen Bauteilen. Demnach bilden die Fehlfunktion und Fehlerursache dieser Bauteile die letzten Elemente im Fehlernetz.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s108_relation_nodes",
+      "label": "Drei Systemebenen",
+      "role": "content",
+      "members": [
+        "s108_relation_nodes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s108_relation_links",
+      "label": "Überlappende Beziehungen",
+      "role": "content",
+      "members": [
+        "s108_relation_links"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s108_perspective",
+      "label": "FMEA-Sicht Systemelement",
+      "role": "content",
+      "members": [
+        "s108_perspective"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s108_rule",
+      "label": "Leseregel",
+      "role": "content",
+      "members": [
+        "s108_rule"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Drei Systemebenen",
+      "sourceText": "Schauen wir uns noch die benachbarten",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s108_relation_nodes"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Überlappende Beziehungen",
+      "sourceText": "Der Fehler einer Ebene ist gleichzeitig",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s108_relation_links"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "FMEA-Sicht Systemelement",
+      "sourceText": "Werfen wir nun einen Blick darauf",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s108_perspective"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Leseregel",
+      "sourceText": "Die Fehler innerhalb der Systemstruktur werden",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s108_rule"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s108_relation_nodes",
+      "beatId": "beat_01",
+      "targetId": "s108_relation_nodes",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s108_relation_links",
+      "beatId": "beat_02",
+      "targetId": "s108_relation_links",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    },
+    {
+      "stepId": "step_03_s108_perspective",
+      "beatId": "beat_03",
+      "targetId": "s108_perspective",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_04_s108_rule",
+      "beatId": "beat_04",
+      "targetId": "s108_rule",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_04",
+      "visibleGroups": [
+        "canvas_context",
+        "s108_relation_nodes",
+        "s108_relation_links",
+        "s108_perspective",
+        "s108_rule"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

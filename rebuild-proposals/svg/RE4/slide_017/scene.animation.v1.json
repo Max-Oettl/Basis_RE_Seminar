@@ -5,37 +5,141 @@
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "basis_events",
-      "label": "Basisereignisse",
+      "targetId": "basis_heading",
+      "label": "Fünfter Schritt der FTA",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "basis_metric",
-      "label": "Ausfallwahrscheinlichkeit",
+      "targetId": "basis_top",
+      "label": "Top-Ereignis",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "basis_sources",
-      "label": "Datenquellen",
+      "targetId": "basis_causes",
+      "label": "Drehmoment und Dichtheit",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "basis_assignment",
-      "label": "Zuordnung",
+      "targetId": "basis_components",
+      "label": "Unmittelbare Ursachen der Komponenten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "basis_modes",
+      "label": "Bruch oder Klemmen der Eingangswelle",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "basis_basics",
+      "label": "Sechs Basisereignisse",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "basis_time",
+      "label": "Gemeinsamer Betrachtungszeitpunkt",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "basis_zero",
+      "label": "Null Prozent nur mit Begründung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "basis_test_sources",
+      "label": "Labor und Felddaten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "basis_calculation_sources",
+      "label": "Berechnung und Simulation",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "basis_experience_sources",
+      "label": "Weitere Quellen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "basis_value_fatigue",
+      "label": "Kennwert fatigue",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "basis_value_material",
+      "label": "Kennwert material",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "basis_value_flow_base",
+      "label": "Kennwert flow_base",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "basis_value_static_base",
+      "label": "Kennwert static_base",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "basis_value_wear",
+      "label": "Kennwert wear",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "basis_value_thermal",
+      "label": "Kennwert thermal",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -44,44 +148,302 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_basis_events",
-      "targetId": "basis_events",
-      "action": "show",
-      "sourceText": "Das bedeutet: Für jedes der blau hinterlegten Basisereignisse im Fehlerbaum – also zum Beispiel Ermüdung, Materialfehler, Verschleiß oder thermische Alterung – benötigen wir einen entsprechenden Zuverlässigkeitskennwert.",
+      "stepId": "step_01_basis_heading",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "basis_heading",
+      "sourceText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse",
+      "action": "show"
     },
     {
-      "stepId": "step_02_basis_metric",
-      "targetId": "basis_metric",
-      "action": "show",
-      "sourceText": "Typischerweise verwenden wir hier die Ausfallwahrscheinlichkeit zu einem bestimmten Zeitpunkt, beispielsweise nach fünftausend oder fünfzigtausend Betriebsstunden.",
+      "stepId": "step_02_basis_top",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "basis_top",
+      "sourceText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse",
+      "action": "show"
     },
     {
-      "stepId": "step_03_basis_sources",
-      "targetId": "basis_sources",
-      "action": "show",
-      "sourceText": "Um diese Ausfallwahrscheinlichkeiten zu bestimmen, gibt es unterschiedliche Datenquellen wie Labortests beziehungsweise Lebensdauerversuche oder auch Felddaten aus dem Betrieb.",
+      "stepId": "step_03_basis_causes",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "basis_causes",
+      "sourceText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse",
+      "action": "show"
     },
     {
-      "stepId": "step_04_basis_assignment",
-      "targetId": "basis_assignment",
-      "action": "show",
-      "sourceText": "Auf diese Weise können wir jedem Basisereignis im Fehlerbaum einen Wahrscheinlichkeitswert zuordnen – passend zum Zeitpunkt, für den wir eine Aussage über das System treffen wollen.",
+      "stepId": "step_04_basis_components",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "basis_components",
+      "sourceText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_basis_modes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_modes",
+      "sourceText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_basis_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_basics",
+      "sourceText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_basis_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_basics",
+      "sourceText": "Für jedes der blau hinterlegten Basisereignisse",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_08_basis_time",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_time",
+      "sourceText": "Ausfallwahrscheinlichkeit zu einem bestimmten Zeitpunkt",
+      "action": "show"
+    },
+    {
+      "stepId": "step_09_basis_top",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_top",
+      "sourceText": "Wenn wir etwa sicher wissen",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_10_basis_causes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_causes",
+      "sourceText": "Wenn wir etwa sicher wissen",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_11_basis_components",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_components",
+      "sourceText": "Wenn wir etwa sicher wissen",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_12_basis_modes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_modes",
+      "sourceText": "Wenn wir etwa sicher wissen",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_13_basis_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_basics",
+      "sourceText": "Wenn wir etwa sicher wissen",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_14_basis_zero",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_zero",
+      "sourceText": "Wenn wir etwa sicher wissen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_15_basis_zero",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_zero",
+      "sourceText": "Das sollte aber immer gut begründet sein",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_16_basis_test_sources",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_test_sources",
+      "sourceText": "unterschiedliche Datenquellen wie Labortests",
+      "action": "show"
+    },
+    {
+      "stepId": "step_17_basis_test_sources",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_test_sources",
+      "sourceText": "bereits im Modul Lebensdauerdatenanalyse gelernt",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_18_basis_calculation_sources",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_calculation_sources",
+      "sourceText": "mithilfe von Berechnungen oder Simulationen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_19_basis_experience_sources",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_experience_sources",
+      "sourceText": "Darüber hinaus sind auch Expertenschätzungen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_20_basis_zero",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_zero",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_21_basis_test_sources",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_test_sources",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_22_basis_calculation_sources",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_calculation_sources",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_23_basis_experience_sources",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_experience_sources",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_24_basis_top",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_top",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show"
+    },
+    {
+      "stepId": "step_25_basis_causes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_causes",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show"
+    },
+    {
+      "stepId": "step_26_basis_components",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_components",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show"
+    },
+    {
+      "stepId": "step_27_basis_modes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_modes",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show"
+    },
+    {
+      "stepId": "step_28_basis_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_basics",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show"
+    },
+    {
+      "stepId": "step_29_basis_value_fatigue",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_value_fatigue",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show"
+    },
+    {
+      "stepId": "step_30_basis_value_material",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_value_material",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show"
+    },
+    {
+      "stepId": "step_31_basis_value_flow_base",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_value_flow_base",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show"
+    },
+    {
+      "stepId": "step_32_basis_value_static_base",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_value_static_base",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show"
+    },
+    {
+      "stepId": "step_33_basis_value_wear",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_value_wear",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show"
+    },
+    {
+      "stepId": "step_34_basis_value_thermal",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_value_thermal",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show"
+    },
+    {
+      "stepId": "step_35_basis_time",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_time",
+      "sourceText": "passend zum Zeitpunkt",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_36_basis_top",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_top",
+      "sourceText": "die Gesamtausfallwahrscheinlichkeit des Systems",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     }
   ]
 }

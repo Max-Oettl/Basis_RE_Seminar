@@ -1,0 +1,366 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_038",
+  "svgPath": "slide_038.svg",
+  "spokenText": "Bei der sogenannten Multiplen Zensierung handelt es sich ebenfalls um eine Form der Rechtszensierung – allerdings mit einer Besonderheit. Auch hier sind nicht alle Objekte ausgefallen. Doch im Unterschied zu den bisherigen Fällen werden die intakten Objekte nicht gleichzeitig aus dem Versuch genommen. Stattdessen endet ihre Beobachtung zu unterschiedlichen Zeitpunkten. Diese Zeitpunkte sind nicht vorher festgelegt, sondern ergeben sich zufällig im Verlauf des Versuchs. Deshalb spricht man auch von zufälligen Zensierungszeitpunkten. In der Abbildung ist gut zu erkennen, dass diese Zensierungen zwischen verschiedenen Ausfällen liegen können. Diese Form der Zensierung tritt häufig auf, wenn einzelne Testobjekte aus organisatorischen, technischen oder wirtschaftlichen Gründen vorzeitig aus dem Versuch entfernt werden müssen.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/after/slide_038.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Bei der sogenannten Multiplen Zensierung handelt",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Bei der sogenannten Multiplen Zensierung",
+      "occurrence": 1,
+      "claim": "Gemeinsamer Start",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "multiple_context"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Auch hier sind nicht alle Objekte",
+      "occurrence": 1,
+      "claim": "multiple failures",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "multiple_failures"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Auch hier sind nicht alle Objekte",
+      "occurrence": 1,
+      "claim": "Ausfall",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "multiple_failure_legend"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "zu unterschiedlichen Zeitpunkten",
+      "occurrence": 1,
+      "claim": "multiple censored",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "multiple_censored"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "zu unterschiedlichen Zeitpunkten",
+      "occurrence": 1,
+      "claim": "Zensierung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "multiple_censor_legend"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "zu unterschiedlichen Zeitpunkten",
+      "occurrence": 1,
+      "claim": "Verschiedene Beobachtungsenden",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "multiple_endings"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "Diese Zeitpunkte sind nicht vorher festgelegt",
+      "occurrence": 1,
+      "claim": "Zufällige Zeitpunkte",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "multiple_random"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "zwischen verschiedenen Ausfällen liegen können",
+      "occurrence": 1,
+      "claim": "multiple censored",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "multiple_censored"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "aus organisatorischen, technischen oder wirtschaftlichen Gründen",
+      "occurrence": 1,
+      "claim": "Gründe für die Herausnahme",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "multiple_reasons"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "multiple_context",
+      "label": "Gemeinsamer Start",
+      "role": "content",
+      "members": [
+        "multiple_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "multiple_failures",
+      "label": "multiple failures",
+      "role": "content",
+      "members": [
+        "multiple_failures"
+      ],
+      "dependsOn": [
+        "multiple_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "multiple_failure_legend",
+      "label": "Ausfall",
+      "role": "content",
+      "members": [
+        "multiple_failure_legend"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "multiple_censored",
+      "label": "multiple censored",
+      "role": "content",
+      "members": [
+        "multiple_censored"
+      ],
+      "dependsOn": [
+        "multiple_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "multiple_censor_legend",
+      "label": "Zensierung",
+      "role": "content",
+      "members": [
+        "multiple_censor_legend"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "multiple_endings",
+      "label": "Verschiedene Beobachtungsenden",
+      "role": "content",
+      "members": [
+        "multiple_endings"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "multiple_random",
+      "label": "Zufällige Zeitpunkte",
+      "role": "content",
+      "members": [
+        "multiple_random"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "multiple_reasons",
+      "label": "Gründe für die Herausnahme",
+      "role": "content",
+      "members": [
+        "multiple_reasons"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_9"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_multiple_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "multiple_context",
+      "sourceText": "Bei der sogenannten Multiplen Zensierung",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_multiple_failures",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "multiple_failures",
+      "sourceText": "Auch hier sind nicht alle Objekte",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_multiple_failure_legend",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "multiple_failure_legend",
+      "sourceText": "Auch hier sind nicht alle Objekte",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_multiple_censored",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "multiple_censored",
+      "sourceText": "zu unterschiedlichen Zeitpunkten",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_multiple_censor_legend",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "multiple_censor_legend",
+      "sourceText": "zu unterschiedlichen Zeitpunkten",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_multiple_endings",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "multiple_endings",
+      "sourceText": "zu unterschiedlichen Zeitpunkten",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_multiple_random",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "multiple_random",
+      "sourceText": "Diese Zeitpunkte sind nicht vorher festgelegt",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_multiple_censored",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "multiple_censored",
+      "sourceText": "zwischen verschiedenen Ausfällen liegen können",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_8",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_09_multiple_reasons",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "multiple_reasons",
+      "sourceText": "aus organisatorischen, technischen oder wirtschaftlichen Gründen",
+      "action": "show",
+      "beatId": "beat_9",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/states-v2/slide_038/00_initial.png"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "multiple_context",
+        "multiple_failures",
+        "multiple_failure_legend",
+        "multiple_censored",
+        "multiple_censor_legend",
+        "multiple_endings",
+        "multiple_random",
+        "multiple_reasons"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/states-v2/slide_038/07_after_06_aus_organisatorischen_technischen_oder_.png"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "reviewedAt": "2026-09-17",
+    "independentReviewer": "/root/visual_review",
+    "endState": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/after/slide_038.png",
+    "preview": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/preview/slide_038.png",
+    "stateDirectory": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/states-v2/slide_038",
+    "reviewedStateCount": 8,
+    "includesHighlights": true,
+    "findings": [],
+    "scope": "Discrete Chromium states, phrase triggers, source correspondence and legibility at 50 percent; no continuous audio playback test."
+  }
+}

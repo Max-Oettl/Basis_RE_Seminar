@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_044.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "field_test_conditions",
+      "label": "Feld und Versuch",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "acceleration_benefits",
+      "label": "Nutzen beschleunigter Tests",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_field_test_conditions",
+      "targetId": "field_test_conditions",
+      "action": "show",
+      "sourceText": "Schädigung pro Zeiteinheit im Versuch höher",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_acceleration_benefits",
+      "targetId": "acceleration_benefits",
+      "action": "show",
+      "sourceText": "Beschleunigte Tests sparen so Zeit und Kosten",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

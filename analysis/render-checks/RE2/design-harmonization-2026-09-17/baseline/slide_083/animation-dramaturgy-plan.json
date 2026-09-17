@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_structural_tree",
+  "svgPath": "slide_083.svg",
+  "spokenText": "Du kannst nun die Struktur eines Systems sehen, das in drei Ebenen unterteilt ist.\n\nDie erste Ebene besteht aus dem Systemelement eins. Dieses Element stellt die oberste Ebene dar und beschreibt in der Regel das Gesamtsystem.\n\nAuf der zweiten Ebene befinden sich drei untergeordnete Systemelemente. Diese sind direkt mit dem Systemelement eins verbunden und repräsentieren die Hauptkomponenten oder Teilsysteme des Gesamtsystems.\n\nIm nächsten Schritt können die Systemelemente der dritten Ebene in weitere Unterelemente aufgeteilt werden. Diese sind den jeweiligen Systemelementen der zweiten Ebene zugeordnet und repräsentieren spezifische Bauteile oder Funktionsgruppen innerhalb der Teilsysteme.\n\nDie Strukturierung lässt sich nach Bedarf beliebig erweitern.\n\nAuf diese Weise stellen wir sicher, dass alle relevanten Systemelemente erfasst und klar gegliedert sind.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s85_tree_nodes",
+      "label": "Systemelemente",
+      "role": "content",
+      "members": [
+        "s85_tree_nodes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s85_tree_links",
+      "label": "Hierarchische Verknüpfungen",
+      "role": "content",
+      "members": [
+        "s85_tree_links"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Systemelemente",
+      "sourceText": "Die erste Ebene besteht aus dem",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s85_tree_nodes"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Hierarchische Verknüpfungen",
+      "sourceText": "Auf der zweiten Ebene befinden sich",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s85_tree_links"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s85_tree_nodes",
+      "beatId": "beat_01",
+      "targetId": "s85_tree_nodes",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s85_tree_links",
+      "beatId": "beat_02",
+      "targetId": "s85_tree_links",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_02",
+      "visibleGroups": [
+        "canvas_context",
+        "s85_tree_nodes",
+        "s85_tree_links"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

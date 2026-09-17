@@ -80,6 +80,14 @@ Redesign darf Inhalte neu verpacken, aber ohne Nutzerauftrag nicht zusammenfasse
 
 ## 4. Lernbotschaft Und Archetyp Waehlen
 
+Eine Legende bleibt eine kleine funktionale Erklärung unmittelbar am Diagramm.
+Sie wird nicht zusätzlich als Merksatz- oder Takeaway-Balken wiederholt. Eine
+separate Schlussfolgerung ist nur sinnvoll, wenn sie über die Markerbedeutung
+hinaus einen belegten Erkenntnisschritt trägt. In einer Folge verwandter
+Diagramme zunächst einen kompakten gemeinsamen Renderer freigeben; anschließend
+Objektidentitäten, Skalen und Marker beibehalten und nur den erklärten Zustand
+ändern. Richtungspfeile gegen den Wortlaut und die Quellenrichtung prüfen.
+
 Eine dominante Lernbotschaft in einem Satz formulieren. Danach genau einen primaeren Archetyp waehlen:
 
 - Titelfolie,
@@ -224,6 +232,9 @@ Diagrammfarbe.
 - Identitaetsbestimmende Merkmale einer technischen Zeichnung vor der Freigabe explizit gegen Quelle, Sprechertext und Nutzerfeedback pruefen. Dazu gehoeren beispielsweise Fahrzeugklasse, Bauart, Anzahl der Gaenge, Achsen, Stufen oder Anschluesse. Ein generisches oder fachlich aehnliches Objekt ist kein ausreichender Ersatz.
 - Wiederkehrende Themen- oder Funktionsleisten nur zeigen, wenn sich ihr Zustand innerhalb der Sequenz sichtbar aendert oder die Leiste fuer eine echte Auswahl bzw. Navigation gebraucht wird. Bleibt dieselbe Kategorie ueber mehrere Folien aktiv, reicht eine kleine lokale Kennzeichnung; bei eindeutigem Titel darf sie ganz entfallen.
 - Daten- und Diagrammfolien erhalten einen dominanten Plot und hoechstens eine gebuendelte Erklaerzone. Begriffe, Werte oder Aussagen nicht zugleich in Plot, Kopfbereich und Ergebnisband wiederholen.
+- Die Plotgröße richtet sich nach seiner Erklärfunktion. Ein rein veranschaulichender Plot bleibt kompakt; die Hauptfläche trägt dann den fachlichen Zusammenhang. Ein ausdrücklich gewünschtes Hochformat nicht in eine breite Standard-Diagrammfläche umwandeln.
+- Nutzerpräferenz für weitere RE3-Folien: CI etwas deutlicher, aber ruhig erkennbar machen. Marineblaue fachliche Begriffsflächen, die Education-Eckenform, konsistente Schriftrollen und ein gezielter grüner Lernfokus tragen die Zugehörigkeit. Zusätzliche Masterelemente oder Dekoration sind dafür nicht erforderlich.
+- Merksatz- und Ergebnisflächen halten Abstand zur vollständigen gerenderten Plot-Boundingbox einschließlich Achsentiteln, Ticklabels und Legenden. Die innere Datenfläche ist kein ausreichender Kollisionsrahmen.
 - Eine Quellenfolie mit einem dominanten Diagramm nicht durch zusaetzliche Transfer-, Zusammenfassungs- oder Folgenboxen verdichten, wenn der Sprechertext diese Aussagen bereits traegt und die Quelle sie nicht sichtbar benoetigt.
 - Zeigt die Quelle mehrere Methoden primaer ueber charakteristische Grafiken, diese Darstellungslogik erhalten. Eine ruhige 2x2-Matrix mit grossen Methodenbildern und knappen Bezeichnungen ist dann besser als vier schmale Erklaerkarten mit wiederholenden Absatztexten.
 - Kuendigt eine Quelle mehrere gleichrangige Kennzahlen oder Themen nur an, eine ruhige Liste oder Tabelle verwenden. Ohne fachliche Grundlage keine Prozesspfeile, Abhaengigkeiten oder kuenstliche Oberkategorien hinzufuegen.

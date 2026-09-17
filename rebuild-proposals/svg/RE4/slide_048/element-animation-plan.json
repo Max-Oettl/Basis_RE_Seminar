@@ -1,26 +1,59 @@
 {
-  "schemaVersion": "elementAnimationPlan/v1",
+  "schemaVersion": "svgAnimationManifest/v1",
   "sceneId": "re4_src_048",
   "decision": "animated",
+  "svgPath": "slide_048.svg",
   "defaults": {
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "assumptions_binary",
-      "label": "Binäre Zustände",
+      "targetId": "assumptions_context",
+      "label": "Modellvoraussetzungen",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "assumptions_repair",
-      "label": "Nicht reparierbar",
+      "targetId": "assumptions_states",
+      "label": "Nur zwei Komponentenzustände",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "assumptions_no_middle",
+      "label": "Keine Zwischenzustände",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "assumptions_working",
+      "label": "Intakte Komponenten ermöglichen die Funktion",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "assumptions_no_repair",
+      "label": "Ausgefallen bleibt ausgefallen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "assumptions_failed",
+      "label": "Ein Ausfall wird nicht repariert",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -28,7 +61,15 @@
     },
     {
       "targetId": "assumptions_independent",
-      "label": "Unabhängig",
+      "label": "Statistisch unabhängige Komponenten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "assumptions_no_coupling",
+      "label": "Keine gemeinsamen Ursachen",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -36,7 +77,39 @@
     },
     {
       "targetId": "assumptions_bridge",
-      "label": "Brückenschaltung",
+      "label": "Komplexere Struktur als Anwendungsgrenze",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "assumptions_bridge_link",
+      "label": "Komponente 5 verbindet die mittleren Knoten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "assumptions_paths",
+      "label": "Mehrere mögliche Funktionspfade",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "assumptions_limit",
+      "label": "Brücke nicht direkt reduzierbar",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "assumptions_next",
+      "label": "Übergang zur nächsten Lektion",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -45,45 +118,154 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_assumptions_binary",
-      "targetId": "assumptions_binary",
-      "action": "show",
-      "sourceText": "Erstens: Jede Komponente kann nur zwei Zustände einnehmen – sie ist entweder funktionsfähig oder ausgefallen.",
+      "stepId": "step_01_assumptions_context",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "assumptions_context",
+      "sourceText": "Damit man ein Zuverlässigkeitsblockdiagramm sinnvoll anwenden kann",
+      "action": "show"
     },
     {
-      "stepId": "step_02_assumptions_repair",
-      "targetId": "assumptions_repair",
-      "action": "show",
-      "sourceText": "Zweitens: Die Komponenten sind nicht reparierbar.",
+      "stepId": "step_02_assumptions_states",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "assumptions_states",
+      "sourceText": "Erstens: Jede Komponente kann nur zwei Zustände",
+      "action": "show"
     },
     {
-      "stepId": "step_03_assumptions_independent",
+      "stepId": "step_03_assumptions_no_middle",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_no_middle",
+      "sourceText": "Es gibt also keine Zwischenstufen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_04_assumptions_working",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_working",
+      "sourceText": "Nur wenn alle benötigten Komponenten intakt sind",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_assumptions_no_repair",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_no_repair",
+      "sourceText": "Zweitens: Die Komponenten sind nicht reparierbar",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_assumptions_working",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_working",
+      "sourceText": "Sobald eine Komponente einmal ausgefallen ist",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_07_assumptions_failed",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_failed",
+      "sourceText": "bleibt sie es auch",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_assumptions_no_repair",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_no_repair",
+      "sourceText": "Diese Annahme vereinfacht die Modellierung erheblich",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_09_assumptions_independent",
+      "occurrence": 1,
+      "confidence": "high",
       "targetId": "assumptions_independent",
-      "action": "show",
-      "sourceText": "Und Drittens: Die Komponenten sind unabhängig voneinander.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "sourceText": "Und Drittens: Die Komponenten sind unabhängig voneinander",
+      "action": "show"
     },
     {
-      "stepId": "step_04_assumptions_bridge",
-      "targetId": "assumptions_bridge",
-      "action": "show",
-      "sourceText": "Ein typisches Beispiel dafür ist die sogenannte Brückenschaltung, in der der Signalfluss durch mehrere mögliche Pfade führen kann.",
+      "stepId": "step_10_assumptions_independent",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "assumptions_independent",
+      "sourceText": "der Ausfall einer Komponente beeinflusst nicht",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_11_assumptions_no_coupling",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_no_coupling",
+      "sourceText": "Es gibt also keine gemeinsamen Ursachen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_12_assumptions_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_context",
+      "sourceText": "In der Praxis lassen sich viele Systeme",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_13_assumptions_failed",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_failed",
+      "sourceText": "Ein typisches Beispiel dafür ist",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_14_assumptions_bridge",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_bridge",
+      "sourceText": "die sogenannte Brückenschaltung",
+      "action": "show"
+    },
+    {
+      "stepId": "step_15_assumptions_bridge_link",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_bridge_link",
+      "sourceText": "die sogenannte Brückenschaltung",
+      "action": "show"
+    },
+    {
+      "stepId": "step_16_assumptions_paths",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_paths",
+      "sourceText": "durch mehrere mögliche Pfade führen kann",
+      "action": "show"
+    },
+    {
+      "stepId": "step_17_assumptions_limit",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_limit",
+      "sourceText": "Diese Strukturen erfordern eine genauere Betrachtung",
+      "action": "show"
+    },
+    {
+      "stepId": "step_18_assumptions_next",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_next",
+      "sourceText": "Wie du in solchen Fällen vorgehst",
+      "action": "show"
     }
-  ],
-  "notes": "Review-Korrektur: Die Fünf-Komponenten-Brücke bleibt groß und quellengetreu; Komponente 5 liegt vertikal zwischen den mittleren Knoten."
+  ]
 }

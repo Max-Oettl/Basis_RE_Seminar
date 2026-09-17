@@ -1,50 +1,115 @@
 {
-  "schemaVersion": "elementAnimationPlan/v1",
+  "schemaVersion": "svgAnimationManifest/v1",
   "sceneId": "re4_src_005",
   "decision": "animated",
+  "svgPath": "slide_005.svg",
   "defaults": {
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "gear_test",
-      "label": "Wöhlertest",
+      "targetId": "gear_test_intro",
+      "label": "Wöhlertest am Zahnrad",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "gear_failures",
-      "label": "Ausfallzeiten",
+      "targetId": "gear_test_result",
+      "label": "Ausfallzeiten auswerten",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "gear_weibull",
-      "label": "Weibull-Modell",
+      "targetId": "population_context",
+      "label": "Grundgesamtheit",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "gear_confidence",
-      "label": "Vertrauensbereich",
+      "targetId": "population_selection",
+      "label": "Begrenzte Stichprobe",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "gear_flow",
-      "label": "Auswertungskette",
+      "targetId": "population_analysis",
+      "label": "Analyse der Stichprobe",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "population_sample_fit",
+      "label": "population sample fit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "population_limit",
+      "label": "Gültigkeit der Schätzung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "population_inference",
+      "label": "Schluss auf die Grundgesamtheit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "population_estimate_fit",
+      "label": "population estimate fit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "population_uncertainty",
+      "label": "Unsicherheit berücksichtigen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "population_estimate_limits",
+      "label": "population estimate limits",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "population_bound_labels",
+      "label": "Beide Vertrauensgrenzen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "population_return",
+      "label": "Rückschluss auf die gesamte Population",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -53,54 +118,144 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_gear_test",
-      "targetId": "gear_test",
-      "action": "show",
-      "sourceText": "Schauen wir uns beispielhaft die Zahnräder an.",
+      "stepId": "step_01_gear_test_intro",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "gear_test_intro",
+      "sourceText": "Für sie könnten Lebensdauerdaten",
+      "action": "show"
     },
     {
-      "stepId": "step_02_gear_failures",
-      "targetId": "gear_failures",
-      "action": "show",
-      "sourceText": "Dabei wird das Zahnrad unter wechselnder Last geprüft, bis es versagt – und wir erhalten Ausfallzeiten.",
+      "stepId": "step_02_gear_test_intro",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "gear_test_intro",
+      "sourceText": "unter wechselnder Last geprüft",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     },
     {
-      "stepId": "step_03_gear_weibull",
-      "targetId": "gear_weibull",
-      "action": "show",
-      "sourceText": "Diese Ausfallzeiten können wir auswerten, um eine Weibull-Verteilung zu bestimmen.",
+      "stepId": "step_03_gear_test_result",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "gear_test_result",
+      "sourceText": "Diese Ausfallzeiten können wir auswerten",
+      "action": "show"
     },
     {
-      "stepId": "step_04_gear_confidence",
-      "targetId": "gear_confidence",
-      "action": "show",
-      "sourceText": "Deshalb berücksichtigen wir zusätzlich einen Vertrauensbereich, um die statistische Unsicherheit abzudecken.",
+      "stepId": "step_04_gear_test_result",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "gear_test_result",
+      "sourceText": "des Zahnrads mathematisch beschreiben",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     },
     {
-      "stepId": "step_05_gear_flow",
-      "targetId": "gear_flow",
-      "action": "draw",
-      "sourceText": "Erst dann können beispielsweise mit einer fünfundneunzig-prozentigen Aussagewahrscheinlichkeit die Zuverlässigkeit eines Zahnrads bis zu einem bestimmten Zeitpunkt bestimmen.",
+      "stepId": "step_05_gear_test_intro",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Beziehung erscheint nach ihren fachlichen Endpunkten.",
-      "drawDurFrames": 42
+      "targetId": "gear_test_intro",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_06_gear_test_result",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "gear_test_result",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_07_population_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_context",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_population_selection",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_selection",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_09_population_analysis",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_analysis",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_10_population_sample_fit",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_sample_fit",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_11_population_limit",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_limit",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_12_population_inference",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_inference",
+      "sourceText": "Wir möchten aber Aussagen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_13_population_estimate_fit",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_estimate_fit",
+      "sourceText": "Wir möchten aber Aussagen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_14_population_uncertainty",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_uncertainty",
+      "sourceText": "Deshalb berücksichtigen wir zusätzlich einen Vertrauensbereich",
+      "action": "show"
+    },
+    {
+      "stepId": "step_15_population_estimate_limits",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_estimate_limits",
+      "sourceText": "Deshalb berücksichtigen wir zusätzlich einen Vertrauensbereich",
+      "action": "show"
+    },
+    {
+      "stepId": "step_16_population_bound_labels",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_bound_labels",
+      "sourceText": "Deshalb berücksichtigen wir zusätzlich einen Vertrauensbereich",
+      "action": "show"
+    },
+    {
+      "stepId": "step_17_population_return",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_return",
+      "sourceText": "Deshalb berücksichtigen wir zusätzlich einen Vertrauensbereich",
+      "action": "show"
     }
   ]
 }

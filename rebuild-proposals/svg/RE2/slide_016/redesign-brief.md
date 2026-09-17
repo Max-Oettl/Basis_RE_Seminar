@@ -3,10 +3,10 @@
 - Kapitel: 2
 - Lektion: 5
 - Quellfolien: 16
-- Titel: Funktionsstruktur des Wechselrichters
-- Takeaway: Acht Teilfunktionen bilden gemeinsam die Umwandlung von Gleichstrom in Wechselstrom.
+- Titel: Funktionsstruktur: Wechselrichter
+- Takeaway: Die detaillierte Wechselrichterstruktur ist die aufgeklappte Zerlegung der Hauptfunktion DC-Strom in AC-Strom.
 - Archetyp: function-structure
-- Layout: Eigenständige, großformatige Funktionskette mit Regelungs- und Überwachungsfunktionen.
+- Layout: Obere DC-zu-AC-Hauptfunktion mit sichtbar aufgespannter Detailstruktur und acht Teilfunktionen.
 - Referenz: RE1-Full-Slide-System und Kapitelbrief analysis/rebuild-plans/RE2_chapter_02_redesign_brief.md
-- Produktionsmodus: Full-Slide 1920×1080
+- Produktionsmodus: Content-SVG 1920×1080; Titel und Masterelemente werden downstream gerendert
 - Animation: sprechertextgeführt aktiviert

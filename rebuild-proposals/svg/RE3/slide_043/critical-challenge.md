@@ -1,10 +1,8 @@
-# Kritischer Challenge — slide_043
+# Review-Schwerpunkte slide_043
 
-- Quellen: RE3::43
-- Struktur: Kapitel/Lektion bewusst nicht zugeordnet
-- Design-Challenge: MLS und MLE sind gleichgewichtet; der Pfeil beschreibt ausschließlich den Informationsgewinn.
-- Animations-Challenge: 4 semantische Schritte an 4 wörtlich belegten Sprechertext-Cues; chronologisch sortiert; 1 Verbindung(en) nach den fachlichen Endpunkten.
-- Sichtprüfung: 5 gerenderte Zustände plus 1920×1080-Endzustand geprüft
-- Korrektur/Entscheidung: Im Challenge keine zusätzliche Korrektur erforderlich.
-- Technisches Ergebnis: 0 Fehler, 0 Warnungen im strikten Modul-QA
-- Urteil: FREIGEGEBEN
+- Quellinhalte, Zuordnungen und Sprecherphrasen gegen alle 1 Quellzustände abgleichen.
+- Endzustand und alle semantischen Zwischenstände in 1920×1080 und 960×540 prüfen.
+- MLS: Datenpunkte vor Regressionsgerade, dann vertikale Residuen und Minimierungsziel. MLE: Fläche vor Maximum und Parameterprojektionen.
+- Beide Methoden mit gleich großen Überschriften; Zensierungsfähigkeit jeweils bei der Methode, Softwareanwendung als gemeinsame Aussage.
+- Statische und animierte QA plus unabhängige visuelle Zweitprüfung dokumentiert im Feedbackaudit.
+- Nutzerfreigabe: offen; keine finale Sperre gesetzt.

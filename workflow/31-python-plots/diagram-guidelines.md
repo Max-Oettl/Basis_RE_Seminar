@@ -191,3 +191,16 @@ Vor der Freigabe muss das Review ausdrücklich bestätigen:
 - Geometrie im gerenderten SVG bei Zielauflösung geprüft
 
 Ein Verstoß ist ein Freigabefehler und führt zurück zur SVG-Komposition.
+
+## Vertrauensbereiche als Dichteflächen
+
+Bei der Erklärung zwei- und einseitiger Vertrauensbereiche an einer Dichtefunktion
+die tatsächlich eingeschlossene Fläche zeigen: zweiseitig zwischen Q05 und Q95,
+linksseitig bis Q90, rechtsseitig ab Q10 für jeweils 90 % Aussagewahrscheinlichkeit.
+Das Verbot gefüllter Bänder im Weibullnetz gilt nicht für diese Dichteflächen.
+Dieselbe Verteilung und Achsenskalierung über die Varianten beibehalten.
+Quantil-Prozente nicht mit numerischen F- oder R-Achsenkoordinaten verwechseln;
+keine unendlichen Grenzen für auf [0,1] beschränkte Wahrscheinlichkeiten zeichnen.
+Beim Wechsel von Ausfallwahrscheinlichkeit F zu Zuverlässigkeit R=1−F ändern
+sich Variable, Achsenbezeichnung und Dichte gemeinsam. Bei einem mathematisch
+gekoppelten Beispiel ist die R-Dichte die Spiegelung der F-Dichte.

@@ -1,0 +1,632 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re4_src_048",
+  "svgPath": "slide_048.svg",
+  "spokenText": "Damit man ein Zuverlässigkeitsblockdiagramm sinnvoll anwenden kann, müssen bestimmte Voraussetzungen erfüllt sein.\n\nErstens: Jede Komponente kann nur zwei Zustände einnehmen – sie ist entweder funktionsfähig oder ausgefallen. Es gibt also keine Zwischenstufen wie \"eingeschränkt funktionsfähig\" oder \"in Wartung\". Nur wenn alle benötigten Komponenten intakt sind, gilt das System als funktionstüchtig.\n\nZweitens: Die Komponenten sind nicht reparierbar. Das bedeutet: Sobald eine Komponente einmal ausgefallen ist, bleibt sie es auch – eine Reparatur findet nicht statt. Diese Annahme vereinfacht die Modellierung erheblich und ist gerade für viele technische Systeme mit begrenzter Lebensdauer durchaus realistisch.\n\nUnd Drittens: Die Komponenten sind unabhängig voneinander. Das heißt, der Ausfall einer Komponente beeinflusst nicht die Wahrscheinlichkeit, mit der eine andere Komponente ausfällt. Es gibt also keine gemeinsamen Ursachen, Koppelungen oder Wechselwirkungen zwischen den Komponenten.\n\nIn der Praxis lassen sich viele Systeme mit diesen Voraussetzungen gut modellieren. Doch es gibt auch Fälle, in denen das Zuverlässigkeitsblockdiagramm komplexer wird – zum Beispiel dann, wenn sich das System nicht direkt als reine Reihen- oder Parallelschaltung beschreiben lässt.\n\nEin typisches Beispiel dafür ist die sogenannte Brückenschaltung, in der der Signalfluss durch mehrere mögliche Pfade führen kann. Diese Strukturen erfordern eine genauere Betrachtung und lassen sich nicht mehr mit den einfachen Rechenregeln lösen.\n\nWie du in solchen Fällen vorgehst, lernst du in der nächsten Lektion.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/after/slide_048.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Damit man ein Zuverlässigkeitsblockdiagramm sinnvoll anwenden",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Damit man ein Zuverlässigkeitsblockdiagramm sinnvoll anwenden kann",
+      "occurrence": 1,
+      "claim": "Modellvoraussetzungen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "assumptions_context"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Erstens: Jede Komponente kann nur zwei Zustände",
+      "occurrence": 1,
+      "claim": "Nur zwei Komponentenzustände",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "assumptions_states"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Es gibt also keine Zwischenstufen",
+      "occurrence": 1,
+      "claim": "Keine Zwischenzustände",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "assumptions_no_middle"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "Nur wenn alle benötigten Komponenten intakt sind",
+      "occurrence": 1,
+      "claim": "Intakte Komponenten ermöglichen die Funktion",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "assumptions_working"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "Zweitens: Die Komponenten sind nicht reparierbar",
+      "occurrence": 1,
+      "claim": "Ausgefallen bleibt ausgefallen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "assumptions_no_repair"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "Sobald eine Komponente einmal ausgefallen ist",
+      "occurrence": 1,
+      "claim": "Intakte Komponenten ermöglichen die Funktion",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "assumptions_working"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "bleibt sie es auch",
+      "occurrence": 1,
+      "claim": "Ein Ausfall wird nicht repariert",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "assumptions_failed"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Diese Annahme vereinfacht die Modellierung erheblich",
+      "occurrence": 1,
+      "claim": "Ausgefallen bleibt ausgefallen",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "assumptions_no_repair"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "Und Drittens: Die Komponenten sind unabhängig voneinander",
+      "occurrence": 1,
+      "claim": "Statistisch unabhängige Komponenten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "assumptions_independent"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "der Ausfall einer Komponente beeinflusst nicht",
+      "occurrence": 1,
+      "claim": "Statistisch unabhängige Komponenten",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "assumptions_independent"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "Es gibt also keine gemeinsamen Ursachen",
+      "occurrence": 1,
+      "claim": "Keine gemeinsamen Ursachen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "assumptions_no_coupling"
+      ]
+    },
+    {
+      "beatId": "beat_12",
+      "sourceText": "In der Praxis lassen sich viele Systeme",
+      "occurrence": 1,
+      "claim": "Modellvoraussetzungen",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "assumptions_context"
+      ]
+    },
+    {
+      "beatId": "beat_13",
+      "sourceText": "Ein typisches Beispiel dafür ist",
+      "occurrence": 1,
+      "claim": "Ein Ausfall wird nicht repariert",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "assumptions_failed"
+      ]
+    },
+    {
+      "beatId": "beat_14",
+      "sourceText": "die sogenannte Brückenschaltung",
+      "occurrence": 1,
+      "claim": "Komplexere Struktur als Anwendungsgrenze",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "assumptions_bridge"
+      ]
+    },
+    {
+      "beatId": "beat_15",
+      "sourceText": "die sogenannte Brückenschaltung",
+      "occurrence": 1,
+      "claim": "Komponente 5 verbindet die mittleren Knoten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "assumptions_bridge_link"
+      ]
+    },
+    {
+      "beatId": "beat_16",
+      "sourceText": "durch mehrere mögliche Pfade führen kann",
+      "occurrence": 1,
+      "claim": "Mehrere mögliche Funktionspfade",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "assumptions_paths"
+      ]
+    },
+    {
+      "beatId": "beat_17",
+      "sourceText": "Diese Strukturen erfordern eine genauere Betrachtung",
+      "occurrence": 1,
+      "claim": "Brücke nicht direkt reduzierbar",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "assumptions_limit"
+      ]
+    },
+    {
+      "beatId": "beat_18",
+      "sourceText": "Wie du in solchen Fällen vorgehst",
+      "occurrence": 1,
+      "claim": "Übergang zur nächsten Lektion",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "assumptions_next"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "assumptions_context",
+      "label": "Modellvoraussetzungen",
+      "role": "content",
+      "members": [
+        "assumptions_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "assumptions_states",
+      "label": "Nur zwei Komponentenzustände",
+      "role": "content",
+      "members": [
+        "assumptions_states"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "assumptions_no_middle",
+      "label": "Keine Zwischenzustände",
+      "role": "content",
+      "members": [
+        "assumptions_no_middle"
+      ],
+      "dependsOn": [
+        "assumptions_states"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "assumptions_working",
+      "label": "Intakte Komponenten ermöglichen die Funktion",
+      "role": "content",
+      "members": [
+        "assumptions_working"
+      ],
+      "dependsOn": [
+        "assumptions_states"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "assumptions_no_repair",
+      "label": "Ausgefallen bleibt ausgefallen",
+      "role": "content",
+      "members": [
+        "assumptions_no_repair"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "assumptions_failed",
+      "label": "Ein Ausfall wird nicht repariert",
+      "role": "content",
+      "members": [
+        "assumptions_failed"
+      ],
+      "dependsOn": [
+        "assumptions_no_repair"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "assumptions_independent",
+      "label": "Statistisch unabhängige Komponenten",
+      "role": "content",
+      "members": [
+        "assumptions_independent"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_9"
+    },
+    {
+      "groupId": "assumptions_no_coupling",
+      "label": "Keine gemeinsamen Ursachen",
+      "role": "content",
+      "members": [
+        "assumptions_no_coupling"
+      ],
+      "dependsOn": [
+        "assumptions_independent"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_11"
+    },
+    {
+      "groupId": "assumptions_bridge",
+      "label": "Komplexere Struktur als Anwendungsgrenze",
+      "role": "content",
+      "members": [
+        "assumptions_bridge"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_14"
+    },
+    {
+      "groupId": "assumptions_bridge_link",
+      "label": "Komponente 5 verbindet die mittleren Knoten",
+      "role": "content",
+      "members": [
+        "assumptions_bridge_link"
+      ],
+      "dependsOn": [
+        "assumptions_bridge"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_15"
+    },
+    {
+      "groupId": "assumptions_paths",
+      "label": "Mehrere mögliche Funktionspfade",
+      "role": "content",
+      "members": [
+        "assumptions_paths"
+      ],
+      "dependsOn": [
+        "assumptions_bridge",
+        "assumptions_bridge_link"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_16"
+    },
+    {
+      "groupId": "assumptions_limit",
+      "label": "Brücke nicht direkt reduzierbar",
+      "role": "content",
+      "members": [
+        "assumptions_limit"
+      ],
+      "dependsOn": [
+        "assumptions_bridge",
+        "assumptions_bridge_link"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_17"
+    },
+    {
+      "groupId": "assumptions_next",
+      "label": "Übergang zur nächsten Lektion",
+      "role": "content",
+      "members": [
+        "assumptions_next"
+      ],
+      "dependsOn": [
+        "assumptions_limit"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_18"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_assumptions_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_context",
+      "sourceText": "Damit man ein Zuverlässigkeitsblockdiagramm sinnvoll anwenden kann",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_assumptions_states",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_states",
+      "sourceText": "Erstens: Jede Komponente kann nur zwei Zustände",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_assumptions_no_middle",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_no_middle",
+      "sourceText": "Es gibt also keine Zwischenstufen",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_assumptions_working",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_working",
+      "sourceText": "Nur wenn alle benötigten Komponenten intakt sind",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_assumptions_no_repair",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_no_repair",
+      "sourceText": "Zweitens: Die Komponenten sind nicht reparierbar",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_assumptions_working",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_working",
+      "sourceText": "Sobald eine Komponente einmal ausgefallen ist",
+      "action": "hide",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_assumptions_failed",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_failed",
+      "sourceText": "bleibt sie es auch",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_assumptions_no_repair",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_no_repair",
+      "sourceText": "Diese Annahme vereinfacht die Modellierung erheblich",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_8",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_09_assumptions_independent",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_independent",
+      "sourceText": "Und Drittens: Die Komponenten sind unabhängig voneinander",
+      "action": "show",
+      "beatId": "beat_9",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_10_assumptions_independent",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_independent",
+      "sourceText": "der Ausfall einer Komponente beeinflusst nicht",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_10",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_11_assumptions_no_coupling",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_no_coupling",
+      "sourceText": "Es gibt also keine gemeinsamen Ursachen",
+      "action": "show",
+      "beatId": "beat_11",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_12_assumptions_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_context",
+      "sourceText": "In der Praxis lassen sich viele Systeme",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_12",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_13_assumptions_failed",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_failed",
+      "sourceText": "Ein typisches Beispiel dafür ist",
+      "action": "hide",
+      "beatId": "beat_13",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_14_assumptions_bridge",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_bridge",
+      "sourceText": "die sogenannte Brückenschaltung",
+      "action": "show",
+      "beatId": "beat_14",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_15_assumptions_bridge_link",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_bridge_link",
+      "sourceText": "die sogenannte Brückenschaltung",
+      "action": "show",
+      "beatId": "beat_15",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_16_assumptions_paths",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_paths",
+      "sourceText": "durch mehrere mögliche Pfade führen kann",
+      "action": "show",
+      "beatId": "beat_16",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_17_assumptions_limit",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_limit",
+      "sourceText": "Diese Strukturen erfordern eine genauere Betrachtung",
+      "action": "show",
+      "beatId": "beat_17",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_18_assumptions_next",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "assumptions_next",
+      "sourceText": "Wie du in solchen Fällen vorgehst",
+      "action": "show",
+      "beatId": "beat_18",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/states-reviewed/slide_048"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "assumptions_context",
+        "assumptions_states",
+        "assumptions_no_middle",
+        "assumptions_no_repair",
+        "assumptions_independent",
+        "assumptions_no_coupling",
+        "assumptions_bridge",
+        "assumptions_bridge_link",
+        "assumptions_paths",
+        "assumptions_limit",
+        "assumptions_next"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/states-reviewed/slide_048"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "reviewEvidence": {
+    "static": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/after/slide_048.png",
+    "animationStates": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/states-reviewed/slide_048",
+    "frameCount": 21,
+    "contentReview": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/content-review.md",
+    "layoutReport": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/qa-final/svg-qa-report.md",
+    "independentVisualReview": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/visual-review-048-and-final39.md"
+  }
+}

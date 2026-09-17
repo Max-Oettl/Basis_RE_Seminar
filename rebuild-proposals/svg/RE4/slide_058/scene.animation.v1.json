@@ -1,0 +1,189 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_058.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 38,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "case_working_head",
+      "label": "Komponente 5 funktioniert",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "case_failed_head",
+      "label": "Komponente 5 fällt aus",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "case_working_rbd",
+      "label": "Zwei Parallelschaltungen in Serie",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "case_failed_rbd",
+      "label": "Zwei Serienpfade parallel",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "case_working_formula",
+      "label": "Gewichtete Zuverlässigkeit bei Funktion",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "case_failed_formula",
+      "label": "Gewichtete Zuverlässigkeit bei Ausfall",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "separation_total",
+      "label": "Vollständige Systemzuverlässigkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "separation_theorem",
+      "label": "Satz der totalen Wahrscheinlichkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_case_working_head",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_working_head",
+      "sourceText": "Erstens, Komponente fünf ist ständig funktionsfähig.",
+      "action": "show"
+    },
+    {
+      "stepId": "step_02_case_failed_head",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_failed_head",
+      "sourceText": "Und zweitens, Komponente fünf ist ständig ausgefallen.",
+      "action": "show"
+    },
+    {
+      "stepId": "step_03_case_working_rbd",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_working_rbd",
+      "sourceText": "Ist die Komponente fünf ständig funktionsfähig,",
+      "action": "show"
+    },
+    {
+      "stepId": "step_04_case_failed_rbd",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_failed_rbd",
+      "sourceText": "Und ist die Komponente fünf ständig ausgefallen,",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_case_working_formula",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_working_formula",
+      "sourceText": "Im ersten Fall, also wenn",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_case_working_formula",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_working_formula",
+      "sourceText": "einfach mit der restlichen Systemzuverlässigkeit multipliziert.",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_07_case_failed_formula",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_failed_formula",
+      "sourceText": "Im zweiten Fall, also wenn",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_case_failed_formula",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_failed_formula",
+      "sourceText": "Diese ergibt sich einfach zu eins minus",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_09_case_working_formula",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_working_formula",
+      "sourceText": "Am Ende addieren wir beide Teilergebnisse,",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_10_case_failed_formula",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_failed_formula",
+      "sourceText": "Am Ende addieren wir beide Teilergebnisse,",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_11_separation_total",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "separation_total",
+      "sourceText": "um die gesamte Systemzuverlässigkeit zu berechnen.",
+      "action": "show"
+    },
+    {
+      "stepId": "step_12_separation_theorem",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "separation_theorem",
+      "sourceText": "Satz der totalen Wahrscheinlichkeit",
+      "action": "show"
+    },
+    {
+      "stepId": "step_13_separation_theorem",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "separation_theorem",
+      "sourceText": "große Vorteil der Methode:Man",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    }
+  ]
+}

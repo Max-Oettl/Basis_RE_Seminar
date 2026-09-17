@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re4_src_065",
+  "svgPath": "slide_065.svg",
+  "spokenText": "Bei einer Brückenschaltung lässt sich die Zuverlässigkeit nicht mit den einfachen Formeln für Reihen- oder Parallelschaltungen berechnen.Aber keine Sorge – es gibt zwei Methoden, mit denen wir trotzdem zu einer exakten Lösung kommen können.\n\nErstens: die Methode der Separation.Und Zweitens: die Methode der Multilinearform.\n\nIn diesem Modul schauen wir uns die Methode der Separation an.\n\nWie der Name schon andeutet, betrachten wir dabei eine bestimmte Komponente isoliert, also „separiert“.Wenn wir uns das Blockdiagramm ansehen, fällt auf:Komponente fünf nimmt eine Schlüsselrolle ein.Genau sie macht aus einer einfachen Struktur eine Brückenschaltung.\n\nDeshalb betrachten wir zwei Fälle.\n\nErstens, Komponente fünf ist ständig funktionsfähig.\n\nUnd zweitens, Komponente fünf ist ständig ausgefallen.\n\nFür jeden dieser Fälle zeichnen wir das daraus resultierende Zuverlässigkeitsblockdiagramm.\n\nUnd das hilft uns – denn jetzt lassen sich beide neuen Diagramme mit den bekannten Regeln für Serien- und Parallelsysteme berechnen:\n\nIst die Komponente fünf ständig funktionsfähig, entsteht eine Reihenschaltung aus zwei Parallelschaltungen.\n\nUnd ist die Komponente fünf ständig ausgefallen, ergibt sich eine Parallelschaltung, in der jeweils eine Reihenschaltung in jedem Pfad vorliegt. Diese können wir also ganz klassisch mit unseren bekannten Formeln berechnen.\n\nWichtig dabei:\n\nIm ersten Fall, also wenn die Komponente fünf funktionsfähig ist, wird die Zuverlässigkeit von Komponente fünf einfach mit der restlichen Systemzuverlässigkeit multipliziert.\n\nIm zweiten Fall, also wenn die Komponente fünf ausgefallen ist, verwenden wir stattdessen die Ausfallwahrscheinlichkeit. Diese ergibt sich einfach zu eins minus der Zuverlässigkeit von Komponente fünf. Wir multiplizieren also dann auch diesen Wert mit der entsprechenden Gleichung des restlichen Systems.\n\nAm Ende addieren wir beide Teilergebnisse, um die gesamte Systemzuverlässigkeit zu berechnen.Das ist nach dem Satz der totalen Wahrscheinlichkeit auch völlig korrekt – denn wir haben zwei sich gegenseitig ausschließende Fälle betrachtet.\n\nUnd das ist auch der große Vorteil der Methode:Man kann sie immer anwenden und erhält so eine exakte Berechnung der Systemzuverlässigkeit, auch wenn eine Brückenschaltung vorliegt.\n\nMit diesem Wissen bist du jetzt in der Lage, für jede Struktur ein passendes Zuverlässigkeitsblockdiagramm zu erstellen und damit auch die Systemzuverlässigkeit korrekt zu bestimmen.",
+  "animationDecision": "static",
+  "animationRationale": "Statische Referenz- oder Übungsszene. Der gemeinsame Quellabschnitt enthält keinen eigenen wortgetreuen Aufbau für diese Grafik.",
+  "initialStateRationale": "Der vollständige Inhalt ist sofort sichtbar; keine künstlichen Einzelreveal-Trigger.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/after/slide_065.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false
+  },
+  "narrativeBeats": [],
+  "semanticGroups": [
+    {
+      "groupId": "scene_content",
+      "label": "Viele Komponenten senken die Systemzuverlässigkeit",
+      "role": "content",
+      "members": [
+        "scene_content"
+      ],
+      "dependsOn": [],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Statische Referenz ohne eigene Aufbaunarration."
+    }
+  ],
+  "steps": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [
+        "scene_content"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/visual-review-61-65.md"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "scene_content"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/visual-review-61-65.md"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "reviewEvidence": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/visual-review-61-65.md",
+    "states": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/after/slide_065.png"
+  }
+}

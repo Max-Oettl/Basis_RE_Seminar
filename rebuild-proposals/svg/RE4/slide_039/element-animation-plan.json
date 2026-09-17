@@ -1,18 +1,35 @@
 {
-  "schemaVersion": "elementAnimationPlan/v1",
+  "schemaVersion": "svgAnimationManifest/v1",
   "sceneId": "re4_src_039",
   "decision": "animated",
+  "svgPath": "slide_039.svg",
   "defaults": {
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
+      "targetId": "math_heads",
+      "label": "Serie und Parallelstruktur vergleichen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "math_assumption",
+      "label": "Gültigkeitsannahme der Produktformeln",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
       "targetId": "math_series",
-      "label": "Serienformel",
+      "label": "Produkt der Einzelzuverlässigkeiten",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -20,7 +37,7 @@
     },
     {
       "targetId": "math_parallel",
-      "label": "Parallelformel",
+      "label": "Gegenwahrscheinlichkeiten multiplizieren",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -28,23 +45,47 @@
     },
     {
       "targetId": "math_example",
-      "label": "Zahlenbeispiel",
+      "label": "Drei gleiche Komponenten",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "math_result_series",
-      "label": "Ergebnis Serienschaltung",
+      "targetId": "math_series_calculation",
+      "label": "Serienrechnung mit 0,9",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "math_result_parallel",
-      "label": "Ergebnis Parallelschaltung",
+      "targetId": "math_series_result",
+      "label": "Serienzuverlässigkeit 72,9 Prozent",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "math_parallel_calculation",
+      "label": "Parallelrechnung und Ergebnis",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "math_series_rule",
+      "label": "Serienstruktur senkt den Gesamtwert",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "math_parallel_rule",
+      "label": "Parallelstruktur erhöht den Gesamtwert",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -53,54 +94,144 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_math_series",
+      "stepId": "step_01_math_heads",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_heads",
+      "sourceText": "Hat man das Zuverlässigkeitsblockdiagramm eines Systems erstellt",
+      "action": "show"
+    },
+    {
+      "stepId": "step_02_math_assumption",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_assumption",
+      "sourceText": "Für die Serienstruktur ergibt sich die Systemzuverlässigkeit",
+      "action": "show"
+    },
+    {
+      "stepId": "step_03_math_series",
+      "occurrence": 1,
+      "confidence": "high",
       "targetId": "math_series",
-      "action": "show",
-      "sourceText": "Für die Serienstruktur ergibt sich die Systemzuverlässigkeit einfach durch Multiplikation der Einzelzuverlässigkeiten ​der Komponenten.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "sourceText": "Für die Serienstruktur ergibt sich die Systemzuverlässigkeit",
+      "action": "show"
     },
     {
-      "stepId": "step_02_math_parallel",
+      "stepId": "step_04_math_series",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_series",
+      "sourceText": "durch Multiplikation der Einzelzuverlässigkeiten",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_05_math_parallel",
+      "occurrence": 1,
+      "confidence": "high",
       "targetId": "math_parallel",
-      "action": "show",
-      "sourceText": "In der Parallelstruktur ist die Berechnung etwas anders: Hier berechnet man zunächst die Ausfallwahrscheinlichkeit jeder Komponente, welche einfach als eins minus seiner Zuverlässigkeit berechnet werden kann.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "sourceText": "In der Parallelstruktur ist die Berechnung",
+      "action": "show"
     },
     {
-      "stepId": "step_03_math_example",
+      "stepId": "step_06_math_parallel",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_parallel",
+      "sourceText": "zunächst die Ausfallwahrscheinlichkeit jeder Komponente",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_07_math_parallel",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_parallel",
+      "sourceText": "Diese multipliziert man dann über alle Komponenten",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_08_math_example",
+      "occurrence": 1,
+      "confidence": "high",
       "targetId": "math_example",
-      "action": "show",
-      "sourceText": "Schauen wir uns dazu ein kleines Beispiel mit jeweils drei Komponenten an.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "sourceText": "Schauen wir uns dazu ein kleines Beispiel",
+      "action": "show"
     },
     {
-      "stepId": "step_04_math_result_series",
-      "targetId": "math_result_series",
-      "action": "show",
-      "sourceText": "Das ergibt für das System ein Zuverlässigkeitswert von Zweiundsiebzigkomma neun Prozent.",
+      "stepId": "step_09_math_example",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "math_example",
+      "sourceText": "eine Zuverlässigkeit von neunzig Prozent besitzt",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     },
     {
-      "stepId": "step_05_math_result_parallel",
-      "targetId": "math_result_parallel",
-      "action": "show",
-      "sourceText": "Bei der Parallelstruktur der drei Komponenten liegt der Wert entsprechend bei neunundneunzigkomma neun Prozent.",
+      "stepId": "step_10_math_series_calculation",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "math_series_calculation",
+      "sourceText": "Bei einer Serienstruktur der drei Komponenten",
+      "action": "show"
+    },
+    {
+      "stepId": "step_11_math_series_result",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_series_result",
+      "sourceText": "Zuverlässigkeitswert von Zweiundsiebzigkomma neun Prozent",
+      "action": "show"
+    },
+    {
+      "stepId": "step_12_math_parallel_calculation",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_parallel_calculation",
+      "sourceText": "Bei der Parallelstruktur der drei Komponenten",
+      "action": "show"
+    },
+    {
+      "stepId": "step_13_math_series_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_series_rule",
+      "sourceText": "die Serienstruktur von Komponenten reduziert",
+      "action": "show"
+    },
+    {
+      "stepId": "step_14_math_parallel_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_parallel_rule",
+      "sourceText": "die Parallelschaltung die Zuverlässigkeit des Systems erhöht",
+      "action": "show"
+    },
+    {
+      "stepId": "step_15_math_series_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_series_rule",
+      "sourceText": "kleiner als die kleinste Einzelzuverlässigkeit",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_16_math_parallel_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_parallel_rule",
+      "sourceText": "größer ist als die größte Einzelzuverlässigkeit",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     }
   ]
 }

@@ -1,0 +1,75 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_070",
+  "scene_id": "re1_src_089",
+  "source_slides": [
+    89
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "lognormal_formula_parameters",
+      "label": "Parameter",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "lognormal_formula_system",
+      "label": "Vier Zuverlässigkeitsfunktionen",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "lognormal_median_formula",
+      "label": "Median",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_lognormal_formula_parameters",
+      "targetId": "lognormal_formula_parameters",
+      "action": "show",
+      "sourceText": "Die Gleichungen der Lognormalverteilung leiten sich direkt aus der Normalverteilung ab",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_lognormal_formula_system",
+      "targetId": "lognormal_formula_system",
+      "action": "show",
+      "sourceText": "Der einzige Unterschied ist, dass die Zeit hierbei noch logarithmiert wird",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_lognormal_median_formula",
+      "targetId": "lognormal_median_formula",
+      "action": "show",
+      "sourceText": "dass der Median nun nicht mehr gleich dem Erwartungswert mü ist",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

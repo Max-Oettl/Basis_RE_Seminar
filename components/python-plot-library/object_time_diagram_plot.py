@@ -7,6 +7,29 @@ from reltest_plot_style import RELTEST_COLORS, apply_reltest_style, parse_float_
 from svg_animation_targets import prepare_svg_animation_targets
 
 
+def create_object_time_axes(*, figsize=(9, 5.8), xmax=100, count=6):
+    """Shared compact canvas for source-aligned object/censoring comparisons."""
+    import matplotlib.pyplot as plt
+    apply_reltest_style()
+    fig, ax = plt.subplots(figsize=figsize)
+    fig.subplots_adjust(left=.15, right=.96, bottom=.18, top=.90)
+    ax.set_xlim(0, xmax)
+    ax.set_ylim(0, count+.6)
+    ax.set_yticks(range(1, count+1))
+    ax.set_xticks([])
+    ax.set_ylabel('Objekt Nr.', fontsize=20, labelpad=14)
+    ax.set_xlabel('Beobachtungszeit t', fontsize=20, labelpad=12)
+    ax.tick_params(axis='y', labelsize=20, length=0, pad=10)
+    ax.grid(False)
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['left'].set_linewidth(1.3)
+    ax.spines['bottom'].set_linewidth(1.3)
+    ax.spines['bottom'].set_bounds(0, xmax-3)
+    ax.annotate('',xy=(xmax,0),xytext=(xmax-4,0),arrowprops={'arrowstyle':'->','color':RELTEST_COLORS['ink'],'lw':1.3},clip_on=False)
+    return fig, ax
+
+
 def build_plot(
     output: str | Path,
     failure_times: list[float],

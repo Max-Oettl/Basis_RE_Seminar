@@ -1,0 +1,123 @@
+{
+  "schema_version": "svgQaReport/v1",
+  "module_id": "slide_049",
+  "svg_root": "rebuild-proposals/svg/RE1/slide_049",
+  "generated_at": "2026-09-17T13:51:22.866Z",
+  "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\tools\\svg-rebuild-qa.js C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\rebuild-proposals\\svg\\RE1\\slide_049 --strict-design --layout --layout-strict --report-dir C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\analysis\\render-checks\\RE1\\redesign-2026-09-17\\qa-049",
+  "files": [
+    {
+      "path": "rebuild-proposals/svg/RE1/slide_049/plots/bq_life.svg",
+      "ids": 64,
+      "animationManifest": ""
+    },
+    {
+      "path": "rebuild-proposals/svg/RE1/slide_049/slide_049.svg",
+      "ids": 71,
+      "animationManifest": "rebuild-proposals/svg/RE1/slide_049/scene.animation.v1.json"
+    }
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_049/plots/bq_life.svg",
+      "message": "ViewBox is not close to 16:9.",
+      "detail": "806.856875x372.1752"
+    }
+  ],
+  "viewer": {
+    "checked": false
+  },
+  "layout": {
+    "checked": true,
+    "strict": true,
+    "warnOnly": false,
+    "browser": {
+      "executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "port": 5899
+    },
+    "files": [
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_049/plots/bq_life.svg",
+        "slide": "049",
+        "states_checked": 1,
+        "browser_rendered": true
+      },
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_049/slide_049.svg",
+        "slide": "049",
+        "states_checked": 6,
+        "browser_rendered": true
+      }
+    ],
+    "issues": [],
+    "summary": {
+      "checked": true,
+      "files_checked": 2,
+      "states_checked": 7,
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "design": {
+    "checked": true,
+    "strict": true,
+    "warnOnly": false,
+    "brandTokens": {
+      "loaded": true,
+      "path": "brand/company-brand-tokens.json",
+      "profile": "reltest-education",
+      "companyName": "RelTest Education"
+    },
+    "tokenSources": [
+      {
+        "loaded": true,
+        "path": "brand/company-brand-tokens.json",
+        "profile": "reltest-education"
+      }
+    ],
+    "files": [
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_049/plots/bq_life.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 6,
+        "textCount": 18
+      },
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_049/slide_049.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 7,
+        "textCount": 26
+      }
+    ],
+    "issues": [],
+    "summary": {
+      "files_checked": 2,
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "handoff": {
+    "checked": false
+  },
+  "summary": {
+    "files_checked": 2,
+    "manifests_checked": 1,
+    "layout_files_checked": 2,
+    "layout_states_checked": 7,
+    "design_files_checked": 2,
+    "design_errors": 0,
+    "design_warnings": 0,
+    "handoff_scenes_checked": 0,
+    "handoff_manifests_checked": 0,
+    "handoff_errors": 0,
+    "handoff_warnings": 0,
+    "errors": 0,
+    "warnings": 1
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch2_function_structure_inverter",
+  "svgPath": "slide_016.svg",
+  "spokenText": "Im Falle des Wechselrichters ist die Hauptfunktion die Umwandlung von Gleichstrom in Wechselstrom.Dies kann dann wieder weiter aufgeteilt werden in alle für den Wechselrichter relevanten Teilfunktionen. Jeder dieser Teilfunktionen hat natürlich wieder seine eigene Aufgabenbeschreibung und individuelle Ein- und Ausgangsgrößen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "func16_overview",
+      "label": "Hauptfunktion DC-Strom zu AC-Strom",
+      "role": "content",
+      "members": [
+        "func16_overview"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "func16_detail",
+      "label": "Aufgeklappte Detailstruktur des Wechselrichters",
+      "role": "content",
+      "members": [
+        "func16_detail"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Hauptfunktion DC-Strom zu AC-Strom",
+      "sourceText": "Im Falle des Wechselrichters ist die",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "func16_overview"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Aufgeklappte Detailstruktur des Wechselrichters",
+      "sourceText": "Dies kann dann wieder weiter aufgeteilt",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "func16_detail"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_func16_overview",
+      "beatId": "beat_01",
+      "targetId": "func16_overview",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_func16_detail",
+      "beatId": "beat_02",
+      "targetId": "func16_detail",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_02",
+      "visibleGroups": [
+        "canvas_context",
+        "func16_overview",
+        "func16_detail"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

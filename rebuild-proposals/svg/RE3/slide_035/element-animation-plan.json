@@ -1,42 +1,91 @@
 {
-  "schemaVersion": "elementAnimationPlan/v1",
+  "schemaVersion": "svgAnimationManifest/v1",
   "sceneId": "re3_src_035",
   "decision": "animated",
+  "svgPath": "slide_035.svg",
   "defaults": {
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "right_censored_plot",
-      "label": "Zensierte Verläufe",
+      "targetId": "censored_context",
+      "label": "Beispiel Typ 1",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "right_censored_definition",
-      "label": "Definition",
+      "targetId": "type_one_stop",
+      "label": "type one stop",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "right_censored_coding",
-      "label": "Zeit und Status",
+      "targetId": "type_one_failures",
+      "label": "type one failures",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "right_censored_rule",
-      "label": "Bedeutung",
+      "targetId": "censored_failure_legend",
+      "label": "Ausfall",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "censored_known",
+      "label": "Beobachtungsdauer bekannt",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "type_one_censored",
+      "label": "type one censored",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "censored_intact_legend",
+      "label": "Zensierung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "censored_unknown",
+      "label": "Ausfallzeit unbekannt",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "censored_record",
+      "label": "Korrekt erfassen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "censored_later",
+      "label": "Noch intakte Objekte",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -45,44 +94,134 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_right_censored_definition",
-      "targetId": "right_censored_definition",
-      "action": "show",
-      "sourceText": "Das bedeutet: Wir wissen nur, dass das Objekt bis zu einem bestimmten Zeitpunkt funktioniert hat – aber nicht, wann es tatsächlich ausfallen wird.",
+      "stepId": "step_01_censored_context",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "censored_context",
+      "sourceText": "In der Statistik spricht man",
+      "action": "show"
     },
     {
-      "stepId": "step_02_right_censored_rule",
-      "targetId": "right_censored_rule",
-      "action": "show",
-      "sourceText": "Man sagt auch: Der wahre Ausfallzeitpunkt liegt jenseits der bekannten Beobachtungsdauer.",
+      "stepId": "step_02_type_one_stop",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "type_one_stop",
+      "sourceText": "bis zum Ende der Beobachtungszeit",
+      "action": "show"
     },
     {
-      "stepId": "step_03_right_censored_coding",
-      "targetId": "right_censored_coding",
-      "action": "show",
-      "sourceText": "Für die Auswertung ist es wichtig, jeden dieser Zensierungszeitpunkte korrekt zu erfassen, da sie die statistische Analyse beeinflussen.",
+      "stepId": "step_03_type_one_failures",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "type_one_failures",
+      "sourceText": "der Ausfall eines Objekts",
+      "action": "show"
     },
     {
-      "stepId": "step_04_right_censored_plot",
-      "targetId": "right_censored_plot",
-      "action": "show",
-      "sourceText": "In der Abbildung sehen wir dies an den blauen Pfeilen.",
+      "stepId": "step_04_censored_failure_legend",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "censored_failure_legend",
+      "sourceText": "der Ausfall eines Objekts",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_censored_known",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_known",
+      "sourceText": "Das bedeutet: Wir wissen nur",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_type_one_censored",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "type_one_censored",
+      "sourceText": "bis zu einem bestimmten Zeitpunkt",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_censored_intact_legend",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_intact_legend",
+      "sourceText": "bis zu einem bestimmten Zeitpunkt",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_censored_unknown",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_unknown",
+      "sourceText": "aber nicht, wann es tatsächlich ausfallen wird",
+      "action": "show"
+    },
+    {
+      "stepId": "step_09_censored_record",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_record",
+      "sourceText": "jeden dieser Zensierungszeitpunkte korrekt zu erfassen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_10_censored_unknown",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_unknown",
+      "sourceText": "Liegen alle unbekannten Ausfallzeiten",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_11_type_one_censored",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "type_one_censored",
+      "sourceText": "sprechen wir von einer Rechtszensierung",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_12_censored_intact_legend",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_intact_legend",
+      "sourceText": "an den blauen Pfeilen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_13_censored_later",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_later",
+      "sourceText": "noch Objekte im Betrieb",
+      "action": "show"
+    },
+    {
+      "stepId": "step_14_censored_unknown",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_unknown",
+      "sourceText": "dieser Zeitpunkt ist aber unbekannt",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_15_type_one_stop",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "type_one_stop",
+      "sourceText": "Die Zensierungszeit ist daher immer",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     }
   ]
 }

@@ -1,0 +1,163 @@
+{
+  "schema_version": "svgQaReport/v1",
+  "module_id": "slide_033",
+  "svg_root": "rebuild-proposals/svg/RE1/slide_033",
+  "generated_at": "2026-09-17T13:21:46.973Z",
+  "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\tools\\svg-rebuild-qa.js C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\rebuild-proposals\\svg\\RE1\\slide_033 --strict-design --layout --layout-strict --report-dir C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\analysis\\render-checks\\RE1\\redesign-2026-09-17\\qa-033",
+  "files": [
+    {
+      "path": "rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg",
+      "ids": 11,
+      "animationManifest": ""
+    },
+    {
+      "path": "rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg",
+      "ids": 14,
+      "animationManifest": ""
+    },
+    {
+      "path": "rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg",
+      "ids": 74,
+      "animationManifest": ""
+    },
+    {
+      "path": "rebuild-proposals/svg/RE1/slide_033/slide_033.svg",
+      "ids": 106,
+      "animationManifest": "rebuild-proposals/svg/RE1/slide_033/scene.animation.v1.json"
+    }
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg",
+      "message": "ViewBox is not close to 16:9.",
+      "detail": "831.410156x450.12"
+    }
+  ],
+  "viewer": {
+    "checked": false
+  },
+  "layout": {
+    "checked": true,
+    "strict": true,
+    "warnOnly": false,
+    "browser": {
+      "executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "port": 5170
+    },
+    "files": [
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg",
+        "slide": "033",
+        "states_checked": 1,
+        "browser_rendered": true
+      },
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg",
+        "slide": "033",
+        "states_checked": 1,
+        "browser_rendered": true
+      },
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg",
+        "slide": "033",
+        "states_checked": 1,
+        "browser_rendered": true
+      },
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_033/slide_033.svg",
+        "slide": "033",
+        "states_checked": 8,
+        "browser_rendered": true
+      }
+    ],
+    "issues": [],
+    "summary": {
+      "checked": true,
+      "files_checked": 4,
+      "states_checked": 11,
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "design": {
+    "checked": true,
+    "strict": true,
+    "warnOnly": false,
+    "brandTokens": {
+      "loaded": true,
+      "path": "brand/company-brand-tokens.json",
+      "profile": "reltest-education",
+      "companyName": "RelTest Education"
+    },
+    "tokenSources": [
+      {
+        "loaded": true,
+        "path": "brand/company-brand-tokens.json",
+        "profile": "reltest-education"
+      }
+    ],
+    "files": [
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_033/formulas/cdf-derivative.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 1,
+        "textCount": 0
+      },
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_033/formulas/cdf-integral.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 1,
+        "textCount": 0
+      },
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_033/plots/smooth_cdf.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 4,
+        "textCount": 16
+      },
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_033/slide_033.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 8,
+        "textCount": 29
+      }
+    ],
+    "issues": [],
+    "summary": {
+      "files_checked": 4,
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "handoff": {
+    "checked": false
+  },
+  "summary": {
+    "files_checked": 4,
+    "manifests_checked": 1,
+    "layout_files_checked": 4,
+    "layout_states_checked": 11,
+    "design_files_checked": 4,
+    "design_errors": 0,
+    "design_warnings": 0,
+    "handoff_scenes_checked": 0,
+    "handoff_manifests_checked": 0,
+    "handoff_errors": 0,
+    "handoff_warnings": 0,
+    "errors": 0,
+    "warnings": 1
+  }
+}

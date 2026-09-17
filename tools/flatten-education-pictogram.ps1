@@ -7,7 +7,13 @@ param(
 
   [int]$CanvasSize = 1024,
 
-  [double]$SafeMarginRatio = 0.10
+  [double]$SafeMarginRatio = 0.10,
+
+  [string]$NavyHex = "#031334",
+
+  [string]$GreenHex = "#00A754",
+
+  [string]$AccentHex = ""
 )
 
 $ErrorActionPreference = "Stop"
@@ -25,11 +31,14 @@ using System.Drawing.Imaging;
 
 namespace RelTest {
   public static class EducationPictogramFlattener {
-    public static void Process(string inputPath, string outputPath, int canvasSize, double safeMarginRatio) {
+    public static void Process(string inputPath, string outputPath, int canvasSize, double safeMarginRatio, string navyHex, string accentHex) {
       using (var source = new Bitmap(inputPath))
       using (var flat = new Bitmap(source.Width, source.Height, PixelFormat.Format32bppArgb)) {
-        var navy = Color.FromArgb(3, 19, 52);
-        var green = Color.FromArgb(0, 167, 84);
+        var navy = ColorTranslator.FromHtml(navyHex);
+        var accent = ColorTranslator.FromHtml(accentHex);
+        bool accentRedDominant = accent.R > accent.G * 1.15 && accent.R > accent.B * 1.10;
+        bool accentGreenDominant = accent.G > accent.R * 1.18 && accent.G > accent.B * 1.08;
+        bool accentCyanDominant = accent.B > accent.R * 1.20 && accent.G > accent.R * 1.20;
         for (int y = 0; y < source.Height; y++) {
           for (int x = 0; x < source.Width; x++) {
             var pixel = source.GetPixel(x, y);
@@ -37,8 +46,15 @@ namespace RelTest {
               flat.SetPixel(x, y, Color.Transparent);
               continue;
             }
-            bool isGreen = pixel.G > pixel.R * 1.18 && pixel.G > pixel.B * 1.08;
-            var target = isGreen ? green : navy;
+            bool isAccent = false;
+            if (accentRedDominant) {
+              isAccent = pixel.R > pixel.G * 1.15 && pixel.R > pixel.B * 1.10;
+            } else if (accentGreenDominant) {
+              isAccent = pixel.G > pixel.R * 1.18 && pixel.G > pixel.B * 1.08;
+            } else if (accentCyanDominant) {
+              isAccent = pixel.B > pixel.R * 1.20 && pixel.G > pixel.R * 1.20 && pixel.G > pixel.B * 0.55;
+            }
+            var target = isAccent ? accent : navy;
             flat.SetPixel(x, y, Color.FromArgb(pixel.A, target.R, target.G, target.B));
           }
         }
@@ -69,5 +85,6 @@ namespace RelTest {
 "@
 }
 
-[RelTest.EducationPictogramFlattener]::Process($resolvedInput, $resolvedOutput, $CanvasSize, $SafeMarginRatio)
+$resolvedAccentHex = if ([string]::IsNullOrWhiteSpace($AccentHex)) { $GreenHex } else { $AccentHex }
+[RelTest.EducationPictogramFlattener]::Process($resolvedInput, $resolvedOutput, $CanvasSize, $SafeMarginRatio, $NavyHex, $resolvedAccentHex)
 Get-Item -LiteralPath $resolvedOutput | Select-Object Name, Length

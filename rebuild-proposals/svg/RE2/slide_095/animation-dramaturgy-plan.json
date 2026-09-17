@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_function_analysis_example",
+  "svgPath": "slide_095.svg",
+  "spokenText": "Schauen wir uns das Ganze anhand unseres Beispiels des Anpassungsgetriebes an.\n\nWir nutzen hierbei die Top-Down-Methode.\n\nZuerst definieren wir die Funktion auf System-Ebene. Für das Getriebe lässt sich die Hauptfunktion „Drehmoment und Drehzahl wandeln“ festlegen. Zusätzlich gibt es auch Nebenfunktionen wie „Umweltverträglichkeit gewährleisten“.\n\nAuf der nächsten Ebene werden die Funktionen den Baugruppen zugewiesen. Die Hauptfunktion des Antriebs ist die Übertragung des Antriebsdrehmoments. Für den Abtrieb gilt entsprechend die Übertragung des Abtriebsdrehmoments. Das Gehäuse hingegen ist für die Dichtheit des Systems verantwortlich.\n\nDanach können die Funktionen der einzelnen Komponenten innerhalb des Antriebs abgeleitet werden. Die Eingangswelle, das Ritzel und die Passfeder sind gemeinsam für die Übertragung des Drehmoments zuständig. Das Rollenlager übernimmt die Funktion der Lagerung der Wellen. Der Radialwellendichtring gewährleistet die Dichtheit, während die Hülse für den Abstand zwischen Welle und Lager sorgt.\n\nWir haben nun die Funktionsstruktur des Getriebes erstellt. Damit sind wir am Ende des dritten Schrittes der FME-A angekommen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s95_gear_root",
+      "label": "Getriebe und Top-Funktionen",
+      "role": "content",
+      "members": [
+        "s95_gear_root"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s95_gear_level2",
+      "label": "Funktionen der Baugruppen",
+      "role": "content",
+      "members": [
+        "s95_gear_level2"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s95_gear_level3",
+      "label": "Funktionen der Bauteile",
+      "role": "content",
+      "members": [
+        "s95_gear_level3"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s95_gear_links",
+      "label": "Hierarchische Verknüpfungen",
+      "role": "content",
+      "members": [
+        "s95_gear_links"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Getriebe und Top-Funktionen",
+      "sourceText": "Zuerst definieren wir die Funktion auf",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s95_gear_root"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Funktionen der Baugruppen",
+      "sourceText": "Auf der nächsten Ebene werden die",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s95_gear_level2"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Funktionen der Bauteile",
+      "sourceText": "Danach können die Funktionen der einzelnen",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s95_gear_level3"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Hierarchische Verknüpfungen",
+      "sourceText": "Wir haben nun die Funktionsstruktur des",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s95_gear_links"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s95_gear_root",
+      "beatId": "beat_01",
+      "targetId": "s95_gear_root",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s95_gear_level2",
+      "beatId": "beat_02",
+      "targetId": "s95_gear_level2",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_s95_gear_level3",
+      "beatId": "beat_03",
+      "targetId": "s95_gear_level3",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_04_s95_gear_links",
+      "beatId": "beat_04",
+      "targetId": "s95_gear_links",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_04",
+      "visibleGroups": [
+        "canvas_context",
+        "s95_gear_root",
+        "s95_gear_level2",
+        "s95_gear_level3",
+        "s95_gear_links"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

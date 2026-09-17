@@ -1,0 +1,54 @@
+{
+  "status": "passed-with-documented-baseline-findings",
+  "active_scenes": 69,
+  "browser_layout": {
+    "checked": true,
+    "files_checked": 70,
+    "states_checked": 301,
+    "errors": 0,
+    "warnings": 0
+  },
+  "raw_issues": [
+    {
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE2/slide_003/plots/bathtub_curve.svg",
+      "message": "ViewBox is not close to 16:9.",
+      "detail": "1760x680"
+    },
+    {
+      "rule": "viewbox-bounds",
+      "severity": "error",
+      "file": "rebuild-proposals/svg/RE2/slide_071/slide_071.svg",
+      "slide": "",
+      "time_seconds": null,
+      "state": "",
+      "element_id": "",
+      "related_element_id": "",
+      "message": "Element coordinate is outside the SVG viewBox.",
+      "detail": "circle min: -173.523,722.292",
+      "expected": null,
+      "actual": null,
+      "bbox": null,
+      "recommendation": ""
+    },
+    {
+      "rule": "viewbox-bounds",
+      "severity": "error",
+      "file": "rebuild-proposals/svg/RE2/slide_071/slide_071.svg",
+      "slide": "",
+      "time_seconds": null,
+      "state": "",
+      "element_id": "",
+      "related_element_id": "",
+      "message": "Element coordinate is outside the SVG viewBox.",
+      "detail": "circle max: -29.522999999999996,866.292",
+      "expected": null,
+      "actual": null,
+      "bbox": null,
+      "recommendation": ""
+    }
+  ],
+  "accepted_circle_finding": "The static bounds rule ignores the existing circle transform. Geometry and transform are identical to the approved baseline. Browser layout checks pass and the circle is inside the rendered slide.",
+  "accepted_plot_warning": "Embedded plot has its intentional 1760x680 aspect ratio; parent content SVG is 1920x1080.",
+  "new_or_unexplained_issues": 0
+}

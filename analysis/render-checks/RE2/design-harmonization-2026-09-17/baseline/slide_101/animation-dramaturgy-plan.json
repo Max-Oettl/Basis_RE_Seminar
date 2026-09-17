@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_failure_structure",
+  "svgPath": "slide_101.svg",
+  "spokenText": "Werfen wir dazu einen Blick auf unsere Systemstruktur. Wir kennen bereits die Systemelemente und ihre zugeordneten Funktionen. Nun können wir jeder Funktion eine oder mehrere Fehlfunktionen zuordnen.\n\nWenn wir die Fehlfunktionen miteinander verknüpfen, entsteht eine Art Fehlerbaum oder Fehlernetz. Den Fehlerbaum solltet ihr bereits schon aus dem Abschnitt Fehlerbaumanalyse kennen.\n\nSchauen wir uns jetzt noch die Fehlerzusammenhänge innerhalb der Systemstruktur etwas genauer an.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s103_gear_root",
+      "label": "Systemebene 1: Getriebe",
+      "role": "content",
+      "members": [
+        "s103_gear_root"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s103_gear_level2",
+      "label": "Systemebene 2",
+      "role": "content",
+      "members": [
+        "s103_gear_level2"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s103_gear_components",
+      "label": "Systemebene 3",
+      "role": "content",
+      "members": [
+        "s103_gear_components"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s103_gear_links",
+      "label": "Quellengetreue Systemhierarchie",
+      "role": "content",
+      "members": [
+        "s103_gear_links"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Systemebene 1: Getriebe",
+      "sourceText": "Werfen wir dazu einen Blick auf",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s103_gear_root"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Systemebene 2",
+      "sourceText": "Werfen wir dazu einen Blick auf",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s103_gear_level2"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Systemebene 3",
+      "sourceText": "Werfen wir dazu einen Blick auf",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s103_gear_components"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Quellengetreue Systemhierarchie",
+      "sourceText": "Wenn wir die Fehlfunktionen miteinander verknüpfen",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s103_gear_links"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s103_gear_root",
+      "beatId": "beat_01",
+      "targetId": "s103_gear_root",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s103_gear_level2",
+      "beatId": "beat_02",
+      "targetId": "s103_gear_level2",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_s103_gear_components",
+      "beatId": "beat_03",
+      "targetId": "s103_gear_components",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_04_s103_gear_links",
+      "beatId": "beat_04",
+      "targetId": "s103_gear_links",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_04",
+      "visibleGroups": [
+        "canvas_context",
+        "s103_gear_root",
+        "s103_gear_level2",
+        "s103_gear_components",
+        "s103_gear_links"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

@@ -1,0 +1,647 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_029",
+  "svgPath": "slide_029.svg",
+  "spokenText": "Analog dazu gibt es auch den rechtsseitigen Vertrauensbereich. In diesem Fall betrachten wir nur eine untere Grenze, was bedeutet, dass der wahre Wert mit einer bestimmten Wahrscheinlichkeit oberhalb dieser Grenze liegt. Um eine Aussagewahrscheinlichkeit von neunzig Prozent zu erhalten, wird nun eine zehn-Prozent-Vertrauensgrenze verwendet.\n\nBetrachten wir die Dichtefunktion der Ausfallwahrscheinlichkeit, ist ein rechtsseitiger Vertrauensbereich allerdings wenig sinnvoll, da er lediglich eine minimale Ausfallwahrscheinlichkeit nachweisen würde. Das bedeutet, dass die tatsächliche Ausfallwahrscheinlichkeit oft deutlich höher sein könnte.\n\nBetrachten wir jedoch statt der Ausfallwahrscheinlichkeit die Zuverlässigkeit, macht eine untere Vertrauensgrenze wieder Sinn. In diesem Fall können wir eine minimale Zuverlässigkeit nachweisen.\n\nDie Wahl des passenden Vertrauensbereichs hängt immer von der konkreten Fragestellung ab. Während der zweiseitige Vertrauensbereich Unsicherheiten in beide Richtungen berücksichtigt, ermöglichen einseitige Vertrauensbereiche gezielte Aussagen für spezifische Anforderungen.\n\nDamit haben wir das Thema Vertrauensbereiche nun abgeschlossen. Später in der Analyse werden wir diese Konzepte in der Praxis noch anwenden.\n\nIn der nächsten Lektion schauen wir uns aber zunächst einmal noch genauer an, welche verschiedenen Arten von Lebensdauerdaten es gibt und was diese für Besonderheiten aufweisen.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/after/slide_029.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Analog dazu gibt es auch den",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Analog dazu gibt es auch",
+      "occurrence": 1,
+      "claim": "Bekannter zweiseitiger Bereich",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "right_reference_context"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Analog dazu gibt es auch",
+      "occurrence": 1,
+      "claim": "right reference region",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "right_reference_region"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Analog dazu gibt es auch",
+      "occurrence": 1,
+      "claim": "right reference values",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "right_reference_values"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "den rechtsseitigen Vertrauensbereich",
+      "occurrence": 1,
+      "claim": "Rechtsseitige Ausfallgrenze",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "right_failure_context"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "nur eine untere Grenze",
+      "occurrence": 1,
+      "claim": "right failure region",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "right_failure_region"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "eine zehn-Prozent-Vertrauensgrenze verwendet",
+      "occurrence": 1,
+      "claim": "right failure values",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "right_failure_values"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "allerdings wenig sinnvoll",
+      "occurrence": 1,
+      "claim": "Begrenzter Nutzen der unteren Ausfallgrenze",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "right_failure_caution"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "oft deutlich höher sein könnte",
+      "occurrence": 1,
+      "claim": "right failure region",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "right_failure_region"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "statt der Ausfallwahrscheinlichkeit die Zuverlässigkeit",
+      "occurrence": 1,
+      "claim": "Rechtsseitige Zuverlässigkeitsgrenze",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "right_reliability_context"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "macht eine untere Vertrauensgrenze wieder Sinn",
+      "occurrence": 1,
+      "claim": "right reliability region",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "right_reliability_region"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "eine minimale Zuverlässigkeit nachweisen",
+      "occurrence": 1,
+      "claim": "right reliability values",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "right_reliability_values"
+      ]
+    },
+    {
+      "beatId": "beat_12",
+      "sourceText": "eine minimale Zuverlässigkeit nachweisen",
+      "occurrence": 1,
+      "claim": "Minimale Zuverlässigkeit nachweisen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "right_reliability_use"
+      ]
+    },
+    {
+      "beatId": "beat_13",
+      "sourceText": "Die Wahl des passenden Vertrauensbereichs",
+      "occurrence": 1,
+      "claim": "Fragestellung entscheidet",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "right_choice"
+      ]
+    },
+    {
+      "beatId": "beat_14",
+      "sourceText": "Während der zweiseitige Vertrauensbereich",
+      "occurrence": 1,
+      "claim": "Unsicherheit in beide Richtungen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "right_reference_meaning"
+      ]
+    },
+    {
+      "beatId": "beat_15",
+      "sourceText": "Während der zweiseitige Vertrauensbereich",
+      "occurrence": 1,
+      "claim": "right reference region",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "right_reference_region"
+      ]
+    },
+    {
+      "beatId": "beat_16",
+      "sourceText": "ermöglichen einseitige Vertrauensbereiche gezielte Aussagen",
+      "occurrence": 1,
+      "claim": "right reliability region",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "right_reliability_region"
+      ]
+    },
+    {
+      "beatId": "beat_17",
+      "sourceText": "diese Konzepte in der Praxis noch anwenden",
+      "occurrence": 1,
+      "claim": "Fragestellung entscheidet",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "right_choice"
+      ]
+    },
+    {
+      "beatId": "beat_18",
+      "sourceText": "In der nächsten Lektion",
+      "occurrence": 1,
+      "claim": "Überleitung zu Lebensdauerdaten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "right_next"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "right_reference_context",
+      "label": "Bekannter zweiseitiger Bereich",
+      "role": "content",
+      "members": [
+        "right_reference_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "right_reference_region",
+      "label": "right reference region",
+      "role": "content",
+      "members": [
+        "right_reference_region"
+      ],
+      "dependsOn": [
+        "right_reference_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "right_reference_values",
+      "label": "right reference values",
+      "role": "content",
+      "members": [
+        "right_reference_values"
+      ],
+      "dependsOn": [
+        "right_reference_region"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "right_failure_context",
+      "label": "Rechtsseitige Ausfallgrenze",
+      "role": "content",
+      "members": [
+        "right_failure_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "right_failure_region",
+      "label": "right failure region",
+      "role": "content",
+      "members": [
+        "right_failure_region"
+      ],
+      "dependsOn": [
+        "right_failure_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "right_failure_values",
+      "label": "right failure values",
+      "role": "content",
+      "members": [
+        "right_failure_values"
+      ],
+      "dependsOn": [
+        "right_failure_region"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "right_failure_caution",
+      "label": "Begrenzter Nutzen der unteren Ausfallgrenze",
+      "role": "content",
+      "members": [
+        "right_failure_caution"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "right_reliability_context",
+      "label": "Rechtsseitige Zuverlässigkeitsgrenze",
+      "role": "content",
+      "members": [
+        "right_reliability_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_9"
+    },
+    {
+      "groupId": "right_reliability_region",
+      "label": "right reliability region",
+      "role": "content",
+      "members": [
+        "right_reliability_region"
+      ],
+      "dependsOn": [
+        "right_reliability_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_10"
+    },
+    {
+      "groupId": "right_reliability_values",
+      "label": "right reliability values",
+      "role": "content",
+      "members": [
+        "right_reliability_values"
+      ],
+      "dependsOn": [
+        "right_reliability_region"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_11"
+    },
+    {
+      "groupId": "right_reliability_use",
+      "label": "Minimale Zuverlässigkeit nachweisen",
+      "role": "content",
+      "members": [
+        "right_reliability_use"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_12"
+    },
+    {
+      "groupId": "right_choice",
+      "label": "Fragestellung entscheidet",
+      "role": "content",
+      "members": [
+        "right_choice"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_13"
+    },
+    {
+      "groupId": "right_reference_meaning",
+      "label": "Unsicherheit in beide Richtungen",
+      "role": "content",
+      "members": [
+        "right_reference_meaning"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_14"
+    },
+    {
+      "groupId": "right_next",
+      "label": "Überleitung zu Lebensdauerdaten",
+      "role": "content",
+      "members": [
+        "right_next"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_18"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_right_reference_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reference_context",
+      "sourceText": "Analog dazu gibt es auch",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_right_reference_region",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reference_region",
+      "sourceText": "Analog dazu gibt es auch",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_right_reference_values",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reference_values",
+      "sourceText": "Analog dazu gibt es auch",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_right_failure_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_failure_context",
+      "sourceText": "den rechtsseitigen Vertrauensbereich",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_right_failure_region",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_failure_region",
+      "sourceText": "nur eine untere Grenze",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_right_failure_values",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_failure_values",
+      "sourceText": "eine zehn-Prozent-Vertrauensgrenze verwendet",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_right_failure_caution",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_failure_caution",
+      "sourceText": "allerdings wenig sinnvoll",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_right_failure_region",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_failure_region",
+      "sourceText": "oft deutlich höher sein könnte",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_8",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_09_right_reliability_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reliability_context",
+      "sourceText": "statt der Ausfallwahrscheinlichkeit die Zuverlässigkeit",
+      "action": "show",
+      "beatId": "beat_9",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_10_right_reliability_region",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reliability_region",
+      "sourceText": "macht eine untere Vertrauensgrenze wieder Sinn",
+      "action": "show",
+      "beatId": "beat_10",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_11_right_reliability_values",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reliability_values",
+      "sourceText": "eine minimale Zuverlässigkeit nachweisen",
+      "action": "show",
+      "beatId": "beat_11",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_12_right_reliability_use",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reliability_use",
+      "sourceText": "eine minimale Zuverlässigkeit nachweisen",
+      "action": "show",
+      "beatId": "beat_12",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_13_right_choice",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_choice",
+      "sourceText": "Die Wahl des passenden Vertrauensbereichs",
+      "action": "show",
+      "beatId": "beat_13",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_14_right_reference_meaning",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reference_meaning",
+      "sourceText": "Während der zweiseitige Vertrauensbereich",
+      "action": "show",
+      "beatId": "beat_14",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_15_right_reference_region",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reference_region",
+      "sourceText": "Während der zweiseitige Vertrauensbereich",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_15",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_16_right_reliability_region",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reliability_region",
+      "sourceText": "ermöglichen einseitige Vertrauensbereiche gezielte Aussagen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_16",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_17_right_choice",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_choice",
+      "sourceText": "diese Konzepte in der Praxis noch anwenden",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_17",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_18_right_next",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_next",
+      "sourceText": "In der nächsten Lektion",
+      "action": "show",
+      "beatId": "beat_18",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_029/00_initial.png"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "right_reference_context",
+        "right_reference_region",
+        "right_reference_values",
+        "right_failure_context",
+        "right_failure_region",
+        "right_failure_values",
+        "right_failure_caution",
+        "right_reliability_context",
+        "right_reliability_region",
+        "right_reliability_values",
+        "right_reliability_use",
+        "right_choice",
+        "right_reference_meaning",
+        "right_next"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_029/18_after_14_in_der_nachsten_lektion.png"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "reviewedAt": "2026-09-17",
+    "endState": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/after/slide_029.png",
+    "preview": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/preview/slide_029.png",
+    "stateDirectory": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_029",
+    "reviewedStateCount": 19,
+    "includesHighlightStates": true,
+    "independentReviewer": "/root/visual_review",
+    "findings": [],
+    "scope": "Final composition and discrete animation states rendered in Chromium; legibility additionally reviewed at 50 percent. No continuous audio playback test."
+  }
+}

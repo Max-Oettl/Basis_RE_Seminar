@@ -1,10 +1,8 @@
-# Kritischer Challenge — slide_036
+# Review-Schwerpunkte slide_036
 
-- Quellen: RE3::36, RE3::37
-- Struktur: Kapitel/Lektion bewusst nicht zugeordnet
-- Design-Challenge: Typ I und Typ II stehen symmetrisch; Objektbeschriftungen und Endmarker sind nach der Korrektur kollisionsfrei.
-- Animations-Challenge: 3 semantische Schritte an 3 wörtlich belegten Sprechertext-Cues; chronologisch sortiert.
-- Sichtprüfung: 4 gerenderte Zustände plus 1920×1080-Endzustand geprüft
-- Korrektur/Entscheidung: Doppelte/fehlplatzierte Objektlabels entfernt und beide Zensierungsarten neu ausgerichtet.
-- Technisches Ergebnis: 0 Fehler, 0 Warnungen im strikten Modul-QA
-- Urteil: FREIGEGEBEN
+- Quellinhalte, Zuordnungen und Sprecherphrasen gegen alle 2 Quellzustände abgleichen.
+- Endzustand und alle semantischen Zwischenstände in 1920×1080 und 960×540 prüfen.
+- Gleiche Objektidentitäten, gemeinsame Starts und unveränderte Ereigniszeiten über die Vergleichsansichten; Grenze vor Interpretation.
+- Legende genau einmal am Diagramm; Zensierungen und Ausfälle klar unterscheiden; Intervallgrenzen statt erfundener exakter Ausfallzeiten.
+- Statische und animierte QA plus unabhängige visuelle Zweitprüfung dokumentiert im Feedbackaudit.
+- Nutzerfreigabe: offen; keine finale Sperre gesetzt.

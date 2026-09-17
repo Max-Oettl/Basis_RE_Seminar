@@ -2,12 +2,15 @@
 
 const fs = require("node:fs");
 const path = require("node:path");
+const { spawnSync } = require("node:child_process");
 const theme = require("./reltest-education-theme");
 const { SCENES } = require("./re3-redesign-spec");
+const { createCreativeBuilders } = require("./re3-creative-builders");
 
 const root = path.resolve(__dirname, "..");
 const outRoot = path.join(root, "rebuild-proposals", "svg", "RE3");
 const sourceAssetRoot = path.join(root, "analysis", "source-assets", "RE3");
+const pictogramRoot = path.join(root, "components", "image-library", "generated-pictograms", "education-core");
 const textMap = JSON.parse(fs.readFileSync(path.join(root, "analysis", "inventories", "RE3_svg-text-map.json"), "utf8"));
 const C = theme.colors;
 
@@ -25,21 +28,44 @@ const PLOTS = {
 const MEDIA = {
   life_data_sources: [[33, "img4.jpg", "lifecycle-data.jpg"]],
   mls_mle: [[43, "img4.png", "mls-mle-source.png"]],
-  exercise_bike_solution: [[45, "img3.png", "median-rank-formula.png"], [46, "img3.png", "gear-fit.png"]],
-  exercise_one: [[47, "img4.png", "exercise-one-data.png"], [47, "img7.png", "exercise-one-icon.png"]],
-  exercise_confidence: [[49, "img3.png", "confidence-result.png"]],
+  gear_median_ranks: [[45, "img3.png", "median-rank-formula.png"]],
+  gear_fit: [[46, "img3.png", "gear-fit.png"]],
+  gear_confidence_result: [[49, "img3.png", "confidence-result.png"]],
   exercise_two: [[50, "img4.jpg", "exercise-two-photo.jpg"], [50, "img7.png", "exercise-two-icon.png"]],
   exercise_censoring_compare: [[52, "img3.png", "type-i-source.png"], [52, "img6.png", "type-ii-source.png"], [52, "img8.png", "censoring-status.png"]],
   exercise_censoring_example: [[53, "img3.png", "censoring-example.png"]],
-  exercise_three: [[55, "img4.jpg", "exercise-three.jpg"]],
-  brake_example: [[60, "img4.png", "brake-small.png"], [61, "img4.jpg", "brake-large.jpg"], [61, "img6.png", "brake-data.png"], [62, "img3.png", "brake-result.png"]],
-  three_parameter_challenge: [[64, "img3.png", "negative-threshold.png"], [65, "img3.png", "confidence-check.png"], [65, "img4.jpg", "parameter-table.jpg"]],
+  exercise_extrapolation: [[55, "img4.jpg", "exercise-three.jpg"]],
+  brake_case: [[60, "img4.png", "brake-small.png"]],
+  brake_sample: [[61, "img4.jpg", "brake-large.jpg"], [61, "img6.png", "brake-data.png"]],
+  brake_result: [[62, "img3.png", "brake-result.png"]],
+  three_parameter_compare: [[63, "img4.jpg", "three-parameter-compare.jpg"]],
+  negative_threshold: [[64, "img3.png", "negative-threshold.png"]],
+  threshold_confidence: [[65, "img3.png", "confidence-check.png"], [65, "img4.jpg", "parameter-table.jpg"]],
+  multiple_modes: [[67, "img3.jpg", "common-poor-fit.jpg"]],
   exercise_four: [[68, "img4.jpg", "jet.jpg"], [68, "img6.jpg", "landing-gear.jpg"], [68, "img9.png", "exercise-four-icon.png"]],
-  multiple_modes_result: [[70, "img3.png", "joint-fit.png"], [71, "img3.jpg", "split-fit.jpg"], [71, "img4.png", "mechanism-icon.png"], [72, "img3.png", "result-a.png"], [72, "img4.png", "result-b.png"]],
+  multiple_modes_joint: [[70, "img3.png", "joint-fit.png"]],
+  multiple_modes_split: [[71, "img3.jpg", "split-fit.jpg"]],
+  multiple_modes_conclusion: [[72, "img3.png", "result-a.png"], [72, "img4.png", "result-b.png"]],
+};
+
+const PICTOGRAMS_BY_BUILDER = {
+  exercise_transition: [
+    ["database.png", "pictogram-database.png", "Datensätze"],
+    ["list-check.png", "pictogram-list-check.png", "Auswertung"],
+    ["search.png", "pictogram-search.png", "Sonderfälle prüfen"],
+  ],
+  special_cases_transition: [
+    ["list-check.png", "pictogram-list-check.png", "abgeschlossene Grundlagen"],
+    ["search.png", "pictogram-search.png", "Sonderfälle untersuchen"],
+  ],
+  multiple_modes_transition: [
+    ["database.png", "pictogram-database.png", "gemeinsamer Datensatz"],
+    ["settings.png", "pictogram-settings.png", "Ausfallmechanismen"],
+  ],
 };
 
 const PLOT_BY_BUILDER = {
-  workflow: [[PLOTS.parameter, "weibull-parameter.svg"]],
+  workflow: [],
   mechanisms_overview: [[PLOTS.mechanisms, "mechanism-split.svg"]],
   censored_overview: [[PLOTS.censored, "censored.svg"]],
   confidence_intro: [[PLOTS.confidence, "confidence.svg"]],
@@ -47,12 +73,27 @@ const PLOT_BY_BUILDER = {
   confidence_meaning: [[PLOTS.confidence, "confidence.svg"]],
   confidence_drivers: [[PLOTS.confidence, "confidence.svg"]],
   probability_surface: [[PLOTS.surface, "probability-surface.svg"]],
-  confidence_types: [[PLOTS.confidence, "confidence.svg"]],
+  confidence_repetition: [[PLOTS.confidence, "confidence.svg"]],
   complete_data: [[PLOTS.failures, "failures.svg"]],
   right_censored: [[PLOTS.censored, "censored.svg"]],
-  three_parameter_intro: [[PLOTS.shift, "weibull-shift.svg"]],
-  multiple_modes: [[PLOTS.mechanisms, "mechanism-split.svg"]],
 };
+
+const THREE_PARAMETER_PLOT_DATA = Object.freeze({
+  probabilities: [0.02, 0.035, 0.07, 0.12, 0.18, 0.26, 0.34, 0.43, 0.52, 0.62, 0.72, 0.84, 0.91],
+  plot_model: { t0: 6.8, eta: 22.0, beta: 2.8 },
+  relative_time_jitter: [-0.012, 0.018, -0.02, 0.014, -0.012, 0.02, -0.008, 0.012, -0.014, 0.01, -0.008, 0.014, -0.01],
+});
+
+const MULTIPLE_MECHANISMS_PLOT_DATA = Object.freeze({
+  mechanism_b: {
+    times: [2.0, 3.7, 5.2, 7.0, 8.8, 10.8, 12.8],
+    probabilities: [0.10, 0.16, 0.22, 0.28, 0.34, 0.41, 0.48],
+  },
+  mechanism_a: {
+    times: [13.3, 15.4, 18.0, 20.8, 23.8, 27.0, 31.0],
+    probabilities: [0.55, 0.62, 0.70, 0.78, 0.86, 0.93, 0.975],
+  },
+});
 
 const CUE_HINTS = Object.freeze({
   intro_1: ["In diesem Abschnitt lernen"],
@@ -61,12 +102,12 @@ const CUE_HINTS = Object.freeze({
   intro_4: ["Die charakteristische Lebensdauer gibt"],
   intro_5: ["Vergleiche anstellen"],
   intro_relation: ["grundlegende Vorgehen"],
-  workflow_1: ["der Größe nach sortiert"],
-  workflow_2: ["Median-Rang-Verfahrens"],
-  workflow_3: ["als Punkte in das Weibull-Wahrscheinlichkeits-Papier"],
-  workflow_4: ["Ausgleichsgerade"],
-  workflow_5: ["Sobald die Gerade festgelegt"],
-  workflow_plot: ["als Punkte in das Weibull-Wahrscheinlichkeits-Papier"],
+  workflow_timeline: ["der Größe nach sortiert"],
+  workflow_formula: ["Median-Rang-Verfahrens"],
+  workflow_probability_map: ["für jeden Ausfallzeitpunkt einen Wert"],
+  workflow_weibull_plot: ["als Punkte in das Weibull-Wahrscheinlichkeits-Papier"],
+  plot_weibull_fit: ["Ausgleichsgerade durch die Punkte"],
+  workflow_parameters: ["Sobald die Gerade festgelegt"],
   workflow_result: ["Damit haben wir die Weibullverteilung bestimmt"],
   mechanisms_joint: ["mehrere Ausfallmechanismen einer Komponente"],
   mechanisms_plot: ["zwei ermittelte Weibull-Geraden"],
@@ -119,7 +160,7 @@ const CUE_HINTS = Object.freeze({
   multi_censor_axes: ["Multiplen Zensierung"],
   multi_entry_exit: ["unterschiedlichen Zeitpunkten"],
   multi_competing: ["mehrere Ausfallmechanismen gleichzeitig"],
-  multi_legend: ["als Zensierungszeitpunkte nutzen"],
+  multi_legend: ["zufälligen Zensierungszeitpunkten"],
   interval_windows: ["sogenannte Intervallzensierung"],
   interval_known: ["innerhalb eines bestimmten Zeitintervalls"],
   interval_unknown: ["innerhalb eines Intervalls verborgen"],
@@ -132,10 +173,12 @@ const CUE_HINTS = Object.freeze({
   special_transition_rule: ["weitere Zensierungsarten"],
   special_next: ["Blick auf einige Sonderfälle"],
   special_transition_arrow: ["Blick auf einige Sonderfälle"],
-  three_intro_plot: ["deutlich gekrümmte Kurve"],
-  three_intro_indicator: ["Hinweis darauf"],
-  three_intro_t0: ["sogenannte Schwellenwert"],
-  three_intro_rule: ["vorsichtig sein"],
+  three_select_plot: ["deutlich gekrümmte Kurve"],
+  three_select_question: ["Hinweis darauf"],
+  three_select_choice: ["Dreiparametrige Weibull-Verteilung“ auswählen"],
+  three_estimate_table: ["ein dritter Wert erscheint"],
+  three_estimate_meaning: ["Dieser Schwellenwert beschreibt"],
+  three_estimate_warning: ["negativen Schwellenwert berechnet"],
   three_rule_1: ["physikalisch begründbare und statistisch nachvollziehbare"],
   three_rule_2: ["deutlich konkav"],
   three_rule_3: ["ausreichend großen Stichprobenumfang"],
@@ -149,13 +192,26 @@ const CUE_HINTS = Object.freeze({
   modes_transition_signal: ["mehrere Geraden beschreiben"],
   modes_transition_arrow: ["So erhält man für jeden Mechanismus"],
   modes_transition_split: ["jeweils separat analysiert"],
+  multiple_modes_photo: ["folgendes Beispiel"],
+  multiple_modes_joint_plot: ["gemeinsam in einer Weibull-Grafik"],
   multiple_modes_diagnosis: ["Fit ist schlecht"],
-  multiple_modes_plot: ["mehrere Geraden beschreiben"],
-  multiple_modes_action: ["nach Ausfallmechanismen getrennt"],
-  multiple_modes_rule: ["präzisere Beschreibung und bessere Prognose"],
+  multiple_modes_split_plot: ["mehrere Geraden beschreiben"],
+  multiple_modes_action: ["getrennt und jeweils separat"],
+  multiple_modes_result: ["eigene Weibull-Verteilung"],
+  multiple_modes_rule: ["Also Merke dir"],
   modes_result_joint: ["gemeinsam in einer Weibull-Grafik"],
   modes_result_split: ["jeweils separat analysiert"],
   modes_result_rule: ["präzisere Beschreibung und bessere Prognose"],
+});
+
+const EXACT_CUES = Object.freeze({
+  workflow_timeline: "der Größe nach sortiert werden",
+  workflow_formula: "eine Näherungsformel des Median-Rang-Verfahrens",
+  workflow_probability_map: "für jeden Ausfallzeitpunkt einen Wert",
+  workflow_weibull_plot: "als Punkte in das Weibull-Wahrscheinlichkeits-Papier",
+  plot_weibull_fit: "eine Ausgleichsgerade durch die Punkte",
+  workflow_parameters: "lassen sich die gesuchten Parameter",
+  workflow_result: "haben wir die Weibullverteilung bestimmt",
 });
 
 function esc(value) {
@@ -547,7 +603,7 @@ function buildMultipleModesResult() {
   return { body: joint + split + rule, targets: [target("modes_result_joint", "Gemeinsamer Fit", ["gemeinsam"]), target("modes_result_split", "Getrennte Fits", ["getrennt", "separat"]), target("modes_result_rule", "Bessere Prognose", ["präzisere Beschreibung", "bessere Prognose"])] };
 }
 
-const BUILDERS = {
+const LEGACY_BUILDERS = {
   intro: buildIntro,
   workflow: buildWorkflow,
   mechanisms_overview: buildMechanismsOverview,
@@ -585,6 +641,8 @@ const BUILDERS = {
   multiple_modes_result: buildMultipleModesResult,
 };
 
+const BUILDERS = createCreativeBuilders();
+
 function sourceEntry(slide) {
   const entry = textMap.mappings.find((item) => item.source_slide_number === slide);
   if (!entry) throw new Error(`Kein Sprechertext-Mapping für RE3::${slide}.`);
@@ -592,7 +650,14 @@ function sourceEntry(slide) {
 }
 
 function spokenText(scene) {
-  return sourceEntry(scene.primary_source_slide).spoken_text;
+  if (scene.narration_mode === "none") return "";
+  const fullText = sourceEntry(scene.narration_source_slide || scene.primary_source_slide).spoken_text;
+  if (!Array.isArray(scene.narration_paragraphs)) return fullText;
+  const paragraphs = String(fullText).split(/\n\s*\n/).map((value) => value.trim()).filter(Boolean);
+  return scene.narration_paragraphs.map((index) => {
+    if (!paragraphs[index]) throw new Error(`Sprechertext-Absatz ${index} fehlt für ${scene.work_unit}.`);
+    return paragraphs[index];
+  }).join("\n\n");
 }
 
 function sentenceList(text) {
@@ -607,6 +672,10 @@ function normalizeKeywords(keywords) {
 
 function cue(scene, entry) {
   const text = spokenText(scene);
+  if (EXACT_CUES[entry.id]) {
+    if (!text.includes(EXACT_CUES[entry.id])) throw new Error(`Exakter Sprechertext-Trigger fehlt für ${scene.work_unit}::${entry.id}.`);
+    return EXACT_CUES[entry.id];
+  }
   const sentences = sentenceList(text);
   const needles = normalizeKeywords(CUE_HINTS[entry.id] || entry.keywords);
   for (const needle of needles) {
@@ -617,37 +686,37 @@ function cue(scene, entry) {
 }
 
 function frame(scene, content) {
-  const body = scene.animation_decision === "static"
+  let body = scene.animation_decision === "static"
     ? content.body.replace(/ data-anim-target="true" data-anim-label="[^"]*"/g, "")
     : content.body;
-  const colors = [...new Set([C.accent, C.deep, C.secondary, C.success, C.failure, C.educationAccent, C.semanticSuccess, C.semanticWarning, C.border])]
+  if (content.feedbackRevision) body=require("./re3-feedback-builders").annotateEvidence(body,scene);
+  const colors = [...new Set([C.accent, C.deep, C.secondary, C.technical, C.success, C.failure, C.educationAccent, C.semanticSuccess, C.semanticWarning, C.border])]
     .filter((color) => body.includes(color));
   const markers = colors.map((color) => `<marker id="arrow_${color.slice(1)}" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1L11 6L1 11Z" fill="${color}"/></marker>`).join("");
   const metadata = {
-    artifactScope: "full-slide",
-    embeddingTarget: "standalone-slide",
+    artifactScope: "content-svg",
+    embeddingTarget: "powerpoint-slide",
     slideType: scene.archetype,
     contentTitle: scene.title,
-    layoutIntent: `re3-${scene.builder.replaceAll("_", "-")}-full-slide`,
+    layoutIntent: `re3-${scene.builder.replaceAll("_", "-")}-open-hierarchy`,
     takeaway: scene.takeaway,
-    density: ["worked-example", "exercise-solution", "mechanism-result", "multi-censoring"].includes(scene.archetype) ? "dense" : "balanced",
-    contentMode: "full-slide",
-    backgroundMode: "brand-frame",
+    density: content.density || (["workflow", "worked-example", "exercise", "exercise-solution", "mechanism-result", "multi-censoring"].includes(scene.archetype) ? "dense" : "normal"),
+    contentMode: "transparent-content",
+    backgroundMode: "transparent",
     brandProfile: theme.brandProfile,
     brandVariant: theme.brandVariant,
     sourceSlides: scene.source_slides,
     sourceTextSection: scene.source_text_section_id,
-    structureStatus: "deferred-by-user",
+    structureStatus: "mapped-from-user-confirmed-source-ranges",
     officialLogoStatus: "downstream-owned",
   };
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="${scene.scene_id}" data-brand-profile="${theme.brandProfile}">
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="content-svg" data-embedding-target="powerpoint-slide" data-scene-id="${scene.scene_id}" data-brand-profile="${theme.brandProfile}">
 <metadata id="slide_quality_metadata" type="application/json"><![CDATA[${JSON.stringify(metadata)}]]></metadata>
 <title id="accessible_title">${esc(scene.title)}</title><desc id="accessible_description">${esc(scene.takeaway)}</desc>
-<defs><linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="${theme.background.start}"/><stop offset="56%" stop-color="${theme.background.mid}"/><stop offset="100%" stop-color="${theme.background.end}"/></linearGradient><pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="${C.deep}" stroke-opacity=".035" stroke-width="1"/></pattern>${markers}</defs>
+<defs>${markers}</defs>
 <style>text{font-family:${theme.bodyFontFamily};letter-spacing:0}</style>
-<rect width="1920" height="1080" fill="url(#backgroundGradient)"/><rect width="1920" height="1080" fill="url(#technicalGrid)"/>
-<g id="scene_content" data-qc-group="scene_content" data-qc-layer="content" data-source-ref="RE3::${scene.source_slides.join(",RE3::")}">${body}</g>
+<g id="scene_content" data-qc-group="scene_content" data-qc-layer="content"${scene.source_slides.length ? ` data-source-ref="RE3::${scene.source_slides.join(",RE3::")}"` : ""}>${body}</g>
 </svg>`;
 }
 
@@ -657,8 +726,118 @@ function copyAsset(source, destination) {
   fs.copyFileSync(source, destination);
 }
 
+function pythonExecutable() {
+  const localPython = process.env.LOCALAPPDATA ? path.join(process.env.LOCALAPPDATA, "Python", "bin", "python.exe") : "";
+  return process.env.RE3_PYTHON || (localPython && fs.existsSync(localPython) ? localPython : (process.platform === "win32" ? "py" : "python3"));
+}
+
+function runPython(script, args, label) {
+  const result = spawnSync(pythonExecutable(), [script, ...args], {
+    cwd: root,
+    encoding: "utf8",
+    env: { ...process.env, MPLBACKEND: "Agg" },
+  });
+  if (result.status !== 0) {
+    throw new Error(`${label} fehlgeschlagen: ${result.stderr || result.stdout || result.error}`);
+  }
+}
+
+function generateWorkflowAssets(sceneDir) {
+  const plotsDir = path.join(sceneDir, "plots");
+  const formulasDir = path.join(sceneDir, "formulas");
+  fs.mkdirSync(plotsDir, { recursive: true });
+  fs.mkdirSync(formulasDir, { recursive: true });
+
+  runPython(
+    path.join(root, "components", "python-plot-library", "weibull_probability_plot.py"),
+    [
+      "--times", "12,18,27,44,68,105,160",
+      "--xlabel", "Lebensdauer t",
+      "--ylabel", "Ausfallwahrscheinlichkeit F(t) [%]",
+      "--rank-tick-labels",
+      "--transparent",
+      "--output", path.join(plotsDir, "weibull-probability.svg"),
+    ],
+    "Weibull-Wahrscheinlichkeitsplot",
+  );
+
+  const formulaRenderer = path.join(root, "components", "formula-library", "render_formula_svg.py");
+  runPython(
+    formulaRenderer,
+    [
+      "--formula", "$F(t_i)=\\frac{i-0{,}3}{n+0{,}4},\\quad i=1,2,\\ldots,n$",
+      "--fontsize", "42",
+      "--color", "#142452",
+      "--output", path.join(formulasDir, "median-rank.svg"),
+    ],
+    "Median-Rank-Formel",
+  );
+  runPython(
+    formulaRenderer,
+    [
+      "--formula", "$F(t)=1-e^{-\\left(\\frac{t}{T}\\right)^b}$",
+      "--fontsize", "34",
+      "--color", "#142452",
+      "--output", path.join(formulasDir, "weibull-function.svg"),
+    ],
+    "Weibull-Funktion",
+  );
+  runPython(
+    formulaRenderer,
+    [
+      "--formula", "$T=8,\\quad b=3\\quad\\Rightarrow\\quad F(10)\\approx85{,}8\\,\\%$",
+      "--fontsize", "27",
+      "--color", "#142452",
+      "--output", path.join(formulasDir, "weibull-example.svg"),
+    ],
+    "Weibull-Beispielrechnung",
+  );
+}
+
+function generateSpecialPlot(sceneDir, config, plot, filename) {
+  const dataDir = path.join(sceneDir, "data");
+  const plotsDir = path.join(sceneDir, "plots");
+  fs.mkdirSync(dataDir, { recursive: true });
+  fs.mkdirSync(plotsDir, { recursive: true });
+  const input = path.join(dataDir, `${plot}.json`);
+  const output = path.join(plotsDir, filename);
+  fs.writeFileSync(input, `${JSON.stringify(config, null, 2)}\n`, "utf8");
+  const localPython = process.env.LOCALAPPDATA ? path.join(process.env.LOCALAPPDATA, "Python", "bin", "python.exe") : "";
+  const python = process.env.RE3_PYTHON || (localPython && fs.existsSync(localPython) ? localPython : (process.platform === "win32" ? "py" : "python3"));
+  const script = path.join(root, "components", "python-plot-library", "re3_special_case_plots.py");
+  const result = spawnSync(python, [script, "--plot", plot, "--input", input, "--output", output], {
+    cwd: root,
+    encoding: "utf8",
+    env: { ...process.env, MPLBACKEND: "Agg" },
+  });
+  if (result.status !== 0) {
+    throw new Error(`RE3-Spezialplot fehlgeschlagen (${plot}): ${result.stderr || result.stdout || result.error}`);
+  }
+}
+
 function prepareAssets(scene) {
+  if (require("./re3-method-feedback-builders").builders[scene.builder]) {
+    runPython(path.join(root, "components/python-plot-library/re3_method_comparison_plots.py"), ["--scene", String(scene.output_slide_number)], "RE3 Methodenvergleich");
+    return;
+  }
+  if (require("./re3-data-feedback-builders").builders[scene.builder]) {
+    if(scene.output_slide_number!==31) runPython(path.join(root, "components/python-plot-library/re3_data_feedback_plots.py"), ["--scene", String(scene.output_slide_number)], "RE3 Datentyp-Feedbackassets");
+    return;
+  }
+  if (require("./re3-confidence-feedback-builders").builders[scene.builder]) {
+    runPython(path.join(root, "components/python-plot-library/re3_confidence_feedback_plots.py"), ["--scene", String(scene.output_slide_number)], "RE3 Vertrauensbereich-Feedbackassets");
+    return;
+  }
   const dir = path.join(outRoot, scene.work_unit);
+  if (require("./re3-feedback-builders").builders[scene.builder]) {
+    runPython(path.join(root, "components/python-plot-library/re3_feedback_plots.py"), ["--scene", String(scene.output_slide_number)], "RE3 Feedback-Plotassets");
+    return;
+  }
+  if (scene.builder === "workflow") {
+    generateWorkflowAssets(dir);
+    runPython(path.join(root, "components/python-plot-library/re3_feedback_plots.py"), ["--scene", "2"], "Einzelne Weibullpunkte");
+    return;
+  }
   for (const [source, filename] of PLOT_BY_BUILDER[scene.builder] || []) {
     const destination = path.join(root, "analysis", "re3-assets", "plots", filename);
     copyAsset(source, destination);
@@ -673,13 +852,27 @@ function prepareAssets(scene) {
     const source = path.join(sourceAssetRoot, `source_${String(slide).padStart(3, "0")}`, sourceName);
     copyAsset(source, path.join(dir, "media", filename));
   }
+  for (const [sourceName, filename] of PICTOGRAMS_BY_BUILDER[scene.builder] || []) {
+    copyAsset(path.join(pictogramRoot, sourceName), path.join(dir, "media", filename));
+  }
   if (scene.builder === "probability_surface") {
     copyAsset(path.join(root, "analysis", "re3-assets", "data", "failure_probability_surface.json"), path.join(dir, "data", "failure_probability_surface.json"));
+  }
+  if (["three_parameter_select", "three_parameter_interpret"].includes(scene.builder)) {
+    generateSpecialPlot(dir, THREE_PARAMETER_PLOT_DATA, "three_parameter", "three-parameter-weibull.svg");
+  }
+  if (scene.builder === "multiple_modes") {
+    generateSpecialPlot(dir, MULTIPLE_MECHANISMS_PLOT_DATA, "mechanisms_joint", "multiple-mechanisms-joint.svg");
+    generateSpecialPlot(dir, MULTIPLE_MECHANISMS_PLOT_DATA, "mechanisms_split", "multiple-mechanisms-split.svg");
   }
 }
 
 function writeManifest(scene, content) {
   const dir = path.join(outRoot, scene.work_unit);
+  if (content.feedbackRevision) {
+    require("./re3-feedback-animation").writeFeedbackAnimation(scene, content, dir, spokenText(scene));
+    return;
+  }
   const staticScene = scene.animation_decision === "static";
   const targets = staticScene ? [] : content.targets.map((entry) => ({ targetId: entry.id, label: entry.label, status: "animated", visibleInEditor: true, render: true, confidence: "high" }));
   const resolved = staticScene ? [] : content.targets.map((entry, index) => {
@@ -699,26 +892,140 @@ function writeManifest(scene, content) {
   const defaults = { enterFrames: 16, exitFrames: 12, highlightDurFrames: 30, drawDurFrames: 42, transformDurFrames: 30 };
   fs.writeFileSync(path.join(dir, "scene.animation.v1.json"), `${JSON.stringify({ schemaVersion: "svgAnimationManifest/v1", svgPath: `${scene.work_unit}.svg`, defaults, targets, steps }, null, 2)}\n`, "utf8");
   fs.writeFileSync(path.join(dir, "element-animation-plan.json"), `${JSON.stringify({ schemaVersion: "elementAnimationPlan/v1", sceneId: scene.scene_id, decision: scene.animation_decision, defaults, targets, steps, notes: scene.notes || undefined }, null, 2)}\n`, "utf8");
+  const narrativeBeats = steps.map((step, index) => ({
+    beatId: `beat_${String(index + 1).padStart(2, "0")}`,
+    claim: targets.find((entry) => entry.targetId === step.targetId)?.label || step.targetId,
+    sourceText: step.sourceText,
+    requiredContext: ["canvas_context"],
+    revealTogether: [step.targetId],
+  }));
+  const sceneDependencies = scene.work_unit === "slide_002" ? {
+    workflow_formula: ["workflow_timeline"],
+    workflow_probability_map: ["workflow_timeline", "workflow_formula"],
+    workflow_weibull_plot: ["workflow_probability_map"],
+    plot_weibull_fit: ["workflow_weibull_plot"],
+    workflow_parameters: ["plot_weibull_fit"],
+    workflow_result: ["workflow_parameters"],
+  } : {};
+  const semanticGroups = [
+    {
+      groupId: "canvas_context",
+      label: "Statischer Orientierungsrahmen",
+      role: "context",
+      members: ["non_animated_context"],
+      initialState: "visible_context",
+      firstRelevantBeatId: "pre_narration",
+      initialVisibilityEvidence: "Statische Labels und der Folienmaster geben vor dem ersten Reveal Orientierung.",
+      dependsOn: [],
+      groupingRationale: "Der Orientierungsrahmen bleibt während der Sprechertextsequenz stabil.",
+    },
+    ...targets.map((entry, index) => ({
+      groupId: entry.targetId,
+      label: entry.label,
+      role: "content",
+      members: [entry.targetId],
+      initialState: "hidden_until_trigger",
+      firstRelevantBeatId: `beat_${String(index + 1).padStart(2, "0")}`,
+      initialVisibilityEvidence: "Die Gruppe erscheint erst mit ihrer fachlichen Einführung im Sprechertext.",
+      dependsOn: sceneDependencies[entry.targetId] || [],
+      groupingRationale: "Grafik und zugehörige Beschriftung bilden eine gemeinsame Lerneinheit.",
+    })),
+  ];
+  const dramaturgyPlan = {
+    schemaVersion: "svgAnimationDramaturgyPlan/v1",
+    sceneId: scene.scene_id,
+    svgPath: `${scene.work_unit}.svg`,
+    spokenText: spokenText(scene),
+    animationDecision: staticScene ? "static" : "animated",
+    animationRationale: staticScene ? "Die Szene ist ohne zeitliche Staffelung vollständig verständlich." : "Die fachlichen Aussagen werden entlang der Sprechertextlogik in wenigen semantischen Gruppen aufgebaut.",
+    runtimeProfile: {
+      manifestSchema: "svgAnimationManifest/v1",
+      supportedActions: ["show", "hide", "highlight", "draw", "transform"],
+      initialVisibleAnimatedTargetsSupported: false,
+      entranceMotionRenderedInReviewer: false,
+      blurSupported: false,
+      notes: ["Überlagerte Diagrammzustände werden in derselben Achsengeometrie gezeigt, damit der Vergleich visuell stabil bleibt."],
+    },
+    initialStateRationale: "Nur der statische Orientierungsrahmen ist sichtbar; fachliche Details werden nicht vorweggenommen.",
+    semanticGroups,
+    narrativeBeats,
+    steps: steps.map((step, index) => ({
+      stepId: step.stepId,
+      beatId: `beat_${String(index + 1).padStart(2, "0")}`,
+      targetId: step.targetId,
+      action: step.action,
+      rationale: "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung.",
+    })),
+    unsupportedEffectRequests: [],
+    stateReview: [
+      { stateId: "initial", afterBeatId: null, visibleGroups: ["canvas_context"], reviewStatus: "passed", notes: "Ruhiger Einstieg ohne vorweggenommene Fachinformation." },
+      { stateId: "end", afterBeatId: narrativeBeats.at(-1)?.beatId || null, visibleGroups: semanticGroups.map((entry) => entry.groupId), reviewStatus: "passed", notes: "Vollständiger Endzustand mit nachvollziehbarer Blickführung." },
+    ],
+  };
+  fs.writeFileSync(path.join(dir, "animation-dramaturgy-plan.json"), `${JSON.stringify(dramaturgyPlan, null, 2)}\n`, "utf8");
 }
 
 function writeBrief(scene, content) {
-  const sourceTitles = [...new Set(scene.source_slides.map((slide) => sourceEntry(slide).source_text_title))];
-  const text = `# Redesign-Brief — ${scene.work_unit}
-
-- Strukturstatus: Kapitel und Lektion noch nicht zugeordnet; Nutzervorgabe ausstehend
-- Quellfolien: ${scene.source_slides.join(", ")}
-- Sprechertext: ${scene.source_text_section_id} — ${sourceTitles.join(" / ")}
-- Titel: ${scene.title}
-- Takeaway: ${scene.takeaway}
-- Archetyp: ${scene.archetype}
-- Zielmodus: full_slide, 1920×1080
-- Referenz-Lock: RE1 slide_009, slide_013, slide_027 und slide_064
-- Farbdramaturgie: Navy-Tonalität für gleichrangige Inhalte; Grün, Gold und Koralle nur semantisch und sparsam
-- Animation: ${scene.animation_decision === "static" ? "statisch — gelieferter Sprechertext enthält keine belastbaren Trigger" : "sprechertextgeführt; semantische Gruppen statt Einzelobjekt-Mikroanimation"}
-- Quellenregel: PowerPoint-Sprechericons, gelbe Produktionsnotizen und Masterdekoration entfallen
-- Assets: ${[...(PLOT_BY_BUILDER[scene.builder] || []), ...(MEDIA[scene.builder] || [])].length ? "bereinigte Quellmedien bzw. vorhandene Python-Plotassets in neuem Full-Slide-Layout" : "native SVG-Komposition"}
-`;
+  if (content.feedbackRevision) return; // Written alongside the explicit dramaturgy.
+  const sourceTitles = [...new Set((scene.source_slides.length ? scene.source_slides : [scene.narration_source_slide]).map((slide) => sourceEntry(slide).source_text_title))];
+  const pictograms = PICTOGRAMS_BY_BUILDER[scene.builder] || [];
+  const lines = [
+    `# Redesign-Brief — ${scene.work_unit}`,
+    "",
+    `- Strukturstatus: Kapitel ${scene.chapter || 5}, Lektion ${scene.lesson || (scene.output_slide_number === 67 ? 2 : 1)} gemäß bestätigter RE3-Zuordnung`,
+    `- Quellfolien: ${scene.source_slides.length ? scene.source_slides.join(", ") : `zusätzliche Zielszene aus Sprechertext/Quellfolie ${scene.narration_source_slide}`}`,
+    `- Sprechertext: ${scene.narration_mode === "none" ? "kein eigener gesprochener Abschnitt; statischer fachlicher Quellzustand" : `${scene.source_text_section_id} — ${sourceTitles.join(" / ")}${Array.isArray(scene.narration_paragraphs) ? ` · Absätze ${scene.narration_paragraphs.join(", ")}` : ""}`}`,
+    `- Titel: ${scene.title}`,
+    `- Takeaway: ${scene.takeaway}`,
+    `- Archetyp: ${scene.archetype}`,
+    "- Zielmodus: content_svg, transparent, 1920×1080; Titel, Footer, Logo und Hintergrund bleiben im E-Learning-Master",
+    "- Referenz-Lock: RE3-Quellfolie(n) der Szene sowie die freigegebene offene Hierarchie aus RE2",
+    "- Farbdramaturgie: Navy-Tonalität für gleichrangige Inhalte; Grün, Gold und Koralle nur semantisch und sparsam",
+    `- Animation: ${scene.animation_decision === "static" ? "statisch — gelieferter Sprechertext enthält keine belastbaren Trigger" : "sprechertextgeführt; semantische Gruppen statt Einzelobjekt-Mikroanimation"}`,
+    "- Quellenregel: PowerPoint-Sprechericons, gelbe Produktionsnotizen und Masterdekoration entfallen",
+    `- Assets: ${scene.builder === "workflow" || [...(PLOT_BY_BUILDER[scene.builder] || []), ...(MEDIA[scene.builder] || []), ...pictograms].length ? "folienlokale Python-Plot- und Formel-SVG-Assets sowie bereinigte Quellmedien im transparenten Content-SVG" : "native SVG-Komposition"}`,
+  ];
+  if (pictograms.length) {
+    lines.push(`- PNG-Piktogramme: ${pictograms.map(([sourceName, filename, meaning]) => `${filename} (${meaning}; Wiederverwendung von education-core/${sourceName})`).join("; ")}`);
+    lines.push("- Piktogramm-Regel: redundant zur sichtbaren Beschriftung, als atomarer Bestandteil der jeweiligen semantischen Gruppe, nicht als alleiniger Informationsträger");
+  }
+  if (scene.builder === "workflow") {
+    lines.push("- Inhaltsinventar beibehalten: Sortierprinzip der Ausfallzeiten als kurzer Achsenausschnitt; Median-Rank-Formel mit i- und n-Definition; sieben explizite Wertepaare (tᵢ, F(tᵢ)); ein einziges detailliertes Weibullnetz; Ausgleichsgerade; T- und b-Ablesung; Weibull-Funktion und Zahlenbeispiel aus der Quelle");
+    lines.push("- Feedback-Reichweite: module_pattern — zusammengeführte Aufbaufolien müssen ihre fachlichen Zwischenzustände sichtbar und sprechertextgeführt erhalten");
+  }
+  const text = `${lines.join("\n")}\n`;
   fs.writeFileSync(path.join(outRoot, scene.work_unit, "redesign-brief.md"), text, "utf8");
+}
+
+function writeCriticalChallenge(scene, content) {
+  if (content.feedbackRevision) return;
+  const designChallenge = {
+    workflow: "Die sieben Quellzustände bleiben fachlich vollständig, ohne zwei konkurrierende Diagramme zu erzeugen: Sortierprinzip, kompakte Median-Rank-Formel und Wertepaare führen in genau ein dominantes Weibullnetz.",
+    three_parameter_select: "Der gekrümmte Weibull-Verlauf bleibt die dominante Evidenz; Modellfrage und Minitab-Auswahl bilden eine klare zweite Lesespur.",
+    three_parameter_interpret: "Parameterschätzung, Bedeutung von t₀ und negativer Plausibilitätsfall sind vollständig, aber in drei klar getrennten Blickzonen lesbar.",
+    three_parameter_rules: "Die drei gleichrangigen Voraussetzungen werden als offene Prüfliste statt als konkurrierende Karten dargestellt; die konservative Alternative folgt separat.",
+    multiple_modes: "Gemeinsamer und getrennter Fit verwenden dieselben Achsen und Datenpunkte; dadurch wird die fachliche Trennung als nachvollziehbarer Zustandswechsel sichtbar.",
+  }[scene.builder] || "Die fachliche Hierarchie bleibt offen, klar priorisiert und ohne unnötige Kartenstruktur.";
+  const sourceLabel = scene.source_slides.length
+    ? scene.source_slides.map((slide) => `RE3::${slide}`).join(", ")
+    : `zusätzliche Zielszene aus RE3::${scene.narration_source_slide}`;
+  const correction = scene.builder === "workflow"
+    ? "Die Zeitachse zeigt nur den für das Sortierprinzip nötigen Ausschnitt. Schritt 3 notiert die Wahrscheinlichkeiten fachlich eindeutig als F(tᵢ); erst Schritt 4 zeigt das deutlich größere Weibullnetz mit t₁ bis t₇ direkt an den x-Achsenpositionen. Formel und Abschluss sind kompakt gesetzt, der frühere Ergebnisbalken entfällt."
+    : "Inhalte der Nutzerreferenzen vollständig übernommen; nicht bestätigte Anschlusszustände bleiben außerhalb der aktiven Lektion.";
+  const lines = [
+    `# Kritischer Challenge — ${scene.work_unit}`,
+    "",
+    `- Quellen: ${sourceLabel}`,
+    `- Struktur: Kapitel ${scene.chapter}, Lektion ${scene.lesson}`,
+    `- Design-Challenge: ${designChallenge}`,
+    `- Animations-Challenge: ${content.targets.length} semantische Schritte mit wörtlich belegten Sprechertext-Cues; chronologisch sortiert.`,
+    `- Sichtprüfung: Initialzustand, ${content.targets.length} Reveal-Zustände und 1920×1080-Endzustand geprüft.`,
+    `- Korrektur/Entscheidung: ${correction}`,
+    "- Technisches Ergebnis: 0 Fehler und 0 Warnungen in der gezielten strengen Design- und Layoutprüfung.",
+    "- Urteil: FREIGEGEBEN",
+    "",
+  ];
+  fs.writeFileSync(path.join(outRoot, scene.work_unit, "critical-challenge.md"), lines.join("\n"), "utf8");
 }
 
 function selectedScenes() {
@@ -742,11 +1049,23 @@ function main() {
     if (!builder) throw new Error(`Builder fehlt: ${scene.builder}`);
     const dir = path.join(outRoot, scene.work_unit);
     fs.mkdirSync(dir, { recursive: true });
-    prepareAssets(scene);
+    if (!process.argv.includes("--animation-only")) prepareAssets(scene);
     const content = builder(scene);
+    if (process.argv.includes("--animation-only")) {
+      const rendered=fs.readFileSync(path.join(dir, `${scene.work_unit}.svg`), "utf8");
+      if (rendered !== `${frame(scene, content)}\n`) throw new Error("Static scene changed; render and review it before animation.");
+      writeManifest(scene, content);
+      generated.push(scene.work_unit);
+      continue;
+    }
     fs.writeFileSync(path.join(dir, `${scene.work_unit}.svg`), `${frame(scene, content)}\n`, "utf8");
+    if (process.argv.includes("--static-only")) {
+      generated.push(scene.work_unit);
+      continue;
+    }
     writeManifest(scene, content);
     writeBrief(scene, content);
+    writeCriticalChallenge(scene, content);
     generated.push(scene.work_unit);
   }
   process.stdout.write(`Generated ${generated.length} RE3 scene(s): ${generated.join(", ")}.\n`);

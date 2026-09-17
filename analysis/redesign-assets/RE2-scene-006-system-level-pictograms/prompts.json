@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "reltestEducationPictogramPromptSet/v1",
+  "sceneId": "re2_ch2_system_levels",
+  "workUnit": "slide_006",
+  "styleProfile": "reltest-education-minimal-v1",
+  "generationMode": "built_in_imagegen",
+  "postProcessing": "tools/flatten-education-pictogram.ps1",
+  "prompts": [
+    {"assetId":"re2_level_environment","reuseKey":"system-level-environment","file":"components/image-library/generated-pictograms/re2-system-levels/re2-level-environment.png","prompt":"Ein isoliertes Umwelt-Piktogramm aus Globus, Standortmarke und kurzen äußeren Einflusslinien; frontal, flach, transparent, RelTest-Marineblau mit Signalgrün nur für die Standortmarke, ohne Text, Schatten, Verlauf oder 3D."},
+    {"assetId":"re2_level_pv_system","reuseKey":"system-level-pv-system","file":"components/image-library/generated-pictograms/re2-system-levels/re2-level-pv-system.png","prompt":"Ein isoliertes PV-Gesamtsystem-Piktogramm aus drei Solarmodulen auf einem Träger und kleinem Sonnensymbol; frontal, flach, transparent, RelTest-Marineblau mit Signalgrün nur im Sonnensymbol, ohne Text, Schatten, Verlauf oder 3D."},
+    {"assetId":"re2_level_inverter","reuseKey":"system-level-inverter","file":"components/image-library/generated-pictograms/re2-system-levels/re2-level-inverter.png","prompt":"Ein isoliertes Wechselrichter-Piktogramm als stehendes technisches Gehäuse mit Statusanzeige, Lüftung und drei Kabelanschlüssen; frontal, flach, transparent, RelTest-Marineblau mit Signalgrün nur in der Anzeige, ohne Text, Schatten, Verlauf oder 3D."},
+    {"assetId":"re2_level_microcontroller","reuseKey":"system-level-microcontroller","file":"components/image-library/generated-pictograms/re2-system-levels/re2-level-microcontroller.png","prompt":"Ein offenes Leiterplatten-Piktogramm mit zentralem Mikrocontroller, klar getrennten Leiterbahnen, Anschlusspads und zwei Nebenbauteilen; orthografische Draufsicht, flach, transparent, RelTest-Marineblau mit Signalgrün nur für den Chip, ohne gefüllte Platinenplatte, Text, Schatten, Verlauf oder 3D."}
+  ],
+  "iterations": [
+    {"assetId":"re2_level_microcontroller","result":"rejected","reason":"Der erste Entwurf verlor nach der Markenbereinigung seine Leiterbahnstruktur und bestand den Kleinmaßstab-Gate nicht."},
+    {"assetId":"re2_level_microcontroller","result":"accepted","reason":"Die offene zweite Variante behält Mikrocontroller, Leiterbahnen und Anschlussstruktur auch im Szenenmaßstab."}
+  ]
+}

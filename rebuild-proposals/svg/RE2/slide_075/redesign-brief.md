@@ -3,11 +3,11 @@
 - Kapitel: 4
 - Lektion: 2
 - Quellfolie: 75
-- Zielmodus: full_slide, 1920×1080
-- Titel: Das FMEA-Team
+- Zielmodus: content_svg, transparentes 1920×1080-Inhaltsmodul für den Downstream-Master
+- Titel: Planung und Vorbereitung: Team
 - Dominante Lernbotschaft: Moderator, Basisteam und erweiterte Experten bringen unterschiedliche Kompetenzen in die FMEA ein.
 - Archetyp: team-hierarchy
-- Layout: Dreistufige Teamhierarchie mit Rollen und Kompetenzen.
+- Layout: Quellengetreue dreistufige Kompetenzpyramide; Erläuterungen liegen offen und höhengleich neben den Stufen.
 - Inhaltsinventar: Fachbegriffe, Beziehungen, Hierarchien, Tabellenzustände und Beispiele bleiben erhalten; PowerPoint-Bedienelemente und Masterdekoration entfallen.
 - Referenz-Lock: RE1 slide_013, slide_009, slide_027 und slide_022
 - Assetstrategie: native RelTest-SVG-Komposition

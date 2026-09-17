@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_062.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "levels_plot",
+      "label": "Versuchsniveaus",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "two_levels",
+      "label": "Zwei Niveaus",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "third_level",
+      "label": "Drittes Niveau",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_levels_plot",
+      "targetId": "levels_plot",
+      "action": "draw",
+      "sourceText": "Schauen wir uns zunächst die Frage nach der Anzahl der Versuchsniveaus an",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "durFrames": 42,
+      "drawStyle": "stroke",
+      "direction": "forward"
+    },
+    {
+      "stepId": "step_02_two_levels",
+      "targetId": "two_levels",
+      "action": "show",
+      "sourceText": "Wenn wir nur zwei Niveaus prüfen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_third_level",
+      "targetId": "third_level",
+      "action": "show",
+      "sourceText": "ein drittes Niveau hinzuzunehmen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

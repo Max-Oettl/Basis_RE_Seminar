@@ -3,11 +3,11 @@
 - Kapitel: 4
 - Lektion: 9
 - Quellfolie: 150
-- Zielmodus: full_slide, 1920×1080
+- Zielmodus: content_svg, transparentes 1920×1080-Inhaltsmodul für den Downstream-Master
 - Titel: Funktionsanalyse der Prozess-FMEA
-- Dominante Lernbotschaft: In der Prozess-FMEA werden Funktionen den einzelnen Prozessschritten zugeordnet.
-- Archetyp: source-asset-diagram
-- Layout: Vergrößertes, quelltreues Struktur-, Funktions- oder Fehlerdiagramm mit klarer FMEA-Zuordnung.
+- Dominante Lernbotschaft: Die Funktionsanalyse ordnet Funktionen entweder Produktkomponenten oder Prozessschritten zu.
+- Archetyp: paired-technical-comparison
+- Layout: Zwei gleich große, gleichfarbig gewichtete technische Diagramme auf einer offenen Vergleichsachse.
 - Inhaltsinventar: Fachbegriffe, Beziehungen, Hierarchien, Tabellenzustände und Beispiele bleiben erhalten; PowerPoint-Bedienelemente und Masterdekoration entfallen.
 - Referenz-Lock: RE1 slide_013, slide_009, slide_027 und slide_022
 - Assetstrategie: bereinigtes und vergrößertes Quellasset

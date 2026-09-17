@@ -1,0 +1,274 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re1_src_001",
+  "svgPath": "rebuild-proposals/svg/RE1/slide_001/slide_001.svg",
+  "spokenText": "Bevor wir näher auf den Begriff der Zuverlässigkeit eingehen, schauen wir uns zunächst die Auswirkungen von unzuverlässigen Produkten an.\n\nJeder hier hat bestimmt schon einmal in den Nachrichten etwas von einer Rückrufaktion eines bestimmten Herstellers aufgrund eines fehlerhaften oder sicherheitskritischen Produktes gehört.\n\nGerade das Thema Sicherheit spielt in der Luftfahrtindustrie eine zentrale Rolle, und kann zu einem Rückruf führen. Ein Fall aus der jüngsten Vergangenheit ist beispielsweise ein Materialmangel an Triebwerken für den Air-Bus A Dreihundertzwanzig neo, welcher durch einen Prozessfehler, in der Produktion von Metallpulver für Hochdruckturbinen-Scheiben verursacht wurde. Dieser Fehler kann zu Einschlüssen führen und damit die Haltbarkeit der Triebwerke verkürzen.\n\nDie Auswirkungen erstrecken sich auf die Hersteller Pratt & Whitney und M T U. Die Untersuchung und der Austausch der betroffenen Tausendzweihundert Triebwerke könnten Kosten von bis zu Vier-Komma-Fünf Milliarden US-Dollar verursachen. MTU erwartet eine Belastung von einer Milliarde Euro für den Umsatz und auch Gewinn im Jahr Zweitausenddreiundzwanzig.",
+  "animationDecision": "animated",
+  "animationRationale": "Die allgemeinen Einleitungsbeats bleiben ohne konkretes Fallmotiv. Foto, technische Ursache und Quellenbezug erscheinen erst gemeinsam mit der Einführung des A320neo-Beispiels; die wirtschaftliche Wirkung folgt danach.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Show wird als reines Fade bewertet.",
+      "Gleiche sourceText-Phrase startet alle Schritte derselben Triggergruppe gleichzeitig."
+    ]
+  },
+  "initialStateRationale": "Der Sprecher beginnt allgemein mit Zuverlässigkeit und Rückrufaktionen. Das konkrete Triebwerksmotiv würde das spätere Beispiel vorwegnehmen; deshalb bleibt nur der Downstream-/Markenrahmen sichtbar.",
+  "semanticGroups": [
+    {
+      "groupId": "brand_background",
+      "label": "RelTest-Education-Hintergrund",
+      "role": "background",
+      "members": [
+        "Education-Farbverlauf",
+        "ruhiges technisches Raster"
+      ],
+      "initialState": "static_decorative",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Der Markenrahmen enthaelt keine konkrete Fachinformation und darf vor der Narration sichtbar sein.",
+      "dependsOn": [],
+      "groupingRationale": "Der Hintergrund ist ruhiger Markenrahmen und trägt keine vorweggenommene Fachinformation."
+    },
+    {
+      "groupId": "a320_case_context",
+      "label": "A320neo-Fall mit technischer Ursache",
+      "role": "case_context",
+      "members": [
+        "vollständiges A320neo-Triebwerksfoto",
+        "Medienkontur",
+        "Ursachenkarte",
+        "Materialmangel",
+        "Prozessfehler",
+        "Einschlüsse und Haltbarkeitsfolge",
+        "Quellenzeile"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [],
+      "groupingRationale": "Bild, Quelle, Ursache und technische Folge bilden das erstmals eingeführte konkrete Fallbeispiel.",
+      "firstRelevantBeatId": "introduce_a320_case",
+      "initialVisibilityEvidence": "Vor diesem Beat spricht der Text nur allgemein über unzuverlässige Produkte, Rückrufe und Luftfahrtsicherheit."
+    },
+    {
+      "groupId": "a320_business_impact",
+      "label": "Ausmaß und Geschäftswirkung",
+      "role": "result",
+      "members": [
+        "drei vollständige Kennzahlkarten",
+        "Herstellerhinweis"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "a320_case_context"
+      ],
+      "groupingRationale": "Umfang, Kosten und Herstellerbezug bilden gemeinsam die Wirkungsebene.",
+      "firstRelevantBeatId": "show_a320_impact",
+      "initialVisibilityEvidence": "Kennzahlen und Herstellerwirkung werden erst im letzten Sprecherabschnitt genannt."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "general_reliability_intro",
+      "claim": "Unzuverlässige Produkte und ihre Auswirkungen werden allgemein eingeführt.",
+      "sourceText": "Bevor wir näher auf den Begriff",
+      "occurrence": 1,
+      "requiredContext": [],
+      "revealTogether": [],
+      "learnerStateBefore": "Nur der ruhige Marken- und Downstream-Rahmen ist sichtbar.",
+      "learnerStateAfter": "Noch kein konkretes Beispiel ist sichtbar."
+    },
+    {
+      "beatId": "general_recall_intro",
+      "claim": "Rückrufaktionen werden als allgemein bekanntes Phänomen eingeordnet.",
+      "sourceText": "Jeder hier hat bestimmt schon einmal",
+      "occurrence": 1,
+      "requiredContext": [],
+      "revealTogether": [],
+      "learnerStateBefore": "Noch kein konkretes Beispiel ist sichtbar.",
+      "learnerStateAfter": "Die allgemeine Einordnung bleibt ohne vorweggenommenes Produktmotiv."
+    },
+    {
+      "beatId": "aviation_safety_intro",
+      "claim": "Die Bedeutung der Sicherheit in der Luftfahrt wird allgemein erklärt.",
+      "sourceText": "Gerade das Thema Sicherheit spielt in der Luftfahrtindustrie",
+      "occurrence": 1,
+      "requiredContext": [],
+      "revealTogether": [],
+      "learnerStateBefore": "Die Content-Ebene bleibt frei von einem konkreten Fall.",
+      "learnerStateAfter": "Der Luftfahrtkontext ist gesprochen, aber das A320neo-Beispiel noch nicht eingeführt."
+    },
+    {
+      "beatId": "introduce_a320_case",
+      "claim": "Der A320neo-Rückruf wird als konkreter technischer Fall eingeführt.",
+      "sourceText": "Ein Fall aus der jüngsten Vergangenheit",
+      "occurrence": 1,
+      "requiredContext": [],
+      "revealTogether": [
+        "a320_case_context"
+      ],
+      "learnerStateBefore": "Noch ist kein konkretes Triebwerkbeispiel sichtbar.",
+      "learnerStateAfter": "Foto, Quelle, Ursache und technische Folge sind gemeinsam sichtbar."
+    },
+    {
+      "beatId": "show_a320_impact",
+      "claim": "Der technische Fehler erzeugt erheblichen wirtschaftlichen Schaden.",
+      "sourceText": "Die Auswirkungen erstrecken sich auf die Hersteller",
+      "occurrence": 1,
+      "requiredContext": [
+        "a320_case_context"
+      ],
+      "revealTogether": [
+        "a320_business_impact"
+      ],
+      "learnerStateBefore": "Der technische Fall ist erklärt.",
+      "learnerStateAfter": "Umfang, Kosten und Herstellerbezug ergänzen den Fall."
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_a320_case_context",
+      "beatId": "introduce_a320_case",
+      "targetId": "a320_case_context",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Das konkrete Triebwerksfoto, der Quellenbezug und die vollständige Ursachenkarte werden bei der ersten Fallnennung gemeinsam eingeblendet."
+    },
+    {
+      "stepId": "show_a320_business_impact",
+      "beatId": "show_a320_impact",
+      "targetId": "a320_business_impact",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Alle wirtschaftlichen Kennzahlen erscheinen gemeinsam als Ergebnisblock."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der Sprecher beginnt allgemein mit Zuverlässigkeit und Rückrufaktionen. Das konkrete Triebwerksmotiv würde das spätere Beispiel vorwegnehmen; deshalb bleibt nur der Downstream-/Markenrahmen sichtbar."
+    },
+    {
+      "stateId": "before_general_reliability_intro",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Nur der ruhige Marken- und Downstream-Rahmen ist sichtbar."
+    },
+    {
+      "stateId": "after_general_reliability_intro",
+      "afterBeatId": "general_reliability_intro",
+      "visibleGroups": [
+        "brand_background"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Noch kein konkretes Beispiel ist sichtbar."
+    },
+    {
+      "stateId": "before_general_recall_intro",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Noch kein konkretes Beispiel ist sichtbar."
+    },
+    {
+      "stateId": "after_general_recall_intro",
+      "afterBeatId": "general_recall_intro",
+      "visibleGroups": [
+        "brand_background"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Die allgemeine Einordnung bleibt ohne vorweggenommenes Produktmotiv."
+    },
+    {
+      "stateId": "before_aviation_safety_intro",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Die Content-Ebene bleibt frei von einem konkreten Fall."
+    },
+    {
+      "stateId": "after_aviation_safety_intro",
+      "afterBeatId": "aviation_safety_intro",
+      "visibleGroups": [
+        "brand_background"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der Luftfahrtkontext ist gesprochen, aber das A320neo-Beispiel noch nicht eingeführt."
+    },
+    {
+      "stateId": "before_introduce_a320_case",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Noch ist kein konkretes Triebwerkbeispiel sichtbar."
+    },
+    {
+      "stateId": "after_introduce_a320_case",
+      "afterBeatId": "introduce_a320_case",
+      "visibleGroups": [
+        "brand_background",
+        "a320_case_context"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Foto, Quelle, Ursache und technische Folge sind gemeinsam sichtbar."
+    },
+    {
+      "stateId": "before_show_a320_impact",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "a320_case_context"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der technische Fall ist erklärt."
+    },
+    {
+      "stateId": "after_show_a320_impact",
+      "afterBeatId": "show_a320_impact",
+      "visibleGroups": [
+        "brand_background",
+        "a320_case_context",
+        "a320_business_impact"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Umfang, Kosten und Herstellerbezug ergänzen den Fall."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "show_a320_impact",
+      "visibleGroups": [
+        "brand_background",
+        "a320_case_context",
+        "a320_business_impact"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der vollständige statische Endzustand bleibt ohne Animation fachlich verständlich."
+    }
+  ]
+}

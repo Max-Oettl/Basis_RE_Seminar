@@ -1,0 +1,275 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_024",
+  "svgPath": "slide_024.svg",
+  "spokenText": "Bereits kennengelernt haben wir den zweiseitigen Vertrauensbereich. Dabei sind sowohl die untere als auch die obere Grenze der Ausfallwahrscheinlichkeit enthalten. Die Aussagewahrscheinlichkeit von neunzig Prozent wird durch eine fünf-Prozent- und eine fünfundneunzig-Prozent-Vertrauensgrenze definiert. Diese Art des Vertrauensbereichs wird häufig verwendet, da sie Unsicherheiten in beide Richtungen berücksichtigt.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/after/slide_024.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Bereits kennengelernt haben wir den zweiseitigen",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Bereits kennengelernt haben wir",
+      "occurrence": 1,
+      "claim": "Zweiseitiger Vertrauensbereich",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "two_context"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "sowohl die untere als auch die obere Grenze",
+      "occurrence": 1,
+      "claim": "two region",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "two_region"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "sowohl die untere als auch die obere Grenze",
+      "occurrence": 1,
+      "claim": "Untere und obere Grenze",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "two_boundaries"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "Die Aussagewahrscheinlichkeit von neunzig Prozent",
+      "occurrence": 1,
+      "claim": "two values",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "two_values"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "Die Aussagewahrscheinlichkeit von neunzig Prozent",
+      "occurrence": 1,
+      "claim": "90 Prozent Aussagewahrscheinlichkeit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "two_probability"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "Unsicherheiten in beide Richtungen berücksichtigt",
+      "occurrence": 1,
+      "claim": "Unsicherheit in beide Richtungen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "two_rule"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "two_context",
+      "label": "Zweiseitiger Vertrauensbereich",
+      "role": "content",
+      "members": [
+        "two_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "two_region",
+      "label": "two region",
+      "role": "content",
+      "members": [
+        "two_region"
+      ],
+      "dependsOn": [
+        "two_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "two_boundaries",
+      "label": "Untere und obere Grenze",
+      "role": "content",
+      "members": [
+        "two_boundaries"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "two_values",
+      "label": "two values",
+      "role": "content",
+      "members": [
+        "two_values"
+      ],
+      "dependsOn": [
+        "two_region"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "two_probability",
+      "label": "90 Prozent Aussagewahrscheinlichkeit",
+      "role": "content",
+      "members": [
+        "two_probability"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "two_rule",
+      "label": "Unsicherheit in beide Richtungen",
+      "role": "content",
+      "members": [
+        "two_rule"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_two_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "two_context",
+      "sourceText": "Bereits kennengelernt haben wir",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_two_region",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "two_region",
+      "sourceText": "sowohl die untere als auch die obere Grenze",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_two_boundaries",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "two_boundaries",
+      "sourceText": "sowohl die untere als auch die obere Grenze",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_two_values",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "two_values",
+      "sourceText": "Die Aussagewahrscheinlichkeit von neunzig Prozent",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_two_probability",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "two_probability",
+      "sourceText": "Die Aussagewahrscheinlichkeit von neunzig Prozent",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_two_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "two_rule",
+      "sourceText": "Unsicherheiten in beide Richtungen berücksichtigt",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_024/00_initial.png"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "two_context",
+        "two_region",
+        "two_boundaries",
+        "two_values",
+        "two_probability",
+        "two_rule"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_024/04_after_04_unsicherheiten_in_beide_richtungen_beru.png"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "reviewedAt": "2026-09-17",
+    "endState": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/after/slide_024.png",
+    "preview": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/preview/slide_024.png",
+    "stateDirectory": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_024",
+    "reviewedStateCount": 5,
+    "includesHighlightStates": true,
+    "independentReviewer": "/root/visual_review",
+    "findings": [],
+    "scope": "Final composition and discrete animation states rendered in Chromium; legibility additionally reviewed at 50 percent. No continuous audio playback test."
+  }
+}

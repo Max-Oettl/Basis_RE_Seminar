@@ -5,45 +5,69 @@
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "cross_function",
-      "label": "Gemeinsame Systemlogik",
+      "targetId": "map_headers",
+      "label": "Drei Darstellungen derselben Logik",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "cross_error",
-      "label": "Fehlerbaum",
+      "targetId": "map_rbds",
+      "label": "Bekannte Serien- und Parallelstruktur",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "cross_series",
-      "label": "UND zu Serie",
+      "targetId": "map_function_and",
+      "label": "UND-Verknüpfung im Funktionsbaum",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "cross_parallel",
-      "label": "ODER zu Parallel",
+      "targetId": "map_series_relation",
+      "label": "UND bedeutet Serie",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "cross_links",
-      "label": "Transformation",
+      "targetId": "map_function_or",
+      "label": "ODER-Verknüpfung im Funktionsbaum",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "map_parallel_relation",
+      "label": "ODER bedeutet Parallelstruktur",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "map_error_gates",
+      "label": "Komplementäre Ereignisse im Fehlerbaum",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "map_direct",
+      "label": "Einfaches System direkt modellieren",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -52,54 +76,88 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_cross_function",
-      "targetId": "cross_function",
-      "action": "show",
-      "sourceText": "Die Grundlage für ein solches Blockdiagramm bildet der Funktionsbaum, der die logische Abfolge der Systemfunktionen darstellt.",
+      "stepId": "step_01_map_headers",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "map_headers",
+      "sourceText": "Wir benötigen hierfür also nur das Zuverlässigkeitsblockdiagramm",
+      "action": "show"
     },
     {
-      "stepId": "step_02_cross_error",
-      "targetId": "cross_error",
-      "action": "show",
-      "sourceText": "Die Grundlage für ein solches Blockdiagramm bildet der Funktionsbaum, der die logische Abfolge der Systemfunktionen darstellt.",
+      "stepId": "step_02_map_rbds",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "map_rbds",
+      "sourceText": "Wir benötigen hierfür also nur das Zuverlässigkeitsblockdiagramm",
+      "action": "show"
     },
     {
-      "stepId": "step_03_cross_series",
-      "targetId": "cross_series",
-      "action": "show",
-      "sourceText": "Eine und-Verknüpfung im Funktionsbaum entspricht dabei einer Reihenschaltung im Zuverlässigkeitsblockdiagramm – alle Komponenten müssen funktionieren, damit die Funktion erfüllt ist.",
+      "stepId": "step_03_map_function_and",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "map_function_and",
+      "sourceText": "Eine und-Verknüpfung im Funktionsbaum",
+      "action": "show"
     },
     {
-      "stepId": "step_04_cross_parallel",
-      "targetId": "cross_parallel",
-      "action": "show",
-      "sourceText": "Eine ODER-Verknüpfung entspricht einer Parallelschaltung – es reicht, wenn mindestens eine Komponente funktioniert.",
+      "stepId": "step_04_map_series_relation",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "map_series_relation",
+      "sourceText": "entspricht dabei einer Reihenschaltung im Zuverlässigkeitsblockdiagramm",
+      "action": "show"
     },
     {
-      "stepId": "step_05_cross_links",
-      "targetId": "cross_links",
-      "action": "draw",
-      "sourceText": "Man muss jedoch nicht zwingend immer den Umweg über Funktions- oder Fehlerbaum gehen – für einfache Systeme lassen sich Zuverlässigkeitsblockdiagramme oft auch direkt aufstellen.",
+      "stepId": "step_05_map_series_relation",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Beziehung erscheint nach ihren fachlichen Endpunkten.",
-      "drawDurFrames": 42
+      "targetId": "map_series_relation",
+      "sourceText": "alle Komponenten müssen funktionieren",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_06_map_function_or",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "map_function_or",
+      "sourceText": "Eine ODER-Verknüpfung entspricht einer Parallelschaltung",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_map_parallel_relation",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "map_parallel_relation",
+      "sourceText": "wenn mindestens eine Komponente funktioniert",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_map_error_gates",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "map_error_gates",
+      "sourceText": "den Umweg über Funktions- oder Fehlerbaum gehen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_09_map_direct",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "map_direct",
+      "sourceText": "für einfache Systeme lassen sich Zuverlässigkeitsblockdiagramme",
+      "action": "show"
+    },
+    {
+      "stepId": "step_10_map_direct",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "map_direct",
+      "sourceText": "oft auch direkt aufstellen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     }
   ]
 }

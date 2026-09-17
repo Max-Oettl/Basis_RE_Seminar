@@ -18,13 +18,27 @@ function main() {
   const sourceSlides = new Set();
   if (data.schema_version !== "basisReScenePlan/v1") errors.push("schema_version ist ungueltig.");
   if (data.target_structure_version !== "external-svg-asset-package-handoff/v1") errors.push("target_structure_version ist ungueltig.");
+  let previousOutputNumber = 0;
   for (const [index, scene] of (data.scenes || []).entries()) {
-    if (scene.output_slide_number !== index + 1) errors.push(`Nicht lueckenlose Ausgabe bei ${scene.work_unit}.`);
+    if (data.output_numbering === "source-aligned" || String(data.output_numbering || "").startsWith("stable-")) {
+      if (scene.output_slide_number <= previousOutputNumber) errors.push(`Ausgabenummern sind nicht streng aufsteigend bei ${scene.work_unit}.`);
+      const expectedWorkUnit = `slide_${String(scene.output_slide_number).padStart(3, "0")}`;
+      if (scene.work_unit !== expectedWorkUnit) errors.push(`work_unit passt nicht zur source-aligned Ausgabenummer: ${scene.work_unit}.`);
+      previousOutputNumber = scene.output_slide_number;
+    } else if (scene.output_slide_number !== index + 1) errors.push(`Nicht lueckenlose Ausgabe bei ${scene.work_unit}.`);
     if (sceneIds.has(scene.scene_id)) errors.push(`Doppelte Scene_ID: ${scene.scene_id}`);
     if (workUnits.has(scene.work_unit)) errors.push(`Doppelte work_unit: ${scene.work_unit}`);
     sceneIds.add(scene.scene_id);
     workUnits.add(scene.work_unit);
-    if (!scene.source_slides.includes(scene.primary_source_slide)) errors.push(`Primary source fehlt in ${scene.work_unit}.`);
+    if (scene.source_slides.length && !scene.source_slides.includes(scene.primary_source_slide)) {
+      errors.push(`Primary source fehlt in ${scene.work_unit}.`);
+    }
+    if (!scene.source_slides.length && !String(scene.mapping_type || "").startsWith("new_content")) {
+      errors.push(`Quellenlose Szene ist nicht als new_content gekennzeichnet: ${scene.work_unit}.`);
+    }
+    if (!scene.source_slides.length && !scene.narration_source_ref) {
+      errors.push(`Quellenlose Szene benötigt eine Sprechertext-Provenienz: ${scene.work_unit}.`);
+    }
     for (const sourceSlide of scene.source_slides) {
       if (sourceSlides.has(sourceSlide)) errors.push(`Quellfolie ${sourceSlide} ist mehrfach verplant.`);
       sourceSlides.add(sourceSlide);
@@ -59,9 +73,11 @@ function main() {
       if (decision === "needs_review") warnings.push(`Animationsentscheidung offen: ${scene.scene_id}`);
     }
   }
-  const orderedSources = [...sourceSlides].sort((a, b) => a - b);
-  for (let index = 0; index < orderedSources.length; index += 1) {
-    if (orderedSources[index] !== index + 1) errors.push(`Quellfolienabdeckung ist bei ${index + 1} nicht lueckenlos.`);
+  const removedSources = new Set(data.removed_source_slides || []);
+  const expectedSourceCount = Number(data.source_state_count || 0);
+  for (let source = 1; source <= expectedSourceCount; source += 1) {
+    if (!removedSources.has(source) && !sourceSlides.has(source)) errors.push(`Quellfolienabdeckung fehlt bei ${source}.`);
+    if (removedSources.has(source) && sourceSlides.has(source)) errors.push(`Entfernte Quellfolie ${source} ist dennoch verplant.`);
   }
   console.log(`Scenes: ${data.scenes?.length || 0}`);
   console.log(`Source slides covered: ${sourceSlides.size}`);

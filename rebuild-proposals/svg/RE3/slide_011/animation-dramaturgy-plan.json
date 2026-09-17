@@ -1,0 +1,291 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_011",
+  "svgPath": "slide_011.svg",
+  "spokenText": "Außerdem müssen Lebensdauerdaten nicht zwingend ausschließlich als Ausfallzeiten vorliegen.Es kann natürlich sein, dass wir den Test vorzeitig abbrechen, wenn manche Objekte noch nicht ausgefallen sind.\n\nWir wissen also, dass eine Komponente eine bestimmte Lebensdauer überlebt hat und noch funktioniert. Hierbei spricht man von Zensierung. Diese zensierten Informationen sind für uns ebenfalls relevant. Und nicht nur das – wir sollten sie sogar unbedingt in der Auswertung mitberücksichtigen.In diesem Modul wirst du auch noch lernen, welche Arten von Zensierung es gibt, wie solche Daten entstehen und wie man sie auswertet.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-2026-09-17/after/slide_011.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Außerdem müssen Lebensdauerdaten nicht zwingend ausschließlich",
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Außerdem müssen Lebensdauerdaten nicht zwingend",
+      "claim": "Beobachtete Ausfälle",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "censored_timeline"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "den Test vorzeitig abbrechen",
+      "claim": "Testabbruch",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "censored_cutoff"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "wenn manche Objekte noch nicht ausgefallen sind",
+      "claim": "Zuordnung zu sechs Objekten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "censored_plot"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "eine bestimmte Lebensdauer überlebt hat",
+      "claim": "Bekannte Überlebensdauer",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "censored_context"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "Hierbei spricht man von Zensierung",
+      "claim": "Unbekannter Ausfallzeitpunkt",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "censored_unknown"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "in der Auswertung mitberücksichtigen",
+      "claim": "Auswertung berücksichtigt Zensierungen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "censored_evaluation"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "welche Arten von Zensierung es gibt",
+      "claim": "Zuordnung zu sechs Objekten",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "censored_plot"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "censored_timeline",
+      "label": "Beobachtete Ausfälle",
+      "role": "content",
+      "members": [
+        "censored_timeline"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "censored_cutoff",
+      "label": "Testabbruch",
+      "role": "content",
+      "members": [
+        "censored_cutoff"
+      ],
+      "dependsOn": [
+        "censored_timeline"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "censored_plot",
+      "label": "Zuordnung zu sechs Objekten",
+      "role": "content",
+      "members": [
+        "censored_plot"
+      ],
+      "dependsOn": [
+        "censored_cutoff"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "censored_context",
+      "label": "Bekannte Überlebensdauer",
+      "role": "content",
+      "members": [
+        "censored_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "censored_unknown",
+      "label": "Unbekannter Ausfallzeitpunkt",
+      "role": "content",
+      "members": [
+        "censored_unknown"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "censored_evaluation",
+      "label": "Auswertung berücksichtigt Zensierungen",
+      "role": "content",
+      "members": [
+        "censored_evaluation"
+      ],
+      "dependsOn": [
+        "censored_context",
+        "censored_unknown"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_censored_timeline",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_timeline",
+      "sourceText": "Außerdem müssen Lebensdauerdaten nicht zwingend",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_censored_cutoff",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_cutoff",
+      "sourceText": "den Test vorzeitig abbrechen",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_censored_plot",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_plot",
+      "sourceText": "wenn manche Objekte noch nicht ausgefallen sind",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_censored_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_context",
+      "sourceText": "eine bestimmte Lebensdauer überlebt hat",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_censored_unknown",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_unknown",
+      "sourceText": "Hierbei spricht man von Zensierung",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_censored_evaluation",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_evaluation",
+      "sourceText": "in der Auswertung mitberücksichtigen",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_censored_plot",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_plot",
+      "sourceText": "welche Arten von Zensierung es gibt",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_7",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-2026-09-17/states-final/slide_011/00_initial.png",
+      "reviewedAt": "2026-09-17"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "censored_timeline",
+        "censored_cutoff",
+        "censored_plot",
+        "censored_context",
+        "censored_unknown",
+        "censored_evaluation"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-2026-09-17/states-final/slide_011/08_after_07_welche_arten_von_zensierung_es_gibt.png",
+      "reviewedAt": "2026-09-17"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "renderDirectory": "analysis/render-checks/RE3/feedback-2026-09-17/states-final/slide_011",
+    "reviewedStateCount": 9,
+    "evidence": "analysis/rebuild-plans/RE3_scenes_001_006_feedback_2026-09-17.md",
+    "method": "local Chromium state renderer plus visual source/reference review",
+    "interactiveBrowserPlayback": "unavailable; no end-to-end audio playback claimed"
+  }
+}

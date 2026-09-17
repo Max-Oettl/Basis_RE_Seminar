@@ -6,7 +6,7 @@
 - Titel: Vom Umfeld bis zum Bauteil
 - Takeaway: Eine saubere Systemanalyse ordnet Umwelt, System, Subsystem und Komponente.
 - Archetyp: nested-system
-- Layout: Vier verschachtelte Ebenen mit Fokus auf den Wechselrichter.
-- Referenz: RE1-Full-Slide-System und Kapitelbrief analysis/rebuild-plans/RE2_chapter_02_redesign_brief.md
-- Produktionsmodus: Full-Slide 1920×1080
+- Layout: Quellnahe vierzeilige Ebenenmatrix mit konzentrischer Hierarchie und angeschlossener Systemgrenze.
+- Referenz: Direkter Referenz-Lock auf die alte Komposition der Quellfolien 6–7; ausschließlich die vier Bildmotive werden durch freigegebene PNG-Piktogramme ersetzt.
+- Produktionsmodus: Content-SVG 1920×1080; Titel und Masterelemente werden downstream gerendert
 - Animation: sprechertextgeführt aktiviert

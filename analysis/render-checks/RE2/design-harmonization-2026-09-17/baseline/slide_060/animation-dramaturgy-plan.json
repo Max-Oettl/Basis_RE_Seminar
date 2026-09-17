@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch3_fta_hospital_common_mode",
+  "svgPath": "slide_060.svg",
+  "spokenText": "Schauen wir hierfür mal den Fehlerbaum an.\n\nAuch hier könnt ihr das Video wieder pausieren und es selbst versuchen.\n\nWir beginnen zunächst mit dem Top-Ereignis, der Unterbrechung der Energieversorgung.\n\nDieses Top-Ereignis tritt nur ein, wenn sowohl die erste als auch die zweite Energieversorgung ausfallen. Daher sind diese beiden Ereignisse mit einem Und-Gatter verbunden.\n\nDer Ausfall der ersten Energieversorgung tritt ein, wenn entweder der Stromgenerator ausfällt oder der Energiepuffer versagt. Da nur eins der beiden Ereignisse ausreicht, die erste Energieversorgung zu unterbrechen, sind beide mit einem Oder-Gatter verbunden.\n\nDer Ausfall der zweiten Energieversorgung tritt ein, wenn entweder das Steuergerät, das Notstromaggregat oder der Energiepuffer ausfallen.\n\nAuch hier sind die Ereignisse mit einem Oder Gatter verbunden.\n\nAuf den ersten Blick wirkt das System redundant, da sowohl ein Stromgenerator als auch ein Notstromaggregat vorhanden ist.\n\nBeide sollen im Falle eines Ausfalls des einen Systems das andere ersetzen.\n\nAber allein durch Betrachtung des Fehlerbaums fällt hier eine große Schwäche im Aufbau der Stromversorgung auf.\n\nWie zu erkennen ist, spielt der Energiepuffer in beiden Energieversorgungspfaden eine zentrale Rolle.\n\nSein Ausfall beeinflusst sowohl die erste als auch die zweite Energieversorgung.\n\nDadurch entsteht eine gemeinsame Schwachstelle im System, die zu einem Common-Mode-Ausfall führen kann.\n\nAus diesem Grund ist hier nicht wirklich eine echte Redundanz vorhanden, was die Zuverlässigkeit des Systems negativ beeinflusst.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "fta60_asset",
+      "label": "Krankenhaus-Stromversorgung",
+      "role": "content",
+      "members": [
+        "fta60_asset"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta60_nodes",
+      "label": "Fehlerbaum",
+      "role": "content",
+      "members": [
+        "fta60_nodes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta60_links",
+      "label": "Fehlerbaum-Beziehungen",
+      "role": "content",
+      "members": [
+        "fta60_links"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta60_warning",
+      "label": "Common Mode",
+      "role": "content",
+      "members": [
+        "fta60_warning"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Krankenhaus-Stromversorgung",
+      "sourceText": "Auf den ersten Blick wirkt das",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta60_asset"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Fehlerbaum",
+      "sourceText": "Wir beginnen zunächst mit dem Top-Ereignis",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta60_nodes"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Fehlerbaum-Beziehungen",
+      "sourceText": "Daher sind diese beiden Ereignisse mit",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta60_links"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Common Mode",
+      "sourceText": "Dadurch entsteht eine gemeinsame Schwachstelle im",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta60_warning"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta60_asset",
+      "beatId": "beat_01",
+      "targetId": "fta60_asset",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_fta60_nodes",
+      "beatId": "beat_02",
+      "targetId": "fta60_nodes",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_fta60_links",
+      "beatId": "beat_03",
+      "targetId": "fta60_links",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    },
+    {
+      "stepId": "step_04_fta60_warning",
+      "beatId": "beat_04",
+      "targetId": "fta60_warning",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_04",
+      "visibleGroups": [
+        "canvas_context",
+        "fta60_asset",
+        "fta60_nodes",
+        "fta60_links",
+        "fta60_warning"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

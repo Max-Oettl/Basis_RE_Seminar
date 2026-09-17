@@ -5,21 +5,45 @@
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "fta_process",
-      "label": "FTA-Prozess",
+      "targetId": "fta_workflow_heading",
+      "label": "Qualitativer Ablauf und quantitative Erweiterung",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "fta_first_four",
-      "label": "Vier gemeinsame Schritte",
+      "targetId": "fta_workflow_first",
+      "label": "Schritt 1 Systemanalyse",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta_workflow_common",
+      "label": "Gemeinsame Schritte 2 bis 4",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta_workflow_quantitative",
+      "label": "Quantitative Schritte 5 und 6",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta_heading",
+      "label": "Fehlerbaum am Beispiel Getriebe",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -34,16 +58,32 @@
       "confidence": "high"
     },
     {
-      "targetId": "fta_tree",
-      "label": "Ursachenstruktur",
+      "targetId": "fta_causes",
+      "label": "Drehmoment und Dichtheit",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "fta_basis",
-      "label": "Basisereignisse",
+      "targetId": "fta_components",
+      "label": "Unmittelbare Ursachen der Komponenten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta_modes",
+      "label": "Bruch oder Klemmen der Eingangswelle",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "fta_basics",
+      "label": "Sechs Basisereignisse",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -52,54 +92,216 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_fta_process",
-      "targetId": "fta_process",
-      "action": "show",
-      "sourceText": "Hierfür eignet sich die quantitative Fehlerbaumanalyse hervorragend.",
+      "stepId": "step_01_fta_workflow_heading",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "fta_workflow_heading",
+      "sourceText": "Zu Beginn geht es darum",
+      "action": "show"
     },
     {
-      "stepId": "step_02_fta_first_four",
-      "targetId": "fta_first_four",
-      "action": "show",
-      "sourceText": "Die ersten vier Schritte sind in beiden Methoden identisch – egal ob qualitativ oder quantitativ.",
+      "stepId": "step_02_fta_workflow_first",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "fta_workflow_first",
+      "sourceText": "Zu Beginn geht es darum",
+      "action": "show"
     },
     {
-      "stepId": "step_03_fta_top",
+      "stepId": "step_03_fta_workflow_common",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_common",
+      "sourceText": "Zu Beginn geht es darum",
+      "action": "show"
+    },
+    {
+      "stepId": "step_04_fta_workflow_quantitative",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_quantitative",
+      "sourceText": "Zu Beginn geht es darum",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_fta_workflow_first",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_first",
+      "sourceText": "Aufbau und die Struktur",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_06_fta_workflow_first",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_first",
+      "sourceText": "welche Komponenten, Baugruppen und Funktionsketten beteiligt sind",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_07_fta_workflow_heading",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_heading",
+      "sourceText": "Hierfür eignet sich die quantitative Fehlerbaumanalyse",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_08_fta_workflow_first",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_first",
+      "sourceText": "Die ersten vier Schritte sind in beiden Methoden",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_09_fta_workflow_common",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_common",
+      "sourceText": "Die ersten vier Schritte sind in beiden Methoden",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_10_fta_workflow_first",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_first",
+      "sourceText": "Der erste Schritt besteht darin",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_11_fta_workflow_heading",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_heading",
+      "sourceText": "Im nächsten Schritt legen wir das unerwünschte Ereignis",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_12_fta_workflow_first",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_first",
+      "sourceText": "Im nächsten Schritt legen wir das unerwünschte Ereignis",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_13_fta_workflow_common",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_common",
+      "sourceText": "Im nächsten Schritt legen wir das unerwünschte Ereignis",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_14_fta_workflow_quantitative",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_quantitative",
+      "sourceText": "Im nächsten Schritt legen wir das unerwünschte Ereignis",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_15_fta_heading",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_heading",
+      "sourceText": "Im nächsten Schritt legen wir das unerwünschte Ereignis",
+      "action": "show"
+    },
+    {
+      "stepId": "step_16_fta_top",
+      "occurrence": 1,
+      "confidence": "high",
       "targetId": "fta_top",
-      "action": "show",
-      "sourceText": "Im Fall des Getriebes lautet das Top-Ereignis: Getriebe defekt.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "sourceText": "Im Fall des Getriebes lautet das Top-Ereignis",
+      "action": "show"
     },
     {
-      "stepId": "step_04_fta_tree",
-      "targetId": "fta_tree",
-      "action": "show",
-      "sourceText": "Anschließend zerlegen wir diesen Systemausfall schrittweise in seine unmittelbaren Ursachen.",
+      "stepId": "step_17_fta_top",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "fta_top",
+      "sourceText": "Anschließend zerlegen wir diesen Systemausfall",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     },
     {
-      "stepId": "step_05_fta_basis",
-      "targetId": "fta_basis",
-      "action": "show",
-      "sourceText": "Wir unterteilen die Ereignisse immer weiter, bis wir schließlich auf die sogenannten Basisereignisse stoßen – also die primären Ausfallmechanismen wie zum Beispiel Materialermüdung oder thermische Alterung.",
+      "stepId": "step_18_fta_causes",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "fta_causes",
+      "sourceText": "Das Getriebe ist beispielsweise ausgefallen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_19_fta_components",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_components",
+      "sourceText": "von der Systemebene über die Baugruppen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_20_fta_modes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_modes",
+      "sourceText": "Wir unterteilen die Ereignisse immer weiter",
+      "action": "show"
+    },
+    {
+      "stepId": "step_21_fta_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_basics",
+      "sourceText": "auf die sogenannten Basisereignisse stoßen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_22_fta_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_basics",
+      "sourceText": "Diese Basisereignisse bilden die Grundlage",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_23_fta_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_basics",
+      "sourceText": "mit konkreten Zuverlässigkeitskennwerten beschreiben",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_24_fta_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_basics",
+      "sourceText": "im fünften Schritt der FTA",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     }
   ]
 }

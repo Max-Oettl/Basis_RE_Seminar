@@ -1,0 +1,129 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_052",
+  "scene_id": "re1_src_062",
+  "source_slides": [
+    62
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "normal_formula_parameters",
+      "label": "Parameter",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "normal_density_formula",
+      "label": "Dichtefunktion",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "normal_failure_formula",
+      "label": "Ausfallwahrscheinlichkeit",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "normal_reliability_formula",
+      "label": "Überlebenswahrscheinlichkeit",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "normal_hazard_formula",
+      "label": "Ausfallrate",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "normal_formula_conclusion",
+      "label": "Komplexitätsfolgerung",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_normal_formula_parameters",
+      "targetId": "normal_formula_parameters",
+      "action": "show",
+      "sourceText": "Wie bereits beschrieben, wird die Normalverteilung durch den Erwartungswert und die Standardabweichung definiert",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_normal_density_formula",
+      "targetId": "normal_density_formula",
+      "action": "show",
+      "sourceText": "Allein durch Betrachtung der Dichtefunktion fällt ein weiterer negativer Aspekt der Normalverteilung auf",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_normal_failure_formula",
+      "targetId": "normal_failure_formula",
+      "action": "show",
+      "sourceText": "Die Ausfallwahrscheinlichkeit zum Zeitpunkt t berechnet sich aus dem Integral von null bis t über der Dichtefunktion",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_normal_reliability_formula",
+      "targetId": "normal_reliability_formula",
+      "action": "show",
+      "sourceText": "Die Überlebenswahrscheinlichkeit dagegen kann dann wiederrum einfach zu eins minus der Ausfallwahrscheinlichkeit berechnet werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_normal_hazard_formula",
+      "targetId": "normal_hazard_formula",
+      "action": "show",
+      "sourceText": "Die Ausfallrate kann wiederrum berechnet werden, indem die Dichtefunktion durch die Zuverlässigkeitsfunktion geteilt wird",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_normal_formula_conclusion",
+      "targetId": "normal_formula_conclusion",
+      "action": "show",
+      "sourceText": "Da die Berechnung aller Funktionen mathematisch auf der Dichtefunktion basiert",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

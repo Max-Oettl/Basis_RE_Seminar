@@ -5,6 +5,8 @@ const educationTheme = require("./reltest-education-theme");
 const root = path.resolve(__dirname, "..");
 const outRoot = path.join(root, "rebuild-proposals", "svg", "RE2");
 const assetRoot = path.join(root, "components", "image-library", "re2-ch3-fta");
+const corePictogramRoot = path.join(root, "components", "image-library", "generated-pictograms", "education-core");
+const sceneThumbnailRoot = path.join(root, "analysis", "redesign-assets", "RE2-user-feedback-2026-08-27", "scene-thumbnails");
 const sourceMap = JSON.parse(fs.readFileSync(path.join(root, "analysis", "rebuild-plans", "RE2_source-reference-map.json"), "utf8"));
 const inventory = JSON.parse(fs.readFileSync(path.join(root, "analysis", "inventories", "RE2_svg-text-map.json"), "utf8"));
 const scenes = sourceMap.mappings.filter((scene) => scene.chapter === 3);
@@ -130,6 +132,10 @@ function group(id, label, body) {
   return `<g id="${id}"${animated ? ` data-anim-target="true" data-anim-label="${esc(label)}"` : ""}><title>${esc(label)}</title>${body}</g>`;
 }
 
+function contextGroup(id, label, body) {
+  return `<g id="${id}" data-static-context="true"><title>${esc(label)}</title>${body}</g>`;
+}
+
 function line(x1, y1, x2, y2, color = C.deep, strokeWidth = 2.2, arrow = false, dash = "") {
   return `<path d="M ${x1} ${y1} L ${x2} ${y2}" fill="none" stroke="${color}" stroke-width="${strokeWidth}" stroke-linecap="round"${arrow ? ` marker-end="url(#arrow_${color.slice(1)})"` : ""}${dash ? ` stroke-dasharray="${dash}"` : ""}/>`;
 }
@@ -144,6 +150,13 @@ function pill(x, y, width, label, color = C.accent, fill = C.surface) {
 
 function evidence(markup, reference) {
   return `<g data-source-evidence="source_slide" data-source-reference="${esc(reference)}">${markup}</g>`;
+}
+
+function bulletList(x, y, width, items, color = C.accent, size = 21, gap = 58) {
+  return items.map((item, index) => {
+    const yy = y + index * gap;
+    return `${box(x, yy - 16, 16, 16, color, color, 1, 8)}${multi(x + 34, yy, width - 34, item, size, 620, C.text, "start", 1.16)}`;
+  }).join("");
 }
 
 function eventBox(x, y, width, height, label, options = {}) {
@@ -172,6 +185,16 @@ function image(filename, x, y, width, height, label) {
   return `<image x="${x}" y="${y}" width="${width}" height="${height}" href="${assetData(filename)}" preserveAspectRatio="xMidYMid meet" aria-label="${esc(label)}" data-source-media="true" data-source-evidence="generated_technical_asset" data-source-reference="Kapitel-3-Redesign: konkretes technisches Orientierungsmotiv"/>`;
 }
 
+function pictogramImage(filename, kind, x, y, size, label) {
+  const data = `data:image/png;base64,${fs.readFileSync(path.join(corePictogramRoot, filename)).toString("base64")}`;
+  return `<image x="${x}" y="${y}" width="${size}" height="${size}" href="${data}" preserveAspectRatio="xMidYMid meet" aria-label="${esc(label)}" data-component="reltest-pictogram" data-pictogram-style="reltest-education-minimal-v1" data-pictogram-kind="${esc(kind)}" data-source-media="true" data-source-evidence="user_request" data-source-reference="Nutzerfeedback: freigegebenes PNG-Piktogramm für das Ziel"/>`;
+}
+
+function sceneThumbnail(filename, x, y, width, height, label) {
+  const data = `data:image/png;base64,${fs.readFileSync(path.join(sceneThumbnailRoot, filename)).toString("base64")}`;
+  return `<image x="${x}" y="${y}" width="${width}" height="${height}" href="${data}" preserveAspectRatio="xMidYMid slice" aria-label="${esc(label)}" data-source-media="true" data-source-evidence="user_request" data-source-reference="Nutzerfeedback: verkleinerter Screenshot einer bereits aufgebauten RE2-Szene"/>`;
+}
+
 function annotate(markup) {
   return markup
     .replace(/<text(?![^>]*data-qc-role)/g, '<text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true"')
@@ -188,9 +211,9 @@ function sceneInventory(n) {
 
 function frame(scene, content) {
   const n = scene.output_slide_number;
-  const title = titles[n];
-  const takeaway = takeaways[n] || "Der dargestellte Zustand übernimmt Inhalt und Erklärlogik der entsprechenden Quellfolie.";
-  const dense = [21, 22, 26, 30, 34, 37, 38, 39, 40, 41, 42, 43, 50, 51, 52, 53, 54, 55, 56, 57, 59, 60, 61, 62].includes(n);
+  const title = scene.content_title_override || titles[n];
+  const takeaway = content.takeaway || takeaways[n] || "Der dargestellte Zustand übernimmt Inhalt und Erklärlogik der entsprechenden Quellfolie.";
+  const dense = [21, 22, 26, 30, 34, 37, 38, 39, 40, 41, 42, 43, 47, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62].includes(n);
   const metadata = {
     artifactScope: "content-svg",
     embeddingTarget: "powerpoint-slide",
@@ -198,15 +221,15 @@ function frame(scene, content) {
     contentTitle: title,
     layoutIntent: content.layout,
     takeaway,
-    density: dense ? "dense" : "balanced",
+    density: dense ? "dense" : "normal",
     contentMode: "transparent-content",
     backgroundMode: "transparent",
     brandProfile: educationTheme.brandProfile,
     brandVariant: educationTheme.brandVariant,
-    sourceSlides: [n],
+    sourceSlides: scene.source_slides || [n],
     officialLogoStatus: "pending-original-asset",
   };
-  const markerColors = [...new Set([C.accent, C.deep, C.failure, C.success, C.secondary, C.soft, C.border])]
+  const markerColors = [...new Set([C.accent, C.deep, C.failure, C.success, C.secondary, C.technical, C.soft, C.border])]
     .filter((color) => content.body.includes(color));
   const markers = markerColors.map((color) =>
     `<marker id="arrow_${color.slice(1)}" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="${color}"/></marker>`).join("");
@@ -218,7 +241,9 @@ function frame(scene, content) {
   ${markers}
 </defs>
 <style>text{font-family:${educationTheme.bodyFontFamily};letter-spacing:0}</style>
-<g id="scene_content" data-qc-group="scene_content" data-qc-layer="content">${annotate(evidence(content.body, `Quellfolie ${n}: ${sceneInventory(n).source_text_title}`))}</g>
+<g id="scene_content" data-qc-group="scene_content" data-qc-layer="content">${annotate(evidence(content.body, scene.source_slides?.length > 1
+    ? `Quellfolien ${scene.source_slides[0]}–${scene.source_slides.at(-1)}: ${sceneInventory(n).source_text_title}`
+    : `Quellfolie ${n}: ${sceneInventory(n).source_text_title}`))}</g>
 </svg>`;
 }
 
@@ -234,20 +259,35 @@ function cue(n, fragments) {
   throw new Error(`No exact speaker cue found for slide ${n}: ${fragments.join(" / ")}`);
 }
 
+function navText(x, y, text, size, weight, fill, anchor = "middle") {
+  return `<text x="${x}" y="${y}" font-size="${size}" font-weight="${weight}" fill="${fill}" text-anchor="${anchor}" data-qc-role="annotation" data-qc-layer="text" data-qc-padding="0">${esc(text)}</text>`;
+}
+
+function navMulti(x, y, width, text, size, weight, fill, lineHeight = 1) {
+  const max = Math.max(9, Math.floor(width / (size * 0.54)));
+  const spans = wrap(text, max)
+    .map((row, index) => `<tspan x="${x}" dy="${index ? Math.round(size * lineHeight) : 0}">${esc(row)}</tspan>`)
+    .join("");
+  return `<text x="${x}" y="${y}" font-size="${size}" font-weight="${weight}" fill="${fill}" text-anchor="middle" data-qc-role="annotation" data-qc-layer="text" data-qc-padding="0">${spans}</text>`;
+}
+
 function processStrip(activeStep, y = 390, compact = false) {
-  const width = compact ? 260 : 292;
-  const gap = compact ? 22 : 28;
+  const width = compact ? 232 : 252;
+  const gap = compact ? 14 : 18;
   const total = width * 5 + gap * 4;
   const x0 = (1920 - total) / 2;
-  const height = compact ? 104 : 142;
+  const height = compact ? 96 : 124;
   const links = processLabels.slice(0, 4).map((_, index) =>
-    line(x0 + width + index * (width + gap), y + height / 2, x0 + (index + 1) * (width + gap), y + height / 2, C.soft, 2.2, true)).join("");
+    line(x0 + width + index * (width + gap), y + height / 2, x0 + (index + 1) * (width + gap), y + height / 2, C.soft, 1.5, true)).join("");
   const nodes = processLabels.map(([step, label], index) => {
     const active = activeStep === index + 1;
     const x = x0 + index * (width + gap);
-    return `${box(x, y, width, height, active ? C.accent : C.deep, active ? C.accent : C.deep, 2, 14)}
-      ${txt(x + width / 2, y + (compact ? 34 : 43), step.toUpperCase(), compact ? 17 : 19, 800, C.surface, "middle")}
-      ${multi(x + width / 2, y + (compact ? 63 : 80), width - 30, label, compact ? 18 : 21, 720, C.surface, "middle", 1.08)}`;
+    const fill = active ? C.educationAccent : C.surface;
+    const stroke = active ? C.educationAccent : C.deep;
+    const textFill = active ? C.surface : C.deep;
+    return `${box(x, y, width, height, fill, stroke, 1.5, 8)}
+      ${navText(x + width / 2, y + (compact ? 25 : 32), step.toUpperCase(), 18, 820, textFill)}
+      ${navMulti(x + width / 2, y + (compact ? 50 : 64), width - 28, label, 18, 720, textFill, 1)}`;
   }).join("");
   return `${links}${nodes}`;
 }
@@ -256,7 +296,7 @@ function processScene(n, activeStep) {
   const id = `process_${n}`;
   return {
     archetype: "process-flow",
-    layout: "Fünfstufiger Ablaufstreifen mit eindeutig hervorgehobenem aktuellem Schritt.",
+    layout: "Kompakte fünfstufige FTA-Schrittübersicht als ruhiger Orientierungsrahmen; der aktuelle Schritt ist signalgrün hervorgehoben.",
     body: group(id, "FTA-Ablauf", processStrip(activeStep)),
     targets: [target(id, "FTA-Ablauf", cue(n, [
       "Die qualitative Fehlerbaumanalyse besteht aus insgesamt fünf Schritten.",
@@ -277,16 +317,34 @@ function definitionCard(id, x, y, width, height, kicker, title, body, color, fil
      ${multi(x + 30, y + 184, width - 60, body, 21, 610, C.text)}`);
 }
 
-function motorCircuit() {
-  return `${box(98, 292, 430, 430, C.surface, C.border, 1.5, 14)}
-    ${txt(313, 334, "SCHALTUNG", 18, 800, C.soft, "middle")}
-    ${line(168, 430, 448, 430, C.deep, 2.5)}
-    ${pathLine("M 168 430 V 620 H 448 V 430", C.deep, 2.5)}
-    ${line(224, 404, 276, 430, C.deep, 2.5)}${line(314, 404, 366, 430, C.deep, 2.5)}
-    ${txt(250, 386, "Schalter 1", 18, 700, C.deep, "middle")}${txt(340, 386, "Schalter 2", 18, 700, C.deep, "middle")}
-    ${box(132, 468, 72, 94, C.secondarySoft, C.secondary, 2, 8)}${txt(168, 508, "+", 24, 800, C.secondary, "middle")}${txt(168, 546, "−", 24, 800, C.secondary, "middle")}${txt(168, 592, "Stromquelle", 18, 700, C.deep, "middle")}
+function motorCircuit(options = {}) {
+  const secondSource = Boolean(options.secondSource);
+  const sourceTwo = secondSource
+    ? `${pathLine("M 168 430 H 104 V 488", C.technical, 2.5, false)}
+       ${line(70, 488, 138, 488, C.technical, 2.8, false)}${line(82, 512, 126, 512, C.technical, 2.8, false)}
+       ${pathLine("M 104 512 V 620 H 168", C.technical, 2.5, false)}
+       ${multi(104, 550, 122, "Stromquelle 2", 18, 720, C.technical, "middle")}`
+    : "";
+  return `${box(54, 292, 514, 430, C.surface, C.border, 1.5, 14)}
+    ${txt(311, 334, secondSource ? "REDUNDANTE SCHALTUNG" : "SCHALTUNG", 18, 800, C.soft, "middle")}
+    ${pathLine("M 168 430 H 226", C.deep, 2.5, false)}
+    <circle cx="226" cy="430" r="9" fill="${C.surface}" stroke="${C.deep}" stroke-width="2.5"/>
+    <circle cx="276" cy="430" r="9" fill="${C.surface}" stroke="${C.deep}" stroke-width="2.5"/>
+    ${line(226, 430, 270, 412, C.deep, 2.5, false)}
+    ${pathLine("M 276 430 H 316", C.deep, 2.5, false)}
+    <circle cx="316" cy="430" r="9" fill="${C.surface}" stroke="${C.deep}" stroke-width="2.5"/>
+    <circle cx="366" cy="430" r="9" fill="${C.surface}" stroke="${C.deep}" stroke-width="2.5"/>
+    ${line(316, 430, 360, 412, C.deep, 2.5, false)}
+    ${pathLine("M 366 430 H 448 V 620 H 474", C.deep, 2.5, false)}
+    ${txt(251, 386, "Schalter 1", 18, 700, C.deep, "middle")}${txt(341, 386, "Schalter 2", 18, 700, C.deep, "middle")}
+    ${pathLine("M 168 430 V 488", C.deep, 2.5, false)}
+    ${line(134, 488, 202, 488, C.deep, 2.8, false)}${line(146, 512, 190, 512, C.deep, 2.8, false)}
+    ${pathLine("M 168 512 V 620 H 244", C.deep, 2.5, false)}
+    ${txt(214, 548, secondSource ? "Stromquelle 1" : "Stromquelle", 18, 700, C.deep)}
     <circle cx="286" cy="620" r="42" fill="${C.accentSoft}" stroke="${C.accent}" stroke-width="2.5"/>${txt(286, 629, "M", 28, 820, C.accent, "middle")}${txt(286, 690, "Motor", 18, 700, C.deep, "middle")}
-    ${box(402, 575, 72, 90, C.successSoft, C.success, 2, 8)}${txt(438, 620, "SG", 24, 820, C.success, "middle")}${txt(438, 690, "Steuergerät", 18, 700, C.deep, "middle")}`;
+    ${line(328, 620, 402, 620, C.deep, 2.5, false)}
+    ${box(402, 575, 72, 90, C.surface, C.accent, 2, 5)}${txt(438, 629, "SG", 24, 820, C.accent, "middle")}${txt(438, 690, "Steuergerät", 18, 700, C.deep, "middle")}
+    ${sourceTwo}`;
 }
 
 function motorTree(focus = "none", reduced = false) {
@@ -324,7 +382,7 @@ function motorTree(focus = "none", reduced = false) {
 }
 
 function aircraftTree(focus = "none") {
-  const active = (key) => focus === key || focus === "critical";
+  const active = (key) => focus === key;
   const fill = (key) => active(key) ? C.deep : C.surface;
   const textFill = (key) => active(key) ? C.surface : C.deep;
   const xs = [970, 1280, 1590];
@@ -343,7 +401,7 @@ function aircraftTree(focus = "none") {
       eventBox(x - 154, 642, 142, 82, `Ausfall ${i === 0 ? "HL" : i === 1 ? "B" : "HR"}-Reifen 1`, { fill: fill(keys[i]), stroke: C.accent, textFill: textFill(keys[i]), size: 16 }),
       eventBox(x + 12, 642, 142, 82, `Ausfall ${i === 0 ? "HL" : i === 1 ? "B" : "HR"}-Reifen 2`, { fill: fill(keys[i]), stroke: C.accent, textFill: textFill(keys[i]), size: 16 }),
     ]).join("")}
-    ${xs.flatMap((x) => [x - 83, x + 83]).map((x) => basicEvent(x, 770, C.deep, focus === "critical" ? C.failureSoft : C.surface)).join("")}`;
+    ${xs.flatMap((x) => [x - 83, x + 83]).map((x) => basicEvent(x, 770, C.deep, C.surface)).join("")}`;
   return { connectors, nodes };
 }
 
@@ -367,6 +425,25 @@ function hospitalTree(focus = "none") {
     ${eventBox(1478, 652, 184, 92, "Energiepuffer ausgefallen", { fill: active("buffer") ? C.failure : C.surface, stroke: active("buffer") ? C.failure : C.secondary, textFill: active("buffer") ? C.surface : C.deep, size: 17 })}
     ${eventBox(1678, 652, 184, 92, "Notstromaggregat ausgefallen", { stroke: C.secondary, size: 17 })}`;
   return { connectors, nodes };
+}
+
+function hospitalPowerSchematic({ x = 92, y = 250, scale = 1 } = {}) {
+  const sx = (value) => x + value * scale;
+  const sy = (value) => y + value * scale;
+  const sw = (value) => value * scale;
+  const node = (nx, ny, width, height, label, fill = C.surface, stroke = C.deep) =>
+    `${box(sx(nx), sy(ny), sw(width), sw(height), fill, stroke, 1.8, 8)}
+     ${multi(sx(nx + width / 2), sy(ny + height / 2 + 8), sw(width - 24), label, Math.max(16, 20 * scale), 760, C.deep, "middle", 1.04)}`;
+  return `${node(210, 0, 360, 92, "OP-SAAL · ENERGIEVERSORGUNG", C.accentSoft, C.accent)}
+    ${node(430, 176, 280, 92, "ENERGIEPUFFER", C.successSoft, C.success)}
+    ${node(70, 176, 280, 92, "NOTSTROMAGGREGAT")}
+    ${node(430, 352, 280, 92, "STROMGENERATOR")}
+    ${node(70, 352, 280, 92, "STEUERGERÄT")}
+    ${pathLine(`M ${sx(570)} ${sy(352)} V ${sy(268)}`, C.deep, Math.max(2, 3 * scale), true)}
+    ${pathLine(`M ${sx(570)} ${sy(176)} V ${sy(130)} H ${sx(470)} V ${sy(92)}`, C.deep, Math.max(2, 3 * scale), true)}
+    ${pathLine(`M ${sx(210)} ${sy(176)} V ${sy(130)} H ${sx(310)} V ${sy(92)}`, C.deep, Math.max(2, 3 * scale), true)}
+    ${pathLine(`M ${sx(210)} ${sy(352)} V ${sy(268)}`, C.deep, Math.max(2, 3 * scale), true)}
+    ${pathLine(`M ${sx(430)} ${sy(398)} H ${sx(350)}`, C.secondary, Math.max(2, 2.6 * scale), true, "9 7")}`;
 }
 
 function scene20() {
@@ -426,106 +503,149 @@ function scene21() {
 }
 
 function scene22() {
+  const context = group("fta22_context", "Top-down-Methode",
+    `${txt(98, 278, "FTA", 104, 900, C.deep)}
+     ${txt(104, 326, "FAULT TREE ANALYSIS", 18, 820, C.accent)}
+     ${multi(104, 374, 350, "Fehlerbaum- oder Fehlzustandsbaumanalyse", 22, 680, C.text)}
+     ${line(104, 476, 456, 476, C.border, 2, false)}
+     ${txt(104, 532, "TOP-DOWN", 20, 850, C.accent)}
+     ${multi(104, 574, 350, "Vom unerwünschten Ereignis Ebene für Ebene bis zur Schadensursache.", 22, 650, C.text)}`);
+  const levelTop = group("fta22_level_top", "Top-Ereignis auf Systemebene",
+    `${txt(538, 238, "01", 18, 850, C.failure)}${eventBox(610, 204, 430, 68, "TOP-EREIGNIS · SYSTEMAUSFALL", { fill: C.failureSoft, stroke: C.failure, size: 19 })}`);
+  const levelSubsystem = group("fta22_level_subsystem", "Teilsystemebene",
+    `${line(825, 272, 825, 306, C.accent, 2.2, true)}${txt(558, 350, "02", 18, 850, C.accent)}${eventBox(640, 306, 370, 68, "AUSFALL EINES TEILSYSTEMS", { fill: C.accentSoft, stroke: C.accent, size: 18 })}`);
+  const levelAssembly = group("fta22_level_assembly", "Baugruppenebene",
+    `${line(825, 374, 825, 408, C.accent, 2.2, true)}${txt(578, 452, "03", 18, 850, C.accent)}${eventBox(670, 408, 310, 68, "AUSFALL EINER BAUGRUPPE", { stroke: C.accent, size: 18 })}`);
+  const levelComponent = group("fta22_level_component", "Bauteilebene",
+    `${line(825, 476, 825, 510, C.accent, 2.2, true)}${txt(598, 554, "04", 18, 850, C.accent)}${eventBox(700, 510, 250, 68, "AUSFALL EINES BAUTEILS", { stroke: C.accent, size: 18 })}`);
+  const levelFailure = group("fta22_level_failure", "Ausfallart",
+    `${line(825, 578, 825, 612, C.accent, 2.2, true)}${txt(618, 656, "05", 18, 850, C.accent)}${eventBox(720, 612, 210, 68, "AUSFALLART", { fill: C.accentSoft, stroke: C.accent, size: 18 })}`);
+  const levelBasic = group("fta22_level_basic", "Basisereignis und Ausfallmechanismus",
+    `${line(825, 680, 825, 714, C.accent, 2.2, true)}${txt(638, 758, "06", 18, 850, C.accent)}${eventBox(735, 714, 180, 68, "BASISEREIGNIS", { stroke: C.accent, size: 17 })}
+     ${multi(825, 824, 370, "Schadensursache / Ausfallmechanismus", 19, 700, C.deep, "middle")}`);
   const links = group("fta22_links", "Logische Beziehungen",
-    `${line(1110, 298, 1110, 338, C.deep, 2.3)}
-     ${pathLine("M 1110 398 V 422 H 820 V 452 M 1110 422 V 452 M 1110 422 H 1400 V 452", C.deep, 2.3)}
-     ${[820, 1110, 1400].map((x) => line(x, 530, x, 562, C.deep, 2.3)).join("")}
-     ${[820, 1110, 1400].map((x) => pathLine(`M ${x} 622 V 646 H ${x - 82} V 670 M ${x} 646 H ${x + 82} V 670`, C.deep, 2.3)).join("")}`);
+    `${line(1502, 298, 1502, 330, C.deep, 2.2, false)}
+     ${pathLine("M 1502 390 V 414 H 1328 V 444 M 1502 414 H 1676 V 444", C.deep, 2.2, false)}
+     ${line(1328, 512, 1328, 548, C.deep, 2.2, false)}${line(1676, 512, 1676, 548, C.deep, 2.2, false)}
+     ${pathLine("M 1328 608 V 632 H 1248 V 662 M 1328 632 H 1408 V 662", C.deep, 2.2, false)}
+     ${pathLine("M 1676 608 V 632 H 1596 V 662 M 1676 632 H 1756 V 662", C.deep, 2.2, false)}`);
   const tree = group("fta22_tree", "Beispiel-Fehlerbaum",
-    `${eventBox(930, 222, 360, 76, "Ausfall des Fahrzeugs", { fill: C.failureSoft, stroke: C.failure, size: 22 })}
-     ${gate(1110, 368, "≥1", C.failure)}
-     ${eventBox(690, 452, 260, 78, "Ausfall Antrieb", { stroke: C.accent })}
-     ${eventBox(980, 452, 260, 78, "Ausfall Getriebe", { stroke: C.accent })}
-     ${eventBox(1270, 452, 260, 78, "Ausfall Abtrieb", { stroke: C.accent })}
-     ${[820, 1110, 1400].map((x) => gate(x, 592, "≥1", C.accent)).join("")}
-     ${["Lagerung", "Gehäuse", "Zahnrad 1", "Zahnrad 2", "Synchron.", "Überlastung"].map((label, index) => {
-       const x = [738, 902, 1028, 1192, 1318, 1482][index];
-       return eventBox(x - 76, 670, 152, 72, label, { stroke: C.deep, size: 17 });
-     }).join("")}`);
+    `${txt(1502, 198, "BEISPIEL-FEHLERBAUM", 18, 820, C.accent, "middle")}
+     ${eventBox(1332, 230, 340, 68, "Systemausfall", { fill: C.failureSoft, stroke: C.failure, size: 20 })}
+     ${gate(1502, 360, "≥1", C.accent)}
+     ${eventBox(1208, 444, 240, 68, "Ausfall Teilsystem A", { stroke: C.accent, size: 17 })}
+     ${eventBox(1556, 444, 240, 68, "Ausfall Teilsystem B", { stroke: C.accent, size: 17 })}
+     ${gate(1328, 578, "≥1", C.accent)}${gate(1676, 578, "≥1", C.accent)}
+     ${eventBox(1172, 662, 152, 66, "Ausfall A1", { stroke: C.accent, size: 17 })}
+     ${eventBox(1332, 662, 152, 66, "Ausfall A2", { stroke: C.accent, size: 17 })}
+     ${eventBox(1520, 662, 152, 66, "Ausfall B1", { stroke: C.accent, size: 17 })}
+     ${eventBox(1680, 662, 152, 66, "Ausfall B2", { stroke: C.accent, size: 17 })}`);
   const value = group("fta22_value", "Nutzen des Fehlerbaums",
-    `${box(92, 222, 500, 520, C.surface, C.border, 1.5, 16)}
-     ${txt(122, 270, "DER FEHLERBAUM ZEIGT", 18, 800, C.accent)}
-     ${multi(122, 330, 420, "• logische Verknüpfungen von Ausfällen", 23, 700, C.deep)}
-     ${multi(122, 438, 420, "• kritische Ereignisse und Ereigniskombinationen", 23, 700, C.deep)}
-     ${multi(122, 570, 420, "• Auswirkungen einzelner Komponentenausfälle", 23, 700, C.deep)}
-     ${box(92, 788, 1438, 88, C.accentSoft, C.accent, 1.5, 9)}
-     ${multi(122, 840, 1370, "Fehlerpfade werden sichtbar – und damit Schwachstellen gezielt bearbeitbar.", 25, 760, C.deep)}`);
+    `${line(102, 884, 1818, 884, C.border, 2, false)}
+     ${txt(104, 932, "FEHLERPFADE", 19, 850, C.deep)}
+     ${line(286, 924, 430, 924, C.accent, 2.5, true)}
+     ${txt(466, 932, "SCHWACHSTELLEN VERSTEHEN", 19, 850, C.deep)}
+     ${line(808, 924, 952, 924, C.accent, 2.5, true)}
+     ${txt(988, 932, "KRITISCHE KOMBINATIONEN ERKENNEN", 19, 850, C.deep)}
+     ${line(1408, 924, 1552, 924, C.accent, 2.5, true)}
+     ${txt(1588, 932, "RISIKEN MINIMIEREN", 19, 850, C.deep)}`);
   return {
-    archetype: "fault-tree-explainer",
-    layout: "Nutzenargumente links, vereinfachter Fehlerbaum rechts; Beziehungen hinter den Ereignissen.",
-    body: links + tree + value,
+    archetype: "top-down-evidence-map",
+    layout: "FTA-Begriff links, schrittweise aufgebaute Top-down-Hierarchie in der Mitte und konkreter Fehlerbaum rechts; Nutzen als offene Wirkungskette.",
+    body: context + levelTop + levelSubsystem + levelAssembly + levelComponent + levelFailure + levelBasic + tree + links + value,
     targets: [
+      target("fta22_context", "Top-down-Methode", cue(22, ["Die Fehlerbaumanalyse ist eine strukturierte Top-Down-Methode."])),
+      target("fta22_level_top", "Top-Ereignis auf Systemebene", cue(22, ["Das heißt, zuerst wird auf der obersten Ebene ein unerwünschtes Ereignis"])),
+      target("fta22_level_subsystem", "Teilsystemebene", cue(22, ["Anschließend werden systematisch alle Ausfälle"])),
+      target("fta22_level_assembly", "Baugruppenebene", cue(22, ["im Anschluss dann die Baugruppen"])),
+      target("fta22_level_component", "Bauteilebene", cue(22, ["schließlich gelangen wir zu den einzelnen Bauteilen"])),
+      target("fta22_level_failure", "Ausfallart", cue(22, ["und ihren spezifischen Ausfallarten"])),
+      target("fta22_level_basic", "Basisereignis und Ausfallmechanismus", cue(22, ["Auf der untersten Ebene befindet sich immer das Basisereignis"])),
       target("fta22_tree", "Beispiel-Fehlerbaum", cue(22, ["Dieses Diagramm wird Fehlerbaum genannt"])),
       target("fta22_links", "Logische Beziehungen", cue(22, ["zeigt die logischen Verknüpfungen von Ausfällen"] ), "draw"),
-      target("fta22_value", "Nutzen des Fehlerbaums", cue(22, ["Auf diese Weise können kritische Ereignisse identifiziert werden"])),
+      target("fta22_value", "Nutzen des Fehlerbaums", cue(22, ["Damit können wir also die Fehlerpfade innerhalb eines Systems visualisieren"])),
     ],
   };
 }
 
 function scene23() {
+  const parent = group("fta23_parent", "Fehlerbaumanalyse als Oberbegriff",
+    `${txt(960, 226, "FEHLERBAUMANALYSE", 34, 860, C.deep, "middle")}
+     ${txt(960, 264, "zwei komplementäre Ausprägungen", 20, 650, C.text, "middle")}
+     ${line(758, 286, 1162, 286, C.accent, 5)}`);
+  const links = group("fta23_links", "Aufteilung der FTA",
+    `${pathLine("M 960 286 V 326 H 492 V 360", C.deep, 2.5, true)}
+     ${pathLine("M 960 326 H 1428 V 360", C.deep, 2.5, true)}`);
   const qualitative = group("fta23_qualitative", "Qualitative FTA",
-    `${box(92, 226, 800, 572, C.accentSoft, C.accent, 2.2, 14)}
-     ${txt(122, 272, "QUALITATIVE FTA", 18, 820, C.accent)}
-     ${txt(122, 326, "Schwachstellen verstehen", 29, 820, C.deep)}
-     ${txt(122, 408, "ZIEL", 18, 820, C.accent)}${multi(282, 408, 550, "Ausfälle, Kombinationen, Ursachen und logische Abhängigkeiten identifizieren.", 22, 650, C.text)}
-     ${line(122, 486, 842, 486, C.accent, 1.2)}
-     ${txt(122, 538, "ERGEBNIS", 18, 820, C.accent)}${multi(282, 538, 550, "Kritische Ereignisse oder Ereigniskombinationen.", 22, 650, C.text)}
-     ${line(122, 612, 842, 612, C.accent, 1.2)}
-     ${txt(122, 664, "VERWENDUNG", 18, 820, C.accent)}${multi(282, 664, 550, "Schwachstellenanalyse ohne Quantifizierung von Wahrscheinlichkeiten.", 22, 650, C.text)}`);
+    `${txt(106, 400, "01", 60, 900, C.accentSoft)}
+     ${txt(206, 394, "QUALITATIVE FTA", 27, 850, C.deep)}
+     ${txt(206, 426, "Schwachstellen verstehen", 20, 700, C.accent)}
+     ${line(106, 466, 858, 466, C.border, 2)}
+     ${txt(106, 516, "ZIEL", 18, 850, C.accent)}${multi(270, 516, 572, "Sämtliche Ausfälle, Ausfallkombinationen, Ursachen und logische Abhängigkeiten identifizieren.", 21, 650, C.text)}
+     ${line(106, 612, 858, 612, C.border, 1.4)}
+     ${txt(106, 660, "ERGEBNIS", 18, 850, C.accent)}${multi(270, 660, 572, "Kritische Ereignisse oder Ereigniskombinationen.", 21, 650, C.text)}
+     ${line(106, 730, 858, 730, C.border, 1.4)}
+     ${txt(106, 778, "VERWENDUNG", 18, 850, C.accent)}${multi(270, 778, 572, "Schwachstellenanalyse; keine Quantifizierung von Wahrscheinlichkeiten.", 21, 650, C.text)}`);
   const quantitative = group("fta23_quantitative", "Quantitative FTA",
-    `${box(1028, 226, 800, 572, C.secondarySoft, C.secondary, 2.2, 14)}
-     ${txt(1058, 272, "QUANTITATIVE FTA", 18, 820, C.secondary)}
-     ${txt(1058, 326, "Wahrscheinlichkeiten berechnen", 29, 820, C.deep)}
-     ${txt(1058, 408, "ZIEL", 18, 820, C.secondary)}${multi(1218, 408, 550, "Ausfallwahrscheinlichkeit des Systems berechnen.", 22, 650, C.text)}
-     ${line(1058, 486, 1778, 486, C.secondary, 1.2)}
-     ${txt(1058, 538, "ERGEBNIS", 18, 820, C.secondary)}${multi(1218, 538, 550, "Numerische Wahrscheinlichkeit für Systemausfälle.", 22, 650, C.text)}
-     ${line(1058, 612, 1778, 612, C.secondary, 1.2)}
-     ${txt(1058, 664, "VERWENDUNG", 18, 820, C.secondary)}${multi(1218, 664, 550, "Risikobewertung, Maßnahmenentscheidung und Zuverlässigkeitsnachweis.", 22, 650, C.text)}`);
+    `${txt(1042, 400, "02", 60, 900, C.secondarySoft)}
+     ${txt(1142, 394, "QUANTITATIVE FTA", 27, 850, C.deep)}
+     ${txt(1142, 426, "Wahrscheinlichkeiten berechnen", 20, 700, C.secondary)}
+     ${line(1042, 466, 1794, 466, C.border, 2)}
+     ${txt(1042, 516, "ZIEL", 18, 850, C.secondary)}${multi(1206, 516, 572, "Ausfallwahrscheinlichkeit des Systems berechnen.", 21, 650, C.text)}
+     ${line(1042, 612, 1794, 612, C.border, 1.4)}
+     ${txt(1042, 660, "ERGEBNIS", 18, 850, C.secondary)}${multi(1206, 660, 572, "Numerische Wahrscheinlichkeiten für Systemausfälle.", 21, 650, C.text)}
+     ${line(1042, 730, 1794, 730, C.border, 1.4)}
+     ${txt(1042, 778, "VERWENDUNG", 18, 850, C.secondary)}${multi(1206, 778, 572, "Risikobewertung, Maßnahmenentscheidung und Zuverlässigkeitsnachweis.", 21, 650, C.text)}`);
   const scope = group("fta23_scope", "Fokus des Moduls",
-    `${box(324, 842, 1272, 82, C.deep, C.deep, 1.5, 10)}
-     ${txt(960, 893, "FOKUS DIESES MODULS: QUALITATIVE FEHLERBAUMANALYSE", 23, 800, C.surface, "middle")}`);
+    `${line(106, 882, 858, 882, C.educationAccent, 5)}
+     ${txt(106, 928, "FOKUS DIESES MODULS", 18, 850, C.educationAccent)}
+     ${txt(352, 928, "QUALITATIVE FEHLERBAUMANALYSE", 22, 850, C.deep)}`);
   return {
-    archetype: "two-column-comparison",
-    layout: "Zwei symmetrische Vergleichskarten plus klarer Modulfokus.",
-    body: qualitative + quantitative + scope,
+    archetype: "open-branching-comparison",
+    layout: "Sichtbarer Oberbegriff verzweigt in zwei gleichrangige, offen ausgerichtete Vergleichsspalten mit identischen Zeilen.",
+    body: parent + qualitative + quantitative + links + scope,
     targets: [
-      target("fta23_qualitative", "Qualitative FTA", cue(23, ["Die qualitative Fehlerbaumanalyse hat das Ziel"])),
-      target("fta23_quantitative", "Quantitative FTA", cue(23, ["Das Ziel der quantitativen Fehlerbaumanalyse hingegen ist"])),
+      target("fta23_parent", "Fehlerbaumanalyse als Oberbegriff", cue(23, ["Nachdem wir die Grundlagen der Fehlerbaumanalyse besprochen haben"])),
+      target("fta23_qualitative", "Qualitative FTA", cue(23, ["Zum einen gibt es die qualitative"])),
+      target("fta23_quantitative", "Quantitative FTA", cue(23, ["und zum anderen die quantitative Fehlerbaumanalyse"])),
+      target("fta23_links", "Aufteilung der FTA", cue(23, ["Beide Ansätze ergänzen sich"]), "draw"),
       target("fta23_scope", "Fokus des Moduls", cue(23, ["In diesem Modul befassen wir uns allerdings nur mit der qualitativen Fehlerbaumanalyse."])),
     ],
   };
 }
 
 function scene26() {
-  const strip = group("fta26_process", "Schritt 1 im Ablauf", processStrip(1, 190, true));
-  const cards = [
-    ["fta26_boundary", "01", "Systemgrenze definieren", "Zu untersuchendes System eindeutig abgrenzen.", C.accent, C.accentSoft],
-    ["fta26_influences", "02", "Einflussgrößen ermitteln", "P-Diagramm und Ishikawa-Diagramm nutzen.", C.secondary, C.secondarySoft],
-    ["fta26_blocks", "03", "Bauteilblockschaltbild", "Komponenten und Wechselwirkungen untersuchen.", C.success, C.successSoft],
-    ["fta26_functions", "04", "Funktionen und Anforderungen", "System- und Komponentenfunktionen verstehen.", C.failure, C.failureSoft],
+  const strip = group("fta26_process", "Schritt 1 im Ablauf", processStrip(1, 150, true));
+  const stages = [
+    ["fta26_boundary", 1, 318, "SYSTEMGRENZE", "System eindeutig abgrenzen", ["Untersuchungsraum festlegen", "Schnittstellen sichtbar machen"], "slide_004.png", "Vorschau der Systemgrenzen-Szene"],
+    ["fta26_influences", 2, 458, "EINFLUSSGRÖSSEN", "Wirkende Größen ermitteln", ["P-Diagramm", "Ishikawa-Diagramm"], "slide_008.png", "Vorschau der P-Diagramm-Szene"],
+    ["fta26_blocks", 3, 598, "KOMPONENTEN", "Wechselwirkungen untersuchen", ["Bauteilblockschaltbild", "interne Beziehungen"], "slide_013.png", "Vorschau des Wechselrichter-Blockdiagramms"],
+    ["fta26_functions", 4, 738, "FUNKTIONEN", "Anforderungen verstehen", ["Systemfunktionen", "Komponentenfunktionen"], "slide_016.png", "Vorschau der Funktionsstruktur-Szene"],
   ];
-  const cardMarkup = cards.map((entry, index) => {
-    const x = 92 + index * 442;
-    return group(entry[0], entry[2],
-      `${box(x, 392, 392, 340, entry[5], entry[4], 2, 14)}
-       ${txt(x + 30, 442, entry[1], 22, 820, entry[4])}
-       ${multi(x + 30, 502, 330, entry[2], 27, 800, C.deep)}
-       ${multi(x + 30, 624, 330, entry[3], 21, 620, C.text)}`);
-  }).join("");
+  const stageMarkup = stages.map(([id, stepNumber, y, kicker, headline, bullets, thumbnail, thumbnailLabel]) => group(id, `Vorgehensschritt ${stepNumber}: ${headline}`,
+    `${line(104, y + 118, 1816, y + 118, C.border, 1.4, false)}
+     ${txt(126, y + 56, `${stepNumber}.`, 32, 900, C.deep, "middle")}
+     ${txt(170, y + 22, kicker, 18, 840, C.accent)}
+     ${txt(170, y + 58, headline, 25, 800, C.deep)}
+     ${txt(760, y + 34, "•", 22, 850, C.accent)}${txt(792, y + 34, bullets[0], 20, 650, C.text)}
+     ${txt(760, y + 76, "•", 22, 850, C.accent)}${txt(792, y + 76, bullets[1], 20, 650, C.text)}
+     ${box(1370, y - 2, 420, 112, C.surface, C.border, 1.4, 8)}
+     ${sceneThumbnail(thumbnail, 1378, y + 6, 404, 96, thumbnailLabel)}`)).join("");
   const goal = group("fta26_goal", "Ziel der Systemanalyse",
-    `${box(92, 788, 1718, 112, C.deep, C.deep, 1.5, 10)}
-     ${txt(120, 842, "ZIEL", 18, 800, C.accentSoft)}
-     ${multi(248, 846, 1500, "Tiefgreifendes Verständnis über das System und seine Wirkungsweise entwickeln.", 26, 760, C.surface)}`);
+    `${box(104, 890, 1712, 74, C.accentSoft, C.accent, 2, 8)}
+     ${pictogramImage("target.png", "target", 126, 894, 66, "Zielscheibe")}
+     ${txt(220, 934, "ZIEL", 18, 840, C.accent)}
+     ${multi(340, 934, 1410, "Tiefgreifendes Verständnis über das System und seine Wirkungsweise entwickeln.", 23, 760, C.deep)}`);
   return {
-    archetype: "method-cards",
-    layout: "Kompakter Ablauf oben, vier gleichgewichtete Methoden und Zielband unten.",
-    body: strip + cardMarkup + goal,
+    archetype: "open-analysis-route",
+    layout: "Kompakter FTA-Kontext oben; darunter die vier nummerierten Vorgehensschritte 1 bis 4 mit kleinen Vorschaubildern bereits aufgebauter RE2-Szenen und gemeinsamem Ziel.",
+    body: strip + stageMarkup + goal,
     targets: [
       target("fta26_process", "Schritt 1 im Ablauf", cue(26, ["Der erste Schritt ist die System-Analyse."])),
-      target("fta26_boundary", "Systemgrenze", cue(26, ["Im ersten Schritt definieren wir unsere Systemgrenze"])),
-      target("fta26_influences", "Einflussgrößen", cue(26, ["Im Anschluss können wir dann die Einflussgrößen"])),
-      target("fta26_blocks", "Bauteilblockschaltbild", cue(26, ["Zusätzlich können wir auch Bauteilblockschaltbilder erstellen"])),
-      target("fta26_functions", "Funktionen und Anforderungen", cue(26, ["Eine Funktionsanalyse hilft uns sämtliche Funktionen"])),
+      target("fta26_boundary", "Vorgehensschritt 1: Systemgrenze", cue(26, ["Im ersten Schritt definieren wir unsere Systemgrenze"])),
+      target("fta26_influences", "Vorgehensschritt 2: Einflussgrößen", cue(26, ["Im Anschluss können wir dann die Einflussgrößen"])),
+      target("fta26_blocks", "Vorgehensschritt 3: Bauteilblockschaltbild", cue(26, ["Zusätzlich können wir auch Bauteilblockschaltbilder erstellen"])),
+      target("fta26_functions", "Vorgehensschritt 4: Funktionen und Anforderungen", cue(26, ["Eine Funktionsanalyse hilft uns sämtliche Funktionen"])),
       target("fta26_goal", "Ziel der Systemanalyse", cue(26, ["Das Ziel im ersten Schritt ist es, ein tiefgreifendes Verständnis"])),
     ],
   };
@@ -555,31 +675,37 @@ function scene29() {
 }
 
 function scene30() {
+  const process = group("fta30_process", "Aktueller Schritt 2", processStrip(2, 132, true));
+  const alternative = group("fta30_alternative", "Zwei alternative Ansätze",
+    `${line(960, 286, 960, 912, C.border, 2)}
+     ${box(908, 302, 104, 48, C.deep, C.deep, 1.5, 24)}
+     ${txt(960, 334, "ODER", 18, 850, C.surface, "middle")}`);
+  const bullet = (x, y, text, width) => `${txt(x, y, "•", 30, 900, C.deep)}${multi(x + 30, y, width - 30, text, 22, 680, C.deep)}`;
   const preventive = group("fta30_preventive", "Präventiver Ansatz",
-    `${box(92, 214, 808, 608, C.accentSoft, C.accent, 2.2, 16)}
-     ${txt(496, 274, "PRÄVENTIV", 31, 850, C.accent, "middle")}
-     ${pill(332, 302, 328, "PROAKTIV · VOR DEM AUFTRETEN", C.accent, C.surface)}
-     ${multi(134, 410, 708, "• Fehlerquellen und Risiken frühzeitig identifizieren", 23, 700, C.deep)}
-     ${multi(134, 518, 708, "• Systemzuverlässigkeit und -sicherheit durch Beseitigung potenzieller Risiken verbessern", 23, 700, C.deep)}
-     ${multi(134, 670, 708, "• Spätere Korrekturmaßnahmen und Reparaturen reduzieren", 23, 700, C.deep)}`);
+    `${txt(112, 338, "VOR DEM AUFTRETEN", 18, 850, C.accent)}
+     ${txt(112, 390, "PRÄVENTIVER ANSATZ", 34, 900, C.deep)}
+     ${line(112, 418, 812, 418, C.accent, 5)}
+     ${bullet(112, 500, "Fehlerquellen und Risiken frühzeitig identifizieren", 650)}
+     ${bullet(112, 626, "Systemzuverlässigkeit und -sicherheit durch Beseitigung potenzieller Risiken verbessern", 650)}
+     ${bullet(112, 778, "Spätere Korrekturmaßnahmen und Reparaturen reduzieren", 650)}
+     ${txt(112, 906, "PROAKTIV · DESIGN & ENTWICKLUNG", 19, 850, C.accent)}`);
   const corrective = group("fta30_corrective", "Korrektiver Ansatz",
-    `${box(1028, 214, 800, 608, C.secondarySoft, C.secondary, 2.2, 16)}
-     ${txt(1428, 274, "KORREKTIV", 31, 850, C.secondary, "middle")}
-     ${pill(1254, 302, 348, "REAKTIV · NACH DEM AUFTRETEN", C.secondary, C.surface)}
-     ${multi(1070, 410, 708, "• Aufgetretene Fehler und Ursachen nach Vorfall oder Systemausfall analysieren", 23, 700, C.deep)}
-     ${multi(1070, 550, 708, "• Wartung und Reparatur durch gezielte Korrekturmaßnahmen verbessern", 23, 700, C.deep)}
-     ${multi(1070, 690, 708, "• Ähnliche Probleme künftig vermeiden", 23, 700, C.deep)}`);
-  const comparison = group("fta30_comparison", "Zeitlicher Unterschied",
-    `${box(244, 856, 1432, 76, C.deep, C.deep, 1.5, 9)}
-     ${txt(960, 905, "DESIGN & ENTWICKLUNG  ←  PRÄVENTIV   |   KORREKTIV  →  BETRIEB & VORFALL", 22, 780, C.surface, "middle")}`);
+    `${txt(1108, 338, "NACH DEM AUFTRETEN", 18, 850, C.accent)}
+     ${txt(1108, 390, "KORREKTIVER ANSATZ", 34, 900, C.deep)}
+     ${line(1108, 418, 1808, 418, C.accent, 5)}
+     ${bullet(1108, 500, "Aufgetretene Fehler und Ursachen nach Vorfall oder Systemausfall analysieren", 650)}
+     ${bullet(1108, 652, "Wartung und Reparatur durch gezielte Korrekturmaßnahmen verbessern", 650)}
+     ${bullet(1108, 778, "Ähnliche Probleme künftig vermeiden", 650)}
+     ${txt(1108, 906, "REAKTIV · BETRIEB & INSTANDHALTUNG", 19, 850, C.accent)}`);
   return {
-    archetype: "two-column-comparison",
-    layout: "Symmetrischer Zeit- und Wirkungsvergleich mit klarer Proaktiv/Reaktiv-Kennung.",
-    body: preventive + corrective + comparison,
+    archetype: "alternative-approaches",
+    layout: "Schritt 2 bleibt sichtbar; zwei klar getrennte, gleichwertige Ansätze werden ohne Flussrichtung gegenübergestellt.",
+    body: process + alternative + preventive + corrective,
     targets: [
+      target("fta30_process", "Aktueller Schritt 2", cue(30, ["Im zweiten Schritt legen wir das unerwünschte Ereignis fest"])),
+      target("fta30_alternative", "Zwei alternative Ansätze", cue(30, ["kann durch zwei verschiedene Ansätze erfolgen"])),
       target("fta30_preventive", "Präventiver Ansatz", cue(30, ["Beim präventiven Ansatz erfolgt die frühzeitige Identifizierung"])),
       target("fta30_corrective", "Korrektiver Ansatz", cue(30, ["Beim korrektiven Ansatz dagegen werden die aufgetretenen Fehler"])),
-      target("fta30_comparison", "Zeitlicher Unterschied", cue(30, ["Dieser Ansatz ist also reaktiv"])),
     ],
   };
 }
@@ -613,68 +739,107 @@ function scene33() {
 }
 
 function scene34() {
-  const circuit = group("fta34_circuit", "Motorschaltung", motorCircuit());
-  const categories = group("fta34_categories", "Ausfallpfade",
-    `${definitionCard("unused", 590, 246, 388, 540, "PRIMÄRAUSFALL", "Motor selbst versagt", "Durchgebrannte Wicklung\nLagerschaden", C.accent, C.accentSoft).replace(/^<g[^>]*>|<\/g>$/g, "")}
-     ${definitionCard("unused", 1004, 246, 388, 540, "SEKUNDÄRAUSFALL", "Randbedingungen wirken", "Blockieren durch Verschmutzung\nGehäusebruch durch Temperatur oder Vibration", C.secondary, C.secondarySoft).replace(/^<g[^>]*>|<\/g>$/g, "")}
-     ${definitionCard("unused", 1418, 246, 388, 540, "KOMMANDIERTER AUSFALL", "Ansteuerung fehlt", "Stromquelle\nSteuergerät\nSchalter", C.success, C.successSoft).replace(/^<g[^>]*>|<\/g>$/g, "")}`);
+  const process = group("fta34_process", "Aktueller Schritt 3", processStrip(3, 116, true));
+  const circuit = group("fta34_circuit", "Korrekte Motorschaltung", motorCircuit());
   const event = group("fta34_event", "Unerwünschtes Ereignis",
-    `${box(590, 830, 1216, 82, C.failureSoft, C.failure, 2, 10)}
-     ${txt(620, 880, "TOP-EREIGNIS", 18, 820, C.failure)}
-     ${txt(1020, 883, "Motor läuft nicht an", 26, 820, C.deep)}`);
+    `${txt(1240, 260, "TOP-EREIGNIS", 18, 850, C.failure, "middle")}
+     ${eventBox(1060, 280, 360, 70, "Motor läuft nicht an", { fill: C.failureSoft, stroke: C.failure, size: 22 })}`);
+  const categories = group("fta34_categories", "Ausfallpfade",
+    `${eventBox(650, 420, 300, 76, "Primärausfall Motor", { stroke: C.deep, size: 20 })}
+     ${eventBox(1070, 420, 300, 76, "Sekundärausfall Motor", { stroke: C.deep, size: 20 })}
+     ${eventBox(1490, 420, 300, 76, "Kommandierter Ausfall Motor", { stroke: C.deep, size: 19 })}`);
+  const causes = group("fta34_causes", "Konkrete Ausfallursachen",
+    `${eventBox(620, 592, 170, 100, "Durchgebrannte Wicklung", { stroke: C.deep, size: 17 })}
+     ${eventBox(810, 592, 160, 100, "Lagerschaden", { stroke: C.deep, size: 18 })}
+     ${eventBox(1020, 592, 190, 100, "Blockieren durch Verschmutzung", { stroke: C.deep, size: 17 })}
+     ${eventBox(1230, 592, 190, 100, "Motorgehäusebruch: Temperatur oder Vibration", { stroke: C.deep, size: 16 })}
+     ${eventBox(1460, 592, 126, 100, "Stromquelle ausgefallen", { stroke: C.deep, size: 16 })}
+     ${eventBox(1600, 592, 126, 100, "Ein Schalter ausgefallen", { stroke: C.deep, size: 16 })}
+     ${eventBox(1740, 592, 126, 100, "Steuergerät ausgefallen", { stroke: C.deep, size: 16 })}`);
+  const links = group("fta34_links", "Hierarchie des Fehlerbaums",
+    `${pathLine("M 1240 350 V 382 H 800 V 420 M 1240 382 V 420 M 1240 382 H 1640 V 420", C.deep, 2.3)}
+     ${pathLine("M 800 496 V 544 H 705 V 592 M 800 544 H 890 V 592", C.deep, 2.1)}
+     ${pathLine("M 1220 496 V 544 H 1115 V 592 M 1220 544 H 1325 V 592", C.deep, 2.1)}
+     ${pathLine("M 1640 496 V 544 H 1523 V 592 M 1640 544 H 1663 V 592 M 1640 544 H 1803 V 592", C.deep, 2.1)}`);
+  const note = group("fta34_note", "Einordnung",
+    `${line(620, 790, 1866, 790, C.border, 2)}
+     ${multi(1243, 832, 1200, "Die drei Ausfallarten strukturieren mögliche Fehlerquellen.", 21, 720, C.deep, "middle")}
+     ${multi(1243, 862, 1200, "Die Trennung in separate Pfade ist hilfreich, aber nicht zwingend.", 21, 720, C.deep, "middle")}`);
   return {
-    archetype: "technical-example",
-    layout: "Konkrete Motorschaltung links, drei getrennte Ausfallpfade rechts.",
-    body: circuit + categories + event,
+    archetype: "technical-fault-tree",
+    layout: "Schritt 3, technisch korrekte Motorschaltung und ein von oben nach unten lesbarer Fehlerbaum ohne nummerierte Zwischenkästen.",
+    body: process + circuit + event + categories + causes + links + note,
     targets: [
+      target("fta34_process", "Aktueller Schritt 3", cue(34, ["Kommen wir nun zum dritten Schritt in der Fehlerbaumanalyse."])),
       target("fta34_circuit", "Motorschaltung", cue(34, ["Schauen wir uns hierzu ein Beispiel einer Schaltung zur Steuerung eines Motors an."])),
       target("fta34_event", "Unerwünschtes Ereignis", cue(34, ["Das unerwünschte Ereignis können wir einfach als „Motor läuft nicht an“ definieren."])),
       target("fta34_categories", "Ausfallpfade", cue(34, ["Nun kann der Fehlerbaum in drei Pfade"])),
+      target("fta34_causes", "Konkrete Ausfallursachen", cue(34, ["Der Primärausfall des Motors kann beispielsweise"])),
+      target("fta34_links", "Hierarchie des Fehlerbaums", cue(34, ["Die drei verschiedenen Ausfallarten lassen sich im Normalfall"]), "draw"),
+      target("fta34_note", "Einordnung", cue(34, ["Es ist jedoch wichtig zu betonen"])),
     ],
   };
 }
 
 function scene37() {
+  const process = group("fta37_process", "Aktueller Schritt 4", processStrip(4, 116, true));
   const cards = [
-    ["fta37_and", "UND-GATTER", "&", "Y tritt nur ein, wenn alle Sub-Ereignisse eintreten.", C.accent, C.accentSoft],
-    ["fta37_or", "ODER-GATTER", "≥1", "Y tritt ein, wenn mindestens ein Sub-Ereignis eintritt.", C.secondary, C.secondarySoft],
-    ["fta37_not", "NICHT-GATTER", "¬", "Y tritt ein, wenn das Sub-Ereignis nicht eintritt.", C.success, C.successSoft],
+    ["fta37_and", "UND-GATTER", "&", "Y tritt nur ein, wenn alle Sub-Ereignisse eintreten."],
+    ["fta37_or", "ODER-GATTER", "≥1", "Y tritt ein, wenn mindestens ein Sub-Ereignis eintritt."],
+    ["fta37_not", "NICHT-GATTER", "1", "Y tritt ein, wenn das Sub-Ereignis nicht eintritt."],
   ];
   const body = cards.map((entry, index) => {
     const x = 92 + index * 590;
     const cx = x + 270;
-    const inputs = index === 2
-      ? `${line(cx, 518, cx, 582, entry[4], 2.5)}
-         ${eventBox(cx - 100, 582, 200, 72, "x", { stroke: entry[4], size: 24 })}`
-      : `${pathLine(`M ${cx} 518 V 552 H ${cx - 84} V 582 M ${cx} 552 H ${cx + 84} V 582`, entry[4], 2.5)}
-         ${eventBox(cx - 164, 582, 160, 72, "x₁", { stroke: entry[4], size: 24 })}
-         ${eventBox(cx + 4, 582, 160, 72, "x₂", { stroke: entry[4], size: 24 })}`;
+    const logic = index === 2
+      ? `${eventBox(cx - 90, 350, 180, 66, "Y", { stroke: C.deep, size: 24 })}
+         ${line(cx, 416, cx, 448, C.deep, 2.4)}
+         <circle cx="${cx}" cy="458" r="9" fill="${C.surface}" stroke="${C.deep}" stroke-width="2.4"/>
+         ${box(cx - 42, 467, 84, 58, C.surface, C.deep, 2.2, 3)}
+         ${txt(cx, 505, entry[2], 22, 820, C.deep, "middle")}
+         ${line(cx, 525, cx, 582, C.deep, 2.4)}
+         ${eventBox(cx - 90, 582, 180, 66, "x", { stroke: C.deep, size: 24 })}`
+      : `${eventBox(cx - 90, 350, 180, 66, "Y", { stroke: C.deep, size: 24 })}
+         ${line(cx, 416, cx, 467, C.deep, 2.4)}
+         ${box(cx - 42, 467, 84, 58, C.surface, C.deep, 2.2, 3)}
+         ${txt(cx, 505, entry[2], 22, 820, C.deep, "middle")}
+         ${pathLine(`M ${cx} 525 V 552 H ${cx - 84} V 582 M ${cx} 552 H ${cx + 84} V 582`, C.deep, 2.4)}
+         ${eventBox(cx - 164, 582, 160, 66, "x₁", { stroke: C.deep, size: 24 })}
+         ${eventBox(cx + 4, 582, 160, 66, "x₂", { stroke: C.deep, size: 24 })}`;
     return group(entry[0], entry[1],
-      `${box(x, 230, 540, 610, entry[5], entry[4], 2.5, 16)}
-       ${txt(cx, 286, entry[1], 25, 850, entry[4], "middle")}
-       ${eventBox(cx - 100, 350, 200, 72, "Y", { stroke: entry[4], size: 26 })}
-       ${line(cx, 422, cx, 458, entry[4], 2.5)}
-       ${gate(cx, 488, entry[2], entry[4])}
-       ${inputs}
-       ${multi(cx, 730, 444, entry[3], 22, 680, C.deep, "middle")}`);
+      `${box(x, 280, 540, 610, C.surface, C.deep, 2, 10)}
+       ${txt(cx, 326, entry[1], 24, 850, C.deep, "middle")}
+       ${logic}
+       ${line(x + 42, 702, x + 498, 702, C.border, 1.5)}
+       ${multi(cx, 764, 444, entry[3], 22, 680, C.deep, "middle")}`);
   }).join("");
   return {
     archetype: "logic-gate-comparison",
-    layout: "Drei gleichartige Logikkarten mit konsequent kleiner Gatter- und Liniengröße.",
-    body,
+    layout: "Schritt 4 bleibt sichtbar; drei gleich gestaltete Logikkarten zeigen UND, ODER und die korrekte Invertierung am Ausgang des NICHT-Gatters.",
+    body: process + body,
     targets: [
+      target("fta37_process", "Aktueller Schritt 4", cue(37, ["Kommen wir nun zum vierten Schritt"])),
       target("fta37_and", "UND-Gatter", cue(37, ["Beim UND-Gatter tritt das nachfolgende Ereignis"])),
       target("fta37_or", "ODER-Gatter", cue(37, ["Beim Oder Gatter tritt das nachfolgende Ereignis"])),
-      target("fta37_not", "NICHT-Gatter", cue(37, ["beim NICHT-Gatter"])),
+      target("fta37_not", "NICHT-Gatter", cue(37, ["Und beim NICHT-Gatter"])),
     ],
   };
 }
 
 function motorTreeScene(n, focus, reduced = false) {
   const tree = motorTree(focus, reduced);
-  const circuit = group(`fta${n}_circuit`, "Motorschaltung", motorCircuit());
-  const links = group(`fta${n}_links`, "Fehlerbaum-Beziehungen", tree.connectors);
-  const nodes = group(`fta${n}_nodes`, "Fehlerbaum-Ereignisse", tree.nodes);
+  const showProcess = n === 43;
+  const contentOffsetY = showProcess ? 92 : 0;
+  const shifted = (markup) => contentOffsetY
+    ? `<g transform="translate(0 ${contentOffsetY})">${markup}</g>`
+    : markup;
+  const process = showProcess
+    ? contextGroup(`fta${n}_process`, "FTA-Schrittübersicht mit aktivem Schritt 4", processStrip(4, 116, true))
+    : "";
+  const circuit = group(`fta${n}_circuit`, "Motorschaltung", shifted(motorCircuit()));
+  const links = group(`fta${n}_links`, "Fehlerbaum-Beziehungen", shifted(tree.connectors));
+  const nodes = group(`fta${n}_nodes`, "Fehlerbaum-Ereignisse", shifted(tree.nodes));
+  const includeNote = n !== 43;
   const noteText = focus === "primary" ? "Fokus: technische Ausfälle des Motors"
     : focus === "secondary" ? "Fokus: Randbedingungen und fehlende Ansteuerung"
       : focus === "all" ? "Vollständige Fehlerhierarchie"
@@ -696,13 +861,15 @@ function motorTreeScene(n, focus, reduced = false) {
   ]);
   return {
     archetype: "fault-tree-example",
-    layout: "Motorschaltung als technischer Anker links, großer Fehlerbaum rechts; Verbindungen liegen hinter den Ereignissen.",
-    body: links + circuit + nodes + note,
+    layout: showProcess
+      ? "Kompakte FTA-Schrittübersicht oben mit aktivem Schritt 4; Motorschaltung als technischer Anker links und vollständiger Fehlerbaum rechts, kontrolliert darunter angeordnet."
+      : "Motorschaltung als technischer Anker links, großer Fehlerbaum rechts; Verbindungen liegen hinter den Ereignissen.",
+    body: process + links + circuit + nodes + (includeNote ? note : ""),
     targets: [
       target(`fta${n}_circuit`, "Motorschaltung", cue(n, ["Schauen wir uns hierzu nochmals das vorherige Beispiel an."])),
       target(`fta${n}_nodes`, "Fehlerbaum-Ereignisse", cueNodes),
       target(`fta${n}_links`, "Fehlerbaum-Beziehungen", cueLinks, "draw"),
-      target(`fta${n}_note`, "Fokus", cue(n, ["Auf diese Weise wird der Fehlerbaum nach unten hin immer weiter verästelt", "Das heißt ab hier gibt es keine weiteren untergeordneten Hierarchieebenen"])),
+      ...(includeNote ? [target(`fta${n}_note`, "Fokus", cue(n, ["Auf diese Weise wird der Fehlerbaum nach unten hin immer weiter verästelt", "Das heißt ab hier gibt es keine weiteren untergeordneten Hierarchieebenen"]))] : []),
     ],
   };
 }
@@ -772,51 +939,108 @@ function specialEventScene(n, type) {
   };
 }
 
+function eventSymbolsOverview(n) {
+  const process = contextGroup(`fta${n}_process`, "FTA-Schrittübersicht mit aktivem Schritt 4", processStrip(4, 116, true));
+  const basic = group(`fta${n}_basic`, "Basisereignis",
+    `${txt(390, 300, "01", 18, 840, C.accent, "middle")}
+     ${txt(390, 344, "BASISEREIGNIS", 24, 860, C.deep, "middle")}
+     ${line(390, 390, 390, 474, C.accent, 2.5)}
+     ${basicEvent(390, 520, C.accent, C.accentSoft)}
+     ${multi(390, 632, 400, "Primäre Ursache oder Ausfallmechanismus – Ende eines vollständig analysierten Pfades.", 21, 650, C.deep, "middle")}`);
+  const diamond = group(`fta${n}_diamond`, "Nicht weiter untersuchtes Ereignis",
+    `${txt(960, 300, "02", 18, 840, C.secondary, "middle")}
+     ${txt(960, 344, "NICHT WEITER UNTERSUCHT", 24, 860, C.deep, "middle")}
+     ${line(960, 390, 960, 462, C.secondary, 2.5)}
+     <path d="M960 462 L1018 520 L960 578 L902 520 Z" fill="${C.secondarySoft}" stroke="${C.secondary}" stroke-width="2.5"/>
+     ${multi(960, 632, 400, "Bewusster Analyseabbruch. Der Grund wird nachvollziehbar im Kommentarfeld dokumentiert.", 21, 650, C.deep, "middle")}`);
+  const transfer = group(`fta${n}_transfer`, "Verweisungsgatter",
+    `${txt(1530, 300, "03", 18, 840, C.success, "middle")}
+     ${txt(1530, 344, "VERWEISUNGSGATTER", 24, 860, C.deep, "middle")}
+     ${line(1530, 390, 1530, 466, C.success, 2.5)}
+     <path d="M1480 466 H1580 L1606 520 L1580 574 H1480 L1454 520 Z" fill="${C.successSoft}" stroke="${C.success}" stroke-width="2.5"/>
+     ${txt(1530, 528, "1.1", 22, 840, C.success, "middle")}
+     ${multi(1530, 632, 400, "Fortsetzung an anderer Stelle. Nummerierte Verweise halten lange Bäume lesbar.", 21, 650, C.deep, "middle")}`);
+  const dividers = group(`fta${n}_dividers`, "Vergleichsstruktur",
+    `${line(675, 270, 675, 744, C.border, 1.5)}${line(1245, 270, 1245, 744, C.border, 1.5)}`);
+  const rule = group(`fta${n}_rule`, "Entscheidungsregel",
+    `${line(188, 806, 1732, 806, C.deep, 2)}
+     ${txt(188, 856, "ENTSCHEIDUNGSREGEL", 19, 840, C.accent)}
+     ${multi(500, 856, 1198, "Pfad vollständig analysiert → Kreis · bewusst beendet → Raute · räumlich fortgesetzt → Verweisung.", 23, 720, C.deep)}`);
+  return {
+    archetype: "symbol-comparison",
+    layout: "Kompakte FTA-Schrittübersicht oben mit aktivem Schritt 4; darunter drei gleichrangige Ereignissymbole auf offener Fläche und eine gemeinsame Abschlussregel.",
+    takeaway: "Kreis, Raute und Verweisung kennzeichnen drei unterschiedliche Arten, einen Fehlerbaumpfad zu beenden oder fortzuführen.",
+    body: process + dividers + basic + diamond + transfer + rule,
+    targets: [
+      target(`fta${n}_basic`, "Basisereignis", cue(n, ["Die Basisereignisse stellen immer das Ende des Fehlerbaumes dar"])),
+      target(`fta${n}_diamond`, "Nicht weiter untersuchtes Ereignis", cue(n, ["Hierzu können wir einfach ein Rauten-Symbol verwenden."])),
+      target(`fta${n}_transfer`, "Verweisungsgatter", cue(n, ["kann er mit Hilfe eines Verweisungsgatters an einer anderen Stelle fortgeführt werden."])),
+      target(`fta${n}_rule`, "Entscheidungsregel", cue(n, ["Durch das schrittweise Unterteilen der Ereignisse im Fehlerbaum"])),
+    ],
+  };
+}
+
 function scene50() {
   const tree = motorTree("critical");
-  const links = group("fta50_links", "Kritische Pfade", tree.connectors.replaceAll(C.deep, C.failure));
-  const nodes = group("fta50_nodes", "Fehlerbaum", tree.nodes);
+  const process = group("fta50_process", "Aktueller Schritt 5", processStrip(5, 116, true));
+  const links = group("fta50_links", "Fehlerbaum-Beziehungen", `<g transform="translate(0 76)">${tree.connectors}</g>`);
+  const nodes = group("fta50_nodes", "Fehlerbaum", `<g transform="translate(0 76)">${tree.nodes}</g>`);
+  const criticalPaths = group("fta50_critical_paths", "Kritische Pfade",
+    `<g transform="translate(0 76)">${tree.connectors.replaceAll(C.deep, C.technical)}</g>
+     ${pill(1458, 278, 300, "ALLE PFADE KRITISCH", C.technical, C.surface)}`);
   const statement = group("fta50_statement", "Bewertung",
-    `${box(92, 810, 1728, 112, C.failureSoft, C.failure, 2, 10)}
-     ${txt(122, 858, "KRITISCHE PFADE", 20, 850, C.failure)}
-     ${multi(352, 862, 1400, "Alle Ereignisse sind über ODER-Gatter verknüpft – jeder einzelne Ausfall kann direkt zum Motorausfall führen.", 24, 730, C.deep)}`);
+    `${box(92, 916, 1728, 66, C.surface, C.deep, 2, 8)}
+     ${txt(122, 956, "BEWERTUNG", 18, 850, C.technical)}
+     ${multi(316, 958, 1440, "Bei ausschließlichen ODER-Verknüpfungen kann jeder einzelne Ausfall direkt zum Motorausfall führen.", 22, 730, C.deep)}`);
   return {
     archetype: "fault-tree-highlight",
-    layout: "Vollständiger Fehlerbaum mit zurückhaltend rot markierten kritischen Pfaden und Auswertung darunter.",
-    body: links + nodes + statement,
+    layout: "Schritt 5 bleibt sichtbar; der vollständige Fehlerbaum wird zunächst aufgebaut und seine kritischen Pfade anschließend in Stahlcyan nachgezeichnet.",
+    body: process + links + nodes + criticalPaths + statement,
     targets: [
+      target("fta50_process", "Aktueller Schritt 5", cue(50, ["Kommen wir nun zum fünften und damit auch letzten Schritt"])),
       target("fta50_nodes", "Fehlerbaum", cue(50, ["In unserem Beispiel von vorher sind alle Ereignisse im Fehlerbaum mit einem Oder Gatter verbunden."])),
-      target("fta50_statement", "Bewertung", cue(50, ["Aus diesem Grund führt jeder Ausfall direkt zum Ausfall des Motors."])),
-      target("fta50_links", "Kritische Pfade", cue(50, ["Demnach ist jeder Pfad im Fehlerbaum auch ein kritischer Pfad."]), "draw"),
+      target("fta50_links", "Fehlerbaum-Beziehungen", cue(50, ["Aus diesem Grund führt jeder Ausfall direkt zum Ausfall des Motors."]), "draw"),
+      target("fta50_critical_paths", "Kritische Pfade", cue(50, ["Demnach ist jeder Pfad im Fehlerbaum auch ein kritischer Pfad."]), "draw"),
+      target("fta50_statement", "Bewertung", cue(50, ["Demnach ist jeder Pfad im Fehlerbaum auch ein kritischer Pfad."])),
     ],
   };
 }
 
 function scene51() {
-  const circuit = group("fta51_circuit", "Redundante Stromversorgung",
-    `${motorCircuit()}
-     ${box(132, 724, 72, 82, C.secondarySoft, C.secondary, 2, 8)}${txt(168, 760, "+", 22, 800, C.secondary, "middle")}${txt(168, 790, "−", 22, 800, C.secondary, "middle")}${txt(236, 770, "Stromquelle 2", 18, 720, C.secondary)}`);
-  const links = group("fta51_links", "UND-Verknüpfung",
-    `${line(1250, 340, 1250, 386, C.failure, 2.5)}
-     ${pathLine("M 1250 446 V 480 H 1050 V 516 M 1250 480 H 1450 V 516", C.failure, 2.5)}
-     ${[1050,1450].map((x) => line(x, 598, x, 642, C.deep, 2.2)).join("")}`);
-  const nodes = group("fta51_nodes", "Minimaler Ausfallschnitt",
-    `${eventBox(1050, 258, 400, 82, "Ausfall der Stromversorgung", { fill: C.failureSoft, stroke: C.failure, size: 23 })}
-     ${gate(1250, 416, "&", C.failure, C.failureSoft)}
-     ${eventBox(910, 516, 280, 82, "Ausfall Stromquelle 1", { stroke: C.accent, size: 20 })}
-     ${eventBox(1310, 516, 280, 82, "Ausfall Stromquelle 2", { stroke: C.secondary, size: 20 })}
-     ${basicEvent(1050, 674, C.accent, C.accentSoft)}${basicEvent(1450, 674, C.secondary, C.secondarySoft)}
-     ${box(850, 748, 800, 118, C.deep, C.deep, 1.5, 10)}
-     ${txt(1250, 794, "MINIMALER AUSFALLSCHNITT", 20, 850, C.accentSoft, "middle")}
-     ${multi(1250, 838, 700, "Stromquelle 1 UND Stromquelle 2 fallen gemeinsam aus.", 24, 740, C.surface, "middle")}`);
+  const circuit = group("fta51_circuit", "Redundante Stromversorgung", motorCircuit({ secondSource: true }));
+  const nodes = group("fta51_nodes", "Vollständiger Fehlerbaum",
+    `${eventBox(1030, 238, 440, 76, "Kommandierter Ausfall Motor", { fill: C.failureSoft, stroke: C.failure, size: 22 })}
+     ${gate(1250, 372, "≥1", C.deep, C.surface)}
+     ${eventBox(710, 454, 280, 78, "Ausfall Stromversorgung", { stroke: C.deep, size: 19 })}
+     ${eventBox(1110, 454, 280, 78, "Ausfall eines Schalters", { stroke: C.deep, size: 19 })}
+     ${eventBox(1510, 454, 280, 78, "Ausfall Steuergerät", { stroke: C.deep, size: 19 })}
+     ${gate(850, 610, "&", C.deep, C.surface)}
+     ${eventBox(650, 682, 190, 84, "Ausfall Stromquelle 1", { stroke: C.deep, size: 17 })}
+     ${eventBox(860, 682, 190, 84, "Ausfall Stromquelle 2", { stroke: C.deep, size: 17 })}
+     ${basicEvent(745, 820, C.deep, C.surface)}${basicEvent(955, 820, C.deep, C.surface)}
+     ${basicEvent(1250, 582, C.deep, C.surface)}${basicEvent(1650, 582, C.deep, C.surface)}`);
+  const links = group("fta51_links", "Logische Verknüpfungen",
+    `${line(1250, 314, 1250, 342, C.deep, 2.4)}
+     ${pathLine("M 1250 402 V 426 H 850 V 454 M 1250 426 V 454 M 1250 426 H 1650 V 454", C.deep, 2.4)}
+     ${line(850, 532, 850, 580, C.deep, 2.4)}
+     ${pathLine("M 850 640 V 660 H 745 V 682 M 850 660 H 955 V 682", C.deep, 2.4)}
+     ${line(745, 766, 745, 800, C.deep, 2.2)}${line(955, 766, 955, 800, C.deep, 2.2)}
+     ${line(1250, 532, 1250, 562, C.deep, 2.2)}${line(1650, 532, 1650, 562, C.deep, 2.2)}`);
+  const cutSet = group("fta51_cutset", "Minimaler Ausfallschnitt",
+    `<rect x="632" y="666" width="436" height="174" rx="10" fill="none" stroke="${C.technical}" stroke-width="4"/>
+     ${pathLine("M 745 854 V 874 H 955 V 854", C.technical, 4)}
+     ${box(632, 884, 436, 84, C.deep, C.deep, 1.5, 8)}
+     ${txt(850, 918, "MINIMALER AUSFALLSCHNITT M₁", 18, 850, C.surface, "middle")}
+     ${txt(850, 950, "M₁ = {Stromquelle 1, Stromquelle 2}", 19, 720, C.surface, "middle")}`);
   return {
     archetype: "minimal-cut-set",
-    layout: "Redundante Schaltung links, fokussierter UND-Teilbaum und klare Cut-Set-Aussage rechts.",
-    body: links + circuit + nodes,
+    layout: "Korrekt parallel angebundene zweite Stromquelle links; vollständiger Fehlerbaum rechts mit ODER-Hauptebene, UND-Unterbaum und explizitem Minimalschnitt.",
+    body: circuit + links + nodes + cutSet,
     targets: [
-      target("fta51_circuit", "Redundante Stromversorgung", cue(51, ["Nehmen wir mal an, wir hätten in der Schaltung zur Steuerung des Motors eine zweite Stromversorgung installiert."])),
-      target("fta51_nodes", "Minimaler Ausfallschnitt", cue(51, ["Da die gesamte Stromversorgung erst ausgefallen ist"])),
-      target("fta51_links", "UND-Verknüpfung", cue(51, ["Erst wenn beide Ausfall-Ereignisse eingetreten sind"]), "draw"),
+      target("fta51_circuit", "Redundante Stromversorgung", cue(51, ["Die beiden Ausfall-Ereignisse können wir als minimale Ausfallschnitte verstehen."])),
+      target("fta51_nodes", "Vollständiger Fehlerbaum", cue(51, ["Die beiden Ausfall-Ereignisse können wir als minimale Ausfallschnitte verstehen."])),
+      target("fta51_links", "Logische Verknüpfungen", cue(51, ["Die beiden Ausfall-Ereignisse können wir als minimale Ausfallschnitte verstehen."]), "draw"),
+      target("fta51_cutset", "Minimaler Ausfallschnitt", cue(51, ["Die beiden Ausfall-Ereignisse können wir als minimale Ausfallschnitte verstehen."])),
     ],
   };
 }
@@ -832,87 +1056,106 @@ function aircraftScene(n, focus) {
      ${multi(138, 734, 540, "Jede Fahrwerksgruppe besitzt zwei Reifen.", 22, 720, C.deep)}`);
   const links = group(`fta${n}_links`, "Fehlerbaum-Beziehungen", tree.connectors);
   const nodes = group(`fta${n}_nodes`, "Fahrwerk-Fehlerbaum", tree.nodes);
-  const label = focus === "critical"
-    ? group(`fta${n}_focus`, "Minimale Ausfallschnitte",
-      `${box(780, 832, 1056, 88, C.failureSoft, C.failure, 1.8, 9)}
-       ${txt(810, 884, "MINIMALSCHNITTE", 19, 850, C.failure)}
-       ${multi(1040, 884, 740, "Je zwei Reifen einer Fahrwerksgruppe fallen gemeinsam aus.", 23, 730, C.deep)}`)
+  const criticalPaths = focus === "critical"
+    ? group(`fta${n}_critical_paths`, "Drei kritische Pfade zum Top-Ereignis",
+      evidence(
+        `${[970, 1280, 1590].map((x) => pathLine(`M ${x - 83} 746 V 724 M ${x + 83} 746 V 724 M ${x - 83} 642 V 618 H ${x} V 596 M ${x + 83} 642 V 618 H ${x} M ${x} 536 V 508 M ${x} 430 V 406 H 1280 V 386 M 1280 326 V 286`, C.educationAccent, 6)).join("")}
+         ${pill(1440, 304, 350, "3 KRITISCHE PFADE", C.educationAccent, C.surface)}`,
+        "Quellfolie 56: drei kritische Pfade bis zum Top-Ereignis",
+      ))
+    : "";
+  const minimalCuts = focus === "critical"
+    ? group(`fta${n}_minimal_cuts`, "Drei minimale Ausfallschnitte",
+      evidence(
+        `${[970, 1280, 1590].map((x) => `${pathLine(`M ${x - 118} 756 L ${x - 48} 812 M ${x + 48} 756 L ${x + 118} 812`, C.failure, 6)}${pathLine(`M ${x - 118} 812 L ${x - 48} 756 M ${x + 48} 812 L ${x + 118} 756`, C.failure, 3)}`).join("")}
+         ${[970, 1280, 1590].map((x, index) => txt(x, 840, `SCHNITT M${index + 1}`, 17, 860, C.failure, "middle")).join("")}
+         ${box(780, 858, 1056, 70, C.surfaceSoft, C.failure, 1.8, 9)}
+         ${txt(810, 901, "MINIMALE AUSFALLSCHNITTE", 18, 850, C.failure)}
+         ${txt(1160, 901, "M1 = {HL1, HL2}  ·  M2 = {B1, B2}  ·  M3 = {HR1, HR2}", 18, 730, C.deep)}`,
+        "Quellfolie 56 und Sprechertext: jede Reifenkombination einer Fahrwerksgruppe ist ein minimaler Ausfallschnitt",
+      ))
     : "";
   const cueAsset = cue(n, ["Hierzu betrachten wir das Bugradfahrwerk eines Flugzeuges", "Das Bugradfahrwerk besteht aus drei Fahrwerksgruppen."]);
   const cueNodes = focus === "nose"
     ? cue(n, ["Das Bugrad ist beispielsweise ausgefallen, wenn die beiden Reifen eins und zwei ausgefallen sind."])
     : focus === "left" || focus === "right"
       ? cue(n, ["Das gleiche Prinzip gilt für das linke und rechte Hauptfahrwerk."])
-      : focus === "critical"
-        ? cue(n, ["Jede Kombination von zwei ausgefallenen Reifen stellt demnach einen minimalen Ausfallschnitt dar."])
-        : cue(n, ["Das Top-Ereignis kann als der Ausfall des Bugradfahrwerks definiert werden."]);
-  const linkCue = focus === "critical"
-    ? cue(n, ["Entlang der kritischen Pfade sehen wir dann"])
-    : cue(n, ["Auch hier sind die Ausfälle der Reifen jeweils mit einem Und-Gatter verbunden."]);
+      : cue(n, ["Fangen wir nun an den Fehlerbaum gemeinsam zu erstellen.", "Das Top-Ereignis kann als der Ausfall des Bugradfahrwerks definiert werden."]);
+  const linkCue = cue(n, ["Daher verbinden wir die Ausfälle der Reifen innerhalb jeder Fahrwerksgruppe mit einem Und-Gatter.", "Auch hier sind die Ausfälle der Reifen jeweils mit einem Und-Gatter verbunden."]);
   const targets = [
     target(`fta${n}_asset`, "Flugzeug mit drei Fahrwerksgruppen", cueAsset),
     target(`fta${n}_nodes`, "Fahrwerk-Fehlerbaum", cueNodes),
-    ...(focus === "critical" ? [target(`fta${n}_focus`, "Minimale Ausfallschnitte", cueNodes)] : []),
     target(`fta${n}_links`, "Fehlerbaum-Beziehungen", linkCue, "draw"),
+    ...(focus === "critical" ? [
+      target(`fta${n}_critical_paths`, "Drei kritische Pfade zum Top-Ereignis", cue(n, ["Nun können wir die kritischen Pfade identifizieren"]), "draw"),
+      target(`fta${n}_minimal_cuts`, "Drei minimale Ausfallschnitte", cue(n, ["Jede Kombination von zwei ausgefallenen Reifen stellt demnach einen minimalen Ausfallschnitt dar."]), "draw"),
+    ] : []),
   ];
   return {
     archetype: "technical-example-fault-tree",
-    layout: "Konkretes Flugzeugmotiv links, großer und vollständig lesbarer Fahrwerk-Fehlerbaum rechts.",
-    body: links + asset + nodes + label,
+    layout: focus === "critical"
+      ? "Konkretes Flugzeugmotiv links; vollständiger Fehlerbaum rechts mit drei stahlcyan markierten kritischen Pfaden und drei direkt zugeordneten minimalen Ausfallschnitten."
+      : "Konkretes Flugzeugmotiv links, großer und vollständig lesbarer Fahrwerk-Fehlerbaum rechts.",
+    body: links + asset + nodes + criticalPaths + minimalCuts,
     targets,
   };
 }
 
 function scene57() {
-  const tree = group("fta57_tree", "Fahrwerksgruppen",
-    `${eventBox(746, 236, 430, 82, "Common Mode: gemeinsame Ausfallart", { fill: C.failureSoft, stroke: C.failure, size: 24 })}
-     ${definitionCard("unused", 92, 390, 510, 430, "PFAD 1", "Feuer greift über", "Bremse überhitzt → Reifen brennt → Feuer erfasst den zweiten Reifen.", C.failure, C.failureSoft).replace(/^<g[^>]*>|<\/g>$/g, "")}
-     ${definitionCard("unused", 706, 390, 510, 430, "PFAD 2", "Trümmer beschädigen", "Ein Reifen platzt → Trümmerteile beschädigen den zweiten Reifen.", C.secondary, C.secondarySoft).replace(/^<g[^>]*>|<\/g>$/g, "")}
-     ${definitionCard("unused", 1320, 390, 510, 430, "PFAD 3", "Überbeanspruchung", "Ein Reifen platzt → der zweite Reifen trägt die Mehrlast und kann ebenfalls platzen.", C.accent, C.accentSoft).replace(/^<g[^>]*>|<\/g>$/g, "")}`);
-  const links = group("fta57_links", "Gemeinsame Ausfallart",
-    `${pathLine("M 961 318 V 352 H 347 V 390 M 961 352 V 390 M 961 352 H 1575 V 390", C.failure, 2.5, true)}`);
+  const fullTree = aircraftTree("none");
+  const context = group("fta57_context", "Common-Mode-Ursachen",
+    `${txt(104, 250, "COMMON MODE", 22, 860, C.failure)}
+     ${multi(104, 300, 560, "Eine gemeinsame Ausfallart kann beide Reifen einer Fahrwerksgruppe treffen.", 25, 740, C.deep)}
+     ${bulletList(104, 454, 560, [
+       "Feuer greift auf den zweiten Reifen über",
+       "Trümmer eines geplatzten Reifens beschädigen den zweiten",
+       "Mehrlast überbeansprucht den verbliebenen Reifen",
+     ], C.failure, 21, 116)}`);
+  const links = group("fta57_links", "Vollständige Fehlerbaum-Beziehungen", fullTree.connectors);
+  const tree = group("fta57_tree", "Vollständiger Fahrwerk-Fehlerbaum", fullTree.nodes);
+  const commonMode = group("fta57_common_mode", "Gemeinsame Ausfallart an einer Reifengruppe",
+    `${pathLine("M 1192 688 H 1368", C.failure, 5, false, "10 7")}
+     ${pathLine("M 1216 618 V 602 H 1344 V 618", C.failure, 4)}
+     ${pill(1110, 820, 340, "GEMEINSAME AUSFALLART", C.failure, C.surface)}`);
   const statement = group("fta57_statement", "Folge für die Zuverlässigkeit",
-    `${box(246, 858, 1428, 72, C.deep, C.deep, 1.5, 9)}
-     ${txt(960, 904, "VERMEINTLICHE REDUNDANZ KANN GLEICHZEITIG AUSFALLEN", 23, 820, C.surface, "middle")}`);
+    `${line(104, 912, 1816, 912, C.border, 2)}
+     ${txt(104, 956, "FOLGE", 18, 850, C.failure)}
+     ${multi(230, 956, 1480, "Vermeintliche Redundanz kann gleichzeitig ausfallen → höheres Systemrisiko und geringere Gesamtzuverlässigkeit.", 22, 780, C.deep)}`);
   return {
-    archetype: "three-path-risk",
-    layout: "Drei konkrete Common-Mode-Pfade unter einer gemeinsamen Risikoklammer.",
-    body: links + tree + statement,
+    archetype: "common-mode-causal-chains",
+    layout: "Eine gemeinsame Ausfallart verzweigt in drei offene Ursache-Wirkungs-Ketten; die Zuverlässigkeitsfolge schließt die Blickroute ab.",
+    body: context + links + tree + commonMode + statement,
     targets: [
-      target("fta57_tree", "Fahrwerksgruppen", cue(57, ["Ein Common-Mode-Ausfall bezieht sich auf den Ausfall von mehreren Komponenten"])),
-      target("fta57_links", "Gemeinsame Ausfallart", cue(57, ["Das heißt der Ausfall einer Komponente bedingt direkt den Ausfall einer anderen Komponente."]), "draw"),
+      target("fta57_context", "Common-Mode-Ursachen", cue(57, ["Ein Common-Mode-Ausfall bezieht sich auf den Ausfall von mehreren Komponenten"])),
+      target("fta57_tree", "Vollständiger Fahrwerk-Fehlerbaum", cue(57, ["Ein Beispiel hierfür wäre"])),
+      target("fta57_links", "Vollständige Fehlerbaum-Beziehungen", cue(57, ["Das heißt der Ausfall einer Komponente bedingt direkt den Ausfall einer anderen Komponente."]), "draw"),
+      target("fta57_common_mode", "Gemeinsame Ausfallart", cue(57, ["Damit sind dann beide Reifen aufgrund der gleichen Ausfallart"]), "draw"),
       target("fta57_statement", "Folge für die Zuverlässigkeit", cue(57, ["Solche Ausfälle erhöhen die Wahrscheinlichkeit eines Systemausfalls"])),
     ],
   };
 }
 
 function scene58() {
-  const asset = group("fta58_asset", "Technische Komponenten",
-    `${box(92, 216, 1736, 650, C.surface, C.border, 1.5, 16)}
-     ${image("hospital-power-assets.png", 156, 242, 1608, 370, "Stromgenerator, Energiepuffer, Steuergerät und Notstromaggregat")}
-     ${pill(330, 626, 360, "STROMGENERATOR", C.accent, C.accentSoft)}
-     ${pill(760, 626, 270, "ENERGIEPUFFER", C.success, C.successSoft)}
-     ${pill(1090, 626, 270, "STEUERGERÄT", C.secondary, C.secondarySoft)}
-     ${pill(1420, 626, 360, "NOTSTROMAGGREGAT", C.failure, C.failureSoft)}`);
-  const flow = group("fta58_flow", "Leistungs- und Signalfluss",
-    `${line(690, 688, 760, 688, C.accent, 2.6, true)}
-     ${pathLine("M 510 710 V 736 H 1225 V 664", C.secondary, 2.2, true, "8 6")}
-     ${line(1360, 710, 1420, 710, C.secondary, 2.2, true, "8 6")}
-     ${pathLine("M 895 664 V 774", C.success, 2.8, true)}
-     ${pathLine("M 1600 664 V 808 H 1220", C.failure, 2.8, true)}
-     ${box(720, 774, 500, 68, C.accentSoft, C.accent, 2, 10)}
-     ${box(278, 884, 1364, 62, C.deep, C.deep, 1.5, 9)}
-     ${txt(725, 680, "LEISTUNG", 18, 800, C.accent, "middle")}
-     ${txt(850, 728, "SIGNAL", 18, 800, C.secondary, "middle")}
-     ${txt(1390, 702, "SIGNAL", 18, 800, C.secondary, "middle")}
-     ${txt(1510, 800, "LEISTUNG", 18, 800, C.failure)}
-     ${txt(970, 817, "OP-SAAL · KONTINUIERLICHE VERSORGUNG", 20, 820, C.deep, "middle")}
-     ${txt(306, 923, "BETRIEBSLOGIK", 18, 820, C.accentSoft)}
-     ${multi(530, 923, 1060, "Generator versorgt den OP; Puffer überbrückt den Start des Notstromaggregats.", 22, 730, C.surface)}`);
+  const asset = group("fta58_asset", "Stromnetzwerk des Operationssaals",
+    hospitalPowerSchematic({ x: 112, y: 256, scale: 1.05 }));
+  const legend = group("fta58_legend", "Legende",
+    `${line(126, 830, 246, 830, C.deep, 3, true)}${txt(274, 838, "LEISTUNG", 18, 820, C.deep)}
+     ${line(126, 882, 246, 882, C.secondary, 3, true, "9 7")}${txt(274, 890, "SIGNAL", 18, 820, C.secondary)}`);
+  const flow = group("fta58_flow", "Betriebslogik",
+    `${txt(1030, 308, "STANDARD­BETRIEB", 20, 850, C.accent)}
+     ${multi(1030, 354, 690, "Stromgenerator → Energiepuffer → Operationssaal", 27, 780, C.deep)}
+     ${line(1030, 440, 1740, 440, C.border, 2)}
+     ${txt(1030, 506, "BEI GENERATORAUSFALL", 20, 850, C.secondary)}
+     ${bulletList(1030, 570, 710, [
+       "Steuergerät erkennt den Ausfall",
+       "Notstromaggregat wird aktiviert",
+       "Energiepuffer überbrückt die Startzeit",
+       "Versorgung des OP-Saals bleibt unterbrechungsfrei",
+     ], C.secondary, 22, 76)}`);
   return {
     archetype: "technical-system-landscape",
-    layout: "Vier konkrete Geräte als technisches Systembild, darunter klare Betriebslogik.",
-    body: asset + flow,
+    layout: "Quellengetreue Systemtopologie links und die zwei Betriebszustände rechts; Leistungs- und Signalwege sind eindeutig unterschieden.",
+    body: asset + legend + flow,
     targets: [
       target("fta58_asset", "Technische Komponenten", cue(58, ["Der Operationssaal wird über ein eigenes Stromnetzwerk betrieben"])),
       target("fta58_flow", "Leistungs- und Signalfluss", cue(58, ["Im Standardbetrieb versorgt der Stromgenerator über den Energiepuffer"])),
@@ -923,9 +1166,11 @@ function scene58() {
 function hospitalTreeScene(n, focus) {
   const tree = hospitalTree(focus);
   const asset = group(`fta${n}_asset`, "Krankenhaus-Stromversorgung",
-    `${box(92, 240, 600, 516, C.surface, C.border, 1.5, 16)}
-     ${image("hospital-power-assets.png", 120, 302, 544, 310, "Komponenten der Krankenhaus-Stromversorgung")}
-     ${multi(392, 684, 500, "Zwei Versorgungspfade sollen den Operationssaal absichern.", 22, 720, C.deep, "middle")}`);
+    `${box(92, 244, 610, 538, C.surface, C.border, 1.5, 16)}
+     ${hospitalPowerSchematic({ x: 112, y: 286, scale: .72 })}
+     ${line(132, 690, 232, 690, C.deep, 2.6, true)}${txt(254, 698, "LEISTUNG", 16, 820, C.deep)}
+     ${line(400, 690, 500, 690, C.secondary, 2.6, true, "8 6")}${txt(522, 698, "SIGNAL", 16, 820, C.secondary)}
+     ${multi(397, 752, 530, "Zwei Versorgungspfade sollen den Operationssaal absichern.", 20, 720, C.deep, "middle")}`);
   const links = group(`fta${n}_links`, "Fehlerbaum-Beziehungen", tree.connectors);
   const nodes = group(`fta${n}_nodes`, "Fehlerbaum", tree.nodes);
   const warning = focus === "buffer"
@@ -939,7 +1184,7 @@ function hospitalTreeScene(n, focus) {
     layout: "Technische Anlage links und strukturierter, großformatiger Fehlerbaum rechts.",
     body: links + asset + nodes + warning,
     targets: [
-      target(`fta${n}_asset`, "Krankenhaus-Stromversorgung", cue(n, ["Der Operationssaal wird über ein eigenes Stromnetzwerk betrieben", "Auf den ersten Blick wirkt das System redundant"])),
+      target(`fta${n}_asset`, "Krankenhaus-Stromversorgung", cue(n, focus === "buffer" ? ["Auf den ersten Blick wirkt das System redundant"] : ["Der Operationssaal wird über ein eigenes Stromnetzwerk betrieben"])),
       target(`fta${n}_nodes`, "Fehlerbaum", cue(n, ["Wir beginnen zunächst mit dem Top-Ereignis", "Wie zu erkennen ist, spielt der Energiepuffer in beiden Energieversorgungspfaden"])),
       target(`fta${n}_links`, "Fehlerbaum-Beziehungen", cue(n, ["Daher sind diese beiden Ereignisse mit einem Und-Gatter verbunden.", "Auch hier sind die Ereignisse mit einem Oder Gatter verbunden."]), "draw"),
       ...(focus === "buffer" ? [target(`fta${n}_warning`, "Common Mode", cue(n, ["Dadurch entsteht eine gemeinsame Schwachstelle im System"]))] : []),
@@ -985,7 +1230,8 @@ function fuelCauseScene(n, commonCause) {
   };
 }
 
-function makeScene(n) {
+function makeScene(n, variant = "") {
+  if (variant === "event_symbols_overview") return eventSymbolsOverview(n);
   if (n === 20) return scene20();
   if (n === 21) return scene21();
   if (n === 22) return scene22();
@@ -1079,18 +1325,24 @@ function writeManifest(scene, content) {
 
 function writeBrief(scene, content) {
   const source = sceneInventory(scene.output_slide_number);
+  const sourceLabel = scene.source_slides?.length > 1
+    ? `${scene.source_slides[0]}–${scene.source_slides.at(-1)} (Primärzustand ${scene.output_slide_number})`
+    : `${scene.output_slide_number}`;
+  const mappingLabel = scene.source_slides?.length > 1
+    ? `zusammengeführte Aufbaufolge aus ${scene.source_slides.length} Quellfolien`
+    : "1:1";
   const brief = `# Redesign-Brief — ${scene.work_unit}
 
 - Kapitel: 3
 - Lektion: ${scene.lesson}
-- Quellfolie: ${scene.output_slide_number}
+- Quellfolie(n): ${sourceLabel}
 - Sprechertext: ${source.source_text_section_id} — ${source.source_text_title}
-- Titel: ${titles[scene.output_slide_number]}
-- Takeaway: ${takeaways[scene.output_slide_number] || "Quelltreuer Aufbauzustand innerhalb der FTA-Erklärfolge."}
+- Titel: ${scene.content_title_override || titles[scene.output_slide_number]}
+- Takeaway: ${content.takeaway || takeaways[scene.output_slide_number] || "Quelltreuer Aufbauzustand innerhalb der FTA-Erklärfolge."}
 - Archetyp: ${content.archetype}
 - Layout: ${content.layout}
-- Produktionsmodus: Full-Slide 1920×1080
-- Mapping: 1:1, keine Zusammenfassung mit benachbarten Quellfolien
+- Produktionsmodus: Content-SVG 1920×1080, transparent für das Education-Master
+- Mapping: ${mappingLabel}
 - Konnektoren: hinter Knoten und Text; Normalstärke 2,0–2,5 px
 - Animation: ${animated ? "sprechertextgeführt aktiviert" : "noch nicht aktiviert; statischer Endzustand zur visuellen Prüfung"}
 `;
@@ -1120,7 +1372,7 @@ function main() {
     const dir = path.join(outRoot, scene.work_unit);
     fs.mkdirSync(dir, { recursive: true });
     prepareMedia(renderScene);
-    const content = makeScene(renderN);
+    const content = makeScene(renderN, scene.render_variant);
     fs.writeFileSync(path.join(dir, `${scene.work_unit}.svg`), `${frame(renderScene, content)}\n`, "utf8");
     writeBrief(renderScene, content);
     if (animated) writeManifest(renderScene, content);

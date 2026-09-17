@@ -1,15 +1,7 @@
-# Redesign-Brief — slide_048
+# RE4 slide_048 – Feedbackrevision
 
-- Strukturstatus: Kapitel und Lektion noch nicht zugeordnet; Nutzervorgabe ausstehend
-- Quellfolien: 48, 49, 50, 51, 52
-- Sprechertext: section_006 — Voraussetzungen für die Anwendung
-- Titel: Voraussetzungen des booleschen Modells
-- Takeaway: Boolesche Blockdiagramme setzen binäre Zustände, nicht reparierbare und unabhängige Komponenten voraus.
-- Archetyp: assumption-checklist
-- Zielmodus: full_slide, 1920×1080
-- Referenz-Lock: RE3 slide_002, slide_024, slide_043 und slide_070
-- Farbdramaturgie: Navy-Tonalität für gleichrangige Inhalte; Grün und Koralle nur semantisch für Fokus, Funktion oder Ausfall
-- Animation: sprechertextgeführt; semantische Gruppen statt Einzelobjekt-Mikroanimation
-- Quellenregel: PowerPoint-Sprechericons, gelbe Produktionsnotizen und Masterdekoration entfallen
-- Assets: native SVG-Komposition
-- Brückengeometrie: kanonische Fünf-Komponenten-Topologie mit Komponente 5 als vertikale Kopplung zwischen den mittleren Knoten; kompakte technische Proportion statt horizontaler Kartenfüllung; in der 960×540-Vieweransicht vollständig lesbar
+- Quellen: 48, 49, 50, 51, 52; stabile ID re4_src_048.
+- Referenz-Lock: RE4::23, RE4::25, RE3::43. Transparente Content-SVG, Archivo und Oxanium, Marineblau mit semantischen Akzenten.
+- Inventar, Topologie und verlustfreie Sprechertextpartition: analysis/rebuild-plans/RE4_feedback_31_48_2026-09-17.md.
+- Statischer Pilot: analysis/render-checks/RE4/feedback-31-48-2026-09-17/after/slide_048.png.
+- Animation: 18 wortgetreue Schritte; technische und visuelle Prüfung im Reviewverzeichnis.

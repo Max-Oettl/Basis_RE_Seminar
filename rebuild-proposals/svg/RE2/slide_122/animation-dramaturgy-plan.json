@@ -1,0 +1,257 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_action_priority",
+  "svgPath": "slide_122.svg",
+  "spokenText": "Die Aufgabenpriorität kategorisiert Risiken in klare Prioritätsstufen wie hoch, mittel und niedrig. Grundlage dafür sind die kombinierten Einzelbewertungen von Bedeutung, Auftretenswahrscheinlichkeit und Entdeckungswahrscheinlichkeit sowie die rechts dargestellte Tabelle.\n\nDie einzelnen Stufen dienen zur Priorisierung von Maßnahmen, um das Risiko zu reduzieren. Im Gegensatz zur R-P-Zett liefert die Aufgabenpriorität nicht nur eine numerische Kennzahl, sondern konkrete Handlungsempfehlungen. Sie gibt klar an, ob und welche Maßnahmen ergriffen werden sollten, um das Risiko zu minimieren.\n\nDies erleichtert die Entscheidungsfindung und die Umsetzung von Verbesserungsmaßnahmen.\n\nSchauen wir uns an, was nach der Bewertung der Aufgabenprioritäten gemacht werden muss.\n\nIst die Aufgabenpriorität hoch, müssen angemessene Maßnahmen definiert werden, um das Auftreten oder die Entdeckung zu verbessern.\n\nWird dies nicht gemacht, muss gerechtfertigt und dokumentiert werden, warum die bisher getroffenen Maßnahmen ausreichend sind.\n\nIst die Aufgabenpriorität mittel, sollten ebenfalls angemessene Maßnahmen definiert werden, um das Auftreten oder die Entdeckung zu verbessern.\n\nWerden keine Maßnahmen getroffen, muss auch hier gerechtfertigt und dokumentiert werden, warum die bisherigen Maßnahmen ausreichend sind.\n\nIst die Aufgabenpriorität dagegen niedrig, können angemessene Maßnahmen definiert werden, um das Auftreten oder die Entdeckung zu verbessern.\n\nWird dies nicht gemacht, ist keine weitere Dokumentation notwendig.\n\nDas Ziel des Schrittes Risikoanalyse ist die Dokumentation aller aktuellen Vermeidungs- und Entdeckungsmaßnahmen sowie die Bewertung des derzeitigen Standes. Auf diese Weise wird festgelegt, ob und welche Maßnahmen notwendig sind, um das Risiko weiter zu minimieren.\n\nDamit haben wir nun den fünften Schritt der FME-A abgeschlossen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s122_intro",
+      "label": "Aufgabenpriorität",
+      "role": "content",
+      "members": [
+        "s122_intro"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s122_matrix",
+      "label": "Aufgabenprioritätsmatrix",
+      "role": "content",
+      "members": [
+        "s122_matrix"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s122_high",
+      "label": "Hohe Aufgabenpriorität",
+      "role": "content",
+      "members": [
+        "s122_high"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s122_medium",
+      "label": "Mittlere Aufgabenpriorität",
+      "role": "content",
+      "members": [
+        "s122_medium"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s122_low",
+      "label": "Niedrige Aufgabenpriorität",
+      "role": "content",
+      "members": [
+        "s122_low"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_05",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s122_goal",
+      "label": "Ziel der Risikoanalyse",
+      "role": "content",
+      "members": [
+        "s122_goal"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_06",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Aufgabenpriorität",
+      "sourceText": "Die Aufgabenpriorität kategorisiert Risiken in klare",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s122_intro"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Aufgabenprioritätsmatrix",
+      "sourceText": "Die Aufgabenpriorität kategorisiert Risiken in klare",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s122_matrix"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Hohe Aufgabenpriorität",
+      "sourceText": "Ist die Aufgabenpriorität hoch, müssen angemessene",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s122_high"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Mittlere Aufgabenpriorität",
+      "sourceText": "Ist die Aufgabenpriorität mittel, sollten ebenfalls",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s122_medium"
+      ]
+    },
+    {
+      "beatId": "beat_05",
+      "claim": "Niedrige Aufgabenpriorität",
+      "sourceText": "Ist die Aufgabenpriorität dagegen niedrig, können",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s122_low"
+      ]
+    },
+    {
+      "beatId": "beat_06",
+      "claim": "Ziel der Risikoanalyse",
+      "sourceText": "Das Ziel des Schrittes Risikoanalyse ist",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s122_goal"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s122_intro",
+      "beatId": "beat_01",
+      "targetId": "s122_intro",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s122_matrix",
+      "beatId": "beat_02",
+      "targetId": "s122_matrix",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_s122_high",
+      "beatId": "beat_03",
+      "targetId": "s122_high",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_04_s122_medium",
+      "beatId": "beat_04",
+      "targetId": "s122_medium",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_05_s122_low",
+      "beatId": "beat_05",
+      "targetId": "s122_low",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_06_s122_goal",
+      "beatId": "beat_06",
+      "targetId": "s122_goal",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_06",
+      "visibleGroups": [
+        "canvas_context",
+        "s122_intro",
+        "s122_matrix",
+        "s122_high",
+        "s122_medium",
+        "s122_low",
+        "s122_goal"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

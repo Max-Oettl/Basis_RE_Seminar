@@ -56,5 +56,7 @@ module.exports = Object.freeze({
     surfaceSoft: colors.surfaceSoft,
     cyan: colors.navy80,
     cyanSoft: colors.navy10,
+    technical: colors.educationSteelCyan,
+    graphite: colors.educationGraphiteBlue,
   }),
 });

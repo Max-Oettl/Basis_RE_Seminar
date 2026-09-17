@@ -1,50 +1,83 @@
 {
-  "schemaVersion": "elementAnimationPlan/v1",
+  "schemaVersion": "svgAnimationManifest/v1",
   "sceneId": "re4_src_033",
   "decision": "animated",
+  "svgPath": "slide_033.svg",
   "defaults": {
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "behavior_basis",
-      "label": "Basisstrukturen",
+      "targetId": "comparison_heads",
+      "label": "Zwei Basisstrukturen",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "behavior_series",
-      "label": "Serienstruktur",
+      "targetId": "series_working",
+      "label": "Alle Komponenten funktionieren",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "behavior_series_failure",
-      "label": "Serienausfall",
+      "targetId": "series_broken",
+      "label": "Ein Ausfall unterbricht den Pfad",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "behavior_parallel",
-      "label": "Parallelstruktur",
+      "targetId": "series_rule",
+      "label": "Serienbedingung",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "behavior_parallel_rule",
-      "label": "Parallelregel",
+      "targetId": "parallel_initial",
+      "label": "Redundante Komponenten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "parallel_one_failed",
+      "label": "Eine Komponente fällt aus",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "parallel_survives",
+      "label": "Ein funktionsfähiger Pfad genügt",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "parallel_rule",
+      "label": "Parallelbedingung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "parallel_broken",
+      "label": "Alle Pfade ausgefallen",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -53,54 +86,122 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_behavior_basis",
-      "targetId": "behavior_basis",
-      "action": "show",
-      "sourceText": "Grundsätzlich unterscheiden wir zwei Basisstrukturen: die Serienstruktur und die Parallelstruktur.",
+      "stepId": "step_01_comparison_heads",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "comparison_heads",
+      "sourceText": "Grundsätzlich unterscheiden wir zwei Basisstrukturen",
+      "action": "show"
     },
     {
-      "stepId": "step_02_behavior_series",
-      "targetId": "behavior_series",
-      "action": "show",
-      "sourceText": "In der Serienstruktur sind alle Komponenten hintereinandergeschaltet.",
+      "stepId": "step_02_series_working",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "series_working",
+      "sourceText": "In der Serienstruktur sind alle Komponenten",
+      "action": "show"
     },
     {
-      "stepId": "step_03_behavior_series_failure",
-      "targetId": "behavior_series_failure",
-      "action": "show",
-      "sourceText": "Fällt auch nur eine Komponente aus, ist die Verbindung unterbrochen – das gesamte System fällt aus.",
+      "stepId": "step_03_series_working",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "series_working",
+      "sourceText": "wenn alle Komponenten funktionsfähig sind",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     },
     {
-      "stepId": "step_04_behavior_parallel",
-      "targetId": "behavior_parallel",
-      "action": "show",
-      "sourceText": "In der Parallelstruktur hingegen gibt es Redundanz: Mehrere Komponenten übernehmen die gleiche Funktion, sind also parallel geschaltet.",
+      "stepId": "step_04_series_broken",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "series_broken",
+      "sourceText": "Fällt auch nur eine Komponente aus",
+      "action": "show"
     },
     {
-      "stepId": "step_05_behavior_parallel_rule",
-      "targetId": "behavior_parallel_rule",
-      "action": "show",
-      "sourceText": "Dadurch bleibt das System funktionsfähig, solange mindestens eine der Komponenten funktioniert.",
+      "stepId": "step_05_series_rule",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "series_rule",
+      "sourceText": "Es genügt also ein einziger Ausfall",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_parallel_initial",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "parallel_initial",
+      "sourceText": "In der Parallelstruktur hingegen gibt es Redundanz",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_parallel_initial",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "parallel_initial",
+      "sourceText": "Mehrere Komponenten übernehmen die gleiche Funktion",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_08_parallel_initial",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "parallel_initial",
+      "sourceText": "Das bedeutet: Fällt eine Komponente",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_09_parallel_one_failed",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "parallel_one_failed",
+      "sourceText": "übernehmen die übrigen ihre Funktion",
+      "action": "show"
+    },
+    {
+      "stepId": "step_10_parallel_one_failed",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "parallel_one_failed",
+      "sourceText": "Dadurch bleibt das System funktionsfähig",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_11_parallel_survives",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "parallel_survives",
+      "sourceText": "solange mindestens eine der Komponenten funktioniert",
+      "action": "show"
+    },
+    {
+      "stepId": "step_12_parallel_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "parallel_rule",
+      "sourceText": "solange mindestens eine der Komponenten funktioniert",
+      "action": "show"
+    },
+    {
+      "stepId": "step_13_parallel_broken",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "parallel_broken",
+      "sourceText": "Erst wenn alle parallelen Komponenten gleichzeitig ausfallen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_14_parallel_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "parallel_rule",
+      "sourceText": "Durch diese Redundanz erhöht sich die Ausfallsicherheit",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     }
   ]
 }

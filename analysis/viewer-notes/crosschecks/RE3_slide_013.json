@@ -1,0 +1,447 @@
+{
+  "schema_version": "basisRebuildContentCrosscheck/v2",
+  "module_id": "RE3",
+  "output_slide_number": 13,
+  "checked_at": "2026-09-17T06:33:49.222Z",
+  "status": "review_required",
+  "manual_review_required": true,
+  "reference_mapping": {
+    "work_unit": "slide_013",
+    "output_slide_number": 13,
+    "source_slides": [
+      13
+    ],
+    "primary_source_slide": 13,
+    "output_slide_numbers": [],
+    "mapping_type": "direct_rebuild",
+    "rationale": "",
+    "mapping_source": "reference_map",
+    "reference_map_path": "analysis/rebuild-plans/RE3_source-reference-map.json",
+    "sequence_plan": "",
+    "read_error": ""
+  },
+  "references": [
+    {
+      "source_slide_number": 13,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie13.SVG",
+      "source_svg_sha256": "e4ba33cb64fb0c8350fd2ff1a8826934c394607e5f5c9333bf0dba43905facb2",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie13.SVG",
+      "analysis_path": ""
+    }
+  ],
+  "proposal": {
+    "path": "rebuild-proposals/svg/RE3/slide_013/slide_013.svg",
+    "svg_sha256": "ff33ba3ceaf19be757aeb5d26eca6e1f560b3a43d2fd7b90d267586511c1c44f",
+    "animation_manifest": "/files/rebuild-proposals/svg/RE3/slide_013/scene.animation.v1.json"
+  },
+  "summary": {
+    "source_count": 1,
+    "checked_content_items": 24,
+    "checked_target_text_items": 22,
+    "errors": 0,
+    "warnings": 5,
+    "infos": 0,
+    "animation_steps": 10
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 013: \"Allgemeines Vorgehen in der Lebensdatenanalyse\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Allgemeines Vorgehen in der Lebensdatenanalyse"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 013: \"2\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-10",
+      "expected": "2"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 013: \"3\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-12",
+      "expected": "3"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 013: \"4\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-14",
+      "expected": "4"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 013: \"6\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-18",
+      "expected": "6"
+    }
+  ],
+  "content_checks": [
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Allgemeines Vorgehen in der Lebensdatenanalyse",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.2,
+      "evidence": "tokens:der"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-2",
+      "expected": "10 %",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-3",
+      "expected": "99 %",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Lebensdauer",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-5",
+      "expected": "Ausfallwahrscheinlichkeit",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-6",
+      "expected": "t",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-7",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-8",
+      "expected": "1",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-9",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-10",
+      "expected": "2",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-11",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-12",
+      "expected": "3",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-13",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-14",
+      "expected": "4",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-15",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-16",
+      "expected": "5",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-17",
+      "expected": "𝑡",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-18",
+      "expected": "6",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-19",
+      "expected": "Grafische Methode",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-20",
+      "expected": "Berechnungs",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-21",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-22",
+      "expected": "Methoden",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-23",
+      "expected": "MLS",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 13,
+      "source_item_id": "source-svg-text-24",
+      "expected": "MLE",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    }
+  ],
+  "target_text_checks": [
+    {
+      "target_text": "Grafische Methode",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Median-Rang-Verfahren",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Lebensdauer t",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "tokens:lebensdauer"
+    },
+    {
+      "target_text": "1",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 13; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_013"
+    },
+    {
+      "target_text": "10",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 13; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_013"
+    },
+    {
+      "target_text": "50",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 13; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_013"
+    },
+    {
+      "target_text": "90",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 13; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_013"
+    },
+    {
+      "target_text": "99",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 13; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_013"
+    },
+    {
+      "target_text": "Ausfallwahrscheinlichkeit F(t) [%]",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "tokens:ausfallwahrscheinlichkeit"
+    },
+    {
+      "target_text": "Anschaulich im Weibullnetz",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Folie13.SVG: grafische Methode im dargestellten Wahrscheinlichkeitspapier"
+    },
+    {
+      "target_text": "Berechnungsmethoden",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_003: Es gibt jedoch auch Berechnungs-Methoden"
+    },
+    {
+      "target_text": "Analytisch oder numerisch",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "tokens:analytisch,oder,numerisch"
+    },
+    {
+      "target_text": "Höhere Genauigkeit",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "MLS",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Methode der",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "kleinsten Quadrate",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "MLE",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Maximum-Likelihood-",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Schätzung",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Mathematisch komplexer",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_003: Der Nachteil dieser Methoden ist ihre mathematische Komplexität"
+    },
+    {
+      "target_text": "Software übernimmt die Berechnung.",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_003: dafür gibt es Software"
+    },
+    {
+      "target_text": "Du verstehst die Hintergründe und wählst die passende Methode.",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_003: die Hintergründe zu verstehen. Nur so können wir sicherstellen, dass die richtige Methode angewendet wurde"
+    }
+  ],
+  "manual_review_focus": [
+    "Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.",
+    "Sprechertext-Reihenfolge gegen die semantisch geplanten Animationsschritte pruefen."
+  ],
+  "reference_mapping_sha256": "c6cf8e521eb131beea0b03aa8cac0b030d0a82ab93a3235262cef78f839f1189",
+  "reference_map_path": "analysis/rebuild-plans/RE3_source-reference-map.json",
+  "sequence_plan": ""
+}

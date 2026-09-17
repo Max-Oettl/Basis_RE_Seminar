@@ -5,37 +5,69 @@
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "multi_censor_axes",
-      "label": "Beobachtungsfenster",
+      "targetId": "multiple_context",
+      "label": "Gemeinsamer Start",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "multi_entry_exit",
-      "label": "Ein- und Austritt",
+      "targetId": "multiple_failures",
+      "label": "multiple failures",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "multi_competing",
-      "label": "Konkurrierende Risiken",
+      "targetId": "multiple_failure_legend",
+      "label": "Ausfall",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "multi_legend",
-      "label": "Status",
+      "targetId": "multiple_censored",
+      "label": "multiple censored",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "multiple_censor_legend",
+      "label": "Zensierung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "multiple_endings",
+      "label": "Verschiedene Beobachtungsenden",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "multiple_random",
+      "label": "Zufällige Zeitpunkte",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "multiple_reasons",
+      "label": "Gründe für die Herausnahme",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -44,44 +76,78 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_multi_censor_axes",
-      "targetId": "multi_censor_axes",
-      "action": "show",
-      "sourceText": "Bei der sogenannten Multiplen Zensierung handelt es sich ebenfalls um eine Form der Rechtszensierung – allerdings mit einer Besonderheit.",
+      "stepId": "step_01_multiple_context",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "multiple_context",
+      "sourceText": "Bei der sogenannten Multiplen Zensierung",
+      "action": "show"
     },
     {
-      "stepId": "step_02_multi_entry_exit",
-      "targetId": "multi_entry_exit",
-      "action": "show",
-      "sourceText": "Stattdessen endet ihre Beobachtung zu unterschiedlichen Zeitpunkten.",
+      "stepId": "step_02_multiple_failures",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "multiple_failures",
+      "sourceText": "Auch hier sind nicht alle Objekte",
+      "action": "show"
     },
     {
-      "stepId": "step_03_multi_competing",
-      "targetId": "multi_competing",
-      "action": "show",
-      "sourceText": "Ein praktisches Beispiel ergibt sich, wenn mehrere Ausfallmechanismen gleichzeitig betrachtet werden.",
+      "stepId": "step_03_multiple_failure_legend",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "multiple_failure_legend",
+      "sourceText": "Auch hier sind nicht alle Objekte",
+      "action": "show"
     },
     {
-      "stepId": "step_04_multi_legend",
-      "targetId": "multi_legend",
-      "action": "show",
-      "sourceText": "Wenn wir nun gezielt den Mechanismus A analysieren möchten, können wir die Ausfälle durch Mechanismus B als Zensierungszeitpunkte nutzen.",
+      "stepId": "step_04_multiple_censored",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "multiple_censored",
+      "sourceText": "zu unterschiedlichen Zeitpunkten",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_multiple_censor_legend",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "multiple_censor_legend",
+      "sourceText": "zu unterschiedlichen Zeitpunkten",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_multiple_endings",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "multiple_endings",
+      "sourceText": "zu unterschiedlichen Zeitpunkten",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_multiple_random",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "multiple_random",
+      "sourceText": "Diese Zeitpunkte sind nicht vorher festgelegt",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_multiple_censored",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "multiple_censored",
+      "sourceText": "zwischen verschiedenen Ausfällen liegen können",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_09_multiple_reasons",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "multiple_reasons",
+      "sourceText": "aus organisatorischen, technischen oder wirtschaftlichen Gründen",
+      "action": "show"
     }
   ]
 }

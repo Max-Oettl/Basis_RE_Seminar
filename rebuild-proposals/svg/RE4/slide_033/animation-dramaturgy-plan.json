@@ -1,0 +1,494 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re4_src_033",
+  "svgPath": "slide_033.svg",
+  "spokenText": "Grundsätzlich unterscheiden wir zwei Basisstrukturen: die Serienstruktur und die Parallelstruktur.\n\nIn der Serienstruktur sind alle Komponenten hintereinandergeschaltet. Das bedeutet: Das System funktioniert nur dann, wenn alle Komponenten funktionsfähig sind. Fällt auch nur eine Komponente aus, ist die Verbindung unterbrochen – das gesamte System fällt aus. Es genügt also ein einziger Ausfall, um die Systemfunktion zu verlieren.\n\nIn der Parallelstruktur hingegen gibt es Redundanz: Mehrere Komponenten übernehmen die gleiche Funktion, sind also parallel geschaltet.\n\nDas bedeutet: Fällt eine Komponente aus, übernehmen die übrigen ihre Funktion. Das System bleibt also weiterhin funktionsfähig.\n\nDadurch bleibt das System funktionsfähig, solange mindestens eine der Komponenten funktioniert. Erst wenn alle parallelen Komponenten gleichzeitig ausfallen, gilt das System als ausgefallen. Durch diese Redundanz erhöht sich die Ausfallsicherheit des Systems deutlich.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/after/slide_033.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Grundsätzlich unterscheiden wir zwei Basisstrukturen: die",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Grundsätzlich unterscheiden wir zwei Basisstrukturen",
+      "occurrence": 1,
+      "claim": "Zwei Basisstrukturen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "comparison_heads"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "In der Serienstruktur sind alle Komponenten",
+      "occurrence": 1,
+      "claim": "Alle Komponenten funktionieren",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "series_working"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "wenn alle Komponenten funktionsfähig sind",
+      "occurrence": 1,
+      "claim": "Alle Komponenten funktionieren",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "series_working"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "Fällt auch nur eine Komponente aus",
+      "occurrence": 1,
+      "claim": "Ein Ausfall unterbricht den Pfad",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "series_broken"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "Es genügt also ein einziger Ausfall",
+      "occurrence": 1,
+      "claim": "Serienbedingung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "series_rule"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "In der Parallelstruktur hingegen gibt es Redundanz",
+      "occurrence": 1,
+      "claim": "Redundante Komponenten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "parallel_initial"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "Mehrere Komponenten übernehmen die gleiche Funktion",
+      "occurrence": 1,
+      "claim": "Redundante Komponenten",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "parallel_initial"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Das bedeutet: Fällt eine Komponente",
+      "occurrence": 1,
+      "claim": "Redundante Komponenten",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "parallel_initial"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "übernehmen die übrigen ihre Funktion",
+      "occurrence": 1,
+      "claim": "Eine Komponente fällt aus",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "parallel_one_failed"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "Dadurch bleibt das System funktionsfähig",
+      "occurrence": 1,
+      "claim": "Eine Komponente fällt aus",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "parallel_one_failed"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "solange mindestens eine der Komponenten funktioniert",
+      "occurrence": 1,
+      "claim": "Ein funktionsfähiger Pfad genügt",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "parallel_survives"
+      ]
+    },
+    {
+      "beatId": "beat_12",
+      "sourceText": "solange mindestens eine der Komponenten funktioniert",
+      "occurrence": 1,
+      "claim": "Parallelbedingung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "parallel_rule"
+      ]
+    },
+    {
+      "beatId": "beat_13",
+      "sourceText": "Erst wenn alle parallelen Komponenten gleichzeitig ausfallen",
+      "occurrence": 1,
+      "claim": "Alle Pfade ausgefallen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "parallel_broken"
+      ]
+    },
+    {
+      "beatId": "beat_14",
+      "sourceText": "Durch diese Redundanz erhöht sich die Ausfallsicherheit",
+      "occurrence": 1,
+      "claim": "Parallelbedingung",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "parallel_rule"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "comparison_heads",
+      "label": "Zwei Basisstrukturen",
+      "role": "content",
+      "members": [
+        "comparison_heads"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "series_working",
+      "label": "Alle Komponenten funktionieren",
+      "role": "content",
+      "members": [
+        "series_working"
+      ],
+      "dependsOn": [
+        "comparison_heads"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "series_broken",
+      "label": "Ein Ausfall unterbricht den Pfad",
+      "role": "content",
+      "members": [
+        "series_broken"
+      ],
+      "dependsOn": [
+        "series_working"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "series_rule",
+      "label": "Serienbedingung",
+      "role": "content",
+      "members": [
+        "series_rule"
+      ],
+      "dependsOn": [
+        "series_broken"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "parallel_initial",
+      "label": "Redundante Komponenten",
+      "role": "content",
+      "members": [
+        "parallel_initial"
+      ],
+      "dependsOn": [
+        "comparison_heads"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "parallel_one_failed",
+      "label": "Eine Komponente fällt aus",
+      "role": "content",
+      "members": [
+        "parallel_one_failed"
+      ],
+      "dependsOn": [
+        "comparison_heads"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_9"
+    },
+    {
+      "groupId": "parallel_survives",
+      "label": "Ein funktionsfähiger Pfad genügt",
+      "role": "content",
+      "members": [
+        "parallel_survives"
+      ],
+      "dependsOn": [
+        "comparison_heads"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_11"
+    },
+    {
+      "groupId": "parallel_rule",
+      "label": "Parallelbedingung",
+      "role": "content",
+      "members": [
+        "parallel_rule"
+      ],
+      "dependsOn": [
+        "parallel_survives"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_12"
+    },
+    {
+      "groupId": "parallel_broken",
+      "label": "Alle Pfade ausgefallen",
+      "role": "content",
+      "members": [
+        "parallel_broken"
+      ],
+      "dependsOn": [
+        "parallel_survives"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_13"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_comparison_heads",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "comparison_heads",
+      "sourceText": "Grundsätzlich unterscheiden wir zwei Basisstrukturen",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_series_working",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "series_working",
+      "sourceText": "In der Serienstruktur sind alle Komponenten",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_series_working",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "series_working",
+      "sourceText": "wenn alle Komponenten funktionsfähig sind",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_3",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_04_series_broken",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "series_broken",
+      "sourceText": "Fällt auch nur eine Komponente aus",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_series_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "series_rule",
+      "sourceText": "Es genügt also ein einziger Ausfall",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_parallel_initial",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "parallel_initial",
+      "sourceText": "In der Parallelstruktur hingegen gibt es Redundanz",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_parallel_initial",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "parallel_initial",
+      "sourceText": "Mehrere Komponenten übernehmen die gleiche Funktion",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_7",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_08_parallel_initial",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "parallel_initial",
+      "sourceText": "Das bedeutet: Fällt eine Komponente",
+      "action": "hide",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_parallel_one_failed",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "parallel_one_failed",
+      "sourceText": "übernehmen die übrigen ihre Funktion",
+      "action": "show",
+      "beatId": "beat_9",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_10_parallel_one_failed",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "parallel_one_failed",
+      "sourceText": "Dadurch bleibt das System funktionsfähig",
+      "action": "hide",
+      "beatId": "beat_10",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_11_parallel_survives",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "parallel_survives",
+      "sourceText": "solange mindestens eine der Komponenten funktioniert",
+      "action": "show",
+      "beatId": "beat_11",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_12_parallel_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "parallel_rule",
+      "sourceText": "solange mindestens eine der Komponenten funktioniert",
+      "action": "show",
+      "beatId": "beat_12",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_13_parallel_broken",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "parallel_broken",
+      "sourceText": "Erst wenn alle parallelen Komponenten gleichzeitig ausfallen",
+      "action": "show",
+      "beatId": "beat_13",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_14_parallel_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "parallel_rule",
+      "sourceText": "Durch diese Redundanz erhöht sich die Ausfallsicherheit",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_14",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/states/slide_033"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "comparison_heads",
+        "series_working",
+        "series_broken",
+        "series_rule",
+        "parallel_survives",
+        "parallel_rule",
+        "parallel_broken"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/states/slide_033"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "reviewEvidence": {
+    "static": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/after/slide_033.png",
+    "animationStates": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/states/slide_033",
+    "frameCount": 17,
+    "contentReview": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/content-review.md",
+    "layoutReport": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/qa-final/svg-qa-report.md",
+    "independentVisualReview": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/visual-review-031-033-039.md"
+  }
+}

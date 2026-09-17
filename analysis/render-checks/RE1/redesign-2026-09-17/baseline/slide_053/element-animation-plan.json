@@ -1,0 +1,111 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_053",
+  "scene_id": "re1_src_063",
+  "source_slides": [
+    63
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "exponential_density_curves",
+      "label": "Dichtekurven der Exponentialverteilung",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "exponential_shape",
+      "label": "Rechtsschiefe Form",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "exponential_lambda_meaning",
+      "label": "Parameterwirkung von lambda",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "exponential_random_events",
+      "label": "Zufällige Ereignisse",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "exponential_application_fields",
+      "label": "Anwendungen",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_exponential_density_curves",
+      "targetId": "exponential_density_curves",
+      "action": "draw",
+      "sourceText": "Kommen wir nun zu unserer zweiten Wahrscheinlichkeitsverteilung, die sogenannte Exponentialverteilung, welche hier als Dichtefunktion dargestellt ist",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_exponential_shape",
+      "targetId": "exponential_shape",
+      "action": "show",
+      "sourceText": "Im Vergleich zur Normalverteilung ist die Exponentialverteilung nicht symmetrisch, sondern eine rechtsschiefe Verteilung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_exponential_lambda_meaning",
+      "targetId": "exponential_lambda_meaning",
+      "action": "show",
+      "sourceText": "Die Verteilung ist durch einen einzigen Parameter definiert",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_exponential_random_events",
+      "targetId": "exponential_random_events",
+      "action": "show",
+      "sourceText": "Sie wird immer dann angewendet, wenn zufällige Ereignisse modelliert werden müssen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_exponential_application_fields",
+      "targetId": "exponential_application_fields",
+      "action": "show",
+      "sourceText": "Die Exponentialverteilung hat ein breites Anwendungsspektrum in Naturwissenschaften wie auch im Finanzwesen oder der Zuverlässigkeitstechnik",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

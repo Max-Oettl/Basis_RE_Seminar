@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_021.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "specimen_group",
+      "label": "n identische Prüflinge",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "group_survival_block",
+      "label": "Gruppenüberleben",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "alpha_formula",
+      "label": "Irrtumswahrscheinlichkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "success_run_formula",
+      "label": "Success-Run-Gleichung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_specimen_group",
+      "targetId": "specimen_group",
+      "action": "show",
+      "sourceText": "Stellen wir uns n identische Prüflinge",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_group_survival_block",
+      "targetId": "group_survival_block",
+      "action": "show",
+      "sourceText": "Die Wahrscheinlichkeit, dass alle n Prüflinge",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_alpha_formula",
+      "targetId": "alpha_formula",
+      "action": "show",
+      "sourceText": "Damit gilt: Alpha gleich R von t hoch n",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_success_run_formula",
+      "targetId": "success_run_formula",
+      "action": "show",
+      "sourceText": "Setzen wir nun für Alpha R von t hoch n ein",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

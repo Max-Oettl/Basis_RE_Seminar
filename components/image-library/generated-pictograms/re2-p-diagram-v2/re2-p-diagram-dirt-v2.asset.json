@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "reltestEducationPictogramAsset/v1",
+  "assetId": "re2_p_diagram_dirt_v2",
+  "file": "components/image-library/generated-pictograms/re2-p-diagram-v2/re2-p-diagram-dirt-v2.png",
+  "assetType": "generated_png",
+  "status": "accepted",
+  "styleProfile": "reltest-education-minimal-v1",
+  "source": {"evidenceType": "source_svg", "reference": "RE2 Quelle 009: Schmutz als eigenständige Störgröße.", "license": "project_internal"},
+  "semantics": {
+    "concept": "Schmutzpartikel treffen auf technische Lüftung",
+    "learningFunction": "concept-anchor",
+    "mustShowFeatures": ["sichtbare Partikel", "technische Oberfläche", "Einwirkungsrichtung"],
+    "mustNotImply": ["Rauch", "Explosion"],
+    "confusableWith": ["Feuchtigkeit", "Luftstrom"],
+    "firstUseLabel": "Schmutz",
+    "reuseKey": "p-diagram-dirt"
+  },
+  "visualStyle": {"flat2d": true, "perspective": "orthographic", "dominantSilhouette": true, "semanticLayers": 2, "brandColors": ["#142452", "#EC6244"], "gradients": false, "shadows": false, "threeDimensional": false, "isometric": false, "photorealistic": false, "glow": false, "texture": false, "embeddedText": false, "logo": false, "watermark": false},
+  "raster": {"widthPx": 1024, "heightPx": 1024, "transparentBackground": true, "safeMarginRatio": 0.10},
+  "learningUse": {"targetPlacementPx": 116, "requiresTextLabelOnFirstUse": true, "colorIndependentMeaning": true, "smallScaleTests": {"at32px": "not_required", "at48px": "passed", "scene960x540": "passed"}},
+  "accessibility": {"redundantWithVisibleLabel": true, "accessibleName": "", "contrastPairs": [{"foreground": "#142452", "background": "#FFFFFF", "minimumRatio": 3}]},
+  "review": {"semantic": "passed", "style": "passed", "eLearning": "passed", "accessibilityTechnical": "passed", "notes": ["Partikel und Filterfläche bleiben mit dem sichtbaren Label eindeutig."]}
+}

@@ -1,0 +1,599 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re4_src_005",
+  "svgPath": "slide_005.svg",
+  "spokenText": "Für sie könnten Lebensdauerdaten aus Versuchen wie einem Wöhlertest vorliegen.\n\nDabei wird das Zahnrad unter wechselnder Last geprüft, bis es versagt – und wir erhalten Ausfallzeiten.\n\nDiese Ausfallzeiten können wir auswerten, um eine Weibull-Verteilung zu bestimmen.\n\nMit dieser Verteilung können wir das Ausfallverhalten des Zahnrads mathematisch beschreiben.\n\nDabei dürfen wir aber nicht vergessen: Diese Ausfallzeiten stammen nur aus einer Stichprobe.\n\nWir möchten aber Aussagen über die Grundgesamtheit aller Zahnräder treffen.\n\nDeshalb berücksichtigen wir zusätzlich einen Vertrauensbereich, um die statistische Unsicherheit abzudecken.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/after/slide_005.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Für sie könnten Lebensdauerdaten aus Versuchen",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Für sie könnten Lebensdauerdaten",
+      "occurrence": 1,
+      "claim": "Wöhlertest am Zahnrad",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "gear_test_intro"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "unter wechselnder Last geprüft",
+      "occurrence": 1,
+      "claim": "Wöhlertest am Zahnrad",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "gear_test_intro"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Diese Ausfallzeiten können wir auswerten",
+      "occurrence": 1,
+      "claim": "Ausfallzeiten auswerten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "gear_test_result"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "des Zahnrads mathematisch beschreiben",
+      "occurrence": 1,
+      "claim": "Ausfallzeiten auswerten",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "gear_test_result"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "occurrence": 1,
+      "claim": "Wöhlertest am Zahnrad",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "gear_test_intro"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "occurrence": 1,
+      "claim": "Ausfallzeiten auswerten",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "gear_test_result"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "occurrence": 1,
+      "claim": "Grundgesamtheit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_context"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "occurrence": 1,
+      "claim": "Begrenzte Stichprobe",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_selection"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "occurrence": 1,
+      "claim": "Analyse der Stichprobe",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_analysis"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "occurrence": 1,
+      "claim": "population sample fit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_sample_fit"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "occurrence": 1,
+      "claim": "Gültigkeit der Schätzung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_limit"
+      ]
+    },
+    {
+      "beatId": "beat_12",
+      "sourceText": "Wir möchten aber Aussagen",
+      "occurrence": 1,
+      "claim": "Schluss auf die Grundgesamtheit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_inference"
+      ]
+    },
+    {
+      "beatId": "beat_13",
+      "sourceText": "Wir möchten aber Aussagen",
+      "occurrence": 1,
+      "claim": "population estimate fit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_estimate_fit"
+      ]
+    },
+    {
+      "beatId": "beat_14",
+      "sourceText": "Deshalb berücksichtigen wir zusätzlich einen Vertrauensbereich",
+      "occurrence": 1,
+      "claim": "Unsicherheit berücksichtigen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_uncertainty"
+      ]
+    },
+    {
+      "beatId": "beat_15",
+      "sourceText": "Deshalb berücksichtigen wir zusätzlich einen Vertrauensbereich",
+      "occurrence": 1,
+      "claim": "population estimate limits",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_estimate_limits"
+      ]
+    },
+    {
+      "beatId": "beat_16",
+      "sourceText": "Deshalb berücksichtigen wir zusätzlich einen Vertrauensbereich",
+      "occurrence": 1,
+      "claim": "Beide Vertrauensgrenzen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_bound_labels"
+      ]
+    },
+    {
+      "beatId": "beat_17",
+      "sourceText": "Deshalb berücksichtigen wir zusätzlich einen Vertrauensbereich",
+      "occurrence": 1,
+      "claim": "Rückschluss auf die gesamte Population",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_return"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "gear_test_intro",
+      "label": "Wöhlertest am Zahnrad",
+      "role": "content",
+      "members": [
+        "gear_test_intro"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "gear_test_result",
+      "label": "Ausfallzeiten auswerten",
+      "role": "content",
+      "members": [
+        "gear_test_result"
+      ],
+      "dependsOn": [
+        "gear_test_intro"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "population_context",
+      "label": "Grundgesamtheit",
+      "role": "content",
+      "members": [
+        "population_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "population_selection",
+      "label": "Begrenzte Stichprobe",
+      "role": "content",
+      "members": [
+        "population_selection"
+      ],
+      "dependsOn": [
+        "population_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    },
+    {
+      "groupId": "population_analysis",
+      "label": "Analyse der Stichprobe",
+      "role": "content",
+      "members": [
+        "population_analysis"
+      ],
+      "dependsOn": [
+        "population_selection"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_9"
+    },
+    {
+      "groupId": "population_sample_fit",
+      "label": "population sample fit",
+      "role": "content",
+      "members": [
+        "population_sample_fit"
+      ],
+      "dependsOn": [
+        "population_analysis"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_10"
+    },
+    {
+      "groupId": "population_limit",
+      "label": "Gültigkeit der Schätzung",
+      "role": "content",
+      "members": [
+        "population_limit"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_11"
+    },
+    {
+      "groupId": "population_inference",
+      "label": "Schluss auf die Grundgesamtheit",
+      "role": "content",
+      "members": [
+        "population_inference"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_12"
+    },
+    {
+      "groupId": "population_estimate_fit",
+      "label": "population estimate fit",
+      "role": "content",
+      "members": [
+        "population_estimate_fit"
+      ],
+      "dependsOn": [
+        "population_inference"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_13"
+    },
+    {
+      "groupId": "population_uncertainty",
+      "label": "Unsicherheit berücksichtigen",
+      "role": "content",
+      "members": [
+        "population_uncertainty"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_14"
+    },
+    {
+      "groupId": "population_estimate_limits",
+      "label": "population estimate limits",
+      "role": "content",
+      "members": [
+        "population_estimate_limits"
+      ],
+      "dependsOn": [
+        "population_estimate_fit"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_15"
+    },
+    {
+      "groupId": "population_bound_labels",
+      "label": "Beide Vertrauensgrenzen",
+      "role": "content",
+      "members": [
+        "population_bound_labels"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_16"
+    },
+    {
+      "groupId": "population_return",
+      "label": "Rückschluss auf die gesamte Population",
+      "role": "content",
+      "members": [
+        "population_return"
+      ],
+      "dependsOn": [
+        "population_context",
+        "population_inference"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_17"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_gear_test_intro",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "gear_test_intro",
+      "sourceText": "Für sie könnten Lebensdauerdaten",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_gear_test_intro",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "gear_test_intro",
+      "sourceText": "unter wechselnder Last geprüft",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_2",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_03_gear_test_result",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "gear_test_result",
+      "sourceText": "Diese Ausfallzeiten können wir auswerten",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_gear_test_result",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "gear_test_result",
+      "sourceText": "des Zahnrads mathematisch beschreiben",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_4",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_05_gear_test_intro",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "gear_test_intro",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "action": "hide",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_gear_test_result",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "gear_test_result",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "action": "hide",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_population_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_context",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_population_selection",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_selection",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_population_analysis",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_analysis",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "action": "show",
+      "beatId": "beat_9",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_10_population_sample_fit",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_sample_fit",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "action": "show",
+      "beatId": "beat_10",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_11_population_limit",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_limit",
+      "sourceText": "Dabei dürfen wir aber nicht vergessen",
+      "action": "show",
+      "beatId": "beat_11",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_12_population_inference",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_inference",
+      "sourceText": "Wir möchten aber Aussagen",
+      "action": "show",
+      "beatId": "beat_12",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_13_population_estimate_fit",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_estimate_fit",
+      "sourceText": "Wir möchten aber Aussagen",
+      "action": "show",
+      "beatId": "beat_13",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_14_population_uncertainty",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_uncertainty",
+      "sourceText": "Deshalb berücksichtigen wir zusätzlich einen Vertrauensbereich",
+      "action": "show",
+      "beatId": "beat_14",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_15_population_estimate_limits",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_estimate_limits",
+      "sourceText": "Deshalb berücksichtigen wir zusätzlich einen Vertrauensbereich",
+      "action": "show",
+      "beatId": "beat_15",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_16_population_bound_labels",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_bound_labels",
+      "sourceText": "Deshalb berücksichtigen wir zusätzlich einen Vertrauensbereich",
+      "action": "show",
+      "beatId": "beat_16",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_17_population_return",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_return",
+      "sourceText": "Deshalb berücksichtigen wir zusätzlich einen Vertrauensbereich",
+      "action": "show",
+      "beatId": "beat_17",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/qa-final/svg-qa-report.md"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "population_context",
+        "population_selection",
+        "population_analysis",
+        "population_sample_fit",
+        "population_limit",
+        "population_inference",
+        "population_estimate_fit",
+        "population_uncertainty",
+        "population_estimate_limits",
+        "population_bound_labels",
+        "population_return"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/qa-final/svg-qa-report.md"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "reviewEvidence": "analysis/render-checks/RE4/feedback-2026-09-17/review-summary.md"
+}

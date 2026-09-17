@@ -1,0 +1,570 @@
+{
+  "schema_version": "basisRebuildContentCrosscheck/v2",
+  "module_id": "RE3",
+  "output_slide_number": 24,
+  "checked_at": "2026-09-17T07:26:20.394Z",
+  "status": "review_required",
+  "manual_review_required": true,
+  "reference_mapping": {
+    "work_unit": "slide_024",
+    "output_slide_number": 24,
+    "source_slides": [
+      24,
+      25,
+      26
+    ],
+    "primary_source_slide": 26,
+    "output_slide_numbers": [],
+    "mapping_type": "merged_sequence",
+    "rationale": "",
+    "mapping_source": "reference_map",
+    "reference_map_path": "analysis/rebuild-plans/RE3_source-reference-map.json",
+    "sequence_plan": "",
+    "read_error": ""
+  },
+  "references": [
+    {
+      "source_slide_number": 24,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie24.SVG",
+      "source_svg_sha256": "de107d298fcfbb8582e7b637d660e4243fb935bef6295b72ba3afc9c0e73cdde",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie24.SVG",
+      "analysis_path": ""
+    },
+    {
+      "source_slide_number": 25,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie25.SVG",
+      "source_svg_sha256": "5ec36137d924a5ca5a7325ec3bf5eccfbf859ce05d5684341f61fdfbc8581c84",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie25.SVG",
+      "analysis_path": ""
+    },
+    {
+      "source_slide_number": 26,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie26.SVG",
+      "source_svg_sha256": "35d1491013d919b78762d0dff9cc395474c61064df0ce75e2668becc054de93d",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie26.SVG",
+      "analysis_path": ""
+    }
+  ],
+  "proposal": {
+    "path": "rebuild-proposals/svg/RE3/slide_024/slide_024.svg",
+    "svg_sha256": "a5ab5f27d3176f0274dfcb7b454c8a6d26e62bbf2eac863a33e8cc2996133f77",
+    "animation_manifest": "/files/rebuild-proposals/svg/RE3/slide_024/scene.animation.v1.json"
+  },
+  "summary": {
+    "source_count": 3,
+    "checked_content_items": 43,
+    "checked_target_text_items": 14,
+    "errors": 0,
+    "warnings": 3,
+    "infos": 0,
+    "animation_steps": 6
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 024: \"Arten von Vertrauensbereichen\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 24,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Arten von Vertrauensbereichen"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 025: \"Arten von Vertrauensbereichen\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 25,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Arten von Vertrauensbereichen"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 026: \"Arten von Vertrauensbereichen\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-6",
+      "expected": "Arten von Vertrauensbereichen"
+    }
+  ],
+  "content_checks": [
+    {
+      "source_slide_number": 24,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Arten von Vertrauensbereichen",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 24,
+      "source_item_id": "source-svg-text-2",
+      "expected": "𝐹",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 24,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Dichte",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 24,
+      "source_item_id": "source-svg-text-4",
+      "expected": "𝑓",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 24,
+      "source_item_id": "source-svg-text-5",
+      "expected": "𝐹",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 25,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Arten von Vertrauensbereichen",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 25,
+      "source_item_id": "source-svg-text-2",
+      "expected": "𝐹",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 25,
+      "source_item_id": "source-svg-text-3",
+      "expected": "𝑜",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 25,
+      "source_item_id": "source-svg-text-4",
+      "expected": "𝐹",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 25,
+      "source_item_id": "source-svg-text-5",
+      "expected": "𝑢",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 25,
+      "source_item_id": "source-svg-text-6",
+      "expected": "𝐹",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 25,
+      "source_item_id": "source-svg-text-7",
+      "expected": "Zweiseitiger",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 25,
+      "source_item_id": "source-svg-text-8",
+      "expected": "Vertrauensbereich",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 25,
+      "source_item_id": "source-svg-text-9",
+      "expected": "Dichte",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 25,
+      "source_item_id": "source-svg-text-10",
+      "expected": "𝑓",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 25,
+      "source_item_id": "source-svg-text-11",
+      "expected": "𝐹",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 25,
+      "source_item_id": "source-svg-text-12",
+      "expected": "𝑃",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "no_significant_tokens"
+    },
+    {
+      "source_slide_number": 25,
+      "source_item_id": "source-svg-text-13",
+      "expected": "𝐴",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-1",
+      "expected": "𝑃",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "no_significant_tokens"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-2",
+      "expected": "𝐴",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-3",
+      "expected": "=",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-4",
+      "expected": "90",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-5",
+      "expected": "%",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-6",
+      "expected": "Arten von Vertrauensbereichen",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-7",
+      "expected": "𝐹",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-8",
+      "expected": "𝑜",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-9",
+      "expected": "=",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-10",
+      "expected": "9",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-11",
+      "expected": "5",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-12",
+      "expected": "%",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-13",
+      "expected": "𝐹",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-14",
+      "expected": "𝑢",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-15",
+      "expected": "=",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-16",
+      "expected": "5",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-17",
+      "expected": "%",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-18",
+      "expected": "𝐹",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-19",
+      "expected": "Zweiseitiger",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-20",
+      "expected": "Vertrauensbereich",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-21",
+      "expected": "Dichte",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-22",
+      "expected": "𝑓",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-23",
+      "expected": "𝐹",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-24",
+      "expected": "𝑃",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "no_significant_tokens"
+    },
+    {
+      "source_slide_number": 26,
+      "source_item_id": "source-svg-text-25",
+      "expected": "𝐴",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    }
+  ],
+  "target_text_checks": [
+    {
+      "target_text": "Zweiseitiger Vertrauensbereich",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Dichte f(F)",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "F",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "5-%-Grenze",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 24,25,26; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_024"
+    },
+    {
+      "target_text": "95-%-Grenze",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 24,25,26; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_024"
+    },
+    {
+      "target_text": "5 %",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 24,25,26; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_024"
+    },
+    {
+      "target_text": "5 %",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 24,25,26; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_024"
+    },
+    {
+      "target_text": "Zwei Grenzen",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_008: sowohl die untere als auch die obere Grenze"
+    },
+    {
+      "target_text": "Untere und obere Grenze",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "tokens:untere,und,obere,grenze"
+    },
+    {
+      "target_text": "der Ausfallwahrscheinlichkeit",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "90 %",
+      "result": "documented_addition",
+      "evidence_type": "orientation",
+      "evidence_reference": "RE3 Quellen 24,25,26; Achsenskalierung / Rangzuordnung, Formeln und lokale data/ des slide_024"
+    },
+    {
+      "target_text": "Aussagewahrscheinlichkeit",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_005: Aussagewahrscheinlichkeit oder auch Aussagesicherheit; section_006: neunzigprozentigen Vertrauensbereich"
+    },
+    {
+      "target_text": "Unsicherheit in",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_008: Unsicherheiten in beide Richtungen berücksichtigt"
+    },
+    {
+      "target_text": "beide Richtungen berücksichtigen.",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_008: Unsicherheiten in beide Richtungen berücksichtigt"
+    }
+  ],
+  "manual_review_focus": [
+    "Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.",
+    "Sprechertext-Reihenfolge gegen die semantisch geplanten Animationsschritte pruefen."
+  ],
+  "reference_mapping_sha256": "5e10b4a8a217aca7a1791a443e47d68d36ba731cfe16dce26460934e93dd12cb",
+  "reference_map_path": "analysis/rebuild-plans/RE3_source-reference-map.json",
+  "sequence_plan": ""
+}

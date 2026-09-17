@@ -5,13 +5,13 @@
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "confidence_estimate",
-      "label": "Punktschätzung",
+      "targetId": "confidence_data",
+      "label": "Ausfalldaten als Ausgangspunkt",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -19,7 +19,23 @@
     },
     {
       "targetId": "confidence_plot",
-      "label": "Fit",
+      "label": "Weibull-Schätzung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "confidence_estimate",
+      "label": "Weibullverteilung als Punktschätzung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "confidence_limits",
+      "label": "Beide Vertrauensgrenzen",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -27,15 +43,15 @@
     },
     {
       "targetId": "confidence_bounds",
-      "label": "Vertrauensgrenzen",
+      "label": "Zusätzlicher Vertrauensbereich",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "confidence_takeaway",
-      "label": "Unsicherheit",
+      "targetId": "confidence_next",
+      "label": "Überleitung zur nächsten Lektion",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -44,44 +60,62 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_confidence_estimate",
-      "targetId": "confidence_estimate",
-      "action": "show",
-      "sourceText": "Zum Schluss solltest du wissen, dass die Weibullverteilung nur einen Teil des Ergebnisses darstellt.",
+      "stepId": "step_01_confidence_data",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "confidence_data",
+      "sourceText": "Aber keine Sorge",
+      "action": "show"
     },
     {
       "stepId": "step_02_confidence_plot",
+      "occurrence": 1,
+      "confidence": "high",
       "targetId": "confidence_plot",
-      "action": "show",
-      "sourceText": "Zum Schluss solltest du wissen, dass die Weibullverteilung nur einen Teil des Ergebnisses darstellt.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "sourceText": "im Laufe dieses Trainings erhältst du",
+      "action": "show"
     },
     {
-      "stepId": "step_03_confidence_bounds",
+      "stepId": "step_03_confidence_estimate",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "confidence_estimate",
+      "sourceText": "die Weibullverteilung nur einen Teil des Ergebnisses",
+      "action": "show"
+    },
+    {
+      "stepId": "step_04_confidence_limits",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "confidence_limits",
+      "sourceText": "zusätzlich einen sogenannten Vertrauensbereich",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_confidence_bounds",
+      "occurrence": 1,
+      "confidence": "high",
       "targetId": "confidence_bounds",
-      "action": "show",
-      "sourceText": "Immer wenn wir Lebensdauerdaten auswerten, benötigen wir zusätzlich einen sogenannten Vertrauensbereich.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "sourceText": "zusätzlich einen sogenannten Vertrauensbereich",
+      "action": "show"
     },
     {
-      "stepId": "step_04_confidence_takeaway",
-      "targetId": "confidence_takeaway",
-      "action": "show",
-      "sourceText": "Warum dieser notwendig ist und welche Aussagekraft er besitzt, erfährst du in der nächsten Lektion.",
+      "stepId": "step_06_confidence_next",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "confidence_next",
+      "sourceText": "Warum dieser notwendig ist",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_confidence_bounds",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "confidence_bounds",
+      "sourceText": "welche Aussagekraft er besitzt",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     }
   ]
 }

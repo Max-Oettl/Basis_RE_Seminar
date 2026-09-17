@@ -1,0 +1,290 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_014",
+  "svgPath": "slide_014.svg",
+  "spokenText": "Aber keine Sorge – im Laufe dieses Trainings erhältst du weitere Einblicke und lernst die Methoden genauer kennen. Am Ende des Trainings zeigen wir dir zudem typische Fallstricke, die vermieden werden sollten.\n\nZum Schluss solltest du wissen, dass die Weibullverteilung nur einen Teil des Ergebnisses darstellt. Immer wenn wir Lebensdauerdaten auswerten, benötigen wir zusätzlich einen sogenannten Vertrauensbereich.\n\nWarum dieser notwendig ist und welche Aussagekraft er besitzt, erfährst du in der nächsten Lektion.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-2026-09-17/after/slide_014.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Aber keine Sorge – im Laufe",
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Aber keine Sorge",
+      "claim": "Ausfalldaten als Ausgangspunkt",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "confidence_data"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "im Laufe dieses Trainings erhältst du",
+      "claim": "Weibull-Schätzung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "confidence_plot"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "die Weibullverteilung nur einen Teil des Ergebnisses",
+      "claim": "Weibullverteilung als Punktschätzung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "confidence_estimate"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "zusätzlich einen sogenannten Vertrauensbereich",
+      "claim": "Beide Vertrauensgrenzen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "confidence_limits"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "zusätzlich einen sogenannten Vertrauensbereich",
+      "claim": "Zusätzlicher Vertrauensbereich",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "confidence_bounds"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "Warum dieser notwendig ist",
+      "claim": "Überleitung zur nächsten Lektion",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "confidence_next"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "welche Aussagekraft er besitzt",
+      "claim": "Zusätzlicher Vertrauensbereich",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "confidence_bounds"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "confidence_data",
+      "label": "Ausfalldaten als Ausgangspunkt",
+      "role": "content",
+      "members": [
+        "confidence_data"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "confidence_plot",
+      "label": "Weibull-Schätzung",
+      "role": "content",
+      "members": [
+        "confidence_plot"
+      ],
+      "dependsOn": [
+        "confidence_data"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "confidence_estimate",
+      "label": "Weibullverteilung als Punktschätzung",
+      "role": "content",
+      "members": [
+        "confidence_estimate"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "confidence_limits",
+      "label": "Beide Vertrauensgrenzen",
+      "role": "content",
+      "members": [
+        "confidence_limits"
+      ],
+      "dependsOn": [
+        "confidence_plot"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "confidence_bounds",
+      "label": "Zusätzlicher Vertrauensbereich",
+      "role": "content",
+      "members": [
+        "confidence_bounds"
+      ],
+      "dependsOn": [
+        "confidence_limits"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "confidence_next",
+      "label": "Überleitung zur nächsten Lektion",
+      "role": "content",
+      "members": [
+        "confidence_next"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_confidence_data",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "confidence_data",
+      "sourceText": "Aber keine Sorge",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_confidence_plot",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "confidence_plot",
+      "sourceText": "im Laufe dieses Trainings erhältst du",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_confidence_estimate",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "confidence_estimate",
+      "sourceText": "die Weibullverteilung nur einen Teil des Ergebnisses",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_confidence_limits",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "confidence_limits",
+      "sourceText": "zusätzlich einen sogenannten Vertrauensbereich",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_confidence_bounds",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "confidence_bounds",
+      "sourceText": "zusätzlich einen sogenannten Vertrauensbereich",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_confidence_next",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "confidence_next",
+      "sourceText": "Warum dieser notwendig ist",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_confidence_bounds",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "confidence_bounds",
+      "sourceText": "welche Aussagekraft er besitzt",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_7",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-2026-09-17/states-final/slide_014/00_initial.png",
+      "reviewedAt": "2026-09-17"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "confidence_data",
+        "confidence_plot",
+        "confidence_estimate",
+        "confidence_limits",
+        "confidence_bounds",
+        "confidence_next"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-2026-09-17/states-final/slide_014/07_after_06_welche_aussagekraft_er_besitzt.png",
+      "reviewedAt": "2026-09-17"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "renderDirectory": "analysis/render-checks/RE3/feedback-2026-09-17/states-final/slide_014",
+    "reviewedStateCount": 8,
+    "evidence": "analysis/rebuild-plans/RE3_scenes_001_006_feedback_2026-09-17.md",
+    "method": "local Chromium state renderer plus visual source/reference review",
+    "interactiveBrowserPlayback": "unavailable; no end-to-end audio playback claimed"
+  }
+}

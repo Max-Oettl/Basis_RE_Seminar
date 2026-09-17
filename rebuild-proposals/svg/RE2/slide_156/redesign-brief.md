@@ -3,11 +3,11 @@
 - Kapitel: 4
 - Lektion: 9
 - Quellfolie: 159
-- Zielmodus: full_slide, 1920×1080
+- Zielmodus: content_svg, transparentes 1920×1080-Inhaltsmodul für den Downstream-Master
 - Titel: RPZ und Aufgabenpriorität
 - Dominante Lernbotschaft: RPZ und Aufgabenpriorität werden in Design- und Prozess-FMEA nach derselben Grundlogik eingesetzt.
 - Archetyp: risk-method-comparison
-- Layout: Gemeinsame RPZ-Formel und Aufgabenpriorität als zwei gleichwertige Bewertungsinstrumente.
+- Layout: Gemeinsame RPZ-Formel und Aufgabenpriorität als zwei offene, gleichwertige Bewertungsinstrumente.
 - Inhaltsinventar: Fachbegriffe, Beziehungen, Hierarchien, Tabellenzustände und Beispiele bleiben erhalten; PowerPoint-Bedienelemente und Masterdekoration entfallen.
 - Referenz-Lock: RE1 slide_013, slide_009, slide_027 und slide_022
 - Assetstrategie: bereinigtes und vergrößertes Quellasset

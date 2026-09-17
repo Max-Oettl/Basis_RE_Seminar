@@ -730,3 +730,13 @@ Die Erweiterung gilt als erfolgreich, wenn:
 * Es werden keine Screenshots oder PNGs erzeugt.
 * Es wird keine KI-/Vision-Auswertung eingebaut.
 * Der Check kann später als hartes Quality Gate verwendet werden.
+
+## Laufende Hervorhebungen prüfen
+
+Bei `highlight` muss die Zustandsberechnung die tatsächliche Viewer-Laufzeit
+abbilden: Ein bereits sichtbares Ziel bleibt während des Fokus vollständig
+deckend. Kurzer Schatten-/Skalierungsimpuls und Rückkehr zum Ausgangsstil werden
+wie im Player berechnet; Highlight ist kein erneutes Einblenden. Zur Prüfung
+von Wertezuordnungen zusätzlich die Mitte des Impulses abfragen. Die separate
+visuelle Zustandsvorschau unterstützt dafür `--sample-highlights true`; der
+automatische Layout-Check selbst erzeugt weiterhin keine Bilddateien.

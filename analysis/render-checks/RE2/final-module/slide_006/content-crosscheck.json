@@ -1,0 +1,93 @@
+{
+  "schema_version": "basisReContentCrosscheck/v1",
+  "module_id": "RE2",
+  "work_unit": "slide_006",
+  "scene_id": "re2_ch2_system_levels",
+  "target_svg": "rebuild-proposals/svg/RE2/slide_006/slide_006.svg",
+  "source_slides": [
+    6,
+    7
+  ],
+  "mapping_type": "merged_sequence",
+  "source_checks": [
+    {
+      "source_slide": 6,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie6.SVG",
+      "expected_text_nodes": 38,
+      "missing_text_nodes": [
+        "Systemebene",
+        "Subsystemebene",
+        "Komponentenebene",
+        "",
+        "Elektr. Verschaltung",
+        "…",
+        "Mikrokontroller",
+        "Umwelt",
+        "Gesetzliche Regularien",
+        "Wechselrichter",
+        "PV",
+        "-",
+        "Modul",
+        "Batterie",
+        "System"
+      ],
+      "expected_image_assets": 5,
+      "missing_image_assets": [
+        "img1",
+        "img3",
+        "img5",
+        "img8",
+        "img11"
+      ],
+      "speaker_control_expected_removed": true
+    },
+    {
+      "source_slide": 7,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie7.SVG",
+      "expected_text_nodes": 44,
+      "missing_text_nodes": [
+        "Systemebene",
+        "Subsystemebene",
+        "Komponentenebene",
+        "",
+        "Elektr. Verschaltung",
+        "…",
+        "Mikrokontroller",
+        "Umwelt",
+        "Gesetzliche Regularien",
+        "Wechselrichter",
+        "PV",
+        "-",
+        "Modul",
+        "Batterie",
+        "System",
+        "Systemgrenze",
+        "Schnittstelle",
+        "für",
+        "Wechselwirkungen",
+        "zur",
+        "Umgebung"
+      ],
+      "expected_image_assets": 5,
+      "missing_image_assets": [
+        "img1",
+        "img3",
+        "img5",
+        "img8",
+        "img11"
+      ],
+      "speaker_control_expected_removed": true
+    }
+  ],
+  "qa": {
+    "issues": [
+      "Quellfolie 6: 15 sichtbare Texte fehlen im Ziel.",
+      "Quellfolie 6: 5 Inhaltsbilder fehlen im Ziel.",
+      "Quellfolie 7: 21 sichtbare Texte fehlen im Ziel.",
+      "Quellfolie 7: 5 Inhaltsbilder fehlen im Ziel."
+    ],
+    "warnings": [],
+    "open_questions": []
+  },
+  "status": "failed"
+}

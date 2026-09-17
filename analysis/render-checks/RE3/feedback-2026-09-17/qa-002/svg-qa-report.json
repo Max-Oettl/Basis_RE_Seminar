@@ -1,0 +1,183 @@
+{
+  "schema_version": "svgQaReport/v1",
+  "module_id": "slide_002",
+  "svg_root": "rebuild-proposals/svg/RE3/slide_002",
+  "generated_at": "2026-09-17T06:11:10.203Z",
+  "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\tools\\svg-rebuild-qa.js rebuild-proposals/svg/RE3/slide_002 --strict-design --layout --layout-strict --report-dir analysis/render-checks/RE3/feedback-2026-09-17/qa-002",
+  "files": [
+    {
+      "path": "rebuild-proposals/svg/RE3/slide_002/formulas/median-rank.svg",
+      "ids": 20,
+      "animationManifest": ""
+    },
+    {
+      "path": "rebuild-proposals/svg/RE3/slide_002/formulas/weibull-example.svg",
+      "ids": 19,
+      "animationManifest": ""
+    },
+    {
+      "path": "rebuild-proposals/svg/RE3/slide_002/formulas/weibull-function.svg",
+      "ids": 16,
+      "animationManifest": ""
+    },
+    {
+      "path": "rebuild-proposals/svg/RE3/slide_002/plots/weibull-probability.svg",
+      "ids": 117,
+      "animationManifest": ""
+    },
+    {
+      "path": "rebuild-proposals/svg/RE3/slide_002/slide_002.svg",
+      "ids": 138,
+      "animationManifest": "rebuild-proposals/svg/RE3/slide_002/scene.animation.v1.json"
+    }
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE3/slide_002/plots/weibull-probability.svg",
+      "message": "ViewBox is not close to 16:9.",
+      "detail": "921.6x388.8"
+    }
+  ],
+  "viewer": {
+    "checked": false
+  },
+  "layout": {
+    "checked": true,
+    "strict": true,
+    "warnOnly": false,
+    "browser": {
+      "executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "port": 5697
+    },
+    "files": [
+      {
+        "path": "rebuild-proposals/svg/RE3/slide_002/formulas/median-rank.svg",
+        "slide": "002",
+        "states_checked": 1,
+        "browser_rendered": true
+      },
+      {
+        "path": "rebuild-proposals/svg/RE3/slide_002/formulas/weibull-example.svg",
+        "slide": "002",
+        "states_checked": 1,
+        "browser_rendered": true
+      },
+      {
+        "path": "rebuild-proposals/svg/RE3/slide_002/formulas/weibull-function.svg",
+        "slide": "002",
+        "states_checked": 1,
+        "browser_rendered": true
+      },
+      {
+        "path": "rebuild-proposals/svg/RE3/slide_002/plots/weibull-probability.svg",
+        "slide": "002",
+        "states_checked": 1,
+        "browser_rendered": true
+      },
+      {
+        "path": "rebuild-proposals/svg/RE3/slide_002/slide_002.svg",
+        "slide": "002",
+        "states_checked": 24,
+        "browser_rendered": true
+      }
+    ],
+    "issues": [],
+    "summary": {
+      "checked": true,
+      "files_checked": 5,
+      "states_checked": 28,
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "design": {
+    "checked": true,
+    "strict": true,
+    "warnOnly": false,
+    "brandTokens": {
+      "loaded": true,
+      "path": "brand/company-brand-tokens.json",
+      "profile": "reltest-education",
+      "companyName": "RelTest Education"
+    },
+    "tokenSources": [
+      {
+        "loaded": true,
+        "path": "brand/company-brand-tokens.json",
+        "profile": "reltest-education"
+      }
+    ],
+    "files": [
+      {
+        "path": "rebuild-proposals/svg/RE3/slide_002/formulas/median-rank.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 1,
+        "textCount": 0
+      },
+      {
+        "path": "rebuild-proposals/svg/RE3/slide_002/formulas/weibull-example.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 1,
+        "textCount": 0
+      },
+      {
+        "path": "rebuild-proposals/svg/RE3/slide_002/formulas/weibull-function.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 1,
+        "textCount": 0
+      },
+      {
+        "path": "rebuild-proposals/svg/RE3/slide_002/plots/weibull-probability.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 6,
+        "textCount": 23
+      },
+      {
+        "path": "rebuild-proposals/svg/RE3/slide_002/slide_002.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 7,
+        "textCount": 74
+      }
+    ],
+    "issues": [],
+    "summary": {
+      "files_checked": 5,
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "handoff": {
+    "checked": false
+  },
+  "summary": {
+    "files_checked": 5,
+    "manifests_checked": 1,
+    "layout_files_checked": 5,
+    "layout_states_checked": 28,
+    "design_files_checked": 5,
+    "design_errors": 0,
+    "design_warnings": 0,
+    "handoff_scenes_checked": 0,
+    "handoff_manifests_checked": 0,
+    "handoff_errors": 0,
+    "handoff_warnings": 0,
+    "errors": 0,
+    "warnings": 1
+  }
+}

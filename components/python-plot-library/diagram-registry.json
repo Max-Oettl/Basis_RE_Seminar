@@ -8,6 +8,47 @@
   },
   "generators": [
     {
+      "diagram_type": "series_component_count",
+      "file": "components/python-plot-library/series_component_count_plot.py",
+      "use_for": ["Portrait series reliability plot versus component count", "RE4 source 065: n 0 to 300, four component reliabilities"],
+      "exports": ["svg"],
+      "reuses": ["reltest_plot_style.py", "re3_feedback_plots.py"],
+      "entrypoint": "python components/python-plot-library/series_component_count_plot.py"
+    },
+    {
+      "diagram_type": "re3_life_data_censoring_feedback",
+      "file": "components/python-plot-library/re3_data_feedback_plots.py",
+      "use_for": ["Consistent six-object lifetime diagrams", "Type I and II stopping rules", "Multiple and competing-mechanism censoring", "Interval-censored observation windows"],
+      "exports": ["svg"],
+      "reuses": ["object_time_diagram_plot.py", "reltest_plot_style.py", "re3_feedback_plots.py", "re3_confidence_feedback_plots.py"],
+      "entrypoint": "--scene 34|35|36|38|39|42"
+    },
+    {
+      "diagram_type": "re3_confidence_lesson_feedback",
+      "file": "components/python-plot-library/re3_confidence_feedback_plots.py",
+      "use_for": [
+        "Sample-to-population inference with compact Weibull illustrations",
+        "Portrait probability paper and controlled confidence-level/sample-size comparisons",
+        "Bounded skewed density areas for two-sided and one-sided confidence regions",
+        "Failure-probability to reliability density transformation"
+      ],
+      "exports": ["svg"],
+      "reuses": ["re3_feedback_plots.py", "weibull_probability_plot.py", "weibull_confidence_plot.py"],
+      "entrypoint": "--scene 15|17|20|23|24|27|29"
+    },
+    {
+      "diagram_type": "re3_narrated_sequence_plots",
+      "file": "components/python-plot-library/re3_feedback_plots.py",
+      "use_for": [
+        "Source-aligned RE3 introduction with portrait Weibull paper",
+        "Individually addressable ranked points, separate mechanisms and compact censored object mapping",
+        "Narrated method comparison and paired 5/95 bootstrap confidence limits"
+      ],
+      "exports": ["svg"],
+      "reuses": ["weibull_probability_plot.py", "weibull_confidence_plot.py", "render_formula_svg.py"],
+      "entrypoint": "--scene 1|2|9|11|13|14"
+    },
+    {
       "diagram_type": "axis_diagram",
       "file": "components/python-plot-library/axis_diagram.py",
       "use_for": [
@@ -177,6 +218,39 @@
         "two-parameter versus three-parameter Weibull shift diagrams",
         "Weibull probability paper, transformed gearbox examples and mechanism separation",
         "lognormal density, hazard, failure and reliability plots"
+      ],
+      "exports": ["svg"]
+    },
+    {
+      "diagram_type": "re5_test_planning_plots",
+      "file": "components/python-plot-library/re5_test_planning_plots.py",
+      "use_for": [
+        "Success Run reliability curves over sample size and confidence",
+        "degradation paths with End-of-Life criterion",
+        "acceleration-factor Weibull comparison",
+        "load-life correlations and accelerated-test level selection",
+        "sample allocation across test levels",
+        "Monte-Carlo precision over total sample size"
+      ],
+      "exports": ["svg"]
+    },
+    {
+      "diagram_type": "re3_method_comparison_plots",
+      "file": "components/python-plot-library/re3_method_comparison_plots.py",
+      "use_for": [
+        "OLS regression with vertical residuals in transformed Weibull coordinates",
+        "Weibull log-likelihood surface with maximum and optimum parameter projections",
+        "narration-synchronized comparison of MLS and MLE"
+      ],
+      "exports": ["svg", "json"]
+    },
+    {
+      "diagram_type": "re3_special_case_plots",
+      "file": "components/python-plot-library/re3_special_case_plots.py",
+      "use_for": [
+        "curved three-parameter Weibull probability plots",
+        "joint poor-fit views for mixed failure mechanisms",
+        "separated Weibull fits for mechanism A and mechanism B"
       ],
       "exports": ["svg"]
     }

@@ -1,0 +1,393 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_027",
+  "svgPath": "slide_027.svg",
+  "spokenText": "Zusätzlich gibt es auch einseitige Vertrauensbereiche. Beim linksseitigen Vertrauensbereich wird nur eine obere Grenze betrachtet, die sicherstellt, dass der wahre Wert mit einer bestimmten Wahrscheinlichkeit unterhalb dieser Grenze liegt. Dies kann beispielsweise nützlich sein, wenn wir eine maximale Ausfallwahrscheinlichkeit garantieren möchten.\n\nWichtig ist, dass die Definition der Grenzen die Aussagewahrscheinlichkeit beeinflusst.\n\nUm beim zweiseitigen Vertrauensbereich eine Aussagewahrscheinlichkeit von neunzig Prozent zu erhalten, wird eine fünf Prozent und eine fünfundneunzig Prozent Vertrauensgrenze benötigt.\n\nUm beim linksseitigen Vertrauensbereich eine Aussagewahrscheinlichkeit von neunzig Prozent zu erhalten, wird dagegen nur eine einzige neunzig Prozent Vertrauensgrenze benötigt.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/after/slide_027.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Zusätzlich gibt es auch einseitige Vertrauensbereiche.",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Zusätzlich gibt es auch einseitige Vertrauensbereiche",
+      "occurrence": 1,
+      "claim": "Bekannter zweiseitiger Bereich",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "left_reference_context"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Zusätzlich gibt es auch einseitige Vertrauensbereiche",
+      "occurrence": 1,
+      "claim": "left reference region",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "left_reference_region"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Zusätzlich gibt es auch einseitige Vertrauensbereiche",
+      "occurrence": 1,
+      "claim": "left reference values",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "left_reference_values"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "Beim linksseitigen Vertrauensbereich",
+      "occurrence": 1,
+      "claim": "Linksseitiger Vertrauensbereich",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "left_context"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "wird nur eine obere Grenze betrachtet",
+      "occurrence": 1,
+      "claim": "left region",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "left_region"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "wenn wir eine maximale Ausfallwahrscheinlichkeit",
+      "occurrence": 1,
+      "claim": "Maximale Ausfallwahrscheinlichkeit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "left_application"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "die Definition der Grenzen die Aussagewahrscheinlichkeit beeinflusst",
+      "occurrence": 1,
+      "claim": "left region",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "left_region"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Um beim zweiseitigen Vertrauensbereich",
+      "occurrence": 1,
+      "claim": "Vergleich der zweiseitigen Grenzen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "left_reference_rule"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "fünf Prozent und eine fünfundneunzig Prozent",
+      "occurrence": 1,
+      "claim": "left reference values",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "left_reference_values"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "Um beim linksseitigen Vertrauensbereich",
+      "occurrence": 1,
+      "claim": "left values",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "left_values"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "left_reference_context",
+      "label": "Bekannter zweiseitiger Bereich",
+      "role": "content",
+      "members": [
+        "left_reference_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "left_reference_region",
+      "label": "left reference region",
+      "role": "content",
+      "members": [
+        "left_reference_region"
+      ],
+      "dependsOn": [
+        "left_reference_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "left_reference_values",
+      "label": "left reference values",
+      "role": "content",
+      "members": [
+        "left_reference_values"
+      ],
+      "dependsOn": [
+        "left_reference_region"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "left_context",
+      "label": "Linksseitiger Vertrauensbereich",
+      "role": "content",
+      "members": [
+        "left_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "left_region",
+      "label": "left region",
+      "role": "content",
+      "members": [
+        "left_region"
+      ],
+      "dependsOn": [
+        "left_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "left_application",
+      "label": "Maximale Ausfallwahrscheinlichkeit",
+      "role": "content",
+      "members": [
+        "left_application"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "left_reference_rule",
+      "label": "Vergleich der zweiseitigen Grenzen",
+      "role": "content",
+      "members": [
+        "left_reference_rule"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    },
+    {
+      "groupId": "left_values",
+      "label": "left values",
+      "role": "content",
+      "members": [
+        "left_values"
+      ],
+      "dependsOn": [
+        "left_region"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_10"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_left_reference_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_reference_context",
+      "sourceText": "Zusätzlich gibt es auch einseitige Vertrauensbereiche",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_left_reference_region",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_reference_region",
+      "sourceText": "Zusätzlich gibt es auch einseitige Vertrauensbereiche",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_left_reference_values",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_reference_values",
+      "sourceText": "Zusätzlich gibt es auch einseitige Vertrauensbereiche",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_left_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_context",
+      "sourceText": "Beim linksseitigen Vertrauensbereich",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_left_region",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_region",
+      "sourceText": "wird nur eine obere Grenze betrachtet",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_left_application",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_application",
+      "sourceText": "wenn wir eine maximale Ausfallwahrscheinlichkeit",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_left_region",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_region",
+      "sourceText": "die Definition der Grenzen die Aussagewahrscheinlichkeit beeinflusst",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_7",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_08_left_reference_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_reference_rule",
+      "sourceText": "Um beim zweiseitigen Vertrauensbereich",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_left_reference_values",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_reference_values",
+      "sourceText": "fünf Prozent und eine fünfundneunzig Prozent",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_9",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_10_left_values",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_values",
+      "sourceText": "Um beim linksseitigen Vertrauensbereich",
+      "action": "show",
+      "beatId": "beat_10",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_027/00_initial.png"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "left_reference_context",
+        "left_reference_region",
+        "left_reference_values",
+        "left_context",
+        "left_region",
+        "left_application",
+        "left_reference_rule",
+        "left_values"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_027/10_after_08_um_beim_linksseitigen_vertrauensbereich.png"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "reviewedAt": "2026-09-17",
+    "endState": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/after/slide_027.png",
+    "preview": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/preview/slide_027.png",
+    "stateDirectory": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_027",
+    "reviewedStateCount": 11,
+    "includesHighlightStates": true,
+    "independentReviewer": "/root/visual_review",
+    "findings": [],
+    "scope": "Final composition and discrete animation states rendered in Chromium; legibility additionally reviewed at 50 percent. No continuous audio playback test."
+  }
+}

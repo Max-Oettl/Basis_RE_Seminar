@@ -1,0 +1,25 @@
+{
+  "sceneId": "re5_src_054",
+  "decision": "animated",
+  "staticGate": "passed_before_animation",
+  "targets": [
+    {
+      "id": "load_life_plot",
+      "label": "Last-Lebensdauer-Korrelation",
+      "cue": "Last-Lebensdauer-Korrelation",
+      "action": "draw"
+    },
+    {
+      "id": "model_catalog",
+      "label": "Typische Schädigungsmodelle",
+      "cue": "Typische Modelle sind das Wöhler-Modell",
+      "action": "show"
+    },
+    {
+      "id": "model_guardrail",
+      "label": "Tragfähiges Modell erforderlich",
+      "cue": "Gibt es kein tragfähiges Modell",
+      "action": "show"
+    }
+  ]
+}

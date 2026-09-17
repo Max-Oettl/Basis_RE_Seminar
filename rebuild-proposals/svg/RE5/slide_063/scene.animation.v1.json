@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_063.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "upper_level_plot",
+      "label": "Oberes Versuchsniveau",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "upper_level_principle",
+      "label": "So hoch wie möglich",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "pretest",
+      "label": "Vorversuche",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_upper_level_plot",
+      "targetId": "upper_level_plot",
+      "action": "draw",
+      "sourceText": "Für das obere Versuchsniveau gilt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "durFrames": 42,
+      "drawStyle": "stroke",
+      "direction": "forward"
+    },
+    {
+      "stepId": "step_02_upper_level_principle",
+      "targetId": "upper_level_principle",
+      "action": "show",
+      "sourceText": "Wir wählen es so hoch wie möglich",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_pretest",
+      "targetId": "pretest",
+      "action": "show",
+      "sourceText": "In der Regel braucht man dazu Vorversuche",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

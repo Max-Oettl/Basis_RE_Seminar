@@ -9,6 +9,15 @@ Effekt-Machbarkeit und zustandsbasierte Review.
 
 ## Grundsatz
 
+Seminarweite Nutzerpräferenz (17.09.2026): Die Inhalte werden gesprochen und
+automatisch abgespielt. Längere Erklärabschnitte sollen durch ruhige,
+fachlich begründete Aufbauten oder Fokuswechsel begleitet werden. Unbegründete
+lange Stillstände vermeiden; keine dekorative Bewegung oder willkürliche
+Mindestfrequenz einführen. Bei Tabelle und zugehörigem Plot den gerade
+übertragenen Wert beziehungsweise das Wertepaar kurz hervorheben, wenn die
+Punkte nacheinander eingeführt werden. Identität und Reihenfolge bleiben über
+alle Darstellungen konsistent.
+
 Animation ist kein Pflichtmerkmal und kein Qualitaetsbeweis. Eine statische, sofort vollstaendige Darstellung ist besser als eine willkuerliche oder technisch kleinteilige Animation.
 
 Bei Redesigns wird keine Animation umgesetzt, bevor der vollstaendige statische
@@ -233,6 +242,7 @@ Vor der Umsetzung und erneut vor der Freigabe:
 - Folgt die Reihenfolge zugleich einer nachvollziehbaren raeumlichen Leserichtung, oder ist jeder notwendige Sprung zwischen entfernten Bereichen fachlich begruendet?
 - Sind Boxen, Beschriftungen, Icons und Marker als vollstaendige Einheiten gruppiert?
 - Erscheint jeder Pfeil oder Verbinder fruehestens gemeinsam mit allen fuer seine Aussage benoetigten Endpunkten?
+- Bleiben verbundene Diagrammteile auch am Maximum eines Highlight-Pulses geometrisch geschlossen? Die aktuelle Runtime skaliert die Zielgruppe kurz um bis zu 1,8 Prozent. Einzelne Verbinder nicht getrennt von ihren Knoten pulsen lassen; bei einer Teilfokussierung stattdessen die zugehoerige Beschriftung hervorheben oder die gesamte geschlossene Struktur gemeinsam gruppieren. Nachweis: RE4-Szene 31, Feedbackrevision 17.09.2026.
 - Wurde jede Listenstruktur visuell gelesen und bleiben Aufzaehlungszeichen, Label und zugehoeriger Inhalt im selben Schritt?
 - Endet keine Animationsgruppe mit einem alleinstehenden Aufzaehlungszeichen oder einem Label wie `Ursache`, `Folge`, `Ausmass` oder `Kosten`?
 - Werden Diagrammrahmen und Daten logisch aufgebaut?

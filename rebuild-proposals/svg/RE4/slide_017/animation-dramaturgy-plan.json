@@ -1,0 +1,1065 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re4_src_017",
+  "svgPath": "slide_017.svg",
+  "spokenText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse geht es nun darum, für jedes Basisereignis – also jeden primären Ausfallmechanismus – eine quantitative Aussage zur Zuverlässigkeit zu treffen.\n\nUnser Ziel ist es ja, später die Zuverlässigkeit des gesamten Systems bewerten zu können. Dafür brauchen wir als Grundlage Kennwerte zu den einzelnen Ursachen.\n\nDas bedeutet: Für jedes der blau hinterlegten Basisereignisse im Fehlerbaum – also zum Beispiel Ermüdung, Materialfehler, Verschleiß oder thermische Alterung – benötigen wir einen entsprechenden Zuverlässigkeitskennwert.Typischerweise verwenden wir hier die Ausfallwahrscheinlichkeit zu einem bestimmten Zeitpunkt, beispielsweise nach fünftausend oder fünfzigtausend Betriebsstunden.\n\nWichtig ist: Das bedeutet nicht, dass wir für jeden Mechanismus zwingend genaue Werte berechnen müssen.Wenn wir etwa sicher wissen, dass ein Ausfallmechanismus in der Praxis nicht relevant ist, können wir ihn als risikoneutral bewerten – und ihm zum Beispiel eine Ausfallwahrscheinlichkeit von null Prozent zuweisen.Das sollte aber immer gut begründet sein, etwa durch technische Absicherung, Redundanzen oder Praxiserfahrung.\n\nUm diese Ausfallwahrscheinlichkeiten zu bestimmen, gibt es unterschiedliche Datenquellen wie Labortests beziehungsweise Lebensdauerversuche oder auch Felddaten aus dem Betrieb.\n\nWie man aus Lebensdauerdaten einen Zuverlässigkeitswert erhält, hast du ja bereits im Modul Lebensdauerdatenanalyse gelernt.\n\nZusätzlich können Zuverlässigkeitswerte auch mithilfe von Berechnungen oder Simulationen quantitativ bestimmt werden.\n\nDarüber hinaus sind auch Expertenschätzungen, historische Daten ähnlicher Systeme oder statistische Modelle ebenfalls denkbare Quellen.\n\nAuf diese Weise können wir jedem Basisereignis im Fehlerbaum einen Wahrscheinlichkeitswert zuordnen – passend zum Zeitpunkt, für den wir eine Aussage über das System treffen wollen.\n\nAber wie berechnen wir nun aus all diesen Einzelwahrscheinlichkeiten die Gesamtausfallwahrscheinlichkeit des Systems?\n\nGenau damit befassen wir uns im nächsten Schritt der Fehlerbaumanalyse: der quantitativen Bewertung.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/after/slide_017.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse",
+      "occurrence": 1,
+      "claim": "Fünfter Schritt der FTA",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_heading"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse",
+      "occurrence": 1,
+      "claim": "Top-Ereignis",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_top"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse",
+      "occurrence": 1,
+      "claim": "Drehmoment und Dichtheit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_causes"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse",
+      "occurrence": 1,
+      "claim": "Unmittelbare Ursachen der Komponenten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_components"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse",
+      "occurrence": 1,
+      "claim": "Bruch oder Klemmen der Eingangswelle",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_modes"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse",
+      "occurrence": 1,
+      "claim": "Sechs Basisereignisse",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_basics"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "Für jedes der blau hinterlegten Basisereignisse",
+      "occurrence": 1,
+      "claim": "Sechs Basisereignisse",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "basis_basics"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Ausfallwahrscheinlichkeit zu einem bestimmten Zeitpunkt",
+      "occurrence": 1,
+      "claim": "Gemeinsamer Betrachtungszeitpunkt",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_time"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "Wenn wir etwa sicher wissen",
+      "occurrence": 1,
+      "claim": "Top-Ereignis",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "basis_top"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "Wenn wir etwa sicher wissen",
+      "occurrence": 1,
+      "claim": "Drehmoment und Dichtheit",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "basis_causes"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "Wenn wir etwa sicher wissen",
+      "occurrence": 1,
+      "claim": "Unmittelbare Ursachen der Komponenten",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "basis_components"
+      ]
+    },
+    {
+      "beatId": "beat_12",
+      "sourceText": "Wenn wir etwa sicher wissen",
+      "occurrence": 1,
+      "claim": "Bruch oder Klemmen der Eingangswelle",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "basis_modes"
+      ]
+    },
+    {
+      "beatId": "beat_13",
+      "sourceText": "Wenn wir etwa sicher wissen",
+      "occurrence": 1,
+      "claim": "Sechs Basisereignisse",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "basis_basics"
+      ]
+    },
+    {
+      "beatId": "beat_14",
+      "sourceText": "Wenn wir etwa sicher wissen",
+      "occurrence": 1,
+      "claim": "Null Prozent nur mit Begründung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_zero"
+      ]
+    },
+    {
+      "beatId": "beat_15",
+      "sourceText": "Das sollte aber immer gut begründet sein",
+      "occurrence": 1,
+      "claim": "Null Prozent nur mit Begründung",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "basis_zero"
+      ]
+    },
+    {
+      "beatId": "beat_16",
+      "sourceText": "unterschiedliche Datenquellen wie Labortests",
+      "occurrence": 1,
+      "claim": "Labor und Felddaten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_test_sources"
+      ]
+    },
+    {
+      "beatId": "beat_17",
+      "sourceText": "bereits im Modul Lebensdauerdatenanalyse gelernt",
+      "occurrence": 1,
+      "claim": "Labor und Felddaten",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "basis_test_sources"
+      ]
+    },
+    {
+      "beatId": "beat_18",
+      "sourceText": "mithilfe von Berechnungen oder Simulationen",
+      "occurrence": 1,
+      "claim": "Berechnung und Simulation",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_calculation_sources"
+      ]
+    },
+    {
+      "beatId": "beat_19",
+      "sourceText": "Darüber hinaus sind auch Expertenschätzungen",
+      "occurrence": 1,
+      "claim": "Weitere Quellen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_experience_sources"
+      ]
+    },
+    {
+      "beatId": "beat_20",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "occurrence": 1,
+      "claim": "Null Prozent nur mit Begründung",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "basis_zero"
+      ]
+    },
+    {
+      "beatId": "beat_21",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "occurrence": 1,
+      "claim": "Labor und Felddaten",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "basis_test_sources"
+      ]
+    },
+    {
+      "beatId": "beat_22",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "occurrence": 1,
+      "claim": "Berechnung und Simulation",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "basis_calculation_sources"
+      ]
+    },
+    {
+      "beatId": "beat_23",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "occurrence": 1,
+      "claim": "Weitere Quellen",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "basis_experience_sources"
+      ]
+    },
+    {
+      "beatId": "beat_24",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "occurrence": 1,
+      "claim": "Top-Ereignis",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_top"
+      ]
+    },
+    {
+      "beatId": "beat_25",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "occurrence": 1,
+      "claim": "Drehmoment und Dichtheit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_causes"
+      ]
+    },
+    {
+      "beatId": "beat_26",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "occurrence": 1,
+      "claim": "Unmittelbare Ursachen der Komponenten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_components"
+      ]
+    },
+    {
+      "beatId": "beat_27",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "occurrence": 1,
+      "claim": "Bruch oder Klemmen der Eingangswelle",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_modes"
+      ]
+    },
+    {
+      "beatId": "beat_28",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "occurrence": 1,
+      "claim": "Sechs Basisereignisse",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_basics"
+      ]
+    },
+    {
+      "beatId": "beat_29",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "occurrence": 1,
+      "claim": "Kennwert fatigue",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_value_fatigue"
+      ]
+    },
+    {
+      "beatId": "beat_30",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "occurrence": 1,
+      "claim": "Kennwert material",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_value_material"
+      ]
+    },
+    {
+      "beatId": "beat_31",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "occurrence": 1,
+      "claim": "Kennwert flow_base",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_value_flow_base"
+      ]
+    },
+    {
+      "beatId": "beat_32",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "occurrence": 1,
+      "claim": "Kennwert static_base",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_value_static_base"
+      ]
+    },
+    {
+      "beatId": "beat_33",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "occurrence": 1,
+      "claim": "Kennwert wear",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_value_wear"
+      ]
+    },
+    {
+      "beatId": "beat_34",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "occurrence": 1,
+      "claim": "Kennwert thermal",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "basis_value_thermal"
+      ]
+    },
+    {
+      "beatId": "beat_35",
+      "sourceText": "passend zum Zeitpunkt",
+      "occurrence": 1,
+      "claim": "Gemeinsamer Betrachtungszeitpunkt",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "basis_time"
+      ]
+    },
+    {
+      "beatId": "beat_36",
+      "sourceText": "die Gesamtausfallwahrscheinlichkeit des Systems",
+      "occurrence": 1,
+      "claim": "Top-Ereignis",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "basis_top"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "basis_heading",
+      "label": "Fünfter Schritt der FTA",
+      "role": "content",
+      "members": [
+        "basis_heading"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "basis_top",
+      "label": "Top-Ereignis",
+      "role": "content",
+      "members": [
+        "basis_top"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "basis_causes",
+      "label": "Drehmoment und Dichtheit",
+      "role": "content",
+      "members": [
+        "basis_causes"
+      ],
+      "dependsOn": [
+        "basis_top"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "basis_components",
+      "label": "Unmittelbare Ursachen der Komponenten",
+      "role": "content",
+      "members": [
+        "basis_components"
+      ],
+      "dependsOn": [
+        "basis_causes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "basis_modes",
+      "label": "Bruch oder Klemmen der Eingangswelle",
+      "role": "content",
+      "members": [
+        "basis_modes"
+      ],
+      "dependsOn": [
+        "basis_components"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "basis_basics",
+      "label": "Sechs Basisereignisse",
+      "role": "content",
+      "members": [
+        "basis_basics"
+      ],
+      "dependsOn": [
+        "basis_modes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "basis_time",
+      "label": "Gemeinsamer Betrachtungszeitpunkt",
+      "role": "content",
+      "members": [
+        "basis_time"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    },
+    {
+      "groupId": "basis_zero",
+      "label": "Null Prozent nur mit Begründung",
+      "role": "content",
+      "members": [
+        "basis_zero"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_14"
+    },
+    {
+      "groupId": "basis_test_sources",
+      "label": "Labor und Felddaten",
+      "role": "content",
+      "members": [
+        "basis_test_sources"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_16"
+    },
+    {
+      "groupId": "basis_calculation_sources",
+      "label": "Berechnung und Simulation",
+      "role": "content",
+      "members": [
+        "basis_calculation_sources"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_18"
+    },
+    {
+      "groupId": "basis_experience_sources",
+      "label": "Weitere Quellen",
+      "role": "content",
+      "members": [
+        "basis_experience_sources"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_19"
+    },
+    {
+      "groupId": "basis_value_fatigue",
+      "label": "Kennwert fatigue",
+      "role": "content",
+      "members": [
+        "basis_value_fatigue"
+      ],
+      "dependsOn": [
+        "basis_basics",
+        "basis_time"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_29"
+    },
+    {
+      "groupId": "basis_value_material",
+      "label": "Kennwert material",
+      "role": "content",
+      "members": [
+        "basis_value_material"
+      ],
+      "dependsOn": [
+        "basis_basics",
+        "basis_time"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_30"
+    },
+    {
+      "groupId": "basis_value_flow_base",
+      "label": "Kennwert flow_base",
+      "role": "content",
+      "members": [
+        "basis_value_flow_base"
+      ],
+      "dependsOn": [
+        "basis_basics",
+        "basis_time"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_31"
+    },
+    {
+      "groupId": "basis_value_static_base",
+      "label": "Kennwert static_base",
+      "role": "content",
+      "members": [
+        "basis_value_static_base"
+      ],
+      "dependsOn": [
+        "basis_basics",
+        "basis_time"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_32"
+    },
+    {
+      "groupId": "basis_value_wear",
+      "label": "Kennwert wear",
+      "role": "content",
+      "members": [
+        "basis_value_wear"
+      ],
+      "dependsOn": [
+        "basis_basics",
+        "basis_time"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_33"
+    },
+    {
+      "groupId": "basis_value_thermal",
+      "label": "Kennwert thermal",
+      "role": "content",
+      "members": [
+        "basis_value_thermal"
+      ],
+      "dependsOn": [
+        "basis_basics",
+        "basis_time"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_34"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_basis_heading",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_heading",
+      "sourceText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_basis_top",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_top",
+      "sourceText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_basis_causes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_causes",
+      "sourceText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_basis_components",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_components",
+      "sourceText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_basis_modes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_modes",
+      "sourceText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_basis_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_basics",
+      "sourceText": "Im fünften Schritt der quantitativen Fehlerbaumanalyse",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_basis_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_basics",
+      "sourceText": "Für jedes der blau hinterlegten Basisereignisse",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_7",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_08_basis_time",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_time",
+      "sourceText": "Ausfallwahrscheinlichkeit zu einem bestimmten Zeitpunkt",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_basis_top",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_top",
+      "sourceText": "Wenn wir etwa sicher wissen",
+      "action": "hide",
+      "beatId": "beat_9",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_10_basis_causes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_causes",
+      "sourceText": "Wenn wir etwa sicher wissen",
+      "action": "hide",
+      "beatId": "beat_10",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_11_basis_components",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_components",
+      "sourceText": "Wenn wir etwa sicher wissen",
+      "action": "hide",
+      "beatId": "beat_11",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_12_basis_modes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_modes",
+      "sourceText": "Wenn wir etwa sicher wissen",
+      "action": "hide",
+      "beatId": "beat_12",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_13_basis_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_basics",
+      "sourceText": "Wenn wir etwa sicher wissen",
+      "action": "hide",
+      "beatId": "beat_13",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_14_basis_zero",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_zero",
+      "sourceText": "Wenn wir etwa sicher wissen",
+      "action": "show",
+      "beatId": "beat_14",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_15_basis_zero",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_zero",
+      "sourceText": "Das sollte aber immer gut begründet sein",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_15",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_16_basis_test_sources",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_test_sources",
+      "sourceText": "unterschiedliche Datenquellen wie Labortests",
+      "action": "show",
+      "beatId": "beat_16",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_17_basis_test_sources",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_test_sources",
+      "sourceText": "bereits im Modul Lebensdauerdatenanalyse gelernt",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_17",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_18_basis_calculation_sources",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_calculation_sources",
+      "sourceText": "mithilfe von Berechnungen oder Simulationen",
+      "action": "show",
+      "beatId": "beat_18",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_19_basis_experience_sources",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_experience_sources",
+      "sourceText": "Darüber hinaus sind auch Expertenschätzungen",
+      "action": "show",
+      "beatId": "beat_19",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_20_basis_zero",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_zero",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "hide",
+      "beatId": "beat_20",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_21_basis_test_sources",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_test_sources",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "hide",
+      "beatId": "beat_21",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_22_basis_calculation_sources",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_calculation_sources",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "hide",
+      "beatId": "beat_22",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_23_basis_experience_sources",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_experience_sources",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "hide",
+      "beatId": "beat_23",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_24_basis_top",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_top",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show",
+      "beatId": "beat_24",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_25_basis_causes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_causes",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show",
+      "beatId": "beat_25",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_26_basis_components",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_components",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show",
+      "beatId": "beat_26",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_27_basis_modes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_modes",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show",
+      "beatId": "beat_27",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_28_basis_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_basics",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show",
+      "beatId": "beat_28",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_29_basis_value_fatigue",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_value_fatigue",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show",
+      "beatId": "beat_29",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_30_basis_value_material",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_value_material",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show",
+      "beatId": "beat_30",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_31_basis_value_flow_base",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_value_flow_base",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show",
+      "beatId": "beat_31",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_32_basis_value_static_base",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_value_static_base",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show",
+      "beatId": "beat_32",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_33_basis_value_wear",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_value_wear",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show",
+      "beatId": "beat_33",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_34_basis_value_thermal",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_value_thermal",
+      "sourceText": "Auf diese Weise können wir jedem Basisereignis",
+      "action": "show",
+      "beatId": "beat_34",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_35_basis_time",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_time",
+      "sourceText": "passend zum Zeitpunkt",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_35",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_36_basis_top",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "basis_top",
+      "sourceText": "die Gesamtausfallwahrscheinlichkeit des Systems",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_36",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/qa-final/svg-qa-report.md"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "basis_heading",
+        "basis_time",
+        "basis_top",
+        "basis_causes",
+        "basis_components",
+        "basis_modes",
+        "basis_basics",
+        "basis_value_fatigue",
+        "basis_value_material",
+        "basis_value_flow_base",
+        "basis_value_static_base",
+        "basis_value_wear",
+        "basis_value_thermal"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/qa-final/svg-qa-report.md"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "reviewEvidence": "analysis/render-checks/RE4/feedback-2026-09-17/review-summary.md"
+}

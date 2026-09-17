@@ -11,32 +11,24 @@
   },
   "targets": [
     {
-      "targetId": "three_rule_1",
-      "label": "Physikalisch begründbar",
+      "targetId": "three_estimate_table",
+      "label": "Dritter Parameterschätzwert",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "three_rule_2",
-      "label": "Konkaver Verlauf",
+      "targetId": "three_estimate_meaning",
+      "label": "Ausfallfreie Zeit",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "three_rule_3",
-      "label": "Stichprobenumfang",
-      "status": "animated",
-      "visibleInEditor": true,
-      "render": true,
-      "confidence": "high"
-    },
-    {
-      "targetId": "three_rule_fallback",
-      "label": "Faustregel",
+      "targetId": "three_estimate_warning",
+      "label": "Negativer Schwellenwert",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -45,44 +37,35 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_three_rule_1",
-      "targetId": "three_rule_1",
+      "stepId": "step_01_three_estimate_table",
+      "targetId": "three_estimate_table",
       "action": "show",
-      "sourceText": "Es gibt eine physikalisch begründbare und statistisch nachvollziehbare ausfallfreie Zeit.",
+      "sourceText": "Du wirst sehen, dass nun zusätzlich zum Form- und Lageparameter ein dritter Wert erscheint – der sogenannte Schwellenwert.",
       "occurrence": 1,
       "confidence": "high",
       "notes": "Sprechertextgeführte semantische Gruppe.",
       "enterFrames": 16
     },
     {
-      "stepId": "step_02_three_rule_2",
-      "targetId": "three_rule_2",
+      "stepId": "step_02_three_estimate_meaning",
+      "targetId": "three_estimate_meaning",
       "action": "show",
-      "sourceText": "Der Kurvenverlauf in der zweiparametrigen-Weibull-Darstellung ist deutlich konkav.",
+      "sourceText": "Dieser Schwellenwert beschreibt eine ausfallfreie Zeit: Also einen Zeitraum, in dem keine Ausfälle auftreten.",
       "occurrence": 1,
       "confidence": "high",
       "notes": "Sprechertextgeführte semantische Gruppe.",
       "enterFrames": 16
     },
     {
-      "stepId": "step_03_three_rule_3",
-      "targetId": "three_rule_3",
+      "stepId": "step_03_three_estimate_warning",
+      "targetId": "three_estimate_warning",
       "action": "show",
-      "sourceText": "Und du hast einen ausreichend großen Stichprobenumfang.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
-    },
-    {
-      "stepId": "step_04_three_rule_fallback",
-      "targetId": "three_rule_fallback",
-      "action": "show",
-      "sourceText": "Wenn du dir unsicher bist, ob all das zutrifft, gilt folgende Faustregel.",
+      "sourceText": "Wenn Minitab beispielsweise einen negativen Schwellenwert berechnet, ist das physikalisch nicht sinnvoll, auch wenn die Daten dadurch rechnerisch besser beschrieben werden.",
       "occurrence": 1,
       "confidence": "high",
       "notes": "Sprechertextgeführte semantische Gruppe.",
       "enterFrames": 16
     }
-  ]
+  ],
+  "notes": "Zusätzliche Zielszene zur lesbaren Trennung der bestätigten Inhalte aus Quellfolie 58."
 }

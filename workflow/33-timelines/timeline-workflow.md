@@ -35,6 +35,16 @@ Sobald eine Darstellung eine y-Achse, Objektzeilen mit Achsenbezug, Achsenskalie
 
 ## QA
 
+Bei mehrszenigen Zensierungsbeispielen bleiben Objektidentitäten, Zeilenreihenfolge,
+Zeitmaßstab und Startzeiten erhalten. Unterschiedliche Beobachtungsenden begründen
+keine unterschiedlichen Startzeiten. Ein Wechsel des ausgewerteten Mechanismus
+ändert den Ereignisstatus am selben Zeitpunkt, nicht die Objektzuordnung.
+Intervalle mit unbekannter Ausfallzeit dürfen keinen scheinbar exakt beobachteten
+Zeitpunkt suggerieren; bekannte Kontrollgrenzen und Ungewissheit explizit zeigen.
+Bei Matplotlib-Annotationen im tatsächlichen exportierten SVG prüfen, dass Pfeil
+und Endmarkierung innerhalb derselben animierten Gruppe wie die Beobachtungslinie
+liegen. Eine Artist-ID allein garantiert das bei Annotation-Pfeilen nicht.
+
 Eine Timeline ist nicht fertig, wenn:
 
 - Marker Pfeilspitzen beruehren,

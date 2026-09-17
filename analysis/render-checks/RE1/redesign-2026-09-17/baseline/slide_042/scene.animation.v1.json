@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_042.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "median_formula",
+      "label": "Medianformel",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "median_equal_halves",
+      "label": "Zwei gleiche Flächenhälften",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "median_robustness",
+      "label": "Robustheit gegenüber Ausreißern",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_median_formula",
+      "targetId": "median_formula",
+      "action": "show",
+      "sourceText": "entspricht dem Zeitpunkt, zu dem fünfzig Prozent der Bauteile ausgefallen sind",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_median_equal_halves",
+      "targetId": "median_equal_halves",
+      "action": "show",
+      "sourceText": "teilt der Median die Fläche unter dieser Kurve in zwei exakt gleiche Hälften",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_median_robustness",
+      "targetId": "median_robustness",
+      "action": "show",
+      "sourceText": "Robustheit gegenüber Ausreißern",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

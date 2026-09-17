@@ -1,18 +1,35 @@
 {
-  "schemaVersion": "elementAnimationPlan/v1",
+  "schemaVersion": "svgAnimationManifest/v1",
   "sceneId": "re3_src_011",
   "decision": "animated",
+  "svgPath": "slide_011.svg",
   "defaults": {
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
+      "targetId": "censored_timeline",
+      "label": "Beobachtete Ausfälle",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "censored_cutoff",
+      "label": "Testabbruch",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
       "targetId": "censored_plot",
-      "label": "Objekt-Zeit-Diagramm",
+      "label": "Zuordnung zu sechs Objekten",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -20,23 +37,23 @@
     },
     {
       "targetId": "censored_context",
-      "label": "Zensierte Information",
+      "label": "Bekannte Überlebensdauer",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "censored_examples",
-      "label": "Zensierungsgründe",
+      "targetId": "censored_unknown",
+      "label": "Unbekannter Ausfallzeitpunkt",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "censored_rule",
-      "label": "Laufzeit bleibt bekannt",
+      "targetId": "censored_evaluation",
+      "label": "Auswertung berücksichtigt Zensierungen",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -45,44 +62,62 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_censored_plot",
+      "stepId": "step_01_censored_timeline",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_timeline",
+      "sourceText": "Außerdem müssen Lebensdauerdaten nicht zwingend",
+      "action": "show"
+    },
+    {
+      "stepId": "step_02_censored_cutoff",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_cutoff",
+      "sourceText": "den Test vorzeitig abbrechen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_03_censored_plot",
+      "occurrence": 1,
+      "confidence": "high",
       "targetId": "censored_plot",
-      "action": "show",
-      "sourceText": "Außerdem müssen Lebensdauerdaten nicht zwingend ausschließlich als Ausfallzeiten vorliegen.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "sourceText": "wenn manche Objekte noch nicht ausgefallen sind",
+      "action": "show"
     },
     {
-      "stepId": "step_02_censored_context",
+      "stepId": "step_04_censored_context",
+      "occurrence": 1,
+      "confidence": "high",
       "targetId": "censored_context",
-      "action": "show",
-      "sourceText": "Es kann natürlich sein, dass wir den Test vorzeitig abbrechen, wenn manche Objekte noch nicht ausgefallen sind.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "sourceText": "eine bestimmte Lebensdauer überlebt hat",
+      "action": "show"
     },
     {
-      "stepId": "step_03_censored_examples",
-      "targetId": "censored_examples",
-      "action": "show",
-      "sourceText": "Es kann natürlich sein, dass wir den Test vorzeitig abbrechen, wenn manche Objekte noch nicht ausgefallen sind.",
+      "stepId": "step_05_censored_unknown",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "censored_unknown",
+      "sourceText": "Hierbei spricht man von Zensierung",
+      "action": "show"
     },
     {
-      "stepId": "step_04_censored_rule",
-      "targetId": "censored_rule",
-      "action": "show",
-      "sourceText": "Diese zensierten Informationen sind für uns ebenfalls relevant.",
+      "stepId": "step_06_censored_evaluation",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "censored_evaluation",
+      "sourceText": "in der Auswertung mitberücksichtigen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_censored_plot",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "censored_plot",
+      "sourceText": "welche Arten von Zensierung es gibt",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     }
   ]
 }

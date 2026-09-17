@@ -162,6 +162,19 @@ function buildApplyAnimationStateExpression(manifest, timeline, state) {
       element.removeAttribute("data-svg-qa-animation-hidden");
       element.style.visibility = "visible";
       element.style.pointerEvents = "none";
+      // Match the viewer's transient pulse; highlighting must not fade a
+      // previously visible table value out during its point-transfer cue.
+      if (step.action === "highlight") {
+        const pulse = Math.sin(Math.PI * value);
+        const color = step.stroke || "#F2A93B";
+        const strength = Math.max(2, Number(step.strokeWidth) || 4);
+        element.style.opacity = "1";
+        element.style.transformBox = "fill-box";
+        element.style.transformOrigin = "center";
+        element.style.transform = "scale(" + (1 + pulse * 0.018) + ")";
+        element.style.filter = "drop-shadow(0 0 " + (strength + pulse * strength) + "px " + color + ")";
+        return;
+      }
       if (step.action === "transform") {
         const fromX = Number(step.fromTranslateX) || 0;
         const fromY = Number(step.fromTranslateY) || 0;

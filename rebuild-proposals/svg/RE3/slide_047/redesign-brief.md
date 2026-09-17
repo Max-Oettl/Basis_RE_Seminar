@@ -3,12 +3,12 @@
 - Strukturstatus: Kapitel und Lektion noch nicht zugeordnet; Nutzervorgabe ausstehend
 - Quellfolien: 47
 - Sprechertext: section_016 — Übung 1-3 Video 8-10
-- Titel: Übung 1 · Weibull-Analyse durchführen
-- Takeaway: Ausfallzeiten werden in Minitab ausgewertet und anhand der Modellparameter interpretiert.
+- Titel: Übung 1: Probe
+- Takeaway: Aus 20 Wellen-Ausfällen werden b, T, B₁₀, B₅ und die Zuverlässigkeit bei 50.000 Lastwechseln bestimmt.
 - Archetyp: exercise
-- Zielmodus: full_slide, 1920×1080
-- Referenz-Lock: RE1 slide_009, slide_013, slide_027 und slide_064
+- Zielmodus: content_svg, transparent, 1920×1080; Titel, Footer, Logo und Hintergrund bleiben im E-Learning-Master
+- Referenz-Lock: RE3-Quellfolie(n) der Szene sowie die freigegebene offene Hierarchie aus RE2
 - Farbdramaturgie: Navy-Tonalität für gleichrangige Inhalte; Grün, Gold und Koralle nur semantisch und sparsam
 - Animation: statisch — gelieferter Sprechertext enthält keine belastbaren Trigger
 - Quellenregel: PowerPoint-Sprechericons, gelbe Produktionsnotizen und Masterdekoration entfallen
-- Assets: bereinigte Quellmedien bzw. vorhandene Python-Plotassets in neuem Full-Slide-Layout
+- Assets: native SVG-Komposition

@@ -3,11 +3,11 @@
 - Kapitel: 4
 - Lektion: 1
 - Quellfolie: 70
-- Zielmodus: full_slide, 1920×1080
-- Titel: Design-FMEA und Prozess-FMEA: Zeitpunkt und Ergebnis
-- Dominante Lernbotschaft: Beide FMEA-Arten setzen früh an, aber an unterschiedlichen Entwicklungsobjekten.
-- Archetyp: two-column-comparison
-- Layout: Zwei gleichgewichtige, semantisch farbcodierte Vergleichsspalten.
+- Zielmodus: content_svg, transparentes 1920×1080-Inhaltsmodul für den Downstream-Master
+- Titel: Design-FMEA und Prozess-FMEA im Vergleich
+- Dominante Lernbotschaft: Design-FMEA und Prozess-FMEA verfolgen dieselbe Risikologik, setzen aber an Produktdesign beziehungsweise Produktionsprozess an.
+- Archetyp: open-comparison-matrix
+- Layout: Quellnahe Aufteilung mit echtem FMEA-Elternknoten, zwei gleichgewichtigen Kopfzeilen und fünf offenen, zeilenweise ausgerichteten Vergleichskriterien.
 - Inhaltsinventar: Fachbegriffe, Beziehungen, Hierarchien, Tabellenzustände und Beispiele bleiben erhalten; PowerPoint-Bedienelemente und Masterdekoration entfallen.
 - Referenz-Lock: RE1 slide_013, slide_009, slide_027 und slide_022
 - Assetstrategie: native RelTest-SVG-Komposition

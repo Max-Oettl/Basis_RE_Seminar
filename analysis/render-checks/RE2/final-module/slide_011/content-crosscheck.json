@@ -1,0 +1,57 @@
+{
+  "schema_version": "basisReContentCrosscheck/v1",
+  "module_id": "RE2",
+  "work_unit": "slide_011",
+  "scene_id": "re2_ch2_component_block_principle",
+  "target_svg": "rebuild-proposals/svg/RE2/slide_011/slide_011.svg",
+  "source_slides": [
+    11,
+    12
+  ],
+  "mapping_type": "merged_sequence",
+  "source_checks": [
+    {
+      "source_slide": 11,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie11.SVG",
+      "expected_text_nodes": 1,
+      "missing_text_nodes": [
+        "Systemgrenze"
+      ],
+      "expected_image_assets": 1,
+      "missing_image_assets": [
+        "img1"
+      ],
+      "speaker_control_expected_removed": true
+    },
+    {
+      "source_slide": 12,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie12.SVG",
+      "expected_text_nodes": 14,
+      "missing_text_nodes": [
+        "Komponente",
+        "1",
+        "Systemgrenze",
+        "2",
+        "Stoffstrom",
+        "Informationsstrom",
+        "Energiestrom"
+      ],
+      "expected_image_assets": 1,
+      "missing_image_assets": [
+        "img1"
+      ],
+      "speaker_control_expected_removed": true
+    }
+  ],
+  "qa": {
+    "issues": [
+      "Quellfolie 11: 1 sichtbare Texte fehlen im Ziel.",
+      "Quellfolie 11: 1 Inhaltsbilder fehlen im Ziel.",
+      "Quellfolie 12: 7 sichtbare Texte fehlen im Ziel.",
+      "Quellfolie 12: 1 Inhaltsbilder fehlen im Ziel."
+    ],
+    "warnings": [],
+    "open_questions": []
+  },
+  "status": "failed"
+}

@@ -9,6 +9,18 @@ const root = path.resolve(__dirname, "..");
 const scenePlan = JSON.parse(fs.readFileSync(path.join(root, "analysis", "rebuild-plans", "RE2_scene-plan.json"), "utf8"));
 const moduleRoot = path.join(root, "rebuild-proposals", "svg", "RE2");
 
+function selectedOutputSlides(argv) {
+  const index = argv.indexOf("--slides");
+  if (index < 0) return null;
+  const selected = new Set();
+  for (const token of String(argv[index + 1] || "").split(",")) {
+    const match = token.trim().match(/^(\d+)(?:-(\d+))?$/);
+    if (!match) throw new Error(`Ungültige Viewer-Szenenauswahl: ${token}`);
+    for (let n = Number(match[1]); n <= Number(match[2] || match[1]); n += 1) selected.add(n);
+  }
+  return selected;
+}
+
 function exactTrigger(spokenText, hint) {
   const start = spokenText.indexOf(hint);
   if (start < 0) throw new Error(`Trigger hint is not present in spoken text: ${hint}`);
@@ -164,9 +176,13 @@ function buildScenePlan(scene) {
   return { scene: scene.work_unit, animated: isAnimated, steps: normalizedSteps.length };
 }
 
-const results = scenePlan.scenes.map(buildScenePlan);
-scenePlan.updated_at = "2026-08-07";
+const selectedSlides = selectedOutputSlides(process.argv.slice(2));
+const selectedScenes = selectedSlides
+  ? scenePlan.scenes.filter((scene) => selectedSlides.has(scene.output_slide_number))
+  : scenePlan.scenes;
+const results = selectedScenes.map(buildScenePlan);
+scenePlan.updated_at = "2026-08-27";
 scenePlan.scene_count = scenePlan.scenes.length;
 fs.writeFileSync(path.join(root, "analysis", "rebuild-plans", "RE2_scene-plan.json"), `${JSON.stringify(scenePlan, null, 2)}\n`, "utf8");
 const animated = results.filter((entry) => entry.animated).length;
-process.stdout.write(`Built ${results.length} RE2 animation dramaturgy plans (${animated} animated, ${results.length - animated} static).\n`);
+process.stdout.write(`Built ${results.length} RE2 animation dramaturgy plans (${animated} animated, ${results.length - animated} static)${selectedSlides ? " for selected viewer scenes" : ""}.\n`);

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "reltestEducationPictogramAsset/v1",
+  "assetId": "re2_p_diagram_activation_energy_v2",
+  "file": "components/image-library/generated-pictograms/re2-p-diagram-v2/re2-p-diagram-activation-energy-v2.png",
+  "assetType": "generated_png",
+  "status": "accepted",
+  "styleProfile": "reltest-education-minimal-v1",
+  "source": {"evidenceType": "user_request", "reference": "RE2 Szene 6 / Quelle 009: Betätigungsenergie wirkt als eigener Eingang auf den Notausschalter.", "license": "project_internal"},
+  "semantics": {
+    "concept": "Betätigungsenergie durch Drücken eines Notausschalters",
+    "learningFunction": "concept-anchor",
+    "mustShowFeatures": ["Hand", "gedrückter Drucktaster", "Energieimpuls"],
+    "mustNotImply": ["Touchscreen", "Reparatur"],
+    "confusableWith": ["allgemeine Bedienung", "Wartung"],
+    "firstUseLabel": "Betätigungsenergie",
+    "reuseKey": "p-diagram-activation-energy"
+  },
+  "visualStyle": {"flat2d": true, "perspective": "front", "dominantSilhouette": true, "semanticLayers": 2, "brandColors": ["#142452", "#00A653"], "gradients": false, "shadows": false, "threeDimensional": false, "isometric": false, "photorealistic": false, "glow": false, "texture": false, "embeddedText": false, "logo": false, "watermark": false},
+  "raster": {"widthPx": 1024, "heightPx": 1024, "transparentBackground": true, "safeMarginRatio": 0.10},
+  "learningUse": {"targetPlacementPx": 108, "requiresTextLabelOnFirstUse": true, "colorIndependentMeaning": true, "smallScaleTests": {"at32px": "not_required", "at48px": "passed", "scene960x540": "passed"}},
+  "accessibility": {"redundantWithVisibleLabel": true, "accessibleName": "", "contrastPairs": [{"foreground": "#142452", "background": "#FFFFFF", "minimumRatio": 3}]},
+  "review": {"semantic": "passed", "style": "passed", "eLearning": "passed", "accessibilityTechnical": "passed", "notes": ["Tastendruck und Energieimpuls sind auch im kleinen Zielmaßstab eindeutig."]}
+}

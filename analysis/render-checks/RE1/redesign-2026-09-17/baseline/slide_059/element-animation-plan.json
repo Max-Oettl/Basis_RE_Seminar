@@ -1,0 +1,93 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_059",
+  "scene_id": "re1_src_074",
+  "source_slides": [
+    74
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "weibull_cdf_curves",
+      "label": "Weibull-Verteilungsfunktionen",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_common_point",
+      "label": "Gemeinsamer Punkt",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_eta_location",
+      "label": "T als Lageparameter",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_eta_conclusion",
+      "label": "F von T und R von T",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_weibull_cdf_curves",
+      "targetId": "weibull_cdf_curves",
+      "action": "draw",
+      "sourceText": "Hierzu sind die Verläufe der Ausfallwahrscheinlichkeit wieder für unterschiedliche Formparameter",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_weibull_common_point",
+      "targetId": "weibull_common_point",
+      "action": "show",
+      "sourceText": "alle Kurven zum Zeitpunkt der charakteristischen Lebensdauer durch einen gemeinsamen Punkt verlaufen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_eta_location",
+      "targetId": "weibull_eta_location",
+      "action": "show",
+      "sourceText": "Nun schauen wir uns einmal genauer die charakteristische Lebensdauer an",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_eta_conclusion",
+      "targetId": "weibull_eta_conclusion",
+      "action": "show",
+      "sourceText": "der charakteristischen Lebensdauer immer eine Ausfallwahrscheinlichkeit von dreiundsechzigkommazwei Prozent zugeordnet ist",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

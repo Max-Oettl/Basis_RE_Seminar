@@ -1,0 +1,129 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_034",
+  "scene_id": "re1_src_036",
+  "source_slides": [
+    36
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "nkw_distribution",
+      "label": "Ausfallwahrscheinlichkeitskurve",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "nkw_cdf_gearbox_image",
+      "label": "Generierte Illustration des 6-Gang-NKW-Getriebes",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "ten_percent_readout",
+      "label": "Leseweg zehn Prozent",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "ten_percent_context",
+      "label": "Erklärung zehn Prozent",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "time_one_readout",
+      "label": "Leseweg t gleich eins",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "time_one_context",
+      "label": "Erklärung t gleich eins",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_nkw_distribution",
+      "targetId": "nkw_distribution",
+      "action": "draw",
+      "sourceText": "Betrachten wir nun am bekannten Beispiel des Sechsgang-Nutzfahrzeuggetriebes die Ausfallwahrscheinlichkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_nkw_cdf_gearbox_image",
+      "targetId": "nkw_cdf_gearbox_image",
+      "action": "show",
+      "sourceText": "Betrachten wir nun am bekannten Beispiel des Sechsgang-Nutzfahrzeuggetriebes die Ausfallwahrscheinlichkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_ten_percent_readout",
+      "targetId": "ten_percent_readout",
+      "action": "show",
+      "sourceText": "Interessiert uns beispielsweise, wann zehn Prozent der Getriebe ausgefallen sind",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_ten_percent_context",
+      "targetId": "ten_percent_context",
+      "action": "show",
+      "sourceText": "Interessiert uns beispielsweise, wann zehn Prozent der Getriebe ausgefallen sind",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_time_one_readout",
+      "targetId": "time_one_readout",
+      "action": "show",
+      "sourceText": "Interessiert uns aber wie viele Einheiten zum Zeitpunkt eins ausgefallen sind",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_time_one_context",
+      "targetId": "time_one_context",
+      "action": "show",
+      "sourceText": "Interessiert uns aber wie viele Einheiten zum Zeitpunkt eins ausgefallen sind",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

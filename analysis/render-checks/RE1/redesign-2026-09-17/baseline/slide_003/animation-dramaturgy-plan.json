@@ -1,0 +1,205 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re1_src_003",
+  "svgPath": "rebuild-proposals/svg/RE1/slide_003/slide_003.svg",
+  "spokenText": "Einer der größten PKW-Rückrufe war der Rückruf wegen fehlerhafter Takata-Airbags im Jahr Zweitausendfünfzehn.\n\nDer Rückruf im Zusammenhang mit den Takata-Airbags ist eine der größten und kostspieligsten Sicherheitsaktionen in der Automobilgeschichte. Die Ursache liegt in einem fehlerhaften Gasgenerator, der bai der Airbag-Auslösung unkontrollierte Entfaltungen und die Freisetzung von scharfen Metallfragmenten verursachen kann, was zu erheblichen Gefahren für die Insassen führt.\n\nDas Ausmaß dieses Problems zeigt sich in der Notwendigkeit, fast Vierunddreißig Millionen Fahrzeuge verschiedener Hersteller in den USA zurückzurufen. Die betroffenen Autohersteller sind mit erheblichen finanziellen Belastungen konfrontiert, da die Rückrufaktion nicht nur die direkten Reparaturkosten umfasst, sondern auch potenzielle rechtliche Konsequenzen und erhebliche Imageschäden nach sich zieht.",
+  "animationDecision": "animated",
+  "animationRationale": "Das Quellfoto bleibt Orientierung; Ursache und Verletzungsfolge werden vor Ausmaß und Konsequenzen eingeführt.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Show wird als reines Fade bewertet.",
+      "Gleiche sourceText-Phrase startet alle Schritte derselben Triggergruppe gleichzeitig."
+    ]
+  },
+  "initialStateRationale": "Das Airbagfoto etabliert Produkt und Fehlerkontext, ohne den späteren Umfang vorwegzunehmen.",
+  "semanticGroups": [
+    {
+      "groupId": "brand_background",
+      "label": "RelTest-Education-Hintergrund",
+      "role": "background",
+      "members": [
+        "Education-Farbverlauf",
+        "ruhiges technisches Raster"
+      ],
+      "initialState": "static_decorative",
+      "dependsOn": [],
+      "groupingRationale": "Der Hintergrund ist ruhiger Markenrahmen und trägt keine vorweggenommene Fachinformation."
+    },
+    {
+      "groupId": "case_media_003",
+      "label": "Takata-Airbagfoto",
+      "role": "context",
+      "members": [
+        "vollständiges Airbagfoto",
+        "Medienkontur"
+      ],
+      "initialState": "visible_context",
+      "dependsOn": [],
+      "groupingRationale": "Foto und Kontur bilden ein untrennbares Quellmedium."
+    },
+    {
+      "groupId": "takata_case_context",
+      "label": "Ursache und Verletzungsfolge",
+      "role": "case_context",
+      "members": [
+        "Ursachenkarte",
+        "Gasgenerator",
+        "Metallfragmente",
+        "Verletzungsgefahr"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "case_media_003"
+      ],
+      "groupingRationale": "Defekt und unmittelbare Sicherheitsfolge gehören fachlich zusammen."
+    },
+    {
+      "groupId": "takata_scope_and_consequences",
+      "label": "Ausmaß und Konsequenzen",
+      "role": "result",
+      "members": [
+        "34-Millionen-Kennzahl",
+        "finanzielle Belastung",
+        "Recht und Imageschaden"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "takata_case_context"
+      ],
+      "groupingRationale": "Umfang und Folgewirkungen bilden die zweite Erklärungsebene."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "introduce_takata_case",
+      "claim": "Der Takata-Rückruf wird als großer Sicherheitsfall eingeordnet.",
+      "sourceText": "Der Rückruf im Zusammenhang mit den Takata-Airbags",
+      "occurrence": 1,
+      "requiredContext": [
+        "case_media_003"
+      ],
+      "revealTogether": [
+        "takata_case_context"
+      ],
+      "learnerStateBefore": "Nur der Airbag ist sichtbar.",
+      "learnerStateAfter": "Defekt und Verletzungsfolge sind vollständig sichtbar."
+    },
+    {
+      "beatId": "show_takata_scope",
+      "claim": "Das Problem betrifft Millionen Fahrzeuge und erzeugt erhebliche Konsequenzen.",
+      "sourceText": "Das Ausmaß dieses Problems zeigt sich",
+      "occurrence": 1,
+      "requiredContext": [
+        "case_media_003",
+        "takata_case_context"
+      ],
+      "revealTogether": [
+        "takata_scope_and_consequences"
+      ],
+      "learnerStateBefore": "Der technische Fall ist erklärt.",
+      "learnerStateAfter": "Ausmaß und Konsequenzen sind ergänzt."
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_takata_case_context",
+      "beatId": "introduce_takata_case",
+      "targetId": "takata_case_context",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Die Ursachenkarte erscheint als vollständige Einheit."
+    },
+    {
+      "stepId": "show_takata_scope_and_consequences",
+      "beatId": "show_takata_scope",
+      "targetId": "takata_scope_and_consequences",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Alle Wirkungskennzahlen erscheinen gemeinsam."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "case_media_003"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Das Airbagfoto etabliert Produkt und Fehlerkontext, ohne den späteren Umfang vorwegzunehmen."
+    },
+    {
+      "stateId": "before_introduce_takata_case",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "case_media_003"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Nur der Airbag ist sichtbar."
+    },
+    {
+      "stateId": "after_introduce_takata_case",
+      "afterBeatId": "introduce_takata_case",
+      "visibleGroups": [
+        "brand_background",
+        "case_media_003",
+        "takata_case_context"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Defekt und Verletzungsfolge sind vollständig sichtbar."
+    },
+    {
+      "stateId": "before_show_takata_scope",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "case_media_003",
+        "takata_case_context"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der technische Fall ist erklärt."
+    },
+    {
+      "stateId": "after_show_takata_scope",
+      "afterBeatId": "show_takata_scope",
+      "visibleGroups": [
+        "brand_background",
+        "case_media_003",
+        "takata_case_context",
+        "takata_scope_and_consequences"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Ausmaß und Konsequenzen sind ergänzt."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "show_takata_scope",
+      "visibleGroups": [
+        "brand_background",
+        "case_media_003",
+        "takata_case_context",
+        "takata_scope_and_consequences"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der vollständige statische Endzustand bleibt ohne Animation fachlich verständlich."
+    }
+  ]
+}

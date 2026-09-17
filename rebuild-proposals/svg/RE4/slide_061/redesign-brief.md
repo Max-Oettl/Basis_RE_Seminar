@@ -1,14 +1,8 @@
-# Redesign-Brief — slide_061
+# RE4 slide_061 · Designrevision
 
-- Strukturstatus: Kapitel und Lektion noch nicht zugeordnet; Nutzervorgabe ausstehend
-- Quellfolien: 61
-- Sprechertext: section_007 — Zuverlässigkeitsblockdiagramm – Separation
-- Titel: Methoden zur Systemzuverlässigkeit einordnen
-- Takeaway: Einfache boolesche Systeme, reparierbare Systeme und komplexe Modelle benötigen unterschiedliche Berechnungsmethoden.
-- Archetyp: method-map
-- Zielmodus: full_slide, 1920×1080
-- Referenz-Lock: RE3 slide_002, slide_024, slide_043 und slide_070
-- Farbdramaturgie: Navy-Tonalität für gleichrangige Inhalte; Grün und Koralle nur semantisch für Fokus, Funktion oder Ausfall
-- Animation: statisch — kein belastbarer separater Sprechertextaufbau
-- Quellenregel: PowerPoint-Sprechericons, gelbe Produktionsnotizen und Masterdekoration entfallen
-- Assets: native SVG-Komposition
+- Transparente Content-SVG,1920×1080; Master extern.
+- Quellen: 61.
+- Referenz-Lock: RE4::39, RE4::41, RE4::48.
+- Inventar und Entscheidungen: analysis/rebuild-plans/RE4_feedback_54_66_2026-09-17.md.
+- Statisch: keine eigenen Originaltext-Trigger für diese Referenz.
+- Nachweise: analysis/render-checks/RE4/feedback-54-66-2026-09-17.

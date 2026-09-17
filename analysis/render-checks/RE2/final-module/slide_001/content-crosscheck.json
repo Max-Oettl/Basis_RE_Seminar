@@ -1,0 +1,83 @@
+{
+  "schema_version": "basisReContentCrosscheck/v1",
+  "module_id": "RE2",
+  "work_unit": "slide_001",
+  "scene_id": "re2_ch1_methods",
+  "target_svg": "rebuild-proposals/svg/RE2/slide_001/slide_001.svg",
+  "source_slides": [
+    1,
+    2
+  ],
+  "mapping_type": "merged_sequence",
+  "source_checks": [
+    {
+      "source_slide": 1,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie1.SVG",
+      "expected_text_nodes": 20,
+      "missing_text_nodes": [
+        "Qualitative",
+        "Zuverlässigkeits",
+        "-",
+        "methoden",
+        "Quantitative",
+        "",
+        "Identifikation der kritischen",
+        "Ausfallmechanismen",
+        "Verbesserung der",
+        "Zuverlässigkeit",
+        "Bestimmung von",
+        "Lebensdauermodellen",
+        "Nachweis der"
+      ],
+      "expected_image_assets": 5,
+      "missing_image_assets": [
+        "img1",
+        "img3",
+        "img6",
+        "img9",
+        "img12"
+      ],
+      "speaker_control_expected_removed": true
+    },
+    {
+      "source_slide": 2,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie2.SVG",
+      "expected_text_nodes": 22,
+      "missing_text_nodes": [
+        "Qualitative",
+        "Zuverlässigkeits",
+        "-",
+        "methoden",
+        "Quantitative",
+        "",
+        "Identifikation der kritischen",
+        "Ausfallmechanismen",
+        "Verbesserung der",
+        "Zuverlässigkeit",
+        "Bestimmung von",
+        "Lebensdauermodellen",
+        "Nachweis der"
+      ],
+      "expected_image_assets": 5,
+      "missing_image_assets": [
+        "img1",
+        "img3",
+        "img6",
+        "img9",
+        "img12"
+      ],
+      "speaker_control_expected_removed": true
+    }
+  ],
+  "qa": {
+    "issues": [
+      "Quellfolie 1: 13 sichtbare Texte fehlen im Ziel.",
+      "Quellfolie 1: 5 Inhaltsbilder fehlen im Ziel.",
+      "Quellfolie 2: 13 sichtbare Texte fehlen im Ziel.",
+      "Quellfolie 2: 5 Inhaltsbilder fehlen im Ziel."
+    ],
+    "warnings": [],
+    "open_questions": []
+  },
+  "status": "failed"
+}

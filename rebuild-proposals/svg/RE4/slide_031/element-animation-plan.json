@@ -1,18 +1,27 @@
 {
-  "schemaVersion": "elementAnimationPlan/v1",
+  "schemaVersion": "svgAnimationManifest/v1",
   "sceneId": "re4_src_031",
   "decision": "animated",
+  "svgPath": "slide_031.svg",
   "defaults": {
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "rbd_definition",
-      "label": "RBD-Definition",
+      "targetId": "rbd_name",
+      "label": "Englische Bezeichnung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "rbd_model",
+      "label": "Modell der Systemzuverlässigkeit",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -20,7 +29,7 @@
     },
     {
       "targetId": "rbd_blocks",
-      "label": "Komponentenblöcke",
+      "label": "Blöcke und Systemgrenzen",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -28,7 +37,23 @@
     },
     {
       "targetId": "rbd_connections",
-      "label": "Verbindungen",
+      "label": "Funktionale Verbindungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "rbd_states",
+      "label": "Zwei mögliche Zustände",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "rbd_ends",
+      "label": "Ein- und Ausgang",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -36,7 +61,7 @@
     },
     {
       "targetId": "rbd_path",
-      "label": "Funktionspfad",
+      "label": "Durchgängiger Funktionspfad",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -45,44 +70,100 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_rbd_definition",
-      "targetId": "rbd_definition",
-      "action": "show",
-      "sourceText": "Es ist ein grafisches Hilfsmittel zur Modellierung der Systemzuverlässigkeit.",
+      "stepId": "step_01_rbd_name",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "rbd_name",
+      "sourceText": "Das Zuverlässigkeitsblockdiagramm wird im Englischen",
+      "action": "show"
     },
     {
-      "stepId": "step_02_rbd_blocks",
+      "stepId": "step_02_rbd_model",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "rbd_model",
+      "sourceText": "Es ist ein grafisches Hilfsmittel",
+      "action": "show"
+    },
+    {
+      "stepId": "step_03_rbd_model",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "rbd_model",
+      "sourceText": "welche Wirkung deren Zuverlässigkeit",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_04_rbd_blocks",
+      "occurrence": 1,
+      "confidence": "high",
       "targetId": "rbd_blocks",
-      "action": "show",
-      "sourceText": "Das Diagramm besteht im Wesentlichen aus zwei Elementen: den Blöcken, meist in Form von Rechtecken, die einzelne Systemkomponenten repräsentieren, und den Verbindungen, oder auch Linien, die die funktionalen Abhängigkeiten zwischen den Komponenten beschreiben.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "sourceText": "Das Diagramm besteht im Wesentlichen",
+      "action": "show"
     },
     {
-      "stepId": "step_03_rbd_connections",
+      "stepId": "step_05_rbd_blocks",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "rbd_blocks",
+      "sourceText": "die einzelne Systemkomponenten repräsentieren",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_06_rbd_connections",
+      "occurrence": 1,
+      "confidence": "high",
       "targetId": "rbd_connections",
-      "action": "show",
-      "sourceText": "Das Diagramm besteht im Wesentlichen aus zwei Elementen: den Blöcken, meist in Form von Rechtecken, die einzelne Systemkomponenten repräsentieren, und den Verbindungen, oder auch Linien, die die funktionalen Abhängigkeiten zwischen den Komponenten beschreiben.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "sourceText": "und den Verbindungen",
+      "action": "show"
     },
     {
-      "stepId": "step_04_rbd_path",
-      "targetId": "rbd_path",
-      "action": "draw",
-      "sourceText": "Solange es eine ununterbrochene Verbindung vom Eingang E zum Ausgang A gibt – das heißt, es existiert ein durchgängiger Pfad durch funktionsfähige Komponenten –, gilt das Gesamtsystem als funktionsfähig.",
+      "stepId": "step_07_rbd_states",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Beziehung erscheint nach ihren fachlichen Endpunkten.",
-      "drawDurFrames": 42
+      "targetId": "rbd_states",
+      "sourceText": "Jede Komponente, also jeder Block",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_rbd_ends",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "rbd_ends",
+      "sourceText": "Solange es eine ununterbrochene Verbindung",
+      "action": "show"
+    },
+    {
+      "stepId": "step_09_rbd_ends",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "rbd_ends",
+      "sourceText": "durchgängiger Pfad durch funktionsfähige Komponenten",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_10_rbd_path",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "rbd_path",
+      "sourceText": "gilt das Gesamtsystem als funktionsfähig",
+      "action": "show"
+    },
+    {
+      "stepId": "step_11_rbd_path",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "rbd_path",
+      "sourceText": "die Systemfunktion beeinflusst",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     }
   ]
 }

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_041.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "mean_formula",
+      "label": "Formel des arithmetischen Mittelwerts",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mass_points",
+      "label": "Ausfallzeiten als Massenpunkte",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mean_centroid",
+      "label": "Mittelwert als Schwerpunkt",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "outlier_effect",
+      "label": "Ausreißereinfluss auf den Mittelwert",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_mean_formula",
+      "targetId": "mean_formula",
+      "action": "show",
+      "sourceText": "Dabei wird einfach die Summe aller Ausfallzeiten durch die Anzahl der Ausfälle geteilt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_mass_points",
+      "targetId": "mass_points",
+      "action": "show",
+      "sourceText": "Stellt euch hierzu die Ausfallzeiten als Massenpunkte vor",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_mean_centroid",
+      "targetId": "mean_centroid",
+      "action": "show",
+      "sourceText": "Der Mittelwert entspricht dann genau dem Schwerpunkt dieser Punkte",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_outlier_effect",
+      "targetId": "outlier_effect",
+      "action": "show",
+      "sourceText": "dass der Mittelwert sehr empfindlich auf Ausreißer reagiert",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ]
+}

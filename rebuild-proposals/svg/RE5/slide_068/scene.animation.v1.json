@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_068.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "allocation_plot",
+      "label": "Prüflingsverteilung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "extrapolation_factor_block",
+      "label": "Extrapolationsfaktor",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "allocation_share_block",
+      "label": "Anteil auf unterem Niveau",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "allocation_rule",
+      "label": "Mehr Prüflinge unten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_allocation_plot",
+      "targetId": "allocation_plot",
+      "action": "draw",
+      "sourceText": "Ein Teil der Prüflinge läuft auf dem oberen Niveau",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "durFrames": 42,
+      "drawStyle": "stroke",
+      "direction": "forward"
+    },
+    {
+      "stepId": "step_02_extrapolation_factor_block",
+      "targetId": "extrapolation_factor_block",
+      "action": "show",
+      "sourceText": "Zunächst bestimmen wir den Extrapolationsfaktor",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_allocation_share_block",
+      "targetId": "allocation_share_block",
+      "action": "show",
+      "sourceText": "Anschließend wird der Anteil p",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_allocation_rule",
+      "targetId": "allocation_rule",
+      "action": "show",
+      "sourceText": "Auf dem unteren Versuchsniveau müssen immer mehr Prüflinge",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

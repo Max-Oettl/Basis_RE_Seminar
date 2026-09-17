@@ -1,0 +1,257 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch2_p_diagram_principle",
+  "svgPath": "slide_008.svg",
+  "spokenText": "Die Wechselbeziehungen zwischen System und Umgebung können durch das sogenannte Parameter Diagramm, oder auch kurz nur P-Diagramm, dargestellt werden.\n\nDas Parameter Diagramm stellt den Zusammenhang zwischen Systemparametern in Form eines Blockdiagramms dar.\n\nDabei können die Ein- und Ausgangsgrößen des Systems in unterschiedliche Kategorien unterteilt werden.\n\nGanz links gibt es die Eingangsgrößen oder auch Stellgrößen, welche in das System eingebracht werden. Sie können von Benutzern oder anderen Systemen stammen und beeinflussen direkt die Funktionsweise unseres Systems.\n\nZusätzlich gehen in das System kontrollierbare Größen oder Steuergrößen ein. Diese Faktoren können wir direkt beeinflussen, um die Leistung oder das Verhalten des Systems zu steuern. Durch Anpassung dieser Größen können wir gezielt also auf das System einwirken.\n\nUnerwünschte Einflüsse, die wir nicht direkt kontrollieren können, die aber dennoch Auswirkungen auf das System haben, werden als Störgrößen bezeichnet. Beispiele hierfür sind Umwelteinflüsse wie Temperatur oder Feuchtigkeit, aber auch Fertigungstoleranzen.\n\nAus dem System heraus gehen die Zielgrößen. Dies sind die gewünschten Ausgaben oder Leistungen, die wir vom System erwarten. Sie definieren die Qualitätsmerkmale und Leistungsparameter, die unser Produkt oder Prozess erfüllen soll.\n\nDie Klassifizierung dieser Größen innerhalb des P-Diagramms hilft uns die Schnittstellen und Wechselwirkungen innerhalb des Systems systematisch zu analysieren und besser zu verstehen.\n\nDas P-Diagramm bildet somit eine wertvolle Grundlage für die weitere qualitative Zuverlässigkeitsanalyse.\n\nWenden wir nun das P-Diagramm auf unseren Wechselrichter an.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "p_system",
+      "label": "System Produkt oder Prozess",
+      "role": "content",
+      "members": [
+        "p_system"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "p_inputs",
+      "label": "Eingangs- und Stellgrößen",
+      "role": "content",
+      "members": [
+        "p_inputs"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "p_controls",
+      "label": "Kontrollierbare Größen",
+      "role": "content",
+      "members": [
+        "p_controls"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "p_disturbances",
+      "label": "Störgrößen",
+      "role": "content",
+      "members": [
+        "p_disturbances"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "p_outputs",
+      "label": "Zielgrößen",
+      "role": "content",
+      "members": [
+        "p_outputs"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_05",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "p_relations",
+      "label": "Wirkbeziehungen",
+      "role": "content",
+      "members": [
+        "p_relations"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_06",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "System Produkt oder Prozess",
+      "sourceText": "Das Parameter Diagramm stellt den Zusammenhang",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "p_system"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Eingangs- und Stellgrößen",
+      "sourceText": "Ganz links gibt es die Eingangsgrößen",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "p_inputs"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Kontrollierbare Größen",
+      "sourceText": "Zusätzlich gehen in das System kontrollierbare",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "p_controls"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Störgrößen",
+      "sourceText": "Unerwünschte Einflüsse, die wir nicht direkt",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "p_disturbances"
+      ]
+    },
+    {
+      "beatId": "beat_05",
+      "claim": "Zielgrößen",
+      "sourceText": "Aus dem System heraus gehen die",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "p_outputs"
+      ]
+    },
+    {
+      "beatId": "beat_06",
+      "claim": "Wirkbeziehungen",
+      "sourceText": "Die Klassifizierung dieser Größen innerhalb des",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "p_relations"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_p_system",
+      "beatId": "beat_01",
+      "targetId": "p_system",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_p_inputs",
+      "beatId": "beat_02",
+      "targetId": "p_inputs",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_p_controls",
+      "beatId": "beat_03",
+      "targetId": "p_controls",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_04_p_disturbances",
+      "beatId": "beat_04",
+      "targetId": "p_disturbances",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_05_p_outputs",
+      "beatId": "beat_05",
+      "targetId": "p_outputs",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_06_p_relations",
+      "beatId": "beat_06",
+      "targetId": "p_relations",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_06",
+      "visibleGroups": [
+        "canvas_context",
+        "p_system",
+        "p_inputs",
+        "p_controls",
+        "p_disturbances",
+        "p_outputs",
+        "p_relations"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

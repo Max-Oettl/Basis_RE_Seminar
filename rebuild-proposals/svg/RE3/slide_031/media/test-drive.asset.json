@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "reltestEducationPictogramAsset/v1",
+  "assetId": "endurance-test-drive",
+  "file": "rebuild-proposals/svg/RE3/slide_031/media/test-drive.png",
+  "assetType": "generated_png",
+  "status": "accepted",
+  "styleProfile": "reltest-education-minimal-v1",
+  "source": {
+    "evidenceType": "speaker_text_and_user_request",
+    "reference": "RE3 Quellfolien 31, 32, 33; Sprechertext section_009; Nutzerauftrag vom 17.09.2026: minimalistische Linienpiktogramme generieren und einbinden",
+    "license": "project_internal_generated",
+    "generationMode": "built-in image_gen",
+    "promptFile": "rebuild-proposals/svg/RE3/slide_031/media/generation-prompts.json"
+  },
+  "semantics": {
+    "concept": "Versuchsfahrt im Fahrzeugbereich",
+    "learningFunction": "concept-anchor",
+    "mustShowFeatures": [
+      "Pkw-Seitenansicht",
+      "Zwei Räder"
+    ],
+    "mustNotImply": [
+      "Konkrete Automarke"
+    ],
+    "confusableWith": [
+      "Serienbetrieb ohne Versuchsbezug"
+    ],
+    "firstUseLabel": "Versuchsfahrten",
+    "reuseKey": "endurance-test-drive"
+  },
+  "visualStyle": {
+    "flat2d": true,
+    "perspective": "orthographic",
+    "dominantSilhouette": true,
+    "semanticLayers": 1,
+    "brandColors": [
+      "#142452"
+    ],
+    "gradients": false,
+    "shadows": false,
+    "threeDimensional": false,
+    "isometric": false,
+    "photorealistic": false,
+    "glow": false,
+    "texture": false,
+    "embeddedText": false,
+    "logo": false,
+    "watermark": false
+  },
+  "raster": {
+    "widthPx": 1254,
+    "heightPx": 1254,
+    "transparentBackground": true,
+    "safeMarginRatio": 0.08
+  },
+  "learningUse": {
+    "targetPlacementPx": 176,
+    "requiresTextLabelOnFirstUse": true,
+    "colorIndependentMeaning": true,
+    "smallScaleTests": {
+      "at32px": "not_required",
+      "at48px": "passed",
+      "scene960x540": "passed"
+    }
+  },
+  "accessibility": {
+    "redundantWithVisibleLabel": true,
+    "accessibleName": "",
+    "contrastPairs": [
+      {
+        "foreground": "#142452",
+        "background": "#FFFFFF",
+        "minimumRatio": 3
+      }
+    ]
+  },
+  "review": {
+    "semantic": "passed",
+    "style": "passed",
+    "eLearning": "passed",
+    "accessibilityTechnical": "passed",
+    "notes": [
+      "Reviewed at 48px and in 960x540 scene render. Transparent PNG is embedded with its visible text label in one animation target."
+    ],
+    "evidence": "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/assets/pictograms-final-48.png"
+  }
+}

@@ -1,0 +1,707 @@
+{
+  "schema_version": "basisRebuildContentCrosscheck/v2",
+  "module_id": "RE4",
+  "output_slide_number": 5,
+  "checked_at": "2026-09-17T09:48:40.198Z",
+  "status": "review_required",
+  "manual_review_required": true,
+  "reference_mapping": {
+    "work_unit": "slide_005",
+    "output_slide_number": 5,
+    "source_slides": [
+      5,
+      6
+    ],
+    "primary_source_slide": 6,
+    "output_slide_numbers": [],
+    "mapping_type": "merged",
+    "rationale": "",
+    "mapping_source": "reference_map",
+    "reference_map_path": "analysis/rebuild-plans/RE4_source-reference-map.json",
+    "sequence_plan": "",
+    "read_error": ""
+  },
+  "references": [
+    {
+      "source_slide_number": 5,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE4/SVG/Folie5.SVG",
+      "source_svg_sha256": "c2d4b6442cd9673df2e57009ea74e394952ca84eb137aa0f719530972888e9e6",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE4/SVG/Folie5.SVG",
+      "analysis_path": ""
+    },
+    {
+      "source_slide_number": 6,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE4/SVG/Folie6.SVG",
+      "source_svg_sha256": "1795d84d227c5ed413d9e430a14acef356892cf86491607d57f3a72716b4c4cc",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE4/SVG/Folie6.SVG",
+      "analysis_path": ""
+    }
+  ],
+  "proposal": {
+    "path": "rebuild-proposals/svg/RE4/slide_005/slide_005.svg",
+    "svg_sha256": "bea8cf32e801f63db32d23a5f4fcc98c453a1a7fef7660f379a9979f7def8833",
+    "animation_manifest": "/files/rebuild-proposals/svg/RE4/slide_005/scene.animation.v1.json"
+  },
+  "summary": {
+    "source_count": 2,
+    "checked_content_items": 29,
+    "checked_target_text_items": 37,
+    "errors": 0,
+    "warnings": 21,
+    "infos": 0,
+    "animation_steps": 17
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 005: \"Wöhlerkurve von Zahnrädern\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 5,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Wöhlerkurve von Zahnrädern"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 005: \"Ermittlung der Weibull\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 5,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Ermittlung der Weibull"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 005: \"Parameter\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 5,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Parameter"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 005: \"eines Zahnrades\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 5,
+      "source_item_id": "source-svg-text-5",
+      "expected": "eines Zahnrades"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 005: \"Ausfallzeiten können ausgewertet\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 5,
+      "source_item_id": "source-svg-text-7",
+      "expected": "Ausfallzeiten können ausgewertet"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 005: \"werden\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 5,
+      "source_item_id": "source-svg-text-8",
+      "expected": "werden"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 006: \"Von der Stichprobe zur Grundgesamtheit\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Von der Stichprobe zur Grundgesamtheit"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 006: \"Vertrauensgrenze\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-12",
+      "expected": "Vertrauensgrenze"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 006: \"Vertrauensgrenze\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-15",
+      "expected": "Vertrauensgrenze"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 006: \"Kumulierter Ausfall\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-20",
+      "expected": "Kumulierter Ausfall"
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Lebensdauerversuch am Zahnrad\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Lebensdauerversuch am Zahnrad",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Wechselnde Last bis zum Versagen\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Wechselnde Last bis zum Versagen",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Alle möglichen Einheiten\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Alle möglichen Einheiten",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Weibull-Analyse\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Weibull-Analyse",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"50\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "50",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"90\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "90",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Beschreibt zunächst\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Beschreibt zunächst",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"unsere Stichprobe.\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "unsere Stichprobe.",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"50\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "50",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"90\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "90",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"5-%- und 95-%-Grenze\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "5-%- und 95-%-Grenze",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    }
+  ],
+  "content_checks": [
+    {
+      "source_slide_number": 5,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Wöhlerkurve von Zahnrädern",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 5,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Ermittlung der Weibull",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.333,
+      "evidence": "tokens:weibull"
+    },
+    {
+      "source_slide_number": 5,
+      "source_item_id": "source-svg-text-3",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 5,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Parameter",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 5,
+      "source_item_id": "source-svg-text-5",
+      "expected": "eines Zahnrades",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 5,
+      "source_item_id": "source-svg-text-6",
+      "expected": "",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 5,
+      "source_item_id": "source-svg-text-7",
+      "expected": "Ausfallzeiten können ausgewertet",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.333,
+      "evidence": "tokens:ausfallzeiten"
+    },
+    {
+      "source_slide_number": 5,
+      "source_item_id": "source-svg-text-8",
+      "expected": "werden",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Von der Stichprobe zur Grundgesamtheit",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.4,
+      "evidence": "tokens:stichprobe,grundgesamtheit"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Grundgesamtheit",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Stichprobe",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Lebensdauer /",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-5",
+      "expected": "Grundgesamtheit",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-6",
+      "expected": "10 %",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-7",
+      "expected": "99 %",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-8",
+      "expected": "Lebensdauer",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-9",
+      "expected": "Ausfallwahrscheinlichkeit",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-10",
+      "expected": "95%",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-11",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-12",
+      "expected": "Vertrauensgrenze",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-13",
+      "expected": "5%",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-14",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-15",
+      "expected": "Vertrauensgrenze",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-16",
+      "expected": "Vertrauensbereich",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-17",
+      "expected": "10 %",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-18",
+      "expected": "99 %",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-19",
+      "expected": "Lebensdauer",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-20",
+      "expected": "Kumulierter Ausfall",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-21",
+      "expected": "Median",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    }
+  ],
+  "target_text_checks": [
+    {
+      "target_text": "Lebensdauerversuch am Zahnrad",
+      "result": "unsupported_target_text",
+      "score": 0.333,
+      "evidence": "tokens:zahnrad"
+    },
+    {
+      "target_text": "Wechselnde Last bis zum Versagen",
+      "result": "unsupported_target_text",
+      "score": 0.4,
+      "evidence": "tokens:last,bis"
+    },
+    {
+      "target_text": "Ausfallzeiten → Weibull-Verteilung",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "tokens:ausfallzeiten,weibull,verteilung"
+    },
+    {
+      "target_text": "Grundgesamtheit",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Alle möglichen Einheiten",
+      "result": "unsupported_target_text",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "target_text": "Stichprobe",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Eine begrenzte Auswahl",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_004: eine begrenzte Anzahl von Datenpunkten"
+    },
+    {
+      "target_text": "liefert unsere Daten.",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_004: das ist unsere Stichprobe"
+    },
+    {
+      "target_text": "Weibull-Analyse",
+      "result": "unsupported_target_text",
+      "score": 0.5,
+      "evidence": "tokens:weibull"
+    },
+    {
+      "target_text": "1",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "10",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Lebensdauer t",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "tokens:lebensdauer"
+    },
+    {
+      "target_text": "1",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "10",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "50",
+      "result": "unsupported_target_text",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "target_text": "90",
+      "result": "unsupported_target_text",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "target_text": "99",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Ausfallwahrscheinlichkeit F(t) [%]",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "tokens:ausfallwahrscheinlichkeit"
+    },
+    {
+      "target_text": "Median",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Beschreibt zunächst",
+      "result": "unsupported_target_text",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "target_text": "unsere Stichprobe.",
+      "result": "unsupported_target_text",
+      "score": 0.5,
+      "evidence": "tokens:stichprobe"
+    },
+    {
+      "target_text": "Grundgesamtheit",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "1",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "10",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Lebensdauer t",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "tokens:lebensdauer"
+    },
+    {
+      "target_text": "1",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "10",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "50",
+      "result": "unsupported_target_text",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "target_text": "90",
+      "result": "unsupported_target_text",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "target_text": "99",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Ausfallwahrscheinlichkeit F(t) [%]",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "tokens:ausfallwahrscheinlichkeit"
+    },
+    {
+      "target_text": "Median",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "5 %",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "95 %",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Vertrauensbereich",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "berücksichtigt Unsicherheit.",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_004: müssen wir die Unsicherheit berücksichtigen"
+    },
+    {
+      "target_text": "5-%- und 95-%-Grenze",
+      "result": "unsupported_target_text",
+      "score": 0.75,
+      "evidence": "tokens:5,und,95"
+    }
+  ],
+  "manual_review_focus": [
+    "Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.",
+    "Sprechertext-Reihenfolge gegen die semantisch geplanten Animationsschritte pruefen."
+  ],
+  "reference_mapping_sha256": "e15a54cd0d7f85a8356a6b3736ea038bd6c61435d84b497c1c414c9349e1645c",
+  "reference_map_path": "analysis/rebuild-plans/RE4_source-reference-map.json",
+  "sequence_plan": ""
+}

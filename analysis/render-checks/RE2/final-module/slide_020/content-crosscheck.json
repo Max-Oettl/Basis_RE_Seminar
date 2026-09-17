@@ -1,0 +1,132 @@
+{
+  "schema_version": "basisReContentCrosscheck/v1",
+  "module_id": "RE2",
+  "work_unit": "slide_020",
+  "scene_id": "re2_ch3_fta_acronym",
+  "target_svg": "rebuild-proposals/svg/RE2/slide_020/slide_020.svg",
+  "source_slides": [
+    20,
+    21,
+    22
+  ],
+  "mapping_type": "merged_sequence",
+  "source_checks": [
+    {
+      "source_slide": 20,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie20.SVG",
+      "expected_text_nodes": 20,
+      "missing_text_nodes": [
+        "F",
+        "ault",
+        "T",
+        "ree",
+        "A",
+        "nalysis",
+        "ehler",
+        "b",
+        "aum",
+        "a",
+        "nalyse/",
+        "ehlzustands",
+        "nalyse",
+        "FBA"
+      ],
+      "expected_image_assets": 1,
+      "missing_image_assets": [
+        "img1"
+      ],
+      "speaker_control_expected_removed": true
+    },
+    {
+      "source_slide": 21,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie21.SVG",
+      "expected_text_nodes": 25,
+      "missing_text_nodes": [
+        "TOP (unerwünschtes Ereignis)",
+        "Ausfall des Teilsystems",
+        "Ausfall der Baugruppe",
+        "Ausfall des Bauteils",
+        "Ausfallarten",
+        "Ablauf der FTA:",
+        "",
+        "FTA ist eine strukturierte Top",
+        "-",
+        "Down",
+        "Methode",
+        "TOP: unerwünschtes Ereignis",
+        "(Systemausfall)",
+        "Identifizierung weiterer Ausfälle und",
+        "Ausfallfolgen auf der nächsttieferen",
+        "Ebene",
+        "DOWN: Basisereignis/Schadensursache",
+        "(Ausfallmechanismus)",
+        "DOWN (Basisereignis, Schadenursache)",
+        "Ausfallmechanismus"
+      ],
+      "expected_image_assets": 1,
+      "missing_image_assets": [
+        "img1"
+      ],
+      "speaker_control_expected_removed": true
+    },
+    {
+      "source_slide": 22,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie22.SVG",
+      "expected_text_nodes": 55,
+      "missing_text_nodes": [
+        "Überlastung",
+        "Falsche",
+        "Berechnung",
+        "Fehlbedienung",
+        "…",
+        "Fressen",
+        "Bruch",
+        "Grübchen",
+        "Ausfall",
+        "Synchron.",
+        "Versagen",
+        "Zahnrad 1",
+        "Zahnrad 2",
+        "Ausfall Getriebe",
+        "Lagerung",
+        "Ausfall Abtrieb",
+        "Gehäuse",
+        "≥ 1",
+        "Fahrzeugs",
+        "Ausfälle und deren Beziehungen werden",
+        "diagrammatisch dargestellt:",
+        "",
+        "Logischen Verknüpfungen von Ausfällen,",
+        "Ausfallkombinationen und Ausfallursachen",
+        "",
+        "Teilsysteme, Baugruppen oder",
+        "Komponenten",
+        "Identifizieren der kritischen Ereignisse",
+        "unerwünschtes Top",
+        "-",
+        "Ereignis",
+        "(z. B. Systemausfall)",
+        "Auswirkungen einzelner Komponenten",
+        "ausfälle und der Kombinationen"
+      ],
+      "expected_image_assets": 1,
+      "missing_image_assets": [
+        "img1"
+      ],
+      "speaker_control_expected_removed": true
+    }
+  ],
+  "qa": {
+    "issues": [
+      "Quellfolie 20: 14 sichtbare Texte fehlen im Ziel.",
+      "Quellfolie 20: 1 Inhaltsbilder fehlen im Ziel.",
+      "Quellfolie 21: 20 sichtbare Texte fehlen im Ziel.",
+      "Quellfolie 21: 1 Inhaltsbilder fehlen im Ziel.",
+      "Quellfolie 22: 34 sichtbare Texte fehlen im Ziel.",
+      "Quellfolie 22: 1 Inhaltsbilder fehlen im Ziel."
+    ],
+    "warnings": [],
+    "open_questions": []
+  },
+  "status": "failed"
+}

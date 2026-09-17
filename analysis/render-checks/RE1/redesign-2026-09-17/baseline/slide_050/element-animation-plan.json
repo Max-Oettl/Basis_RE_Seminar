@@ -1,0 +1,129 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_050",
+  "scene_id": "re1_src_055",
+  "source_slides": [
+    55
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "normal_density_curves",
+      "label": "Dichtekurven der Normalverteilung",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "normal_mean_marker",
+      "label": "Lageparameter mü",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "normal_mu_meaning",
+      "label": "Bedeutung von mü",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "normal_sigma_meaning",
+      "label": "Bedeutung von sigma",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "normal_symmetry_properties",
+      "label": "Symmetrie und Lagewerte",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "normal_application_fields",
+      "label": "Typische Anwendungen",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_normal_density_curves",
+      "targetId": "normal_density_curves",
+      "action": "draw",
+      "sourceText": "Wir starten mit der hier abgebildeten Normalverteilung, welche als Dichtefunktion dargestellt ist",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_normal_mean_marker",
+      "targetId": "normal_mean_marker",
+      "action": "show",
+      "sourceText": "Zum einen durch den Erwartungswert mü",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_normal_mu_meaning",
+      "targetId": "normal_mu_meaning",
+      "action": "show",
+      "sourceText": "Zum einen durch den Erwartungswert mü",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_normal_sigma_meaning",
+      "targetId": "normal_sigma_meaning",
+      "action": "show",
+      "sourceText": "Und zum anderen durch die Standardabweichung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_normal_symmetry_properties",
+      "targetId": "normal_symmetry_properties",
+      "action": "show",
+      "sourceText": "Charakteristisch für die Normalverteilung ist die symmetrische Glockenform",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_normal_application_fields",
+      "targetId": "normal_application_fields",
+      "action": "show",
+      "sourceText": "Typische Anwendungsgebiete sind beispielsweise das Finanzwesen, die Medizin, aber auch Naturwissenschaften",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

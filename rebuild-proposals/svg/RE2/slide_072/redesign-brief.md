@@ -2,15 +2,15 @@
 
 - Kapitel: 4
 - Lektion: 2
-- Quellfolie: 75
-- Zielmodus: full_slide, 1920×1080
-- Titel: Das FMEA-Team
-- Dominante Lernbotschaft: Moderator, Basisteam und erweiterte Experten bringen unterschiedliche Kompetenzen in die FMEA ein.
-- Archetyp: team-hierarchy
-- Layout: Dreistufige Teamhierarchie mit Rollen und Kompetenzen.
+- Quellfolie: 73
+- Zielmodus: content_svg, transparentes 1920×1080-Inhaltsmodul für den Downstream-Master
+- Titel: 1. Schritt: Planung und Vorbereitung
+- Dominante Lernbotschaft: Schritt 1 – Planung und Vorbereitung – ist der nächste FMEA-Arbeitsschritt.
+- Archetyp: step-transition-preview
+- Layout: Zurückhaltende Sieben-Schritt-Navigation oben mit signalgrünem aktuellem Schritt; darunter ein großer Schrittanker und eine fachliche Vorschau auf die kommende Denkoperation.
 - Inhaltsinventar: Fachbegriffe, Beziehungen, Hierarchien, Tabellenzustände und Beispiele bleiben erhalten; PowerPoint-Bedienelemente und Masterdekoration entfallen.
 - Referenz-Lock: RE1 slide_013, slide_009, slide_027 und slide_022
 - Assetstrategie: native RelTest-SVG-Komposition
-- Animation: animated — sprechertextgeführte semantische Gruppen
+- Animation: static — der Zustand ist als vollständiger Aufbau-/Fokuszustand sofort verständlich
 - Statisches Freigabekriterium: vollständiger Quellen-Ziel-Referenzvergleich ohne Text-, Kontrast-, Pfeil- oder Assetbefund
 - QA-Schwerpunkte: 1:1-Inhaltstransfer, Mindestschrift 18 px, Verbinder 1,5–2,5 px, Pfeile hinter Knoten, keine unbelegte fachliche Ergänzung

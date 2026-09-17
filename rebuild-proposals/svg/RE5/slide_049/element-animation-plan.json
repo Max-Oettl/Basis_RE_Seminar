@@ -1,0 +1,37 @@
+{
+  "sceneId": "re5_src_049",
+  "decision": "animated",
+  "staticGate": "passed_before_animation",
+  "targets": [
+    {
+      "id": "degradation_plot",
+      "label": "Degradationspfade",
+      "cue": "Viertens sind Degradationstests möglich",
+      "action": "draw"
+    },
+    {
+      "id": "eol_criterion",
+      "label": "End-of-Life-Kriterium",
+      "cue": "Über einen festgelegten Grenzwert",
+      "action": "show"
+    },
+    {
+      "id": "lifetime_estimates",
+      "label": "Geschätzte Ausfallzeitpunkte",
+      "cue": "Wiederholen wir dieses Vorgehen für mehrere Prüflinge",
+      "action": "show"
+    },
+    {
+      "id": "lifetime_distribution",
+      "label": "Lebensdauerverteilung",
+      "cue": "erhalten wir eine Menge geschätzter Ausfallzeitpunkte",
+      "action": "show"
+    },
+    {
+      "id": "degradation_guardrail",
+      "label": "Ausfallmechanismus erhalten",
+      "cue": "Entscheidend ist immer der Ausfallmechanismus",
+      "action": "show"
+    }
+  ]
+}

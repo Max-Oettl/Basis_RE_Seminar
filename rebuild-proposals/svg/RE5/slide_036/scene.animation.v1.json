@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_036.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "weibull_relation_plot",
+      "label": "Weibullverteilung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "shape_parameter",
+      "label": "Formparameter b",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "duration_markers",
+      "label": "Zwei Zeitpunkte",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "survival_ratio_block",
+      "label": "Verhältnis der Überlebenswahrscheinlichkeiten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_weibull_relation_plot",
+      "targetId": "weibull_relation_plot",
+      "action": "draw",
+      "sourceText": "Hier kommt die Weibullverteilung ins Spiel",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "durFrames": 42,
+      "drawStyle": "stroke",
+      "direction": "forward"
+    },
+    {
+      "stepId": "step_02_shape_parameter",
+      "targetId": "shape_parameter",
+      "action": "show",
+      "sourceText": "Der entscheidende Parameter ist der Formparameter b",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_duration_markers",
+      "targetId": "duration_markers",
+      "action": "show",
+      "sourceText": "zwischen zwei verschiedenen Zeiten",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_survival_ratio_block",
+      "targetId": "survival_ratio_block",
+      "action": "show",
+      "sourceText": "Verhältnis der logarithmierten Überlebenswahrscheinlichkeiten",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

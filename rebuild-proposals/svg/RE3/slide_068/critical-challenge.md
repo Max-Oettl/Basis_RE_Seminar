@@ -2,9 +2,9 @@
 
 - Quellen: RE3::68, RE3::69
 - Struktur: Kapitel/Lektion bewusst nicht zugeordnet
-- Design-Challenge: Fahrwerk, Daten und Arbeitsauftrag sind im vorhandenen Übungsmaterial verankert und nicht durch erfundene Animationen überformt.
-- Animations-Challenge: Statisch: Der gelieferte Sprechertext leitet nur allgemein zum Beispiel über; für die konkreten Arbeitsschritte werden keine Trigger erfunden.
+- Design-Challenge: Zapfluftsystem, Felddatengrundlage und vierteiliger Arbeitsauftrag sind quellengetreu dargestellt und nicht durch erfundene Animationen überformt.
+- Animations-Challenge: Statisch: Konkreter Arbeitsauftrag der Quellfolie; keine erfundenen Sprechertexttrigger.
 - Sichtprüfung: finaler statischer Zustand plus 1920×1080-Endzustand geprüft
-- Korrektur/Entscheidung: Animation auf statisch gesetzt, weil der Sprechertext nur allgemein zum Beispiel überleitet.
+- Korrektur/Entscheidung: Animation auf statisch gesetzt, weil kein eigener gesprochener Übungstext geliefert wurde.
 - Technisches Ergebnis: 0 Fehler, 0 Warnungen im strikten Modul-QA
 - Urteil: FREIGEGEBEN

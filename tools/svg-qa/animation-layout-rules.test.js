@@ -2,6 +2,7 @@
 
 const test = require("node:test");
 const assert = require("node:assert/strict");
+const vm = require("node:vm");
 const {
   buildAnimationStates,
   buildApplyAnimationStateExpression,
@@ -45,4 +46,20 @@ test("initial QA render has no preview opacity for animated targets", () => {
 
   assert.match(expression, /element\.style\.opacity = String\(value\);/);
   assert.doesNotMatch(expression, /Math\.max\(0\.15, value\)/);
+});
+
+test("a highlighted visible value stays opaque and returns to its normal style", () => {
+  const animation=buildAnimationStates({
+    targets:[{targetId:"value",status:"animated"}],
+    steps:[{targetId:"value",action:"show",sourceText:"the known value"},{targetId:"value",action:"highlight",sourceText:"the matching point",stroke:"#00A653",strokeWidth:2}],
+  });
+  const element={style:{},setAttribute(){},removeAttribute(name){if(name==="style")this.style={};}};
+  const context={document:{querySelector:()=>({}),getElementById:()=>element},window:{__svgQaOriginalStyles:{value:null}}};
+  const pulse=animation.timeline[1];
+  vm.runInNewContext(buildApplyAnimationStateExpression(animation.manifest,animation.timeline,{timeMs:(pulse.start+pulse.end)/2}),context);
+  assert.equal(element.style.opacity,"1");
+  assert.match(element.style.filter,/#00A653/);
+  vm.runInNewContext(buildApplyAnimationStateExpression(animation.manifest,animation.timeline,{timeMs:pulse.end}),context);
+  assert.equal(element.style.opacity,"1");
+  assert.equal(element.style.filter,undefined);
 });

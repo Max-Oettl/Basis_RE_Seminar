@@ -3,8 +3,8 @@
 - Kapitel: 4
 - Lektion: 5
 - Quellfolie: 109
-- Zielmodus: full_slide, 1920×1080
-- Titel: Typische Ausfallarten und Ausfallursachen
+- Zielmodus: content_svg, transparentes 1920×1080-Inhaltsmodul für den Downstream-Master
+- Titel: Fehlerzusammenhänge: Ausfallarten und Ursachen
 - Dominante Lernbotschaft: Auf Bauteilebene werden physikalische Ausfallarten und ihre möglichen Ursachen konkret.
 - Archetyp: two-column-list
 - Layout: Zwei ruhige Listen für physikalische Ausfallarten und typische Ursachen.

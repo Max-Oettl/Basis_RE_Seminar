@@ -1,0 +1,57 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_025",
+  "scene_id": "re1_src_026",
+  "source_slides": [
+    26
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "series_production_preparation",
+      "label": "Planung und Optimierung der Serienfertigung",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "representative_series_sample",
+      "label": "Repräsentative Stichprobe",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_representative_series_sample",
+      "targetId": "representative_series_sample",
+      "action": "show",
+      "sourceText": "Diese repräsentative Stichprobe kommt natürlich aus der Produktion",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_series_production_preparation",
+      "targetId": "series_production_preparation",
+      "action": "show",
+      "sourceText": "unterstützt die Zuverlässigkeitstechnik mit den statistischen Methoden wie Design of Experiments",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

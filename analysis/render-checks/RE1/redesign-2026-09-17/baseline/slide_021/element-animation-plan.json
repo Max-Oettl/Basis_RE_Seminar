@@ -1,0 +1,57 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_021",
+  "scene_id": "re1_src_022",
+  "source_slides": [
+    22
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "weakness_testing",
+      "label": "Schwachstellenidentifikation",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "reliability_proof_testing",
+      "label": "Zuverlässigkeitsnachweis",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_weakness_testing",
+      "targetId": "weakness_testing",
+      "action": "show",
+      "sourceText": "Die Erprobung kann dabei ebenfalls eingesetzt werden, um Schwachstellen zu identifizieren",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_reliability_proof_testing",
+      "targetId": "reliability_proof_testing",
+      "action": "show",
+      "sourceText": "Zusätzlich können mit der Erprobung aber auch die Zuverlässigkeitsziele quantitativ nachgewiesen werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

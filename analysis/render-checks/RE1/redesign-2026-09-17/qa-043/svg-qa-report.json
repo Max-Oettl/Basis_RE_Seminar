@@ -1,0 +1,143 @@
+{
+  "schema_version": "svgQaReport/v1",
+  "module_id": "slide_043",
+  "svg_root": "rebuild-proposals/svg/RE1/slide_043",
+  "generated_at": "2026-09-17T13:41:10.409Z",
+  "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\tools\\svg-rebuild-qa.js C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\rebuild-proposals\\svg\\RE1\\slide_043 --strict-design --layout --layout-strict --report-dir C:\\Users\\MaximilianÖttl\\Documents\\Basis_RE_Seminar\\analysis\\render-checks\\RE1\\redesign-2026-09-17\\qa-043",
+  "files": [
+    {
+      "path": "rebuild-proposals/svg/RE1/slide_043/formulas/mode.svg",
+      "ids": 16,
+      "animationManifest": ""
+    },
+    {
+      "path": "rebuild-proposals/svg/RE1/slide_043/plots/mode_peak.svg",
+      "ids": 37,
+      "animationManifest": ""
+    },
+    {
+      "path": "rebuild-proposals/svg/RE1/slide_043/slide_043.svg",
+      "ids": 58,
+      "animationManifest": "rebuild-proposals/svg/RE1/slide_043/scene.animation.v1.json"
+    }
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "file": "rebuild-proposals/svg/RE1/slide_043/plots/mode_peak.svg",
+      "message": "ViewBox is not close to 16:9.",
+      "detail": "795.558437x399.6"
+    }
+  ],
+  "viewer": {
+    "checked": false
+  },
+  "layout": {
+    "checked": true,
+    "strict": true,
+    "warnOnly": false,
+    "browser": {
+      "executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "port": 5938
+    },
+    "files": [
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_043/formulas/mode.svg",
+        "slide": "043",
+        "states_checked": 1,
+        "browser_rendered": true
+      },
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_043/plots/mode_peak.svg",
+        "slide": "043",
+        "states_checked": 1,
+        "browser_rendered": true
+      },
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_043/slide_043.svg",
+        "slide": "043",
+        "states_checked": 3,
+        "browser_rendered": true
+      }
+    ],
+    "issues": [],
+    "summary": {
+      "checked": true,
+      "files_checked": 3,
+      "states_checked": 5,
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "design": {
+    "checked": true,
+    "strict": true,
+    "warnOnly": false,
+    "brandTokens": {
+      "loaded": true,
+      "path": "brand/company-brand-tokens.json",
+      "profile": "reltest-education",
+      "companyName": "RelTest Education"
+    },
+    "tokenSources": [
+      {
+        "loaded": true,
+        "path": "brand/company-brand-tokens.json",
+        "profile": "reltest-education"
+      }
+    ],
+    "files": [
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_043/formulas/mode.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 1,
+        "textCount": 0
+      },
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_043/plots/mode_peak.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 3,
+        "textCount": 9
+      },
+      {
+        "path": "rebuild-proposals/svg/RE1/slide_043/slide_043.svg",
+        "metadata": true,
+        "metadataSource": "svg",
+        "artifactScope": "content-svg",
+        "tokenSource": "brand/company-brand-tokens.json",
+        "colorCount": 4,
+        "textCount": 12
+      }
+    ],
+    "issues": [],
+    "summary": {
+      "files_checked": 3,
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "handoff": {
+    "checked": false
+  },
+  "summary": {
+    "files_checked": 3,
+    "manifests_checked": 1,
+    "layout_files_checked": 3,
+    "layout_states_checked": 5,
+    "design_files_checked": 3,
+    "design_errors": 0,
+    "design_warnings": 0,
+    "handoff_scenes_checked": 0,
+    "handoff_manifests_checked": 0,
+    "handoff_errors": 0,
+    "handoff_warnings": 0,
+    "errors": 0,
+    "warnings": 1
+  }
+}

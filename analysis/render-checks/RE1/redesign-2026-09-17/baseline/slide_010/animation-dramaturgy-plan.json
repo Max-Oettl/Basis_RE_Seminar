@@ -1,0 +1,423 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re1_src_010",
+  "svgPath": "rebuild-proposals/svg/RE1/slide_010/slide_010.svg",
+  "spokenText": "Zuvor haben wir gelernt, welche Auswirkungen eine ausgefallene Komponente beispielsweise für das System PKW haben kann. Nun schauen wir uns an, wie es überhaupt zu einem Ausfall einer Komponente kommen kann.\n\nDazu gehen wir auf das Konzept der Stress Strength Interference ein.\n\nZunächst einmal wirkt auf ein Produkt oder auch eine Komponente immer eine gewisse Belastung. Diese kann im Betrieb je nach Nutzungsart des Kunden und den jeweiligen Umgebungsbedingungen variieren. Aus diesem Grund kann die Belastung nicht als deterministischer Wert, sondern vielmehr als statistische Größe aufgefasst werden und ist demnach als Verteilung, hier in hellblau, dargestellt.\n\nDem gegenüber steht die Belastbarkeit, die jedes Produkt besitzt. Auch hier handelt es sich um eine statistische Größe, da beispielsweise Produktionsprozesse und Materialeigenschaften streuen können. Sie ist also ebenfalls als Verteilung, hier in dunkelblau, dargestellt.\n\nZwischen den Verteilungen von Belastung und Belastbarkeit gibt es nun einen Überlappungsbereich, bai denen das Produkt bzw. die Komponente, einer eher hohen Belastung ausgesetzt ist, bai einer gleichzeitig niedrigen Belastbarkeit. Übersteigt nun die Belastung die Belastbarkeit, kommt es zu Ausfällen.\n\nDiese Ausfälle wiederum führen zu Kundenunzufriedenheit, zu Kosten für die Hersteller, bis hin auch zur Produkthaftung.",
+  "animationDecision": "animated",
+  "animationRationale": "Der Plotrahmen ist Startkontext; Verteilungen erscheinen jeweils gemeinsam mit ihrer Einflusskarte, danach Überlappung und Folgen.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Show wird als reines Fade bewertet.",
+      "Gleiche sourceText-Phrase startet alle Schritte derselben Triggergruppe gleichzeitig."
+    ]
+  },
+  "initialStateRationale": "Achsen und Skalen sind für die statistische Erklärung notwendig. Kurven und Ergebnis würden spätere Aussagen vorwegnehmen.",
+  "semanticGroups": [
+    {
+      "groupId": "brand_background",
+      "label": "RelTest-Education-Hintergrund",
+      "role": "background",
+      "members": [
+        "Education-Farbverlauf",
+        "ruhiges technisches Raster"
+      ],
+      "initialState": "static_decorative",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Der Markenrahmen enthaelt keine konkrete Fachinformation und darf vor der Narration sichtbar sein.",
+      "dependsOn": [],
+      "groupingRationale": "Der Hintergrund ist ruhiger Markenrahmen und trägt keine vorweggenommene Fachinformation."
+    },
+    {
+      "groupId": "ssi_plot_frame",
+      "label": "Stress-Strength-Diagrammrahmen",
+      "role": "context",
+      "members": [
+        "Achsen",
+        "Skalen",
+        "Raster",
+        "Achsenlabels"
+      ],
+      "initialState": "visible_context",
+      "dependsOn": [],
+      "groupingRationale": "Der Rahmen ist gemeinsamer Bezug für beide Verteilungen.",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Achsen und Raster enthalten noch kein fachliches Ergebnis und dienen nur der Orientierung."
+    },
+    {
+      "groupId": "stress_distribution",
+      "label": "Belastungsverteilung",
+      "role": "data_series",
+      "members": [
+        "Belastungskurve",
+        "Belastungsfläche",
+        "direktes Kurvenlabel"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "ssi_plot_frame"
+      ],
+      "groupingRationale": "Kurve, Fläche und Label bilden eine Datenserie.",
+      "firstRelevantBeatId": "show_stress_context",
+      "initialVisibilityEvidence": "Die Belastungsverteilung wird erst im ersten Modellschritt erklärt."
+    },
+    {
+      "groupId": "stress_influences",
+      "label": "Einflüsse auf die Belastung",
+      "role": "context_card",
+      "members": [
+        "vollständige Belastungskarte",
+        "alle drei Einflussgrößen"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "ssi_plot_frame"
+      ],
+      "groupingRationale": "Karte und alle Listeneinträge bilden eine Einheit.",
+      "firstRelevantBeatId": "show_stress_context",
+      "initialVisibilityEvidence": "Die Einflussgrößen gehören zur Einführung der Belastung und erscheinen mit ihr."
+    },
+    {
+      "groupId": "strength_distribution",
+      "label": "Belastbarkeitsverteilung",
+      "role": "data_series",
+      "members": [
+        "Belastbarkeitskurve",
+        "Belastbarkeitsfläche",
+        "direktes Kurvenlabel"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "ssi_plot_frame"
+      ],
+      "groupingRationale": "Kurve, Fläche und Label bilden eine Datenserie.",
+      "firstRelevantBeatId": "show_strength_context",
+      "initialVisibilityEvidence": "Die Belastbarkeit ist der zweite Modellschritt und bleibt zuvor verborgen."
+    },
+    {
+      "groupId": "strength_influences",
+      "label": "Einflüsse auf die Belastbarkeit",
+      "role": "context_card",
+      "members": [
+        "vollständige Belastbarkeitskarte",
+        "alle drei Einflussgrößen"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "ssi_plot_frame"
+      ],
+      "groupingRationale": "Karte und alle Listeneinträge bilden eine Einheit.",
+      "firstRelevantBeatId": "show_strength_context",
+      "initialVisibilityEvidence": "Die Einflussgrößen werden zusammen mit der Belastbarkeit eingeführt."
+    },
+    {
+      "groupId": "failure_overlap",
+      "label": "Ausfallverteilung im Überlappungsbereich",
+      "role": "result",
+      "members": [
+        "weich auslaufende korallfarbene Glockenkurve",
+        "sichtbare Verteilungskontur",
+        "freistehendes Ausfalllabel mit Führungslinie"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "stress_distribution",
+        "strength_distribution"
+      ],
+      "groupingRationale": "Glockenkurve, Füllung, Führungslinie und Label bilden gemeinsam die Ausfallverteilung im sichtbaren Überlappungsbereich.",
+      "firstRelevantBeatId": "show_failure_overlap",
+      "initialVisibilityEvidence": "Die Ausfallverteilung setzt beide vollständig sichtbaren Hauptverteilungen voraus."
+    },
+    {
+      "groupId": "failure_consequences",
+      "label": "Ausfallfolgen",
+      "role": "result",
+      "members": [
+        "Kostenkarte",
+        "Haftungskarte",
+        "Kundenzufriedenheitskarte"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "failure_overlap"
+      ],
+      "groupingRationale": "Alle drei Folgen bilden den gemeinsamen Wirkungsausgang.",
+      "firstRelevantBeatId": "show_failure_consequences",
+      "initialVisibilityEvidence": "Die Folgen werden erst nach Erklärung der Ausfälle benötigt."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "show_stress_context",
+      "claim": "Belastung ist statistisch verteilt und nutzungsabhängig.",
+      "sourceText": "Zunächst einmal wirkt auf ein Produkt",
+      "occurrence": 1,
+      "requiredContext": [
+        "ssi_plot_frame"
+      ],
+      "revealTogether": [
+        "stress_distribution",
+        "stress_influences"
+      ],
+      "learnerStateBefore": "Nur der Diagrammrahmen ist sichtbar.",
+      "learnerStateAfter": "Belastungskurve und Einflusskarte sind gemeinsam sichtbar."
+    },
+    {
+      "beatId": "show_strength_context",
+      "claim": "Belastbarkeit ist ebenfalls statistisch verteilt.",
+      "sourceText": "Dem gegenüber steht die Belastbarkeit",
+      "occurrence": 1,
+      "requiredContext": [
+        "ssi_plot_frame",
+        "stress_distribution",
+        "stress_influences"
+      ],
+      "revealTogether": [
+        "strength_distribution",
+        "strength_influences"
+      ],
+      "learnerStateBefore": "Die Belastungsseite ist erklärt.",
+      "learnerStateAfter": "Beide Verteilungen und beide Einflusskarten sind sichtbar."
+    },
+    {
+      "beatId": "show_failure_overlap",
+      "claim": "Ausfälle entstehen, wenn Belastung die Belastbarkeit übersteigt.",
+      "sourceText": "Zwischen den Verteilungen von Belastung und Belastbarkeit",
+      "occurrence": 1,
+      "requiredContext": [
+        "stress_distribution",
+        "strength_distribution"
+      ],
+      "revealTogether": [
+        "failure_overlap"
+      ],
+      "learnerStateBefore": "Beide Verteilungen sind sichtbar.",
+      "learnerStateAfter": "Der Ausfallbereich ist eindeutig markiert."
+    },
+    {
+      "beatId": "show_failure_consequences",
+      "claim": "Ausfälle führen zu Kosten, Haftung und Kundenunzufriedenheit.",
+      "sourceText": "Diese Ausfälle wiederum führen zu Kundenunzufriedenheit",
+      "occurrence": 1,
+      "requiredContext": [
+        "failure_overlap"
+      ],
+      "revealTogether": [
+        "failure_consequences"
+      ],
+      "learnerStateBefore": "Der Ausfallbereich ist sichtbar.",
+      "learnerStateAfter": "Die drei Folgen sind ergänzt."
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_stress_distribution",
+      "beatId": "show_stress_context",
+      "targetId": "stress_distribution",
+      "action": "draw",
+      "effect": {
+        "drawDurFrames": 42,
+        "direction": "leftToRight"
+      },
+      "rationale": "Die Belastungskurve entsteht entlang der x-Achse."
+    },
+    {
+      "stepId": "show_stress_influences",
+      "beatId": "show_stress_context",
+      "targetId": "stress_influences",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Die Einflusskarte startet gleichzeitig mit der Kurve."
+    },
+    {
+      "stepId": "draw_strength_distribution",
+      "beatId": "show_strength_context",
+      "targetId": "strength_distribution",
+      "action": "draw",
+      "effect": {
+        "drawDurFrames": 42,
+        "direction": "leftToRight"
+      },
+      "rationale": "Die Belastbarkeitskurve entsteht entlang derselben Achse."
+    },
+    {
+      "stepId": "show_strength_influences",
+      "beatId": "show_strength_context",
+      "targetId": "strength_influences",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Die Einflusskarte startet gleichzeitig mit der Kurve."
+    },
+    {
+      "stepId": "show_failure_overlap",
+      "beatId": "show_failure_overlap",
+      "targetId": "failure_overlap",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Der Ergebnisbereich erscheint erst nach beiden Verteilungen."
+    },
+    {
+      "stepId": "show_failure_consequences",
+      "beatId": "show_failure_consequences",
+      "targetId": "failure_consequences",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Alle Folgen erscheinen als gemeinsame Ergebnisgruppe."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "ssi_plot_frame"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Achsen und Skalen sind für die statistische Erklärung notwendig. Kurven und Ergebnis würden spätere Aussagen vorwegnehmen."
+    },
+    {
+      "stateId": "before_show_stress_context",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "ssi_plot_frame"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Nur der Diagrammrahmen ist sichtbar."
+    },
+    {
+      "stateId": "after_show_stress_context",
+      "afterBeatId": "show_stress_context",
+      "visibleGroups": [
+        "brand_background",
+        "ssi_plot_frame",
+        "stress_distribution",
+        "stress_influences"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Belastungskurve und Einflusskarte sind gemeinsam sichtbar."
+    },
+    {
+      "stateId": "before_show_strength_context",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "ssi_plot_frame",
+        "stress_distribution",
+        "stress_influences"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Die Belastungsseite ist erklärt."
+    },
+    {
+      "stateId": "after_show_strength_context",
+      "afterBeatId": "show_strength_context",
+      "visibleGroups": [
+        "brand_background",
+        "ssi_plot_frame",
+        "stress_distribution",
+        "stress_influences",
+        "strength_distribution",
+        "strength_influences"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Beide Verteilungen und beide Einflusskarten sind sichtbar."
+    },
+    {
+      "stateId": "before_show_failure_overlap",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "ssi_plot_frame",
+        "stress_distribution",
+        "stress_influences",
+        "strength_distribution",
+        "strength_influences"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Beide Verteilungen sind sichtbar."
+    },
+    {
+      "stateId": "after_show_failure_overlap",
+      "afterBeatId": "show_failure_overlap",
+      "visibleGroups": [
+        "brand_background",
+        "ssi_plot_frame",
+        "stress_distribution",
+        "stress_influences",
+        "strength_distribution",
+        "strength_influences",
+        "failure_overlap"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der Ausfallbereich ist eindeutig markiert."
+    },
+    {
+      "stateId": "before_show_failure_consequences",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "ssi_plot_frame",
+        "stress_distribution",
+        "stress_influences",
+        "strength_distribution",
+        "strength_influences",
+        "failure_overlap"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der Ausfallbereich ist sichtbar."
+    },
+    {
+      "stateId": "after_show_failure_consequences",
+      "afterBeatId": "show_failure_consequences",
+      "visibleGroups": [
+        "brand_background",
+        "ssi_plot_frame",
+        "stress_distribution",
+        "stress_influences",
+        "strength_distribution",
+        "strength_influences",
+        "failure_overlap",
+        "failure_consequences"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Die drei Folgen sind ergänzt."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "show_failure_consequences",
+      "visibleGroups": [
+        "brand_background",
+        "ssi_plot_frame",
+        "stress_distribution",
+        "stress_influences",
+        "strength_distribution",
+        "strength_influences",
+        "failure_overlap",
+        "failure_consequences"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der vollständige statische Endzustand bleibt ohne Animation fachlich verständlich."
+    }
+  ]
+}

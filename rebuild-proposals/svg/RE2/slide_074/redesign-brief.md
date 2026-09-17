@@ -3,11 +3,11 @@
 - Kapitel: 4
 - Lektion: 2
 - Quellfolie: 74
-- Zielmodus: full_slide, 1920×1080
-- Titel: Planung und Vorbereitung: zentrale Aufgaben
-- Dominante Lernbotschaft: Schritt 1 definiert Umfang, Informationsbasis und Team.
-- Archetyp: three-part-workflow
-- Layout: Kompakter Prozesskontext und drei gleichwertige Vorbereitungsaufgaben.
+- Zielmodus: content_svg, transparentes 1920×1080-Inhaltsmodul für den Downstream-Master
+- Titel: Planung und Vorbereitung: Analyseumfang
+- Dominante Lernbotschaft: Planung beginnt mit einem klaren Analyseumfang und einer belastbaren Informationsbasis.
+- Archetyp: planning-foundation
+- Layout: Drei quellnahe, klar gestaffelte Inhaltsabschnitte mit dunklen Abschnittsreitern und echten Stichpunkten.
 - Inhaltsinventar: Fachbegriffe, Beziehungen, Hierarchien, Tabellenzustände und Beispiele bleiben erhalten; PowerPoint-Bedienelemente und Masterdekoration entfallen.
 - Referenz-Lock: RE1 slide_013, slide_009, slide_027 und slide_022
 - Assetstrategie: native RelTest-SVG-Komposition

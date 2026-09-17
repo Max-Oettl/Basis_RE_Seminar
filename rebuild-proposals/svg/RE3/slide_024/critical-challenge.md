@@ -1,10 +1,8 @@
-# Kritischer Challenge — slide_024
+# Review-Schwerpunkte slide_024
 
-- Quellen: RE3::24, RE3::25, RE3::26, RE3::27, RE3::28, RE3::29, RE3::30
-- Struktur: Kapitel/Lektion bewusst nicht zugeordnet
-- Design-Challenge: Drei Intervalltypen nutzen dieselbe Kartenlogik; Koralle bleibt auf den Schätzwert begrenzt.
-- Animations-Challenge: 4 semantische Schritte an 4 wörtlich belegten Sprechertext-Cues; chronologisch sortiert.
-- Sichtprüfung: 5 gerenderte Zustände plus 1920×1080-Endzustand geprüft
-- Korrektur/Entscheidung: Im Challenge keine zusätzliche Korrektur erforderlich.
-- Technisches Ergebnis: 0 Fehler, 0 Warnungen im strikten Modul-QA
-- Urteil: FREIGEGEBEN
+- Quellinhalte, Zuordnungen und Sprecherphrasen gegen alle 3 Quellzustände abgleichen.
+- Endzustand und alle semantischen Zwischenstände in 1920×1080 und 960×540 prüfen.
+- Beziehungen erst mit ihren Endpunkten; Daten vor Fit; beide Vertrauensgrenzen zusammen.
+- Dichteflächen entsprechen den berechneten Quantilen; F und R liegen in [0,1]. Bei R=1−F werden Variable und Dichte gemeinsam gespiegelt.
+- Statische und animierte QA plus unabhängige visuelle Zweitprüfung dokumentiert im Feedbackaudit.
+- Nutzerfreigabe: offen; keine finale Sperre gesetzt.

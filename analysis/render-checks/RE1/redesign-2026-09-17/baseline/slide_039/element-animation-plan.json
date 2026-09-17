@@ -1,0 +1,111 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_039",
+  "scene_id": "re1_src_041",
+  "source_slides": [
+    41
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "nkw_hazard_curve",
+      "label": "Steigende Ausfallrate",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "nkw_hazard_gearbox_image",
+      "label": "Generierte Illustration des 6-Gang-NKW-Getriebes",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "wearout_area",
+      "label": "Verschleißbereich",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "nkw_hazard_mechanism",
+      "label": "Verschleiß und Ermüdung",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "nkw_hazard_counterexample",
+      "label": "Gegenbeispiel zur Badewannenkurve",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_nkw_hazard_curve",
+      "targetId": "nkw_hazard_curve",
+      "action": "draw",
+      "sourceText": "Hierbei steigt die Ausfallrate kontinuierlich über der Zeit an",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_nkw_hazard_gearbox_image",
+      "targetId": "nkw_hazard_gearbox_image",
+      "action": "show",
+      "sourceText": "Hierbei steigt die Ausfallrate kontinuierlich über der Zeit an",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_wearout_area",
+      "targetId": "wearout_area",
+      "action": "show",
+      "sourceText": "In unserem Beispiel sehen wir aufgrund der ansteigenden Ausfallrate",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_nkw_hazard_mechanism",
+      "targetId": "nkw_hazard_mechanism",
+      "action": "show",
+      "sourceText": "In unserem Beispiel sehen wir aufgrund der ansteigenden Ausfallrate",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_nkw_hazard_counterexample",
+      "targetId": "nkw_hazard_counterexample",
+      "action": "show",
+      "sourceText": "Der Verlauf der Ausfallrate eines Produktes muss also nicht immer zwangsläufig alle drei Bereiche",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

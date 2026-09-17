@@ -1,0 +1,776 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_043",
+  "svgPath": "slide_043.svg",
+  "spokenText": "In den bisherigen Abschnitten haben wir die grafische Auswertung von Lebensdauerdaten kennengelernt.\n\nEs gibt jedoch auch rechnerische Verfahren, mit denen sich die Parameter einer Lebensdauerverteilung bestimmen lassen.\n\nZwei dieser Verfahren möchten wir an dieser Stelle ganz kurz vorstellen: Die Methode der kleinsten Quadrate – abgekürzt als M-L-S – und die Maximum-Likelihood-Methode, abgekürzt als M-L-E.\n\nDie M-L-S-Methode basiert auf dem Prinzip der Regressionsanalyse. Sie versucht, eine möglichst gute Gerade durch die Datenpunkte im Weibull-Papier zu legen. Diese Gerade kann entweder rechnerisch oder sogar grafisch geschätzt werden. Ziel ist es, die Abweichungen der Punkte zur Geraden möglichst gering zu halten – genauer gesagt, die Summe der Abweichungen im Quadrat zu minimieren. Die Methode ist einfach anzuwenden und gut nachvollziehbar. Ein großer Nachteil besteht jedoch darin, dass sie keine Zensierungsinformationen berücksichtigen kann. Sie ist daher nur für vollständig beobachtete Daten geeignet.\n\nAnders verhält es sich mit der Maximum-Likelihood-Methode. Hier werden die Parameter so bestimmt, dass die beobachteten Daten mit maximaler Wahrscheinlichkeit unter einer angenommenen Verteilung auftreten. Das Besondere an dieser Methode: Sie kann sowohl vollständige als auch zensierte Daten verarbeiten. Genau deshalb wird sie in der Lebensdauerdatenanalyse besonders häufig eingesetzt. Die M-L-E liefert präzise Ergebnisse, ist aber mathematisch komplexer und in der Regel nur mithilfe geeigneter Software durchführbar.\n\nFür die Praxis gilt: Beide Verfahren lassen sich heute bequem mit Statistiksoftware anwenden. Dennoch ist es wichtig, die Unterschiede zu kennen, um die Ergebnisse richtig zu interpretieren.\n\nWenn du tiefer in diese Methoden einsteigen möchtest, empfehlen wir dir unser Experten-Seminar zur Lebensdauerdatenanalyse. Dort zeigen wir dir, wie beide Verfahren im Detail funktionieren – mit konkreten Beispielen, Berechnungen und Anwendungstipps.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-43-2026-09-17/after/slide_043.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "In den bisherigen Abschnitten haben wir",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Es gibt jedoch auch rechnerische Verfahren",
+      "occurrence": 1,
+      "claim": "MLS – Methode der kleinsten Quadrate",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mls_heading"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Es gibt jedoch auch rechnerische Verfahren",
+      "occurrence": 1,
+      "claim": "MLE – Maximum-Likelihood-Methode",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mle_heading"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Die Methode der kleinsten Quadrate",
+      "occurrence": 1,
+      "claim": "MLS – Methode der kleinsten Quadrate",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "mls_heading"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "und die Maximum-Likelihood-Methode",
+      "occurrence": 1,
+      "claim": "MLE – Maximum-Likelihood-Methode",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "mle_heading"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "basiert auf dem Prinzip",
+      "occurrence": 1,
+      "claim": "Regression im Weibull-Papier",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mls_context"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "basiert auf dem Prinzip",
+      "occurrence": 1,
+      "claim": "mls points",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mls_points"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "eine möglichst gute Gerade",
+      "occurrence": 1,
+      "claim": "mls fit",
+      "requiredContext": [],
+      "action": "draw",
+      "revealTogether": [
+        "mls_fit"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "die Abweichungen der Punkte zur Geraden",
+      "occurrence": 1,
+      "claim": "mls residuals",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mls_residuals"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "Summe der Abweichungen im Quadrat",
+      "occurrence": 1,
+      "claim": "Summe der quadrierten Abweichungen minimieren",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mls_objective"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "Die Methode ist einfach anzuwenden",
+      "occurrence": 1,
+      "claim": "Einfach und nachvollziehbar",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mls_simple"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "keine Zensierungsinformationen berücksichtigen kann",
+      "occurrence": 1,
+      "claim": "Nur vollständige Daten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mls_data"
+      ]
+    },
+    {
+      "beatId": "beat_12",
+      "sourceText": "Anders verhält es sich",
+      "occurrence": 1,
+      "claim": "Likelihood über den Parametern T und b",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mle_context"
+      ]
+    },
+    {
+      "beatId": "beat_13",
+      "sourceText": "Anders verhält es sich",
+      "occurrence": 1,
+      "claim": "mle surface",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mle_surface"
+      ]
+    },
+    {
+      "beatId": "beat_14",
+      "sourceText": "die Parameter so bestimmt",
+      "occurrence": 1,
+      "claim": "mle maximum",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mle_maximum"
+      ]
+    },
+    {
+      "beatId": "beat_15",
+      "sourceText": "mit maximaler Wahrscheinlichkeit",
+      "occurrence": 1,
+      "claim": "Likelihood maximieren",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mle_objective"
+      ]
+    },
+    {
+      "beatId": "beat_16",
+      "sourceText": "sowohl vollständige als auch zensierte Daten",
+      "occurrence": 1,
+      "claim": "Vollständige und zensierte Daten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mle_data"
+      ]
+    },
+    {
+      "beatId": "beat_17",
+      "sourceText": "ist aber mathematisch komplexer",
+      "occurrence": 1,
+      "claim": "Mathematisch komplexer",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mle_complex"
+      ]
+    },
+    {
+      "beatId": "beat_18",
+      "sourceText": "Beide Verfahren lassen sich heute",
+      "occurrence": 1,
+      "claim": "Beide Verfahren mit Statistiksoftware",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "methods_software"
+      ]
+    },
+    {
+      "beatId": "beat_19",
+      "sourceText": "die Unterschiede zu kennen",
+      "occurrence": 1,
+      "claim": "Nur vollständige Daten",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "mls_data"
+      ]
+    },
+    {
+      "beatId": "beat_20",
+      "sourceText": "die Unterschiede zu kennen",
+      "occurrence": 1,
+      "claim": "Vollständige und zensierte Daten",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "mle_data"
+      ]
+    },
+    {
+      "beatId": "beat_21",
+      "sourceText": "Experten-Seminar zur Lebensdauerdatenanalyse",
+      "occurrence": 1,
+      "claim": "Vertiefung im Experten-Seminar",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "methods_expert"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "mls_heading",
+      "label": "MLS – Methode der kleinsten Quadrate",
+      "role": "content",
+      "members": [
+        "mls_heading"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "mle_heading",
+      "label": "MLE – Maximum-Likelihood-Methode",
+      "role": "content",
+      "members": [
+        "mle_heading"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "mls_context",
+      "label": "Regression im Weibull-Papier",
+      "role": "content",
+      "members": [
+        "mls_context"
+      ],
+      "dependsOn": [
+        "mls_heading"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "mls_points",
+      "label": "mls points",
+      "role": "content",
+      "members": [
+        "mls_points"
+      ],
+      "dependsOn": [
+        "mls_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "mls_fit",
+      "label": "mls fit",
+      "role": "content",
+      "members": [
+        "mls_fit"
+      ],
+      "dependsOn": [
+        "mls_points"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "mls_residuals",
+      "label": "mls residuals",
+      "role": "content",
+      "members": [
+        "mls_residuals"
+      ],
+      "dependsOn": [
+        "mls_points",
+        "mls_fit"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    },
+    {
+      "groupId": "mls_objective",
+      "label": "Summe der quadrierten Abweichungen minimieren",
+      "role": "content",
+      "members": [
+        "mls_objective"
+      ],
+      "dependsOn": [
+        "mls_residuals"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_9"
+    },
+    {
+      "groupId": "mls_simple",
+      "label": "Einfach und nachvollziehbar",
+      "role": "content",
+      "members": [
+        "mls_simple"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_10"
+    },
+    {
+      "groupId": "mls_data",
+      "label": "Nur vollständige Daten",
+      "role": "content",
+      "members": [
+        "mls_data"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_11"
+    },
+    {
+      "groupId": "mle_context",
+      "label": "Likelihood über den Parametern T und b",
+      "role": "content",
+      "members": [
+        "mle_context"
+      ],
+      "dependsOn": [
+        "mle_heading"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_12"
+    },
+    {
+      "groupId": "mle_surface",
+      "label": "mle surface",
+      "role": "content",
+      "members": [
+        "mle_surface"
+      ],
+      "dependsOn": [
+        "mle_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_13"
+    },
+    {
+      "groupId": "mle_maximum",
+      "label": "mle maximum",
+      "role": "content",
+      "members": [
+        "mle_maximum"
+      ],
+      "dependsOn": [
+        "mle_surface"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_14"
+    },
+    {
+      "groupId": "mle_objective",
+      "label": "Likelihood maximieren",
+      "role": "content",
+      "members": [
+        "mle_objective"
+      ],
+      "dependsOn": [
+        "mle_maximum"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_15"
+    },
+    {
+      "groupId": "mle_data",
+      "label": "Vollständige und zensierte Daten",
+      "role": "content",
+      "members": [
+        "mle_data"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_16"
+    },
+    {
+      "groupId": "mle_complex",
+      "label": "Mathematisch komplexer",
+      "role": "content",
+      "members": [
+        "mle_complex"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_17"
+    },
+    {
+      "groupId": "methods_software",
+      "label": "Beide Verfahren mit Statistiksoftware",
+      "role": "content",
+      "members": [
+        "methods_software"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_18"
+    },
+    {
+      "groupId": "methods_expert",
+      "label": "Vertiefung im Experten-Seminar",
+      "role": "content",
+      "members": [
+        "methods_expert"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_21"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_mls_heading",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mls_heading",
+      "sourceText": "Es gibt jedoch auch rechnerische Verfahren",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_mle_heading",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mle_heading",
+      "sourceText": "Es gibt jedoch auch rechnerische Verfahren",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_mls_heading",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mls_heading",
+      "sourceText": "Die Methode der kleinsten Quadrate",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_3",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_04_mle_heading",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mle_heading",
+      "sourceText": "und die Maximum-Likelihood-Methode",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_4",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_05_mls_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mls_context",
+      "sourceText": "basiert auf dem Prinzip",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_mls_points",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mls_points",
+      "sourceText": "basiert auf dem Prinzip",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_mls_fit",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mls_fit",
+      "sourceText": "eine möglichst gute Gerade",
+      "action": "draw",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_mls_residuals",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mls_residuals",
+      "sourceText": "die Abweichungen der Punkte zur Geraden",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_mls_objective",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mls_objective",
+      "sourceText": "Summe der Abweichungen im Quadrat",
+      "action": "show",
+      "beatId": "beat_9",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_10_mls_simple",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mls_simple",
+      "sourceText": "Die Methode ist einfach anzuwenden",
+      "action": "show",
+      "beatId": "beat_10",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_11_mls_data",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mls_data",
+      "sourceText": "keine Zensierungsinformationen berücksichtigen kann",
+      "action": "show",
+      "beatId": "beat_11",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_12_mle_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mle_context",
+      "sourceText": "Anders verhält es sich",
+      "action": "show",
+      "beatId": "beat_12",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_13_mle_surface",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mle_surface",
+      "sourceText": "Anders verhält es sich",
+      "action": "show",
+      "beatId": "beat_13",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_14_mle_maximum",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mle_maximum",
+      "sourceText": "die Parameter so bestimmt",
+      "action": "show",
+      "beatId": "beat_14",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_15_mle_objective",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mle_objective",
+      "sourceText": "mit maximaler Wahrscheinlichkeit",
+      "action": "show",
+      "beatId": "beat_15",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_16_mle_data",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mle_data",
+      "sourceText": "sowohl vollständige als auch zensierte Daten",
+      "action": "show",
+      "beatId": "beat_16",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_17_mle_complex",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mle_complex",
+      "sourceText": "ist aber mathematisch komplexer",
+      "action": "show",
+      "beatId": "beat_17",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_18_methods_software",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "methods_software",
+      "sourceText": "Beide Verfahren lassen sich heute",
+      "action": "show",
+      "beatId": "beat_18",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_19_mls_data",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mls_data",
+      "sourceText": "die Unterschiede zu kennen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_19",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_20_mle_data",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mle_data",
+      "sourceText": "die Unterschiede zu kennen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_20",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_21_methods_expert",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "methods_expert",
+      "sourceText": "Experten-Seminar zur Lebensdauerdatenanalyse",
+      "action": "show",
+      "beatId": "beat_21",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/00_initial.png"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "mls_heading",
+        "mle_heading",
+        "mls_context",
+        "mls_points",
+        "mls_fit",
+        "mls_residuals",
+        "mls_objective",
+        "mls_simple",
+        "mls_data",
+        "mle_context",
+        "mle_surface",
+        "mle_maximum",
+        "mle_objective",
+        "mle_data",
+        "mle_complex",
+        "methods_software",
+        "methods_expert"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/21_after_17_experten_seminar_zur_lebensdauerdatenan.png"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "staticPreview": "analysis/render-checks/RE3/feedback-43-2026-09-17/after/slide_043.png",
+    "reducedPreview": "analysis/render-checks/RE3/feedback-43-2026-09-17/preview/slide_043_960.png",
+    "stateCount": 22,
+    "states": [
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/00_initial.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/01_after_01_es_gibt_jedoch_auch_rechnerische_verfah.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/02_highlight_mls_heading_2.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/03_after_02_die_methode_der_kleinsten_quadrate.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/04_highlight_mle_heading_3.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/05_after_03_und_die_maximum_likelihood_methode.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/06_after_04_basiert_auf_dem_prinzip.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/07_after_05_eine_moglichst_gute_gerade.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/08_after_06_die_abweichungen_der_punkte_zur_geraden.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/09_after_07_summe_der_abweichungen_im_quadrat.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/10_after_08_die_methode_ist_einfach_anzuwenden.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/11_after_09_keine_zensierungsinformationen_berucksi.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/12_after_10_anders_verhalt_es_sich.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/13_after_11_die_parameter_so_bestimmt.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/14_after_12_mit_maximaler_wahrscheinlichkeit.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/15_after_13_sowohl_vollstandige_als_auch_zensierte_.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/16_after_14_ist_aber_mathematisch_komplexer.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/17_after_15_beide_verfahren_lassen_sich_heute.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/18_highlight_mls_data_18.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/19_highlight_mle_data_19.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/20_after_16_die_unterschiede_zu_kennen.png",
+      "analysis/render-checks/RE3/feedback-43-2026-09-17/states/slide_043/21_after_17_experten_seminar_zur_lebensdauerdatenan.png"
+    ],
+    "independentVisualReview": "passed after correction of axis-label collisions",
+    "scope": "Discrete Chromium animation states; no audio playback or continuous video verified."
+  }
+}

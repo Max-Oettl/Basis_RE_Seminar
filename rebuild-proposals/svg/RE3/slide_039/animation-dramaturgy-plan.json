@@ -1,0 +1,762 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_039",
+  "svgPath": "slide_039.svg",
+  "spokenText": "Ein praktisches Beispiel ergibt sich, wenn mehrere Ausfallmechanismen gleichzeitig betrachtet werden. In der Abbildung sehen wir sechs Objekte. Einige sind durch Ausfallmechanismus A ausgefallen – gekennzeichnet durch rote Kreuze. Andere durch Ausfallmechanismus B – dargestellt durch grüne Kreuze. Wenn wir nun gezielt den Mechanismus A analysieren möchten, können wir die Ausfälle durch Mechanismus B als Zensierungszeitpunkte nutzen. Denn wir wissen: Bis zu diesem Zeitpunkt war das jeweilige Objekt in Bezug auf Mechanismus A noch funktionsfähig. Wann es tatsächlich durch Mechanismus A ausgefallen wäre, bleibt unbekannt. Das gleiche gilt natürlich auch umgekehrt. Wenn wir Mechanismus B untersuchen, können die Ausfälle durch Mechanismus A als Zensurzeitpunkte betrachtet werden. So entstehen multiple, zufällige Zensierungen – abhängig davon, welcher Ausfallmechanismus gerade analysiert wird.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/after/slide_039.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Ein praktisches Beispiel ergibt sich, wenn",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Ein praktisches Beispiel ergibt sich",
+      "occurrence": 1,
+      "claim": "Gemeinsame Beobachtung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "observed_context"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Einige sind durch Ausfallmechanismus A",
+      "occurrence": 1,
+      "claim": "observed a",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "observed_a"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Einige sind durch Ausfallmechanismus A",
+      "occurrence": 1,
+      "claim": "Mechanismus A",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "observed_legend_a"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "Andere durch Ausfallmechanismus B",
+      "occurrence": 1,
+      "claim": "observed b",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "observed_b"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "Andere durch Ausfallmechanismus B",
+      "occurrence": 1,
+      "claim": "Mechanismus B",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "observed_legend_b"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "Wenn wir nun gezielt",
+      "occurrence": 1,
+      "claim": "Analyse A",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "analysis_a_context"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "Wenn wir nun gezielt",
+      "occurrence": 1,
+      "claim": "analysis a a",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "analysis_a_a"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Wenn wir nun gezielt",
+      "occurrence": 1,
+      "claim": "A als Ausfall",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "analysis_a_legend_a"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "als Zensierungszeitpunkte nutzen",
+      "occurrence": 1,
+      "claim": "analysis a b",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "analysis_a_b"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "als Zensierungszeitpunkte nutzen",
+      "occurrence": 1,
+      "claim": "B als Zensierung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "analysis_a_legend_b"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "als Zensierungszeitpunkte nutzen",
+      "occurrence": 1,
+      "claim": "observed b",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "observed_b"
+      ]
+    },
+    {
+      "beatId": "beat_12",
+      "sourceText": "noch funktionsfähig. Wann es",
+      "occurrence": 1,
+      "claim": "Bis dahin intakt bezüglich A",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "analysis_a_meaning"
+      ]
+    },
+    {
+      "beatId": "beat_13",
+      "sourceText": "bleibt unbekannt. Das gleiche",
+      "occurrence": 1,
+      "claim": "analysis a b",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "analysis_a_b"
+      ]
+    },
+    {
+      "beatId": "beat_14",
+      "sourceText": "Wenn wir Mechanismus B untersuchen",
+      "occurrence": 1,
+      "claim": "Analyse B",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "analysis_b_context"
+      ]
+    },
+    {
+      "beatId": "beat_15",
+      "sourceText": "Wenn wir Mechanismus B untersuchen",
+      "occurrence": 1,
+      "claim": "analysis b b",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "analysis_b_b"
+      ]
+    },
+    {
+      "beatId": "beat_16",
+      "sourceText": "Wenn wir Mechanismus B untersuchen",
+      "occurrence": 1,
+      "claim": "B als Ausfall",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "analysis_b_legend_b"
+      ]
+    },
+    {
+      "beatId": "beat_17",
+      "sourceText": "als Zensurzeitpunkte betrachtet werden",
+      "occurrence": 1,
+      "claim": "analysis b a",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "analysis_b_a"
+      ]
+    },
+    {
+      "beatId": "beat_18",
+      "sourceText": "als Zensurzeitpunkte betrachtet werden",
+      "occurrence": 1,
+      "claim": "A als Zensierung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "analysis_b_legend_a"
+      ]
+    },
+    {
+      "beatId": "beat_19",
+      "sourceText": "als Zensurzeitpunkte betrachtet werden",
+      "occurrence": 1,
+      "claim": "Bis dahin intakt bezüglich B",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "analysis_b_meaning"
+      ]
+    },
+    {
+      "beatId": "beat_20",
+      "sourceText": "als Zensurzeitpunkte betrachtet werden",
+      "occurrence": 1,
+      "claim": "observed a",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "observed_a"
+      ]
+    },
+    {
+      "beatId": "beat_21",
+      "sourceText": "So entstehen multiple, zufällige Zensierungen",
+      "occurrence": 1,
+      "claim": "Gleiche Objekte und Zeiten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "observed_identity"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "observed_context",
+      "label": "Gemeinsame Beobachtung",
+      "role": "content",
+      "members": [
+        "observed_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "observed_a",
+      "label": "observed a",
+      "role": "content",
+      "members": [
+        "observed_a"
+      ],
+      "dependsOn": [
+        "observed_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "observed_legend_a",
+      "label": "Mechanismus A",
+      "role": "content",
+      "members": [
+        "observed_legend_a"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "observed_b",
+      "label": "observed b",
+      "role": "content",
+      "members": [
+        "observed_b"
+      ],
+      "dependsOn": [
+        "observed_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "observed_legend_b",
+      "label": "Mechanismus B",
+      "role": "content",
+      "members": [
+        "observed_legend_b"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "analysis_a_context",
+      "label": "Analyse A",
+      "role": "content",
+      "members": [
+        "analysis_a_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "analysis_a_a",
+      "label": "analysis a a",
+      "role": "content",
+      "members": [
+        "analysis_a_a"
+      ],
+      "dependsOn": [
+        "analysis_a_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "analysis_a_legend_a",
+      "label": "A als Ausfall",
+      "role": "content",
+      "members": [
+        "analysis_a_legend_a"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    },
+    {
+      "groupId": "analysis_a_b",
+      "label": "analysis a b",
+      "role": "content",
+      "members": [
+        "analysis_a_b"
+      ],
+      "dependsOn": [
+        "analysis_a_context",
+        "observed_b"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_9"
+    },
+    {
+      "groupId": "analysis_a_legend_b",
+      "label": "B als Zensierung",
+      "role": "content",
+      "members": [
+        "analysis_a_legend_b"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_10"
+    },
+    {
+      "groupId": "analysis_a_meaning",
+      "label": "Bis dahin intakt bezüglich A",
+      "role": "content",
+      "members": [
+        "analysis_a_meaning"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_12"
+    },
+    {
+      "groupId": "analysis_b_context",
+      "label": "Analyse B",
+      "role": "content",
+      "members": [
+        "analysis_b_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_14"
+    },
+    {
+      "groupId": "analysis_b_b",
+      "label": "analysis b b",
+      "role": "content",
+      "members": [
+        "analysis_b_b"
+      ],
+      "dependsOn": [
+        "analysis_b_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_15"
+    },
+    {
+      "groupId": "analysis_b_legend_b",
+      "label": "B als Ausfall",
+      "role": "content",
+      "members": [
+        "analysis_b_legend_b"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_16"
+    },
+    {
+      "groupId": "analysis_b_a",
+      "label": "analysis b a",
+      "role": "content",
+      "members": [
+        "analysis_b_a"
+      ],
+      "dependsOn": [
+        "analysis_b_context",
+        "observed_a"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_17"
+    },
+    {
+      "groupId": "analysis_b_legend_a",
+      "label": "A als Zensierung",
+      "role": "content",
+      "members": [
+        "analysis_b_legend_a"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_18"
+    },
+    {
+      "groupId": "analysis_b_meaning",
+      "label": "Bis dahin intakt bezüglich B",
+      "role": "content",
+      "members": [
+        "analysis_b_meaning"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_19"
+    },
+    {
+      "groupId": "observed_identity",
+      "label": "Gleiche Objekte und Zeiten",
+      "role": "content",
+      "members": [
+        "observed_identity"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_21"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_observed_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "observed_context",
+      "sourceText": "Ein praktisches Beispiel ergibt sich",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_observed_a",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "observed_a",
+      "sourceText": "Einige sind durch Ausfallmechanismus A",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_observed_legend_a",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "observed_legend_a",
+      "sourceText": "Einige sind durch Ausfallmechanismus A",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_observed_b",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "observed_b",
+      "sourceText": "Andere durch Ausfallmechanismus B",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_observed_legend_b",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "observed_legend_b",
+      "sourceText": "Andere durch Ausfallmechanismus B",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_analysis_a_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "analysis_a_context",
+      "sourceText": "Wenn wir nun gezielt",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_analysis_a_a",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "analysis_a_a",
+      "sourceText": "Wenn wir nun gezielt",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_analysis_a_legend_a",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "analysis_a_legend_a",
+      "sourceText": "Wenn wir nun gezielt",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_analysis_a_b",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "analysis_a_b",
+      "sourceText": "als Zensierungszeitpunkte nutzen",
+      "action": "show",
+      "beatId": "beat_9",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_10_analysis_a_legend_b",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "analysis_a_legend_b",
+      "sourceText": "als Zensierungszeitpunkte nutzen",
+      "action": "show",
+      "beatId": "beat_10",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_11_observed_b",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "observed_b",
+      "sourceText": "als Zensierungszeitpunkte nutzen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_11",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_12_analysis_a_meaning",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "analysis_a_meaning",
+      "sourceText": "noch funktionsfähig. Wann es",
+      "action": "show",
+      "beatId": "beat_12",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_13_analysis_a_b",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "analysis_a_b",
+      "sourceText": "bleibt unbekannt. Das gleiche",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_13",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_14_analysis_b_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "analysis_b_context",
+      "sourceText": "Wenn wir Mechanismus B untersuchen",
+      "action": "show",
+      "beatId": "beat_14",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_15_analysis_b_b",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "analysis_b_b",
+      "sourceText": "Wenn wir Mechanismus B untersuchen",
+      "action": "show",
+      "beatId": "beat_15",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_16_analysis_b_legend_b",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "analysis_b_legend_b",
+      "sourceText": "Wenn wir Mechanismus B untersuchen",
+      "action": "show",
+      "beatId": "beat_16",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_17_analysis_b_a",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "analysis_b_a",
+      "sourceText": "als Zensurzeitpunkte betrachtet werden",
+      "action": "show",
+      "beatId": "beat_17",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_18_analysis_b_legend_a",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "analysis_b_legend_a",
+      "sourceText": "als Zensurzeitpunkte betrachtet werden",
+      "action": "show",
+      "beatId": "beat_18",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_19_analysis_b_meaning",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "analysis_b_meaning",
+      "sourceText": "als Zensurzeitpunkte betrachtet werden",
+      "action": "show",
+      "beatId": "beat_19",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_20_observed_a",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "observed_a",
+      "sourceText": "als Zensurzeitpunkte betrachtet werden",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_20",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_21_observed_identity",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "observed_identity",
+      "sourceText": "So entstehen multiple, zufällige Zensierungen",
+      "action": "show",
+      "beatId": "beat_21",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/states/slide_039/00_initial.png"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "observed_context",
+        "observed_a",
+        "observed_legend_a",
+        "observed_b",
+        "observed_legend_b",
+        "analysis_a_context",
+        "analysis_a_a",
+        "analysis_a_legend_a",
+        "analysis_a_b",
+        "analysis_a_legend_b",
+        "analysis_a_meaning",
+        "analysis_b_context",
+        "analysis_b_b",
+        "analysis_b_legend_b",
+        "analysis_b_a",
+        "analysis_b_legend_a",
+        "analysis_b_meaning",
+        "observed_identity"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/states/slide_039/13_after_10_so_entstehen_multiple_zufallige_zensier.png"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "reviewedAt": "2026-09-17",
+    "independentReviewer": "/root/visual_review",
+    "endState": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/after/slide_039.png",
+    "preview": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/preview/slide_039.png",
+    "stateDirectory": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/states/slide_039",
+    "reviewedStateCount": 14,
+    "includesHighlights": true,
+    "findings": [],
+    "scope": "Discrete Chromium states, phrase triggers, source correspondence and legibility at 50 percent; no continuous audio playback test."
+  }
+}

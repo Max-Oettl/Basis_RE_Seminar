@@ -1,0 +1,111 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_077",
+  "scene_id": "re1_src_096",
+  "source_slides": [
+    96
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "weibull_bathtub_curve",
+      "label": "Badewannenkurve und Lebenszyklusbereiche",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_bathtub_early",
+      "label": "b kleiner eins und Frühausfälle",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_bathtub_random",
+      "label": "b gleich eins und Zufallsausfälle",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_bathtub_wear",
+      "label": "b größer eins und Ermüdungs- sowie Verschleißausfälle",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_separation_rule",
+      "label": "Schematische Darstellung und Trennregel",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_weibull_bathtub_curve",
+      "targetId": "weibull_bathtub_curve",
+      "action": "draw",
+      "sourceText": "Zum Abschluss blicken wir noch einmal auf den Zusammenhang von Weibullverteilung und Badewannenkurve.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_weibull_bathtub_early",
+      "targetId": "weibull_bathtub_early",
+      "action": "draw",
+      "sourceText": "Für b kleiner eins sinkt die Ausfallrate über der Zeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_weibull_bathtub_random",
+      "targetId": "weibull_bathtub_random",
+      "action": "draw",
+      "sourceText": "Für b gleich eins ist die Ausfallrate Lambda konstant.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_weibull_bathtub_wear",
+      "targetId": "weibull_bathtub_wear",
+      "action": "draw",
+      "sourceText": "Und für b größer eins ist im Bereich drei eine ansteigende Ausfallrate zu erkennen.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_weibull_separation_rule",
+      "targetId": "weibull_separation_rule",
+      "action": "show",
+      "sourceText": "Wir können also hiermit Ermüdungs- und Verschleißausfälle modellieren.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

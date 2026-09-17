@@ -5,37 +5,141 @@
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "mls_panel",
-      "label": "MLS",
+      "targetId": "mls_heading",
+      "label": "MLS – Methode der kleinsten Quadrate",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "mle_panel",
-      "label": "MLE",
+      "targetId": "mle_heading",
+      "label": "MLE – Maximum-Likelihood-Methode",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "mls_mle_arrow",
-      "label": "Mehr Information",
+      "targetId": "mls_context",
+      "label": "Regression im Weibull-Papier",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "mls_mle_rule",
-      "label": "Methodenregel",
+      "targetId": "mls_points",
+      "label": "mls points",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mls_fit",
+      "label": "mls fit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mls_residuals",
+      "label": "mls residuals",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mls_objective",
+      "label": "Summe der quadrierten Abweichungen minimieren",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mls_simple",
+      "label": "Einfach und nachvollziehbar",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mls_data",
+      "label": "Nur vollständige Daten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mle_context",
+      "label": "Likelihood über den Parametern T und b",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mle_surface",
+      "label": "mle surface",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mle_maximum",
+      "label": "mle maximum",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mle_objective",
+      "label": "Likelihood maximieren",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mle_data",
+      "label": "Vollständige und zensierte Daten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mle_complex",
+      "label": "Mathematisch komplexer",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "methods_software",
+      "label": "Beide Verfahren mit Statistiksoftware",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "methods_expert",
+      "label": "Vertiefung im Experten-Seminar",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -44,44 +148,180 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_mls_panel",
-      "targetId": "mls_panel",
-      "action": "show",
-      "sourceText": "Die M-L-S-Methode basiert auf dem Prinzip der Regressionsanalyse.",
+      "stepId": "step_01_mls_heading",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "mls_heading",
+      "sourceText": "Es gibt jedoch auch rechnerische Verfahren",
+      "action": "show"
     },
     {
-      "stepId": "step_02_mle_panel",
-      "targetId": "mle_panel",
-      "action": "show",
-      "sourceText": "Anders verhält es sich mit der Maximum-Likelihood-Methode.",
+      "stepId": "step_02_mle_heading",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "mle_heading",
+      "sourceText": "Es gibt jedoch auch rechnerische Verfahren",
+      "action": "show"
     },
     {
-      "stepId": "step_03_mls_mle_arrow",
-      "targetId": "mls_mle_arrow",
-      "action": "draw",
-      "sourceText": "Das Besondere an dieser Methode: Sie kann sowohl vollständige als auch zensierte Daten verarbeiten.",
+      "stepId": "step_03_mls_heading",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Beziehung erscheint nach ihren fachlichen Endpunkten.",
-      "drawDurFrames": 42
+      "targetId": "mls_heading",
+      "sourceText": "Die Methode der kleinsten Quadrate",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     },
     {
-      "stepId": "step_04_mls_mle_rule",
-      "targetId": "mls_mle_rule",
-      "action": "show",
-      "sourceText": "Dennoch ist es wichtig, die Unterschiede zu kennen, um die Ergebnisse richtig zu interpretieren.",
+      "stepId": "step_04_mle_heading",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "mle_heading",
+      "sourceText": "und die Maximum-Likelihood-Methode",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_05_mls_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mls_context",
+      "sourceText": "basiert auf dem Prinzip",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_mls_points",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mls_points",
+      "sourceText": "basiert auf dem Prinzip",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_mls_fit",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mls_fit",
+      "sourceText": "eine möglichst gute Gerade",
+      "action": "draw"
+    },
+    {
+      "stepId": "step_08_mls_residuals",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mls_residuals",
+      "sourceText": "die Abweichungen der Punkte zur Geraden",
+      "action": "show"
+    },
+    {
+      "stepId": "step_09_mls_objective",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mls_objective",
+      "sourceText": "Summe der Abweichungen im Quadrat",
+      "action": "show"
+    },
+    {
+      "stepId": "step_10_mls_simple",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mls_simple",
+      "sourceText": "Die Methode ist einfach anzuwenden",
+      "action": "show"
+    },
+    {
+      "stepId": "step_11_mls_data",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mls_data",
+      "sourceText": "keine Zensierungsinformationen berücksichtigen kann",
+      "action": "show"
+    },
+    {
+      "stepId": "step_12_mle_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mle_context",
+      "sourceText": "Anders verhält es sich",
+      "action": "show"
+    },
+    {
+      "stepId": "step_13_mle_surface",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mle_surface",
+      "sourceText": "Anders verhält es sich",
+      "action": "show"
+    },
+    {
+      "stepId": "step_14_mle_maximum",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mle_maximum",
+      "sourceText": "die Parameter so bestimmt",
+      "action": "show"
+    },
+    {
+      "stepId": "step_15_mle_objective",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mle_objective",
+      "sourceText": "mit maximaler Wahrscheinlichkeit",
+      "action": "show"
+    },
+    {
+      "stepId": "step_16_mle_data",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mle_data",
+      "sourceText": "sowohl vollständige als auch zensierte Daten",
+      "action": "show"
+    },
+    {
+      "stepId": "step_17_mle_complex",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mle_complex",
+      "sourceText": "ist aber mathematisch komplexer",
+      "action": "show"
+    },
+    {
+      "stepId": "step_18_methods_software",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "methods_software",
+      "sourceText": "Beide Verfahren lassen sich heute",
+      "action": "show"
+    },
+    {
+      "stepId": "step_19_mls_data",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mls_data",
+      "sourceText": "die Unterschiede zu kennen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_20_mle_data",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mle_data",
+      "sourceText": "die Unterschiede zu kennen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_21_methods_expert",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "methods_expert",
+      "sourceText": "Experten-Seminar zur Lebensdauerdatenanalyse",
+      "action": "show"
     }
   ]
 }

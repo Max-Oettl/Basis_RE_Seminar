@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_step1_scope_documents",
+  "svgPath": "slide_074.svg",
+  "spokenText": "In dieser Phase legen wir die Grundlagen für eine erfolgreiche Design-FME-A. Zunächst wird der Analyseumfang festgelegt und genau definiert. Das bedeutet, wir bestimmen das spezifische Produkt oder den Produktbereich, den wir untersuchen wollen. Gleichzeitig legen wir die Betrachtungsebene der Analyse fest.\n\nAuf System-Ebene betrachten wir das Gesamtsystem und seine Hauptfunktionen.\n\nAuf Teilsystem-Ebene hingegen, fokussieren wir uns auf bestimmte Teilsysteme oder Baugruppen.\n\nUnd auf Komponenten-Ebene analysieren wir einzelne Komponenten oder Bauteile innerhalb des Gesamtsystems.\n\nEine klare Abgrenzung des Analyseumfangs hilft uns, den Fokus zu behalten und unsere Ressourcen gezielt einzusetzen.\n\nAnschließend sammeln wir alle verfügbaren Informationen, Dokumente und Materialien, die relevant sein könnten. Dazu gehören zum Beispiel Erkenntnisse und Erfahrungen aus früheren Projekten oder bereits durchgeführte FME-A‘s. Auch Lessons-Learned Dokumentationen können hier eine wertvolle Quelle sein, da sie oft wichtige Informationen über frühere Fehler und deren Lösungen enthalten.\n\nEin weiterer wichtiger Aspekt ist die Zusammenstellung eines geeigneten Teams. Ein interdisziplinäres Team, das unterschiedliche Rollen und Fachbereiche repräsentiert, ist entscheidend für den Erfolg der FME-A.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s74_scope",
+      "label": "Analyseumfang",
+      "role": "content",
+      "members": [
+        "s74_scope"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s74_documents",
+      "label": "Informationsbasis",
+      "role": "content",
+      "members": [
+        "s74_documents"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s74_bridge",
+      "label": "Nächster Vorbereitungsschritt",
+      "role": "content",
+      "members": [
+        "s74_bridge"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Analyseumfang",
+      "sourceText": "In dieser Phase legen wir die",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s74_scope"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Informationsbasis",
+      "sourceText": "Anschließend sammeln wir alle verfügbaren Informationen",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s74_documents"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Nächster Vorbereitungsschritt",
+      "sourceText": "Ein weiterer wichtiger Aspekt ist die",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s74_bridge"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s74_scope",
+      "beatId": "beat_01",
+      "targetId": "s74_scope",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s74_documents",
+      "beatId": "beat_02",
+      "targetId": "s74_documents",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_s74_bridge",
+      "beatId": "beat_03",
+      "targetId": "s74_bridge",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_03",
+      "visibleGroups": [
+        "canvas_context",
+        "s74_scope",
+        "s74_documents",
+        "s74_bridge"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

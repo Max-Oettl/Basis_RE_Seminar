@@ -1,26 +1,43 @@
 {
-  "schemaVersion": "elementAnimationPlan/v1",
+  "schemaVersion": "svgAnimationManifest/v1",
   "sceneId": "re3_src_042",
   "decision": "animated",
+  "svgPath": "slide_042.svg",
   "defaults": {
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "interval_windows",
-      "label": "Intervall",
+      "targetId": "interval_context",
+      "label": "Sechs beobachtete Objekte",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "interval_known",
-      "label": "Bekannte Grenzen",
+      "targetId": "interval_example",
+      "label": "interval example",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "interval_detail_context",
+      "label": "Beispiel Objekt 2",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "interval_window",
+      "label": "Zwei bekannte Grenzen",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -28,15 +45,39 @@
     },
     {
       "targetId": "interval_unknown",
-      "label": "Unbekannter Zeitpunkt",
+      "label": "Zeitpunkt innerhalb unbekannt",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "interval_rule",
-      "label": "Intervall codieren",
+      "targetId": "interval_legend",
+      "label": "Unbekannter Ausfall im Intervall",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "interval_controls",
+      "label": "Erfolgreiche Prüfung und Defekt",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "interval_others",
+      "label": "interval others",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "interval_resolution",
+      "label": "Beobachtungsauflösung",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -45,44 +86,126 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_interval_windows",
-      "targetId": "interval_windows",
-      "action": "show",
-      "sourceText": "Eine weitere Form der Zensierung ist die sogenannte Intervallzensierung.",
+      "stepId": "step_01_interval_context",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "interval_context",
+      "sourceText": "Eine weitere Form der Zensierung",
+      "action": "show"
     },
     {
-      "stepId": "step_02_interval_known",
-      "targetId": "interval_known",
-      "action": "show",
-      "sourceText": "Stattdessen wissen wir nur, dass der Ausfall innerhalb eines bestimmten Zeitintervalls stattgefunden hat.",
+      "stepId": "step_02_interval_example",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "interval_example",
+      "sourceText": "nicht bekannt ist",
+      "action": "show"
     },
     {
-      "stepId": "step_03_interval_rule",
-      "targetId": "interval_rule",
-      "action": "show",
-      "sourceText": "Das bedeutet: Wir kennen zwei Zeitpunkte, zwischen denen der Ausfall liegen muss – aber nicht, wann genau er eingetreten ist.",
+      "stepId": "step_03_interval_detail_context",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "interval_detail_context",
+      "sourceText": "innerhalb eines bestimmten Zeitintervalls",
+      "action": "show"
     },
     {
-      "stepId": "step_04_interval_unknown",
+      "stepId": "step_04_interval_window",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_window",
+      "sourceText": "innerhalb eines bestimmten Zeitintervalls",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_interval_unknown",
+      "occurrence": 1,
+      "confidence": "high",
       "targetId": "interval_unknown",
-      "action": "show",
-      "sourceText": "Der tatsächliche Ausfallzeitpunkt bleibt also innerhalb eines Intervalls verborgen.",
+      "sourceText": "aber nicht, wann genau",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_interval_legend",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "interval_legend",
+      "sourceText": "aber nicht, wann genau",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_interval_controls",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_controls",
+      "sourceText": "nicht kontinuierlich überwacht werden",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_interval_window",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_window",
+      "sourceText": "zwischen der letzten erfolgreichen Prüfung",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_09_interval_others",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_others",
+      "sourceText": "Der tatsächliche Ausfallzeitpunkt bleibt",
+      "action": "show"
+    },
+    {
+      "stepId": "step_10_interval_resolution",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_resolution",
+      "sourceText": "auf die Genauigkeit unserer Beobachtung",
+      "action": "show"
+    },
+    {
+      "stepId": "step_11_interval_resolution",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_resolution",
+      "sourceText": "sowohl in Fällen vollständigen Daten",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_12_interval_window",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_window",
+      "sourceText": "zeitliche Auflösung nicht unendlich klein ist",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_13_interval_unknown",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_unknown",
+      "sourceText": "Selbst kleinste Intervalle führen dazu",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_14_interval_resolution",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "interval_resolution",
+      "sourceText": "wie genau wir über den Zeitpunkt",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     }
   ]
 }

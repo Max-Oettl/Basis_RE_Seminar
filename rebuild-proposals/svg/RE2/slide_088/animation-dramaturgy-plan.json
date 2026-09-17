@@ -1,0 +1,225 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_gearbox_hierarchy",
+  "svgPath": "slide_088.svg",
+  "spokenText": "Diese Aufteilung hilft uns jetzt, eine klare und vollständige Systemstruktur zu erstellen. Ganz oben, auf der ersten Systemebene, befindet sich das Getriebe. Entsprechend der Stückliste kann es in die drei Baugruppen Antrieb, Abtrieb und Gehäuse untergliedert werden.\n\nDer Antrieb umfasst die Eingangswelle, das Ritzel, ein Rollenlager, einen Radialwellendichtring, eine Passfeder und eine Hülse. Für den Abtrieb lässt sich die Struktur auf die gleiche Weise aufbauen. Dies kann natürlich auch analog für das Gehäuse fortgeführt werden.\n\nEs ist entscheidend, dass diese Analyse vollständig und sorgfältig durchgeführt wird, damit keine Systemelemente oder Bauteile übersehen werden. Das gilt auch für Standardbauteile wie Schrauben oder Hülsen. Werden solche Bauteile vergessen, könnten sie in der weiteren Analyse unbeachtet bleiben – selbst, wenn von ihnen ein Risiko ausgehen könnte.\n\nDamit haben wir den zweiten Schritt der FME-A abgeschlossen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s89_root",
+      "label": "System Getriebe",
+      "role": "content",
+      "members": [
+        "s89_root"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s89_groups",
+      "label": "Baugruppen",
+      "role": "content",
+      "members": [
+        "s89_groups"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s89_components",
+      "label": "Komponenten",
+      "role": "content",
+      "members": [
+        "s89_components"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s89_links",
+      "label": "Systemhierarchie",
+      "role": "content",
+      "members": [
+        "s89_links"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s89_rule",
+      "label": "Vollständigkeitsregel",
+      "role": "content",
+      "members": [
+        "s89_rule"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_05",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "System Getriebe",
+      "sourceText": "Diese Aufteilung hilft uns jetzt, eine",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s89_root"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Baugruppen",
+      "sourceText": "Diese Aufteilung hilft uns jetzt, eine",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s89_groups"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Komponenten",
+      "sourceText": "Der Antrieb umfasst die Eingangswelle, das",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s89_components"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Systemhierarchie",
+      "sourceText": "Diese Aufteilung hilft uns jetzt, eine",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s89_links"
+      ]
+    },
+    {
+      "beatId": "beat_05",
+      "claim": "Vollständigkeitsregel",
+      "sourceText": "Es ist entscheidend, dass diese Analyse",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s89_rule"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s89_root",
+      "beatId": "beat_01",
+      "targetId": "s89_root",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s89_groups",
+      "beatId": "beat_02",
+      "targetId": "s89_groups",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_s89_components",
+      "beatId": "beat_03",
+      "targetId": "s89_components",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_04_s89_links",
+      "beatId": "beat_04",
+      "targetId": "s89_links",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    },
+    {
+      "stepId": "step_05_s89_rule",
+      "beatId": "beat_05",
+      "targetId": "s89_rule",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_05",
+      "visibleGroups": [
+        "canvas_context",
+        "s89_root",
+        "s89_groups",
+        "s89_components",
+        "s89_links",
+        "s89_rule"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

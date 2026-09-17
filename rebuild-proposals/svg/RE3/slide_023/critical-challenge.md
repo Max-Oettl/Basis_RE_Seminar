@@ -1,10 +1,8 @@
-# Kritischer Challenge — slide_023
+# Review-Schwerpunkte slide_023
 
-- Quellen: RE3::23
-- Struktur: Kapitel/Lektion bewusst nicht zugeordnet
-- Design-Challenge: Die 3D-Grafik zeigt nun Dichteverteilungen von F(t), ihre Mediane und die daraus entstehende Weibullgerade.
-- Animations-Challenge: 4 semantische Schritte an 4 wörtlich belegten Sprechertext-Cues; chronologisch sortiert.
-- Sichtprüfung: 5 gerenderte Zustände plus 1920×1080-Endzustand geprüft
-- Korrektur/Entscheidung: Fachlich falsche Stichprobenumfang-Achse entfernt und Plot als Dichteverteilungen neu modelliert.
-- Technisches Ergebnis: 0 Fehler, 0 Warnungen im strikten Modul-QA
-- Urteil: FREIGEGEBEN
+- Quellinhalte, Zuordnungen und Sprecherphrasen gegen alle 1 Quellzustände abgleichen.
+- Endzustand und alle semantischen Zwischenstände in 1920×1080 und 960×540 prüfen.
+- Beziehungen erst mit ihren Endpunkten; Daten vor Fit; beide Vertrauensgrenzen zusammen.
+- Dichteflächen entsprechen den berechneten Quantilen; F und R liegen in [0,1]. Bei R=1−F werden Variable und Dichte gemeinsam gespiegelt.
+- Statische und animierte QA plus unabhängige visuelle Zweitprüfung dokumentiert im Feedbackaudit.
+- Nutzerfreigabe: offen; keine finale Sperre gesetzt.

@@ -1,0 +1,163 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_027.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 38,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "left_reference_context",
+      "label": "Bekannter zweiseitiger Bereich",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "left_reference_region",
+      "label": "left reference region",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "left_reference_values",
+      "label": "left reference values",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "left_context",
+      "label": "Linksseitiger Vertrauensbereich",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "left_region",
+      "label": "left region",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "left_application",
+      "label": "Maximale Ausfallwahrscheinlichkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "left_reference_rule",
+      "label": "Vergleich der zweiseitigen Grenzen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "left_values",
+      "label": "left values",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_left_reference_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_reference_context",
+      "sourceText": "Zusätzlich gibt es auch einseitige Vertrauensbereiche",
+      "action": "show"
+    },
+    {
+      "stepId": "step_02_left_reference_region",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_reference_region",
+      "sourceText": "Zusätzlich gibt es auch einseitige Vertrauensbereiche",
+      "action": "show"
+    },
+    {
+      "stepId": "step_03_left_reference_values",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_reference_values",
+      "sourceText": "Zusätzlich gibt es auch einseitige Vertrauensbereiche",
+      "action": "show"
+    },
+    {
+      "stepId": "step_04_left_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_context",
+      "sourceText": "Beim linksseitigen Vertrauensbereich",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_left_region",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_region",
+      "sourceText": "wird nur eine obere Grenze betrachtet",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_left_application",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_application",
+      "sourceText": "wenn wir eine maximale Ausfallwahrscheinlichkeit",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_left_region",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_region",
+      "sourceText": "die Definition der Grenzen die Aussagewahrscheinlichkeit beeinflusst",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_08_left_reference_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_reference_rule",
+      "sourceText": "Um beim zweiseitigen Vertrauensbereich",
+      "action": "show"
+    },
+    {
+      "stepId": "step_09_left_reference_values",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_reference_values",
+      "sourceText": "fünf Prozent und eine fünfundneunzig Prozent",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_10_left_values",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "left_values",
+      "sourceText": "Um beim linksseitigen Vertrauensbereich",
+      "action": "show"
+    }
+  ]
+}

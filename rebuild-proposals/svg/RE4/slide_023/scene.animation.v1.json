@@ -5,29 +5,61 @@
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "inversion_error",
-      "label": "Fehlerbaum",
+      "targetId": "logic_headings",
+      "label": "Fehlerbaum und Funktionsbaum",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "inversion_swap",
-      "label": "Logikumkehr",
+      "targetId": "logic_complement",
+      "label": "Zuverlässigkeit als Gegenstück",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "inversion_function",
-      "label": "Funktionsbaum",
+      "targetId": "logic_functions",
+      "label": "Aus Einzelwerten werden Systemwerte",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "logic_error_or",
+      "label": "ODER im Fehlerbaum",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "logic_function_and",
+      "label": "UND im Funktionsbaum",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "logic_error_and",
+      "label": "UND im Fehlerbaum",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "logic_function_or",
+      "label": "ODER im Funktionsbaum",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -36,34 +68,70 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_inversion_error",
-      "targetId": "inversion_error",
-      "action": "show",
-      "sourceText": "Wir sprechen dann nicht mehr von einem Fehlerbaum, sondern von einem sogenannten Funktionsbaum.",
+      "stepId": "step_01_logic_headings",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "logic_headings",
+      "sourceText": "Doch in der Praxis ist es üblich",
+      "action": "show"
     },
     {
-      "stepId": "step_02_inversion_function",
-      "targetId": "inversion_function",
-      "action": "show",
-      "sourceText": "Ein ODER-Gatter, das im Fehlerbaum beschreibt, dass das System ausfällt, wenn eine der Ursachen eintritt, wird im Funktionsbaum zu einem und-Gatter.",
+      "stepId": "step_02_logic_complement",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "logic_complement",
+      "sourceText": "Ausfallwahrscheinlichkeiten mit deren Gegenstück",
+      "action": "show"
     },
     {
-      "stepId": "step_03_inversion_swap",
-      "targetId": "inversion_swap",
-      "action": "draw",
-      "sourceText": "Auf dieser Grundlage wandeln wir also unseren Fehlerbaum systematisch in einen Funktionsbaum um:",
+      "stepId": "step_03_logic_functions",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Beziehung erscheint nach ihren fachlichen Endpunkten.",
-      "drawDurFrames": 42
+      "targetId": "logic_functions",
+      "sourceText": "von einem sogenannten Funktionsbaum",
+      "action": "show"
+    },
+    {
+      "stepId": "step_04_logic_error_or",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "logic_error_or",
+      "sourceText": "Ein ODER-Gatter, das im Fehlerbaum beschreibt",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_logic_function_and",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "logic_function_and",
+      "sourceText": "wird im Funktionsbaum zu einem und-Gatter",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_logic_function_and",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "logic_function_and",
+      "sourceText": "wenn alle Teilfunktionen erfüllt sind",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_07_logic_error_and",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "logic_error_and",
+      "sourceText": "Umgekehrt wird ein und-Gatter",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_logic_function_or",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "logic_function_or",
+      "sourceText": "Umgekehrt wird ein und-Gatter",
+      "action": "show"
     }
   ]
 }

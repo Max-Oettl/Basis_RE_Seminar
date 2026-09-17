@@ -2,7 +2,7 @@
   "schema_version": "basisReScenePlan/v1",
   "module_id": "RE4",
   "source_state_count": 68,
-  "target_scene_count": 22,
+  "target_scene_count": 23,
   "removed_source_slides": [
     53
   ],
@@ -52,7 +52,175 @@
         2,
         3,
         4
-      ]
+      ],
+      "spoken_text": "In dieser Lektion beschäftigen wir uns mit der Frage: Wie lässt sich die Zuverlässigkeit eines Systems berechnen?\n\nDazu schauen wir uns zunächst an, was ein „System“ überhaupt ist.\n\nEin System besteht aus verschiedenen Teilsystemen, Baugruppen und Komponenten – die miteinander in Beziehung stehen und gemeinsam eine übergeordnete Funktion erfüllen.\n\nNehmen wir als Beispiel einen PKW:\n\nDie Systemfunktion hier lautet ganz einfach – es soll fahren können.\n\nDie entsprechende Fehlfunktion wäre: Das Fahrzeug lässt sich nicht mehr bewegen und das Fahren ist unmöglich.\n\nDiese Systemfunktion wird aber nicht von einem einzelnen Bauteil getragen, sondern ist nur möglich, wenn mehrere Subsysteme gemeinsam funktionieren – zum Beispiel der Motor, das Getriebe oder das Fahrwerk.\n\nWerfen wir exemplarisch einen genaueren Blick auf das Getriebe.\n\nSeine Funktion ist es, das Drehmoment vom Motor auf die Räder zu übertragen.\n\nWenn diese Funktion ausfällt – also kein Drehmoment mehr übertragen wird – sprechen wir von einem Getriebeversagen.\n\nDoch auch das Getriebe ist nicht einfach ein Bauteil, sondern besteht wiederum aus der Eingangswelle, Zahnrädern, der Ausgangswelle, dem Gehäuse und weiterer Komponenten.\n\nAll diese einzelnen Komponenten müssen funktionieren, damit das Getriebe als Ganzes zuverlässig arbeitet.\n\nSchauen wir uns beispielhaft die Zahnräder an.",
+      "narration_partition": {
+        "method": "verbatim_contiguous_source_span",
+        "source_text_section_id": "section_001",
+        "start": 0,
+        "end": 1362
+      },
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_001/scene.animation.v1.json",
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Die Animation folgt dem Sprechertext und blendet fachlich zusammengehoerige Elemente als semantische Gruppen ein.",
+        "strategy": "semantic_reveal",
+        "state_count": 12,
+        "public_targets": [
+          "system_context",
+          "system_pkw",
+          "pkw_function",
+          "pkw_failure",
+          "system_subsystems",
+          "gear_function",
+          "gear_failure",
+          "system_components",
+          "gear_focus"
+        ],
+        "semantic_groups": [
+          {
+            "group_id": "system_context",
+            "label": "Drei Systemebenen",
+            "role": "redesign_semantic_group",
+            "members": [
+              "system_context"
+            ]
+          },
+          {
+            "group_id": "system_pkw",
+            "label": "PKW",
+            "role": "redesign_semantic_group",
+            "members": [
+              "system_pkw"
+            ]
+          },
+          {
+            "group_id": "pkw_function",
+            "label": "Funktion des PKW",
+            "role": "redesign_semantic_group",
+            "members": [
+              "pkw_function"
+            ]
+          },
+          {
+            "group_id": "pkw_failure",
+            "label": "Fehlfunktion des PKW",
+            "role": "redesign_semantic_group",
+            "members": [
+              "pkw_failure"
+            ]
+          },
+          {
+            "group_id": "system_subsystems",
+            "label": "Motor, Getriebe und Fahrwerk",
+            "role": "redesign_semantic_group",
+            "members": [
+              "system_subsystems"
+            ]
+          },
+          {
+            "group_id": "gear_function",
+            "label": "Funktion des Getriebes",
+            "role": "redesign_semantic_group",
+            "members": [
+              "gear_function"
+            ]
+          },
+          {
+            "group_id": "gear_failure",
+            "label": "Fehlfunktion des Getriebes",
+            "role": "redesign_semantic_group",
+            "members": [
+              "gear_failure"
+            ]
+          },
+          {
+            "group_id": "system_components",
+            "label": "Vier Komponenten des Getriebes",
+            "role": "redesign_semantic_group",
+            "members": [
+              "system_components"
+            ]
+          },
+          {
+            "group_id": "gear_focus",
+            "label": "Zahnräder im Kraftfluss",
+            "role": "redesign_semantic_group",
+            "members": [
+              "gear_focus"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "target_id": "system_context",
+            "action": "show",
+            "source_text": "Ein System besteht"
+          },
+          {
+            "order": 2,
+            "target_id": "system_pkw",
+            "action": "show",
+            "source_text": "Nehmen wir als Beispiel einen PKW"
+          },
+          {
+            "order": 3,
+            "target_id": "pkw_function",
+            "action": "show",
+            "source_text": "Die Systemfunktion hier lautet"
+          },
+          {
+            "order": 4,
+            "target_id": "pkw_failure",
+            "action": "show",
+            "source_text": "Die entsprechende Fehlfunktion wäre"
+          },
+          {
+            "order": 5,
+            "target_id": "system_subsystems",
+            "action": "show",
+            "source_text": "mehrere Subsysteme gemeinsam funktionieren"
+          },
+          {
+            "order": 6,
+            "target_id": "system_subsystems",
+            "action": "highlight",
+            "source_text": "einen genaueren Blick auf das Getriebe"
+          },
+          {
+            "order": 7,
+            "target_id": "gear_function",
+            "action": "show",
+            "source_text": "Seine Funktion ist es"
+          },
+          {
+            "order": 8,
+            "target_id": "gear_failure",
+            "action": "show",
+            "source_text": "Wenn diese Funktion ausfällt"
+          },
+          {
+            "order": 9,
+            "target_id": "system_components",
+            "action": "show",
+            "source_text": "Doch auch das Getriebe"
+          },
+          {
+            "order": 10,
+            "target_id": "system_components",
+            "action": "highlight",
+            "source_text": "All diese einzelnen Komponenten müssen funktionieren"
+          },
+          {
+            "order": 11,
+            "target_id": "gear_focus",
+            "action": "show",
+            "source_text": "Schauen wir uns beispielhaft die Zahnräder an"
+          }
+        ]
+      }
     },
     {
       "output_slide_number": 5,
@@ -78,7 +246,247 @@
       "canonical_source_ref": "RE4::6",
       "absorbed_source_states": [
         6
-      ]
+      ],
+      "spoken_text": "Für sie könnten Lebensdauerdaten aus Versuchen wie einem Wöhlertest vorliegen.\n\nDabei wird das Zahnrad unter wechselnder Last geprüft, bis es versagt – und wir erhalten Ausfallzeiten.\n\nDiese Ausfallzeiten können wir auswerten, um eine Weibull-Verteilung zu bestimmen.\n\nMit dieser Verteilung können wir das Ausfallverhalten des Zahnrads mathematisch beschreiben.\n\nDabei dürfen wir aber nicht vergessen: Diese Ausfallzeiten stammen nur aus einer Stichprobe.\n\nWir möchten aber Aussagen über die Grundgesamtheit aller Zahnräder treffen.\n\nDeshalb berücksichtigen wir zusätzlich einen Vertrauensbereich, um die statistische Unsicherheit abzudecken.",
+      "narration_partition": {
+        "method": "verbatim_contiguous_source_span",
+        "source_text_section_id": "section_001",
+        "start": 1362,
+        "end": 2006
+      },
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_005/scene.animation.v1.json",
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Die Animation folgt dem Sprechertext und blendet fachlich zusammengehoerige Elemente als semantische Gruppen ein.",
+        "strategy": "semantic_reveal",
+        "state_count": 18,
+        "public_targets": [
+          "gear_test_intro",
+          "gear_test_result",
+          "population_context",
+          "population_selection",
+          "population_analysis",
+          "population_sample_fit",
+          "population_limit",
+          "population_inference",
+          "population_estimate_fit",
+          "population_uncertainty",
+          "population_estimate_limits",
+          "population_bound_labels",
+          "population_return"
+        ],
+        "semantic_groups": [
+          {
+            "group_id": "gear_test_intro",
+            "label": "Wöhlertest am Zahnrad",
+            "role": "redesign_semantic_group",
+            "members": [
+              "gear_test_intro"
+            ]
+          },
+          {
+            "group_id": "gear_test_result",
+            "label": "Ausfallzeiten auswerten",
+            "role": "redesign_semantic_group",
+            "members": [
+              "gear_test_result"
+            ]
+          },
+          {
+            "group_id": "population_context",
+            "label": "Grundgesamtheit",
+            "role": "redesign_semantic_group",
+            "members": [
+              "population_context"
+            ]
+          },
+          {
+            "group_id": "population_selection",
+            "label": "Begrenzte Stichprobe",
+            "role": "redesign_semantic_group",
+            "members": [
+              "population_selection"
+            ]
+          },
+          {
+            "group_id": "population_analysis",
+            "label": "Analyse der Stichprobe",
+            "role": "redesign_semantic_group",
+            "members": [
+              "population_analysis"
+            ]
+          },
+          {
+            "group_id": "population_sample_fit",
+            "label": "population sample fit",
+            "role": "redesign_semantic_group",
+            "members": [
+              "population_sample_fit"
+            ]
+          },
+          {
+            "group_id": "population_limit",
+            "label": "Gültigkeit der Schätzung",
+            "role": "redesign_semantic_group",
+            "members": [
+              "population_limit"
+            ]
+          },
+          {
+            "group_id": "population_inference",
+            "label": "Schluss auf die Grundgesamtheit",
+            "role": "redesign_semantic_group",
+            "members": [
+              "population_inference"
+            ]
+          },
+          {
+            "group_id": "population_estimate_fit",
+            "label": "population estimate fit",
+            "role": "redesign_semantic_group",
+            "members": [
+              "population_estimate_fit"
+            ]
+          },
+          {
+            "group_id": "population_uncertainty",
+            "label": "Unsicherheit berücksichtigen",
+            "role": "redesign_semantic_group",
+            "members": [
+              "population_uncertainty"
+            ]
+          },
+          {
+            "group_id": "population_estimate_limits",
+            "label": "population estimate limits",
+            "role": "redesign_semantic_group",
+            "members": [
+              "population_estimate_limits"
+            ]
+          },
+          {
+            "group_id": "population_bound_labels",
+            "label": "Beide Vertrauensgrenzen",
+            "role": "redesign_semantic_group",
+            "members": [
+              "population_bound_labels"
+            ]
+          },
+          {
+            "group_id": "population_return",
+            "label": "Rückschluss auf die gesamte Population",
+            "role": "redesign_semantic_group",
+            "members": [
+              "population_return"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "target_id": "gear_test_intro",
+            "action": "show",
+            "source_text": "Für sie könnten Lebensdauerdaten"
+          },
+          {
+            "order": 2,
+            "target_id": "gear_test_intro",
+            "action": "highlight",
+            "source_text": "unter wechselnder Last geprüft"
+          },
+          {
+            "order": 3,
+            "target_id": "gear_test_result",
+            "action": "show",
+            "source_text": "Diese Ausfallzeiten können wir auswerten"
+          },
+          {
+            "order": 4,
+            "target_id": "gear_test_result",
+            "action": "highlight",
+            "source_text": "des Zahnrads mathematisch beschreiben"
+          },
+          {
+            "order": 5,
+            "target_id": "gear_test_intro",
+            "action": "hide",
+            "source_text": "Dabei dürfen wir aber nicht vergessen"
+          },
+          {
+            "order": 6,
+            "target_id": "gear_test_result",
+            "action": "hide",
+            "source_text": "Dabei dürfen wir aber nicht vergessen"
+          },
+          {
+            "order": 7,
+            "target_id": "population_context",
+            "action": "show",
+            "source_text": "Dabei dürfen wir aber nicht vergessen"
+          },
+          {
+            "order": 8,
+            "target_id": "population_selection",
+            "action": "show",
+            "source_text": "Dabei dürfen wir aber nicht vergessen"
+          },
+          {
+            "order": 9,
+            "target_id": "population_analysis",
+            "action": "show",
+            "source_text": "Dabei dürfen wir aber nicht vergessen"
+          },
+          {
+            "order": 10,
+            "target_id": "population_sample_fit",
+            "action": "show",
+            "source_text": "Dabei dürfen wir aber nicht vergessen"
+          },
+          {
+            "order": 11,
+            "target_id": "population_limit",
+            "action": "show",
+            "source_text": "Dabei dürfen wir aber nicht vergessen"
+          },
+          {
+            "order": 12,
+            "target_id": "population_inference",
+            "action": "show",
+            "source_text": "Wir möchten aber Aussagen"
+          },
+          {
+            "order": 13,
+            "target_id": "population_estimate_fit",
+            "action": "show",
+            "source_text": "Wir möchten aber Aussagen"
+          },
+          {
+            "order": 14,
+            "target_id": "population_uncertainty",
+            "action": "show",
+            "source_text": "Deshalb berücksichtigen wir zusätzlich einen Vertrauensbereich"
+          },
+          {
+            "order": 15,
+            "target_id": "population_estimate_limits",
+            "action": "show",
+            "source_text": "Deshalb berücksichtigen wir zusätzlich einen Vertrauensbereich"
+          },
+          {
+            "order": 16,
+            "target_id": "population_bound_labels",
+            "action": "show",
+            "source_text": "Deshalb berücksichtigen wir zusätzlich einen Vertrauensbereich"
+          },
+          {
+            "order": 17,
+            "target_id": "population_return",
+            "action": "show",
+            "source_text": "Deshalb berücksichtigen wir zusätzlich einen Vertrauensbereich"
+          }
+        ]
+      }
     },
     {
       "output_slide_number": 7,
@@ -112,7 +520,154 @@
         10,
         11,
         12
-      ]
+      ],
+      "spoken_text": "Erst dann können beispielsweise mit einer fünfundneunzig-prozentigen Aussagewahrscheinlichkeit die Zuverlässigkeit eines Zahnrads bis zu einem bestimmten Zeitpunkt bestimmen.\n\nWir erhalten zum Beispiel eine Zuverlässigkeit von neunundneunzig Prozent.\n\nDasselbe Vorgehen gilt natürlich auch für die anderen Komponenten – also die Eingangs- und Ausgangswelle sowie das Gehäuse, für die wir ebenfalls Zuverlässigkeiten ermitteln können.\n\nHaben wir nun die Zuverlässigkeit aller Einzelteile bestimmt, können wir diese eine Hierarchieebene höher zusammenführen – zur Zuverlässigkeit des gesamten Getriebes.\n\nUnd dieses Prinzip lässt sich auch auf andere Teilsysteme anwenden – zum Beispiel auf den Motor oder das Fahrwerk.\n\nAm Ende können wir alle Informationen nutzen, um die Zuverlässigkeit des gesamten Fahrzeugs abzuschätzen.\n\nWie genau diese Verknüpfung und Berechnung funktioniert – also wie man Komponenten- und Systemzuverlässigkeit mathematisch zusammensetzt – das schauen wir uns jetzt Schritt für Schritt in dieser Lektion an.",
+      "narration_partition": {
+        "method": "verbatim_contiguous_source_span",
+        "source_text_section_id": "section_001",
+        "start": 2006,
+        "end": 3038
+      },
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_007/scene.animation.v1.json",
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Die Animation folgt dem Sprechertext und blendet fachlich zusammengehoerige Elemente als semantische Gruppen ein.",
+        "strategy": "semantic_reveal",
+        "state_count": 10,
+        "public_targets": [
+          "aggregation_context",
+          "aggregation_boundary",
+          "aggregation_tree",
+          "aggregation_gears",
+          "aggregation_components",
+          "aggregation_gearbox",
+          "aggregation_subsystems",
+          "aggregation_vehicle"
+        ],
+        "semantic_groups": [
+          {
+            "group_id": "aggregation_context",
+            "label": "Bewertung für einen Zeitpunkt",
+            "role": "redesign_semantic_group",
+            "members": [
+              "aggregation_context"
+            ]
+          },
+          {
+            "group_id": "aggregation_boundary",
+            "label": "Systemgrenze",
+            "role": "redesign_semantic_group",
+            "members": [
+              "aggregation_boundary"
+            ]
+          },
+          {
+            "group_id": "aggregation_tree",
+            "label": "Bekannte Systemstruktur",
+            "role": "redesign_semantic_group",
+            "members": [
+              "aggregation_tree"
+            ]
+          },
+          {
+            "group_id": "aggregation_gears",
+            "label": "Zahnradzuverlässigkeit",
+            "role": "redesign_semantic_group",
+            "members": [
+              "aggregation_gears"
+            ]
+          },
+          {
+            "group_id": "aggregation_components",
+            "label": "Zuverlässigkeit der übrigen Komponenten",
+            "role": "redesign_semantic_group",
+            "members": [
+              "aggregation_components"
+            ]
+          },
+          {
+            "group_id": "aggregation_gearbox",
+            "label": "Zuverlässigkeit des Getriebes",
+            "role": "redesign_semantic_group",
+            "members": [
+              "aggregation_gearbox"
+            ]
+          },
+          {
+            "group_id": "aggregation_subsystems",
+            "label": "Zuverlässigkeit der weiteren Teilsysteme",
+            "role": "redesign_semantic_group",
+            "members": [
+              "aggregation_subsystems"
+            ]
+          },
+          {
+            "group_id": "aggregation_vehicle",
+            "label": "Zuverlässigkeit des Fahrzeugs",
+            "role": "redesign_semantic_group",
+            "members": [
+              "aggregation_vehicle"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "target_id": "aggregation_context",
+            "action": "show",
+            "source_text": "Erst dann können beispielsweise"
+          },
+          {
+            "order": 2,
+            "target_id": "aggregation_boundary",
+            "action": "show",
+            "source_text": "Erst dann können beispielsweise"
+          },
+          {
+            "order": 3,
+            "target_id": "aggregation_tree",
+            "action": "show",
+            "source_text": "Erst dann können beispielsweise"
+          },
+          {
+            "order": 4,
+            "target_id": "aggregation_gears",
+            "action": "show",
+            "source_text": "Wir erhalten zum Beispiel"
+          },
+          {
+            "order": 5,
+            "target_id": "aggregation_components",
+            "action": "show",
+            "source_text": "Dasselbe Vorgehen gilt natürlich auch"
+          },
+          {
+            "order": 6,
+            "target_id": "aggregation_gearbox",
+            "action": "show",
+            "source_text": "eine Hierarchieebene höher zusammenführen"
+          },
+          {
+            "order": 7,
+            "target_id": "aggregation_subsystems",
+            "action": "show",
+            "source_text": "auf andere Teilsysteme anwenden"
+          },
+          {
+            "order": 8,
+            "target_id": "aggregation_vehicle",
+            "action": "show",
+            "source_text": "Am Ende können wir alle Informationen nutzen"
+          },
+          {
+            "order": 9,
+            "target_id": "aggregation_tree",
+            "action": "highlight",
+            "source_text": "Wie genau diese Verknüpfung und Berechnung funktioniert"
+          }
+        ]
+      }
     },
     {
       "output_slide_number": 13,
@@ -142,7 +697,256 @@
         14,
         15,
         16
-      ]
+      ],
+      "spoken_text": "Zu Beginn geht es darum, sich systematisch Gedanken über den Aufbau und die Struktur des betrachteten Systems zu machen.Denn nur wenn wir wissen, wie ein System aufgebaut ist – welche Komponenten, Baugruppen und Funktionsketten beteiligt sind – können wir auch verstehen, wie die Zuverlässigkeit der einzelnen Komponenten und Baugruppen verknüpft werden muss, um die Systemzuverlässigkeit zu erhalten.\n\nHierfür eignet sich die quantitative Fehlerbaumanalyse hervorragend.Die qualitative FTA kennst du ja bereits aus dem vorherigen Modul zu den qualitativen Methoden in der Zuverlässigkeitstechnik.\n\nDie ersten vier Schritte sind in beiden Methoden identisch – egal ob qualitativ oder quantitativ.\n\nDer erste Schritt besteht darin, das System zu definieren, das analysiert werden soll – also zum Beispiel ein Getriebe.\n\nIm nächsten Schritt legen wir das unerwünschte Ereignis fest, also das sogenannte Top-Ereignis bzw. der Systemausfall.\n\nIm Fall des Getriebes lautet das Top-Ereignis: Getriebe defekt.\n\nAnschließend zerlegen wir diesen Systemausfall schrittweise in seine unmittelbaren Ursachen.\n\nDazu nutzen wir logische Verknüpfungen wie das und- oder ODER-Gatter, um die Fehlerbeziehungen zwischen den verschiedenen Subsystemen darzustellen.\n\nDas Getriebe ist beispielsweise ausgefallen, wenn kein Drehmoment mehr übertragen wird oder eine Undichtigkeit vorliegt.\n\nSo nähern wir uns stufenweise den Ursachen an – von der Systemebene über die Baugruppen bis hin zu den einzelnen Komponenten.Wir unterteilen die Ereignisse immer weiter, bis wir schließlich auf die sogenannten Basisereignisse stoßen – also die primären Ausfallmechanismen wie zum Beispiel Materialermüdung oder thermische Alterung.\n\nDiese Basisereignisse bilden die Grundlage für die quantitative Bewertung im nächsten Schritt.\n\nDenn sie lassen sich mit konkreten Zuverlässigkeitskennwerten beschreiben – und genau das ist das Ziel der quantitativen FTA:Nicht nur aufzeigen, was passieren kann, sondern auch wie wahrscheinlich es ist.\n\nWie wir für die einzelnen Basisereignisse diese Zuverlässigkeitskennwerte ermitteln, schauen wir uns im fünften Schritt der FTA einmal genauer an.",
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_013/scene.animation.v1.json",
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Die Animation folgt dem Sprechertext und blendet fachlich zusammengehoerige Elemente als semantische Gruppen ein.",
+        "strategy": "semantic_reveal",
+        "state_count": 25,
+        "public_targets": [
+          "fta_workflow_heading",
+          "fta_workflow_first",
+          "fta_workflow_common",
+          "fta_workflow_quantitative",
+          "fta_heading",
+          "fta_top",
+          "fta_causes",
+          "fta_components",
+          "fta_modes",
+          "fta_basics"
+        ],
+        "semantic_groups": [
+          {
+            "group_id": "fta_workflow_heading",
+            "label": "Qualitativer Ablauf und quantitative Erweiterung",
+            "role": "redesign_semantic_group",
+            "members": [
+              "fta_workflow_heading"
+            ]
+          },
+          {
+            "group_id": "fta_workflow_first",
+            "label": "Schritt 1 Systemanalyse",
+            "role": "redesign_semantic_group",
+            "members": [
+              "fta_workflow_first"
+            ]
+          },
+          {
+            "group_id": "fta_workflow_common",
+            "label": "Gemeinsame Schritte 2 bis 4",
+            "role": "redesign_semantic_group",
+            "members": [
+              "fta_workflow_common"
+            ]
+          },
+          {
+            "group_id": "fta_workflow_quantitative",
+            "label": "Quantitative Schritte 5 und 6",
+            "role": "redesign_semantic_group",
+            "members": [
+              "fta_workflow_quantitative"
+            ]
+          },
+          {
+            "group_id": "fta_heading",
+            "label": "Fehlerbaum am Beispiel Getriebe",
+            "role": "redesign_semantic_group",
+            "members": [
+              "fta_heading"
+            ]
+          },
+          {
+            "group_id": "fta_top",
+            "label": "Top-Ereignis",
+            "role": "redesign_semantic_group",
+            "members": [
+              "fta_top"
+            ]
+          },
+          {
+            "group_id": "fta_causes",
+            "label": "Drehmoment und Dichtheit",
+            "role": "redesign_semantic_group",
+            "members": [
+              "fta_causes"
+            ]
+          },
+          {
+            "group_id": "fta_components",
+            "label": "Unmittelbare Ursachen der Komponenten",
+            "role": "redesign_semantic_group",
+            "members": [
+              "fta_components"
+            ]
+          },
+          {
+            "group_id": "fta_modes",
+            "label": "Bruch oder Klemmen der Eingangswelle",
+            "role": "redesign_semantic_group",
+            "members": [
+              "fta_modes"
+            ]
+          },
+          {
+            "group_id": "fta_basics",
+            "label": "Sechs Basisereignisse",
+            "role": "redesign_semantic_group",
+            "members": [
+              "fta_basics"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "target_id": "fta_workflow_heading",
+            "action": "show",
+            "source_text": "Zu Beginn geht es darum"
+          },
+          {
+            "order": 2,
+            "target_id": "fta_workflow_first",
+            "action": "show",
+            "source_text": "Zu Beginn geht es darum"
+          },
+          {
+            "order": 3,
+            "target_id": "fta_workflow_common",
+            "action": "show",
+            "source_text": "Zu Beginn geht es darum"
+          },
+          {
+            "order": 4,
+            "target_id": "fta_workflow_quantitative",
+            "action": "show",
+            "source_text": "Zu Beginn geht es darum"
+          },
+          {
+            "order": 5,
+            "target_id": "fta_workflow_first",
+            "action": "highlight",
+            "source_text": "Aufbau und die Struktur"
+          },
+          {
+            "order": 6,
+            "target_id": "fta_workflow_first",
+            "action": "highlight",
+            "source_text": "welche Komponenten, Baugruppen und Funktionsketten beteiligt sind"
+          },
+          {
+            "order": 7,
+            "target_id": "fta_workflow_heading",
+            "action": "highlight",
+            "source_text": "Hierfür eignet sich die quantitative Fehlerbaumanalyse"
+          },
+          {
+            "order": 8,
+            "target_id": "fta_workflow_first",
+            "action": "highlight",
+            "source_text": "Die ersten vier Schritte sind in beiden Methoden"
+          },
+          {
+            "order": 9,
+            "target_id": "fta_workflow_common",
+            "action": "highlight",
+            "source_text": "Die ersten vier Schritte sind in beiden Methoden"
+          },
+          {
+            "order": 10,
+            "target_id": "fta_workflow_first",
+            "action": "highlight",
+            "source_text": "Der erste Schritt besteht darin"
+          },
+          {
+            "order": 11,
+            "target_id": "fta_workflow_heading",
+            "action": "hide",
+            "source_text": "Im nächsten Schritt legen wir das unerwünschte Ereignis"
+          },
+          {
+            "order": 12,
+            "target_id": "fta_workflow_first",
+            "action": "hide",
+            "source_text": "Im nächsten Schritt legen wir das unerwünschte Ereignis"
+          },
+          {
+            "order": 13,
+            "target_id": "fta_workflow_common",
+            "action": "hide",
+            "source_text": "Im nächsten Schritt legen wir das unerwünschte Ereignis"
+          },
+          {
+            "order": 14,
+            "target_id": "fta_workflow_quantitative",
+            "action": "hide",
+            "source_text": "Im nächsten Schritt legen wir das unerwünschte Ereignis"
+          },
+          {
+            "order": 15,
+            "target_id": "fta_heading",
+            "action": "show",
+            "source_text": "Im nächsten Schritt legen wir das unerwünschte Ereignis"
+          },
+          {
+            "order": 16,
+            "target_id": "fta_top",
+            "action": "show",
+            "source_text": "Im Fall des Getriebes lautet das Top-Ereignis"
+          },
+          {
+            "order": 17,
+            "target_id": "fta_top",
+            "action": "highlight",
+            "source_text": "Anschließend zerlegen wir diesen Systemausfall"
+          },
+          {
+            "order": 18,
+            "target_id": "fta_causes",
+            "action": "show",
+            "source_text": "Das Getriebe ist beispielsweise ausgefallen"
+          },
+          {
+            "order": 19,
+            "target_id": "fta_components",
+            "action": "show",
+            "source_text": "von der Systemebene über die Baugruppen"
+          },
+          {
+            "order": 20,
+            "target_id": "fta_modes",
+            "action": "show",
+            "source_text": "Wir unterteilen die Ereignisse immer weiter"
+          },
+          {
+            "order": 21,
+            "target_id": "fta_basics",
+            "action": "show",
+            "source_text": "auf die sogenannten Basisereignisse stoßen"
+          },
+          {
+            "order": 22,
+            "target_id": "fta_basics",
+            "action": "highlight",
+            "source_text": "Diese Basisereignisse bilden die Grundlage"
+          },
+          {
+            "order": 23,
+            "target_id": "fta_basics",
+            "action": "highlight",
+            "source_text": "mit konkreten Zuverlässigkeitskennwerten beschreiben"
+          },
+          {
+            "order": 24,
+            "target_id": "fta_basics",
+            "action": "highlight",
+            "source_text": "im fünften Schritt der FTA"
+          }
+        ]
+      }
     },
     {
       "output_slide_number": 17,
@@ -172,7 +976,391 @@
         18,
         19,
         20
-      ]
+      ],
+      "spoken_text": "Im fünften Schritt der quantitativen Fehlerbaumanalyse geht es nun darum, für jedes Basisereignis – also jeden primären Ausfallmechanismus – eine quantitative Aussage zur Zuverlässigkeit zu treffen.\n\nUnser Ziel ist es ja, später die Zuverlässigkeit des gesamten Systems bewerten zu können. Dafür brauchen wir als Grundlage Kennwerte zu den einzelnen Ursachen.\n\nDas bedeutet: Für jedes der blau hinterlegten Basisereignisse im Fehlerbaum – also zum Beispiel Ermüdung, Materialfehler, Verschleiß oder thermische Alterung – benötigen wir einen entsprechenden Zuverlässigkeitskennwert.Typischerweise verwenden wir hier die Ausfallwahrscheinlichkeit zu einem bestimmten Zeitpunkt, beispielsweise nach fünftausend oder fünfzigtausend Betriebsstunden.\n\nWichtig ist: Das bedeutet nicht, dass wir für jeden Mechanismus zwingend genaue Werte berechnen müssen.Wenn wir etwa sicher wissen, dass ein Ausfallmechanismus in der Praxis nicht relevant ist, können wir ihn als risikoneutral bewerten – und ihm zum Beispiel eine Ausfallwahrscheinlichkeit von null Prozent zuweisen.Das sollte aber immer gut begründet sein, etwa durch technische Absicherung, Redundanzen oder Praxiserfahrung.\n\nUm diese Ausfallwahrscheinlichkeiten zu bestimmen, gibt es unterschiedliche Datenquellen wie Labortests beziehungsweise Lebensdauerversuche oder auch Felddaten aus dem Betrieb.\n\nWie man aus Lebensdauerdaten einen Zuverlässigkeitswert erhält, hast du ja bereits im Modul Lebensdauerdatenanalyse gelernt.\n\nZusätzlich können Zuverlässigkeitswerte auch mithilfe von Berechnungen oder Simulationen quantitativ bestimmt werden.\n\nDarüber hinaus sind auch Expertenschätzungen, historische Daten ähnlicher Systeme oder statistische Modelle ebenfalls denkbare Quellen.\n\nAuf diese Weise können wir jedem Basisereignis im Fehlerbaum einen Wahrscheinlichkeitswert zuordnen – passend zum Zeitpunkt, für den wir eine Aussage über das System treffen wollen.\n\nAber wie berechnen wir nun aus all diesen Einzelwahrscheinlichkeiten die Gesamtausfallwahrscheinlichkeit des Systems?\n\nGenau damit befassen wir uns im nächsten Schritt der Fehlerbaumanalyse: der quantitativen Bewertung.",
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_017/scene.animation.v1.json",
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Die Animation folgt dem Sprechertext und blendet fachlich zusammengehoerige Elemente als semantische Gruppen ein.",
+        "strategy": "semantic_reveal",
+        "state_count": 37,
+        "public_targets": [
+          "basis_heading",
+          "basis_top",
+          "basis_causes",
+          "basis_components",
+          "basis_modes",
+          "basis_basics",
+          "basis_time",
+          "basis_zero",
+          "basis_test_sources",
+          "basis_calculation_sources",
+          "basis_experience_sources",
+          "basis_value_fatigue",
+          "basis_value_material",
+          "basis_value_flow_base",
+          "basis_value_static_base",
+          "basis_value_wear",
+          "basis_value_thermal"
+        ],
+        "semantic_groups": [
+          {
+            "group_id": "basis_heading",
+            "label": "Fünfter Schritt der FTA",
+            "role": "redesign_semantic_group",
+            "members": [
+              "basis_heading"
+            ]
+          },
+          {
+            "group_id": "basis_top",
+            "label": "Top-Ereignis",
+            "role": "redesign_semantic_group",
+            "members": [
+              "basis_top"
+            ]
+          },
+          {
+            "group_id": "basis_causes",
+            "label": "Drehmoment und Dichtheit",
+            "role": "redesign_semantic_group",
+            "members": [
+              "basis_causes"
+            ]
+          },
+          {
+            "group_id": "basis_components",
+            "label": "Unmittelbare Ursachen der Komponenten",
+            "role": "redesign_semantic_group",
+            "members": [
+              "basis_components"
+            ]
+          },
+          {
+            "group_id": "basis_modes",
+            "label": "Bruch oder Klemmen der Eingangswelle",
+            "role": "redesign_semantic_group",
+            "members": [
+              "basis_modes"
+            ]
+          },
+          {
+            "group_id": "basis_basics",
+            "label": "Sechs Basisereignisse",
+            "role": "redesign_semantic_group",
+            "members": [
+              "basis_basics"
+            ]
+          },
+          {
+            "group_id": "basis_time",
+            "label": "Gemeinsamer Betrachtungszeitpunkt",
+            "role": "redesign_semantic_group",
+            "members": [
+              "basis_time"
+            ]
+          },
+          {
+            "group_id": "basis_zero",
+            "label": "Null Prozent nur mit Begründung",
+            "role": "redesign_semantic_group",
+            "members": [
+              "basis_zero"
+            ]
+          },
+          {
+            "group_id": "basis_test_sources",
+            "label": "Labor und Felddaten",
+            "role": "redesign_semantic_group",
+            "members": [
+              "basis_test_sources"
+            ]
+          },
+          {
+            "group_id": "basis_calculation_sources",
+            "label": "Berechnung und Simulation",
+            "role": "redesign_semantic_group",
+            "members": [
+              "basis_calculation_sources"
+            ]
+          },
+          {
+            "group_id": "basis_experience_sources",
+            "label": "Weitere Quellen",
+            "role": "redesign_semantic_group",
+            "members": [
+              "basis_experience_sources"
+            ]
+          },
+          {
+            "group_id": "basis_value_fatigue",
+            "label": "Kennwert fatigue",
+            "role": "redesign_semantic_group",
+            "members": [
+              "basis_value_fatigue"
+            ]
+          },
+          {
+            "group_id": "basis_value_material",
+            "label": "Kennwert material",
+            "role": "redesign_semantic_group",
+            "members": [
+              "basis_value_material"
+            ]
+          },
+          {
+            "group_id": "basis_value_flow_base",
+            "label": "Kennwert flow_base",
+            "role": "redesign_semantic_group",
+            "members": [
+              "basis_value_flow_base"
+            ]
+          },
+          {
+            "group_id": "basis_value_static_base",
+            "label": "Kennwert static_base",
+            "role": "redesign_semantic_group",
+            "members": [
+              "basis_value_static_base"
+            ]
+          },
+          {
+            "group_id": "basis_value_wear",
+            "label": "Kennwert wear",
+            "role": "redesign_semantic_group",
+            "members": [
+              "basis_value_wear"
+            ]
+          },
+          {
+            "group_id": "basis_value_thermal",
+            "label": "Kennwert thermal",
+            "role": "redesign_semantic_group",
+            "members": [
+              "basis_value_thermal"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "target_id": "basis_heading",
+            "action": "show",
+            "source_text": "Im fünften Schritt der quantitativen Fehlerbaumanalyse"
+          },
+          {
+            "order": 2,
+            "target_id": "basis_top",
+            "action": "show",
+            "source_text": "Im fünften Schritt der quantitativen Fehlerbaumanalyse"
+          },
+          {
+            "order": 3,
+            "target_id": "basis_causes",
+            "action": "show",
+            "source_text": "Im fünften Schritt der quantitativen Fehlerbaumanalyse"
+          },
+          {
+            "order": 4,
+            "target_id": "basis_components",
+            "action": "show",
+            "source_text": "Im fünften Schritt der quantitativen Fehlerbaumanalyse"
+          },
+          {
+            "order": 5,
+            "target_id": "basis_modes",
+            "action": "show",
+            "source_text": "Im fünften Schritt der quantitativen Fehlerbaumanalyse"
+          },
+          {
+            "order": 6,
+            "target_id": "basis_basics",
+            "action": "show",
+            "source_text": "Im fünften Schritt der quantitativen Fehlerbaumanalyse"
+          },
+          {
+            "order": 7,
+            "target_id": "basis_basics",
+            "action": "highlight",
+            "source_text": "Für jedes der blau hinterlegten Basisereignisse"
+          },
+          {
+            "order": 8,
+            "target_id": "basis_time",
+            "action": "show",
+            "source_text": "Ausfallwahrscheinlichkeit zu einem bestimmten Zeitpunkt"
+          },
+          {
+            "order": 9,
+            "target_id": "basis_top",
+            "action": "hide",
+            "source_text": "Wenn wir etwa sicher wissen"
+          },
+          {
+            "order": 10,
+            "target_id": "basis_causes",
+            "action": "hide",
+            "source_text": "Wenn wir etwa sicher wissen"
+          },
+          {
+            "order": 11,
+            "target_id": "basis_components",
+            "action": "hide",
+            "source_text": "Wenn wir etwa sicher wissen"
+          },
+          {
+            "order": 12,
+            "target_id": "basis_modes",
+            "action": "hide",
+            "source_text": "Wenn wir etwa sicher wissen"
+          },
+          {
+            "order": 13,
+            "target_id": "basis_basics",
+            "action": "hide",
+            "source_text": "Wenn wir etwa sicher wissen"
+          },
+          {
+            "order": 14,
+            "target_id": "basis_zero",
+            "action": "show",
+            "source_text": "Wenn wir etwa sicher wissen"
+          },
+          {
+            "order": 15,
+            "target_id": "basis_zero",
+            "action": "highlight",
+            "source_text": "Das sollte aber immer gut begründet sein"
+          },
+          {
+            "order": 16,
+            "target_id": "basis_test_sources",
+            "action": "show",
+            "source_text": "unterschiedliche Datenquellen wie Labortests"
+          },
+          {
+            "order": 17,
+            "target_id": "basis_test_sources",
+            "action": "highlight",
+            "source_text": "bereits im Modul Lebensdauerdatenanalyse gelernt"
+          },
+          {
+            "order": 18,
+            "target_id": "basis_calculation_sources",
+            "action": "show",
+            "source_text": "mithilfe von Berechnungen oder Simulationen"
+          },
+          {
+            "order": 19,
+            "target_id": "basis_experience_sources",
+            "action": "show",
+            "source_text": "Darüber hinaus sind auch Expertenschätzungen"
+          },
+          {
+            "order": 20,
+            "target_id": "basis_zero",
+            "action": "hide",
+            "source_text": "Auf diese Weise können wir jedem Basisereignis"
+          },
+          {
+            "order": 21,
+            "target_id": "basis_test_sources",
+            "action": "hide",
+            "source_text": "Auf diese Weise können wir jedem Basisereignis"
+          },
+          {
+            "order": 22,
+            "target_id": "basis_calculation_sources",
+            "action": "hide",
+            "source_text": "Auf diese Weise können wir jedem Basisereignis"
+          },
+          {
+            "order": 23,
+            "target_id": "basis_experience_sources",
+            "action": "hide",
+            "source_text": "Auf diese Weise können wir jedem Basisereignis"
+          },
+          {
+            "order": 24,
+            "target_id": "basis_top",
+            "action": "show",
+            "source_text": "Auf diese Weise können wir jedem Basisereignis"
+          },
+          {
+            "order": 25,
+            "target_id": "basis_causes",
+            "action": "show",
+            "source_text": "Auf diese Weise können wir jedem Basisereignis"
+          },
+          {
+            "order": 26,
+            "target_id": "basis_components",
+            "action": "show",
+            "source_text": "Auf diese Weise können wir jedem Basisereignis"
+          },
+          {
+            "order": 27,
+            "target_id": "basis_modes",
+            "action": "show",
+            "source_text": "Auf diese Weise können wir jedem Basisereignis"
+          },
+          {
+            "order": 28,
+            "target_id": "basis_basics",
+            "action": "show",
+            "source_text": "Auf diese Weise können wir jedem Basisereignis"
+          },
+          {
+            "order": 29,
+            "target_id": "basis_value_fatigue",
+            "action": "show",
+            "source_text": "Auf diese Weise können wir jedem Basisereignis"
+          },
+          {
+            "order": 30,
+            "target_id": "basis_value_material",
+            "action": "show",
+            "source_text": "Auf diese Weise können wir jedem Basisereignis"
+          },
+          {
+            "order": 31,
+            "target_id": "basis_value_flow_base",
+            "action": "show",
+            "source_text": "Auf diese Weise können wir jedem Basisereignis"
+          },
+          {
+            "order": 32,
+            "target_id": "basis_value_static_base",
+            "action": "show",
+            "source_text": "Auf diese Weise können wir jedem Basisereignis"
+          },
+          {
+            "order": 33,
+            "target_id": "basis_value_wear",
+            "action": "show",
+            "source_text": "Auf diese Weise können wir jedem Basisereignis"
+          },
+          {
+            "order": 34,
+            "target_id": "basis_value_thermal",
+            "action": "show",
+            "source_text": "Auf diese Weise können wir jedem Basisereignis"
+          },
+          {
+            "order": 35,
+            "target_id": "basis_time",
+            "action": "highlight",
+            "source_text": "passend zum Zeitpunkt"
+          },
+          {
+            "order": 36,
+            "target_id": "basis_top",
+            "action": "highlight",
+            "source_text": "die Gesamtausfallwahrscheinlichkeit des Systems"
+          }
+        ]
+      }
     },
     {
       "output_slide_number": 21,
@@ -198,7 +1386,235 @@
       "canonical_source_ref": "RE4::22",
       "absorbed_source_states": [
         22
-      ]
+      ],
+      "spoken_text": "Im sechsten Schritt der Fehlerbaumanalyse geht es nun darum, aus den einzelnen Ausfallwahrscheinlichkeiten der Basisereignisse die Gesamtausfallwahrscheinlichkeit des Systems zu berechnen.\n\nDabei greifen wir auf die logische Struktur des Fehlerbaums zurück, wie wir sie zuvor aufgebaut haben.",
+      "narration_partition": {
+        "method": "verbatim_contiguous_source_span",
+        "source_text_section_id": "section_004",
+        "start": 0,
+        "end": 293
+      },
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_021/scene.animation.v1.json",
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Die Animation folgt dem Sprechertext und blendet fachlich zusammengehoerige Elemente als semantische Gruppen ein.",
+        "strategy": "semantic_reveal",
+        "state_count": 16,
+        "public_targets": [
+          "quant_heading",
+          "quant_top",
+          "quant_causes",
+          "quant_components",
+          "quant_modes",
+          "quant_basics",
+          "quant_value_fatigue",
+          "quant_value_material",
+          "quant_value_flow_base",
+          "quant_value_static_base",
+          "quant_value_wear",
+          "quant_value_thermal",
+          "quant_result"
+        ],
+        "semantic_groups": [
+          {
+            "group_id": "quant_heading",
+            "label": "Sechster Schritt der FTA",
+            "role": "redesign_semantic_group",
+            "members": [
+              "quant_heading"
+            ]
+          },
+          {
+            "group_id": "quant_top",
+            "label": "Top-Ereignis",
+            "role": "redesign_semantic_group",
+            "members": [
+              "quant_top"
+            ]
+          },
+          {
+            "group_id": "quant_causes",
+            "label": "Drehmoment und Dichtheit",
+            "role": "redesign_semantic_group",
+            "members": [
+              "quant_causes"
+            ]
+          },
+          {
+            "group_id": "quant_components",
+            "label": "Unmittelbare Ursachen der Komponenten",
+            "role": "redesign_semantic_group",
+            "members": [
+              "quant_components"
+            ]
+          },
+          {
+            "group_id": "quant_modes",
+            "label": "Bruch oder Klemmen der Eingangswelle",
+            "role": "redesign_semantic_group",
+            "members": [
+              "quant_modes"
+            ]
+          },
+          {
+            "group_id": "quant_basics",
+            "label": "Sechs Basisereignisse",
+            "role": "redesign_semantic_group",
+            "members": [
+              "quant_basics"
+            ]
+          },
+          {
+            "group_id": "quant_value_fatigue",
+            "label": "Kennwert fatigue",
+            "role": "redesign_semantic_group",
+            "members": [
+              "quant_value_fatigue"
+            ]
+          },
+          {
+            "group_id": "quant_value_material",
+            "label": "Kennwert material",
+            "role": "redesign_semantic_group",
+            "members": [
+              "quant_value_material"
+            ]
+          },
+          {
+            "group_id": "quant_value_flow_base",
+            "label": "Kennwert flow_base",
+            "role": "redesign_semantic_group",
+            "members": [
+              "quant_value_flow_base"
+            ]
+          },
+          {
+            "group_id": "quant_value_static_base",
+            "label": "Kennwert static_base",
+            "role": "redesign_semantic_group",
+            "members": [
+              "quant_value_static_base"
+            ]
+          },
+          {
+            "group_id": "quant_value_wear",
+            "label": "Kennwert wear",
+            "role": "redesign_semantic_group",
+            "members": [
+              "quant_value_wear"
+            ]
+          },
+          {
+            "group_id": "quant_value_thermal",
+            "label": "Kennwert thermal",
+            "role": "redesign_semantic_group",
+            "members": [
+              "quant_value_thermal"
+            ]
+          },
+          {
+            "group_id": "quant_result",
+            "label": "Gesamtausfallwahrscheinlichkeit",
+            "role": "redesign_semantic_group",
+            "members": [
+              "quant_result"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "target_id": "quant_heading",
+            "action": "show",
+            "source_text": "Im sechsten Schritt der Fehlerbaumanalyse"
+          },
+          {
+            "order": 2,
+            "target_id": "quant_top",
+            "action": "show",
+            "source_text": "Im sechsten Schritt der Fehlerbaumanalyse"
+          },
+          {
+            "order": 3,
+            "target_id": "quant_causes",
+            "action": "show",
+            "source_text": "Im sechsten Schritt der Fehlerbaumanalyse"
+          },
+          {
+            "order": 4,
+            "target_id": "quant_components",
+            "action": "show",
+            "source_text": "Im sechsten Schritt der Fehlerbaumanalyse"
+          },
+          {
+            "order": 5,
+            "target_id": "quant_modes",
+            "action": "show",
+            "source_text": "Im sechsten Schritt der Fehlerbaumanalyse"
+          },
+          {
+            "order": 6,
+            "target_id": "quant_basics",
+            "action": "show",
+            "source_text": "Im sechsten Schritt der Fehlerbaumanalyse"
+          },
+          {
+            "order": 7,
+            "target_id": "quant_value_fatigue",
+            "action": "show",
+            "source_text": "aus den einzelnen Ausfallwahrscheinlichkeiten der Basisereignisse"
+          },
+          {
+            "order": 8,
+            "target_id": "quant_value_material",
+            "action": "show",
+            "source_text": "aus den einzelnen Ausfallwahrscheinlichkeiten der Basisereignisse"
+          },
+          {
+            "order": 9,
+            "target_id": "quant_value_flow_base",
+            "action": "show",
+            "source_text": "aus den einzelnen Ausfallwahrscheinlichkeiten der Basisereignisse"
+          },
+          {
+            "order": 10,
+            "target_id": "quant_value_static_base",
+            "action": "show",
+            "source_text": "aus den einzelnen Ausfallwahrscheinlichkeiten der Basisereignisse"
+          },
+          {
+            "order": 11,
+            "target_id": "quant_value_wear",
+            "action": "show",
+            "source_text": "aus den einzelnen Ausfallwahrscheinlichkeiten der Basisereignisse"
+          },
+          {
+            "order": 12,
+            "target_id": "quant_value_thermal",
+            "action": "show",
+            "source_text": "aus den einzelnen Ausfallwahrscheinlichkeiten der Basisereignisse"
+          },
+          {
+            "order": 13,
+            "target_id": "quant_result",
+            "action": "show",
+            "source_text": "die Gesamtausfallwahrscheinlichkeit des Systems zu berechnen"
+          },
+          {
+            "order": 14,
+            "target_id": "quant_basics",
+            "action": "highlight",
+            "source_text": "Dabei greifen wir auf die logische Struktur"
+          },
+          {
+            "order": 15,
+            "target_id": "quant_causes",
+            "action": "highlight",
+            "source_text": "Dabei greifen wir auf die logische Struktur"
+          }
+        ]
+      }
     },
     {
       "output_slide_number": 23,
@@ -224,7 +1640,139 @@
       "canonical_source_ref": "RE4::24",
       "absorbed_source_states": [
         24
-      ]
+      ],
+      "spoken_text": "Doch in der Praxis ist es üblich, statt mit Ausfallwahrscheinlichkeiten mit deren Gegenstück – den Zuverlässigkeitswerten – zu arbeiten. Wir sprechen dann nicht mehr von einem Fehlerbaum, sondern von einem sogenannten Funktionsbaum.\n\nDiese Transformation vom Fehler- zum Funktionsbaum erfolgt ganz einfach: Wir kehren die Logik der verwendeten Gatter um. Ein ODER-Gatter, das im Fehlerbaum beschreibt, dass das System ausfällt, wenn eine der Ursachen eintritt, wird im Funktionsbaum zu einem und-Gatter. Das System funktioniert also nur, wenn alle Teilfunktionen erfüllt sind. Umgekehrt wird ein und-Gatter im Fehlerbaum zu einem ODER-Gatter im Funktionsbaum.",
+      "narration_partition": {
+        "method": "verbatim_contiguous_source_span",
+        "source_text_section_id": "section_004",
+        "start": 293,
+        "end": 954
+      },
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_023/scene.animation.v1.json",
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Die Animation folgt dem Sprechertext und blendet fachlich zusammengehoerige Elemente als semantische Gruppen ein.",
+        "strategy": "semantic_reveal",
+        "state_count": 9,
+        "public_targets": [
+          "logic_headings",
+          "logic_complement",
+          "logic_functions",
+          "logic_error_or",
+          "logic_function_and",
+          "logic_error_and",
+          "logic_function_or"
+        ],
+        "semantic_groups": [
+          {
+            "group_id": "logic_headings",
+            "label": "Fehlerbaum und Funktionsbaum",
+            "role": "redesign_semantic_group",
+            "members": [
+              "logic_headings"
+            ]
+          },
+          {
+            "group_id": "logic_complement",
+            "label": "Zuverlässigkeit als Gegenstück",
+            "role": "redesign_semantic_group",
+            "members": [
+              "logic_complement"
+            ]
+          },
+          {
+            "group_id": "logic_functions",
+            "label": "Aus Einzelwerten werden Systemwerte",
+            "role": "redesign_semantic_group",
+            "members": [
+              "logic_functions"
+            ]
+          },
+          {
+            "group_id": "logic_error_or",
+            "label": "ODER im Fehlerbaum",
+            "role": "redesign_semantic_group",
+            "members": [
+              "logic_error_or"
+            ]
+          },
+          {
+            "group_id": "logic_function_and",
+            "label": "UND im Funktionsbaum",
+            "role": "redesign_semantic_group",
+            "members": [
+              "logic_function_and"
+            ]
+          },
+          {
+            "group_id": "logic_error_and",
+            "label": "UND im Fehlerbaum",
+            "role": "redesign_semantic_group",
+            "members": [
+              "logic_error_and"
+            ]
+          },
+          {
+            "group_id": "logic_function_or",
+            "label": "ODER im Funktionsbaum",
+            "role": "redesign_semantic_group",
+            "members": [
+              "logic_function_or"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "target_id": "logic_headings",
+            "action": "show",
+            "source_text": "Doch in der Praxis ist es üblich"
+          },
+          {
+            "order": 2,
+            "target_id": "logic_complement",
+            "action": "show",
+            "source_text": "Ausfallwahrscheinlichkeiten mit deren Gegenstück"
+          },
+          {
+            "order": 3,
+            "target_id": "logic_functions",
+            "action": "show",
+            "source_text": "von einem sogenannten Funktionsbaum"
+          },
+          {
+            "order": 4,
+            "target_id": "logic_error_or",
+            "action": "show",
+            "source_text": "Ein ODER-Gatter, das im Fehlerbaum beschreibt"
+          },
+          {
+            "order": 5,
+            "target_id": "logic_function_and",
+            "action": "show",
+            "source_text": "wird im Funktionsbaum zu einem und-Gatter"
+          },
+          {
+            "order": 6,
+            "target_id": "logic_function_and",
+            "action": "highlight",
+            "source_text": "wenn alle Teilfunktionen erfüllt sind"
+          },
+          {
+            "order": 7,
+            "target_id": "logic_error_and",
+            "action": "show",
+            "source_text": "Umgekehrt wird ein und-Gatter"
+          },
+          {
+            "order": 8,
+            "target_id": "logic_function_or",
+            "action": "show",
+            "source_text": "Umgekehrt wird ein und-Gatter"
+          }
+        ]
+      }
     },
     {
       "output_slide_number": 25,
@@ -258,7 +1806,484 @@
         28,
         29,
         30
-      ]
+      ],
+      "spoken_text": "Das klingt zunächst abstrakt, ist aber logisch nachvollziehbar. Wenn wir zum Beispiel im Fehlerbaum sagen: „Das Getriebe fällt aus, wenn kein Drehmoment mehr übertragen wird oder eine Leckage vorliegt“, dann bedeutet das im Umkehrschluss: „Das Getriebe funktioniert nur dann, wenn beides – die Drehmomentübertragung und die Dichtheit – gegeben ist.“\n\nDiese Umkehrung der Logik erlaubt es uns, mit Zuverlässigkeiten zu arbeiten, die häufig auch intuitiver zu interpretieren sind. Anstelle von Aussagen wie „Ausfallwahrscheinlichkeit von zehn Prozent“ sprechen wir dann von „Zuverlässigkeit von neunzig Prozent“.\n\nAuf dieser Grundlage wandeln wir also unseren Fehlerbaum systematisch in einen Funktionsbaum um:\n\nWir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte und die ODER-Gatter durch und-Gatter.\n\nAuf diese Weise erhalten wir den vollständigen Funktionsbaum des Getriebes.\n\nDurch die Umwandlung von Fehlerbaum zu Funktionsbaum lässt sich die Systemzuverlässigkeit einfach berechnen.\n\nUm die resultierende Zuverlässigkeit des Systems anschaulich darzustellen, nutzt man in der Praxis häufig sogenannte Zuverlässigkeitsblockdiagramme. Diese lassen sich direkt aus dem Funktionsbaum ableiten und visualisieren, welche Komponenten in Serie oder parallel wirken müssen, damit das Gesamtsystem zuverlässig funktioniert.\n\nFür die eigentliche Berechnung greifen wir auf Regeln der Wahrscheinlichkeitsrechnung zurück. Die Grundlage hierfür bildet das sogenannte boolesche Modell – also eine logische Verknüpfung der Einzelwahrscheinlichkeiten, aus der sich dann die Systemzuverlässigkeit ergibt.\n\nWie genau das funktioniert – und wie wir die Zuverlässigkeitsblockdiagramme konkret einsetzen – schauen wir uns im nächsten Abschnitt im Detail an.",
+      "narration_partition": {
+        "method": "verbatim_contiguous_source_span",
+        "source_text_section_id": "section_004",
+        "start": 954,
+        "end": 2714
+      },
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_025/scene.animation.v1.json",
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Die Animation folgt dem Sprechertext und blendet fachlich zusammengehoerige Elemente als semantische Gruppen ein.",
+        "strategy": "semantic_reveal",
+        "state_count": 44,
+        "public_targets": [
+          "transfer_example_heading",
+          "transfer_error",
+          "transfer_function",
+          "transfer_complement",
+          "transfer_tree_heading",
+          "transfer_tree_top",
+          "transfer_tree_causes",
+          "transfer_tree_components",
+          "transfer_tree_modes",
+          "transfer_tree_basics",
+          "transfer_tree_value_fatigue",
+          "transfer_tree_value_material",
+          "transfer_tree_value_flow_base",
+          "transfer_tree_value_static_base",
+          "transfer_tree_value_wear",
+          "transfer_tree_value_thermal",
+          "transfer_headers",
+          "transfer_gates",
+          "transfer_series",
+          "transfer_parallel",
+          "transfer_symbols",
+          "transfer_boolean"
+        ],
+        "semantic_groups": [
+          {
+            "group_id": "transfer_example_heading",
+            "label": "Das Getriebe als Beispiel",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_example_heading"
+            ]
+          },
+          {
+            "group_id": "transfer_error",
+            "label": "Ausfalllogik des Getriebes",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_error"
+            ]
+          },
+          {
+            "group_id": "transfer_function",
+            "label": "Funktionslogik des Getriebes",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_function"
+            ]
+          },
+          {
+            "group_id": "transfer_complement",
+            "label": "Zehn Prozent Ausfall entspricht neunzig Prozent Zuverlässigkeit",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_complement"
+            ]
+          },
+          {
+            "group_id": "transfer_tree_heading",
+            "label": "Vollständiger Funktionsbaum",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_tree_heading"
+            ]
+          },
+          {
+            "group_id": "transfer_tree_top",
+            "label": "Top-Ereignis",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_tree_top"
+            ]
+          },
+          {
+            "group_id": "transfer_tree_causes",
+            "label": "Drehmoment und Dichtheit",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_tree_causes"
+            ]
+          },
+          {
+            "group_id": "transfer_tree_components",
+            "label": "Unmittelbare Ursachen der Komponenten",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_tree_components"
+            ]
+          },
+          {
+            "group_id": "transfer_tree_modes",
+            "label": "Bruch oder Klemmen der Eingangswelle",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_tree_modes"
+            ]
+          },
+          {
+            "group_id": "transfer_tree_basics",
+            "label": "Sechs Basisereignisse",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_tree_basics"
+            ]
+          },
+          {
+            "group_id": "transfer_tree_value_fatigue",
+            "label": "Kennwert fatigue",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_tree_value_fatigue"
+            ]
+          },
+          {
+            "group_id": "transfer_tree_value_material",
+            "label": "Kennwert material",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_tree_value_material"
+            ]
+          },
+          {
+            "group_id": "transfer_tree_value_flow_base",
+            "label": "Kennwert flow_base",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_tree_value_flow_base"
+            ]
+          },
+          {
+            "group_id": "transfer_tree_value_static_base",
+            "label": "Kennwert static_base",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_tree_value_static_base"
+            ]
+          },
+          {
+            "group_id": "transfer_tree_value_wear",
+            "label": "Kennwert wear",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_tree_value_wear"
+            ]
+          },
+          {
+            "group_id": "transfer_tree_value_thermal",
+            "label": "Kennwert thermal",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_tree_value_thermal"
+            ]
+          },
+          {
+            "group_id": "transfer_headers",
+            "label": "Drei Sichten auf dieselbe Logik",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_headers"
+            ]
+          },
+          {
+            "group_id": "transfer_gates",
+            "label": "Beide Gatterpaare",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_gates"
+            ]
+          },
+          {
+            "group_id": "transfer_series",
+            "label": "UND entspricht Serie",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_series"
+            ]
+          },
+          {
+            "group_id": "transfer_parallel",
+            "label": "ODER entspricht Parallelstruktur",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_parallel"
+            ]
+          },
+          {
+            "group_id": "transfer_symbols",
+            "label": "Bedeutung der booleschen Variablen",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_symbols"
+            ]
+          },
+          {
+            "group_id": "transfer_boolean",
+            "label": "Boolesches Modell als Berechnungsgrundlage",
+            "role": "redesign_semantic_group",
+            "members": [
+              "transfer_boolean"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "target_id": "transfer_example_heading",
+            "action": "show",
+            "source_text": "Das klingt zunächst abstrakt"
+          },
+          {
+            "order": 2,
+            "target_id": "transfer_error",
+            "action": "show",
+            "source_text": "Wenn wir zum Beispiel im Fehlerbaum sagen"
+          },
+          {
+            "order": 3,
+            "target_id": "transfer_function",
+            "action": "show",
+            "source_text": "dann bedeutet das im Umkehrschluss"
+          },
+          {
+            "order": 4,
+            "target_id": "transfer_function",
+            "action": "highlight",
+            "source_text": "Drehmomentübertragung und die Dichtheit"
+          },
+          {
+            "order": 5,
+            "target_id": "transfer_complement",
+            "action": "show",
+            "source_text": "Anstelle von Aussagen wie"
+          },
+          {
+            "order": 6,
+            "target_id": "transfer_example_heading",
+            "action": "hide",
+            "source_text": "Auf dieser Grundlage"
+          },
+          {
+            "order": 7,
+            "target_id": "transfer_error",
+            "action": "hide",
+            "source_text": "Auf dieser Grundlage"
+          },
+          {
+            "order": 8,
+            "target_id": "transfer_function",
+            "action": "hide",
+            "source_text": "Auf dieser Grundlage"
+          },
+          {
+            "order": 9,
+            "target_id": "transfer_complement",
+            "action": "hide",
+            "source_text": "Auf dieser Grundlage"
+          },
+          {
+            "order": 10,
+            "target_id": "transfer_tree_heading",
+            "action": "show",
+            "source_text": "wandeln wir also unseren Fehlerbaum systematisch"
+          },
+          {
+            "order": 11,
+            "target_id": "transfer_tree_top",
+            "action": "show",
+            "source_text": "wandeln wir also unseren Fehlerbaum systematisch"
+          },
+          {
+            "order": 12,
+            "target_id": "transfer_tree_causes",
+            "action": "show",
+            "source_text": "wandeln wir also unseren Fehlerbaum systematisch"
+          },
+          {
+            "order": 13,
+            "target_id": "transfer_tree_components",
+            "action": "show",
+            "source_text": "wandeln wir also unseren Fehlerbaum systematisch"
+          },
+          {
+            "order": 14,
+            "target_id": "transfer_tree_modes",
+            "action": "show",
+            "source_text": "wandeln wir also unseren Fehlerbaum systematisch"
+          },
+          {
+            "order": 15,
+            "target_id": "transfer_tree_basics",
+            "action": "show",
+            "source_text": "wandeln wir also unseren Fehlerbaum systematisch"
+          },
+          {
+            "order": 16,
+            "target_id": "transfer_tree_value_fatigue",
+            "action": "show",
+            "source_text": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte"
+          },
+          {
+            "order": 17,
+            "target_id": "transfer_tree_value_material",
+            "action": "show",
+            "source_text": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte"
+          },
+          {
+            "order": 18,
+            "target_id": "transfer_tree_value_flow_base",
+            "action": "show",
+            "source_text": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte"
+          },
+          {
+            "order": 19,
+            "target_id": "transfer_tree_value_static_base",
+            "action": "show",
+            "source_text": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte"
+          },
+          {
+            "order": 20,
+            "target_id": "transfer_tree_value_wear",
+            "action": "show",
+            "source_text": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte"
+          },
+          {
+            "order": 21,
+            "target_id": "transfer_tree_value_thermal",
+            "action": "show",
+            "source_text": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte"
+          },
+          {
+            "order": 22,
+            "target_id": "transfer_tree_causes",
+            "action": "highlight",
+            "source_text": "die ODER-Gatter durch und-Gatter"
+          },
+          {
+            "order": 23,
+            "target_id": "transfer_tree_basics",
+            "action": "highlight",
+            "source_text": "den vollständigen Funktionsbaum des Getriebes"
+          },
+          {
+            "order": 24,
+            "target_id": "transfer_tree_heading",
+            "action": "hide",
+            "source_text": "Um die resultierende Zuverlässigkeit"
+          },
+          {
+            "order": 25,
+            "target_id": "transfer_tree_top",
+            "action": "hide",
+            "source_text": "Um die resultierende Zuverlässigkeit"
+          },
+          {
+            "order": 26,
+            "target_id": "transfer_tree_causes",
+            "action": "hide",
+            "source_text": "Um die resultierende Zuverlässigkeit"
+          },
+          {
+            "order": 27,
+            "target_id": "transfer_tree_components",
+            "action": "hide",
+            "source_text": "Um die resultierende Zuverlässigkeit"
+          },
+          {
+            "order": 28,
+            "target_id": "transfer_tree_modes",
+            "action": "hide",
+            "source_text": "Um die resultierende Zuverlässigkeit"
+          },
+          {
+            "order": 29,
+            "target_id": "transfer_tree_basics",
+            "action": "hide",
+            "source_text": "Um die resultierende Zuverlässigkeit"
+          },
+          {
+            "order": 30,
+            "target_id": "transfer_tree_value_fatigue",
+            "action": "hide",
+            "source_text": "Um die resultierende Zuverlässigkeit"
+          },
+          {
+            "order": 31,
+            "target_id": "transfer_tree_value_material",
+            "action": "hide",
+            "source_text": "Um die resultierende Zuverlässigkeit"
+          },
+          {
+            "order": 32,
+            "target_id": "transfer_tree_value_flow_base",
+            "action": "hide",
+            "source_text": "Um die resultierende Zuverlässigkeit"
+          },
+          {
+            "order": 33,
+            "target_id": "transfer_tree_value_static_base",
+            "action": "hide",
+            "source_text": "Um die resultierende Zuverlässigkeit"
+          },
+          {
+            "order": 34,
+            "target_id": "transfer_tree_value_wear",
+            "action": "hide",
+            "source_text": "Um die resultierende Zuverlässigkeit"
+          },
+          {
+            "order": 35,
+            "target_id": "transfer_tree_value_thermal",
+            "action": "hide",
+            "source_text": "Um die resultierende Zuverlässigkeit"
+          },
+          {
+            "order": 36,
+            "target_id": "transfer_headers",
+            "action": "show",
+            "source_text": "des Systems anschaulich darzustellen"
+          },
+          {
+            "order": 37,
+            "target_id": "transfer_gates",
+            "action": "show",
+            "source_text": "direkt aus dem Funktionsbaum ableiten"
+          },
+          {
+            "order": 38,
+            "target_id": "transfer_series",
+            "action": "show",
+            "source_text": "welche Komponenten in Serie"
+          },
+          {
+            "order": 39,
+            "target_id": "transfer_parallel",
+            "action": "show",
+            "source_text": "oder parallel wirken müssen"
+          },
+          {
+            "order": 40,
+            "target_id": "transfer_symbols",
+            "action": "show",
+            "source_text": "Regeln der Wahrscheinlichkeitsrechnung"
+          },
+          {
+            "order": 41,
+            "target_id": "transfer_boolean",
+            "action": "show",
+            "source_text": "das sogenannte boolesche Modell"
+          },
+          {
+            "order": 42,
+            "target_id": "transfer_boolean",
+            "action": "highlight",
+            "source_text": "aus der sich dann die Systemzuverlässigkeit ergibt"
+          },
+          {
+            "order": 43,
+            "target_id": "transfer_headers",
+            "action": "highlight",
+            "source_text": "im nächsten Abschnitt im Detail"
+          }
+        ]
+      }
     },
     {
       "output_slide_number": 31,
@@ -284,7 +2309,157 @@
       "canonical_source_ref": "RE4::32",
       "absorbed_source_states": [
         32
-      ]
+      ],
+      "spoken_text": "Das Zuverlässigkeitsblockdiagramm wird im Englischen als “Reliability Block Diagram” oder kurz nur mit R-B-D bezeichnet.\n\nEs ist ein grafisches Hilfsmittel zur Modellierung der Systemzuverlässigkeit. Es zeigt, wie die Komponenten eines Systems miteinander verbunden sind und welche Wirkung deren Zuverlässigkeit auf das Gesamtsystem hat.\n\nDas Diagramm besteht im Wesentlichen aus zwei Elementen: den Blöcken, meist in Form von Rechtecken, die einzelne Systemkomponenten repräsentieren, und den Verbindungen, oder auch Linien, die die funktionalen Abhängigkeiten zwischen den Komponenten beschreiben.\n\nJede Komponente, also jeder Block, kann dabei zwei Zustände einnehmen: „funktionsfähig“ oder „ausgefallen“.\n\nSolange es eine ununterbrochene Verbindung vom Eingang E zum Ausgang A gibt – das heißt, es existiert ein durchgängiger Pfad durch funktionsfähige Komponenten –, gilt das Gesamtsystem als funktionsfähig. Das Zuverlässigkeitsblockdiagramm visualisiert also, wie der Ausfall oder die Funktionsfähigkeit einzelner Komponenten die Systemfunktion beeinflusst.",
+      "narration_partition": {
+        "method": "verbatim_contiguous_source_span",
+        "source_text_section_id": "section_005",
+        "start": 0,
+        "end": 1066
+      },
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_031/scene.animation.v1.json",
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Die Animation folgt dem Sprechertext und blendet fachlich zusammengehoerige Elemente als semantische Gruppen ein.",
+        "strategy": "semantic_reveal",
+        "state_count": 12,
+        "public_targets": [
+          "rbd_name",
+          "rbd_model",
+          "rbd_blocks",
+          "rbd_connections",
+          "rbd_states",
+          "rbd_ends",
+          "rbd_path"
+        ],
+        "semantic_groups": [
+          {
+            "group_id": "rbd_name",
+            "label": "Englische Bezeichnung",
+            "role": "redesign_semantic_group",
+            "members": [
+              "rbd_name"
+            ]
+          },
+          {
+            "group_id": "rbd_model",
+            "label": "Modell der Systemzuverlässigkeit",
+            "role": "redesign_semantic_group",
+            "members": [
+              "rbd_model"
+            ]
+          },
+          {
+            "group_id": "rbd_blocks",
+            "label": "Blöcke und Systemgrenzen",
+            "role": "redesign_semantic_group",
+            "members": [
+              "rbd_blocks"
+            ]
+          },
+          {
+            "group_id": "rbd_connections",
+            "label": "Funktionale Verbindungen",
+            "role": "redesign_semantic_group",
+            "members": [
+              "rbd_connections"
+            ]
+          },
+          {
+            "group_id": "rbd_states",
+            "label": "Zwei mögliche Zustände",
+            "role": "redesign_semantic_group",
+            "members": [
+              "rbd_states"
+            ]
+          },
+          {
+            "group_id": "rbd_ends",
+            "label": "Ein- und Ausgang",
+            "role": "redesign_semantic_group",
+            "members": [
+              "rbd_ends"
+            ]
+          },
+          {
+            "group_id": "rbd_path",
+            "label": "Durchgängiger Funktionspfad",
+            "role": "redesign_semantic_group",
+            "members": [
+              "rbd_path"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "target_id": "rbd_name",
+            "action": "show",
+            "source_text": "Das Zuverlässigkeitsblockdiagramm wird im Englischen"
+          },
+          {
+            "order": 2,
+            "target_id": "rbd_model",
+            "action": "show",
+            "source_text": "Es ist ein grafisches Hilfsmittel"
+          },
+          {
+            "order": 3,
+            "target_id": "rbd_model",
+            "action": "highlight",
+            "source_text": "welche Wirkung deren Zuverlässigkeit"
+          },
+          {
+            "order": 4,
+            "target_id": "rbd_blocks",
+            "action": "show",
+            "source_text": "Das Diagramm besteht im Wesentlichen"
+          },
+          {
+            "order": 5,
+            "target_id": "rbd_blocks",
+            "action": "highlight",
+            "source_text": "die einzelne Systemkomponenten repräsentieren"
+          },
+          {
+            "order": 6,
+            "target_id": "rbd_connections",
+            "action": "show",
+            "source_text": "und den Verbindungen"
+          },
+          {
+            "order": 7,
+            "target_id": "rbd_states",
+            "action": "show",
+            "source_text": "Jede Komponente, also jeder Block"
+          },
+          {
+            "order": 8,
+            "target_id": "rbd_ends",
+            "action": "show",
+            "source_text": "Solange es eine ununterbrochene Verbindung"
+          },
+          {
+            "order": 9,
+            "target_id": "rbd_ends",
+            "action": "highlight",
+            "source_text": "durchgängiger Pfad durch funktionsfähige Komponenten"
+          },
+          {
+            "order": 10,
+            "target_id": "rbd_path",
+            "action": "show",
+            "source_text": "gilt das Gesamtsystem als funktionsfähig"
+          },
+          {
+            "order": 11,
+            "target_id": "rbd_path",
+            "action": "highlight",
+            "source_text": "die Systemfunktion beeinflusst"
+          }
+        ]
+      }
     },
     {
       "output_slide_number": 33,
@@ -318,7 +2493,193 @@
         36,
         37,
         38
-      ]
+      ],
+      "spoken_text": "Grundsätzlich unterscheiden wir zwei Basisstrukturen: die Serienstruktur und die Parallelstruktur.\n\nIn der Serienstruktur sind alle Komponenten hintereinandergeschaltet. Das bedeutet: Das System funktioniert nur dann, wenn alle Komponenten funktionsfähig sind. Fällt auch nur eine Komponente aus, ist die Verbindung unterbrochen – das gesamte System fällt aus. Es genügt also ein einziger Ausfall, um die Systemfunktion zu verlieren.\n\nIn der Parallelstruktur hingegen gibt es Redundanz: Mehrere Komponenten übernehmen die gleiche Funktion, sind also parallel geschaltet.\n\nDas bedeutet: Fällt eine Komponente aus, übernehmen die übrigen ihre Funktion. Das System bleibt also weiterhin funktionsfähig.\n\nDadurch bleibt das System funktionsfähig, solange mindestens eine der Komponenten funktioniert. Erst wenn alle parallelen Komponenten gleichzeitig ausfallen, gilt das System als ausgefallen. Durch diese Redundanz erhöht sich die Ausfallsicherheit des Systems deutlich.",
+      "narration_partition": {
+        "method": "verbatim_contiguous_source_span",
+        "source_text_section_id": "section_005",
+        "start": 1066,
+        "end": 2037
+      },
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_033/scene.animation.v1.json",
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Die Animation folgt dem Sprechertext und blendet fachlich zusammengehoerige Elemente als semantische Gruppen ein.",
+        "strategy": "semantic_reveal",
+        "state_count": 15,
+        "public_targets": [
+          "comparison_heads",
+          "series_working",
+          "series_broken",
+          "series_rule",
+          "parallel_initial",
+          "parallel_one_failed",
+          "parallel_survives",
+          "parallel_rule",
+          "parallel_broken"
+        ],
+        "semantic_groups": [
+          {
+            "group_id": "comparison_heads",
+            "label": "Zwei Basisstrukturen",
+            "role": "redesign_semantic_group",
+            "members": [
+              "comparison_heads"
+            ]
+          },
+          {
+            "group_id": "series_working",
+            "label": "Alle Komponenten funktionieren",
+            "role": "redesign_semantic_group",
+            "members": [
+              "series_working"
+            ]
+          },
+          {
+            "group_id": "series_broken",
+            "label": "Ein Ausfall unterbricht den Pfad",
+            "role": "redesign_semantic_group",
+            "members": [
+              "series_broken"
+            ]
+          },
+          {
+            "group_id": "series_rule",
+            "label": "Serienbedingung",
+            "role": "redesign_semantic_group",
+            "members": [
+              "series_rule"
+            ]
+          },
+          {
+            "group_id": "parallel_initial",
+            "label": "Redundante Komponenten",
+            "role": "redesign_semantic_group",
+            "members": [
+              "parallel_initial"
+            ]
+          },
+          {
+            "group_id": "parallel_one_failed",
+            "label": "Eine Komponente fällt aus",
+            "role": "redesign_semantic_group",
+            "members": [
+              "parallel_one_failed"
+            ]
+          },
+          {
+            "group_id": "parallel_survives",
+            "label": "Ein funktionsfähiger Pfad genügt",
+            "role": "redesign_semantic_group",
+            "members": [
+              "parallel_survives"
+            ]
+          },
+          {
+            "group_id": "parallel_rule",
+            "label": "Parallelbedingung",
+            "role": "redesign_semantic_group",
+            "members": [
+              "parallel_rule"
+            ]
+          },
+          {
+            "group_id": "parallel_broken",
+            "label": "Alle Pfade ausgefallen",
+            "role": "redesign_semantic_group",
+            "members": [
+              "parallel_broken"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "target_id": "comparison_heads",
+            "action": "show",
+            "source_text": "Grundsätzlich unterscheiden wir zwei Basisstrukturen"
+          },
+          {
+            "order": 2,
+            "target_id": "series_working",
+            "action": "show",
+            "source_text": "In der Serienstruktur sind alle Komponenten"
+          },
+          {
+            "order": 3,
+            "target_id": "series_working",
+            "action": "highlight",
+            "source_text": "wenn alle Komponenten funktionsfähig sind"
+          },
+          {
+            "order": 4,
+            "target_id": "series_broken",
+            "action": "show",
+            "source_text": "Fällt auch nur eine Komponente aus"
+          },
+          {
+            "order": 5,
+            "target_id": "series_rule",
+            "action": "show",
+            "source_text": "Es genügt also ein einziger Ausfall"
+          },
+          {
+            "order": 6,
+            "target_id": "parallel_initial",
+            "action": "show",
+            "source_text": "In der Parallelstruktur hingegen gibt es Redundanz"
+          },
+          {
+            "order": 7,
+            "target_id": "parallel_initial",
+            "action": "highlight",
+            "source_text": "Mehrere Komponenten übernehmen die gleiche Funktion"
+          },
+          {
+            "order": 8,
+            "target_id": "parallel_initial",
+            "action": "hide",
+            "source_text": "Das bedeutet: Fällt eine Komponente"
+          },
+          {
+            "order": 9,
+            "target_id": "parallel_one_failed",
+            "action": "show",
+            "source_text": "übernehmen die übrigen ihre Funktion"
+          },
+          {
+            "order": 10,
+            "target_id": "parallel_one_failed",
+            "action": "hide",
+            "source_text": "Dadurch bleibt das System funktionsfähig"
+          },
+          {
+            "order": 11,
+            "target_id": "parallel_survives",
+            "action": "show",
+            "source_text": "solange mindestens eine der Komponenten funktioniert"
+          },
+          {
+            "order": 12,
+            "target_id": "parallel_rule",
+            "action": "show",
+            "source_text": "solange mindestens eine der Komponenten funktioniert"
+          },
+          {
+            "order": 13,
+            "target_id": "parallel_broken",
+            "action": "show",
+            "source_text": "Erst wenn alle parallelen Komponenten gleichzeitig ausfallen"
+          },
+          {
+            "order": 14,
+            "target_id": "parallel_rule",
+            "action": "highlight",
+            "source_text": "Durch diese Redundanz erhöht sich die Ausfallsicherheit"
+          }
+        ]
+      }
     },
     {
       "output_slide_number": 39,
@@ -344,7 +2705,214 @@
       "canonical_source_ref": "RE4::40",
       "absorbed_source_states": [
         40
-      ]
+      ],
+      "spoken_text": "Hat man das Zuverlässigkeitsblockdiagramm eines Systems erstellt, lässt sich daraus sehr einfach die Systemzuverlässigkeit berechnen – also die Wahrscheinlichkeit, dass das System zu einem bestimmten Zeitpunkt funktionsfähig ist.\n\nFür die Serienstruktur ergibt sich die Systemzuverlässigkeit einfach durch Multiplikation der Einzelzuverlässigkeiten ​der Komponenten.\n\nIn der Parallelstruktur ist die Berechnung etwas anders: Hier berechnet man zunächst die Ausfallwahrscheinlichkeit jeder Komponente, welche einfach als eins minus seiner Zuverlässigkeit berechnet werden kann. Diese multipliziert man dann über alle Komponenten und zieht das Ergebnis von eins ab.\n\nSchauen wir uns dazu ein kleines Beispiel mit jeweils drei Komponenten an. Nehmen wir an, dass jede Komponente zu einem bestimmten Zeitpunkt eine Zuverlässigkeit von neunzig Prozent besitzt.\n\nBei einer Serienstruktur der drei Komponenten ergibt sich die Zuverlässigkeit des Systems einfach durch Multiplikation der drei Einzelzuverlässigkeiten.\n\nDas ergibt für das System ein Zuverlässigkeitswert von Zweiundsiebzigkomma neun Prozent.\n\nBei der Parallelstruktur der drei Komponenten liegt der Wert entsprechend bei neunundneunzigkomma neun Prozent.\n\nWir sehen also, die Serienstruktur von Komponenten reduziert die Systemzuverlässigkeit wohingegen die Parallelschaltung die Zuverlässigkeit des Systems erhöht.Als Faustregel gilt dabei: In einer Serienstruktur ist die Systemzuverlässigkeit immer kleiner als die kleinste Einzelzuverlässigkeit, wohingegen in einer Parallelstruktur die Systemzuverlässigkeit immer größer ist als die größte Einzelzuverlässigkeit.",
+      "narration_partition": {
+        "method": "verbatim_contiguous_source_span",
+        "source_text_section_id": "section_005",
+        "start": 2037,
+        "end": 3664
+      },
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_039/scene.animation.v1.json",
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Die Animation folgt dem Sprechertext und blendet fachlich zusammengehoerige Elemente als semantische Gruppen ein.",
+        "strategy": "semantic_reveal",
+        "state_count": 17,
+        "public_targets": [
+          "math_heads",
+          "math_assumption",
+          "math_series",
+          "math_parallel",
+          "math_example",
+          "math_series_calculation",
+          "math_series_result",
+          "math_parallel_calculation",
+          "math_series_rule",
+          "math_parallel_rule"
+        ],
+        "semantic_groups": [
+          {
+            "group_id": "math_heads",
+            "label": "Serie und Parallelstruktur vergleichen",
+            "role": "redesign_semantic_group",
+            "members": [
+              "math_heads"
+            ]
+          },
+          {
+            "group_id": "math_assumption",
+            "label": "Gültigkeitsannahme der Produktformeln",
+            "role": "redesign_semantic_group",
+            "members": [
+              "math_assumption"
+            ]
+          },
+          {
+            "group_id": "math_series",
+            "label": "Produkt der Einzelzuverlässigkeiten",
+            "role": "redesign_semantic_group",
+            "members": [
+              "math_series"
+            ]
+          },
+          {
+            "group_id": "math_parallel",
+            "label": "Gegenwahrscheinlichkeiten multiplizieren",
+            "role": "redesign_semantic_group",
+            "members": [
+              "math_parallel"
+            ]
+          },
+          {
+            "group_id": "math_example",
+            "label": "Drei gleiche Komponenten",
+            "role": "redesign_semantic_group",
+            "members": [
+              "math_example"
+            ]
+          },
+          {
+            "group_id": "math_series_calculation",
+            "label": "Serienrechnung mit 0,9",
+            "role": "redesign_semantic_group",
+            "members": [
+              "math_series_calculation"
+            ]
+          },
+          {
+            "group_id": "math_series_result",
+            "label": "Serienzuverlässigkeit 72,9 Prozent",
+            "role": "redesign_semantic_group",
+            "members": [
+              "math_series_result"
+            ]
+          },
+          {
+            "group_id": "math_parallel_calculation",
+            "label": "Parallelrechnung und Ergebnis",
+            "role": "redesign_semantic_group",
+            "members": [
+              "math_parallel_calculation"
+            ]
+          },
+          {
+            "group_id": "math_series_rule",
+            "label": "Serienstruktur senkt den Gesamtwert",
+            "role": "redesign_semantic_group",
+            "members": [
+              "math_series_rule"
+            ]
+          },
+          {
+            "group_id": "math_parallel_rule",
+            "label": "Parallelstruktur erhöht den Gesamtwert",
+            "role": "redesign_semantic_group",
+            "members": [
+              "math_parallel_rule"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "target_id": "math_heads",
+            "action": "show",
+            "source_text": "Hat man das Zuverlässigkeitsblockdiagramm eines Systems erstellt"
+          },
+          {
+            "order": 2,
+            "target_id": "math_assumption",
+            "action": "show",
+            "source_text": "Für die Serienstruktur ergibt sich die Systemzuverlässigkeit"
+          },
+          {
+            "order": 3,
+            "target_id": "math_series",
+            "action": "show",
+            "source_text": "Für die Serienstruktur ergibt sich die Systemzuverlässigkeit"
+          },
+          {
+            "order": 4,
+            "target_id": "math_series",
+            "action": "highlight",
+            "source_text": "durch Multiplikation der Einzelzuverlässigkeiten"
+          },
+          {
+            "order": 5,
+            "target_id": "math_parallel",
+            "action": "show",
+            "source_text": "In der Parallelstruktur ist die Berechnung"
+          },
+          {
+            "order": 6,
+            "target_id": "math_parallel",
+            "action": "highlight",
+            "source_text": "zunächst die Ausfallwahrscheinlichkeit jeder Komponente"
+          },
+          {
+            "order": 7,
+            "target_id": "math_parallel",
+            "action": "highlight",
+            "source_text": "Diese multipliziert man dann über alle Komponenten"
+          },
+          {
+            "order": 8,
+            "target_id": "math_example",
+            "action": "show",
+            "source_text": "Schauen wir uns dazu ein kleines Beispiel"
+          },
+          {
+            "order": 9,
+            "target_id": "math_example",
+            "action": "highlight",
+            "source_text": "eine Zuverlässigkeit von neunzig Prozent besitzt"
+          },
+          {
+            "order": 10,
+            "target_id": "math_series_calculation",
+            "action": "show",
+            "source_text": "Bei einer Serienstruktur der drei Komponenten"
+          },
+          {
+            "order": 11,
+            "target_id": "math_series_result",
+            "action": "show",
+            "source_text": "Zuverlässigkeitswert von Zweiundsiebzigkomma neun Prozent"
+          },
+          {
+            "order": 12,
+            "target_id": "math_parallel_calculation",
+            "action": "show",
+            "source_text": "Bei der Parallelstruktur der drei Komponenten"
+          },
+          {
+            "order": 13,
+            "target_id": "math_series_rule",
+            "action": "show",
+            "source_text": "die Serienstruktur von Komponenten reduziert"
+          },
+          {
+            "order": 14,
+            "target_id": "math_parallel_rule",
+            "action": "show",
+            "source_text": "die Parallelschaltung die Zuverlässigkeit des Systems erhöht"
+          },
+          {
+            "order": 15,
+            "target_id": "math_series_rule",
+            "action": "highlight",
+            "source_text": "kleiner als die kleinste Einzelzuverlässigkeit"
+          },
+          {
+            "order": 16,
+            "target_id": "math_parallel_rule",
+            "action": "highlight",
+            "source_text": "größer ist als die größte Einzelzuverlässigkeit"
+          }
+        ]
+      }
     },
     {
       "output_slide_number": 41,
@@ -372,7 +2940,151 @@
       "absorbed_source_states": [
         42,
         43
-      ]
+      ],
+      "spoken_text": "In der Praxis bestehen Systeme oft nicht nur aus Reihen- oder Parallelschaltungen, sondern aus einer Kombination beider Strukturen. Auch diese sogenannten gemischten Strukturen lassen sich mit Hilfe der bekannten Rechenregeln behandeln. Dabei wird das System schrittweise vereinfacht, indem zunächst Teilsysteme in Serien- oder Parallelstruktur berechnet und anschließend weiter kombiniert werden.\n\nSchauen wir uns hierzu wieder ein Beispiel an. In einem System ist die Komponente eins in Serie mit einem Parallelsystem aus Komponente zwei und drei geschaltet.\n\nZuerst berechnet man die Zuverlässigkeit des Parallelsystems aus Komponente zwei und drei mithilfe der bekannten Formel.\n\nDa die Parallelstruktur mit Komponente eins in Serie geschaltet ist, multiplizieren wir einfach nun den Zuverlässigkeitswert mit dem der Komponente eins.\n\nAuf diese Weise erhalten wir die Systemzuverlässigkeit.\n\nSomit können wir auch für komplexere Systeme die Systemzuverlässigkeit in Abhängigkeit der Komponentenzuverlässigkeiten berechnen.",
+      "narration_partition": {
+        "method": "verbatim_contiguous_source_span",
+        "source_text_section_id": "section_005",
+        "start": 3664,
+        "end": 4692
+      },
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_041/scene.animation.v1.json",
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Die Animation folgt dem Sprechertext und blendet fachlich zusammengehoerige Elemente als semantische Gruppen ein.",
+        "strategy": "semantic_reveal",
+        "state_count": 11,
+        "public_targets": [
+          "mixed_context",
+          "mixed_original",
+          "mixed_first",
+          "mixed_subsystem",
+          "mixed_second",
+          "mixed_product",
+          "mixed_result"
+        ],
+        "semantic_groups": [
+          {
+            "group_id": "mixed_context",
+            "label": "Kombination der Grundstrukturen",
+            "role": "redesign_semantic_group",
+            "members": [
+              "mixed_context"
+            ]
+          },
+          {
+            "group_id": "mixed_original",
+            "label": "Komponente 1 in Serie mit 2 parallel 3",
+            "role": "redesign_semantic_group",
+            "members": [
+              "mixed_original"
+            ]
+          },
+          {
+            "group_id": "mixed_first",
+            "label": "Zuerst das parallele Teilsystem",
+            "role": "redesign_semantic_group",
+            "members": [
+              "mixed_first"
+            ]
+          },
+          {
+            "group_id": "mixed_subsystem",
+            "label": "Zuverlässigkeit des parallelen Teilsystems",
+            "role": "redesign_semantic_group",
+            "members": [
+              "mixed_subsystem"
+            ]
+          },
+          {
+            "group_id": "mixed_second",
+            "label": "Ersatzblock in Serie mit Komponente 1",
+            "role": "redesign_semantic_group",
+            "members": [
+              "mixed_second"
+            ]
+          },
+          {
+            "group_id": "mixed_product",
+            "label": "Serienzuverlässigkeit der Ersatzstruktur",
+            "role": "redesign_semantic_group",
+            "members": [
+              "mixed_product"
+            ]
+          },
+          {
+            "group_id": "mixed_result",
+            "label": "Gesamtformel der gemischten Struktur",
+            "role": "redesign_semantic_group",
+            "members": [
+              "mixed_result"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "target_id": "mixed_context",
+            "action": "show",
+            "source_text": "In der Praxis bestehen Systeme oft nicht"
+          },
+          {
+            "order": 2,
+            "target_id": "mixed_original",
+            "action": "show",
+            "source_text": "sondern aus einer Kombination beider Strukturen"
+          },
+          {
+            "order": 3,
+            "target_id": "mixed_original",
+            "action": "highlight",
+            "source_text": "Dabei wird das System schrittweise vereinfacht"
+          },
+          {
+            "order": 4,
+            "target_id": "mixed_original",
+            "action": "highlight",
+            "source_text": "In einem System ist die Komponente eins"
+          },
+          {
+            "order": 5,
+            "target_id": "mixed_first",
+            "action": "show",
+            "source_text": "Zuerst berechnet man die Zuverlässigkeit des Parallelsystems"
+          },
+          {
+            "order": 6,
+            "target_id": "mixed_subsystem",
+            "action": "show",
+            "source_text": "mithilfe der bekannten Formel"
+          },
+          {
+            "order": 7,
+            "target_id": "mixed_second",
+            "action": "show",
+            "source_text": "Da die Parallelstruktur mit Komponente eins"
+          },
+          {
+            "order": 8,
+            "target_id": "mixed_product",
+            "action": "show",
+            "source_text": "multiplizieren wir einfach nun den Zuverlässigkeitswert"
+          },
+          {
+            "order": 9,
+            "target_id": "mixed_result",
+            "action": "show",
+            "source_text": "Auf diese Weise erhalten wir die Systemzuverlässigkeit"
+          },
+          {
+            "order": 10,
+            "target_id": "mixed_result",
+            "action": "highlight",
+            "source_text": "Somit können wir auch für komplexere Systeme"
+          }
+        ]
+      }
     },
     {
       "output_slide_number": 44,
@@ -402,7 +3114,160 @@
         45,
         46,
         47
-      ]
+      ],
+      "spoken_text": "Wir benötigen hierfür also nur das Zuverlässigkeitsblockdiagramm.\n\nDie Grundlage für ein solches Blockdiagramm bildet der Funktionsbaum, der die logische Abfolge der Systemfunktionen darstellt.\n\nEine und-Verknüpfung im Funktionsbaum entspricht dabei einer Reihenschaltung im Zuverlässigkeitsblockdiagramm – alle Komponenten müssen funktionieren, damit die Funktion erfüllt ist. Eine ODER-Verknüpfung entspricht einer Parallelschaltung – es reicht, wenn mindestens eine Komponente funktioniert.\n\nMan muss jedoch nicht zwingend immer den Umweg über Funktions- oder Fehlerbaum gehen – für einfache Systeme lassen sich Zuverlässigkeitsblockdiagramme oft auch direkt aufstellen.\n\nAllerdings müssen während der Erstellung solcher Diagramme einige Voraussetzungen und Annahmen beachtet werden. Diese betrachten wir in der nächsten Lektion.",
+      "narration_partition": {
+        "method": "verbatim_contiguous_source_span",
+        "source_text_section_id": "section_005",
+        "start": 4692,
+        "end": 5524
+      },
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_044/scene.animation.v1.json",
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Die Animation folgt dem Sprechertext und blendet fachlich zusammengehoerige Elemente als semantische Gruppen ein.",
+        "strategy": "semantic_reveal",
+        "state_count": 11,
+        "public_targets": [
+          "map_headers",
+          "map_rbds",
+          "map_function_and",
+          "map_series_relation",
+          "map_function_or",
+          "map_parallel_relation",
+          "map_error_gates",
+          "map_direct"
+        ],
+        "semantic_groups": [
+          {
+            "group_id": "map_headers",
+            "label": "Drei Darstellungen derselben Logik",
+            "role": "redesign_semantic_group",
+            "members": [
+              "map_headers"
+            ]
+          },
+          {
+            "group_id": "map_rbds",
+            "label": "Bekannte Serien- und Parallelstruktur",
+            "role": "redesign_semantic_group",
+            "members": [
+              "map_rbds"
+            ]
+          },
+          {
+            "group_id": "map_function_and",
+            "label": "UND-Verknüpfung im Funktionsbaum",
+            "role": "redesign_semantic_group",
+            "members": [
+              "map_function_and"
+            ]
+          },
+          {
+            "group_id": "map_series_relation",
+            "label": "UND bedeutet Serie",
+            "role": "redesign_semantic_group",
+            "members": [
+              "map_series_relation"
+            ]
+          },
+          {
+            "group_id": "map_function_or",
+            "label": "ODER-Verknüpfung im Funktionsbaum",
+            "role": "redesign_semantic_group",
+            "members": [
+              "map_function_or"
+            ]
+          },
+          {
+            "group_id": "map_parallel_relation",
+            "label": "ODER bedeutet Parallelstruktur",
+            "role": "redesign_semantic_group",
+            "members": [
+              "map_parallel_relation"
+            ]
+          },
+          {
+            "group_id": "map_error_gates",
+            "label": "Komplementäre Ereignisse im Fehlerbaum",
+            "role": "redesign_semantic_group",
+            "members": [
+              "map_error_gates"
+            ]
+          },
+          {
+            "group_id": "map_direct",
+            "label": "Einfaches System direkt modellieren",
+            "role": "redesign_semantic_group",
+            "members": [
+              "map_direct"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "target_id": "map_headers",
+            "action": "show",
+            "source_text": "Wir benötigen hierfür also nur das Zuverlässigkeitsblockdiagramm"
+          },
+          {
+            "order": 2,
+            "target_id": "map_rbds",
+            "action": "show",
+            "source_text": "Wir benötigen hierfür also nur das Zuverlässigkeitsblockdiagramm"
+          },
+          {
+            "order": 3,
+            "target_id": "map_function_and",
+            "action": "show",
+            "source_text": "Eine und-Verknüpfung im Funktionsbaum"
+          },
+          {
+            "order": 4,
+            "target_id": "map_series_relation",
+            "action": "show",
+            "source_text": "entspricht dabei einer Reihenschaltung im Zuverlässigkeitsblockdiagramm"
+          },
+          {
+            "order": 5,
+            "target_id": "map_series_relation",
+            "action": "highlight",
+            "source_text": "alle Komponenten müssen funktionieren"
+          },
+          {
+            "order": 6,
+            "target_id": "map_function_or",
+            "action": "show",
+            "source_text": "Eine ODER-Verknüpfung entspricht einer Parallelschaltung"
+          },
+          {
+            "order": 7,
+            "target_id": "map_parallel_relation",
+            "action": "show",
+            "source_text": "wenn mindestens eine Komponente funktioniert"
+          },
+          {
+            "order": 8,
+            "target_id": "map_error_gates",
+            "action": "show",
+            "source_text": "den Umweg über Funktions- oder Fehlerbaum gehen"
+          },
+          {
+            "order": 9,
+            "target_id": "map_direct",
+            "action": "show",
+            "source_text": "für einfache Systeme lassen sich Zuverlässigkeitsblockdiagramme"
+          },
+          {
+            "order": 10,
+            "target_id": "map_direct",
+            "action": "highlight",
+            "source_text": "oft auch direkt aufstellen"
+          }
+        ]
+      }
     },
     {
       "output_slide_number": 48,
@@ -434,7 +3299,247 @@
         50,
         51,
         52
-      ]
+      ],
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_048/scene.animation.v1.json",
+      "spoken_text": "Damit man ein Zuverlässigkeitsblockdiagramm sinnvoll anwenden kann, müssen bestimmte Voraussetzungen erfüllt sein.\n\nErstens: Jede Komponente kann nur zwei Zustände einnehmen – sie ist entweder funktionsfähig oder ausgefallen. Es gibt also keine Zwischenstufen wie \"eingeschränkt funktionsfähig\" oder \"in Wartung\". Nur wenn alle benötigten Komponenten intakt sind, gilt das System als funktionstüchtig.\n\nZweitens: Die Komponenten sind nicht reparierbar. Das bedeutet: Sobald eine Komponente einmal ausgefallen ist, bleibt sie es auch – eine Reparatur findet nicht statt. Diese Annahme vereinfacht die Modellierung erheblich und ist gerade für viele technische Systeme mit begrenzter Lebensdauer durchaus realistisch.\n\nUnd Drittens: Die Komponenten sind unabhängig voneinander. Das heißt, der Ausfall einer Komponente beeinflusst nicht die Wahrscheinlichkeit, mit der eine andere Komponente ausfällt. Es gibt also keine gemeinsamen Ursachen, Koppelungen oder Wechselwirkungen zwischen den Komponenten.\n\nIn der Praxis lassen sich viele Systeme mit diesen Voraussetzungen gut modellieren. Doch es gibt auch Fälle, in denen das Zuverlässigkeitsblockdiagramm komplexer wird – zum Beispiel dann, wenn sich das System nicht direkt als reine Reihen- oder Parallelschaltung beschreiben lässt.\n\nEin typisches Beispiel dafür ist die sogenannte Brückenschaltung, in der der Signalfluss durch mehrere mögliche Pfade führen kann. Diese Strukturen erfordern eine genauere Betrachtung und lassen sich nicht mehr mit den einfachen Rechenregeln lösen.\n\nWie du in solchen Fällen vorgehst, lernst du in der nächsten Lektion.",
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Die Animation folgt dem Sprechertext und blendet fachlich zusammengehoerige Elemente als semantische Gruppen ein.",
+        "strategy": "semantic_reveal",
+        "state_count": 19,
+        "public_targets": [
+          "assumptions_context",
+          "assumptions_states",
+          "assumptions_no_middle",
+          "assumptions_working",
+          "assumptions_no_repair",
+          "assumptions_failed",
+          "assumptions_independent",
+          "assumptions_no_coupling",
+          "assumptions_bridge",
+          "assumptions_bridge_link",
+          "assumptions_paths",
+          "assumptions_limit",
+          "assumptions_next"
+        ],
+        "semantic_groups": [
+          {
+            "group_id": "assumptions_context",
+            "label": "Modellvoraussetzungen",
+            "role": "redesign_semantic_group",
+            "members": [
+              "assumptions_context"
+            ]
+          },
+          {
+            "group_id": "assumptions_states",
+            "label": "Nur zwei Komponentenzustände",
+            "role": "redesign_semantic_group",
+            "members": [
+              "assumptions_states"
+            ]
+          },
+          {
+            "group_id": "assumptions_no_middle",
+            "label": "Keine Zwischenzustände",
+            "role": "redesign_semantic_group",
+            "members": [
+              "assumptions_no_middle"
+            ]
+          },
+          {
+            "group_id": "assumptions_working",
+            "label": "Intakte Komponenten ermöglichen die Funktion",
+            "role": "redesign_semantic_group",
+            "members": [
+              "assumptions_working"
+            ]
+          },
+          {
+            "group_id": "assumptions_no_repair",
+            "label": "Ausgefallen bleibt ausgefallen",
+            "role": "redesign_semantic_group",
+            "members": [
+              "assumptions_no_repair"
+            ]
+          },
+          {
+            "group_id": "assumptions_failed",
+            "label": "Ein Ausfall wird nicht repariert",
+            "role": "redesign_semantic_group",
+            "members": [
+              "assumptions_failed"
+            ]
+          },
+          {
+            "group_id": "assumptions_independent",
+            "label": "Statistisch unabhängige Komponenten",
+            "role": "redesign_semantic_group",
+            "members": [
+              "assumptions_independent"
+            ]
+          },
+          {
+            "group_id": "assumptions_no_coupling",
+            "label": "Keine gemeinsamen Ursachen",
+            "role": "redesign_semantic_group",
+            "members": [
+              "assumptions_no_coupling"
+            ]
+          },
+          {
+            "group_id": "assumptions_bridge",
+            "label": "Komplexere Struktur als Anwendungsgrenze",
+            "role": "redesign_semantic_group",
+            "members": [
+              "assumptions_bridge"
+            ]
+          },
+          {
+            "group_id": "assumptions_bridge_link",
+            "label": "Komponente 5 verbindet die mittleren Knoten",
+            "role": "redesign_semantic_group",
+            "members": [
+              "assumptions_bridge_link"
+            ]
+          },
+          {
+            "group_id": "assumptions_paths",
+            "label": "Mehrere mögliche Funktionspfade",
+            "role": "redesign_semantic_group",
+            "members": [
+              "assumptions_paths"
+            ]
+          },
+          {
+            "group_id": "assumptions_limit",
+            "label": "Brücke nicht direkt reduzierbar",
+            "role": "redesign_semantic_group",
+            "members": [
+              "assumptions_limit"
+            ]
+          },
+          {
+            "group_id": "assumptions_next",
+            "label": "Übergang zur nächsten Lektion",
+            "role": "redesign_semantic_group",
+            "members": [
+              "assumptions_next"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "target_id": "assumptions_context",
+            "action": "show",
+            "source_text": "Damit man ein Zuverlässigkeitsblockdiagramm sinnvoll anwenden kann"
+          },
+          {
+            "order": 2,
+            "target_id": "assumptions_states",
+            "action": "show",
+            "source_text": "Erstens: Jede Komponente kann nur zwei Zustände"
+          },
+          {
+            "order": 3,
+            "target_id": "assumptions_no_middle",
+            "action": "show",
+            "source_text": "Es gibt also keine Zwischenstufen"
+          },
+          {
+            "order": 4,
+            "target_id": "assumptions_working",
+            "action": "show",
+            "source_text": "Nur wenn alle benötigten Komponenten intakt sind"
+          },
+          {
+            "order": 5,
+            "target_id": "assumptions_no_repair",
+            "action": "show",
+            "source_text": "Zweitens: Die Komponenten sind nicht reparierbar"
+          },
+          {
+            "order": 6,
+            "target_id": "assumptions_working",
+            "action": "hide",
+            "source_text": "Sobald eine Komponente einmal ausgefallen ist"
+          },
+          {
+            "order": 7,
+            "target_id": "assumptions_failed",
+            "action": "show",
+            "source_text": "bleibt sie es auch"
+          },
+          {
+            "order": 8,
+            "target_id": "assumptions_no_repair",
+            "action": "highlight",
+            "source_text": "Diese Annahme vereinfacht die Modellierung erheblich"
+          },
+          {
+            "order": 9,
+            "target_id": "assumptions_independent",
+            "action": "show",
+            "source_text": "Und Drittens: Die Komponenten sind unabhängig voneinander"
+          },
+          {
+            "order": 10,
+            "target_id": "assumptions_independent",
+            "action": "highlight",
+            "source_text": "der Ausfall einer Komponente beeinflusst nicht"
+          },
+          {
+            "order": 11,
+            "target_id": "assumptions_no_coupling",
+            "action": "show",
+            "source_text": "Es gibt also keine gemeinsamen Ursachen"
+          },
+          {
+            "order": 12,
+            "target_id": "assumptions_context",
+            "action": "highlight",
+            "source_text": "In der Praxis lassen sich viele Systeme"
+          },
+          {
+            "order": 13,
+            "target_id": "assumptions_failed",
+            "action": "hide",
+            "source_text": "Ein typisches Beispiel dafür ist"
+          },
+          {
+            "order": 14,
+            "target_id": "assumptions_bridge",
+            "action": "show",
+            "source_text": "die sogenannte Brückenschaltung"
+          },
+          {
+            "order": 15,
+            "target_id": "assumptions_bridge_link",
+            "action": "show",
+            "source_text": "die sogenannte Brückenschaltung"
+          },
+          {
+            "order": 16,
+            "target_id": "assumptions_paths",
+            "action": "show",
+            "source_text": "durch mehrere mögliche Pfade führen kann"
+          },
+          {
+            "order": 17,
+            "target_id": "assumptions_limit",
+            "action": "show",
+            "source_text": "Diese Strukturen erfordern eine genauere Betrachtung"
+          },
+          {
+            "order": 18,
+            "target_id": "assumptions_next",
+            "action": "show",
+            "source_text": "Wie du in solchen Fällen vorgehst"
+          }
+        ]
+      }
     },
     {
       "output_slide_number": 54,
@@ -457,7 +3562,23 @@
       "lesson": null,
       "structure_status": "deferred_by_user",
       "canonical_source_ref": "RE4::54",
-      "absorbed_source_states": []
+      "absorbed_source_states": [],
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_054/scene.animation.v1.json",
+      "feedback_revision": {
+        "date": "2026-09-17",
+        "audit": "analysis/rebuild-plans/RE4_feedback_54_66_2026-09-17.md",
+        "review_root": "analysis/render-checks/RE4/feedback-54-66-2026-09-17"
+      },
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "static",
+        "rationale": "Die Szene ist ohne Animation vollstaendig und didaktisch klar.",
+        "strategy": "static_complete",
+        "state_count": 1,
+        "public_targets": [],
+        "semantic_groups": [],
+        "steps": []
+      }
     },
     {
       "output_slide_number": 55,
@@ -466,7 +3587,157 @@
       "source_slides": [
         55,
         56,
-        57,
+        57
+      ],
+      "primary_source_slide": 57,
+      "render_source_slide": 57,
+      "source_text_section_id": "section_007",
+      "title": "Separation vorbereiten",
+      "takeaway": "Die Brückenschaltung wird durch die isolierte Betrachtung von Komponente 5 berechenbar.",
+      "archetype": "method-introduction",
+      "builder": "bridge_separation",
+      "animation_decision": "animated",
+      "notes": "Review-Korrektur: Die Einordnung bildet eine eigene, ruhige Szene mit drei stabilen Typostufen. Die kanonische Fünf-Komponenten-Brücke bleibt groß; Komponente 5 wird als Schlüsselkomponente fokussiert.",
+      "order": 16,
+      "chapter": null,
+      "lesson": null,
+      "structure_status": "deferred_by_user",
+      "canonical_source_ref": "RE4::57",
+      "absorbed_source_states": [
+        56,
+        57
+      ],
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_055/scene.animation.v1.json",
+      "feedback_revision": {
+        "date": "2026-09-17",
+        "audit": "analysis/rebuild-plans/RE4_feedback_54_66_2026-09-17.md",
+        "review_root": "analysis/render-checks/RE4/feedback-54-66-2026-09-17"
+      },
+      "spoken_text": "Bei einer Brückenschaltung lässt sich die Zuverlässigkeit nicht mit den einfachen Formeln für Reihen- oder Parallelschaltungen berechnen.Aber keine Sorge – es gibt zwei Methoden, mit denen wir trotzdem zu einer exakten Lösung kommen können.\n\nErstens: die Methode der Separation.Und Zweitens: die Methode der Multilinearform.\n\nIn diesem Modul schauen wir uns die Methode der Separation an.\n\nWie der Name schon andeutet, betrachten wir dabei eine bestimmte Komponente isoliert, also „separiert“.Wenn wir uns das Blockdiagramm ansehen, fällt auf:Komponente fünf nimmt eine Schlüsselrolle ein.Genau sie macht aus einer einfachen Struktur eine Brückenschaltung.",
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Die Animation folgt dem Sprechertext und blendet fachlich zusammengehoerige Elemente als semantische Gruppen ein.",
+        "strategy": "semantic_reveal",
+        "state_count": 8,
+        "public_targets": [
+          "separation_bridge",
+          "separation_limit",
+          "separation_hub",
+          "separation_method",
+          "multilinear_method",
+          "separation_selection",
+          "separation_key"
+        ],
+        "semantic_groups": [
+          {
+            "group_id": "separation_bridge",
+            "label": "Brückenschaltung",
+            "role": "redesign_semantic_group",
+            "members": [
+              "separation_bridge"
+            ]
+          },
+          {
+            "group_id": "separation_limit",
+            "label": "Keine direkte Reduktion",
+            "role": "redesign_semantic_group",
+            "members": [
+              "separation_limit"
+            ]
+          },
+          {
+            "group_id": "separation_hub",
+            "label": "Zwei exakte Berechnungsmethoden",
+            "role": "redesign_semantic_group",
+            "members": [
+              "separation_hub"
+            ]
+          },
+          {
+            "group_id": "separation_method",
+            "label": "Methode der Separation",
+            "role": "redesign_semantic_group",
+            "members": [
+              "separation_method"
+            ]
+          },
+          {
+            "group_id": "multilinear_method",
+            "label": "Methode der Multilinearform",
+            "role": "redesign_semantic_group",
+            "members": [
+              "multilinear_method"
+            ]
+          },
+          {
+            "group_id": "separation_selection",
+            "label": "Separation in diesem Modul",
+            "role": "redesign_semantic_group",
+            "members": [
+              "separation_selection"
+            ]
+          },
+          {
+            "group_id": "separation_key",
+            "label": "Schlüsselrolle der Komponente 5",
+            "role": "redesign_semantic_group",
+            "members": [
+              "separation_key"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "target_id": "separation_bridge",
+            "action": "show",
+            "source_text": "Bei einer Brückenschaltung lässt sich"
+          },
+          {
+            "order": 2,
+            "target_id": "separation_limit",
+            "action": "show",
+            "source_text": "mit den einfachen Formeln"
+          },
+          {
+            "order": 3,
+            "target_id": "separation_hub",
+            "action": "show",
+            "source_text": "es gibt zwei Methoden"
+          },
+          {
+            "order": 4,
+            "target_id": "separation_method",
+            "action": "show",
+            "source_text": "Erstens: die Methode der Separation."
+          },
+          {
+            "order": 5,
+            "target_id": "multilinear_method",
+            "action": "show",
+            "source_text": "Und Zweitens: die Methode der Multilinearform."
+          },
+          {
+            "order": 6,
+            "target_id": "separation_selection",
+            "action": "show",
+            "source_text": "In diesem Modul schauen wir"
+          },
+          {
+            "order": 7,
+            "target_id": "separation_key",
+            "action": "show",
+            "source_text": "Komponente fünf nimmt eine Schlüsselrolle ein."
+          }
+        ]
+      }
+    },
+    {
+      "output_slide_number": 58,
+      "work_unit": "slide_058",
+      "scene_id": "re4_src_058",
+      "source_slides": [
         58,
         59,
         60
@@ -474,24 +3745,191 @@
       "primary_source_slide": 60,
       "render_source_slide": 60,
       "source_text_section_id": "section_007",
-      "title": "Brückenschaltung durch Separation lösen",
-      "takeaway": "Die Separation zerlegt die Brücke nach dem Zustand einer ausgewählten Komponente in zwei berechenbare Fälle.",
-      "archetype": "worked-method",
-      "builder": "bridge_separation",
+      "title": "Separationsfälle berechnen",
+      "takeaway": "Die beiden disjunkten Zustände von Komponente 5 ergeben berechenbare Ersatzstrukturen, deren Teilzuverlässigkeiten addiert werden.",
+      "archetype": "formula-comparison",
+      "builder": "bridge_separation_cases",
       "animation_decision": "animated",
-      "notes": "Review-Korrektur: Originalbrücke und beide separierten Ersatzstrukturen verwenden eine einheitliche, bei 960x540 lesbare RBD-Geometrie.",
-      "order": 16,
+      "notes": "Review-Korrektur: Fall I und Fall II erhalten eine eigene Rechenszene mit großen Ersatzstrukturen, Fallgewichten, kontrollierten Formelassets und vollständiger Endsumme.",
+      "order": 17,
       "chapter": null,
       "lesson": null,
       "structure_status": "deferred_by_user",
       "canonical_source_ref": "RE4::60",
       "absorbed_source_states": [
-        56,
-        57,
-        58,
         59,
         60
-      ]
+      ],
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_058/scene.animation.v1.json",
+      "feedback_revision": {
+        "date": "2026-09-17",
+        "audit": "analysis/rebuild-plans/RE4_feedback_54_66_2026-09-17.md",
+        "review_root": "analysis/render-checks/RE4/feedback-54-66-2026-09-17"
+      },
+      "spoken_text": "Deshalb betrachten wir zwei Fälle.\n\nErstens, Komponente fünf ist ständig funktionsfähig.\n\nUnd zweitens, Komponente fünf ist ständig ausgefallen.\n\nFür jeden dieser Fälle zeichnen wir das daraus resultierende Zuverlässigkeitsblockdiagramm.\n\nUnd das hilft uns – denn jetzt lassen sich beide neuen Diagramme mit den bekannten Regeln für Serien- und Parallelsysteme berechnen:\n\nIst die Komponente fünf ständig funktionsfähig, entsteht eine Reihenschaltung aus zwei Parallelschaltungen.\n\nUnd ist die Komponente fünf ständig ausgefallen, ergibt sich eine Parallelschaltung, in der jeweils eine Reihenschaltung in jedem Pfad vorliegt. Diese können wir also ganz klassisch mit unseren bekannten Formeln berechnen.\n\nWichtig dabei:\n\nIm ersten Fall, also wenn die Komponente fünf funktionsfähig ist, wird die Zuverlässigkeit von Komponente fünf einfach mit der restlichen Systemzuverlässigkeit multipliziert.\n\nIm zweiten Fall, also wenn die Komponente fünf ausgefallen ist, verwenden wir stattdessen die Ausfallwahrscheinlichkeit. Diese ergibt sich einfach zu eins minus der Zuverlässigkeit von Komponente fünf. Wir multiplizieren also dann auch diesen Wert mit der entsprechenden Gleichung des restlichen Systems.\n\nAm Ende addieren wir beide Teilergebnisse, um die gesamte Systemzuverlässigkeit zu berechnen.Das ist nach dem Satz der totalen Wahrscheinlichkeit auch völlig korrekt – denn wir haben zwei sich gegenseitig ausschließende Fälle betrachtet.\n\nUnd das ist auch der große Vorteil der Methode:Man kann sie immer anwenden und erhält so eine exakte Berechnung der Systemzuverlässigkeit, auch wenn eine Brückenschaltung vorliegt.\n\nMit diesem Wissen bist du jetzt in der Lage, für jede Struktur ein passendes Zuverlässigkeitsblockdiagramm zu erstellen und damit auch die Systemzuverlässigkeit korrekt zu bestimmen.",
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "animated",
+        "rationale": "Die Animation folgt dem Sprechertext und blendet fachlich zusammengehoerige Elemente als semantische Gruppen ein.",
+        "strategy": "semantic_reveal",
+        "state_count": 14,
+        "public_targets": [
+          "case_working_head",
+          "case_failed_head",
+          "case_working_rbd",
+          "case_failed_rbd",
+          "case_working_formula",
+          "case_failed_formula",
+          "separation_total",
+          "separation_theorem"
+        ],
+        "semantic_groups": [
+          {
+            "group_id": "case_working_head",
+            "label": "Komponente 5 funktioniert",
+            "role": "redesign_semantic_group",
+            "members": [
+              "case_working_head"
+            ]
+          },
+          {
+            "group_id": "case_failed_head",
+            "label": "Komponente 5 fällt aus",
+            "role": "redesign_semantic_group",
+            "members": [
+              "case_failed_head"
+            ]
+          },
+          {
+            "group_id": "case_working_rbd",
+            "label": "Zwei Parallelschaltungen in Serie",
+            "role": "redesign_semantic_group",
+            "members": [
+              "case_working_rbd"
+            ]
+          },
+          {
+            "group_id": "case_failed_rbd",
+            "label": "Zwei Serienpfade parallel",
+            "role": "redesign_semantic_group",
+            "members": [
+              "case_failed_rbd"
+            ]
+          },
+          {
+            "group_id": "case_working_formula",
+            "label": "Gewichtete Zuverlässigkeit bei Funktion",
+            "role": "redesign_semantic_group",
+            "members": [
+              "case_working_formula"
+            ]
+          },
+          {
+            "group_id": "case_failed_formula",
+            "label": "Gewichtete Zuverlässigkeit bei Ausfall",
+            "role": "redesign_semantic_group",
+            "members": [
+              "case_failed_formula"
+            ]
+          },
+          {
+            "group_id": "separation_total",
+            "label": "Vollständige Systemzuverlässigkeit",
+            "role": "redesign_semantic_group",
+            "members": [
+              "separation_total"
+            ]
+          },
+          {
+            "group_id": "separation_theorem",
+            "label": "Satz der totalen Wahrscheinlichkeit",
+            "role": "redesign_semantic_group",
+            "members": [
+              "separation_theorem"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "target_id": "case_working_head",
+            "action": "show",
+            "source_text": "Erstens, Komponente fünf ist ständig funktionsfähig."
+          },
+          {
+            "order": 2,
+            "target_id": "case_failed_head",
+            "action": "show",
+            "source_text": "Und zweitens, Komponente fünf ist ständig ausgefallen."
+          },
+          {
+            "order": 3,
+            "target_id": "case_working_rbd",
+            "action": "show",
+            "source_text": "Ist die Komponente fünf ständig funktionsfähig,"
+          },
+          {
+            "order": 4,
+            "target_id": "case_failed_rbd",
+            "action": "show",
+            "source_text": "Und ist die Komponente fünf ständig ausgefallen,"
+          },
+          {
+            "order": 5,
+            "target_id": "case_working_formula",
+            "action": "show",
+            "source_text": "Im ersten Fall, also wenn"
+          },
+          {
+            "order": 6,
+            "target_id": "case_working_formula",
+            "action": "highlight",
+            "source_text": "einfach mit der restlichen Systemzuverlässigkeit multipliziert."
+          },
+          {
+            "order": 7,
+            "target_id": "case_failed_formula",
+            "action": "show",
+            "source_text": "Im zweiten Fall, also wenn"
+          },
+          {
+            "order": 8,
+            "target_id": "case_failed_formula",
+            "action": "highlight",
+            "source_text": "Diese ergibt sich einfach zu eins minus"
+          },
+          {
+            "order": 9,
+            "target_id": "case_working_formula",
+            "action": "hide",
+            "source_text": "Am Ende addieren wir beide Teilergebnisse,"
+          },
+          {
+            "order": 10,
+            "target_id": "case_failed_formula",
+            "action": "hide",
+            "source_text": "Am Ende addieren wir beide Teilergebnisse,"
+          },
+          {
+            "order": 11,
+            "target_id": "separation_total",
+            "action": "show",
+            "source_text": "um die gesamte Systemzuverlässigkeit zu berechnen."
+          },
+          {
+            "order": 12,
+            "target_id": "separation_theorem",
+            "action": "show",
+            "source_text": "Satz der totalen Wahrscheinlichkeit"
+          },
+          {
+            "order": 13,
+            "target_id": "separation_theorem",
+            "action": "highlight",
+            "source_text": "große Vorteil der Methode:Man"
+          }
+        ]
+      }
     },
     {
       "output_slide_number": 61,
@@ -509,12 +3947,28 @@
       "builder": "method_overview",
       "animation_decision": "static",
       "notes": "Methodenübersicht ohne eigenen belastbaren Sprechertext-Trigger.",
-      "order": 17,
+      "order": 18,
       "chapter": null,
       "lesson": null,
       "structure_status": "deferred_by_user",
       "canonical_source_ref": "RE4::61",
-      "absorbed_source_states": []
+      "absorbed_source_states": [],
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_061/scene.animation.v1.json",
+      "feedback_revision": {
+        "date": "2026-09-17",
+        "audit": "analysis/rebuild-plans/RE4_feedback_54_66_2026-09-17.md",
+        "review_root": "analysis/render-checks/RE4/feedback-54-66-2026-09-17"
+      },
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "static",
+        "rationale": "Die Szene ist ohne Animation vollstaendig und didaktisch klar.",
+        "strategy": "static_complete",
+        "state_count": 1,
+        "public_targets": [],
+        "semantic_groups": [],
+        "steps": []
+      }
     },
     {
       "output_slide_number": 62,
@@ -532,12 +3986,28 @@
       "builder": "boolean_summary",
       "animation_decision": "static",
       "notes": "Wiederholung als statische Referenzszene ohne erfundene Trigger.",
-      "order": 18,
+      "order": 19,
       "chapter": null,
       "lesson": null,
       "structure_status": "deferred_by_user",
       "canonical_source_ref": "RE4::62",
-      "absorbed_source_states": []
+      "absorbed_source_states": [],
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_062/scene.animation.v1.json",
+      "feedback_revision": {
+        "date": "2026-09-17",
+        "audit": "analysis/rebuild-plans/RE4_feedback_54_66_2026-09-17.md",
+        "review_root": "analysis/render-checks/RE4/feedback-54-66-2026-09-17"
+      },
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "static",
+        "rationale": "Die Szene ist ohne Animation vollstaendig und didaktisch klar.",
+        "strategy": "static_complete",
+        "state_count": 1,
+        "public_targets": [],
+        "semantic_groups": [],
+        "steps": []
+      }
     },
     {
       "output_slide_number": 63,
@@ -556,14 +4026,30 @@
       "builder": "structure_reference",
       "animation_decision": "static",
       "notes": "Formelreferenz und Zahlenbeispiel sind nicht eigenständig eingesprochen.",
-      "order": 19,
+      "order": 20,
       "chapter": null,
       "lesson": null,
       "structure_status": "deferred_by_user",
       "canonical_source_ref": "RE4::64",
       "absorbed_source_states": [
         64
-      ]
+      ],
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_063/scene.animation.v1.json",
+      "feedback_revision": {
+        "date": "2026-09-17",
+        "audit": "analysis/rebuild-plans/RE4_feedback_54_66_2026-09-17.md",
+        "review_root": "analysis/render-checks/RE4/feedback-54-66-2026-09-17"
+      },
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "static",
+        "rationale": "Die Szene ist ohne Animation vollstaendig und didaktisch klar.",
+        "strategy": "static_complete",
+        "state_count": 1,
+        "public_targets": [],
+        "semantic_groups": [],
+        "steps": []
+      }
     },
     {
       "output_slide_number": 65,
@@ -581,12 +4067,28 @@
       "builder": "component_count_plot",
       "animation_decision": "static",
       "notes": "Das technische Diagramm wird als statische Referenz gezeigt; kein separater Sprechertext-Trigger.",
-      "order": 20,
+      "order": 21,
       "chapter": null,
       "lesson": null,
       "structure_status": "deferred_by_user",
       "canonical_source_ref": "RE4::65",
-      "absorbed_source_states": []
+      "absorbed_source_states": [],
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_065/scene.animation.v1.json",
+      "feedback_revision": {
+        "date": "2026-09-17",
+        "audit": "analysis/rebuild-plans/RE4_feedback_54_66_2026-09-17.md",
+        "review_root": "analysis/render-checks/RE4/feedback-54-66-2026-09-17"
+      },
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "static",
+        "rationale": "Die Szene ist ohne Animation vollstaendig und didaktisch klar.",
+        "strategy": "static_complete",
+        "state_count": 1,
+        "public_targets": [],
+        "semantic_groups": [],
+        "steps": []
+      }
     },
     {
       "output_slide_number": 66,
@@ -605,14 +4107,30 @@
       "builder": "freewheel_transfer",
       "animation_decision": "static",
       "notes": "Beispiel und Arbeitsauftrag sind nicht im gelieferten Sprechertext ausformuliert.",
-      "order": 21,
+      "order": 22,
       "chapter": null,
       "lesson": null,
       "structure_status": "deferred_by_user",
       "canonical_source_ref": "RE4::67",
       "absorbed_source_states": [
         67
-      ]
+      ],
+      "internal_manifest": "rebuild-proposals/svg/RE4/slide_066/scene.animation.v1.json",
+      "feedback_revision": {
+        "date": "2026-09-17",
+        "audit": "analysis/rebuild-plans/RE4_feedback_54_66_2026-09-17.md",
+        "review_root": "analysis/render-checks/RE4/feedback-54-66-2026-09-17"
+      },
+      "remove_powerpoint_speaker": true,
+      "animation_plan": {
+        "decision": "static",
+        "rationale": "Die Szene ist ohne Animation vollstaendig und didaktisch klar.",
+        "strategy": "static_complete",
+        "state_count": 1,
+        "public_targets": [],
+        "semantic_groups": [],
+        "steps": []
+      }
     },
     {
       "output_slide_number": 68,
@@ -630,7 +4148,7 @@
       "builder": "network_exercise",
       "animation_decision": "static",
       "notes": "Statischer Arbeitsauftrag; keine Animationszeitpunkte erfinden.",
-      "order": 22,
+      "order": 23,
       "chapter": null,
       "lesson": null,
       "structure_status": "deferred_by_user",

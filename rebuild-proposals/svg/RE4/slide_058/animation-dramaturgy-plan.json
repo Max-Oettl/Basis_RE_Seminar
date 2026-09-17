@@ -1,0 +1,454 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re4_src_058",
+  "svgPath": "slide_058.svg",
+  "spokenText": "Deshalb betrachten wir zwei Fälle.\n\nErstens, Komponente fünf ist ständig funktionsfähig.\n\nUnd zweitens, Komponente fünf ist ständig ausgefallen.\n\nFür jeden dieser Fälle zeichnen wir das daraus resultierende Zuverlässigkeitsblockdiagramm.\n\nUnd das hilft uns – denn jetzt lassen sich beide neuen Diagramme mit den bekannten Regeln für Serien- und Parallelsysteme berechnen:\n\nIst die Komponente fünf ständig funktionsfähig, entsteht eine Reihenschaltung aus zwei Parallelschaltungen.\n\nUnd ist die Komponente fünf ständig ausgefallen, ergibt sich eine Parallelschaltung, in der jeweils eine Reihenschaltung in jedem Pfad vorliegt. Diese können wir also ganz klassisch mit unseren bekannten Formeln berechnen.\n\nWichtig dabei:\n\nIm ersten Fall, also wenn die Komponente fünf funktionsfähig ist, wird die Zuverlässigkeit von Komponente fünf einfach mit der restlichen Systemzuverlässigkeit multipliziert.\n\nIm zweiten Fall, also wenn die Komponente fünf ausgefallen ist, verwenden wir stattdessen die Ausfallwahrscheinlichkeit. Diese ergibt sich einfach zu eins minus der Zuverlässigkeit von Komponente fünf. Wir multiplizieren also dann auch diesen Wert mit der entsprechenden Gleichung des restlichen Systems.\n\nAm Ende addieren wir beide Teilergebnisse, um die gesamte Systemzuverlässigkeit zu berechnen.Das ist nach dem Satz der totalen Wahrscheinlichkeit auch völlig korrekt – denn wir haben zwei sich gegenseitig ausschließende Fälle betrachtet.\n\nUnd das ist auch der große Vorteil der Methode:Man kann sie immer anwenden und erhält so eine exakte Berechnung der Systemzuverlässigkeit, auch wenn eine Brückenschaltung vorliegt.\n\nMit diesem Wissen bist du jetzt in der Lage, für jede Struktur ein passendes Zuverlässigkeitsblockdiagramm zu erstellen und damit auch die Systemzuverlässigkeit korrekt zu bestimmen.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/after/slide_058.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Deshalb betrachten wir zwei Fälle. Erstens,",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Erstens, Komponente fünf ist ständig funktionsfähig.",
+      "occurrence": 1,
+      "claim": "Komponente 5 funktioniert",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "case_working_head"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Und zweitens, Komponente fünf ist ständig ausgefallen.",
+      "occurrence": 1,
+      "claim": "Komponente 5 fällt aus",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "case_failed_head"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Ist die Komponente fünf ständig funktionsfähig,",
+      "occurrence": 1,
+      "claim": "Zwei Parallelschaltungen in Serie",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "case_working_rbd"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "Und ist die Komponente fünf ständig ausgefallen,",
+      "occurrence": 1,
+      "claim": "Zwei Serienpfade parallel",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "case_failed_rbd"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "Im ersten Fall, also wenn",
+      "occurrence": 1,
+      "claim": "Gewichtete Zuverlässigkeit bei Funktion",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "case_working_formula"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "einfach mit der restlichen Systemzuverlässigkeit multipliziert.",
+      "occurrence": 1,
+      "claim": "Gewichtete Zuverlässigkeit bei Funktion",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "case_working_formula"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "Im zweiten Fall, also wenn",
+      "occurrence": 1,
+      "claim": "Gewichtete Zuverlässigkeit bei Ausfall",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "case_failed_formula"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Diese ergibt sich einfach zu eins minus",
+      "occurrence": 1,
+      "claim": "Gewichtete Zuverlässigkeit bei Ausfall",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "case_failed_formula"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "Am Ende addieren wir beide Teilergebnisse,",
+      "occurrence": 1,
+      "claim": "Gewichtete Zuverlässigkeit bei Funktion",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "case_working_formula"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "Am Ende addieren wir beide Teilergebnisse,",
+      "occurrence": 1,
+      "claim": "Gewichtete Zuverlässigkeit bei Ausfall",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "case_failed_formula"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "um die gesamte Systemzuverlässigkeit zu berechnen.",
+      "occurrence": 1,
+      "claim": "Vollständige Systemzuverlässigkeit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "separation_total"
+      ]
+    },
+    {
+      "beatId": "beat_12",
+      "sourceText": "Satz der totalen Wahrscheinlichkeit",
+      "occurrence": 1,
+      "claim": "Satz der totalen Wahrscheinlichkeit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "separation_theorem"
+      ]
+    },
+    {
+      "beatId": "beat_13",
+      "sourceText": "große Vorteil der Methode:Man",
+      "occurrence": 1,
+      "claim": "Satz der totalen Wahrscheinlichkeit",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "separation_theorem"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "case_working_head",
+      "label": "Komponente 5 funktioniert",
+      "role": "content",
+      "members": [
+        "case_working_head"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "case_failed_head",
+      "label": "Komponente 5 fällt aus",
+      "role": "content",
+      "members": [
+        "case_failed_head"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "case_working_rbd",
+      "label": "Zwei Parallelschaltungen in Serie",
+      "role": "content",
+      "members": [
+        "case_working_rbd"
+      ],
+      "dependsOn": [
+        "case_working_head"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "case_failed_rbd",
+      "label": "Zwei Serienpfade parallel",
+      "role": "content",
+      "members": [
+        "case_failed_rbd"
+      ],
+      "dependsOn": [
+        "case_failed_head"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "case_working_formula",
+      "label": "Gewichtete Zuverlässigkeit bei Funktion",
+      "role": "content",
+      "members": [
+        "case_working_formula"
+      ],
+      "dependsOn": [
+        "case_working_rbd"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "case_failed_formula",
+      "label": "Gewichtete Zuverlässigkeit bei Ausfall",
+      "role": "content",
+      "members": [
+        "case_failed_formula"
+      ],
+      "dependsOn": [
+        "case_failed_rbd"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "separation_total",
+      "label": "Vollständige Systemzuverlässigkeit",
+      "role": "content",
+      "members": [
+        "separation_total"
+      ],
+      "dependsOn": [
+        "case_working_rbd",
+        "case_failed_rbd"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_11"
+    },
+    {
+      "groupId": "separation_theorem",
+      "label": "Satz der totalen Wahrscheinlichkeit",
+      "role": "content",
+      "members": [
+        "separation_theorem"
+      ],
+      "dependsOn": [
+        "separation_total"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_12"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_case_working_head",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_working_head",
+      "sourceText": "Erstens, Komponente fünf ist ständig funktionsfähig.",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_case_failed_head",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_failed_head",
+      "sourceText": "Und zweitens, Komponente fünf ist ständig ausgefallen.",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_case_working_rbd",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_working_rbd",
+      "sourceText": "Ist die Komponente fünf ständig funktionsfähig,",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_case_failed_rbd",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_failed_rbd",
+      "sourceText": "Und ist die Komponente fünf ständig ausgefallen,",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_case_working_formula",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_working_formula",
+      "sourceText": "Im ersten Fall, also wenn",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_case_working_formula",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_working_formula",
+      "sourceText": "einfach mit der restlichen Systemzuverlässigkeit multipliziert.",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_6",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_07_case_failed_formula",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_failed_formula",
+      "sourceText": "Im zweiten Fall, also wenn",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_case_failed_formula",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_failed_formula",
+      "sourceText": "Diese ergibt sich einfach zu eins minus",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_8",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_09_case_working_formula",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_working_formula",
+      "sourceText": "Am Ende addieren wir beide Teilergebnisse,",
+      "action": "hide",
+      "beatId": "beat_9",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_10_case_failed_formula",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "case_failed_formula",
+      "sourceText": "Am Ende addieren wir beide Teilergebnisse,",
+      "action": "hide",
+      "beatId": "beat_10",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_11_separation_total",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "separation_total",
+      "sourceText": "um die gesamte Systemzuverlässigkeit zu berechnen.",
+      "action": "show",
+      "beatId": "beat_11",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_12_separation_theorem",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "separation_theorem",
+      "sourceText": "Satz der totalen Wahrscheinlichkeit",
+      "action": "show",
+      "beatId": "beat_12",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_13_separation_theorem",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "separation_theorem",
+      "sourceText": "große Vorteil der Methode:Man",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_13",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/visual-review-55-58.md"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "case_working_head",
+        "case_failed_head",
+        "case_working_rbd",
+        "case_failed_rbd",
+        "separation_total",
+        "separation_theorem"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/visual-review-55-58.md"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "reviewEvidence": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/visual-review-55-58.md",
+    "states": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/states/slide_058"
+  }
+}

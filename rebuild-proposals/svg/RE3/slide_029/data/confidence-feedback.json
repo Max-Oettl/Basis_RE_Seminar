@@ -1,0 +1,34 @@
+{
+  "source": "RE3 Folie29–30.SVG",
+  "role": "Bounded 90% density areas; reliability R=1-F uses the mirrored density and its own 10% quantile, not a renamed F axis",
+  "reference": {
+    "kind": "two",
+    "variable": "F",
+    "model": "Beta(3,7)",
+    "lower_quantile": 0.05,
+    "upper_quantile": 0.95,
+    "lower_coordinate": 0.09774681343927574,
+    "upper_coordinate": 0.549641649506611,
+    "area": 0.8999999999999999
+  },
+  "failure": {
+    "kind": "right",
+    "variable": "F",
+    "model": "Beta(3,7)",
+    "lower_quantile": 0.1,
+    "upper_quantile": 1,
+    "lower_coordinate": 0.12949729685768963,
+    "upper_coordinate": 1,
+    "area": 0.9
+  },
+  "reliability": {
+    "kind": "right",
+    "variable": "R",
+    "model": "Beta(7,3) = 1-F",
+    "lower_quantile": 0.1,
+    "upper_quantile": 1,
+    "lower_coordinate": 0.5099188055541972,
+    "upper_coordinate": 1,
+    "area": 0.9
+  }
+}

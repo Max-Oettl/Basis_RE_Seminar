@@ -1,0 +1,495 @@
+{
+  "schema_version": "basisRebuildContentCrosscheck/v2",
+  "module_id": "RE2",
+  "output_slide_number": 10,
+  "checked_at": "2026-08-21T11:48:16.367Z",
+  "status": "review_required",
+  "manual_review_required": true,
+  "reference_mapping": {
+    "work_unit": "slide_010",
+    "output_slide_number": 10,
+    "source_slides": [
+      10
+    ],
+    "primary_source_slide": 10,
+    "output_slide_numbers": [],
+    "mapping_type": "direct",
+    "rationale": "Eigenständige didaktische Szene.",
+    "mapping_source": "reference_map",
+    "reference_map_path": "analysis/rebuild-plans/RE2_source-reference-map.json",
+    "sequence_plan": "analysis/rebuild-plans/RE2_sequence_plan.md",
+    "read_error": ""
+  },
+  "references": [
+    {
+      "source_slide_number": 10,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie10.SVG",
+      "source_svg_sha256": "ded1ff5189d5c057b71188f8d2deb3a8732fc018a773067e27a3131b0eab6c20",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie10.SVG",
+      "analysis_path": "analysis/slides/re2_slide_010_rebuild.json"
+    }
+  ],
+  "proposal": {
+    "path": "rebuild-proposals/svg/RE2/slide_010/slide_010.svg",
+    "svg_sha256": "30b70a14813f6d7f2f931ca7cd26b367d01093fab4668a2bc54d4441249014d6",
+    "animation_manifest": "/files/rebuild-proposals/svg/RE2/slide_010/scene.animation.v1.json"
+  },
+  "summary": {
+    "source_count": 1,
+    "checked_content_items": 32,
+    "checked_target_text_items": 18,
+    "errors": 0,
+    "warnings": 5,
+    "infos": 0,
+    "animation_steps": 7
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 010: \"Wirkungs\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Wirkungs"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 010: \"Diagramm\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-5",
+      "expected": "Diagramm"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 010: \"(Ishikawa\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-6",
+      "expected": "(Ishikawa"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 010: \"Diagramm\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-8",
+      "expected": "Diagramm"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 010: \"Mileu\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-27",
+      "expected": "Mileu"
+    }
+  ],
+  "content_checks": [
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Ursache",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-2",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Wirkungs",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-4",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-5",
+      "expected": "Diagramm",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-6",
+      "expected": "(Ishikawa",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-7",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-8",
+      "expected": "Diagramm",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-9",
+      "expected": ")",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-10",
+      "expected": "Qualität elektrischer Bauteile",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-11",
+      "expected": "Verkabelung",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-12",
+      "expected": "Montagestruktur",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-13",
+      "expected": "Überwachungssysteme",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-14",
+      "expected": "Fehler bei der Installation",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-15",
+      "expected": "Wartungsfehler",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-16",
+      "expected": "Standards bei Installation",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-17",
+      "expected": "Wetterbedingungen",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-18",
+      "expected": "Wartungsintervalle und",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-19",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-20",
+      "expected": "protokolle",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-21",
+      "expected": "Schattenwurf durch Objekte",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-22",
+      "expected": "Materialien",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-23",
+      "expected": "Maschinen",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-24",
+      "expected": "(Ausrüstung)",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-25",
+      "expected": "Mensch",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-26",
+      "expected": "Methoden",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-27",
+      "expected": "Mileu",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-28",
+      "expected": "(Umwelt)",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-29",
+      "expected": "Leistungsverlust",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-30",
+      "expected": "der PV",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-31",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 10,
+      "source_item_id": "source-svg-text-32",
+      "expected": "Anlage",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    }
+  ],
+  "target_text_checks": [
+    {
+      "target_text": "WIRKUNG",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Leistungsverlust der PV-Anlage",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "URSACHEN",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Materialien",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Qualität elektrischer Bauteile",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Verkabelung",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Maschinen (Ausrüstung)",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Montagestruktur",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Überwachungssysteme",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Mensch",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Fehler bei der Installation",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Wartungsfehler",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Methoden",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Wartungsintervalle und -protokolle",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Standards bei Installation",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Milieu (Umwelt)",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "tokens:milieu,umwelt"
+    },
+    {
+      "target_text": "Schattenwurf durch Objekte",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Wetterbedingungen",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    }
+  ],
+  "manual_review_focus": [
+    "Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.",
+    "Sprechertext-Reihenfolge gegen die semantisch geplanten Animationsschritte pruefen."
+  ],
+  "reference_mapping_sha256": "e1d7198b5cccceb29a4bbcdd0f5a87dcd3e7287c9b986fbb4d6a81addb875867",
+  "reference_map_path": "analysis/rebuild-plans/RE2_source-reference-map.json",
+  "sequence_plan": "analysis/rebuild-plans/RE2_sequence_plan.md"
+}

@@ -1,14 +1,7 @@
-# Redesign-Brief — slide_013
+# RE4 slide_013 – Feedbackrevision
 
-- Strukturstatus: Kapitel und Lektion noch nicht zugeordnet; Nutzervorgabe ausstehend
-- Quellfolien: 13, 14, 15, 16
-- Sprechertext: section_002 — Ablaufschema der quantitativen FTA
-- Titel: Quantitative FTA systematisch aufbauen
-- Takeaway: Die quantitative FTA führt in sechs Schritten vom Systemverständnis zur Gesamtbewertung.
-- Archetyp: workflow-tree
-- Zielmodus: full_slide, 1920×1080
-- Referenz-Lock: RE3 slide_002, slide_024, slide_043 und slide_070
-- Farbdramaturgie: Navy-Tonalität für gleichrangige Inhalte; Grün und Koralle nur semantisch für Fokus, Funktion oder Ausfall
-- Animation: sprechertextgeführt; semantische Gruppen statt Einzelobjekt-Mikroanimation
-- Quellenregel: PowerPoint-Sprechericons, gelbe Produktionsnotizen und Masterdekoration entfallen
-- Assets: native SVG-Komposition
+- Quellen: 13, 14, 15, 16; stabile ID re4_src_013.
+- Referenz-Lock: RE3 15, 31, 43. Transparente Content-SVG, Archivo und Oxanium, Marineblau mit semantischen Akzenten.
+- Inventar, Topologie und verlustfreie Sprechertextpartition: analysis/rebuild-plans/RE4_feedback_2026-09-17.md.
+- Statischer Pilot: analysis/render-checks/RE4/feedback-2026-09-17/after/slide_013.png.
+- Animation: 24 wortgetreue Schritte; technische und visuelle Prüfung im Reviewverzeichnis.

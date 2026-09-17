@@ -1,18 +1,43 @@
 {
-  "schemaVersion": "elementAnimationPlan/v1",
+  "schemaVersion": "svgAnimationManifest/v1",
   "sceneId": "re3_src_013",
   "decision": "animated",
+  "svgPath": "slide_013.svg",
   "defaults": {
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
+      "targetId": "method_graphical",
+      "label": "Grafische Methode",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "method_calculation",
+      "label": "Berechnungsmethoden",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "method_accuracy",
+      "label": "Höhere Genauigkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
       "targetId": "method_mls",
-      "label": "MLS",
+      "label": "Methode der kleinsten Quadrate",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -20,15 +45,31 @@
     },
     {
       "targetId": "method_mle",
-      "label": "MLE",
+      "label": "Maximum-Likelihood-Schätzung",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "method_decision",
-      "label": "Methodenwahl",
+      "targetId": "method_complexity",
+      "label": "Mathematische Komplexität",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "method_software",
+      "label": "Software übernimmt die Berechnung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "method_understanding",
+      "label": "Methoden bewusst anwenden",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -37,34 +78,88 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_method_mls",
+      "stepId": "step_01_method_graphical",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "method_graphical",
+      "sourceText": "Bisher haben wir die grafische Methode",
+      "action": "show"
+    },
+    {
+      "stepId": "step_02_method_calculation",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "method_calculation",
+      "sourceText": "Es gibt jedoch auch Berechnungs-Methoden",
+      "action": "show"
+    },
+    {
+      "stepId": "step_03_method_accuracy",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "method_accuracy",
+      "sourceText": "eine höhere Genauigkeit bieten",
+      "action": "show"
+    },
+    {
+      "stepId": "step_04_method_mls",
+      "occurrence": 1,
+      "confidence": "high",
       "targetId": "method_mls",
-      "action": "show",
-      "sourceText": "Zu den bekanntesten zählen die Methode der kleinsten Quadrate, abgekürzt als M-L-S, sowie die Maximum-Likelihood-Schätzung, abgekürzt als M-L-E.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "sourceText": "die Methode der kleinsten Quadrate",
+      "action": "show"
     },
     {
-      "stepId": "step_02_method_mle",
+      "stepId": "step_05_method_mle",
+      "occurrence": 1,
+      "confidence": "high",
       "targetId": "method_mle",
-      "action": "show",
-      "sourceText": "Zu den bekanntesten zählen die Methode der kleinsten Quadrate, abgekürzt als M-L-S, sowie die Maximum-Likelihood-Schätzung, abgekürzt als M-L-E.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "sourceText": "sowie die Maximum-Likelihood-Schätzung",
+      "action": "show"
     },
     {
-      "stepId": "step_03_method_decision",
-      "targetId": "method_decision",
-      "action": "show",
-      "sourceText": "Nur so können wir sicherstellen, dass die richtige Methode angewendet wurde.",
+      "stepId": "step_06_method_complexity",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "method_complexity",
+      "sourceText": "Der Nachteil dieser Methoden",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_method_software",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "method_software",
+      "sourceText": "dafür gibt es Software",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_method_understanding",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "method_understanding",
+      "sourceText": "Dennoch ist es wichtig",
+      "action": "show"
+    },
+    {
+      "stepId": "step_09_method_understanding",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "method_understanding",
+      "sourceText": "fehlerhafte oder ungenaue Ergebnisse entstehen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_10_method_understanding",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "method_understanding",
+      "sourceText": "Sei dir also immer bewusst",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     }
   ]
 }

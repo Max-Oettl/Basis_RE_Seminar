@@ -8,5 +8,5 @@
 - Archetyp: system-landscape
 - Layout: Konkrete PV-Komponenten mit äußerer und verschachtelter Systemgrenze.
 - Referenz: RE1-Full-Slide-System und Kapitelbrief analysis/rebuild-plans/RE2_chapter_02_redesign_brief.md
-- Produktionsmodus: Full-Slide 1920×1080
+- Produktionsmodus: Content-SVG 1920×1080; Titel und Masterelemente werden downstream gerendert
 - Animation: sprechertextgeführt aktiviert

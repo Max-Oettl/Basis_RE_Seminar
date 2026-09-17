@@ -1,14 +1,7 @@
-# Redesign-Brief — slide_005
+# RE4 slide_005 – Feedbackrevision
 
-- Strukturstatus: Kapitel und Lektion noch nicht zugeordnet; Nutzervorgabe ausstehend
-- Quellfolien: 5, 6
-- Sprechertext: section_001 — Zuverlässigkeit eines Systems
-- Titel: Vom Wöhlertest zur Zahnradzuverlässigkeit
-- Takeaway: Versuchsdaten werden als Weibull-Modell ausgewertet und mit einem Vertrauensbereich abgesichert.
-- Archetyp: evidence-pipeline
-- Zielmodus: full_slide, 1920×1080
-- Referenz-Lock: RE3 slide_002, slide_024, slide_043 und slide_070
-- Farbdramaturgie: Navy-Tonalität für gleichrangige Inhalte; Grün und Koralle nur semantisch für Fokus, Funktion oder Ausfall
-- Animation: sprechertextgeführt; semantische Gruppen statt Einzelobjekt-Mikroanimation
-- Quellenregel: PowerPoint-Sprechericons, gelbe Produktionsnotizen und Masterdekoration entfallen
-- Assets: bereinigte Quellmedien im neuen Full-Slide-Layout
+- Quellen: 5, 6; stabile ID re4_src_005.
+- Referenz-Lock: RE3 15, 31, 43. Transparente Content-SVG, Archivo und Oxanium, Marineblau mit semantischen Akzenten.
+- Inventar, Topologie und verlustfreie Sprechertextpartition: analysis/rebuild-plans/RE4_feedback_2026-09-17.md.
+- Statischer Pilot: analysis/render-checks/RE4/feedback-2026-09-17/after/slide_005.png.
+- Animation: 17 wortgetreue Schritte; technische und visuelle Prüfung im Reviewverzeichnis.

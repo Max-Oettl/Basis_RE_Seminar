@@ -1,10 +1,8 @@
-# Kritischer Challenge — slide_035
+# Review-Schwerpunkte slide_035
 
-- Quellen: RE3::35
-- Struktur: Kapitel/Lektion bewusst nicht zugeordnet
-- Design-Challenge: Rechtszensierung nutzt blaue Pfeile und rote Ausfallkreuze konsistent; die Statuscodierung ist separat erklärt.
-- Animations-Challenge: 4 semantische Schritte an 4 wörtlich belegten Sprechertext-Cues; chronologisch sortiert.
-- Sichtprüfung: 5 gerenderte Zustände plus 1920×1080-Endzustand geprüft
-- Korrektur/Entscheidung: Im Challenge keine zusätzliche Korrektur erforderlich.
-- Technisches Ergebnis: 0 Fehler, 0 Warnungen im strikten Modul-QA
-- Urteil: FREIGEGEBEN
+- Quellinhalte, Zuordnungen und Sprecherphrasen gegen alle 1 Quellzustände abgleichen.
+- Endzustand und alle semantischen Zwischenstände in 1920×1080 und 960×540 prüfen.
+- Gleiche Objektidentitäten, gemeinsame Starts und unveränderte Ereigniszeiten über die Vergleichsansichten; Grenze vor Interpretation.
+- Legende genau einmal am Diagramm; Zensierungen und Ausfälle klar unterscheiden; Intervallgrenzen statt erfundener exakter Ausfallzeiten.
+- Statische und animierte QA plus unabhängige visuelle Zweitprüfung dokumentiert im Feedbackaudit.
+- Nutzerfreigabe: offen; keine finale Sperre gesetzt.

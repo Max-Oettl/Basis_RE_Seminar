@@ -1,0 +1,101 @@
+{
+  "schema_version": "basisReContentCrosscheck/v1",
+  "module_id": "RE2",
+  "work_unit": "slide_014",
+  "scene_id": "re2_ch2_function_structure",
+  "target_svg": "rebuild-proposals/svg/RE2/slide_014/slide_014.svg",
+  "source_slides": [
+    14,
+    15,
+    16
+  ],
+  "mapping_type": "merged_sequence",
+  "source_checks": [
+    {
+      "source_slide": 14,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie14.SVG",
+      "expected_text_nodes": 5,
+      "missing_text_nodes": [
+        "Funktion",
+        "Eingangsgrößen",
+        "Ausgangsgrößen",
+        "Aufgabenformulierung auf abstrakter",
+        "und lösungsneutraler Ebene"
+      ],
+      "expected_image_assets": 1,
+      "missing_image_assets": [
+        "img1"
+      ],
+      "speaker_control_expected_removed": true
+    },
+    {
+      "source_slide": 15,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie15.SVG",
+      "expected_text_nodes": 11,
+      "missing_text_nodes": [
+        "Ausgangsgrößen",
+        "Teilfunktion",
+        "1",
+        "2",
+        "3",
+        "Eingangsgrößen",
+        "Funktion"
+      ],
+      "expected_image_assets": 1,
+      "missing_image_assets": [
+        "img1"
+      ],
+      "speaker_control_expected_removed": true
+    },
+    {
+      "source_slide": 16,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie16.SVG",
+      "expected_text_nodes": 71,
+      "missing_text_nodes": [
+        "DC",
+        "-",
+        "Strom",
+        "(6) Netz",
+        "überwachung",
+        "Elektr.",
+        "Signal",
+        "(7) Netz",
+        "Synchroni",
+        "sierung",
+        "Arbeitspunkt",
+        "regelung",
+        "(MPPT)",
+        "AC",
+        "(1) Eingang DC",
+        "(8) Ausgang",
+        "(2) DC/DC",
+        "Wandlung",
+        "(4) DC/AC",
+        "(5) Netz",
+        "einspeisung",
+        "und",
+        "trennung",
+        "Umwandlung",
+        "Strom in"
+      ],
+      "expected_image_assets": 1,
+      "missing_image_assets": [
+        "img1"
+      ],
+      "speaker_control_expected_removed": true
+    }
+  ],
+  "qa": {
+    "issues": [
+      "Quellfolie 14: 5 sichtbare Texte fehlen im Ziel.",
+      "Quellfolie 14: 1 Inhaltsbilder fehlen im Ziel.",
+      "Quellfolie 15: 7 sichtbare Texte fehlen im Ziel.",
+      "Quellfolie 15: 1 Inhaltsbilder fehlen im Ziel.",
+      "Quellfolie 16: 25 sichtbare Texte fehlen im Ziel.",
+      "Quellfolie 16: 1 Inhaltsbilder fehlen im Ziel."
+    ],
+    "warnings": [],
+    "open_questions": []
+  },
+  "status": "failed"
+}

@@ -1,0 +1,998 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_002",
+  "svgPath": "slide_002.svg",
+  "spokenText": "Wie bereits erwähnt, ist der erste Schritt das Sammeln von Lebensdauerdaten. In diesem Fall liegen uns ausschließlich Ausfalldaten in Form unterschiedlicher Zeitwerte vor.\n\nDiese müssen zunächst der Größe nach sortiert werden. Wir können dies einfach entlang der Zeitachse visualisieren.\n\nIm nächsten Schritt bestimmen wir für jeden Zeitpunkt die zugehörige Ausfallwahrscheinlichkeit. Aus den Grundlagen wissen wir bereits, dass die Ausfallwahrscheinlichkeit der Summe der ausgefallenen Einheiten entspricht.\n\nDa uns jedoch nur Zeitwerte vorliegen, können wir die Ausfallwahrscheinlichkeit nicht direkt berechnen. Stattdessen nutzen wir eine Näherungsformel des Median-Rang-Verfahrens. Dabei berechnet sich die Ausfallwahrscheinlichkeit für den i-ten Ausfall als i minus null Komma drei, geteilt durch die Stichprobengröße plus null Komma vier.\n\nAuf diese Weise erhalten wir für jeden Ausfallzeitpunkt einen Wert für die Ausfallwahrscheinlichkeit.\n\nIm Anschluss können wir unsere Ausfallzeiten zusammen mit den entsprechenden Ausfallwahrscheinlichkeiten als Punkte in das Weibull-Wahrscheinlichkeits-Papier mit doppellogarithmischer Darstellung eintragen.\n\nDamit haben wir unser erstes Ziel erreicht: Jedem Ausfallzeitpunkt wurde eine Ausfallwahrscheinlichkeit zugewiesen.\n\nIm nächsten Schritt legen wir eine Ausgleichsgerade durch die Punkte. Dies kann entweder visuell erfolgen oder durch eine Regressionsmethode bestimmt werden.\n\nSobald die Gerade festgelegt ist, lassen sich die gesuchten Parameter für die Weibullverteilung ableiten. Die charakteristische Lebensdauer lässt sich aus der Ausfallwahrscheinlichkeit von dreiundsechzig Komma zwei ablesen, während der Formparameter durch die Steigung der Geraden bestimmt wird.\n\nDamit haben wir die Weibullverteilung bestimmt, die das Ausfallverhalten am besten beschreibt.\n\nWenn du bis hierhin folgen konntest, hast du das grundlegende Vorgehen der Lebensdauerdatenanalyse verstanden.\n\nDu hast gelernt, wie man aus Ausfallzeiten eine Weibullverteilung ermittelt. Damit können wir das Ausfallverhalten mathematisch beschreiben und Prognosen für zukünftige Ausfälle erstellen. Und ja, das grundlegende Vorgehen ist tatsächlich so einfach.\n\nAllerdings gibt es einige wichtige Aspekte und Sonderfälle, die beachtet werden müssen.Auf diese gehen wir nun im Folgenden ein.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-2026-09-17/after/slide_002.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Wie bereits erwähnt, ist der erste",
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Ausfalldaten in Form unterschiedlicher Zeitwerte",
+      "claim": "Sortierte Ausfallzeiten auf der Zeitachse",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_timeline"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Diese müssen zunächst der Größe nach",
+      "claim": "Sortierte Ausfallzeiten auf der Zeitachse",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "workflow_timeline"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Näherungsformel des Median-Rang-Verfahrens",
+      "claim": "Median-Rank-Formel",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_formula"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "für jeden Ausfallzeitpunkt einen Wert",
+      "claim": "Zeitwerte und Ausfallwahrscheinlichkeiten zuordnen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_probability_map"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "für jeden Ausfallzeitpunkt einen Wert",
+      "claim": "Wertepaar 1",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_pair_1"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "für jeden Ausfallzeitpunkt einen Wert",
+      "claim": "Wertepaar 2",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_pair_2"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "für jeden Ausfallzeitpunkt einen Wert",
+      "claim": "Wertepaar 3",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_pair_3"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "für jeden Ausfallzeitpunkt einen Wert",
+      "claim": "Wertepaar 4",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_pair_4"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "für jeden Ausfallzeitpunkt einen Wert",
+      "claim": "Wertepaar 5",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_pair_5"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "für jeden Ausfallzeitpunkt einen Wert",
+      "claim": "Wertepaar 6",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_pair_6"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "für jeden Ausfallzeitpunkt einen Wert",
+      "claim": "Wertepaar 7",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_pair_7"
+      ]
+    },
+    {
+      "beatId": "beat_12",
+      "sourceText": "Im Anschluss können",
+      "claim": "Wertepaare im Weibullnetz",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_weibull_plot"
+      ]
+    },
+    {
+      "beatId": "beat_13",
+      "sourceText": "Im Anschluss können",
+      "claim": "Wertepaar 1",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "workflow_pair_1"
+      ]
+    },
+    {
+      "beatId": "beat_14",
+      "sourceText": "Im Anschluss können",
+      "claim": "Wertepaar 1 im Weibullnetz",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_point_1"
+      ]
+    },
+    {
+      "beatId": "beat_15",
+      "sourceText": "wir unsere Ausfallzeiten",
+      "claim": "Wertepaar 2",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "workflow_pair_2"
+      ]
+    },
+    {
+      "beatId": "beat_16",
+      "sourceText": "wir unsere Ausfallzeiten",
+      "claim": "Wertepaar 2 im Weibullnetz",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_point_2"
+      ]
+    },
+    {
+      "beatId": "beat_17",
+      "sourceText": "zusammen mit den",
+      "claim": "Wertepaar 3",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "workflow_pair_3"
+      ]
+    },
+    {
+      "beatId": "beat_18",
+      "sourceText": "zusammen mit den",
+      "claim": "Wertepaar 3 im Weibullnetz",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_point_3"
+      ]
+    },
+    {
+      "beatId": "beat_19",
+      "sourceText": "entsprechenden Ausfallwahrscheinlichkeiten als",
+      "claim": "Wertepaar 4",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "workflow_pair_4"
+      ]
+    },
+    {
+      "beatId": "beat_20",
+      "sourceText": "entsprechenden Ausfallwahrscheinlichkeiten als",
+      "claim": "Wertepaar 4 im Weibullnetz",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_point_4"
+      ]
+    },
+    {
+      "beatId": "beat_21",
+      "sourceText": "Punkte in das",
+      "claim": "Wertepaar 5",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "workflow_pair_5"
+      ]
+    },
+    {
+      "beatId": "beat_22",
+      "sourceText": "Punkte in das",
+      "claim": "Wertepaar 5 im Weibullnetz",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_point_5"
+      ]
+    },
+    {
+      "beatId": "beat_23",
+      "sourceText": "Weibull-Wahrscheinlichkeits-Papier mit doppellogarithmischer",
+      "claim": "Wertepaar 6",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "workflow_pair_6"
+      ]
+    },
+    {
+      "beatId": "beat_24",
+      "sourceText": "Weibull-Wahrscheinlichkeits-Papier mit doppellogarithmischer",
+      "claim": "Wertepaar 6 im Weibullnetz",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_point_6"
+      ]
+    },
+    {
+      "beatId": "beat_25",
+      "sourceText": "doppellogarithmischer Darstellung eintragen",
+      "claim": "Wertepaar 7",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "workflow_pair_7"
+      ]
+    },
+    {
+      "beatId": "beat_26",
+      "sourceText": "doppellogarithmischer Darstellung eintragen",
+      "claim": "Wertepaar 7 im Weibullnetz",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_point_7"
+      ]
+    },
+    {
+      "beatId": "beat_27",
+      "sourceText": "eine Ausgleichsgerade durch die Punkte",
+      "claim": "Ausgleichsgerade",
+      "requiredContext": [],
+      "action": "draw",
+      "revealTogether": [
+        "plot_weibull_fit"
+      ]
+    },
+    {
+      "beatId": "beat_28",
+      "sourceText": "Sobald die Gerade festgelegt ist",
+      "claim": "Weibull-Parameter ablesen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_parameters"
+      ]
+    },
+    {
+      "beatId": "beat_29",
+      "sourceText": "Damit haben wir die Weibullverteilung bestimmt",
+      "claim": "Weibull-Funktion",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "workflow_result"
+      ]
+    },
+    {
+      "beatId": "beat_30",
+      "sourceText": "wie man aus Ausfallzeiten eine Weibullverteilung ermittelt",
+      "claim": "Sortierte Ausfallzeiten auf der Zeitachse",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "workflow_timeline"
+      ]
+    },
+    {
+      "beatId": "beat_31",
+      "sourceText": "Prognosen für zukünftige Ausfälle erstellen",
+      "claim": "Weibull-Funktion",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "workflow_result"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "workflow_timeline",
+      "label": "Sortierte Ausfallzeiten auf der Zeitachse",
+      "role": "content",
+      "members": [
+        "workflow_timeline"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "workflow_formula",
+      "label": "Median-Rank-Formel",
+      "role": "content",
+      "members": [
+        "workflow_formula"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "workflow_probability_map",
+      "label": "Zeitwerte und Ausfallwahrscheinlichkeiten zuordnen",
+      "role": "content",
+      "members": [
+        "workflow_probability_map"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "workflow_pair_1",
+      "label": "Wertepaar 1",
+      "role": "content",
+      "members": [
+        "workflow_pair_1"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "workflow_pair_2",
+      "label": "Wertepaar 2",
+      "role": "content",
+      "members": [
+        "workflow_pair_2"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "workflow_pair_3",
+      "label": "Wertepaar 3",
+      "role": "content",
+      "members": [
+        "workflow_pair_3"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "workflow_pair_4",
+      "label": "Wertepaar 4",
+      "role": "content",
+      "members": [
+        "workflow_pair_4"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    },
+    {
+      "groupId": "workflow_pair_5",
+      "label": "Wertepaar 5",
+      "role": "content",
+      "members": [
+        "workflow_pair_5"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_9"
+    },
+    {
+      "groupId": "workflow_pair_6",
+      "label": "Wertepaar 6",
+      "role": "content",
+      "members": [
+        "workflow_pair_6"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_10"
+    },
+    {
+      "groupId": "workflow_pair_7",
+      "label": "Wertepaar 7",
+      "role": "content",
+      "members": [
+        "workflow_pair_7"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_11"
+    },
+    {
+      "groupId": "workflow_weibull_plot",
+      "label": "Wertepaare im Weibullnetz",
+      "role": "content",
+      "members": [
+        "workflow_weibull_plot"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_12"
+    },
+    {
+      "groupId": "workflow_point_1",
+      "label": "Wertepaar 1 im Weibullnetz",
+      "role": "content",
+      "members": [
+        "workflow_point_1"
+      ],
+      "dependsOn": [
+        "workflow_weibull_plot",
+        "workflow_pair_1"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_14"
+    },
+    {
+      "groupId": "workflow_point_2",
+      "label": "Wertepaar 2 im Weibullnetz",
+      "role": "content",
+      "members": [
+        "workflow_point_2"
+      ],
+      "dependsOn": [
+        "workflow_weibull_plot",
+        "workflow_pair_2"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_16"
+    },
+    {
+      "groupId": "workflow_point_3",
+      "label": "Wertepaar 3 im Weibullnetz",
+      "role": "content",
+      "members": [
+        "workflow_point_3"
+      ],
+      "dependsOn": [
+        "workflow_weibull_plot",
+        "workflow_pair_3"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_18"
+    },
+    {
+      "groupId": "workflow_point_4",
+      "label": "Wertepaar 4 im Weibullnetz",
+      "role": "content",
+      "members": [
+        "workflow_point_4"
+      ],
+      "dependsOn": [
+        "workflow_weibull_plot",
+        "workflow_pair_4"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_20"
+    },
+    {
+      "groupId": "workflow_point_5",
+      "label": "Wertepaar 5 im Weibullnetz",
+      "role": "content",
+      "members": [
+        "workflow_point_5"
+      ],
+      "dependsOn": [
+        "workflow_weibull_plot",
+        "workflow_pair_5"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_22"
+    },
+    {
+      "groupId": "workflow_point_6",
+      "label": "Wertepaar 6 im Weibullnetz",
+      "role": "content",
+      "members": [
+        "workflow_point_6"
+      ],
+      "dependsOn": [
+        "workflow_weibull_plot",
+        "workflow_pair_6"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_24"
+    },
+    {
+      "groupId": "workflow_point_7",
+      "label": "Wertepaar 7 im Weibullnetz",
+      "role": "content",
+      "members": [
+        "workflow_point_7"
+      ],
+      "dependsOn": [
+        "workflow_weibull_plot",
+        "workflow_pair_7"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_26"
+    },
+    {
+      "groupId": "plot_weibull_fit",
+      "label": "Ausgleichsgerade",
+      "role": "content",
+      "members": [
+        "plot_weibull_fit"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_27"
+    },
+    {
+      "groupId": "workflow_parameters",
+      "label": "Weibull-Parameter ablesen",
+      "role": "content",
+      "members": [
+        "workflow_parameters"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_28"
+    },
+    {
+      "groupId": "workflow_result",
+      "label": "Weibull-Funktion",
+      "role": "content",
+      "members": [
+        "workflow_result"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_29"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_workflow_timeline",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_timeline",
+      "sourceText": "Ausfalldaten in Form unterschiedlicher Zeitwerte",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_workflow_timeline",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_timeline",
+      "sourceText": "Diese müssen zunächst der Größe nach",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_2",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_03_workflow_formula",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_formula",
+      "sourceText": "Näherungsformel des Median-Rang-Verfahrens",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_workflow_probability_map",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_probability_map",
+      "sourceText": "für jeden Ausfallzeitpunkt einen Wert",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_workflow_pair_1",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_pair_1",
+      "sourceText": "für jeden Ausfallzeitpunkt einen Wert",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_workflow_pair_2",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_pair_2",
+      "sourceText": "für jeden Ausfallzeitpunkt einen Wert",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_workflow_pair_3",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_pair_3",
+      "sourceText": "für jeden Ausfallzeitpunkt einen Wert",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_workflow_pair_4",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_pair_4",
+      "sourceText": "für jeden Ausfallzeitpunkt einen Wert",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_workflow_pair_5",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_pair_5",
+      "sourceText": "für jeden Ausfallzeitpunkt einen Wert",
+      "action": "show",
+      "beatId": "beat_9",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_10_workflow_pair_6",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_pair_6",
+      "sourceText": "für jeden Ausfallzeitpunkt einen Wert",
+      "action": "show",
+      "beatId": "beat_10",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_11_workflow_pair_7",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_pair_7",
+      "sourceText": "für jeden Ausfallzeitpunkt einen Wert",
+      "action": "show",
+      "beatId": "beat_11",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_12_workflow_weibull_plot",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_weibull_plot",
+      "sourceText": "Im Anschluss können",
+      "action": "show",
+      "beatId": "beat_12",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_13_workflow_pair_1",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_pair_1",
+      "sourceText": "Im Anschluss können",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_13",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_14_workflow_point_1",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_point_1",
+      "sourceText": "Im Anschluss können",
+      "action": "show",
+      "beatId": "beat_14",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_15_workflow_pair_2",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_pair_2",
+      "sourceText": "wir unsere Ausfallzeiten",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_15",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_16_workflow_point_2",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_point_2",
+      "sourceText": "wir unsere Ausfallzeiten",
+      "action": "show",
+      "beatId": "beat_16",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_17_workflow_pair_3",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_pair_3",
+      "sourceText": "zusammen mit den",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_17",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_18_workflow_point_3",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_point_3",
+      "sourceText": "zusammen mit den",
+      "action": "show",
+      "beatId": "beat_18",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_19_workflow_pair_4",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_pair_4",
+      "sourceText": "entsprechenden Ausfallwahrscheinlichkeiten als",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_19",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_20_workflow_point_4",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_point_4",
+      "sourceText": "entsprechenden Ausfallwahrscheinlichkeiten als",
+      "action": "show",
+      "beatId": "beat_20",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_21_workflow_pair_5",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_pair_5",
+      "sourceText": "Punkte in das",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_21",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_22_workflow_point_5",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_point_5",
+      "sourceText": "Punkte in das",
+      "action": "show",
+      "beatId": "beat_22",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_23_workflow_pair_6",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_pair_6",
+      "sourceText": "Weibull-Wahrscheinlichkeits-Papier mit doppellogarithmischer",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_23",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_24_workflow_point_6",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_point_6",
+      "sourceText": "Weibull-Wahrscheinlichkeits-Papier mit doppellogarithmischer",
+      "action": "show",
+      "beatId": "beat_24",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_25_workflow_pair_7",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_pair_7",
+      "sourceText": "doppellogarithmischer Darstellung eintragen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_25",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_26_workflow_point_7",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_point_7",
+      "sourceText": "doppellogarithmischer Darstellung eintragen",
+      "action": "show",
+      "beatId": "beat_26",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_27_plot_weibull_fit",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "plot_weibull_fit",
+      "sourceText": "eine Ausgleichsgerade durch die Punkte",
+      "action": "draw",
+      "beatId": "beat_27",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_28_workflow_parameters",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_parameters",
+      "sourceText": "Sobald die Gerade festgelegt ist",
+      "action": "show",
+      "beatId": "beat_28",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_29_workflow_result",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_result",
+      "sourceText": "Damit haben wir die Weibullverteilung bestimmt",
+      "action": "show",
+      "beatId": "beat_29",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_30_workflow_timeline",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_timeline",
+      "sourceText": "wie man aus Ausfallzeiten eine Weibullverteilung ermittelt",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_30",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_31_workflow_result",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "workflow_result",
+      "sourceText": "Prognosen für zukünftige Ausfälle erstellen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_31",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-2026-09-17/states-final/slide_002/00_initial.png",
+      "reviewedAt": "2026-09-17"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "workflow_timeline",
+        "workflow_formula",
+        "workflow_probability_map",
+        "workflow_pair_1",
+        "workflow_pair_2",
+        "workflow_pair_3",
+        "workflow_pair_4",
+        "workflow_pair_5",
+        "workflow_pair_6",
+        "workflow_pair_7",
+        "workflow_weibull_plot",
+        "workflow_point_1",
+        "workflow_point_2",
+        "workflow_point_3",
+        "workflow_point_4",
+        "workflow_point_5",
+        "workflow_point_6",
+        "workflow_point_7",
+        "plot_weibull_fit",
+        "workflow_parameters",
+        "workflow_result"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-2026-09-17/states-final/slide_002/26_after_16_prognosen_fur_zukunftige_ausfalle_erste.png",
+      "reviewedAt": "2026-09-17"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "renderDirectory": "analysis/render-checks/RE3/feedback-2026-09-17/states-final/slide_002",
+    "reviewedStateCount": 27,
+    "evidence": "analysis/rebuild-plans/RE3_scenes_001_006_feedback_2026-09-17.md",
+    "method": "local Chromium state renderer plus visual source/reference review",
+    "interactiveBrowserPlayback": "unavailable; no end-to-end audio playback claimed"
+  }
+}

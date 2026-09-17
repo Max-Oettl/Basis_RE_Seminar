@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch3_fta_event_symbols",
+  "svgPath": "slide_044.svg",
+  "spokenText": "Gehen wir die Fehlerhierarchie von oben nach unten immer weiter durch, treffen wir irgendwann auf die primären Fehlerursachen bzw. Ausfallmechanismen.\n\nDiese nennen wir auch Basisereignisse.Die Basisereignisse stellen immer das Ende des Fehlerbaumes dar und können einfach durch ein Kreissymbol gekennzeichnet werden.\n\nDas heißt ab hier gibt es keine weiteren untergeordneten Hierarchieebenen und wir sind am Ende des Pfades angekommen.\n\nDer Fehlerbaum muss aber nicht immer bis zum Ende durchgeführt werden. Prinzipiell kann an jedem Ast beliebig abgebrochen werden.\n\nHierzu können wir neben den Basisereignissen noch weitere Symbole im Fehlerbaum verwenden.\n\nEs kann beispielsweise immer entschieden werden, dass ein Ereignis ab einer gewissen Stelle nicht mehr weiter untersucht werden soll.\n\nHierzu können wir einfach ein Rauten-Symbol verwenden.\n\nIn diesem Fall wollen wir den Primärausfall des Motors nicht weiter untersuchen.\n\nHierbei ist es sinnvoll, in einem kleinen Kommentarfeld daneben immer die entsprechenden Gründe zu notieren, um auch zu einem späteren Zeitpunkt nachvollziehen zu können, warum diese Entscheidung getroffen worden ist.\n\nWird der Fehlerbaum dagegen zu lang, kann er mit Hilfe eines Verweisungsgatters an einer anderen Stelle fortgeführt werden.\n\nDie Verweisungen sollten dabei auch durchnummeriert werden, um die entsprechende Stelle der Fortführung wieder zu finden.\n\nDurch das schrittweise Unterteilen der Ereignisse im Fehlerbaum, erhalten wir ein detailliertes Diagramm, das die logischen Verknüpfungen zwischen den verschiedenen Ausfällen und ihren Ursachen visualisiert.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "fta47_basic",
+      "label": "Basisereignis",
+      "role": "content",
+      "members": [
+        "fta47_basic"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta47_diamond",
+      "label": "Nicht weiter untersuchtes Ereignis",
+      "role": "content",
+      "members": [
+        "fta47_diamond"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta47_transfer",
+      "label": "Verweisungsgatter",
+      "role": "content",
+      "members": [
+        "fta47_transfer"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta47_rule",
+      "label": "Entscheidungsregel",
+      "role": "content",
+      "members": [
+        "fta47_rule"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Basisereignis",
+      "sourceText": "Die Basisereignisse stellen immer das Ende",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta47_basic"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Nicht weiter untersuchtes Ereignis",
+      "sourceText": "Hierzu können wir einfach ein Rauten-Symbol",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta47_diamond"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Verweisungsgatter",
+      "sourceText": "kann er mit Hilfe eines Verweisungsgatters",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta47_transfer"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Entscheidungsregel",
+      "sourceText": "Durch das schrittweise Unterteilen der Ereignisse",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta47_rule"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta47_basic",
+      "beatId": "beat_01",
+      "targetId": "fta47_basic",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_fta47_diamond",
+      "beatId": "beat_02",
+      "targetId": "fta47_diamond",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_fta47_transfer",
+      "beatId": "beat_03",
+      "targetId": "fta47_transfer",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_04_fta47_rule",
+      "beatId": "beat_04",
+      "targetId": "fta47_rule",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_04",
+      "visibleGroups": [
+        "canvas_context",
+        "fta47_basic",
+        "fta47_diamond",
+        "fta47_transfer",
+        "fta47_rule"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

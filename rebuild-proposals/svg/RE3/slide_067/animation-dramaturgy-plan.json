@@ -1,0 +1,289 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_067",
+  "svgPath": "slide_067.svg",
+  "spokenText": "Ein weiterer wichtiger Fall wird deutlich, wenn wir uns folgendes Beispiel anschauen:\n\nAngenommen, wir haben eine Liste von Ausfallzeiten und führen damit direkt eine Weibull-Analyse durch.Für alle Ausfälle werden die zugehörigen Ausfallwahrscheinlichkeiten ermittelt und die Daten werden gemeinsam in einer Weibull-Grafik dargestellt.\n\nDabei erkennen wir schnell:Eine einzige Weibull-Gerade passt nur schlecht zu den vorhandenen Daten.Der Fit ist schlecht und auch die daraus abgeleiteten Prognosen sind ungenau.\n\nWas bedeutet das?Wenn sich die Daten besser durch mehrere Geraden beschreiben lassen, ist das ein deutliches Anzeichen dafür, dass mehrere unterschiedliche Ausfallmechanismen vorliegen.\n\nIn solchen Fällen ist es nicht sinnvoll, alle Daten gemeinsam auszuwerten.Stattdessen sollten die Daten nach Ausfallmechanismen getrennt und jeweils separat analysiert werden.\n\nSo erhält man für jeden Mechanismus eine eigene Weibull-Verteilung, die eine deutlich präzisere Beschreibung und bessere Prognose ermöglicht.\n\nAlso Merke dir:Lassen sich die Daten besser durch mehrere Geraden beschreiben, ist dies ein Anzeichen für unterschiedliche Ausfallmechanismen, die immer getrennt ausgewertet werden müssen.\n\nZum Abschluss schauen wir uns dazu noch ein konkretes Beispiel an.",
+  "animationDecision": "animated",
+  "animationRationale": "Die fachlichen Aussagen werden entlang der Sprechertextlogik in wenigen semantischen Gruppen aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Überlagerte Diagrammzustände werden in derselben Achsengeometrie gezeigt, damit der Vergleich visuell stabil bleibt."
+    ]
+  },
+  "initialStateRationale": "Nur der statische Orientierungsrahmen ist sichtbar; fachliche Details werden nicht vorweggenommen.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Statische Labels und der Folienmaster geben vor dem ersten Reveal Orientierung.",
+      "dependsOn": [],
+      "groupingRationale": "Der Orientierungsrahmen bleibt während der Sprechertextsequenz stabil."
+    },
+    {
+      "groupId": "multiple_modes_photo",
+      "label": "Beispiel",
+      "role": "content",
+      "members": [
+        "multiple_modes_photo"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe erscheint erst mit ihrer fachlichen Einführung im Sprechertext.",
+      "dependsOn": [],
+      "groupingRationale": "Grafik und zugehörige Beschriftung bilden eine gemeinsame Lerneinheit."
+    },
+    {
+      "groupId": "multiple_modes_joint_plot",
+      "label": "Gemeinsame Weibull-Auswertung",
+      "role": "content",
+      "members": [
+        "multiple_modes_joint_plot"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe erscheint erst mit ihrer fachlichen Einführung im Sprechertext.",
+      "dependsOn": [],
+      "groupingRationale": "Grafik und zugehörige Beschriftung bilden eine gemeinsame Lerneinheit."
+    },
+    {
+      "groupId": "multiple_modes_diagnosis",
+      "label": "Schlechter gemeinsamer Fit",
+      "role": "content",
+      "members": [
+        "multiple_modes_diagnosis"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe erscheint erst mit ihrer fachlichen Einführung im Sprechertext.",
+      "dependsOn": [],
+      "groupingRationale": "Grafik und zugehörige Beschriftung bilden eine gemeinsame Lerneinheit."
+    },
+    {
+      "groupId": "multiple_modes_split_plot",
+      "label": "Mehrere Geraden",
+      "role": "content",
+      "members": [
+        "multiple_modes_split_plot"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe erscheint erst mit ihrer fachlichen Einführung im Sprechertext.",
+      "dependsOn": [],
+      "groupingRationale": "Grafik und zugehörige Beschriftung bilden eine gemeinsame Lerneinheit."
+    },
+    {
+      "groupId": "multiple_modes_action",
+      "label": "Separate Analyse",
+      "role": "content",
+      "members": [
+        "multiple_modes_action"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_05",
+      "initialVisibilityEvidence": "Die Gruppe erscheint erst mit ihrer fachlichen Einführung im Sprechertext.",
+      "dependsOn": [],
+      "groupingRationale": "Grafik und zugehörige Beschriftung bilden eine gemeinsame Lerneinheit."
+    },
+    {
+      "groupId": "multiple_modes_result",
+      "label": "Eigener Fit je Mechanismus",
+      "role": "content",
+      "members": [
+        "multiple_modes_result"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_06",
+      "initialVisibilityEvidence": "Die Gruppe erscheint erst mit ihrer fachlichen Einführung im Sprechertext.",
+      "dependsOn": [],
+      "groupingRationale": "Grafik und zugehörige Beschriftung bilden eine gemeinsame Lerneinheit."
+    },
+    {
+      "groupId": "multiple_modes_rule",
+      "label": "Merksatz",
+      "role": "content",
+      "members": [
+        "multiple_modes_rule"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_07",
+      "initialVisibilityEvidence": "Die Gruppe erscheint erst mit ihrer fachlichen Einführung im Sprechertext.",
+      "dependsOn": [],
+      "groupingRationale": "Grafik und zugehörige Beschriftung bilden eine gemeinsame Lerneinheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Beispiel",
+      "sourceText": "Ein weiterer wichtiger Fall wird deutlich, wenn wir uns folgendes Beispiel anschauen:",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "multiple_modes_photo"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Gemeinsame Weibull-Auswertung",
+      "sourceText": "Für alle Ausfälle werden die zugehörigen Ausfallwahrscheinlichkeiten ermittelt und die Daten werden gemeinsam in einer Weibull-Grafik dargestellt.",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "multiple_modes_joint_plot"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Schlechter gemeinsamer Fit",
+      "sourceText": "Der Fit ist schlecht und auch die daraus abgeleiteten Prognosen sind ungenau.",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "multiple_modes_diagnosis"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Mehrere Geraden",
+      "sourceText": "Wenn sich die Daten besser durch mehrere Geraden beschreiben lassen, ist das ein deutliches Anzeichen dafür, dass mehrere unterschiedliche Ausfallmechanismen vorliegen.",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "multiple_modes_split_plot"
+      ]
+    },
+    {
+      "beatId": "beat_05",
+      "claim": "Separate Analyse",
+      "sourceText": "Stattdessen sollten die Daten nach Ausfallmechanismen getrennt und jeweils separat analysiert werden.",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "multiple_modes_action"
+      ]
+    },
+    {
+      "beatId": "beat_06",
+      "claim": "Eigener Fit je Mechanismus",
+      "sourceText": "So erhält man für jeden Mechanismus eine eigene Weibull-Verteilung, die eine deutlich präzisere Beschreibung und bessere Prognose ermöglicht.",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "multiple_modes_result"
+      ]
+    },
+    {
+      "beatId": "beat_07",
+      "claim": "Merksatz",
+      "sourceText": "Also Merke dir:Lassen sich die Daten besser durch mehrere Geraden beschreiben, ist dies ein Anzeichen für unterschiedliche Ausfallmechanismen, die immer getrennt ausgewertet werden müssen.",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "multiple_modes_rule"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_multiple_modes_photo",
+      "beatId": "beat_01",
+      "targetId": "multiple_modes_photo",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_multiple_modes_joint_plot",
+      "beatId": "beat_02",
+      "targetId": "multiple_modes_joint_plot",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_multiple_modes_diagnosis",
+      "beatId": "beat_03",
+      "targetId": "multiple_modes_diagnosis",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_04_multiple_modes_split_plot",
+      "beatId": "beat_04",
+      "targetId": "multiple_modes_split_plot",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_05_multiple_modes_action",
+      "beatId": "beat_05",
+      "targetId": "multiple_modes_action",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_06_multiple_modes_result",
+      "beatId": "beat_06",
+      "targetId": "multiple_modes_result",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_07_multiple_modes_rule",
+      "beatId": "beat_07",
+      "targetId": "multiple_modes_rule",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Einstieg ohne vorweggenommene Fachinformation."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_07",
+      "visibleGroups": [
+        "canvas_context",
+        "multiple_modes_photo",
+        "multiple_modes_joint_plot",
+        "multiple_modes_diagnosis",
+        "multiple_modes_split_plot",
+        "multiple_modes_action",
+        "multiple_modes_result",
+        "multiple_modes_rule"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger Endzustand mit nachvollziehbarer Blickführung."
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "schema_version": "basisRebuildContentCrosscheck/v2",
+  "module_id": "RE3",
+  "output_slide_number": 34,
+  "checked_at": "2026-09-17T07:51:48.343Z",
+  "status": "review_required",
+  "manual_review_required": true,
+  "reference_mapping": {
+    "work_unit": "slide_034",
+    "output_slide_number": 34,
+    "source_slides": [
+      34
+    ],
+    "primary_source_slide": 34,
+    "output_slide_numbers": [],
+    "mapping_type": "direct_rebuild",
+    "rationale": "",
+    "mapping_source": "reference_map",
+    "reference_map_path": "analysis/rebuild-plans/RE3_source-reference-map.json",
+    "sequence_plan": "",
+    "read_error": ""
+  },
+  "references": [
+    {
+      "source_slide_number": 34,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie34.SVG",
+      "source_svg_sha256": "830a42787f04da9bfa25bf24e8a0fc04f77de795e7bd429512ed903a9cb5b27b",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie34.SVG",
+      "analysis_path": ""
+    }
+  ],
+  "proposal": {
+    "path": "rebuild-proposals/svg/RE3/slide_034/slide_034.svg",
+    "svg_sha256": "08feb076ece7ab8c37d1298c3d55ff0317468dba8c19c71f8cc1e18c3426c32a",
+    "animation_manifest": "/files/rebuild-proposals/svg/RE3/slide_034/scene.animation.v1.json"
+  },
+  "summary": {
+    "source_count": 1,
+    "checked_content_items": 15,
+    "checked_target_text_items": 19,
+    "errors": 0,
+    "warnings": 3,
+    "infos": 0,
+    "animation_steps": 11
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 034: \"Arten der Zensierung\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Arten der Zensierung"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 034: \"sind ausgefallen\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-11",
+      "expected": "sind ausgefallen"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 034: \"Zeit (Lebensdauermerkmal)\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-14",
+      "expected": "Zeit (Lebensdauermerkmal)"
+    }
+  ],
+  "content_checks": [
+    {
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Arten der Zensierung",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.667,
+      "evidence": "tokens:der,zensierung"
+    },
+    {
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Vollständige Daten (keine Zensierung)",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Objekt Nr.",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-4",
+      "expected": "1",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-5",
+      "expected": "2",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-6",
+      "expected": "3",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-7",
+      "expected": "4",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-8",
+      "expected": "5",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-9",
+      "expected": "6",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-10",
+      "expected": "Alle Objekte",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "tokens:alle,objekte"
+    },
+    {
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-11",
+      "expected": "sind ausgefallen",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-12",
+      "expected": "Versuchsende nach",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "tokens:versuchsende,nach"
+    },
+    {
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-13",
+      "expected": "letztem Ausfall",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-14",
+      "expected": "Zeit (Lebensdauermerkmal)",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 34,
+      "source_item_id": "source-svg-text-15",
+      "expected": "Ausfall",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    }
+  ],
+  "target_text_checks": [
+    {
+      "target_text": "Sechs Objekte im Versuch",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_010; source slides 34; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Beobachtungszeit t",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_010; source slides 34; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "1",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_010; source slides 34; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "2",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_010; source slides 34; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "3",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_010; source slides 34; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "4",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_010; source slides 34; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "5",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_010; source slides 34; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "6",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_010; source slides 34; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Objekt Nr.",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_010; source slides 34; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Versuchsende",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_010; source slides 34; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Ausfall",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_010; source slides 34; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Für jedes Objekt bekannt",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_010; source slides 34; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Der genaue Ausfallzeitpunkt.",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_010; source slides 34; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Vollständige Daten",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_010; source slides 34; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Keine Zensierung",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_010; source slides 34; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Auch: unzensierte Daten.",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_010; source slides 34; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Ende nach letztem Ausfall",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_010; source slides 34; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Alle sechs Ausfallzeiten liegen vor.",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_010; source slides 34; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Praxis: häufig vorzeitiger Abbruch",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_010; source slides 34; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    }
+  ],
+  "manual_review_focus": [
+    "Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.",
+    "Sprechertext-Reihenfolge gegen die semantisch geplanten Animationsschritte pruefen."
+  ],
+  "reference_mapping_sha256": "2b947eb1af6e0c73cdc3236c6afad969b25a8b3f2b1942481f9e258eb1e8655b",
+  "reference_map_path": "analysis/rebuild-plans/RE3_source-reference-map.json",
+  "sequence_plan": ""
+}

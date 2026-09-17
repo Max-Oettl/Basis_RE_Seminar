@@ -15,7 +15,8 @@ from reltest_plot_style import (
 from svg_animation_targets import prepare_svg_animation_targets
 
 
-PROBABILITY_TICKS = [0.01, 0.02, 0.05, 0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90, 0.95, 0.98, 0.99]
+CHARACTERISTIC_PROBABILITY = 1.0 - math.exp(-1.0)
+PROBABILITY_TICKS = [0.01, 0.02, 0.05, 0.10, 0.20, 0.30, 0.50, CHARACTERISTIC_PROBABILITY, 0.80, 0.90, 0.99]
 
 
 def weibull_y(probability: float) -> float:
@@ -60,6 +61,8 @@ def build_plot(
     probabilities: list[float] | None = None,
     xlabel: str = "Lebensdauer t",
     ylabel: str = "Ausfallwahrscheinlichkeit F(t) [%]",
+    transparent: bool = False,
+    rank_tick_labels: bool = False,
 ) -> None:
     import matplotlib.pyplot as plt
 
@@ -82,7 +85,9 @@ def build_plot(
     line_y = [intercept + slope * math.log10(time) for time in line_times]
 
     apply_reltest_style()
-    fig, ax = plt.subplots()
+    # A wide probability paper fits the e-learning scene without forcing the
+    # axis labels and data into the tiny thumbnail proportions of the source.
+    fig, ax = plt.subplots(figsize=(14.0, 5.4))
 
     ax.set_xscale("log")
     fit_line = ax.plot(line_times, line_y, color=RELTEST_COLORS["data"], linewidth=2.5, label="Weibull-Fit")[0]
@@ -101,17 +106,23 @@ def build_plot(
     scatter.set_gid("plot_data_points")
 
     y_ticks = [weibull_y(value) for value in PROBABILITY_TICKS]
-    y_labels = [f"{int(value * 100)}" for value in PROBABILITY_TICKS]
+    y_labels = [
+        "63,2" if math.isclose(value, CHARACTERISTIC_PROBABILITY) else f"{value * 100:.0f}"
+        for value in PROBABILITY_TICKS
+    ]
     ax.set_yticks(y_ticks)
     ax.set_yticklabels(y_labels)
     ax.set_ylim(weibull_y(0.01), weibull_y(0.99))
     ax.set_xlim(x_min, x_max)
 
     style_axes(ax, xlabel, ylabel)
-    legend = ax.legend(loc="lower right")
-    legend.set_gid("plot_legend")
+    if rank_tick_labels:
+        ax.set_xticks(sorted_times)
+        ax.set_xticklabels([rf"$t_{{{index}}}$" for index in range(1, len(sorted_times) + 1)])
+        ax.tick_params(axis="x", which="major", colors=RELTEST_COLORS["data"], labelsize=18)
+        ax.tick_params(axis="x", which="minor", bottom=False, labelbottom=False)
     fig.tight_layout()
-    save_figure(fig, output)
+    save_figure(fig, output, transparent=transparent)
     plt.close(fig)
     prepare_svg_animation_targets(
         output,
@@ -131,6 +142,8 @@ def main() -> None:
     )
     parser.add_argument("--xlabel", default="Lebensdauer t")
     parser.add_argument("--ylabel", default="Ausfallwahrscheinlichkeit F(t) [%]")
+    parser.add_argument("--transparent", action="store_true", help="Export the plot on a transparent background for SVG scene embedding.")
+    parser.add_argument("--rank-tick-labels", action="store_true", help="Label the x-axis positions as t1, t2, ... in failure-rank order.")
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
 
@@ -139,6 +152,8 @@ def main() -> None:
         probabilities=parse_float_list(args.probabilities, []) if args.probabilities else None,
         xlabel=args.xlabel,
         ylabel=args.ylabel,
+        transparent=args.transparent,
+        rank_tick_labels=args.rank_tick_labels,
         output=args.output,
     )
 

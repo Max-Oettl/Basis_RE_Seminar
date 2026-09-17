@@ -1,10 +1,3 @@
-# Kritischer Challenge — slide_063
+# Prüffokus slide_063
 
-- Quellen: RE4::63, RE4::64
-- Struktur: Kapitel/Lektion bewusst nicht zugeordnet
-- Design-Challenge: Serie, Parallel- und Mischstruktur passen vollständig in die Referenzkarten; Formeln und Mini-RBDs bleiben lesbar.
-- Animations-Challenge: Statisch: Formelreferenz und Zahlenbeispiel sind nicht eigenständig eingesprochen.
-- Sichtprüfung: finaler statischer Zustand plus 1920×1080-Endzustand geprüft
-- Korrektur/Entscheidung: Mischstruktur skaliert, damit Diagramm und Formel vollständig innerhalb der Karte bleiben.
-- Technisches Ergebnis: 0 Fehler; 21 erwartete Asset-Warnungen für nicht-16:9-Formel-/Plotfragmente und Live-Text-Formeln; 0 gerenderte Layoutprobleme
-- Urteil: FREIGEGEBEN
+Vollständige Quellenübertragung, beidseitiger Inhaltsabgleich und Lesbarkeit bei960×540 prüfen. Keine Masterelemente, übergroßen Zustandsziffern oder wiederholten Legendenbalken. Nachweise: analysis/render-checks/RE4/feedback-54-66-2026-09-17.

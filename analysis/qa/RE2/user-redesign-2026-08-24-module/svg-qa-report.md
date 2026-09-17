@@ -1,0 +1,654 @@
+# SVG QA Report - RE2
+
+Generated: 2026-08-24T15:53:58.475Z
+
+## Summary
+
+- Files checked: 161
+- Animation manifests checked: 160
+- Layout files checked: 0
+- Layout states checked: 0
+- Design files checked: 161
+- Design errors: 227
+- Design warnings: 0
+- Handoff scenes checked: 0
+- Handoff manifests checked: 0
+- Handoff errors: 0
+- Handoff warnings: 0
+- Errors: 227
+- Warnings: 1
+
+## Issues
+
+- WARNING (rebuild-proposals/svg/RE2/slide_003/plots/bathtub_curve.svg): ViewBox is not close to 16:9.: 1760x680
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_001/slide_001.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_001/slide_001.svg): Colors outside brand/design tokens found. Detail: #687185 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_004/slide_004.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_009/slide_009.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_011/slide_011.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_016/slide_016.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_016/slide_016.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #0C84B4, #FFFFFF, #CDD0D6, #E6F6EE, #FFF5CC
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_016/slide_016.svg): Colors outside brand/design tokens found. Detail: #00A754, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_018/slide_018.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_018/slide_018.svg): Many visible colors found for the declared density. Detail: 10 colors: #00A754, #031334, #EC6244, #E9B400, #0C84B4, #FCE7E2, #FFFFFF, #CDD0D6, #FFF5CC, #E6F6EE
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_018/slide_018.svg): Colors outside brand/design tokens found. Detail: #00A754, #FCE7E2, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_019/slide_019.svg): Many visible colors found for the declared density. Detail: 11 colors: #00A754, #031334, #EC6244, #E9B400, #0C84B4, #FFFFFF, #F7F9FC, #CDD0D6, #E6F6EE, #FFF5CC, #FCE7E2
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_019/slide_019.svg): Colors outside brand/design tokens found. Detail: #00A754, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_021/slide_021.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FCE7E2, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_022/slide_022.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_025/slide_025.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_025/slide_025.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_026/slide_026.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_027/slide_027.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_027/slide_027.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_029/slide_029.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_029/slide_029.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FCE7E2, #E6F6EE, #FFF5CC, #FFFFFF
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_029/slide_029.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_030/slide_030.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_031/slide_031.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_031/slide_031.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_033/slide_033.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_033/slide_033.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_034/slide_034.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_035/slide_035.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_035/slide_035.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_037/slide_037.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_038/slide_038.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_039/slide_039.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_040/slide_040.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_041/slide_041.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_042/slide_042.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_043/slide_043.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_044/slide_044.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_044/slide_044.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #CDD0D6, #FFF5CC, #E6F6EE
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_044/slide_044.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_045/slide_045.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_045/slide_045.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #CDD0D6, #FFF5CC, #E6F6EE
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_045/slide_045.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_046/slide_046.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_046/slide_046.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #CDD0D6, #FFF5CC, #E6F6EE
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_046/slide_046.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_047/slide_047.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_047/slide_047.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #CDD0D6, #FFF5CC, #E6F6EE
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_047/slide_047.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_048/slide_048.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_048/slide_048.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_050/slide_050.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_051/slide_051.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_053/slide_053.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_054/slide_054.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_055/slide_055.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_056/slide_056.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_059/slide_059.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_060/slide_060.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_061/slide_061.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_062/slide_062.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_063/slide_063.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_064/slide_064.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_064/slide_064.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_065/slide_065.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_065/slide_065.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_066/slide_066.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_067/slide_067.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_068/slide_068.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_069/slide_069.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_069/slide_069.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_070/slide_070.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_070/slide_070.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_071/slide_071.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_072/slide_072.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_073/slide_073.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_073/slide_073.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_074/slide_074.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_074/slide_074.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_075/slide_075.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_075/slide_075.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_076/slide_076.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_076/slide_076.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_077/slide_077.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_077/slide_077.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_078/slide_078.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_079/slide_079.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_080/slide_080.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_080/slide_080.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_081/slide_081.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_081/slide_081.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_082/slide_082.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_082/slide_082.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_083/slide_083.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_084/slide_084.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_084/slide_084.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_085/slide_085.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_085/slide_085.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_086/slide_086.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_087/slide_087.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_087/slide_087.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #CDD0D6, #E6F6EE, #FFF5CC
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_087/slide_087.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_088/slide_088.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_088/slide_088.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_089/slide_089.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_089/slide_089.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_090/slide_090.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_092/slide_092.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_092/slide_092.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_093/slide_093.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_094/slide_094.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_094/slide_094.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_095/slide_095.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_096/slide_096.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_098/slide_098.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_098/slide_098.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #E6F6EE, #FCE7E2, #CDD0D6
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_098/slide_098.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_099/slide_099.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_099/slide_099.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #E6F6EE, #FCE7E2, #CDD0D6
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_099/slide_099.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_100/slide_100.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_100/slide_100.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_101/slide_101.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_102/slide_102.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_103/slide_103.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_104/slide_104.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_105/slide_105.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_105/slide_105.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #E6F6EE, #FCE7E2, #FFF5CC
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_105/slide_105.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_106/slide_106.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_106/slide_106.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_107/slide_107.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_107/slide_107.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_108/slide_108.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_108/slide_108.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_109/slide_109.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_109/slide_109.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_111/slide_111.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_112/slide_112.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_113/slide_113.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_114/slide_114.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_114/slide_114.svg): Many visible colors found for the declared density. Detail: 10 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #F7F9FC, #CDD0D6, #FCE7E2, #687185
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_114/slide_114.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FCE7E2, #687185 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_115/slide_115.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_115/slide_115.svg): Many visible colors found for the declared density. Detail: 10 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #F7F9FC, #CDD0D6, #FFF5CC, #687185
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_115/slide_115.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #687185 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_116/slide_116.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_116/slide_116.svg): Many visible colors found for the declared density. Detail: 10 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #F7F9FC, #CDD0D6, #E6F6EE, #687185
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_116/slide_116.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #687185 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_117/slide_117.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_117/slide_117.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #FCE7E2, #FFF5CC, #E6F6EE
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_117/slide_117.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_118/slide_118.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_118/slide_118.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_119/slide_119.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_120/slide_120.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_120/slide_120.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #FCE7E2, #FFF5CC, #E6F6EE
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_120/slide_120.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_121/slide_121.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_121/slide_121.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #687185 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_122/slide_122.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_122/slide_122.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_123/slide_123.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_123/slide_123.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_124/slide_124.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_124/slide_124.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_125/slide_125.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_125/slide_125.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_126/slide_126.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_126/slide_126.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_127/slide_127.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_128/slide_128.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_129/slide_129.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_129/slide_129.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #FCE7E2, #FFF5CC, #E6F6EE
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_129/slide_129.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_130/slide_130.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_130/slide_130.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_131/slide_131.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_133/slide_133.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_134/slide_134.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_135/slide_135.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_136/slide_136.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_137/slide_137.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_137/slide_137.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_138/slide_138.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_138/slide_138.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_139/slide_139.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_140/slide_140.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_140/slide_140.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_141/slide_141.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_141/slide_141.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_142/slide_142.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_142/slide_142.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_144/slide_144.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_144/slide_144.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_145/slide_145.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_146/slide_146.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_148/slide_148.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_148/slide_148.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_149/slide_149.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_150/slide_150.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_151/slide_151.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_151/slide_151.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_152/slide_152.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_152/slide_152.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_153/slide_153.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_154/slide_154.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_155/slide_155.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_155/slide_155.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_156/slide_156.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_157/slide_157.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_157/slide_157.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_158/slide_158.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_158/slide_158.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_159/slide_159.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_159/slide_159.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_160/slide_160.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_161/slide_161.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_161/slide_161.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_162/slide_162.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_162/slide_162.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_163/slide_163.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_164/slide_164.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_164/slide_164.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_165/slide_165.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_165/slide_165.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+
+## Design QA
+
+- Mode: strict-design
+- Files checked: 161
+- Brand tokens: brand/company-brand-tokens.json
+- Brand profile: reltest-education
+
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_001/slide_001.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_001/slide_001.svg): Colors outside brand/design tokens found. Detail: #687185 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_004/slide_004.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_009/slide_009.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_011/slide_011.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_016/slide_016.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_016/slide_016.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #0C84B4, #FFFFFF, #CDD0D6, #E6F6EE, #FFF5CC
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_016/slide_016.svg): Colors outside brand/design tokens found. Detail: #00A754, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_018/slide_018.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_018/slide_018.svg): Many visible colors found for the declared density. Detail: 10 colors: #00A754, #031334, #EC6244, #E9B400, #0C84B4, #FCE7E2, #FFFFFF, #CDD0D6, #FFF5CC, #E6F6EE
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_018/slide_018.svg): Colors outside brand/design tokens found. Detail: #00A754, #FCE7E2, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_019/slide_019.svg): Many visible colors found for the declared density. Detail: 11 colors: #00A754, #031334, #EC6244, #E9B400, #0C84B4, #FFFFFF, #F7F9FC, #CDD0D6, #E6F6EE, #FFF5CC, #FCE7E2
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_019/slide_019.svg): Colors outside brand/design tokens found. Detail: #00A754, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_021/slide_021.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FCE7E2, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_022/slide_022.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_025/slide_025.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_025/slide_025.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_026/slide_026.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_027/slide_027.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_027/slide_027.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_029/slide_029.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_029/slide_029.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FCE7E2, #E6F6EE, #FFF5CC, #FFFFFF
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_029/slide_029.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_030/slide_030.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_031/slide_031.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_031/slide_031.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_033/slide_033.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_033/slide_033.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_034/slide_034.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_035/slide_035.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_035/slide_035.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_037/slide_037.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_038/slide_038.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_039/slide_039.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_040/slide_040.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_041/slide_041.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_042/slide_042.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_043/slide_043.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_044/slide_044.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_044/slide_044.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #CDD0D6, #FFF5CC, #E6F6EE
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_044/slide_044.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_045/slide_045.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_045/slide_045.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #CDD0D6, #FFF5CC, #E6F6EE
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_045/slide_045.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_046/slide_046.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_046/slide_046.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #CDD0D6, #FFF5CC, #E6F6EE
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_046/slide_046.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_047/slide_047.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_047/slide_047.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #CDD0D6, #FFF5CC, #E6F6EE
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_047/slide_047.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_048/slide_048.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_048/slide_048.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_050/slide_050.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_051/slide_051.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_053/slide_053.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_054/slide_054.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_055/slide_055.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_056/slide_056.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_059/slide_059.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_060/slide_060.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_061/slide_061.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_062/slide_062.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_063/slide_063.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_064/slide_064.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_064/slide_064.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_065/slide_065.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_065/slide_065.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_066/slide_066.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_067/slide_067.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_068/slide_068.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_069/slide_069.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_069/slide_069.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_070/slide_070.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_070/slide_070.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_071/slide_071.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_072/slide_072.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_073/slide_073.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_073/slide_073.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_074/slide_074.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_074/slide_074.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_075/slide_075.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_075/slide_075.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_076/slide_076.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_076/slide_076.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_077/slide_077.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_077/slide_077.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_078/slide_078.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_079/slide_079.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_080/slide_080.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_080/slide_080.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_081/slide_081.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_081/slide_081.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_082/slide_082.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_082/slide_082.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_083/slide_083.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_084/slide_084.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_084/slide_084.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_085/slide_085.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_085/slide_085.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_086/slide_086.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_087/slide_087.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_087/slide_087.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #CDD0D6, #E6F6EE, #FFF5CC
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_087/slide_087.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_088/slide_088.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_088/slide_088.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_089/slide_089.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_089/slide_089.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_090/slide_090.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_092/slide_092.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_092/slide_092.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_093/slide_093.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_094/slide_094.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_094/slide_094.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_095/slide_095.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_096/slide_096.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_098/slide_098.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_098/slide_098.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #E6F6EE, #FCE7E2, #CDD0D6
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_098/slide_098.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_099/slide_099.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_099/slide_099.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #E6F6EE, #FCE7E2, #CDD0D6
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_099/slide_099.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_100/slide_100.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_100/slide_100.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_101/slide_101.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_102/slide_102.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_103/slide_103.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_104/slide_104.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_105/slide_105.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_105/slide_105.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #E6F6EE, #FCE7E2, #FFF5CC
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_105/slide_105.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_106/slide_106.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_106/slide_106.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_107/slide_107.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_107/slide_107.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_108/slide_108.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_108/slide_108.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_109/slide_109.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_109/slide_109.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_111/slide_111.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_112/slide_112.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_113/slide_113.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_114/slide_114.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_114/slide_114.svg): Many visible colors found for the declared density. Detail: 10 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #F7F9FC, #CDD0D6, #FCE7E2, #687185
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_114/slide_114.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FCE7E2, #687185 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_115/slide_115.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_115/slide_115.svg): Many visible colors found for the declared density. Detail: 10 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #F7F9FC, #CDD0D6, #FFF5CC, #687185
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_115/slide_115.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC, #687185 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_116/slide_116.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_116/slide_116.svg): Many visible colors found for the declared density. Detail: 10 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #F7F9FC, #CDD0D6, #E6F6EE, #687185
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_116/slide_116.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #687185 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_117/slide_117.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_117/slide_117.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #FCE7E2, #FFF5CC, #E6F6EE
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_117/slide_117.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_118/slide_118.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_118/slide_118.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_119/slide_119.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_120/slide_120.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_120/slide_120.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #FCE7E2, #FFF5CC, #E6F6EE
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_120/slide_120.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_121/slide_121.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_121/slide_121.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #687185 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_122/slide_122.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_122/slide_122.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_123/slide_123.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_123/slide_123.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_124/slide_124.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_124/slide_124.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_125/slide_125.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_125/slide_125.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_126/slide_126.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_126/slide_126.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_127/slide_127.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_128/slide_128.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_129/slide_129.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [color-count] (rebuild-proposals/svg/RE2/slide_129/slide_129.svg): Many visible colors found for the declared density. Detail: 9 colors: #00A754, #031334, #EC6244, #E9B400, #9AA1AE, #FFFFFF, #FCE7E2, #FFF5CC, #E6F6EE
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_129/slide_129.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FCE7E2, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_130/slide_130.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_130/slide_130.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_131/slide_131.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_133/slide_133.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_134/slide_134.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_135/slide_135.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_136/slide_136.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_137/slide_137.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_137/slide_137.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_138/slide_138.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_138/slide_138.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_139/slide_139.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_140/slide_140.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_140/slide_140.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_141/slide_141.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_141/slide_141.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_142/slide_142.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_142/slide_142.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_144/slide_144.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_144/slide_144.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_145/slide_145.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_146/slide_146.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_148/slide_148.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_148/slide_148.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_149/slide_149.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6 Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_150/slide_150.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_151/slide_151.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_151/slide_151.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_152/slide_152.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_152/slide_152.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_153/slide_153.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_154/slide_154.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #CDD0D6, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_155/slide_155.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_155/slide_155.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_156/slide_156.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_157/slide_157.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_157/slide_157.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_158/slide_158.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_158/slide_158.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_159/slide_159.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_159/slide_159.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_160/slide_160.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_161/slide_161.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_161/slide_161.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_162/slide_162.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_162/slide_162.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_163/slide_163.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_164/slide_164.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_164/slide_164.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+- ERROR [design-density] (rebuild-proposals/svg/RE2/slide_165/slide_165.svg): density must be low, normal, or dense. Detail: balanced
+- ERROR [brand-token-color] (rebuild-proposals/svg/RE2/slide_165/slide_165.svg): Colors outside brand/design tokens found. Detail: #00A754, #9AA1AE, #FFF5CC Recommendation: Use brand/company-brand-tokens.json or add data-qa-brand-exception with data-qa-reason for temporary imported colors.
+
+## Viewer Mapping
+
+- slide 1: svg=true, animation=true, steps=4, file=slide_001.svg
+- slide 2: svg=true, animation=true, steps=4, file=slide_001.svg alias for 1
+- slide 3: svg=true, animation=true, steps=6, file=slide_003.svg
+- slide 4: svg=true, animation=true, steps=4, file=slide_004.svg
+- slide 6: svg=true, animation=true, steps=5, file=slide_006.svg
+- slide 5: svg=true, animation=true, steps=4, file=slide_004.svg alias for 4
+- slide 8: svg=true, animation=true, steps=6, file=slide_008.svg
+- slide 9: svg=true, animation=true, steps=6, file=slide_009.svg
+- slide 7: svg=true, animation=true, steps=5, file=slide_006.svg alias for 6
+- slide 10: svg=true, animation=true, steps=7, file=slide_010.svg
+- slide 11: svg=true, animation=true, steps=5, file=slide_011.svg
+- slide 13: svg=true, animation=true, steps=6, file=slide_013.svg
+- slide 14: svg=true, animation=true, steps=2, file=slide_014.svg
+- slide 17: svg=true, animation=true, steps=6, file=slide_017.svg
+- slide 12: svg=true, animation=true, steps=5, file=slide_011.svg alias for 11
+- slide 20: svg=true, animation=true, steps=3, file=slide_020.svg
+- slide 23: svg=true, animation=true, steps=4, file=slide_023.svg
+- slide 24: svg=true, animation=true, steps=6, file=slide_024.svg
+- slide 15: svg=true, animation=true, steps=2, file=slide_014.svg alias for 14
+- slide 28: svg=true, animation=true, steps=3, file=slide_028.svg
+- slide 16: svg=true, animation=true, steps=3, file=slide_016.svg
+- slide 32: svg=true, animation=true, steps=3, file=slide_032.svg
+- slide 36: svg=true, animation=true, steps=4, file=slide_036.svg
+- slide 18: svg=true, animation=true, steps=4, file=slide_018.svg
+- slide 49: svg=true, animation=true, steps=3, file=slide_049.svg
+- slide 19: svg=true, animation=true, steps=6, file=slide_019.svg
+- slide 52: svg=true, animation=true, steps=4, file=slide_052.svg
+- slide 57: svg=true, animation=true, steps=3, file=slide_057.svg
+- slide 21: svg=true, animation=true, steps=3, file=slide_021.svg
+- slide 58: svg=true, animation=true, steps=3, file=slide_058.svg
+- slide 22: svg=true, animation=true, steps=3, file=slide_022.svg
+- slide 63: svg=true, animation=true, steps=3, file=slide_063.svg
+- slide 66: svg=true, animation=true, steps=4, file=slide_066.svg
+- slide 67: svg=true, animation=true, steps=5, file=slide_067.svg
+- slide 25: svg=true, animation=true, steps=1, file=slide_025.svg
+- slide 68: svg=true, animation=true, steps=2, file=slide_068.svg
+- slide 26: svg=true, animation=true, steps=6, file=slide_026.svg
+- slide 71: svg=true, animation=true, steps=2, file=slide_071.svg
+- slide 27: svg=true, animation=true, steps=1, file=slide_027.svg
+- slide 72: svg=true, animation=true, steps=2, file=slide_072.svg
+- slide 78: svg=true, animation=false, steps=0, file=slide_078.svg
+- slide 29: svg=true, animation=true, steps=4, file=slide_029.svg
+- slide 79: svg=true, animation=true, steps=3, file=slide_079.svg
+- slide 30: svg=true, animation=true, steps=3, file=slide_030.svg
+- slide 83: svg=true, animation=true, steps=2, file=slide_083.svg
+- slide 31: svg=true, animation=true, steps=1, file=slide_031.svg
+- slide 86: svg=true, animation=true, steps=2, file=slide_086.svg
+- slide 90: svg=true, animation=false, steps=0, file=slide_090.svg
+- slide 33: svg=true, animation=true, steps=3, file=slide_033.svg
+- slide 91: svg=true, animation=true, steps=2, file=slide_091.svg
+- slide 34: svg=true, animation=true, steps=3, file=slide_034.svg
+- slide 96: svg=true, animation=false, steps=0, file=slide_096.svg
+- slide 35: svg=true, animation=true, steps=1, file=slide_035.svg
+- slide 97: svg=true, animation=true, steps=1, file=slide_097.svg
+- slide 104: svg=true, animation=true, steps=1, file=slide_104.svg
+- slide 37: svg=true, animation=true, steps=3, file=slide_037.svg
+- slide 110: svg=true, animation=true, steps=2, file=slide_110.svg
+- slide 38: svg=true, animation=true, steps=4, file=slide_038.svg
+- slide 111: svg=true, animation=false, steps=0, file=slide_111.svg
+- slide 39: svg=true, animation=true, steps=4, file=slide_039.svg
+- slide 112: svg=true, animation=true, steps=2, file=slide_112.svg
+- slide 40: svg=true, animation=true, steps=4, file=slide_040.svg
+- slide 119: svg=true, animation=true, steps=2, file=slide_119.svg
+- slide 41: svg=true, animation=true, steps=4, file=slide_041.svg
+- slide 127: svg=true, animation=false, steps=0, file=slide_127.svg
+- slide 42: svg=true, animation=true, steps=4, file=slide_042.svg
+- slide 128: svg=true, animation=true, steps=3, file=slide_128.svg
+- slide 43: svg=true, animation=true, steps=4, file=slide_043.svg
+- slide 131: svg=true, animation=false, steps=0, file=slide_131.svg
+- slide 44: svg=true, animation=true, steps=3, file=slide_044.svg
+- slide 132: svg=true, animation=true, steps=1, file=slide_132.svg
+- slide 45: svg=true, animation=true, steps=3, file=slide_045.svg
+- slide 139: svg=true, animation=true, steps=3, file=slide_139.svg
+- slide 46: svg=true, animation=true, steps=3, file=slide_046.svg
+- slide 143: svg=true, animation=true, steps=1, file=slide_143.svg
+- slide 47: svg=true, animation=true, steps=3, file=slide_047.svg
+- slide 147: svg=true, animation=true, steps=1, file=slide_147.svg
+- slide 48: svg=true, animation=true, steps=1, file=slide_048.svg
+- slide 153: svg=true, animation=true, steps=2, file=slide_153.svg
+- slide 156: svg=true, animation=true, steps=3, file=slide_156.svg
+- slide 50: svg=true, animation=true, steps=3, file=slide_050.svg
+- slide 160: svg=true, animation=true, steps=2, file=slide_160.svg
+- slide 51: svg=true, animation=true, steps=3, file=slide_051.svg
+- slide 163: svg=true, animation=true, steps=2, file=slide_163.svg
+- slide 53: svg=true, animation=true, steps=3, file=slide_053.svg
+- slide 54: svg=true, animation=true, steps=3, file=slide_054.svg
+- slide 55: svg=true, animation=true, steps=3, file=slide_055.svg
+- slide 56: svg=true, animation=true, steps=4, file=slide_056.svg
+- slide 59: svg=true, animation=true, steps=3, file=slide_059.svg
+- slide 60: svg=true, animation=true, steps=4, file=slide_060.svg
+- slide 61: svg=true, animation=true, steps=3, file=slide_061.svg
+- slide 62: svg=true, animation=true, steps=3, file=slide_062.svg
+- slide 64: svg=true, animation=false, steps=0, file=slide_064.svg
+- slide 65: svg=true, animation=true, steps=3, file=slide_065.svg
+- slide 69: svg=true, animation=true, steps=2, file=slide_069.svg
+- slide 70: svg=true, animation=true, steps=2, file=slide_070.svg
+- slide 73: svg=true, animation=false, steps=0, file=slide_073.svg
+- slide 74: svg=true, animation=true, steps=3, file=slide_074.svg
+- slide 75: svg=true, animation=true, steps=2, file=slide_075.svg
+- slide 76: svg=true, animation=true, steps=1, file=slide_076.svg
+- slide 77: svg=true, animation=false, steps=0, file=slide_077.svg
+- slide 80: svg=true, animation=true, steps=2, file=slide_080.svg
+- slide 81: svg=true, animation=true, steps=3, file=slide_081.svg
+- slide 82: svg=true, animation=true, steps=1, file=slide_082.svg
+- slide 84: svg=true, animation=true, steps=2, file=slide_084.svg
+- slide 85: svg=true, animation=true, steps=2, file=slide_085.svg
+- slide 87: svg=true, animation=true, steps=1, file=slide_087.svg
+- slide 88: svg=true, animation=true, steps=2, file=slide_088.svg
+- slide 89: svg=true, animation=true, steps=2, file=slide_089.svg
+- slide 92: svg=true, animation=true, steps=1, file=slide_092.svg
+- slide 93: svg=true, animation=true, steps=2, file=slide_093.svg
+- slide 94: svg=true, animation=true, steps=1, file=slide_094.svg
+- slide 95: svg=true, animation=true, steps=2, file=slide_095.svg
+- slide 98: svg=true, animation=true, steps=4, file=slide_098.svg
+- slide 99: svg=true, animation=true, steps=4, file=slide_099.svg
+- slide 100: svg=true, animation=true, steps=1, file=slide_100.svg
+- slide 101: svg=true, animation=true, steps=2, file=slide_101.svg
+- slide 102: svg=true, animation=true, steps=2, file=slide_102.svg
+- slide 103: svg=true, animation=true, steps=1, file=slide_103.svg
+- slide 105: svg=true, animation=true, steps=2, file=slide_105.svg
+- slide 106: svg=true, animation=true, steps=1, file=slide_106.svg
+- slide 107: svg=true, animation=true, steps=1, file=slide_107.svg
+- slide 108: svg=true, animation=true, steps=1, file=slide_108.svg
+- slide 109: svg=true, animation=true, steps=2, file=slide_109.svg
+- slide 113: svg=true, animation=true, steps=2, file=slide_113.svg
+- slide 114: svg=true, animation=true, steps=1, file=slide_114.svg
+- slide 115: svg=true, animation=true, steps=1, file=slide_115.svg
+- slide 116: svg=true, animation=true, steps=1, file=slide_116.svg
+- slide 117: svg=true, animation=true, steps=2, file=slide_117.svg
+- slide 118: svg=true, animation=true, steps=2, file=slide_118.svg
+- slide 120: svg=true, animation=true, steps=2, file=slide_120.svg
+- slide 121: svg=true, animation=true, steps=3, file=slide_121.svg
+- slide 122: svg=true, animation=true, steps=2, file=slide_122.svg
+- slide 123: svg=true, animation=true, steps=2, file=slide_123.svg
+- slide 124: svg=true, animation=true, steps=2, file=slide_124.svg
+- slide 125: svg=true, animation=true, steps=2, file=slide_125.svg
+- slide 126: svg=true, animation=true, steps=1, file=slide_126.svg
+- slide 129: svg=true, animation=true, steps=3, file=slide_129.svg
+- slide 130: svg=true, animation=true, steps=1, file=slide_130.svg
+- slide 133: svg=true, animation=true, steps=1, file=slide_133.svg
+- slide 134: svg=true, animation=true, steps=1, file=slide_134.svg
+- slide 135: svg=true, animation=true, steps=1, file=slide_135.svg
+- slide 136: svg=true, animation=true, steps=1, file=slide_136.svg
+- slide 137: svg=true, animation=true, steps=2, file=slide_137.svg
+- slide 138: svg=true, animation=false, steps=0, file=slide_138.svg
+- slide 140: svg=true, animation=false, steps=0, file=slide_140.svg
+- slide 141: svg=true, animation=false, steps=0, file=slide_141.svg
+- slide 142: svg=true, animation=true, steps=3, file=slide_142.svg
+- slide 144: svg=true, animation=false, steps=0, file=slide_144.svg
+- slide 145: svg=true, animation=true, steps=1, file=slide_145.svg
+- slide 146: svg=true, animation=true, steps=1, file=slide_146.svg
+- slide 148: svg=true, animation=false, steps=0, file=slide_148.svg
+- slide 149: svg=true, animation=true, steps=1, file=slide_149.svg
+- slide 150: svg=true, animation=true, steps=1, file=slide_150.svg
+- slide 151: svg=true, animation=false, steps=0, file=slide_151.svg
+- slide 152: svg=true, animation=false, steps=0, file=slide_152.svg
+- slide 154: svg=true, animation=true, steps=1, file=slide_154.svg
+- slide 155: svg=true, animation=true, steps=2, file=slide_155.svg
+- slide 157: svg=true, animation=false, steps=0, file=slide_157.svg
+- slide 158: svg=true, animation=true, steps=2, file=slide_158.svg
+- slide 159: svg=true, animation=true, steps=3, file=slide_159.svg
+- slide 161: svg=true, animation=false, steps=0, file=slide_161.svg
+- slide 162: svg=true, animation=true, steps=2, file=slide_162.svg
+- slide 164: svg=true, animation=false, steps=0, file=slide_164.svg
+- slide 165: svg=true, animation=true, steps=2, file=slide_165.svg
+

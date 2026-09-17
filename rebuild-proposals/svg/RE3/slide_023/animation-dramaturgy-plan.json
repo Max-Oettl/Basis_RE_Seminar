@@ -1,0 +1,317 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_023",
+  "svgPath": "slide_023.svg",
+  "spokenText": "Um das Konzept des Vertrauensbereiches besser zu verstehen, betrachten wir die Ausfallwahrscheinlichkeit in Abhängigkeit von der Zeit in einer dreidimensionalen Visualisierung.\n\nAufgrund der Unsicherheit in unserer Stichprobe haben wir für einen bestimmten Zeitpunkt keine exakt festgelegte Ausfallwahrscheinlichkeit. Stattdessen liegt sie als Verteilung vor.\n\nDiese Verteilung der Ausfallwahrscheinlichkeit können wir als Dichtefunktion auf der Z-Achse darstellen. In der Abbildung ist dies exemplarisch für verschiedene Zeitpunkte gezeigt.\n\nDer Median jeder dieser Verteilungen liegt genau in der Mitte. Verbindet man die Mediane über die verschiedenen Zeitpunkte hinweg, entsteht die Weibullgerade.\n\nDiese Weibullgerade ist unsere beste Schätzung für das Ausfallverhalten. Es ist jedoch wichtig zu verstehen, dass sie lediglich auf den Stichprobendaten basiert.\n\nIn fünfzig Prozent der Fälle liegt die tatsächliche Weibullgerade der Grundgesamtheit oberhalb unserer berechneten Linie, und in fünfzig Prozent der Fälle liegt sie darunter.\n\nDas bedeutet, dass unsere Schätzung genau in der Mitte der möglichen Ausfallverteilungen liegt, jedoch individuelle Schwankungen auftreten können.\n\nNachdem wir nun verstanden haben, was ein Vertrauensbereich ist, werfen wir einen Blick auf die verschiedenen Arten.\n\nWenn wir die Verteilung der Ausfallwahrscheinlichkeit für einen bestimmten Zeitpunkt von vorne betrachten, sehen wir die Dichtefunktion der Ausfallwahrscheinlichkeit.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/after/slide_023.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Um das Konzept des Vertrauensbereiches besser",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Um das Konzept des Vertrauensbereiches",
+      "occurrence": 1,
+      "claim": "Dichtefunktionen über der Lebensdauer",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "surface_visual"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "für einen bestimmten Zeitpunkt keine exakt festgelegte",
+      "occurrence": 1,
+      "claim": "Verteilung je Zeitpunkt",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "surface_uncertainty"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "als Dichtefunktion auf der Z-Achse darstellen",
+      "occurrence": 1,
+      "claim": "Dichte der möglichen Werte",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "surface_density"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "Verbindet man die Mediane",
+      "occurrence": 1,
+      "claim": "Mediane verbinden",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "surface_medians"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "lediglich auf den Stichprobendaten basiert",
+      "occurrence": 1,
+      "claim": "Verteilung je Zeitpunkt",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "surface_uncertainty"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "In fünfzig Prozent der Fälle",
+      "occurrence": 1,
+      "claim": "Median je Zeitpunkt",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "surface_halves"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "unsere Schätzung genau in der Mitte",
+      "occurrence": 1,
+      "claim": "Median je Zeitpunkt",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "surface_halves"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "für einen bestimmten Zeitpunkt von vorne betrachten",
+      "occurrence": 1,
+      "claim": "Übergang zur Frontansicht",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "surface_front"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "surface_visual",
+      "label": "Dichtefunktionen über der Lebensdauer",
+      "role": "content",
+      "members": [
+        "surface_visual"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "surface_uncertainty",
+      "label": "Verteilung je Zeitpunkt",
+      "role": "content",
+      "members": [
+        "surface_uncertainty"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "surface_density",
+      "label": "Dichte der möglichen Werte",
+      "role": "content",
+      "members": [
+        "surface_density"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "surface_medians",
+      "label": "Mediane verbinden",
+      "role": "content",
+      "members": [
+        "surface_medians"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "surface_halves",
+      "label": "Median je Zeitpunkt",
+      "role": "content",
+      "members": [
+        "surface_halves"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "surface_front",
+      "label": "Übergang zur Frontansicht",
+      "role": "content",
+      "members": [
+        "surface_front"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_surface_visual",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "surface_visual",
+      "sourceText": "Um das Konzept des Vertrauensbereiches",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_surface_uncertainty",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "surface_uncertainty",
+      "sourceText": "für einen bestimmten Zeitpunkt keine exakt festgelegte",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_surface_density",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "surface_density",
+      "sourceText": "als Dichtefunktion auf der Z-Achse darstellen",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_surface_medians",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "surface_medians",
+      "sourceText": "Verbindet man die Mediane",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_surface_uncertainty",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "surface_uncertainty",
+      "sourceText": "lediglich auf den Stichprobendaten basiert",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_5",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_06_surface_halves",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "surface_halves",
+      "sourceText": "In fünfzig Prozent der Fälle",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_surface_halves",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "surface_halves",
+      "sourceText": "unsere Schätzung genau in der Mitte",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_7",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_08_surface_front",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "surface_front",
+      "sourceText": "für einen bestimmten Zeitpunkt von vorne betrachten",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_023/00_initial.png"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "surface_visual",
+        "surface_uncertainty",
+        "surface_density",
+        "surface_medians",
+        "surface_halves",
+        "surface_front"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_023/10_after_08_fur_einen_bestimmten_zeitpunkt_von_vorn.png"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "reviewedAt": "2026-09-17",
+    "endState": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/after/slide_023.png",
+    "preview": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/preview/slide_023.png",
+    "stateDirectory": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_023",
+    "reviewedStateCount": 11,
+    "includesHighlightStates": true,
+    "independentReviewer": "/root/visual_review",
+    "findings": [],
+    "scope": "Final composition and discrete animation states rendered in Chromium; legibility additionally reviewed at 50 percent. No continuous audio playback test."
+  }
+}

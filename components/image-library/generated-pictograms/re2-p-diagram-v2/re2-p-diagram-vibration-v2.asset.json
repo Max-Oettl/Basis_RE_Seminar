@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "reltestEducationPictogramAsset/v1",
+  "assetId": "re2_p_diagram_vibration_v2",
+  "file": "components/image-library/generated-pictograms/re2-p-diagram-v2/re2-p-diagram-vibration-v2.png",
+  "assetType": "generated_png",
+  "status": "accepted",
+  "styleProfile": "reltest-education-minimal-v1",
+  "source": {"evidenceType": "source_svg", "reference": "RE2 Quelle 009: Vibration als eigenständige Störgröße.", "license": "project_internal"},
+  "semantics": {
+    "concept": "mechanische Vibration eines Bauteils",
+    "learningFunction": "concept-anchor",
+    "mustShowFeatures": ["mechanisches Bauteil", "gegenläufige Vibrationspfeile", "Schwinglinien"],
+    "mustNotImply": ["Funksignal", "Schall"],
+    "confusableWith": ["Signal", "Bewegung"],
+    "firstUseLabel": "Vibration",
+    "reuseKey": "p-diagram-vibration"
+  },
+  "visualStyle": {"flat2d": true, "perspective": "front", "dominantSilhouette": true, "semanticLayers": 2, "brandColors": ["#142452", "#EC6244"], "gradients": false, "shadows": false, "threeDimensional": false, "isometric": false, "photorealistic": false, "glow": false, "texture": false, "embeddedText": false, "logo": false, "watermark": false},
+  "raster": {"widthPx": 1024, "heightPx": 1024, "transparentBackground": true, "safeMarginRatio": 0.10},
+  "learningUse": {"targetPlacementPx": 108, "requiresTextLabelOnFirstUse": true, "colorIndependentMeaning": true, "smallScaleTests": {"at32px": "not_required", "at48px": "passed", "scene960x540": "passed"}},
+  "accessibility": {"redundantWithVisibleLabel": true, "accessibleName": "", "contrastPairs": [{"foreground": "#142452", "background": "#FFFFFF", "minimumRatio": 3}]},
+  "review": {"semantic": "passed", "style": "passed", "eLearning": "passed", "accessibilityTechnical": "passed", "notes": ["Beidseitige Pfeile und Lagerform tragen die Vibrationssemantik formredundant."]}
+}

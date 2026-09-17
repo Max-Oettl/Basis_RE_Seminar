@@ -1,0 +1,257 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch2_abc_application",
+  "svgPath": "slide_019.svg",
+  "spokenText": "Auf diese Weise erhält man eine Übersicht über alle relevanten Bauteile, samt Ausfallarten und Ausfallmechanismen sowie der Kritikalitätsbewertung.\n\nAls ergänzende Methode zur ABC-Klassifizierung eignet sich die Fehlerbaumanalyse.\n\nDabei werden die Zusammenhänge zwischen möglichen Fehlfunktionen und ihren Ursachen systematisch analysiert und in Form eines Baumdiagramms visualisiert.\n\nDiese Methode lernen wir nun im Folgenden kennen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "abc19_header",
+      "label": "Bewertungsschema",
+      "role": "content",
+      "members": [
+        "abc19_header"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "abc19_connectors",
+      "label": "Klemmen und Trennschalter",
+      "role": "content",
+      "members": [
+        "abc19_connectors"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "abc19_capacitor",
+      "label": "Kondensator",
+      "role": "content",
+      "members": [
+        "abc19_capacitor"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "abc19_semiconductor",
+      "label": "Leistungshalbleiter",
+      "role": "content",
+      "members": [
+        "abc19_semiconductor"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "abc19_sensor",
+      "label": "Spannungs- und Stromsensor",
+      "role": "content",
+      "members": [
+        "abc19_sensor"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_05",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "abc19_transition",
+      "label": "Übergang zur FTA",
+      "role": "content",
+      "members": [
+        "abc19_transition"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_06",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Bewertungsschema",
+      "sourceText": "Auf diese Weise erhält man eine",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "abc19_header"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Klemmen und Trennschalter",
+      "sourceText": "Auf diese Weise erhält man eine",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "abc19_connectors"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Kondensator",
+      "sourceText": "Auf diese Weise erhält man eine",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "abc19_capacitor"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Leistungshalbleiter",
+      "sourceText": "Auf diese Weise erhält man eine",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "abc19_semiconductor"
+      ]
+    },
+    {
+      "beatId": "beat_05",
+      "claim": "Spannungs- und Stromsensor",
+      "sourceText": "Auf diese Weise erhält man eine",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "abc19_sensor"
+      ]
+    },
+    {
+      "beatId": "beat_06",
+      "claim": "Übergang zur FTA",
+      "sourceText": "Als ergänzende Methode zur ABC-Klassifizierung eignet",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "abc19_transition"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_abc19_header",
+      "beatId": "beat_01",
+      "targetId": "abc19_header",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_abc19_connectors",
+      "beatId": "beat_02",
+      "targetId": "abc19_connectors",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_abc19_capacitor",
+      "beatId": "beat_03",
+      "targetId": "abc19_capacitor",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_04_abc19_semiconductor",
+      "beatId": "beat_04",
+      "targetId": "abc19_semiconductor",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_05_abc19_sensor",
+      "beatId": "beat_05",
+      "targetId": "abc19_sensor",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_06_abc19_transition",
+      "beatId": "beat_06",
+      "targetId": "abc19_transition",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_06",
+      "visibleGroups": [
+        "canvas_context",
+        "abc19_header",
+        "abc19_connectors",
+        "abc19_capacitor",
+        "abc19_semiconductor",
+        "abc19_sensor",
+        "abc19_transition"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

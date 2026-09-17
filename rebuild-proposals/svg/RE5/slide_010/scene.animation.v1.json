@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_010.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "requirement_parameters",
+      "label": "Anforderungsparameter",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "plot_target_point",
+      "label": "Nachweispunkt",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "plot_weibull_fit",
+      "label": "Weibullgerade",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "plot_confidence_limits",
+      "label": "Vertrauensbereich",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "acceptance_result",
+      "label": "Nachweis erfüllt",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_requirement_parameters",
+      "targetId": "requirement_parameters",
+      "action": "show",
+      "sourceText": "Eine typische Anforderung besteht dabei aus drei Parametern",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_plot_target_point",
+      "targetId": "plot_target_point",
+      "action": "show",
+      "sourceText": "Diesen Punkt können wir als Anforderung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_plot_weibull_fit",
+      "targetId": "plot_weibull_fit",
+      "action": "draw",
+      "sourceText": "eine Weibull-Analyse durchführen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "durFrames": 42,
+      "drawStyle": "stroke",
+      "direction": "forward"
+    },
+    {
+      "stepId": "step_04_plot_confidence_limits",
+      "targetId": "plot_confidence_limits",
+      "action": "show",
+      "sourceText": "den gewünschten Vertrauensbereich",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_05_acceptance_result",
+      "targetId": "acceptance_result",
+      "action": "show",
+      "sourceText": "Ist das der Fall, dann haben wir die Anforderung erfüllt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

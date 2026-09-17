@@ -1,0 +1,359 @@
+{
+  "schema_version": "basisRebuildContentCrosscheck/v2",
+  "module_id": "RE5",
+  "output_slide_number": 6,
+  "checked_at": "2026-08-21T10:34:52.070Z",
+  "status": "review_required",
+  "manual_review_required": true,
+  "reference_mapping": {
+    "work_unit": "slide_006",
+    "output_slide_number": 6,
+    "source_slides": [
+      6
+    ],
+    "primary_source_slide": 6,
+    "output_slide_numbers": [],
+    "mapping_type": "direct",
+    "rationale": "Eigenständiger Quellzustand wird als eigene Zielszene transformiert.",
+    "mapping_source": "reference_map",
+    "reference_map_path": "analysis/rebuild-plans/RE5_source-reference-map.json",
+    "sequence_plan": "",
+    "read_error": ""
+  },
+  "references": [
+    {
+      "source_slide_number": 6,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE5/SVG/Folie6.SVG",
+      "source_svg_sha256": "4e4e02630b848fb63b60d62834a6424634c491d247f26d9740ae901a5575997d",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE5/SVG/Folie6.SVG",
+      "analysis_path": ""
+    }
+  ],
+  "proposal": {
+    "path": "rebuild-proposals/svg/RE5/slide_006/slide_006.svg",
+    "svg_sha256": "67ae1722181d848ab291abd43bfb616d3b8a04095d4e6468420e57ef33037956",
+    "animation_manifest": "/files/rebuild-proposals/svg/RE5/slide_006/scene.animation.v1.json"
+  },
+  "summary": {
+    "source_count": 1,
+    "checked_content_items": 20,
+    "checked_target_text_items": 10,
+    "errors": 0,
+    "warnings": 8,
+    "infos": 0,
+    "animation_steps": 4
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 006: \"Unterscheidung der Teststrategie\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Unterscheidung der Teststrategie"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 006: \"Beschleunigungsart\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Beschleunigungsart"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 006: \"Testrandbedingungen\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-18",
+      "expected": "Testrandbedingungen"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 006: \"Testtyp\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-20",
+      "expected": "Testtyp"
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"TESTART WÄHLEN\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "TESTART WÄHLEN",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"jeweils unbeschleunigt oder beschleunigt\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "jeweils unbeschleunigt oder beschleunigt",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Kein Prüfling darf ausfallen. Ende nach festgelegter Laufzeit.\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Kein Prüfling darf ausfallen. Ende nach festgelegter Laufzeit.",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Prüflingszahl · Lastniveaus · Prüfdauer · Ablauf\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Prüflingszahl · Lastniveaus · Prüfdauer · Ablauf",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    }
+  ],
+  "content_checks": [
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Unterscheidung der Teststrategie",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Testart",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Beschleunigungsart",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-4",
+      "expected": "End",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-5",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-6",
+      "expected": "of",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-7",
+      "expected": "-",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "empty_expected"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-8",
+      "expected": "Life",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-9",
+      "expected": "Success Run",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-10",
+      "expected": "b",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-11",
+      "expected": "u",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-12",
+      "expected": "zensiert",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-13",
+      "expected": "vollständig",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-14",
+      "expected": "b",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-15",
+      "expected": "u",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-16",
+      "expected": "b",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-17",
+      "expected": "u",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-18",
+      "expected": "Testrandbedingungen",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-19",
+      "expected": "Testkonfiguration",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 6,
+      "source_item_id": "source-svg-text-20",
+      "expected": "Testtyp",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    }
+  ],
+  "target_text_checks": [
+    {
+      "target_text": "TESTART WÄHLEN",
+      "result": "unsupported_target_text",
+      "score": 0.5,
+      "evidence": "tokens:testart"
+    },
+    {
+      "target_text": "END-OF-LIFE",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "VOLLSTÄNDIG",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "ZENSIERT",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "jeweils unbeschleunigt oder beschleunigt",
+      "result": "unsupported_target_text",
+      "score": 0.75,
+      "evidence": "tokens:unbeschleunigt,oder,beschleunigt"
+    },
+    {
+      "target_text": "SUCCESS RUN",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Kein Prüfling darf ausfallen. Ende nach festgelegter Laufzeit.",
+      "result": "unsupported_target_text",
+      "score": 0.75,
+      "evidence": "tokens:kein,prüfling,darf,ausfallen,nach,laufzeit"
+    },
+    {
+      "target_text": "U · ODER · BESCHLEUNIGT",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "tokens:oder,beschleunigt"
+    },
+    {
+      "target_text": "TESTKONFIGURATION",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Prüflingszahl · Lastniveaus · Prüfdauer · Ablauf",
+      "result": "unsupported_target_text",
+      "score": 0.75,
+      "evidence": "tokens:lastniveaus,prüfdauer,ablauf"
+    }
+  ],
+  "manual_review_focus": [
+    "Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.",
+    "Sprechertext-Reihenfolge gegen die semantisch geplanten Animationsschritte pruefen."
+  ],
+  "reference_mapping_sha256": "421902c3620b4cb1c06963e1fb48624c82630cbc18d3d18a61cfacd29a529fda",
+  "reference_map_path": "analysis/rebuild-plans/RE5_source-reference-map.json",
+  "sequence_plan": ""
+}

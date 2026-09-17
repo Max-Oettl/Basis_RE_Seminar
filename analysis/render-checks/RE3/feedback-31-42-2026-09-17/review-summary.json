@@ -1,0 +1,187 @@
+{
+  "status": "passed",
+  "animationPlans": [
+    {
+      "slide": 31,
+      "steps": 27,
+      "states": 34,
+      "errors": [],
+      "warnings": [
+        {
+          "location": "$.semanticGroups",
+          "message": "Animated scene starts empty; document why the build-up from nothing is intentional."
+        }
+      ]
+    },
+    {
+      "slide": 34,
+      "steps": 11,
+      "states": 13,
+      "errors": [],
+      "warnings": [
+        {
+          "location": "$.semanticGroups",
+          "message": "Animated scene starts empty; document why the build-up from nothing is intentional."
+        }
+      ]
+    },
+    {
+      "slide": 35,
+      "steps": 15,
+      "states": 19,
+      "errors": [],
+      "warnings": [
+        {
+          "location": "$.semanticGroups",
+          "message": "Animated scene starts empty; document why the build-up from nothing is intentional."
+        }
+      ]
+    },
+    {
+      "slide": 36,
+      "steps": 18,
+      "states": 18,
+      "errors": [],
+      "warnings": [
+        {
+          "location": "$.semanticGroups",
+          "message": "Animated scene starts empty; document why the build-up from nothing is intentional."
+        }
+      ]
+    },
+    {
+      "slide": 38,
+      "steps": 9,
+      "states": 8,
+      "errors": [],
+      "warnings": [
+        {
+          "location": "$.semanticGroups",
+          "message": "Animated scene starts empty; document why the build-up from nothing is intentional."
+        }
+      ]
+    },
+    {
+      "slide": 39,
+      "steps": 21,
+      "states": 14,
+      "errors": [],
+      "warnings": [
+        {
+          "location": "$.semanticGroups",
+          "message": "Animated scene starts empty; document why the build-up from nothing is intentional."
+        }
+      ]
+    },
+    {
+      "slide": 42,
+      "steps": 14,
+      "states": 18,
+      "errors": [],
+      "warnings": [
+        {
+          "location": "$.semanticGroups",
+          "message": "Animated scene starts empty; document why the build-up from nothing is intentional."
+        }
+      ]
+    }
+  ],
+  "contentCrosschecks": [
+    {
+      "slide": 31,
+      "source_count": 3,
+      "checked_content_items": 39,
+      "checked_target_text_items": 33,
+      "errors": 0,
+      "warnings": 23,
+      "infos": 0,
+      "animation_steps": 27,
+      "automatedStatus": "review_required",
+      "manualReview": "passed",
+      "manualReviewEvidence": "analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "slide": 34,
+      "source_count": 1,
+      "checked_content_items": 15,
+      "checked_target_text_items": 19,
+      "errors": 0,
+      "warnings": 3,
+      "infos": 0,
+      "animation_steps": 11,
+      "automatedStatus": "review_required",
+      "manualReview": "passed",
+      "manualReviewEvidence": "analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "slide": 35,
+      "source_count": 1,
+      "checked_content_items": 16,
+      "checked_target_text_items": 20,
+      "errors": 0,
+      "warnings": 6,
+      "infos": 0,
+      "animation_steps": 15,
+      "automatedStatus": "review_required",
+      "manualReview": "passed",
+      "manualReviewEvidence": "analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "slide": 36,
+      "source_count": 2,
+      "checked_content_items": 56,
+      "checked_target_text_items": 24,
+      "errors": 0,
+      "warnings": 28,
+      "infos": 0,
+      "animation_steps": 18,
+      "automatedStatus": "review_required",
+      "manualReview": "passed",
+      "manualReviewEvidence": "analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "slide": 38,
+      "source_count": 1,
+      "checked_content_items": 19,
+      "checked_target_text_items": 20,
+      "errors": 0,
+      "warnings": 11,
+      "infos": 0,
+      "animation_steps": 9,
+      "automatedStatus": "review_required",
+      "manualReview": "passed",
+      "manualReviewEvidence": "analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "slide": 39,
+      "source_count": 3,
+      "checked_content_items": 38,
+      "checked_target_text_items": 37,
+      "errors": 0,
+      "warnings": 17,
+      "infos": 0,
+      "animation_steps": 21,
+      "automatedStatus": "review_required",
+      "manualReview": "passed",
+      "manualReviewEvidence": "analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "slide": 42,
+      "source_count": 1,
+      "checked_content_items": 15,
+      "checked_target_text_items": 31,
+      "errors": 0,
+      "warnings": 7,
+      "infos": 0,
+      "animation_steps": 14,
+      "automatedStatus": "review_required",
+      "manualReview": "passed",
+      "manualReviewEvidence": "analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    }
+  ],
+  "tests": {
+    "command": "node --test tools/re3-transparent-content.test.js tools/re3-censoring-sequence.test.js",
+    "passed": 8,
+    "failed": 0
+  }
+}

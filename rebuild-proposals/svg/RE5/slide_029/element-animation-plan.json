@@ -1,0 +1,31 @@
+{
+  "sceneId": "re5_src_029",
+  "decision": "animated",
+  "staticGate": "passed_before_animation",
+  "targets": [
+    {
+      "id": "no_failure_rule",
+      "label": "Null-Ausfall-Regel",
+      "cue": "Bis zum Zeitpunkt t darf kein einziger Ausfall auftreten",
+      "action": "show"
+    },
+    {
+      "id": "success_run_plot",
+      "label": "Success-Run-Kurven",
+      "cue": "Wir sehen die Kurven für Aussagesicherheiten",
+      "action": "draw"
+    },
+    {
+      "id": "target_pa95",
+      "label": "Beispiel P_A 95 Prozent",
+      "cue": "Bei einer Aussagesicherheit von fünfundneunzig Prozent",
+      "action": "show"
+    },
+    {
+      "id": "target_pa90",
+      "label": "Beispiel P_A 90 Prozent",
+      "cue": "Bei einer Aussagesicherheit von neunzig Prozent",
+      "action": "show"
+    }
+  ]
+}

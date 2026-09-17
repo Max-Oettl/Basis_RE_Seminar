@@ -5,37 +5,77 @@
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
+      "targetId": "meaning_plot",
+      "label": "Weibullnetz",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
       "targetId": "meaning_fit",
-      "label": "Schätzung",
+      "label": "meaning fit",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "meaning_bounds",
-      "label": "Vertrauensgrenzen",
+      "targetId": "meaning_sample",
+      "label": "Schätzung aus einer Stichprobe",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "meaning_warning",
-      "label": "Aussagesicherheit",
+      "targetId": "meaning_limits",
+      "label": "meaning limits",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "meaning_rule",
-      "label": "Unsicherheitsbereich",
+      "targetId": "meaning_bounds_note",
+      "label": "Zwei Vertrauensgrenzen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "meaning_level",
+      "label": "90 Prozent Aussagewahrscheinlichkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "meaning_alternatives",
+      "label": "meaning alternatives",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "meaning_resampling",
+      "label": "Eine weitere Stichprobe",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "meaning_vocabulary",
+      "label": "Bezeichnung Aussagesicherheit",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -44,44 +84,86 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_meaning_fit",
+      "stepId": "step_01_meaning_plot",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "meaning_plot",
+      "sourceText": "Nehmen wir an",
+      "action": "show"
+    },
+    {
+      "stepId": "step_02_meaning_fit",
+      "occurrence": 1,
+      "confidence": "high",
       "targetId": "meaning_fit",
-      "action": "show",
-      "sourceText": "Nehmen wir an, wir haben aus unseren Ausfalldaten eine Weibullgerade ermittelt.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "sourceText": "Nehmen wir an",
+      "action": "show"
     },
     {
-      "stepId": "step_02_meaning_bounds",
-      "targetId": "meaning_bounds",
-      "action": "show",
-      "sourceText": "Dieser wird durch zwei Vertrauensgrenzen definiert.",
+      "stepId": "step_03_meaning_sample",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "meaning_sample",
+      "sourceText": "Nehmen wir an",
+      "action": "show"
     },
     {
-      "stepId": "step_03_meaning_warning",
-      "targetId": "meaning_warning",
-      "action": "show",
-      "sourceText": "Würden wir eine andere Stichprobe aus derselben Grundgesamtheit analysieren, würde die berechnete Weibullgerade in neunzig Prozent der Fälle innerhalb der Vertrauensgrenzen liegen.",
+      "stepId": "step_04_meaning_sample",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "meaning_sample",
+      "sourceText": "nur auf einer Stichprobe der Grundgesamtheit",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     },
     {
-      "stepId": "step_04_meaning_rule",
-      "targetId": "meaning_rule",
-      "action": "show",
-      "sourceText": "Man spricht in diesem Zusammenhang auch manchmal von der Aussagewahrscheinlichkeit oder auch Aussagesicherheit.",
+      "stepId": "step_05_meaning_limits",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "meaning_limits",
+      "sourceText": "durch zwei Vertrauensgrenzen definiert",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_meaning_bounds_note",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "meaning_bounds_note",
+      "sourceText": "durch zwei Vertrauensgrenzen definiert",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_meaning_level",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "meaning_level",
+      "sourceText": "Ein neunzigprozentiger Vertrauensbereich bedeutet",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_meaning_alternatives",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "meaning_alternatives",
+      "sourceText": "eine andere Stichprobe aus derselben Grundgesamtheit",
+      "action": "show"
+    },
+    {
+      "stepId": "step_09_meaning_resampling",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "meaning_resampling",
+      "sourceText": "eine andere Stichprobe aus derselben Grundgesamtheit",
+      "action": "show"
+    },
+    {
+      "stepId": "step_10_meaning_vocabulary",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "meaning_vocabulary",
+      "sourceText": "Man spricht in diesem Zusammenhang",
+      "action": "show"
     }
   ]
 }

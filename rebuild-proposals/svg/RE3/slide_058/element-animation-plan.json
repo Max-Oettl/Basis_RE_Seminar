@@ -11,7 +11,7 @@
   },
   "targets": [
     {
-      "targetId": "three_intro_plot",
+      "targetId": "three_select_plot",
       "label": "Gekrümmter Verlauf",
       "status": "animated",
       "visibleInEditor": true,
@@ -19,24 +19,16 @@
       "confidence": "high"
     },
     {
-      "targetId": "three_intro_indicator",
-      "label": "Indikation",
+      "targetId": "three_select_question",
+      "label": "Drei-Parameter-Modell prüfen",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "three_intro_t0",
-      "label": "Schwellenwert",
-      "status": "animated",
-      "visibleInEditor": true,
-      "render": true,
-      "confidence": "high"
-    },
-    {
-      "targetId": "three_intro_rule",
-      "label": "Vorsicht",
+      "targetId": "three_select_choice",
+      "label": "Minitab-Auswahl",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -45,8 +37,8 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_three_intro_plot",
-      "targetId": "three_intro_plot",
+      "stepId": "step_01_three_select_plot",
+      "targetId": "three_select_plot",
       "action": "show",
       "sourceText": "Wenn du eine Auswertung in Minitab durchführst und dich für die Weibull-Verteilung entscheidest, kann es vorkommen, dass du im Ergebnisverlauf eine deutlich gekrümmte Kurve erkennst, anstelle des typischen linearen Verlaufs in der Weibull-Darstellung.",
       "occurrence": 1,
@@ -55,8 +47,8 @@
       "enterFrames": 16
     },
     {
-      "stepId": "step_02_three_intro_indicator",
-      "targetId": "three_intro_indicator",
+      "stepId": "step_02_three_select_question",
+      "targetId": "three_select_question",
       "action": "show",
       "sourceText": "Das ist ein Hinweis darauf, dass eine dreiparametrige Weibull-Verteilung besser zu deinen Daten passen könnte.",
       "occurrence": 1,
@@ -65,20 +57,10 @@
       "enterFrames": 16
     },
     {
-      "stepId": "step_03_three_intro_t0",
-      "targetId": "three_intro_t0",
+      "stepId": "step_03_three_select_choice",
+      "targetId": "three_select_choice",
       "action": "show",
-      "sourceText": "Du wirst sehen, dass nun zusätzlich zum Form- und Lageparameter ein dritter Wert erscheint – der sogenannte Schwellenwert.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
-    },
-    {
-      "stepId": "step_04_three_intro_rule",
-      "targetId": "three_intro_rule",
-      "action": "show",
-      "sourceText": "Allerdings solltest du vorsichtig sein, wenn du die Interpretation vornimmst.",
+      "sourceText": "In Minitab kannst du dafür einfach statt der „Weibull-Verteilung“ die Option „Dreiparametrige Weibull-Verteilung“ auswählen.",
       "occurrence": 1,
       "confidence": "high",
       "notes": "Sprechertextgeführte semantische Gruppe.",

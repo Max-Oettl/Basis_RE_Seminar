@@ -1,0 +1,423 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_034",
+  "svgPath": "slide_034.svg",
+  "spokenText": "Ein weiterer wichtiger Punkt ist die Art der Daten.\n\nStellen wir uns dazu vor, wir führen einen Lebensdauerversuch mit sechs identischen Objekten durch. Jedes dieser Objekte wird so lange betrieben, bis es ausfällt.\n\nDas bedeutet: Wir kennen für jedes einzelne Objekt den genauen Ausfallzeitpunkt. In der Abbildung sehen wir dies anhand der roten Kreuze, die jeweils den Ausfall eines Objekts markieren.\n\nDa alle sechs Objekte ausgefallen sind, sprechen wir von vollständigen Daten.\n\nEs liegt also keine Zensierung vor. Deshalb werden diese Daten auch manchmal unzensierte Daten genannt. Es ist leicht vorstellbar, dass wir diese Art von Daten nur dann erhalten, wenn der Lebensdauerversuch erst nach dem letzten Ausfall beendet wird.\n\nSolche vollständigen Lebensdauerdaten sind besonders einfach auszuwerten, da keinerlei Unsicherheiten durch unvollständige Beobachtungen bestehen. In der Praxis kommen sie jedoch nur selten vor. Denn viele Versuche werden aus zeitlichen oder wirtschaftlichen Gründen vorzeitig beendet – noch bevor alle Objekte ausgefallen sind.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/after/slide_034.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Ein weiterer wichtiger Punkt ist die",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Stellen wir uns dazu vor",
+      "occurrence": 1,
+      "claim": "Sechs Objekte",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "complete_context"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "bis es ausfällt",
+      "occurrence": 1,
+      "claim": "complete failures",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "complete_failures"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Das bedeutet: Wir kennen",
+      "occurrence": 1,
+      "claim": "Exakte Ausfallzeit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "complete_known"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "anhand der roten Kreuze",
+      "occurrence": 1,
+      "claim": "Ausfallmarker",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "complete_legend"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "sprechen wir von vollständigen Daten",
+      "occurrence": 1,
+      "claim": "Vollständige Daten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "complete_definition"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "Es liegt also keine Zensierung",
+      "occurrence": 1,
+      "claim": "Keine Zensierung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "complete_uncensored"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "erst nach dem letzten Ausfall",
+      "occurrence": 1,
+      "claim": "complete stop",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "complete_stop"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "erst nach dem letzten Ausfall",
+      "occurrence": 1,
+      "claim": "Versuchsende",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "complete_stop_note"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "besonders einfach auszuwerten",
+      "occurrence": 1,
+      "claim": "Exakte Ausfallzeit",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "complete_known"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "Denn viele Versuche werden",
+      "occurrence": 1,
+      "claim": "Praxis",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "complete_practice"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "noch bevor alle Objekte ausgefallen sind",
+      "occurrence": 1,
+      "claim": "complete stop",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "complete_stop"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "complete_context",
+      "label": "Sechs Objekte",
+      "role": "content",
+      "members": [
+        "complete_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "complete_failures",
+      "label": "complete failures",
+      "role": "content",
+      "members": [
+        "complete_failures"
+      ],
+      "dependsOn": [
+        "complete_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "complete_known",
+      "label": "Exakte Ausfallzeit",
+      "role": "content",
+      "members": [
+        "complete_known"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "complete_legend",
+      "label": "Ausfallmarker",
+      "role": "content",
+      "members": [
+        "complete_legend"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "complete_definition",
+      "label": "Vollständige Daten",
+      "role": "content",
+      "members": [
+        "complete_definition"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "complete_uncensored",
+      "label": "Keine Zensierung",
+      "role": "content",
+      "members": [
+        "complete_uncensored"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "complete_stop",
+      "label": "complete stop",
+      "role": "content",
+      "members": [
+        "complete_stop"
+      ],
+      "dependsOn": [
+        "complete_failures"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "complete_stop_note",
+      "label": "Versuchsende",
+      "role": "content",
+      "members": [
+        "complete_stop_note"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    },
+    {
+      "groupId": "complete_practice",
+      "label": "Praxis",
+      "role": "content",
+      "members": [
+        "complete_practice"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_10"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_complete_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "complete_context",
+      "sourceText": "Stellen wir uns dazu vor",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_complete_failures",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "complete_failures",
+      "sourceText": "bis es ausfällt",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_complete_known",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "complete_known",
+      "sourceText": "Das bedeutet: Wir kennen",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_complete_legend",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "complete_legend",
+      "sourceText": "anhand der roten Kreuze",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_complete_definition",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "complete_definition",
+      "sourceText": "sprechen wir von vollständigen Daten",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_complete_uncensored",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "complete_uncensored",
+      "sourceText": "Es liegt also keine Zensierung",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_complete_stop",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "complete_stop",
+      "sourceText": "erst nach dem letzten Ausfall",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_complete_stop_note",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "complete_stop_note",
+      "sourceText": "erst nach dem letzten Ausfall",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_complete_known",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "complete_known",
+      "sourceText": "besonders einfach auszuwerten",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_9",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_10_complete_practice",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "complete_practice",
+      "sourceText": "Denn viele Versuche werden",
+      "action": "show",
+      "beatId": "beat_10",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_11_complete_stop",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "complete_stop",
+      "sourceText": "noch bevor alle Objekte ausgefallen sind",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_11",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/states/slide_034/00_initial.png"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "complete_context",
+        "complete_failures",
+        "complete_known",
+        "complete_legend",
+        "complete_definition",
+        "complete_uncensored",
+        "complete_stop",
+        "complete_stop_note",
+        "complete_practice"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/states/slide_034/12_after_10_noch_bevor_alle_objekte_ausgefallen_sin.png"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "reviewedAt": "2026-09-17",
+    "independentReviewer": "/root/visual_review",
+    "endState": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/after/slide_034.png",
+    "preview": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/preview/slide_034.png",
+    "stateDirectory": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/states/slide_034",
+    "reviewedStateCount": 13,
+    "includesHighlights": true,
+    "findings": [],
+    "scope": "Discrete Chromium states, phrase triggers, source correspondence and legibility at 50 percent; no continuous audio playback test."
+  }
+}

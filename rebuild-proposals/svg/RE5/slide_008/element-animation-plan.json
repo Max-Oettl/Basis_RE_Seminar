@@ -1,0 +1,25 @@
+{
+  "sceneId": "re5_src_008",
+  "decision": "animated",
+  "staticGate": "passed_before_animation",
+  "targets": [
+    {
+      "id": "sample_context",
+      "label": "Stichprobe und Grundgesamtheit",
+      "cue": "Da diese Daten nur eine Stichprobe darstellen",
+      "action": "show"
+    },
+    {
+      "id": "plot_weibull_fit",
+      "label": "Weibullgerade",
+      "cue": "erhalten wir eine Weibull-Verteilung",
+      "action": "draw"
+    },
+    {
+      "id": "plot_confidence_limits",
+      "label": "Vertrauensgrenzen",
+      "cue": "Der Vertrauensbereich wird durch zwei Vertrauensgrenzen definiert",
+      "action": "show"
+    }
+  ]
+}

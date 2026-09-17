@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_075.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "design_gate",
+      "label": "Dimensionierung prüfen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "wear_gate",
+      "label": "Messbaren Verschleiß prüfen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "acceleration_gate",
+      "label": "Beschleunigung prüfen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "strategy_outcomes",
+      "label": "Vier Strategien",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "universal_guardrail",
+      "label": "Universelle Guardrails",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_design_gate",
+      "targetId": "design_gate",
+      "action": "show",
+      "sourceText": "wie das Produktdesign im Verhältnis zur Anforderung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_wear_gate",
+      "targetId": "wear_gate",
+      "action": "show",
+      "sourceText": "ob ein messbarer Verschleiß vorhanden ist",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_acceleration_gate",
+      "targetId": "acceleration_gate",
+      "action": "show",
+      "sourceText": "ob eine Beschleunigung durch Lasterhöhung möglich ist",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_strategy_outcomes",
+      "targetId": "strategy_outcomes",
+      "action": "show",
+      "sourceText": "wählen wir den End-of-Life Test",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_05_universal_guardrail",
+      "targetId": "universal_guardrail",
+      "action": "show",
+      "sourceText": "Noch ein wichtiger Hinweis gilt unabhängig",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

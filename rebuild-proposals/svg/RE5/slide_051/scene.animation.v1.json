@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_051.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "acceleration_plot",
+      "label": "Feld- und Versuchsverteilung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "acceleration_factor_formula",
+      "label": "Raffungsfaktor",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transfer_guardrail",
+      "label": "Übertragbarkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_acceleration_plot",
+      "targetId": "acceleration_plot",
+      "action": "draw",
+      "sourceText": "Schädigung pro Zeiteinheit im Versuch höher",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "durFrames": 42,
+      "drawStyle": "stroke",
+      "direction": "forward"
+    },
+    {
+      "stepId": "step_02_acceleration_factor_formula",
+      "targetId": "acceleration_factor_formula",
+      "action": "show",
+      "sourceText": "benötigen wir den sogenannten Raffungsfaktor",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_transfer_guardrail",
+      "targetId": "transfer_guardrail",
+      "action": "show",
+      "sourceText": "Übertragbarkeit ist nur gegeben",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

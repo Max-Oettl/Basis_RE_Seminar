@@ -1,0 +1,75 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_066",
+  "scene_id": "re1_src_084",
+  "source_slides": [
+    84
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "nkw_probability_data",
+      "label": "Transformierte Ausfalldaten",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "nkw_probability_line",
+      "label": "Geradenförmiger Weibull-Fit",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "nkw_same_data_note",
+      "label": "Gleiche Daten, andere Skalierung",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_nkw_probability_data",
+      "targetId": "nkw_probability_data",
+      "action": "show",
+      "sourceText": "Nach der Transformation der Achsen in eine einfach bzw. doppel-logarithmierte Skalierung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_nkw_probability_line",
+      "targetId": "nkw_probability_line",
+      "action": "draw",
+      "sourceText": "ergibt sich für dieselbe Verteilung eine geradenförmige Darstellung der Ausfallwahrscheinlichkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_nkw_same_data_note",
+      "targetId": "nkw_same_data_note",
+      "action": "show",
+      "sourceText": "mit transformierten Achsen und damit Verteilungsfunktionen in Form von Geraden arbeiten",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

@@ -1,0 +1,808 @@
+{
+  "schema_version": "basisRebuildContentCrosscheck/v2",
+  "module_id": "RE3",
+  "output_slide_number": 31,
+  "checked_at": "2026-09-17T08:20:40.810Z",
+  "status": "review_required",
+  "manual_review_required": true,
+  "reference_mapping": {
+    "work_unit": "slide_031",
+    "output_slide_number": 31,
+    "source_slides": [
+      31,
+      32,
+      33
+    ],
+    "primary_source_slide": 33,
+    "output_slide_numbers": [],
+    "mapping_type": "merged_sequence",
+    "rationale": "",
+    "mapping_source": "reference_map",
+    "reference_map_path": "analysis/rebuild-plans/RE3_source-reference-map.json",
+    "sequence_plan": "",
+    "read_error": ""
+  },
+  "references": [
+    {
+      "source_slide_number": 31,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie31.SVG",
+      "source_svg_sha256": "e69b61dde5d9d094e820bdf5b69feadd7bba3346de9a61ad7913e18ad00f160f",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie31.SVG",
+      "analysis_path": ""
+    },
+    {
+      "source_slide_number": 32,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie32.SVG",
+      "source_svg_sha256": "390bfa59008218bc5cf5d32efeed34cdd568f71f2580cafe5b9bca92dfea8165",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie32.SVG",
+      "analysis_path": ""
+    },
+    {
+      "source_slide_number": 33,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie33.SVG",
+      "source_svg_sha256": "d0f9efe6109cfe52d3b55f2c659246686c956ce624e2e4d680d17defe53eccd6",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE3/SVG/Folie33.SVG",
+      "analysis_path": ""
+    }
+  ],
+  "proposal": {
+    "path": "rebuild-proposals/svg/RE3/slide_031/slide_031.svg",
+    "svg_sha256": "f2cff0de4b8181d1994cf80028db59ede0e626117e8d1aa0d0e7e5811826ece4",
+    "animation_manifest": "/files/rebuild-proposals/svg/RE3/slide_031/scene.animation.v1.json"
+  },
+  "summary": {
+    "source_count": 3,
+    "checked_content_items": 39,
+    "checked_target_text_items": 33,
+    "errors": 0,
+    "warnings": 23,
+    "infos": 0,
+    "animation_steps": 27
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 031: \"Lebensdauerdaten aus Tests und aus dem Feld\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 31,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Lebensdauerdaten aus Tests und aus dem Feld"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 031: \"Zunahme von Unsicherheiten\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 31,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Zunahme von Unsicherheiten"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 031: \"Zunahme von Repräsentativität\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 31,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Zunahme von Repräsentativität"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 031: \"unbeschleunigte\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 31,
+      "source_item_id": "source-svg-text-8",
+      "expected": "unbeschleunigte"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 032: \"Lebensdauerdaten aus Tests und aus dem Feld\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 32,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Lebensdauerdaten aus Tests und aus dem Feld"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 032: \"Zunahme von Unsicherheiten\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 32,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Zunahme von Unsicherheiten"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 032: \"Zunahme von Repräsentativität\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 32,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Zunahme von Repräsentativität"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 032: \"unbeschleunigte\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 32,
+      "source_item_id": "source-svg-text-8",
+      "expected": "unbeschleunigte"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 033: \"Life\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Life"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 033: \"data\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-2",
+      "expected": "data"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 033: \"from\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-3",
+      "expected": "from"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 033: \"field\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-4",
+      "expected": "field"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 033: \"and test\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-5",
+      "expected": "and test"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 033: \"Test Bench\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-6",
+      "expected": "Test Bench"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 033: \"Test Drive\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-7",
+      "expected": "Test Drive"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 033: \"Field Data\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-8",
+      "expected": "Field Data"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 033: \"Product\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-9",
+      "expected": "Product"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 033: \"Development\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-10",
+      "expected": "Development"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 033: \"Process\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-11",
+      "expected": "Process"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 033: \"More\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-12",
+      "expected": "More"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 033: \"Representative\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-13",
+      "expected": "Representative"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 033: \"More\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-14",
+      "expected": "More"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 033: \"Uncertainty\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-15",
+      "expected": "Uncertainty"
+    }
+  ],
+  "content_checks": [
+    {
+      "source_slide_number": 31,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Lebensdauerdaten aus Tests und aus dem Feld",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.143,
+      "evidence": "tokens:und"
+    },
+    {
+      "source_slide_number": 31,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Produktentwicklungsprozess",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 31,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Zunahme von Unsicherheiten",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 31,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Zunahme von Repräsentativität",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.333,
+      "evidence": "tokens:repräsentativität"
+    },
+    {
+      "source_slide_number": 31,
+      "source_item_id": "source-svg-text-5",
+      "expected": "Stark beschleunigte",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 31,
+      "source_item_id": "source-svg-text-6",
+      "expected": "Lebensdauerversuche",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 31,
+      "source_item_id": "source-svg-text-7",
+      "expected": "Beschleunigte oder",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "tokens:beschleunigte,oder"
+    },
+    {
+      "source_slide_number": 31,
+      "source_item_id": "source-svg-text-8",
+      "expected": "unbeschleunigte",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 31,
+      "source_item_id": "source-svg-text-9",
+      "expected": "Lebensdauerversuche",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 31,
+      "source_item_id": "source-svg-text-10",
+      "expected": "Versuchsfahrten",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 31,
+      "source_item_id": "source-svg-text-11",
+      "expected": "Felddaten oder",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "tokens:felddaten,oder"
+    },
+    {
+      "source_slide_number": 31,
+      "source_item_id": "source-svg-text-12",
+      "expected": "Feldversuche",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 32,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Lebensdauerdaten aus Tests und aus dem Feld",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.143,
+      "evidence": "tokens:und"
+    },
+    {
+      "source_slide_number": 32,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Produktentwicklungsprozess",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 32,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Zunahme von Unsicherheiten",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 32,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Zunahme von Repräsentativität",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.333,
+      "evidence": "tokens:repräsentativität"
+    },
+    {
+      "source_slide_number": 32,
+      "source_item_id": "source-svg-text-5",
+      "expected": "Stark beschleunigte",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 32,
+      "source_item_id": "source-svg-text-6",
+      "expected": "Lebensdauerversuche",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 32,
+      "source_item_id": "source-svg-text-7",
+      "expected": "Beschleunigte oder",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "tokens:beschleunigte,oder"
+    },
+    {
+      "source_slide_number": 32,
+      "source_item_id": "source-svg-text-8",
+      "expected": "unbeschleunigte",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 32,
+      "source_item_id": "source-svg-text-9",
+      "expected": "Lebensdauerversuche",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 32,
+      "source_item_id": "source-svg-text-10",
+      "expected": "Versuchsfahrten",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 32,
+      "source_item_id": "source-svg-text-11",
+      "expected": "Felddaten oder",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "tokens:felddaten,oder"
+    },
+    {
+      "source_slide_number": 32,
+      "source_item_id": "source-svg-text-12",
+      "expected": "Feldversuche",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Life",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-2",
+      "expected": "data",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-3",
+      "expected": "from",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-4",
+      "expected": "field",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-5",
+      "expected": "and test",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-6",
+      "expected": "Test Bench",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-7",
+      "expected": "Test Drive",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-8",
+      "expected": "Field Data",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-9",
+      "expected": "Product",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-10",
+      "expected": "Development",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-11",
+      "expected": "Process",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-12",
+      "expected": "More",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-13",
+      "expected": "Representative",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-14",
+      "expected": "More",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 33,
+      "source_item_id": "source-svg-text-15",
+      "expected": "Uncertainty",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    }
+  ],
+  "target_text_checks": [
+    {
+      "target_text": "Produktentwicklungsprozess",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Unsicherheit",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Streuung und Kontrollierbarkeit",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Repräsentativität",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Nähe zum tatsächlichen Einsatz",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Stark beschleunigte",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Lebensdauerversuche",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Hohe Temperatur",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Starke Vibration",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Überhöhte Spannung",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Schnelle Ergebnisse",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Übertragbarkeit unsicher",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Lebensdauerversuche",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "im Labor",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Unbeschleunigt:",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "normaler Einsatz, lange Dauer",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Beschleunigt:",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "höhere Last, kürzere Dauer",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Moderat beschleunigt:",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Kompromiss zur Realitätsnähe",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Versuchsfahrten",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Reales Umfeld",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Definiert und überwacht",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Mehr Störfaktoren",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "als im Labor",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Felddaten /",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Feldversuche",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Einsatz beim Kunden",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "oder im Serienbetrieb",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Sehr repräsentativ",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Viele Einflüsse unkontrolliert",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Unsicherheit nimmt zu",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    },
+    {
+      "target_text": "Repräsentativität nimmt zu",
+      "result": "documented_addition",
+      "evidence_type": "spoken_text",
+      "evidence_reference": "section_009; source slides 31,32,33; analysis/rebuild-plans/RE3_scenes_031_042_feedback_2026-09-17.md"
+    }
+  ],
+  "manual_review_focus": [
+    "Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.",
+    "Sprechertext-Reihenfolge gegen die semantisch geplanten Animationsschritte pruefen."
+  ],
+  "reference_mapping_sha256": "8d0a3fa4a771e5e2a549d3b5ad77afcbdd671994919443eaac49f1eda8b9967d",
+  "reference_map_path": "analysis/rebuild-plans/RE3_source-reference-map.json",
+  "sequence_plan": ""
+}

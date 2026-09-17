@@ -1,0 +1,308 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re4_src_055",
+  "svgPath": "slide_055.svg",
+  "spokenText": "Bei einer Brückenschaltung lässt sich die Zuverlässigkeit nicht mit den einfachen Formeln für Reihen- oder Parallelschaltungen berechnen.Aber keine Sorge – es gibt zwei Methoden, mit denen wir trotzdem zu einer exakten Lösung kommen können.\n\nErstens: die Methode der Separation.Und Zweitens: die Methode der Multilinearform.\n\nIn diesem Modul schauen wir uns die Methode der Separation an.\n\nWie der Name schon andeutet, betrachten wir dabei eine bestimmte Komponente isoliert, also „separiert“.Wenn wir uns das Blockdiagramm ansehen, fällt auf:Komponente fünf nimmt eine Schlüsselrolle ein.Genau sie macht aus einer einfachen Struktur eine Brückenschaltung.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/after/slide_055.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Bei einer Brückenschaltung lässt sich die",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Bei einer Brückenschaltung lässt sich",
+      "occurrence": 1,
+      "claim": "Brückenschaltung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "separation_bridge"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "mit den einfachen Formeln",
+      "occurrence": 1,
+      "claim": "Keine direkte Reduktion",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "separation_limit"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "es gibt zwei Methoden",
+      "occurrence": 1,
+      "claim": "Zwei exakte Berechnungsmethoden",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "separation_hub"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "Erstens: die Methode der Separation.",
+      "occurrence": 1,
+      "claim": "Methode der Separation",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "separation_method"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "Und Zweitens: die Methode der Multilinearform.",
+      "occurrence": 1,
+      "claim": "Methode der Multilinearform",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "multilinear_method"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "In diesem Modul schauen wir",
+      "occurrence": 1,
+      "claim": "Separation in diesem Modul",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "separation_selection"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "Komponente fünf nimmt eine Schlüsselrolle ein.",
+      "occurrence": 1,
+      "claim": "Schlüsselrolle der Komponente 5",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "separation_key"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "separation_bridge",
+      "label": "Brückenschaltung",
+      "role": "content",
+      "members": [
+        "separation_bridge"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "separation_limit",
+      "label": "Keine direkte Reduktion",
+      "role": "content",
+      "members": [
+        "separation_limit"
+      ],
+      "dependsOn": [
+        "separation_bridge"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "separation_hub",
+      "label": "Zwei exakte Berechnungsmethoden",
+      "role": "content",
+      "members": [
+        "separation_hub"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "separation_method",
+      "label": "Methode der Separation",
+      "role": "content",
+      "members": [
+        "separation_method"
+      ],
+      "dependsOn": [
+        "separation_hub"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "multilinear_method",
+      "label": "Methode der Multilinearform",
+      "role": "content",
+      "members": [
+        "multilinear_method"
+      ],
+      "dependsOn": [
+        "separation_hub"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "separation_selection",
+      "label": "Separation in diesem Modul",
+      "role": "content",
+      "members": [
+        "separation_selection"
+      ],
+      "dependsOn": [
+        "separation_method"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "separation_key",
+      "label": "Schlüsselrolle der Komponente 5",
+      "role": "content",
+      "members": [
+        "separation_key"
+      ],
+      "dependsOn": [
+        "separation_bridge"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_separation_bridge",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "separation_bridge",
+      "sourceText": "Bei einer Brückenschaltung lässt sich",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_separation_limit",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "separation_limit",
+      "sourceText": "mit den einfachen Formeln",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_separation_hub",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "separation_hub",
+      "sourceText": "es gibt zwei Methoden",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_separation_method",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "separation_method",
+      "sourceText": "Erstens: die Methode der Separation.",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_multilinear_method",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "multilinear_method",
+      "sourceText": "Und Zweitens: die Methode der Multilinearform.",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_separation_selection",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "separation_selection",
+      "sourceText": "In diesem Modul schauen wir",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_separation_key",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "separation_key",
+      "sourceText": "Komponente fünf nimmt eine Schlüsselrolle ein.",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/visual-review-55-58.md"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "separation_bridge",
+        "separation_limit",
+        "separation_hub",
+        "separation_method",
+        "multilinear_method",
+        "separation_selection",
+        "separation_key"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/visual-review-55-58.md"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "reviewEvidence": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/visual-review-55-58.md",
+    "states": "analysis/render-checks/RE4/feedback-54-66-2026-09-17/states/slide_055"
+  }
+}

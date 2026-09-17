@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch3_fta_minimal_cut_sets",
+  "svgPath": "slide_051.svg",
+  "spokenText": "Die beiden Ausfall-Ereignisse können wir als minimale Ausfallschnitte verstehen.\n\nDie minimalen Ausfallschnitte, auch Minimalschnitte, kritische Mengen oder Cut Sets genannt, sind die kleinsten Kombinationen von Basisereignissen, deren gemeinsames Eintreten zu einem unerwünschten Top-Ereignis führt.\n\nAllein durch Betrachtung des Fehlerbaums erhalten wir wertvolle Erkenntnisse über das Ursachen-Wirkungsgefüge innerhalb des Systems.\n\nDabei können wir kritische Pfade und minimale Ausfallschnitte identifizieren.\n\nDiese helfen uns qualitative Aussagen über die schwächsten Äste des Systems zu treffen und zu erkennen, ob Einzel- oder Mehrfachausfälle, zu kritischen Zuständen führen.\n\nMit Hilfe dieser Analysen können wir erste Näherungen über das momentane Risiko möglicher Systemschwachstellen ableiten und sehen welche Basisereignisse den größten Einfluss auf das Eintreten des Top-Ereignisses haben.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "fta51_circuit",
+      "label": "Redundante Stromversorgung",
+      "role": "content",
+      "members": [
+        "fta51_circuit"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta51_nodes",
+      "label": "Vollständiger Fehlerbaum",
+      "role": "content",
+      "members": [
+        "fta51_nodes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta51_links",
+      "label": "Logische Verknüpfungen",
+      "role": "content",
+      "members": [
+        "fta51_links"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "fta51_cutset",
+      "label": "Minimaler Ausfallschnitt",
+      "role": "content",
+      "members": [
+        "fta51_cutset"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Redundante Stromversorgung",
+      "sourceText": "Die beiden Ausfall-Ereignisse können wir als",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta51_circuit"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Vollständiger Fehlerbaum",
+      "sourceText": "Die beiden Ausfall-Ereignisse können wir als",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta51_nodes"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Logische Verknüpfungen",
+      "sourceText": "Die beiden Ausfall-Ereignisse können wir als",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta51_links"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Minimaler Ausfallschnitt",
+      "sourceText": "Die beiden Ausfall-Ereignisse können wir als",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "fta51_cutset"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta51_circuit",
+      "beatId": "beat_01",
+      "targetId": "fta51_circuit",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_fta51_nodes",
+      "beatId": "beat_02",
+      "targetId": "fta51_nodes",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_fta51_links",
+      "beatId": "beat_03",
+      "targetId": "fta51_links",
+      "action": "draw",
+      "rationale": "Die Beziehung wird nach den zugehörigen fachlichen Knoten gezeichnet."
+    },
+    {
+      "stepId": "step_04_fta51_cutset",
+      "beatId": "beat_04",
+      "targetId": "fta51_cutset",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_04",
+      "visibleGroups": [
+        "canvas_context",
+        "fta51_circuit",
+        "fta51_nodes",
+        "fta51_links",
+        "fta51_cutset"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

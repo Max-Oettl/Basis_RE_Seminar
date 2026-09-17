@@ -1,0 +1,399 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re4_src_031",
+  "svgPath": "slide_031.svg",
+  "spokenText": "Das Zuverlässigkeitsblockdiagramm wird im Englischen als “Reliability Block Diagram” oder kurz nur mit R-B-D bezeichnet.\n\nEs ist ein grafisches Hilfsmittel zur Modellierung der Systemzuverlässigkeit. Es zeigt, wie die Komponenten eines Systems miteinander verbunden sind und welche Wirkung deren Zuverlässigkeit auf das Gesamtsystem hat.\n\nDas Diagramm besteht im Wesentlichen aus zwei Elementen: den Blöcken, meist in Form von Rechtecken, die einzelne Systemkomponenten repräsentieren, und den Verbindungen, oder auch Linien, die die funktionalen Abhängigkeiten zwischen den Komponenten beschreiben.\n\nJede Komponente, also jeder Block, kann dabei zwei Zustände einnehmen: „funktionsfähig“ oder „ausgefallen“.\n\nSolange es eine ununterbrochene Verbindung vom Eingang E zum Ausgang A gibt – das heißt, es existiert ein durchgängiger Pfad durch funktionsfähige Komponenten –, gilt das Gesamtsystem als funktionsfähig. Das Zuverlässigkeitsblockdiagramm visualisiert also, wie der Ausfall oder die Funktionsfähigkeit einzelner Komponenten die Systemfunktion beeinflusst.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/after/slide_031.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Das Zuverlässigkeitsblockdiagramm wird im Englischen als",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Das Zuverlässigkeitsblockdiagramm wird im Englischen",
+      "occurrence": 1,
+      "claim": "Englische Bezeichnung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "rbd_name"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Es ist ein grafisches Hilfsmittel",
+      "occurrence": 1,
+      "claim": "Modell der Systemzuverlässigkeit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "rbd_model"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "welche Wirkung deren Zuverlässigkeit",
+      "occurrence": 1,
+      "claim": "Modell der Systemzuverlässigkeit",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "rbd_model"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "Das Diagramm besteht im Wesentlichen",
+      "occurrence": 1,
+      "claim": "Blöcke und Systemgrenzen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "rbd_blocks"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "die einzelne Systemkomponenten repräsentieren",
+      "occurrence": 1,
+      "claim": "Blöcke und Systemgrenzen",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "rbd_blocks"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "und den Verbindungen",
+      "occurrence": 1,
+      "claim": "Funktionale Verbindungen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "rbd_connections"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "Jede Komponente, also jeder Block",
+      "occurrence": 1,
+      "claim": "Zwei mögliche Zustände",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "rbd_states"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Solange es eine ununterbrochene Verbindung",
+      "occurrence": 1,
+      "claim": "Ein- und Ausgang",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "rbd_ends"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "durchgängiger Pfad durch funktionsfähige Komponenten",
+      "occurrence": 1,
+      "claim": "Ein- und Ausgang",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "rbd_ends"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "gilt das Gesamtsystem als funktionsfähig",
+      "occurrence": 1,
+      "claim": "Durchgängiger Funktionspfad",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "rbd_path"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "die Systemfunktion beeinflusst",
+      "occurrence": 1,
+      "claim": "Durchgängiger Funktionspfad",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "rbd_path"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "rbd_name",
+      "label": "Englische Bezeichnung",
+      "role": "content",
+      "members": [
+        "rbd_name"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "rbd_model",
+      "label": "Modell der Systemzuverlässigkeit",
+      "role": "content",
+      "members": [
+        "rbd_model"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "rbd_blocks",
+      "label": "Blöcke und Systemgrenzen",
+      "role": "content",
+      "members": [
+        "rbd_blocks"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "rbd_connections",
+      "label": "Funktionale Verbindungen",
+      "role": "content",
+      "members": [
+        "rbd_connections"
+      ],
+      "dependsOn": [
+        "rbd_blocks"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "rbd_states",
+      "label": "Zwei mögliche Zustände",
+      "role": "content",
+      "members": [
+        "rbd_states"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "rbd_ends",
+      "label": "Ein- und Ausgang",
+      "role": "content",
+      "members": [
+        "rbd_ends"
+      ],
+      "dependsOn": [
+        "rbd_blocks"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    },
+    {
+      "groupId": "rbd_path",
+      "label": "Durchgängiger Funktionspfad",
+      "role": "content",
+      "members": [
+        "rbd_path"
+      ],
+      "dependsOn": [
+        "rbd_connections"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_10"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_rbd_name",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "rbd_name",
+      "sourceText": "Das Zuverlässigkeitsblockdiagramm wird im Englischen",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_rbd_model",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "rbd_model",
+      "sourceText": "Es ist ein grafisches Hilfsmittel",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_rbd_model",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "rbd_model",
+      "sourceText": "welche Wirkung deren Zuverlässigkeit",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_3",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_04_rbd_blocks",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "rbd_blocks",
+      "sourceText": "Das Diagramm besteht im Wesentlichen",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_rbd_blocks",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "rbd_blocks",
+      "sourceText": "die einzelne Systemkomponenten repräsentieren",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_5",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_06_rbd_connections",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "rbd_connections",
+      "sourceText": "und den Verbindungen",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_rbd_states",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "rbd_states",
+      "sourceText": "Jede Komponente, also jeder Block",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_rbd_ends",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "rbd_ends",
+      "sourceText": "Solange es eine ununterbrochene Verbindung",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_rbd_ends",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "rbd_ends",
+      "sourceText": "durchgängiger Pfad durch funktionsfähige Komponenten",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_9",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_10_rbd_path",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "rbd_path",
+      "sourceText": "gilt das Gesamtsystem als funktionsfähig",
+      "action": "show",
+      "beatId": "beat_10",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_11_rbd_path",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "rbd_path",
+      "sourceText": "die Systemfunktion beeinflusst",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_11",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/states-reviewed/slide_031"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "rbd_name",
+        "rbd_model",
+        "rbd_blocks",
+        "rbd_connections",
+        "rbd_states",
+        "rbd_ends",
+        "rbd_path"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/states-reviewed/slide_031"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "reviewEvidence": {
+    "static": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/after/slide_031.png",
+    "animationStates": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/states-reviewed/slide_031",
+    "frameCount": 16,
+    "contentReview": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/content-review.md",
+    "layoutReport": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/qa-final/svg-qa-report.md",
+    "independentVisualReview": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/visual-review-031-033-039.md"
+  }
+}

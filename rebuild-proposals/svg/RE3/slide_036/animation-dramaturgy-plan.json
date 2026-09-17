@@ -1,0 +1,638 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_036",
+  "svgPath": "slide_036.svg",
+  "spokenText": "Beginnen wir mit der Rechtszensierung vom Typ eins. Dabei wird der Versuch nach einer vorher festgelegten Zeit beendet – unabhängig davon, wie viele Ausfälle bis dahin eingetreten sind. Alle Objekte, die zu diesem Zeitpunkt noch funktionieren, gelten als rechtszensiert. Ihre tatsächlichen Ausfallzeiten liegen also jenseits des Versuchsstopps und bleiben unbekannt. Die Anzahl der Ausfälle, die während des Versuchs auftreten, ist dabei eine Zufallsgröße. Typ eins ist in der Praxis besonders häufig, da viele Versuche aus organisatorischen oder wirtschaftlichen Gründen zu einem festen Zeitpunkt abgeschlossen werden müssen. Mindestens ein Testobjekt bleibt auch nach der Testdauer noch funktionsfähig.\n\nIm Gegensatz dazu steht die Rechtszensierung vom Typ zwei. Hier ist nicht die Zeit, sondern die Anzahl an Ausfällen vorgegeben. Der Versuch endet, sobald eine bestimmte Anzahl an Objekten ausgefallen ist – unabhängig davon, wie lange das dauert. In diesem Fall ist die Versuchszeit eine Zufallsgröße. Alle Objekte, die zu diesem Zeitpunkt noch intakt sind, gelten ebenfalls als rechtszensiert. Diese Variante wird oft verwendet, wenn eine genau definierte Anzahl an Ausfallereignissen betrachtet werden soll.\n\nBeide Varianten haben gemeinsam, dass nicht alle Ausfallzeiten bekannt sind. Und genau das ist das Wesentliche bei der Rechtszensierung: Wir wissen, dass einige Objekte länger durchhalten – aber wir wissen nicht, wie lange genau.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/after/slide_036.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Beginnen wir mit der Rechtszensierung vom",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Beginnen wir mit der Rechtszensierung",
+      "occurrence": 1,
+      "claim": "Typ 1",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "types_one_context"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Beginnen wir mit der Rechtszensierung",
+      "occurrence": 1,
+      "claim": "compare one failures",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "compare_one_failures"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Beginnen wir mit der Rechtszensierung",
+      "occurrence": 1,
+      "claim": "Ausfall",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "types_failure_legend"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "nach einer vorher festgelegten Zeit",
+      "occurrence": 1,
+      "claim": "compare one stop",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "compare_one_stop"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "noch funktionieren, gelten als rechtszensiert",
+      "occurrence": 1,
+      "claim": "compare one censored",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "compare_one_censored"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "noch funktionieren, gelten als rechtszensiert",
+      "occurrence": 1,
+      "claim": "Bei Stopp intakt",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "types_censor_legend"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "ist dabei eine Zufallsgröße",
+      "occurrence": 1,
+      "claim": "Zufällige Ausfallzahl",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "types_one_random"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "zu einem festen Zeitpunkt abgeschlossen",
+      "occurrence": 1,
+      "claim": "compare one stop",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "compare_one_stop"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "Mindestens ein Testobjekt bleibt",
+      "occurrence": 1,
+      "claim": "compare one censored",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "compare_one_censored"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "Im Gegensatz dazu steht",
+      "occurrence": 1,
+      "claim": "Typ 2",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "types_two_context"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "Im Gegensatz dazu steht",
+      "occurrence": 1,
+      "claim": "compare two failures",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "compare_two_failures"
+      ]
+    },
+    {
+      "beatId": "beat_12",
+      "sourceText": "sobald eine bestimmte Anzahl",
+      "occurrence": 1,
+      "claim": "compare two stop event",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "compare_two_stop_event"
+      ]
+    },
+    {
+      "beatId": "beat_13",
+      "sourceText": "sobald eine bestimmte Anzahl",
+      "occurrence": 1,
+      "claim": "compare two stop",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "compare_two_stop"
+      ]
+    },
+    {
+      "beatId": "beat_14",
+      "sourceText": "die Versuchszeit eine Zufallsgröße",
+      "occurrence": 1,
+      "claim": "Zufällige Versuchsdauer",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "types_two_random"
+      ]
+    },
+    {
+      "beatId": "beat_15",
+      "sourceText": "zu diesem Zeitpunkt noch intakt sind",
+      "occurrence": 1,
+      "claim": "compare two censored",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "compare_two_censored"
+      ]
+    },
+    {
+      "beatId": "beat_16",
+      "sourceText": "genau definierte Anzahl an Ausfallereignissen",
+      "occurrence": 1,
+      "claim": "compare two stop event",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "compare_two_stop_event"
+      ]
+    },
+    {
+      "beatId": "beat_17",
+      "sourceText": "Beide Varianten haben gemeinsam",
+      "occurrence": 1,
+      "claim": "compare one censored",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "compare_one_censored"
+      ]
+    },
+    {
+      "beatId": "beat_18",
+      "sourceText": "Beide Varianten haben gemeinsam",
+      "occurrence": 1,
+      "claim": "compare two censored",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "compare_two_censored"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "types_one_context",
+      "label": "Typ 1",
+      "role": "content",
+      "members": [
+        "types_one_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "compare_one_failures",
+      "label": "compare one failures",
+      "role": "content",
+      "members": [
+        "compare_one_failures"
+      ],
+      "dependsOn": [
+        "types_one_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "types_failure_legend",
+      "label": "Ausfall",
+      "role": "content",
+      "members": [
+        "types_failure_legend"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "compare_one_stop",
+      "label": "compare one stop",
+      "role": "content",
+      "members": [
+        "compare_one_stop"
+      ],
+      "dependsOn": [
+        "types_one_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "compare_one_censored",
+      "label": "compare one censored",
+      "role": "content",
+      "members": [
+        "compare_one_censored"
+      ],
+      "dependsOn": [
+        "compare_one_stop"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "types_censor_legend",
+      "label": "Bei Stopp intakt",
+      "role": "content",
+      "members": [
+        "types_censor_legend"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "types_one_random",
+      "label": "Zufällige Ausfallzahl",
+      "role": "content",
+      "members": [
+        "types_one_random"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "types_two_context",
+      "label": "Typ 2",
+      "role": "content",
+      "members": [
+        "types_two_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_10"
+    },
+    {
+      "groupId": "compare_two_failures",
+      "label": "compare two failures",
+      "role": "content",
+      "members": [
+        "compare_two_failures"
+      ],
+      "dependsOn": [
+        "types_two_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_11"
+    },
+    {
+      "groupId": "compare_two_stop_event",
+      "label": "compare two stop event",
+      "role": "content",
+      "members": [
+        "compare_two_stop_event"
+      ],
+      "dependsOn": [
+        "compare_two_failures"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_12"
+    },
+    {
+      "groupId": "compare_two_stop",
+      "label": "compare two stop",
+      "role": "content",
+      "members": [
+        "compare_two_stop"
+      ],
+      "dependsOn": [
+        "compare_two_stop_event"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_13"
+    },
+    {
+      "groupId": "types_two_random",
+      "label": "Zufällige Versuchsdauer",
+      "role": "content",
+      "members": [
+        "types_two_random"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_14"
+    },
+    {
+      "groupId": "compare_two_censored",
+      "label": "compare two censored",
+      "role": "content",
+      "members": [
+        "compare_two_censored"
+      ],
+      "dependsOn": [
+        "compare_two_stop"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_15"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_types_one_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "types_one_context",
+      "sourceText": "Beginnen wir mit der Rechtszensierung",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_compare_one_failures",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_one_failures",
+      "sourceText": "Beginnen wir mit der Rechtszensierung",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_types_failure_legend",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "types_failure_legend",
+      "sourceText": "Beginnen wir mit der Rechtszensierung",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_compare_one_stop",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_one_stop",
+      "sourceText": "nach einer vorher festgelegten Zeit",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_compare_one_censored",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_one_censored",
+      "sourceText": "noch funktionieren, gelten als rechtszensiert",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_types_censor_legend",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "types_censor_legend",
+      "sourceText": "noch funktionieren, gelten als rechtszensiert",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_types_one_random",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "types_one_random",
+      "sourceText": "ist dabei eine Zufallsgröße",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_compare_one_stop",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_one_stop",
+      "sourceText": "zu einem festen Zeitpunkt abgeschlossen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_8",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_09_compare_one_censored",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_one_censored",
+      "sourceText": "Mindestens ein Testobjekt bleibt",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_9",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_10_types_two_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "types_two_context",
+      "sourceText": "Im Gegensatz dazu steht",
+      "action": "show",
+      "beatId": "beat_10",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_11_compare_two_failures",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_two_failures",
+      "sourceText": "Im Gegensatz dazu steht",
+      "action": "show",
+      "beatId": "beat_11",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_12_compare_two_stop_event",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_two_stop_event",
+      "sourceText": "sobald eine bestimmte Anzahl",
+      "action": "show",
+      "beatId": "beat_12",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_13_compare_two_stop",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_two_stop",
+      "sourceText": "sobald eine bestimmte Anzahl",
+      "action": "show",
+      "beatId": "beat_13",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_14_types_two_random",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "types_two_random",
+      "sourceText": "die Versuchszeit eine Zufallsgröße",
+      "action": "show",
+      "beatId": "beat_14",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_15_compare_two_censored",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_two_censored",
+      "sourceText": "zu diesem Zeitpunkt noch intakt sind",
+      "action": "show",
+      "beatId": "beat_15",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_16_compare_two_stop_event",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_two_stop_event",
+      "sourceText": "genau definierte Anzahl an Ausfallereignissen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_16",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_17_compare_one_censored",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_one_censored",
+      "sourceText": "Beide Varianten haben gemeinsam",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_17",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_18_compare_two_censored",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_two_censored",
+      "sourceText": "Beide Varianten haben gemeinsam",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_18",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/states-v2/slide_036/00_initial.png"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "types_one_context",
+        "compare_one_failures",
+        "types_failure_legend",
+        "compare_one_stop",
+        "compare_one_censored",
+        "types_censor_legend",
+        "types_one_random",
+        "types_two_context",
+        "compare_two_failures",
+        "compare_two_stop_event",
+        "compare_two_stop",
+        "types_two_random",
+        "compare_two_censored"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/states-v2/slide_036/17_after_12_beide_varianten_haben_gemeinsam.png"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "reviewedAt": "2026-09-17",
+    "independentReviewer": "/root/visual_review",
+    "endState": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/after/slide_036.png",
+    "preview": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/preview/slide_036.png",
+    "stateDirectory": "analysis/render-checks/RE3/feedback-31-42-2026-09-17/states-v2/slide_036",
+    "reviewedStateCount": 18,
+    "includesHighlights": true,
+    "findings": [],
+    "scope": "Discrete Chromium states, phrase triggers, source correspondence and legibility at 50 percent; no continuous audio playback test."
+  }
+}

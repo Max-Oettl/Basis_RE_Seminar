@@ -1278,6 +1278,8 @@
   <script src="/viewer-assets/narration-pause-domain.js"></script>
   <script src="/viewer-assets/svg-animation-domain.js"></script>
   <script>
+    const MODULES_EXCLUDED_FROM_SELECTION = new Set(["RE3_TEST_1"]);
+
     const state = {
       slides: [],
       filtered: [],
@@ -3918,8 +3920,12 @@
       const response = await fetch(`/api/slides?v=${Date.now()}`);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const payload = await response.json();
-      state.slides = payload.slides || [];
-      state.modules = payload.modules || [];
+      state.slides = (payload.slides || []).filter(
+        (slide) => !MODULES_EXCLUDED_FROM_SELECTION.has(slide.moduleId),
+      );
+      state.modules = (payload.modules || []).filter(
+        (moduleId) => !MODULES_EXCLUDED_FROM_SELECTION.has(moduleId),
+      );
       state.trainingStructure = payload.trainingStructure || {
         schema_version: "basisReliabilityTrainingStructure/v1",
         modules: {},

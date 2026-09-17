@@ -1,10 +1,10 @@
 # Kritischer Challenge — slide_058
 
 - Quellen: RE3::58
-- Struktur: Kapitel/Lektion bewusst nicht zugeordnet
-- Design-Challenge: Zwei- und Dreiparameter-Verlauf sind im Plot dominant; Koralle markiert nur die kritische Abweichung.
-- Animations-Challenge: 4 semantische Schritte an 4 wörtlich belegten Sprechertext-Cues; chronologisch sortiert.
-- Sichtprüfung: 5 gerenderte Zustände plus 1920×1080-Endzustand geprüft
-- Korrektur/Entscheidung: Im Challenge keine zusätzliche Korrektur erforderlich.
-- Technisches Ergebnis: 0 Fehler, 0 Warnungen im strikten Modul-QA
+- Struktur: Kapitel 5, Lektion 1
+- Design-Challenge: Der gekrümmte Weibull-Verlauf bleibt die dominante Evidenz; Modellfrage und Minitab-Auswahl bilden eine klare zweite Lesespur.
+- Animations-Challenge: 3 semantische Schritte mit wörtlich belegten Sprechertext-Cues; chronologisch sortiert.
+- Sichtprüfung: Initialzustand, 3 Reveal-Zustände und 1920×1080-Endzustand geprüft.
+- Korrektur/Entscheidung: Inhalte der Nutzerreferenzen vollständig übernommen; nicht bestätigte Anschlusszustände bleiben außerhalb der aktiven Lektion.
+- Technisches Ergebnis: 0 Fehler und 0 Warnungen in der gezielten strengen Design- und Layoutprüfung.
 - Urteil: FREIGEGEBEN

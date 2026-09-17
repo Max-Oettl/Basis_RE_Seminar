@@ -2,11 +2,11 @@
 
 - Kapitel: 2
 - Lektion: 6
-- Quellfolien: 17, 18, 19
-- Titel: ABC-Analyse des Wechselrichters
-- Takeaway: Die Einstufung macht die weiterzuverfolgenden A- und B-Risiken unmittelbar sichtbar.
-- Archetyp: risk-inventory-table
-- Layout: Großformatige Ergebnistabelle mit farbcodierter ABC-Einstufung.
+- Quellfolien: 17, 18
+- Titel: ABC-Analyse: Bewertungskriterien
+- Takeaway: A- und B-Teile sind risikoreich; C-Teile gelten als risikoneutral.
+- Archetyp: three-column-comparison
+- Layout: Drei klar getrennte Bewertungsspalten mit Definition, Berechenbarkeit und Ausfallverhalten.
 - Referenz: RE1-Full-Slide-System und Kapitelbrief analysis/rebuild-plans/RE2_chapter_02_redesign_brief.md
-- Produktionsmodus: Full-Slide 1920×1080
+- Produktionsmodus: Content-SVG 1920×1080; Titel und Masterelemente werden downstream gerendert
 - Animation: sprechertextgeführt aktiviert

@@ -1,0 +1,75 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_009",
+  "scene_id": "re1_src_009",
+  "source_slides": [
+    9
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "vehicle_system_hierarchy",
+      "label": "Systemstruktur eines PKW",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "function_examples",
+      "label": "Funktionen von Motor und PKW",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "failure_propagation",
+      "label": "Fehlerwirkung vom Kolben bis zum PKW",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_vehicle_system_hierarchy",
+      "targetId": "vehicle_system_hierarchy",
+      "action": "show",
+      "sourceText": "schauen wir uns zunächst einmal die System-Struktur",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_function_examples",
+      "targetId": "function_examples",
+      "action": "show",
+      "sourceText": "Im Falle eines PKWs ist die entsprechende Funktion",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_failure_propagation",
+      "targetId": "failure_propagation",
+      "action": "show",
+      "sourceText": "Verliert nun beispielsweise der Kolben",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

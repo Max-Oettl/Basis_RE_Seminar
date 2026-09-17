@@ -1,0 +1,148 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re1_src_012",
+  "svgPath": "rebuild-proposals/svg/RE1/slide_012/slide_012.svg",
+  "spokenText": "Erhöht man nun immer weiter die Belastbarkeit, schiebt also die Kurve immer weiter nach rechts, entstehen immer weniger Ausfälle. Durch die Qualitätserhöhung entstehen aber auch deutliche Mehrkosten gegenüber der Ausgangslage.Die Aufgabe der Zuverlässigkeitstechnik ist es dafür zu sorgen, dass der Überlappungsbereich und damit auch die Anzahl der Ausfälle minimiert werden, die Produkte also zuverlässiger werden. Gleichzeitig müssen aber unnötige und vor allem teure Überdimensionierungen der Produkte vermieden werden.\n\nAus unseren bisherigen Betrachtungen wissen wir, dass Zuverlässigkeit aus der Wechselwirkung zwischen den statistischen Verteilungen von Belastung und Belastbarkeit resultiert und immer für ein Produkt sowie dessen Funktionserhalt definiert wird. Fassen wir dies alles nun in der Definition der Zuverlässigkeit zusammen.",
+  "animationDecision": "animated",
+  "animationRationale": "Der bekannte Diagrammkontext bleibt sichtbar; die neue Information ist der vollständige Zielkonflikt aus Ausfällen und Kosten.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Show wird als reines Fade bewertet.",
+      "Gleiche sourceText-Phrase startet alle Schritte derselben Triggergruppe gleichzeitig."
+    ]
+  },
+  "initialStateRationale": "Das bekannte Stress-Strength-Modell ist der notwendige Bezugsrahmen. Die Waage würde den Schluss vorwegnehmen.",
+  "semanticGroups": [
+    {
+      "groupId": "brand_background",
+      "label": "RelTest-Education-Hintergrund",
+      "role": "background",
+      "members": [
+        "Education-Farbverlauf",
+        "ruhiges technisches Raster"
+      ],
+      "initialState": "static_decorative",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Der Markenrahmen enthaelt keine konkrete Fachinformation und darf vor der Narration sichtbar sein.",
+      "dependsOn": [],
+      "groupingRationale": "Der Hintergrund ist ruhiger Markenrahmen und trägt keine vorweggenommene Fachinformation."
+    },
+    {
+      "groupId": "tradeoff_plot_context",
+      "label": "Bekannter Stress-Strength-Kontext",
+      "role": "context",
+      "members": [
+        "vollständiger statischer Plot",
+        "Belastungslabel",
+        "Belastbarkeitslabel"
+      ],
+      "initialState": "visible_context",
+      "dependsOn": [],
+      "groupingRationale": "Der Plot ist aus den vorherigen Szenen bekannt und bleibt stabil.",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Der bekannte Plot ist notwendiger Ausgangskontext für die unmittelbar folgende Kostenabwägung."
+    },
+    {
+      "groupId": "quality_cost_tradeoff",
+      "label": "Zielkonflikt aus Ausfällen und Kosten",
+      "role": "result",
+      "members": [
+        "vollständige Zielkonfliktkarte",
+        "beide Kennzahlkarten",
+        "Waagenasset",
+        "Zielkorridor"
+      ],
+      "initialState": "hidden_until_trigger",
+      "dependsOn": [
+        "tradeoff_plot_context"
+      ],
+      "groupingRationale": "Kennzahlen, Waage und Zieltext bilden eine unteilbare Abwägung.",
+      "firstRelevantBeatId": "show_quality_cost_tradeoff",
+      "initialVisibilityEvidence": "Die Kostenabwägung wird erst bei der gesprochenen Mehrkosten-Aussage relevant."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "show_quality_cost_tradeoff",
+      "claim": "Höhere Belastbarkeit senkt Ausfälle, erhöht aber Kosten.",
+      "sourceText": "Durch die Qualitätserhöhung entstehen aber auch deutliche Mehrkosten",
+      "occurrence": 1,
+      "requiredContext": [
+        "tradeoff_plot_context"
+      ],
+      "revealTogether": [
+        "quality_cost_tradeoff"
+      ],
+      "learnerStateBefore": "Nur der bekannte Diagrammkontext ist sichtbar.",
+      "learnerStateAfter": "Der vollständige Zielkonflikt ist sichtbar."
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_quality_cost_tradeoff",
+      "beatId": "show_quality_cost_tradeoff",
+      "targetId": "quality_cost_tradeoff",
+      "action": "show",
+      "effect": {
+        "enterFrames": 16
+      },
+      "rationale": "Die gesamte Abwägung erscheint als eine fachliche Einheit."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "tradeoff_plot_context"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Das bekannte Stress-Strength-Modell ist der notwendige Bezugsrahmen. Die Waage würde den Schluss vorwegnehmen."
+    },
+    {
+      "stateId": "before_show_quality_cost_tradeoff",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "brand_background",
+        "tradeoff_plot_context"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Nur der bekannte Diagrammkontext ist sichtbar."
+    },
+    {
+      "stateId": "after_show_quality_cost_tradeoff",
+      "afterBeatId": "show_quality_cost_tradeoff",
+      "visibleGroups": [
+        "brand_background",
+        "tradeoff_plot_context",
+        "quality_cost_tradeoff"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der vollständige Zielkonflikt ist sichtbar."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "show_quality_cost_tradeoff",
+      "visibleGroups": [
+        "brand_background",
+        "tradeoff_plot_context",
+        "quality_cost_tradeoff"
+      ],
+      "reviewStatus": "planned",
+      "notes": "Der vollständige statische Endzustand bleibt ohne Animation fachlich verständlich."
+    }
+  ]
+}

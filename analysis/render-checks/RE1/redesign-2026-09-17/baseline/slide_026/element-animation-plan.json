@@ -1,0 +1,75 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_026",
+  "scene_id": "re1_src_027",
+  "source_slides": [
+    27
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "field_observation",
+      "label": "Feldbeobachtung",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "field_reliability_assessment",
+      "label": "Felddatenauswertung",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "next_generation_learning_loop",
+      "label": "Lessons Learned",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_field_observation",
+      "targetId": "field_observation",
+      "action": "show",
+      "sourceText": "Sobald unser Produkt im Feld ist",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_field_reliability_assessment",
+      "targetId": "field_reliability_assessment",
+      "action": "show",
+      "sourceText": "nur mit Hilfe der Daten aus dem Feld final feststellen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_next_generation_learning_loop",
+      "targetId": "next_generation_learning_loop",
+      "action": "show",
+      "sourceText": "wichtiger Input für die Weiterentwicklung der nächsten Produktgeneration",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

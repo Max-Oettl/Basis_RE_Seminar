@@ -1,0 +1,557 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re4_src_039",
+  "svgPath": "slide_039.svg",
+  "spokenText": "Hat man das Zuverlässigkeitsblockdiagramm eines Systems erstellt, lässt sich daraus sehr einfach die Systemzuverlässigkeit berechnen – also die Wahrscheinlichkeit, dass das System zu einem bestimmten Zeitpunkt funktionsfähig ist.\n\nFür die Serienstruktur ergibt sich die Systemzuverlässigkeit einfach durch Multiplikation der Einzelzuverlässigkeiten ​der Komponenten.\n\nIn der Parallelstruktur ist die Berechnung etwas anders: Hier berechnet man zunächst die Ausfallwahrscheinlichkeit jeder Komponente, welche einfach als eins minus seiner Zuverlässigkeit berechnet werden kann. Diese multipliziert man dann über alle Komponenten und zieht das Ergebnis von eins ab.\n\nSchauen wir uns dazu ein kleines Beispiel mit jeweils drei Komponenten an. Nehmen wir an, dass jede Komponente zu einem bestimmten Zeitpunkt eine Zuverlässigkeit von neunzig Prozent besitzt.\n\nBei einer Serienstruktur der drei Komponenten ergibt sich die Zuverlässigkeit des Systems einfach durch Multiplikation der drei Einzelzuverlässigkeiten.\n\nDas ergibt für das System ein Zuverlässigkeitswert von Zweiundsiebzigkomma neun Prozent.\n\nBei der Parallelstruktur der drei Komponenten liegt der Wert entsprechend bei neunundneunzigkomma neun Prozent.\n\nWir sehen also, die Serienstruktur von Komponenten reduziert die Systemzuverlässigkeit wohingegen die Parallelschaltung die Zuverlässigkeit des Systems erhöht.Als Faustregel gilt dabei: In einer Serienstruktur ist die Systemzuverlässigkeit immer kleiner als die kleinste Einzelzuverlässigkeit, wohingegen in einer Parallelstruktur die Systemzuverlässigkeit immer größer ist als die größte Einzelzuverlässigkeit.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/after/slide_039.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Hat man das Zuverlässigkeitsblockdiagramm eines Systems",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Hat man das Zuverlässigkeitsblockdiagramm eines Systems erstellt",
+      "occurrence": 1,
+      "claim": "Serie und Parallelstruktur vergleichen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "math_heads"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Für die Serienstruktur ergibt sich die Systemzuverlässigkeit",
+      "occurrence": 1,
+      "claim": "Gültigkeitsannahme der Produktformeln",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "math_assumption"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Für die Serienstruktur ergibt sich die Systemzuverlässigkeit",
+      "occurrence": 1,
+      "claim": "Produkt der Einzelzuverlässigkeiten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "math_series"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "durch Multiplikation der Einzelzuverlässigkeiten",
+      "occurrence": 1,
+      "claim": "Produkt der Einzelzuverlässigkeiten",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "math_series"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "In der Parallelstruktur ist die Berechnung",
+      "occurrence": 1,
+      "claim": "Gegenwahrscheinlichkeiten multiplizieren",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "math_parallel"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "zunächst die Ausfallwahrscheinlichkeit jeder Komponente",
+      "occurrence": 1,
+      "claim": "Gegenwahrscheinlichkeiten multiplizieren",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "math_parallel"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "Diese multipliziert man dann über alle Komponenten",
+      "occurrence": 1,
+      "claim": "Gegenwahrscheinlichkeiten multiplizieren",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "math_parallel"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Schauen wir uns dazu ein kleines Beispiel",
+      "occurrence": 1,
+      "claim": "Drei gleiche Komponenten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "math_example"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "eine Zuverlässigkeit von neunzig Prozent besitzt",
+      "occurrence": 1,
+      "claim": "Drei gleiche Komponenten",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "math_example"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "Bei einer Serienstruktur der drei Komponenten",
+      "occurrence": 1,
+      "claim": "Serienrechnung mit 0,9",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "math_series_calculation"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "Zuverlässigkeitswert von Zweiundsiebzigkomma neun Prozent",
+      "occurrence": 1,
+      "claim": "Serienzuverlässigkeit 72,9 Prozent",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "math_series_result"
+      ]
+    },
+    {
+      "beatId": "beat_12",
+      "sourceText": "Bei der Parallelstruktur der drei Komponenten",
+      "occurrence": 1,
+      "claim": "Parallelrechnung und Ergebnis",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "math_parallel_calculation"
+      ]
+    },
+    {
+      "beatId": "beat_13",
+      "sourceText": "die Serienstruktur von Komponenten reduziert",
+      "occurrence": 1,
+      "claim": "Serienstruktur senkt den Gesamtwert",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "math_series_rule"
+      ]
+    },
+    {
+      "beatId": "beat_14",
+      "sourceText": "die Parallelschaltung die Zuverlässigkeit des Systems erhöht",
+      "occurrence": 1,
+      "claim": "Parallelstruktur erhöht den Gesamtwert",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "math_parallel_rule"
+      ]
+    },
+    {
+      "beatId": "beat_15",
+      "sourceText": "kleiner als die kleinste Einzelzuverlässigkeit",
+      "occurrence": 1,
+      "claim": "Serienstruktur senkt den Gesamtwert",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "math_series_rule"
+      ]
+    },
+    {
+      "beatId": "beat_16",
+      "sourceText": "größer ist als die größte Einzelzuverlässigkeit",
+      "occurrence": 1,
+      "claim": "Parallelstruktur erhöht den Gesamtwert",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "math_parallel_rule"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "math_heads",
+      "label": "Serie und Parallelstruktur vergleichen",
+      "role": "content",
+      "members": [
+        "math_heads"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "math_assumption",
+      "label": "Gültigkeitsannahme der Produktformeln",
+      "role": "content",
+      "members": [
+        "math_assumption"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "math_series",
+      "label": "Produkt der Einzelzuverlässigkeiten",
+      "role": "content",
+      "members": [
+        "math_series"
+      ],
+      "dependsOn": [
+        "math_heads"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "math_parallel",
+      "label": "Gegenwahrscheinlichkeiten multiplizieren",
+      "role": "content",
+      "members": [
+        "math_parallel"
+      ],
+      "dependsOn": [
+        "math_heads"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "math_example",
+      "label": "Drei gleiche Komponenten",
+      "role": "content",
+      "members": [
+        "math_example"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    },
+    {
+      "groupId": "math_series_calculation",
+      "label": "Serienrechnung mit 0,9",
+      "role": "content",
+      "members": [
+        "math_series_calculation"
+      ],
+      "dependsOn": [
+        "math_example",
+        "math_series"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_10"
+    },
+    {
+      "groupId": "math_series_result",
+      "label": "Serienzuverlässigkeit 72,9 Prozent",
+      "role": "content",
+      "members": [
+        "math_series_result"
+      ],
+      "dependsOn": [
+        "math_series_calculation"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_11"
+    },
+    {
+      "groupId": "math_parallel_calculation",
+      "label": "Parallelrechnung und Ergebnis",
+      "role": "content",
+      "members": [
+        "math_parallel_calculation"
+      ],
+      "dependsOn": [
+        "math_example",
+        "math_parallel"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_12"
+    },
+    {
+      "groupId": "math_series_rule",
+      "label": "Serienstruktur senkt den Gesamtwert",
+      "role": "content",
+      "members": [
+        "math_series_rule"
+      ],
+      "dependsOn": [
+        "math_series_result"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_13"
+    },
+    {
+      "groupId": "math_parallel_rule",
+      "label": "Parallelstruktur erhöht den Gesamtwert",
+      "role": "content",
+      "members": [
+        "math_parallel_rule"
+      ],
+      "dependsOn": [
+        "math_parallel_calculation"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_14"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_math_heads",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_heads",
+      "sourceText": "Hat man das Zuverlässigkeitsblockdiagramm eines Systems erstellt",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_math_assumption",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_assumption",
+      "sourceText": "Für die Serienstruktur ergibt sich die Systemzuverlässigkeit",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_math_series",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_series",
+      "sourceText": "Für die Serienstruktur ergibt sich die Systemzuverlässigkeit",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_math_series",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_series",
+      "sourceText": "durch Multiplikation der Einzelzuverlässigkeiten",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_4",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_05_math_parallel",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_parallel",
+      "sourceText": "In der Parallelstruktur ist die Berechnung",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_math_parallel",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_parallel",
+      "sourceText": "zunächst die Ausfallwahrscheinlichkeit jeder Komponente",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_6",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_07_math_parallel",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_parallel",
+      "sourceText": "Diese multipliziert man dann über alle Komponenten",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_7",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_08_math_example",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_example",
+      "sourceText": "Schauen wir uns dazu ein kleines Beispiel",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_math_example",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_example",
+      "sourceText": "eine Zuverlässigkeit von neunzig Prozent besitzt",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_9",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_10_math_series_calculation",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_series_calculation",
+      "sourceText": "Bei einer Serienstruktur der drei Komponenten",
+      "action": "show",
+      "beatId": "beat_10",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_11_math_series_result",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_series_result",
+      "sourceText": "Zuverlässigkeitswert von Zweiundsiebzigkomma neun Prozent",
+      "action": "show",
+      "beatId": "beat_11",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_12_math_parallel_calculation",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_parallel_calculation",
+      "sourceText": "Bei der Parallelstruktur der drei Komponenten",
+      "action": "show",
+      "beatId": "beat_12",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_13_math_series_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_series_rule",
+      "sourceText": "die Serienstruktur von Komponenten reduziert",
+      "action": "show",
+      "beatId": "beat_13",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_14_math_parallel_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_parallel_rule",
+      "sourceText": "die Parallelschaltung die Zuverlässigkeit des Systems erhöht",
+      "action": "show",
+      "beatId": "beat_14",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_15_math_series_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_series_rule",
+      "sourceText": "kleiner als die kleinste Einzelzuverlässigkeit",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_15",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_16_math_parallel_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "math_parallel_rule",
+      "sourceText": "größer ist als die größte Einzelzuverlässigkeit",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_16",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/states-reviewed/slide_039"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "math_heads",
+        "math_assumption",
+        "math_series",
+        "math_parallel",
+        "math_example",
+        "math_series_calculation",
+        "math_series_result",
+        "math_parallel_calculation",
+        "math_series_rule",
+        "math_parallel_rule"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/states-reviewed/slide_039"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "reviewEvidence": {
+    "static": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/after/slide_039.png",
+    "animationStates": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/states-reviewed/slide_039",
+    "frameCount": 22,
+    "contentReview": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/content-review.md",
+    "layoutReport": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/qa-final/svg-qa-report.md",
+    "independentVisualReview": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/visual-review-048-and-final39.md"
+  }
+}

@@ -2,13 +2,13 @@
 
 - Kapitel: 3
 - Lektion: 4
-- Quellfolie: 62
+- Quellfolie(n): 58
 - Sprechertext: section_010 — Beispiel: Stromversorgung in einem Krankenhaus
-- Titel: Common Cause: gemeinsame Ausfallursache
-- Takeaway: Ein gemeinsamer Kraftstofftank ist eine gemeinsame Ausfallursache für Generator und Notstromaggregat.
-- Archetyp: cause-tree-focus
-- Layout: Zwei symmetrische Ursachenpfade; identische Kraftstofftanks werden bei Common Cause klar markiert.
-- Produktionsmodus: Full-Slide 1920×1080
-- Mapping: 1:1, keine Zusammenfassung mit benachbarten Quellfolien
+- Titel: Beispiel Krankenhaus: Versorgungssystem
+- Takeaway: Quelltreuer Aufbauzustand innerhalb der FTA-Erklärfolge.
+- Archetyp: technical-system-landscape
+- Layout: Quellengetreue Systemtopologie links und die zwei Betriebszustände rechts; Leistungs- und Signalwege sind eindeutig unterschieden.
+- Produktionsmodus: Content-SVG 1920×1080, transparent für das Education-Master
+- Mapping: 1:1
 - Konnektoren: hinter Knoten und Text; Normalstärke 2,0–2,5 px
 - Animation: sprechertextgeführt aktiviert

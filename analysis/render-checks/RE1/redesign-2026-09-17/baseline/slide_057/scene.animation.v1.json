@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_057.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "weibull_hazard_random",
+      "label": "Konstante Ausfallrate",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_hazard_early",
+      "label": "Sinkende Ausfallrate",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "weibull_hazard_wear",
+      "label": "Steigende Ausfallrate",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_weibull_hazard_random",
+      "targetId": "weibull_hazard_random",
+      "action": "draw",
+      "sourceText": "Für b gleich eins ergibt sich eine konstante Ausfallrate",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_weibull_hazard_early",
+      "targetId": "weibull_hazard_early",
+      "action": "draw",
+      "sourceText": "Für b kleiner eins, sinkt die Ausfallrate über der Zeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_weibull_hazard_wear",
+      "targetId": "weibull_hazard_wear",
+      "action": "draw",
+      "sourceText": "Und für b größer eins ist ein ansteigender Verlauf der Ausfallrate zu erkennen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    }
+  ]
+}

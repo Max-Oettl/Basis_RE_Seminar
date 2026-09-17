@@ -1,0 +1,37 @@
+{
+  "sceneId": "re5_src_015",
+  "decision": "animated",
+  "staticGate": "passed_before_animation",
+  "targets": [
+    {
+      "id": "proof_gap",
+      "label": "Nicht erfüllter Nachweis",
+      "cue": "In diesem Fall können wir nur Folgendes nachweisen",
+      "action": "show"
+    },
+    {
+      "id": "plot_confidence_limits",
+      "label": "Vertrauensgrenzen",
+      "cue": "höhere Ausfallwahrscheinlichkeit unter gleicher Lebensdauer",
+      "action": "show"
+    },
+    {
+      "id": "lower_reliability",
+      "label": "Geringere Zuverlässigkeit",
+      "cue": "Erstens – eine geringere Zuverlässigkeit",
+      "action": "show"
+    },
+    {
+      "id": "shorter_lifetime",
+      "label": "Kürzere Lebensdauer",
+      "cue": "Zweitens – eine geringere Lebensdauer",
+      "action": "show"
+    },
+    {
+      "id": "lower_confidence",
+      "label": "Geringere Aussagesicherheit",
+      "cue": "Oder drittens – wir können das Ziel nur mit einer geringeren Aussagesicherheit",
+      "action": "show"
+    }
+  ]
+}

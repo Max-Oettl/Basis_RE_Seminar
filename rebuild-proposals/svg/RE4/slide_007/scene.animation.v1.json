@@ -5,37 +5,69 @@
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "aggregate_components",
-      "label": "Komponentenwerte",
+      "targetId": "aggregation_context",
+      "label": "Bewertung für einen Zeitpunkt",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "aggregate_gearbox",
-      "label": "Getriebewert",
+      "targetId": "aggregation_boundary",
+      "label": "Systemgrenze",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "aggregate_subsystems",
-      "label": "Teilsystemwerte",
+      "targetId": "aggregation_tree",
+      "label": "Bekannte Systemstruktur",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "aggregate_vehicle",
-      "label": "Fahrzeugwert",
+      "targetId": "aggregation_gears",
+      "label": "Zahnradzuverlässigkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "aggregation_components",
+      "label": "Zuverlässigkeit der übrigen Komponenten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "aggregation_gearbox",
+      "label": "Zuverlässigkeit des Getriebes",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "aggregation_subsystems",
+      "label": "Zuverlässigkeit der weiteren Teilsysteme",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "aggregation_vehicle",
+      "label": "Zuverlässigkeit des Fahrzeugs",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -44,44 +76,78 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_aggregate_components",
-      "targetId": "aggregate_components",
-      "action": "show",
-      "sourceText": "Dasselbe Vorgehen gilt natürlich auch für die anderen Komponenten – also die Eingangs- und Ausgangswelle sowie das Gehäuse, für die wir ebenfalls Zuverlässigkeiten ermitteln können.",
+      "stepId": "step_01_aggregation_context",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "aggregation_context",
+      "sourceText": "Erst dann können beispielsweise",
+      "action": "show"
     },
     {
-      "stepId": "step_02_aggregate_gearbox",
-      "targetId": "aggregate_gearbox",
-      "action": "show",
-      "sourceText": "Haben wir nun die Zuverlässigkeit aller Einzelteile bestimmt, können wir diese eine Hierarchieebene höher zusammenführen – zur Zuverlässigkeit des gesamten Getriebes.",
+      "stepId": "step_02_aggregation_boundary",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "aggregation_boundary",
+      "sourceText": "Erst dann können beispielsweise",
+      "action": "show"
     },
     {
-      "stepId": "step_03_aggregate_subsystems",
-      "targetId": "aggregate_subsystems",
-      "action": "show",
-      "sourceText": "Und dieses Prinzip lässt sich auch auf andere Teilsysteme anwenden – zum Beispiel auf den Motor oder das Fahrwerk.",
+      "stepId": "step_03_aggregation_tree",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "aggregation_tree",
+      "sourceText": "Erst dann können beispielsweise",
+      "action": "show"
     },
     {
-      "stepId": "step_04_aggregate_vehicle",
-      "targetId": "aggregate_vehicle",
-      "action": "show",
-      "sourceText": "Am Ende können wir alle Informationen nutzen, um die Zuverlässigkeit des gesamten Fahrzeugs abzuschätzen.",
+      "stepId": "step_04_aggregation_gears",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "aggregation_gears",
+      "sourceText": "Wir erhalten zum Beispiel",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_aggregation_components",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "aggregation_components",
+      "sourceText": "Dasselbe Vorgehen gilt natürlich auch",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_aggregation_gearbox",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "aggregation_gearbox",
+      "sourceText": "eine Hierarchieebene höher zusammenführen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_aggregation_subsystems",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "aggregation_subsystems",
+      "sourceText": "auf andere Teilsysteme anwenden",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_aggregation_vehicle",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "aggregation_vehicle",
+      "sourceText": "Am Ende können wir alle Informationen nutzen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_09_aggregation_tree",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "aggregation_tree",
+      "sourceText": "Wie genau diese Verknüpfung und Berechnung funktioniert",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     }
   ]
 }

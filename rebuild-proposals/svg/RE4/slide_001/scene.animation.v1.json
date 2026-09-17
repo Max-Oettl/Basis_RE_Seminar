@@ -5,20 +5,20 @@
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "hierarchy_context",
-      "label": "Systemverständnis",
+      "targetId": "system_context",
+      "label": "Drei Systemebenen",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "hierarchy_vehicle",
+      "targetId": "system_pkw",
       "label": "PKW",
       "status": "animated",
       "visibleInEditor": true,
@@ -26,24 +26,56 @@
       "confidence": "high"
     },
     {
-      "targetId": "hierarchy_subsystems",
-      "label": "Teilsysteme",
+      "targetId": "pkw_function",
+      "label": "Funktion des PKW",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "hierarchy_gearbox",
-      "label": "Getriebe",
+      "targetId": "pkw_failure",
+      "label": "Fehlfunktion des PKW",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "hierarchy_components",
-      "label": "Getriebekomponenten",
+      "targetId": "system_subsystems",
+      "label": "Motor, Getriebe und Fahrwerk",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "gear_function",
+      "label": "Funktion des Getriebes",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "gear_failure",
+      "label": "Fehlfunktion des Getriebes",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "system_components",
+      "label": "Vier Komponenten des Getriebes",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "gear_focus",
+      "label": "Zahnräder im Kraftfluss",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -52,54 +84,96 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_hierarchy_context",
-      "targetId": "hierarchy_context",
-      "action": "show",
-      "sourceText": "Dazu schauen wir uns zunächst an, was ein „System“ überhaupt ist.",
+      "stepId": "step_01_system_context",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "system_context",
+      "sourceText": "Ein System besteht",
+      "action": "show"
     },
     {
-      "stepId": "step_02_hierarchy_vehicle",
-      "targetId": "hierarchy_vehicle",
-      "action": "show",
-      "sourceText": "Nehmen wir als Beispiel einen PKW:",
+      "stepId": "step_02_system_pkw",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "system_pkw",
+      "sourceText": "Nehmen wir als Beispiel einen PKW",
+      "action": "show"
     },
     {
-      "stepId": "step_03_hierarchy_subsystems",
-      "targetId": "hierarchy_subsystems",
-      "action": "show",
-      "sourceText": "Diese Systemfunktion wird aber nicht von einem einzelnen Bauteil getragen, sondern ist nur möglich, wenn mehrere Subsysteme gemeinsam funktionieren – zum Beispiel der Motor, das Getriebe oder das Fahrwerk.",
+      "stepId": "step_03_pkw_function",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "pkw_function",
+      "sourceText": "Die Systemfunktion hier lautet",
+      "action": "show"
     },
     {
-      "stepId": "step_04_hierarchy_gearbox",
-      "targetId": "hierarchy_gearbox",
-      "action": "show",
-      "sourceText": "Werfen wir exemplarisch einen genaueren Blick auf das Getriebe.",
+      "stepId": "step_04_pkw_failure",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "pkw_failure",
+      "sourceText": "Die entsprechende Fehlfunktion wäre",
+      "action": "show"
     },
     {
-      "stepId": "step_05_hierarchy_components",
-      "targetId": "hierarchy_components",
-      "action": "show",
-      "sourceText": "Doch auch das Getriebe ist nicht einfach ein Bauteil, sondern besteht wiederum aus der Eingangswelle, Zahnrädern, der Ausgangswelle, dem Gehäuse und weiterer Komponenten.",
+      "stepId": "step_05_system_subsystems",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "system_subsystems",
+      "sourceText": "mehrere Subsysteme gemeinsam funktionieren",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_system_subsystems",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "system_subsystems",
+      "sourceText": "einen genaueren Blick auf das Getriebe",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_07_gear_function",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "gear_function",
+      "sourceText": "Seine Funktion ist es",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_gear_failure",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "gear_failure",
+      "sourceText": "Wenn diese Funktion ausfällt",
+      "action": "show"
+    },
+    {
+      "stepId": "step_09_system_components",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "system_components",
+      "sourceText": "Doch auch das Getriebe",
+      "action": "show"
+    },
+    {
+      "stepId": "step_10_system_components",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "system_components",
+      "sourceText": "All diese einzelnen Komponenten müssen funktionieren",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_11_gear_focus",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "gear_focus",
+      "sourceText": "Schauen wir uns beispielhaft die Zahnräder an",
+      "action": "show"
     }
   ]
 }

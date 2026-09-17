@@ -1,0 +1,609 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_020",
+  "svgPath": "slide_020.svg",
+  "spokenText": "Aber was bedeutet das für unsere Auswertung?\n\nWenn wir Lebensdauerdaten auswerten, können wir immer einen Vertrauensbereich angeben, den wir berücksichtigen möchten. Unsere Analyse liefert also nicht nur die Weibullverteilung, sondern auch den entsprechenden Vertrauensbereich.\n\nIn diesem Fall betrachten wir einen neunzigprozentigen Vertrauensbereich, der durch die fünf-Prozent- und die fünfundneunzig-Prozent-Vertrauensgrenze definiert ist. Alternativ könnten wir auch einen achtzigprozentigen Vertrauensbereich anzeigen lassen, der zwischen der zehn-Prozent- und der neunzig-Prozent-Vertrauensgrenze liegt.\n\nJe kleiner der Vertrauensbereich gewählt wird, desto enger rücken die Vertrauensgrenzen zusammen. Umgekehrt gilt: Je größer der Vertrauensbereich, desto weiter liegen die Grenzen von der Weibullverteilung entfernt.\n\nAuch die Größe unserer Stichprobe hat einen starken Einfluss auf die Breite des Vertrauensbereichs. Dabei gilt: Je größer die Stichprobe, desto präziser ist die Schätzung und desto schmaler wird der Vertrauensbereich. Eine kleine Stichprobe hingegen führt zu einer höheren Unsicherheit, wodurch der Vertrauensbereich breiter wird.\n\nDoch warum ist der Vertrauensbereich so wichtig?\n\nOhne ihn könnten wir zu falschen oder ungenauen Schlussfolgerungen gelangen. Eine berechnete Weibullverteilung könnte beispielsweise suggerieren, dass eine Komponente eine bestimmte Lebensdauer hat, obwohl sie in Wirklichkeit – wenn wir alle Daten der Grundgesamtheit hätten – deutlich kürzer oder länger sein könnte.\n\nDer Vertrauensbereich ist daher essenziell, um die Genauigkeit unserer Schätzung zu bewerten und das Risiko von Fehleinschätzungen zu minimieren.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/after/slide_020.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Aber was bedeutet das für unsere",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Aber was bedeutet das",
+      "occurrence": 1,
+      "claim": "Vergleich der Aussagewahrscheinlichkeit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "drivers_level_context"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "In diesem Fall betrachten wir",
+      "occurrence": 1,
+      "claim": "level 90",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "level_90"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "In diesem Fall betrachten wir",
+      "occurrence": 1,
+      "claim": "90 Prozent und ihre Grenzen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "drivers_90_label"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "Alternativ könnten wir auch",
+      "occurrence": 1,
+      "claim": "level 80",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "level_80"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "Alternativ könnten wir auch",
+      "occurrence": 1,
+      "claim": "80 Prozent und ihre Grenzen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "drivers_80_label"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "Je kleiner der Vertrauensbereich gewählt wird",
+      "occurrence": 1,
+      "claim": "Engerer Bereich bei kleinerem Niveau",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "drivers_level_rule"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "Je kleiner der Vertrauensbereich gewählt wird",
+      "occurrence": 1,
+      "claim": "level 80",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "level_80"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Umgekehrt gilt: Je größer",
+      "occurrence": 1,
+      "claim": "level 90",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "level_90"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "Auch die Größe unserer Stichprobe",
+      "occurrence": 1,
+      "claim": "Vergleich des Stichprobenumfangs",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "drivers_sample_context"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "Je größer die Stichprobe",
+      "occurrence": 1,
+      "claim": "sample large",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "sample_large"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "Je größer die Stichprobe",
+      "occurrence": 1,
+      "claim": "Größere Stichprobe",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "drivers_large_label"
+      ]
+    },
+    {
+      "beatId": "beat_12",
+      "sourceText": "Je größer die Stichprobe",
+      "occurrence": 1,
+      "claim": "Präzision durch mehr Daten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "drivers_sample_rule"
+      ]
+    },
+    {
+      "beatId": "beat_13",
+      "sourceText": "Eine kleine Stichprobe hingegen",
+      "occurrence": 1,
+      "claim": "sample small",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "sample_small"
+      ]
+    },
+    {
+      "beatId": "beat_14",
+      "sourceText": "Eine kleine Stichprobe hingegen",
+      "occurrence": 1,
+      "claim": "Kleinere Stichprobe",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "drivers_small_label"
+      ]
+    },
+    {
+      "beatId": "beat_15",
+      "sourceText": "Ohne ihn könnten wir",
+      "occurrence": 1,
+      "claim": "Fehleinschätzungen vermeiden",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "drivers_risk"
+      ]
+    },
+    {
+      "beatId": "beat_16",
+      "sourceText": "deutlich kürzer oder länger sein könnte",
+      "occurrence": 1,
+      "claim": "Vergleich des Stichprobenumfangs",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "drivers_sample_context"
+      ]
+    },
+    {
+      "beatId": "beat_17",
+      "sourceText": "das Risiko von Fehleinschätzungen zu minimieren",
+      "occurrence": 1,
+      "claim": "Fehleinschätzungen vermeiden",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "drivers_risk"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "drivers_level_context",
+      "label": "Vergleich der Aussagewahrscheinlichkeit",
+      "role": "content",
+      "members": [
+        "drivers_level_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "level_90",
+      "label": "level 90",
+      "role": "content",
+      "members": [
+        "level_90"
+      ],
+      "dependsOn": [
+        "drivers_level_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "drivers_90_label",
+      "label": "90 Prozent und ihre Grenzen",
+      "role": "content",
+      "members": [
+        "drivers_90_label"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "level_80",
+      "label": "level 80",
+      "role": "content",
+      "members": [
+        "level_80"
+      ],
+      "dependsOn": [
+        "drivers_level_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "drivers_80_label",
+      "label": "80 Prozent und ihre Grenzen",
+      "role": "content",
+      "members": [
+        "drivers_80_label"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "drivers_level_rule",
+      "label": "Engerer Bereich bei kleinerem Niveau",
+      "role": "content",
+      "members": [
+        "drivers_level_rule"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "drivers_sample_context",
+      "label": "Vergleich des Stichprobenumfangs",
+      "role": "content",
+      "members": [
+        "drivers_sample_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_9"
+    },
+    {
+      "groupId": "sample_large",
+      "label": "sample large",
+      "role": "content",
+      "members": [
+        "sample_large"
+      ],
+      "dependsOn": [
+        "drivers_sample_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_10"
+    },
+    {
+      "groupId": "drivers_large_label",
+      "label": "Größere Stichprobe",
+      "role": "content",
+      "members": [
+        "drivers_large_label"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_11"
+    },
+    {
+      "groupId": "drivers_sample_rule",
+      "label": "Präzision durch mehr Daten",
+      "role": "content",
+      "members": [
+        "drivers_sample_rule"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_12"
+    },
+    {
+      "groupId": "sample_small",
+      "label": "sample small",
+      "role": "content",
+      "members": [
+        "sample_small"
+      ],
+      "dependsOn": [
+        "drivers_sample_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_13"
+    },
+    {
+      "groupId": "drivers_small_label",
+      "label": "Kleinere Stichprobe",
+      "role": "content",
+      "members": [
+        "drivers_small_label"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_14"
+    },
+    {
+      "groupId": "drivers_risk",
+      "label": "Fehleinschätzungen vermeiden",
+      "role": "content",
+      "members": [
+        "drivers_risk"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_15"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_drivers_level_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_level_context",
+      "sourceText": "Aber was bedeutet das",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_level_90",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "level_90",
+      "sourceText": "In diesem Fall betrachten wir",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_drivers_90_label",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_90_label",
+      "sourceText": "In diesem Fall betrachten wir",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_level_80",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "level_80",
+      "sourceText": "Alternativ könnten wir auch",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_drivers_80_label",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_80_label",
+      "sourceText": "Alternativ könnten wir auch",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_drivers_level_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_level_rule",
+      "sourceText": "Je kleiner der Vertrauensbereich gewählt wird",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_level_80",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "level_80",
+      "sourceText": "Je kleiner der Vertrauensbereich gewählt wird",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_7",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_08_level_90",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "level_90",
+      "sourceText": "Umgekehrt gilt: Je größer",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_8",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_09_drivers_sample_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_sample_context",
+      "sourceText": "Auch die Größe unserer Stichprobe",
+      "action": "show",
+      "beatId": "beat_9",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_10_sample_large",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "sample_large",
+      "sourceText": "Je größer die Stichprobe",
+      "action": "show",
+      "beatId": "beat_10",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_11_drivers_large_label",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_large_label",
+      "sourceText": "Je größer die Stichprobe",
+      "action": "show",
+      "beatId": "beat_11",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_12_drivers_sample_rule",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_sample_rule",
+      "sourceText": "Je größer die Stichprobe",
+      "action": "show",
+      "beatId": "beat_12",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_13_sample_small",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "sample_small",
+      "sourceText": "Eine kleine Stichprobe hingegen",
+      "action": "show",
+      "beatId": "beat_13",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_14_drivers_small_label",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_small_label",
+      "sourceText": "Eine kleine Stichprobe hingegen",
+      "action": "show",
+      "beatId": "beat_14",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_15_drivers_risk",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_risk",
+      "sourceText": "Ohne ihn könnten wir",
+      "action": "show",
+      "beatId": "beat_15",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_16_drivers_sample_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_sample_context",
+      "sourceText": "deutlich kürzer oder länger sein könnte",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_16",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_17_drivers_risk",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "drivers_risk",
+      "sourceText": "das Risiko von Fehleinschätzungen zu minimieren",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_17",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_020/00_initial.png"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "drivers_level_context",
+        "level_90",
+        "drivers_90_label",
+        "level_80",
+        "drivers_80_label",
+        "drivers_level_rule",
+        "drivers_sample_context",
+        "sample_large",
+        "drivers_large_label",
+        "drivers_sample_rule",
+        "sample_small",
+        "drivers_small_label",
+        "drivers_risk"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_020/15_after_11_das_risiko_von_fehleinschatzungen_zu_mi.png"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "reviewedAt": "2026-09-17",
+    "endState": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/after/slide_020.png",
+    "preview": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/preview/slide_020.png",
+    "stateDirectory": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_020",
+    "reviewedStateCount": 16,
+    "includesHighlightStates": true,
+    "independentReviewer": "/root/visual_review",
+    "findings": [],
+    "scope": "Final composition and discrete animation states rendered in Chromium; legibility additionally reviewed at 50 percent. No continuous audio playback test."
+  }
+}

@@ -5,6 +5,11 @@ const educationTheme = require("./reltest-education-theme");
 const root = path.resolve(__dirname, "..");
 const outRoot = path.join(root, "rebuild-proposals", "svg", "RE2");
 const assetRoot = path.join(root, "components", "image-library", "re2-ch2-pv");
+const pDiagramPictogramRoot = path.join(root, "components", "image-library", "generated-pictograms", "re2-p-diagram");
+const corePictogramRoot = path.join(root, "components", "image-library", "generated-pictograms", "education-core");
+const abcPictogramRoot = path.join(root, "components", "image-library", "generated-pictograms", "re2-abc-classes");
+const systemLevelPictogramRoot = path.join(root, "components", "image-library", "generated-pictograms", "re2-system-levels");
+const abcSourceMediaRoot = path.join(root, "analysis", "redesign-assets", "RE2-user-feedback-2026-08-27", "source_018");
 const sourceMap = JSON.parse(fs.readFileSync(path.join(root, "analysis", "rebuild-plans", "RE2_source-reference-map.json"), "utf8"));
 const scenes = sourceMap.mappings.filter((scene) => scene.chapter === 2);
 const animated = process.argv.includes("--animated");
@@ -13,14 +18,14 @@ const C = educationTheme.colors;
 
 const sceneMeta = {
   4: ["Systemgrenzen am Beispiel einer PV-Anlage", "Die Systemgrenze trennt PV-Anlage, Subsysteme und relevante Umwelt.", "system-landscape", "Konkrete PV-Komponenten mit äußerer und verschachtelter Systemgrenze."],
-  6: ["Vom Umfeld bis zum Bauteil", "Eine saubere Systemanalyse ordnet Umwelt, System, Subsystem und Komponente.", "nested-system", "Vier verschachtelte Ebenen mit Fokus auf den Wechselrichter."],
+  6: ["Vom Umfeld bis zum Bauteil", "Eine saubere Systemanalyse ordnet Umwelt, System, Subsystem und Komponente.", "nested-system", "Quellnahe vierzeilige Ebenenmatrix mit konzentrischer Hierarchie und angeschlossener Systemgrenze."],
   8: ["Das P-Diagramm als Analysemodell", "Das P-Diagramm ordnet Eingänge, Steuergrößen, Störungen und Zielgrößen um ein System.", "p-diagram", "Vier Parametergruppen in einer klaren Kreuzstruktur."],
   9: ["P-Diagramm des Wechselrichters", "Am Wechselrichter werden Energie, Steuerung, Störungen und Zielgröße konkret.", "p-diagram", "Konkretes P-Diagramm mit Wechselrichter als System."],
-  10: ["Ursachen für Leistungsverlust", "Das Ishikawa-Diagramm strukturiert mögliche Ursachen aus fünf Kategorien.", "ishikawa", "Ursache-Wirkungs-Diagramm mit dauerhaft sichtbarer Wirkung."],
+  10: ["Ursache-Wirkungs-Diagramm (Ishikawa-Diagramm)", "Das Ishikawa-Diagramm strukturiert konkrete Ursachen des PV-Leistungsverlusts in fünf M-Kategorien.", "ishikawa", "Quellnahe Fischgräten-Topologie mit drei oberen und zwei unteren Ursachenkategorien."],
   11: ["Bauteilblockdiagramm: Prinzip", "Komponenten werden über Energie-, Stoff- und Informationsströme verbunden.", "component-block", "Zwei Komponenten innerhalb einer Systemgrenze und drei bidirektionale Flüsse."],
   13: ["Bauteilblockdiagramm des Wechselrichters", "Der Wechselrichter wird in Energiepfad, Steuerung, Kommunikation und Nebenfunktionen zerlegt.", "component-block-detailed", "Detaillierte, zonierte Komponenten- und Schnittstellenübersicht."],
   14: ["Von der Black Box zur Funktionsstruktur", "Eine abstrakte Gesamtfunktion wird über Ein- und Ausgangsgrößen beschrieben und in Teilfunktionen zerlegt.", "function-structure-principle", "Black Box oben und generische Zerlegung in drei Teilfunktionen darunter."],
-  16: ["Funktionsstruktur des Wechselrichters", "Acht Teilfunktionen bilden gemeinsam die Umwandlung von Gleichstrom in Wechselstrom.", "function-structure", "Eigenständige, großformatige Funktionskette mit Regelungs- und Überwachungsfunktionen."],
+  16: ["Funktionsstruktur", "Die detaillierte Wechselrichterstruktur ist die aufgeklappte Zerlegung der Hauptfunktion DC-Strom in AC-Strom.", "function-structure", "Obere DC-zu-AC-Hauptfunktion mit sichtbar aufgespannter Detailstruktur und acht Teilfunktionen."],
   17: ["ABC-Analyse: Ausgangsinventar", "Bauteile, Fehlermöglichkeiten und Ausfallmechanismen bilden die Grundlage der anschließenden ABC-Einstufung.", "risk-inventory-table", "Großformatige Inventartabelle ohne vorweggenommene ABC-Bewertung."],
   18: ["ABC-Einteilung von Ausfallmechanismen", "A- und B-Teile sind risikoreich; C-Teile gelten als risikoneutral.", "three-column-comparison", "Drei klar getrennte Bewertungsspalten mit Definition, Berechenbarkeit und Ausfallverhalten."],
   19: ["ABC-Analyse des Wechselrichters", "Die Einstufung macht die weiterzuverfolgenden A- und B-Risiken unmittelbar sichtbar.", "risk-inventory-table", "Großformatige Ergebnistabelle mit farbcodierter ABC-Einstufung."],
@@ -57,13 +62,13 @@ const animationSpec = {
     ["pi_relations", "Wirkbeziehungen", "Dieser ist die vom Wechselrichter erzeugte elektrische Energie"],
   ],
   10: [
-    ["ishi_effect", "Wirkung Leistungsverlust", "In unserem Fall ist die unerwünschte Wirkung der Leistungsverlust der PV-Anlage."],
+    ["ishi_framework", "Fischgräte und Wirkung", "In unserem Fall ist die unerwünschte Wirkung der Leistungsverlust der PV-Anlage."],
     ["ishi_material", "Materialien", "Zunächst werden alle Materialien bzw. Bauteile betrachtet"],
     ["ishi_machine", "Maschinen und Ausrüstung", "In der zweiten Gräte können die eingesetzten Maschinen und Ausrüstungen erfasst werden."],
     ["ishi_human", "Mensch", "Der Mensch spielt natürlich auch in technischen Systemen meist eine relevante Rolle."],
     ["ishi_methods", "Methoden", "Unter Methoden verstehen wir die Prozesse und Verfahren"],
     ["ishi_environment", "Milieu und Umwelt", "Zum Schluss gibt es noch die Umweltfaktoren"],
-    ["ishi_spine", "Ursache-Wirkungs-Beziehungen", "Das Ishikawa-Diagramm wird von rechts nach links gelesen"],
+    ["ishi_reading_direction", "Leserichtung Wirkung zu Ursachen", "Das Ishikawa-Diagramm wird von rechts nach links gelesen"],
   ],
   11: [
     ["block_boundary", "Systemgrenze", "Nachdem wir die Systemgrenze definiert"],
@@ -74,6 +79,7 @@ const animationSpec = {
   ],
   13: [
     ["inv_boundary", "Systemgrenze und Schnittstellen", "Als Beispiel betrachten wir das Bauteilblockdiagramm eines Wechselrichters."],
+    ["inv_legend", "Legende der Flussarten", "Als Beispiel betrachten wir das Bauteilblockdiagramm eines Wechselrichters."],
     ["inv_aux", "Bordnetz und Lüfter", "Darin sind alle elektronischen Baugruppen und Komponenten dargestellt."],
     ["inv_energy", "Energiepfad", "Der Energiestrom im Leistungspfad des Wechselrichters kann eingezeichnet werden"],
     ["inv_communication", "Kommunikation", "Sämtliche Bauteile zur Kommunikation werden ebenfalls erfasst"],
@@ -87,9 +93,8 @@ const animationSpec = {
     ["func_relations", "Funktionsbeziehungen", "Wird die Summe dieser Teilfunktionen erfüllt, so ist auch die übergeordnete Funktion des Systems erfüllt."],
   ],
   16: [
-    ["func16_main", "Hauptfunktionskette", "Im Falle des Wechselrichters ist die Hauptfunktion die Umwandlung von Gleichstrom in Wechselstrom."],
-    ["func16_controls", "Regelungs- und Überwachungsfunktionen", "Dies kann dann wieder weiter aufgeteilt werden in alle für den Wechselrichter relevanten Teilfunktionen."],
-    ["func16_relations", "Funktionsbeziehungen", "Jeder dieser Teilfunktionen hat natürlich wieder seine eigene Aufgabenbeschreibung und individuelle Ein- und Ausgangsgrößen."],
+    ["func16_overview", "Hauptfunktion DC-Strom zu AC-Strom", "Im Falle des Wechselrichters ist die Hauptfunktion die Umwandlung von Gleichstrom in Wechselstrom."],
+    ["func16_detail", "Aufgeklappte Detailstruktur des Wechselrichters", "Dies kann dann wieder weiter aufgeteilt werden in alle für den Wechselrichter relevanten Teilfunktionen."],
   ],
   17: [
     ["abc17_header", "Inventarschema", "Hierzu werden zunächst alle kritischen Bauteile des Systems identifiziert und aufgelistet."],
@@ -164,6 +169,15 @@ function dataUri(file) { return `data:image/png;base64,${fs.readFileSync(file).t
 function img(n, filename, x, y, w, h, label) {
   return `<image x="${x}" y="${y}" width="${w}" height="${h}" href="${dataUri(mediaPath(n, filename))}" preserveAspectRatio="xMidYMid meet" aria-label="${esc(label)}" data-source-media="true" data-source-evidence="user_request" data-source-reference="Nutzerfeedback: konkrete technische Abbildung statt generischer Box"/>`;
 }
+function pictogramImg(n, filename, kind, x, y, size) {
+  return `<image x="${x}" y="${y}" width="${size}" height="${size}" href="${dataUri(mediaPath(n, filename))}" preserveAspectRatio="xMidYMid meet" aria-hidden="true" data-component="reltest-pictogram" data-pictogram-style="reltest-education-minimal-v1" data-pictogram-kind="${esc(kind)}" data-source-media="true" data-source-evidence="user_request" data-source-reference="Nutzerfeedback: freigegebenes PNG-Piktogramm als visueller Lernanker"/>`;
+}
+function abcPictogramImg(filename, kind, x, y, size, label) {
+  return `<image x="${x}" y="${y}" width="${size}" height="${size}" href="${dataUri(path.join(abcPictogramRoot, filename))}" preserveAspectRatio="xMidYMid meet" aria-hidden="true" data-component="reltest-pictogram" data-pictogram-style="reltest-education-minimal-v1" data-pictogram-kind="${esc(kind)}" data-source-media="true" data-source-evidence="user_request" data-source-reference="Nutzerfeedback Szene 12: alt wirkende Quellbilder durch neu generierte PNG-Piktogramme ersetzen" data-qc-label="${esc(label)}"/>`;
+}
+function sourceMediaImg(filename, x, y, w, h, label) {
+  return `<image x="${x}" y="${y}" width="${w}" height="${h}" href="${dataUri(path.join(abcSourceMediaRoot, filename))}" preserveAspectRatio="xMidYMid meet" aria-label="${esc(label)}" data-source-media="true" data-source-evidence="source_slide" data-source-reference="Quellfolie 18: technische Beispielabbildung für die ABC-Klasse"/>`;
+}
 function annotate(markup) {
   return markup
     .replace(/<text(?![^>]*data-qc-role)/g, '<text data-qc-role="text" data-qc-layer="text" data-qc-allow-overlap="true"')
@@ -174,17 +188,18 @@ function annotate(markup) {
     .replace(/<line(?![^>]*data-role)/g, '<line data-role="connector"');
 }
 function frame(scene, body) {
-  const [title, takeaway, archetype, layoutIntent] = sceneMeta[scene.output_slide_number];
+  const [defaultTitle, takeaway, archetype, layoutIntent] = sceneMeta[scene.output_slide_number];
+  const title = scene.content_title_override || defaultTitle;
   const metadata = {
     artifactScope: "content-svg", embeddingTarget: "powerpoint-slide", slideType: archetype,
-    contentTitle: title, layoutIntent, takeaway, density: [13, 17, 19].includes(scene.output_slide_number) ? "dense" : "balanced",
+    contentTitle: title, layoutIntent, takeaway, density: [9, 13, 17, 18, 19].includes(scene.output_slide_number) ? "dense" : "normal",
     contentMode: "transparent-content", backgroundMode: "transparent", brandProfile: educationTheme.brandProfile,
     brandVariant: educationTheme.brandVariant, sourceSlides: scene.source_slides, officialLogoStatus: "pending-original-asset",
   };
-  const markers = [...new Set([C.accent, C.deep, C.failure, C.success, C.secondary, C.cyan, C.border])]
+  const markers = [...new Set([C.accent, C.deep, C.failure, C.success, C.secondary, C.educationAccent, C.cyan, C.technical, C.graphite, C.border])]
     .filter((color) => body.includes(color))
     .map((color) =>
-    `<marker id="arrow_${color.slice(1)}" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="${color}"/></marker>`).join("");
+    `<marker id="arrow_${color.slice(1)}" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1L11 6L1 11Z" fill="${color}"/></marker>`).join("");
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="content-svg" data-embedding-target="powerpoint-slide" data-scene-id="${scene.scene_id}" data-brand-profile="${educationTheme.brandProfile}">
 <metadata id="slide_quality_metadata" type="application/json"><![CDATA[${JSON.stringify(metadata)}]]></metadata>
@@ -220,35 +235,81 @@ function slide4() {
 }
 
 function slide6() {
+  const bullet = (x, y, label, width = 250, size = 22) =>
+    `<rect x="${x}" y="${y - 8}" width="7" height="7" fill="${C.deep}"/>${multi(x + 22, y, width, label, size, 620, C.deep, "start", 1.12)}`;
+  const context = `<g id="level_structure_context" data-anim-label="Konzentrische Systemebenen und Tabellenraster"><title>Konzentrische Systemebenen und Tabellenraster</title>
+     <path d="M 520 218 A 322 322 0 0 0 520 862 Z" fill="${C.accent}"/>
+     <path d="M 520 373 A 244 244 0 0 0 520 861" fill="none" stroke="${C.surface}" stroke-width="4"/>
+     <path d="M 520 528 A 166 166 0 0 0 520 860" fill="none" stroke="${C.surface}" stroke-width="4"/>
+     <path d="M 520 683 A 89.5 89.5 0 0 0 520 862" fill="none" stroke="${C.surface}" stroke-width="4"/>
+     <rect x="520" y="218" width="900" height="645" fill="${C.surface}" stroke="${C.deep}" stroke-width="3"/>
+     <path d="M 520 373 H 1420 M 520 528 H 1420 M 520 683 H 1420 M 520 838 H 1420" fill="none" stroke="${C.deep}" stroke-width="3"/>
+   </g>`;
   const environment = group("level_environment", "Umwelt",
-    `${box(94, 192, 1732, 708, C.surfaceSoft, C.soft, 2.5, 18)}${pill(120, 214, 114, "UMWELT", C.soft, C.surface)}
-     ${multi(128, 292, 305, "Standort · Umwelteinflüsse · Umgebungseinflüsse · gesetzliche Regularien und Anforderungen", 22, 650, C.muted)}`);
+    `${txt(540, 258, "Umwelt", 27, 800, C.deep)}
+     ${pictogramImg(6, "re2-level-environment.png", "system-level-environment", 650, 266, 96)}
+     ${bullet(800, 258, "Standort", 220)}
+     ${bullet(1080, 258, "Umwelteinflüsse", 260)}
+     ${bullet(800, 316, "Umgebungseinflüsse", 250)}
+     ${bullet(1080, 316, "Gesetzliche Regularien & Anforderungen", 300, 20)}`);
   const system = group("level_system", "System",
-    `${box(442, 266, 1330, 584, C.accentSoft, C.accent, 2.5, 16)}${pill(470, 288, 110, "SYSTEM", C.accent, C.surface)}
-     ${multi(470, 356, 290, "Anlagentyp · elektrische Verschaltung · Betriebsstrategie · Nennleistung", 22, 650, C.deepSoft)}`);
+    `${txt(540, 413, "Systemebene", 27, 800, C.deep)}
+     ${pictogramImg(6, "re2-level-pv-system.png", "system-level-pv-system", 650, 421, 96)}
+     ${bullet(800, 413, "Anlagentyp", 220)}
+     ${bullet(1080, 413, "Elektrische Verschaltung", 280, 21)}
+     ${bullet(800, 471, "Betriebsstrategie", 250)}
+     ${bullet(1080, 471, "Nennleistung", 240)}`);
   const subsystem = group("level_subsystem", "Subsystem",
-    `${box(776, 338, 940, 458, C.secondarySoft, C.secondary, 2.5, 14)}${pill(804, 360, 150, "SUBSYSTEM", C.secondary, C.surface)}
-     ${pill(824, 432, 174, "PV-Modul", C.secondary, C.surface)}${pill(1016, 432, 226, "Wechselrichter", C.secondary, C.surface)}${pill(1260, 432, 210, "Batteriesystem", C.secondary, C.surface)}`);
+    `${txt(540, 568, "Subsystemebene", 27, 800, C.deep)}
+     ${pictogramImg(6, "re2-level-inverter.png", "system-level-inverter", 650, 576, 96)}
+     ${bullet(800, 598, "Wechselrichter", 205)}
+     ${bullet(1035, 598, "PV-Modul", 160)}
+     ${bullet(1218, 598, "Batteriesystem", 180)}`);
   const component = group("level_component", "Komponente",
-    `${box(1004, 510, 654, 230, C.surface, C.deep, 2, 12)}${pill(1032, 532, 158, "KOMPONENTE", C.deep, C.surfaceSoft)}
-     ${pill(1060, 612, 210, "Mikrocontroller", C.deep, C.surfaceSoft)}${pill(1290, 612, 330, "weitere Baugruppen / Bauteile", C.deep, C.surfaceSoft)}`);
+    `${txt(540, 723, "Komponentenebene", 25, 800, C.deep)}
+     ${pictogramImg(6, "re2-level-microcontroller.png", "system-level-microcontroller", 650, 731, 96)}
+     ${bullet(800, 780, "Mikrocontroller", 220)}
+     ${bullet(1060, 780, "Weitere Baugruppen oder Bauteile", 330, 20)}`);
   const focus = group("level_focus", "Fokus Wechselrichter",
-    `<path d="M 1000 408 H 1252 V 490 H 1670 V 758 H 980 V 490 H 1000 Z" fill="none" stroke="${C.failure}" stroke-width="4" stroke-dasharray="10 7" stroke-linejoin="round"/>${pill(1236, 770, 178, "FOKUS ANALYSE", C.failure, C.surface)}
-     ${pathLine("M 1126 408 C 1330 332 1460 298 1580 276", C.failure, 2.5)}${pill(1420, 224, 330, "SCHNITTSTELLEN ZUR UMWELT", C.failure, C.surface)}`);
-  return evidence(environment, "Quellfolien 6–7: Umwelt") + evidence(system, "Quellfolien 6–7: System") + evidence(subsystem, "Quellfolien 6–7: Subsysteme") + evidence(component, "Quellfolien 6–7: Komponenten") + evidence(focus, "Quellfolie 7: Wechselrichter-Fokus");
+    `<path d="M 520 528 H 1420 V 838 H 520 A 155 155 0 0 1 520 528 Z" fill="${C.technical}" fill-opacity=".18" stroke="none"/>
+     <path d="M 520 528 H 1690 V 838 H 520 A 155 155 0 0 1 520 528 Z" fill="none" stroke="${C.failure}" stroke-width="4" stroke-dasharray="14 10" stroke-linejoin="round"/>
+     ${multi(1470, 300, 290, "Schnittstelle für Wechselwirkungen zur Umgebung", 25, 760, C.deep, "start", 1.18)}
+     ${line(1490, 430, 1490, 504, C.failure, 4)}${line(1570, 430, 1570, 504, C.failure, 4)}${line(1650, 430, 1650, 504, C.failure, 4)}
+     ${txt(1554, 700, "SYSTEMGRENZE", 25, 820, C.failure, "middle")}`);
+  return evidence(context, "Quellfolien 6–7: konzentrische Ebenenmatrix") + evidence(environment, "Quellfolien 6–7: Umwelt") + evidence(system, "Quellfolien 6–7: System") + evidence(subsystem, "Quellfolien 6–7: Subsysteme") + evidence(component, "Quellfolien 6–7: Komponenten") + evidence(focus, "Quellfolie 7: Wechselrichter-Fokus und Systemgrenze");
 }
 
 function pNode(x, y, w, h, labelText, color, fill, id, label) {
   return group(id, label, `${box(x, y, w, h, fill, color, 2.5, 12)}${multi(x + w / 2, y + h / 2 - 4, w - 40, labelText, 27, 760, color, "middle")}`);
 }
 function slide8() {
-  const center = pNode(710, 404, 500, 210, "System: Produkt / Prozess", C.deep, C.surface, "p_system", "System Produkt oder Prozess");
-  const inputs = pNode(110, 434, 380, 150, "Eingangsgrößen / Stellgrößen", C.accent, C.accentSoft, "p_inputs", "Eingangs- und Stellgrößen");
-  const controls = pNode(770, 204, 380, 130, "Kontrollierbare Größen / Steuergrößen", C.success, C.successSoft, "p_controls", "Kontrollierbare Größen");
-  const disturbances = pNode(770, 704, 380, 130, "Störgrößen", C.failure, C.failureSoft, "p_disturbances", "Störgrößen");
-  const outputs = pNode(1430, 434, 380, 150, "Zielgrößen", C.secondary, C.secondarySoft, "p_outputs", "Zielgrößen");
+  const center = group("p_system", "System Produkt oder Prozess",
+    `${box(710, 386, 500, 252, C.accent, C.accent, 2.5, 14)}
+     ${txt(960, 450, "SYSTEM", 18, 820, C.accentSoft, "middle")}
+     ${multi(960, 520, 420, "Produkt / Prozess", 34, 820, C.surface, "middle")}
+     ${multi(960, 582, 390, "wandelt Einwirkungen in ein gewünschtes Ergebnis", 20, 620, C.surface, "middle", 1.12)}`);
+  const inputs = group("p_inputs", "Eingangs- und Stellgrößen",
+    `${box(92, 406, 492, 212, C.surface, C.accent, 2.2, 12)}${box(92, 406, 12, 212, C.accent, C.accent, 0, 6)}
+     ${pictogramImg(8, "re2-p-diagram-input.png", "p-diagram-input", 122, 450, 124)}
+     ${txt(276, 472, "EINGANG", 18, 820, C.secondary)}
+     ${multi(276, 518, 270, "Eingangsgrößen / Stellgrößen", 25, 780, C.accent, "start", 1.12)}`);
+  const controls = group("p_controls", "Kontrollierbare Größen",
+    `${box(660, 180, 600, 154, C.surface, C.secondary, 2.2, 12)}${box(660, 180, 600, 10, C.accent, C.accent, 0, 5)}
+     ${pictogramImg(8, "re2-p-diagram-control.png", "p-diagram-control", 698, 202, 112)}
+     ${txt(842, 228, "GEZIELT BEEINFLUSSBAR", 18, 820, C.secondary)}
+     ${multi(842, 270, 370, "Kontrollierbare Größen / Steuergrößen", 23, 760, C.accent, "start", 1.1)}`);
+  const disturbances = group("p_disturbances", "Störgrößen",
+    `${box(660, 704, 600, 154, C.surface, C.failure, 2.2, 12)}${box(660, 704, 600, 10, C.failure, C.failure, 0, 5)}
+     ${pictogramImg(8, "re2-p-diagram-disturbance.png", "p-diagram-disturbance", 698, 726, 112)}
+     ${txt(842, 752, "NICHT DIREKT KONTROLLIERBAR", 18, 820, C.failure)}
+     ${multi(842, 794, 370, "Störgrößen", 25, 780, C.accent, "start", 1.1)}`);
+  const outputs = group("p_outputs", "Zielgrößen",
+    `${box(1336, 406, 492, 212, C.surface, C.accent, 2.2, 12)}${box(1816, 406, 12, 212, C.accent, C.accent, 0, 6)}
+     ${pictogramImg(8, "re2-p-diagram-output.png", "p-diagram-output", 1364, 450, 124)}
+     ${txt(1518, 472, "ERGEBNIS", 18, 820, C.secondary)}
+     ${multi(1518, 518, 270, "Ausgangsgrößen / Zielgrößen", 25, 780, C.accent, "start", 1.12)}`);
   const rel = group("p_relations", "Wirkbeziehungen",
-    `${line(490, 509, 710, 509, C.accent, 3)}${line(960, 334, 960, 404, C.success, 3)}${line(960, 704, 960, 614, C.failure, 3)}${line(1210, 509, 1430, 509, C.secondary, 3)}`);
+    `${line(584, 512, 710, 512, C.accent, 2.8)}${line(960, 334, 960, 386, C.accent, 2.8)}${line(960, 704, 960, 638, C.failure, 2.8)}${line(1210, 512, 1336, 512, C.accent, 2.8)}`);
   return evidence(center + inputs + controls + disturbances + outputs + rel, "Quellfolie 8: generisches P-Diagramm; keine Systemgrenze");
 }
 function slide9() {
@@ -263,26 +324,79 @@ function slide9() {
   return evidence(center + inputs + controls + disturb + outputs + rel, "Quellfolie 9: P-Diagramm Wechselrichter");
 }
 
-function ishBranch(id, label, x, y, side, title, a, b, color) {
-  const endX = side === "top" ? x + 150 : x + 150;
-  const endY = side === "top" ? 326 : 744;
-  const joinY = 535;
-  const stem = pathLine(`M ${x} ${joinY} L ${endX} ${endY}`, color, 2.5, "none");
-  const titleY = side === "top" ? endY - 46 : endY + 34;
-  const bodyY = side === "top" ? endY - 8 : endY + 70;
-  return group(id, label, `${stem}${txt(endX, titleY, title, 23, 800, color, "middle")}${multi(endX, bodyY, 280, `${a} · ${b}`, 19, 610, C.text, "middle")}`);
+function ishCategory(id, label, config) {
+  const {
+    ribbonX, ribbonY, ribbonW, boneStartX, boneStartY, boneEndX, boneEndY,
+    examples, sourceLabel,
+  } = config;
+  const ribbon = `<path d="M ${ribbonX} ${ribbonY} H ${ribbonX + ribbonW - 42} L ${ribbonX + ribbonW} ${ribbonY + 40} L ${ribbonX + ribbonW - 42} ${ribbonY + 80} H ${ribbonX} Z" fill="${C.accentSoft}" stroke="${C.accent}" stroke-width="2.5" stroke-linejoin="round"/>
+    <rect x="${ribbonX}" y="${ribbonY}" width="14" height="80" fill="${C.accent}"/>
+    ${multi(ribbonX + (ribbonW / 2) - 8, ribbonY + 31, ribbonW - 70, label, 24, 800, C.accent, "middle", 1.05)}`;
+  const bone = pathLine(`M ${boneStartX} ${boneStartY} L ${boneEndX} ${boneEndY}`, C.accent, 3, "none");
+  const tributaries = examples.map((example) =>
+    `${pathLine(`M ${example.x1} ${example.y} L ${example.x2} ${example.y}`, C.secondary, 1.8)}
+     ${multi((example.x1 + example.x2) / 2, example.labelY || example.y - 14, example.x2 - example.x1 - 10, example.label, 20, 610, C.text, "middle", 1.05)}`
+  ).join("");
+  return evidence(group(id, label, `${ribbon}${bone}${tributaries}`), `Quellfolie 10: ${sourceLabel}`);
 }
 function slide10() {
-  const effect = group("ishi_effect", "Wirkung Leistungsverlust",
-    `${box(1435, 440, 385, 190, C.failureSoft, C.failure, 3, 14)}${txt(1627, 486, "WIRKUNG", 19, 800, C.failure, "middle")}${multi(1627, 536, 330, "Leistungsverlust der PV-Anlage", 30, 820, C.deep, "middle")}`);
-  const spine = group("ishi_spine", "Ursache-Wirkungs-Beziehungen", `${line(150, 535, 1435, 535, C.deep, 4)}${txt(180, 510, "URSACHEN", 18, 800, C.soft)}`);
-  const branches =
-    ishBranch("ishi_material", "Materialien", 180, 535, "top", "Materialien", "Qualität elektrischer Bauteile", "Verkabelung", C.accent) +
-    ishBranch("ishi_machine", "Maschinen und Ausrüstung", 500, 535, "bottom", "Maschinen (Ausrüstung)", "Montagestruktur", "Überwachungssysteme", C.secondary) +
-    ishBranch("ishi_human", "Mensch", 760, 535, "top", "Mensch", "Fehler bei der Installation", "Wartungsfehler", C.success) +
-    ishBranch("ishi_methods", "Methoden", 1030, 535, "bottom", "Methoden", "Standards bei Installation", "Wartungsintervalle und -protokolle", C.accent) +
-    ishBranch("ishi_environment", "Milieu und Umwelt", 1170, 535, "top", "Milieu (Umwelt)", "Wetterbedingungen", "Schattenwurf durch Objekte", C.secondary);
-  return evidence(effect + branches + spine, "Quellfolie 10: Ishikawa-Diagramm und Beispiele");
+  const framework = evidence(group("ishi_framework", "Fischgräte und Wirkung",
+    `<path d="M 132 548 H 1462" fill="none" stroke="${C.deep}" stroke-width="5"/>
+     <path d="M 132 548 L 88 500 M 132 548 L 88 596" fill="none" stroke="${C.deep}" stroke-width="5" stroke-linecap="round"/>
+     <path d="M 1462 432 H 1706 L 1812 548 L 1706 664 H 1462 Z" fill="${C.deep}" stroke="${C.accent}" stroke-width="3" stroke-linejoin="round"/>
+     ${txt(1634, 486, "WIRKUNG", 20, 800, C.failure, "middle")}
+     ${multi(1634, 532, 300, "Leistungsverlust der PV-Anlage", 31, 820, C.surface, "middle", 1.15)}
+     ${txt(136, 518, "URSACHEN", 18, 800, C.soft)}`), "Quellfolie 10: Hauptachse und Wirkung Leistungsverlust der PV-Anlage");
+
+  const material = ishCategory("ishi_material", "Materialien", {
+    ribbonX: 120, ribbonY: 202, ribbonW: 305,
+    boneStartX: 425, boneStartY: 242, boneEndX: 630, boneEndY: 548,
+    examples: [
+      { x1: 214, y: 350, x2: 497, labelY: 320, label: "Qualität elektrischer Bauteile" },
+      { x1: 304, y: 426, x2: 548, label: "Verkabelung" },
+    ],
+    sourceLabel: "Materialien mit Qualität elektrischer Bauteile und Verkabelung",
+  });
+  const machine = ishCategory("ishi_machine", "Maschinen (Ausrüstung)", {
+    ribbonX: 510, ribbonY: 202, ribbonW: 320,
+    boneStartX: 830, boneStartY: 242, boneEndX: 1038, boneEndY: 548,
+    examples: [
+      { x1: 624, y: 350, x2: 903, label: "Montagestruktur" },
+      { x1: 706, y: 426, x2: 955, label: "Überwachungssysteme" },
+    ],
+    sourceLabel: "Maschinen und Ausrüstung mit Montagestruktur und Überwachungssystemen",
+  });
+  const human = ishCategory("ishi_human", "Mensch", {
+    ribbonX: 920, ribbonY: 202, ribbonW: 275,
+    boneStartX: 1195, boneStartY: 242, boneEndX: 1398, boneEndY: 548,
+    examples: [
+      { x1: 954, y: 350, x2: 1267, label: "Fehler bei der Installation" },
+      { x1: 1082, y: 426, x2: 1317, label: "Wartungsfehler" },
+    ],
+    sourceLabel: "Mensch mit Installations- und Wartungsfehlern",
+  });
+  const methods = ishCategory("ishi_methods", "Methoden", {
+    ribbonX: 300, ribbonY: 790, ribbonW: 310,
+    boneStartX: 610, boneStartY: 830, boneEndX: 824, boneEndY: 548,
+    examples: [
+      { x1: 390, y: 710, x2: 701, labelY: 665, label: "Wartungsintervalle und -protokolle" },
+      { x1: 482, y: 642, x2: 753, labelY: 597, label: "Standards bei Installation" },
+    ],
+    sourceLabel: "Methoden mit Standards und Wartungsintervallen",
+  });
+  const environment = ishCategory("ishi_environment", "Milieu (Umwelt)", {
+    ribbonX: 700, ribbonY: 790, ribbonW: 320,
+    boneStartX: 1020, boneStartY: 830, boneEndX: 1234, boneEndY: 548,
+    examples: [
+      { x1: 796, y: 710, x2: 1111, label: "Schattenwurf durch Objekte" },
+      { x1: 890, y: 642, x2: 1163, label: "Wetterbedingungen" },
+    ],
+    sourceLabel: "Milieu und Umwelt mit Wetterbedingungen und Schattenwurf",
+  });
+  const readingDirection = group("ishi_reading_direction", "Leserichtung Wirkung zu Ursachen",
+    `<path d="M 1370 912 H 1010" fill="none" stroke="${C.secondary}" stroke-width="2.5" stroke-dasharray="8 7" marker-end="url(#arrow_${C.secondary.slice(1)})"/>`)
+    .replace("<g ", `<g data-source-evidence="speaker_text" data-source-reference="Sprechertext section_007: von rechts nach links gelesen" `);
+  return framework + material + machine + human + methods + environment + readingDirection;
 }
 
 function slide11() {
@@ -307,35 +421,59 @@ function smallBlock(x, y, w, h, text, color = C.deep, fill = C.surface, size = 1
 }
 function slide13() {
   const boundary = group("inv_boundary", "Systemgrenze und Schnittstellen",
-    `<rect x="246" y="244" width="1430" height="620" rx="16" fill="${C.surface}" fill-opacity=".72" stroke="${C.accent}" stroke-width="3" stroke-dasharray="10 7"/>${pill(272, 262, 170, "SYSTEMGRENZE", C.accent, C.surface)}
-     ${multi(108, 374, 110, "Elektr. Energie (DC-Strom)", 18, 700, C.accent, "middle")}${multi(1760, 374, 120, "Elektr. Energie (AC-Strom)", 18, 700, C.secondary, "middle")}
-     ${multi(110, 510, 150, "Betätigungsenergie · Thermische Energie · Verschmutzung · Feuchtigkeit · Störsignale", 18, 620, C.muted, "middle")}
-     ${multi(1760, 520, 150, "Thermische Energie · Feuchtigkeit · Störsignale", 18, 620, C.muted, "middle")}`);
+    `<rect x="230" y="196" width="1460" height="718" rx="18" fill="${C.surface}" fill-opacity=".76" stroke="${C.failure}" stroke-width="2.8" stroke-dasharray="12 8"/>
+     ${pill(256, 216, 366, "SYSTEMGRENZE WECHSELRICHTER", C.failure, C.surface)}`);
+  const legend = group("inv_legend", "Legende der Flussarten",
+    `${box(650, 208, 1006, 66, C.surface, C.border, 1.2, 8)}
+     ${pathLine("M 674 230 H 722", C.failure, 2.4, "none", "9 6")}${txt(734, 237, "Systemgrenze", 18, 730, C.deep)}
+     ${line(884, 230, 932, 230, C.deep, 2.4, "none")}${txt(944, 237, "Energiestrom", 18, 730, C.deep)}
+     ${line(1094, 230, 1142, 230, C.technical, 2.4, "none")}${txt(1154, 237, "Bordnetzstrom", 18, 730, C.deep)}
+     ${line(1312, 230, 1360, 230, C.secondary, 2.4, "none")}${txt(1372, 237, "Informationsstrom", 18, 730, C.deep)}
+     ${line(674, 254, 722, 254, C.graphite, 2.4, "none")}${txt(734, 261, "Messsignal", 18, 730, C.deep)}
+     ${line(884, 254, 932, 254, C.educationAccent, 2.4, "none")}${txt(944, 261, "Stoff-/Umwelteinfluss", 18, 730, C.deep)}`);
   const energy = group("inv_energy", "Energiepfad",
-    `${line(218, 392, 280, 392, C.accent, 2.5)}${line(404, 392, 438, 392, C.accent, 2.5)}${line(590, 392, 624, 392, C.accent, 2.5)}${line(756, 392, 790, 392, C.accent, 2.5)}${line(908, 392, 942, 392, C.accent, 2.5)}${line(1112, 392, 1146, 392, C.accent, 2.5)}${line(1278, 392, 1312, 392, C.accent, 2.5)}${line(1474, 392, 1508, 392, C.secondary, 2.5)}${line(1634, 392, 1704, 392, C.secondary, 2.5)}
-     ${smallBlock(280, 350, 124, 84, "DC-|Klemmen", C.accent, C.accentSoft, 18)}${smallBlock(438, 350, 152, 84, "DC-Fehlerstrom-|überwachung", C.accent, C.accentSoft, 18)}
-     ${smallBlock(624, 350, 132, 84, "DC-Trenn-|schalter", C.accent, C.accentSoft, 18)}${smallBlock(790, 350, 118, 84, "EMV-|Filter", C.accent, C.accentSoft, 18)}
-     ${smallBlock(942, 340, 170, 104, "Hoch-/Tiefsetz-|steller", C.accent, C.accentSoft, 18)}${smallBlock(1146, 350, 132, 84, "Zwischen-|kreis", C.accent, C.accentSoft, 18)}
-     ${smallBlock(1312, 340, 162, 104, "H-Brücken-|schaltung", C.secondary, C.secondarySoft, 18)}${smallBlock(1508, 350, 126, 84, "AC-|Filter", C.secondary, C.secondarySoft, 18)}`);
+    `${multi(104, 336, 112, "DC-ENERGIE (Gleichstrom)", 18, 780, C.technical, "middle", 1.08)}
+     ${multi(1810, 336, 126, "AC-ENERGIE (Wechselstrom)", 18, 780, C.technical, "middle", 1.08)}
+     ${line(170, 349, 270, 349, C.deep, 2.6)}${line(400, 349, 420, 349, C.deep, 2.6, "none")}${line(580, 349, 600, 349, C.deep, 2.6, "none")}${line(735, 349, 755, 349, C.deep, 2.6, "none")}
+     ${line(875, 349, 895, 349, C.deep, 2.6, "none")}${line(1055, 349, 1075, 349, C.deep, 2.6, "none")}${line(1205, 349, 1225, 349, C.deep, 2.6, "none")}${line(1395, 349, 1415, 349, C.deep, 2.6, "none")}${line(1530, 349, 1748, 349, C.deep, 2.6)}
+     ${smallBlock(270, 306, 130, 86, "DC-|Klemmen", C.accent, C.surfaceSoft, 18)}
+     ${smallBlock(420, 306, 160, 86, "DC-Fehlerstrom-|überwachung", C.accent, C.surfaceSoft, 18)}
+     ${smallBlock(600, 306, 135, 86, "DC-Trenn-|schalter", C.accent, C.surfaceSoft, 18)}
+     ${smallBlock(755, 306, 120, 86, "EMV-|Filter", C.accent, C.surfaceSoft, 18)}
+     ${smallBlock(895, 298, 160, 102, "Hoch-/Tiefsetz-|steller", C.accent, C.surfaceSoft, 18)}
+     ${smallBlock(1075, 306, 130, 86, "Zwischen-|kreis", C.accent, C.surfaceSoft, 18)}
+     ${smallBlock(1225, 298, 170, 102, "H-Brücken-|schaltung", C.accent, C.surfaceSoft, 18)}
+     ${smallBlock(1415, 306, 115, 86, "AC-|Filter", C.accent, C.surfaceSoft, 18)}`);
   const control = group("inv_control", "Steuerung und Überwachung",
-    `${pathLine("M 910 560 V 466 H 1027 V 444", C.deep, 2.5)}${pathLine("M 1060 614 H 1100", C.deep, 2.5)}
-     ${pathLine("M 1290 585 H 1324", C.deep, 2.5)}${line(1422, 585, 1444, 585, C.deep, 2.5)}${line(1542, 585, 1564, 585, C.deep, 2.5)}${pathLine("M 1606 622 V 650", C.deep, 2.5)}
-     ${pathLine("M 910 560 V 512 H 1392 V 548", C.deep, 2.5)}
-     ${smallBlock(760, 560, 300, 108, "Microcontroller", C.deep, C.deep, 24).replaceAll(`fill="${C.deep}" stroke`, `fill="${C.deep}" stroke`).replace(`fill="${C.deep}" text-anchor`, `fill="${C.surface}" text-anchor`)}
-     ${smallBlock(1100, 548, 190, 74, "Netzüberwachung|AC", C.success, C.successSoft, 18)}${smallBlock(1324, 548, 98, 74, "Relais", C.success, C.successSoft)}${smallBlock(1444, 548, 98, 74, "Relais", C.success, C.successSoft)}
-     ${smallBlock(1564, 548, 84, 74, "EMV-|Filter", C.success, C.successSoft, 18)}${smallBlock(1564, 650, 84, 74, "AC-|Klemmen", C.success, C.successSoft, 18)}
-     ${txt(928, 494, "U, I", 18, 740, C.deep)}${txt(1070, 540, "I, f, U", 18, 740, C.deep)}${txt(1120, 500, "Tastgrad · Öffnen/Schließen · Messsignale", 18, 680, C.deep)}`);
+    `${pathLine("M 800 486 V 450 H 975 V 400", C.graphite, 2.2)}
+     ${pathLine("M 960 486 V 438 H 1310 V 400", C.graphite, 2.2)}
+     ${line(1040, 540, 1100, 540, C.graphite, 2.2)}${line(1290, 540, 1320, 540, C.graphite, 2.2)}${line(1410, 540, 1430, 540, C.graphite, 2.2)}${line(1520, 540, 1540, 540, C.graphite, 2.2)}
+     ${pathLine("M 1595 574 V 598", C.graphite, 2.2)}
+     ${box(720, 486, 320, 108, C.accent, C.accent, 2, 10)}${txt(880, 548, "MICROCONTROLLER", 23, 820, C.surface, "middle")}
+     ${smallBlock(1100, 500, 190, 80, "Netzüberwachung|AC", C.accent, C.surfaceSoft, 18)}
+     ${smallBlock(1320, 506, 90, 68, "Relais", C.accent, C.surface)}${smallBlock(1430, 506, 90, 68, "Relais", C.accent, C.surface)}
+     ${smallBlock(1540, 506, 110, 68, "EMV-|Filter", C.accent, C.surface, 18)}${smallBlock(1540, 598, 110, 68, "AC-|Klemmen", C.accent, C.surface, 18)}
+     ${txt(810, 430, "U, I", 18, 740, C.graphite)}${txt(1068, 420, "Tastgrad · Messsignale", 18, 700, C.graphite)}
+     ${txt(1068, 526, "I, f, U", 18, 740, C.graphite)}`);
   const aux = group("inv_aux", "Bordnetz und Lüfter",
-    `${pathLine("M 380 680 V 474 H 850 V 434", C.secondary, 2.5)}${pathLine("M 460 718 H 500", C.secondary, 2.5)}${pathLine("M 634 718 H 760 V 650", C.secondary, 2.5)}
-     ${smallBlock(300, 680, 160, 76, "DC-Bordnetz", C.secondary, C.secondarySoft)}${smallBlock(500, 680, 134, 76, "Lüfter", C.secondary, C.secondarySoft)}${txt(650, 704, "Drehzahl", 18, 700, C.secondary)}`);
+    `${pathLine("M 380 626 V 440 H 815 V 392", C.technical, 2.2)}${line(460, 663, 500, 663, C.technical, 2.2, "none")}${pathLine("M 640 663 H 700 V 594", C.technical, 2.2)}
+     ${smallBlock(300, 626, 160, 74, "DC-Bordnetz", C.technical, C.surfaceSoft)}${smallBlock(500, 626, 140, 74, "Lüfter", C.technical, C.surfaceSoft)}
+     ${txt(652, 648, "Drehzahl", 18, 700, C.technical)}`);
   const comm = group("inv_communication", "Kommunikation",
-    `${line(884, 228, 884, 768, C.accent, 2.2, "both")}${[385,575,765,955,1145,1335,1525].map((x) => line(x, 888, 884, 830, C.accent, 1.8, "both")).join("")}
-     ${smallBlock(596, 768, 576, 62, "Kommunikationseinheit", C.accent, C.accentSoft, 20)}
-     ${["Display", "Bluetooth", "RS232", "RS485", "Funk", "Ethernet", "WLAN"].map((t, i) => smallBlock(310 + i * 190, 888, 150, 52, t, C.accent, C.surface, 18)).join("")}
-     ${multi(884, 216, 600, "Kommunikationsdaten · Netzsignal ↕ Betriebsdaten", 19, 700, C.accent, "middle")}`);
+    `${smallBlock(640, 706, 640, 66, "Kommunikationseinheit", C.accent, C.surfaceSoft, 20)}
+     ${line(345, 808, 1575, 808, C.secondary, 2.2, "none")}
+     ${[345,550,755,960,1165,1370,1575].map((x) => line(x, 808, x, 832, C.secondary, 2, "none")).join("")}
+     ${["Display", "Bluetooth", "RS232", "RS485", "Funk", "Ethernet", "WLAN"].map((t, i) => smallBlock(260 + i * 205, 832, 170, 52, t, C.accent, C.surface, 18)).join("")}
+     ${pathLine("M 1062 772 V 934", C.secondary, 2.2, "both")}
+     ${multi(1062, 958, 760, "Kommunikationsdaten · Netzsignal ↕ Betriebsdaten", 18, 720, C.secondary, "middle")}`);
   const environment = group("inv_environment", "Umwelteinflüsse und Abgaben",
-    `${pill(80, 780, 150, "STÖRGRÖSSEN", C.failure, C.failureSoft)}${line(230, 799, 300, 718, C.failure, 2.5)}${pill(1690, 780, 150, "ABGABEN", C.secondary, C.secondarySoft)}${line(1648, 687, 1690, 799, C.secondary, 2.5)}`);
-  return evidence(boundary + energy + aux + comm + control + environment, "Quellfolie 13: detailliertes Wechselrichter-Bauteilblockdiagramm");
+    `${box(34, 478, 174, 104, C.surface, C.accent, 1.8, 10)}${txt(121, 514, "BETÄTIGUNG", 18, 820, C.accent, "middle")}${multi(121, 548, 140, "Betätigungsenergie", 18, 680, C.accent, "middle")}
+     ${pathLine("M 208 530 H 244 V 663 H 300", C.accent, 2.2)}
+     ${box(34, 612, 174, 196, C.failureSoft, C.failure, 1.8, 10)}${txt(121, 648, "STÖRGRÖSSEN", 18, 820, C.failure, "middle")}${multi(121, 686, 136, "Thermische Energie · Verschmutzung · Feuchtigkeit · Störsignale", 18, 650, C.text, "middle", 1.13)}
+     ${line(208, 676, 230, 676, C.failure, 2.2, "none")}${line(208, 724, 230, 724, C.educationAccent, 2.2, "none")}${line(208, 772, 230, 772, C.graphite, 2.2, "none")}
+     ${box(1712, 500, 174, 178, C.surface, C.secondary, 1.8, 10)}${txt(1799, 536, "ABGABEN", 18, 820, C.secondary, "middle")}${multi(1799, 574, 136, "Thermische Energie · Feuchtigkeit · Störsignale", 18, 650, C.text, "middle", 1.13)}
+     ${line(1690, 552, 1712, 552, C.failure, 2.2, "none")}${line(1690, 608, 1712, 608, C.educationAccent, 2.2, "none")}${line(1690, 656, 1712, 656, C.graphite, 2.2, "none")}`);
+  return evidence(boundary + legend + energy + aux + comm + control + environment, "Quellfolie 13: detailliertes Wechselrichter-Bauteilblockdiagramm");
 }
 
 function funcBox(x, y, w, h, number, text, color = C.deep, fill = C.surface) {
@@ -360,39 +498,56 @@ function slide14() {
      ${line(690, 748, 810, 748, C.accent, 2.5)}${line(1110, 748, 1230, 748, C.accent, 2.5)}
      ${line(1530, 748, 1640, 748, C.secondary, 3)}${txt(1660, 756, "Ausgangsgrößen", 22, 760, C.secondary)}`);
   const relations = group("func_relations", "Funktionsbeziehungen",
-    `${pathLine("M 610 402 V 610", C.soft, 2.2, "none", "7 6")}${pathLine("M 890 402 V 610", C.soft, 2.2, "none", "7 6")}
+    `${pathLine("M 610 402 L 300 610", C.soft, 2.2, "none")}${pathLine("M 890 402 L 1620 610", C.soft, 2.2, "none")}
      ${box(300, 886, 1320, 58, C.accentSoft, C.accent, 1.5, 8)}
      ${multi(960, 923, 1220, "Die Summe der Teilfunktionen erfüllt die übergeordnete Funktion.", 22, 740, C.deep, "middle")}`);
   return evidence(black + definition + decomposition + relations, "Quellfolien 14–15: Black Box, abstrakte Aufgabenbeschreibung und generische Funktionszerlegung");
 }
 
 function slide16() {
-  const main = group("func16_main", "Hauptfunktionskette",
-    `<rect x="92" y="214" width="1736" height="618" rx="18" fill="${C.surface}" fill-opacity=".8" stroke="${C.border}" stroke-width="1.8"/>
-     ${pill(122, 240, 328, "SYSTEMGRENZE WECHSELRICHTER", C.accent, C.surface)}
-     ${txt(112, 508, "DC-STROM", 21, 800, C.accent)}${line(238, 500, 320, 500, C.accent, 3)}
-     ${funcBox(320, 430, 196, 140, 1, "Eingang DC-Strom", C.accent, C.accentSoft)}
-     ${funcBox(574, 430, 210, 140, 2, "DC/DC-Wandlung", C.accent, C.accentSoft)}
-     ${funcBox(842, 430, 210, 140, 4, "DC/AC-Wandlung", C.secondary, C.secondarySoft)}
-     ${funcBox(1110, 418, 278, 164, 5, "Netzeinspeisung und -trennung", C.secondary, C.secondarySoft)}
-     ${funcBox(1446, 430, 210, 140, 8, "Ausgang AC-Strom", C.success, C.successSoft)}
-     ${line(516, 500, 574, 500, C.accent, 2.5)}${line(784, 500, 842, 500, C.accent, 2.5)}
-     ${line(1052, 500, 1110, 500, C.secondary, 2.5)}${line(1388, 500, 1446, 500, C.secondary, 2.5)}
-     ${line(1656, 500, 1690, 500, C.success, 3)}${txt(1712, 508, "AC-STROM", 21, 800, C.success)}`);
-  const controls = group("func16_controls", "Regelungs- und Überwachungsfunktionen",
-    `${funcBox(522, 666, 254, 112, 3, "Arbeitspunktregelung (MPPT)", C.success, C.successSoft)}
-     ${funcBox(842, 666, 238, 112, 7, "Netz-Synchronisierung", C.success, C.successSoft)}
-     ${funcBox(1144, 666, 238, 112, 6, "Netzüberwachung", C.success, C.successSoft)}`);
-  const relations = group("func16_relations", "Funktionsbeziehungen",
-    `${pathLine("M 649 666 V 570", C.success, 2.2, "both")}
-     ${pathLine("M 961 666 V 570", C.success, 2.2)}
-     ${pathLine("M 1263 666 V 582", C.success, 2.2)}
-     ${pathLine("M 1080 722 H 1144", C.success, 2.2)}
-     ${pathLine("M 1382 722 H 1418 V 500 H 1446", C.success, 2.2)}
-     ${box(92, 858, 1736, 72, C.accentSoft, C.accent, 1.5, 8)}
-     ${txt(120, 903, "MERKSATZ", 18, 800, C.accent)}
-     ${multi(314, 903, 1450, "Erfüllt die Summe der Teilfunktionen ihre Aufgaben, ist auch die Hauptfunktion erfüllt.", 23, 720, C.deep)}`);
-  return evidence(main + controls + relations, "Quellfolie 16: vollständige Funktionsstruktur des Wechselrichters");
+  const darkFunction = (x, y, w, h, number, label) =>
+    `${box(x, y, w, h, C.accent, C.accent, 2, 10)}
+     ${txt(x + 18, y + 28, `(${number})`, 18, 800, C.accentSoft)}
+     ${multi(x + w / 2, y + h / 2 + 5, w - 34, label, 18, 720, C.surface, "middle", 1.08)}`;
+
+  const overview = group("func16_overview", "Hauptfunktion DC-Strom zu AC-Strom",
+    `${txt(478, 284, "DC-Strom", 23, 760, C.accent, "end")}
+     ${line(500, 276, 650, 276, C.accent, 3)}
+     ${box(650, 206, 620, 140, C.accent, C.accent, 2.5, 12)}
+     ${multi(960, 252, 550, "Umwandlung DC-Strom in AC-Strom", 30, 820, C.surface, "middle", 1.08)}
+     ${line(1270, 276, 1420, 276, C.secondary, 3)}
+     ${txt(1444, 284, "AC-Strom", 23, 760, C.secondary)}`);
+
+  const detail = group("func16_detail", "Aufgeklappte Detailstruktur des Wechselrichters",
+    `${pathLine("M 700 346 L 142 426", C.accent, 2.5, "none")}
+     ${pathLine("M 1220 346 L 1778 426", C.accent, 2.5, "none")}
+     <rect x="116" y="426" width="1688" height="474" rx="18" fill="${C.surface}" fill-opacity=".66" stroke="${C.accent}" stroke-width="2.5" stroke-dasharray="12 9"/>
+
+     ${txt(92, 581, "DC-Strom", 19, 760, C.accent, "end")}${line(100, 574, 180, 574, C.accent, 2.5)}
+     ${darkFunction(180, 508, 200, 132, 1, "Eingang DC-Strom")}
+     ${darkFunction(470, 508, 200, 132, 2, "DC/DC-Wandlung")}
+     ${darkFunction(760, 508, 200, 132, 4, "DC/AC-Wandlung")}
+     ${darkFunction(1050, 496, 260, 156, 5, "Netzeinspeisung und -trennung")}
+     ${darkFunction(1400, 508, 200, 132, 8, "Ausgang AC-Strom")}
+
+     ${line(380, 574, 470, 574, C.accent, 2.5)}${txt(425, 550, "DC-Strom", 18, 700, C.accent, "middle")}
+     ${line(670, 574, 760, 574, C.accent, 2.5)}${txt(715, 550, "DC-Strom", 18, 700, C.accent, "middle")}
+     ${line(960, 574, 1050, 574, C.secondary, 2.5)}${txt(1005, 550, "AC-Strom", 18, 700, C.secondary, "middle")}
+     ${line(1310, 574, 1400, 574, C.secondary, 2.5)}${txt(1355, 550, "AC-Strom", 18, 700, C.secondary, "middle")}
+     ${line(1600, 574, 1680, 574, C.secondary, 2.5)}${txt(1704, 581, "AC-Strom", 19, 760, C.secondary)}
+
+     ${darkFunction(470, 742, 200, 112, 3, "Arbeitspunktregelung (MPPT)")}
+     ${darkFunction(760, 742, 200, 112, 7, "Netz-Synchronisierung")}
+     ${darkFunction(1050, 742, 260, 112, 6, "Netzüberwachung")}
+
+     ${pathLine("M 570 742 V 640", C.accent, 2.2, "both")}${multi(545, 692, 104, "Elektr. Signal", 18, 680, C.accent, "end")}
+     ${pathLine("M 860 742 V 640", C.secondary, 2.2)}${multi(835, 692, 104, "Elektr. Signal", 18, 680, C.secondary, "end")}
+     ${pathLine("M 1180 742 V 652", C.secondary, 2.2)}${multi(1155, 696, 104, "Elektr. Signal", 18, 680, C.secondary, "end")}
+     ${line(1050, 798, 960, 798, C.secondary, 2.2)}${multi(1005, 827, 104, "Elektr. Signal", 18, 680, C.secondary, "middle")}
+     ${pathLine("M 1310 798 H 1355 V 574 H 1400", C.secondary, 2.2)}`);
+
+  return evidence(overview, "Quellfolie 16: obere Hauptfunktion DC-Strom zu AC-Strom") +
+    evidence(detail, "Quellfolien 15–16: aufgeklappte Detailstruktur mit acht Teilfunktionen und Signalbeziehungen");
 }
 
 function classBadge(x, y, value) {
@@ -435,40 +590,40 @@ function slide17() {
   return evidence(header + connectors + capacitor + semiconductor + sensor + next, "Quellfolie 17: Bauteile, Fehlermöglichkeiten und Ausfallmechanismen vor der ABC-Bewertung");
 }
 
-function abcRuleCard(id, label, x, color, fill, title, subtitle, rows) {
+function abcRuleColumn(id, label, x, title, imageFile, imageKind, imageLabel, rows) {
   const rowMarkup = rows.map((row, i) => {
-    const y = 390 + i * 154;
-    return `${box(x + 28, y, 476, 126, C.surface, C.border, 1.2, 8)}
-      ${box(x + 48, y + 28, 52, 52, fill, color, 1.5, 26)}
-      ${txt(x + 74, y + 64, String(i + 1), 20, 820, color, "middle")}
-      ${multi(x + 122, y + 39, 352, row, 20, 620, C.text, "start", 1.18)}`;
+    const y = 514 + i * 112;
+    return `${circleBullet(x + 32, y + 3, C.accent)}${multi(x + 58, y, 430, row, 20, 620, C.text, "start", 1.18)}`;
   }).join("");
   return group(id, label,
-    `${box(x, 210, 532, 650, fill, color, 2.5, 16)}
-     ${txt(x + 266, 264, title, 31, 820, color, "middle")}
-     ${multi(x + 266, 310, 460, subtitle, 21, 720, C.deep, "middle")}
+    `${line(x, 224, x + 532, 224, C.accent, 4, "none")}
+     ${txt(x, 278, title, 31, 850, C.accent)}
+     ${abcPictogramImg(imageFile, imageKind, x + 189, 306, 154, imageLabel)}
      ${rowMarkup}`);
 }
+function circleBullet(cx, cy, color = C.accent) {
+  return `<circle cx="${cx}" cy="${cy}" r="7" fill="${color}"/>`;
+}
 function slide18() {
-  const a = abcRuleCard("abc18_a", "A-Teile", 92, C.failure, C.failureSoft, "A-TEILE", "risikoreich · Belastung definierbar", [
+  const a = abcRuleColumn("abc18_a", "A-Teile", 92, "A-TEILE", "abc-a-bearing-load.png", "abc-a-bearing-load", "Belastetes Wälzlager als Beispiel für A-Teile", [
     "Statische und dynamische Belastung; Lastkollektiv bekannt; leistungsführend",
     "Lebensdauerberechnung möglich und weitgehend gesichert",
     "Ausfallverhalten aus Wöhlerversuchen bekannt; Formparameter b > 1,0",
   ]);
-  const b = abcRuleCard("abc18_b", "B-Teile", 694, C.semanticWarning, C.semanticWarningSoft, "B-TEILE", "risikoreich · Belastung nicht sicher berechenbar", [
+  const b = abcRuleColumn("abc18_b", "B-Teile", 694, "B-TEILE", "abc-b-wear-bushing.png", "abc-b-wear-bushing", "Verschleißbeanspruchte Buchse als Beispiel für B-Teile", [
     "Reibung, Verschleiß, extreme Temperaturen, Erschütterungen, Schmutz oder Korrosion",
     "Lebensdauerberechnung nicht möglich oder nicht gesichert",
     "Ausfallverhalten schätzen oder im Versuch bestimmen; Formparameter b ≥ 1,0",
   ]);
-  const c = abcRuleCard("abc18_c", "C-Teile", 1296, C.semanticSuccess, C.semanticSuccessSoft, "C-TEILE", "risikoneutral · stochastische Beanspruchung", [
+  const c = abcRuleColumn("abc18_c", "C-Teile", 1296, "C-TEILE", "abc-c-standard-fastener.png", "abc-c-standard-fastener", "Einfacher Standardbefestiger als Beispiel für C-Teile", [
     "Beanspruchung durch Stöße, Reibung, Verschleiß und vergleichbare Einflüsse",
     "Keine rechnerische Auslegung möglich",
     "Nur Zufalls- oder Frühausfälle; Formparameter 0 < b ≤ 1,0",
   ]);
   const difference = group("abc18_difference", "Unterschied A und B",
-    `${box(92, 884, 1736, 66, C.deep, C.deep, 1.5, 8)}
-     ${txt(120, 925, "ENTSCHEIDUNGSLOGIK", 18, 800, C.accentSoft)}
-     ${multi(386, 925, 1370, "A: Lebensdauer weitgehend berechenbar · B: nur Schätzung oder Versuch · C: nicht weiterverfolgen", 22, 720, C.surface)}`);
+    `${box(92, 886, 1736, 66, C.accent, C.accent, 1.5, 8)}
+     ${txt(120, 927, "ENTSCHEIDUNGSLOGIK", 18, 800, C.surface)}
+     ${multi(386, 927, 1370, "A: Lebensdauer weitgehend berechenbar · B: Schätzung oder Versuch · C: nicht weiterverfolgen", 22, 720, C.surface)}`);
   return evidence(a + b + c + difference, "Quellfolie 18: Regeln der ABC-Einteilung von Ausfallmechanismen");
 }
 
@@ -477,14 +632,15 @@ function resultRow(id, label, y, component, failure, mechanisms) {
   const rows = mechanisms.map((entry, i) =>
     `${txt(1168, y + 34 + i * 42, entry[0], 20, 600, C.text)}${classBadge(1690, y + 10 + i * 42, entry[1])}`).join("");
   return group(id, label,
-    `${box(92, y, 1736, h, y % 2 ? C.surface : C.surfaceSoft, C.border, 1, 0)}
-     ${multi(116, y + 36, 290, component, 20, 750, C.deep)}
+    `${box(92, y, 1736, h, C.accentSoft, C.border, 1, 0)}
+     ${box(92, y, 320, h, C.accent, C.accent, 1, 0)}
+     ${multi(116, y + 36, 270, component, 20, 760, C.surface)}
      ${multi(452, y + 36, 620, failure, 20, 600, C.text)}
      ${rows}`);
 }
 function slide19() {
   const header = group("abc19_header", "Bewertungsschema",
-    `${box(92, 208, 1736, 64, C.deep, C.deep, 1, 6)}
+    `${box(92, 208, 1736, 64, C.accent, C.accent, 1, 6)}
      ${txt(116, 249, "Bauteil", 20, 800, C.surface)}
      ${txt(452, 249, "Fehlermöglichkeit", 20, 800, C.surface)}
      ${txt(1168, 249, "Ausfallmechanismus", 20, 800, C.surface)}
@@ -495,9 +651,9 @@ function slide19() {
   const semiconductor = resultRow("abc19_semiconductor", "Leistungshalbleiter", 620, "Leistungshalbleiter", "Kurzschluss · fehlerhafte Ansteuerung", [["Überstrom", "A"], ["Fehlerhafte Software", "B"]]);
   const sensor = resultRow("abc19_sensor", "Spannungs- und Stromsensor", 722, "Spannungssensor · Stromsensor", "Fehlmessung · thermische Zerstörung", [["Staub- und Schmutzablagerungen", "B"], ["Überhitzung", "A"]]);
   const transition = group("abc19_transition", "Übergang zur FTA",
-    `${box(92, 846, 1736, 82, C.accentSoft, C.accent, 1.5, 8)}
-     ${txt(120, 896, "WEITERVERFOLGUNG", 18, 800, C.accent)}
-     ${multi(354, 896, 1400, "A- und B-Risiken werden in der Fehlerbaumanalyse vertieft.", 23, 720, C.deep)}`);
+    `${box(92, 846, 1736, 82, C.accent, C.accent, 1.5, 8)}
+     ${txt(120, 896, "WEITERVERFOLGUNG", 18, 800, C.accentSoft)}
+     ${multi(354, 896, 1400, "A- und B-Risiken werden in der Fehlerbaumanalyse vertieft.", 23, 720, C.surface)}`);
   return evidence(header + connectors + capacitor + semiconductor + sensor + transition, "Quellfolie 19: ABC-Ergebnis für Bauteile des Wechselrichters");
 }
 
@@ -517,6 +673,16 @@ function prepareMedia(n) {
   fs.mkdirSync(mediaDir, { recursive: true });
   for (const filename of ["pv-panels.png", "inverter.png", "battery-storage.png", "electricity-meter.png", "public-grid-pylon.png", "household-consumers.png"]) {
     fs.copyFileSync(path.join(assetRoot, filename), path.join(mediaDir, filename));
+  }
+  if (n === 6) {
+    for (const filename of ["re2-level-environment.png", "re2-level-pv-system.png", "re2-level-inverter.png", "re2-level-microcontroller.png"]) {
+      fs.copyFileSync(path.join(systemLevelPictogramRoot, filename), path.join(mediaDir, filename));
+    }
+  }
+  if (n === 8) {
+    for (const filename of ["re2-p-diagram-input.png", "re2-p-diagram-control.png", "re2-p-diagram-disturbance.png", "re2-p-diagram-output.png"]) {
+      fs.copyFileSync(path.join(pDiagramPictogramRoot, filename), path.join(mediaDir, filename));
+    }
   }
 }
 function writeManifest(scene) {
@@ -539,8 +705,12 @@ function writeManifest(scene) {
   }, null, 2)}\n`, "utf8");
 }
 function writeBrief(scene) {
-  const [title, takeaway, archetype, layout] = sceneMeta[scene.output_slide_number];
-  const text = `# Redesign-Brief — ${scene.work_unit}\n\n- Kapitel: 2\n- Lektion: ${scene.lesson}\n- Quellfolien: ${scene.source_slides.join(", ")}\n- Titel: ${title}\n- Takeaway: ${takeaway}\n- Archetyp: ${archetype}\n- Layout: ${layout}\n- Referenz: RE1-Full-Slide-System und Kapitelbrief analysis/rebuild-plans/RE2_chapter_02_redesign_brief.md\n- Produktionsmodus: Full-Slide 1920×1080\n- Animation: ${animated ? "sprechertextgeführt aktiviert" : "noch nicht aktiviert; statischer Endzustand zur Freigabe"}\n`;
+  const [defaultTitle, takeaway, archetype, layout] = sceneMeta[scene.output_slide_number];
+  const title = scene.content_title_override || defaultTitle;
+  const reference = scene.output_slide_number === 6
+    ? "Direkter Referenz-Lock auf die alte Komposition der Quellfolien 6–7; ausschließlich die vier Bildmotive werden durch freigegebene PNG-Piktogramme ersetzt."
+    : "RE1-Full-Slide-System und Kapitelbrief analysis/rebuild-plans/RE2_chapter_02_redesign_brief.md";
+  const text = `# Redesign-Brief — ${scene.work_unit}\n\n- Kapitel: 2\n- Lektion: ${scene.lesson}\n- Quellfolien: ${scene.source_slides.join(", ")}\n- Titel: ${title}\n- Takeaway: ${takeaway}\n- Archetyp: ${archetype}\n- Layout: ${layout}\n- Referenz: ${reference}\n- Produktionsmodus: Content-SVG 1920×1080; Titel und Masterelemente werden downstream gerendert\n- Animation: ${animated ? "sprechertextgeführt aktiviert" : "noch nicht aktiviert; statischer Endzustand zur Freigabe"}\n`;
   fs.writeFileSync(path.join(outRoot, scene.work_unit, "redesign-brief.md"), text, "utf8");
 }
 function main() {

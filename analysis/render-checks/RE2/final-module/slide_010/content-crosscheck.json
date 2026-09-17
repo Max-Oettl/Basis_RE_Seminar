@@ -1,0 +1,46 @@
+{
+  "schema_version": "basisReContentCrosscheck/v1",
+  "module_id": "RE2",
+  "work_unit": "slide_010",
+  "scene_id": "re2_ch2_ishikawa",
+  "target_svg": "rebuild-proposals/svg/RE2/slide_010/slide_010.svg",
+  "source_slides": [
+    10
+  ],
+  "mapping_type": "direct",
+  "source_checks": [
+    {
+      "source_slide": 10,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie10.SVG",
+      "expected_text_nodes": 23,
+      "missing_text_nodes": [
+        "Qualität elektrischer Bauteile",
+        "Standards bei Installation",
+        "Wartungsintervalle und",
+        "-",
+        "protokolle",
+        "Maschinen",
+        "(Ausrüstung)",
+        "Mileu",
+        "(Umwelt)",
+        "Leistungsverlust",
+        "der PV",
+        "Anlage"
+      ],
+      "expected_image_assets": 1,
+      "missing_image_assets": [
+        "img1"
+      ],
+      "speaker_control_expected_removed": true
+    }
+  ],
+  "qa": {
+    "issues": [
+      "Quellfolie 10: 12 sichtbare Texte fehlen im Ziel.",
+      "Quellfolie 10: 1 Inhaltsbilder fehlen im Ziel."
+    ],
+    "warnings": [],
+    "open_questions": []
+  },
+  "status": "failed"
+}

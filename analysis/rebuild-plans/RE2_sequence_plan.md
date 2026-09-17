@@ -129,7 +129,9 @@ RE2 übernimmt nicht nur Farben, sondern die vollständige Folienarchitektur von
 | 1 | `slide_067` | 67 | `re2_ch4_fmea_principles` | eigenständig | Kontinuität, Systematik, Proaktivität, Dokumentation und Teamarbeit |
 | 1 | `slide_068` | 68–70 | `re2_ch4_fmea_types` | Aufbaufolge | Design- und Prozess-FMEA: Zielsetzung, Schwerpunkte, Anwendung und Ergebnis |
 | 1 | `slide_071` | 71 | `re2_ch4_fmea_use` | eigenständig | Einsatzzeitpunkt, Standards und Zielbild |
-| 2 | `slide_072` | 72–77 | `re2_ch4_step1_planning` | Aufbaufolge | Sieben-Schritte-Navigation, Analyseumfang, Informationsquellen und Team |
+| 2 | `slide_072` | 72–73 | `re2_ch4_step1_planning` | Lektionsbrücke | einheitliche Vorschau auf Schritt 1 mit kompakter Sieben-Schritte-Navigation |
+| 2 | `slide_074` | 74 | `re2_ch4_step1_scope_documents` | eigenständig | Analyseumfang, Informationsquellen und Vorbereitung des interdisziplinären Teams |
+| 2 | `slide_075` | 75–77 | `re2_ch4_step1_team` | Aufbaufolge | Moderator, Basisteam und erweiterte Experten als Kompetenzhierarchie |
 | 3 | `slide_078` | 78 | `re2_ch4_step2_bridge` | Lektionsbrücke | ruhiger Fortschrittswechsel von Schritt 1 zu Schritt 2; nicht mit Lektion 2 zusammenführen |
 | 3 | `slide_079` | 79–82 | `re2_ch4_structural_method` | Aufbaufolge | Abgrenzen, Systemelemente aufteilen, Struktur erstellen und Ziel festhalten |
 | 3 | `slide_083` | 83–85 | `re2_ch4_structural_tree` | Aufbaufolge | Systemstruktur über drei Ebenen mit Fokuswechsel |
@@ -249,3 +251,7 @@ Die PNG-Familie wird in einem einheitlichen Blickwinkel, Licht und Detailgrad er
 - [x] Modulweite Kapitelübergänge und wiederverwendbare Systeme definiert.
 - [x] Asset- und Animationsstrategie vor der nächsten Folienproduktion festgelegt.
 - [x] Kapitel 2 zurückgesetzt; keine neue Kapitel-2-Zielfolie produziert.
+
+## Vollständigkeitskorrektur 2026-08-27
+
+Die erste Verdichtung auf 51 Szenen hat einzelne fachlich eigenständige Inhalte zu stark in gemeinsame Endzustände gezogen. Die korrigierte Sequenz umfasst nach der Wiederherstellung der eigenständigen Eingangsfolie zu FMEA-Schritt 1 insgesamt 69 Szenen. Zusätzliche Szenen werden nur an didaktisch belastbaren Grenzen eingefügt: Definition vor Beispiel, Methode vor Anwendung, Bewertungslogik vor Handlungspflicht sowie wiederkehrende Eingangsfolie vor fachlichem Detail. Der bestehende Sprechertext wird an diesen Übergängen lückenlos aufgeteilt; die 165 Quellzustände bleiben vollständig und eindeutig zugeordnet. Der konkrete Reparaturumfang ist in `analysis/rebuild-plans/RE2_technical_completeness_repair_plan.md` und `analysis/rebuild-plans/RE2_fmea_entry_slides_consistency_feedback_audit.md` festgelegt.

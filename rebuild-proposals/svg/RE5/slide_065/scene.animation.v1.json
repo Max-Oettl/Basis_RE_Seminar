@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_065.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "lower_level_plot",
+      "label": "Unteres Versuchsniveau",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "field_proximity",
+      "label": "Nähe zum Feld",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "runtime_limit",
+      "label": "Laufzeit begrenzen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "recommended_factor",
+      "label": "Raffungsfaktor zwei bis drei",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_lower_level_plot",
+      "targetId": "lower_level_plot",
+      "action": "draw",
+      "sourceText": "Das untere Versuchsniveau ist dagegen ein Kompromiss",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "durFrames": 42,
+      "drawStyle": "stroke",
+      "direction": "forward"
+    },
+    {
+      "stepId": "step_02_field_proximity",
+      "targetId": "field_proximity",
+      "action": "show",
+      "sourceText": "möglichst nah am Feldniveau",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_runtime_limit",
+      "targetId": "runtime_limit",
+      "action": "show",
+      "sourceText": "Gleichzeitig darf die Laufzeit aber nicht so lang sein",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_recommended_factor",
+      "targetId": "recommended_factor",
+      "action": "show",
+      "sourceText": "Raffungsfaktoren im Bereich von zwei bis drei",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

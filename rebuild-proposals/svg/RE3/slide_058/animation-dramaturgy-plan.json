@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_058",
+  "svgPath": "slide_058.svg",
+  "spokenText": "Wenn du eine Auswertung in Minitab durchführst und dich für die Weibull-Verteilung entscheidest, kann es vorkommen, dass du im Ergebnisverlauf eine deutlich gekrümmte Kurve erkennst, anstelle des typischen linearen Verlaufs in der Weibull-Darstellung.\n\nDas ist ein Hinweis darauf, dass eine dreiparametrige Weibull-Verteilung besser zu deinen Daten passen könnte.\n\nIn Minitab kannst du dafür einfach statt der „Weibull-Verteilung“ die Option „Dreiparametrige Weibull-Verteilung“ auswählen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die fachlichen Aussagen werden entlang der Sprechertextlogik in wenigen semantischen Gruppen aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Überlagerte Diagrammzustände werden in derselben Achsengeometrie gezeigt, damit der Vergleich visuell stabil bleibt."
+    ]
+  },
+  "initialStateRationale": "Nur der statische Orientierungsrahmen ist sichtbar; fachliche Details werden nicht vorweggenommen.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Statische Labels und der Folienmaster geben vor dem ersten Reveal Orientierung.",
+      "dependsOn": [],
+      "groupingRationale": "Der Orientierungsrahmen bleibt während der Sprechertextsequenz stabil."
+    },
+    {
+      "groupId": "three_select_plot",
+      "label": "Gekrümmter Verlauf",
+      "role": "content",
+      "members": [
+        "three_select_plot"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe erscheint erst mit ihrer fachlichen Einführung im Sprechertext.",
+      "dependsOn": [],
+      "groupingRationale": "Grafik und zugehörige Beschriftung bilden eine gemeinsame Lerneinheit."
+    },
+    {
+      "groupId": "three_select_question",
+      "label": "Drei-Parameter-Modell prüfen",
+      "role": "content",
+      "members": [
+        "three_select_question"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe erscheint erst mit ihrer fachlichen Einführung im Sprechertext.",
+      "dependsOn": [],
+      "groupingRationale": "Grafik und zugehörige Beschriftung bilden eine gemeinsame Lerneinheit."
+    },
+    {
+      "groupId": "three_select_choice",
+      "label": "Minitab-Auswahl",
+      "role": "content",
+      "members": [
+        "three_select_choice"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe erscheint erst mit ihrer fachlichen Einführung im Sprechertext.",
+      "dependsOn": [],
+      "groupingRationale": "Grafik und zugehörige Beschriftung bilden eine gemeinsame Lerneinheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Gekrümmter Verlauf",
+      "sourceText": "Wenn du eine Auswertung in Minitab durchführst und dich für die Weibull-Verteilung entscheidest, kann es vorkommen, dass du im Ergebnisverlauf eine deutlich gekrümmte Kurve erkennst, anstelle des typischen linearen Verlaufs in der Weibull-Darstellung.",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "three_select_plot"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Drei-Parameter-Modell prüfen",
+      "sourceText": "Das ist ein Hinweis darauf, dass eine dreiparametrige Weibull-Verteilung besser zu deinen Daten passen könnte.",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "three_select_question"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Minitab-Auswahl",
+      "sourceText": "In Minitab kannst du dafür einfach statt der „Weibull-Verteilung“ die Option „Dreiparametrige Weibull-Verteilung“ auswählen.",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "three_select_choice"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_three_select_plot",
+      "beatId": "beat_01",
+      "targetId": "three_select_plot",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_three_select_question",
+      "beatId": "beat_02",
+      "targetId": "three_select_question",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_three_select_choice",
+      "beatId": "beat_03",
+      "targetId": "three_select_choice",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Einstieg ohne vorweggenommene Fachinformation."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_03",
+      "visibleGroups": [
+        "canvas_context",
+        "three_select_plot",
+        "three_select_question",
+        "three_select_choice"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger Endzustand mit nachvollziehbarer Blickführung."
+    }
+  ]
+}

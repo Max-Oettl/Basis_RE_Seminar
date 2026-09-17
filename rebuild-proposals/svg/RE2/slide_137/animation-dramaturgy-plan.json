@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_documentation_goals",
+  "svgPath": "slide_137.svg",
+  "spokenText": "Die Ergebnisdokumentation fasst somit alle Erkenntnisse und Maßnahmen aus der Analyse zusammen. Obwohl sie als letzter Schritt der FME-A vorgesehen ist, sollte sie dynamisch und iterativ durchgeführt werden. Mit jeder umgesetzten Optimierungsmaßnahme erfolgt eine erneute Risikobewertung, die automatisch eine Aktualisierung der Dokumente notwendig macht.\n\nDie Ergebnisdokumentation sorgt außerdem dafür, dass alle relevanten Informationen nachvollziehbar und transparent festgehalten werden. Dies ist besonders wichtig für die spätere Überprüfung und die kontinuierliche Verbesserung.\n\nFür den siebten Schritt der FME-A lassen sich mehrere wichtige Ziele ableiten.\n\nZunächst steht die systematische Dokumentation aller aktuellen Risiken und der getroffenen Maßnahmen im Fokus.\n\nZiel ist es, sicherzustellen, dass diese Risiken auf ein akzeptables Maß reduziert werden.\n\nDabei spielt die Nachvollziehbarkeit eine zentrale Rolle: Alle relevanten Informationen müssen transparent festgehalten sein, um eine spätere Überprüfung und Weiterentwicklung zu ermöglichen.\n\nEin weiterer wichtiger Aspekt ist die Sicherstellung der Wissensweitergabe. Durch die umfassende Dokumentation können neue Teammitglieder oder andere Abteilungen sich schnell einen Überblick über die durchgeführten Analysen und Maßnahmen verschaffen. Das erleichtert den internen Wissenstransfer und sorgt für eine reibungslose Zusammenarbeit.\n\nZusätzlich ermöglicht die Dokumentation die Überwachung und Prüfung der Wirksamkeit der getroffenen Maßnahmen. Nach deren Umsetzung erfolgt eine iterative Neubewertung der Risiken. So kann das Team jederzeit den Fortschritt überwachen und sicherstellen, dass die Maßnahmen erfolgreich implementiert wurden und tatsächlich wirksam sind.\n\nEin weiterer zentraler Punkt ist die Ableitung von Berichten und die gezielte Kommunikation an alle relevanten Stakeholder. Dazu zählen beispielsweise Entscheidungsträger innerhalb der Organisation, Kunden oder auch Lieferanten. Durch eine klare und einheitliche Informationsbasis wird die Zusammenarbeit erleichtert und das Risiko von Missverständnissen reduziert.\n\nDarüber hinaus ist die Ergebnisdokumentation oft auch eine Voraussetzung für die Einhaltung von Branchenstandards und regulatorischen Anforderungen.\n\nZusammenfassend ist die Ergebnisdokumentation ein zentraler Bestandteil der FME-A. Sie sorgt für Transparenz und Nachvollziehbarkeit der Analyseergebnisse, stärkt die Teamzusammenarbeit, erfüllt regulatorische Anforderungen und unterstützt die kontinuierliche Verbesserung der Zuverlässigkeit und Qualität des gesamten Systems.\n\nDamit haben wir nun alle Schritte der FME-A abgeschlossen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s137_intro",
+      "label": "Dokumentationsprinzip",
+      "role": "content",
+      "members": [
+        "s137_intro"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s137_goals",
+      "label": "Ziele",
+      "role": "content",
+      "members": [
+        "s137_goals"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Dokumentationsprinzip",
+      "sourceText": "Die Ergebnisdokumentation fasst somit alle Erkenntnisse",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s137_intro"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Ziele",
+      "sourceText": "Für den siebten Schritt der FME-A",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s137_goals"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s137_intro",
+      "beatId": "beat_01",
+      "targetId": "s137_intro",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s137_goals",
+      "beatId": "beat_02",
+      "targetId": "s137_goals",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_02",
+      "visibleGroups": [
+        "canvas_context",
+        "s137_intro",
+        "s137_goals"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

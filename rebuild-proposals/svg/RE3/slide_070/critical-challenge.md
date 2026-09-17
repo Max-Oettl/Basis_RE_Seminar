@@ -1,10 +1,10 @@
 # Kritischer Challenge — slide_070
 
-- Quellen: RE3::70, RE3::71, RE3::72
+- Quellen: RE3::70
 - Struktur: Kapitel/Lektion bewusst nicht zugeordnet
-- Design-Challenge: Gemeinsamer Fit, getrennte Ergebnisse und Schlussfolgerung sind als Vorher-nachher-Vergleich sauber lesbar.
-- Animations-Challenge: 3 semantische Schritte an 3 wörtlich belegten Sprechertext-Cues; chronologisch sortiert.
-- Sichtprüfung: 4 gerenderte Zustände plus 1920×1080-Endzustand geprüft
-- Korrektur/Entscheidung: Im Challenge keine zusätzliche Korrektur erforderlich.
+- Design-Challenge: Gemeinsamer Fit, Kennwerte, Anforderungsvergleich und Knickdiagnose bilden einen eindeutigen Problemzustand.
+- Animations-Challenge: Statisch: kein belastbarer Sprechertext-Trigger für einen semantischen Aufbau.
+- Sichtprüfung: finaler statischer Zustand plus 1920×1080-Endzustand geprüft
+- Korrektur/Entscheidung: Gemeinsamer Fit, getrennte Fits und technische Schlussfolgerung auf Szenen 70–72 verteilt.
 - Technisches Ergebnis: 0 Fehler, 0 Warnungen im strikten Modul-QA
 - Urteil: FREIGEGEBEN

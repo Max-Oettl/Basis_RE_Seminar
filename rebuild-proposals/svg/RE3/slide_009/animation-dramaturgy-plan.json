@@ -1,0 +1,337 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_009",
+  "svgPath": "slide_009.svg",
+  "spokenText": "Als erstes müssen uns Lebensdauerdaten nicht immer nur als reine Ausfallzeiten einer einzelnen Komponente mit nur einem Ausfallmechanismus vorliegen. Es können auch Ausfallzeiten verschiedener Komponenten oder auch mehrere Ausfallmechanismen einer Komponente verfügbar sein. Für jeden Ausfallmechanismus muss dann die Auswertung immer getrennt voneinander erfolgen.\n\nDas bedeutet, wenn zwei Ausfallmechanismen A und B vorliegen, wie in dem Beispiel hier, dann erhalten wir natürlich auch immer zwei ermittelte Weibull-Geraden. Eine für den Ausfallmechanismus A und eine für den Ausfallmechanismus B.\n\nDiese können dann wieder miteinander verrechnet werden, um die Gesamtzuverlässigkeit der Komponente zu erhalten.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-2026-09-17/after/slide_009.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Als erstes müssen uns Lebensdauerdaten nicht",
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Als erstes müssen uns Lebensdauerdaten",
+      "claim": "Gemeinsame Ausfallzeiten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mechanisms_joint"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "getrennt voneinander erfolgen",
+      "claim": "Nach Mechanismus trennen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mechanisms_split"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "zwei Ausfallmechanismen A und B vorliegen",
+      "claim": "Getrennte Auswertung im Weibullnetz",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mechanisms_plot"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "Eine für den Ausfallmechanismus A",
+      "claim": "mechanism a",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mechanism_a"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "Eine für den Ausfallmechanismus A",
+      "claim": "Weibullgerade A",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mechanism_a_label"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "und eine für den Ausfallmechanismus B",
+      "claim": "mechanism b",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mechanism_b"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "und eine für den Ausfallmechanismus B",
+      "claim": "Weibullgerade B",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mechanism_b_label"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Diese können dann wieder miteinander verrechnet werden",
+      "claim": "Gesamtzuverlässigkeit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mechanisms_total"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "mechanisms_joint",
+      "label": "Gemeinsame Ausfallzeiten",
+      "role": "content",
+      "members": [
+        "mechanisms_joint"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "mechanisms_split",
+      "label": "Nach Mechanismus trennen",
+      "role": "content",
+      "members": [
+        "mechanisms_split"
+      ],
+      "dependsOn": [
+        "mechanisms_joint"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "mechanisms_plot",
+      "label": "Getrennte Auswertung im Weibullnetz",
+      "role": "content",
+      "members": [
+        "mechanisms_plot"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "mechanism_a",
+      "label": "mechanism a",
+      "role": "content",
+      "members": [
+        "mechanism_a"
+      ],
+      "dependsOn": [
+        "mechanisms_plot"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "mechanism_a_label",
+      "label": "Weibullgerade A",
+      "role": "content",
+      "members": [
+        "mechanism_a_label"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "mechanism_b",
+      "label": "mechanism b",
+      "role": "content",
+      "members": [
+        "mechanism_b"
+      ],
+      "dependsOn": [
+        "mechanisms_plot"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "mechanism_b_label",
+      "label": "Weibullgerade B",
+      "role": "content",
+      "members": [
+        "mechanism_b_label"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "mechanisms_total",
+      "label": "Gesamtzuverlässigkeit",
+      "role": "content",
+      "members": [
+        "mechanisms_total"
+      ],
+      "dependsOn": [
+        "mechanism_a",
+        "mechanism_b"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_mechanisms_joint",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mechanisms_joint",
+      "sourceText": "Als erstes müssen uns Lebensdauerdaten",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_mechanisms_split",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mechanisms_split",
+      "sourceText": "getrennt voneinander erfolgen",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_mechanisms_plot",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mechanisms_plot",
+      "sourceText": "zwei Ausfallmechanismen A und B vorliegen",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_mechanism_a",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mechanism_a",
+      "sourceText": "Eine für den Ausfallmechanismus A",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_mechanism_a_label",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mechanism_a_label",
+      "sourceText": "Eine für den Ausfallmechanismus A",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_mechanism_b",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mechanism_b",
+      "sourceText": "und eine für den Ausfallmechanismus B",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_mechanism_b_label",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mechanism_b_label",
+      "sourceText": "und eine für den Ausfallmechanismus B",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_mechanisms_total",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mechanisms_total",
+      "sourceText": "Diese können dann wieder miteinander verrechnet werden",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-2026-09-17/states-final/slide_009/00_initial.png",
+      "reviewedAt": "2026-09-17"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "mechanisms_joint",
+        "mechanisms_split",
+        "mechanisms_plot",
+        "mechanism_a",
+        "mechanism_a_label",
+        "mechanism_b",
+        "mechanism_b_label",
+        "mechanisms_total"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-2026-09-17/states-final/slide_009/06_after_06_diese_konnen_dann_wieder_miteinander_ve.png",
+      "reviewedAt": "2026-09-17"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "renderDirectory": "analysis/render-checks/RE3/feedback-2026-09-17/states-final/slide_009",
+    "reviewedStateCount": 7,
+    "evidence": "analysis/rebuild-plans/RE3_scenes_001_006_feedback_2026-09-17.md",
+    "method": "local Chromium state renderer plus visual source/reference review",
+    "interactiveBrowserPlayback": "unavailable; no end-to-end audio playback claimed"
+  }
+}

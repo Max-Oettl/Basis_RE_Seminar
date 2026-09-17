@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_005.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "test_type",
+      "label": "Testart",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "censoring_type",
+      "label": "Zensierung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "acceleration_type",
+      "label": "Beschleunigung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_test_type",
+      "targetId": "test_type",
+      "action": "show",
+      "sourceText": "Erstens die Testart",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_censoring_type",
+      "targetId": "censoring_type",
+      "action": "show",
+      "sourceText": "Zweitens der Zensierungstyp",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_acceleration_type",
+      "targetId": "acceleration_type",
+      "action": "show",
+      "sourceText": "Und drittens die Beschleunigungsart",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

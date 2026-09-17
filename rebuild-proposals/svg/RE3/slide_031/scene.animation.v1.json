@@ -5,37 +5,149 @@
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "sources_development",
-      "label": "Entwicklung",
+      "targetId": "data_origin",
+      "label": "Produktentwicklungsprozess",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "sources_testing",
-      "label": "Erprobung",
+      "targetId": "data_extreme",
+      "label": "Stark beschleunigte Versuche",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "sources_field",
-      "label": "Feld",
+      "targetId": "data_lab",
+      "label": "Versuche im Labor",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "sources_evidence",
-      "label": "Evidenzbasis",
+      "targetId": "data_drive",
+      "label": "Versuchsfahrten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "data_field",
+      "label": "Felddaten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "data_uncertainty",
+      "label": "Unsicherheit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "data_representative",
+      "label": "Repräsentativität",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "data_extreme_load",
+      "label": "Extreme Belastung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "data_extreme_result",
+      "label": "Schnelle Schwachstellensuche",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "data_lab_normal",
+      "label": "Unbeschleunigter Versuch",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "data_lab_fast",
+      "label": "Beschleunigter Versuch",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "data_lab_tradeoff",
+      "label": "Moderate Beschleunigung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "data_drive_detail",
+      "label": "Überwachter realer Einsatz",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "data_drive_variation",
+      "label": "Mehr Störfaktoren",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "data_field_use",
+      "label": "Kunde und Serie",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "data_field_variation",
+      "label": "Unkontrollierte Einflüsse",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "data_trend_representative",
+      "label": "Zunahme der Repräsentativität",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "data_trend_uncertainty",
+      "label": "Zunahme der Unsicherheit",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -44,44 +156,238 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_sources_development",
-      "targetId": "sources_development",
-      "action": "show",
-      "sourceText": "Wir können die verschiedenen Arten von Datenquellen in eine typische Reihenfolge bringen, die sich entlang des Entwicklungsprozesses eines Produkts einordnen lässt.",
+      "stepId": "step_01_data_origin",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "data_origin",
+      "sourceText": "Bevor wir mit einer Lebensdauerdatenanalyse",
+      "action": "show"
     },
     {
-      "stepId": "step_02_sources_testing",
-      "targetId": "sources_testing",
-      "action": "show",
-      "sourceText": "An erster Stelle stehen stark beschleunigte Lebensdauerversuche.",
+      "stepId": "step_02_data_extreme",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "data_extreme",
+      "sourceText": "Lebensdauerdaten können auf verschiedene Weise",
+      "action": "show"
     },
     {
-      "stepId": "step_03_sources_field",
-      "targetId": "sources_field",
-      "action": "show",
-      "sourceText": "Abschließend betrachten wir Felddaten oder sogenannte Feldversuche.",
+      "stepId": "step_03_data_lab",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "data_lab",
+      "sourceText": "Lebensdauerdaten können auf verschiedene Weise",
+      "action": "show"
     },
     {
-      "stepId": "step_04_sources_evidence",
-      "targetId": "sources_evidence",
-      "action": "show",
-      "sourceText": "Zusammenfassend lässt sich sagen: Je weiter wir uns im Entwicklungsprozess befinden, desto repräsentativer werden die Daten – gleichzeitig nimmt jedoch auch die Unsicherheit zu.",
+      "stepId": "step_04_data_drive",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "data_drive",
+      "sourceText": "Lebensdauerdaten können auf verschiedene Weise",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_data_field",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_field",
+      "sourceText": "Lebensdauerdaten können auf verschiedene Weise",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_data_origin",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_origin",
+      "sourceText": "entlang des Entwicklungsprozesses eines Produkts",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_07_data_uncertainty",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_uncertainty",
+      "sourceText": "Die Unsicherheit bezieht sich hierbei",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_data_representative",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_representative",
+      "sourceText": "Repräsentativität bedeutet, wie gut",
+      "action": "show"
+    },
+    {
+      "stepId": "step_09_data_extreme",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_extreme",
+      "sourceText": "An erster Stelle stehen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_10_data_extreme_load",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_extreme_load",
+      "sourceText": "gezielt extremen Belastungen ausgesetzt",
+      "action": "show"
+    },
+    {
+      "stepId": "step_11_data_extreme_result",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_extreme_result",
+      "sourceText": "Ziel ist es, in kürzester Zeit",
+      "action": "show"
+    },
+    {
+      "stepId": "step_12_data_extreme_result",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_extreme_result",
+      "sourceText": "hohe Unsicherheit hinsichtlich ihrer Übertragbarkeit",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_13_data_lab",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_lab",
+      "sourceText": "Es folgen beschleunigte oder unbeschleunigte",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_14_data_lab_normal",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_lab_normal",
+      "sourceText": "Bei unbeschleunigten Tests werden Produkte",
+      "action": "show"
+    },
+    {
+      "stepId": "step_15_data_lab_fast",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_lab_fast",
+      "sourceText": "Deshalb werden in der Praxis",
+      "action": "show"
+    },
+    {
+      "stepId": "step_16_data_lab_fast",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_lab_fast",
+      "sourceText": "Je stärker die Beschleunigung",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_17_data_lab_tradeoff",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_lab_tradeoff",
+      "sourceText": "Moderat beschleunigte Tests stellen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_18_data_drive",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_drive",
+      "sourceText": "Danach folgen Versuchsfahrten",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_19_data_drive_detail",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_drive_detail",
+      "sourceText": "im realen Umfeld, aber noch",
+      "action": "show"
+    },
+    {
+      "stepId": "step_20_data_drive_variation",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_drive_variation",
+      "sourceText": "von mehr Störfaktoren beeinflusst",
+      "action": "show"
+    },
+    {
+      "stepId": "step_21_data_field",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_field",
+      "sourceText": "Abschließend betrachten wir Felddaten",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_22_data_field_use",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_field_use",
+      "sourceText": "während des echten Einsatzes",
+      "action": "show"
+    },
+    {
+      "stepId": "step_23_data_field_variation",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_field_variation",
+      "sourceText": "Die Repräsentativität dieser Daten",
+      "action": "show"
+    },
+    {
+      "stepId": "step_24_data_field_variation",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_field_variation",
+      "sourceText": "mit der größten Unsicherheit behaftet",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_25_data_trend_representative",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_trend_representative",
+      "sourceText": "desto repräsentativer werden die Daten",
+      "action": "show"
+    },
+    {
+      "stepId": "step_26_data_trend_uncertainty",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_trend_uncertainty",
+      "sourceText": "gleichzeitig nimmt jedoch auch die Unsicherheit zu",
+      "action": "show"
+    },
+    {
+      "stepId": "step_27_data_origin",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_origin",
+      "sourceText": "die Herkunft der Daten zu kennen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     }
   ]
 }

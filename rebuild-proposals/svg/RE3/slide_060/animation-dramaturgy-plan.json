@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_060",
+  "svgPath": "slide_060.svg",
+  "spokenText": "Für die Anwendung der dreiparametrigen Weibull-Verteilung gelten deshalb immer die folgenden Voraussetzungen:\n\nEs gibt eine physikalisch begründbare und statistisch nachvollziehbare ausfallfreie Zeit.\n\nDer Kurvenverlauf in der zweiparametrigen-Weibull-Darstellung ist deutlich konkav.\n\nUnd du hast einen ausreichend großen Stichprobenumfang.\n\nWenn du dir unsicher bist, ob all das zutrifft, gilt folgende Faustregel.Greife lieber zur klassischen zweiparametrigen Weibullverteilung.\n\nSie ist der konservativere Ansatz – und berücksichtigt Ausfälle bereits ab dem Zeitpunkt t gleich null.",
+  "animationDecision": "animated",
+  "animationRationale": "Die fachlichen Aussagen werden entlang der Sprechertextlogik in wenigen semantischen Gruppen aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Überlagerte Diagrammzustände werden in derselben Achsengeometrie gezeigt, damit der Vergleich visuell stabil bleibt."
+    ]
+  },
+  "initialStateRationale": "Nur der statische Orientierungsrahmen ist sichtbar; fachliche Details werden nicht vorweggenommen.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Statische Labels und der Folienmaster geben vor dem ersten Reveal Orientierung.",
+      "dependsOn": [],
+      "groupingRationale": "Der Orientierungsrahmen bleibt während der Sprechertextsequenz stabil."
+    },
+    {
+      "groupId": "three_rule_1",
+      "label": "Begründbare ausfallfreie Zeit",
+      "role": "content",
+      "members": [
+        "three_rule_1"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe erscheint erst mit ihrer fachlichen Einführung im Sprechertext.",
+      "dependsOn": [],
+      "groupingRationale": "Grafik und zugehörige Beschriftung bilden eine gemeinsame Lerneinheit."
+    },
+    {
+      "groupId": "three_rule_2",
+      "label": "Konkaver Verlauf",
+      "role": "content",
+      "members": [
+        "three_rule_2"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe erscheint erst mit ihrer fachlichen Einführung im Sprechertext.",
+      "dependsOn": [],
+      "groupingRationale": "Grafik und zugehörige Beschriftung bilden eine gemeinsame Lerneinheit."
+    },
+    {
+      "groupId": "three_rule_3",
+      "label": "Stichprobenumfang",
+      "role": "content",
+      "members": [
+        "three_rule_3"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_03",
+      "initialVisibilityEvidence": "Die Gruppe erscheint erst mit ihrer fachlichen Einführung im Sprechertext.",
+      "dependsOn": [],
+      "groupingRationale": "Grafik und zugehörige Beschriftung bilden eine gemeinsame Lerneinheit."
+    },
+    {
+      "groupId": "three_rule_fallback",
+      "label": "Konservative Alternative",
+      "role": "content",
+      "members": [
+        "three_rule_fallback"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_04",
+      "initialVisibilityEvidence": "Die Gruppe erscheint erst mit ihrer fachlichen Einführung im Sprechertext.",
+      "dependsOn": [],
+      "groupingRationale": "Grafik und zugehörige Beschriftung bilden eine gemeinsame Lerneinheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Begründbare ausfallfreie Zeit",
+      "sourceText": "Es gibt eine physikalisch begründbare und statistisch nachvollziehbare ausfallfreie Zeit.",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "three_rule_1"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Konkaver Verlauf",
+      "sourceText": "Der Kurvenverlauf in der zweiparametrigen-Weibull-Darstellung ist deutlich konkav.",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "three_rule_2"
+      ]
+    },
+    {
+      "beatId": "beat_03",
+      "claim": "Stichprobenumfang",
+      "sourceText": "Und du hast einen ausreichend großen Stichprobenumfang.",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "three_rule_3"
+      ]
+    },
+    {
+      "beatId": "beat_04",
+      "claim": "Konservative Alternative",
+      "sourceText": "Wenn du dir unsicher bist, ob all das zutrifft, gilt folgende Faustregel.",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "three_rule_fallback"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_three_rule_1",
+      "beatId": "beat_01",
+      "targetId": "three_rule_1",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_three_rule_2",
+      "beatId": "beat_02",
+      "targetId": "three_rule_2",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_03_three_rule_3",
+      "beatId": "beat_03",
+      "targetId": "three_rule_3",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_04_three_rule_fallback",
+      "beatId": "beat_04",
+      "targetId": "three_rule_fallback",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Einstieg ohne vorweggenommene Fachinformation."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_04",
+      "visibleGroups": [
+        "canvas_context",
+        "three_rule_1",
+        "three_rule_2",
+        "three_rule_3",
+        "three_rule_fallback"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger Endzustand mit nachvollziehbarer Blickführung."
+    }
+  ]
+}

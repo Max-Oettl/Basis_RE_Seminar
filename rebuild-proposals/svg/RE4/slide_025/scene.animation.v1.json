@@ -5,37 +5,181 @@
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "transform_error",
-      "label": "Fehlerbaum",
+      "targetId": "transfer_example_heading",
+      "label": "Das Getriebe als Beispiel",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "transform_function",
-      "label": "Funktionsbaum",
+      "targetId": "transfer_error",
+      "label": "Ausfalllogik des Getriebes",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "transform_rbd",
-      "label": "Blockdiagramm",
+      "targetId": "transfer_function",
+      "label": "Funktionslogik des Getriebes",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "transform_boolean",
-      "label": "Boolesches Modell",
+      "targetId": "transfer_complement",
+      "label": "Zehn Prozent Ausfall entspricht neunzig Prozent Zuverlässigkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transfer_tree_heading",
+      "label": "Vollständiger Funktionsbaum",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transfer_tree_top",
+      "label": "Top-Ereignis",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transfer_tree_causes",
+      "label": "Drehmoment und Dichtheit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transfer_tree_components",
+      "label": "Unmittelbare Ursachen der Komponenten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transfer_tree_modes",
+      "label": "Bruch oder Klemmen der Eingangswelle",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transfer_tree_basics",
+      "label": "Sechs Basisereignisse",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transfer_tree_value_fatigue",
+      "label": "Kennwert fatigue",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transfer_tree_value_material",
+      "label": "Kennwert material",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transfer_tree_value_flow_base",
+      "label": "Kennwert flow_base",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transfer_tree_value_static_base",
+      "label": "Kennwert static_base",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transfer_tree_value_wear",
+      "label": "Kennwert wear",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transfer_tree_value_thermal",
+      "label": "Kennwert thermal",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transfer_headers",
+      "label": "Drei Sichten auf dieselbe Logik",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transfer_gates",
+      "label": "Beide Gatterpaare",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transfer_series",
+      "label": "UND entspricht Serie",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transfer_parallel",
+      "label": "ODER entspricht Parallelstruktur",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transfer_symbols",
+      "label": "Bedeutung der booleschen Variablen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "transfer_boolean",
+      "label": "Boolesches Modell als Berechnungsgrundlage",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -44,44 +188,358 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_transform_error",
-      "targetId": "transform_error",
-      "action": "show",
-      "sourceText": "Auf dieser Grundlage wandeln wir also unseren Fehlerbaum systematisch in einen Funktionsbaum um:",
+      "stepId": "step_01_transfer_example_heading",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "transfer_example_heading",
+      "sourceText": "Das klingt zunächst abstrakt",
+      "action": "show"
     },
     {
-      "stepId": "step_02_transform_function",
-      "targetId": "transform_function",
-      "action": "show",
-      "sourceText": "Auf diese Weise erhalten wir den vollständigen Funktionsbaum des Getriebes.",
+      "stepId": "step_02_transfer_error",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "transfer_error",
+      "sourceText": "Wenn wir zum Beispiel im Fehlerbaum sagen",
+      "action": "show"
     },
     {
-      "stepId": "step_03_transform_rbd",
-      "targetId": "transform_rbd",
-      "action": "show",
-      "sourceText": "Um die resultierende Zuverlässigkeit des Systems anschaulich darzustellen, nutzt man in der Praxis häufig sogenannte Zuverlässigkeitsblockdiagramme.",
+      "stepId": "step_03_transfer_function",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "transfer_function",
+      "sourceText": "dann bedeutet das im Umkehrschluss",
+      "action": "show"
     },
     {
-      "stepId": "step_04_transform_boolean",
-      "targetId": "transform_boolean",
-      "action": "draw",
-      "sourceText": "Die Grundlage hierfür bildet das sogenannte boolesche Modell – also eine logische Verknüpfung der Einzelwahrscheinlichkeiten, aus der sich dann die Systemzuverlässigkeit ergibt.",
+      "stepId": "step_04_transfer_function",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Beziehung erscheint nach ihren fachlichen Endpunkten.",
-      "drawDurFrames": 42
+      "targetId": "transfer_function",
+      "sourceText": "Drehmomentübertragung und die Dichtheit",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_05_transfer_complement",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_complement",
+      "sourceText": "Anstelle von Aussagen wie",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_transfer_example_heading",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_example_heading",
+      "sourceText": "Auf dieser Grundlage",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_07_transfer_error",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_error",
+      "sourceText": "Auf dieser Grundlage",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_08_transfer_function",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_function",
+      "sourceText": "Auf dieser Grundlage",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_09_transfer_complement",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_complement",
+      "sourceText": "Auf dieser Grundlage",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_10_transfer_tree_heading",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_heading",
+      "sourceText": "wandeln wir also unseren Fehlerbaum systematisch",
+      "action": "show"
+    },
+    {
+      "stepId": "step_11_transfer_tree_top",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_top",
+      "sourceText": "wandeln wir also unseren Fehlerbaum systematisch",
+      "action": "show"
+    },
+    {
+      "stepId": "step_12_transfer_tree_causes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_causes",
+      "sourceText": "wandeln wir also unseren Fehlerbaum systematisch",
+      "action": "show"
+    },
+    {
+      "stepId": "step_13_transfer_tree_components",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_components",
+      "sourceText": "wandeln wir also unseren Fehlerbaum systematisch",
+      "action": "show"
+    },
+    {
+      "stepId": "step_14_transfer_tree_modes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_modes",
+      "sourceText": "wandeln wir also unseren Fehlerbaum systematisch",
+      "action": "show"
+    },
+    {
+      "stepId": "step_15_transfer_tree_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_basics",
+      "sourceText": "wandeln wir also unseren Fehlerbaum systematisch",
+      "action": "show"
+    },
+    {
+      "stepId": "step_16_transfer_tree_value_fatigue",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_fatigue",
+      "sourceText": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte",
+      "action": "show"
+    },
+    {
+      "stepId": "step_17_transfer_tree_value_material",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_material",
+      "sourceText": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte",
+      "action": "show"
+    },
+    {
+      "stepId": "step_18_transfer_tree_value_flow_base",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_flow_base",
+      "sourceText": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte",
+      "action": "show"
+    },
+    {
+      "stepId": "step_19_transfer_tree_value_static_base",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_static_base",
+      "sourceText": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte",
+      "action": "show"
+    },
+    {
+      "stepId": "step_20_transfer_tree_value_wear",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_wear",
+      "sourceText": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte",
+      "action": "show"
+    },
+    {
+      "stepId": "step_21_transfer_tree_value_thermal",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_thermal",
+      "sourceText": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte",
+      "action": "show"
+    },
+    {
+      "stepId": "step_22_transfer_tree_causes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_causes",
+      "sourceText": "die ODER-Gatter durch und-Gatter",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_23_transfer_tree_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_basics",
+      "sourceText": "den vollständigen Funktionsbaum des Getriebes",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_24_transfer_tree_heading",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_heading",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_25_transfer_tree_top",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_top",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_26_transfer_tree_causes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_causes",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_27_transfer_tree_components",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_components",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_28_transfer_tree_modes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_modes",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_29_transfer_tree_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_basics",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_30_transfer_tree_value_fatigue",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_fatigue",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_31_transfer_tree_value_material",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_material",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_32_transfer_tree_value_flow_base",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_flow_base",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_33_transfer_tree_value_static_base",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_static_base",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_34_transfer_tree_value_wear",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_wear",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_35_transfer_tree_value_thermal",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_thermal",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide"
+    },
+    {
+      "stepId": "step_36_transfer_headers",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_headers",
+      "sourceText": "des Systems anschaulich darzustellen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_37_transfer_gates",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_gates",
+      "sourceText": "direkt aus dem Funktionsbaum ableiten",
+      "action": "show"
+    },
+    {
+      "stepId": "step_38_transfer_series",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_series",
+      "sourceText": "welche Komponenten in Serie",
+      "action": "show"
+    },
+    {
+      "stepId": "step_39_transfer_parallel",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_parallel",
+      "sourceText": "oder parallel wirken müssen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_40_transfer_symbols",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_symbols",
+      "sourceText": "Regeln der Wahrscheinlichkeitsrechnung",
+      "action": "show"
+    },
+    {
+      "stepId": "step_41_transfer_boolean",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_boolean",
+      "sourceText": "das sogenannte boolesche Modell",
+      "action": "show"
+    },
+    {
+      "stepId": "step_42_transfer_boolean",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_boolean",
+      "sourceText": "aus der sich dann die Systemzuverlässigkeit ergibt",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_43_transfer_headers",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_headers",
+      "sourceText": "im nächsten Abschnitt im Detail",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     }
   ]
 }

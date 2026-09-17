@@ -9,10 +9,10 @@ const root = path.resolve(__dirname, "..", "..");
 const plan = JSON.parse(fs.readFileSync(path.join(root, "analysis", "rebuild-plans", "RE2_scene-plan.json"), "utf8"));
 const curation = JSON.parse(fs.readFileSync(path.join(root, "analysis", "viewer-notes", "viewer-curation.json"), "utf8"));
 
-test("RE2 viewer exposes only the 51 consolidated work units by default", () => {
+test("RE2 viewer exposes the 69 content-complete work units by default", () => {
   const activeSlides = plan.scenes.map((scene) => Number(String(scene.work_unit).replace("slide_", "")));
-  assert.equal(activeSlides.length, 51);
-  assert.equal(new Set(activeSlides).size, 51);
+  assert.equal(activeSlides.length, 69);
+  assert.equal(new Set(activeSlides).size, 69);
 
   for (let slideNumber = 1; slideNumber <= 165; slideNumber += 1) {
     const entry = curation.slides[`RE2::${slideNumber}`];
@@ -26,4 +26,3 @@ test("RE2 viewer exposes only the 51 consolidated work units by default", () => 
     assert.equal(scene.production_status, "complete");
   });
 });
-

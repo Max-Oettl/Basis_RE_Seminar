@@ -1,0 +1,325 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re4_src_023",
+  "svgPath": "slide_023.svg",
+  "spokenText": "Doch in der Praxis ist es üblich, statt mit Ausfallwahrscheinlichkeiten mit deren Gegenstück – den Zuverlässigkeitswerten – zu arbeiten. Wir sprechen dann nicht mehr von einem Fehlerbaum, sondern von einem sogenannten Funktionsbaum.\n\nDiese Transformation vom Fehler- zum Funktionsbaum erfolgt ganz einfach: Wir kehren die Logik der verwendeten Gatter um. Ein ODER-Gatter, das im Fehlerbaum beschreibt, dass das System ausfällt, wenn eine der Ursachen eintritt, wird im Funktionsbaum zu einem und-Gatter. Das System funktioniert also nur, wenn alle Teilfunktionen erfüllt sind. Umgekehrt wird ein und-Gatter im Fehlerbaum zu einem ODER-Gatter im Funktionsbaum.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/after/slide_023.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Doch in der Praxis ist es",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Doch in der Praxis ist es üblich",
+      "occurrence": 1,
+      "claim": "Fehlerbaum und Funktionsbaum",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "logic_headings"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Ausfallwahrscheinlichkeiten mit deren Gegenstück",
+      "occurrence": 1,
+      "claim": "Zuverlässigkeit als Gegenstück",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "logic_complement"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "von einem sogenannten Funktionsbaum",
+      "occurrence": 1,
+      "claim": "Aus Einzelwerten werden Systemwerte",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "logic_functions"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "Ein ODER-Gatter, das im Fehlerbaum beschreibt",
+      "occurrence": 1,
+      "claim": "ODER im Fehlerbaum",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "logic_error_or"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "wird im Funktionsbaum zu einem und-Gatter",
+      "occurrence": 1,
+      "claim": "UND im Funktionsbaum",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "logic_function_and"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "wenn alle Teilfunktionen erfüllt sind",
+      "occurrence": 1,
+      "claim": "UND im Funktionsbaum",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "logic_function_and"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "Umgekehrt wird ein und-Gatter",
+      "occurrence": 1,
+      "claim": "UND im Fehlerbaum",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "logic_error_and"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Umgekehrt wird ein und-Gatter",
+      "occurrence": 1,
+      "claim": "ODER im Funktionsbaum",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "logic_function_or"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "logic_headings",
+      "label": "Fehlerbaum und Funktionsbaum",
+      "role": "content",
+      "members": [
+        "logic_headings"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "logic_complement",
+      "label": "Zuverlässigkeit als Gegenstück",
+      "role": "content",
+      "members": [
+        "logic_complement"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "logic_functions",
+      "label": "Aus Einzelwerten werden Systemwerte",
+      "role": "content",
+      "members": [
+        "logic_functions"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "logic_error_or",
+      "label": "ODER im Fehlerbaum",
+      "role": "content",
+      "members": [
+        "logic_error_or"
+      ],
+      "dependsOn": [
+        "logic_headings"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "logic_function_and",
+      "label": "UND im Funktionsbaum",
+      "role": "content",
+      "members": [
+        "logic_function_and"
+      ],
+      "dependsOn": [
+        "logic_error_or"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "logic_error_and",
+      "label": "UND im Fehlerbaum",
+      "role": "content",
+      "members": [
+        "logic_error_and"
+      ],
+      "dependsOn": [
+        "logic_headings"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "logic_function_or",
+      "label": "ODER im Funktionsbaum",
+      "role": "content",
+      "members": [
+        "logic_function_or"
+      ],
+      "dependsOn": [
+        "logic_error_and"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_logic_headings",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "logic_headings",
+      "sourceText": "Doch in der Praxis ist es üblich",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_logic_complement",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "logic_complement",
+      "sourceText": "Ausfallwahrscheinlichkeiten mit deren Gegenstück",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_logic_functions",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "logic_functions",
+      "sourceText": "von einem sogenannten Funktionsbaum",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_logic_error_or",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "logic_error_or",
+      "sourceText": "Ein ODER-Gatter, das im Fehlerbaum beschreibt",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_logic_function_and",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "logic_function_and",
+      "sourceText": "wird im Funktionsbaum zu einem und-Gatter",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_logic_function_and",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "logic_function_and",
+      "sourceText": "wenn alle Teilfunktionen erfüllt sind",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_6",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_07_logic_error_and",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "logic_error_and",
+      "sourceText": "Umgekehrt wird ein und-Gatter",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_logic_function_or",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "logic_function_or",
+      "sourceText": "Umgekehrt wird ein und-Gatter",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/qa-final/svg-qa-report.md"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "logic_headings",
+        "logic_complement",
+        "logic_functions",
+        "logic_error_or",
+        "logic_function_and",
+        "logic_error_and",
+        "logic_function_or"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/qa-final/svg-qa-report.md"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "reviewEvidence": "analysis/render-checks/RE4/feedback-2026-09-17/review-summary.md"
+}

@@ -3,7 +3,7 @@
 - Kapitel: 4
 - Lektion: 3
 - Quellfolie: 85
-- Zielmodus: full_slide, 1920×1080
+- Zielmodus: content_svg, transparentes 1920×1080-Inhaltsmodul für den Downstream-Master
 - Titel: Systembaum: Systemebene 3
 - Dominante Lernbotschaft: Der Systembaum ordnet jedes Systemelement eindeutig einer Hierarchieebene zu.
 - Archetyp: hierarchy-tree

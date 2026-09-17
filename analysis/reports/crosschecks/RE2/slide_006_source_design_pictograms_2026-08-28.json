@@ -1,0 +1,58 @@
+{
+  "schema_version": "basisReContentCrosscheck/v1",
+  "module_id": "RE2",
+  "work_unit": "slide_006",
+  "scene_id": "re2_ch2_system_levels",
+  "target_svg": "rebuild-proposals/svg/RE2/slide_006/slide_006.svg",
+  "source_slides": [6, 7],
+  "mapping_type": "merged_sequence",
+  "source_checks": [
+    {
+      "source_slide": 6,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie6.SVG",
+      "must_preserve": [
+        "vierzeilige Ebenenmatrix mit konzentrischer Hierarchie",
+        "Umwelt: Standort, Umwelteinflüsse, Umgebungseinflüsse, gesetzliche Regularien",
+        "Systemebene: Anlagentyp, elektrische Verschaltung, Betriebsstrategie, Nennleistung",
+        "Subsystemebene: Wechselrichter, PV-Modul, Batteriesystem",
+        "Komponentenebene: Mikrocontroller und weitere Baugruppen oder Bauteile"
+      ],
+      "visual_replacements": [
+        "Weltkarte durch freigegebenes Umwelt-PNG-Piktogramm",
+        "PV-Abbildung durch freigegebenes PV-System-PNG-Piktogramm",
+        "Wechselrichterfoto durch freigegebenes Wechselrichter-PNG-Piktogramm",
+        "Leiterplattenfoto durch freigegebenes Mikrocontroller-PNG-Piktogramm"
+      ],
+      "decorative_remove": [
+        "sichtbarer PowerPoint-Folientitel",
+        "Lautsprechersymbol",
+        "Logo und Masterelemente"
+      ],
+      "status": "passed"
+    },
+    {
+      "source_slide": 7,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie7.SVG",
+      "must_preserve": [
+        "Systemgrenze umfasst Subsystem- und Komponentenebene",
+        "Schnittstelle für Wechselwirkungen zur Umgebung",
+        "drei gerade, nach unten gerichtete Schnittstellenpfeile",
+        "farbliche Fokusfläche über Subsystem- und Komponentenebene"
+      ],
+      "status": "passed"
+    }
+  ],
+  "reverse_check": {
+    "unsupported_target_additions": [],
+    "speaker_text_evidence": [
+      "Weitere Baugruppen oder Bauteile konkretisiert die offene Quellkategorie der Komponentenebene."
+    ],
+    "status": "passed"
+  },
+  "qa": {
+    "issues": [],
+    "warnings": [],
+    "open_questions": []
+  },
+  "status": "passed"
+}

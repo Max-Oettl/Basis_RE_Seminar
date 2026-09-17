@@ -1,0 +1,327 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_037",
+  "scene_id": "re1_src_039",
+  "source_slides": [
+    39
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "hazard_definition",
+      "label": "Definition der Ausfallrate",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "hazard_risk_meaning",
+      "label": "Bedingtes Ausfallrisiko",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "bathtub_curve_path",
+      "label": "Badewannenkurve",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "bathtub_early_span",
+      "label": "Frühausfallzone · span",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "bathtub_early_divider",
+      "label": "Frühausfallzone · divider",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "bathtub_early_number",
+      "label": "Frühausfallzone · number",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "bathtub_early_label",
+      "label": "Frühausfallzone · label",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "early_failure_region",
+      "label": "Frühausfälle",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "bathtub_random_span",
+      "label": "Zufallsausfallzone · span",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "bathtub_random_divider",
+      "label": "Zufallsausfallzone · divider",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "bathtub_random_number",
+      "label": "Zufallsausfallzone · number",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "bathtub_random_label",
+      "label": "Zufallsausfallzone · label",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "random_failure_region",
+      "label": "Zufallsausfälle",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "bathtub_wear_span",
+      "label": "Ermüdungsausfallzone · span",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "bathtub_wear_number",
+      "label": "Ermüdungsausfallzone · number",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "bathtub_wear_label",
+      "label": "Ermüdungsausfallzone · label",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "wearout_failure_region",
+      "label": "Ermüdungsausfälle",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_hazard_definition",
+      "targetId": "hazard_definition",
+      "action": "show",
+      "sourceText": "Die Ausfallrate wird mit Lambda abgekürzt und beschreibt das Verhältnis der Ausfälle",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_hazard_risk_meaning",
+      "targetId": "hazard_risk_meaning",
+      "action": "show",
+      "sourceText": "Die Ausfallrate zu einem bestimmten Zeitpunkt t",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_bathtub_curve_path",
+      "targetId": "bathtub_curve_path",
+      "action": "draw",
+      "sourceText": "Der charakteristische Verlauf dieser Raten wird durch die sogenannte Badewannenkurve dargestellt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_bathtub_early_span",
+      "targetId": "bathtub_early_span",
+      "action": "show",
+      "sourceText": "Im ersten Bereich der Kurve nimmt die Ausfallrate ab",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_bathtub_early_divider",
+      "targetId": "bathtub_early_divider",
+      "action": "show",
+      "sourceText": "Im ersten Bereich der Kurve nimmt die Ausfallrate ab",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_bathtub_early_number",
+      "targetId": "bathtub_early_number",
+      "action": "show",
+      "sourceText": "Im ersten Bereich der Kurve nimmt die Ausfallrate ab",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_bathtub_early_label",
+      "targetId": "bathtub_early_label",
+      "action": "show",
+      "sourceText": "Im ersten Bereich der Kurve nimmt die Ausfallrate ab",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_early_failure_region",
+      "targetId": "early_failure_region",
+      "action": "show",
+      "sourceText": "Im ersten Bereich der Kurve nimmt die Ausfallrate ab",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_bathtub_random_span",
+      "targetId": "bathtub_random_span",
+      "action": "show",
+      "sourceText": "Im zweiten Bereich, der die Zufallsausfälle darstellt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_bathtub_random_divider",
+      "targetId": "bathtub_random_divider",
+      "action": "show",
+      "sourceText": "Im zweiten Bereich, der die Zufallsausfälle darstellt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_bathtub_random_number",
+      "targetId": "bathtub_random_number",
+      "action": "show",
+      "sourceText": "Im zweiten Bereich, der die Zufallsausfälle darstellt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_bathtub_random_label",
+      "targetId": "bathtub_random_label",
+      "action": "show",
+      "sourceText": "Im zweiten Bereich, der die Zufallsausfälle darstellt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_random_failure_region",
+      "targetId": "random_failure_region",
+      "action": "show",
+      "sourceText": "Im zweiten Bereich, der die Zufallsausfälle darstellt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_bathtub_wear_span",
+      "targetId": "bathtub_wear_span",
+      "action": "show",
+      "sourceText": "Der dritte Bereich beschreibt die Ermüdungsausfälle",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_bathtub_wear_number",
+      "targetId": "bathtub_wear_number",
+      "action": "show",
+      "sourceText": "Der dritte Bereich beschreibt die Ermüdungsausfälle",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_bathtub_wear_label",
+      "targetId": "bathtub_wear_label",
+      "action": "show",
+      "sourceText": "Der dritte Bereich beschreibt die Ermüdungsausfälle",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_wearout_failure_region",
+      "targetId": "wearout_failure_region",
+      "action": "show",
+      "sourceText": "Der dritte Bereich beschreibt die Ermüdungsausfälle",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

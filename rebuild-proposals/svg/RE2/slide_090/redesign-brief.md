@@ -3,11 +3,11 @@
 - Kapitel: 4
 - Lektion: 3
 - Quellfolie: 90
-- Zielmodus: full_slide, 1920×1080
+- Zielmodus: content_svg, transparentes 1920×1080-Inhaltsmodul für den Downstream-Master
 - Titel: Die 7 Schritte der FMEA
-- Dominante Lernbotschaft: Die FMEA folgt einem klaren Ablauf aus sieben Schritten.
-- Archetyp: process-overview
-- Layout: Kanonische siebenstufige FMEA-Prozessleiste als dominante Erklärfläche.
+- Dominante Lernbotschaft: Schritt 3 – Funktionsanalyse – ist der nächste FMEA-Arbeitsschritt.
+- Archetyp: step-transition-preview
+- Layout: Zurückhaltende Sieben-Schritt-Navigation oben mit signalgrünem aktuellem Schritt; darunter ein großer Schrittanker und eine fachliche Vorschau auf die kommende Denkoperation.
 - Inhaltsinventar: Fachbegriffe, Beziehungen, Hierarchien, Tabellenzustände und Beispiele bleiben erhalten; PowerPoint-Bedienelemente und Masterdekoration entfallen.
 - Referenz-Lock: RE1 slide_013, slide_009, slide_027 und slide_022
 - Assetstrategie: native RelTest-SVG-Komposition

@@ -1,0 +1,1253 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re4_src_025",
+  "svgPath": "slide_025.svg",
+  "spokenText": "Das klingt zunächst abstrakt, ist aber logisch nachvollziehbar. Wenn wir zum Beispiel im Fehlerbaum sagen: „Das Getriebe fällt aus, wenn kein Drehmoment mehr übertragen wird oder eine Leckage vorliegt“, dann bedeutet das im Umkehrschluss: „Das Getriebe funktioniert nur dann, wenn beides – die Drehmomentübertragung und die Dichtheit – gegeben ist.“\n\nDiese Umkehrung der Logik erlaubt es uns, mit Zuverlässigkeiten zu arbeiten, die häufig auch intuitiver zu interpretieren sind. Anstelle von Aussagen wie „Ausfallwahrscheinlichkeit von zehn Prozent“ sprechen wir dann von „Zuverlässigkeit von neunzig Prozent“.\n\nAuf dieser Grundlage wandeln wir also unseren Fehlerbaum systematisch in einen Funktionsbaum um:\n\nWir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte und die ODER-Gatter durch und-Gatter.\n\nAuf diese Weise erhalten wir den vollständigen Funktionsbaum des Getriebes.\n\nDurch die Umwandlung von Fehlerbaum zu Funktionsbaum lässt sich die Systemzuverlässigkeit einfach berechnen.\n\nUm die resultierende Zuverlässigkeit des Systems anschaulich darzustellen, nutzt man in der Praxis häufig sogenannte Zuverlässigkeitsblockdiagramme. Diese lassen sich direkt aus dem Funktionsbaum ableiten und visualisieren, welche Komponenten in Serie oder parallel wirken müssen, damit das Gesamtsystem zuverlässig funktioniert.\n\nFür die eigentliche Berechnung greifen wir auf Regeln der Wahrscheinlichkeitsrechnung zurück. Die Grundlage hierfür bildet das sogenannte boolesche Modell – also eine logische Verknüpfung der Einzelwahrscheinlichkeiten, aus der sich dann die Systemzuverlässigkeit ergibt.\n\nWie genau das funktioniert – und wie wir die Zuverlässigkeitsblockdiagramme konkret einsetzen – schauen wir uns im nächsten Abschnitt im Detail an.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/after/slide_025.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Das klingt zunächst abstrakt, ist aber",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Das klingt zunächst abstrakt",
+      "occurrence": 1,
+      "claim": "Das Getriebe als Beispiel",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_example_heading"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Wenn wir zum Beispiel im Fehlerbaum sagen",
+      "occurrence": 1,
+      "claim": "Ausfalllogik des Getriebes",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_error"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "dann bedeutet das im Umkehrschluss",
+      "occurrence": 1,
+      "claim": "Funktionslogik des Getriebes",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_function"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "Drehmomentübertragung und die Dichtheit",
+      "occurrence": 1,
+      "claim": "Funktionslogik des Getriebes",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "transfer_function"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "Anstelle von Aussagen wie",
+      "occurrence": 1,
+      "claim": "Zehn Prozent Ausfall entspricht neunzig Prozent Zuverlässigkeit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_complement"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "Auf dieser Grundlage",
+      "occurrence": 1,
+      "claim": "Das Getriebe als Beispiel",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "transfer_example_heading"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "Auf dieser Grundlage",
+      "occurrence": 1,
+      "claim": "Ausfalllogik des Getriebes",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "transfer_error"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Auf dieser Grundlage",
+      "occurrence": 1,
+      "claim": "Funktionslogik des Getriebes",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "transfer_function"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "Auf dieser Grundlage",
+      "occurrence": 1,
+      "claim": "Zehn Prozent Ausfall entspricht neunzig Prozent Zuverlässigkeit",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "transfer_complement"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "wandeln wir also unseren Fehlerbaum systematisch",
+      "occurrence": 1,
+      "claim": "Vollständiger Funktionsbaum",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_tree_heading"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "wandeln wir also unseren Fehlerbaum systematisch",
+      "occurrence": 1,
+      "claim": "Top-Ereignis",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_tree_top"
+      ]
+    },
+    {
+      "beatId": "beat_12",
+      "sourceText": "wandeln wir also unseren Fehlerbaum systematisch",
+      "occurrence": 1,
+      "claim": "Drehmoment und Dichtheit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_tree_causes"
+      ]
+    },
+    {
+      "beatId": "beat_13",
+      "sourceText": "wandeln wir also unseren Fehlerbaum systematisch",
+      "occurrence": 1,
+      "claim": "Unmittelbare Ursachen der Komponenten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_tree_components"
+      ]
+    },
+    {
+      "beatId": "beat_14",
+      "sourceText": "wandeln wir also unseren Fehlerbaum systematisch",
+      "occurrence": 1,
+      "claim": "Bruch oder Klemmen der Eingangswelle",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_tree_modes"
+      ]
+    },
+    {
+      "beatId": "beat_15",
+      "sourceText": "wandeln wir also unseren Fehlerbaum systematisch",
+      "occurrence": 1,
+      "claim": "Sechs Basisereignisse",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_tree_basics"
+      ]
+    },
+    {
+      "beatId": "beat_16",
+      "sourceText": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte",
+      "occurrence": 1,
+      "claim": "Kennwert fatigue",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_tree_value_fatigue"
+      ]
+    },
+    {
+      "beatId": "beat_17",
+      "sourceText": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte",
+      "occurrence": 1,
+      "claim": "Kennwert material",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_tree_value_material"
+      ]
+    },
+    {
+      "beatId": "beat_18",
+      "sourceText": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte",
+      "occurrence": 1,
+      "claim": "Kennwert flow_base",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_tree_value_flow_base"
+      ]
+    },
+    {
+      "beatId": "beat_19",
+      "sourceText": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte",
+      "occurrence": 1,
+      "claim": "Kennwert static_base",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_tree_value_static_base"
+      ]
+    },
+    {
+      "beatId": "beat_20",
+      "sourceText": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte",
+      "occurrence": 1,
+      "claim": "Kennwert wear",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_tree_value_wear"
+      ]
+    },
+    {
+      "beatId": "beat_21",
+      "sourceText": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte",
+      "occurrence": 1,
+      "claim": "Kennwert thermal",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_tree_value_thermal"
+      ]
+    },
+    {
+      "beatId": "beat_22",
+      "sourceText": "die ODER-Gatter durch und-Gatter",
+      "occurrence": 1,
+      "claim": "Drehmoment und Dichtheit",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "transfer_tree_causes"
+      ]
+    },
+    {
+      "beatId": "beat_23",
+      "sourceText": "den vollständigen Funktionsbaum des Getriebes",
+      "occurrence": 1,
+      "claim": "Sechs Basisereignisse",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "transfer_tree_basics"
+      ]
+    },
+    {
+      "beatId": "beat_24",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "occurrence": 1,
+      "claim": "Vollständiger Funktionsbaum",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "transfer_tree_heading"
+      ]
+    },
+    {
+      "beatId": "beat_25",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "occurrence": 1,
+      "claim": "Top-Ereignis",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "transfer_tree_top"
+      ]
+    },
+    {
+      "beatId": "beat_26",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "occurrence": 1,
+      "claim": "Drehmoment und Dichtheit",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "transfer_tree_causes"
+      ]
+    },
+    {
+      "beatId": "beat_27",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "occurrence": 1,
+      "claim": "Unmittelbare Ursachen der Komponenten",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "transfer_tree_components"
+      ]
+    },
+    {
+      "beatId": "beat_28",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "occurrence": 1,
+      "claim": "Bruch oder Klemmen der Eingangswelle",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "transfer_tree_modes"
+      ]
+    },
+    {
+      "beatId": "beat_29",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "occurrence": 1,
+      "claim": "Sechs Basisereignisse",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "transfer_tree_basics"
+      ]
+    },
+    {
+      "beatId": "beat_30",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "occurrence": 1,
+      "claim": "Kennwert fatigue",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "transfer_tree_value_fatigue"
+      ]
+    },
+    {
+      "beatId": "beat_31",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "occurrence": 1,
+      "claim": "Kennwert material",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "transfer_tree_value_material"
+      ]
+    },
+    {
+      "beatId": "beat_32",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "occurrence": 1,
+      "claim": "Kennwert flow_base",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "transfer_tree_value_flow_base"
+      ]
+    },
+    {
+      "beatId": "beat_33",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "occurrence": 1,
+      "claim": "Kennwert static_base",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "transfer_tree_value_static_base"
+      ]
+    },
+    {
+      "beatId": "beat_34",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "occurrence": 1,
+      "claim": "Kennwert wear",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "transfer_tree_value_wear"
+      ]
+    },
+    {
+      "beatId": "beat_35",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "occurrence": 1,
+      "claim": "Kennwert thermal",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "transfer_tree_value_thermal"
+      ]
+    },
+    {
+      "beatId": "beat_36",
+      "sourceText": "des Systems anschaulich darzustellen",
+      "occurrence": 1,
+      "claim": "Drei Sichten auf dieselbe Logik",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_headers"
+      ]
+    },
+    {
+      "beatId": "beat_37",
+      "sourceText": "direkt aus dem Funktionsbaum ableiten",
+      "occurrence": 1,
+      "claim": "Beide Gatterpaare",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_gates"
+      ]
+    },
+    {
+      "beatId": "beat_38",
+      "sourceText": "welche Komponenten in Serie",
+      "occurrence": 1,
+      "claim": "UND entspricht Serie",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_series"
+      ]
+    },
+    {
+      "beatId": "beat_39",
+      "sourceText": "oder parallel wirken müssen",
+      "occurrence": 1,
+      "claim": "ODER entspricht Parallelstruktur",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_parallel"
+      ]
+    },
+    {
+      "beatId": "beat_40",
+      "sourceText": "Regeln der Wahrscheinlichkeitsrechnung",
+      "occurrence": 1,
+      "claim": "Bedeutung der booleschen Variablen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_symbols"
+      ]
+    },
+    {
+      "beatId": "beat_41",
+      "sourceText": "das sogenannte boolesche Modell",
+      "occurrence": 1,
+      "claim": "Boolesches Modell als Berechnungsgrundlage",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "transfer_boolean"
+      ]
+    },
+    {
+      "beatId": "beat_42",
+      "sourceText": "aus der sich dann die Systemzuverlässigkeit ergibt",
+      "occurrence": 1,
+      "claim": "Boolesches Modell als Berechnungsgrundlage",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "transfer_boolean"
+      ]
+    },
+    {
+      "beatId": "beat_43",
+      "sourceText": "im nächsten Abschnitt im Detail",
+      "occurrence": 1,
+      "claim": "Drei Sichten auf dieselbe Logik",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "transfer_headers"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "transfer_example_heading",
+      "label": "Das Getriebe als Beispiel",
+      "role": "content",
+      "members": [
+        "transfer_example_heading"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "transfer_error",
+      "label": "Ausfalllogik des Getriebes",
+      "role": "content",
+      "members": [
+        "transfer_error"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "transfer_function",
+      "label": "Funktionslogik des Getriebes",
+      "role": "content",
+      "members": [
+        "transfer_function"
+      ],
+      "dependsOn": [
+        "transfer_error"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "transfer_complement",
+      "label": "Zehn Prozent Ausfall entspricht neunzig Prozent Zuverlässigkeit",
+      "role": "content",
+      "members": [
+        "transfer_complement"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "transfer_tree_heading",
+      "label": "Vollständiger Funktionsbaum",
+      "role": "content",
+      "members": [
+        "transfer_tree_heading"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_10"
+    },
+    {
+      "groupId": "transfer_tree_top",
+      "label": "Top-Ereignis",
+      "role": "content",
+      "members": [
+        "transfer_tree_top"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_11"
+    },
+    {
+      "groupId": "transfer_tree_causes",
+      "label": "Drehmoment und Dichtheit",
+      "role": "content",
+      "members": [
+        "transfer_tree_causes"
+      ],
+      "dependsOn": [
+        "transfer_tree_top"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_12"
+    },
+    {
+      "groupId": "transfer_tree_components",
+      "label": "Unmittelbare Ursachen der Komponenten",
+      "role": "content",
+      "members": [
+        "transfer_tree_components"
+      ],
+      "dependsOn": [
+        "transfer_tree_causes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_13"
+    },
+    {
+      "groupId": "transfer_tree_modes",
+      "label": "Bruch oder Klemmen der Eingangswelle",
+      "role": "content",
+      "members": [
+        "transfer_tree_modes"
+      ],
+      "dependsOn": [
+        "transfer_tree_components"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_14"
+    },
+    {
+      "groupId": "transfer_tree_basics",
+      "label": "Sechs Basisereignisse",
+      "role": "content",
+      "members": [
+        "transfer_tree_basics"
+      ],
+      "dependsOn": [
+        "transfer_tree_modes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_15"
+    },
+    {
+      "groupId": "transfer_tree_value_fatigue",
+      "label": "Kennwert fatigue",
+      "role": "content",
+      "members": [
+        "transfer_tree_value_fatigue"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_16"
+    },
+    {
+      "groupId": "transfer_tree_value_material",
+      "label": "Kennwert material",
+      "role": "content",
+      "members": [
+        "transfer_tree_value_material"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_17"
+    },
+    {
+      "groupId": "transfer_tree_value_flow_base",
+      "label": "Kennwert flow_base",
+      "role": "content",
+      "members": [
+        "transfer_tree_value_flow_base"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_18"
+    },
+    {
+      "groupId": "transfer_tree_value_static_base",
+      "label": "Kennwert static_base",
+      "role": "content",
+      "members": [
+        "transfer_tree_value_static_base"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_19"
+    },
+    {
+      "groupId": "transfer_tree_value_wear",
+      "label": "Kennwert wear",
+      "role": "content",
+      "members": [
+        "transfer_tree_value_wear"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_20"
+    },
+    {
+      "groupId": "transfer_tree_value_thermal",
+      "label": "Kennwert thermal",
+      "role": "content",
+      "members": [
+        "transfer_tree_value_thermal"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_21"
+    },
+    {
+      "groupId": "transfer_headers",
+      "label": "Drei Sichten auf dieselbe Logik",
+      "role": "content",
+      "members": [
+        "transfer_headers"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_36"
+    },
+    {
+      "groupId": "transfer_gates",
+      "label": "Beide Gatterpaare",
+      "role": "content",
+      "members": [
+        "transfer_gates"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_37"
+    },
+    {
+      "groupId": "transfer_series",
+      "label": "UND entspricht Serie",
+      "role": "content",
+      "members": [
+        "transfer_series"
+      ],
+      "dependsOn": [
+        "transfer_gates"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_38"
+    },
+    {
+      "groupId": "transfer_parallel",
+      "label": "ODER entspricht Parallelstruktur",
+      "role": "content",
+      "members": [
+        "transfer_parallel"
+      ],
+      "dependsOn": [
+        "transfer_gates"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_39"
+    },
+    {
+      "groupId": "transfer_symbols",
+      "label": "Bedeutung der booleschen Variablen",
+      "role": "content",
+      "members": [
+        "transfer_symbols"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_40"
+    },
+    {
+      "groupId": "transfer_boolean",
+      "label": "Boolesches Modell als Berechnungsgrundlage",
+      "role": "content",
+      "members": [
+        "transfer_boolean"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_41"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_transfer_example_heading",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_example_heading",
+      "sourceText": "Das klingt zunächst abstrakt",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_transfer_error",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_error",
+      "sourceText": "Wenn wir zum Beispiel im Fehlerbaum sagen",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_transfer_function",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_function",
+      "sourceText": "dann bedeutet das im Umkehrschluss",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_transfer_function",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_function",
+      "sourceText": "Drehmomentübertragung und die Dichtheit",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_4",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_05_transfer_complement",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_complement",
+      "sourceText": "Anstelle von Aussagen wie",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_transfer_example_heading",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_example_heading",
+      "sourceText": "Auf dieser Grundlage",
+      "action": "hide",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_transfer_error",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_error",
+      "sourceText": "Auf dieser Grundlage",
+      "action": "hide",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_transfer_function",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_function",
+      "sourceText": "Auf dieser Grundlage",
+      "action": "hide",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_transfer_complement",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_complement",
+      "sourceText": "Auf dieser Grundlage",
+      "action": "hide",
+      "beatId": "beat_9",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_10_transfer_tree_heading",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_heading",
+      "sourceText": "wandeln wir also unseren Fehlerbaum systematisch",
+      "action": "show",
+      "beatId": "beat_10",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_11_transfer_tree_top",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_top",
+      "sourceText": "wandeln wir also unseren Fehlerbaum systematisch",
+      "action": "show",
+      "beatId": "beat_11",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_12_transfer_tree_causes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_causes",
+      "sourceText": "wandeln wir also unseren Fehlerbaum systematisch",
+      "action": "show",
+      "beatId": "beat_12",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_13_transfer_tree_components",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_components",
+      "sourceText": "wandeln wir also unseren Fehlerbaum systematisch",
+      "action": "show",
+      "beatId": "beat_13",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_14_transfer_tree_modes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_modes",
+      "sourceText": "wandeln wir also unseren Fehlerbaum systematisch",
+      "action": "show",
+      "beatId": "beat_14",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_15_transfer_tree_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_basics",
+      "sourceText": "wandeln wir also unseren Fehlerbaum systematisch",
+      "action": "show",
+      "beatId": "beat_15",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_16_transfer_tree_value_fatigue",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_fatigue",
+      "sourceText": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte",
+      "action": "show",
+      "beatId": "beat_16",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_17_transfer_tree_value_material",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_material",
+      "sourceText": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte",
+      "action": "show",
+      "beatId": "beat_17",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_18_transfer_tree_value_flow_base",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_flow_base",
+      "sourceText": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte",
+      "action": "show",
+      "beatId": "beat_18",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_19_transfer_tree_value_static_base",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_static_base",
+      "sourceText": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte",
+      "action": "show",
+      "beatId": "beat_19",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_20_transfer_tree_value_wear",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_wear",
+      "sourceText": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte",
+      "action": "show",
+      "beatId": "beat_20",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_21_transfer_tree_value_thermal",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_thermal",
+      "sourceText": "Wir ersetzen die Ausfallwahrscheinlichkeiten durch Zuverlässigkeitswerte",
+      "action": "show",
+      "beatId": "beat_21",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_22_transfer_tree_causes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_causes",
+      "sourceText": "die ODER-Gatter durch und-Gatter",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_22",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_23_transfer_tree_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_basics",
+      "sourceText": "den vollständigen Funktionsbaum des Getriebes",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_23",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_24_transfer_tree_heading",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_heading",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide",
+      "beatId": "beat_24",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_25_transfer_tree_top",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_top",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide",
+      "beatId": "beat_25",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_26_transfer_tree_causes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_causes",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide",
+      "beatId": "beat_26",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_27_transfer_tree_components",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_components",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide",
+      "beatId": "beat_27",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_28_transfer_tree_modes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_modes",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide",
+      "beatId": "beat_28",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_29_transfer_tree_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_basics",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide",
+      "beatId": "beat_29",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_30_transfer_tree_value_fatigue",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_fatigue",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide",
+      "beatId": "beat_30",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_31_transfer_tree_value_material",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_material",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide",
+      "beatId": "beat_31",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_32_transfer_tree_value_flow_base",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_flow_base",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide",
+      "beatId": "beat_32",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_33_transfer_tree_value_static_base",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_static_base",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide",
+      "beatId": "beat_33",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_34_transfer_tree_value_wear",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_wear",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide",
+      "beatId": "beat_34",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_35_transfer_tree_value_thermal",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_tree_value_thermal",
+      "sourceText": "Um die resultierende Zuverlässigkeit",
+      "action": "hide",
+      "beatId": "beat_35",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_36_transfer_headers",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_headers",
+      "sourceText": "des Systems anschaulich darzustellen",
+      "action": "show",
+      "beatId": "beat_36",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_37_transfer_gates",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_gates",
+      "sourceText": "direkt aus dem Funktionsbaum ableiten",
+      "action": "show",
+      "beatId": "beat_37",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_38_transfer_series",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_series",
+      "sourceText": "welche Komponenten in Serie",
+      "action": "show",
+      "beatId": "beat_38",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_39_transfer_parallel",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_parallel",
+      "sourceText": "oder parallel wirken müssen",
+      "action": "show",
+      "beatId": "beat_39",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_40_transfer_symbols",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_symbols",
+      "sourceText": "Regeln der Wahrscheinlichkeitsrechnung",
+      "action": "show",
+      "beatId": "beat_40",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_41_transfer_boolean",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_boolean",
+      "sourceText": "das sogenannte boolesche Modell",
+      "action": "show",
+      "beatId": "beat_41",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_42_transfer_boolean",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_boolean",
+      "sourceText": "aus der sich dann die Systemzuverlässigkeit ergibt",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_42",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_43_transfer_headers",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "transfer_headers",
+      "sourceText": "im nächsten Abschnitt im Detail",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_43",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/qa-final/svg-qa-report.md"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "transfer_headers",
+        "transfer_gates",
+        "transfer_series",
+        "transfer_parallel",
+        "transfer_symbols",
+        "transfer_boolean"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/qa-final/svg-qa-report.md"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "reviewEvidence": "analysis/render-checks/RE4/feedback-2026-09-17/review-summary.md"
+}

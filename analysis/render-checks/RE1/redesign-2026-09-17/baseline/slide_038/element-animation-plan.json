@@ -1,0 +1,219 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_038",
+  "scene_id": "re1_src_040",
+  "source_slides": [
+    40
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "men_hazard",
+      "label": "Ausfallrate Männer",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "women_hazard",
+      "label": "Ausfallrate Frauen",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "human_hazard_early_span",
+      "label": "Hintergrund der frühen Phase",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "human_hazard_early_label",
+      "label": "Beschriftung der frühen Phase",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "human_hazard_early_phase",
+      "label": "Frühe Phase",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "human_hazard_constant_span",
+      "label": "Hintergrund der konstanten Phase",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "human_hazard_constant_label",
+      "label": "Beschriftung der konstanten Phase",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "human_hazard_constant_phase",
+      "label": "Konstante Phase",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "human_hazard_ageing_span",
+      "label": "Hintergrund der altersbedingten Phase",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "human_hazard_ageing_label",
+      "label": "Beschriftung der altersbedingten Phase",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "human_hazard_ageing_phase",
+      "label": "Altersanstieg",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_men_hazard",
+      "targetId": "men_hazard",
+      "action": "draw",
+      "sourceText": "Am Beispiel der Sterblichkeitsraten von Männern und Frauen lässt sich ebenfalls ein Verlauf erkennen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "draw_women_hazard",
+      "targetId": "women_hazard",
+      "action": "draw",
+      "sourceText": "Am Beispiel der Sterblichkeitsraten von Männern und Frauen lässt sich ebenfalls ein Verlauf erkennen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_human_hazard_early_span",
+      "targetId": "human_hazard_early_span",
+      "action": "show",
+      "sourceText": "Zu Beginn fällt die Sterberate geringfügig ab",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_human_hazard_early_label",
+      "targetId": "human_hazard_early_label",
+      "action": "show",
+      "sourceText": "Zu Beginn fällt die Sterberate geringfügig ab",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_human_hazard_early_phase",
+      "targetId": "human_hazard_early_phase",
+      "action": "show",
+      "sourceText": "Zu Beginn fällt die Sterberate geringfügig ab",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_human_hazard_constant_span",
+      "targetId": "human_hazard_constant_span",
+      "action": "show",
+      "sourceText": "Anschließend bleibt die Sterberate für eine längere Phase nahezu konstant",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_human_hazard_constant_label",
+      "targetId": "human_hazard_constant_label",
+      "action": "show",
+      "sourceText": "Anschließend bleibt die Sterberate für eine längere Phase nahezu konstant",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_human_hazard_constant_phase",
+      "targetId": "human_hazard_constant_phase",
+      "action": "show",
+      "sourceText": "Anschließend bleibt die Sterberate für eine längere Phase nahezu konstant",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_human_hazard_ageing_span",
+      "targetId": "human_hazard_ageing_span",
+      "action": "show",
+      "sourceText": "Mit zunehmendem Alter steigt die Sterberate dann deutlich an",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_human_hazard_ageing_label",
+      "targetId": "human_hazard_ageing_label",
+      "action": "show",
+      "sourceText": "Mit zunehmendem Alter steigt die Sterberate dann deutlich an",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_human_hazard_ageing_phase",
+      "targetId": "human_hazard_ageing_phase",
+      "action": "show",
+      "sourceText": "Mit zunehmendem Alter steigt die Sterberate dann deutlich an",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

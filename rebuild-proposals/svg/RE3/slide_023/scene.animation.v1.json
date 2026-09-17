@@ -5,37 +5,53 @@
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "surface_plot",
-      "label": "Dichteverteilungen",
+      "targetId": "surface_visual",
+      "label": "Dichtefunktionen über der Lebensdauer",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "surface_meaning",
-      "label": "Verteilung statt Einzelwert",
+      "targetId": "surface_uncertainty",
+      "label": "Verteilung je Zeitpunkt",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "surface_message",
-      "label": "Mediane und Weibullgerade",
+      "targetId": "surface_density",
+      "label": "Dichte der möglichen Werte",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "surface_note",
-      "label": "50-50-Lage",
+      "targetId": "surface_medians",
+      "label": "Mediane verbinden",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "surface_halves",
+      "label": "Median je Zeitpunkt",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "surface_front",
+      "label": "Übergang zur Frontansicht",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -44,44 +60,72 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_surface_plot",
-      "targetId": "surface_plot",
-      "action": "show",
-      "sourceText": "Um das Konzept des Vertrauensbereiches besser zu verstehen, betrachten wir die Ausfallwahrscheinlichkeit in Abhängigkeit von der Zeit in einer dreidimensionalen Visualisierung.",
+      "stepId": "step_01_surface_visual",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "surface_visual",
+      "sourceText": "Um das Konzept des Vertrauensbereiches",
+      "action": "show"
     },
     {
-      "stepId": "step_02_surface_meaning",
-      "targetId": "surface_meaning",
-      "action": "show",
-      "sourceText": "Aufgrund der Unsicherheit in unserer Stichprobe haben wir für einen bestimmten Zeitpunkt keine exakt festgelegte Ausfallwahrscheinlichkeit.",
+      "stepId": "step_02_surface_uncertainty",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "surface_uncertainty",
+      "sourceText": "für einen bestimmten Zeitpunkt keine exakt festgelegte",
+      "action": "show"
     },
     {
-      "stepId": "step_03_surface_message",
-      "targetId": "surface_message",
-      "action": "show",
-      "sourceText": "Der Median jeder dieser Verteilungen liegt genau in der Mitte.",
+      "stepId": "step_03_surface_density",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "surface_density",
+      "sourceText": "als Dichtefunktion auf der Z-Achse darstellen",
+      "action": "show"
     },
     {
-      "stepId": "step_04_surface_note",
-      "targetId": "surface_note",
-      "action": "show",
-      "sourceText": "In fünfzig Prozent der Fälle liegt die tatsächliche Weibullgerade der Grundgesamtheit oberhalb unserer berechneten Linie, und in fünfzig Prozent der Fälle liegt sie darunter.",
+      "stepId": "step_04_surface_medians",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "surface_medians",
+      "sourceText": "Verbindet man die Mediane",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_surface_uncertainty",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "surface_uncertainty",
+      "sourceText": "lediglich auf den Stichprobendaten basiert",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_06_surface_halves",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "surface_halves",
+      "sourceText": "In fünfzig Prozent der Fälle",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_surface_halves",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "surface_halves",
+      "sourceText": "unsere Schätzung genau in der Mitte",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_08_surface_front",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "surface_front",
+      "sourceText": "für einen bestimmten Zeitpunkt von vorne betrachten",
+      "action": "show"
     }
   ]
 }

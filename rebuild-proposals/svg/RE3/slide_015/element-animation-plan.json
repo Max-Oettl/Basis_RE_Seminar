@@ -1,25 +1,58 @@
 {
-  "schemaVersion": "elementAnimationPlan/v1",
+  "schemaVersion": "svgAnimationManifest/v1",
   "sceneId": "re3_src_015",
   "decision": "animated",
+  "svgPath": "slide_015.svg",
   "defaults": {
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "sample_population_sample",
-      "label": "Stichprobe",
+      "targetId": "population_context",
+      "label": "Grundgesamtheit",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "sample_population_transfer",
+      "targetId": "population_selection",
+      "label": "Begrenzte Stichprobe",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "population_analysis",
+      "label": "Analyse der Stichprobe",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "population_sample_fit",
+      "label": "population sample fit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "population_limit",
+      "label": "Gültigkeit der Schätzung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "population_inference",
       "label": "Schluss auf die Grundgesamtheit",
       "status": "animated",
       "visibleInEditor": true,
@@ -27,16 +60,40 @@
       "confidence": "high"
     },
     {
-      "targetId": "sample_population_distribution",
-      "label": "Verteilung und Grenzen",
+      "targetId": "population_estimate_fit",
+      "label": "population estimate fit",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "sample_population_rule",
-      "label": "Aussage",
+      "targetId": "population_uncertainty",
+      "label": "Unsicherheit berücksichtigen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "population_estimate_limits",
+      "label": "population estimate limits",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "population_bound_labels",
+      "label": "Beide Vertrauensgrenzen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "population_return",
+      "label": "Rückschluss auf die gesamte Population",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -45,44 +102,112 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_sample_population_sample",
-      "targetId": "sample_population_sample",
-      "action": "show",
-      "sourceText": "Bisher haben wir uns mit der Analyse von Lebensdauerdaten auf Basis einer Stichprobe beschäftigt.",
+      "stepId": "step_01_population_context",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "population_context",
+      "sourceText": "Bisher haben wir uns",
+      "action": "show"
     },
     {
-      "stepId": "step_02_sample_population_distribution",
-      "targetId": "sample_population_distribution",
-      "action": "show",
-      "sourceText": "Das Ergebnis ist eine Weibullverteilung, die das Ausfallverhalten unserer Stichprobe beschreibt.",
+      "stepId": "step_02_population_context",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "population_context",
+      "sourceText": "Sie umfasst alle möglichen Einheiten",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     },
     {
-      "stepId": "step_03_sample_population_transfer",
-      "targetId": "sample_population_transfer",
-      "action": "draw",
-      "sourceText": "Doch Vorsicht: Diese Verteilung gilt zunächst nur für die Stichprobe selbst und nicht zwangsläufig für die gesamte Population.",
+      "stepId": "step_03_population_selection",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Beziehung erscheint nach ihren fachlichen Endpunkten.",
-      "drawDurFrames": 42
+      "targetId": "population_selection",
+      "sourceText": "eine begrenzte Anzahl von Datenpunkten",
+      "action": "show"
     },
     {
-      "stepId": "step_04_sample_population_rule",
-      "targetId": "sample_population_rule",
-      "action": "show",
-      "sourceText": "Wenn wir jedoch Aussagen über die Grundgesamtheit treffen möchten, müssen wir die Unsicherheit berücksichtigen, die durch die begrenzte Anzahl an Stichprobendaten entsteht.",
+      "stepId": "step_04_population_analysis",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "population_analysis",
+      "sourceText": "führen wir eine Weibull-Analyse durch",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_population_sample_fit",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_sample_fit",
+      "sourceText": "Das Ergebnis ist eine Weibullverteilung",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_population_limit",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_limit",
+      "sourceText": "gilt zunächst nur für die Stichprobe selbst",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_population_inference",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_inference",
+      "sourceText": "Aussagen über die Grundgesamtheit treffen möchten",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_population_estimate_fit",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_estimate_fit",
+      "sourceText": "Aussagen über die Grundgesamtheit treffen möchten",
+      "action": "show"
+    },
+    {
+      "stepId": "step_09_population_uncertainty",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_uncertainty",
+      "sourceText": "müssen wir die Unsicherheit berücksichtigen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_10_population_estimate_limits",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_estimate_limits",
+      "sourceText": "Genau hier kommt der Vertrauensbereich",
+      "action": "show"
+    },
+    {
+      "stepId": "step_11_population_bound_labels",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_bound_labels",
+      "sourceText": "Genau hier kommt der Vertrauensbereich",
+      "action": "show"
+    },
+    {
+      "stepId": "step_12_population_return",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_return",
+      "sourceText": "Genau hier kommt der Vertrauensbereich",
+      "action": "show"
+    },
+    {
+      "stepId": "step_13_population_uncertainty",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_uncertainty",
+      "sourceText": "Doch was genau bedeutet ein Vertrauensbereich",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     }
   ]
 }

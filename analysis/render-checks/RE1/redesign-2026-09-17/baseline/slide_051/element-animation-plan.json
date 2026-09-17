@@ -1,0 +1,116 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_051",
+  "scene_id": "re1_src_056",
+  "source_slides": [
+    56,
+    57,
+    58,
+    59,
+    60,
+    61
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "normal_hazard_curves",
+      "label": "Steigende Ausfallrate",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "normal_wearout_mapping",
+      "label": "Bereich 3 der Badewannenkurve",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "normal_cdf_curves",
+      "label": "Ausfallwahrscheinlichkeit",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "normal_zero_problem",
+      "label": "Problem bei t gleich null",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "normal_lifetime_limitation",
+      "label": "Eignungsgrenze",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "draw_normal_hazard_curves",
+      "targetId": "normal_hazard_curves",
+      "action": "draw",
+      "sourceText": "Betrachten wir zunächst nur den Verlauf der Ausfallrate",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_normal_wearout_mapping",
+      "targetId": "normal_wearout_mapping",
+      "action": "show",
+      "sourceText": "Das heißt also, dass sich die Normalverteilung aufgrund ihrer steigenden Ausfallrate, nur zur Beschreibung des dritten Bereichs der Badewannenkurve eignet",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_normal_cdf_curves",
+      "targetId": "normal_cdf_curves",
+      "action": "draw",
+      "sourceText": "Betrachten wir nun das Schaubild der Ausfallwahrscheinlichkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_normal_zero_problem",
+      "targetId": "normal_zero_problem",
+      "action": "show",
+      "sourceText": "Zum Zeitpunkt t gleich null sind bereits zehn Prozent der Produkte ausgefallen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_normal_lifetime_limitation",
+      "targetId": "normal_lifetime_limitation",
+      "action": "show",
+      "sourceText": "Da die Ausfallzeiten in Realität natürlich nicht im negativen Zeitbereich sein können",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

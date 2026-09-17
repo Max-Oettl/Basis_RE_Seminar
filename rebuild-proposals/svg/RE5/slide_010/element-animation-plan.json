@@ -1,0 +1,37 @@
+{
+  "sceneId": "re5_src_010",
+  "decision": "animated",
+  "staticGate": "passed_before_animation",
+  "targets": [
+    {
+      "id": "requirement_parameters",
+      "label": "Anforderungsparameter",
+      "cue": "Eine typische Anforderung besteht dabei aus drei Parametern",
+      "action": "show"
+    },
+    {
+      "id": "plot_target_point",
+      "label": "Nachweispunkt",
+      "cue": "Diesen Punkt können wir als Anforderung",
+      "action": "show"
+    },
+    {
+      "id": "plot_weibull_fit",
+      "label": "Weibullgerade",
+      "cue": "eine Weibull-Analyse durchführen",
+      "action": "draw"
+    },
+    {
+      "id": "plot_confidence_limits",
+      "label": "Vertrauensbereich",
+      "cue": "den gewünschten Vertrauensbereich",
+      "action": "show"
+    },
+    {
+      "id": "acceptance_result",
+      "label": "Nachweis erfüllt",
+      "cue": "Ist das der Fall, dann haben wir die Anforderung erfüllt",
+      "action": "show"
+    }
+  ]
+}

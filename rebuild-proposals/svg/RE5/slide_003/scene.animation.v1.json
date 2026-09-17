@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_003.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "development_axis",
+      "label": "Entwicklungsprozess",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "qualitative_window",
+      "label": "Qualitative Methoden",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "quantitative_window",
+      "label": "Quantitative Methoden",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "proof_window",
+      "label": "Nachweistests",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_development_axis",
+      "targetId": "development_axis",
+      "action": "draw",
+      "sourceText": "einzelnen Prozessschritte",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "durFrames": 42,
+      "drawStyle": "stroke",
+      "direction": "forward"
+    },
+    {
+      "stepId": "step_02_qualitative_window",
+      "targetId": "qualitative_window",
+      "action": "show",
+      "sourceText": "Qualitative Methoden wie der Halt-Test",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_quantitative_window",
+      "targetId": "quantitative_window",
+      "action": "show",
+      "sourceText": "Quantitative Methoden wie der End-of-Life Tests",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_proof_window",
+      "targetId": "proof_window",
+      "action": "show",
+      "sourceText": "Für den formalen Nachweis",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

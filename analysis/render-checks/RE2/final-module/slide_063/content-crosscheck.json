@@ -1,0 +1,88 @@
+{
+  "schema_version": "basisReContentCrosscheck/v1",
+  "module_id": "RE2",
+  "work_unit": "slide_063",
+  "scene_id": "re2_ch4_fmea_intro",
+  "target_svg": "rebuild-proposals/svg/RE2/slide_063/slide_063.svg",
+  "source_slides": [
+    63,
+    64,
+    65
+  ],
+  "mapping_type": "merged_sequence",
+  "source_checks": [
+    {
+      "source_slide": 63,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie63.SVG",
+      "expected_text_nodes": 3,
+      "missing_text_nodes": [
+        "Was ist eine",
+        "?"
+      ],
+      "expected_image_assets": 1,
+      "missing_image_assets": [
+        "img1"
+      ],
+      "speaker_control_expected_removed": true
+    },
+    {
+      "source_slide": 64,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie64.SVG",
+      "expected_text_nodes": 3,
+      "missing_text_nodes": [
+        "Was ist eine",
+        "?"
+      ],
+      "expected_image_assets": 1,
+      "missing_image_assets": [
+        "img1"
+      ],
+      "speaker_control_expected_removed": true
+    },
+    {
+      "source_slide": 65,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie65.SVG",
+      "expected_text_nodes": 31,
+      "missing_text_nodes": [
+        "F",
+        "ehler",
+        "-",
+        "M",
+        "öglichkeits",
+        "E",
+        "influss",
+        "A",
+        "nalyse",
+        "ailure",
+        "ode and",
+        "ffects",
+        "nalysis",
+        "FMEA …",
+        "",
+        "Systematische, proaktive und entwicklungsbegleitende Methode",
+        "Durchführung im Team",
+        "Frühzeitige Identifizierung von Ausfallarten, Ausfallfolgen und Ausfallursachen",
+        "Bewertung des Risikos",
+        "Festlegung von Maßnahmen zur Optimierung"
+      ],
+      "expected_image_assets": 1,
+      "missing_image_assets": [
+        "img1"
+      ],
+      "speaker_control_expected_removed": true
+    }
+  ],
+  "qa": {
+    "issues": [
+      "Quellfolie 63: 2 sichtbare Texte fehlen im Ziel.",
+      "Quellfolie 63: 1 Inhaltsbilder fehlen im Ziel.",
+      "Quellfolie 64: 2 sichtbare Texte fehlen im Ziel.",
+      "Quellfolie 64: 1 Inhaltsbilder fehlen im Ziel.",
+      "Quellfolie 65: 20 sichtbare Texte fehlen im Ziel.",
+      "Quellfolie 65: 1 Inhaltsbilder fehlen im Ziel."
+    ],
+    "warnings": [],
+    "open_questions": []
+  },
+  "status": "failed"
+}

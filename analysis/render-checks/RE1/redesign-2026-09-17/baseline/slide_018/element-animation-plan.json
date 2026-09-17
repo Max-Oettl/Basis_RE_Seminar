@@ -1,0 +1,75 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_018",
+  "scene_id": "re1_src_019",
+  "source_slides": [
+    19
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "planning_drivers",
+      "label": "Treiber und Systemziel",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "reliability_goal_cascade",
+      "label": "Zielkaskade",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "representative_load_collective",
+      "label": "Repräsentatives Lastkollektiv",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_planning_drivers",
+      "targetId": "planning_drivers",
+      "action": "show",
+      "sourceText": "unter der Berücksichtigung der gesetzlichen Vorgaben",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_reliability_goal_cascade",
+      "targetId": "reliability_goal_cascade",
+      "action": "show",
+      "sourceText": "Dieses Ziel wird auf der obersten Systemebene festgelegt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_representative_load_collective",
+      "targetId": "representative_load_collective",
+      "action": "show",
+      "sourceText": "Ein zweiter wichtiger Punkt neben der Zuverlässigkeitsplanung",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

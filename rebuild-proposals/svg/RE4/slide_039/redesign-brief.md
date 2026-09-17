@@ -1,15 +1,7 @@
-# Redesign-Brief — slide_039
+# RE4 slide_039 – Feedbackrevision
 
-- Strukturstatus: Kapitel und Lektion noch nicht zugeordnet; Nutzervorgabe ausstehend
-- Quellfolien: 39, 40
-- Sprechertext: section_005 — Zuverlässigkeitsblockdiagramm
-- Titel: Systemzuverlässigkeit berechnen
-- Takeaway: Die Serien- und Parallelformeln führen bei gleichen Komponenten zu sehr unterschiedlichen Systemwerten.
-- Archetyp: formula-comparison
-- Zielmodus: full_slide, 1920×1080
-- Referenz-Lock: RE3 slide_002, slide_024, slide_043 und slide_070
-- Farbdramaturgie: Navy-Tonalität für gleichrangige Inhalte; Grün und Koralle nur semantisch für Fokus, Funktion oder Ausfall
-- Animation: sprechertextgeführt; semantische Gruppen statt Einzelobjekt-Mikroanimation
-- Quellenregel: PowerPoint-Sprechericons, gelbe Produktionsnotizen und Masterdekoration entfallen
-- Assets: native SVG-Komposition
-- Formeln: szenenlokale transparente SVG-Assets; mit MathJax als selbständige SVG-Pfade gerendert, ohne Text- oder Font-Fallback
+- Quellen: 39, 40; stabile ID re4_src_039.
+- Referenz-Lock: RE4::23, RE4::25, RE3::43. Transparente Content-SVG, Archivo und Oxanium, Marineblau mit semantischen Akzenten.
+- Inventar, Topologie und verlustfreie Sprechertextpartition: analysis/rebuild-plans/RE4_feedback_31_48_2026-09-17.md.
+- Statischer Pilot: analysis/render-checks/RE4/feedback-31-48-2026-09-17/after/slide_039.png.
+- Animation: 16 wortgetreue Schritte; technische und visuelle Prüfung im Reviewverzeichnis.

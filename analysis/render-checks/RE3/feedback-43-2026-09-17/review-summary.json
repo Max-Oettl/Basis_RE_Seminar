@@ -1,0 +1,101 @@
+{
+  "status": "passed",
+  "scene": 43,
+  "staticReview": "passed",
+  "independentVisualReview": "passed",
+  "animation": {
+    "targets": 17,
+    "steps": 21,
+    "states": 22,
+    "validation": {
+      "errors": [],
+      "warnings": [
+        {
+          "location": "$.semanticGroups",
+          "message": "Animated scene starts empty; document why the build-up from nothing is intentional."
+        }
+      ]
+    },
+    "maximumWordsBetweenTriggers": 26,
+    "initialWordsBeforeFirstReveal": 12
+  },
+  "strictQA": {
+    "errors": 0,
+    "warnings": 35,
+    "warningReason": "Standalone plot asset aspect ratios; four assets in scene43."
+  },
+  "contentCrosscheck": {
+    "source_count": 1,
+    "checked_content_items": 53,
+    "checked_target_text_items": 14,
+    "errors": 0,
+    "warnings": 3,
+    "infos": 0,
+    "animation_steps": 21,
+    "manualReview": "passed",
+    "resolutions": [
+      "Master title belongs to player",
+      "Simple and understandable is spoken text",
+      "Complete data only expresses the described MLS censoring limitation"
+    ]
+  },
+  "numericalModelChecks": {
+    "role": "illustrative_models_not_observed_seminar_data",
+    "source_slide": 43,
+    "mls": {
+      "x_transformed": [
+        1.1,
+        2,
+        3.2,
+        4,
+        5.8,
+        7.2
+      ],
+      "y_transformed": [
+        1,
+        1.4,
+        1.7,
+        4.1,
+        4.5,
+        4.8
+      ],
+      "slope": 0.6972714096666456,
+      "intercept": 0.2089293591278603,
+      "residual_sum_squares": 2.0494864200642757,
+      "selected_observation": 4,
+      "normal_equations_verified": true
+    },
+    "mle": {
+      "failures": [
+        8,
+        12,
+        17,
+        24,
+        31,
+        46
+      ],
+      "right_censored": [
+        35,
+        50
+      ],
+      "T_opt": 36.00620278378522,
+      "b_opt": 1.6233396894622412,
+      "log_likelihood_max": -26.879090345799156,
+      "profile_score": 0,
+      "nearby_log_likelihoods": [
+        -26.879893254724806,
+        -26.879868883959244,
+        -26.87951701191293,
+        -26.879512157482885
+      ],
+      "local_maximum_verified": true,
+      "formula": "d ln(b) - d b ln(T) + (b-1) sum_fail ln(t) - sum_all (t/T)^b"
+    }
+  },
+  "existingTests": {
+    "passed": 6,
+    "failed": 0
+  },
+  "evidence": "analysis/render-checks/RE3/feedback-43-2026-09-17",
+  "scope": "Discrete Chromium animation states; no audio playback or continuous video verified."
+}

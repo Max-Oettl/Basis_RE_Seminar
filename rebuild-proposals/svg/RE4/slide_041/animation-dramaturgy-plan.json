@@ -1,0 +1,380 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re4_src_041",
+  "svgPath": "slide_041.svg",
+  "spokenText": "In der Praxis bestehen Systeme oft nicht nur aus Reihen- oder Parallelschaltungen, sondern aus einer Kombination beider Strukturen. Auch diese sogenannten gemischten Strukturen lassen sich mit Hilfe der bekannten Rechenregeln behandeln. Dabei wird das System schrittweise vereinfacht, indem zunächst Teilsysteme in Serien- oder Parallelstruktur berechnet und anschließend weiter kombiniert werden.\n\nSchauen wir uns hierzu wieder ein Beispiel an. In einem System ist die Komponente eins in Serie mit einem Parallelsystem aus Komponente zwei und drei geschaltet.\n\nZuerst berechnet man die Zuverlässigkeit des Parallelsystems aus Komponente zwei und drei mithilfe der bekannten Formel.\n\nDa die Parallelstruktur mit Komponente eins in Serie geschaltet ist, multiplizieren wir einfach nun den Zuverlässigkeitswert mit dem der Komponente eins.\n\nAuf diese Weise erhalten wir die Systemzuverlässigkeit.\n\nSomit können wir auch für komplexere Systeme die Systemzuverlässigkeit in Abhängigkeit der Komponentenzuverlässigkeiten berechnen.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/after/slide_041.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "In der Praxis bestehen Systeme oft",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "In der Praxis bestehen Systeme oft nicht",
+      "occurrence": 1,
+      "claim": "Kombination der Grundstrukturen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mixed_context"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "sondern aus einer Kombination beider Strukturen",
+      "occurrence": 1,
+      "claim": "Komponente 1 in Serie mit 2 parallel 3",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mixed_original"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Dabei wird das System schrittweise vereinfacht",
+      "occurrence": 1,
+      "claim": "Komponente 1 in Serie mit 2 parallel 3",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "mixed_original"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "In einem System ist die Komponente eins",
+      "occurrence": 1,
+      "claim": "Komponente 1 in Serie mit 2 parallel 3",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "mixed_original"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "Zuerst berechnet man die Zuverlässigkeit des Parallelsystems",
+      "occurrence": 1,
+      "claim": "Zuerst das parallele Teilsystem",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mixed_first"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "mithilfe der bekannten Formel",
+      "occurrence": 1,
+      "claim": "Zuverlässigkeit des parallelen Teilsystems",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mixed_subsystem"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "Da die Parallelstruktur mit Komponente eins",
+      "occurrence": 1,
+      "claim": "Ersatzblock in Serie mit Komponente 1",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mixed_second"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "multiplizieren wir einfach nun den Zuverlässigkeitswert",
+      "occurrence": 1,
+      "claim": "Serienzuverlässigkeit der Ersatzstruktur",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mixed_product"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "Auf diese Weise erhalten wir die Systemzuverlässigkeit",
+      "occurrence": 1,
+      "claim": "Gesamtformel der gemischten Struktur",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "mixed_result"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "Somit können wir auch für komplexere Systeme",
+      "occurrence": 1,
+      "claim": "Gesamtformel der gemischten Struktur",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "mixed_result"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "mixed_context",
+      "label": "Kombination der Grundstrukturen",
+      "role": "content",
+      "members": [
+        "mixed_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "mixed_original",
+      "label": "Komponente 1 in Serie mit 2 parallel 3",
+      "role": "content",
+      "members": [
+        "mixed_original"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "mixed_first",
+      "label": "Zuerst das parallele Teilsystem",
+      "role": "content",
+      "members": [
+        "mixed_first"
+      ],
+      "dependsOn": [
+        "mixed_original"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "mixed_subsystem",
+      "label": "Zuverlässigkeit des parallelen Teilsystems",
+      "role": "content",
+      "members": [
+        "mixed_subsystem"
+      ],
+      "dependsOn": [
+        "mixed_first"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "mixed_second",
+      "label": "Ersatzblock in Serie mit Komponente 1",
+      "role": "content",
+      "members": [
+        "mixed_second"
+      ],
+      "dependsOn": [
+        "mixed_subsystem"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "mixed_product",
+      "label": "Serienzuverlässigkeit der Ersatzstruktur",
+      "role": "content",
+      "members": [
+        "mixed_product"
+      ],
+      "dependsOn": [
+        "mixed_second"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    },
+    {
+      "groupId": "mixed_result",
+      "label": "Gesamtformel der gemischten Struktur",
+      "role": "content",
+      "members": [
+        "mixed_result"
+      ],
+      "dependsOn": [
+        "mixed_product"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_9"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_mixed_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mixed_context",
+      "sourceText": "In der Praxis bestehen Systeme oft nicht",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_mixed_original",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mixed_original",
+      "sourceText": "sondern aus einer Kombination beider Strukturen",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_mixed_original",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mixed_original",
+      "sourceText": "Dabei wird das System schrittweise vereinfacht",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_3",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_04_mixed_original",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mixed_original",
+      "sourceText": "In einem System ist die Komponente eins",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_4",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_05_mixed_first",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mixed_first",
+      "sourceText": "Zuerst berechnet man die Zuverlässigkeit des Parallelsystems",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_mixed_subsystem",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mixed_subsystem",
+      "sourceText": "mithilfe der bekannten Formel",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_mixed_second",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mixed_second",
+      "sourceText": "Da die Parallelstruktur mit Komponente eins",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_mixed_product",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mixed_product",
+      "sourceText": "multiplizieren wir einfach nun den Zuverlässigkeitswert",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_mixed_result",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mixed_result",
+      "sourceText": "Auf diese Weise erhalten wir die Systemzuverlässigkeit",
+      "action": "show",
+      "beatId": "beat_9",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_10_mixed_result",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mixed_result",
+      "sourceText": "Somit können wir auch für komplexere Systeme",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_10",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/states/slide_041"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "mixed_context",
+        "mixed_original",
+        "mixed_first",
+        "mixed_subsystem",
+        "mixed_second",
+        "mixed_product",
+        "mixed_result"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/states/slide_041"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "reviewEvidence": {
+    "static": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/after/slide_041.png",
+    "animationStates": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/states/slide_041",
+    "frameCount": 14,
+    "contentReview": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/content-review.md",
+    "layoutReport": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/qa-final/svg-qa-report.md",
+    "independentVisualReview": "analysis/render-checks/RE4/feedback-31-48-2026-09-17/visual-review-041-044.md"
+  }
+}

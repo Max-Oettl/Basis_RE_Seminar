@@ -1,0 +1,57 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_003",
+  "scene_id": "re1_src_003",
+  "source_slides": [
+    3
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "takata_case_context",
+      "label": "Ursache und Verletzungsfolge",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "takata_scope_and_consequences",
+      "label": "Ausmaß und Konsequenzen",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_takata_case_context",
+      "targetId": "takata_case_context",
+      "action": "show",
+      "sourceText": "Der Rückruf im Zusammenhang mit den Takata-Airbags",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_takata_scope_and_consequences",
+      "targetId": "takata_scope_and_consequences",
+      "action": "show",
+      "sourceText": "Das Ausmaß dieses Problems zeigt sich",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

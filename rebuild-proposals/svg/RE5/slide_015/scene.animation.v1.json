@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_015.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "proof_gap",
+      "label": "Nicht erfüllter Nachweis",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "plot_confidence_limits",
+      "label": "Vertrauensgrenzen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "lower_reliability",
+      "label": "Geringere Zuverlässigkeit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "shorter_lifetime",
+      "label": "Kürzere Lebensdauer",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "lower_confidence",
+      "label": "Geringere Aussagesicherheit",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_proof_gap",
+      "targetId": "proof_gap",
+      "action": "show",
+      "sourceText": "In diesem Fall können wir nur Folgendes nachweisen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_plot_confidence_limits",
+      "targetId": "plot_confidence_limits",
+      "action": "show",
+      "sourceText": "höhere Ausfallwahrscheinlichkeit unter gleicher Lebensdauer",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_lower_reliability",
+      "targetId": "lower_reliability",
+      "action": "show",
+      "sourceText": "Erstens – eine geringere Zuverlässigkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_04_shorter_lifetime",
+      "targetId": "shorter_lifetime",
+      "action": "show",
+      "sourceText": "Zweitens – eine geringere Lebensdauer",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_05_lower_confidence",
+      "targetId": "lower_confidence",
+      "action": "show",
+      "sourceText": "Oder drittens – wir können das Ziel nur mit einer geringeren Aussagesicherheit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

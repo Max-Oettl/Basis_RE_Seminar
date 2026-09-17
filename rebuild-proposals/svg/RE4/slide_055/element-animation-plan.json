@@ -1,12 +1,13 @@
 {
-  "schemaVersion": "elementAnimationPlan/v1",
+  "schemaVersion": "svgAnimationManifest/v1",
   "sceneId": "re4_src_055",
   "decision": "animated",
+  "svgPath": "slide_055.svg",
   "defaults": {
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
@@ -19,48 +20,48 @@
       "confidence": "high"
     },
     {
-      "targetId": "separation_methods",
-      "label": "Lösungsmethoden",
+      "targetId": "separation_limit",
+      "label": "Keine direkte Reduktion",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "separation_focus",
-      "label": "Komponente 5",
+      "targetId": "separation_hub",
+      "label": "Zwei exakte Berechnungsmethoden",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "separation_cases",
-      "label": "Falltrennung",
+      "targetId": "separation_method",
+      "label": "Methode der Separation",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "separation_case_working",
-      "label": "Fall I",
+      "targetId": "multilinear_method",
+      "label": "Methode der Multilinearform",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "separation_case_failed",
-      "label": "Fall II",
+      "targetId": "separation_selection",
+      "label": "Separation in diesem Modul",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "separation_sum",
-      "label": "Gesamtergebnis",
+      "targetId": "separation_key",
+      "label": "Schlüsselrolle der Komponente 5",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -70,74 +71,59 @@
   "steps": [
     {
       "stepId": "step_01_separation_bridge",
+      "occurrence": 1,
+      "confidence": "high",
       "targetId": "separation_bridge",
-      "action": "show",
-      "sourceText": "Bei einer Brückenschaltung lässt sich die Zuverlässigkeit nicht mit den einfachen Formeln für Reihen- oder Parallelschaltungen berechnen.",
-      "occurrence": 1,
-      "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "sourceText": "Bei einer Brückenschaltung lässt sich",
+      "action": "show"
     },
     {
-      "stepId": "step_02_separation_methods",
-      "targetId": "separation_methods",
-      "action": "show",
-      "sourceText": "Aber keine Sorge – es gibt zwei Methoden, mit denen wir trotzdem zu einer exakten Lösung kommen können.",
+      "stepId": "step_02_separation_limit",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "separation_limit",
+      "sourceText": "mit den einfachen Formeln",
+      "action": "show"
     },
     {
-      "stepId": "step_03_separation_focus",
-      "targetId": "separation_focus",
-      "action": "show",
-      "sourceText": "Wenn wir uns das Blockdiagramm ansehen, fällt auf:Komponente fünf nimmt eine Schlüsselrolle ein.",
+      "stepId": "step_03_separation_hub",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "separation_hub",
+      "sourceText": "es gibt zwei Methoden",
+      "action": "show"
     },
     {
-      "stepId": "step_04_separation_cases",
-      "targetId": "separation_cases",
-      "action": "draw",
-      "sourceText": "Deshalb betrachten wir zwei Fälle.",
+      "stepId": "step_04_separation_method",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Beziehung erscheint nach ihren fachlichen Endpunkten.",
-      "drawDurFrames": 42
+      "targetId": "separation_method",
+      "sourceText": "Erstens: die Methode der Separation.",
+      "action": "show"
     },
     {
-      "stepId": "step_05_separation_case_working",
-      "targetId": "separation_case_working",
-      "action": "show",
-      "sourceText": "Erstens, Komponente fünf ist ständig funktionsfähig.",
+      "stepId": "step_05_multilinear_method",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "multilinear_method",
+      "sourceText": "Und Zweitens: die Methode der Multilinearform.",
+      "action": "show"
     },
     {
-      "stepId": "step_06_separation_case_failed",
-      "targetId": "separation_case_failed",
-      "action": "show",
-      "sourceText": "Und zweitens, Komponente fünf ist ständig ausgefallen.",
+      "stepId": "step_06_separation_selection",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "separation_selection",
+      "sourceText": "In diesem Modul schauen wir",
+      "action": "show"
     },
     {
-      "stepId": "step_07_separation_sum",
-      "targetId": "separation_sum",
-      "action": "show",
-      "sourceText": "Am Ende addieren wir beide Teilergebnisse, um die gesamte Systemzuverlässigkeit zu berechnen.",
+      "stepId": "step_07_separation_key",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "separation_key",
+      "sourceText": "Komponente fünf nimmt eine Schlüsselrolle ein.",
+      "action": "show"
     }
-  ],
-  "notes": "Review-Korrektur: Originalbrücke und beide separierten Ersatzstrukturen verwenden eine einheitliche, bei 960x540 lesbare RBD-Geometrie."
+  ]
 }

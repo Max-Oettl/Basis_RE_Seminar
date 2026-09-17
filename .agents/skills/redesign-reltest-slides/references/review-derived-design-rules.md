@@ -10,9 +10,15 @@ Diese Referenz buendelt bestaetigte, wiederverwendbare Learnings aus dem Review 
   Kategorien oder Beziehungen brauchen einen Beleg aus Quelle, Sprechertext oder
   ausdruecklichem Nutzerauftrag.
 - Nicht nur Textbegriffe, sondern Beziehungen, Pfeilrichtungen, Kurvenformen, Phasen, Nummern und Vorher-/Nachher-Zustaende aus der Quelle erhalten.
+- Bei zusammengezogenen Fallunterscheidungs- oder Separationsfolgen bleiben die Auswahl der Schluesselkomponente, alle Faelle, die resultierenden Ersatzstrukturen, Fallgewichte, Teilformeln und die abschliessende Zusammenfuehrung sichtbar erhalten. Anfangs- und Endzustand allein sind kein vollstaendiger Inhaltstransfer.
 - Wenn die Quelle eine funktionierende Darstellungslogik besitzt, diese modernisieren statt ohne Lerngewinn neu zu interpretieren.
+- Zeigt die Quelle eine Übersicht, die über Klammern, Aufklapplinien oder Zoombezüge in eine Detailstruktur zerlegt wird, bleiben beide Ebenen und ihre sichtbare Zuordnung erhalten. Eine alleinstehende Detailkette ersetzt die Übersicht-Detail-Beziehung nicht.
 - Reine Aufzaehlungen und Vorschauen bleiben Aufzaehlungen. Keine Prozesspfeile, Abhaengigkeiten oder Kategorien erfinden, wenn Quelle und Sprechertext nur gleichrangige kommende Themen nennen.
+- Nummern wie `1.`, `2.`, `3.` und `4.` nur fuer eine fachlich belegte zeitliche oder methodische Reihenfolge einsetzen. Zeigt die Quelle eine echte Vorgehensweise, ist ihre Nummerierung Teil der Leserichtung und bleibt erhalten; gleichrangige, nicht sequenzielle Aussagen verwenden dagegen Stichpunkte.
 - Sprechertext muss auch nach Zusammenlegung oder Redesign zur sichtbaren Reihenfolge passen.
+- In mehrszenigen Vorgehenssequenzen bleibt die kanonische Schrittübersicht auch auf Detail- und Fortsetzungsszenen sichtbar; der aktuelle Schritt wird durchgehend konsistent hervorgehoben. Fehlt im Sprechertext eine erneute Schrittansage, bleibt die Übersicht statischer Orientierungsrahmen und erhält keinen erfundenen Animationstrigger.
+- Wiederkehrende Schrittübersichten bleiben eine kompakte, visuell untergeordnete Navigation und konkurrieren nicht mit dem eigentlichen Szeneninhalt. Alle Schrittbezeichnungen bleiben lesbar erhalten; inaktive Schritte verwenden helle Flächen mit marineblauer Kontur und Beschriftung, der aktuelle Schritt wird eindeutig und konsistent in Signalgrün markiert.
+- Wiederkehrende Eingangs- oder Brückenszenen eines mehrstufigen Modells verwenden für jeden Schritt denselben Archetyp, dieselbe Nummernlogik und dieselbe Vorschaugliederung. Beim Zusammenziehen von Quellzuständen darf eine notwendige Eingangsszene nicht unbemerkt entfallen; umfangreiche Fachinhalte werden bei Bedarf in eine direkt folgende eigene Szene verschoben und der vorhandene Sprechertext verlustfrei aufgeteilt.
 - Direkte Zitate bleiben wortgetreu, einschließlich einer formellen Ansprache oder Pointe. Die projektweite Du-Regel gilt für redaktionelle Formulierungen, nicht für gekennzeichneten Quelltext. Mehrere Sätze desselben Zitats dürfen nacheinander animiert werden, müssen aber räumlich und typografisch derselben Zitatgruppe angehören.
 
 ## Zusammenfassungskapitel Und Wiederverwendung
@@ -26,10 +32,32 @@ Diese Referenz buendelt bestaetigte, wiederverwendbare Learnings aus dem Review 
 ## Hierarchie Und Typografie
 
 - Keine automatische Unterueberschrift, Fokuszeile oder Zusammenfassungsbox erfinden. Jede sichtbare Ebene braucht eine Lernfunktion.
+- Eine sichtbare Kopfzeile darf den downstream gerenderten Szenentitel weder
+  wiederholen noch nahezu gleichlautend paraphrasieren. Subtitel und Kicker sind
+  nur zulaessig, wenn sie eine echte Unterteilung, Kategorie, Bedingung,
+  Prozessstufe oder Leserichtung benennen; der Szenentitel bleibt ausschliesslich
+  in Metadaten und Downstream-Workflow.
+- Wiederkehrende Merk- und Takeaway-Leisten werden moduluebergreifend aus der
+  freigegebenen Referenzkomponente uebernommen. Geometrie, vertikale Position,
+  Typografie und der schmale signalgruene Corporate-Faden werden nicht pro Modul
+  neu interpretiert.
 - Wenige stabile Typostufen verwenden. Kein wechselndes Muster aus sehr grossen, kleinen und wieder grossen Texten.
+- Vollstaendigkeit nicht durch gleichzeitige Sichtbarkeit aller Inhalte erzwingen.
+  Wenn eine zusammengezogene Herleitung in der 960x540-Vieweransicht nur mit
+  Kleinschrift oder konkurrierenden Ebenen lesbar bleibt, wird sie verlustfrei
+  in eigenstaendige Szenen mit je einer dominanten Lernbotschaft geteilt.
+  Quellzuordnung, Sprechertextsegmentierung und sichtbare Reihenfolge werden
+  dabei gemeinsam nachgefuehrt.
 - Reduktion vor Verkleinerung: erklaerende Absatztexte entfernen, wenn Grafik und Sprechertext dieselbe Aussage bereits tragen.
 - Textboxen mit sichtbarem Innenabstand planen. Der laengste Begriff muss auch in der verkleinerten Viewer-Ansicht Luft zum Rand besitzen.
 - Karten nur fuer echte fachliche Einheiten, Prozessstufen oder Vergleichsklassen einsetzen.
+- E-Learning-Struktur nicht mit Kartenanzahl verwechseln. Vor jeder Karte pruefen,
+  ob Position, Typografie, Abstand, Linie, gemeinsames Zentrum oder ausgerichtete
+  Spalten die Hierarchie klarer tragen. Eine Karte nur verwenden, wenn sie eine
+  echte fachliche Einheit oder Grenze definiert.
+- Besitzt die Quelle eine starke Zentralgrafik, offene Vergleichsmatrix oder
+  Listenhierarchie, diese Topologie modernisieren und nicht in ein generisches
+  Kartenraster umwandeln.
 - Seminarweite Nutzerentscheidung: Marineblau traegt die visuelle Grundordnung.
   Gleichrangige Infoboxen verwenden dieselbe blaue Farbfamilie mit abgestuften
   Tonwerten oder Deckkraeften; keine dekorative Rotation durch Gelb, Blau, Gruen
@@ -52,6 +80,8 @@ Diese Referenz buendelt bestaetigte, wiederverwendbare Learnings aus dem Review 
 - Durchgestrichene Referenzformen zuerst fachlich korrekt zeichnen und erst danach negieren.
 - Mehrere grafisch definierte Methoden bevorzugt in einer ruhigen, quellnahen Matrix zeigen. Lange Erklaertexte entfallen, wenn die Methodengrafik und der Sprechertext die Bedeutung tragen.
 - Achsen, Daten, Fit, Grenzen und Interpretation als nachvollziehbare Lesefolge planen; nicht alles allein wegen vorhandener DOM-IDs animieren.
+- Werden mehrere Quellzustände zu einer statistischen Herleitung zusammengezogen, bleiben Ausgangsachse, Achsenerweiterung, Berechnungsformel, Wertepaarbildung, Datenpunkte, Fit und Parameterablesung als eigene semantische Lernzustände erhalten. Eine nummerierte Prozessliste ist kein Ersatz für diese grafischen Zwischenschritte.
+- Wenn Wertepaarbildung und Zielplot auf derselben Szene stehen, darf nur der Zielplot als vollständiges Achsendiagramm erscheinen. Die vorbereitende Zuordnung wird als Liste oder Tabelle gezeigt, damit kein zweites vereinfachtes Diagramm mit dem eigentlichen Plot konkurriert.
 - Vorher-/Nachher-Vergleiche wie Ausreissereinfluss verwenden denselben Datensatz, dieselbe Achse und dieselbe Skalierung. Nur die fachlich veraenderte Groesse darf zwischen den Zustaenden wechseln.
 - Wiederkehrende Ausfallereignisse innerhalb einer Sequenz verwenden dasselbe freigegebene Ausfallsystem-Piktogramm. Bei Zeitintervallen markieren Ereignislinien zugleich die exakten Grenzen der darueberliegenden Zeitraeume.
 - Plotlabels und Ergebniswerte duerfen keine Kurven, Marker oder Hilfslinien verdecken. Falls eine konfliktfreie Position im Datenraum nicht stabil moeglich ist, eine eigene Ergebniszone ausserhalb der Achsen verwenden.

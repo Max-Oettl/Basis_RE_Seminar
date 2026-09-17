@@ -1,0 +1,500 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_015",
+  "svgPath": "slide_015.svg",
+  "spokenText": "Bisher haben wir uns mit der Analyse von Lebensdauerdaten auf Basis einer Stichprobe beschäftigt. Doch was bedeutet das genau, und warum brauchen wir einen Vertrauensbereich?\n\nStellen wir uns die gesamte Population, also die Grundgesamtheit, vor. Sie umfasst alle möglichen Einheiten, die jemals betrachtet werden könnten. Innerhalb dieser Grundgesamtheit ziehen wir eine begrenzte Anzahl von Datenpunkten – das ist unsere Stichprobe.\n\nAuf Basis dieser Stichprobe führen wir eine Weibull-Analyse durch. Das Ergebnis ist eine Weibullverteilung, die das Ausfallverhalten unserer Stichprobe beschreibt. Doch Vorsicht: Diese Verteilung gilt zunächst nur für die Stichprobe selbst und nicht zwangsläufig für die gesamte Population.\n\nWenn wir jedoch Aussagen über die Grundgesamtheit treffen möchten, müssen wir die Unsicherheit berücksichtigen, die durch die begrenzte Anzahl an Stichprobendaten entsteht. Genau hier kommt der Vertrauensbereich ins Spiel.\n\nDoch was genau bedeutet ein Vertrauensbereich eigentlich?",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/after/slide_015.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Bisher haben wir uns mit der",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Bisher haben wir uns",
+      "occurrence": 1,
+      "claim": "Grundgesamtheit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_context"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Sie umfasst alle möglichen Einheiten",
+      "occurrence": 1,
+      "claim": "Grundgesamtheit",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "population_context"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "eine begrenzte Anzahl von Datenpunkten",
+      "occurrence": 1,
+      "claim": "Begrenzte Stichprobe",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_selection"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "führen wir eine Weibull-Analyse durch",
+      "occurrence": 1,
+      "claim": "Analyse der Stichprobe",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_analysis"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "Das Ergebnis ist eine Weibullverteilung",
+      "occurrence": 1,
+      "claim": "population sample fit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_sample_fit"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "gilt zunächst nur für die Stichprobe selbst",
+      "occurrence": 1,
+      "claim": "Gültigkeit der Schätzung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_limit"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "Aussagen über die Grundgesamtheit treffen möchten",
+      "occurrence": 1,
+      "claim": "Schluss auf die Grundgesamtheit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_inference"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Aussagen über die Grundgesamtheit treffen möchten",
+      "occurrence": 1,
+      "claim": "population estimate fit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_estimate_fit"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "müssen wir die Unsicherheit berücksichtigen",
+      "occurrence": 1,
+      "claim": "Unsicherheit berücksichtigen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_uncertainty"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "Genau hier kommt der Vertrauensbereich",
+      "occurrence": 1,
+      "claim": "population estimate limits",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_estimate_limits"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "Genau hier kommt der Vertrauensbereich",
+      "occurrence": 1,
+      "claim": "Beide Vertrauensgrenzen",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_bound_labels"
+      ]
+    },
+    {
+      "beatId": "beat_12",
+      "sourceText": "Genau hier kommt der Vertrauensbereich",
+      "occurrence": 1,
+      "claim": "Rückschluss auf die gesamte Population",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "population_return"
+      ]
+    },
+    {
+      "beatId": "beat_13",
+      "sourceText": "Doch was genau bedeutet ein Vertrauensbereich",
+      "occurrence": 1,
+      "claim": "Unsicherheit berücksichtigen",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "population_uncertainty"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "population_context",
+      "label": "Grundgesamtheit",
+      "role": "content",
+      "members": [
+        "population_context"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "population_selection",
+      "label": "Begrenzte Stichprobe",
+      "role": "content",
+      "members": [
+        "population_selection"
+      ],
+      "dependsOn": [
+        "population_context"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "population_analysis",
+      "label": "Analyse der Stichprobe",
+      "role": "content",
+      "members": [
+        "population_analysis"
+      ],
+      "dependsOn": [
+        "population_selection"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "population_sample_fit",
+      "label": "population sample fit",
+      "role": "content",
+      "members": [
+        "population_sample_fit"
+      ],
+      "dependsOn": [
+        "population_analysis"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "population_limit",
+      "label": "Gültigkeit der Schätzung",
+      "role": "content",
+      "members": [
+        "population_limit"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "population_inference",
+      "label": "Schluss auf die Grundgesamtheit",
+      "role": "content",
+      "members": [
+        "population_inference"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "population_estimate_fit",
+      "label": "population estimate fit",
+      "role": "content",
+      "members": [
+        "population_estimate_fit"
+      ],
+      "dependsOn": [
+        "population_inference"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    },
+    {
+      "groupId": "population_uncertainty",
+      "label": "Unsicherheit berücksichtigen",
+      "role": "content",
+      "members": [
+        "population_uncertainty"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_9"
+    },
+    {
+      "groupId": "population_estimate_limits",
+      "label": "population estimate limits",
+      "role": "content",
+      "members": [
+        "population_estimate_limits"
+      ],
+      "dependsOn": [
+        "population_estimate_fit"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_10"
+    },
+    {
+      "groupId": "population_bound_labels",
+      "label": "Beide Vertrauensgrenzen",
+      "role": "content",
+      "members": [
+        "population_bound_labels"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_11"
+    },
+    {
+      "groupId": "population_return",
+      "label": "Rückschluss auf die gesamte Population",
+      "role": "content",
+      "members": [
+        "population_return"
+      ],
+      "dependsOn": [
+        "population_context",
+        "population_inference"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_12"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_population_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_context",
+      "sourceText": "Bisher haben wir uns",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_population_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_context",
+      "sourceText": "Sie umfasst alle möglichen Einheiten",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_2",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_03_population_selection",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_selection",
+      "sourceText": "eine begrenzte Anzahl von Datenpunkten",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_population_analysis",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_analysis",
+      "sourceText": "führen wir eine Weibull-Analyse durch",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_population_sample_fit",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_sample_fit",
+      "sourceText": "Das Ergebnis ist eine Weibullverteilung",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_population_limit",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_limit",
+      "sourceText": "gilt zunächst nur für die Stichprobe selbst",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_population_inference",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_inference",
+      "sourceText": "Aussagen über die Grundgesamtheit treffen möchten",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_population_estimate_fit",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_estimate_fit",
+      "sourceText": "Aussagen über die Grundgesamtheit treffen möchten",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_population_uncertainty",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_uncertainty",
+      "sourceText": "müssen wir die Unsicherheit berücksichtigen",
+      "action": "show",
+      "beatId": "beat_9",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_10_population_estimate_limits",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_estimate_limits",
+      "sourceText": "Genau hier kommt der Vertrauensbereich",
+      "action": "show",
+      "beatId": "beat_10",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_11_population_bound_labels",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_bound_labels",
+      "sourceText": "Genau hier kommt der Vertrauensbereich",
+      "action": "show",
+      "beatId": "beat_11",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_12_population_return",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_return",
+      "sourceText": "Genau hier kommt der Vertrauensbereich",
+      "action": "show",
+      "beatId": "beat_12",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_13_population_uncertainty",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "population_uncertainty",
+      "sourceText": "Doch was genau bedeutet ein Vertrauensbereich",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_13",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_015/00_initial.png"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "population_context",
+        "population_selection",
+        "population_analysis",
+        "population_sample_fit",
+        "population_limit",
+        "population_inference",
+        "population_estimate_fit",
+        "population_uncertainty",
+        "population_estimate_limits",
+        "population_bound_labels",
+        "population_return"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_015/12_after_10_doch_was_genau_bedeutet_ein_vertrauensb.png"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "reviewedAt": "2026-09-17",
+    "endState": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/after/slide_015.png",
+    "preview": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/preview/slide_015.png",
+    "stateDirectory": "analysis/render-checks/RE3/feedback-15-29-2026-09-17/states/slide_015",
+    "reviewedStateCount": 13,
+    "includesHighlightStates": true,
+    "independentReviewer": "/root/visual_review",
+    "findings": [],
+    "scope": "Final composition and discrete animation states rendered in Chromium; legibility additionally reviewed at 50 percent. No continuous audio playback test."
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_060",
+  "scene_id": "re1_src_075",
+  "source_slides": [
+    75
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "weibull_formula_parameters",
+      "label": "Parameter",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_density_formula",
+      "label": "Dichtefunktion",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_failure_formula",
+      "label": "Ausfallwahrscheinlichkeit",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_reliability_formula",
+      "label": "Überlebenswahrscheinlichkeit",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_hazard_formula",
+      "label": "Ausfallrate",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "weibull_formula_transition",
+      "label": "Übergang zur Herleitung",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_weibull_formula_parameters",
+      "targetId": "weibull_formula_parameters",
+      "action": "show",
+      "sourceText": "Die Weibullverteilung kann mathematisch über die charakteristische Lebensdauer und den Formparameter beschrieben werden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_density_formula",
+      "targetId": "weibull_density_formula",
+      "action": "show",
+      "sourceText": "Entsprechend lässt sich die Dichtefunktion einfach mit Hilfe dieser beiden Parameter berechnen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_failure_formula",
+      "targetId": "weibull_failure_formula",
+      "action": "show",
+      "sourceText": "Über das Integral der Dichtefunktion erhält man die Ausfallwahrscheinlichkeit groß F von t",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_reliability_formula",
+      "targetId": "weibull_reliability_formula",
+      "action": "show",
+      "sourceText": "Die Überlebenswahrscheinlichkeit R von t berechnet sich dann einfach zu eins minus der Ausfallwahrscheinlichkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_hazard_formula",
+      "targetId": "weibull_hazard_formula",
+      "action": "show",
+      "sourceText": "Und zum Schluss noch die Ausfallrate",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_weibull_formula_transition",
+      "targetId": "weibull_formula_transition",
+      "action": "show",
+      "sourceText": "Und zum Schluss noch die Ausfallrate",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

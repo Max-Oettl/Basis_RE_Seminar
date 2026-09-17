@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "reltestEducationPictogramAsset/v1",
+  "assetId": "re2_p_diagram_input",
+  "file": "components/image-library/generated-pictograms/re2-p-diagram/re2-p-diagram-input.png",
+  "assetType": "generated_png",
+  "status": "accepted",
+  "styleProfile": "reltest-education-minimal-v1",
+  "source": {
+    "evidenceType": "speaker_text",
+    "reference": "RE2 Quellfolie 8: Eingangsgrößen / Stellgrößen wirken von links auf das System.",
+    "license": "project_internal"
+  },
+  "semantics": {
+    "concept": "Eingabe oder Stellgröße wirkt in ein System hinein",
+    "learningFunction": "concept-anchor",
+    "mustShowFeatures": ["deutlicher Rechtspfeil", "einfacher Systemeingang", "aktive Stellbewegung"],
+    "mustNotImply": ["Systemausgang", "Fehlerzustand"],
+    "confusableWith": ["Zielgröße", "Datenexport"],
+    "firstUseLabel": "Eingangsgrößen / Stellgrößen",
+    "reuseKey": "p-diagram-input"
+  },
+  "visualStyle": {
+    "flat2d": true,
+    "perspective": "front",
+    "dominantSilhouette": true,
+    "semanticLayers": 2,
+    "brandColors": ["#142452"],
+    "gradients": false,
+    "shadows": false,
+    "threeDimensional": false,
+    "isometric": false,
+    "photorealistic": false,
+    "glow": false,
+    "texture": false,
+    "embeddedText": false,
+    "logo": false,
+    "watermark": false
+  },
+  "raster": {"widthPx": 1254, "heightPx": 1254, "transparentBackground": true, "safeMarginRatio": 0.08},
+  "learningUse": {
+    "targetPlacementPx": 112,
+    "requiresTextLabelOnFirstUse": true,
+    "colorIndependentMeaning": true,
+    "smallScaleTests": {"at32px": "not_required", "at48px": "passed", "scene960x540": "passed"}
+  },
+  "accessibility": {
+    "redundantWithVisibleLabel": true,
+    "accessibleName": "",
+    "contrastPairs": [{"foreground": "#142452", "background": "#FFFFFF", "minimumRatio": 3}]
+  },
+  "review": {"semantic": "passed", "style": "passed", "eLearning": "passed", "accessibilityTechnical": "passed", "notes": ["Richtung, Systemeingang und Stellbewegung sind im 50-%-Viewer eindeutig lesbar."]}
+}

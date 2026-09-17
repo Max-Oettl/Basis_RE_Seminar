@@ -1,0 +1,31 @@
+{
+  "sceneId": "re5_src_006",
+  "decision": "animated",
+  "staticGate": "passed_before_animation",
+  "targets": [
+    {
+      "id": "strategy_root",
+      "label": "Testart wählen",
+      "cue": "Wir starten mit der Testart",
+      "action": "show"
+    },
+    {
+      "id": "end_of_life_branch",
+      "label": "End-of-Life-Zweig",
+      "cue": "Ein End-of-Life Test kann vollständig durchgeführt werden",
+      "action": "show"
+    },
+    {
+      "id": "success_run_branch",
+      "label": "Success-Run-Zweig",
+      "cue": "Beim Success Run Test gilt die Definition",
+      "action": "show"
+    },
+    {
+      "id": "test_configuration",
+      "label": "Testkonfiguration",
+      "cue": "Ganz unten in der Grafik siehst du die Testkonfiguration",
+      "action": "show"
+    }
+  ]
+}

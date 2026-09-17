@@ -4,10 +4,12 @@ const fs = require("node:fs");
 const path = require("node:path");
 const theme = require("./reltest-education-theme");
 const { SCENES } = require("./re4-redesign-spec");
+const { createCreativeBuilders } = require("./re4-creative-builders");
 
 const root = path.resolve(__dirname, "..");
 const outRoot = path.join(root, "rebuild-proposals", "svg", "RE4");
 const sourceAssetRoot = path.join(root, "analysis", "source-assets", "RE4");
+const pictogramRoot = path.join(root, "components", "image-library", "generated-pictograms", "education-core");
 const textMap = JSON.parse(fs.readFileSync(path.join(root, "analysis", "inventories", "RE4_svg-text-map.json"), "utf8"));
 const C = theme.colors;
 
@@ -15,6 +17,16 @@ const MEDIA = Object.freeze({
   gear_weibull: [[5, "img3.png", "zahnrad-versagen.png"]],
   freewheel_transfer: [[67, "img4.png", "freilauf-ableitung.png"]],
   network_exercise: [[68, "img4.png", "netzwerke-aufgabe.png"]],
+});
+
+const PICTOGRAMS_BY_BUILDER = Object.freeze({
+  system_hierarchy: [["layers.png", "layers.png"]],
+  gear_weibull: [["flask.png", "flask.png"]],
+  basis_probabilities: [["flask.png", "flask.png"], ["database.png", "database.png"], ["eye.png", "eye.png"]],
+  boolean_prerequisites: [["shield.png", "shield.png"], ["wrench-alert.png", "wrench-alert.png"], ["layers.png", "layers.png"]],
+  method_overview: [["settings.png", "settings.png"]],
+  boolean_summary: [["shield.png", "shield.png"], ["wrench-alert.png", "wrench-alert.png"], ["layers.png", "layers.png"]],
+  freewheel_transfer: [["settings.png", "settings.png"]],
 });
 
 const CUE_HINTS = Object.freeze({
@@ -84,6 +96,8 @@ const CUE_HINTS = Object.freeze({
   separation_cases: ["betrachten wir zwei Fälle"],
   separation_case_working: ["Komponente fünf ist ständig funktionsfähig"],
   separation_case_failed: ["Komponente fünf ist ständig ausgefallen"],
+  separation_weight_working: ["Im ersten Fall, also wenn die Komponente fünf funktionsfähig ist"],
+  separation_weight_failed: ["Im zweiten Fall, also wenn die Komponente fünf ausgefallen ist"],
   separation_sum: ["Am Ende addieren wir beide Teilergebnisse"],
 });
 
@@ -518,30 +532,7 @@ function buildNetworkExercise() {
   return { body, targets: [] };
 }
 
-const BUILDERS = Object.freeze({
-  system_hierarchy: buildSystemHierarchy,
-  gear_weibull: buildGearWeibull,
-  reliability_aggregation: buildReliabilityAggregation,
-  fta_workflow: buildFtaWorkflow,
-  basis_probabilities: buildBasisProbabilities,
-  quantitative_tree: buildQuantitativeTree,
-  logic_inversion: buildLogicInversion,
-  tree_to_rbd: buildTreeToRbd,
-  rbd_intro: buildRbdIntro,
-  series_parallel_behavior: buildSeriesParallelBehavior,
-  series_parallel_math: buildSeriesParallelMath,
-  mixed_reduction: buildMixedReduction,
-  fta_function_rbd: buildFtaFunctionRbd,
-  boolean_prerequisites: buildBooleanPrerequisites,
-  boolean_states: buildBooleanStates,
-  bridge_separation: buildBridgeSeparation,
-  method_overview: buildMethodOverview,
-  boolean_summary: buildBooleanSummary,
-  structure_reference: buildStructureReference,
-  component_count_plot: buildComponentCountPlot,
-  freewheel_transfer: buildFreewheelTransfer,
-  network_exercise: buildNetworkExercise,
-});
+const BUILDERS = createCreativeBuilders();
 
 function sourceEntry(slide) {
   const entry = textMap.mappings.find((item) => item.source_slide_number === slide);
@@ -578,34 +569,33 @@ function frame(scene, content) {
   const body = scene.animation_decision === "static"
     ? content.body.replace(/ data-anim-target="true" data-anim-label="[^"]*"/g, "")
     : content.body;
-  const colors = [...new Set([C.accent, C.deep, C.secondary, C.success, C.failure, C.educationAccent, C.semanticSuccess, C.semanticWarning, C.border])]
+  const colors = [...new Set([C.accent, C.deep, C.secondary, C.success, C.failure, C.educationAccent, C.semanticSuccess, C.semanticWarning, C.technical, C.graphite, C.border])]
     .filter((color) => body.includes(color));
   const markers = colors.map((color) => `<marker id="arrow_${color.slice(1)}" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1L11 6L1 11Z" fill="${color}"/></marker>`).join("");
   const metadata = {
-    artifactScope: "full-slide",
-    embeddingTarget: "standalone-slide",
+    artifactScope: "content-svg",
+    embeddingTarget: "powerpoint-slide",
     slideType: scene.archetype,
     contentTitle: scene.title,
-    layoutIntent: `re4-${scene.builder.replaceAll("_", "-")}-full-slide`,
+    layoutIntent: `re4-${scene.builder.replaceAll("_", "-")}-open-hierarchy`,
     takeaway: scene.takeaway,
-    density: ["workflow-tree", "cross-model-map", "worked-method", "formula-reference", "exercise"].includes(scene.archetype) ? "dense" : "balanced",
-    contentMode: "full-slide",
-    backgroundMode: "brand-frame",
+    density: content.density || (["workflow-tree", "tree-calculation", "cross-model-map", "worked-method", "formula-reference", "formula-comparison", "logic-comparison", "logic-to-rbd", "assumption-checklist", "exercise"].includes(scene.archetype) ? "dense" : "normal"),
+    contentMode: "transparent-content",
+    backgroundMode: "transparent",
     brandProfile: theme.brandProfile,
     brandVariant: theme.brandVariant,
     sourceSlides: scene.source_slides,
     sourceTextSection: scene.source_text_section_id,
     structureStatus: "deferred-by-user",
     officialLogoStatus: "downstream-owned",
-    referenceLock: ["RE3::2", "RE3::24", "RE3::43", "RE3::70"],
+    referenceLock: content.referenceLock || ["RE3::1", "RE3::34", "RE3::70"],
   };
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="full-slide" data-embedding-target="standalone-slide" data-scene-id="${scene.scene_id}" data-brand-profile="${theme.brandProfile}">
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="accessible_title accessible_description" data-artifact-scope="content-svg" data-embedding-target="powerpoint-slide" data-scene-id="${scene.scene_id}" data-brand-profile="${theme.brandProfile}">
 <metadata id="slide_quality_metadata" type="application/json"><![CDATA[${JSON.stringify(metadata)}]]></metadata>
 <title id="accessible_title">${esc(scene.title)}</title><desc id="accessible_description">${esc(scene.takeaway)}</desc>
-<defs><linearGradient id="backgroundGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="${theme.background.start}"/><stop offset="56%" stop-color="${theme.background.mid}"/><stop offset="100%" stop-color="${theme.background.end}"/></linearGradient><pattern id="technicalGrid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="${C.deep}" stroke-opacity=".035" stroke-width="1"/></pattern>${markers}</defs>
+<defs>${markers}</defs>
 <style>text{font-family:${theme.bodyFontFamily};letter-spacing:0}</style>
-<rect width="1920" height="1080" fill="url(#backgroundGradient)"/><rect width="1920" height="1080" fill="url(#technicalGrid)"/>
 <g id="scene_content" data-qc-group="scene_content" data-qc-layer="content" data-source-ref="RE4::${scene.source_slides.join(",RE4::")}">${body}</g>
 </svg>`;
 }
@@ -622,10 +612,14 @@ function prepareAssets(scene) {
     const source = path.join(sourceAssetRoot, `source_${String(slide).padStart(3, "0")}`, sourceName);
     copyAsset(source, path.join(dir, "media", filename));
   }
+  for (const [sourceName, filename] of PICTOGRAMS_BY_BUILDER[scene.builder] || []) {
+    copyAsset(path.join(pictogramRoot, sourceName), path.join(dir, "media", filename));
+  }
 }
 
 function writeManifest(scene, content) {
   const dir = path.join(outRoot, scene.work_unit);
+  if (content.feedbackRevision) return require('./re4-feedback-support').writeAnimation(scene,content,dir);
   const staticScene = scene.animation_decision === "static";
   const targets = staticScene ? [] : content.targets.map((entry) => ({ targetId: entry.id, label: entry.label, status: "animated", visibleInEditor: true, render: true, confidence: "high" }));
   const resolved = staticScene ? [] : content.targets.map((entry, index) => {
@@ -647,11 +641,12 @@ function writeManifest(scene, content) {
   fs.writeFileSync(path.join(dir, "element-animation-plan.json"), `${JSON.stringify({ schemaVersion: "elementAnimationPlan/v1", sceneId: scene.scene_id, decision: scene.animation_decision, defaults, targets, steps, notes: scene.notes || undefined }, null, 2)}\n`, "utf8");
 }
 
-function writeBrief(scene) {
+function writeBrief(scene, content) {
   const sourceTitles = [...new Set(scene.source_slides.map((slide) => sourceEntry(slide).source_text_title))];
-  const hasFormula = ["series_parallel_math", "mixed_reduction", "bridge_separation", "structure_reference"].includes(scene.builder);
+  const pictograms = content.pictograms || [];
   const hasPlot = scene.builder === "component_count_plot";
-  const hasBridge = ["boolean_prerequisites", "bridge_separation"].includes(scene.builder);
+  const hasBridge = ["boolean_prerequisites", "bridge_separation", "bridge_separation_cases"].includes(scene.builder);
+  const hasSeparation = ["bridge_separation", "bridge_separation_cases"].includes(scene.builder);
   const text = `# Redesign-Brief — ${scene.work_unit}
 
 - Strukturstatus: Kapitel und Lektion noch nicht zugeordnet; Nutzervorgabe ausstehend
@@ -660,13 +655,14 @@ function writeBrief(scene) {
 - Titel: ${scene.title}
 - Takeaway: ${scene.takeaway}
 - Archetyp: ${scene.archetype}
-- Zielmodus: full_slide, 1920×1080
-- Referenz-Lock: RE3 slide_002, slide_024, slide_043 und slide_070
-- Farbdramaturgie: Navy-Tonalität für gleichrangige Inhalte; Grün und Koralle nur semantisch für Fokus, Funktion oder Ausfall
+- Zielmodus: content_svg, transparent, 1920×1080; Titel, Footer, Logo und Hintergrund bleiben im E-Learning-Master
+- Referenz-Lock: RE4-Quellfolie(n) der Szene sowie die freigegebene offene Hierarchie aus RE3 slide_001, slide_034 und slide_070
+- Farbdramaturgie: Marineblau für Struktur, Signalgrün für Funktion/Fokus, Koralle für Ausfall und Stahlcyan für technische Ableitungen
 - Animation: ${scene.animation_decision === "static" ? "statisch — kein belastbarer separater Sprechertextaufbau" : "sprechertextgeführt; semantische Gruppen statt Einzelobjekt-Mikroanimation"}
 - Quellenregel: PowerPoint-Sprechericons, gelbe Produktionsnotizen und Masterdekoration entfallen
-- Assets: ${(MEDIA[scene.builder] || []).length ? "bereinigte Quellmedien im neuen Full-Slide-Layout" : "native SVG-Komposition"}
-${hasBridge ? "- Brückengeometrie: kanonische Fünf-Komponenten-Topologie mit Komponente 5 als vertikale Kopplung zwischen den mittleren Knoten; kompakte technische Proportion statt horizontaler Kartenfüllung; in der 960×540-Vieweransicht vollständig lesbar\n" : ""}${hasFormula ? "- Formeln: szenenlokale transparente SVG-Assets; kontrollierter Cambria-Math-Fallback, da der vorgeschriebene Python-Mathtext-Renderer in der Laufzeitumgebung nicht verfügbar ist\n" : ""}${hasPlot ? "- Diagramm: technical; x = Anzahl der Komponenten n; y = Systemzuverlässigkeit R_S [%]; Modell R_S = R_B^n; szenenlokales SVG und Datensnapshot. Kontrollierter Node-Vektor-Fallback, da kein Python-Interpreter verfügbar ist\n" : ""}`;
+- Layoutprinzip: offene Hierarchie; Boxen nur für echte technische Knoten, Zustände oder Ergebnisflächen
+- Assets: ${(MEDIA[scene.builder] || []).length ? "bereinigte Quellmedien" : "native technische SVG-Komposition"}${pictograms.length ? " plus freigegebene generierte PNG-Piktogramme aus education-core" : ""}
+${pictograms.length ? `- PNG-Piktogramme: ${pictograms.map(([filename, kind, meaning]) => `${filename} (${kind}; ${meaning})`).join("; ")}\n- Piktogramm-Regel: redundant zur sichtbaren Beschriftung, atomar eingebettet und nicht aus SVG-Elementen nachgebaut\n` : ""}${hasBridge ? "- Brückengeometrie: kanonische Fünf-Komponenten-Topologie mit Komponente 5 als vertikale Kopplung zwischen den mittleren Knoten; alle Ersatzstrukturen verwenden dieselbe Komponentensprache\n" : ""}${hasSeparation ? "- Separationstransfer: Schlüsselkomponente, beide disjunkten Fälle, resultierende Ersatzstrukturen, Fallgewichte R₅ und 1 − R₅, Teilformeln sowie die vollständige Endsumme bleiben sichtbar erhalten\n" : ""}${hasPlot ? "- Diagramm: technische Direktbeschriftung; x = Anzahl der Komponenten n; y = Systemzuverlässigkeit R_S [%]; Modell R_S = R_i^n\n" : ""}`;
   fs.writeFileSync(path.join(outRoot, scene.work_unit, "redesign-brief.md"), text, "utf8");
 }
 
@@ -691,11 +687,16 @@ function main() {
     if (!builder) throw new Error(`Builder fehlt: ${scene.builder}`);
     const dir = path.join(outRoot, scene.work_unit);
     fs.mkdirSync(dir, { recursive: true });
-    prepareAssets(scene);
+    if (!process.argv.includes('--animation-only')) prepareAssets(scene);
     const content = builder(scene);
+    if(process.argv.includes('--animation-only')) {
+      if(fs.readFileSync(path.join(dir,`${scene.work_unit}.svg`),'utf8')!==`${frame(scene,content)}\n`) throw Error('Static scene changed; review before animation.');
+      writeManifest(scene,content);generated.push(scene.work_unit);continue;
+    }
     fs.writeFileSync(path.join(dir, `${scene.work_unit}.svg`), `${frame(scene, content)}\n`, "utf8");
+    if(process.argv.includes('--static-only')) {generated.push(scene.work_unit);continue;}
     writeManifest(scene, content);
-    writeBrief(scene);
+    if(!content.feedbackRevision) writeBrief(scene, content);
     generated.push(scene.work_unit);
   }
   process.stdout.write(`Generated ${generated.length} RE4 scene(s): ${generated.join(", ")}.\n`);

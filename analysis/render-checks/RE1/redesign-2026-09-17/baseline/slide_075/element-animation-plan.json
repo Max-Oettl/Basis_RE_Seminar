@@ -1,0 +1,183 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_075",
+  "scene_id": "re1_src_094",
+  "source_slides": [
+    94
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "hazard_definition",
+      "label": "Definition der Ausfallrate",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "hazard_risk_meaning",
+      "label": "Bedingtes Ausfallrisiko",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "bathtub_curve_path",
+      "label": "Badewannenkurve",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "bathtub_early_zone",
+      "label": "Frühausfallzone",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "early_failure_region",
+      "label": "Frühausfälle",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "bathtub_random_zone",
+      "label": "Zufallsausfallzone",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "random_failure_region",
+      "label": "Zufallsausfälle",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "bathtub_wear_zone",
+      "label": "Ermüdungsausfallzone",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "wearout_failure_region",
+      "label": "Ermüdungsausfälle",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_hazard_definition",
+      "targetId": "hazard_definition",
+      "action": "show",
+      "sourceText": "Die Ausfallrate wird durch den Buchstaben Lambda abgekürzt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_hazard_risk_meaning",
+      "targetId": "hazard_risk_meaning",
+      "action": "show",
+      "sourceText": "Oder mit anderen Worten, die Ausfallrate beschreibt das Risiko",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "draw_bathtub_curve_path",
+      "targetId": "bathtub_curve_path",
+      "action": "draw",
+      "sourceText": "Mit der Ausfallrate kann das gesamte Ausfallverhalten eines Produktes beschrieben",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_bathtub_early_zone",
+      "targetId": "bathtub_early_zone",
+      "action": "show",
+      "sourceText": "Dabei lässt sich die Badewannen-Kurve entsprechend einer abfallenden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_early_failure_region",
+      "targetId": "early_failure_region",
+      "action": "show",
+      "sourceText": "Die Ausfälle in den verschiedenen Bereichen entstehen durch unterschiedliche Ursachen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_bathtub_random_zone",
+      "targetId": "bathtub_random_zone",
+      "action": "show",
+      "sourceText": "Dabei lässt sich die Badewannen-Kurve entsprechend einer abfallenden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_random_failure_region",
+      "targetId": "random_failure_region",
+      "action": "show",
+      "sourceText": "Die Ausfälle in den verschiedenen Bereichen entstehen durch unterschiedliche Ursachen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_bathtub_wear_zone",
+      "targetId": "bathtub_wear_zone",
+      "action": "show",
+      "sourceText": "Dabei lässt sich die Badewannen-Kurve entsprechend einer abfallenden",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_wearout_failure_region",
+      "targetId": "wearout_failure_region",
+      "action": "show",
+      "sourceText": "Die Ausfälle in den verschiedenen Bereichen entstehen durch unterschiedliche Ursachen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

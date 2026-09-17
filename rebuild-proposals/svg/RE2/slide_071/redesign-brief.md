@@ -3,14 +3,14 @@
 - Kapitel: 4
 - Lektion: 1
 - Quellfolie: 71
-- Zielmodus: full_slide, 1920×1080
+- Zielmodus: content_svg, transparentes 1920×1080-Inhaltsmodul für den Downstream-Master
 - Titel: Einsatz der FMEA
-- Dominante Lernbotschaft: FMEA identifiziert potenzielle Fehler, analysiert Ursachen und Auswirkungen und entwickelt Maßnahmen.
+- Dominante Lernbotschaft: FMEA wird branchenübergreifend und standardgestützt eingesetzt, um Fehler, Ursachen und Auswirkungen zu analysieren und Risiken zu minimieren.
 - Archetyp: use-and-goal
-- Layout: Einsatz und Standards links, methodisches Ziel rechts.
+- Layout: Offene Informationsbereiche für Einsatz und Standards; genau ein hervorgehobenes Zielband als zentrale Lernbotschaft.
 - Inhaltsinventar: Fachbegriffe, Beziehungen, Hierarchien, Tabellenzustände und Beispiele bleiben erhalten; PowerPoint-Bedienelemente und Masterdekoration entfallen.
 - Referenz-Lock: RE1 slide_013, slide_009, slide_027 und slide_022
-- Assetstrategie: native RelTest-SVG-Komposition
+- Assetstrategie: bereinigtes und vergrößertes Quellasset
 - Animation: animated — sprechertextgeführte semantische Gruppen
 - Statisches Freigabekriterium: vollständiger Quellen-Ziel-Referenzvergleich ohne Text-, Kontrast-, Pfeil- oder Assetbefund
 - QA-Schwerpunkte: 1:1-Inhaltstransfer, Mindestschrift 18 px, Verbinder 1,5–2,5 px, Pfeile hinter Knoten, keine unbelegte fachliche Ergänzung

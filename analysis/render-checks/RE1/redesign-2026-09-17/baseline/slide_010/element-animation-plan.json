@@ -1,0 +1,129 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_010",
+  "scene_id": "re1_src_010",
+  "source_slides": [
+    10
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "stress_distribution",
+      "label": "Belastungsverteilung",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "stress_influences",
+      "label": "Einflüsse auf die Belastung",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "strength_distribution",
+      "label": "Belastbarkeitsverteilung",
+      "action": "draw",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "strength_influences",
+      "label": "Einflüsse auf die Belastbarkeit",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "failure_overlap",
+      "label": "Ausfallbereich",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "failure_consequences",
+      "label": "Ausfallfolgen",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_stress_distribution",
+      "targetId": "stress_distribution",
+      "action": "draw",
+      "sourceText": "Zunächst einmal wirkt auf ein Produkt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_stress_influences",
+      "targetId": "stress_influences",
+      "action": "show",
+      "sourceText": "Zunächst einmal wirkt auf ein Produkt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_strength_distribution",
+      "targetId": "strength_distribution",
+      "action": "draw",
+      "sourceText": "Dem gegenüber steht die Belastbarkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "drawDurFrames": 42
+    },
+    {
+      "stepId": "show_strength_influences",
+      "targetId": "strength_influences",
+      "action": "show",
+      "sourceText": "Dem gegenüber steht die Belastbarkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_failure_overlap",
+      "targetId": "failure_overlap",
+      "action": "show",
+      "sourceText": "Zwischen den Verteilungen von Belastung und Belastbarkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_failure_consequences",
+      "targetId": "failure_consequences",
+      "action": "show",
+      "sourceText": "Diese Ausfälle wiederum führen zu Kundenunzufriedenheit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

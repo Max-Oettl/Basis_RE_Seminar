@@ -1,0 +1,357 @@
+{
+  "schema_version": "basisRebuildContentCrosscheck/v2",
+  "module_id": "RE4",
+  "output_slide_number": 65,
+  "checked_at": "2026-09-17T10:47:59.936Z",
+  "status": "review_required",
+  "manual_review_required": true,
+  "reference_mapping": {
+    "work_unit": "slide_065",
+    "output_slide_number": 65,
+    "source_slides": [
+      65
+    ],
+    "primary_source_slide": 65,
+    "output_slide_numbers": [],
+    "mapping_type": "direct",
+    "rationale": "",
+    "mapping_source": "reference_map",
+    "reference_map_path": "analysis/rebuild-plans/RE4_source-reference-map.json",
+    "sequence_plan": "",
+    "read_error": ""
+  },
+  "references": [
+    {
+      "source_slide_number": 65,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE4/SVG/Folie65.SVG",
+      "source_svg_sha256": "c030b9efeda5b4499174c912554ae9b1659e00e0dcd49c8e0421037787a230e0",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE4/SVG/Folie65.SVG",
+      "analysis_path": ""
+    }
+  ],
+  "proposal": {
+    "path": "rebuild-proposals/svg/RE4/slide_065/slide_065.svg",
+    "svg_sha256": "b1279f4d6244ea0ffb892f599dea67c485b4b582901262111407c037192d0b48",
+    "animation_manifest": "/files/rebuild-proposals/svg/RE4/slide_065/scene.animation.v1.json"
+  },
+  "summary": {
+    "source_count": 1,
+    "checked_content_items": 15,
+    "checked_target_text_items": 10,
+    "errors": 0,
+    "warnings": 14,
+    "infos": 0,
+    "animation_steps": 0
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 065: \"Boolesche Systemtheorie\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Boolesche Systemtheorie"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 065: \"Abnahme der\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Abnahme der"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 065: \"mit zunehmender\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-7",
+      "expected": "mit zunehmender"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 065: \"Anzahl\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-8",
+      "expected": "Anzahl"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 065: \"bei unterschiedlicher\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-11",
+      "expected": "bei unterschiedlicher"
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Serienstruktur\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Serienstruktur",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Mehr Bauteile,\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Mehr Bauteile,",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"geringere Systemzuverlässigkeit\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "geringere Systemzuverlässigkeit",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Mit jedem weiteren Bauteil wird\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Mit jedem weiteren Bauteil wird",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"ein zusätzlicher Zuverlässigkeitswert\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "ein zusätzlicher Zuverlässigkeitswert",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"in das Produkt aufgenommen.\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "in das Produkt aufgenommen.",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Für unabhängige Bauteile mit gleicher\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Für unabhängige Bauteile mit gleicher",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Je geringer die Bauteilzuverlässigkeit,\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Je geringer die Bauteilzuverlässigkeit,",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"desto stärker der Abfall.\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "desto stärker der Abfall.",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    }
+  ],
+  "content_checks": [
+    {
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Boolesche Systemtheorie",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Abnahme der",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:der"
+    },
+    {
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-3",
+      "expected": "Systemzuverlässigkeit",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-4",
+      "expected": "R",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-5",
+      "expected": "S",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-6",
+      "expected": "(t)",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-7",
+      "expected": "mit zunehmender",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:mit"
+    },
+    {
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-8",
+      "expected": "Anzahl",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-9",
+      "expected": "n",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-10",
+      "expected": "der Bauteile",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "tokens:der,bauteile"
+    },
+    {
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-11",
+      "expected": "bei unterschiedlicher",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-12",
+      "expected": "Bauteilzuverlässigkeit",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-13",
+      "expected": "R",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-14",
+      "expected": "B",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 65,
+      "source_item_id": "source-svg-text-15",
+      "expected": "(t)",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    }
+  ],
+  "target_text_checks": [
+    {
+      "target_text": "Serienstruktur",
+      "result": "unsupported_target_text",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "target_text": "Mehr Bauteile,",
+      "result": "unsupported_target_text",
+      "score": 0.5,
+      "evidence": "tokens:bauteile"
+    },
+    {
+      "target_text": "geringere Systemzuverlässigkeit",
+      "result": "unsupported_target_text",
+      "score": 0.5,
+      "evidence": "tokens:systemzuverlässigkeit"
+    },
+    {
+      "target_text": "Mit jedem weiteren Bauteil wird",
+      "result": "unsupported_target_text",
+      "score": 0.6,
+      "evidence": "tokens:mit,jedem,wird"
+    },
+    {
+      "target_text": "ein zusätzlicher Zuverlässigkeitswert",
+      "result": "unsupported_target_text",
+      "score": 0.333,
+      "evidence": "tokens:ein"
+    },
+    {
+      "target_text": "in das Produkt aufgenommen.",
+      "result": "unsupported_target_text",
+      "score": 0.5,
+      "evidence": "tokens:in,das"
+    },
+    {
+      "target_text": "Für unabhängige Bauteile mit gleicher",
+      "result": "unsupported_target_text",
+      "score": 0.6,
+      "evidence": "tokens:für,bauteile,mit"
+    },
+    {
+      "target_text": "Bauteilzuverlässigkeit.",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Je geringer die Bauteilzuverlässigkeit,",
+      "result": "unsupported_target_text",
+      "score": 0.5,
+      "evidence": "tokens:die,bauteilzuverlässigkeit"
+    },
+    {
+      "target_text": "desto stärker der Abfall.",
+      "result": "unsupported_target_text",
+      "score": 0.25,
+      "evidence": "tokens:der"
+    }
+  ],
+  "manual_review_focus": [
+    "Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.",
+    "Bestaetigen, dass die vollstaendige statische Darstellung klarer als ein schrittweiser Aufbau ist."
+  ],
+  "reference_mapping_sha256": "26fa4b34d4d56fc4942a5b00b1df5c6543fcbc36638e3da6e4360176daf7d791",
+  "reference_map_path": "analysis/rebuild-plans/RE4_source-reference-map.json",
+  "sequence_plan": ""
+}

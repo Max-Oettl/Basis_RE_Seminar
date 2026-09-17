@@ -2,12 +2,12 @@
 
 - Kapitel: 4
 - Lektion: 4
-- Quellfolie: 95
-- Zielmodus: full_slide, 1920×1080
-- Titel: Funktionsstruktur des Anpassungsgetriebes
-- Dominante Lernbotschaft: Die Funktionen werden direkt an den Systemelementen des Getriebes geführt.
-- Archetyp: technical-hierarchy
-- Layout: Kanonischer Getriebebaum mit Systemelementen und optionalen Funktions-/Fehlerlagen.
+- Quellfolie: 92
+- Zielmodus: content_svg, transparentes 1920×1080-Inhaltsmodul für den Downstream-Master
+- Titel: Funktionsanalyse: Zwei Methoden
+- Dominante Lernbotschaft: Funktionen werden entweder top-down abgeleitet oder aus Ein- und Ausgangsgrößen einer Blackbox bestimmt.
+- Archetyp: method-comparison
+- Layout: Zwei offene Methodenfelder mit identischer Gewichtung; die gemeinsame Zuordnungsregel schließt die Szene ab.
 - Inhaltsinventar: Fachbegriffe, Beziehungen, Hierarchien, Tabellenzustände und Beispiele bleiben erhalten; PowerPoint-Bedienelemente und Masterdekoration entfallen.
 - Referenz-Lock: RE1 slide_013, slide_009, slide_027 und slide_022
 - Assetstrategie: native RelTest-SVG-Komposition

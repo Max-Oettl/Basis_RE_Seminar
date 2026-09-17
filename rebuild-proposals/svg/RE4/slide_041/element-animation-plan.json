@@ -1,42 +1,67 @@
 {
-  "schemaVersion": "elementAnimationPlan/v1",
+  "schemaVersion": "svgAnimationManifest/v1",
   "sceneId": "re4_src_041",
   "decision": "animated",
+  "svgPath": "slide_041.svg",
   "defaults": {
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "mixed_system",
-      "label": "Gemischtes System",
+      "targetId": "mixed_context",
+      "label": "Kombination der Grundstrukturen",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "mixed_parallel",
-      "label": "Parallelteil",
+      "targetId": "mixed_original",
+      "label": "Komponente 1 in Serie mit 2 parallel 3",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "mixed_reduce",
-      "label": "Teilzuverlässigkeit",
+      "targetId": "mixed_first",
+      "label": "Zuerst das parallele Teilsystem",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "mixed_total",
-      "label": "Systemzuverlässigkeit",
+      "targetId": "mixed_subsystem",
+      "label": "Zuverlässigkeit des parallelen Teilsystems",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mixed_second",
+      "label": "Ersatzblock in Serie mit Komponente 1",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mixed_product",
+      "label": "Serienzuverlässigkeit der Ersatzstruktur",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "mixed_result",
+      "label": "Gesamtformel der gemischten Struktur",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -45,44 +70,90 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_mixed_system",
-      "targetId": "mixed_system",
-      "action": "show",
-      "sourceText": "In der Praxis bestehen Systeme oft nicht nur aus Reihen- oder Parallelschaltungen, sondern aus einer Kombination beider Strukturen.",
+      "stepId": "step_01_mixed_context",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "mixed_context",
+      "sourceText": "In der Praxis bestehen Systeme oft nicht",
+      "action": "show"
     },
     {
-      "stepId": "step_02_mixed_parallel",
-      "targetId": "mixed_parallel",
-      "action": "show",
-      "sourceText": "In einem System ist die Komponente eins in Serie mit einem Parallelsystem aus Komponente zwei und drei geschaltet.",
+      "stepId": "step_02_mixed_original",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "mixed_original",
+      "sourceText": "sondern aus einer Kombination beider Strukturen",
+      "action": "show"
     },
     {
-      "stepId": "step_03_mixed_reduce",
-      "targetId": "mixed_reduce",
-      "action": "show",
-      "sourceText": "Zuerst berechnet man die Zuverlässigkeit des Parallelsystems aus Komponente zwei und drei mithilfe der bekannten Formel.",
+      "stepId": "step_03_mixed_original",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "mixed_original",
+      "sourceText": "Dabei wird das System schrittweise vereinfacht",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     },
     {
-      "stepId": "step_04_mixed_total",
-      "targetId": "mixed_total",
-      "action": "show",
-      "sourceText": "Da die Parallelstruktur mit Komponente eins in Serie geschaltet ist, multiplizieren wir einfach nun den Zuverlässigkeitswert mit dem der Komponente eins.",
+      "stepId": "step_04_mixed_original",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "mixed_original",
+      "sourceText": "In einem System ist die Komponente eins",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_05_mixed_first",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mixed_first",
+      "sourceText": "Zuerst berechnet man die Zuverlässigkeit des Parallelsystems",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_mixed_subsystem",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mixed_subsystem",
+      "sourceText": "mithilfe der bekannten Formel",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_mixed_second",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mixed_second",
+      "sourceText": "Da die Parallelstruktur mit Komponente eins",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_mixed_product",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mixed_product",
+      "sourceText": "multiplizieren wir einfach nun den Zuverlässigkeitswert",
+      "action": "show"
+    },
+    {
+      "stepId": "step_09_mixed_result",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mixed_result",
+      "sourceText": "Auf diese Weise erhalten wir die Systemzuverlässigkeit",
+      "action": "show"
+    },
+    {
+      "stepId": "step_10_mixed_result",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "mixed_result",
+      "sourceText": "Somit können wir auch für komplexere Systeme",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     }
   ]
 }

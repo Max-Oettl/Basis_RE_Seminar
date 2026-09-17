@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_failure_mode_catalog",
+  "svgPath": "slide_109.svg",
+  "spokenText": "Die Fehlfunktion eines Bauteils ist oft einfach die physikalische Ausfallart. Typische Ausfallarten sind Bruch, Kurzschluss, Undichtheit oder auch Leistungsabfall. Natürlich gibt es noch viele weitere Ausfallarten.\n\nDiese Ausfallarten werden wiederum durch unterschiedliche Ausfallursachen hervorgerufen. Typische Ursachen sind falsche Materialwahl, unzulässige Belastung, Materialfehler sowie Ermüdung, Korrosion oder falscher Einbau. Auch hier gibt es viele weitere mögliche Ursachen.\n\nDurch das Verständnis dieser Ausfallarten und ihrer Ursachen können wir gezielte Maßnahmen ergreifen, um die Zuverlässigkeit einzelner Bauteile und damit des gesamten Systems zu erhöhen.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s109_failures",
+      "label": "Typische Ausfallarten",
+      "role": "content",
+      "members": [
+        "s109_failures"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s109_causes",
+      "label": "Typische Ausfallursachen",
+      "role": "content",
+      "members": [
+        "s109_causes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "Typische Ausfallarten",
+      "sourceText": "Die Fehlfunktion eines Bauteils ist oft",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s109_failures"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "Typische Ausfallursachen",
+      "sourceText": "Diese Ausfallarten werden wiederum durch unterschiedliche",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s109_causes"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s109_failures",
+      "beatId": "beat_01",
+      "targetId": "s109_failures",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s109_causes",
+      "beatId": "beat_02",
+      "targetId": "s109_causes",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_02",
+      "visibleGroups": [
+        "canvas_context",
+        "s109_failures",
+        "s109_causes"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

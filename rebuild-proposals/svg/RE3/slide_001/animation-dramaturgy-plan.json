@@ -1,0 +1,405 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_001",
+  "svgPath": "slide_001.svg",
+  "spokenText": "In diesem Abschnitt lernen wir die Lebensdauerdatenanalyse kennen.\n\nDer Name verrät bereits, was wir dazu benötigen: Lebensdauerdaten. Diese können beispielsweise als Ausfallzeiten einer einzelnen Komponente oder eines gesamten Systems vorliegen.\n\nSobald wir die Lebensdauerdaten gesammelt haben, können wir sie auswerten. Das Ziel ist es, das Ausfallverhalten der Komponente oder des Systems abzuschätzen.\n\nDafür wenden wir geeignete statistische Methoden an, um die Parameter der zugrundeliegenden Lebensdauerverteilung zu bestimmen. In diesem Fall nutzen wir die Weibullverteilung.\n\nErinnern wir uns zurück: Mit der Weibullverteilung können wir die Ausfallwahrscheinlichkeit in Abhängigkeit der Zeit mithilfe einer mathematischen Formel beschreiben.\n\nDie charakteristische Lebensdauer gibt dabei eine Art Lageparameter an, während der Formparameter die Gestalt der Verteilung beeinflusst und damit die Steigung der Geraden im Weibull-Papier bestimmt.\n\nSobald wir die Weibullverteilung basierend auf den Lebensdauerdaten ermittelt haben, können wir Vergleiche anstellen, Berechnungen durchführen und Prognosen erstellen.\n\nZunächst konzentrieren wir uns jedoch auf das grundlegende Vorgehen für die Analyse von Lebensdauerdaten. Dafür nutzen wir die grafische Methode.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-2026-09-17/after/slide_001.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "In diesem Abschnitt lernen wir die",
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "In diesem Abschnitt lernen wir",
+      "claim": "Ausfallzeiten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "intro_1"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "können wir sie auswerten",
+      "claim": "Auswertung von Ausfallzeiten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "intro_2"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Das Ziel ist es",
+      "claim": "Ziel der Auswertung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "intro_relation"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "Dafür wenden wir geeignete statistische Methoden an",
+      "claim": "Statistische Methoden",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "intro_3"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "die Parameter der zugrundeliegenden Lebensdauerverteilung",
+      "claim": "Verteilungsparameter",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "intro_4"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "In diesem Fall nutzen wir die Weibullverteilung",
+      "claim": "Weibullverteilung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "intro_5"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "mithilfe einer mathematischen Formel beschreiben",
+      "claim": "Weibull-Funktion",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "intro_formula"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Die charakteristische Lebensdauer",
+      "claim": "Charakteristische Lebensdauer",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "intro_parameter_t"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "während der Formparameter",
+      "claim": "Formparameter",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "intro_parameter_b"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "Vergleiche anstellen, Berechnungen durchführen und Prognosen erstellen",
+      "claim": "Weibullverteilung",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "intro_5"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "Dafür nutzen wir die grafische Methode",
+      "claim": "Statistische Methoden",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "intro_3"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "intro_1",
+      "label": "Ausfallzeiten",
+      "role": "content",
+      "members": [
+        "intro_1"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "intro_2",
+      "label": "Auswertung von Ausfallzeiten",
+      "role": "content",
+      "members": [
+        "intro_2"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "intro_relation",
+      "label": "Ziel der Auswertung",
+      "role": "content",
+      "members": [
+        "intro_relation"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "intro_3",
+      "label": "Statistische Methoden",
+      "role": "content",
+      "members": [
+        "intro_3"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "intro_4",
+      "label": "Verteilungsparameter",
+      "role": "content",
+      "members": [
+        "intro_4"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "intro_5",
+      "label": "Weibullverteilung",
+      "role": "content",
+      "members": [
+        "intro_5"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "intro_formula",
+      "label": "Weibull-Funktion",
+      "role": "content",
+      "members": [
+        "intro_formula"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "intro_parameter_t",
+      "label": "Charakteristische Lebensdauer",
+      "role": "content",
+      "members": [
+        "intro_parameter_t"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    },
+    {
+      "groupId": "intro_parameter_b",
+      "label": "Formparameter",
+      "role": "content",
+      "members": [
+        "intro_parameter_b"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_9"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_intro_1",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "intro_1",
+      "sourceText": "In diesem Abschnitt lernen wir",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_intro_2",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "intro_2",
+      "sourceText": "können wir sie auswerten",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_intro_relation",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "intro_relation",
+      "sourceText": "Das Ziel ist es",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_intro_3",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "intro_3",
+      "sourceText": "Dafür wenden wir geeignete statistische Methoden an",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_intro_4",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "intro_4",
+      "sourceText": "die Parameter der zugrundeliegenden Lebensdauerverteilung",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_intro_5",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "intro_5",
+      "sourceText": "In diesem Fall nutzen wir die Weibullverteilung",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_intro_formula",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "intro_formula",
+      "sourceText": "mithilfe einer mathematischen Formel beschreiben",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_intro_parameter_t",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "intro_parameter_t",
+      "sourceText": "Die charakteristische Lebensdauer",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_intro_parameter_b",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "intro_parameter_b",
+      "sourceText": "während der Formparameter",
+      "action": "show",
+      "beatId": "beat_9",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_10_intro_5",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "intro_5",
+      "sourceText": "Vergleiche anstellen, Berechnungen durchführen und Prognosen erstellen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_10",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_11_intro_3",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "intro_3",
+      "sourceText": "Dafür nutzen wir die grafische Methode",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_11",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-2026-09-17/states-final/slide_001/00_initial.png",
+      "reviewedAt": "2026-09-17"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "intro_1",
+        "intro_2",
+        "intro_relation",
+        "intro_3",
+        "intro_4",
+        "intro_5",
+        "intro_formula",
+        "intro_parameter_t",
+        "intro_parameter_b"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-2026-09-17/states-final/slide_001/13_after_11_dafur_nutzen_wir_die_grafische_methode.png",
+      "reviewedAt": "2026-09-17"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "renderDirectory": "analysis/render-checks/RE3/feedback-2026-09-17/states-final/slide_001",
+    "reviewedStateCount": 14,
+    "evidence": "analysis/rebuild-plans/RE3_scenes_001_006_feedback_2026-09-17.md",
+    "method": "local Chromium state renderer plus visual source/reference review",
+    "interactiveBrowserPlayback": "unavailable; no end-to-end audio playback claimed"
+  }
+}

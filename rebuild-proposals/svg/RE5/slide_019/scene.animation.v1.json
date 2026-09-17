@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "svgPath": "slide_019.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 42,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "success_run_requirement",
+      "label": "Beispielanforderung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "zero_failures",
+      "label": "Null Ausfälle",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "proof_plot",
+      "label": "Bekannter Nachweis mit Weibullverteilung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "missing_weibull",
+      "label": "Fehlende Weibull-Auswertung",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "proof_question",
+      "label": "Zentrale Nachweisfrage",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_success_run_requirement",
+      "targetId": "success_run_requirement",
+      "action": "show",
+      "sourceText": "Die Anforderung kann zum Beispiel so aussehen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_zero_failures",
+      "targetId": "zero_failures",
+      "action": "show",
+      "sourceText": "Und während des Testlaufs darf kein einziger Prüfling ausfallen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_proof_plot",
+      "targetId": "proof_plot",
+      "action": "draw",
+      "sourceText": "Wenn wir die Weibullverteilung samt Vertrauensbereich",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "durFrames": 42,
+      "drawStyle": "stroke",
+      "direction": "forward"
+    },
+    {
+      "stepId": "step_04_missing_weibull",
+      "targetId": "missing_weibull",
+      "action": "show",
+      "sourceText": "Wenn kein Ausfall auftritt",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_05_proof_question",
+      "targetId": "proof_question",
+      "action": "show",
+      "sourceText": "Wie können wir aber trotzdem einen Nachweis führen",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte, fachlich vollständige Gruppe.",
+      "enterFrames": 16
+    }
+  ]
+}

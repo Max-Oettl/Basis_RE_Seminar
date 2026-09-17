@@ -1,0 +1,281 @@
+{
+  "schemaVersion": "svgAnimationManifest/v1",
+  "sceneId": "re3_src_029",
+  "decision": "animated",
+  "svgPath": "slide_029.svg",
+  "defaults": {
+    "enterFrames": 16,
+    "exitFrames": 12,
+    "highlightDurFrames": 30,
+    "drawDurFrames": 38,
+    "transformDurFrames": 30
+  },
+  "targets": [
+    {
+      "targetId": "right_reference_context",
+      "label": "Bekannter zweiseitiger Bereich",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "right_reference_region",
+      "label": "right reference region",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "right_reference_values",
+      "label": "right reference values",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "right_failure_context",
+      "label": "Rechtsseitige Ausfallgrenze",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "right_failure_region",
+      "label": "right failure region",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "right_failure_values",
+      "label": "right failure values",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "right_failure_caution",
+      "label": "Begrenzter Nutzen der unteren Ausfallgrenze",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "right_reliability_context",
+      "label": "Rechtsseitige Zuverlässigkeitsgrenze",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "right_reliability_region",
+      "label": "right reliability region",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "right_reliability_values",
+      "label": "right reliability values",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "right_reliability_use",
+      "label": "Minimale Zuverlässigkeit nachweisen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "right_choice",
+      "label": "Fragestellung entscheidet",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "right_reference_meaning",
+      "label": "Unsicherheit in beide Richtungen",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "right_next",
+      "label": "Überleitung zu Lebensdauerdaten",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_right_reference_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reference_context",
+      "sourceText": "Analog dazu gibt es auch",
+      "action": "show"
+    },
+    {
+      "stepId": "step_02_right_reference_region",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reference_region",
+      "sourceText": "Analog dazu gibt es auch",
+      "action": "show"
+    },
+    {
+      "stepId": "step_03_right_reference_values",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reference_values",
+      "sourceText": "Analog dazu gibt es auch",
+      "action": "show"
+    },
+    {
+      "stepId": "step_04_right_failure_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_failure_context",
+      "sourceText": "den rechtsseitigen Vertrauensbereich",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_right_failure_region",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_failure_region",
+      "sourceText": "nur eine untere Grenze",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_right_failure_values",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_failure_values",
+      "sourceText": "eine zehn-Prozent-Vertrauensgrenze verwendet",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_right_failure_caution",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_failure_caution",
+      "sourceText": "allerdings wenig sinnvoll",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_right_failure_region",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_failure_region",
+      "sourceText": "oft deutlich höher sein könnte",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_09_right_reliability_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reliability_context",
+      "sourceText": "statt der Ausfallwahrscheinlichkeit die Zuverlässigkeit",
+      "action": "show"
+    },
+    {
+      "stepId": "step_10_right_reliability_region",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reliability_region",
+      "sourceText": "macht eine untere Vertrauensgrenze wieder Sinn",
+      "action": "show"
+    },
+    {
+      "stepId": "step_11_right_reliability_values",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reliability_values",
+      "sourceText": "eine minimale Zuverlässigkeit nachweisen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_12_right_reliability_use",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reliability_use",
+      "sourceText": "eine minimale Zuverlässigkeit nachweisen",
+      "action": "show"
+    },
+    {
+      "stepId": "step_13_right_choice",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_choice",
+      "sourceText": "Die Wahl des passenden Vertrauensbereichs",
+      "action": "show"
+    },
+    {
+      "stepId": "step_14_right_reference_meaning",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reference_meaning",
+      "sourceText": "Während der zweiseitige Vertrauensbereich",
+      "action": "show"
+    },
+    {
+      "stepId": "step_15_right_reference_region",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reference_region",
+      "sourceText": "Während der zweiseitige Vertrauensbereich",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_16_right_reliability_region",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_reliability_region",
+      "sourceText": "ermöglichen einseitige Vertrauensbereiche gezielte Aussagen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_17_right_choice",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_choice",
+      "sourceText": "diese Konzepte in der Praxis noch anwenden",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_18_right_next",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "right_next",
+      "sourceText": "In der nächsten Lektion",
+      "action": "show"
+    }
+  ]
+}

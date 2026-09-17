@@ -1,34 +1,115 @@
 {
-  "schemaVersion": "elementAnimationPlan/v1",
+  "schemaVersion": "svgAnimationManifest/v1",
   "sceneId": "re3_src_036",
   "decision": "animated",
+  "svgPath": "slide_036.svg",
   "defaults": {
     "enterFrames": 16,
     "exitFrames": 12,
     "highlightDurFrames": 30,
-    "drawDurFrames": 42,
+    "drawDurFrames": 38,
     "transformDurFrames": 30
   },
   "targets": [
     {
-      "targetId": "censor_type_i",
-      "label": "Typ I",
+      "targetId": "types_one_context",
+      "label": "Typ 1",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "censor_type_ii",
-      "label": "Typ II",
+      "targetId": "compare_one_failures",
+      "label": "compare one failures",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
       "confidence": "high"
     },
     {
-      "targetId": "censor_types_rule",
-      "label": "Vergleich",
+      "targetId": "types_failure_legend",
+      "label": "Ausfall",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "compare_one_stop",
+      "label": "compare one stop",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "compare_one_censored",
+      "label": "compare one censored",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "types_censor_legend",
+      "label": "Bei Stopp intakt",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "types_one_random",
+      "label": "Zufällige Ausfallzahl",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "types_two_context",
+      "label": "Typ 2",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "compare_two_failures",
+      "label": "compare two failures",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "compare_two_stop_event",
+      "label": "compare two stop event",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "compare_two_stop",
+      "label": "compare two stop",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "types_two_random",
+      "label": "Zufällige Versuchsdauer",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "compare_two_censored",
+      "label": "compare two censored",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -37,34 +118,158 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_censor_type_i",
-      "targetId": "censor_type_i",
-      "action": "show",
-      "sourceText": "Beginnen wir mit der Rechtszensierung vom Typ eins.",
+      "stepId": "step_01_types_one_context",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "types_one_context",
+      "sourceText": "Beginnen wir mit der Rechtszensierung",
+      "action": "show"
     },
     {
-      "stepId": "step_02_censor_type_ii",
-      "targetId": "censor_type_ii",
-      "action": "show",
-      "sourceText": "Im Gegensatz dazu steht die Rechtszensierung vom Typ zwei.",
+      "stepId": "step_02_compare_one_failures",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "compare_one_failures",
+      "sourceText": "Beginnen wir mit der Rechtszensierung",
+      "action": "show"
     },
     {
-      "stepId": "step_03_censor_types_rule",
-      "targetId": "censor_types_rule",
-      "action": "show",
-      "sourceText": "Beide Varianten haben gemeinsam, dass nicht alle Ausfallzeiten bekannt sind.",
+      "stepId": "step_03_types_failure_legend",
       "occurrence": 1,
       "confidence": "high",
-      "notes": "Sprechertextgeführte semantische Gruppe.",
-      "enterFrames": 16
+      "targetId": "types_failure_legend",
+      "sourceText": "Beginnen wir mit der Rechtszensierung",
+      "action": "show"
+    },
+    {
+      "stepId": "step_04_compare_one_stop",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_one_stop",
+      "sourceText": "nach einer vorher festgelegten Zeit",
+      "action": "show"
+    },
+    {
+      "stepId": "step_05_compare_one_censored",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_one_censored",
+      "sourceText": "noch funktionieren, gelten als rechtszensiert",
+      "action": "show"
+    },
+    {
+      "stepId": "step_06_types_censor_legend",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "types_censor_legend",
+      "sourceText": "noch funktionieren, gelten als rechtszensiert",
+      "action": "show"
+    },
+    {
+      "stepId": "step_07_types_one_random",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "types_one_random",
+      "sourceText": "ist dabei eine Zufallsgröße",
+      "action": "show"
+    },
+    {
+      "stepId": "step_08_compare_one_stop",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_one_stop",
+      "sourceText": "zu einem festen Zeitpunkt abgeschlossen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_09_compare_one_censored",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_one_censored",
+      "sourceText": "Mindestens ein Testobjekt bleibt",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_10_types_two_context",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "types_two_context",
+      "sourceText": "Im Gegensatz dazu steht",
+      "action": "show"
+    },
+    {
+      "stepId": "step_11_compare_two_failures",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_two_failures",
+      "sourceText": "Im Gegensatz dazu steht",
+      "action": "show"
+    },
+    {
+      "stepId": "step_12_compare_two_stop_event",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_two_stop_event",
+      "sourceText": "sobald eine bestimmte Anzahl",
+      "action": "show"
+    },
+    {
+      "stepId": "step_13_compare_two_stop",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_two_stop",
+      "sourceText": "sobald eine bestimmte Anzahl",
+      "action": "show"
+    },
+    {
+      "stepId": "step_14_types_two_random",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "types_two_random",
+      "sourceText": "die Versuchszeit eine Zufallsgröße",
+      "action": "show"
+    },
+    {
+      "stepId": "step_15_compare_two_censored",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_two_censored",
+      "sourceText": "zu diesem Zeitpunkt noch intakt sind",
+      "action": "show"
+    },
+    {
+      "stepId": "step_16_compare_two_stop_event",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_two_stop_event",
+      "sourceText": "genau definierte Anzahl an Ausfallereignissen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_17_compare_one_censored",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_one_censored",
+      "sourceText": "Beide Varianten haben gemeinsam",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
+    },
+    {
+      "stepId": "step_18_compare_two_censored",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "compare_two_censored",
+      "sourceText": "Beide Varianten haben gemeinsam",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2
     }
   ]
 }

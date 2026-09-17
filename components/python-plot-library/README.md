@@ -1,6 +1,24 @@
 # Python Plot Library
 
+Die RE3-Folge zu Datentypen und Zensierung verwendet
+`re3_data_feedback_plots.py --scene 34|35|36|38|39|42`. Sie erweitert die gemeinsame
+Objektachsen-Komponente aus `object_time_diagram_plot.py`: sechs identische
+Objektzeilen, feste Zeitachse und Markersemantik. Typ-I-/Typ-II-Stoppregeln,
+mechanismusspezifische Zensierung und Intervallgrenzen sind getrennt animierbar.
+Normierte Zeitpositionen ohne Quellzahlen sind illustrative Geometrie; Identitäten
+und Ereignisreihenfolge bleiben erhalten. Konfiguration und SVGs liegen pro Szene
+unter `data/object-time.json` und `plots/`.
+
 Kanonischer Projektworkflow: `workflow/31-python-plots/python-plot-workflow.md`.
+
+Die überarbeiteten RE3-Szenen 1, 2, 9, 11, 13 und 14 verwenden
+`re3_feedback_plots.py --scene <Nummer>`. Der Generator kombiniert die
+vorhandenen Median-Rank-, Regressions- und Bootstrap-Funktionen mit den
+quellnahen Szenenformaten und semantischen Einzelzielen. Daten und Konfiguration
+liegen jeweils im lokalen `data/`-Ordner. Die Vertrauensgrenzen verwenden
+5.000 parametrische Bootstrap-Stichproben und Seed 42. Zeitpositionen ohne
+Quellzahlen sind ausdrücklich illustrative Geometrie; die A/B-Zugehörigkeit
+und Objektzuordnung bleiben quellengetreu.
 
 Diese Library ist die fuehrende Quelle fuer wiederkehrende echte technische Diagramme und Plots.
 Plots werden nicht mehr als handgezeichnete SVG-Vorlagen begonnen, sondern
@@ -78,6 +96,8 @@ wird, wird es ausserhalb des Plotgenerators aus dem SVG erzeugt.
 - `purchase_criteria_plot.py`: mehrjaehrige, horizontale Kriterienvergleiche in Prozent.
 - `stress_strength_interference_plot.py`: Belastung, Belastbarkeit, Ueberlappung und konsistente Verschiebungszustaende.
 - `bathtub_curve_plot.py`: schematische Badewannenkurve mit Frueh-, Zufalls- und Ermuedungsausfaellen; Varianten `standard`, `reduction` und `source_aligned` fuer eine quellnahe gemeinsame Achsen-/Phasenkomposition.
+- `re5_test_planning_plots.py`: RE5-spezifische, wiederverwendbare Plotfamilie fuer Success-Run-Kurven, Degradation, Raffungsfaktor, Last-Lebensdauer-Korrelation, Versuchsniveaus, Stichprobenverteilung und Monte-Carlo-Praezision.
+- `re3_special_case_plots.py`: RE3-spezifische Weibull-Wahrscheinlichkeitsnetze fuer gekruemmte 3-Parameter-Daten sowie den gemeinsamen und getrennten Fit mehrerer Ausfallmechanismen.
 
 Die konkreten Daten und Renderkonfigurationen liegen im Ordner der jeweiligen
 Folie. Die zentralen Dateien enthalten nur die wiederverwendbare Plotlogik.
@@ -259,6 +279,31 @@ SVG-Gruppen fuer den sprechertextgefuehrten Aufbau.
 
 ## Output-Regeln
 
+### RE3 – MLS und MLE
+
+`re3_method_comparison_plots.py --scene 43` erzeugt einen OLS-Fit in
+transformierten Koordinaten mit vertikalen Residuen sowie eine berechnete
+Weibull-Loglikelihoodfläche über T und b. Der Maximumspunkt wird auf die
+sichtbaren Parameterachsen projiziert. Daten, Fit, Residuen, Fläche und Maximum
+haben getrennte Animationsgruppen. Lokale JSON-Daten kennzeichnen beide Modelle
+als Illustration; OLS-Normalgleichungen, Profilscore und Nachbarwerte des
+Likelihood-Maximums werden beim Export geprüft. Mathematische Labels und
+Zielfunktionen werden als Pfadglyphen exportiert.
+
+### RE3 – Vertrauensbereiche
+
+`re3_confidence_feedback_plots.py --scene 15|17|20|23|24|27|29` erzeugt
+jeweils nur die Plotassets der angeforderten Feedbackszene. Weibullgrenzen nutzen
+den kanonischen parametrischen Bootstrap (5000 Replikate, Seed 42); Vergleiche
+halten Modell und Achsen fest und variieren nur Aussagewahrscheinlichkeit oder
+Stichprobenumfang. Die schematische Dichte ist Beta(3,7) auf [0,1]; die
+Zuverlässigkeitsdichte ist konsistent gespiegelt als Beta(7,3). Flächen und
+Quantilpositionen werden berechnet und in lokalen Daten-JSONs dokumentiert.
+Mathematische Labels werden als Pfadglyphen ausgegeben, übrige Texte bleiben
+editierbar. Region, Grenzen und Quantilwerte haben getrennte semantische IDs.
+Szene 23 referenziert auf ausdrücklichen Nutzerwunsch das bereits akzeptierte,
+unveränderte 3D-Asset; dessen Herkunft und Hash werden dokumentiert.
+
 - Folienspezifische Plot-Assets gehoeren in den Ordner der jeweiligen Folie,
   z.B. `rebuild-proposals/svg/<module_id>/slide_###/plots/<plot_id>.svg`.
 - Folienspezifische Plotdaten und Renderkonfigurationen liegen daneben unter
@@ -276,3 +321,16 @@ SVG-Gruppen fuer den sprechertextgefuehrten Aufbau.
   Daten-Spezifikation angepasst und der Plot neu erzeugt.
 - Callouts, didaktische Hervorhebungen und Animationen dürfen im Szenen-SVG
   um den Plot herum entstehen, aber die Datengeometrie bleibt im Python-Plot.
+
+### Serienzuverlässigkeit und Komponentenanzahl
+
+`series_component_count_plot.py` erzeugt den hochformatigen RE4-Plot aus Quelle
+065: 0 bis 300 Komponenten, 0 bis 100 Prozent Systemzuverlässigkeit und die vier
+Bauteilzuverlässigkeiten 99,9 / 99,5 / 99 / 95 Prozent. Alle Werte folgen exakt
+`100 * R_B ** n`. Kurve und direkte Beschriftung bilden jeweils eine semantische
+Gruppe; mathematische Labels werden als Glyphen exportiert. Der Export ist SVG,
+der Daten- und Achsenvertrag liegt lokal unter `slide_065/data/`.
+
+```powershell
+python components/python-plot-library/series_component_count_plot.py
+```

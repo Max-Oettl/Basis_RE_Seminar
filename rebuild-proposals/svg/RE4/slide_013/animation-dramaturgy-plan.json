@@ -1,0 +1,714 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re4_src_013",
+  "svgPath": "slide_013.svg",
+  "spokenText": "Zu Beginn geht es darum, sich systematisch Gedanken über den Aufbau und die Struktur des betrachteten Systems zu machen.Denn nur wenn wir wissen, wie ein System aufgebaut ist – welche Komponenten, Baugruppen und Funktionsketten beteiligt sind – können wir auch verstehen, wie die Zuverlässigkeit der einzelnen Komponenten und Baugruppen verknüpft werden muss, um die Systemzuverlässigkeit zu erhalten.\n\nHierfür eignet sich die quantitative Fehlerbaumanalyse hervorragend.Die qualitative FTA kennst du ja bereits aus dem vorherigen Modul zu den qualitativen Methoden in der Zuverlässigkeitstechnik.\n\nDie ersten vier Schritte sind in beiden Methoden identisch – egal ob qualitativ oder quantitativ.\n\nDer erste Schritt besteht darin, das System zu definieren, das analysiert werden soll – also zum Beispiel ein Getriebe.\n\nIm nächsten Schritt legen wir das unerwünschte Ereignis fest, also das sogenannte Top-Ereignis bzw. der Systemausfall.\n\nIm Fall des Getriebes lautet das Top-Ereignis: Getriebe defekt.\n\nAnschließend zerlegen wir diesen Systemausfall schrittweise in seine unmittelbaren Ursachen.\n\nDazu nutzen wir logische Verknüpfungen wie das und- oder ODER-Gatter, um die Fehlerbeziehungen zwischen den verschiedenen Subsystemen darzustellen.\n\nDas Getriebe ist beispielsweise ausgefallen, wenn kein Drehmoment mehr übertragen wird oder eine Undichtigkeit vorliegt.\n\nSo nähern wir uns stufenweise den Ursachen an – von der Systemebene über die Baugruppen bis hin zu den einzelnen Komponenten.Wir unterteilen die Ereignisse immer weiter, bis wir schließlich auf die sogenannten Basisereignisse stoßen – also die primären Ausfallmechanismen wie zum Beispiel Materialermüdung oder thermische Alterung.\n\nDiese Basisereignisse bilden die Grundlage für die quantitative Bewertung im nächsten Schritt.\n\nDenn sie lassen sich mit konkreten Zuverlässigkeitskennwerten beschreiben – und genau das ist das Ziel der quantitativen FTA:Nicht nur aufzeigen, was passieren kann, sondern auch wie wahrscheinlich es ist.\n\nWie wir für die einzelnen Basisereignisse diese Zuverlässigkeitskennwerte ermitteln, schauen wir uns im fünften Schritt der FTA einmal genauer an.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/after/slide_013.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Zu Beginn geht es darum, sich",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Zu Beginn geht es darum",
+      "occurrence": 1,
+      "claim": "Qualitativer Ablauf und quantitative Erweiterung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "fta_workflow_heading"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Zu Beginn geht es darum",
+      "occurrence": 1,
+      "claim": "Schritt 1 Systemanalyse",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "fta_workflow_first"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Zu Beginn geht es darum",
+      "occurrence": 1,
+      "claim": "Gemeinsame Schritte 2 bis 4",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "fta_workflow_common"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "Zu Beginn geht es darum",
+      "occurrence": 1,
+      "claim": "Quantitative Schritte 5 und 6",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "fta_workflow_quantitative"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "Aufbau und die Struktur",
+      "occurrence": 1,
+      "claim": "Schritt 1 Systemanalyse",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "fta_workflow_first"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "welche Komponenten, Baugruppen und Funktionsketten beteiligt sind",
+      "occurrence": 1,
+      "claim": "Schritt 1 Systemanalyse",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "fta_workflow_first"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "Hierfür eignet sich die quantitative Fehlerbaumanalyse",
+      "occurrence": 1,
+      "claim": "Qualitativer Ablauf und quantitative Erweiterung",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "fta_workflow_heading"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Die ersten vier Schritte sind in beiden Methoden",
+      "occurrence": 1,
+      "claim": "Schritt 1 Systemanalyse",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "fta_workflow_first"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "Die ersten vier Schritte sind in beiden Methoden",
+      "occurrence": 1,
+      "claim": "Gemeinsame Schritte 2 bis 4",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "fta_workflow_common"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "Der erste Schritt besteht darin",
+      "occurrence": 1,
+      "claim": "Schritt 1 Systemanalyse",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "fta_workflow_first"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "Im nächsten Schritt legen wir das unerwünschte Ereignis",
+      "occurrence": 1,
+      "claim": "Qualitativer Ablauf und quantitative Erweiterung",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "fta_workflow_heading"
+      ]
+    },
+    {
+      "beatId": "beat_12",
+      "sourceText": "Im nächsten Schritt legen wir das unerwünschte Ereignis",
+      "occurrence": 1,
+      "claim": "Schritt 1 Systemanalyse",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "fta_workflow_first"
+      ]
+    },
+    {
+      "beatId": "beat_13",
+      "sourceText": "Im nächsten Schritt legen wir das unerwünschte Ereignis",
+      "occurrence": 1,
+      "claim": "Gemeinsame Schritte 2 bis 4",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "fta_workflow_common"
+      ]
+    },
+    {
+      "beatId": "beat_14",
+      "sourceText": "Im nächsten Schritt legen wir das unerwünschte Ereignis",
+      "occurrence": 1,
+      "claim": "Quantitative Schritte 5 und 6",
+      "requiredContext": [],
+      "action": "hide",
+      "revealTogether": [
+        "fta_workflow_quantitative"
+      ]
+    },
+    {
+      "beatId": "beat_15",
+      "sourceText": "Im nächsten Schritt legen wir das unerwünschte Ereignis",
+      "occurrence": 1,
+      "claim": "Fehlerbaum am Beispiel Getriebe",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "fta_heading"
+      ]
+    },
+    {
+      "beatId": "beat_16",
+      "sourceText": "Im Fall des Getriebes lautet das Top-Ereignis",
+      "occurrence": 1,
+      "claim": "Top-Ereignis",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "fta_top"
+      ]
+    },
+    {
+      "beatId": "beat_17",
+      "sourceText": "Anschließend zerlegen wir diesen Systemausfall",
+      "occurrence": 1,
+      "claim": "Top-Ereignis",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "fta_top"
+      ]
+    },
+    {
+      "beatId": "beat_18",
+      "sourceText": "Das Getriebe ist beispielsweise ausgefallen",
+      "occurrence": 1,
+      "claim": "Drehmoment und Dichtheit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "fta_causes"
+      ]
+    },
+    {
+      "beatId": "beat_19",
+      "sourceText": "von der Systemebene über die Baugruppen",
+      "occurrence": 1,
+      "claim": "Unmittelbare Ursachen der Komponenten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "fta_components"
+      ]
+    },
+    {
+      "beatId": "beat_20",
+      "sourceText": "Wir unterteilen die Ereignisse immer weiter",
+      "occurrence": 1,
+      "claim": "Bruch oder Klemmen der Eingangswelle",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "fta_modes"
+      ]
+    },
+    {
+      "beatId": "beat_21",
+      "sourceText": "auf die sogenannten Basisereignisse stoßen",
+      "occurrence": 1,
+      "claim": "Sechs Basisereignisse",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "fta_basics"
+      ]
+    },
+    {
+      "beatId": "beat_22",
+      "sourceText": "Diese Basisereignisse bilden die Grundlage",
+      "occurrence": 1,
+      "claim": "Sechs Basisereignisse",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "fta_basics"
+      ]
+    },
+    {
+      "beatId": "beat_23",
+      "sourceText": "mit konkreten Zuverlässigkeitskennwerten beschreiben",
+      "occurrence": 1,
+      "claim": "Sechs Basisereignisse",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "fta_basics"
+      ]
+    },
+    {
+      "beatId": "beat_24",
+      "sourceText": "im fünften Schritt der FTA",
+      "occurrence": 1,
+      "claim": "Sechs Basisereignisse",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "fta_basics"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "fta_workflow_heading",
+      "label": "Qualitativer Ablauf und quantitative Erweiterung",
+      "role": "content",
+      "members": [
+        "fta_workflow_heading"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "fta_workflow_first",
+      "label": "Schritt 1 Systemanalyse",
+      "role": "content",
+      "members": [
+        "fta_workflow_first"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "fta_workflow_common",
+      "label": "Gemeinsame Schritte 2 bis 4",
+      "role": "content",
+      "members": [
+        "fta_workflow_common"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "fta_workflow_quantitative",
+      "label": "Quantitative Schritte 5 und 6",
+      "role": "content",
+      "members": [
+        "fta_workflow_quantitative"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "fta_heading",
+      "label": "Fehlerbaum am Beispiel Getriebe",
+      "role": "content",
+      "members": [
+        "fta_heading"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_15"
+    },
+    {
+      "groupId": "fta_top",
+      "label": "Top-Ereignis",
+      "role": "content",
+      "members": [
+        "fta_top"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_16"
+    },
+    {
+      "groupId": "fta_causes",
+      "label": "Drehmoment und Dichtheit",
+      "role": "content",
+      "members": [
+        "fta_causes"
+      ],
+      "dependsOn": [
+        "fta_top"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_18"
+    },
+    {
+      "groupId": "fta_components",
+      "label": "Unmittelbare Ursachen der Komponenten",
+      "role": "content",
+      "members": [
+        "fta_components"
+      ],
+      "dependsOn": [
+        "fta_causes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_19"
+    },
+    {
+      "groupId": "fta_modes",
+      "label": "Bruch oder Klemmen der Eingangswelle",
+      "role": "content",
+      "members": [
+        "fta_modes"
+      ],
+      "dependsOn": [
+        "fta_components"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_20"
+    },
+    {
+      "groupId": "fta_basics",
+      "label": "Sechs Basisereignisse",
+      "role": "content",
+      "members": [
+        "fta_basics"
+      ],
+      "dependsOn": [
+        "fta_modes"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_21"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_fta_workflow_heading",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_heading",
+      "sourceText": "Zu Beginn geht es darum",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_fta_workflow_first",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_first",
+      "sourceText": "Zu Beginn geht es darum",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_fta_workflow_common",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_common",
+      "sourceText": "Zu Beginn geht es darum",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_fta_workflow_quantitative",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_quantitative",
+      "sourceText": "Zu Beginn geht es darum",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_fta_workflow_first",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_first",
+      "sourceText": "Aufbau und die Struktur",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_5",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_06_fta_workflow_first",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_first",
+      "sourceText": "welche Komponenten, Baugruppen und Funktionsketten beteiligt sind",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_6",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_07_fta_workflow_heading",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_heading",
+      "sourceText": "Hierfür eignet sich die quantitative Fehlerbaumanalyse",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_7",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_08_fta_workflow_first",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_first",
+      "sourceText": "Die ersten vier Schritte sind in beiden Methoden",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_8",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_09_fta_workflow_common",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_common",
+      "sourceText": "Die ersten vier Schritte sind in beiden Methoden",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_9",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_10_fta_workflow_first",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_first",
+      "sourceText": "Der erste Schritt besteht darin",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_10",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_11_fta_workflow_heading",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_heading",
+      "sourceText": "Im nächsten Schritt legen wir das unerwünschte Ereignis",
+      "action": "hide",
+      "beatId": "beat_11",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_12_fta_workflow_first",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_first",
+      "sourceText": "Im nächsten Schritt legen wir das unerwünschte Ereignis",
+      "action": "hide",
+      "beatId": "beat_12",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_13_fta_workflow_common",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_common",
+      "sourceText": "Im nächsten Schritt legen wir das unerwünschte Ereignis",
+      "action": "hide",
+      "beatId": "beat_13",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_14_fta_workflow_quantitative",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_workflow_quantitative",
+      "sourceText": "Im nächsten Schritt legen wir das unerwünschte Ereignis",
+      "action": "hide",
+      "beatId": "beat_14",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_15_fta_heading",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_heading",
+      "sourceText": "Im nächsten Schritt legen wir das unerwünschte Ereignis",
+      "action": "show",
+      "beatId": "beat_15",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_16_fta_top",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_top",
+      "sourceText": "Im Fall des Getriebes lautet das Top-Ereignis",
+      "action": "show",
+      "beatId": "beat_16",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_17_fta_top",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_top",
+      "sourceText": "Anschließend zerlegen wir diesen Systemausfall",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_17",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_18_fta_causes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_causes",
+      "sourceText": "Das Getriebe ist beispielsweise ausgefallen",
+      "action": "show",
+      "beatId": "beat_18",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_19_fta_components",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_components",
+      "sourceText": "von der Systemebene über die Baugruppen",
+      "action": "show",
+      "beatId": "beat_19",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_20_fta_modes",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_modes",
+      "sourceText": "Wir unterteilen die Ereignisse immer weiter",
+      "action": "show",
+      "beatId": "beat_20",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_21_fta_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_basics",
+      "sourceText": "auf die sogenannten Basisereignisse stoßen",
+      "action": "show",
+      "beatId": "beat_21",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_22_fta_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_basics",
+      "sourceText": "Diese Basisereignisse bilden die Grundlage",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_22",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_23_fta_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_basics",
+      "sourceText": "mit konkreten Zuverlässigkeitskennwerten beschreiben",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_23",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_24_fta_basics",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "fta_basics",
+      "sourceText": "im fünften Schritt der FTA",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_24",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/qa-final/svg-qa-report.md"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "fta_heading",
+        "fta_top",
+        "fta_causes",
+        "fta_components",
+        "fta_modes",
+        "fta_basics"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE4/feedback-2026-09-17/qa-final/svg-qa-report.md"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "reviewEvidence": "analysis/render-checks/RE4/feedback-2026-09-17/review-summary.md"
+}

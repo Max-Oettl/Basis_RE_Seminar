@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080" role="img" aria-labelledby="scene-title scene-desc" data-artifact-scope="content-svg" data-role="content-root" data-qc-role="scene" data-qc-group="scene-content" data-qc-layer="content">
+  <title id="scene-title">P-Diagramm des Wechselrichters</title>
+  <desc id="scene-desc">Das P-Diagramm zeigt den Wechselrichter innerhalb einer Systemgrenze. Gleichstrom und Betätigungsenergie wirken über zwei getrennte linke Kanäle ein. Ein Signal wirkt von unten ein. Vibration, Schmutz, Wärme und Feuchtigkeit sind vier eigenständige Störgrößen. Wechselstrom verlässt das System als Ziel- und Ausgangsgröße.</desc>
+  <metadata id="slide-quality-metadata" type="application/json"><![CDATA[
+{
+  "artifactScope": "content-svg",
+  "embeddingTarget": "powerpoint-slide",
+  "slideType": "technical-diagram",
+  "contentTitle": "P-Diagramm des Wechselrichters",
+  "layoutIntent": "Quellnahe offene P-Diagramm-Topologie mit getrennten Einflusskanälen und zentraler Systemgrenze.",
+  "takeaway": "Gleichstrom, Betätigungsenergie, Signal und vier getrennte Umwelteinflüsse wirken auf den Wechselrichter; Wechselstrom verlässt ihn als Zielgröße.",
+  "audienceGoal": "Der Lernende kann jeden Einflusskanal des P-Diagramms benennen und seiner Richtung zuordnen.",
+  "density": "normal",
+  "contentMode": "transparent-content",
+  "backgroundMode": "transparent",
+  "brandProfile": "reltest-education",
+  "brandVariant": "education-technical",
+  "sourceEvidence": "RE2 Folie9.SVG, gemappter Sprechertext und Nutzerfeedback vom 28.08.2026"
+}
+  ]]></metadata>
+
+  <defs>
+    <marker id="arrow-navy" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M1 1 L9 5 L1 9 Z" fill="#142452"/>
+    </marker>
+    <marker id="arrow-cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M1 1 L9 5 L1 9 Z" fill="#0C84B4"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M1 1 L9 5 L1 9 Z" fill="#00A653"/>
+    </marker>
+    <marker id="arrow-coral" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M1 1 L9 5 L1 9 Z" fill="#EC6244"/>
+    </marker>
+  </defs>
+
+  <g id="pi_system" data-animation-role="content" data-anim-target="true" data-anim-label="System Wechselrichter" aria-label="Systemgrenze mit Wechselrichter, Notausschalter und Steuerung">
+    <rect x="630" y="270" width="660" height="500" rx="30" fill="#F7F9FC" fill-opacity="0.82" stroke="#00A653" stroke-width="4" stroke-dasharray="13 10"/>
+    <g transform="translate(860 288)">
+      <rect width="178" height="42" rx="21" fill="#FFFFFF" stroke="#00A653" stroke-width="2"/>
+      <text x="89" y="28" text-anchor="middle" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#142452" letter-spacing="0.7">SYSTEMGRENZE</text>
+    </g>
+
+    <image href="media/inverter-generated.png" xlink:href="media/inverter-generated.png" x="810" y="340" width="250" height="250" preserveAspectRatio="xMidYMid meet" data-pictogram-asset-type="generated_png" data-pictogram-kind="inverter" aria-hidden="true"/>
+    <text x="935" y="620" text-anchor="middle" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="33" font-weight="800" fill="#142452">WECHSELRICHTER</text>
+
+    <g id="pi_system_sos" aria-label="SOS-Signal">
+      <rect x="688" y="640" width="210" height="74" rx="10" fill="#FFFFFF" stroke="#142452" stroke-width="2.5"/>
+      <circle cx="720" cy="677" r="16" fill="#00A653"/>
+      <text x="748" y="685" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#142452">SOS-Signal</text>
+    </g>
+
+    <g id="pi_system_control" aria-label="interne Steuerung">
+      <rect x="1053" y="640" width="200" height="74" rx="10" fill="#FFFFFF" stroke="#142452" stroke-width="2.5"/>
+      <text x="1153" y="685" text-anchor="middle" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#142452">Steuerung</text>
+    </g>
+
+    <path d="M900 677 H1041" fill="none" stroke="#142452" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow-navy)"/>
+    <path d="M1153 638 V626 H1270 V540 H1070" fill="none" stroke="#142452" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-navy)"/>
+  </g>
+
+  <g id="pi_inputs" data-animation-role="content" data-anim-target="true" data-anim-label="Eingangssignale: Gleichstrom" aria-label="Gleichstrom als Eingangssignal">
+    <image href="media/p-diagram-v2/re2-p-diagram-dc-input-v2.png" xlink:href="media/p-diagram-v2/re2-p-diagram-dc-input-v2.png" x="78" y="352" width="124" height="124" preserveAspectRatio="xMidYMid meet" data-pictogram-asset-type="generated_png" data-pictogram-kind="p-diagram-dc-input" aria-hidden="true"/>
+    <rect x="222" y="356" width="6" height="104" rx="3" fill="#0C84B4"/>
+    <text x="252" y="374" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="#25495F" letter-spacing="0.6">EINGANGSSIGNALE</text>
+    <text x="252" y="419" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="31" font-weight="800" fill="#142452">Gleichstrom (DC)</text>
+    <path d="M492 430 H660" fill="none" stroke="#0C84B4" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrow-cyan)"/>
+  </g>
+
+  <g id="pi_controls" data-animation-role="content" data-anim-target="true" data-anim-label="Betätigungsenergie und Signal" aria-label="Betätigungsenergie als Eingangssignal und Signal als kontrollierbare Größe">
+    <g id="pi_activation_energy" aria-label="Betätigungsenergie für den Notausschalter">
+      <image href="media/p-diagram-v2/re2-p-diagram-activation-energy-v2.png" xlink:href="media/p-diagram-v2/re2-p-diagram-activation-energy-v2.png" x="78" y="580" width="124" height="124" preserveAspectRatio="xMidYMid meet" data-pictogram-asset-type="generated_png" data-pictogram-kind="p-diagram-activation-energy" aria-hidden="true"/>
+      <rect x="222" y="584" width="6" height="104" rx="3" fill="#00A653"/>
+      <text x="252" y="647" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="30" font-weight="800" fill="#142452">Betätigungsenergie</text>
+      <path d="M510 677 H676" fill="none" stroke="#00A653" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrow-green)"/>
+    </g>
+
+    <g id="pi_control_signal" aria-label="Signal als kontrollierbare Größe">
+      <path d="M1152 789 V724" fill="none" stroke="#00A653" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrow-green)"/>
+      <image href="media/p-diagram-v2/re2-p-diagram-control-signal-v2.png" xlink:href="media/p-diagram-v2/re2-p-diagram-control-signal-v2.png" x="1098" y="796" width="108" height="108" preserveAspectRatio="xMidYMid meet" data-pictogram-asset-type="generated_png" data-pictogram-kind="p-diagram-control-signal" aria-hidden="true"/>
+      <text x="1152" y="926" text-anchor="middle" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="#00A653" letter-spacing="0.5">KONTROLLIERBARE GRÖSSE</text>
+      <text x="1152" y="960" text-anchor="middle" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="25" font-weight="800" fill="#142452">Signal</text>
+    </g>
+  </g>
+
+  <g id="pi_disturbances" data-animation-role="content" data-anim-target="true" data-anim-label="Vier Störgrößen" aria-label="Vier getrennte Störgrößen: Vibration, Schmutz, Wärme und Feuchtigkeit">
+    <text x="960" y="54" text-anchor="middle" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="#EC6244" letter-spacing="0.9">STÖRGRÖSSEN</text>
+    <line x1="710" y1="66" x2="1210" y2="66" stroke="#EC6244" stroke-width="2" stroke-linecap="round"/>
+
+    <g id="pi_disturbance_vibration" aria-label="Störgröße Vibration">
+      <image href="media/p-diagram-v2/re2-p-diagram-vibration-v2.png" xlink:href="media/p-diagram-v2/re2-p-diagram-vibration-v2.png" x="684" y="78" width="112" height="112" preserveAspectRatio="xMidYMid meet" data-pictogram-asset-type="generated_png" data-pictogram-kind="p-diagram-vibration" aria-hidden="true"/>
+      <text x="740" y="217" text-anchor="middle" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="23" font-weight="800" fill="#142452">Vibration</text>
+      <path d="M740 230 V292" fill="none" stroke="#EC6244" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-coral)"/>
+    </g>
+
+    <g id="pi_disturbance_dirt" aria-label="Störgröße Schmutz">
+      <image href="media/p-diagram-v2/re2-p-diagram-dirt-v2.png" xlink:href="media/p-diagram-v2/re2-p-diagram-dirt-v2.png" x="1020" y="78" width="112" height="112" preserveAspectRatio="xMidYMid meet" data-pictogram-asset-type="generated_png" data-pictogram-kind="p-diagram-dirt" aria-hidden="true"/>
+      <text x="1076" y="217" text-anchor="middle" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="23" font-weight="800" fill="#142452">Schmutz</text>
+      <path d="M1076 230 V292" fill="none" stroke="#EC6244" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-coral)"/>
+    </g>
+
+    <g id="pi_disturbance_heat" aria-label="Störgröße Wärme">
+      <path d="M690 817 V748" fill="none" stroke="#EC6244" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-coral)"/>
+      <image href="media/p-diagram-v2/re2-p-diagram-heat-v2.png" xlink:href="media/p-diagram-v2/re2-p-diagram-heat-v2.png" x="636" y="824" width="108" height="108" preserveAspectRatio="xMidYMid meet" data-pictogram-asset-type="generated_png" data-pictogram-kind="p-diagram-heat" aria-hidden="true"/>
+      <text x="690" y="956" text-anchor="middle" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="23" font-weight="800" fill="#142452">Wärme</text>
+    </g>
+
+    <g id="pi_disturbance_moisture" aria-label="Störgröße Feuchtigkeit">
+      <path d="M920 817 V748" fill="none" stroke="#EC6244" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-coral)"/>
+      <image href="media/p-diagram-v2/re2-p-diagram-moisture-v2.png" xlink:href="media/p-diagram-v2/re2-p-diagram-moisture-v2.png" x="866" y="824" width="108" height="108" preserveAspectRatio="xMidYMid meet" data-pictogram-asset-type="generated_png" data-pictogram-kind="p-diagram-moisture" aria-hidden="true"/>
+      <text x="920" y="956" text-anchor="middle" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="23" font-weight="800" fill="#142452">Feuchtigkeit</text>
+    </g>
+  </g>
+
+  <g id="pi_outputs" data-animation-role="content" data-anim-target="true" data-anim-label="Wechselstrom-Ausgang" aria-label="Wechselstrom als Ziel- und Ausgangsgröße">
+    <path d="M1292 430 H1392" fill="none" stroke="#0C84B4" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrow-cyan)"/>
+    <rect x="1422" y="356" width="6" height="104" rx="3" fill="#0C84B4"/>
+    <text x="1452" y="374" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="#25495F" letter-spacing="0.6">AUSGANGSGRÖSSE</text>
+    <text x="1452" y="419" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="31" font-weight="800" fill="#142452">Wechselstrom (AC)</text>
+    <image href="media/p-diagram-v2/re2-p-diagram-ac-output-v2.png" xlink:href="media/p-diagram-v2/re2-p-diagram-ac-output-v2.png" x="1710" y="478" width="116" height="116" preserveAspectRatio="xMidYMid meet" data-pictogram-asset-type="generated_png" data-pictogram-kind="p-diagram-ac-output" aria-hidden="true"/>
+  </g>
+
+  <g id="pi_relations" data-animation-role="connector" data-anim-target="true" data-anim-label="Weiterleitung des Wechselstroms" aria-label="Weiterleitung des Wechselstroms">
+    <path d="M1452 540 H1688" fill="none" stroke="#00A653" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrow-green)"/>
+  </g>
+</svg>

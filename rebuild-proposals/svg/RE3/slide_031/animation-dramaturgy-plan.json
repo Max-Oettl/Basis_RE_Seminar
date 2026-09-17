@@ -1,0 +1,932 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_031",
+  "svgPath": "slide_031.svg",
+  "spokenText": "Bevor wir mit einer Lebensdauerdatenanalyse beginnen können, müssen wir uns die Grundlage der gesamten Auswertung anschauen – nämlich die Herkunft unserer Daten.\n\nLebensdauerdaten können auf verschiedene Weise erhoben werden.\n\nWir können die verschiedenen Arten von Datenquellen in eine typische Reihenfolge bringen, die sich entlang des Entwicklungsprozesses eines Produkts einordnen lässt.\n\nJe nach Quelle unterscheiden sich die Daten dabei in ihrer Unsicherheit und Repräsentativität.\n\nDie Unsicherheit bezieht sich hierbei auf die statistische Streuung und die Kontrollierbarkeit der Einflussgrößen – also darauf, wie exakt und zuverlässig die erfassten Daten das wahre Ausfallverhalten der Grundgesamtheit widerspiegeln.\n\nRepräsentativität bedeutet, wie gut die erhobenen Daten das tatsächliche Einsatzverhalten des Produkts im Feld widerspiegeln – also wie „realitätsnah“ die Daten in Bezug auf den späteren Gebrauch durch den Kunden sind.\n\nAn erster Stelle stehen stark beschleunigte Lebensdauerversuche. Dabei werden Komponenten gezielt extremen Belastungen ausgesetzt – etwa durch hohe Temperaturen, starke Vibrationen oder überhöhte elektrische Spannungen. Ziel ist es, in kürzester Zeit möglichst viele Ausfälle zu provozieren, um frühe Schwachstellen zu erkennen. Diese Tests laufen kontrolliert ab und liefern schnelle Ergebnisse, bergen aber eine hohe Unsicherheit hinsichtlich ihrer Übertragbarkeit auf reale Einsatzbedingungen.\n\nEs folgen beschleunigte oder unbeschleunigte Lebensdauerversuche unter realitätsnahen Bedingungen im Labor.\n\nBei unbeschleunigten Tests werden Produkte unter normalen Einsatzbedingungen betrieben – entsprechend lange dauert es, bis Ausfälle auftreten.\n\nDeshalb werden in der Praxis häufig beschleunigte Lebensdauerversuche eingesetzt. Dabei werden Einflussgrößen wie Temperatur, Belastung oder Schaltzyklen gezielt erhöht, um die Lebensdauer künstlich zu verkürzen und schneller an aussagekräftige Daten zu gelangen.\n\nJe stärker die Beschleunigung, desto schneller ist das Testergebnis verfügbar – gleichzeitig sinken aber auch die Repräsentativität und die Übertragbarkeit auf reale Einsatzbedingungen.\n\nModerat beschleunigte Tests stellen daher oft einen sinnvollen Kompromiss dar: Sie verkürzen die Testdauer, bleiben aber noch ausreichend realitätsnah, um belastbare Aussagen für den späteren Praxiseinsatz zu ermöglichen.\n\nDanach folgen Versuchsfahrten – beispielsweise im Fahrzeugbereich. Dabei wird das Produkt bereits im realen Umfeld, aber noch unter definierten und überwachten Bedingungen getestet. Diese Daten liegen näher an der Realität, sind aber auch von mehr Störfaktoren beeinflusst und dadurch ungenauer als Labordaten.\n\nAbschließend betrachten wir Felddaten oder sogenannte Feldversuche. Diese entstehen während des echten Einsatzes beim Kunden oder im Serienbetrieb. Die Repräsentativität dieser Daten ist sehr hoch, da sie den tatsächlichen Anwendungsfall widerspiegeln. Gleichzeitig sind sie jedoch mit der größten Unsicherheit behaftet, da viele Einflussgrößen nicht kontrolliert werden können.\n\nZusammenfassend lässt sich sagen: Je weiter wir uns im Entwicklungsprozess befinden, desto repräsentativer werden die Daten – gleichzeitig nimmt jedoch auch die Unsicherheit zu. Deshalb ist es besonders wichtig, die Herkunft der Daten zu kennen, um die Ergebnisse der Analyse richtig einordnen zu können.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/after/slide_031.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Bevor wir mit einer Lebensdauerdatenanalyse beginnen",
+      "occurrence": 1,
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Bevor wir mit einer Lebensdauerdatenanalyse",
+      "occurrence": 1,
+      "claim": "Produktentwicklungsprozess",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "data_origin"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Lebensdauerdaten können auf verschiedene Weise",
+      "occurrence": 1,
+      "claim": "Stark beschleunigte Versuche",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "data_extreme"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "Lebensdauerdaten können auf verschiedene Weise",
+      "occurrence": 1,
+      "claim": "Versuche im Labor",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "data_lab"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "Lebensdauerdaten können auf verschiedene Weise",
+      "occurrence": 1,
+      "claim": "Versuchsfahrten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "data_drive"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "Lebensdauerdaten können auf verschiedene Weise",
+      "occurrence": 1,
+      "claim": "Felddaten",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "data_field"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "entlang des Entwicklungsprozesses eines Produkts",
+      "occurrence": 1,
+      "claim": "Produktentwicklungsprozess",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "data_origin"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "Die Unsicherheit bezieht sich hierbei",
+      "occurrence": 1,
+      "claim": "Unsicherheit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "data_uncertainty"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Repräsentativität bedeutet, wie gut",
+      "occurrence": 1,
+      "claim": "Repräsentativität",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "data_representative"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "An erster Stelle stehen",
+      "occurrence": 1,
+      "claim": "Stark beschleunigte Versuche",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "data_extreme"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "gezielt extremen Belastungen ausgesetzt",
+      "occurrence": 1,
+      "claim": "Extreme Belastung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "data_extreme_load"
+      ]
+    },
+    {
+      "beatId": "beat_11",
+      "sourceText": "Ziel ist es, in kürzester Zeit",
+      "occurrence": 1,
+      "claim": "Schnelle Schwachstellensuche",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "data_extreme_result"
+      ]
+    },
+    {
+      "beatId": "beat_12",
+      "sourceText": "hohe Unsicherheit hinsichtlich ihrer Übertragbarkeit",
+      "occurrence": 1,
+      "claim": "Schnelle Schwachstellensuche",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "data_extreme_result"
+      ]
+    },
+    {
+      "beatId": "beat_13",
+      "sourceText": "Es folgen beschleunigte oder unbeschleunigte",
+      "occurrence": 1,
+      "claim": "Versuche im Labor",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "data_lab"
+      ]
+    },
+    {
+      "beatId": "beat_14",
+      "sourceText": "Bei unbeschleunigten Tests werden Produkte",
+      "occurrence": 1,
+      "claim": "Unbeschleunigter Versuch",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "data_lab_normal"
+      ]
+    },
+    {
+      "beatId": "beat_15",
+      "sourceText": "Deshalb werden in der Praxis",
+      "occurrence": 1,
+      "claim": "Beschleunigter Versuch",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "data_lab_fast"
+      ]
+    },
+    {
+      "beatId": "beat_16",
+      "sourceText": "Je stärker die Beschleunigung",
+      "occurrence": 1,
+      "claim": "Beschleunigter Versuch",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "data_lab_fast"
+      ]
+    },
+    {
+      "beatId": "beat_17",
+      "sourceText": "Moderat beschleunigte Tests stellen",
+      "occurrence": 1,
+      "claim": "Moderate Beschleunigung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "data_lab_tradeoff"
+      ]
+    },
+    {
+      "beatId": "beat_18",
+      "sourceText": "Danach folgen Versuchsfahrten",
+      "occurrence": 1,
+      "claim": "Versuchsfahrten",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "data_drive"
+      ]
+    },
+    {
+      "beatId": "beat_19",
+      "sourceText": "im realen Umfeld, aber noch",
+      "occurrence": 1,
+      "claim": "Überwachter realer Einsatz",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "data_drive_detail"
+      ]
+    },
+    {
+      "beatId": "beat_20",
+      "sourceText": "von mehr Störfaktoren beeinflusst",
+      "occurrence": 1,
+      "claim": "Mehr Störfaktoren",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "data_drive_variation"
+      ]
+    },
+    {
+      "beatId": "beat_21",
+      "sourceText": "Abschließend betrachten wir Felddaten",
+      "occurrence": 1,
+      "claim": "Felddaten",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "data_field"
+      ]
+    },
+    {
+      "beatId": "beat_22",
+      "sourceText": "während des echten Einsatzes",
+      "occurrence": 1,
+      "claim": "Kunde und Serie",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "data_field_use"
+      ]
+    },
+    {
+      "beatId": "beat_23",
+      "sourceText": "Die Repräsentativität dieser Daten",
+      "occurrence": 1,
+      "claim": "Unkontrollierte Einflüsse",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "data_field_variation"
+      ]
+    },
+    {
+      "beatId": "beat_24",
+      "sourceText": "mit der größten Unsicherheit behaftet",
+      "occurrence": 1,
+      "claim": "Unkontrollierte Einflüsse",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "data_field_variation"
+      ]
+    },
+    {
+      "beatId": "beat_25",
+      "sourceText": "desto repräsentativer werden die Daten",
+      "occurrence": 1,
+      "claim": "Zunahme der Repräsentativität",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "data_trend_representative"
+      ]
+    },
+    {
+      "beatId": "beat_26",
+      "sourceText": "gleichzeitig nimmt jedoch auch die Unsicherheit zu",
+      "occurrence": 1,
+      "claim": "Zunahme der Unsicherheit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "data_trend_uncertainty"
+      ]
+    },
+    {
+      "beatId": "beat_27",
+      "sourceText": "die Herkunft der Daten zu kennen",
+      "occurrence": 1,
+      "claim": "Produktentwicklungsprozess",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "data_origin"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "data_origin",
+      "label": "Produktentwicklungsprozess",
+      "role": "content",
+      "members": [
+        "data_origin"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "data_extreme",
+      "label": "Stark beschleunigte Versuche",
+      "role": "content",
+      "members": [
+        "data_extreme"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "data_lab",
+      "label": "Versuche im Labor",
+      "role": "content",
+      "members": [
+        "data_lab"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "data_drive",
+      "label": "Versuchsfahrten",
+      "role": "content",
+      "members": [
+        "data_drive"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "data_field",
+      "label": "Felddaten",
+      "role": "content",
+      "members": [
+        "data_field"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "data_uncertainty",
+      "label": "Unsicherheit",
+      "role": "content",
+      "members": [
+        "data_uncertainty"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "data_representative",
+      "label": "Repräsentativität",
+      "role": "content",
+      "members": [
+        "data_representative"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    },
+    {
+      "groupId": "data_extreme_load",
+      "label": "Extreme Belastung",
+      "role": "content",
+      "members": [
+        "data_extreme_load"
+      ],
+      "dependsOn": [
+        "data_extreme"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_10"
+    },
+    {
+      "groupId": "data_extreme_result",
+      "label": "Schnelle Schwachstellensuche",
+      "role": "content",
+      "members": [
+        "data_extreme_result"
+      ],
+      "dependsOn": [
+        "data_extreme"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_11"
+    },
+    {
+      "groupId": "data_lab_normal",
+      "label": "Unbeschleunigter Versuch",
+      "role": "content",
+      "members": [
+        "data_lab_normal"
+      ],
+      "dependsOn": [
+        "data_lab"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_14"
+    },
+    {
+      "groupId": "data_lab_fast",
+      "label": "Beschleunigter Versuch",
+      "role": "content",
+      "members": [
+        "data_lab_fast"
+      ],
+      "dependsOn": [
+        "data_lab"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_15"
+    },
+    {
+      "groupId": "data_lab_tradeoff",
+      "label": "Moderate Beschleunigung",
+      "role": "content",
+      "members": [
+        "data_lab_tradeoff"
+      ],
+      "dependsOn": [
+        "data_lab"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_17"
+    },
+    {
+      "groupId": "data_drive_detail",
+      "label": "Überwachter realer Einsatz",
+      "role": "content",
+      "members": [
+        "data_drive_detail"
+      ],
+      "dependsOn": [
+        "data_drive"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_19"
+    },
+    {
+      "groupId": "data_drive_variation",
+      "label": "Mehr Störfaktoren",
+      "role": "content",
+      "members": [
+        "data_drive_variation"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_20"
+    },
+    {
+      "groupId": "data_field_use",
+      "label": "Kunde und Serie",
+      "role": "content",
+      "members": [
+        "data_field_use"
+      ],
+      "dependsOn": [
+        "data_field"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_22"
+    },
+    {
+      "groupId": "data_field_variation",
+      "label": "Unkontrollierte Einflüsse",
+      "role": "content",
+      "members": [
+        "data_field_variation"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_23"
+    },
+    {
+      "groupId": "data_trend_representative",
+      "label": "Zunahme der Repräsentativität",
+      "role": "content",
+      "members": [
+        "data_trend_representative"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_25"
+    },
+    {
+      "groupId": "data_trend_uncertainty",
+      "label": "Zunahme der Unsicherheit",
+      "role": "content",
+      "members": [
+        "data_trend_uncertainty"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_26"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_data_origin",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_origin",
+      "sourceText": "Bevor wir mit einer Lebensdauerdatenanalyse",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_data_extreme",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_extreme",
+      "sourceText": "Lebensdauerdaten können auf verschiedene Weise",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_data_lab",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_lab",
+      "sourceText": "Lebensdauerdaten können auf verschiedene Weise",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_data_drive",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_drive",
+      "sourceText": "Lebensdauerdaten können auf verschiedene Weise",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_data_field",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_field",
+      "sourceText": "Lebensdauerdaten können auf verschiedene Weise",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_data_origin",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_origin",
+      "sourceText": "entlang des Entwicklungsprozesses eines Produkts",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_6",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_07_data_uncertainty",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_uncertainty",
+      "sourceText": "Die Unsicherheit bezieht sich hierbei",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_data_representative",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_representative",
+      "sourceText": "Repräsentativität bedeutet, wie gut",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_data_extreme",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_extreme",
+      "sourceText": "An erster Stelle stehen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_9",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_10_data_extreme_load",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_extreme_load",
+      "sourceText": "gezielt extremen Belastungen ausgesetzt",
+      "action": "show",
+      "beatId": "beat_10",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_11_data_extreme_result",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_extreme_result",
+      "sourceText": "Ziel ist es, in kürzester Zeit",
+      "action": "show",
+      "beatId": "beat_11",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_12_data_extreme_result",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_extreme_result",
+      "sourceText": "hohe Unsicherheit hinsichtlich ihrer Übertragbarkeit",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_12",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_13_data_lab",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_lab",
+      "sourceText": "Es folgen beschleunigte oder unbeschleunigte",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_13",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_14_data_lab_normal",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_lab_normal",
+      "sourceText": "Bei unbeschleunigten Tests werden Produkte",
+      "action": "show",
+      "beatId": "beat_14",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_15_data_lab_fast",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_lab_fast",
+      "sourceText": "Deshalb werden in der Praxis",
+      "action": "show",
+      "beatId": "beat_15",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_16_data_lab_fast",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_lab_fast",
+      "sourceText": "Je stärker die Beschleunigung",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_16",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_17_data_lab_tradeoff",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_lab_tradeoff",
+      "sourceText": "Moderat beschleunigte Tests stellen",
+      "action": "show",
+      "beatId": "beat_17",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_18_data_drive",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_drive",
+      "sourceText": "Danach folgen Versuchsfahrten",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_18",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_19_data_drive_detail",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_drive_detail",
+      "sourceText": "im realen Umfeld, aber noch",
+      "action": "show",
+      "beatId": "beat_19",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_20_data_drive_variation",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_drive_variation",
+      "sourceText": "von mehr Störfaktoren beeinflusst",
+      "action": "show",
+      "beatId": "beat_20",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_21_data_field",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_field",
+      "sourceText": "Abschließend betrachten wir Felddaten",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_21",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_22_data_field_use",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_field_use",
+      "sourceText": "während des echten Einsatzes",
+      "action": "show",
+      "beatId": "beat_22",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_23_data_field_variation",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_field_variation",
+      "sourceText": "Die Repräsentativität dieser Daten",
+      "action": "show",
+      "beatId": "beat_23",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_24_data_field_variation",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_field_variation",
+      "sourceText": "mit der größten Unsicherheit behaftet",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_24",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_25_data_trend_representative",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_trend_representative",
+      "sourceText": "desto repräsentativer werden die Daten",
+      "action": "show",
+      "beatId": "beat_25",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_26_data_trend_uncertainty",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_trend_uncertainty",
+      "sourceText": "gleichzeitig nimmt jedoch auch die Unsicherheit zu",
+      "action": "show",
+      "beatId": "beat_26",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_27_data_origin",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "data_origin",
+      "sourceText": "die Herkunft der Daten zu kennen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_27",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/00_initial.png"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "data_origin",
+        "data_extreme",
+        "data_lab",
+        "data_drive",
+        "data_field",
+        "data_uncertainty",
+        "data_representative",
+        "data_extreme_load",
+        "data_extreme_result",
+        "data_lab_normal",
+        "data_lab_fast",
+        "data_lab_tradeoff",
+        "data_drive_detail",
+        "data_drive_variation",
+        "data_field_use",
+        "data_field_variation",
+        "data_trend_representative",
+        "data_trend_uncertainty"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/33_after_24_die_herkunft_der_daten_zu_kennen.png"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "staticPreview": "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/after/slide_031.png",
+    "reducedPreview": "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/preview/slide_031_960.png",
+    "stateCount": 34,
+    "states": [
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/00_initial.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/01_after_01_bevor_wir_mit_einer_lebensdauerdatenana.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/02_after_02_lebensdauerdaten_konnen_auf_verschieden.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/03_highlight_data_origin_5.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/04_after_03_entlang_des_entwicklungsprozesses_eines.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/05_after_04_die_unsicherheit_bezieht_sich_hierbei.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/06_after_05_reprasentativitat_bedeutet_wie_gut.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/07_highlight_data_extreme_8.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/08_after_06_an_erster_stelle_stehen.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/09_after_07_gezielt_extremen_belastungen_ausgesetzt.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/10_after_08_ziel_ist_es_in_kurzester_zeit.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/11_highlight_data_extreme_result_11.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/12_after_09_hohe_unsicherheit_hinsichtlich_ihrer_ub.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/13_highlight_data_lab_12.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/14_after_10_es_folgen_beschleunigte_oder_unbeschleu.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/15_after_11_bei_unbeschleunigten_tests_werden_produ.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/16_after_12_deshalb_werden_in_der_praxis.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/17_highlight_data_lab_fast_15.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/18_after_13_je_starker_die_beschleunigung.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/19_after_14_moderat_beschleunigte_tests_stellen.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/20_highlight_data_drive_17.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/21_after_15_danach_folgen_versuchsfahrten.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/22_after_16_im_realen_umfeld_aber_noch.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/23_after_17_von_mehr_storfaktoren_beeinflusst.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/24_highlight_data_field_20.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/25_after_18_abschlie_end_betrachten_wir_felddaten.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/26_after_19_wahrend_des_echten_einsatzes.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/27_after_20_die_reprasentativitat_dieser_daten.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/28_highlight_data_field_variation_23.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/29_after_21_mit_der_gro_ten_unsicherheit_behaftet.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/30_after_22_desto_reprasentativer_werden_die_daten.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/31_after_23_gleichzeitig_nimmt_jedoch_auch_die_unsi.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/32_highlight_data_origin_26.png",
+      "analysis/render-checks/RE3/feedback-31-pictograms-2026-09-17/states/slide_031/33_after_24_die_herkunft_der_daten_zu_kennen.png"
+    ],
+    "independentVisualReview": "passed: pictograms recognizable, atomic icon/heading reveals, no collisions",
+    "scope": "Discrete Chromium states; no audio playback or continuous video verified."
+  }
+}

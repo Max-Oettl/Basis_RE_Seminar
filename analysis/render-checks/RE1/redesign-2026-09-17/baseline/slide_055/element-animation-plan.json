@@ -1,0 +1,129 @@
+{
+  "schema_version": "basisReElementAnimationPlan/v1",
+  "module_id": "RE1",
+  "work_unit": "slide_055",
+  "scene_id": "re1_src_070",
+  "source_slides": [
+    70
+  ],
+  "planning_basis": "chapter_redesign_plan_and_spoken_text",
+  "whole_scene_only_animation": false,
+  "collapsed_equivalent_source_states": [],
+  "groups": [
+    {
+      "target_id": "exponential_formula_parameters",
+      "label": "Parameter",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "exponential_density_formula",
+      "label": "Dichtefunktion",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "exponential_failure_formula",
+      "label": "Ausfallwahrscheinlichkeit",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "exponential_reliability_formula",
+      "label": "Überlebenswahrscheinlichkeit",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "exponential_hazard_formula",
+      "label": "Ausfallrate",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    },
+    {
+      "target_id": "exponential_formula_conclusion",
+      "label": "Anwendungsfolgerung",
+      "action": "show",
+      "confidence": "high",
+      "semantic_grouping": "atomic",
+      "static_visibility": "hidden_until_trigger"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "show_exponential_formula_parameters",
+      "targetId": "exponential_formula_parameters",
+      "action": "show",
+      "sourceText": "Wie bereits beschrieben, wird die Exponentialverteilung nur über die Ausfallrate Lamda definiert",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_exponential_density_formula",
+      "targetId": "exponential_density_formula",
+      "action": "show",
+      "sourceText": "Die Dichtefunktion ergibt sich dabei einfach",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_exponential_failure_formula",
+      "targetId": "exponential_failure_formula",
+      "action": "show",
+      "sourceText": "Die Ausfallwahrscheinlichkeit groß F von t berechnet sich aus dem Integral von null bis t über der Dichtefunktion",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_exponential_reliability_formula",
+      "targetId": "exponential_reliability_formula",
+      "action": "show",
+      "sourceText": "Die Überlebenswahrscheinlichkeit berechnet sich wiederum zu eins minus der Ausfallwahrscheinlichkeit",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_exponential_hazard_formula",
+      "targetId": "exponential_hazard_formula",
+      "action": "show",
+      "sourceText": "Tut man dies, erhält man für die Ausfallrate einfach nur den Parameter Lambda",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "show_exponential_formula_conclusion",
+      "targetId": "exponential_formula_conclusion",
+      "action": "show",
+      "sourceText": "Dies ist unter anderem auch mit ein Grund, warum die Exponentialverteilung in der Zuverlässigkeitstechnik zur Beschreibung von zufälligem Ausfallverhalten sehr beliebt ist",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe des Full-Slide-Redesigns.",
+      "enterFrames": 16
+    }
+  ],
+  "qa": {
+    "issues": [],
+    "warnings": {},
+    "open_questions": []
+  }
+}

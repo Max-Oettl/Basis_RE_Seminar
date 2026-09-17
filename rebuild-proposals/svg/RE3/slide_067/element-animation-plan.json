@@ -11,8 +11,16 @@
   },
   "targets": [
     {
-      "targetId": "multiple_modes_plot",
-      "label": "Mehrere Geraden",
+      "targetId": "multiple_modes_photo",
+      "label": "Beispiel",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "multiple_modes_joint_plot",
+      "label": "Gemeinsame Weibull-Auswertung",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -27,8 +35,24 @@
       "confidence": "high"
     },
     {
+      "targetId": "multiple_modes_split_plot",
+      "label": "Mehrere Geraden",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
       "targetId": "multiple_modes_action",
-      "label": "Trennen",
+      "label": "Separate Analyse",
+      "status": "animated",
+      "visibleInEditor": true,
+      "render": true,
+      "confidence": "high"
+    },
+    {
+      "targetId": "multiple_modes_result",
+      "label": "Eigener Fit je Mechanismus",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -36,7 +60,7 @@
     },
     {
       "targetId": "multiple_modes_rule",
-      "label": "Regel",
+      "label": "Merksatz",
       "status": "animated",
       "visibleInEditor": true,
       "render": true,
@@ -45,7 +69,27 @@
   ],
   "steps": [
     {
-      "stepId": "step_01_multiple_modes_diagnosis",
+      "stepId": "step_01_multiple_modes_photo",
+      "targetId": "multiple_modes_photo",
+      "action": "show",
+      "sourceText": "Ein weiterer wichtiger Fall wird deutlich, wenn wir uns folgendes Beispiel anschauen:",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_02_multiple_modes_joint_plot",
+      "targetId": "multiple_modes_joint_plot",
+      "action": "show",
+      "sourceText": "Für alle Ausfälle werden die zugehörigen Ausfallwahrscheinlichkeiten ermittelt und die Daten werden gemeinsam in einer Weibull-Grafik dargestellt.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_03_multiple_modes_diagnosis",
       "targetId": "multiple_modes_diagnosis",
       "action": "show",
       "sourceText": "Der Fit ist schlecht und auch die daraus abgeleiteten Prognosen sind ungenau.",
@@ -55,8 +99,8 @@
       "enterFrames": 16
     },
     {
-      "stepId": "step_02_multiple_modes_plot",
-      "targetId": "multiple_modes_plot",
+      "stepId": "step_04_multiple_modes_split_plot",
+      "targetId": "multiple_modes_split_plot",
       "action": "show",
       "sourceText": "Wenn sich die Daten besser durch mehrere Geraden beschreiben lassen, ist das ein deutliches Anzeichen dafür, dass mehrere unterschiedliche Ausfallmechanismen vorliegen.",
       "occurrence": 1,
@@ -65,7 +109,7 @@
       "enterFrames": 16
     },
     {
-      "stepId": "step_03_multiple_modes_action",
+      "stepId": "step_05_multiple_modes_action",
       "targetId": "multiple_modes_action",
       "action": "show",
       "sourceText": "Stattdessen sollten die Daten nach Ausfallmechanismen getrennt und jeweils separat analysiert werden.",
@@ -75,10 +119,20 @@
       "enterFrames": 16
     },
     {
-      "stepId": "step_04_multiple_modes_rule",
-      "targetId": "multiple_modes_rule",
+      "stepId": "step_06_multiple_modes_result",
+      "targetId": "multiple_modes_result",
       "action": "show",
       "sourceText": "So erhält man für jeden Mechanismus eine eigene Weibull-Verteilung, die eine deutlich präzisere Beschreibung und bessere Prognose ermöglicht.",
+      "occurrence": 1,
+      "confidence": "high",
+      "notes": "Sprechertextgeführte semantische Gruppe.",
+      "enterFrames": 16
+    },
+    {
+      "stepId": "step_07_multiple_modes_rule",
+      "targetId": "multiple_modes_rule",
+      "action": "show",
+      "sourceText": "Also Merke dir:Lassen sich die Daten besser durch mehrere Geraden beschreiben, ist dies ein Anzeichen für unterschiedliche Ausfallmechanismen, die immer getrennt ausgewertet werden müssen.",
       "occurrence": 1,
       "confidence": "high",
       "notes": "Sprechertextgeführte semantische Gruppe.",

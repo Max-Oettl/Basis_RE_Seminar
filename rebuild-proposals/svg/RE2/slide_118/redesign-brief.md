@@ -3,11 +3,11 @@
 - Kapitel: 4
 - Lektion: 6
 - Quellfolie: 118
-- Zielmodus: full_slide, 1920×1080
-- Titel: Bewertungskriterien für B, A und E
+- Zielmodus: content_svg, transparentes 1920×1080-Inhaltsmodul für den Downstream-Master
+- Titel: Risikoanalyse: Bewertungskriterien
 - Dominante Lernbotschaft: B, A und E werden anhand eindeutiger, unternehmensspezifisch festgelegter Kriterien bewertet.
 - Archetyp: media-aside
-- Layout: Bewertungsgrundsätze links und vergrößerte Kriterien-Tabelle rechts.
+- Layout: Offene Bewertungsgrundsätze links und vergrößerte Kriterien-Tabelle rechts; nur das fachliche Dokument bleibt gerahmt.
 - Inhaltsinventar: Fachbegriffe, Beziehungen, Hierarchien, Tabellenzustände und Beispiele bleiben erhalten; PowerPoint-Bedienelemente und Masterdekoration entfallen.
 - Referenz-Lock: RE1 slide_013, slide_009, slide_027 und slide_022
 - Assetstrategie: bereinigtes und vergrößertes Quellasset

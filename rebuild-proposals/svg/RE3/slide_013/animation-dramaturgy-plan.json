@@ -1,0 +1,381 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re3_src_013",
+  "svgPath": "slide_013.svg",
+  "spokenText": "Bisher haben wir die grafische Methode zur Auswertung der Lebensdauerdaten genutzt, genauer gesagt das Median-Rang-Verfahren. Es gibt jedoch auch Berechnungs-Methoden, die analytisch oder teils numerisch gelöst werden müssen und eine höhere Genauigkeit bieten.\n\nZu den bekanntesten zählen die Methode der kleinsten Quadrate, abgekürzt als M-L-S, sowie die Maximum-Likelihood-Schätzung, abgekürzt als M-L-E. Der Nachteil dieser Methoden ist ihre mathematische Komplexität im Vergleich zur grafischen Methode.\n\nDas ist jedoch kein Problem, denn wir müssen diese Methoden nicht manuell anwenden – dafür gibt es Software. Dennoch ist es wichtig, die Hintergründe zu verstehen. Nur so können wir sicherstellen, dass die richtige Methode angewendet wurde. Andernfalls können fehlerhafte oder ungenaue Ergebnisse entstehen, die schwerwiegende Konsequenzen haben können.\n\nSei dir also immer bewusst, was du tust, wenn du solche Auswertungen durchführst.",
+  "animationDecision": "animated",
+  "animationRationale": "Quellaufbau und gesprochenen Erklärfluss durch semantische Reveals und gezielte Fokussierung begleiten.",
+  "initialStateRationale": "Der Player zeigt den Szenentitel. Der Inhaltsbereich baut sich ab der ersten inhaltlichen Einführung auf, ohne spätere Aussagen vorwegzunehmen.",
+  "staticReview": {
+    "status": "passed",
+    "evidence": "analysis/render-checks/RE3/feedback-2026-09-17/after/slide_013.png"
+  },
+  "runtimeProfile": {
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false
+  },
+  "narrativeBeats": [
+    {
+      "beatId": "opening",
+      "sourceText": "Bisher haben wir die grafische Methode",
+      "claim": "Orientierung durch den vom Player gesetzten Szenentitel",
+      "requiredContext": [],
+      "revealTogether": []
+    },
+    {
+      "beatId": "beat_1",
+      "sourceText": "Bisher haben wir die grafische Methode",
+      "claim": "Grafische Methode",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "method_graphical"
+      ]
+    },
+    {
+      "beatId": "beat_2",
+      "sourceText": "Es gibt jedoch auch Berechnungs-Methoden",
+      "claim": "Berechnungsmethoden",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "method_calculation"
+      ]
+    },
+    {
+      "beatId": "beat_3",
+      "sourceText": "eine höhere Genauigkeit bieten",
+      "claim": "Höhere Genauigkeit",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "method_accuracy"
+      ]
+    },
+    {
+      "beatId": "beat_4",
+      "sourceText": "die Methode der kleinsten Quadrate",
+      "claim": "Methode der kleinsten Quadrate",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "method_mls"
+      ]
+    },
+    {
+      "beatId": "beat_5",
+      "sourceText": "sowie die Maximum-Likelihood-Schätzung",
+      "claim": "Maximum-Likelihood-Schätzung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "method_mle"
+      ]
+    },
+    {
+      "beatId": "beat_6",
+      "sourceText": "Der Nachteil dieser Methoden",
+      "claim": "Mathematische Komplexität",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "method_complexity"
+      ]
+    },
+    {
+      "beatId": "beat_7",
+      "sourceText": "dafür gibt es Software",
+      "claim": "Software übernimmt die Berechnung",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "method_software"
+      ]
+    },
+    {
+      "beatId": "beat_8",
+      "sourceText": "Dennoch ist es wichtig",
+      "claim": "Methoden bewusst anwenden",
+      "requiredContext": [],
+      "action": "show",
+      "revealTogether": [
+        "method_understanding"
+      ]
+    },
+    {
+      "beatId": "beat_9",
+      "sourceText": "fehlerhafte oder ungenaue Ergebnisse entstehen",
+      "claim": "Methoden bewusst anwenden",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "method_understanding"
+      ]
+    },
+    {
+      "beatId": "beat_10",
+      "sourceText": "Sei dir also immer bewusst",
+      "claim": "Methoden bewusst anwenden",
+      "requiredContext": [],
+      "action": "highlight",
+      "revealTogether": [
+        "method_understanding"
+      ]
+    }
+  ],
+  "semanticGroups": [
+    {
+      "groupId": "method_graphical",
+      "label": "Grafische Methode",
+      "role": "content",
+      "members": [
+        "method_graphical"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_1"
+    },
+    {
+      "groupId": "method_calculation",
+      "label": "Berechnungsmethoden",
+      "role": "content",
+      "members": [
+        "method_calculation"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_2"
+    },
+    {
+      "groupId": "method_accuracy",
+      "label": "Höhere Genauigkeit",
+      "role": "content",
+      "members": [
+        "method_accuracy"
+      ],
+      "dependsOn": [
+        "method_calculation"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_3"
+    },
+    {
+      "groupId": "method_mls",
+      "label": "Methode der kleinsten Quadrate",
+      "role": "content",
+      "members": [
+        "method_mls"
+      ],
+      "dependsOn": [
+        "method_calculation"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_4"
+    },
+    {
+      "groupId": "method_mle",
+      "label": "Maximum-Likelihood-Schätzung",
+      "role": "content",
+      "members": [
+        "method_mle"
+      ],
+      "dependsOn": [
+        "method_calculation"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_5"
+    },
+    {
+      "groupId": "method_complexity",
+      "label": "Mathematische Komplexität",
+      "role": "content",
+      "members": [
+        "method_complexity"
+      ],
+      "dependsOn": [
+        "method_mls",
+        "method_mle"
+      ],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_6"
+    },
+    {
+      "groupId": "method_software",
+      "label": "Software übernimmt die Berechnung",
+      "role": "content",
+      "members": [
+        "method_software"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_7"
+    },
+    {
+      "groupId": "method_understanding",
+      "label": "Methoden bewusst anwenden",
+      "role": "content",
+      "members": [
+        "method_understanding"
+      ],
+      "dependsOn": [],
+      "initialState": "hidden_until_trigger",
+      "initialVisibilityEvidence": "Erst mit der zugeordneten Originalphrase fachlich relevant.",
+      "firstRelevantBeatId": "beat_8"
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_method_graphical",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "method_graphical",
+      "sourceText": "Bisher haben wir die grafische Methode",
+      "action": "show",
+      "beatId": "beat_1",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_02_method_calculation",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "method_calculation",
+      "sourceText": "Es gibt jedoch auch Berechnungs-Methoden",
+      "action": "show",
+      "beatId": "beat_2",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_03_method_accuracy",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "method_accuracy",
+      "sourceText": "eine höhere Genauigkeit bieten",
+      "action": "show",
+      "beatId": "beat_3",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_04_method_mls",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "method_mls",
+      "sourceText": "die Methode der kleinsten Quadrate",
+      "action": "show",
+      "beatId": "beat_4",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_05_method_mle",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "method_mle",
+      "sourceText": "sowie die Maximum-Likelihood-Schätzung",
+      "action": "show",
+      "beatId": "beat_5",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_06_method_complexity",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "method_complexity",
+      "sourceText": "Der Nachteil dieser Methoden",
+      "action": "show",
+      "beatId": "beat_6",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_07_method_software",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "method_software",
+      "sourceText": "dafür gibt es Software",
+      "action": "show",
+      "beatId": "beat_7",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_08_method_understanding",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "method_understanding",
+      "sourceText": "Dennoch ist es wichtig",
+      "action": "show",
+      "beatId": "beat_8",
+      "rationale": "Vollständige fachliche Einheit mit ihrer Einführung sichtbar machen."
+    },
+    {
+      "stepId": "step_09_method_understanding",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "method_understanding",
+      "sourceText": "fehlerhafte oder ungenaue Ergebnisse entstehen",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_9",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    },
+    {
+      "stepId": "step_10_method_understanding",
+      "occurrence": 1,
+      "confidence": "high",
+      "targetId": "method_understanding",
+      "sourceText": "Sei dir also immer bewusst",
+      "action": "highlight",
+      "stroke": "#00A653",
+      "strokeWidth": 2,
+      "beatId": "beat_10",
+      "rationale": "Bereits eingeführten Zusammenhang beim gesprochenen Bezug fokussieren."
+    }
+  ],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "visibleGroups": [],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-2026-09-17/states-final/slide_013/00_initial.png",
+      "reviewedAt": "2026-09-17"
+    },
+    {
+      "stateId": "end",
+      "visibleGroups": [
+        "method_graphical",
+        "method_calculation",
+        "method_accuracy",
+        "method_mls",
+        "method_mle",
+        "method_complexity",
+        "method_software",
+        "method_understanding"
+      ],
+      "reviewStatus": "passed",
+      "evidence": "analysis/render-checks/RE3/feedback-2026-09-17/states-final/slide_013/12_after_10_sei_dir_also_immer_bewusst.png",
+      "reviewedAt": "2026-09-17"
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "renderReview": {
+    "status": "passed",
+    "renderDirectory": "analysis/render-checks/RE3/feedback-2026-09-17/states-final/slide_013",
+    "reviewedStateCount": 13,
+    "evidence": "analysis/rebuild-plans/RE3_scenes_001_006_feedback_2026-09-17.md",
+    "method": "local Chromium state renderer plus visual source/reference review",
+    "interactiveBrowserPlayback": "unavailable; no end-to-end audio playback claimed"
+  }
+}

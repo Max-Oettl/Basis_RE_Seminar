@@ -1,0 +1,348 @@
+{
+  "schema_version": "basisRebuildContentCrosscheck/v2",
+  "module_id": "RE4",
+  "output_slide_number": 62,
+  "checked_at": "2026-09-17T10:47:58.766Z",
+  "status": "review_required",
+  "manual_review_required": true,
+  "reference_mapping": {
+    "work_unit": "slide_062",
+    "output_slide_number": 62,
+    "source_slides": [
+      62
+    ],
+    "primary_source_slide": 62,
+    "output_slide_numbers": [],
+    "mapping_type": "direct",
+    "rationale": "",
+    "mapping_source": "reference_map",
+    "reference_map_path": "analysis/rebuild-plans/RE4_source-reference-map.json",
+    "sequence_plan": "",
+    "read_error": ""
+  },
+  "references": [
+    {
+      "source_slide_number": 62,
+      "source_svg_path": "source-materials/basis-seminar/powerpoint-svg/RE4/SVG/Folie62.SVG",
+      "source_svg_sha256": "1352184dc7b18001f54b0075d7e6b2ca24778013f574e4de619b6c884e15c1ca",
+      "old_slide_path": "source-materials/basis-seminar/powerpoint-svg/RE4/SVG/Folie62.SVG",
+      "analysis_path": ""
+    }
+  ],
+  "proposal": {
+    "path": "rebuild-proposals/svg/RE4/slide_062/slide_062.svg",
+    "svg_sha256": "905fa4395d2a36bf6841daad634ce76456b0e0f429acb64df29fd667aefc1eab",
+    "animation_manifest": "/files/rebuild-proposals/svg/RE4/slide_062/scene.animation.v1.json"
+  },
+  "summary": {
+    "source_count": 1,
+    "checked_content_items": 7,
+    "checked_target_text_items": 17,
+    "errors": 0,
+    "warnings": 17,
+    "infos": 0,
+    "animation_steps": 0
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 062: \"Boolesche Systemtheorie\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 62,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Boolesche Systemtheorie"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 062: \"System ist „nicht reparierbar“ (erster Systemausfall beendet Systemlebensdauer)\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 62,
+      "source_item_id": "source-svg-text-3",
+      "expected": "System ist „nicht reparierbar“ (erster Systemausfall beendet Systemlebensdauer)"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 062: \"Bauelemente können nur die beiden Zustände „funktionsfähig“ oder „ausgefallen“\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 62,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Bauelemente können nur die beiden Zustände „funktionsfähig“ oder „ausgefallen“"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 062: \"annehmen\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 62,
+      "source_item_id": "source-svg-text-5",
+      "expected": "annehmen"
+    },
+    {
+      "severity": "warning",
+      "code": "source-content-not-textually-verifiable",
+      "message": "Quellfolie 062: \"Bauelemente sind „unabhängig“ (Ausfallverhalten eines Bauelements wird durch\" ist im SVG-Text nicht eindeutig nachweisbar. Visuell pruefen, ob die Aussage durch Grafik, Formel oder Animation erhalten bleibt.",
+      "source_slide_number": 62,
+      "source_item_id": "source-svg-text-6",
+      "expected": "Bauelemente sind „unabhängig“ (Ausfallverhalten eines Bauelements wird durch"
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"01 · Zwei Zustände\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "01 · Zwei Zustände",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"1 · funktionsfähig\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "1 · funktionsfähig",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"0 · ausgefallen\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "0 · ausgefallen",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Jedes Bauelement nimmt\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Jedes Bauelement nimmt",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"genau einen der beiden\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "genau einen der beiden",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"02 · Nicht reparierbar\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "02 · Nicht reparierbar",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Ausfall bleibt bestehen\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Ausfall bleibt bestehen",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Der erste Systemausfall\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Der erste Systemausfall",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"beendet die Lebensdauer\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "beendet die Lebensdauer",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"03 · Unabhängig\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "03 · Unabhängig",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Keine Wechselwirkung\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Keine Wechselwirkung",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    },
+    {
+      "severity": "warning",
+      "code": "target-text-not-source-supported",
+      "message": "Der sichtbare Zieltext \"Voraussetzungen vor der Berechnung prüfen\" ist weder in den Quell-SVGs noch im zugeordneten Sprechertext eindeutig belegt.",
+      "target_text": "Voraussetzungen vor der Berechnung prüfen",
+      "recommendation": "Entfernen oder mit data-source-evidence und data-source-reference als belegte Zielergaenzung dokumentieren."
+    }
+  ],
+  "content_checks": [
+    {
+      "source_slide_number": 62,
+      "source_item_id": "source-svg-text-1",
+      "expected": "Boolesche Systemtheorie",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 62,
+      "source_item_id": "source-svg-text-2",
+      "expected": "Voraussetzungen:",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "source_slide_number": 62,
+      "source_item_id": "source-svg-text-3",
+      "expected": "System ist „nicht reparierbar“ (erster Systemausfall beendet Systemlebensdauer)",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.5,
+      "evidence": "tokens:nicht,reparierbar,systemausfall,beendet"
+    },
+    {
+      "source_slide_number": 62,
+      "source_item_id": "source-svg-text-4",
+      "expected": "Bauelemente können nur die beiden Zustände „funktionsfähig“ oder „ausgefallen“",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.556,
+      "evidence": "tokens:die,beiden,zustände,funktionsfähig,ausgefallen"
+    },
+    {
+      "source_slide_number": 62,
+      "source_item_id": "source-svg-text-5",
+      "expected": "annehmen",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "source_slide_number": 62,
+      "source_item_id": "source-svg-text-6",
+      "expected": "Bauelemente sind „unabhängig“ (Ausfallverhalten eines Bauelements wird durch",
+      "source_kind": "source_svg",
+      "result": "manual_visual_check",
+      "score": 0.75,
+      "evidence": "tokens:unabhängig,ausfallverhalten,eines,bauelements,wird,durch"
+    },
+    {
+      "source_slide_number": 62,
+      "source_item_id": "source-svg-text-7",
+      "expected": "andere nicht beeinflusst)",
+      "source_kind": "source_svg",
+      "result": "textually_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    }
+  ],
+  "target_text_checks": [
+    {
+      "target_text": "01 · Zwei Zustände",
+      "result": "unsupported_target_text",
+      "score": 0.667,
+      "evidence": "tokens:zwei,zustände"
+    },
+    {
+      "target_text": "1 · funktionsfähig",
+      "result": "unsupported_target_text",
+      "score": 0.5,
+      "evidence": "tokens:funktionsfähig"
+    },
+    {
+      "target_text": "0 · ausgefallen",
+      "result": "unsupported_target_text",
+      "score": 0.5,
+      "evidence": "tokens:ausgefallen"
+    },
+    {
+      "target_text": "Jedes Bauelement nimmt",
+      "result": "unsupported_target_text",
+      "score": 0.333,
+      "evidence": "tokens:nimmt"
+    },
+    {
+      "target_text": "genau einen der beiden",
+      "result": "unsupported_target_text",
+      "score": 0.75,
+      "evidence": "tokens:genau,der,beiden"
+    },
+    {
+      "target_text": "Zustände an.",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "tokens:zustände,an"
+    },
+    {
+      "target_text": "02 · Nicht reparierbar",
+      "result": "unsupported_target_text",
+      "score": 0.667,
+      "evidence": "tokens:nicht,reparierbar"
+    },
+    {
+      "target_text": "Ausfall bleibt bestehen",
+      "result": "unsupported_target_text",
+      "score": 0,
+      "evidence": "no_token_match"
+    },
+    {
+      "target_text": "Der erste Systemausfall",
+      "result": "unsupported_target_text",
+      "score": 0.667,
+      "evidence": "tokens:der,systemausfall"
+    },
+    {
+      "target_text": "beendet die Lebensdauer",
+      "result": "unsupported_target_text",
+      "score": 0.667,
+      "evidence": "tokens:beendet,die"
+    },
+    {
+      "target_text": "des Systems.",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "tokens:des,systems"
+    },
+    {
+      "target_text": "03 · Unabhängig",
+      "result": "unsupported_target_text",
+      "score": 0.5,
+      "evidence": "tokens:unabhängig"
+    },
+    {
+      "target_text": "Keine Wechselwirkung",
+      "result": "unsupported_target_text",
+      "score": 0.5,
+      "evidence": "tokens:keine"
+    },
+    {
+      "target_text": "Das Ausfallverhalten eines",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "tokens:das,ausfallverhalten,eines"
+    },
+    {
+      "target_text": "Bauelements wird durch",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "andere nicht beeinflusst.",
+      "result": "source_or_spoken_supported",
+      "score": 1,
+      "evidence": "normalized_phrase"
+    },
+    {
+      "target_text": "Voraussetzungen vor der Berechnung prüfen",
+      "result": "unsupported_target_text",
+      "score": 0.6,
+      "evidence": "tokens:voraussetzungen,der,berechnung"
+    }
+  ],
+  "manual_review_focus": [
+    "Visuelle Aussage, Mengen, Positionen und Hervorhebungen gegen alle Referenzfolien pruefen.",
+    "Bestaetigen, dass die vollstaendige statische Darstellung klarer als ein schrittweiser Aufbau ist."
+  ],
+  "reference_mapping_sha256": "3697d77b68caae14cdfcc0a9ba635ba12fdf8e0d52444ad20b70b73911b3045a",
+  "reference_map_path": "analysis/rebuild-plans/RE4_source-reference-map.json",
+  "sequence_plan": ""
+}

@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "svgAnimationDramaturgyPlan/v1",
+  "sceneId": "re2_ch4_design_process_step6",
+  "svgPath": "slide_160.svg",
+  "spokenText": "Im sechsten Schritt, der Optimierung, geht es darum, die zuvor in der Risikoanalyse abgeleiteten Maßnahmen umzusetzen.\n\nBeim Produktdesign stehen dabei Änderungen im Konstruktionskonzept im Vordergrund. Dazu zählen zum Beispiel die Anpassungen des Designs, zum Beispiel durch Änderung der Geometrie von Bauteilen oder die Auswahl robusterer Materialien. Ein konkretes Beispiel wäre die Verwendung eines stabileren Werkstoffs, um das Bruchrisiko zu reduzieren.\n\nIn der Prozessanalyse hingegen liegt der Fokus auf der Verbesserung von Abläufen in der Fertigung. Maßnahmen können hier sowohl technische Änderungen als auch organisatorische Ansätze umfassen – etwa die Optimierung einzelner Prozessschritte oder gezielte Schulungen des Personals, um typische Fehlerquellen im Produktionsablauf zu minimieren.\n\nEin praxisnahes Beispiel ist die Einführung regelmäßiger Wartungen, um Maschinenausfälle zu vermeiden und so die Zuverlässigkeit der Produktionsanlagen zu steigern.",
+  "animationDecision": "animated",
+  "animationRationale": "Die Narration führt mehrere fachlich getrennte Einheiten ein; sie werden in wenigen semantischen Schritten aufgebaut.",
+  "runtimeProfile": {
+    "manifestSchema": "svgAnimationManifest/v1",
+    "supportedActions": [
+      "show",
+      "hide",
+      "highlight",
+      "draw",
+      "transform"
+    ],
+    "initialVisibleAnimatedTargetsSupported": false,
+    "entranceMotionRenderedInReviewer": false,
+    "blurSupported": false,
+    "notes": [
+      "Verbinder werden nur innerhalb vollständiger semantischer Gruppen oder nach ihren Endpunkten gezeigt."
+    ]
+  },
+  "initialStateRationale": "Der statische Rahmen bleibt sichtbar; fachliche Details erscheinen erst mit ihrer exakten Sprecherphrase.",
+  "semanticGroups": [
+    {
+      "groupId": "canvas_context",
+      "label": "Statischer Orientierungsrahmen",
+      "role": "context",
+      "members": [
+        "background_grid_and_non_animated_context"
+      ],
+      "initialState": "visible_context",
+      "firstRelevantBeatId": "pre_narration",
+      "initialVisibilityEvidence": "Hintergrund, Prozessleiste und statische Orientierung werden vor dem ersten Sprecherbeat benötigt.",
+      "dependsOn": [],
+      "groupingRationale": "Der unveränderliche Rahmen hält die Orientierung während aller Reveals stabil."
+    },
+    {
+      "groupId": "s162_left",
+      "label": "DESIGN-FMEA",
+      "role": "content",
+      "members": [
+        "s162_left"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_01",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    },
+    {
+      "groupId": "s162_right",
+      "label": "PROZESS-FMEA",
+      "role": "content",
+      "members": [
+        "s162_right"
+      ],
+      "initialState": "hidden_until_trigger",
+      "firstRelevantBeatId": "beat_02",
+      "initialVisibilityEvidence": "Die Gruppe wird erst sichtbar, wenn der Sprecher sie fachlich einführt.",
+      "dependsOn": [],
+      "groupingRationale": "Form, Text, Bild und lokale Beziehungen bilden eine vollständige semantische Einheit."
+    }
+  ],
+  "narrativeBeats": [
+    {
+      "beatId": "beat_01",
+      "claim": "DESIGN-FMEA",
+      "sourceText": "Beim Produktdesign stehen dabei Änderungen im",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s162_left"
+      ]
+    },
+    {
+      "beatId": "beat_02",
+      "claim": "PROZESS-FMEA",
+      "sourceText": "Ein praxisnahes Beispiel ist die Einführung",
+      "requiredContext": [
+        "canvas_context"
+      ],
+      "revealTogether": [
+        "s162_right"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "stepId": "step_01_s162_left",
+      "beatId": "beat_01",
+      "targetId": "s162_left",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    },
+    {
+      "stepId": "step_02_s162_right",
+      "beatId": "beat_02",
+      "targetId": "s162_right",
+      "action": "show",
+      "rationale": "Die vollständige semantische Einheit erscheint mit ihrer ersten fachlichen Nennung."
+    }
+  ],
+  "unsupportedEffectRequests": [],
+  "stateReview": [
+    {
+      "stateId": "initial",
+      "afterBeatId": null,
+      "visibleGroups": [
+        "canvas_context"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Ruhiger Orientierungsrahmen ohne vorweggenommene Fachdetails."
+    },
+    {
+      "stateId": "end",
+      "afterBeatId": "beat_02",
+      "visibleGroups": [
+        "canvas_context",
+        "s162_left",
+        "s162_right"
+      ],
+      "reviewStatus": "passed",
+      "notes": "Vollständiger, statisch geprüfter Endzustand."
+    }
+  ]
+}

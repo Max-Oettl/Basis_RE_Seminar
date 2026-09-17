@@ -1,0 +1,50 @@
+{
+  "schema_version": "basisReContentCrosscheck/v1",
+  "module_id": "RE2",
+  "work_unit": "slide_131",
+  "scene_id": "re2_ch4_step7_bridge",
+  "target_svg": "rebuild-proposals/svg/RE2/slide_131/slide_131.svg",
+  "source_slides": [
+    131
+  ],
+  "mapping_type": "direct",
+  "source_checks": [
+    {
+      "source_slide": 131,
+      "source_svg": "source-materials/basis-seminar/powerpoint-svg/RE2/SVG/Folie131.SVG",
+      "expected_text_nodes": 25,
+      "missing_text_nodes": [
+        "1. Schritt",
+        "Planung und",
+        "Vorbereitung",
+        "2. Schritt",
+        "Struktur",
+        "-",
+        "analyse",
+        "3. Schritt",
+        "Funktions",
+        "4. Schritt",
+        "Fehler",
+        "5. Schritt",
+        "Risiko",
+        "6. Schritt",
+        "7. Schritt",
+        "Ergebnis"
+      ],
+      "expected_image_assets": 1,
+      "missing_image_assets": [
+        "img1"
+      ],
+      "speaker_control_expected_removed": true
+    }
+  ],
+  "qa": {
+    "issues": [
+      "Quellfolie 131: 16 sichtbare Texte fehlen im Ziel.",
+      "Quellfolie 131: 1 Inhaltsbilder fehlen im Ziel."
+    ],
+    "warnings": [],
+    "open_questions": []
+  },
+  "status": "failed"
+}
